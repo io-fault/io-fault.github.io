@@ -1,0 +1,168 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 213 40`
+
+[ module ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1 1 1 33`
+
+[ test_parse_empty ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`3 1 8 39`
+(signature)`test_parse_empty(test)`
+
+- (project-local/factor-element)&<snapshot#parse[fault.vector.snapshot.parse]>
+
+
+[ test_parse_env ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`10 1 20 82`
+(signature)`test_parse_env(test)`
+
+- (project-local/factor-element)&<snapshot#parse[fault.vector.snapshot.parse]>
+
+
+[ test_parse_multiple_env ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`22 1 36 2`
+(signature)`test_parse_multiple_env(test)`
+
+- (project-local/factor-element)&<snapshot#parse[fault.vector.snapshot.parse]>
+
+
+[ test_parse_no_env ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`38 1 47 64`
+(signature)`test_parse_no_env(test)`
+
+- (project-local/factor-element)&<snapshot#parse[fault.vector.snapshot.parse]>
+
+
+[ test_parse_env_unset ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`49 1 59 77`
+(signature)`test_parse_env_unset(test)`
+
+- (project-local/factor-element)&<snapshot#parse[fault.vector.snapshot.parse]>
+
+
+[ test_parse_newlines ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`61 1 71 66`
+(signature)`test_parse_newlines(test)`
+
+- (project-local/factor-element)&<snapshot#parse[fault.vector.snapshot.parse]>
+
+
+[ test_parse_newlines_suffix ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`73 1 83 72`
+(signature)`test_parse_newlines_suffix(test)`
+
+- (project-local/factor-element)&<snapshot#parse[fault.vector.snapshot.parse]>
+
+
+[ test_parse_zero_newlines ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`85 1 95 70`
+(signature)`test_parse_zero_newlines(test)`
+
+- (project-local/factor-element)&<snapshot#parse[fault.vector.snapshot.parse]>
+
+
+[ test_parse_plural_newlines ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`97 1 107 76`
+(signature)`test_parse_plural_newlines(test)`
+
+- (project-local/factor-element)&<snapshot#parse[fault.vector.snapshot.parse]>
+
+
+[ test_parse_no_op ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`109 1 120 64`
+(signature)`test_parse_no_op(test)`
+
+- (project-local/factor-element)&<snapshot#parse[fault.vector.snapshot.parse]>
+
+
+[ test_parse_unknown_qual ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`122 1 131 49`
+(signature)`test_parse_unknown_qual(test)`
+
+- (project-local/factor-element)&<snapshot#parse[fault.vector.snapshot.parse]>
+
+
+[ test_serialize_escapes ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`133 1 157 2`
+(signature)`test_serialize_escapes(test)`
+
+- (project-local/factor-element)&<snapshot#parse[fault.vector.snapshot.parse]>
+
+
+[ test_serialize_none ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`159 1 182 2`
+(signature)`test_serialize_none(test)`
+
+- (project-local/factor-element)&<snapshot#parse[fault.vector.snapshot.parse]>
+
+
+[ test_parse_space_separated_fields ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`184 1 210 36`
+(signature)`test_parse_space_separated_fields(test)`
+
+- (project-local/factor-element)&<snapshot#parse[fault.vector.snapshot.parse]>
+

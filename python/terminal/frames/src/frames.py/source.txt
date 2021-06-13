@@ -1,0 +1,96 @@
+"""
+# Frame drawing kit for delimiting areas of display.
+
+# Frames are drawn from pattern expressions; the expressions are formed
+# from a sequence of intersections that designate the special cases found
+# along the primary line pattern.
+"""
+
+def render_vertical(canvas, palette, expression):
+	"""
+	# Interpret the &expression in the context of the &canvas
+	# yielding the events necessary to cause the frame borders to be displayed.
+	"""
+	solid = palette['none']
+	dsv = canvas.draw_segment_vertical
+	duv = canvas.draw_unit_vertical
+
+	for segment_length, isection in zip(expression[0::2], expression[1::2]):
+		yield dsv(solid, segment_length)
+		yield duv(palette[isection])
+
+def render_horizontal(canvas, palette, expression):
+	"""
+	# Interpret the &expression in the context of the &canvas
+	# yielding the events necessary to cause the frame borders to be displayed.
+	"""
+	solid = palette['none']
+	dsh = canvas.draw_segment_horizontal
+	duh = canvas.draw_unit_horizontal
+
+	for segment_length, isection in zip(expression[0::2], expression[1::2]):
+		yield dsh(solid, segment_length)
+		yield duh(palette[isection])
+
+def render_box(canvas, corners, hpalette, vpalette, width, height):
+	"""
+	# Draw the border of a box with the given width and height.
+	# The &width and &height are the inclusive dimensions of the contents;
+	# the frame will be drawn around that area.
+
+	# The yielded commands are entirely relative and can be cached
+	# for replays. This should only be used for raw mode displays.
+	"""
+
+	left = right = [height, 'empty']
+	top = bottom = [width, 'empty']
+
+	yield canvas.store_caret_position()
+
+	yield canvas.draw_unit_horizontal(corners[0]) # top left
+
+	yield from render_horizontal(canvas, hpalette, top)
+	yield canvas.draw_unit_horizontal(corners[1]) # top right
+	yield canvas.seek_relative((-1,1))
+	yield from render_vertical(canvas, vpalette, right)
+
+	yield canvas.restore_caret_position()
+
+	yield canvas.seek_vertical_relative(1)
+	yield from render_vertical(canvas, vpalette, left)
+
+	yield canvas.draw_unit_horizontal(corners[2])
+	yield from render_horizontal(canvas, hpalette, bottom)
+	yield canvas.encode(corners[3])
+
+if __name__ == '__main__':
+	import sys
+	import time
+	from . import device
+	from . import symbols
+	from ..system import tty
+	tty = tty.Device(1).record()
+	d = device.Display()
+	bw = sys.stdout.buffer.write
+	hp = {'isect': symbols.intersections['top'], 'none': symbols.lines['horizontal'], 'empty': ''}
+	vp = {'none': symbols.lines['vertical'], 'empty': ''}
+	corners = ''.join([
+		symbols.rounds[x] for x in (
+			'top-left', 'top-right',
+			'bottom-left', 'bottom-right',
+		)
+	])
+
+	try:
+		tty.set_raw()
+		sys.stdout.flush()
+		for x in range(0, 1):
+			bw(d.clear())
+			bw(b''.join(render_box(d, corners, hp, vp, 20, 20)))
+			sys.stdout.flush()
+			break
+			bw(d.seek_absolute((0,0)))
+	finally:
+		sys.stdout.write('\n\r')
+		sys.stdout.flush()
+		tty.restore()

@@ -1,0 +1,306 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 286 0`
+Terminal control sequences for emulator configuration management.
+
+While (project-local/unknown)&<matrix#Context[matrix.Context]> constructs sequences for drawing, the functions and data
+here provide high-level access to options that are usually maintained for the duration
+of the controlling process.
+
+The (invalid/unknown)&<#options> dictionary provides a mapping from a contrived option Symbols to the codes
+used to compose the escape sequence. Most (project-local/unknown)&<control> interfaces work with &[Symbols].
+
+The functions here behave similarly to (project-local/unknown)&<matrix>; the control sequences are constructed
+and returned for the caller to emit to the terminal in order to avoid state and to permit
+application control over buffering.
+(factor-local/function)&<#setup[setup]> is the one notable exception and provides a solution for the common case of
+terminal initialization for the duration of the process.
+
+[ Symbols ]
+
+Symbols present in (invalid/unknown)&<#options> are described below. This will usually be a subset of
+the terminal's configuration intensely focused on what applications need to control
+for proper rendering.
+
+/line-wrap/
+	Control line wrapping.
+
+/origin-mode/
+	Control the home cursor position to be absolute or scrolling region relative.
+
+/margin-bell/
+	Control the margin bell.
+
+/cursor-visible/
+	Control whether the cursor is visible.
+
+/cursor-blink/
+	Control whether the cursor blinks.
+
+/mouse-extended-protocol/
+	Use the SGR protocol for mouse events.
+
+/mouse-events/
+	Subscribe to mouse button press events.
+
+/mouse-drag/
+	Subscribe to mouse button press events and motion within holds.
+
+/mouse-motion/
+	Subscribe to mouse button press events and motion within and outside of holds.
+
+/bracket-paste-mode/
+	Allow paste signals to be generated.
+
+/mouse-highlight/
+	Allow terminal-level mouse highlighting.
+
+/focus-events/
+	Subscribe to window enter and exit events.
+
+/alternate-screen/
+	Record the cursor position and switch to the alternate screen buffer.
+	Upon disabling, restore the original screen state.
+
+/meta-escape/
+	Enable escape qualified key events when the meta modifier is used.
+
+/scroll-bar/
+	Control scroll bar visibility.
+
+/scroll-bottom-on-output/
+	Control the effect of output being printed to the scrolling region.
+
+/scroll-bottom-on-input/
+	Control an effect of typing input into the terminal.
+
+/log/
+	Control the terminal's internal logging facility.
+
+[ Configuration Types ]
+
+&[Symbols] will be added when desireable features are added by emulators. In order to keep usage
+consistent as possible without requiring changes to applications, configuration types are defined
+to allow applications to refer to and define groups of symbols.
+
+/cursed/
+	The default configuration type referrenced by (factor-local/function)&<#setup[setup]>; used by raw line disciplines.
+
+/cooked/
+	A reasonable set of defaults for use with cooked line disciplines.
+
+	! NOTE: Used primarily as an inverse for &cursed.
+/observe/
+	Configuration used by (project-local/unknown)&<bin.observe> to maximize the perceived events.
+
+
+[ matrix ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`75 1 75 20`
+
+[ private_mode_options ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`77 1 103 1`
+#!source
+	private_mode_options = {
+		# CSI ? {0} [lhsr]
+		'alternate-screen': 1049,
+		'origin-mode': 6,
+		'line-wrap': 7,
+		'margin-bell': 44,
+	
+		'cursor-visible': 25,
+		'cursor-blink': 12,
+	
+		'mouse-extended-protocol': 1006, # SGR's format is sane and the only supported one in &.events.
+		'mouse-events': 1000,
+		'mouse-drag': 1002,
+		'mouse-motion': 1003,
+		'bracket-paste-mode': 2004,
+		'mouse-highlight': 1001,
+	
+		# xterm
+		'focus-events': 1004,
+		'meta-escape': 1036,
+		'log': 46,
+	
+		# rxvt
+		'scroll-bar': 30,
+		'scroll-bottom-on-output': 1010,
+		'scroll-bottom-on-input': 1011,
+	}
+
+[ configuration ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`105 1 124 2`
+		- (type/syntax)`bytes`
+		- (type/invalid/unknown)&<#bytes>
+		
+(signature)`configuration(ttype, settings, options)`
+
+Construct the initialization and restoration sequences for the given (factor-local/parameter)&<#configuration.Parameters.settings[settings]>.
+
+(factor-local/parameter)&<#configuration.Parameters.settings[settings]> is normally retrieved by selecting an entry from (factor-local/data)&<#ctypes[ctypes]>.
+
+
+[ ctypes ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`127 1 173 1`
+#!source
+	ctypes = {
+		'cursed': (
+			'cooked', # revert using
+			'raw', {
+				'mouse-extended-protocol',
+				'mouse-drag',
+				'alternate-screen',
+				'focus-events',
+				'bracket-paste-mode',
+			}, {
+				'origin-mode',
+				'line-wrap',
+				'margin-bell',
+				'cursor-visible',
+			},
+		),
+		'cooked': (
+			None, # no revert
+			'cooked', {
+				'line-wrap',
+				'cursor-visible',
+				# No margin bell assignment; force outer program to re-enable.
+			}, {
+				'origin-mode',
+				'mouse-extended-protocol',
+				'mouse-events',
+				'mouse-drag',
+				'mouse-motion',
+				'alternate-screen',
+				'focus-events',
+				'bracket-paste-mode',
+			},
+		),
+		'observe': (
+			'cooked', # revert using
+			'raw', {
+				'mouse-extended-protocol',
+				'mouse-events',
+				'mouse-drag',
+				'mouse-motion',
+				'bracket-paste-mode',
+				'focus-events',
+			}, (),
+		),
+		# no-op ctype
+		'prepared': (None, None, (), ()),
+	}
+
+[ _terminal_ctl_exit ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`175 1 196 59`
+(signature)`_terminal_ctl_exit(tty, ctype, write, restoration, limit)`
+
+
+[ _terminal_ctl_init ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`198 1 210 6`
+(signature)`_terminal_ctl_init(tty, ctype, mode, write, preparation, limit)`
+
+
+[ setup ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`212 1 286 35`
+(signature)`setup(ctype, ttype, destruct, ttydevice, atprepare, atrestore, limit)`
+
+Construct a device instance and functions for preparing the terminal and
+kernel line discipline for the given (factor-local/parameter)&<#setup.Parameters.ctype[ctype]>.
+
+The given (factor-local/parameter)&<#setup.Parameters.ttydevice[ttydevice]> or the one created will be returned along with two
+functions that can be used to prepare and restore the terminal state.
+
+[ > Parameters ]
+
+/(parameter)`ctype`/
+	- (type/syntax)`str`
+	- (type/invalid/unknown)&<#str>
+	
+	The &[Configuration Types] to apply immediately after the atexit handler has been registered.
+	Usually, the default, `'cursed'`, is the desired value and selects the configuration
+	set from (factor-local/data)&<#ctypes[ctypes]>.
+
+/(parameter)`ttype`/
+	- (type/syntax)`matrix.Type`
+	- (type/project-local/factor-element)&<matrix#Type[fault.terminal.matrix.Type]>
+	
+	The (project-local/factor-element)&<matrix#Type[fault.terminal.matrix.Type]> instance to use to construct the initialization and restoration
+	sequences. Defaults to the (project-local/factor-element)&<matrix#utf8_terminal_type[fault.terminal.matrix.utf8_terminal_type]>. Applications
+	needing to select a distinct Type or encoding need to supply this instead
+	of the default.
+
+/(parameter)`destruct`/
+	
+	Clear the module's globals ((project-local/unknown)&<control>) and remove it from (invalid/unknown)&<#sys.modules> after writing
+	the initialization string to (factor-local/parameter)&<#setup.Parameters.ttydevice[ttydevice.fileno]> and registering the atexit handler.
+	For most applications using (project-local/unknown)&<control>, (factor-local/function)&<#setup[setup]> is called once and the module
+	is never used again. By default, this is (invalid/unknown)&<#False> and the module is retained in memory.
+
+/(parameter)`ttydevice`/
+	
+	The (context-local/factor-element)&<fault.system/tty#Device[fault.system.tty.Device]> instance whose restore method should be called atexit.
+	If (invalid/unknown)&<#tty> is not provided, a (context-local/factor-element)&<fault.system/tty#Device[fault.system.tty.Device]> instance will be created from the
+	system's tty path (usually (fs/path)`/dev/tty`) and call its `record` method.
+
+/(parameter)`atprepare`/
+	
+	Additional binary string to write to the terminal device at preparation.
+
+/(parameter)`atrestore`/
+	
+	Additional binary string to write to the terminal device at restoration.
+
+/(parameter)`limit`/
+	
+	(ctl/absent)`Undocumented`.
+
+[ > Returns ]
+
+A tuple:
+
+# (context-local/factor-element)&<fault.system/tty#Device[fault.system.tty.Device]> instance.
+# Preparation Callable
+# Restoration Callable
+	The two callables can be used for applications supporting suspend operations.
+

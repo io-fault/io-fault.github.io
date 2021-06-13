@@ -1,0 +1,246 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 184 10`
+Package module for custom line parsers and profiles for (project-local/unknown)&<console>
+
+
+[ importlib ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`4 1 4 16`
+
+[ fields ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`5 1 5 21`
+
+[ parse ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`7 1 64 14`
+(signature)`parse(Class, line)`
+
+Parse a line of text into Fields.
+
+/(parameter)`Class`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`line`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`len`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`space`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`String`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ Line ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (source/area)`66 1 76 57`
+! INHERIT:
+	- (source/area)`66 12 66 22`
+	- (type/syntax)`fields.Text`
+	- (type/project-local/factor-element)&<fields#Text[meta.syntax.fields.Text]>
+	
+Base class for primary Unit.
+
+
+[ Line >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`70 2 70 34`
+#!source
+	__slots__ = fields.Text.__slots__
+
+[ Line >> reformat ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`72 2 76 57`
+(signature)`reformat(self)`
+
+Rebuild the Line contents.
+
+/(parameter)`self`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`str`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ cache ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`79 1 79 10`
+#!source
+	cache = {}
+
+[ extensions ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`81 1 112 1`
+#!source
+	extensions = {
+		'.hs': 'haskell',
+		'.py': 'python',
+		'.sh': 'shell',
+	
+		'.c': 'c',
+		'.h': 'c',
+		'.m': 'objectivec',
+		'.swift': 'swift',
+		'.java': 'java',
+		'.rs': 'rust',
+	
+		'.hh': 'cxx',
+		'.hpp': 'cxx',
+		'.hxx': 'cxx',
+		'.cxx': 'cxx',
+		'.c++': 'cxx',
+		'.cpp': 'cxx',
+		'.cc': 'cxx',
+	
+		'.js': 'ecmascript',
+		'.json': 'ecmascript',
+		'.css': 'css',
+	
+		'.xsl': 'xslt',
+		'.xslt': 'xslt',
+		'.xml': 'xml',
+		'.html': 'html',
+	
+		'.txt': 'text',
+		None: 'text',
+	}
+
+[ translation_set ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`115 1 122 1`
+#!source
+	translation_set = (
+		'terminators',
+		'separators',
+		'routers',
+		'operators',
+		'groupings',
+		'quotations',
+	)
+
+[ table ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`124 1 129 40`
+(signature)`table(language)`
+
+Construct a table for string translate.
+
+/(parameter)`language`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ aggregate ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`131 1 136 41`
+(signature)`aggregate(language)`
+
+Aggregate the profile module translation set.
+
+/(parameter)`language`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ profile_module ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`138 1 142 59`
+(signature)`profile_module(name)`
+
+Get the profile module for parsing lines for the given language.
+
+/(parameter)`name`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ profile_from_filename ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`144 1 149 35`
+(signature)`profile_from_filename(filename)`
+
+Get the profile name from the given file name.
+
+/(parameter)`filename`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ profile ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`151 1 185 9`
+(signature)`profile(name)`
+
+Get the profile module's (factor-local/class)&<#Line[Line]> subclass and module.
+
+/(parameter)`name`/
+	
+	(ctl/absent)`Undocumented`.
+

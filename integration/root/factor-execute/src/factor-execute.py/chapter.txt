@@ -1,0 +1,113 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 40 0`
+Python factor execution script used in the absence of system bindings.
+
+Normally, this is only executed by (project-local/unknown)&<setup>, but in cases where (context-local/project-factor)&<system.python/bin.bind[system.python.bin.bind]>
+cannot create usable executables with the system's compiler driver, shell scripts
+will be created instead invoking this script with the necessary environment variables.
+
+
+[ sys ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`8 1 8 10`
+
+[ os ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`9 1 9 9`
+
+[ os ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`10 1 10 14`
+
+[ importlib ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`11 1 11 16`
+
+[ path_sources ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`14 1 14 57`
+#!source
+	path_sources = ['FAULT_PYTHON_PATH', 'FAULT_SYSTEM_PATH']
+
+[ fault_name ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`15 1 15 45`
+#!source
+	fault_name = os.environ['FAULT_CONTEXT_NAME']
+
+[ factors_module_path ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`16 1 16 65`
+#!source
+	factors_module_path = '.'.join((fault_name, 'system', 'factors'))
+
+[ subexec_module_path ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`17 1 17 72`
+#!source
+	subexec_module_path = '.'.join((fault_name, 'system', 'bin', 'subexec'))
+
+[ extend_python_path ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`19 1 32 6`
+(signature)`extend_python_path(pathrefs)`
+
+
+[ av_execution ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`34 1 37 75`
+(signature)`av_execution(module_path)`
+

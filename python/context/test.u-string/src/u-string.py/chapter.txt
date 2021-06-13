@@ -1,0 +1,58 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 45 0`
+
+[ module ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1 1 1 31`
+
+[ test_normal ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`3 1 7 71`
+(signature)`test_normal(test)`
+
+
+[ test_slug ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`9 1 14 51`
+(signature)`test_slug(test)`
+
+
+[ test_varsplit ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`16 1 37 43`
+(signature)`test_varsplit(test)`
+
+
+[ test_ilevel ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`39 1 41 45`
+(signature)`test_ilevel(test)`
+

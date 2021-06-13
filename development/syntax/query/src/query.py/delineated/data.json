@@ -1,0 +1,1 @@
+[[["punctuation"], ["operation"], ["quotation"]], [{"syntax": "set(\";:.,!?\")", "area": [[5, 15], [5, 27]]}, {"syntax": "set(\"-+/*&^%!~\")", "area": [[6, 13], [6, 28]]}, {"syntax": "set(\"'\\\"`\")", "area": [[7, 13], [7, 23]]}]]

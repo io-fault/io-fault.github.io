@@ -1,0 +1,1692 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 952 0`
+Character matrix rendering contexts.
+
+Holds (factor-local/class)&<#Type[Type]>, (factor-local/class)&<#Context[Context]> and (factor-local/class)&<#Screen[Screen]> defintions for constructing escape sequences
+to be transmitted to the terminal.
+
+[ Engineering ]
+
+Many sequence codes are hardcoded in (factor-local/class)&<#Context[Context]> and (factor-local/class)&<#Screen[Screen]>. The exact codes
+should be moved to (factor-local/class)&<#Type[Type]> and symbolically referenced in preparation for some termcap
+loading.
+
+
+[ Iterable ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`12 1 12 46`
+
+[ Sequence ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`12 1 12 46`
+
+[ functools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`13 1 13 16`
+
+[ itertools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`14 1 14 16`
+
+[ codecs ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`15 1 15 13`
+
+[ types ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`17 1 17 19`
+
+[ Type ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (source/area)`19 1 345 61`
+! INHERIT:
+	- (source/area)`19 12 19 17`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+Terminal Type data structure and cache for composing instruction sequences.
+
+Conceptually, this is a Terminal Capabilities set coupled with an encoding. However,
+standard terminfo databases are not referenced as the target applications are those
+committed to modern terminal emulators supporting commonly employed standards or practices.
+
+[ > Engineering ]
+
+Currently unstable API. It was quickly ripped out of (factor-local/class)&<#Context[Context]>.
+
+
+[ Type >> normal_render_parameters ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`31 2 31 89`
+#!source
+	normal_render_parameters = types.RenderParameters((types.NoTraits, -1024, -1024, -1024))
+
+[ Type >> _escape_character ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`33 2 33 28`
+#!source
+	_escape_character = b'\x1b'
+
+[ Type >> _field_separator ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`34 2 34 24`
+#!source
+	_field_separator = b';'
+
+[ Type >> _join ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`35 2 35 30`
+#!source
+	_join = _field_separator.join
+
+[ Type >> _csi_init ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`36 2 36 37`
+#!source
+	_csi_init = _escape_character + b'['
+
+[ Type >> _osc_init ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`37 2 37 37`
+#!source
+	_osc_init = _escape_character + b']'
+
+[ Type >> _st ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`38 2 38 32`
+#!source
+	_st = _escape_character = b'\\' # String Terminator
+
+[ Type >> _wm ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`39 2 39 11`
+#!source
+	_wm = b't'
+
+[ Type >> _ul_color ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`40 2 40 27`
+#!source
+	_ul_color = (b'58', b'59')
+
+[ Type >> _pm_set ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`43 2 43 15`
+#!source
+	_pm_set = b'h'
+
+[ Type >> _pm_reset ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`44 2 44 17`
+#!source
+	_pm_reset = b'l'
+
+[ Type >> _pm_save ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`45 2 45 16`
+#!source
+	_pm_save = b's'
+
+[ Type >> _pm_restore ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`46 2 46 19`
+#!source
+	_pm_restore = b'r'
+
+[ Type >> _pm_init ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`47 2 47 28`
+#!source
+	_pm_init = _csi_init + b'?'
+
+[ Type >> _pm_origin ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`50 2 50 15`
+#!source
+	_pm_origin = 6
+
+[ Type >> _pm_screen ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`51 2 51 18`
+#!source
+	_pm_screen = 1049
+
+[ Type >> _reset_text_attributes ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`53 2 56 14`
+#!source
+	_reset_text_attributes = b'0'
+		# Support for SGR color.
+	@staticmethod
+
+[ Type >> select_foreground_16 ]
+! CONTROL:
+	/type/
+		staticmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`57 2 60 14`
+(signature)`select_foreground_16(code, offsets)`
+
+
+[ Type >> select_background_16 ]
+! CONTROL:
+	/type/
+		staticmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`61 2 62 38`
+(signature)`select_background_16(code, offsets)`
+
+
+[ Type >> select_foreground_256 ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`64 2 64 32`
+#!source
+	select_foreground_256 = b'38;5'
+
+[ Type >> select_background_256 ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`65 2 65 32`
+#!source
+	select_background_256 = b'48;5'
+
+[ Type >> select_underline_256 ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`66 2 66 31`
+#!source
+	select_underline_256 = b'58;5'
+
+[ Type >> select_foreground_rgb ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`67 2 67 32`
+#!source
+	select_foreground_rgb = b'38;2'
+
+[ Type >> select_background_rgb ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`68 2 68 32`
+#!source
+	select_background_rgb = b'48;2'
+
+[ Type >> select_underline_rgb ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`69 2 69 31`
+#!source
+	select_underline_rgb = b'58;2'
+
+[ Type >> style_codes ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`72 2 89 2`
+#!source
+	style_codes = {
+		'bold': (b'1', b'22'),
+		'feint': (b'2', b'22'),
+		'blink': (b'5', b'25'),
+		'rapid': (b'6', b'25'),
+			'italic': (b'3', b'23'),
+		'underline': (b'4', b'24'),
+		'inverse': (b'7', b'27'),
+		'invisible': (b'8', b'28'),
+		'cross': (b'9', b'29'),
+			# Does not appear to be commonly supported.
+		'double-underline': (b'21', b'24'),
+		'frame': (b'51', b'54'),
+		'encircle': (b'52', b'54'),
+		'overline': (b'53', b'55'),
+	}
+
+[ Type >> esc ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`91 2 99 40`
+(signature)`esc(self, string)`
+
+Escape prefixed string.
+
+[ >> Parameters ]
+
+/(parameter)`self`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`string`/
+	- (type/syntax)`bytes`
+	- (type/invalid/unknown)&<#bytes>
+	
+	The bytes that will be prefixed with the configured escape.
+
+
+[ Type >> csi ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`101 2 111 56`
+(signature)`csi(self, terminator, *parts)`
+
+Control Sequence Introducer constructor.
+
+[ >> Parameters ]
+
+/(parameter)`self`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`terminator`/
+	- (type/syntax)`bytes`
+	- (type/invalid/unknown)&<#bytes>
+	
+	The end of the CSI; intermediates and termination character.
+
+/(parameter)`parts`/
+	- (type/syntax)`bytes`
+	- (type/invalid/unknown)&<#bytes>
+	
+	The decimal parameter codes as ASCII encoded byte strings.
+
+
+[ Type >> osc ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`113 2 117 54`
+(signature)`osc(self, *parts)`
+
+Operating System Command.
+
+
+[ Type >> csi_filter_empty ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`119 2 125 56`
+(signature)`csi_filter_empty(self, terminator, *parts)`
+
+(factor-local/method)&<#Type.csi[csi]> variant that returns an empty string when (factor-local/parameter)&<#Type.csi_filter_empty.Parameters.parts[parts]> is empty.
+
+
+[ Type >> wm ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`127 2 131 87`
+(signature)`wm(self, *parts)`
+
+Window Manipulations.
+
+
+[ Type >> pm ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`133 2 137 55`
+(signature)`pm(self, terminator, parts)`
+
+Private Mode Values. (DECSET/DECRST)
+
+
+[ Type >> decset ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`139 2 143 72`
+(signature)`decset(self, options)`
+
+Set Private Mode values.
+
+
+[ Type >> decrst ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`145 2 149 74`
+(signature)`decrst(self, options)`
+
+Reset Private Mode values.
+
+
+[ Type >> pm_save ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`151 2 155 73`
+(signature)`pm_save(self, options)`
+
+Save Private Mode values.
+
+
+[ Type >> pm_restore ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`157 2 161 76`
+(signature)`pm_restore(self, options)`
+
+Restore Private Mode values.
+
+
+[ Type >> wm_title ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`163 2 169 50`
+(signature)`wm_title(self, title)`
+
+Instruct the emulator to use the given title for the window.
+The given (factor-local/parameter)&<#Type.wm_title.Parameters.title[title]> should be plain text and control characters will be translated.
+
+
+[ Type >> insert_characters ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`171 2 175 58`
+(signature)`insert_characters(self, count)`
+
+ICH, make room for (factor-local/parameter)&<#Type.insert_characters.Parameters.count[count]> characters. Maintains characters after the insertion.
+
+
+[ Type >> delete_characters ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`177 2 181 58`
+(signature)`delete_characters(self, count)`
+
+DCH, delete character moving remaining characters left.
+
+
+[ Type >> insert_lines ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`183 2 187 58`
+(signature)`insert_lines(self, count)`
+
+IL, make room for (factor-local/parameter)&<#Type.insert_lines.Parameters.count[count]> lines. Maintains lines after the insertion.
+
+
+[ Type >> delete_lines ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`189 2 193 58`
+(signature)`delete_lines(self, count)`
+
+DL, remove (factor-local/parameter)&<#Type.delete_lines.Parameters.count[count]> lines. Moves lines following the deleted up.
+
+
+[ Type >> scroll_up ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`195 2 199 58`
+(signature)`scroll_up(self, count)`
+
+SU, adjust the scrolling region's view by scrolling up (factor-local/parameter)&<#Type.scroll_up.Parameters.count[count]> lines.
+
+
+[ Type >> scroll_down ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`201 2 205 58`
+(signature)`scroll_down(self, count)`
+
+SD, adjust the scrolling region's view by scrolling down (factor-local/parameter)&<#Type.scroll_down.Parameters.count[count]> lines.
+
+
+[ Type >> select_color ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`207 2 254 14`
+(signature)`select_color(targets_rgb, targets_256, targets_reset, str, map)`
+
+Values beyond 24-bit are ignored.
+Negatives select from traditional palettes or stored references.
+
+
+[ Type >> transition_traits ]
+! CONTROL:
+	/type/
+		staticmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`255 2 269 14`
+(signature)`transition_traits(style_codes, from_traits, to_traits, chain)`
+
+
+[ Type >> change_text_traits ]
+! CONTROL:
+	/type/
+		staticmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`270 2 271 48`
+(signature)`change_text_traits(style_codes, index, traits)`
+
+
+[ Type >> select_transition ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`273 2 309 47`
+		- (type/syntax)`Iterable[bytes]`
+		
+(signature)`select_transition(self, former, latter)`
+
+Construct SGR codes necessary to transition the SGR state from (factor-local/parameter)&<#Type.select_transition.Parameters.former[former]> to (factor-local/parameter)&<#Type.select_transition.Parameters.latter[latter]>.
+
+Usually called through (factor-local/method)&<#Type.transition_render_parameters[transition_render_parameters]>.
+
+
+[ Type >> transition_render_parameters ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`311 2 312 77`
+(signature)`transition_render_parameters(self, former, latter)`
+
+
+[ Type >> reset_render_parameters ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`314 2 320 3`
+(signature)`reset_render_parameters(self, state)`
+
+
+[ Type >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`322 2 345 61`
+(signature)`__init__(self, encoding, errors, integer_encode_cache_size, word_encode_cache_size)`
+
+
+[ utf8_terminal_type ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`348 1 348 34`
+#!source
+	utf8_terminal_type = Type('utf-8')
+
+[ Context ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (source/area)`350 1 812 74`
+! INHERIT:
+	- (source/area)`350 15 350 20`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+Rendering Context for character matrices.
+
+Initialized using the terminal (factor-local/class)&<#Type[Type]> that designates how escape sequences should be serialized.
+
+Methods beginning with (id)`context_` are Context configuration interfaces
+returning the instance for method chaining. After creating a (factor-local/class)&<#Context[Context]> instance,
+some of them may need to be called for proper usage:
+
+- (factor-local/method)&<#Context.context_set_position[context_set_position]>
+- (factor-local/method)&<#Context.context_set_dimensions[context_set_dimensions]>
+- (factor-local/method)&<#Context.context_set_text_color[context_set_text_color]>
+- (factor-local/method)&<#Context.context_set_cell_color[context_set_cell_color]>
+
+Majority of methods return (invalid/unknown)&<#bytes> or iterables of (invalid/unknown)&<#bytes> that should be sent
+to the terminal to cause the desired effect.
+
+
+[ Context >> Text ]
+! CONTROL:
+	/type/
+		import
+	/element/
+		- (source/area)`387 2 394 6`
+Alias to the builtin (invalid/unknown)&<#str>.
+
+
+[ Context >> Units ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`387 2 394 6`
+
+[ Context >> Traits ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`387 2 394 6`
+
+[ Context >> RenderParameters ]
+! CONTROL:
+	/type/
+		import
+	/element/
+		- (source/area)`387 2 394 6`
+Type containing data used to render (project-local/factor-element)&<types#Text[fault.terminal.types.Text]> with the configured attributes.
+
+
+[ Context >> Words ]
+! CONTROL:
+	/type/
+		import
+	/element/
+		- (source/area)`387 2 394 6`
+Named type annotation describing the contents of a (project-local/factor-element)&<types#Phrase[fault.terminal.types.Phrase]>.
+
+
+[ Context >> Phrase ]
+! CONTROL:
+	/type/
+		import
+	/element/
+		- (source/area)`387 2 394 6`
+Sequence of (project-local/factor-element)&<types#Words[fault.terminal.types.Words]> type. The primary interest of higher-level methods on (factor-local/class)&<#Context[Context]>.
+Passed to (factor-local/method)&<#Context.render[render]> and (factor-local/method)&<#Context.print[print]>.
+
+
+[ Context >> Page ]
+! CONTROL:
+	/type/
+		import
+	/element/
+		- (source/area)`387 2 394 6`
+Named type annotation for a sequence of (project-local/factor-element)&<types#Phrase[fault.terminal.types.Phrase]>.
+
+
+[ Context >> control_mapping ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`396 2 396 63`
+#!source
+	control_mapping = {chr(i): chr(0x2400 + i) for i in range(32)}
+
+[ Context >> control_table ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`397 2 400 25`
+#!source
+	control_table = str.maketrans(control_mapping)
+		@staticmethod
+	@functools.lru_cache(32)
+
+[ Context >> translate ]
+! CONTROL:
+	/type/
+		staticmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`401 2 402 53`
+(signature)`translate(spoint, point)`
+
+
+[ Context >> point ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`404 2 404 21`
+#!source
+	point = (None, None)
+
+[ Context >> dimensions ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`405 2 405 26`
+#!source
+	dimensions = (None, None)
+
+[ Context >> width ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`406 2 406 22`
+#!source
+	width = height = None
+
+[ Context >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`407 2 422 10`
+(signature)`__init__(self, type)`
+
+
+[ Context >> _context_traits ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`423 2 431 10`
+
+[ Context >> context_render_parameters ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`432 2 438 4`
+
+[ Context >> context_set_position ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`440 2 446 13`
+(signature)`context_set_position(self, point)`
+
+Designate the absolute positioning of the character matrix.
+Appropriate interface to use to set (factor-local/parameter)&<#Context.context_set_position.Parameters.self[self.point]>.
+
+
+[ Context >> context_set_dimensions ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`448 2 455 13`
+(signature)`context_set_dimensions(self, dimensions)`
+
+Designate the width and height of the character matrix being targeted.
+Initializes (factor-local/data)&<#Context.dimensions[Context.dimensions]>, (factor-local/data)&<#Context.width[width]>, and (invalid/unknown)&<#height>.
+
+
+[ Context >> context_set_text_color ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`457 2 463 13`
+(signature)`context_set_text_color(self, color_id)`
+
+Configure the default text color.
+Used by (factor-local/method)&<#Context.reset_text[reset_text]> and (factor-local/method)&<#Context.reset_text_color[reset_text_color]>.
+
+
+[ Context >> context_set_cell_color ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`465 2 471 13`
+(signature)`context_set_cell_color(self, color_id)`
+
+Configure the default cell color.
+Used by (factor-local/method)&<#Context.reset_text[reset_text]> and (factor-local/method)&<#Context.reset_cell_color[reset_cell_color]>.
+
+
+[ Context >> context_set_line_color ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`473 2 479 13`
+(signature)`context_set_line_color(self, color_id)`
+
+Configure the default line color.
+Used by (factor-local/method)&<#Context.reset_text[reset_text]> and (factor-local/method)&<#Context.reset_line_color[reset_line_color]>.
+
+
+[ Context >> draw_unit_vertical ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`481 2 489 10`
+(signature)`draw_unit_vertical(self, character)`
+
+
+[ Context >> draw_unit_horizontal ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`491 2 492 31`
+(signature)`draw_unit_horizontal(self, character)`
+
+
+[ Context >> draw_segment_vertical ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`494 2 501 76`
+(signature)`draw_segment_vertical(self, unit, length)`
+
+
+[ Context >> draw_segment_horizontal ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`503 2 504 49`
+(signature)`draw_segment_horizontal(self, unit, length)`
+
+
+[ Context >> set_text_color ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`506 2 510 73`
+(signature)`set_text_color(self, color)`
+
+Construct the escape sequence for selecting a different text (foreground) color.
+
+
+[ Context >> set_cell_color ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`512 2 516 73`
+(signature)`set_cell_color(self, color)`
+
+Construct the escape sequence for selecting a different cell (background) color.
+
+
+[ Context >> set_line_color ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`518 2 522 73`
+(signature)`set_line_color(self, color)`
+
+Construct the escape sequence for selecting a different line (underline) color.
+
+
+[ Context >> set_render_parameters ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`524 2 525 49`
+(signature)`set_render_parameters(self, rp)`
+
+
+[ Context >> reset_text_color ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`527 2 531 92`
+(signature)`reset_text_color(self)`
+
+Use the text color configured with (factor-local/method)&<#Context.context_set_text_color[context_set_text_color]>.
+
+
+[ Context >> reset_cell_color ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`533 2 537 92`
+(signature)`reset_cell_color(self)`
+
+Use the cell color configured with (factor-local/method)&<#Context.context_set_cell_color[context_set_cell_color]>.
+
+
+[ Context >> reset_line_color ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`539 2 543 92`
+(signature)`reset_line_color(self)`
+
+Use the cell color configured with (factor-local/method)&<#Context.context_set_cell_color[context_set_cell_color]>.
+
+
+[ Context >> reset_colors ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`545 2 554 4`
+(signature)`reset_colors(self)`
+
+Using the cell and text colors stored on the Context, (factor-local/parameter)&<#Context.reset_colors.Parameters.self[self]>, construct
+a sequence to instruct the terminal to use those colors.
+
+
+[ Context >> reset_text ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`556 2 565 4`
+(signature)`reset_text(self)`
+
+Reset text traits and colors.
+
+
+[ Context >> draw_words ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`567 2 573 73`
+(signature)`draw_words(self, phrasewordtext, control_map)`
+
+Translate the given (invalid/unknown)&<#phraseword> with (factor-local/parameter)&<#Context.draw_words.Parameters.control_map[control_map]> and encode it
+with the Context's configured encoding.
+
+
+[ Context >> render ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`575 2 606 13`
+		- (type/syntax)`Iterable[bytes]`
+		
+(signature)`render(self, phrase, rparams)`
+
+Render the given (factor-local/parameter)&<#Context.render.Parameters.phrase[phrase]> for display on the terminal.
+Unlike most Context methods, (factor-local/method)&<#Context.render[render]> returns an iterator
+producing the sequences necessary to represent the phrase.
+
+[ >> Parameters ]
+
+/(parameter)`self`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`phrase`/
+	- (type/syntax)`Phrase`
+	- (type/project-local/factor-element)&<types#Phrase[fault.terminal.types.Phrase]>
+	
+	The sequence of words to render. The text of the word must
+	be retrievable at (index)`1` and the rendering parameters
+	must be retrievable at (index)`2`.
+
+/(parameter)`rparams`/
+	- (type/syntax)`RenderParameters`
+	- (type/project-local/factor-element)&<types#RenderParameters[fault.terminal.types.RenderParameters]>
+	
+	If (invalid/unknown)&<#None> is given, the configured text and cell colors are used for
+	identifying the initial transition into the Phrase.
+	When rendering multiple (project-local/factor-element)&<types#Phrase[fault.terminal.types.Phrase]> instances, the final triple of a phrase can be
+	provided to the next render call to make minimal transitions.
+
+
+[ Context >> print ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`608 2 666 40`
+		- (type/syntax)`Iterable[bytes]`
+		
+(signature)`print(self, phrases, cellcounts, indentations, width, zip)`
+
+Print the page of phrases using (factor-local/method)&<#Context.render[render]>.
+
+Text Properties will be unconditionally reset, and lines will
+be presumed dirty causing a following erase to be emitted after
+the phrase is rendered.
+
+(factor-local/method)&<#Context.print[print]>, tentatively, expects the cursor to be at the desired starting location and
+that the number of (factor-local/parameter)&<#Context.print.Parameters.phrases[phrases]> not exceed the (invalid/unknown)&<#height> of the context.
+
+[ >> Parameters ]
+
+/(parameter)`self`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`phrases`/
+	- (type/syntax)`Page`
+	- (type/project-local/factor-element)&<types#Page[fault.terminal.types.Page]>
+	
+	The (project-local/factor-element)&<types#Phrase[fault.terminal.types.Phrase]> instances that populate each line in the page.
+
+/(parameter)`cellcounts`/
+	- (type/syntax)`Sequence[int]`
+	
+	The result of the corresponding (project-local/factor-element)&<types#Phrase.cellcount[fault.terminal.types.Phrase.cellcount]> method.
+	Usually cached alongside (factor-local/parameter)&<#Context.print.Parameters.phrases[phrases]>.
+
+/(parameter)`indentations`/
+	- (type/syntax)`Sequence[int]`
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`width`/
+	
+	Optional width override. Defaults to (factor-local/parameter)&<#Context.print.Parameters.self[self.width]>.
+
+/(parameter)`zip`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ Context >> spaces ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`668 2 676 53`
+(signature)`spaces(self, count)`
+
+Construct a sequence or characters necessary for writing (factor-local/parameter)&<#Context.spaces.Parameters.count[count]> spaces.
+Uses REP.
+
+
+[ Context >> clear_line ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`678 2 679 59`
+(signature)`clear_line(self, lineno)`
+
+
+[ Context >> clear_to_line ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`681 2 682 46`
+(signature)`clear_to_line(self, lineno)`
+
+
+[ Context >> clear_to_bottom ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`684 2 685 24`
+(signature)`clear_to_bottom(self)`
+
+
+[ Context >> clear_before_cursor ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`687 2 688 27`
+(signature)`clear_before_cursor(self)`
+
+
+[ Context >> clear_after_cursor ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`690 2 691 24`
+(signature)`clear_after_cursor(self)`
+
+
+[ Context >> clear_current_line ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`693 2 694 63`
+(signature)`clear_current_line(self)`
+
+
+[ Context >> clear ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`696 2 710 48`
+(signature)`clear(self)`
+
+Clear the area according to its configured width and default text properties.
+
+Text properties will be reset; the cell color configured on the context will be used.
+
+
+[ Context >> erase ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`712 2 720 44`
+(signature)`erase(self, count)`
+
+Erase the given (factor-local/parameter)&<#Context.erase.Parameters.count[count]> of characters after the cursor.
+Cursor position should be unchanged after the erase.
+
+This should respect the current cell color, but not traits like underline.
+
+
+[ Context >> seek_absolute ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`722 2 727 60`
+		- (type/syntax)`bytes`
+		- (type/invalid/unknown)&<#bytes>
+		
+(signature)`seek_absolute(self, coordinates)`
+
+Primitive absolute seek; Context cursor poisition is *not* updated.
+
+
+[ Context >> seek_horizontal_relative ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`729 2 738 13`
+		- (type/syntax)`bytes`
+		- (type/invalid/unknown)&<#bytes>
+		
+(signature)`seek_horizontal_relative(self, cells)`
+
+Primitive relative seek; Context cursor position is *not* updated.
+
+
+[ Context >> seek_vertical_relative ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`740 2 749 13`
+		- (type/syntax)`bytes`
+		- (type/invalid/unknown)&<#bytes>
+		
+(signature)`seek_vertical_relative(self, cells)`
+
+Primitive relative seek; Context cursor position is *not* updated.
+
+
+[ Context >> seek_first ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`751 2 757 25`
+(signature)`seek_first(self)`
+
+Seek the first cell in the Context.
+
+Requires prior (factor-local/method)&<#Context.context_set_position[context_set_position]>.
+
+
+[ Context >> seek_last ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`759 2 766 30`
+(signature)`seek_last(self)`
+
+Seek the last cell in the Context.
+
+Requires prior (factor-local/method)&<#Context.context_set_dimensions[context_set_dimensions]>.
+
+
+[ Context >> seek ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`768 2 773 62`
+(signature)`seek(self, point)`
+
+Seek to the point relative to the area and store the point on the context.
+
+
+[ Context >> tell ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`775 2 776 29`
+(signature)`tell(self)`
+
+
+[ Context >> seek_bottom ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`778 2 782 38`
+(signature)`seek_bottom(self)`
+
+Seek to the last row of the area and the first column.
+
+
+[ Context >> seek_start_of_line ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`784 2 788 48`
+(signature)`seek_start_of_line(self)`
+
+Seek to the start of the line.
+
+
+[ Context >> seek_line ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`790 2 794 31`
+(signature)`seek_line(self, lineno)`
+
+Seek to the beginning of a particular line number.
+
+
+[ Context >> seek_next_line ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`796 2 800 50`
+(signature)`seek_next_line(self)`
+
+Seek beginning of next line.
+
+
+[ Context >> seek_next_column ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`802 2 804 28`
+(signature)`seek_next_column(self)`
+
+
+[ Context >> seek_relative ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`806 2 812 74`
+(signature)`seek_relative(self, rcoords)`
+
+Seek the relative coordinates and update the Context's cursor.
+
+
+[ Screen ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (source/area)`814 1 952 63`
+! INHERIT:
+	- (source/area)`814 14 814 20`
+	- (type/syntax)`Context`
+	- (type/factor-local/class)&<#Context[Context]>
+	
+Matrix (factor-local/class)&<#Context[Context]> bound to the first column and row.
+
+Screens are given a slightly wider scope than (factor-local/class)&<#Context[Context]> and provides
+access to some configuration options that are not always maintained
+for the duration of the process.
+
+
+[ Screen >> point ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`822 2 822 27`
+#!source
+	point = types.Point((0,0))
+
+[ Screen >> set_window_title_text ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`824 2 829 73`
+(signature)`set_window_title_text(self, title)`
+
+Instruct the emulator to use the given title for the window.
+The given (factor-local/parameter)&<#Screen.set_window_title_text.Parameters.title[title]> should be plain text and control characters will be translated.
+
+
+[ Screen >> report_cursor_position ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`831 2 835 30`
+(signature)`report_cursor_position(self)`
+
+Request that the terminal report the cursor position.
+
+
+[ Screen >> report_device_status ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`837 2 841 30`
+(signature)`report_device_status(self)`
+
+Request that the terminal report status.
+
+
+[ Screen >> set_cursor_visible ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`843 2 850 42`
+(signature)`set_cursor_visible(self, visible)`
+
+Adjust cursor visibility.
+
+
+[ Screen >> set_cursor_blink ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`852 2 859 42`
+(signature)`set_cursor_blink(self, blinking)`
+
+Adjust cursor blink state.
+
+
+[ Screen >> reset ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`861 2 865 25`
+(signature)`reset(self)`
+
+Construct a soft terminal reset.
+
+
+[ Screen >> set_scrolling_region ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`867 2 871 67`
+(signature)`set_scrolling_region(self, top, bottom)`
+
+Confine the scrolling area to the given rows.
+
+
+[ Screen >> reset_scrolling_region ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`873 2 877 24`
+(signature)`reset_scrolling_region(self)`
+
+Set the scrolling region to the entire screen.
+
+
+[ Screen >> open_scrolling_region ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`879 2 887 80`
+(signature)`open_scrolling_region(self, top, bottom)`
+
+Set the scrolling region, enter it, and seek the bottom.
+Subsequent (factor-local/method)&<#Screen.exit_scrolling_region[exit_scrolling_region]> and (factor-local/method)&<#Screen.enter_scrolling_region[enter_scrolling_region]>
+should be use to maintain the SR's state.
+
+
+[ Screen >> close_scrolling_region ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`889 2 897 68`
+(signature)`close_scrolling_region(self)`
+
+Save the screen buffer, reset the scrolling region, and restore the buffer.
+This preserves the screen's state after the transition.
+
+
+[ Screen >> store_cursor_location ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`899 2 903 24`
+(signature)`store_cursor_location(self)`
+
+Emulator level cursor storage.
+
+
+[ Screen >> restore_cursor_location ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`906 2 910 24`
+(signature)`restore_cursor_location(self)`
+
+Restore a previously stored cursor location.
+
+
+[ Screen >> scroll_up ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`913 2 917 44`
+(signature)`scroll_up(self, count)`
+
+Adjust the scroll region's view by scrolling up (factor-local/parameter)&<#Screen.scroll_up.Parameters.count[count]> rows.
+
+
+[ Screen >> scroll_down ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`919 2 923 44`
+(signature)`scroll_down(self, count)`
+
+Adjust the scroll region's view by scrolling down (factor-local/parameter)&<#Screen.scroll_down.Parameters.count[count]> rows.
+
+
+[ Screen >> scroll ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`925 2 933 45`
+(signature)`scroll(self, lines)`
+
+Scroll forwards if quantity is positive or zero, backwards if negative.
+
+
+[ Screen >> enter_scrolling_region ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`935 2 941 33`
+(signature)`enter_scrolling_region(self)`
+
+Enter scrolling region; normal terminal output; restores cursor location.
+
+
+[ Screen >> exit_scrolling_region ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`943 2 949 62`
+(signature)`exit_scrolling_region(self)`
+
+Exit scrolling region; allow out of region printing; saves cursor location.
+
+
+[ Screen >> clear ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`951 2 952 63`
+(signature)`clear(self)`
+

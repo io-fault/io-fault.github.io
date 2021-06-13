@@ -1,0 +1,142 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 199 40`
+Most of the tests here are sanity tests primarily checking to make sure exceptions aren't
+raised from good parameters.
+
+
+[ module ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`5 1 5 31`
+
+[ types ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`6 1 6 20`
+#!source
+	types = module.types
+
+[ test_Type ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`8 1 15 61`
+(signature)`test_Type(test)`
+
+- (project-local/factor-element)&<matrix#Type[fault.terminal.matrix.Type]>
+
+
+[ test_Type_transition ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`17 1 48 55`
+(signature)`test_Type_transition(test)`
+
+- (project-local/factor-element)&<matrix#Type.transition_render_parameters[fault.terminal.matrix.Type.transition_render_parameters]>
+- (project-local/factor-element)&<matrix#Type.select_transition[fault.terminal.matrix.Type.select_transition]>
+
+
+[ test_Type_linecolor_transition ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`50 1 78 42`
+(signature)`test_Type_linecolor_transition(test)`
+
+- (project-local/factor-element)&<matrix#Type.transition_render_parameters[fault.terminal.matrix.Type.transition_render_parameters]>
+- (project-local/factor-element)&<matrix#Type.select_transition[fault.terminal.matrix.Type.select_transition]>
+
+
+[ test_Context_render_transitions ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`80 1 113 79`
+(signature)`test_Context_render_transitions(test)`
+
+- (project-local/factor-element)&<matrix#Context.render[fault.terminal.matrix.Context.render]>
+
+Validates that (project-local/factor-element)&<matrix#Context.transition[fault.terminal.matrix.Context.transition]> is properly applied.
+
+
+[ test_Context_stored_colors ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`115 1 142 57`
+(signature)`test_Context_stored_colors(test)`
+
+- (project-local/factor-element)&<matrix#Context.context_set_text_color[fault.terminal.matrix.Context.context_set_text_color]>
+- (project-local/factor-element)&<matrix#Context.context_set_cell_color[fault.terminal.matrix.Context.context_set_cell_color]>
+- (project-local/factor-element)&<matrix#Context.context_set_line_color[fault.terminal.matrix.Context.context_set_line_color]>
+- (project-local/factor-element)&<matrix#Context.set_text_color[fault.terminal.matrix.Context.set_text_color]>
+- (project-local/factor-element)&<matrix#Context.set_cell_color[fault.terminal.matrix.Context.set_cell_color]>
+- (project-local/factor-element)&<matrix#Context.set_line_color[fault.terminal.matrix.Context.set_line_color]>
+- (project-local/factor-element)&<matrix#Context.reset_colors[fault.terminal.matrix.Context.reset_colors]>
+- (project-local/factor-element)&<matrix#Context.render[fault.terminal.matrix.Context.render]>
+
+
+[ test_Screen_methods ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`144 1 163 30`
+(signature)`test_Screen_methods(test)`
+
+- (project-local/factor-element)&<matrix#Screen[fault.terminal.matrix.Screen]>
+
+Check sanity of the additional screen methods.
+
+
+[ test_Context_seek ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`165 1 178 29`
+(signature)`test_Context_seek(test)`
+
+- (project-local/factor-element)&<matrix#Context.seek[fault.terminal.matrix.Context.seek]>
+- (project-local/factor-element)&<matrix#Context.tell[fault.terminal.matrix.Context.tell]>
+- (project-local/factor-element)&<matrix#Context.seek_last[fault.terminal.matrix.Context.seek_last]>
+
+
+[ test_Context_properties ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`180 1 189 31`
+(signature)`test_Context_properties(test)`
+
+- (project-local/factor-element)&<matrix#Context[fault.terminal.matrix.Context]>
+
+
+[ test_Context_draw_words ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`191 1 196 39`
+(signature)`test_Context_draw_words(test)`
+
+- (project-local/factor-element)&<matrix#Context.draw_words[fault.terminal.matrix.Context.draw_words]>
+

@@ -1,0 +1,38 @@
+<html><head><title>meta.syntax.lines.xslt</title><meta charset="utf-8"/><link as="style" rel="preload" href="../../.legacy-web/core.css"></link><link as="style" rel="preload" href="../../.legacy-web/factor.css"></link><link rel="stylesheet" href="../../.legacy-web/core.css"></link><link rel="stylesheet" href="../../.legacy-web/factor.css"></link></head><body><main><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><span class="title">meta.syntax.lines.xslt</span><span class="factor-type">http://if.fault.io/factors/python.module</span></h1><div class="text.abstract"><p><span class="text.normal">XSLT language profile.</span></p></div><section class="import" documented="false" local-identifier="itertools" id="itertools"><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><a class="title" href="#itertools"><span class="text.normal">itertools</span></a><span class="abstract-type">import</span></h1></section><section class="import" documented="false" local-identifier="fields" id="fields"><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><a class="title" href="#fields"><span class="text.normal">fields</span></a><span class="abstract-type">import</span></h1></section><section class="data" documented="false" local-identifier="indentation_width" id="indentation_width"><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><a class="title" href="#indentation_width"><span class="text.normal">indentation_width</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code>indentation_width = 1
+</code></pre></section><section class="data" documented="false" local-identifier="_keywords" id="_keywords"><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><a class="title" href="#_keywords"><span class="text.normal">_keywords</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code>_keywords = [
+	'include', 'import',
+	'attribute',
+	'element',
+	'call-template',
+	'with-param',
+	'template',
+	'transform',
+
+	'if',
+	'choose',
+	'when',
+	'otherwise',
+	'for-each',
+	'apply-templates',
+	'sort',
+
+	'param',
+	'variable',
+
+	'value-of',
+	'copy-of',
+	'text',
+]
+</code></pre></section><section class="data" documented="false" local-identifier="keywords" id="keywords"><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><a class="title" href="#keywords"><span class="text.normal">keywords</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code>keywords = {y: y for y in map(fields.String, _keywords)}
+</code></pre></section><section class="data" documented="false" local-identifier="cores" id="cores"><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><a class="title" href="#cores"><span class="text.normal">cores</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code>cores = {
+	'xsl': fields.String('xsl'),
+	'xmlns': fields.String('xmlns'),
+	'xml': fields.String('xml')
+}
+</code></pre></section><section class="data" documented="false" local-identifier="terminators" id="terminators"><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><a class="title" href="#terminators"><span class="text.normal">terminators</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code>terminators = {y: y for y in map(fields.Constant, "&#60;&#62;")}
+</code></pre></section><section class="data" documented="false" local-identifier="separators" id="separators"><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><a class="title" href="#separators"><span class="text.normal">separators</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code>separators = {}
+</code></pre></section><section class="data" documented="false" local-identifier="routers" id="routers"><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><a class="title" href="#routers"><span class="text.normal">routers</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code>routers = {':': fields.Constant(":")}
+</code></pre></section><section class="data" documented="false" local-identifier="operators" id="operators"><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><a class="title" href="#operators"><span class="text.normal">operators</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code>operators = {y: y for y in map(fields.Constant, ";@!&#38;^*%+=\\/&#60;&#62;?~|")}
+</code></pre></section><section class="data" documented="false" local-identifier="groupings" id="groupings"><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><a class="title" href="#groupings"><span class="text.normal">groupings</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code>groupings = {y: y for y in map(fields.Constant, "()[]{}")}
+</code></pre></section><section class="data" documented="false" local-identifier="quotations" id="quotations"><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><a class="title" href="#quotations"><span class="text.normal">quotations</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code>quotations = {y: y for y in map(fields.Constant, ("'", '"',))}
+</code></pre></section><h1 class="footing"></h1></main></body></html>

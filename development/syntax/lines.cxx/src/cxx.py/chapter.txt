@@ -1,0 +1,241 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 117 0`
+C language profile.
+
+
+[ fields ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`4 1 4 21`
+
+[ c ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`5 1 5 15`
+
+[ keyword_list ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`7 1 94 1`
+#!source
+	keyword_list = [
+		'alignas',
+		'alignof',
+		'and',
+		'and_eq',
+		'asm',
+		'auto',
+		'bitand',
+		'bitor',
+		'bool',
+		'break',
+		'case',
+		'catch',
+		'char',
+		'char16_t',
+		'char32_t',
+		'class',
+		'compl',
+		'concept',
+		'const',
+		'constexpr',
+		'const_cast',
+		'continue',
+		'decltype',
+		'default',
+		'delete',
+		'do',
+		'double',
+		'dynamic_cast',
+		'else',
+		'enum',
+		'explicit',
+		'export',
+		'extern',
+		'false',
+		'float',
+		'for',
+		'friend',
+		'goto',
+		'if',
+		'inline',
+		'int',
+		'long',
+		'mutable',
+		'namespace',
+		'new',
+		'noexcept',
+		'not',
+		'not_eq',
+		'nullptr',
+		'operator',
+		'or',
+		'or_eq',
+		'private',
+		'protected',
+		'public',
+		'register',
+		'reinterpret_cast',
+		'requires',
+		'return',
+		'short',
+		'signed',
+		'sizeof',
+		'static',
+		'static_assert',
+		'static_cast',
+		'struct',
+		'switch',
+		'template',
+		'this',
+		'thread_local',
+		'throw',
+		'true',
+		'try',
+		'typedef',
+		'typeid',
+		'typename',
+		'union',
+		'unsigned',
+		'using',
+		'virtual',
+		'void',
+		'volatile',
+		'wchar_t',
+		'while',
+		'xor',
+		'xor_eq',
+	]
+
+[ core_list ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`96 1 104 1`
+#!source
+	core_list = [
+		'unique_ptr',
+		'shared_ptr',
+		'weak_ptr',
+		'auto_ptr',
+	
+		'align',
+		'addressof',
+	]
+
+[ keywords ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`108 1 108 59`
+#!source
+	keywords = {y: y for y in map(fields.String, keyword_list)}
+
+[ cores ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`109 1 109 53`
+#!source
+	cores = {y: y for y in map(fields.String, core_list)}
+
+[ exowords ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`110 1 110 21`
+#!source
+	exowords = c.exowords
+
+[ terminators ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`112 1 112 55`
+#!source
+	terminators = {y: y for y in map(fields.Constant, ";")}
+
+[ separators ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`113 1 113 54`
+#!source
+	separators = {y: y for y in map(fields.Constant, ",")}
+
+[ routers ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`114 1 114 61`
+#!source
+	routers = {y: y for y in map(fields.Constant, (".","-",">"))} # "->"; needs special handling
+
+[ operators ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`115 1 115 70`
+#!source
+	operators = {y: y for y in map(fields.Constant, "@!&^*%+=-|\\/<>?~:")}
+
+[ groupings ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`116 1 116 58`
+#!source
+	groupings = {y: y for y in map(fields.Constant, "()[]{}")}
+
+[ quotations ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`117 1 117 62`
+#!source
+	quotations = {y: y for y in map(fields.Constant, ("'", '"',))}

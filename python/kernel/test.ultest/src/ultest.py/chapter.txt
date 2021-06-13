@@ -1,0 +1,29 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 12 1`
+unit library test module
+
+
+[ func ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`6 1 7 14`
+(signature)`func(sector)`
+
+
+[ libs ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`10 1 12 11`
+(signature)`libs(sector)`
+

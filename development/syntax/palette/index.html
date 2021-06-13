@@ -1,0 +1,58 @@
+<html><head><title>meta.syntax.palette</title><meta charset="utf-8"/><link as="style" rel="preload" href="../../.legacy-web/core.css"></link><link as="style" rel="preload" href="../../.legacy-web/factor.css"></link><link rel="stylesheet" href="../../.legacy-web/core.css"></link><link rel="stylesheet" href="../../.legacy-web/factor.css"></link></head><body><main><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><span class="title">meta.syntax.palette</span><span class="factor-type">http://if.fault.io/factors/python.module</span></h1><div class="text.abstract"><p><span class="text.normal">Theme data. Colors and text borders.</span></p></div><section class="data" documented="false" local-identifier="colors" id="colors"><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><a class="title" href="#colors"><span class="text.normal">colors</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code>colors = (
+	# These are the symbols used to identify the sixteen colors commonly
+	# made available by terminals and emulators. Either this list can be
+	# reorganzied to match a terminal's existing configuration or the
+	# terminal can be reconfigured to match this list's expectations.
+
+	'background-limit', # black (used for embossed areas)
+
+	'exception',        # red
+	'endpoint',         # green
+	'highlighter',      # yellow
+	'keyword',          # blue
+	'core',             # purple, normally magenta
+	'comment',          # teal, normally cyan (fake text; markers)
+	'gray',             # white (darker default text)
+
+	'dark',             # bright black (lighter default cell)
+
+	# Position indicators on borders:
+		'stop',         # bright red
+		'start',        # bright green
+		'current',      # bright yellow
+
+	'blue',             # bright blue
+	'magenta',          # bright magenta (magenta)
+	'preprocessor',     # bright cyan (oranage)
+
+	'foreground-limit', # bright white (currently unused)
+)
+</code></pre></section><section class="data" documented="false" local-identifier="theme" id="theme"><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><a class="title" href="#theme"><span class="text.normal">theme</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code>theme = {
+	'comment': -(512 + colors.index('comment')),
+	'quotation': -(512 + colors.index('gray')),
+	'indent': -(512 + colors.index('dark')),
+	'keyword': -(512 + colors.index('keyword')),
+	'core': -(512 + colors.index('core')),
+	'exoword': -(512 + colors.index('preprocessor')),
+
+	'identifier': -(1024),
+	'expression': -(1024),
+
+	'cell': -(1024), # (terminal) default cell color
+
+	'border': -(512 + colors.index('dark')),
+	'refraction-type': -(512 + colors.index('blue')),
+	'cursor-text': -(512 + colors.index('background-limit')),
+}
+</code></pre></section><section class="data" documented="false" local-identifier="range_colors" id="range_colors"><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><a class="title" href="#range_colors"><span class="text.normal">range_colors</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code>range_colors = {
+	'start-inclusive': -(512 + colors.index('start')),
+	'stop-inclusive': -(512 + colors.index('preprocessor')), # orange (between yellow and red)
+
+	'offset-active': -(512 + colors.index('current')), # yellow, actual position
+	'offset-inactive': -(512 + colors.index('gray')),
+
+	'start-exclusive': -(512 + colors.index('start')),
+	'stop-exclusive': -(512 + colors.index('stop')),
+	'clear': theme['border'],
+}
+</code></pre></section><h1 class="footing"></h1></main></body></html>

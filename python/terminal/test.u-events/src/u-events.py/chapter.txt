@@ -1,0 +1,208 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 300 40`
+
+[ events ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1 1 1 21`
+
+[ test_ictlchr ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`3 1 30 52`
+(signature)`test_ictlchr(test)`
+
+Check for basic consistency.
+
+
+[ test_print ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`32 1 37 69`
+(signature)`test_print(test)`
+
+- (project-local/factor-element)&<events#print[fault.terminal.events.print]>
+
+
+[ test_dispatch_sequence_common ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`39 1 51 71`
+(signature)`test_dispatch_sequence_common(test)`
+
+- (project-local/factor-element)&<events#dispatch_sequence[fault.terminal.events.dispatch_sequence]>
+
+
+[ test_dispatch_sequence_empty_parameters ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`53 1 60 75`
+(signature)`test_dispatch_sequence_empty_parameters(test)`
+
+- (project-local/factor-element)&<events#dispatch_sequence[fault.terminal.events.dispatch_sequence]>
+
+
+[ test_dispatch_sequence_no_terminator ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`62 1 74 72`
+(signature)`test_dispatch_sequence_no_terminator(test)`
+
+- (project-local/factor-element)&<events#dispatch_sequence[fault.terminal.events.dispatch_sequence]>
+
+(invalid/unknown)&<#None> is used to signal that no final character was present.
+
+
+[ test_dispatch_sequence_no_negatives ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`76 1 81 76`
+(signature)`test_dispatch_sequence_no_negatives(test)`
+
+- (project-local/factor-element)&<events#dispatch_sequence[fault.terminal.events.dispatch_sequence]>
+
+
+[ test_Parser_literal ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`83 1 101 85`
+(signature)`test_Parser_literal(test)`
+
+- (project-local/factor-element)&<events#Parser[fault.terminal.events.Parser]>
+- (project-local/factor-element)&<events#parser[fault.terminal.events.parser]>
+
+
+[ test_Parser_u_control ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`103 1 116 80`
+(signature)`test_Parser_u_control(test)`
+
+- (project-local/factor-element)&<events#Parser[fault.terminal.events.Parser]>
+- (project-local/factor-element)&<events#parser[fault.terminal.events.parser]>
+- (project-local/factor-element)&<events#sequence_map[fault.terminal.events.sequence_map]>
+
+
+[ test_Parser_compound_events ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`118 1 148 2`
+(signature)`test_Parser_compound_events(test)`
+
+- (project-local/factor-element)&<events#Parser[fault.terminal.events.Parser]>
+- (project-local/factor-element)&<events#parser[fault.terminal.events.parser]>
+
+
+[ test_Parser_incompleted_sequence ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`150 1 166 56`
+(signature)`test_Parser_incompleted_sequence(test)`
+
+- (project-local/factor-element)&<events#Parser[fault.terminal.events.Parser]>
+- (project-local/factor-element)&<events#parser[fault.terminal.events.parser]>
+
+
+[ test_Parser_completed_sequence ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`168 1 185 78`
+(signature)`test_Parser_completed_sequence(test)`
+
+- (project-local/factor-element)&<events#Parser[fault.terminal.events.Parser]>
+- (project-local/factor-element)&<events#parser[fault.terminal.events.parser]>
+
+
+[ test_Parser_focus_events ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`187 1 202 67`
+(signature)`test_Parser_focus_events(test)`
+
+- (project-local/factor-element)&<events#Parser[fault.terminal.events.Parser]>
+- (project-local/factor-element)&<events#parser[fault.terminal.events.parser]>
+- (project-local/factor-element)&<events#sequence_map[fault.terminal.events.sequence_map]>
+
+
+[ test_Parser_common_tabs ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`204 1 220 81`
+(signature)`test_Parser_common_tabs(test)`
+
+- (project-local/factor-element)&<events#Parser[fault.terminal.events.Parser]>
+- (project-local/factor-element)&<events#parser[fault.terminal.events.parser]>
+- (project-local/factor-element)&<events#sequence_map[fault.terminal.events.sequence_map]>
+
+
+[ test_Parser_paste ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`222 1 249 87`
+(signature)`test_Parser_paste(test)`
+
+- (project-local/factor-element)&<events#Parser[fault.terminal.events.Parser]>
+- (project-local/factor-element)&<events#parser[fault.terminal.events.parser]>
+- (project-local/factor-element)&<events#process_region_data[fault.terminal.events.process_region_data]>
+
+
+[ test_Parser_paste_oneshot ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`251 1 276 75`
+(signature)`test_Parser_paste_oneshot(test)`
+
+- (project-local/factor-element)&<events#Parser[fault.terminal.events.Parser]>
+- (project-local/factor-element)&<events#parser[fault.terminal.events.parser]>
+- (project-local/factor-element)&<events#process_region_data[fault.terminal.events.process_region_data]>
+
+
+[ test_Parser_paste_edge ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`278 1 297 61`
+(signature)`test_Parser_paste_edge(test)`
+
+- (project-local/factor-element)&<events#Parser[fault.terminal.events.Parser]>
+- (project-local/factor-element)&<events#parser[fault.terminal.events.parser]>
+- (project-local/factor-element)&<events#process_region_data[fault.terminal.events.process_region_data]>
+

@@ -1,0 +1,13 @@
+/**
+	// Qualifiers for documenting the ownership of a memory resource.
+*/
+
+/**
+	// Declare the intended scope of a pointer.
+	// #!syntax/c
+		int memctl(process) *permanent_pointer;
+		int memctl(function) *function_only_pointer;
+		int memctl(scope) *free_at_end_of_block;
+		int memctl(inherit) *released_by_containing_resource;
+*/
+#define memctl(TYP) __attribute__((memory-control(#TYP)))

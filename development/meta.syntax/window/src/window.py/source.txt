@@ -1,0 +1,65 @@
+"""
+# Implementations for Window event endpoints.
+"""
+
+def delete_full(window):
+	"""
+	# ???
+	"""
+
+def delete_current(window):
+	"""
+	# Close the refraction referenced by the current pane.
+	"""
+
+def delete_backward(window):
+	"""
+	# Close the refraction referenced by the current pane.
+	"""
+
+def open_after(window):
+	"""
+	# Split the pane vertically with a command refraction
+	# connected to the new area below the current pane.
+	"""
+	pass
+
+def open_before(window):
+	"""
+	# Split the pane vertically with a command refraction
+	# connected to the new area above the current pane.
+	"""
+	pass
+
+def split(window):
+	"""
+	# (default binding: 'n')
+	# Fork the pane creating a new refraction connected to
+	# the same document. The targeted pane will be split in half.
+	"""
+
+def join(window):
+	"""
+	# Collapse the current pane expanding the area of the pane below.
+	# No-op if there's only one pane in the vertical.
+	"""
+
+def navigation_horizontal_forward(window):
+	"""
+	# Select the pane right of the current pane.
+	"""
+
+def navigation_horizontal_backward(window):
+	"""
+	# Select the pane left of the current pane.
+	"""
+
+def navigation_vertical_forward(window):
+	"""
+	# Select the pane below the current pane.
+	"""
+
+def navigation_vertical_backward(window):
+	"""
+	# Select the pane above the current pane.
+	"""

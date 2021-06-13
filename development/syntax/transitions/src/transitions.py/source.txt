@@ -1,0 +1,27 @@
+"""
+# Implementations for Transition event endpoints.
+"""
+
+def open_vertical_after(refraction, quantity=1):
+	"""
+	# Split the pane vertically with a command refraction
+	# connected to the new area below the current pane.
+	"""
+	pass
+
+def open_vertical_before(refraction, quantity=1):
+	"""
+	# Split the pane vertically with a command refraction
+	# connected to the new area above the current pane.
+	"""
+	pass
+
+def open_vertical_between(refraction, quantity=1):
+	"""
+	# Split the current line at the cursor's current position.
+	"""
+
+def join_vertical(refraction, cursor, quantity=1):
+	"""
+	# Join the current line with the following line.
+	"""

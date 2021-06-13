@@ -1,0 +1,263 @@
+! CONTROL:
+	/type/
+		unit
+	/element/
+		- (source/area)``
+
+[ PYTHON_TYPES ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`490 9 491 11`
+(signature)`PYTHON_TYPES()`
+
+
+[ MODULE_FUNCTIONS ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`493 9 495 50`
+(signature)`MODULE_FUNCTIONS()`
+
+
+[ ID ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`501 10 505 14`
+#!source
+	#define ID(NAME) \
+		if (PyType_Ready((PyTypeObject *) &( NAME##Type ))) \
+			goto error; \
+		if (PyModule_AddObject(module, #NAME, (PyObj) &( NAME##Type )) < 0) \
+			goto error;
+
+[ fs_device ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`17 1 38 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`fs_device(self)`
+
+
+[ cells ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`40 1 113 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`cells(self, parameter)`
+
+
+[ device_set_controlling_process ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`115 1 129 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`device_set_controlling_process(self, ob)`
+
+
+[ device_get_controlling_process ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`131 1 142 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`device_get_controlling_process(self)`
+
+
+[ device_get_window_dimensions ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`144 1 181 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`device_get_window_dimensions(self)`
+
+
+[ device_fs_path ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`183 1 196 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`device_fs_path(self)`
+
+
+[ device_send_break ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`198 1 212 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`device_send_break(self, args)`
+
+
+[ device_drain ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`214 1 224 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`device_drain(self)`
+
+
+[ device_record ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`226 1 236 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`device_record(self)`
+
+
+[ device_restore ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`238 1 248 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`device_restore(self)`
+
+
+[ device_set_message_limits ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`250 1 271 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`device_set_message_limits(self, args)`
+
+
+[ device_set_raw ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`273 1 295 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`device_set_raw(self)`
+
+
+[ device_set_cbreak ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`297 1 315 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`device_set_cbreak(self)`
+
+
+[ device_set_cooked ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`317 1 352 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`device_set_cooked(self)`
+
+
+[ device_open ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`354 1 387 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`device_open(subtype, args)`
+
+
+[ device_fileno ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`389 1 394 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`device_fileno(self)`
+
+
+[ device_new ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`427 1 445 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`device_new(subtype, args, kw)`
+

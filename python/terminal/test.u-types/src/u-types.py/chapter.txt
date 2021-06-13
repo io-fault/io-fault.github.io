@@ -1,0 +1,472 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 658 40`
+- (project-local/unknown)&<types>
+
+
+[ module ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`4 1 4 30`
+
+[ notraits ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`5 1 5 26`
+#!source
+	notraits = module.NoTraits
+
+[ test_Modifiers ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`7 1 23 22`
+(signature)`test_Modifiers(test)`
+
+
+[ test_Traits ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`25 1 33 38`
+(signature)`test_Traits(test)`
+
+- (project-local/factor-element)&<types#Traits[fault.terminal.types.Traits]>
+
+
+[ test_Traits_unique ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`35 1 42 41`
+(signature)`test_Traits_unique(test)`
+
+- (project-local/factor-element)&<types#Traits[fault.terminal.types.Traits]>
+
+
+[ test_Traits_expected ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`44 1 72 16`
+(signature)`test_Traits_expected(test)`
+
+- (project-local/factor-element)&<types#Traits[fault.terminal.types.Traits]>
+
+
+[ test_RenderParameters ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`74 1 87 44`
+(signature)`test_RenderParameters(test)`
+
+- (project-local/factor-element)&<types#RenderParameters[fault.terminal.types.RenderParameters]>
+
+
+[ test_RenderParameters_apply ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`89 1 100 49`
+(signature)`test_RenderParameters_apply(test)`
+
+- (project-local/factor-element)&<types#RenderParamters.apply[fault.terminal.types.RenderParamters.apply]>
+
+
+[ test_RenderParameters_traits ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`102 1 118 55`
+(signature)`test_RenderParameters_traits(test)`
+
+- (project-local/factor-element)&<types#RenderParameters.clear[fault.terminal.types.RenderParameters.clear]>
+- (project-local/factor-element)&<types#RenderParameters.set[fault.terminal.types.RenderParameters.set]>
+
+
+[ test_RenderParameters_equality ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`120 1 130 15`
+(signature)`test_RenderParameters_equality(test)`
+
+- (project-local/factor-element)&<types#RenderParameters[fault.terminal.types.RenderParameters]>
+
+
+[ test_Units ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`132 1 153 32`
+(signature)`test_Units(test)`
+
+- (project-local/factor-element)&<types#Units[fault.terminal.types.Units]>
+
+
+[ test_Units_slice ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`155 1 170 15`
+(signature)`test_Units_slice(test)`
+
+- (project-local/factor-element)&<types#Units.__getitem__[fault.terminal.types.Units.__getitem__]>
+
+
+[ test_grapheme ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`172 1 185 30`
+(signature)`test_grapheme(test)`
+
+- (project-local/factor-element)&<types#Phrase.grapheme[fault.terminal.types.Phrase.grapheme]>
+
+
+[ test_itergraphemes ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`187 1 189 46`
+(signature)`test_itergraphemes(test)`
+
+
+[ test_Phrase_properties ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`191 1 203 25`
+(signature)`test_Phrase_properties(test)`
+
+- (project-local/factor-element)&<types#Phrase.cellcount[fault.terminal.types.Phrase.cellcount]>
+- (project-local/factor-element)&<types#Phrase.stringlength[fault.terminal.types.Phrase.stringlength]>
+
+
+[ test_Phrase_rstripcells_singular ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`205 1 236 48`
+(signature)`test_Phrase_rstripcells_singular(test)`
+
+- (project-local/factor-element)&<types#Phrase.rstripcells[fault.terminal.types.Phrase.rstripcells]>
+- (project-local/factor-element)&<types#Phrase.rfindcell[fault.terminal.types.Phrase.rfindcell]>
+
+
+[ findcell_phrase_1 ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`238 1 245 2`
+#!source
+	findcell_phrase_1 = module.Phrase.construct([
+		("field", None, None, notraits),
+		(" ", None, None, notraits),
+		("sequence", None, None, notraits),
+		(",", None, None, notraits),
+		(" ", None, None, notraits),
+		("terminal", None, None, notraits),
+	])
+
+[ findcell_phrase_1_cc ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`248 1 255 2`
+#!source
+	findcell_phrase_1_cc = module.Phrase.construct([
+		("field\u0356\u035B", None, None, notraits),
+		(" ", None, None, notraits),
+		("sequence\u035B", None, None, notraits),
+		(",", None, None, notraits),
+		(" \u035B", None, None, notraits),
+		("terminal", None, None, notraits),
+	])
+
+[ findcell_phrase_1_units ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`258 1 265 2`
+#!source
+	findcell_phrase_1_units = module.Phrase.construct([
+		("field", None, None, notraits),
+		(module.Units((" ",)), None, None, notraits),
+		("sequence", None, None, notraits),
+		(module.Units((",",)), None, None, notraits),
+		(module.Units((" ",)), None, None, notraits),
+		("terminal", None, None, notraits),
+	])
+
+[ t_lfindcell_1 ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`267 1 292 39`
+(signature)`t_lfindcell_1(test, phrase)`
+
+
+[ test_Phrase_lfindcell ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`294 1 302 45`
+(signature)`test_Phrase_lfindcell(test)`
+
+- (project-local/factor-element)&<types#Phrase.lfindcell[fault.terminal.types.Phrase.lfindcell]>
+
+
+[ t_rfindcell_1 ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`304 1 329 39`
+(signature)`t_rfindcell_1(test, phrase)`
+
+
+[ test_Phrase_rfindcell ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`331 1 339 45`
+(signature)`test_Phrase_rfindcell(test)`
+
+- (project-local/factor-element)&<types#Phrase.rfindcell[fault.terminal.types.Phrase.rfindcell]>
+
+
+[ test_Phrase_lstripcells_singular ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`341 1 372 49`
+(signature)`test_Phrase_lstripcells_singular(test)`
+
+- (project-local/factor-element)&<types#Phrase.lstripcells[fault.terminal.types.Phrase.lstripcells]>
+- (project-local/factor-element)&<types#Phrase.lfindcell[fault.terminal.types.Phrase.lfindcell]>
+
+
+[ test_Phrase_lstripcells_wide ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`374 1 389 35`
+(signature)`test_Phrase_lstripcells_wide(test)`
+
+- (project-local/factor-element)&<types#Phrase.lstripcells[fault.terminal.types.Phrase.lstripcells]>
+- (project-local/factor-element)&<types#Phrase.lfindcell[fault.terminal.types.Phrase.lfindcell]>
+
+Failure is likely due to a malfunctioning (invalid/unknown)&<#wcswidth> implementation.
+
+
+[ test_Phrase_rstripcells_wide ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`391 1 406 35`
+(signature)`test_Phrase_rstripcells_wide(test)`
+
+- (project-local/factor-element)&<types#Phrase.rstripcells[fault.terminal.types.Phrase.rstripcells]>
+- (project-local/factor-element)&<types#Phrase.rfindcell[fault.terminal.types.Phrase.rfindcell]>
+
+Failure is likely due to a malfunctioning (invalid/unknown)&<#wcswidth> implementation.
+
+
+[ test_Phrase_lstripcells_boundary ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`408 1 424 41`
+(signature)`test_Phrase_lstripcells_boundary(test)`
+
+- (project-local/factor-element)&<types#Phrase.lstripcells[fault.terminal.types.Phrase.lstripcells]>
+- (project-local/factor-element)&<types#Phrase.lfindcell[fault.terminal.types.Phrase.lfindcell]>
+
+
+[ test_Phrase_rstripcells_boundary ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`426 1 444 37`
+(signature)`test_Phrase_rstripcells_boundary(test)`
+
+- (project-local/factor-element)&<types#Phrase.rstripcells[fault.terminal.types.Phrase.rstripcells]>
+- (project-local/factor-element)&<types#Phrase.rfindcell[fault.terminal.types.Phrase.rfindcell]>
+
+
+[ test_Phrase_lstripcells_zerowidth ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`446 1 470 28`
+(signature)`test_Phrase_lstripcells_zerowidth(test)`
+
+- (project-local/factor-element)&<types#Phrase.lstripcells[fault.terminal.types.Phrase.lstripcells]>
+- (project-local/factor-element)&<types#Phrase.lfindcell[fault.terminal.types.Phrase.lfindcell]>
+
+
+[ test_Phrase_rstripcells_zerowidth ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`472 1 498 28`
+(signature)`test_Phrase_rstripcells_zerowidth(test)`
+
+- (project-local/factor-element)&<types#Phrase.rstripcells[fault.terminal.types.Phrase.rstripcells]>
+- (project-local/factor-element)&<types#Phrase.rfindcell[fault.terminal.types.Phrase.rfindcell]>
+
+Failure is likely due to a malfunctioning (invalid/unknown)&<#wcswidth> implementation.
+
+
+[ test_Phrase_lstripcells_noop ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`500 1 508 32`
+(signature)`test_Phrase_lstripcells_noop(test)`
+
+
+[ test_Phrase_rstripcells_noop ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`510 1 518 32`
+(signature)`test_Phrase_rstripcells_noop(test)`
+
+
+[ test_Phrase_translate_ascii ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`520 1 532 53`
+(signature)`test_Phrase_translate_ascii(test)`
+
+- (project-local/factor-element)&<types#Phrase.translate[fault.terminal.types.Phrase.translate]>
+
+
+[ test_Phrase_translate_empty ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`534 1 544 37`
+(signature)`test_Phrase_translate_empty(test)`
+
+- (project-local/factor-element)&<types#Phrase.translate[fault.terminal.types.Phrase.translate]>
+
+
+[ test_Phrase_translate_wide ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`546 1 565 13`
+(signature)`test_Phrase_translate_wide(test)`
+
+- (project-local/factor-element)&<types#Phrase.translate[fault.terminal.types.Phrase.translate]>
+
+
+[ test_Phrase_combine ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`567 1 576 22`
+(signature)`test_Phrase_combine(test)`
+
+- (project-local/factor-element)&<types#Phrase.combine[fault.terminal.types.Phrase.combine]>
+
+
+[ test_Phrase_subphrase ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`578 1 596 68`
+(signature)`test_Phrase_subphrase(test)`
+
+- (project-local/factor-element)&<types#Phrase.subphrase[fault.terminal.types.Phrase.subphrase]>
+
+
+[ test_Phrase_join ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`598 1 633 38`
+(signature)`test_Phrase_join(test)`
+
+- (project-local/factor-element)&<types#Phrase.join[fault.terminal.types.Phrase.join]>
+
+
+[ test_Constructors ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`635 1 655 77`
+(signature)`test_Constructors(test)`
+
+- (project-local/factor-element)&<types#RenderParameters.form[fault.terminal.types.RenderParameters.form]>
+- (project-local/factor-element)&<types#Phrase.from_words[fault.terminal.types.Phrase.from_words]>
+

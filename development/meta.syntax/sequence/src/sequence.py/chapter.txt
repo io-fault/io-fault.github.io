@@ -1,0 +1,341 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 307 33`
+Segmented implementation for large sequences.
+
+
+[ itertools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`4 1 4 16`
+
+[ address ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`6 1 55 2`
+(signature)`address(seq, start, stop)`
+
+Find the address of the absolute slice.
+
+/(parameter)`seq`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`start`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`stop`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`len`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`range`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ delete ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`57 1 82 11`
+(signature)`delete(seq, start, stop)`
+
+
+[ insert ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`84 1 145 14`
+(signature)`insert(seq, offset, insertion)`
+
+
+[ Segments ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (source/area)`147 1 308 32`
+! INHERIT:
+	- (source/area)`147 16 147 21`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+Manage a sequence of sequences as if it were a single sequence.
+Primarily used to control maximum memory moves for each insertion
+when dealing with (relatively) naive sequence implementations.
+
+Segments does not make assumptions about the size of the lists;
+full scans of the list sizes must be used to identify proper placement
+with exception to recently organized Segments instance where
+the size of each segment is already known.
+
+
+[ Segments >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`159 2 159 37`
+#!source
+	__slots__ = ('sequences', '_length')
+
+[ Segments >> Type ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`160 2 160 12`
+#!source
+	Type = list
+
+[ Segments >> segment_size ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`161 2 161 18`
+#!source
+	segment_size = 64
+
+[ Segments >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`163 2 168 19`
+(signature)`__init__(self)`
+
+
+[ Segments >> __getitem__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`170 2 178 12`
+(signature)`__getitem__(self, item)`
+
+
+[ Segments >> __setitem__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`180 2 192 45`
+(signature)`__setitem__(self, item, value)`
+
+
+[ Segments >> __delitem__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`194 2 202 26`
+(signature)`__delitem__(self, item)`
+
+
+[ Segments >> __len__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`204 2 205 21`
+(signature)`__len__(self)`
+
+
+[ Segments >> __iadd__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`207 2 210 24`
+(signature)`__iadd__(self, sequence)`
+
+
+[ Segments >> select ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`212 2 237 4`
+(signature)`select(self, start, stop)`
+
+Return an iterator to the requested slice.
+
+/(parameter)`self`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`start`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`stop`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`whole`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`_address`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`from_iterable`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`len`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`range`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`slice`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`iter`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ Segments >> __iter__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`239 2 240 55`
+(signature)`__iter__(self)`
+
+
+[ Segments >> clear ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`242 2 247 18`
+(signature)`clear(self)`
+
+Truncate the entire sequence.
+
+/(parameter)`self`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ Segments >> partition ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`249 2 273 23`
+(signature)`partition(self)`
+
+Organize the segments so that they have appropriate sizes.
+
+/(parameter)`self`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`iterable`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`len`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`iter`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`islice`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ Segments >> prepend ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`275 2 278 24`
+(signature)`prepend(self, sequence)`
+
+
+[ Segments >> append ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`280 2 286 24`
+(signature)`append(self, sequence)`
+
+
+[ Segments >> insert ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`288 2 291 24`
+(signature)`insert(self, offset, sequence)`
+
+
+[ Segments >> delete ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`293 2 308 32`
+(signature)`delete(self, start, stop)`
+

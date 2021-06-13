@@ -1,0 +1,289 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 244 0`
+- (project-local/unknown)&<factory>
+
+polynomial-1 materialization checks.
+
+
+[ module ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`6 1 6 32`
+
+[ types ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`7 1 7 20`
+
+[ files ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`8 1 8 27`
+
+[ Segment ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`9 1 9 34`
+
+[ structure_project_declaration ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`11 1 11 50`
+
+[ s_information ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`13 1 20 1`
+#!source
+	s_information = types.Information(
+		identifier = 'http://sample.fault.io/corpus/project',
+		name = 'project',
+		icon = {},
+		authority = 'fault.io',
+		contact = 'http://fault.io/critical',
+		abstract = None,
+	)
+
+[ s_formats ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`22 1 32 1`
+#!source
+	s_formats = {
+		'http://if.fault.io/factors/meta': [
+			('chapter', 'txt', 'fault-1', 'kleptic'),
+		],
+		'http://if.fault.io/factors/system': [
+			('elements', 'c', '2011', 'c'),
+		],
+		'http://if.fault.io/factors/python': [
+			('module', 'py', 'psf-v3', 'python'),
+		],
+	}
+
+[ test_Composition_indirect ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`34 1 42 33`
+(signature)`test_Composition_indirect(test)`
+
+- (project-local/factor-element)&<factory#Composition.indirect[fault.project.factory.Composition.indirect]>
+
+
+[ test_Composition_explicit ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`44 1 60 49`
+(signature)`test_Composition_explicit(test)`
+
+- (project-local/factor-element)&<factory#Composition.explicit[fault.project.factory.Composition.explicit]>
+
+
+[ check_information ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`62 1 64 19`
+(signature)`check_information(test, original, serialized)`
+
+
+[ test_plan_information ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`66 1 73 54`
+(signature)`test_plan_information(test)`
+
+- (project-local/factor-element)&<factory#plan[fault.project.factory.plan]>
+
+Check that serialized project information is consistent.
+
+
+[ test_plan_cell_factors ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`75 1 86 36`
+(signature)`test_plan_cell_factors(test)`
+
+- (project-local/factor-element)&<factory#plan[fault.project.factory.plan]>
+
+Check that plan produces a suffixed path for an indirectly typed factor
+when given a Cell as the source list.
+
+
+[ test_plan_explicitly_typed_factors ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`88 1 99 42`
+(signature)`test_plan_explicitly_typed_factors(test)`
+
+- (project-local/factor-element)&<factory#plan[fault.project.factory.plan]>
+
+
+[ test_plan_explicitly_typed_symbols ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`101 1 120 74`
+(signature)`test_plan_explicitly_typed_symbols(test)`
+
+- (project-local/factor-element)&<factory#plan[fault.project.factory.plan]>
+
+Check that symbols are stored and are retrievable.
+
+
+[ S ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`122 1 122 25`
+#!source
+	S = Segment.from_sequence
+
+[ test_materialize_mkdir ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`124 1 130 47`
+(signature)`test_materialize_mkdir(test)`
+
+- (project-local/factor-element)&<factory#materialize[fault.project.factory.materialize]>
+
+
+[ test_materialize_link ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`132 1 141 61`
+(signature)`test_materialize_link(test)`
+
+- (project-local/factor-element)&<factory#materialize[fault.project.factory.materialize]>
+
+
+[ test_materialize_module ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`143 1 154 51`
+(signature)`test_materialize_module(test)`
+
+- (project-local/factor-element)&<factory#materialize[fault.project.factory.materialize]>
+
+
+[ test_materialize_bytes ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`156 1 162 58`
+(signature)`test_materialize_bytes(test)`
+
+- (project-local/factor-element)&<factory#materialize[fault.project.factory.materialize]>
+
+
+[ test_materialize_strings ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`164 1 170 52`
+(signature)`test_materialize_strings(test)`
+
+- (project-local/factor-element)&<factory#materialize[fault.project.factory.materialize]>
+
+
+[ test_Parameters_instantiate ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`172 1 184 74`
+(signature)`test_Parameters_instantiate(test)`
+
+- (project-local/factor-element)&<factory#Parameters.instantiate[fault.project.factory.Parameters.instantiate]>
+
+
+[ test_Parameters_instantiate_dimensions ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`186 1 201 33`
+(signature)`test_Parameters_instantiate_dimensions(test)`
+
+- (project-local/factor-element)&<factory#Parameters.instantiate[fault.project.factory.Parameters.instantiate]>
+
+Validate that dimensions is forwarded by instantiate.
+
+
+[ test_Parameters_define ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`203 1 231 2`
+(signature)`test_Parameters_define(test)`
+
+- (project-local/factor-element)&<factory#Parameters.define[fault.project.factory.Parameters.define]>
+
+
+[ test_Parameters_define_index_error ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`233 1 244 30`
+(signature)`test_Parameters_define_index_error(test)`
+
+- (project-local/factor-element)&<factory#Parameters.define[fault.project.factory.Parameters.define]>
+

@@ -1,0 +1,7 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 2 4`
+Formatting routines for printing data to the terminal in a styled form.
+

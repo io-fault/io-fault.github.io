@@ -1,0 +1,4 @@
+"""
+# Implementations for event endpoints manipulating syntax refractions.
+"""
+

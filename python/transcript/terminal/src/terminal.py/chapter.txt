@@ -1,0 +1,915 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 757 0`
+Terminal support for status displays.
+
+
+[ os ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`4 1 4 9`
+
+[ io ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`5 1 5 9`
+
+[ typing ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`6 1 6 13`
+
+[ itertools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`7 1 7 16`
+
+[ collections ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`8 1 8 18`
+
+[ tools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`10 1 10 27`
+
+[ matrix ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`11 1 11 29`
+
+[ frames ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`12 1 12 27`
+
+[ duration_repr ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`14 1 29 19`
+		- (type/syntax)`typing.Tuple[float, str]`
+		
+(signature)`duration_repr(seconds)`
+
+
+[ Layout ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (source/area)`31 1 82 32`
+! INHERIT:
+	- (source/area)`31 14 31 19`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+The set, sizes, and ordering of fields present in a monitor.
+
+
+[ Layout >> Definition ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`37 2 37 36`
+#!source
+	Definition = typing.Tuple[str, int]
+
+[ Layout >> Fields ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`38 2 40 14`
+#!source
+	Fields = typing.Sequence[Definition]
+		@staticmethod
+
+[ Layout >> separators ]
+! CONTROL:
+	/type/
+		staticmethod
+	/element/
+		- (source/area)`41 2 51 19`
+(signature)`separators(fields, termination, separation)`
+
+Generate a series of separators finished with a terminator.
+Given a number of a fields, emit separators until the final index
+is reached.
+
+
+[ Layout >> label ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`53 2 57 27`
+(signature)`label(self, field, text)`
+
+The display text for the field's label.
+
+
+[ Layout >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`59 2 64 36`
+(signature)`__init__(self, fields, **updates)`
+
+
+[ Layout >> fields ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`66 2 71 70`
+(signature)`fields(self)`
+
+Iterate over the fields in their designated order along with separators
+that can be used to follow the rendered field.
+
+
+[ Layout >> positions ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`73 2 82 32`
+(signature)`positions(self)`
+
+Join the field identifier, cell allocation, and field label in
+the order designated by (invalid/unknown)&<#order>.
+
+
+[ Theme ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (source/area)`84 1 174 45`
+! INHERIT:
+	- (source/area)`84 13 84 18`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+The rendering methods and parameters used by a (factor-local/class)&<#Status[Status]>.
+
+
+[ Theme >> palette ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`88 2 88 31`
+
+[ Theme >> Formatter ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`90 2 90 35`
+#!source
+	Formatter = typing.Tuple[str, str]
+
+[ Theme >> default_render_method ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`92 2 101 14`
+(signature)`default_render_method(self, key, field)`
+
+Renders the string form of (factor-local/parameter)&<#Theme.default_render_method.Parameters.field[field]> with the style set identified
+by (factor-local/parameter)&<#Theme.default_render_method.Parameters.key[key]>.
+
+
+[ Theme >> r_transparent ]
+! CONTROL:
+	/type/
+		staticmethod
+	/element/
+		- (source/area)`102 2 111 14`
+(signature)`r_transparent(value)`
+
+Render method expecting and returning a sequence of formatting pairs.
+
+Used in cases where the field wishes to control theme-relative
+formatting directly.
+
+
+[ Theme >> r_duration ]
+! CONTROL:
+	/type/
+		staticmethod
+	/element/
+		- (source/area)`112 2 122 3`
+(signature)`r_duration(value)`
+
+Render method for common duration fields.
+
+
+[ Theme >> define ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`124 2 129 65`
+(signature)`define(self, name, *args, using, **kw)`
+
+Define a set of render parameters within the theme.
+Parameters aside from (factor-local/parameter)&<#Theme.define.Parameters.name[name]> are passed to (context-local/factor-element)&<fault.terminal/matrix#Context.RenderParameters.apply[fault.terminal.matrix.Context.RenderParameters.apply]>.
+
+
+[ Theme >> implement ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`131 2 135 34`
+(signature)`implement(self, type, render)`
+
+Assign a render method, (invalid/unknown)&<#call>, for the (invalid/unknown)&<#field>.
+
+
+[ Theme >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`137 2 140 24`
+(signature)`__init__(self, default)`
+
+
+[ Theme >> configure ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`142 2 156 13`
+(signature)`configure(self, colors)`
+
+
+[ Theme >> style ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`158 2 167 29`
+(signature)`style(self, celltexts)`
+
+Emit words formatted according to their associated style set for forming
+a (context-local/factor-element)&<fault.terminal/matrix#Context.Phrase[fault.terminal.matrix.Context.Phrase]> instance.
+
+
+[ Theme >> render ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`169 2 174 45`
+(signature)`render(self, type, field, Phrase, partial)`
+
+Render the given (factor-local/parameter)&<#Theme.render.Parameters.field[field]> according to the configured (invalid/unknown)&<#type'> render method.
+
+
+[ Status ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (source/area)`176 1 457 70`
+! INHERIT:
+	- (source/area)`176 14 176 19`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+Allocated area for status display of a set of changing fields.
+
+Structure holding the target (context-local/factor-element)&<fault.terminal/matrix#Context[fault.terminal.matrix.Context]> with the rendering
+function and an associated state snapshot.
+
+
+[ Status >> view_state_loop ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`184 2 188 2`
+#!source
+	view_state_loop = {
+		'total': 'rate_window',
+		'rate_window': 'rate_overall',
+		'rate_overall': 'total',
+	}
+
+[ Status >> unit_type_separators ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`190 2 194 2`
+#!source
+	unit_type_separators = {
+		'total': '+',
+		'rate_window': '<',
+		'rate_overall': '^',
+	}
+
+[ Status >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`196 2 207 28`
+(signature)`__init__(self, theme, layout, context)`
+
+
+[ Status >> _calculate_fields ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`209 2 224 24`
+(signature)`_calculate_fields(self, alignment)`
+
+
+[ Status >> _update_field_cache ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`226 2 231 3`
+(signature)`_update_field_cache(self)`
+
+
+[ Status >> reset ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`233 2 239 10`
+(signature)`reset(self, time, metrics)`
+
+Reset the metrics records using the given entry as the only one.
+
+
+[ Status >> current ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`240 2 241 28`
+
+[ Status >> elapse ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`243 2 250 48`
+(signature)`elapse(self, time)`
+
+Update the time field on the last metrics record.
+
+
+[ Status >> update ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`252 2 262 9`
+(signature)`update(self, time, metrics, window)`
+
+Update the metrics record for the given point in time.
+
+
+[ Status >> duration ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`264 2 265 51`
+(signature)`duration(self)`
+
+
+[ Status >> cycle ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`267 2 274 25`
+(signature)`cycle(self, field)`
+
+Select the next read type for the given field using the (factor-local/data)&<#Status.view_state_loop[view_state_loop]>.
+
+
+[ Status >> set_field_read_type ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`276 2 279 26`
+(signature)`set_field_read_type(self, field, units)`
+
+
+[ Status >> prefix ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`281 2 285 57`
+(signature)`prefix(self, *words)`
+
+Attach a constant phrase to the beginning of the monitor.
+
+
+[ Status >> suffix ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`287 2 291 57`
+(signature)`suffix(self, *words)`
+
+Attach a constant phrase to the end of the monitor.
+
+
+[ Status >> title ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`293 2 297 35`
+(signature)`title(self, title, *dimensions)`
+
+Assign the monitor's title and dimension identifiers.
+
+
+[ Status >> window_period ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`299 2 308 36`
+(signature)`window_period(self)`
+
+Calculate the current metrics window size.
+
+
+[ Status >> origin ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`310 2 311 34`
+(signature)`origin(self, field)`
+
+
+[ Status >> window_delta ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`313 2 319 21`
+(signature)`window_delta(self, field)`
+
+
+[ Status >> edge ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`321 2 324 34`
+(signature)`edge(self, field, i)`
+
+
+[ Status >> total ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`326 2 327 35`
+(signature)`total(self, field)`
+
+
+[ Status >> rate_window ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`329 2 331 37`
+(signature)`rate_window(self, field)`
+
+
+[ Status >> rate_overall ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`333 2 335 32`
+(signature)`rate_overall(self, field)`
+
+
+[ Status >> render ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`337 2 363 65`
+(signature)`render(self, filter, offset)`
+
+
+[ Status >> delta ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`365 2 389 65`
+(signature)`delta(self, fields, offset)`
+
+
+[ Status >> phrase ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`391 2 404 54`
+		- (type/syntax)`matrix.Context.Phrase`
+		- (type/context-local/factor-element)&<fault.terminal/matrix#Context.Phrase[fault.terminal.matrix.Context.Phrase]>
+		
+(signature)`phrase(self, filter)`
+
+The monitor's image as a single phrase instance.
+
+
+[ Status >> snapshot ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`406 2 413 76`
+		- (type/syntax)`bytes`
+		- (type/invalid/unknown)&<#bytes>
+		
+(signature)`snapshot(self, encoding)`
+
+A bytes form of the (factor-local/method)&<#Status.phrase[Status.phrase]>. (The image without cursor movement)
+
+
+[ Status >> profile ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`415 2 419 71`
+(signature)`profile(self)`
+
+Construct a triple containing the start and stop time and the final metrics.
+
+
+[ Status >> synopsis ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`421 2 441 17`
+(signature)`synopsis(self, context, vmap)`
+
+Construct a status frame synopsis using the monitor's configuration and metrics.
+
+
+[ Status >> frame ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`443 2 457 70`
+(signature)`frame(self, type, identifier, channel)`
+
+Construct a transaction frame for reporting the status.
+Used after the completion of the dispatcher.
+
+
+[ Monitor ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (source/area)`459 1 630 13`
+! INHERIT:
+	- (source/area)`459 15 459 20`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+Terminal display management for monitoring changes in (factor-local/class)&<#Status[Status]> instances.
+
+
+[ Monitor >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`464 2 471 30`
+(signature)`__init__(self, device, screen, context)`
+
+
+[ Monitor >> allocate ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`473 2 487 13`
+		- (type/syntax)`matrix.Context`
+		- (type/context-local/factor-element)&<fault.terminal/matrix#Context[fault.terminal.matrix.Context]>
+		
+(signature)`allocate(self, point, width, height)`
+
+Create a (context-local/factor-element)&<fault.terminal/matrix#Context[fault.terminal.matrix.Context]> instance relative to the (invalid/unknown)&<#Monitor'> status context.
+
+
+[ Monitor >> install ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`489 2 495 40`
+(signature)`install(self, monitor)`
+
+Erase, reframe, and update the given monitor..
+
+
+[ Monitor >> frame ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`497 2 530 52`
+(signature)`frame(self, monitor, offset)`
+
+Render and emit the prefix, title, and suffix of the (factor-local/parameter)&<#Monitor.frame.Parameters.monitor[monitor]>.
+
+Operation is buffered and must be flushed to be displayed.
+
+
+[ Monitor >> update ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`532 2 552 43`
+(signature)`update(self, monitor, fields, offset)`
+
+Render and emit the given (factor-local/parameter)&<#Monitor.update.Parameters.fields[fields]>.
+
+Operation is buffered and must be flushed to be displayed.
+
+
+[ Monitor >> flush ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`554 2 578 23`
+(signature)`flush(self)`
+
+Write any buffered terminal changes to the device.
+
+
+[ Monitor >> erase ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`580 2 586 46`
+(signature)`erase(self, monitor)`
+
+Clear the area used by the monitor's context.
+
+Operation is buffered and must flushed to be effective.
+
+
+[ Monitor >> clear ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`588 2 593 43`
+(signature)`clear(self)`
+
+Clear the entire configured area for status.
+Used when transitioning monitor configurations.
+
+
+[ Monitor >> configure ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`595 2 630 13`
+(signature)`configure(self, lines)`
+
+Configure the scrolling region allocating (factor-local/parameter)&<#Monitor.configure.Parameters.lines[lines]> at
+the top or bottom of the screen for status display.
+
+This method should be called after window changes of any type.
+The window size is refreshed from the device; monitors should
+also be reallocated so that their Context positions can be adjusted.
+
+
+[ setup ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`632 1 656 62`
+		- (type/syntax)`Monitor`
+		- (type/factor-local/class)&<#Monitor[Monitor]>
+		
+(signature)`setup(atrestore, type, destruct, Context)`
+
+Initialize the terminal for use with a scrolling region.
+
+The given (invalid/unknown)&<#lines> determines the horizontal area allocation to
+manage at the bottom or top of the screen. If negative,
+the top of the screen will be allocated. Allocating both is
+not supported by this interface as (factor-local/class)&<#Monitor[Monitor]> only manages one
+(context-local/factor-element)&<fault.terminal/matrix#Context[fault.terminal.matrix.Context]>.
+
+
+[ _metric_units ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`658 1 668 1`
+#!source
+	_metric_units = [
+		('', '', 0),
+		('kilo', 'k', 3),
+		('mega', 'M', 6),
+		('giga', 'G', 9),
+		('tera', 'T', 12),
+		('peta', 'P', 15),
+		('exa', 'E', 18),
+		('zetta', 'Z', 21),
+		('yotta', 'Y', 24),
+	]
+
+[ _precision ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`670 1 676 10`
+(signature)`_precision(count)`
+
+
+[ _strings ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`678 1 681 31`
+(signature)`_strings(value, formatting)`
+
+
+[ r_count ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`683 1 701 2`
+(signature)`r_count(field, value, isinstance)`
+
+Render method for counts providing compression using metric units.
+
+
+[ r_title ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`703 1 711 22`
+(signature)`r_title(value)`
+
+Render method for monitor titles.
+
+
+[ form ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`713 1 735 42`
+(signature)`form(module, colors)`
+
+Construct a (factor-local/class)&<#Layout[Layout]> and (factor-local/class)&<#Theme[Theme]> from the provided order and formatting structures.
+
+
+[ aggregate ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`737 1 757 20`
+(signature)`aggregate(control, module, lanes, width)`
+
+Construct (factor-local/class)&<#Status[Status]> instances allocated using (factor-local/parameter)&<#aggregate.Parameters.control[control]> for
+displaying the aggregate of the dimension allocations.
+
+Returns a sequence of (factor-local/class)&<#Status[Status]> instances for the dimensions
+and a single Status for the aggregation.
+

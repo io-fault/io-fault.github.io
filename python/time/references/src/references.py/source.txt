@@ -1,0 +1,25 @@
+"""
+# Named references to relative time locations.
+"""
+# fq -C -t yesterday@13:15 tomorrow@14:12  date@timeofday 2010-04-20@12:15  @7:15 +2:15 jan[12-14]@16:30 UTC: this-week next-week last-week next-friday
+
+def week(ts):
+	start = ts.update('week', day=0)
+	stop = start.elapse(day=7)
+	return start, stop
+
+def month(ts):
+	start = ts.update('month', day=1)
+	stop = ts.elapse(month=1).rollback(day=1)
+
+functions = {
+	"last-week": (lambda x: week(x.rollback(day=7))),
+	"next-week": (lambda x: week(x.elapse(day=7))),
+	"this-week": (lambda x: week(x)),
+}
+
+def compose(unit, relation):
+	"""
+	# Compose a range selector from the unit and relation.
+	"""
+	return f[0]

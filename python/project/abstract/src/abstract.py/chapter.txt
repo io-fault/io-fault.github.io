@@ -1,0 +1,56 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 18 0`
+Python Interfaces for Factor concepts.
+
+
+[ abc ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`4 1 4 10`
+
+[ typing ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`5 1 5 13`
+
+[ Route ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`6 1 6 34`
+
+[ FactorSet ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (source/area)`8 1 18 6`
+Query interface for finding projects and factors therein.
+
+
+[ FactorSet >> select ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`14 2 18 6`
+		- (type/syntax)`typing.Tuple[Route,Route]`
+		
+(signature)`select(self, identifier)`
+
+Retrieve the storage route to the project and its Factor Path.
+

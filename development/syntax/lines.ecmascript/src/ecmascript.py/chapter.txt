@@ -1,0 +1,223 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 115 0`
+ECMA Script language profile.
+
+
+[ fields ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`4 1 4 21`
+
+[ keyword_list ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`6 1 52 1`
+#!source
+	keyword_list = [
+		'break',
+		'case',
+		'catch',
+		'continue',
+		'debugger',
+		'default',
+		'delete',
+		'do',
+		'else',
+		'finally',
+		'for',
+		'function',
+		'if',
+		'in',
+		'instanceof',
+		'new',
+		'return',
+		'switch',
+		'this',
+		'throw',
+		'try',
+		'typeof',
+		'var',
+		'void',
+		'while',
+		'with',
+	
+		# reserved
+		'class',
+		'const',
+		'enum',
+		'export',
+		'extends',
+		'import',
+		'super',
+	
+		'implements',
+		'interface',
+		'let',
+		'package',
+		'private',
+		'protected',
+		'public',
+		'static',
+		'yield',
+	]
+
+[ core_list ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`54 1 105 1`
+#!source
+	core_list = [
+		'prototype',
+		'window',
+	
+		'null',
+		'undefined',
+		'true',
+		'false',
+	
+		'NaN',
+		'Infinity',
+		'isNaN',
+		'isFinite',
+	
+		'Arguments',
+		'Array',
+		'Boolean',
+		'Date',
+		'Error',
+		'Function',
+		'JSON',
+		'Math',
+		'Number',
+		'Object',
+		'RegExp',
+		'String',
+	
+		'eval',
+		'escape',
+		'unescape',
+		'parseInt',
+		'parseFloat',
+	
+		'encodeURI',
+		'decodeURI',
+		'encodeURIComponent',
+		'decodeURIComponent',
+	
+		'EvalError',
+		'RangeError',
+		'ReferenceError',
+		'SyntaxError',
+		'TypeError',
+		'URIError',
+	
+		'setTimeout',
+		'clearTimeout',
+		'setInterval',
+		'clearInterval',
+		'setImmediate',
+		'clearImmediate',
+	]
+
+[ keywords ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`107 1 107 59`
+#!source
+	keywords = {y: y for y in map(fields.String, keyword_list)}
+
+[ cores ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`108 1 108 53`
+#!source
+	cores = {y: y for y in map(fields.String, core_list)}
+
+[ terminators ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`110 1 110 55`
+#!source
+	terminators = {y: y for y in map(fields.Constant, ";")}
+
+[ separators ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`111 1 111 54`
+#!source
+	separators = {y: y for y in map(fields.Constant, ",")}
+
+[ routers ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`112 1 112 61`
+#!source
+	routers = {y: y for y in map(fields.Constant, (".","-",">"))} # "->"; needs special handling
+
+[ operators ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`113 1 113 70`
+#!source
+	operators = {y: y for y in map(fields.Constant, "@!&^*%+=-|\\/<>?~:")}
+
+[ groupings ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`114 1 114 58`
+#!source
+	groupings = {y: y for y in map(fields.Constant, "()[]{}")}
+
+[ quotations ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`115 1 115 62`
+#!source
+	quotations = {y: y for y in map(fields.Constant, ("'", '"',))}

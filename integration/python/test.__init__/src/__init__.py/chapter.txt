@@ -1,0 +1,18 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 5 6`
+Test context initialization and module set.
+
+
+[ context ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`5 1 6 5`
+(signature)`context(test)`
+

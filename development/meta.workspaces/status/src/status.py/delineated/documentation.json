@@ -1,0 +1,1 @@
+[["Terminal status control."], ["Status control."], ["Initialize the terminal for use with a scrolling region.", "Constructs a device using &control.setup and a &matrix.Context", "pointing to the status region."]]

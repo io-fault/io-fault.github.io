@@ -1,0 +1,39 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 13 0`
+Execute an application module selected by argument zero.
+
+
+[ importlib ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`4 1 4 16`
+
+[ process ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`5 1 5 22`
+
+[ main ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`7 1 10 39`
+		- (type/syntax)`process.Exit`
+		- (type/project-local/factor-element)&<process#Exit[fault.system.process.Exit]>
+		
+(signature)`main(inv)`
+

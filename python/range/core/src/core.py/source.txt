@@ -1,0 +1,40 @@
+"""
+# Critical functions supporting range types.
+"""
+
+def scale(n, target = (1, 100), origin = (0, 0xFFFFFFFF), divmod = divmod):
+	"""
+	# Given a number, target range, and a origin range. Project the number
+	# onto the target range so that the projected number
+	# is proportional to the target range with respect to the number's
+	# relative position in the origin range. For instance::
+
+	>>> scale(5, target=(1,100), origin=(1,10))
+	(50, 0, 9)
+
+	# The return is a triple: (N, remainder, origin[1] - origin[0])
+	# Where the second item is the remainder with the difference between the source
+	# range's end and beginning.
+	"""
+	# The relative complexity of this sequence of computations is due to the
+	# need to push division toward the end of the transformation sequence. That
+	# is, greater clarity can be achieved with some reorganization, but this
+	# would require the use of floating point operations, which is not desirable
+	# for some use cases where "perfect" scaling (index projections) is desired.
+
+	dx, dy = target
+	sx, sy = origin
+	# source range
+	# (this is used to adjust 'n' relative to zero, see 'N' below)
+	sb = sy - sx
+	# destination range
+	# (used to map the adjusted 'n' relative to the destination)
+	db = dy - dx
+	# bring N relative to *beginning of the source range*
+	N = n - sx
+	# magnify N to the destination range
+	# divmod by the source range to get N relative to the
+	# *the destination range*
+	n, r = divmod(N * db, sb)
+	# dx + N to make N relative to beginning of the destination range
+	return dx + n, r, sb

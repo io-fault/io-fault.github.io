@@ -1,0 +1,14 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 1 0`
+
+[ module ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1 1 1 31`

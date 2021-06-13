@@ -1,0 +1,62 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 91 0`
+
+[ module ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1 1 1 31`
+
+[ test_sequence ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`3 1 57 60`
+(signature)`test_sequence(test)`
+
+
+[ doc ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`59 1 74 3`
+#!source
+	doc = """import foo
+	import bar
+	import nothing
+	
+	def function(a, b):
+		pass
+	
+	class Class():
+	
+		def __init__(self):
+			pass
+			pass
+			if 0:
+				pass
+			pass
+	"""
+
+[ test_block ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`76 1 87 24`
+(signature)`test_block(test)`
+

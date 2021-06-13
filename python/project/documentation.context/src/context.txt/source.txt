@@ -1,0 +1,10 @@
+[ References ]
+...
+
+[ Glossary ]
+
+The section whose first-level dictionaries are considered
+referencable terms throughout the project.
+
+/term
+	Colloquial definition of (term)&term.

@@ -1,0 +1,1 @@
+[[["Identifier"], ["partition_cache"], ["absolute_cache"]], [{"syntax": "TypeVar('Identifier', bound=Hashable)", "area": [[18, 14], [18, 50]]}, {"syntax": "cachedcalls(32)(vcombine)", "area": [[23, 19], [23, 43]]}, {"syntax": "cachedcalls(64)(join)", "area": [[27, 18], [27, 38]]}]]

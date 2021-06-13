@@ -1,0 +1,1 @@
+[[["codes"]], [{"syntax": "{\n\t'T': (1, 'delineation'), # Tree\n\t'g': (0, 'debug'),\n\t'J': (3, 'injections'),\n\t'O': (2, 'optimal'),\n\t'M': (3, 'instruments'),\n\t'C': (3, 'coverage'),\n\t'P': (3, 'profile'),\n\t'Z': (2, 'analyze'),\n\n\t'A': '..', # All.\n}", "area": [[5, 9], [16, 1]]}]]

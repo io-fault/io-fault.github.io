@@ -1,0 +1,222 @@
+! CONTROL:
+	/type/
+		unit
+	/element/
+		- (source/area)``
+
+[ ERRNO_INJECTION ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`21 9 21 74`
+(signature)`ERRNO_INJECTION()`
+
+
+[ _RETRY_STATE ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`23 9 23 35`
+#!source
+	#define _RETRY_STATE _avail_retries
+
+[ RETRY_STATE_INIT ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`24 9 24 64`
+#!source
+	#define RETRY_STATE_INIT int _RETRY_STATE = CONFIG_SYSCALL_RETRY
+
+[ LIMITED_RETRY ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`25 9 31 11`
+(signature)`LIMITED_RETRY()`
+
+
+[ UNLIMITED_RETRY ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`32 9 32 56`
+(signature)`UNLIMITED_RETRY()`
+
+
+[ CONFIG_SOCKET_TRANSFER_LIMIT ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`34 9 34 38`
+#!source
+	#define CONFIG_SOCKET_TRANSFER_LIMIT 1
+
+[ socketmessage ]
+! CONTROL:
+	/type/
+		structure
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`36 1 43 1`
+
+[ socketmessage >> iov ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)``
+		- (type/syntax)`struct iovec`
+		
+
+[ socketmessage >> mh ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)``
+		- (type/syntax)`struct msghdr`
+		
+
+[ socketmessage >> buf ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)``
+		- (type/syntax)`char[16]`
+		
+
+[ socketmessage >> _align ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)``
+		- (type/syntax)`struct cmsghdr`
+		
+
+[ socketmessage >> ab ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)``
+		- (type/syntax)`union (unnamed union at /x/f/system/extensions/network/system.c:39:2)`
+		
+
+[ socketmessage >> buf ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)``
+		- (type/syntax)`char[16]`
+		
+
+[ socketmessage >> _align ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)``
+		- (type/syntax)`struct cmsghdr`
+		
+
+[ _init_socketmessage ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`45 1 82 1`
+		- (type/syntax)`struct cmsghdr *`
+		
+(signature)`_init_socketmessage(m, buf, bufsize)`
+
+
+[ sockets_receive ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`84 1 127 1`
+		- (type/syntax)`int`
+		
+(signature)`sockets_receive(kp, buf, size)`
+
+
+[ sockets_transmit ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`129 1 174 1`
+		- (type/syntax)`int`
+		
+(signature)`sockets_transmit(kp, buf, size)`
+
+
+[ sockets_accept ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`179 1 222 1`
+		- (type/syntax)`int`
+		
+(signature)`sockets_accept(kp, buf, size)`
+
+Regular socket accept from listening sockets.
+
+
+[ sockets_pipe ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`224 1 256 1`
+		- (type/syntax)`int`
+		
+(signature)`sockets_pipe(kp, buf, size)`
+

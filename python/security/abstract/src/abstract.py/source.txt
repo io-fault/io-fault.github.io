@@ -1,0 +1,20 @@
+"""
+# Documentation for adapter interfaces.
+"""
+import abc
+import typing
+
+class Transport(abc.ABCMeta):
+	"""
+	# Secure I/O state.
+	"""
+
+	def encipher(self, data:typing.Sequence[bytes]) -> typing.Sequence[bytes]:
+		"""
+		# Encrypt the data for transmission.
+		"""
+
+	def encipher(self, data:typing.Sequence[bytes]) -> typing.Sequence[bytes]:
+		"""
+		# Decrypt received data for processing by the application.
+		"""

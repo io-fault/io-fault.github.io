@@ -1,0 +1,56 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 29 8`
+Developer tool used to observe the transformed events from received from standard input.
+
+
+[ sys ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`4 1 4 10`
+
+[ os ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`5 1 5 9`
+
+[ events ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`6 1 6 21`
+
+[ loop ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`8 1 21 11`
+(signature)`loop(tty, prepare, restore)`
+
+
+[ main ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`23 1 27 38`
+(signature)`main()`
+

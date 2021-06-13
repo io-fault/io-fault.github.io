@@ -1,0 +1,132 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 149 25`
+Color formatting for file paths, URIs, and timestamps.
+
+
+[ os ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`4 1 4 9`
+
+[ palette ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`6 1 9 1`
+#!source
+	palette = {
+		'yellow': 0xffff87,
+		'blue': 0x0087ff,
+	}
+
+[ route_colors ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`11 1 36 1`
+#!source
+	route_colors = {
+		'filesystem-root': palette['blue'],
+		'warning': palette['yellow'],
+	
+		'directory': 0x0087ff,
+		'executable': 0x008700,
+		'data': 0xc6c6c6,
+	
+		'dot-file': 0x808080,
+		'file-not-found': 0xaf0000,
+	
+		'link': 0xff0000,
+		'device': 0xff5f00,
+		'socket': 0xff5f00,
+		'pipe': 0xff5f00,
+	
+		'path': 0x6e6e6e,
+		'path-link': 0x005f87,
+		'root-segments': 0x4e4e4e,
+	
+		'text/plain;pl=python': 0x875faf,
+		'text/plain;sf=fault.txt': 0x875faf,
+		'text/xml': 0x4e4e4e,
+	
+		None: None,
+	}
+
+[ route_is_link ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`38 1 42 14`
+(signature)`route_is_link(route, islink)`
+
+
+[ _f_route_factor_type ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`44 1 57 21`
+(signature)`_f_route_factor_type(route, ia_link)`
+
+
+[ _f_route_path ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`59 1 78 20`
+(signature)`_f_route_path(root, route, _is_link)`
+
+
+[ f_route_path ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`80 1 83 9`
+(signature)`f_route_path(root, route)`
+
+
+[ f_route_identifier ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`85 1 104 45`
+(signature)`f_route_identifier(route, warning)`
+
+
+[ f_route_absolute ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`106 1 131 97`
+(signature)`f_route_absolute(route, warning)`
+
+Format the absolute path of the given route.
+

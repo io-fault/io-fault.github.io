@@ -1,0 +1,338 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 390 0`
+Test the coherence of the specified project.
+
+
+[ os ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`4 1 4 9`
+
+[ sys ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`5 1 5 10`
+
+[ contextlib ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`6 1 6 17`
+
+[ signal ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`7 1 7 13`
+
+[ functools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`8 1 8 16`
+
+[ types ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`9 1 9 12`
+
+[ importlib ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`10 1 10 16`
+
+[ resource ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`11 1 11 15`
+
+[ corefile ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`13 1 13 30`
+
+[ process ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`14 1 14 29`
+
+[ files ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`15 1 15 27`
+
+[ factors ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`16 1 16 29`
+
+[ python ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`17 1 17 28`
+
+[ recognition ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`18 1 18 33`
+
+[ elapsed ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`19 1 19 34`
+
+[ metrics ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`20 1 20 33`
+
+[ Log ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`21 1 21 32`
+
+[ engine ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`23 1 23 21`
+
+[ core ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`24 1 24 19`
+
+[ status_identifiers ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`26 1 33 1`
+#!source
+	status_identifiers = {
+		'skip': 'skipped',
+		'return': 'passed',
+		'pass': 'passed',
+		'fail': 'failed',
+		'core': 'failed',
+		'error': 'failed',
+	}
+
+[ restricted ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`35 1 37 1`
+#!source
+	restricted = {
+		'-.': ('ignore', None, None),
+	}
+
+[ required ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`39 1 41 1`
+#!source
+	required = {
+		'-D': ('field-replace', 'product-directory'),
+	}
+
+[ Harness ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (source/area)`43 1 231 15`
+! INHERIT:
+	- (source/area)`43 15 43 28`
+	- (type/syntax)`engine.Harness`
+	- (type/project-local/factor-element)&<engine#Harness[fault.test.engine.Harness]>
+	
+The collection and execution of a series of tests.
+
+
+[ Harness >> concurrently ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`47 2 47 50`
+#!source
+	concurrently = staticmethod(process.concurrently)
+
+[ Harness >> _handle_core ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`49 2 61 75`
+(signature)`_handle_core(self, corefile)`
+
+
+[ Harness >> _print_tb ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`63 2 67 22`
+(signature)`_print_tb(self, fate)`
+
+
+[ Harness >> dispatch ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`69 2 163 15`
+(signature)`dispatch(self, test)`
+
+
+[ Harness >> execute ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`165 2 231 15`
+(signature)`execute(self, test, count)`
+
+
+[ intercept ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`233 1 266 30`
+(signature)`intercept(product, project, intention)`
+
+
+[ slicing ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`268 1 282 44`
+(signature)`slicing(spec)`
+
+
+[ trapped_report ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`284 1 295 2`
+(signature)`trapped_report(source)`
+
+Reform the report into the common join protocol.
+
+
+[ main ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`297 1 386 19`
+		- (type/syntax)`process.Exit`
+		- (type/context-local/factor-element)&<fault.system/process#Exit[fault.system.process.Exit]>
+		
+(signature)`main(inv)`
+

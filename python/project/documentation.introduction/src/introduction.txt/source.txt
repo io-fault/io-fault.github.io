@@ -1,0 +1,11 @@
+Startup documentation. Probably avoid describing usage outside of
+supportive illustrations.
+
+[ Concepts ]
+
+Describe project concepts here. Generally written for audiences unfamiliar
+with the project and its concerns.
+
+[ Goals ]
+
+Note explicit goals and direction of the project.

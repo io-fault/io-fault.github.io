@@ -1,0 +1,46 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 96 1`
+Core structures tests.
+
+
+[ library ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`4 1 4 30`
+
+[ test_Point ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`6 1 24 22`
+(signature)`test_Point(test)`
+
+- (project-local/factor-element)&<core#Point[meta.syntax.core.Point]>
+
+/(parameter)`test`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ test_Position ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`26 1 92 33`
+(signature)`test_Position(test)`
+
+Check all the methods of (project-local/factor-element)&<core#Position[meta.syntax.core.Position]>
+
+/(parameter)`test`/
+	
+	(ctl/absent)`Undocumented`.
+

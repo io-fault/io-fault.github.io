@@ -1,0 +1,42 @@
+! CONTROL:
+	/type/
+		unit
+	/element/
+		- (source/area)``
+
+[ MODULE_FUNCTIONS ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`37 9 41 94`
+(signature)`MODULE_FUNCTIONS()`
+
+
+[ dsetlocale ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`12 1 25 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`dsetlocale(self)`
+
+
+[ get_encoding ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`27 1 35 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`get_encoding(self)`
+

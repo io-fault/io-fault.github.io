@@ -1,0 +1,284 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 333 15`
+Module finder and loader for Factored Projects.
+
+
+[ importlib ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`4 1 4 26`
+
+[ files ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`6 1 6 19`
+
+[ lsf ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`7 1 7 35`
+
+[ compose_image_path ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`9 1 25 16`
+(signature)`compose_image_path(variants, default, groups)`
+
+Create a variant path according to the given (factor-local/parameter)&<#compose_image_path.Parameters.groups[groups]> and (factor-local/parameter)&<#compose_image_path.Parameters.variants[variants]>.
+
+
+[ IntegralFinder ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (source/area)`27 1 300 37`
+! INHERIT:
+	- (source/area)`27 22 27 27`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+Select an image based on the configured variants querying the connected factor paths.
+
+
+[ IntegralFinder >> suffixes ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`32 2 32 19`
+#!source
+	suffixes = ['.py']
+
+[ IntegralFinder >> ModuleSpec ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`33 2 33 44`
+#!source
+	ModuleSpec = importlib.machinery.ModuleSpec
+
+[ IntegralFinder >> ExtensionFileLoader ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`34 2 34 62`
+#!source
+	ExtensionFileLoader = importlib.machinery.ExtensionFileLoader
+
+[ IntegralFinder >> Loader ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (source/area)`36 2 83 91`
+! INHERIT:
+	- (source/area)`36 15 36 50`
+	- (type/syntax)`importlib.machinery.SourceFileLoader`
+	- (type/none/invalid)&<http://fault.io/dev/null[importlib.machinery.machinery.SourceFileLoader]>
+	
+Loader for compiled Python factors. Compiled modules are not checked
+against the source unlike Python's builtin loader.
+
+
+[ IntegralFinder >> Loader >> _compile ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`41 3 41 74`
+#!source
+	_compile = staticmethod(importlib._bootstrap_external._compile_bytecode)
+
+[ IntegralFinder >> Loader >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`43 3 48 14`
+(signature)`__init__(self, bytecode, fullname, path)`
+
+
+[ IntegralFinder >> Loader >> from_nothing ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (source/area)`49 3 57 11`
+(signature)`from_nothing(Class, *args)`
+
+Create the (factor-local/class)&<#IntegralFinder.Loader[Loader]> instance with (factor-local/method)&<#IntegralFinder.Loader.get_code[get_code]> overridden to return
+a code object created from a `pass` statement.
+
+
+[ IntegralFinder >> Loader >> exec_module ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`59 3 67 30`
+(signature)`exec_module(self, module)`
+
+
+[ IntegralFinder >> Loader >> get_code ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`69 3 80 79`
+(signature)`get_code(self, fullname)`
+
+
+[ IntegralFinder >> Loader >> set_data ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`82 3 83 91`
+(signature)`set_data(self, *args, **kw)`
+
+
+[ IntegralFinder >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`85 2 112 14`
+(signature)`__init__(self, groups, python_bytecode_variants, extension_variants, form, image_container_name)`
+
+Initialize a finder instance for use with the given variants.
+
+
+[ IntegralFinder >> _init_segment ]
+! CONTROL:
+	/type/
+		staticmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`113 2 126 37`
+(signature)`_init_segment(groups, variants)`
+
+
+[ IntegralFinder >> connect ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`128 2 137 13`
+(signature)`connect(self, route)`
+
+Add the route to finder connecting its subdirectories for import purposes.
+
+Similar to adding a filesystem path to Python's (invalid/unknown)&<#sys.path>.
+
+
+[ IntegralFinder >> disconnect ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`139 2 174 13`
+(signature)`disconnect(self, route)`
+
+Remove a route from the finder's set eliminating any relevant index entries.
+
+
+[ IntegralFinder >> invalidate_caches ]
+! CONTROL:
+	/type/
+		classmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`175 2 176 6`
+(signature)`invalidate_caches(self)`
+
+
+[ IntegralFinder >> find ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`178 2 195 27`
+(signature)`find(self, name)`
+
+Retrieve the product with a root that matches the start of the given (factor-local/parameter)&<#IntegralFinder.find.Parameters.name[name]>.
+
+
+[ IntegralFinder >> find_spec ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`197 2 280 13`
+(signature)`find_spec(self, name, path, target)`
+
+Using the (invalid/unknown)&<#index>, check for the presence of (invalid/unknown)&<#name's> initial package.
+If found, the images contained by the connected directory will be
+used to load either an extension module or a Python bytecode module.
+
+
+[ IntegralFinder >> create ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (source/area)`281 2 300 37`
+(signature)`create(Class, system, python, host, form)`
+
+Construct a standard loader selecting images with the given (factor-local/parameter)&<#IntegralFinder.create.Parameters.form[form]>.
+
+
+[ setup ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`302 1 334 14`
+(signature)`setup(form, paths, platform)`
+
+Create and install a configured (factor-local/class)&<#IntegralFinder[IntegralFinder]>.
+
+The new finder is assigned to (invalid/unknown)&<#finder> and its (context-local/factor-element)&<fault.project/system#Context[fault.project.system.Context]> to (invalid/unknown)&<#context>.
+This is considered process global data and (invalid/unknown)&<#context> the method that should
+be used to resolve factors that are intended for application support.
+
+If called multiple times, a new finder will be created and the assignments
+will be overwritten. However, the old finder will remain active.
+

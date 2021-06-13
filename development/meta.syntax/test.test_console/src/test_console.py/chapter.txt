@@ -1,0 +1,29 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 29 0`
+
+[ library ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1 1 1 30`
+
+[ test_cache ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`3 1 25 44`
+(signature)`test_cache(test)`
+
+clipboard implementation
+
+/(parameter)`test`/
+	
+	(ctl/absent)`Undocumented`.
+

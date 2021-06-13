@@ -1,0 +1,190 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 269 0`
+Analyze the query module.
+
+
+[ module ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`4 1 4 30`
+
+[ test_iselement ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`6 1 21 37`
+(signature)`test_iselement(test)`
+
+- (project-local/factor-element)&<query#iselement[fault.route.query.iselement]>
+
+
+[ test_Context_initialization ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`23 1 29 87`
+(signature)`test_Context_initialization(test)`
+
+- (project-local/factor-element)&<query#Context.__init__[fault.route.query.Context.__init__]>
+
+
+[ test_Context_parse_slice ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`31 1 38 56`
+(signature)`test_Context_parse_slice(test)`
+
+- (project-local/factor-element)&<query#Context._parse_slice[fault.route.query.Context._parse_slice]>
+
+
+[ test_Context_identify_node ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`40 1 47 61`
+(signature)`test_Context_identify_node(test)`
+
+- (project-local/factor-element)&<query#Context._identify_node[fault.route.query.Context._identify_node]>
+
+
+[ test_Context_prepare_empty ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`49 1 55 18`
+(signature)`test_Context_prepare_empty(test)`
+
+- (project-local/factor-element)&<query#Context.prepare[fault.route.query.Context.prepare]>
+
+
+[ test_Context_invalid_path ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`57 1 85 30`
+(signature)`test_Context_invalid_path(test)`
+
+- (project-local/factor-element)&<query#Context.structure[fault.route.query.Context.structure]>
+- (project-local/factor-element)&<query#Context.prepare[fault.route.query.Context.prepare]>
+
+
+[ test_Context_filters ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`87 1 105 29`
+(signature)`test_Context_filters(test)`
+
+- (project-local/factor-element)&<query#Context.structure[fault.route.query.Context.structure]>
+- (project-local/factor-element)&<query#Context._filter[fault.route.query.Context._filter]>
+
+
+[ test_Context_all ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`107 1 120 44`
+(signature)`test_Context_all(test)`
+
+- (project-local/factor-element)&<query#Context.structure[fault.route.query.Context.structure]>
+- (project-local/factor-element)&<query#Context._all[fault.route.query.Context._all]>
+
+
+[ test_Context_index ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`122 1 146 46`
+(signature)`test_Context_index(test)`
+
+- (project-local/factor-element)&<query#Context._index[fault.route.query.Context._index]>
+- (project-local/factor-element)&<query#Context.interpret[fault.route.query.Context.interpret]>
+
+
+[ test_Context_predicate ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`148 1 164 47`
+(signature)`test_Context_predicate(test)`
+
+- (project-local/factor-element)&<query#Context._predicate[fault.route.query.Context._predicate]>
+- (project-local/factor-element)&<query#Context.interpret[fault.route.query.Context.interpret]>
+
+
+[ test_Context_union ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`166 1 184 56`
+(signature)`test_Context_union(test)`
+
+- (project-local/factor-element)&<query#Context._union[fault.route.query.Context._union]>
+- (project-local/factor-element)&<query#Context.interpret[fault.route.query.Context.interpret]>
+
+
+[ test_Cursor_select ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`186 1 210 58`
+(signature)`test_Cursor_select(test)`
+
+- (project-local/factor-element)&<query#Context._select[fault.route.query.Context._select]>
+- (project-local/factor-element)&<query#Cursor.select[fault.route.query.Cursor.select]>
+- (project-local/factor-element)&<query#Context.switch[fault.route.query.Context.switch]>
+- (project-local/factor-element)&<query#Context.interpret[fault.route.query.Context.interpret]>
+
+
+[ test_Cursor_seek ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`212 1 231 25`
+(signature)`test_Cursor_seek(test)`
+
+- (project-local/factor-element)&<query#Cursor.seek[fault.route.query.Cursor.seek]>
+
+
+[ test_Cursor_reset ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`233 1 251 35`
+(signature)`test_Cursor_reset(test)`
+
+- (project-local/factor-element)&<query#Cursor.reset[fault.route.query.Cursor.reset]>
+
+
+[ test_Cursor_fork ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`253 1 269 65`
+(signature)`test_Cursor_fork(test)`
+
+- (project-local/factor-element)&<query#Cursor.fork[fault.route.query.Cursor.fork]>
+

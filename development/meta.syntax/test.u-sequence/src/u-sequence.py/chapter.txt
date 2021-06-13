@@ -1,0 +1,55 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 64 0`
+
+[ module ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1 1 1 33`
+
+[ test_Segments ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`3 1 33 15`
+(signature)`test_Segments(test)`
+
+- (project-local/factor-element)&<sequence#Segments[meta.syntax.sequence.Segments]>
+
+/(parameter)`test`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ test_Segments_Sequence_Interface ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`35 1 55 46`
+(signature)`test_Segments_Sequence_Interface(test)`
+
+- (project-local/factor-element)&<sequence#Segments[meta.syntax.sequence.Segments]>
+
+/(parameter)`test`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ test_Segments_select ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`57 1 60 57`
+(signature)`test_Segments_select(test)`
+

@@ -1,0 +1,25 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 5 0`
+Check (none/invalid)&<http://fault.io/dev/null[meta.calculations]> functions.
+
+
+[ files ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`4 1 4 30`
+
+[ module ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`5 1 5 37`

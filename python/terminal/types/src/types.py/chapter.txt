@@ -1,0 +1,1174 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 832 0`
+Fundamental classes for representing input from a terminal and caret state management.
+
+
+[ TypeAlias ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`13 1 13 28`
+
+[ Sequence ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`14 1 14 36`
+
+[ functools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`15 1 15 16`
+
+[ itertools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`16 1 16 16`
+
+[ cells ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`17 1 17 30`
+
+[ Text ]
+! CONTROL:
+	/type/
+		data
+	/element/
+		- (source/area)`19 1 19 21`
+		- (type/syntax)`TypeAlias`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing.TypeAlias]>
+		
+Alias to the builtin (invalid/unknown)&<#str>.
+
+#!source
+	Text: TypeAlias = str
+
+[ Point ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (source/area)`21 1 52 22`
+! INHERIT:
+	- (source/area)`21 13 21 17`
+	- (type/syntax)`tuple`
+	- (type/invalid/unknown)&<#tuple>
+	
+A pair of integers locating a cell on the screen.
+Used by (project-local/unknown)&<events#mouse[events.mouse]> to specify the cursor location.
+
+Usually referenced from (project-local/unknown)&<events#Point[events.Point]>.
+
+
+[ Point >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`28 2 30 10`
+#!source
+	__slots__ = ()
+		@property
+
+[ Point >> x ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`31 2 34 10`
+
+[ Point >> y ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`35 2 36 16`
+
+[ Point >> __add__ ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`38 2 42 71`
+(signature)`__add__(self, point, op)`
+
+Translate the point relative to another.
+
+
+[ Point >> __sub__ ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`44 2 50 13`
+(signature)`__sub__(self, point, op)`
+
+Subtract the point from another.
+
+
+[ Point >> construct ]
+! CONTROL:
+	/type/
+		classmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`51 2 52 22`
+(signature)`construct(Class, *points)`
+
+
+[ Modifiers ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (source/area)`54 1 135 19`
+! INHERIT:
+	- (source/area)`54 17 54 19`
+	- (type/syntax)`int`
+	- (type/invalid/unknown)&<#int>
+	
+Bitmap of modifiers with an imaginary index.
+
+The imaginary index is usually not used, but can be used to describe
+the modifier context or carry additional information about the event.
+
+
+[ Modifiers >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`61 2 61 15`
+#!source
+	__slots__ = ()
+
+[ Modifiers >> sequence ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`63 2 67 2`
+#!source
+	sequence = (
+		'shift',
+		'meta',
+		'control',
+	)
+
+[ Modifiers >> bits ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`68 2 70 2`
+#!source
+	bits = {
+		k: 1 << i for k, i in zip(sequence, range(len(sequence)))
+	}
+
+[ Modifiers >> __repr__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`72 2 80 10`
+(signature)`__repr__(self)`
+
+
+[ Modifiers >> none ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (source/area)`81 2 87 10`
+		- (type/syntax)`bool`
+		- (type/invalid/unknown)&<#bool>
+		
+Whether there are any modifiers present.
+
+
+[ Modifiers >> control ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`88 2 91 10`
+		- (type/syntax)`bool`
+		- (type/invalid/unknown)&<#bool>
+		
+
+[ Modifiers >> meta ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`92 2 95 10`
+		- (type/syntax)`bool`
+		- (type/invalid/unknown)&<#bool>
+		
+
+[ Modifiers >> shift ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`96 2 99 10`
+		- (type/syntax)`bool`
+		- (type/invalid/unknown)&<#bool>
+		
+
+[ Modifiers >> imaginary ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (source/area)`100 2 105 30`
+An arbitrary number designating an imaginary modifier.
+Defaults to zero.
+
+
+[ Modifiers >> test ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`107 2 121 24`
+(signature)`test(self, *fields)`
+
+Check for the presence of multiple modifiers.
+
+#!/pl/python
+	if mod.test('shift', 'meta'):
+		action()
+	else:
+		no_shift_meta_action()
+
+[ Modifiers >> construct ]
+! CONTROL:
+	/type/
+		classmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`122 2 135 19`
+(signature)`construct(Class, bits, control, meta, shift, imaginary)`
+
+
+[ Event ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (source/area)`137 1 171 16`
+! INHERIT:
+	- (source/area)`137 13 137 17`
+	- (type/syntax)`tuple`
+	- (type/invalid/unknown)&<#tuple>
+	
+An input event from a terminal device.
+
+
+[ Event >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`141 2 143 10`
+#!source
+	__slots__ = ()
+		@property
+
+[ Event >> subtype ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (source/area)`144 2 148 16`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+The classification of the character with respect to the source.
+
+
+[ Event >> type ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`149 2 151 10`
+#!source
+	type=subtype
+		@property
+
+[ Event >> string ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (source/area)`152 2 158 10`
+		- (type/syntax)`bytes`
+		- (type/invalid/unknown)&<#bytes>
+		
+The literal characters, if any, of the event. Used for forwarding key events.
+
+
+[ Event >> identity ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (source/area)`159 2 166 10`
+		- (type/syntax)`object`
+		- (type/invalid/unknown)&<#object>
+		
+A name for the (factor-local/property)&<#Event.string[string]> contents; often the appropriate way to process
+character events. For complex events, this field holds a structure.
+
+
+[ Event >> modifiers ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (source/area)`167 2 171 16`
+		- (type/syntax)`Modifiers`
+		- (type/factor-local/class)&<#Modifiers[Modifiers]>
+		
+The identified (factor-local/class)&<#Modifiers[Modifiers]> of the Character.
+
+
+[ Traits ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (source/area)`173 1 264 17`
+! INHERIT:
+	- (source/area)`173 14 173 16`
+	- (type/syntax)`int`
+	- (type/invalid/unknown)&<#int>
+	
+Word attribute bitmap used to describe a part of a (factor-local/class)&<#Phrase[Phrase]>.
+
+The bitmap of attributes allows for conflicting decorations;
+(project-local/project-name)&<fault.terminal> makes no presumptions about how the terminal responds to
+these, so constraints regarding exclusive settings are not present.
+
+
+[ Traits >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`181 2 181 15`
+#!source
+	__slots__ = ()
+
+[ Traits >> _build ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`183 2 186 3`
+(signature)`_build(fields)`
+
+
+[ Traits >> linetypes ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`213 2 218 2`
+#!source
+	linetypes = (
+		'solid',
+		'dotted',
+		'dashed',
+		'curly',
+	)
+
+[ Traits >> __and__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`220 2 221 45`
+(signature)`__and__(self, rhs)`
+
+
+[ Traits >> __or__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`222 2 223 44`
+(signature)`__or__(self, rhs)`
+
+
+[ Traits >> __xor__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`224 2 227 13`
+(signature)`__xor__(self, rhs)`
+
+
+[ Traits >> all ]
+! CONTROL:
+	/type/
+		classmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`228 2 231 13`
+(signature)`all(Class)`
+
+
+[ Traits >> construct ]
+! CONTROL:
+	/type/
+		classmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`232 2 240 18`
+(signature)`construct(Class, *style, From)`
+
+
+[ Traits >> test ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`242 2 247 13`
+(signature)`test(self, *names)`
+
+
+[ Traits >> __iter__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`249 2 252 14`
+(signature)`__iter__(self)`
+
+
+[ Traits >> __str__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`254 2 259 14`
+(signature)`__str__(self)`
+
+
+[ Traits >> none ]
+! CONTROL:
+	/type/
+		staticmethod
+	/element/
+		- (source/area)`260 2 264 17`
+		- (type/syntax)`'Traits'`
+		
+(signature)`none()`
+
+Reference to the Zero Traits instance, (factor-local/data)&<#NoTraits[NoTraits]>.
+
+
+[ NoTraits ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`266 1 266 20`
+#!source
+	NoTraits = Traits(0)
+
+[ RenderParameters ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (source/area)`268 1 356 34`
+! INHERIT:
+	- (source/area)`268 24 268 28`
+	- (type/syntax)`tuple`
+	- (type/invalid/unknown)&<#tuple>
+	
+Rendering context parameters to use for displaying text on a Terminal.
+Instances hold the text and cell colors and the (factor-local/class)&<#Traits[Traits]>.
+
+
+[ RenderParameters >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`273 2 273 15`
+#!source
+	__slots__ = ()
+
+[ RenderParameters >> _cc_none ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`275 2 275 17`
+#!source
+	_cc_none = -1024
+
+[ RenderParameters >> _tc_none ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`276 2 276 17`
+#!source
+	_tc_none = -1024
+
+[ RenderParameters >> _lc_none ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`277 2 279 10`
+#!source
+	_lc_none = -1024
+		@property
+
+[ RenderParameters >> traits ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (source/area)`280 2 286 10`
+		- (type/syntax)`Traits`
+		- (type/factor-local/class)&<#Traits[Traits]>
+		
+The set of (factor-local/class)&<#Traits[Traits]> used to style displayed text.
+
+
+[ RenderParameters >> textcolor ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (source/area)`287 2 293 10`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+The color to use as the text color.
+
+
+[ RenderParameters >> cellcolor ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (source/area)`294 2 300 10`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+The color to use as the cell's background color.
+
+
+[ RenderParameters >> linecolor ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (source/area)`301 2 307 10`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+The color to use for the line when the underline trait is present.
+
+
+[ RenderParameters >> font ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (source/area)`308 2 315 13`
+		- (type/syntax)`None`
+		
+Configured font.
+Currently, always (invalid/unknown)&<#None> and ignored by Contexts and Types.
+
+
+[ RenderParameters >> from_colors ]
+! CONTROL:
+	/type/
+		classmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`316 2 317 55`
+(signature)`from_colors(Class, textcolor, cellcolor)`
+
+
+[ RenderParameters >> set ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`319 2 324 54`
+(signature)`set(self, traits)`
+
+Create a new instance with the given (factor-local/parameter)&<#RenderParameters.set.Parameters.traits[traits]> added to
+the traits present in (factor-local/parameter)&<#RenderParameters.set.Parameters.self[self]>.
+
+
+[ RenderParameters >> clear ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`326 2 332 57`
+(signature)`clear(self, traits)`
+
+Create a new instance with the given (factor-local/parameter)&<#RenderParameters.clear.Parameters.traits[traits]> removed
+from the traits present in (factor-local/parameter)&<#RenderParameters.clear.Parameters.self[self]>.
+
+
+[ RenderParameters >> apply ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`334 2 341 4`
+(signature)`apply(self, *traits, textcolor, cellcolor, linecolor)`
+
+
+[ RenderParameters >> update ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`343 2 349 4`
+(signature)`update(self, textcolor, cellcolor, linecolor, traits)`
+
+
+[ RenderParameters >> form ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`351 2 356 34`
+(signature)`form(self, *strings, cells)`
+
+Construct words suitable for use by (factor-local/class)&<#Phrase[Phrase]> associated with the parameters, (factor-local/parameter)&<#RenderParameters.form.Parameters.self[self]>.
+
+
+[ Units ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (source/area)`358 1 380 45`
+! INHERIT:
+	- (source/area)`358 13 358 17`
+	- (type/syntax)`tuple`
+	- (type/invalid/unknown)&<#tuple>
+	
+Explicitly partitioned string for forced segmentation.
+
+Provides a string-like object for explicitly designating User Perceived Characters.
+
+
+[ Units >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`364 2 364 15`
+#!source
+	__slots__ = ()
+
+[ Units >> __str__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`366 2 367 46`
+(signature)`__str__(self, map, str, tuple)`
+
+
+[ Units >> encode ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`369 2 370 50`
+(signature)`encode(self, encoding, errors)`
+
+
+[ Units >> __getitem__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`372 2 377 34`
+(signature)`__getitem__(self, item, isinstance, slice)`
+
+
+[ Units >> __add__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`379 2 380 45`
+(signature)`__add__(self, rhs)`
+
+
+[ grapheme ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`382 1 421 38`
+(signature)`grapheme(text, index, cells, slice, Units, str)`
+
+Retrieve the slice to characters that make up an indivisible unit of cells.
+This is not always consistent with User Perceived Characters.
+
+If the given (factor-local/parameter)&<#grapheme.Parameters.index[index]> refers to a zero width character,
+find the non-zero width character before the index.
+If the given (factor-local/parameter)&<#grapheme.Parameters.index[index]> refers to a non-zero width character,
+find all the zero width characters after it.
+
+! WARNING:
+	This is **not** consistent with Unicode grapheme clusters.
+
+
+[ itergraphemes ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`423 1 429 12`
+(signature)`itergraphemes(text, getslice, len)`
+
+
+[ Words ]
+! CONTROL:
+	/type/
+		data
+	/element/
+		- (source/area)`431 1 431 53`
+		- (type/syntax)`TypeAlias`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing.TypeAlias]>
+		
+Tuple identifying total cell count, text, and rendering options.
+The fundamentals of forming a (factor-local/class)&<#Phrase[Phrase]>.
+
+#!source
+	Words: TypeAlias = tuple[int, Text, RenderParameters]
+
+[ Phrase ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (source/area)`433 1 829 28`
+! INHERIT:
+	- (source/area)`433 14 433 18`
+	- (type/syntax)`tuple`
+	- (type/invalid/unknown)&<#tuple>
+	
+A terminal Phrase expressing a sequence of styled words.
+
+Each Word in the Phrase contains an arbitrary string associated with a foreground,
+background, and (factor-local/class)&<#Traits[Traits]>.
+
+
+[ Phrase >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`440 2 442 14`
+#!source
+	__slots__ = ()
+		@staticmethod
+
+[ Phrase >> default ]
+! CONTROL:
+	/type/
+		staticmethod
+	/element/
+		- (source/area)`443 2 449 13`
+(signature)`default(text, traits)`
+
+Construct a Word Specification with default text attributes.
+
+
+[ Phrase >> wordspace ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (source/area)`450 2 456 13`
+(signature)`wordspace(Class)`
+
+Word specification consisting of a single space.
+
+
+[ Phrase >> from_words ]
+! CONTROL:
+	/type/
+		classmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`457 2 458 29`
+(signature)`from_words(Class, *words, ichain)`
+
+
+[ Phrase >> join ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`460 2 472 13`
+(signature)`join(self, phrases, zip, repeat, ichain)`
+
+Create a new Phrase from (factor-local/parameter)&<#Phrase.join.Parameters.phrases[phrases]> by placing (factor-local/parameter)&<#Phrase.join.Parameters.self[self]> between each (factor-local/class)&<#Phrase[Phrase]> instance
+in (factor-local/parameter)&<#Phrase.join.Parameters.phrases[phrases]>.
+
+
+[ Phrase >> construct ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (source/area)`473 2 491 38`
+(signature)`construct(Class, specifications, RenderParametersConstructor, cells, str)`
+
+Create a (factor-local/class)&<#Phrase[Phrase]> instance from the (factor-local/parameter)&<#Phrase.construct.Parameters.specifications[specifications]> designating
+the text of the words and their properties.
+
+[ >> Parameters ]
+
+/(parameter)`Class`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`specifications`/
+	- (type/syntax)`Sequence[object]`
+	
+	The words and their attributes making up the phrase.
+
+/(parameter)`RenderParametersConstructor`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`cells`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`str`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ Phrase >> combine ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`493 2 509 28`
+(signature)`combine(self)`
+
+Combine word specifications with identical attributes(styles).
+Returns a new (factor-local/class)&<#Phrase[Phrase]> instance with any redundant word attributes eliminated.
+
+
+[ Phrase >> cellcount ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`511 2 515 32`
+(signature)`cellcount(self)`
+
+Number of cells that the phrase will occupy.
+
+
+[ Phrase >> unitcount ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`517 2 521 37`
+(signature)`unitcount(self)`
+
+Number of character units contained by the phrase.
+
+
+[ Phrase >> translate ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`523 2 572 14`
+(signature)`translate(self, *indexes, iter, len, next, cells)`
+
+Get the cell offsets of the given character indexes.
+
+[ >> Parameters ]
+
+/(parameter)`self`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`indexes`/
+	
+	Ordered sequence of grapheme (cluster) indexes to resolve.
+	(Currently a lie, it is mere character index translation)
+
+/(parameter)`iter`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`len`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`next`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`cells`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ Phrase >> findcells ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`574 2 580 14`
+(signature)`findcells(self, *offsets, index)`
+
+
+[ Phrase >> reverse ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`582 2 591 3`
+(signature)`reverse(self)`
+
+Construct an iterator to the concrete words for creating a new (factor-local/class)&<#Phrase[Phrase]>
+instance that is in reversed form of the words in (factor-local/parameter)&<#Phrase.reverse.Parameters.self[self]>.
+`assert phrase == Phrase(Phrase(phrase.reverse()).reverse())`
+
+
+[ Phrase >> subphrase ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`593 2 598 57`
+(signature)`subphrase(self, start, stop, adjust)`
+
+Extract the subphrase at the given cell offsets.
+
+
+[ Phrase >> select ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`600 2 628 46`
+(signature)`select(self, start, stop, adjust, cells)`
+
+Extract the subphrase at the given indexes.
+
+[ >> Parameters ]
+
+/(parameter)`self`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`start`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`stop`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`adjust`/
+	
+	Callable that changes the text properties of the selected words.
+	Defaults to no change.
+
+/(parameter)`cells`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ Phrase >> lfindcell ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`635 2 701 41`
+(signature)`lfindcell(self, celloffset, start, map, len, range, cells, islice)`
+
+Find the word and character index using a cell offset.
+
+
+[ Phrase >> rfindcell ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`703 2 759 41`
+(signature)`rfindcell(self, celloffset, start, map, len, range, cells, islice)`
+
+Find the word and character index using a cell offset.
+
+
+[ Phrase >> lstripcells ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`761 2 793 28`
+(signature)`lstripcells(self, cellcount, substitute, list, len, range, cells)`
+
+Remove the given number of cells from the start of the phrase.
+
+If the cell count traverses a wide character, the (factor-local/parameter)&<#Phrase.lstripcells.Parameters.substitute[substitute]> parameter is
+called with the character as its only argument and the result is prefixed
+to the start of the phrase.
+
+
+[ Phrase >> rstripcells ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`795 2 829 28`
+(signature)`rstripcells(self, cellcount, substitute, list, len, range, cells)`
+
+Remove the given number of cells from the end of the phrase.
+
+If the cell count traverses a wide character, the (factor-local/parameter)&<#Phrase.rstripcells.Parameters.substitute[substitute]> parameter is
+called with the character as its only argument and the result is suffixed
+to the end of the phrase.
+
+
+[ Page ]
+! CONTROL:
+	/type/
+		data
+	/element/
+		- (source/area)`832 1 832 34`
+		- (type/syntax)`TypeAlias`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing.TypeAlias]>
+		
+(factor-local/class)&<#Phrase[Phrase]> sequence type.
+
+#!source
+	Page: TypeAlias = Sequence[Phrase]

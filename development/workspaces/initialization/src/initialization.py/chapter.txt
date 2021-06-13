@@ -1,0 +1,65 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 47 24`
+Workspace initialization procedures.
+
+
+[ os ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`4 1 4 9`
+
+[ directory_paths ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`6 1 11 1`
+#!source
+	directory_paths = [
+		'cc', # Construction Context
+		'xc', # Execution Context
+		'cache', # Build cache.
+		'captures',
+	]
+
+[ cc ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`13 1 23 26`
+(signature)`cc(route, intentions)`
+
+
+[ directories ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`25 1 28 22`
+(signature)`directories(route)`
+
+
+[ root ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`30 1 48 23`
+(signature)`root(wkenv, intentions, relevel)`
+

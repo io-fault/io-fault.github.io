@@ -1,0 +1,49 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 89 0`
+Arbitrary Calendar Address Resolution
+
+Used internally by (project-local/unknown)&<gregorian> in order to work with the gregorian calendar pattern.
+
+
+[ itertools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`6 1 6 16`
+
+[ operator ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`7 1 7 15`
+
+[ aggregate ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`11 1 42 2`
+(signature)`aggregate(node, chain, accumulate, isinstance, int, tuple, range, len, sum)`
+
+Recursively aggregate the data in the node.
+
+
+[ resolve ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`51 1 89 85`
+(signature)`resolve(selectors, iaddress, calendar, divmod, isinstance, range, len, int)`
+

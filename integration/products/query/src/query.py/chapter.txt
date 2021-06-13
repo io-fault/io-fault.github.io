@@ -1,0 +1,85 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 65 18`
+Product reporting functions for integration status and profile information.
+
+[ Engineering ]
+
+Current implementation is incomplete and serves only as guidance for the intention
+of the pdctl command. In addition, it is desirable that integration status be shown
+as well. Future changes will likely include keeping integration records inside the
+product index.
+
+
+[ collections ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`10 1 10 18`
+
+[ lsf ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`12 1 12 39`
+
+[ files ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`13 1 13 30`
+
+[ options ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`15 1 15 18`
+#!source
+	options = ({}, {})
+
+[ sources ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`17 1 20 12`
+(signature)`sources(factor_record)`
+
+
+[ stats ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`22 1 36 12`
+(signature)`stats(projects)`
+
+
+[ report ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`38 1 66 17`
+(signature)`report(meta, log, config, fx, cc, pdr, remainder)`
+
+Write human readable information about the product and the identified projects.
+

@@ -1,0 +1,60 @@
+"""
+# Human readable count (number) formatting using metric symbol suffixes.
+"""
+
+steps = [
+	('', '', 0),
+	('kilo', 'k', 3),
+	('mega', 'M', 6),
+	('giga', 'G', 9),
+	('tera', 'T', 12),
+	('peta', 'P', 15),
+	('exa', 'E', 18),
+	('zetta', 'Z', 21),
+	('yotta', 'Y', 24),
+]
+
+def precision(count):
+	"""
+	# Find the prefix, suffix, and power that the given count should be classified as.
+	"""
+	index = 0
+	for pd in steps:
+		if count < 1000:
+			return pd
+		count //= (10**3)
+
+	return pd
+
+def metric(value, decimal='.', formatting="{:.1f}".format):
+	"""
+	# Construct a sequence of strings that make up the formatted text to be printed.
+
+	# [ Parameters ]
+	# /value/
+		# The number to be formatted.
+	# /decimal/
+		# The character that should be used to separate the whole and fraction.
+
+	# [ Returns ]
+	# # Whole number portion.
+	# # Decimal point. Defaults to (character)`.`.
+	# # Fractional portion of the number in decimal.
+	# # Metric suffix; empty string if less than (integer)`1000`.
+	"""
+
+	suffix, power = precision(abs(value))[1:]
+	if power == 0:
+		return (str(value), '', '', '')
+
+	r = value / (10**power)
+
+	fstr = formatting(r)
+	if '.' in fstr:
+		whole, fraction = fstr.split('.')
+	else:
+		whole = fstr
+		decimal = ''
+		fraction = ''
+
+	return (whole, decimal, fraction, suffix)

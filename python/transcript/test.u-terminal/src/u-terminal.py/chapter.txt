@@ -1,0 +1,16 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 7 39`
+Validate terminal classes and functionality.
+
+
+[ module ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`4 1 4 33`

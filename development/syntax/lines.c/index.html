@@ -1,0 +1,201 @@
+<html><head><title>meta.syntax.lines.c</title><meta charset="utf-8"/><link as="style" rel="preload" href="../../.legacy-web/core.css"></link><link as="style" rel="preload" href="../../.legacy-web/factor.css"></link><link rel="stylesheet" href="../../.legacy-web/core.css"></link><link rel="stylesheet" href="../../.legacy-web/factor.css"></link></head><body><main><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><span class="title">meta.syntax.lines.c</span><span class="factor-type">http://if.fault.io/factors/python.module</span></h1><div class="text.abstract"><p><span class="text.normal">C language profile.</span></p></div><section class="import" documented="false" local-identifier="fields" id="fields"><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><a class="title" href="#fields"><span class="text.normal">fields</span></a><span class="abstract-type">import</span></h1></section><section class="data" documented="false" local-identifier="keyword_list" id="keyword_list"><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><a class="title" href="#keyword_list"><span class="text.normal">keyword_list</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code>keyword_list = [
+	'asm',
+	'auto',
+	'break',
+	'case',
+	'char',
+	'const',
+	'continue',
+	'default',
+	'do',
+	'double',
+	'else',
+	'enum',
+	'extern',
+	'float',
+	'for',
+	'goto',
+	'if',
+	'int',
+	'long',
+	'register',
+	'return',
+	'short',
+	'signed',
+	'sizeof',
+	'static',
+	'struct',
+	'switch',
+	'typedef',
+	'union',
+	'unsigned',
+	'void',
+	'volatile',
+	'while',
+
+	'inline',
+	'restrict',
+
+	'_Alignas',
+	'_Alignof',
+	'_Atomic',
+	'_Bool',
+	'_Complex',
+	'_Generic',
+	'_Imaginary',
+	'_Noreturn',
+	'_Static_assert',
+	'_Thread_local',
+]
+</code></pre></section><section class="data" documented="false" local-identifier="core_list" id="core_list"><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><a class="title" href="#core_list"><span class="text.normal">core_list</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code>core_list = [
+	'printf',
+	'fprintf',
+	'sprintf',
+	'vprintf',
+	'vfprintf',
+	'vsprintf',
+
+	'scanf',
+	'sscanf',
+	'fscanf',
+	'vscanf',
+	'vfscanf',
+	'vsscanf',
+
+	'getc',
+	'fgetc',
+	'getchar',
+	'putc',
+	'fputc',
+	'putchar',
+
+	'getwc',
+	'fgetwc',
+	'getwchar',
+	'putwc',
+	'fputwc',
+	'putwchar',
+
+	'fopen',
+	'freopen',
+	'fgetpos',
+	'fsetpos',
+	'fseek',
+	'ftell',
+	'rewind',
+
+	'feof',
+	'ferror',
+	'clearerr',
+
+	'errno',
+	'stderr',
+	'stdin',
+	'stdout',
+	'signal',
+	'raise',
+
+	'read',
+	'write',
+	'close',
+	'open',
+	'flush',
+
+	'malloc',
+	'calloc',
+	'realloc',
+	'free',
+
+	'memcpy',
+	'memmove',
+	'memset',
+
+	'bzero',
+	'bcopy',
+	'swab',
+
+	'strlen',
+	'strcpy',
+	'strcpy',
+	'strcat',
+	'strcmp',
+	'strlwr',
+	'strupr',
+
+	'size_t',
+	'ssize_t',
+	'offset_t',
+
+	'alignas',
+	'alignof',
+	'bool',
+	'complex',
+	'imaginary',
+	'noreturn',
+	'static_assert',
+	'thread_local',
+
+	'wchar_t',
+	'char16_t',
+	'char32_t',
+
+	'setjmp',
+	'longjmp',
+	'jmp_buf',
+
+	'__func__',
+	'__FILE__',
+	'__LINE__',
+	'__DATE__',
+	'__TIME__',
+
+	'__STDC__',
+	'__STDC_VERSION__',
+	'__STDC_HOSTED__',
+
+	'__STDC_ANALYZABLE__',
+	'__STDC_LIB_EXT1__',
+	'__STDC_NO_THREADS__',
+	'__STDC_NO_ATOMICS__',
+	'__STDC_IEC_559__',
+	'__STDC_IEC_559_COMPLEX__',
+	'__STDC_NO_COMPLEX__',
+	'__STDC_NO_VLA__',
+
+	'_Pragma',
+]
+</code></pre></section><section class="data" documented="false" local-identifier="exoword_list" id="exoword_list"><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><a class="title" href="#exoword_list"><span class="text.normal">exoword_list</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code>exoword_list = [
+	'#include',
+	'#define',
+	'#undef',
+	'#if',
+	'#ifdef',
+	'#ifndef',
+	'#elif',
+	'#else',
+	'#endif',
+	'#warning',
+	'#error',
+	'#line',
+	'#pragma',
+	'#import',
+	'STATIC',
+	'CONCEAL',
+	'REVEAL',
+	'SYMBOL',
+]
+</code></pre></section><section class="data" documented="false" local-identifier="keywords" id="keywords"><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><a class="title" href="#keywords"><span class="text.normal">keywords</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code>keywords = {y: y for y in map(fields.String, keyword_list)}
+</code></pre></section><section class="data" documented="false" local-identifier="cores" id="cores"><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><a class="title" href="#cores"><span class="text.normal">cores</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code>cores = {y: y for y in map(fields.String, core_list)}
+</code></pre></section><section class="data" documented="false" local-identifier="exowords" id="exowords"><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><a class="title" href="#exowords"><span class="text.normal">exowords</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code>exowords = {y: y for y in map(fields.String, exoword_list)}
+</code></pre></section><section class="data" documented="false" local-identifier="terminators" id="terminators"><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><a class="title" href="#terminators"><span class="text.normal">terminators</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code>terminators = {y: y for y in map(fields.Constant, ";")}
+</code></pre></section><section class="data" documented="false" local-identifier="separators" id="separators"><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><a class="title" href="#separators"><span class="text.normal">separators</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code>separators = {y: y for y in map(fields.Constant, ",")}
+</code></pre></section><section class="data" documented="false" local-identifier="routers" id="routers"><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><a class="title" href="#routers"><span class="text.normal">routers</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code>routers = {y: y for y in map(fields.Constant, (".","-","&#62;"))} # "-&#62;"; needs special handling
+</code></pre></section><section class="data" documented="false" local-identifier="operators" id="operators"><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><a class="title" href="#operators"><span class="text.normal">operators</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code>operators = {y: y for y in map(fields.Constant, "@!&#38;^*%+=-|\\/&#60;&#62;?~:")}
+</code></pre></section><section class="data" documented="false" local-identifier="groupings" id="groupings"><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><a class="title" href="#groupings"><span class="text.normal">groupings</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code>groupings = {y: y for y in map(fields.Constant, "()[]{}")}
+</code></pre></section><section class="data" documented="false" local-identifier="quotations" id="quotations"><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><a class="title" href="#quotations"><span class="text.normal">quotations</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code>quotations = {y: y for y in map(fields.Constant, ("'", '"',))}
+</code></pre></section><section class="data" documented="false" local-identifier="comments" id="comments"><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><a class="title" href="#comments"><span class="text.normal">comments</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code>comments = {
+	"//": fields.Constant("//"),
+	"/*": fields.Constant("/*"),
+	"*/": fields.Constant("*/"),
+}
+</code></pre></section><h1 class="footing"></h1></main></body></html>

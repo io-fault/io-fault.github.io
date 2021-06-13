@@ -1,0 +1,1384 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 728 0`
+Field entry management package.
+
+
+[ abc ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`5 1 5 10`
+
+[ operator ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`6 1 6 15`
+
+[ keyword ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`7 1 7 14`
+
+[ itertools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`8 1 8 16`
+
+[ functools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`9 1 9 16`
+
+[ Field ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (source/area)`11 1 69 5`
+Protocol for Field types.
+
+
+[ Field >> empty ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (source/area)`18 2 24 20`
+Designates that the Field contains no content.
+
+
+[ Field >> full ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (source/area)`25 2 30 20`
+Designates that the field is full and cannot accept inserts.
+
+
+[ Field >> characters ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`31 2 36 20`
+(signature)`characters(self)`
+
+Number of characters in the field.
+
+
+[ Field >> cells ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`37 2 42 20`
+(signature)`cells(self)`
+
+Number of cells used by the display of the field.
+
+
+[ Field >> value ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`43 2 48 20`
+(signature)`value(self)`
+
+The value of the field or structure.
+
+
+[ Field >> subfields ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`49 2 64 20`
+(signature)`subfields(self)`
+
+The absolute sequence of fields contained within the Field.
+Nested fields must be unnested by including the Field context.
+
+Returns an iterator producing a triple:
+
+(path, field)
+
+Where path is a tuple containing the sequence of containing fields
+and the corresponding index:
+
+(index, field), ...
+
+
+[ Field >> count ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`65 2 69 5`
+(signature)`count(self)`
+
+Number of subfields contained by the field.
+(invalid/unknown)&<#None> if the field is not a container.
+
+
+[ changelength ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`71 1 82 9`
+(signature)`changelength(delta)`
+
+Calculate the length of a delta.
+
+
+[ address ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`84 1 133 2`
+(signature)`address(seq, start, stop, len, range)`
+
+Find the address of the absolute slice.
+
+
+[ delete ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`135 1 181 11`
+(signature)`delete(seq, start, stop, empty, len, range)`
+
+
+[ insert ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`183 1 246 15`
+(signature)`insert(seq, offset, insertion, empty, len)`
+
+
+[ String ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (source/area)`247 1 280 19`
+! INHERIT:
+	- (source/area)`247 14 247 16`
+	- (type/syntax)`str`
+	- (type/invalid/unknown)&<#str>
+	
+A constant string field. The contents are immutable and it identifies itself as full.
+
+
+[ String >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`251 2 251 15`
+#!source
+	__slots__ = ()
+
+[ String >> merge ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`252 2 252 13`
+#!source
+	merge = True
+
+[ String >> __getitem__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`254 2 257 10`
+(signature)`__getitem__(self, args)`
+
+
+[ String >> empty ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`258 2 261 10`
+
+[ String >> full ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`262 2 263 13`
+
+[ String >> count ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`265 2 266 13`
+(signature)`count(self)`
+
+
+[ String >> delete ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`268 2 269 6`
+(signature)`delete(self, start, stop)`
+
+
+[ String >> insert ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`271 2 272 6`
+(signature)`insert(self, position, string)`
+
+
+[ String >> value ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`274 2 275 18`
+(signature)`value(self)`
+
+
+[ String >> length ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`277 2 278 18`
+(signature)`length(self, len)`
+
+
+[ String >> characters ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`279 2 279 25`
+#!source
+	characters = str.__len__
+
+[ String >> cells ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`280 2 280 19`
+#!source
+	cells = characters
+
+[ Constant ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`282 1 283 14`
+! INHERIT:
+	- (source/area)`282 16 282 21`
+	- (type/syntax)`String`
+	- (type/factor-local/class)&<#String[String]>
+	
+
+[ Constant >> merge ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`283 2 283 14`
+#!source
+	merge = False
+
+[ Delimiter ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`285 1 288 15`
+! INHERIT:
+	- (source/area)`285 17 285 22`
+	- (type/syntax)`String`
+	- (type/factor-local/class)&<#String[String]>
+	
+
+[ Delimiter >> merge ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`286 2 288 15`
+#!source
+		merge = False
+	
+	@Field.register
+
+[ Styled ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (source/area)`289 1 320 15`
+! INHERIT:
+	- (source/area)`289 14 289 19`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+Explicitly styled text field.
+
+
+[ Styled >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`294 2 296 10`
+#!source
+	__slots__ = ('text', 'traits', 'textcolor', 'cellcolor', 'linecolor')
+		@property
+
+[ Styled >> underlined ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`297 2 298 35`
+
+[ Styled >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`300 2 305 17`
+(signature)`__init__(self, text, fg)`
+
+
+[ Styled >> terminal ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`307 2 320 15`
+(signature)`terminal(self)`
+
+Return a tuple suitable for fault.terminal.
+
+
+[ Text ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (source/area)`321 1 460 29`
+! INHERIT:
+	- (source/area)`321 12 321 17`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+Mutable string field.
+
+Normally subclassed for specific languages for highlighting.
+
+
+[ Text >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`328 2 328 27`
+#!source
+	__slots__ = ('sequences',)
+
+[ Text >> empty_entry ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`330 2 330 25`
+#!source
+	empty_entry = String("")
+
+[ Text >> constants ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`331 2 331 15`
+#!source
+	constants = ()
+
+[ Text >> classifications ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`332 2 334 10`
+#!source
+	classifications = ()
+		@property
+
+[ Text >> empty ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`335 2 338 10`
+
+[ Text >> full ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (source/area)`339 2 345 31`
+Whether or not more characters can be inserted.
+
+
+[ Text >> characters ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`347 2 348 18`
+(signature)`characters(self)`
+
+
+[ Text >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`350 2 353 13`
+(signature)`__init__(self, string)`
+
+
+[ Text >> from_sequence ]
+! CONTROL:
+	/type/
+		classmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`354 2 357 10`
+(signature)`from_sequence(Class, sequence)`
+
+
+[ Text >> set ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`359 2 366 16`
+(signature)`set(self, characters)`
+
+Set the field characters. Used loading fields.
+Destroys the log (delta sequence).
+
+
+[ Text >> clear ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`368 2 372 37`
+(signature)`clear(self)`
+
+Set the text to an empty string.
+
+
+[ Text >> insert ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`374 2 414 37`
+(signature)`insert(self, offset, string, op, len)`
+
+
+[ Text >> delete ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`416 2 436 40`
+(signature)`delete(self, start, stop)`
+
+
+[ Text >> replace ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`438 2 441 17`
+(signature)`replace(self, start, stop, string)`
+
+
+[ Text >> __len__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`443 2 444 38`
+(signature)`__len__(self)`
+
+
+[ Text >> length ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`445 2 445 17`
+#!source
+	length = __len__
+
+[ Text >> count ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`447 2 448 28`
+(signature)`count(self)`
+
+
+[ Text >> value ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`450 2 451 32`
+(signature)`value(self)`
+
+
+[ Text >> subfields ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`453 2 454 77`
+(signature)`subfields(self, path)`
+
+
+[ Text >> __str__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`456 2 457 42`
+(signature)`__str__(self)`
+
+
+[ Text >> __repr__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`459 2 460 29`
+(signature)`__repr__(self)`
+
+
+[ Line ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (source/area)`462 1 467 27`
+! INHERIT:
+	- (source/area)`462 12 462 15`
+	- (type/syntax)`Text`
+	- (type/factor-local/class)&<#Text[Text]>
+	
+Text object representing a single line.
+Implies the special handling of control characters.
+
+
+[ Line >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`467 2 467 27`
+#!source
+	__slots__ = Text.__slots__
+
+[ FieldSeparator ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (source/area)`469 1 476 21`
+! INHERIT:
+	- (source/area)`469 22 469 30`
+	- (type/syntax)`Delimiter`
+	- (type/factor-local/class)&<#Delimiter[Delimiter]>
+	
+A space-like character used to delimit fields for commands.
+
+Primarily used by Prompts to distinguish between spaces and field separation.
+
+
+[ FieldSeparator >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`475 2 475 32`
+#!source
+	__slots__ = Delimiter.__slots__
+
+[ FieldSeparator >> classifications ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`476 2 476 21`
+#!source
+	classifications = ()
+
+[ field_separator ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`478 1 480 15`
+#!source
+	field_separator = FieldSeparator(':')
+	
+	@Field.register
+
+[ Formatting ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (source/area)`481 1 525 20`
+! INHERIT:
+	- (source/area)`481 18 481 20`
+	- (type/syntax)`int`
+	- (type/invalid/unknown)&<#int>
+	
+A field that represents a sequence of tabs.
+Cannot be used inside (factor-local/class)&<#Text[Text]> fields.
+
+
+[ Formatting >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`487 2 487 15`
+#!source
+	__slots__ = ()
+
+[ Formatting >> character ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`489 2 489 15`
+#!source
+	character = ''
+
+[ Formatting >> identity ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`490 2 490 19`
+#!source
+	identity = 'empty'
+
+[ Formatting >> size ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`491 2 493 10`
+#!source
+	size = 0
+		@property
+
+[ Formatting >> empty ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`494 2 497 10`
+
+[ Formatting >> full ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`498 2 499 13`
+
+[ Formatting >> characters ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`501 2 502 25`
+(signature)`characters(self)`
+
+
+[ Formatting >> cells ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`503 2 503 19`
+#!source
+	cells = characters
+
+[ Formatting >> count ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`505 2 506 13`
+(signature)`count(self)`
+
+
+[ Formatting >> insert ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`508 2 509 13`
+(signature)`insert(self, *args)`
+
+
+[ Formatting >> delete ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`511 2 512 13`
+(signature)`delete(self, *args)`
+
+
+[ Formatting >> __str__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`514 2 515 44`
+(signature)`__str__(self)`
+
+
+[ Formatting >> __len__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`517 2 518 25`
+(signature)`__len__(self)`
+
+
+[ Formatting >> value ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`520 2 521 30`
+(signature)`value(self)`
+
+
+[ Formatting >> length ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`523 2 524 25`
+(signature)`length(self)`
+
+
+[ Formatting >> characters ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`525 2 525 20`
+#!source
+	characters = length
+
+[ Spacing ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (source/area)`527 1 536 9`
+! INHERIT:
+	- (source/area)`527 15 527 24`
+	- (type/syntax)`Formatting`
+	- (type/factor-local/class)&<#Formatting[Formatting]>
+	
+A field that represents a series of spaces.
+
+
+[ Spacing >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`532 2 532 15`
+#!source
+	__slots__ = ()
+
+[ Spacing >> character ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`534 2 534 16`
+#!source
+	character = ' '
+
+[ Spacing >> identity ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`535 2 535 19`
+#!source
+	identity = 'space'
+
+[ Spacing >> size ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`536 2 536 9`
+#!source
+	size = 1
+
+[ Indentation ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (source/area)`538 1 550 21`
+! INHERIT:
+	- (source/area)`538 19 538 28`
+	- (type/syntax)`Formatting`
+	- (type/factor-local/class)&<#Formatting[Formatting]>
+	
+A field that represents a series of tabs.
+
+
+[ Indentation >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`542 2 542 15`
+#!source
+	__slots__ = ()
+
+[ Indentation >> character ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`543 2 543 17`
+#!source
+	character = '\t'
+
+[ Indentation >> identity ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`544 2 544 17`
+#!source
+	identity = 'tab'
+
+[ Indentation >> size ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`545 2 548 25`
+#!source
+	size = 4
+		@classmethod
+	@functools.lru_cache(16)
+
+[ Indentation >> acquire ]
+! CONTROL:
+	/type/
+		classmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`549 2 550 21`
+(signature)`acquire(Class, level)`
+
+
+[ Terminator ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (source/area)`552 1 561 15`
+! INHERIT:
+	- (source/area)`552 18 552 27`
+	- (type/syntax)`Formatting`
+	- (type/factor-local/class)&<#Formatting[Formatting]>
+	
+A field that represents a newline.
+
+
+[ Terminator >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`556 2 556 15`
+#!source
+	__slots__ = ()
+
+[ Terminator >> character ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`557 2 557 17`
+#!source
+	character = '\n'
+
+[ Terminator >> identity ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`558 2 558 21`
+#!source
+	identity = 'newline'
+
+[ Terminator >> size ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`559 2 561 15`
+#!source
+		size = 1
+	
+	@Field.register
+
+[ Sequence ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`562 1 726 39`
+! INHERIT:
+	- (source/area)`562 16 562 19`
+	- (type/syntax)`list`
+	- (type/invalid/unknown)&<#list>
+	
+
+[ Sequence >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`563 2 563 15`
+#!source
+	__slots__ = ()
+
+[ Sequence >> field_usage_indicators ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`567 2 587 10`
+#!source
+	field_usage_indicators = {
+		'key': ("<", ">"),
+		'': ("(", ")"),
+		'value': ("[", "]"),
+		'item': ("<", ">"),
+		'expression': ("{", "}"),
+		'default': ("[", "]"),
+	}
+		# dict:
+	# <key> [value]
+	# <key> [value]
+	# <key> [value]
+	# matrix:
+	#  |item| |item| |item|
+	#  |item| |item| |item|
+	#  |item| |item| |item|
+	# list:
+	#  [item] [item]
+		@property
+
+[ Sequence >> empty ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (source/area)`588 2 595 13`
+Whether the sequence contains non-empty fields.
+
+
+[ Sequence >> count ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`597 2 601 18`
+(signature)`count(self)`
+
+The number of fields immediately contained.
+
+
+[ Sequence >> prefix ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`603 2 604 20`
+(signature)`prefix(self, *fields)`
+
+
+[ Sequence >> suffix ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`606 2 607 21`
+(signature)`suffix(self, *fields)`
+
+
+[ Sequence >> insert ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`609 2 611 30`
+(signature)`insert(self, position, *fields)`
+
+
+[ Sequence >> insertion ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`613 2 618 43`
+(signature)`insertion(self, seq)`
+
+
+[ Sequence >> delete ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`620 2 631 39`
+(signature)`delete(self, *fields, get0)`
+
+Delete a set of fields from the sequence.
+
+
+[ Sequence >> clear ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`633 2 636 16`
+(signature)`clear(self)`
+
+
+[ Sequence >> __str__ ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`638 2 642 40`
+(signature)`__str__(self)`
+
+Display string of the sequence of fields.
+
+
+[ Sequence >> length ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`644 2 648 34`
+(signature)`length(self, lenmethod)`
+
+The sum of the *display* length of the contained fields.
+
+
+[ Sequence >> characters ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`649 2 649 20`
+#!source
+	characters = length
+
+[ Sequence >> cells ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`651 2 655 34`
+(signature)`cells(self, lenmethod)`
+
+Sum of (factor-local/method)&<#Sequence.cells[cells]> of all the subfields.
+
+
+[ Sequence >> subfields ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`657 2 674 34`
+(signature)`subfields(self, path, range, len, isinstance)`
+
+Map the nested sequences into a serialized form.
+
+The tuples produced are pairs containing the field and path to the field.
+The path being the sequence of sequences containing the field.
+
+
+[ Sequence >> value ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`676 2 678 18`
+(signature)`value(self)`
+
+
+[ Sequence >> offset ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`680 2 694 15`
+(signature)`offset(self, path, field)`
+
+Get the horizontal positioning of the field within the unit.
+
+
+[ Sequence >> find ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`696 2 726 39`
+(signature)`find(self, offset, state)`
+
+Find the field at the relative offset.
+
+If the offset is beyond the end of the sequence, (invalid/unknown)&<#None>.
+If the offset is less than zero, the first.
+
+
+[ space ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`728 1 728 22`
+#!source
+	space = Delimiter(" ")

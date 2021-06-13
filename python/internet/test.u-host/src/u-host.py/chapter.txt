@@ -1,0 +1,34 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 15 0`
+
+[ library ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1 1 1 30`
+
+[ ri ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`2 1 2 17`
+
+[ test_endpoint ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`4 1 15 50`
+(signature)`test_endpoint(test)`
+

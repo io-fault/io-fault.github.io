@@ -1,0 +1,1332 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 694 0`
+
+[ functools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1 1 1 16`
+
+[ operator ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`2 1 2 15`
+
+[ collections ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`3 1 3 18`
+
+[ kcore ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`5 1 5 38`
+
+[ matrix ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`6 1 6 33`
+
+[ keyboard ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`8 1 8 22`
+
+[ Position ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (source/area)`10 1 297 33`
+! INHERIT:
+	- (source/area)`10 16 10 21`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+Mutable position state for managing the position of a cursor with respect to a range.
+No constraints are enforced and position coherency is considered subjective.
+
+[ > Properties ]
+
+/datum/
+	The absolute position. (start)
+
+/offset/
+	The actual position relative to the (invalid/unknown)&<#datum>. (current=datum+offset)
+
+/magnitude/
+	The size of the range relative to the (invalid/unknown)&<#datum>. (stop=datum+magnitude)
+
+
+[ Position >> minimum ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`24 2 27 10`
+
+[ Position >> maximum ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`28 2 29 36`
+
+[ Position >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`31 2 34 20`
+(signature)`__init__(self)`
+
+
+[ Position >> get ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`36 2 40 33`
+(signature)`get(self)`
+
+Get the absolute position.
+
+/(parameter)`self`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ Position >> set ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`42 2 51 15`
+(signature)`set(self, position)`
+
+Set the absolute position.
+
+Calculates a new (invalid/unknown)&<#offset> based on the absolute (factor-local/parameter)&<#Position.set.position[position]>.
+
+/(parameter)`self`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`position`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ Position >> configure ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`53 2 59 22`
+(signature)`configure(self, datum, magnitude)`
+
+Initialize the values of the position.
+
+/(parameter)`self`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`datum`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`magnitude`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`offset`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ Position >> limit ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`61 2 71 17`
+(signature)`limit(self, minimum, maximum)`
+
+Apply the minimum and maximum limits to the Position's absolute values.
+
+/(parameter)`self`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`minimum`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`maximum`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ Position >> snapshot ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`73 2 80 30`
+(signature)`snapshot(self)`
+
+Calculate and return the absolute position as a triple.
+
+/(parameter)`self`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ Position >> restore ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`82 2 88 44`
+(signature)`restore(self, snapshot)`
+
+Restores the given snapshot.
+
+/(parameter)`self`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`snapshot`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ Position >> update ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`90 2 95 25`
+(signature)`update(self, quantity)`
+
+Update the offset by the given quantity.
+Negative quantities move the offset down.
+
+/(parameter)`self`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`quantity`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ Position >> clear ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`97 2 101 17`
+(signature)`clear(self)`
+
+Reset the position state to a zeros.
+
+/(parameter)`self`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ Position >> zero ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`103 2 110 17`
+(signature)`zero(self)`
+
+Zero the (invalid/unknown)&<#offset> and (invalid/unknown)&<#magnitude> of the position.
+
+The (invalid/unknown)&<#datum> is not changed.
+
+/(parameter)`self`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ Position >> move ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`112 2 136 15`
+(signature)`move(self)`
+
+Move the position relatively or absolutely.
+
+Perspective is like the whence parameter, but uses slightly different values.
+
+`-1` is used to move the offset relative from the end.
+`+1` is used to move the offset relative to the beginning.
+Zero moves the offset relatively with (factor-local/method)&<#Position.update[update]>.
+
+/(parameter)`self`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`location`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`perspective`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ Position >> constrain ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`138 2 151 24`
+(signature)`constrain(self)`
+
+Adjust the offset to be within the bounds of the magnitude.
+Returns the change in position; positive values means that
+the magnitude was being exceeded and negative values
+mean that the minimum was being exceeded.
+
+/(parameter)`self`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ Position >> collapse ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`153 2 160 10`
+(signature)`collapse(self)`
+
+Move the origin to the position of the offset and zero out magnitude.
+
+/(parameter)`self`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ Position >> normalize ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`162 2 172 10`
+(signature)`normalize(self)`
+
+Relocate the origin, datum, to the offset and zero the magnitude and offset.
+
+/(parameter)`self`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ Position >> reposition ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`174 2 183 14`
+(signature)`reposition(self)`
+
+Reposition the (invalid/unknown)&<#datum> such that (factor-local/option)&<#Position.reposition.offset[offset]> will be equal to the given parameter.
+
+The magnitude is untouched. The change to the origin, (invalid/unknown)&<#datum>, is returned.
+
+/(parameter)`self`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`offset`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ Position >> start ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`185 2 191 26`
+(signature)`start(self)`
+
+Start the position by adjusting the (invalid/unknown)&<#datum> to match the position of the (invalid/unknown)&<#offset>.
+The magnitude will also be adjust to maintain its position.
+
+/(parameter)`self`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ Position >> bisect ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`193 2 197 35`
+(signature)`bisect(self)`
+
+Place the position in the middle of the start and stop positions.
+
+/(parameter)`self`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ Position >> halt ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`199 2 204 30`
+(signature)`halt(self)`
+
+Halt the position by adjusting the (invalid/unknown)&<#magnitude> to match the position of the
+offset.
+
+/(parameter)`self`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ Position >> invert ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`206 2 212 34`
+(signature)`invert(self)`
+
+Invert the position; causes the direction to change.
+
+/(parameter)`self`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ Position >> page ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`214 2 220 43`
+(signature)`page(self)`
+
+Adjust the position's datum to be at the magnitude's position according
+to the given quantity. Essentially, this is used to "page" the position;
+a given quantity selects how far forward or backwards the origin is sent.
+
+/(parameter)`self`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`quantity`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ Position >> contract ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`222 2 235 26`
+(signature)`contract(self, offset, quantity)`
+
+Adjust, decrease, the magnitude relative to a particular offset.
+
+/(parameter)`self`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`offset`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`quantity`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ Position >> changed ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`237 2 259 26`
+(signature)`changed(self, offset, quantity)`
+
+Adjust the position to accomodate for a change that occurred
+to the reference space--insertion or removal.
+
+Similar to (factor-local/method)&<#Position.contract[contract]>, but attempts to maintain (factor-local/parameter)&<#Position.changed.offset[offset]> when possible,
+and takes an absolute offset instead of a relative one.
+
+/(parameter)`self`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`offset`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`quantity`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ Position >> dilate ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`261 2 265 41`
+(signature)`dilate(self, offset, quantity)`
+
+Adjust, increase, the magnitude relative to a particular offset.
+
+/(parameter)`self`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`offset`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`quantity`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ Position >> expand ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`266 2 266 16`
+#!source
+	expand = dilate
+
+[ Position >> relation ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`268 2 278 11`
+(signature)`relation(self)`
+
+Return the relation of the offset to the datum and the magnitude.
+
+/(parameter)`self`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ Position >> compensate ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`280 2 290 18`
+(signature)`compensate(self)`
+
+If the position lay outside of the range, relocate
+the start or stop to be on position.
+
+/(parameter)`self`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ Position >> slice ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`292 2 297 33`
+(signature)`slice(self)`
+
+Construct a (factor-local/method)&<#Position.slice[slice]> object that represents the range.
+
+/(parameter)`self`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`adjustment`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`step`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`Slice`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ Vector ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (source/area)`299 1 366 36`
+! INHERIT:
+	- (source/area)`299 14 299 19`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+A pair of (factor-local/class)&<#Position[Position]> instances describing an area and point on a two dimensional plane.
+
+Primarily this exists to provide methods that will often be used simultaneously on the vertical
+and horizontal positions. State snapshots and restoration being common or likely.
+
+[ > Properties ]
+
+/horizontal/
+	The horizontal (factor-local/class)&<#Position[Position]>.
+
+/vertical/
+	The vertical (factor-local/class)&<#Position[Position]>.
+
+
+[ Vector >> __len__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`313 2 314 10`
+(signature)`__len__(self)`
+
+
+[ Vector >> __getitem__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`316 2 321 24`
+(signature)`__getitem__(self, index)`
+
+
+[ Vector >> __iter__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`323 2 324 52`
+(signature)`__iter__(self)`
+
+
+[ Vector >> clear ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`326 2 331 23`
+(signature)`clear(self)`
+
+Zero the horizontal and vertical positions.
+
+/(parameter)`self`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ Vector >> move ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`333 2 346 26`
+(signature)`move(self, x, y)`
+
+Move the positions relative to their current state.
+This method should be used for cases when applying a function:
+
+#!/pl/python
+	for x in range(...):
+		vector.move(x, f(x))
+		draw(vector)
+/(parameter)`self`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`x`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`y`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ Vector >> get ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`348 2 352 53`
+(signature)`get(self)`
+
+Get the absolute horizontal and vertical position as a 2-tuple.
+
+/(parameter)`self`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ Vector >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`354 2 359 28`
+(signature)`__init__(self)`
+
+Create a (factor-local/class)&<#Vector[Vector]> whose positions are initialized to zero.
+
+/(parameter)`self`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ Vector >> snapshot ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`361 2 362 63`
+(signature)`snapshot(self)`
+
+
+[ Vector >> restore ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`364 2 366 36`
+(signature)`restore(self, snapshot)`
+
+
+[ Cache ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (source/area)`368 1 427 27`
+! INHERIT:
+	- (source/area)`368 13 368 18`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+Mapping interface for user trans-refraction communication. (Local Clipboard)
+
+Maintains a set of slots for storing a sequence of typed objects; the latest item
+in the slot being the default. A sequence is used in order to maintain a history of
+cached objects. The configured limit restricts the number recalled.
+
+Console clipboard.
+
+
+[ Cache >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`379 2 379 33`
+#!source
+	__slots__ = ('storage', 'limit')
+
+[ Cache >> Storage ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`380 2 380 15`
+#!source
+	Storage = dict
+
+[ Cache >> Sequence ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`381 2 381 29`
+#!source
+	Sequence = collections.deque
+
+[ Cache >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`383 2 385 20`
+(signature)`__init__(self)`
+
+
+[ Cache >> allocate ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`387 2 393 37`
+(signature)`allocate(self, *keys)`
+
+Initialize a cache slot.
+
+/(parameter)`self`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`keys`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ Cache >> index ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`395 2 399 28`
+(signature)`index(self)`
+
+Return a sequence of storage slots.
+
+/(parameter)`self`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ Cache >> put ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`401 2 410 17`
+(signature)`put(self, key, cobject)`
+
+Put the given object as the cache entry.
+
+/(parameter)`self`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`key`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`cobject`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ Cache >> get ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`412 2 421 10`
+(signature)`get(self, key)`
+
+Get the contents of the cache slot.
+
+/(parameter)`self`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`key`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`offset`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ Cache >> clear ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`423 2 427 27`
+(signature)`clear(self, key)`
+
+Remove the all the contents of the given slot.
+
+/(parameter)`self`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`key`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ Refraction ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (source/area)`429 1 694 6`
+! INHERIT:
+	- (source/area)`429 18 429 32`
+	- (type/syntax)`kcore.Processor`
+	- (type/none/invalid)&<http://fault.io/dev/null[fault.kernel.core.Processor]>
+	
+A Refraction of a source onto a connected area of the display.
+
+Refraction resources are used by Console transformers to manage the parts
+of the display.
+
+
+[ Refraction >> create_keyboard_mapping ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`437 2 437 54`
+#!source
+	create_keyboard_mapping = keyboard.Selection.standard
+
+[ Refraction >> default_keyboard_mapping ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`438 2 440 10`
+#!source
+	default_keyboard_mapping = 'edit'
+		@property
+
+[ Refraction >> horizontal ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (source/area)`441 2 447 10`
+The current working horizontal position.
+
+
+[ Refraction >> vertical ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (source/area)`448 2 454 10`
+The current working vertical position.
+
+
+[ Refraction >> last_axis ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (source/area)`455 2 464 10`
+The recently used axis.
+
+
+[ Refraction >> axis ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (source/area)`465 2 471 10`
+Return the (factor-local/class)&<#Position[Position]> of the last axis used.
+
+
+[ Refraction >> keyset ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`472 2 473 30`
+
+[ Refraction >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`475 2 507 25`
+(signature)`__init__(self)`
+
+
+[ Refraction >> event_method ]
+! CONTROL:
+	/type/
+		staticmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`508 2 509 35`
+(signature)`event_method(target, event)`
+
+
+[ Refraction >> route ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`511 2 532 26`
+(signature)`route(self, event)`
+
+Route the event to the target given the current processing state.
+
+/(parameter)`self`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`event`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`scrollmap`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ Refraction >> key ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`534 2 585 12`
+(signature)`key(self, console, event)`
+
+Process the event.
+
+/(parameter)`self`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`console`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`event`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`getattr`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`range`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ Refraction >> event_distribute_sequence ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`587 2 589 30`
+(signature)`event_distribute_sequence(self, event)`
+
+
+[ Refraction >> event_distribute_one ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`591 2 593 29`
+(signature)`event_distribute_one(self, event)`
+
+
+[ Refraction >> event_prepare_open ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`595 2 597 42`
+(signature)`event_prepare_open(self, event)`
+
+
+[ Refraction >> adjust ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`599 2 610 29`
+(signature)`adjust(self, point, dimensions)`
+
+Adjust the positioning and size of the view. (factor-local/parameter)&<#Refraction.adjust.point[point]> is a pair of positive integers
+describing the top-right corner on the screen and dimensions is a pair of positive
+integers describing the width.
+
+Adjustments are conditionally passed to a view.
+
+/(parameter)`self`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`point`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`dimensions`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ Refraction >> calibrate ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`612 2 618 58`
+(signature)`calibrate(self, dimensions)`
+
+Called when the refraction is adjusted.
+
+/(parameter)`self`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`dimensions`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ Refraction >> conceal ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`620 2 624 6`
+(signature)`conceal(self)`
+
+Called when the refraction is hidden from the display.
+
+/(parameter)`self`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ Refraction >> reveal ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`626 2 632 10`
+(signature)`reveal(self)`
+
+Called when the refraction is revealed. May not be focused.
+
+/(parameter)`self`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ Refraction >> revealed ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (source/area)`633 2 637 36`
+Whether the refraction is currently visible.
+
+
+[ Refraction >> focus ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`639 2 647 10`
+(signature)`focus(self)`
+
+Set position indicators and activate cursor.
+
+/(parameter)`self`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ Refraction >> focused ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (source/area)`648 2 652 39`
+Whether the refraction is the current focus; receives key events.
+
+
+[ Refraction >> blur ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`654 2 660 26`
+(signature)`blur(self)`
+
+Clear position indicators and lock cursor.
+
+/(parameter)`self`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ Refraction >> connect ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`662 2 673 23`
+(signature)`connect(self, view)`
+
+Connect the area to the refraction for displaying the units.
+
+Connect (invalid/unknown)&<#None> in order to conceal.
+
+/(parameter)`self`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`view`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ Refraction >> clear ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`675 2 679 6`
+(signature)`clear(self)`
+
+Clear the refraction state.
+
+/(parameter)`self`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ Refraction >> update ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`681 2 685 6`
+(signature)`update(self, start, stop, *lines)`
+
+Render all the display lines in the given ranges.
+
+/(parameter)`self`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`start`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`stop`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`lines`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ Refraction >> render ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`687 2 688 6`
+(signature)`render(self, start, stop)`
+
+
+[ Refraction >> refresh ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`690 2 694 6`
+(signature)`refresh(self)`
+
+Render all lines in the refraction.
+
+/(parameter)`self`/
+	
+	(ctl/absent)`Undocumented`.
+

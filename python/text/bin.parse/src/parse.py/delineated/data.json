@@ -1,0 +1,1 @@
+[[["formats"]], [{"syntax": "{\n\t'json': ('json', (lambda m,f,a: m.dump(a, f))),\n\t'print': ('pprint', (lambda m,f,a: f.write(m.pformat(a)))),\n}", "area": [[12, 11], [15, 1]]}]]

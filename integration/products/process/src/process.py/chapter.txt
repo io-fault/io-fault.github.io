@@ -1,0 +1,227 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 270 0`
+Product builds and tests for system integration.
+
+
+[ os ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`4 1 4 9`
+
+[ Iterable ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`5 1 5 46`
+
+[ Sequence ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`5 1 5 46`
+
+[ tools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`7 1 7 31`
+
+[ files ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`8 1 8 30`
+
+[ time ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`10 1 10 37`
+
+[ terminal ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`12 1 12 37`
+
+[ fatetheme ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`13 1 13 49`
+
+[ proctheme ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`13 1 13 49`
+
+[ execution ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`14 1 14 38`
+
+[ KInvocation ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`16 1 16 46`
+
+[ graph ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`17 1 17 31`
+
+[ lsf ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`18 1 18 39`
+
+[ query ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`20 1 20 24`
+
+[ options ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`22 1 39 1`
+#!source
+	options = (
+		{
+			# Defaults to update when missing.
+			'-u': ('field-replace', 'never', 'update-product-index'),
+			'-U': ('field-replace', 'always', 'update-product-index'),
+	
+			# Integration operation controls. Disable testing/processing.
+			'-t': ('field-replace', True, 'disable-functionality-tests'),
+			'-T': ('field-replace', False, 'disable-functionality-tests'),
+			'-b': ('field-replace', True, 'disable-factor-processing'),
+			'-B': ('field-replace', False, 'disable-factor-processing'),
+	
+			# Delineation of sources and chapters. Disabled by default.
+			'-y': ('field-replace', True, 'disable-delineation'),
+			'-Y': ('field-replace', False, 'disable-delineation'),
+		},
+		{}
+	)
+
+[ plan_build ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`41 1 73 29`
+(signature)`plan_build(command, ccontext, intentions, cache, argv, pcontext, identifier, executable, cache_type)`
+
+Create an invocation for processing (invalid/unknown)&<#pj> with (factor-local/parameter)&<#plan_build.Parameters.ccontext[ccontext]>.
+
+
+[ plan_test ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`75 1 102 59`
+(signature)`plan_test(intention, argv, pcontext, identifier)`
+
+Create an invocation for processing the project from (factor-local/parameter)&<#plan_test.Parameters.pcontext[pcontext]> selected using (factor-local/parameter)&<#plan_test.Parameters.identifier[identifier]>.
+
+
+[ iterconstructs ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`104 1 114 14`
+(signature)`iterconstructs(factors)`
+
+Iterator producing (remote/factor-element)&<http://fault.io/python/project/system#Project[fault.project.system.Project]> instances in dependency order.
+
+
+[ build ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`117 1 140 25`
+(signature)`build(meta, log, factors, status, pd, contexts, intentions, cache, symbols)`
+
+Build all projects within the product using all (factor-local/parameter)&<#build.Parameters.contexts[contexts]>.
+
+
+[ test ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`142 1 159 25`
+(signature)`test(meta, log, factors, status, pd, argv, intention)`
+
+Test all projects.
+
+
+[ integrate ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`161 1 270 59`
+(signature)`integrate(meta, log, config, fx, cc, pdr, argv, intention)`
+
+Complete build connecting requirements and updating indexes.
+

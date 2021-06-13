@@ -1,0 +1,29 @@
+<html><head><title>fault.format.security</title><meta charset="utf-8"/><link as="style" rel="preload" href="../../.legacy-web/core.css"></link><link as="style" rel="preload" href="../../.legacy-web/factor.css"></link><link rel="stylesheet" href="../../.legacy-web/core.css"></link><link rel="stylesheet" href="../../.legacy-web/factor.css"></link></head><body><main><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><span class="title">fault.format.security</span><span class="factor-type">http://if.fault.io/factors/python.module</span></h1><div class="text.abstract"><p><span class="text.normal">Text frames for Certificates, Keys, and Contexts.</span></p></div><section class="import" documented="false" local-identifier="sys" id="sys"><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><a class="title" href="#sys"><span class="text.normal">sys</span></a><span class="abstract-type">import</span></h1></section><section class="data" documented="false" local-identifier="key_fields" id="key_fields"><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><a class="title" href="#key_fields"><span class="text.normal">key_fields</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code>key_fields = set([
+	'algorithm',
+	'key-id', # Hash of key if necessary.
+])
+</code></pre></section><section class="data" documented="false" local-identifier="certificate_fields" id="certificate_fields"><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><a class="title" href="#certificate_fields"><span class="text.normal">certificate_fields</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code>certificate_fields = set([
+	# Security Context data regarding its validity.
+	'validation',
+
+	'type', # Usually X.509
+	'interval', # validity; not-before, not-after
+
+	'serial', # Unique identifier.
+	'signature-type',
+	'signature-algorithm',
+
+	'issuer-organization',
+	'issuer-name', # domain
+
+	'subject-organization',
+	'subject-name', # domain
+
+	'extension-names',
+
+	'revocations', # CRL
+
+	'key-usage',
+	'key-algorithm',
+])
+</code></pre></section><section class="function" documented="true" local-identifier="mkcertview" id="mkcertview"><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><a class="title" href="#mkcertview"><span class="text.normal">mkcertview</span></a><span class="abstract-type">function</span></h1><p><code class="signature">mkcertview(record)</code></p><p><span class="text.normal">Create record-frame for a certificate.</span></p></section><section class="function" documented="false" local-identifier="pframe" id="pframe"><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><a class="title" href="#pframe"><span class="text.normal">pframe</span></a><span class="abstract-type">function</span></h1><p><code class="signature">pframe(data)</code></p></section><h1 class="footing"></h1></main></body></html>

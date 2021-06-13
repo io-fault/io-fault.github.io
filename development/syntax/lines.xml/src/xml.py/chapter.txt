@@ -1,0 +1,148 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 21 0`
+XML language profile.
+
+
+[ itertools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`4 1 4 16`
+
+[ fields ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`5 1 5 21`
+
+[ indentation_width ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`7 1 7 21`
+#!source
+	indentation_width = 1
+
+[ _keywords ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`9 1 11 1`
+#!source
+	_keywords = [
+		'xmlns',
+	]
+
+[ keywords ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`12 1 12 56`
+#!source
+	keywords = {y: y for y in map(fields.String, _keywords)}
+
+[ cores ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`13 1 13 10`
+#!source
+	cores = {}
+
+[ terminators ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`15 1 15 56`
+#!source
+	terminators = {y: y for y in map(fields.Constant, "<>")}
+
+[ separators ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`16 1 16 15`
+#!source
+	separators = {}
+
+[ routers ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`17 1 17 37`
+#!source
+	routers = {':': fields.Constant(":")}
+
+[ operators ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`18 1 18 55`
+#!source
+	operators = {y: y for y in map(fields.Constant, "=&;")}
+
+[ groupings ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`19 1 19 54`
+#!source
+	groupings = {y: y for y in map(fields.Constant, "<>")}
+
+[ quotations ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`20 1 20 62`
+#!source
+	quotations = {y: y for y in map(fields.Constant, ("'", '"',))}
+
+[ comments ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`21 1 21 65`
+#!source
+	comments = {y: y for y in map(fields.Constant, ("<!--", '-->',))}

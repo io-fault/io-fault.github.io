@@ -1,0 +1,624 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 1009 0`
+Check the implementation of filesystem routes.
+
+
+[ sys ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`4 1 4 10`
+
+[ functools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`5 1 5 16`
+
+[ os ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`6 1 6 14`
+
+[ lib ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`8 1 8 27`
+
+[ time ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`9 1 11 25`
+
+[ d_setup ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`12 1 15 17`
+(signature)`d_setup(x, path)`
+
+
+[ _ ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`16 1 18 20`
+(signature)`_(x, path)`
+
+
+[ test_root ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`20 1 29 34`
+(signature)`test_root(test)`
+
+Check for (project-local/unknown)&<files#root[files.root]> presence and sanity.
+
+
+[ test_Path ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`31 1 40 65`
+(signature)`test_Path(test)`
+
+
+[ test_Path_filename ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`42 1 48 25`
+(signature)`test_Path_filename(test)`
+
+
+[ test_Path_repr ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`50 1 57 40`
+(signature)`test_Path_repr(test)`
+
+
+[ test_Path_string_cache ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`59 1 69 42`
+(signature)`test_Path_string_cache(test)`
+
+
+[ test_Path_from_partitioned_string ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`71 1 78 2`
+(signature)`test_Path_from_partitioned_string(test)`
+
+
+[ test_Path_bytespath ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`80 1 82 34`
+(signature)`test_Path_bytespath(test)`
+
+
+[ test_Path_temporary ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`84 1 92 35`
+(signature)`test_Path_temporary(test)`
+
+
+[ test_Path_list ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`94 1 119 18`
+(signature)`test_Path_list(test)`
+
+- (project-local/factor-element)&<files#Path.fs_list[fault.system.files.Path.fs_list]>
+
+
+[ test_Path_iterfiles ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`121 1 161 40`
+(signature)`test_Path_iterfiles(test)`
+
+- (project-local/factor-element)&<files#Path.fs_iterfiles[fault.system.files.Path.fs_iterfiles]>
+
+
+[ test_Path_index ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`163 1 187 23`
+(signature)`test_Path_index(test)`
+
+- (project-local/factor-element)&<files#Path.fs_index[fault.system.files.Path.fs_index]>
+- (project-local/factor-element)&<files#Path.fs_list[fault.system.files.Path.fs_list]>
+
+
+[ test_Path_snapshot ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`189 1 211 22`
+(signature)`test_Path_snapshot(test)`
+
+- (project-local/factor-element)&<files#Path.fs_snapshot[fault.system.files.Path.fs_snapshot]>
+
+
+[ test_Path_real ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`213 1 228 22`
+(signature)`test_Path_real(test)`
+
+- (project-local/factor-element)&<files#Path.fs_real[fault.system.files.Path.fs_real]>
+
+
+[ test_Path_replace ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`230 1 258 36`
+(signature)`test_Path_replace(test)`
+
+
+[ test_Path_init ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`260 1 276 43`
+(signature)`test_Path_init(test)`
+
+Test (project-local/factor-element)&<files#Path.fs_init[fault.system.files.Path.fs_init]> checking that the parent directories are
+properly created regardless of the selected type.
+
+
+[ test_Path_mkdir ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`278 1 294 30`
+(signature)`test_Path_mkdir(test)`
+
+Test (project-local/factor-element)&<files#Path.fs_mkdir[fault.system.files.Path.fs_mkdir]> checking that the parent directories are
+properly created regardless of the selected type.
+
+
+[ test_Path_type_void ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`296 1 318 28`
+(signature)`test_Path_type_void(test)`
+
+- (project-local/factor-element)&<files#Path.fs_type[fault.system.files.Path.fs_type]>
+
+
+[ test_Path_extension ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`320 1 325 26`
+(signature)`test_Path_extension(test)`
+
+
+[ test_Path_size ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`327 1 339 23`
+(signature)`test_Path_size(test)`
+
+
+[ test_Path_get_last_modified ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`341 1 366 33`
+(signature)`test_Path_get_last_modified(test)`
+
+System check.
+
+
+[ test_Path_set_last_modified ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`368 1 387 61`
+(signature)`test_Path_set_last_modified(test)`
+
+System check.
+
+
+[ test_Path_get_text_content ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`389 1 399 38`
+(signature)`test_Path_get_text_content(test)`
+
+Validate (project-local/factor-element)&<files#Path.get_text_content[fault.system.files.Path.get_text_content]>.
+
+
+[ test_Path_set_text_content ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`401 1 410 27`
+(signature)`test_Path_set_text_content(test)`
+
+Validate (project-local/factor-element)&<files#Path.set_text_content[fault.system.files.Path.set_text_content]>.
+
+
+[ test_Path_since ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`412 1 433 40`
+(signature)`test_Path_since(test)`
+
+(project-local/factor-element)&<files#Path.fs_since[fault.system.files.Path.fs_since]>
+
+
+[ test_Path_construct ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`435 1 460 49`
+(signature)`test_Path_construct(test)`
+
+Test the various classmethods that construct file instances.
+
+
+[ test_Path_relative_resolution ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`462 1 480 34`
+(signature)`test_Path_relative_resolution(test)`
+
+- (project-local/factor-element)&<files#Path.__pos__[fault.system.files.Path.__pos__]>
+
+
+[ test_Path_basename_manipulations ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`482 1 492 59`
+(signature)`test_Path_basename_manipulations(test)`
+
+- (project-local/factor-element)&<files#Path.prefix_filename[fault.system.files.Path.prefix_filename]>
+- (project-local/factor-element)&<files#Path.suffix_filename[fault.system.files.Path.suffix_filename]>
+
+
+[ test_Path_join ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`494 1 507 78`
+(signature)`test_Path_join(test)`
+
+- (project-local/factor-element)&<files#Path.join[fault.system.files.Path.join]>
+
+
+[ test_Path_properties ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`509 1 520 37`
+(signature)`test_Path_properties(test)`
+
+
+[ test_Path_open ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`522 1 544 41`
+(signature)`test_Path_open(test)`
+
+- (project-local/factor-element)&<files#File.fs_open[fault.system.files.File.fs_open]>
+
+
+[ test_Path_open_exception ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`546 1 559 59`
+(signature)`test_Path_open_exception(test)`
+
+- (project-local/factor-element)&<files#File.fs_open[fault.system.files.File.fs_open]>
+
+
+[ test_Path_void ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`561 1 583 28`
+(signature)`test_Path_void(test)`
+
+- (project-local/factor-element)&<files#Path.fs_void[fault.system.files.Path.fs_void]>
+
+
+[ link_checks ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`585 1 616 37`
+(signature)`link_checks(test, create_link)`
+
+
+[ test_Path_relative_links ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`618 1 622 45`
+(signature)`test_Path_relative_links(test)`
+
+(project-local/factor-element)&<files#Path.fs_link_relative[fault.system.files.Path.fs_link_relative]>
+
+
+[ test_Path_absolute_links ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`624 1 628 45`
+(signature)`test_Path_absolute_links(test)`
+
+(project-local/factor-element)&<files#Path.fs_link_absolute[fault.system.files.Path.fs_link_absolute]>
+
+
+[ test_Path_recursive_since ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`630 1 653 64`
+(signature)`test_Path_recursive_since(test)`
+
+(project-local/factor-element)&<files#Path.fs_since[fault.system.files.Path.fs_since]> with recursive directories.
+
+
+[ test_Path_follow_links ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`655 1 676 64`
+(signature)`test_Path_follow_links(test)`
+
+- (project-local/factor-element)&<files#Path.fs_follow_links[fault.system.files.Path.fs_follow_links]>
+
+
+[ test_Path_io ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`678 1 697 33`
+(signature)`test_Path_io(test)`
+
+- (project-local/factor-element)&<files#Path.fs_load[fault.system.files.Path.fs_load]>
+- (project-local/factor-element)&<files#Path.fs_store[fault.system.files.Path.fs_store]>
+
+
+[ test_Path_python_protocol ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`699 1 706 34`
+(signature)`test_Path_python_protocol(test)`
+
+- (project-local/factor-element)&<files#Path.__fspath__[fault.system.files.Path.__fspath__]>
+
+
+[ test_Path_snapshot_sanity ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`708 1 730 53`
+(signature)`test_Path_snapshot_sanity(test)`
+
+- (project-local/factor-element)&<files#Path.fs_snapshot[fault.system.files.Path.fs_snapshot]>
+
+
+[ test_Path_snapshot_limit ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`732 1 756 19`
+(signature)`test_Path_snapshot_limit(test)`
+
+- (project-local/factor-element)&<files#Path.fs_snapshot[fault.system.files.Path.fs_snapshot]>
+
+
+[ test_Path_snapshot_depth ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`758 1 811 37`
+(signature)`test_Path_snapshot_depth(test)`
+
+- (project-local/factor-element)&<files#Path.fs_snapshot[fault.system.files.Path.fs_snapshot]>
+
+
+[ test_Path_fs_alloc ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`813 1 837 32`
+(signature)`test_Path_fs_alloc(test)`
+
+- (project-local/factor-element)&<files#Path.fs_alloc[fault.system.files.Path.fs_alloc]>
+
+
+[ test_Path_fs_require_void ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`839 1 881 50`
+(signature)`test_Path_fs_require_void(test)`
+
+- (project-local/factor-element)&<files#Path.fs_require[fault.system.files.Path.fs_require]>
+- (project-local/factor-element)&<files#RequirementViolation[fault.system.files.RequirementViolation]>
+
+Validate that missing file cases are handled.
+
+
+[ test_Path_fs_require_type ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`883 1 913 44`
+(signature)`test_Path_fs_require_type(test)`
+
+- (project-local/factor-element)&<files#Path.fs_require[fault.system.files.Path.fs_require]>
+- (project-local/factor-element)&<files#RequirementViolation[fault.system.files.RequirementViolation]>
+
+Validate that fs_require checks the type.
+
+
+[ test_Path_fs_require_permissions ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`915 1 940 44`
+(signature)`test_Path_fs_require_permissions(test)`
+
+- (project-local/factor-element)&<files#Path.fs_require[fault.system.files.Path.fs_require]>
+- (project-local/factor-element)&<files#RequirementViolation[fault.system.files.RequirementViolation]>
+
+Validate that fs_require checks the properties.
+
+
+[ test_Path_fs_require_directory_control ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`942 1 981 44`
+(signature)`test_Path_fs_require_directory_control(test)`
+
+- (project-local/factor-element)&<files#Path.fs_require[fault.system.files.Path.fs_require]>
+- (project-local/factor-element)&<files#RequirementViolation[fault.system.files.RequirementViolation]>
+
+Validate that fs_require allows for optional directory.
+
+
+[ test_Path_fs_require_accessibility ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`983 1 1009 55`
+(signature)`test_Path_fs_require_accessibility(test)`
+
+- (project-local/factor-element)&<files#Path.fs_require[fault.system.files.Path.fs_require]>
+- (project-local/factor-element)&<files#RequirementViolation[fault.system.files.RequirementViolation]>
+
+Validate that the implied accessibility constraint is
+communicated when paths traverse through regular files or
+directories without the necessary permissions.
+

@@ -1,0 +1,134 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 200 41`
+Test argument vector parsing in (project-local/unknown)&<recognition>.
+
+
+[ functools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`4 1 4 16`
+
+[ merge ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`6 1 6 55`
+
+[ legacy ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`6 1 6 55`
+
+[ UsageViolation ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`6 1 6 55`
+
+[ test_merge_operations ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`8 1 59 41`
+(signature)`test_merge_operations(test)`
+
+- (project-local/factor-element)&<recognition#merge[fault.vector.recognition.merge]>
+
+Check the default merge operations supported by (project-local/unknown)&<recognition#operations[recognition.operations]>.
+
+
+[ test_merge_usage_violations ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`61 1 71 88`
+(signature)`test_merge_usage_violations(test)`
+
+- (project-local/factor-element)&<recognition#merge[fault.vector.recognition.merge]>
+
+Check the (project-local/factor-element)&<recognition#UsageViolation[fault.vector.recognition.UsageViolation]> exceptions raised by (project-local/factor-element)&<recognition#merge[fault.vector.recognition.merge]>.
+
+
+[ test_merge_interpreter_exceptions ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`73 1 98 38`
+(signature)`test_merge_interpreter_exceptions(test)`
+
+- (project-local/factor-element)&<recognition#merge[fault.vector.recognition.merge]>
+
+Check the chaining of interpeter exceptions.
+
+
+[ test_legacy_restricted ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`100 1 125 40`
+(signature)`test_legacy_restricted(test)`
+
+- (project-local/factor-element)&<recognition#legacy[fault.vector.recognition.legacy]>
+
+Validate options that restrict parameters.
+
+
+[ test_legacy_required ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`127 1 157 40`
+(signature)`test_legacy_required(test)`
+
+- (project-local/factor-element)&<recognition#legacy[fault.vector.recognition.legacy]>
+
+Validate options that require parameters.
+
+
+[ test_legacy_trap ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`159 1 173 40`
+(signature)`test_legacy_trap(test)`
+
+- (project-local/factor-element)&<recognition#legacy[fault.vector.recognition.legacy]>
+
+Validate the trap case for long options.
+
+
+[ test_legacy_violations ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`175 1 201 40`
+(signature)`test_legacy_violations(test)`
+
+- (project-local/factor-element)&<recognition#legacy[fault.vector.recognition.legacy]>
+
+Validate that the expected violations are generated.
+

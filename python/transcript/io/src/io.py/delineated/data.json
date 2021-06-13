@@ -1,0 +1,1 @@
+[[["job_priority"], ["Log", "highlights"]], [5, {"syntax": "{\n\t\t'reset': '\\x1b[0m',\n\t\t'error': '\\x1b[31m',\n\t\t'warning': '\\x1b[33m',\n\t\t'notice': '\\x1b[34m',\n\t\t'synopsis': '\\x1b[38;5;247m',\n\t}", "area": [[177, 15], [183, 2]]}]]

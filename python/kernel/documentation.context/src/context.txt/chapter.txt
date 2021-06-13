@@ -1,0 +1,20 @@
+! CONTROL:
+	/type/
+		factor
+	/element/
+		- (source/area)``
+[ References ]
+
+.
+
+[ Glossary ]
+
+/Creation/
+	The instantiation of a Processor.
+
+/Actuation/
+	The runtime initialization of a Processor.
+
+/Processor/
+	A Processing resource.
+

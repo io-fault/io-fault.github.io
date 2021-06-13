@@ -1,0 +1,31 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 72 0`
+Core structures tests.
+
+
+[ module ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`4 1 4 29`
+
+[ test_Position ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`6 1 72 33`
+(signature)`test_Position(test)`
+
+Check all the methods of (project-local/factor-element)&<core#Position[meta.syntax.core.Position]>
+
+/(parameter)`test`/
+	
+	(ctl/absent)`Undocumented`.
+

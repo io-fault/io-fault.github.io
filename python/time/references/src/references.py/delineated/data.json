@@ -1,0 +1,1 @@
+[[["functions"]], [{"syntax": "{\n\t\"last-week\": (lambda x: week(x.rollback(day=7))),\n\t\"next-week\": (lambda x: week(x.elapse(day=7))),\n\t\"this-week\": (lambda x: week(x)),\n}", "area": [[15, 13], [19, 1]]}]]

@@ -1,0 +1,453 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 329 11`
+Status frame I/O support.
+
+
+[ sys ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`4 1 4 10`
+
+[ os ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`5 1 5 9`
+
+[ io ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`6 1 6 9`
+
+[ itertools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`7 1 7 16`
+
+[ signal ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`8 1 8 13`
+
+[ tools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`10 1 10 27`
+
+[ execution ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`11 1 11 30`
+
+[ frames ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`12 1 12 27`
+
+[ allocate_line_buffer ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`14 1 15 84`
+(signature)`allocate_line_buffer(fd, encoding)`
+
+
+[ job_priority ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`17 1 17 16`
+#!source
+	job_priority = 5
+
+[ spawnframes ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`26 1 73 86`
+(signature)`spawnframes(invocation, exceptions, stdin, stderr, readsize)`
+
+Generator emitting frames produced by the given invocation's standard out.
+If (invalid/unknown)&<#GeneratorExit> or (invalid/unknown)&<#KeyboardInterrupt> is thrown, the generator will send
+the process a (none/invalid)&<http://fault.io/dev/null[signal.SIGKILL]>.
+
+
+[ FrameArray ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (source/area)`75 1 169 25`
+! INHERIT:
+	- (source/area)`75 18 75 23`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+IO array manager for frame sources.
+
+
+[ FrameArray >> io ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`81 2 83 35`
+(signature)`io(self)`
+
+
+[ FrameArray >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`85 2 94 24`
+(signature)`__init__(self, readframe, encoding, newline, timeout)`
+
+
+[ FrameArray >> __enter__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`96 2 98 27`
+(signature)`__enter__(self)`
+
+
+[ FrameArray >> __exit__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`100 2 101 18`
+(signature)`__exit__(self, exc, val, tb)`
+
+
+[ FrameArray >> connect ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`103 2 108 37`
+(signature)`connect(self, id, fd)`
+
+
+[ FrameArray >> force ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`110 2 111 19`
+(signature)`force(self)`
+
+
+[ FrameArray >> frame ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`113 2 120 7`
+(signature)`frame(self, line)`
+
+Decode and unpack the binary status frame using Array's configuration.
+
+
+[ FrameArray >> collect ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`122 2 127 4`
+(signature)`collect(self)`
+
+
+[ FrameArray >> __iter__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`129 2 169 25`
+(signature)`__iter__(self)`
+
+
+[ Log ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (source/area)`171 1 330 10`
+! INHERIT:
+	- (source/area)`171 11 171 16`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+Status frame serialization interface and write buffer.
+
+
+[ Log >> highlights ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`177 2 185 14`
+#!source
+	highlights = {
+		'reset': '\x1b[0m',
+		'error': '\x1b[31m',
+		'warning': '\x1b[33m',
+		'notice': '\x1b[34m',
+		'synopsis': '\x1b[38;5;247m',
+	}
+		@staticmethod
+
+[ Log >> _xid ]
+! CONTROL:
+	/type/
+		staticmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`186 2 194 13`
+(signature)`_xid(extension, xid)`
+
+
+[ Log >> stdout ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (source/area)`195 2 202 13`
+(signature)`stdout(Class, channel, encoding)`
+
+Construct a (factor-local/class)&<#Log[Log]> instance for serializing frames to (none/invalid)&<http://fault.io/dev/null[sys.stdout]>.
+
+
+[ Log >> stderr ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (source/area)`203 2 208 92`
+(signature)`stderr(Class, channel, encoding)`
+
+Construct a (factor-local/class)&<#Log[Log]> instance for serializing frames to (none/invalid)&<http://fault.io/dev/null[sys.stderr]>.
+
+
+[ Log >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`210 2 218 17`
+(signature)`__init__(self, pack, stream, encoding, frequency, channel)`
+
+
+[ Log >> transaction ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`220 2 232 14`
+		- (type/syntax)`bool`
+		- (type/invalid/unknown)&<#bool>
+		
+(signature)`transaction(self)`
+
+Increment the operation count and check if it exceeds the frequency.
+If in excess, flush the buffer causing serialized messages to be written
+to the configured stream.
+
+Return (invalid/unknown)&<#True> when a (factor-local/method)&<#Log.flush[flush]> is performed, otherwise (invalid/unknown)&<#False>.
+
+
+[ Log >> flush ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`234 2 239 15`
+(signature)`flush(self)`
+
+Write any emitted messages to the configured stream and reset the operation count.
+
+
+[ Log >> emit ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`241 2 245 82`
+(signature)`emit(self, frame)`
+
+Send a (invalid/unknown)&<#message> using the given (invalid/unknown)&<#channel> identifier.
+
+
+[ Log >> inject ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`247 2 252 18`
+(signature)`inject(self, data)`
+
+Write bytes directly to the log's stream.
+
+
+[ Log >> write ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`254 2 259 18`
+(signature)`write(self, text)`
+
+Write text to the log's stream incrementing the transmit count.
+
+
+[ Log >> declare ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`261 2 269 33`
+(signature)`declare(self, datum, timestamp)`
+
+Emit a protocol declaration.
+
+
+[ Log >> compose ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`271 2 294 54`
+(signature)`compose(self, type, severity, qualifier, text, extension, channel, _compose)`
+
+
+[ Log >> notice ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`296 2 300 12`
+(signature)`notice(self, *text, extension, xid, label)`
+
+
+[ Log >> warning ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`302 2 306 12`
+(signature)`warning(self, *text, extension, xid, label)`
+
+
+[ Log >> error ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`308 2 312 12`
+(signature)`error(self, *text, extension, xid, label)`
+
+
+[ Log >> xact_open ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`314 2 318 10`
+(signature)`xact_open(self, xid, synopsis, extension)`
+
+
+[ Log >> xact_status ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`320 2 324 10`
+(signature)`xact_status(self, xid, synopsis, extension)`
+
+
+[ Log >> xact_close ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`326 2 330 10`
+(signature)`xact_close(self, xid, synopsis, extension)`
+

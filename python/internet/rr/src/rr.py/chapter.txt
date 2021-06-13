@@ -1,0 +1,171 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 146 11`
+Parse and query reference composition files.
+
+
+[ Sequence ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`4 1 4 36`
+
+[ dataclass ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`5 1 5 33`
+
+[ Vector ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`7 1 7 12`
+#!source
+	Vector = str
+
+[ Empty ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`8 1 10 35`
+#!source
+	Empty = ''
+	
+	@dataclass(frozen=True, slots=True)
+
+[ References ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`11 1 54 93`
+
+[ References >> mirrors ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`19 2 30 10`
+
+[ References >> canonical ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (source/area)`31 2 40 10`
+		- (type/syntax)`Vector`
+		- (type/factor-local/data)&<#Vector[Vector]>
+		
+The canonical prefix to the resources.
+
+
+[ References >> records ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`41 2 42 43`
+
+[ References >> indicators ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`44 2 51 26`
+		- (type/syntax)`Vector`
+		- (type/factor-local/data)&<#Vector[Vector]>
+		
+(signature)`indicators(self, root)`
+
+
+[ References >> select ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`53 2 54 93`
+(signature)`select(self, *columns)`
+
+
+[ form ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`56 1 71 11`
+(signature)`form(records)`
+
+
+[ context ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`73 1 92 33`
+(signature)`context(rheader)`
+
+Extract the record prefix, qualifiers, and attributes from the header.
+
+
+[ split ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`94 1 103 46`
+(signature)`split(text, _filter)`
+
+
+[ structure ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`105 1 124 2`
+(signature)`structure(parts)`
+
+
+[ select ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`126 1 140 47`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+(signature)`select(struct, req, *fields)`
+
+Select fields from the representation records.
+

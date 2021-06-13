@@ -1,0 +1,23 @@
+<html><head><title>meta.workspaces.analysis</title><meta charset="utf-8"/><link as="style" rel="preload" href="../../.legacy-web/core.css"></link><link as="style" rel="preload" href="../../.legacy-web/factor.css"></link><link rel="stylesheet" href="../../.legacy-web/core.css"></link><link rel="stylesheet" href="../../.legacy-web/factor.css"></link></head><body><main><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><span class="title">meta.workspaces.analysis</span><span class="factor-type">http://if.fault.io/factors/python.module</span></h1><div class="text.abstract"><p><span class="text.normal">Testing and static analysis support.</span></p></div><section class="data" documented="false" local-identifier="test_type_map" id="test_type_map"><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><a class="title" href="#test_type_map"><span class="text.normal">test_type_map</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code>test_type_map = {
+	'integration': 'i-',
+	'unit': 'u-',
+	'performance': 'p-',
+	'explicit': 'x-',
+}
+</code></pre></section><section class="data" documented="false" local-identifier="test_type_set_control" id="test_type_set_control"><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><a class="title" href="#test_type_set_control"><span class="text.normal">test_type_set_control</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code>test_type_set_control = {
+	'--integration': ('set-add', 'integration', 'test-types'),
+	'--unit': ('set-add', 'unit', 'test-types'),
+	'--performance': ('set-add', 'performance', 'test-types'),
+	'--explicit': ('set-add', 'explicit', 'test-types'),
+
+	'-i': ('set-add', 'integration', 'test-types'),
+	'-u': ('set-add', 'unit', 'test-types'),
+	'-p': ('set-add', 'performance', 'test-types'),
+	'-x': ('set-add', 'explicit', 'test-types'),
+
+	'-I': ('set-discard', 'integration', 'test-types'),
+	'-U': ('set-discard', 'unit', 'test-types'),
+	'-P': ('set-discard', 'performance', 'test-types'),
+	'-X': ('set-discard', 'explicit', 'test-types'),
+}
+</code></pre></section><h1 class="footing"></h1></main></body></html>

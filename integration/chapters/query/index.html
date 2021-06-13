@@ -1,0 +1,28 @@
+<html><head><title>system.chapters.query</title><meta charset="utf-8"/><link as="style" rel="preload" href="../../.legacy-web/core.css"></link><link as="style" rel="preload" href="../../.legacy-web/factor.css"></link><link rel="stylesheet" href="../../.legacy-web/core.css"></link><link rel="stylesheet" href="../../.legacy-web/factor.css"></link></head><body><main><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><span class="title">system.chapters.query</span><span class="factor-type">http://if.fault.io/factors/python.module</span></h1><div class="text.abstract"><p><span class="text.normal">Query context for navigating chapter nodes.</span></p></div><section class="import" documented="false" local-identifier="Context" id="Context"><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><a class="title" href="#Context"><span class="text.normal">Context</span></a><span class="abstract-type">import</span></h1></section><section class="import" documented="false" local-identifier="Cursor" id="Cursor"><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><a class="title" href="#Cursor"><span class="text.normal">Cursor</span></a><span class="abstract-type">import</span></h1></section><section class="import" documented="false" local-identifier="InvalidPath" id="InvalidPath"><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><a class="title" href="#InvalidPath"><span class="text.normal">InvalidPath</span></a><span class="abstract-type">import</span></h1></section><section class="function" documented="true" local-identifier="identify" id="identify"><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><a class="title" href="#identify"><span class="text.normal">identify</span></a><span class="abstract-type">function</span></h1><p><code class="signature">identify(title, node)</code></p><p><span class="text.normal">Identification function for chapter nodes providing</span><span class="text.line-break"> </span><span class="text.normal">shortcuts for directories and sequences.</span></p></section><section class="data" documented="false" local-identifier="context" id="context"><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><a class="title" href="#context"><span class="text.normal">context</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code>context = Context(
+	{
+		'paragraph',
+		'syntax',
+		'line',
+
+		'chapter',
+		'section',
+		'admonition',
+		'dictionary',
+		'sequence',
+		'set',
+
+		'item',
+		'key',
+		'value',
+	},
+	{
+		'p': 'paragraph',
+		'i': 'item',
+		'd': 'dictionary',
+		's': 'sequence',
+		'S': 'section',
+		'C': 'chapter',
+	},
+	identify = identify,
+)
+</code></pre></section><section class="function" documented="true" local-identifier="navigate" id="navigate"><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><a class="title" href="#navigate"><span class="text.normal">navigate</span></a><span class="abstract-type">function</span><code class="type"><a class="remote" href="http://fault.io/python/route/query#Cursor"><span class="factor-element">Cursor</span></a></code></h1><p><code class="signature">navigate(chapter)</code></p><p><span class="text.normal">Construct a </span><a class="remote" href="http://fault.io/python/route/query#Cursor"><span class="factor-element">fault.route.query.Cursor</span></a><span class="text.normal"> instance using the given </span><a class="factor-local" href="#navigate.Parameters.chapter"><span class="parameter">chapter</span></a><span class="text.normal"> element</span><span class="text.line-break"> </span><span class="text.normal">with the configured expression </span><a class="factor-local" href="#context"><span class="data">context</span></a><span class="text.normal">.</span></p></section><h1 class="footing"></h1></main></body></html>

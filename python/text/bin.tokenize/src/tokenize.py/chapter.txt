@@ -1,0 +1,18 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 13 0`
+Transform the text from standard input into a token stream.
+
+
+[ main ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`5 1 9 32`
+(signature)`main(src, args)`
+

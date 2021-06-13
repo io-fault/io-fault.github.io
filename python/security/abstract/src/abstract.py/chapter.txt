@@ -1,0 +1,65 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 19 6`
+Documentation for adapter interfaces.
+
+
+[ abc ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`4 1 4 10`
+
+[ typing ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`5 1 5 13`
+
+[ Transport ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (source/area)`7 1 20 5`
+! INHERIT:
+	- (source/area)`7 17 7 27`
+	- (type/syntax)`abc.ABCMeta`
+	- (type/none/invalid)&<http://fault.io/dev/null[abc.ABCMeta]>
+	
+Secure I/O state.
+
+
+[ Transport >> encipher ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`12 2 15 5`
+		- (type/syntax)`typing.Sequence[bytes]`
+		
+(signature)`encipher(self, data)`
+
+Decrypt received data for processing by the application.
+
+
+[ Transport >> encipher ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`17 2 20 5`
+		- (type/syntax)`typing.Sequence[bytes]`
+		
+(signature)`encipher(self, data)`
+
+Decrypt received data for processing by the application.
+

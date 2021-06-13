@@ -1,0 +1,981 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 774 0`
+Client and server common IETF HTTP tools for (context-local/project-name)&<fault.kernel> based applications.
+
+[ Properties ]
+
+/HeaderSequence/
+	Type annotation for the header sequence used by (factor-local/class)&<#Structures[Structures]> instances.
+
+
+[ typing ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`8 1 8 13`
+
+[ collections ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`9 1 9 18`
+
+[ itertools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`10 1 10 16`
+
+[ functools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`11 1 11 16`
+
+[ tools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`13 1 13 27`
+
+[ cachedproperty ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`14 1 14 55`
+
+[ cachedcalls ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`14 1 14 55`
+
+[ timetypes ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`15 1 15 37`
+
+[ memory ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`16 1 16 27`
+
+[ protocoldata ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`18 1 18 48`
+
+[ protocolcore ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`19 1 19 43`
+
+[ media ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`21 1 21 28`
+
+[ ri ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`22 1 22 25`
+
+[ core ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`24 1 24 25`
+
+[ flows ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`25 1 25 26`
+
+[ HeaderSequence ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`27 1 27 60`
+#!source
+	HeaderSequence = typing.Sequence[typing.Tuple[bytes, bytes]]
+
+[ ranges ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`29 1 67 37`
+(signature)`ranges(length, range_header, decode_number)`
+
+Generator producing the integer ranges specified by the given Range header.
+
+[ > Parameters ]
+
+/(parameter)`length`/
+	
+	The (http/header)`Content-Length` of the entity body being referenced.
+
+/(parameter)`range_header`/
+	
+	The (http/header)`Range` to be converted to slices.
+
+/(parameter)`decode_number`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ Structures ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (source/area)`69 1 383 35`
+! INHERIT:
+	- (source/area)`69 18 69 23`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+Manages a sequence of HTTP headers and cached access to specific ones.
+
+Primarily used to extract information from received response (client) or request (server).
+
+
+[ Structures >> method ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`76 2 76 14`
+#!source
+	method = None
+
+[ Structures >> uri ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`77 2 77 11`
+#!source
+	uri = None
+
+[ Structures >> pathstring ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`78 2 78 18`
+#!source
+	pathstring = None
+
+[ Structures >> querystring ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`79 2 79 19`
+#!source
+	querystring = None
+
+[ Structures >> status ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`81 2 81 14`
+#!source
+	status = None
+
+[ Structures >> phrase ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`82 2 82 14`
+#!source
+	phrase = None
+
+[ Structures >> _uri_struct ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`84 2 84 19`
+#!source
+	_uri_struct = None
+
+[ Structures >> _uri_parts ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`85 2 85 18`
+#!source
+	_uri_parts = None
+
+[ Structures >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`87 2 100 24`
+(signature)`__init__(self, headers, *local)`
+
+Create a cache for a sequence of headers directly stored.
+
+[ >> Parameters ]
+
+/(parameter)`self`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`headers`/
+	- (type/syntax)`HeaderSequence`
+	- (type/factor-local/data)&<#HeaderSequence[HeaderSequence]>
+	
+	The sequence of pairs designating the storage area to use.
+
+/(parameter)`local`/
+	- (type/syntax)`bytes`
+	- (type/invalid/unknown)&<#bytes>
+	
+	Additional headers that should have cached access.
+
+
+[ Structures >> set_request ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`102 2 114 13`
+(signature)`set_request(self, method, uri)`
+
+Configure the structure as representing a request received by a server.
+
+
+[ Structures >> set_status ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`116 2 125 10`
+(signature)`set_status(self, status, phrase)`
+
+Configure the structure as representing a response received by a client.
+
+
+[ Structures >> redirected ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (source/area)`126 2 132 16`
+		- (type/syntax)`bool`
+		- (type/invalid/unknown)&<#bool>
+		
+Whether the response is a redirect.
+
+
+[ Structures >> cache ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`133 2 135 20`
+(signature)`cache(self)`
+
+
+[ Structures >> __str__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`137 2 141 4`
+(signature)`__str__(self)`
+
+
+[ Structures >> _init_headers ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`143 2 163 16`
+(signature)`_init_headers(self, headers)`
+
+Set the headers to be cached and structured for use by an application.
+
+
+[ Structures >> _uri_parts ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`164 2 170 16`
+(signature)`_uri_parts(self)`
+
+
+[ Structures >> _uri_struct ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`171 2 174 10`
+(signature)`_uri_struct(self)`
+
+
+[ Structures >> path ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (source/area)`175 2 181 10`
+		- (type/syntax)`typing.Sequence[str]`
+		
+The sequence of path items in pathstring.
+
+
+[ Structures >> query ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (source/area)`182 2 188 10`
+		- (type/syntax)`typing.Optional[dict]`
+		
+The query parameters of the URI.
+
+
+[ Structures >> upgrade ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (source/area)`189 2 195 10`
+		- (type/syntax)`bool`
+		- (type/invalid/unknown)&<#bool>
+		
+Whether or not the request looking to perform protocol substitution.
+
+
+[ Structures >> content ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (source/area)`196 2 206 10`
+		- (type/syntax)`bool`
+		- (type/invalid/unknown)&<#bool>
+		
+Whether the headers indicate an associated body.
+
+
+[ Structures >> length ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (source/area)`207 2 221 13`
+		- (type/syntax)`typing.Optional[int]`
+		
+The length of the content; positive if exact, (invalid/unknown)&<#None> if no content, and -1 if arbitrary.
+For HTTP, arbitrary triggers chunked transfer encoding.
+
+
+[ Structures >> byte_ranges ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`223 2 231 16`
+(signature)`byte_ranges(self, length)`
+
+The byte ranges of the request.
+
+
+[ Structures >> upgrade_insecure ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`232 2 247 58`
+(signature)`upgrade_insecure(self)`
+
+The (http/header-id)`Upgrade-Insecure-Requests` header as a boolean.
+(invalid/unknown)&<#None> if not the header was not present, (invalid/unknown)&<#True> if the header value was
+(octets)`1` and (invalid/unknown)&<#False> if (octets)`0`.
+
+
+[ Structures >> cached_headers ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`249 2 314 10`
+#!source
+	cached_headers = set(
+		x.lower() for x in [
+			b'Connection',
+			b'Upgrade',
+			b'Host',
+			b'Upgrade-Insecure-Requests',
+			b'Range',
+			b'Expect',
+				b'Transfer-Encoding',
+			b'Transfer-Extension',
+				b'TE',
+			b'Trailer',
+				b'Date',
+			b'Last-Modified',
+			b'Retry-After',
+				b'Server',
+			b'User-Agent',
+			b'From',
+			b'P3P',
+				b'Accept',
+			b'Accept-Encoding',
+			b'Accept-Language',
+			b'Accept-Ranges',
+			b'Accept-Charset',
+				b'Content-Type',
+			b'Content-Language',
+			b'Content-Length',
+			b'Content-Range',
+			b'Content-Location',
+			b'Content-Encoding',
+				b'Cache-Control',
+			b'ETag',
+			b'Expires',
+			b'If-Match',
+			b'If-Modified-Since',
+			b'If-None-Match',
+			b'If-Range',
+			b'If-Unmodified-Since',
+				b'Authorization',
+			b'WWW-Authenticate',
+			b'Proxy-Authenticate',
+			b'Proxy-Authorization',
+				b'Location',
+			b'Max-Forwards',
+				b'Via',
+			b'Vary',
+				b'Forwarded',
+			b'X-Forwarded-For',
+				b':Method',
+			b':URI',
+		]
+	)
+		@property
+
+[ Structures >> connection ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (source/area)`315 2 322 17`
+		- (type/syntax)`bytes`
+		- (type/invalid/unknown)&<#bytes>
+		
+Return the connection header stripped and lowered or `b''` if no header present.
+
+
+[ Structures >> media_range_cache ]
+! CONTROL:
+	/type/
+		staticmethod
+	/element/
+		- (source/area)`323 2 333 16`
+(signature)`media_range_cache(range_data, parse_range)`
+
+Cached access to a media range header.
+
+
+[ Structures >> media_range ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`334 2 342 16`
+(signature)`media_range(self)`
+
+Structured form of the Accept header.
+
+
+[ Structures >> media_type ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`343 2 350 16`
+		- (type/syntax)`media.Type`
+		- (type/context-local/factor-element)&<fault.internet/media#Type[fault.internet.media.Type]>
+		
+(signature)`media_type(self)`
+
+The structured media type extracted from the (http/header-id)`Content-Type` header.
+
+
+[ Structures >> date ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`351 2 362 10`
+		- (type/syntax)`timetypes.Timestamp`
+		- (type/context-local/factor-element)&<fault.time/types#Timestamp[fault.time.types.Timestamp]>
+		
+(signature)`date(self, parse)`
+
+Date header timestamp.
+
+
+[ Structures >> host ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (source/area)`363 2 369 10`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+Decoded host header.
+
+
+[ Structures >> encoding ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (source/area)`370 2 376 10`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+Character encoding of entity content. (invalid/unknown)&<#None> if not applicable.
+
+
+[ Structures >> final ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (source/area)`377 2 383 35`
+		- (type/syntax)`bool`
+		- (type/invalid/unknown)&<#bool>
+		
+Whether this is suppoed to be the last transaction in the connection.
+
+
+[ _join_send_wire ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`385 1 387 31`
+(signature)`_join_send_wire(event, channel_id, transfer_events)`
+
+
+[ _join_send_content ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`389 1 391 41`
+(signature)`_join_send_content(event, channel_id, transfer_events)`
+
+
+[ _join_send_chunk ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`393 1 395 41`
+(signature)`_join_send_chunk(event, channel_id, transfer_events)`
+
+
+[ _join_send_eom ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`397 1 399 14`
+(signature)`_join_send_eom(event, channel_id, terminal, EOM)`
+
+
+[ _join_initiate_response ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`401 1 422 2`
+(signature)`_join_initiate_response(shared, commands, sequence, event, channel_id, init, fc_transfer)`
+
+
+[ _join_initiate_request ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`424 1 448 2`
+(signature)`_join_initiate_request(shared, commands, sequence, event, channel_id, init, fc_transfer)`
+
+
+[ join ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`450 1 489 18`
+(signature)`join(shared, sequence, fc_initiate, fc_terminate, fc_transfer, partial)`
+
+Join flow events into a proper HTTP stream.
+
+
+[ _fork_response_sync ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`491 1 497 52`
+(signature)`_fork_response_sync(state)`
+
+Generator that can be used to communicate whether or not
+the response will have a body. Used with client disposition.
+
+
+[ fork ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`499 1 649 18`
+(signature)`fork(shared, allocate, close, overflow, rline, headers, trailers, content, chunk, violation, bypass, EOH, EOM, iter, map, len, chain, fc_initiate, fc_terminate, fc_transfer)`
+
+Split an HTTP stream into flow events for use by (context-local/factor-element)&<fault.kernel/flows#Division[fault.kernel.flows.Division]>.
+
+
+[ tg ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`651 1 668 17`
+(signature)`tg(ig)`
+
+
+[ ifork ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`670 1 670 12`
+#!source
+	ifork = fork
+
+[ tfork ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`671 1 672 30`
+(signature)`tfork(*args, **kw)`
+
+
+[ fork ]
+! CONTROL:
+	/type/
+		data
+	/element/
+		- (source/area)`673 1 673 12`
+Split an HTTP stream into flow events for use by (context-local/factor-element)&<fault.kernel/flows#Division[fault.kernel.flows.Division]>.
+
+#!source
+	fork = tfork
+
+[ TXProtocol ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (source/area)`675 1 704 23`
+! INHERIT:
+	- (source/area)`675 18 675 31`
+	- (type/syntax)`flows.Protocol`
+	- (type/context-local/factor-element)&<fault.kernel/flows#Protocol[fault.kernel.flows.Protocol]>
+	
+Protocol class sending HTTP messages.
+
+
+[ TXProtocol >> http_version ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`681 2 684 14`
+
+[ TXProtocol >> initiate_server_request ]
+! CONTROL:
+	/type/
+		staticmethod
+	/element/
+		- (source/area)`685 2 692 14`
+(signature)`initiate_server_request(protocol, parameter)`
+
+Used by clients to select the proper initiation to send.
+
+
+[ TXProtocol >> initiate_client_response ]
+! CONTROL:
+	/type/
+		staticmethod
+	/element/
+		- (source/area)`693 2 698 57`
+(signature)`initiate_client_response(protocol, parameter)`
+
+Used by servers to select the proper initiation to send.
+
+
+[ TXProtocol >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`700 2 704 23`
+(signature)`__init__(self, state, initiate)`
+
+
+[ RXProtocol ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (source/area)`706 1 747 23`
+! INHERIT:
+	- (source/area)`706 18 706 31`
+	- (type/syntax)`flows.Protocol`
+	- (type/context-local/factor-element)&<fault.kernel/flows#Protocol[fault.kernel.flows.Protocol]>
+	
+Protocol class receiving HTTP messages.
+
+
+[ RXProtocol >> http_version ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`712 2 715 14`
+
+[ RXProtocol >> allocate_client_request ]
+! CONTROL:
+	/type/
+		staticmethod
+	/element/
+		- (source/area)`716 2 723 14`
+(signature)`allocate_client_request(parameter)`
+
+For use by server receiving the client request.
+
+
+[ RXProtocol >> allocate_server_response ]
+! CONTROL:
+	/type/
+		staticmethod
+	/element/
+		- (source/area)`724 2 729 46`
+(signature)`allocate_server_response(parameter)`
+
+For use by clients receiving the server response.
+
+
+[ RXProtocol >> p_close ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`731 2 732 6`
+(signature)`p_close(self)`
+
+
+[ RXProtocol >> p_correlate ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`734 2 736 36`
+(signature)`p_correlate(self, send)`
+
+
+[ RXProtocol >> p_overflowing ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`738 2 741 31`
+(signature)`p_overflowing(self)`
+
+
+[ RXProtocol >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`743 2 747 23`
+(signature)`__init__(self, state, allocate)`
+
+
+[ allocate_client_protocol ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`749 1 757 25`
+(signature)`allocate_client_protocol(version)`
+
+
+[ allocate_server_protocol ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`759 1 767 25`
+(signature)`allocate_server_protocol(version)`
+
+
+[ allocate_client_protocol_v1 ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`769 1 769 54`
+#!source
+	allocate_client_protocol_v1 = allocate_client_protocol
+
+[ allocate_server_protocol_v1 ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`770 1 770 54`
+#!source
+	allocate_server_protocol_v1 = allocate_server_protocol

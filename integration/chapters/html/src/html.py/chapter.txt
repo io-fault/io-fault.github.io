@@ -1,0 +1,730 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 886 42`
+
+[ Sequence ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1 1 1 36`
+
+[ itertools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`2 1 2 16`
+
+[ tools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`4 1 4 31`
+
+[ comethod ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`5 1 5 34`
+
+[ xml ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`6 1 6 30`
+
+[ document ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`8 1 8 31`
+
+[ structure_chapter_lines ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`9 1 9 73`
+
+[ structure_chapter_text ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`9 1 9 73`
+
+[ ipara ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`10 1 10 62`
+
+[ setdirectory ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`12 1 12 34`
+
+[ query ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`13 1 13 19`
+
+[ formlink ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`15 1 41 28`
+		- (type/syntax)`(str, str):`
+		
+(signature)`formlink(reference)`
+
+Construct a pair from the hyperlink reference string for constructing an anchor tag.
+
+First element is the display text, second is the content for the `href` attribute.
+
+
+[ formtype ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`43 1 61 18`
+(signature)`formtype(tree, element)`
+
+Construct HTML elements for representing a type given proper annotations.
+
+
+[ load_control_value ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`63 1 76 39`
+(signature)`load_control_value(value)`
+
+
+[ integrate ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`78 1 128 12`
+(signature)`integrate(index, types, node)`
+
+Traverse the sections of the (factor-local/parameter)&<#integrate.Parameters.node[node]> converting CONTEXT and CONTROL
+admonition nodes into (factor-local/parameter)&<#integrate.Parameters.node[node]> attributes.
+
+
+[ prepare ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`130 1 148 16`
+(signature)`prepare(chapter, path, types)`
+
+
+[ Render ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (source/area)`150 1 774 81`
+! INHERIT:
+	- (source/area)`150 14 150 28`
+	- (type/syntax)`comethod.object`
+	- (type/remote/factor-element)&<http://fault.io/python/context/comethod#object[fault.context.comethod.object]>
+	
+Render an HTML document for the configured text document.
+
+
+[ Render >> slug ]
+! CONTROL:
+	/type/
+		staticmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`157 2 163 23`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+(signature)`slug(ident)`
+
+
+[ Render >> steps ]
+! CONTROL:
+	/type/
+		classmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`164 2 174 13`
+(signature)`steps(Class, path)`
+
+
+[ Render >> from_chapter ]
+! CONTROL:
+	/type/
+		classmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`175 2 180 47`
+(signature)`from_chapter(Class, prefix, depth, chapter, encoding)`
+
+
+[ Render >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`182 2 192 27`
+(signature)`__init__(self, output, context, prefix, depth, index, input)`
+
+
+[ Render >> default_resolver ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`194 2 195 51`
+(signature)`default_resolver(self, capacity)`
+
+
+[ Render >> title ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`197 2 209 3`
+(signature)`title(self, resolver, content, integrate, tag)`
+
+
+[ Render >> document ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`211 2 250 3`
+(signature)`document(self, type, identifier, head, header, footer, resolver)`
+
+Render the HTML document from the given chapter.
+
+
+[ Render >> abstract ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`252 2 260 3`
+(signature)`abstract(self, resolver, nodes, attr)`
+
+Extract the non-section content from the chapter.
+
+
+[ Render >> root ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`262 2 267 21`
+(signature)`root(self, resolver, nodes, attr)`
+
+
+[ Render >> semantic_section ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`268 2 348 3`
+(signature)`semantic_section(self, resolver, nodes, attr, adjustment, tag)`
+
+
+[ Render >> reference_target ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`350 2 364 3`
+(signature)`reference_target(self, resolver, ref)`
+
+Display the target of the concept's reference.
+
+
+[ Render >> switch ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`366 2 374 23`
+(signature)`switch(self, resolver, nodes, attr)`
+
+Perform the transformation for the given node.
+
+
+[ Render >> error ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`375 2 378 20`
+(signature)`error(self, resolver, nodes, attr)`
+
+
+[ Render >> code_block ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`379 2 399 23`
+(signature)`code_block(self, resolver, nodes, attr)`
+
+
+[ Render >> normal_paragraph ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`400 2 403 3`
+(signature)`normal_paragraph(self, resolver, nodes, attr)`
+
+
+[ Render >> list_item ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`405 2 408 17`
+(signature)`list_item(self, resolver, item, attr)`
+
+
+[ Render >> ul_set ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`409 2 419 22`
+(signature)`ul_set(self, resolver, items, attr)`
+
+
+[ Render >> ol_seq ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`420 2 428 3`
+(signature)`ol_seq(self, resolver, items, attr)`
+
+
+[ Render >> dl_item_anchor ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`430 2 434 3`
+(signature)`dl_item_anchor(self, path)`
+
+
+[ Render >> dl_key_identifier ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`436 2 448 14`
+(signature)`dl_key_identifier(self, kpg)`
+
+
+[ Render >> dl_item ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`450 2 516 24`
+(signature)`dl_item(self, resolver, item, attr, sattr, prefix)`
+
+
+[ Render >> dl_dict ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`517 2 536 3`
+(signature)`dl_dict(self, resolver, items, attr)`
+
+
+[ Render >> admonition_table ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`538 2 555 24`
+(signature)`admonition_table(self, resolver, icon, severity, content)`
+
+
+[ Render >> block_admonition ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`556 2 580 3`
+(signature)`block_admonition(self, resolver, content, attr)`
+
+
+[ Render >> link ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`582 2 593 34`
+(signature)`link(self, eclass, content, href, tag)`
+
+
+[ Render >> dereference_section ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`594 2 601 36`
+(signature)`dereference_section(self, resolver, context, text, *quals)`
+
+
+[ Render >> dereference_ambiguous ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`602 2 611 36`
+(signature)`dereference_ambiguous(self, resolver, context, text, *quals)`
+
+
+[ Render >> hyperlink ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`612 2 664 28`
+(signature)`hyperlink(self, resolver, context, text, *quals, title)`
+
+
+[ Render >> normal_text ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`665 2 672 32`
+(signature)`normal_text(self, resolver, context, text, *quals)`
+
+
+[ Render >> line_break ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`673 2 680 30`
+(signature)`line_break(self, resolver, context, text, *quals)`
+
+
+[ Render >> emphasized_text ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`681 2 695 3`
+(signature)`emphasized_text(self, resolver, context, text, level)`
+
+
+[ Render >> semantic_literals ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`698 2 716 37`
+#!source
+	semantic_literals = {
+		# (self, default-class-attribute, quals, literal-text)
+		'date': (
+			(lambda s, c, q, x: s.element(
+				'time', s.text(x),
+				('class', 'gregorian-calendar-date'),
+				('datetime', x),
+			))
+		),
+		'timestamp': (
+			(lambda s, c, q, x: s.element(
+				'time', s.text(x),
+				('class', 'point'),
+				('datetime', x),
+			))
+		),
+	}
+		@comethod('literal', 'grave-accent')
+
+[ Render >> inline_literal ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`717 2 730 4`
+(signature)`inline_literal(self, resolver, context, text, *quals)`
+
+
+[ Render >> paragraph_content ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`732 2 733 67`
+(signature)`paragraph_content(self, resolver, content, attr)`
+
+
+[ Render >> paragraph ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`735 2 744 70`
+(signature)`paragraph(self, resolver, para, attr)`
+
+
+[ Render >> subtext ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`746 2 774 81`
+(signature)`subtext(self, resolver, snodes, attr)`
+
+Currently unused.
+
+Originally, this parsed the syntax node content as kleptic text.
+Eventually (project-local/unknown)&<join> was changed to integrate the documentation into
+the generated sections leaving this unused.
+
+
+[ r_icon ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`776 1 777 55`
+(signature)`r_icon(sx, i)`
+
+
+[ r_index ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`779 1 810 2`
+(signature)`r_index(sx, pathclass, abstractclass, listclass, index)`
+
+
+[ r_projects ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`812 1 817 72`
+(signature)`r_projects(sx, index)`
+
+
+[ r_factors ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`819 1 824 71`
+(signature)`r_factors(sx, index)`
+
+
+[ r_sources ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`826 1 831 71`
+(signature)`r_sources(sx, index, icon)`
+
+
+[ r_head ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`833 1 847 2`
+(signature)`r_head(sx, encoding, styles, title, preload)`
+
+
+[ indexframe ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`849 1 872 2`
+(signature)`indexframe(head)`
+
+
+[ sourceindex ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`874 1 875 69`
+(signature)`sourceindex(sx, head, factor, index, type)`
+
+
+[ projectfactors ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`877 1 877 56`
+#!source
+	projectfactors='http://if.fault.io/factors/meta.project'
+
+[ factorindex ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`878 1 879 75`
+(signature)`factorindex(sx, head, project, index, type)`
+
+
+[ projectindex ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`881 1 882 74`
+(signature)`projectindex(sx, head, type, corpus, title, index)`
+
+
+[ transform ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`884 1 887 41`
+(signature)`transform(sx, prefix, depth, chapter, head, identifier, type)`
+

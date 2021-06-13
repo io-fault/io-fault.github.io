@@ -1,0 +1,13 @@
+! CONTROL:
+	/type/
+		factor
+	/element/
+		- (source/area)``
+Discuss project mechanics here if at all.
+Often well positioned comments suffice, but given reasonably complicated
+implementations, highlights of the mechanical concepts are useful.
+
+[ Internal Patterns ]
+
+...
+

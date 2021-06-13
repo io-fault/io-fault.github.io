@@ -1,0 +1,1 @@
+[["Evaluate the functions of a &module.Coroutine process;", "notably the continuations and callback registration."], ["- &module.Subprocess", "", "Validate that process exits block termination.", "The subclasses are used for injections to avoid real system processes."], ["- &module.Subprocess.sp_only"]]

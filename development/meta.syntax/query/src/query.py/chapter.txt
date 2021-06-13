@@ -1,0 +1,197 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 145 0`
+Horizontal and vertical query for range selection.
+
+
+[ punctuation ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`5 1 5 27`
+#!source
+	punctuation = set(";:.,!?")
+
+[ operation ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`6 1 6 28`
+#!source
+	operation = set("-+/*&^%!~")
+
+[ quotation ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`7 1 7 23`
+#!source
+	quotation = set("'\"`")
+
+[ classify ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`9 1 23 20`
+(signature)`classify(string)`
+
+Identify the class of the given character.
+
+/(parameter)`string`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ Query ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (source/area)`25 1 64 17`
+! INHERIT:
+	- (source/area)`25 13 25 18`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+Range queries for managing range operations.
+
+Manages the collection of query operations for selecting ranges.
+
+
+[ Query >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`31 2 36 21`
+(signature)`__init__(self, type, scanner, condition)`
+
+
+[ Query >> dispatch ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`38 2 64 17`
+(signature)`dispatch(self, sequence, index, minimum, maximum)`
+
+Identify the range where the given conditions hold True.
+
+/(parameter)`self`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`sequence`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`index`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`minimum`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`maximum`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ indentation ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`66 1 76 22`
+(signature)`indentation(seq)`
+
+Return the indentation level or zero if none.
+
+/(parameter)`seq`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ has_content ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`78 1 87 13`
+(signature)`has_content(line)`
+
+Whether or not the non-formatting fields have content.
+
+/(parameter)`line`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ indentation_block ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`89 1 121 29`
+(signature)`indentation_block(direction, initial)`
+
+Select indentation block.
+
+/(parameter)`direction`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`initial`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`level`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`level_adjustment`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ contiguous_block ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`123 1 145 25`
+(signature)`contiguous_block(direction, initial)`
+
+Select a contiguous range.
+
+/(parameter)`direction`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`initial`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`level`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`level_adjustment`/
+	
+	(ctl/absent)`Undocumented`.
+

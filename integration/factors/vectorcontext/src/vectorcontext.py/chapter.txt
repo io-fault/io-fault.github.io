@@ -1,0 +1,501 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 429 0`
+Construction Context implementation using vector formulations.
+
+
+[ sys ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`4 1 4 10`
+
+[ functools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`5 1 5 16`
+
+[ itertools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`6 1 6 16`
+
+[ typing ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`7 1 7 13`
+
+[ collections ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`8 1 8 18`
+
+[ files ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`10 1 10 30`
+
+[ execution ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`11 1 11 34`
+
+[ lsf ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`12 1 12 39`
+
+[ vf ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`13 1 13 42`
+
+[ core ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`15 1 15 18`
+
+[ _variant_constants ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`17 1 23 2`
+(signature)`_variant_constants(variants)`
+
+
+[ _variant_conclusions ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`25 1 32 2`
+(signature)`_variant_conclusions(variants)`
+
+
+[ Mechanism ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (source/area)`34 1 95 59`
+! INHERIT:
+	- (source/area)`34 17 34 22`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+A section of a construction context that can formulate adapters for factor processing.
+
+
+[ Mechanism >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`39 2 42 18`
+(signature)`__init__(self, context, semantics)`
+
+
+[ Mechanism >> __repr__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`44 2 45 51`
+(signature)`__repr__(self)`
+
+
+[ Mechanism >> _cc ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`47 2 54 10`
+(signature)`_cc(self, phase, section, variants, itype, xtype)`
+
+
+[ Mechanism >> variants ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`56 2 61 61`
+(signature)`variants(self, intentions)`
+
+Generate the full combinations of sections and variants
+for the given intentions.
+
+
+[ Mechanism >> integrates ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`63 2 71 14`
+(signature)`integrates(self, section, variants, itype)`
+
+Identify whether the mechanism is operable.
+
+
+[ Mechanism >> unit_name_delta ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`73 2 77 66`
+(signature)`unit_name_delta(self, section, variants, itype)`
+
+Identify the prefix and suffix for the unit file.
+
+
+[ Mechanism >> prepare ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`79 2 83 63`
+(signature)`prepare(self, section, variants, itype, srctype)`
+
+Construct the command constructor for source preparation.
+
+
+[ Mechanism >> translate ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`85 2 89 65`
+(signature)`translate(self, section, variants, itype, srctype)`
+
+Construct the command constructor for translating sources.
+
+
+[ Mechanism >> render ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`91 2 95 59`
+(signature)`render(self, section, variants, itype)`
+
+Construct the command constructor for rendering the factor's image.
+
+
+[ Context ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (source/area)`97 1 403 12`
+! INHERIT:
+	- (source/area)`97 15 97 20`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+Vectors Formulations based Mechanism set for building system argument vectors.
+
+
+[ Context >> _ref ]
+! CONTROL:
+	/type/
+		staticmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`103 2 116 13`
+(signature)`_ref(section, name)`
+
+
+[ Context >> from_directory ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (source/area)`117 2 121 32`
+(signature)`from_directory(Class, route, intention)`
+
+Create instance using a directory. Defaults depending intention to (id)`optimal`.
+
+
+[ Context >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`123 2 137 37`
+(signature)`__init__(self, route, intention, environ)`
+
+
+[ Context >> _variants ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`139 2 147 24`
+(signature)`_variants(self, factor)`
+
+Read the full product of system-architecture pairs from
+the given variants (factor-local/parameter)&<#Context._variants.Parameters.factor[factor]>.
+
+
+[ Context >> cc_unit_name_delta ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`149 2 168 33`
+(signature)`cc_unit_name_delta(self, section, variants, itype)`
+
+
+[ Context >> cc_integration_types ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`170 2 177 81`
+(signature)`cc_integration_types(self, section, variants, itype)`
+
+
+[ Context >> cc_variants ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`179 2 194 12`
+(signature)`cc_variants(self, semantics, intentions)`
+
+Identify the variant combinations to use for the given (factor-local/parameter)&<#Context.cc_variants.Parameters.semantics[semantics]> and (factor-local/parameter)&<#Context.cc_variants.Parameters.intentions[intentions]>.
+
+
+[ Context >> _constants ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`196 2 209 11`
+(signature)`_constants(self, section, variants, itype, xtype, **kw)`
+
+
+[ Context >> _conclusions ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`211 2 221 36`
+(signature)`_conclusions(self, section, variants, itype, xtype)`
+
+
+[ Context >> _compose ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`223 2 237 45`
+(signature)`_compose(self, vctx, section, composition, itype, name, fallback)`
+
+
+[ Context >> _load_descriptor ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`239 2 258 24`
+(signature)`_load_descriptor(self, vctx, section, variants, phase, itype, xtype)`
+
+
+[ Context >> _read_merged ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`260 2 270 29`
+(signature)`_read_merged(self, vctx, section, variants, phase, itype, xtype)`
+
+
+[ Context >> cc_compose ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`272 2 286 61`
+(signature)`cc_compose(self, phase, section, variants, itype, xtype)`
+
+
+[ Context >> _load_intercepts ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`288 2 305 32`
+(signature)`_load_intercepts(self, context, Intercepts)`
+
+
+[ Context >> load ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`307 2 314 13`
+(signature)`load(self)`
+
+Load the product indicies.
+
+
+[ Context >> configure ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`316 2 323 13`
+(signature)`configure(self, context)`
+
+Load the default factor semantics.
+
+
+[ Context >> _read_cell ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`325 2 338 16`
+(signature)`_read_cell(self, factor)`
+
+Get the sole source type and path of the given (factor-local/parameter)&<#Context._read_cell.Parameters.factor[factor]>.
+
+
+[ Context >> _load_vector ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`340 2 347 49`
+(signature)`_load_vector(self, factor)`
+
+Load vector formulations from the (factor-local/parameter)&<#Context._load_vector.Parameters.factor[factor]>.
+
+
+[ Context >> _load_system ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`349 2 358 63`
+(signature)`_load_system(self, factor)`
+
+Load system command vector identified by (factor-local/parameter)&<#Context._load_system.Parameters.factor[factor]>.
+
+
+[ Context >> _iq ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`360 2 362 11`
+(signature)`_iq(self, name)`
+
+
+[ Context >> _cat ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`364 2 371 46`
+(signature)`_cat(self, ctx, index, name, fallback)`
+
+Catenate the vectors selected in (factor-local/parameter)&<#Context._cat.Parameters.index[index]>.
+
+
+[ Context >> _v ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`373 2 378 29`
+(signature)`_v(self, factor)`
+
+
+[ Context >> _map_factor_semantics ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`380 2 403 12`
+(signature)`_map_factor_semantics(self, context, Projections)`
+
+Identify the projects providing adapters for the listed semantics.
+

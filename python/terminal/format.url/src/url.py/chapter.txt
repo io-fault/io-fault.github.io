@@ -1,0 +1,87 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 62 4`
+Color formatting for URL strings.
+
+
+[ ri ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`4 1 4 26`
+
+[ palette ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`6 1 9 1`
+#!source
+	palette = {
+		'yellow': 0xffff87,
+		'blue': 0x0087ff,
+	}
+
+[ colors ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`11 1 35 1`
+#!source
+	colors = {
+		'delimiter': 0x6c6c6c,
+		'scheme': palette['blue'],
+		'type': 0x6c6c6c,
+	
+		'user': 0xff5f00,
+		'password': 0x5f0000,
+	
+		'host': 0x875faf,
+		'port': 0x005f5f,
+	
+		'path-root': -1024,
+		'path-segment': 0x6e6e6e,
+		'delimiter-path-only': 0x6e6e6e,
+		'delimiter-path-initial': 0x6e6e6e,
+		'delimiter-path-root': 0x6e6e6e,
+		'delimiter-path-segments': 0x6e6e6e,
+		'delimiter-path-final': 0x6e6e6e,
+		'resource': 0xFFFFFF,
+	
+		'query-key': 0x5fafff,
+		'query-value': 0x949494,
+		'fragment': 0x505050,
+		('delimiter', "#"): 0xFF0000,
+	}
+
+[ f_struct ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`37 1 39 39`
+(signature)`f_struct(struct)`
+
+
+[ f_string ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`41 1 45 34`
+(signature)`f_string(string)`
+
+Format the string returning an iterable for use with (project-local/unknown)&<matrix#Context.render[matrix.Context.render]>
+

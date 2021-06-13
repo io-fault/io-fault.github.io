@@ -1,0 +1,51 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 95 16`
+Frame drawing kit for delimiting areas of display.
+
+Frames are drawn from pattern expressions; the expressions are formed
+from a sequence of intersections that designate the special cases found
+along the primary line pattern.
+
+
+[ render_vertical ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`9 1 20 30`
+(signature)`render_vertical(canvas, palette, expression)`
+
+Interpret the (factor-local/parameter)&<#render_vertical.Parameters.expression[expression]> in the context of the (factor-local/parameter)&<#render_vertical.Parameters.canvas[canvas]>
+yielding the events necessary to cause the frame borders to be displayed.
+
+
+[ render_horizontal ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`22 1 33 30`
+(signature)`render_horizontal(canvas, palette, expression)`
+
+Interpret the (factor-local/parameter)&<#render_horizontal.Parameters.expression[expression]> in the context of the (factor-local/parameter)&<#render_horizontal.Parameters.canvas[canvas]>
+yielding the events necessary to cause the frame borders to be displayed.
+
+
+[ render_box ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`35 1 64 32`
+(signature)`render_box(canvas, corners, hpalette, vpalette, width, height)`
+
+Draw the border of a box with the given width and height.
+The (factor-local/parameter)&<#render_box.Parameters.width[width]> and (factor-local/parameter)&<#render_box.Parameters.height[height]> are the inclusive dimensions of the contents;
+the frame will be drawn around that area.
+
+The yielded commands are entirely relative and can be cached
+for replays. This should only be used for raw mode displays.
+

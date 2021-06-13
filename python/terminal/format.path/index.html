@@ -1,0 +1,31 @@
+<html><head><title>fault.terminal.format.path</title><meta charset="utf-8"/><link as="style" rel="preload" href="../../.legacy-web/core.css"></link><link as="style" rel="preload" href="../../.legacy-web/factor.css"></link><link rel="stylesheet" href="../../.legacy-web/core.css"></link><link rel="stylesheet" href="../../.legacy-web/factor.css"></link></head><body><main><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><span class="title">fault.terminal.format.path</span><span class="factor-type">http://if.fault.io/factors/python.module</span></h1><div class="text.abstract"><p><span class="text.normal">Color formatting for file paths, URIs, and timestamps.</span></p></div><section class="import" documented="false" local-identifier="os" id="os"><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><a class="title" href="#os"><span class="text.normal">os</span></a><span class="abstract-type">import</span></h1></section><section class="data" documented="false" local-identifier="palette" id="palette"><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><a class="title" href="#palette"><span class="text.normal">palette</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code>palette = {
+	'yellow': 0xffff87,
+	'blue': 0x0087ff,
+}
+</code></pre></section><section class="data" documented="false" local-identifier="route_colors" id="route_colors"><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><a class="title" href="#route_colors"><span class="text.normal">route_colors</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code>route_colors = {
+	'filesystem-root': palette['blue'],
+	'warning': palette['yellow'],
+
+	'directory': 0x0087ff,
+	'executable': 0x008700,
+	'data': 0xc6c6c6,
+
+	'dot-file': 0x808080,
+	'file-not-found': 0xaf0000,
+
+	'link': 0xff0000,
+	'device': 0xff5f00,
+	'socket': 0xff5f00,
+	'pipe': 0xff5f00,
+
+	'path': 0x6e6e6e,
+	'path-link': 0x005f87,
+	'root-segments': 0x4e4e4e,
+
+	'text/plain;pl=python': 0x875faf,
+	'text/plain;sf=fault.txt': 0x875faf,
+	'text/xml': 0x4e4e4e,
+
+	None: None,
+}
+</code></pre></section><section class="function" documented="false" local-identifier="route_is_link" id="route_is_link"><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><a class="title" href="#route_is_link"><span class="text.normal">route_is_link</span></a><span class="abstract-type">function</span></h1><p><code class="signature">route_is_link(route, islink)</code></p></section><section class="function" documented="false" local-identifier="_f_route_factor_type" id="_f_route_factor_type"><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><a class="title" href="#_f_route_factor_type"><span class="text.normal">_f_route_factor_type</span></a><span class="abstract-type">function</span></h1><p><code class="signature">_f_route_factor_type(route, ia_link)</code></p></section><section class="function" documented="false" local-identifier="_f_route_path" id="_f_route_path"><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><a class="title" href="#_f_route_path"><span class="text.normal">_f_route_path</span></a><span class="abstract-type">function</span></h1><p><code class="signature">_f_route_path(root, route, _is_link)</code></p></section><section class="function" documented="false" local-identifier="f_route_path" id="f_route_path"><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><a class="title" href="#f_route_path"><span class="text.normal">f_route_path</span></a><span class="abstract-type">function</span></h1><p><code class="signature">f_route_path(root, route)</code></p></section><section class="function" documented="false" local-identifier="f_route_identifier" id="f_route_identifier"><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><a class="title" href="#f_route_identifier"><span class="text.normal">f_route_identifier</span></a><span class="abstract-type">function</span></h1><p><code class="signature">f_route_identifier(route, warning)</code></p></section><section class="function" documented="true" local-identifier="f_route_absolute" id="f_route_absolute"><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><a class="title" href="#f_route_absolute"><span class="text.normal">f_route_absolute</span></a><span class="abstract-type">function</span></h1><p><code class="signature">f_route_absolute(route, warning)</code></p><p><span class="text.normal">Format the absolute path of the given route.</span></p></section><h1 class="footing"></h1></main></body></html>

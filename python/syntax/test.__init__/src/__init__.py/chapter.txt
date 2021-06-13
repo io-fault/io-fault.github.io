@@ -1,0 +1,27 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 6 0`
+Test context initialization.
+
+
+[ __factor_type__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`4 1 4 25`
+#!source
+	__factor_type__ = 'tests'
+
+[ abstract ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`6 1 6 23`

@@ -1,0 +1,134 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 26 0`
+Cascading Style Sheets language profile.
+
+
+[ fields ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`4 1 4 21`
+
+[ keyword_list ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`6 1 11 1`
+#!source
+	keyword_list = [
+		'@import',
+		'@media',
+		'@charset',
+		'@page',
+	]
+
+[ core_list ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`13 1 16 1`
+#!source
+	core_list = [
+		'body',
+		'html',
+	]
+
+[ keywords ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`18 1 18 59`
+#!source
+	keywords = {y: y for y in map(fields.String, keyword_list)}
+
+[ cores ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`19 1 19 53`
+#!source
+	cores = {y: y for y in map(fields.String, core_list)}
+
+[ terminators ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`21 1 21 55`
+#!source
+	terminators = {y: y for y in map(fields.Constant, ";")}
+
+[ separators ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`22 1 22 55`
+#!source
+	separators = {y: y for y in map(fields.Constant, ":,")}
+
+[ routers ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`23 1 23 57`
+#!source
+	routers = {y: y for y in map(fields.Constant, (".","-"))}
+
+[ operators ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`24 1 24 68`
+#!source
+	operators = {y: y for y in map(fields.Constant, "!&^*%+=-|\\/<>?~")}
+
+[ groupings ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`25 1 25 58`
+#!source
+	groupings = {y: y for y in map(fields.Constant, "()[]{}")}
+
+[ quotations ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`26 1 26 62`
+#!source
+	quotations = {y: y for y in map(fields.Constant, ("'", '"',))}

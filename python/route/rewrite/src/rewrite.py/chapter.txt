@@ -1,0 +1,29 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 28 0`
+Relative path resolution.
+
+
+[ Sequence ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`4 1 4 36`
+
+[ relative ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`6 1 28 9`
+		- (type/syntax)`Sequence[str]`
+		
+(signature)`relative(points, delta)`
+
+Resolve relative accessors within (factor-local/parameter)&<#relative.Parameters.points[points]>.
+

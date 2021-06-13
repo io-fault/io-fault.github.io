@@ -1,0 +1,3458 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 4456 0`
+Application view publishing library.
+Currently limited to built-in applications.
+
+[ Concepts ]
+
+/window/
+	A collection of organized Panes.
+	Windows are event receivers.
+
+/pane/
+	A drawing area connected to a Refraction.
+	Panes do not receive events; Windows pass them to refractions.
+
+/refraction/
+	A view connected to a sequence of pages.
+	Refractions are event receivers.
+
+/terminal/
+	The display endpoint and event source connected to a Window.
+
+[ Engineering ]
+
+The initial development has left some major misdesign. Refractions
+are currently conflated with Application Contexts. Contexts being
+purely conceptual with the current incarnation.
+
+Application Contexts will be the primary focus of a Console's runtime.
+Each Context will represent a document being edited, rather, a generalization.
+Refractions will have static view relationships and be configured to connect
+to applications. The refractions will manage the dispatching of Application Events
+if any are necessary.
+
+
+[ sys ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`31 1 31 10`
+
+[ os ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`32 1 32 9`
+
+[ queue ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`33 1 33 12`
+
+[ functools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`34 1 34 16`
+
+[ codecs ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`35 1 35 13`
+
+[ keyword ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`36 1 36 14`
+
+[ itertools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`37 1 37 16`
+
+[ weakref ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`38 1 38 14`
+
+[ subprocess ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`39 1 39 17`
+
+[ typing ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`40 1 40 13`
+
+[ kcore ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`42 1 42 38`
+
+[ ksystem ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`43 1 43 42`
+
+[ flows ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`44 1 44 30`
+
+[ IRange ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`45 1 45 36`
+
+[ systemfiles ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`46 1 46 45`
+
+[ timetypes ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`48 1 48 41`
+
+[ elapsed ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`49 1 49 37`
+
+[ matrix ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`51 1 51 33`
+
+[ events ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`52 1 52 33`
+
+[ meta ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`53 1 53 31`
+
+[ seqtools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`55 1 55 34`
+
+[ symbols ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`56 1 56 21`
+
+[ fields ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`57 1 57 20`
+
+[ query ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`58 1 58 19`
+
+[ liblines ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`59 1 59 31`
+
+[ core ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`61 1 61 18`
+
+[ palette ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`62 1 62 21`
+
+[ underlined ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`64 1 64 57`
+#!source
+	underlined = matrix.Context.Traits.construct('underline')
+
+[ normalstyle ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`65 1 65 42`
+#!source
+	normalstyle = matrix.Context.Traits.none()
+
+[ exceptions ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`66 1 66 15`
+#!source
+	exceptions = []
+
+[ PConstruct ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`67 1 67 44`
+#!source
+	PConstruct = matrix.Context.Phrase.construct
+
+[ print_except_with_crlf ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`69 1 87 13`
+(signature)`print_except_with_crlf(exc, val, tb, altbuffer, file)`
+
+
+[ contexts ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`89 1 97 1`
+#!source
+	contexts = (
+		'system', # the operating system
+		'unit', # the program the editor is running in
+		'control', # the session control; the prompt
+		'session', # the state of the set of projects being managed
+		'project', # the project referring to the container (may be None)
+		'container', # root/document
+		'query', # The active query context
+	)
+
+[ actions ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`99 1 135 1`
+#!source
+	actions = dict(
+		navigation = (
+			'forward',
+			'backward',
+			'first',
+			'move',
+			'last',
+		),
+	
+		delta = (
+			'create',
+			'delete',
+			'insert',
+			'change',
+		),
+	
+		selection = (
+			'select',
+			'all', # select all wrt context
+			'tag',
+			'match',
+			'void', # deletion tagging
+		),
+	
+		# commands that exclusively perform context transitions
+		transition = (
+			'enter',
+			'exit',
+			'escape',
+		),
+	
+		transaction = (
+			'commit',
+			'rollback',
+			'replay', # replay a rolled back transaction
+		),
+	)
+
+[ _subresource ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`137 1 146 35`
+(signature)`_subresource(sub, ascent, WR)`
+
+Currently, this is being misused and will be eliminated once
+a proper processor hierarchy is established.
+
+
+[ Session ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (source/area)`148 1 160 25`
+! INHERIT:
+	- (source/area)`148 15 148 29`
+	- (type/syntax)`kcore.Processor`
+	- (type/none/invalid)&<http://fault.io/dev/null[fault.kernel.core.Processor]>
+	
+A set of buffers and execution contexts accessed by a Console.
+
+Session provides a storage abstraction, persistent cache, and retention policy.
+
+
+[ Session >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`155 2 160 25`
+(signature)`__init__(self, route)`
+
+
+[ Fields ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (source/area)`162 1 3015 17`
+! INHERIT:
+	- (source/area)`162 14 162 28`
+	- (type/syntax)`core.Refraction`
+	- (type/project-local/factor-element)&<core#Refraction[meta.syntax.core.Refraction]>
+	
+A (project-local/project-factor)&<fields[meta.syntax.fields]> based refraction that maintains focus and field selection state.
+
+
+[ Fields >> Indentation ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`166 2 166 33`
+#!source
+	Indentation = fields.Indentation
+
+[ Fields >> separator ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`167 2 167 35`
+#!source
+	separator = fields.field_separator
+
+[ Fields >> delete_across_units ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`169 2 169 28`
+#!source
+	delete_across_units = False
+
+[ Fields >> margin ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`170 2 170 11`
+#!source
+	margin = 8 # number of lines that remains below or above the cursor
+
+[ Fields >> out_of_bounds ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`171 2 171 66`
+#!source
+	out_of_bounds = fields.Sequence((fields.Indentation.acquire(0),))
+
+[ Fields >> transcript_write ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`173 2 176 10`
+(signature)`transcript_write(self, data)`
+
+
+[ Fields >> current_vertical ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (source/area)`177 2 181 59`
+The curent vertical index as a single IRange instance.
+
+
+[ Fields >> log ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`183 2 184 34`
+(signature)`log(self, message)`
+
+Log a change for undo-operations.
+
+
+[ Fields >> focus ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`186 2 188 37`
+(signature)`focus(self)`
+
+
+[ Fields >> selection ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`190 2 197 32`
+(signature)`selection(self)`
+
+Calculate the selection from the vector position.
+
+
+[ Fields >> new ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`199 2 208 82`
+(signature)`new(self, indentation, Class, Sequence, String)`
+
+Create and return new Field Sequence.
+
+
+[ Fields >> open_vertical ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`210 2 244 87`
+(signature)`open_vertical(self, il, position, quantity, temporary)`
+
+Create a quantity of new lines at the cursor (factor-local/parameter)&<#Fields.open_vertical.Parameters.position[position]>.
+
+
+[ Fields >> indentation ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`246 2 257 28`
+(signature)`indentation(self, seq)`
+
+Return the indentation level of the sequence, (factor-local/parameter)&<#Fields.indentation.Parameters.seq[seq]>, or zero if none.
+
+
+[ Fields >> has_content ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`259 2 268 14`
+(signature)`has_content(self, line)`
+
+Whether or not the non-formatting fields have content.
+
+
+[ Fields >> scan_block ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`270 2 299 17`
+(signature)`scan_block(self, sequence, index, minimum, maximum, condition_constructor, *parameters)`
+
+Identify the range where the given condition remains true.
+
+
+[ Fields >> indentation_block ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`301 2 338 30`
+(signature)`indentation_block(self, direction, initial, level, level_adjustment)`
+
+Detect indentation blocks.
+
+
+[ Fields >> contiguous_block ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`340 2 366 26`
+(signature)`contiguous_block(self, direction, initial, level, level_adjustment)`
+
+Detect a contiguous block at the designated indentation level.
+If the initial item is empty, the adjacent empty items will be selected,
+if the initial item is not empty, only populated items will be selected.
+
+
+[ Fields >> block ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`368 2 392 22`
+(signature)`block(self, index, ilevel, minimum, maximum)`
+
+Indentation block ranges.
+
+
+[ Fields >> outerblock ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`394 2 401 7`
+(signature)`outerblock(self, index)`
+
+Outer indentation block ranges.
+
+
+[ Fields >> adjacent ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`403 2 430 22`
+(signature)`adjacent(self, index, level, minimum, maximum)`
+
+Adjacent block ranges.
+
+
+[ Fields >> horizontal_select ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`432 2 440 22`
+(signature)`horizontal_select(self, path, field, offset)`
+
+
+[ Fields >> select ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`442 2 460 36`
+(signature)`select(self, line, unit, path, field)`
+
+Select the field in the unit with the vector.
+
+The vertical ranges (start and stop) will not be adjusted, but
+the vertical position and horizontal ranges will be.
+
+
+[ Fields >> constrain_horizontal_range ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`462 2 468 51`
+(signature)`constrain_horizontal_range(self)`
+
+Apply the limits of the vertical index to the vector's horizontal range.
+
+
+[ Fields >> update_unit ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`470 2 493 35`
+(signature)`update_unit(self)`
+
+Unconditionally update the vertical index and unit without scrolling.
+
+
+[ Fields >> update_vertical_state ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`495 2 523 22`
+(signature)`update_vertical_state(self, force)`
+
+Update the cache of the position based on the vector.
+
+
+[ Fields >> update_window ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`525 2 560 36`
+(signature)`update_window(self)`
+
+Invoked after (invalid/unknown)&<#vertical_index> is updated to scroll to the new location.
+
+
+[ Fields >> scrolled ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`562 2 589 36`
+(signature)`scrolled(self)`
+
+Bind the window to the appropriate edges.
+
+
+[ Fields >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`591 2 610 18`
+(signature)`__init__(self)`
+
+
+[ Fields >> log ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`612 2 621 22`
+(signature)`log(self, *inverse)`
+
+Log a change for undo-operations.
+
+
+[ Fields >> checkpoint ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`623 2 628 22`
+(signature)`checkpoint(self)`
+
+Insert a checkpoint into the changelog to mark stopping points for undo and redo
+operations.
+
+
+[ Fields >> undo ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`630 2 671 22`
+(signature)`undo(self, quantity)`
+
+Undo the given quantity of *transactions*.
+
+
+[ Fields >> redo ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`673 2 698 22`
+(signature)`redo(self, quantity)`
+
+Redo the given quantity of *transactions*.
+
+
+[ Fields >> find ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`700 2 706 43`
+(signature)`find(self, pattern)`
+
+Alter the vertical and horizontal query to search.
+
+
+[ Fields >> event_delta_undo ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`708 2 709 21`
+(signature)`event_delta_undo(self, event, quantity)`
+
+
+[ Fields >> event_delta_redo ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`711 2 712 21`
+(signature)`event_delta_redo(self, event, quantity)`
+
+
+[ Fields >> event_delta_map ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`714 2 721 25`
+(signature)`event_delta_map(self, event)`
+
+Map the the following commands across the vertical range.
+
+
+[ Fields >> tab ]
+! CONTROL:
+	/type/
+		staticmethod
+	/element/
+		- (source/area)`722 2 729 25`
+(signature)`tab(v, size)`
+
+Draw a tab for display.
+
+
+[ Fields >> visible_tab ]
+! CONTROL:
+	/type/
+		staticmethod
+	/element/
+		- (source/area)`730 2 735 37`
+(signature)`visible_tab(v, size)`
+
+Draw a visible tab for display. Used to construct the characters
+for an indented line that does not have content.
+
+
+[ Fields >> comment ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`737 2 761 60`
+(signature)`comment(self, iterator, color)`
+
+Draw the content of a comment.
+
+
+[ Fields >> quotation ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`763 2 793 59`
+(signature)`quotation(self, q, iterator, color, cell)`
+
+Draw the quotation.
+
+
+[ Fields >> specify ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`795 2 863 62`
+(signature)`specify(self, line, Indent, Constant, quotation, indent_cv, theme, defaultcell, defaulttraits, isinstance, len, hasattr, iter, next)`
+
+Yield the WordSpecifications for constructing a Phrase.
+
+
+[ Fields >> phrase ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`865 2 866 40`
+(signature)`phrase(self, line, Constructor)`
+
+
+[ Fields >> calculate_horizontal_start_indicator ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`869 2 870 37`
+(signature)`calculate_horizontal_start_indicator(self, empty, text, style, positions)`
+
+
+[ Fields >> calculate_horizontal_stop_indicator ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`872 2 875 54`
+(signature)`calculate_horizontal_stop_indicator(self, empty, text, style, positions, combining_wedge)`
+
+
+[ Fields >> calculate_horizontal_position_indicator ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`877 2 913 46`
+(signature)`calculate_horizontal_position_indicator(self, empty, text, style, positions, vc, fs, xc, range_color_palette, cursortext)`
+
+
+[ Fields >> horizontal_transforms ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`916 2 920 2`
+#!source
+	horizontal_transforms = {
+		'start': calculate_horizontal_start_indicator,
+		'stop': calculate_horizontal_stop_indicator,
+		'position': calculate_horizontal_position_indicator,
+	}
+
+[ Fields >> collect_horizontal_range ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`922 2 975 50`
+(signature)`collect_horizontal_range(self, line, positions, len, whole, address)`
+
+Collect the fragments of the horizontal range from the Phrase.
+
+Nearly identical to (project-local/factor-element)&<sequence#Segments.select[meta.syntax.sequence.Segments.select]>()
+
+
+[ Fields >> collect_horizontal_positions ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`977 2 1036 15`
+(signature)`collect_horizontal_positions(self, phrase, positions, len, list, set, iter, range, tuple)`
+
+Collect the style information and characters at the requested positions
+of the rendered unit.
+
+Used to draw range boundaries and the cursor.
+
+
+[ Fields >> clear_horizontal_indicators ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`1038 2 1073 30`
+(signature)`clear_horizontal_indicators(self, cells)`
+
+Called to clear the horizontal indicators for line switches.
+
+
+[ Fields >> render_horizontal_indicators ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`1075 2 1198 36`
+(signature)`render_horizontal_indicators(self, unit, horizontal, names, starmap, cells, list, len, tuple, zip)`
+
+Changes the horizontal position indicators surrounding the portal.
+
+
+[ Fields >> current_horizontal_indicators ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1200 2 1213 11`
+(signature)`current_horizontal_indicators(self)`
+
+
+[ Fields >> update_horizontal_indicators ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1215 2 1217 28`
+(signature)`update_horizontal_indicators(self)`
+
+
+[ Fields >> window_line ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`1219 2 1223 42`
+(signature)`window_line(self, line)`
+
+Map the given absolute index to an index relative to the window.
+
+
+[ Fields >> relative_index ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`1225 2 1229 43`
+(signature)`relative_index(self, rline)`
+
+Map the given vertical index relative to the window to an absolute index.
+
+
+[ Fields >> change_unit ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`1231 2 1236 30`
+(signature)`change_unit(self, index)`
+
+Move the current vertical position to the given index.
+
+
+[ Fields >> render ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`1238 2 1276 24`
+(signature)`render(self, start, stop, len, max, min, list, range, zip)`
+
+Render the given line range into the terminal view.
+
+Returns the relative line range to be rendered.
+
+
+[ Fields >> update ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`1278 2 1292 11`
+(signature)`update(self, start, stop, slice)`
+
+Recognize the dirty range, update the local page,
+and emit the printed page to the terminal.
+
+
+[ Fields >> refresh ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1294 2 1311 12`
+(signature)`refresh(self, start, len, range, list, min, islice)`
+
+
+[ Fields >> insignificant ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`1313 2 1317 85`
+(signature)`insignificant(self, path, field)`
+
+Determines whether the field as having insignifianct content.
+
+
+[ Fields >> rotate ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`1319 2 1378 23`
+(signature)`rotate(self, direction, horizontal, unit, sequence, quantity, filtered, iter, cells)`
+
+Select the next *significant* field, skipping the given quantity.
+
+The optional (factor-local/parameter)&<#Fields.rotate.Parameters.filtered[filtered]> parameter will be given candidate fields
+that can be skipped.
+
+
+[ Fields >> event_console_search ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1380 2 1387 37`
+(signature)`event_console_search(self, event)`
+
+
+[ Fields >> event_console_save ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1389 2 1392 24`
+(signature)`event_console_save(self, event)`
+
+
+[ Fields >> event_console_seek_line ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1394 2 1401 24`
+(signature)`event_console_seek_line(self, event)`
+
+
+[ Fields >> event_field_cut ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1403 2 1405 25`
+(signature)`event_field_cut(self, event)`
+
+
+[ Fields >> event_delta_delete_line ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1407 2 1412 20`
+(signature)`event_delta_delete_line(self, event)`
+
+
+[ Fields >> truncate_vertical ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`1414 2 1425 55`
+(signature)`truncate_vertical(self, start, stop)`
+
+Remove a vertical range from the refraction.
+
+
+[ Fields >> insert_vertical ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1427 2 1431 67`
+(signature)`insert_vertical(self, offset, sequence)`
+
+
+[ Fields >> translocate_vertical ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`1433 2 1444 76`
+(signature)`translocate_vertical(self, index, units, target, start, stop)`
+
+Relocate the vertical range to the (factor-local/parameter)&<#Fields.translocate_vertical.Parameters.target[target]> position.
+
+
+[ Fields >> translocate_horizontal ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1446 2 1460 29`
+(signature)`translocate_horizontal(self, index, unit, target, start, stop)`
+
+
+[ Fields >> event_delta_translocate ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`1462 2 1501 19`
+(signature)`event_delta_translocate(self, event)`
+
+Relocate the range to the current position.
+
+
+[ Fields >> event_delta_transpose_vertical ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1503 2 1523 19`
+(signature)`event_delta_transpose_vertical(self, event)`
+
+
+[ Fields >> event_delta_transpose_horizontal ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1525 2 1597 19`
+(signature)`event_delta_transpose_horizontal(self, event)`
+
+
+[ Fields >> event_delta_transpose ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`1599 2 1611 7`
+(signature)`event_delta_transpose(self, event)`
+
+Relocate the current range with the queued.
+
+
+[ Fields >> event_delta_truncate ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`1613 2 1642 20`
+(signature)`event_delta_truncate(self, event)`
+
+Remove the range of the last axis.
+
+
+[ Fields >> event_select_horizontal_line ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`1644 2 1668 37`
+(signature)`event_select_horizontal_line(self, event, quantity)`
+
+Alter the horizontal range to be the length of the current vertical index.
+
+
+[ Fields >> event_select_vertical_line ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`1670 2 1678 22`
+(signature)`event_select_vertical_line(self, event, quantity)`
+
+Alter the vertical range to contain a single line.
+
+
+[ Fields >> event_select_single ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`1680 2 1724 34`
+(signature)`event_select_single(self, event)`
+
+Modify the horizontal range to field beneath the position indicator.
+
+
+[ Fields >> event_select_absolute ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`1726 2 1746 25`
+(signature)`event_select_absolute(self, target, ax, ay)`
+
+Map the absolute position to the relative position and
+perform the (factor-local/method)&<#Fields.event_select_series[event_select_series]> operation.
+
+
+[ Fields >> event_select_series ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`1748 2 1797 22`
+(signature)`event_select_series(self, event, Indentation)`
+
+Expand the horizontal range to include fields separated by an access, routing, delimiter.
+
+
+[ Fields >> event_select_block ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1799 2 1801 79`
+(signature)`event_select_block(self, event, quantity)`
+
+
+[ Fields >> event_select_outerblock ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1803 2 1805 50`
+(signature)`event_select_outerblock(self, event, quantity)`
+
+
+[ Fields >> event_select_adjacent ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1807 2 1809 80`
+(signature)`event_select_adjacent(self, event, quantity)`
+
+
+[ Fields >> event_place_start ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1811 2 1816 22`
+(signature)`event_place_start(self, event)`
+
+
+[ Fields >> event_place_stop ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1818 2 1823 22`
+(signature)`event_place_stop(self, event)`
+
+
+[ Fields >> event_place_center ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1825 2 1831 22`
+(signature)`event_place_center(self, event)`
+
+
+[ Fields >> event_navigation_move_bol ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1833 2 1836 58`
+(signature)`event_navigation_move_bol(self, event)`
+
+
+[ Fields >> event_navigation_move_eol ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1838 2 1841 73`
+(signature)`event_navigation_move_eol(self, event)`
+
+
+[ Fields >> event_navigation_vertical_forward ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`1844 2 1853 22`
+(signature)`event_navigation_vertical_forward(self, event, quantity)`
+
+Move the position to the next line.
+
+
+[ Fields >> event_navigation_vertical_backward ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`1855 2 1864 22`
+(signature)`event_navigation_vertical_backward(self, event, quantity)`
+
+Move the position to the previous line.
+
+
+[ Fields >> event_navigation_vertical_paging ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`1866 2 1878 22`
+(signature)`event_navigation_vertical_paging(self, event, quantity)`
+
+Modify the vertical range query for paging.
+
+
+[ Fields >> event_navigation_vertical_sections ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1880 2 1889 22`
+(signature)`event_navigation_vertical_sections(self, event, quantity)`
+
+
+[ Fields >> event_window_horizontal_forward ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`1891 2 1898 17`
+(signature)`event_window_horizontal_forward(self, event, quantity, point)`
+
+Adjust the horizontal position of the window forward by the given quantity.
+
+
+[ Fields >> event_window_horizontal_backward ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`1900 2 1907 17`
+(signature)`event_window_horizontal_backward(self, event, quantity, point)`
+
+Adjust the horizontal position of the window forward by the given quantity.
+
+
+[ Fields >> event_window_vertical_forward ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`1909 2 1917 17`
+(signature)`event_window_vertical_forward(self, event, quantity, point)`
+
+Adjust the vertical position of the window forward by the
+given quantity.
+
+
+[ Fields >> event_window_vertical_backward ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`1919 2 1927 17`
+(signature)`event_window_vertical_backward(self, event, quantity, point)`
+
+Adjust the vertical position of the window backward by the
+given quantity. (Moves view port).
+
+
+[ Fields >> event_window_vertical_forward_jump ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`1929 2 1937 17`
+(signature)`event_window_vertical_forward_jump(self, event, quantity, point)`
+
+Adjust the vertical position of the window forward by the
+given quantity.
+
+
+[ Fields >> event_window_vertical_backward_jump ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`1939 2 1947 17`
+(signature)`event_window_vertical_backward_jump(self, event, quantity, point)`
+
+Adjust the vertical position of the window backward by the
+given quantity. (Moves view port).
+
+
+[ Fields >> vertical_query_previous ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1949 2 1984 59`
+(signature)`vertical_query_previous(self)`
+
+
+[ Fields >> event_navigation_vertical_start ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`1986 2 2002 22`
+(signature)`event_navigation_vertical_start(self, event)`
+
+Relocate the vertical position to the start of the vertical range.
+
+
+[ Fields >> vertical_query_next ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`2004 2 2038 55`
+(signature)`vertical_query_next(self)`
+
+
+[ Fields >> event_navigation_vertical_stop ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`2040 2 2053 22`
+(signature)`event_navigation_vertical_stop(self, event)`
+
+
+[ Fields >> event_navigation_horizontal_forward ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`2057 2 2063 87`
+(signature)`event_navigation_horizontal_forward(self, event, quantity)`
+
+Move the selection to the next significant field.
+
+
+[ Fields >> event_navigation_horizontal_backward ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`2065 2 2071 104`
+(signature)`event_navigation_horizontal_backward(self, event, quantity)`
+
+Move the selection to the previous significant field.
+
+
+[ Fields >> event_navigation_horizontal_start ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`2073 2 2099 22`
+(signature)`event_navigation_horizontal_start(self, event)`
+
+Horizontally move the cursor to the beginning of the range.
+or extend the range if already on the edge of the start.
+
+
+[ Fields >> event_navigation_horizontal_stop ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`2101 2 2124 22`
+(signature)`event_navigation_horizontal_stop(self, event)`
+
+Horizontally move the cursor to the end of the range.
+
+
+[ Fields >> event_navigation_forward_character ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`2126 2 2132 22`
+(signature)`event_navigation_forward_character(self, event, quantity)`
+
+
+[ Fields >> event_control_space ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`2133 2 2133 57`
+#!source
+	event_control_space = event_navigation_forward_character
+
+[ Fields >> event_navigation_backward_character ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`2135 2 2141 22`
+(signature)`event_navigation_backward_character(self, event, quantity)`
+
+
+[ Fields >> event_control_backspace ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`2142 2 2142 61`
+#!source
+	event_control_backspace = event_navigation_forward_character
+
+[ Fields >> indentation_adjustments ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`2144 2 2149 69`
+(signature)`indentation_adjustments(self, unit)`
+
+Construct a string of tabs reprsenting the indentation of the given unit.
+
+
+[ Fields >> event_navigation_jump_character ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`2151 2 2174 22`
+(signature)`event_navigation_jump_character(self, event, quantity)`
+
+Horizontally move the cursor to the character in the event.
+
+
+[ Fields >> select_void ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`2176 2 2200 22`
+(signature)`select_void(self, linerange, direction)`
+
+Select the first empty line without indentation.
+
+
+[ Fields >> event_navigation_void_forward ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`2202 2 2203 78`
+(signature)`event_navigation_void_forward(self, event)`
+
+
+[ Fields >> event_navigation_void_backward ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`2205 2 2206 70`
+(signature)`event_navigation_void_backward(self, event)`
+
+
+[ Fields >> range_enqueue ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`2208 2 2217 34`
+(signature)`range_enqueue(self, vector, axis)`
+
+
+[ Fields >> event_navigation_range_enqueue ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`2219 2 2228 34`
+(signature)`event_navigation_range_enqueue(self, event)`
+
+
+[ Fields >> event_navigation_range_dequeue ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`2230 2 2243 34`
+(signature)`event_navigation_range_dequeue(self, event)`
+
+
+[ Fields >> clear_horizontal_state ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`2245 2 2249 34`
+(signature)`clear_horizontal_state(self)`
+
+Zero out the horizontal cursor.
+
+
+[ Fields >> clear_vertical_state ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`2251 2 2256 30`
+(signature)`clear_vertical_state(self)`
+
+Zero out the horizontal cursor.
+
+
+[ Fields >> get_indentation_level ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`2258 2 2262 48`
+(signature)`get_indentation_level(self)`
+
+Get the indentation level of the line at the current vertical position.
+
+
+[ Fields >> event_open_behind ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`2264 2 2271 22`
+(signature)`event_open_behind(self, event, quantity)`
+
+Open a new vertical behind the current vertical position.
+
+
+[ Fields >> event_open_ahead ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`2273 2 2283 22`
+(signature)`event_open_ahead(self, event, quantity)`
+
+Open a new vertical ahead of the current vertical position.
+
+
+[ Fields >> event_open_into ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`2285 2 2312 22`
+(signature)`event_open_into(self, event)`
+
+Open a newline between the line at the current position with greater indentation.
+
+
+[ Fields >> event_edit_return ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`2314 2 2320 22`
+(signature)`event_edit_return(self, event, quantity)`
+
+Open a newline while in edit mode.
+
+
+[ Fields >> extract_horizontal_range ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`2322 2 2327 57`
+(signature)`extract_horizontal_range(self, unit, vector)`
+
+Map the display range to the character range compensating for indentation.
+
+
+[ Fields >> event_delta_substitute ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`2329 2 2346 34`
+(signature)`event_delta_substitute(self, event)`
+
+Substitute the contents of the selection.
+
+
+[ Fields >> event_delta_substitute_previous ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`2348 2 2367 72`
+(signature)`event_delta_substitute_previous(self, event)`
+
+Substitute the horizontal selection with previous substitution later.
+
+
+[ Fields >> line_insert_characters ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`2369 2 2392 32`
+(signature)`line_insert_characters(self, vertical, line, horizontal, characters, isinstance, StringField)`
+
+Insert characters at the horizontal focus.
+
+
+[ Fields >> insert_characters ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`2394 2 2420 32`
+(signature)`insert_characters(self, characters, isinstance, StringField)`
+
+Insert characters at the horizontal focus.
+
+
+[ Fields >> delete_characters ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`2422 2 2456 10`
+(signature)`delete_characters(self, quantity)`
+
+Delete the (factor-local/parameter)&<#Fields.delete_characters.Parameters.quantity[quantity]> of characters from the horizontal focus.
+
+
+[ Fields >> insert_lines ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`2458 2 2491 25`
+(signature)`insert_lines(self, index, lines, Sequence)`
+
+Insert the given (factor-local/parameter)&<#Fields.insert_lines.Parameters.lines[lines]> at the absolute vertical (factor-local/parameter)&<#Fields.insert_lines.Parameters.index[index]>.
+
+[ >> Parameters ]
+
+/(parameter)`self`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`index`/
+	
+	The absolute vertical index in the document in memory.
+
+/(parameter)`lines`/
+	
+	The sequence of lines to insert *without* line terminators.
+
+/(parameter)`Sequence`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ Fields >> breakline ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`2493 2 2522 12`
+(signature)`breakline(self, line, offset)`
+
+Create a new line splitting the current line at the horizontal position.
+
+
+[ Fields >> event_delta_insert_character ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`2524 2 2541 57`
+(signature)`event_delta_insert_character(self, event)`
+
+Insert a character at the current cursor position.
+
+
+[ Fields >> event_checkpoint ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`2543 2 2544 19`
+(signature)`event_checkpoint(self, event)`
+
+
+[ Fields >> event_delta_insert_data ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`2546 2 2600 43`
+(signature)`event_delta_insert_data(self, event)`
+
+Endpoint for terminal paste events.
+
+
+[ Fields >> transition_insert_character ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`2602 2 2614 33`
+(signature)`transition_insert_character(self, key)`
+
+Used as a capture hook to insert literal characters.
+
+
+[ Fields >> event_delta_replace_character ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`2616 2 2622 37`
+(signature)`event_delta_replace_character(self, event)`
+
+Replace the character underneath the cursor and progress its position.
+
+
+[ Fields >> event_edit_capture ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`2624 2 2630 37`
+(signature)`event_edit_capture(self, event)`
+
+Insert an exact character with the value carried by the event. (^V)
+
+
+[ Fields >> event_delta_delete_tobol ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`2632 2 2646 29`
+(signature)`event_delta_delete_tobol(self, event)`
+
+Delete all characters between the current position and the begining of the line.
+
+
+[ Fields >> event_delta_delete_toeol ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`2648 2 2663 29`
+(signature)`event_delta_delete_toeol(self, event)`
+
+Delete all characters between the current position and the end of the line.
+
+
+[ Fields >> event_delta_delete_backward_adjacent_class ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`2665 2 2672 6`
+(signature)`event_delta_delete_backward_adjacent_class(self, event, classify)`
+
+Delete the characters before the position indicator
+until the class changes. Or, delete the previous word.
+
+
+[ Fields >> event_delta_delete_forward_adjacent_class ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`2674 2 2680 6`
+(signature)`event_delta_delete_forward_adjacent_class(self, event, classify)`
+
+Delete the characters after the position until the class changes.
+
+
+[ Fields >> transition_keyboard ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`2682 2 2692 25`
+(signature)`transition_keyboard(self, mode)`
+
+Transition the keyboard mode. Called in order to update the horizontal
+indicators that can be styled for each mode.
+
+
+[ Fields >> event_transition_control ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`2694 2 2698 37`
+(signature)`event_transition_control(self, event)`
+
+Transition into control-mode.
+
+
+[ Fields >> event_transition_edit ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`2700 2 2705 34`
+(signature)`event_transition_edit(self, event)`
+
+Transition into edit-mode. If the line does not have an initialized field
+or the currently selected field is a Constant, an empty Text field will be created.
+
+
+[ Fields >> horizontal_selection ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`2707 2 2720 50`
+(signature)`horizontal_selection(self)`
+
+Get the string of the current horizontal selection.
+
+
+[ Fields >> record_last_edit ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`2722 2 2726 46`
+(signature)`record_last_edit(self)`
+
+Record the text of the edit performed.
+
+
+[ Fields >> event_edit_commit ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`2728 2 2734 37`
+(signature)`event_edit_commit(self, event)`
+
+Commit an edited line.
+
+
+[ Fields >> event_edit_abort ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`2736 2 2741 37`
+(signature)`event_edit_abort(self, event)`
+
+Exit edit mode and revert all alterations that were made while editing.
+
+
+[ Fields >> event_delta_edit_insert_space ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`2743 2 2751 57`
+(signature)`event_delta_edit_insert_space(self, event)`
+
+Insert a constant into the field sequence and
+create a new text field for further editing.
+
+
+[ Fields >> event_delta_insert_space ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`2753 2 2759 57`
+(signature)`event_delta_insert_space(self, event)`
+
+Insert a literal space.
+
+
+[ Fields >> event_delta_indent_increment ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`2761 2 2776 35`
+(signature)`event_delta_indent_increment(self, event, quantity)`
+
+Increment indentation of the current line.
+
+
+[ Fields >> event_delta_indent_decrement ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`2778 2 2793 35`
+(signature)`event_delta_indent_decrement(self, event, quantity)`
+
+Decrement the indentation of the current line.
+
+
+[ Fields >> event_delta_indent_void ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`2795 2 2800 53`
+(signature)`event_delta_indent_void(self, event, quantity)`
+
+Remove all indentation from the line.
+
+
+[ Fields >> event_edit_tab ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`2802 2 2802 46`
+#!source
+	event_edit_tab = event_delta_indent_increment
+
+[ Fields >> event_edit_shift_tab ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`2803 2 2803 52`
+#!source
+	event_edit_shift_tab = event_delta_indent_decrement
+
+[ Fields >> event_print_unit ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`2805 2 2819 31`
+(signature)`event_print_unit(self, event)`
+
+Display the structure of the current unit to the transcript.
+
+
+[ Fields >> event_delta_delete_backward ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`2821 2 2827 23`
+(signature)`event_delta_delete_backward(self, event, quantity)`
+
+
+[ Fields >> event_delta_delete_forward ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`2829 2 2835 23`
+(signature)`event_delta_delete_forward(self, event, quantity)`
+
+
+[ Fields >> event_copy ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`2837 2 2849 42`
+(signature)`event_copy(self, event)`
+
+Copy the range to the default cache entry.
+
+
+[ Fields >> event_delta_split ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`2851 2 2878 22`
+(signature)`event_delta_split(self, event)`
+
+Create a new line splitting the current line at the horizontal position.
+
+
+[ Fields >> event_delta_join ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`2880 2 2898 22`
+(signature)`event_delta_join(self, event)`
+
+Join the current line with the following.
+
+
+[ Fields >> unit_class ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`2900 2 2909 34`
+(signature)`unit_class(self, index, len)`
+
+Get the corresponding line class for the index.
+
+
+[ Fields >> event_paste_after ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`2911 2 2915 35`
+(signature)`event_paste_after(self, event)`
+
+Paste cache contents after the current vertical position.
+
+
+[ Fields >> event_paste_before ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`2917 2 2921 33`
+(signature)`event_paste_before(self, event)`
+
+Paste cache contents before the current vertical position.
+
+
+[ Fields >> event_paste_into ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`2923 2 2924 67`
+(signature)`event_paste_into(self, event)`
+
+
+[ Fields >> indent ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`2926 2 2952 15`
+(signature)`indent(self, sequence, quantity, ignore_empty)`
+
+Increase or decrease the indentation level of the given sequence.
+
+The sequence is prefixed with a constant corresponding to the tab-level,
+and replaced when increased.
+
+
+[ Fields >> seek ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`2954 2 2963 22`
+(signature)`seek(self, vertical_index)`
+
+Go to a specific vertical index.
+
+
+[ Fields >> read ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`2965 2 2970 35`
+(signature)`read(self, quantity, whence, line_separator)`
+
+Read string data from the refraction relative to its cursor position
+and selected vertical range.
+
+
+[ Fields >> write ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`2972 2 2984 63`
+(signature)`write(self, string, line_separator, Sequence)`
+
+Write the given string at the current position. The string will be split
+by the (factor-local/parameter)&<#Fields.write.Parameters.line_separator[line_separator]> and processed independently
+
+[ >> Parameters ]
+
+/(parameter)`self`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`string`/
+	
+	The data to write.
+
+/(parameter)`line_separator`/
+	
+	The line terminator to split on.
+
+/(parameter)`Sequence`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ Fields >> append ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`2986 2 2987 44`
+(signature)`append(self, string)`
+
+
+[ Fields >> paste ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`2989 2 2991 48`
+(signature)`paste(self, index, cache)`
+
+
+[ Fields >> focus ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`2993 2 2995 37`
+(signature)`focus(self)`
+
+
+[ Fields >> blur ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`2997 2 2999 56`
+(signature)`blur(self)`
+
+
+[ Fields >> sequence ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`3001 2 3015 17`
+(signature)`sequence(self, unit)`
+
+
+[ Lines ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (source/area)`3017 1 3067 38`
+! INHERIT:
+	- (source/area)`3017 13 3017 18`
+	- (type/syntax)`Fields`
+	- (type/factor-local/class)&<#Fields[Fields]>
+	
+Fields based line editor.
+
+
+[ Lines >> _lindent ]
+! CONTROL:
+	/type/
+		staticmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`3024 2 3031 21`
+(signature)`_lindent(lsize)`
+
+
+[ Lines >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`3033 2 3045 46`
+(signature)`__init__(self, line_class)`
+
+
+[ Lines >> serialize ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`3047 2 3061 13`
+(signature)`serialize(self, write, chunk_size, encoding)`
+
+Serialize the Refraction's content into the given (factor-local/parameter)&<#Lines.serialize.Parameters.write[write]> function.
+
+
+[ Lines >> event_edit_return ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`3063 2 3067 38`
+(signature)`event_edit_return(self, event)`
+
+Splits the line at the cursor position.
+
+
+[ Status ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (source/area)`3069 1 3116 23`
+! INHERIT:
+	- (source/area)`3069 14 3069 19`
+	- (type/syntax)`Fields`
+	- (type/factor-local/class)&<#Fields[Fields]>
+	
+The status line above the console prompt.
+
+
+[ Status >> format_route ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`3073 2 3073 72`
+
+[ Status >> format_route ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`3074 2 3074 42`
+#!source
+	format_route = staticmethod(format_route)
+
+[ Status >> status_open_resource ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`3076 2 3076 49`
+#!source
+	status_open_resource = fields.Styled('[', -1024)
+
+[ Status >> status_close_resource ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`3077 2 3077 50`
+#!source
+	status_close_resource = fields.Styled(']', -1024)
+
+[ Status >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`3079 2 3083 3`
+(signature)`__init__(self)`
+
+
+[ Status >> specify ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`3085 2 3087 21`
+(signature)`specify(self, unit, getattr)`
+
+
+[ Status >> refraction_changed ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`3089 2 3116 23`
+(signature)`refraction_changed(self, new)`
+
+Called when a different refraction has become the focus.
+
+
+[ Prompt ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (source/area)`3118 1 3383 6`
+! INHERIT:
+	- (source/area)`3118 14 3118 18`
+	- (type/syntax)`Lines`
+	- (type/factor-local/class)&<#Lines[Lines]>
+	
+The prompt providing access to the console's command interface.
+
+This refraction manages the last two lines on the screen and provides
+a globally accessible command interface for managing the content panes.
+
+The units of a prompt make up the history and are global across panes
+and refractions.
+
+
+[ Prompt >> margin ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`3128 2 3128 11`
+#!source
+	margin = 0
+
+[ Prompt >> execute ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`3130 2 3147 56`
+(signature)`execute(self, event)`
+
+Execute the command entered on the prompt.
+
+
+[ Prompt >> event_edit_return ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`3149 2 3149 28`
+#!source
+	event_edit_return = execute
+
+[ Prompt >> event_control_return ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`3150 2 3150 31`
+#!source
+	event_control_return = execute
+
+[ Prompt >> prepare ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`3152 2 3164 36`
+(signature)`prepare(self, *fields)`
+
+Set the command line to a sequence of fields.
+
+
+[ Prompt >> event_delta_edit_insert_space ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`3166 2 3170 57`
+(signature)`event_delta_edit_insert_space(self, event)`
+
+
+[ Prompt >> event_edit_tab ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`3172 2 3176 57`
+(signature)`event_edit_tab(self, event)`
+
+
+[ Prompt >> event_edit_shift_tab ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`3178 2 3179 6`
+(signature)`event_edit_shift_tab(self, event)`
+
+
+[ Prompt >> command_suspend ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`3181 2 3183 38`
+(signature)`command_suspend(self)`
+
+
+[ Prompt >> command_exit ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`3185 2 3190 12`
+(signature)`command_exit(self)`
+
+Immediately exit the process. Unsaved files will not be saved.
+
+
+[ Prompt >> command_forget ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`3192 2 3196 6`
+(signature)`command_forget(self)`
+
+Destroy the prompt's history.
+
+
+[ Prompt >> command_search ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`3198 2 3205 22`
+(signature)`command_search(self, term)`
+
+Search the current working pane for the designated term.
+
+
+[ Prompt >> command_printobject ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`3207 2 3210 16`
+(signature)`command_printobject(self)`
+
+
+[ Prompt >> command_shell ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`3212 2 3216 8`
+(signature)`command_shell(self)`
+
+Select the shell state set used to execute processes in the given session.
+
+
+[ Prompt >> command_open ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`3218 2 3267 29`
+(signature)`command_open(self, source, type, mechanism, encoding)`
+
+Open a new refraction using the identified source.
+
+The implementation will be selected based on the file type.
+File type being determined by the dot-extension of the filename.
+
+
+[ Prompt >> command_write ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`3269 2 3282 22`
+(signature)`command_write(self, target)`
+
+Write the value of the current working pane to the given target.
+
+
+[ Prompt >> command_seek ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`3284 2 3293 22`
+(signature)`command_seek(self, vertical_index)`
+
+Move the refraction's vector to a specific vertical index. (Line Number).
+
+
+[ Prompt >> command_close ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`3295 2 3311 41`
+(signature)`command_close(self)`
+
+Close the current working pane.
+
+
+[ Prompt >> command_chsrc ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`3313 2 3319 19`
+(signature)`command_chsrc(self, target)`
+
+Change the source of the current working pane.
+
+
+[ Prompt >> command_system ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`3321 2 3339 22`
+(signature)`command_system(self, *command)`
+
+Execute a system command buffering standard out and error in order to
+write it to the (factor-local/class)&<#Transcript[Transcript]>. Currently blocks the process.
+
+
+[ Prompt >> command_cwd ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`3341 2 3346 24`
+(signature)`command_cwd(self)`
+
+Print the current working directory.
+
+
+[ Prompt >> command_insert ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`3348 2 3358 22`
+(signature)`command_insert(self, *characters)`
+
+Insert characters using their ordinal value.
+
+
+[ Prompt >> command_index ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`3360 2 3380 35`
+(signature)`command_index(self, *parameters)`
+
+List command index.
+
+
+[ Prompt >> command ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`3382 2 3383 6`
+(signature)`command(self, event)`
+
+
+[ Transcript ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (source/area)`3385 1 3454 35`
+! INHERIT:
+	- (source/area)`3385 18 3385 32`
+	- (type/syntax)`core.Refraction`
+	- (type/project-local/factor-element)&<core#Refraction[meta.syntax.core.Refraction]>
+	
+A trivial line buffer. While (invalid/unknown)&<#Log> refractions are usually preferred, a single
+transcript is always available for critical messages.
+
+
+[ Transcript >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`3391 2 3394 17`
+(signature)`__init__(self)`
+
+
+[ Transcript >> write ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`3396 2 3410 37`
+(signature)`write(self, text)`
+
+Append only to in memory line buffer.
+
+
+[ Transcript >> reveal ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`3412 2 3414 31`
+(signature)`reveal(self)`
+
+
+[ Transcript >> move ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`3416 2 3420 22`
+(signature)`move(self, lines)`
+
+Move the window.
+
+
+[ Transcript >> update ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`3422 2 3441 55`
+(signature)`update(self)`
+
+
+[ Transcript >> phrase ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`3443 2 3444 63`
+(signature)`phrase(self, line)`
+
+
+[ Transcript >> refresh ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`3446 2 3454 35`
+(signature)`refresh(self)`
+
+
+[ IDeviceState ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (source/area)`3456 1 3545 21`
+! INHERIT:
+	- (source/area)`3456 20 3456 25`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+Manage the state of mouse key presses and scroll events.
+
+
+[ IDeviceState >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`3461 2 3469 31`
+(signature)`__init__(self)`
+
+
+[ IDeviceState >> scroll ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`3471 2 3488 10`
+(signature)`scroll(self, refraction, timestamp, event, Event)`
+
+Record the scroll event for later propagation after counts have accumulated.
+
+
+[ IDeviceState >> scroll_quantity ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`3489 2 3490 66`
+
+[ IDeviceState >> flush_scroll_events ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`3492 2 3516 15`
+(signature)`flush_scroll_events(self, ref, Event)`
+
+
+[ IDeviceState >> key_delta ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`3518 2 3532 21`
+(signature)`key_delta(self, refraction, timestamp, event)`
+
+
+[ IDeviceState >> update ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`3534 2 3545 21`
+(signature)`update(self, *params)`
+
+Update the mouse state if any events were received.
+
+
+[ Empty ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (source/area)`3547 1 3555 5`
+! INHERIT:
+	- (source/area)`3547 13 3547 17`
+	- (type/syntax)`Lines`
+	- (type/factor-local/class)&<#Lines[Lines]>
+	
+Space holder for empty panes.
+
+[ > Engineering ]
+
+This placeholder could leverage the space providing access to recent documents
+or other information that is not suited for the transcript.
+
+
+[ Console ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (source/area)`3557 1 4313 26`
+! INHERIT:
+	- (source/area)`3557 15 3557 27`
+	- (type/syntax)`flows.Channel`
+	- (type/none/invalid)&<http://fault.io/dev/null[fault.kernel.flows.Channel]>
+	
+The application that responds to keyboard input in order to make display changes.
+
+Console is a complex Transformer that consists of a set of (invalid/unknown)&<#Refraction's>. The
+refractions are associated with panes that make up the total screen.
+
+
+[ Console >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`3565 2 3597 48`
+(signature)`__init__(self)`
+
+
+[ Console >> con_connect_tty ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`3599 2 3609 15`
+(signature)`con_connect_tty(self, tty, preparation, restoration)`
+
+
+[ Console >> display_refraction ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`3611 2 3645 44`
+(signature)`display_refraction(self, pane, refraction)`
+
+Display the (factor-local/parameter)&<#Console.display_refraction.Parameters.refraction[refraction]> on the designated visible pane index.
+
+
+[ Console >> pane_verticals ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`3647 2 3665 22`
+(signature)`pane_verticals(self, index)`
+
+Calculate the vertical offsets of the pane.
+
+
+[ Console >> adjust ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`3667 2 3707 21`
+(signature)`adjust(self, dimensions)`
+
+The window changed and the views and controls need to be updated.
+
+
+[ Console >> locate_refraction ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`3709 2 3728 32`
+(signature)`locate_refraction(self, point)`
+
+Return the refraction that contains the given point.
+
+
+[ Console >> frame ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`3730 2 3783 51`
+(signature)`frame(self, offset, color, nomap)`
+
+Draw the frame of the console. Vertical separators and horizontal.
+
+[ >> Parameters ]
+
+/(parameter)`self`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`offset`/
+	
+	The offset from the top of the screen.
+
+/(parameter)`color`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`nomap`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ Console >> set_position_indicators ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`3785 2 3896 15`
+(signature)`set_position_indicators(self, refraction, colors, range_color_palette, vprecede, vproceed, vwedges, hproceed, hprecede, zip, bytearray)`
+
+
+[ Console >> clear_position_indicators ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`3898 2 4000 15`
+(signature)`clear_position_indicators(self, refraction, v_line, h_line, h_intersection, h_bottom_left, h_bottom_right, color, bytearray, set, range)`
+
+Clear the position indicators on the frame.
+
+
+[ Console >> suspend ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`4002 2 4008 25`
+(signature)`suspend(self, link)`
+
+
+[ Console >> delta ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`4010 2 4028 25`
+(signature)`delta(self, link)`
+
+The terminal window changed in size. Get the new dimensions and refresh the entire
+screen.
+
+
+[ Console >> actuate ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`4030 2 4074 32`
+(signature)`actuate(self)`
+
+
+[ Console >> focus ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`4076 2 4089 20`
+(signature)`focus(self, refraction)`
+
+Focus the given refraction, blurring the current. Does nothing if already focused.
+
+
+[ Console >> focus_prompt ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`4091 2 4095 32`
+(signature)`focus_prompt(self)`
+
+Focus the prompt.
+
+
+[ Console >> focus_pane ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`4097 2 4101 44`
+(signature)`focus_pane(self)`
+
+Focus the [target] pane.
+
+
+[ Console >> switch_pane ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`4103 2 4125 12`
+(signature)`switch_pane(self, pane)`
+
+Focus the given pane.
+
+The new focus pane will only receive a (invalid/unknown)&<#Refraction.focus> call iff
+the old pane's refraction is the current receiver, (factor-local/class)&<#Console[Console.refraction]>.
+
+
+[ Console >> event_toggle_prompt ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`4127 2 4137 22`
+(signature)`event_toggle_prompt(self, event)`
+
+Toggle the focusing of the prompt.
+
+
+[ Console >> event_prepare_open ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`4139 2 4148 21`
+(signature)`event_prepare_open(self, event)`
+
+
+[ Console >> event_pane_rotate_refraction ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`4150 2 4184 19`
+(signature)`event_pane_rotate_refraction(self, event, direction)`
+
+Display the next refraction in the current working pane according to
+the persistent rotation state.
+
+
+[ Console >> event_console_rotate_pane_forward ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`4186 2 4193 33`
+(signature)`event_console_rotate_pane_forward(self, event)`
+
+Select the next pane horizontally. If on the last pane, select the first one.
+
+
+[ Console >> event_console_rotate_pane_backward ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`4195 2 4205 24`
+(signature)`event_console_rotate_pane_backward(self, event)`
+
+Select the previous pane horizontally. If on the first pane, select the last one.
+
+
+[ Console >> event_method ]
+! CONTROL:
+	/type/
+		staticmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`4206 2 4207 35`
+(signature)`event_method(target, event)`
+
+
+[ Console >> f_transfer ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`4209 2 4306 22`
+(signature)`f_transfer(self, event, source, sto, sto_soon, trap, list, tuple)`
+
+Process key events received from the device.
+
+
+[ Console >> id_scroll_timeout ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`4308 2 4312 35`
+(signature)`id_scroll_timeout(self)`
+
+
+[ Console >> occur ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`4313 2 4313 26`
+#!source
+	occur = id_scroll_timeout
+
+[ input_line_state ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`4315 1 4324 30`
+(signature)`input_line_state()`
+
+
+[ thread_bytes_output ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`4326 1 4346 56`
+(signature)`thread_bytes_output(flow, queue, tty, bytearray)`
+
+Thread transformer function receiving display transactions and writing to the terminal.
+
+
+[ input_transformed ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`4348 1 4369 13`
+(signature)`input_transformed(flow, queue, tty, maximum_read, partial)`
+
+Thread transformer function translating input to Character events for (factor-local/class)&<#Console[Console]>.
+
+
+[ thread_bytes_input ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`4371 1 4382 33`
+(signature)`thread_bytes_input(flow, queue, tty, maximum_read, partial)`
+
+Bytes input read loop minimizing time spent out of (none/invalid)&<http://fault.io/dev/null[os.read]>.
+
+
+[ Editor ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`4384 1 4456 27`
+! INHERIT:
+	- (source/area)`4384 14 4384 26`
+	- (type/syntax)`kcore.Context`
+	- (type/none/invalid)&<http://fault.io/dev/null[fault.kernel.core.Context]>
+	
+
+[ Editor >> actuate ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`4385 2 4456 27`
+(signature)`actuate(self)`
+
+Initialize the given unit with a console.
+

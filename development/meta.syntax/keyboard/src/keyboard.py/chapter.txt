@@ -1,0 +1,408 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 313 0`
+Provides common mappings for keyboard based navigation and control.
+
+Modifying the mappings is not recommended, but is possible. Interacting
+with these mappings is the only way to modify the keyboard mappings used
+by (project-local/unknown)&<console>.
+
+[ Engineering ]
+
+Currently, there are no hooks for customizing bindings.
+
+[ Properties ]
+
+/trap/
+	Console level events. Key events mapped here are trapped and are
+	not propagated to Refractions. This is the "global" mapping.
+
+/control/
+	Control mode mapping is for navigation and high-level manipulation.
+
+/edit/
+	Mode used to manage the insertion and removal of characters from fields.
+
+/capture/
+	...
+
+/types/
+	Mode used to select field types for custom interactions.
+
+
+[ events ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`25 1 25 33`
+
+[ Mapping ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (source/area)`27 1 57 46`
+! INHERIT:
+	- (source/area)`27 15 27 20`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+A mapping of commands and keys for binding shortcuts.
+
+A mapping "context" is a reference to a target. For instance, a field, line, or
+container.
+
+
+[ Mapping >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`35 2 38 23`
+(signature)`__init__(self)`
+
+
+[ Mapping >> assign ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`40 2 50 27`
+(signature)`assign(self, character, context, action)`
+
+Assign the character sequence to action.
+
+/(parameter)`self`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`character`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`context`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`action`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`parameters`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ Mapping >> event ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`52 2 57 46`
+(signature)`event(self, key)`
+
+Return the action associated with the given keystroke.
+
+/(parameter)`self`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`key`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ shift ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`59 1 59 46`
+#!source
+	shift = events.Modifiers.construct(shift=True)
+
+[ meta ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`60 1 60 44`
+#!source
+	meta = events.Modifiers.construct(meta=True)
+
+[ ctlm ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`61 1 61 47`
+#!source
+	ctlm = events.Modifiers.construct(control=True)
+
+[ shiftmeta ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`62 1 62 61`
+#!source
+	shiftmeta = events.Modifiers.construct(meta=True, shift=True)
+
+[ kmeta ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`64 1 64 40`
+#!source
+	kmeta = (lambda x: ('literal', x, meta))
+
+[ lit ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`65 1 66 28`
+(signature)`lit(x)`
+
+
+[ ctl ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`67 1 68 28`
+(signature)`ctl(x)`
+
+
+[ nav ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`69 1 70 31`
+(signature)`nav(x)`
+
+
+[ trap ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`73 1 73 16`
+#!source
+	trap = Mapping()
+
+[ control ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`83 1 83 74`
+#!source
+	control = Mapping(('refraction', ('navigation', 'jump', 'character'), ()))
+
+[ ca ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`84 1 84 19`
+#!source
+	ca = control.assign
+
+[ edit ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`85 1 85 78`
+#!source
+	edit = Mapping(default = ('refraction', ('delta', 'insert', 'character'), ())) # insert
+
+[ ea ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`86 1 86 16`
+#!source
+	ea = edit.assign
+
+[ capture ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`256 1 256 61`
+#!source
+	capture = Mapping(default = ('refraction', ('capture',), ()))
+
+[ types ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`259 1 259 17`
+#!source
+	types = Mapping()
+
+[ field_type_mnemonics ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`260 1 269 1`
+#!source
+	field_type_mnemonics = {
+		'i': 'integer',
+		't': 'text',
+		'"': 'quotation',
+		"'": 'quotation',
+		'd': 'date',
+		'T': 'timestamp',
+		'n': 'internet', # address
+		'r': 'reference', # contextual reference (variables, environment)
+	}
+
+[ standard ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`277 1 282 1`
+#!source
+	standard = {
+		'control': control,
+		'edit': edit,
+		'capture': capture,
+		'types': types,
+	}
+
+[ Selection ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (source/area)`284 1 313 24`
+! INHERIT:
+	- (source/area)`284 17 284 22`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+A set of mappings used to interact with objects.
+
+
+[ Selection >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`288 2 290 10`
+#!source
+	__slots__ = ('index', 'current')
+		@property
+
+[ Selection >> mapping ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (source/area)`291 2 295 24`
+Get the currently selected mapping by the defined name.
+
+
+[ Selection >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`297 2 299 21`
+(signature)`__init__(self, index)`
+
+
+[ Selection >> set ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`301 2 303 21`
+(signature)`set(self, name)`
+
+
+[ Selection >> event ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`305 2 311 13`
+(signature)`event(self, key)`
+
+Look up the event using the currently selected mapping.
+
+/(parameter)`self`/
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`key`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ Selection >> standard ]
+! CONTROL:
+	/type/
+		classmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`312 2 313 24`
+(signature)`standard(Class)`
+

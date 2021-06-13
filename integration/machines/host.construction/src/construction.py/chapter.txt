@@ -1,0 +1,438 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 358 0`
+Host construction context initialization.
+
+
+[ itertools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`4 1 4 16`
+
+[ lsf ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`6 1 6 39`
+
+[ factory ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`7 1 7 33`
+
+[ files ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`9 1 9 30`
+
+[ factors ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`10 1 10 32`
+
+[ identity ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`11 1 11 33`
+
+[ execution ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`12 1 12 34`
+
+[ query ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`14 1 14 25`
+
+[ machines_project ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`15 1 15 52`
+
+[ mkinfo ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`17 1 25 2`
+(signature)`mkinfo(path, name)`
+
+
+[ mktype ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`27 1 31 64`
+(signature)`mktype(semantics, type, language, identifier)`
+
+
+[ interfaces ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`33 1 35 1`
+#!source
+	interfaces = [
+		lsf.types.Reference('http://fault.io/integration/machines', lsf.types.factor@'include'),
+	]
+
+[ formats ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`37 1 50 1`
+#!source
+	formats = {
+		'http://if.fault.io/factors/system': [
+			('type', 'c', '2011', 'c'),
+			('type', 'h', '2011', 'c'),
+		],
+		'http://if.fault.io/factors/python': [
+			('module', 'py', 'psf-v3', 'python'),
+			('interface', 'pyi', 'psf-v3', 'python'),
+		],
+		'http://if.fault.io/factors/vector': [
+			('set', 'v', '', 'fault-vc'),
+			('system', 'sys', '', 'fault-vi'),
+		],
+	}
+
+[ vformats ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`52 1 57 1`
+#!source
+	vformats = {
+		'http://if.fault.io/factors/vector': [
+			('set', 'v', '', 'fault-vc'),
+			('system', 'sys', '', 'fault-vi'),
+		],
+	}
+
+[ vtype ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`59 1 59 20`
+#!source
+	vtype = 'vector.set'
+
+[ clang_delineate ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`60 1 60 54`
+#!source
+	clang_delineate = (query.bindir() / 'clang-delineate')
+
+[ system ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`62 1 65 63`
+(signature)`system(path, *args)`
+
+
+[ iproduct ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`67 1 76 10`
+(signature)`iproduct(route, connections)`
+
+Initialize the product index and return the created instance.
+
+
+[ mksole ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`78 1 79 46`
+(signature)`mksole(fpath, type, source)`
+
+
+[ fx ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`81 1 82 76`
+(signature)`fx(fpath, name, *argv, **env)`
+
+
+[ mkset ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`84 1 85 39`
+(signature)`mkset(fpath, type, symbols, sources)`
+
+
+[ getsource ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`87 1 89 34`
+(signature)`getsource(project, name, ext)`
+
+
+[ comment ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`91 1 92 26`
+(signature)`comment(text)`
+
+
+[ constant ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`94 1 98 12`
+(signature)`constant(name, *types)`
+
+
+[ define ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`100 1 105 9`
+(signature)`define(name, *types)`
+
+
+[ form_host_target ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`107 1 139 14`
+(signature)`form_host_target(hlinker)`
+
+
+[ form_variants ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`141 1 147 16`
+(signature)`form_variants(system, architecture, forms)`
+
+
+[ form_host_type ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`149 1 174 14`
+(signature)`form_host_type()`
+
+
+[ host ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`176 1 201 2`
+(signature)`host(context, hlinker, hsystem, harch, factor, name, cc)`
+
+
+[ form_python_type ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`203 1 218 14`
+(signature)`form_python_type()`
+
+
+[ python ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`220 1 237 2`
+(signature)`python(context, psystem, parch, factor, name)`
+
+
+[ mkctx ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`239 1 241 79`
+(signature)`mkctx(info, formats, product, context, soles)`
+
+
+[ mkproject ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`243 1 245 80`
+(signature)`mkproject(info, product, context, project, soles)`
+
+
+[ mktools ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`247 1 250 25`
+(signature)`mktools(context, route, name)`
+
+
+[ system_select_linker ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`252 1 261 25`
+(signature)`system_select_linker(system)`
+
+Select the linker command interface to use based on the system's name.
+
+
+[ form_meta_type ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`263 1 278 14`
+(signature)`form_meta_type()`
+
+
+[ meta ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`280 1 321 2`
+(signature)`meta(context)`
+
+
+[ mkvectors ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`323 1 353 25`
+(signature)`mkvectors(context, route, name)`
+
+
+[ mkcc ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`355 1 358 69`
+(signature)`mkcc(route)`
+

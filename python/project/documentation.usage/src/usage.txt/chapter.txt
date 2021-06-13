@@ -1,0 +1,11 @@
+! CONTROL:
+	/type/
+		factor
+	/element/
+		- (source/area)``
+Primary narrative.
+
+[ Hello, World! ]
+
+Information about the hello world interfaces.
+

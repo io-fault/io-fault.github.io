@@ -1,0 +1,25 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 94 0`
+
+[ library ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1 1 1 32`
+
+[ test_Segments ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`3 1 94 21`
+(signature)`test_Segments(test)`
+

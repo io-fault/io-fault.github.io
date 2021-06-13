@@ -1,0 +1,113 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 62 0`
+
+[ sys ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1 1 1 10`
+
+[ python ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`2 1 2 21`
+
+[ types ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`3 1 3 20`
+
+[ stack_1 ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`5 1 9 13`
+(signature)`stack_1(error)`
+
+
+[ stack_2 ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`11 1 12 27`
+(signature)`stack_2(error)`
+
+
+[ stack_3 ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`14 1 15 27`
+(signature)`stack_3(error)`
+
+
+[ stack_4 ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`17 1 18 27`
+(signature)`stack_4(error)`
+
+
+[ stack_5 ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`20 1 21 27`
+(signature)`stack_5(error)`
+
+
+[ test_iterstack ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`23 1 36 39`
+(signature)`test_iterstack(test)`
+
+- (project-local/factor-element)&<python#iterstack[fault.status.python.iterstack]>
+
+Additionally checks coherency of the Python runtime.
+
+
+[ test_itertraceback ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`38 1 62 39`
+(signature)`test_itertraceback(test)`
+
+- (project-local/factor-element)&<python#itertraceback[fault.status.python.itertraceback]>
+
+Additionally checks coherency of the Python runtime.
+

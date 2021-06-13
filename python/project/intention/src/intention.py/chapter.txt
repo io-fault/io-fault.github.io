@@ -1,0 +1,42 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 29 0`
+Common intention data and option parser.
+
+
+[ codes ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`5 1 16 1`
+#!source
+	codes = {
+		'T': (1, 'delineation'), # Tree
+		'g': (0, 'debug'),
+		'J': (3, 'injections'),
+		'O': (2, 'optimal'),
+		'M': (3, 'instruments'),
+		'C': (3, 'coverage'),
+		'P': (3, 'profile'),
+		'Z': (2, 'analyze'),
+	
+		'A': '..', # All.
+	}
+
+[ select ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`18 1 29 38`
+(signature)`select(options, index, sentinal, indicator)`
+
+Recognize intention flags from the given list of options.
+
+Iterates over (factor-local/parameter)&<#select.Parameters.options[options]> and the selects intersecting intentions from (factor-local/data)&<#codes[codes]>.
+

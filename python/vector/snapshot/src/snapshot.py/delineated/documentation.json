@@ -1,0 +1,1 @@
+[["Parsing and serialization functions for system argument vector snapshots."], ["Parse a System Execution Plan string into structured environment", "settings, executable path, and command arguments."], ["Serialize the environment, execution path, and command arguments into a string."]]

@@ -1,0 +1,412 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 449 0`
+Terminal input events parser for common CSI, CSI-u, and ground characters.
+
+
+[ functools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`4 1 4 16`
+
+[ Sequence ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`5 1 5 47`
+
+[ Generator ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`5 1 5 47`
+
+[ Character ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`7 1 7 55`
+
+[ Modifiers ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`7 1 7 55`
+
+[ Point ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`7 1 7 55`
+
+[ Char ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`9 1 9 16`
+#!source
+	Char = Character
+
+[ Mod ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`10 1 10 25`
+#!source
+	Mod = Modifiers.construct
+
+[ Zero ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`11 1 11 13`
+#!source
+	Zero = Mod(0)
+
+[ Meta ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`12 1 12 21`
+#!source
+	Meta = Mod(meta=True)
+
+[ literal_overrides ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`15 1 18 1`
+#!source
+	literal_overrides = {
+		'\x7f': '?',
+		' ': ' ',
+	}
+
+[ ictlchr ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`20 1 38 24`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+(signature)`ictlchr(ctlid, offset)`
+
+Transform a `'control'`
+(project-local/factor-element)&<types#Event.identity[fault.terminal.types.Event.identity]> into its literal form.
+
+When a control character is transformed into a (project-local/factor-element)&<types#Event[fault.terminal.types.Event]>, its
+identity is processed into a lowercase english alphabet character
+consistent with the usual visualization.
+
+This function inverts the process for applications needing the actual
+target control character. Notably, relying on the (project-local/factor-element)&<types#Event.string[fault.terminal.types.Event.string]>
+is inappropriate in the case where the character was escaped and the
+event is qualified with some modifiers.
+
+
+[ print ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`39 1 61 24`
+(signature)`print(k, source, modifiers, Character, Space, ControlOffset)`
+
+Construct literal key press event.
+
+Handles control and literals.
+
+
+[ point ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`62 1 68 23`
+(signature)`point(x, y, Type)`
+
+Build a (project-local/factor-element)&<types#Point[fault.terminal.types.Point]> for describing mount events.
+
+
+[ interpret_modifiers ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`69 1 76 23`
+(signature)`interpret_modifiers(packed, Create)`
+
+
+[ interpret_key_modifiers ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`77 1 80 24`
+(signature)`interpret_key_modifiers(packed, Create)`
+
+
+[ mouse ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`81 1 121 3`
+(signature)`mouse(origin, terminator, parameters)`
+
+Construct a raw mouse event from the given string.
+(factor-local/function)&<#mouse[mouse]> separates scroll, click, and drag events.
+
+
+[ im_test ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`123 1 140 13`
+(signature)`im_test(char, xstart, xstop)`
+
+Test if the character can be considered an intermediate.
+
+This is not consistent with VT100's as it allows for control characters
+to be used as intermediates.
+
+
+[ dispatch_sequence ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`142 1 196 96`
+		- (type/syntax)`tuple[str, Sequence[int], str]`
+		
+(signature)`dispatch_sequence(region, separator)`
+
+Parse, normally CSI, returning the intermediates, parameters, terminator,
+and any following text as a remainder.
+
+If no final character is present in the CSI, the last field in the returned
+tuple will be (invalid/unknown)&<#None> indicating that a continuation or timeout should occur.
+
+[ > Returns ]
+
+A tuple:
+
+# Intermediates
+# Parameters
+# Terminator
+
+
+[ dispatch_string ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`198 1 202 33`
+(signature)`dispatch_string(region)`
+
+Parse OSC returning the intermediates, parameters, and any following text.
+
+
+[ type_switch ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`204 1 211 1`
+#!source
+	type_switch = {
+		'[': ('csi', dispatch_sequence),
+		']': ('osc', dispatch_string),
+		'X': ('sos', dispatch_string),
+		'^': ('pm', dispatch_string),
+		'_': ('apc', dispatch_string),
+		'P': ('dcs', dispatch_string),
+	}
+
+[ csi_keymap ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`213 1 236 1`
+#!source
+	csi_keymap = {
+		1: ('navigation', 'home'),
+		2: ('delta', 'insert'),
+		3: ('delta', 'delete'),
+		4: ('navigation', 'end'),
+		5: ('navigation', 'page-up'),
+		6: ('navigation', 'page-down'),
+		11: ('function', 1),
+		12: ('function', 2),
+		13: ('function', 3),
+		14: ('function', 4),
+		15: ('function', 5),
+		17: ('function', 6),
+		18: ('function', 7),
+		19: ('function', 8),
+		20: ('function', 9),
+		21: ('function', 10),
+		23: ('function', 11),
+		24: ('function', 12),
+		29: ('function', 'applications'),
+		34: ('function', 'windows'),
+		200: ('paste', 'start'),
+		201: ('paste', 'stop'),
+	}
+
+[ csi_terminator_keys ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`238 1 245 1`
+#!source
+	csi_terminator_keys = {
+		'A': 'up',
+		'B': 'down',
+		'C': 'right',
+		'D': 'left',
+		'H': 'home',
+		'F': 'end',
+	}
+
+[ csi_alternates ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`247 1 254 1`
+#!source
+	csi_alternates = {
+		# Tabs; [.u makes this uncessary, but leave it in for compatibility.
+		'Z': ('control', 'i'),
+	
+		# xterm focus events
+		'I': ('focus', 'in'),
+		'O': ('focus', 'out'),
+	}
+
+[ sequence_map ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`256 1 289 57`
+(signature)`sequence_map(escape, stype, action, region, remainder, Zero)`
+
+
+[ process_region_ground ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`291 1 308 35`
+(signature)`process_region_ground(escape, region, Meta, Zero)`
+
+
+[ process_region_data ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`310 1 332 49`
+(signature)`process_region_data(escape, region, Meta, Zero)`
+
+
+[ Parser ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`334 1 435 21`
+		- (type/syntax)`Generator[Sequence[Character], str, Sequence[Character]]`
+		
+(signature)`Parser(initial, escape, separator, Zero, Sequence, print, map)`
+
+VT100 CSI and Ground Parser constructing (project-local/factor-element)&<types#Event[fault.terminal.types.Event]> sequences from
+received (invalid/unknown)&<#str> instances.
+
+Some functionality exceptions being that intermediate characters may not
+appear after the first parameter and unrecognized forms will always be
+emitted as a (id)`ignored-escape-sequence` event type.
+
+
+[ parser ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`437 1 447 9`
+		- (type/syntax)`Parser`
+		- (type/factor-local/function)&<#Parser[Parser]>
+		
+(signature)`parser(initial)`
+
+Construct a running (factor-local/function)&<#Parser[Parser]> generator for interpreting CSI and ground characters.
+
+[ > Parameters ]
+
+/(parameter)`initial`/
+	- (type/syntax)`str`
+	- (type/invalid/unknown)&<#str>
+	
+	Optional initial string to be transformed when the first (id)`send` is performed.
+

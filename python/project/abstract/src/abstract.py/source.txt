@@ -1,0 +1,18 @@
+"""
+# Python Interfaces for Factor concepts.
+"""
+import abc
+import typing
+from ..route.abstract import Route
+
+class FactorSet(metaclass=abc.ABCMeta):
+	"""
+	# Query interface for finding projects and factors therein.
+	"""
+
+	@abc.abstractmethod
+	def select(self, identifier:str) -> typing.Tuple[Route,Route]:
+		"""
+		# Retrieve the storage route to the project and its Factor Path.
+		"""
+		pass

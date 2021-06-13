@@ -1,0 +1,59 @@
+"""
+# Commands that primarily query the workspace's projects.
+"""
+
+from fault.system import files
+from fault.system import execution
+from fault.project import system as lsf
+
+def system(command, argv, name=None):
+	ki = execution.KInvocation(command, [name or command] + argv)
+	pid = ki.spawn(fdmap=[(0,0), (1,1), (2,2)])
+	return pid, execution.reap(pid, options=0)
+
+def srcindex(wkenv, factors):
+	for afpath in factors:
+		pd, pj, fpath = wkenv.work_project_context.split(lsf.types.factor@afpath)
+		for (fp, ft), (fy, fs) in pj.select(fpath.container):
+			if fp == fpath or fp.segment(fpath):
+				yield from fs
+
+# Launch EDITOR for resolved sources.
+def edit(wkenv:Environment, config, command, *argv):
+	from fault.system.query import executables
+	system_command = os.environ['EDITOR']
+	if system_command[:1] != '/':
+		system_command, = executables(system_command) # EDITOR not in environment?
+
+	wkenv.load()
+
+	pwd = str(files.Path.from_absolute(os.environ['PWD'])) + '/'
+	l = len(pwd)
+	sources = [
+		x[l:] if x.startswith(pwd) else x
+		for x in
+		map(str, (y[1] for y in srcindex(wkenv, argv[1:])))
+	]
+
+	os.execv(system_command, [system_command] + sources)
+
+# List sources.
+def sources(wkenv:Environment, config, command, *argv):
+	wkenv.load()
+
+	for f in srcindex(wkenv, argv[1:]):
+		sys.stdout.write(str(f) + '\n')
+
+# List projects or contexts.
+def project_list(wkenv:Environment, config, command, *argv):
+	wkenv.load()
+	ls = '\n'.join(str(pj.factor) for pj in wkenv.iterprojects())
+	sys.stdout.write(ls + '\n')
+
+# Execute workspace subject factor.
+def execute(wkenv:Environment, config, command, *argv):
+	wkenv.load()
+	works = wkenv.work_space_tooling
+	works.load()
+
+	str(wkenv.work_product_route)

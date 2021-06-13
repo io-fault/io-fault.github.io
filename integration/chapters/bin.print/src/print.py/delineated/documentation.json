@@ -1,0 +1,1 @@
+[["Construct an archive for a Product's Internet Representation.", "", "This provides the input used by &.daemon web partitions."], ["Initialize the `.http-resource` directory inside &path", "with a `meta.json` formed from &meta, &type, and &identifier.", "", "Returns the directory path that was created."]]

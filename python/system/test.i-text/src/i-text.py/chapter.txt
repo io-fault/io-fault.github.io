@@ -1,0 +1,46 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 14 0`
+
+[ sys ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1 1 1 10`
+
+[ module ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`2 1 2 29`
+
+[ test_setlocale ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`4 1 10 63`
+(signature)`test_setlocale(test)`
+
+- (project-local/unknown)&<extensions.text/module.c#dsetlocale>
+- (project-local/factor-element)&<text#setlocale[fault.system.text.setlocale]>
+
+
+[ test_encoding ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`12 1 14 33`
+(signature)`test_encoding(test)`
+

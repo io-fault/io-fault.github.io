@@ -1,0 +1,175 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 67 0`
+Bourne Shell language profile.
+
+
+[ fields ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`4 1 4 21`
+
+[ keyword_list ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`6 1 18 1`
+#!source
+	keyword_list = [
+		'if', 'fi',
+		'elif', 'else',
+		'case', 'esac',
+		'while', 'until',
+		'for', 'in',
+		'do', 'done',
+		'break',
+		'continue',
+		'return',
+		'function',
+		'then',
+	]
+
+[ core_list ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`20 1 57 1`
+#!source
+	core_list = [
+		'export',
+		'shift',
+		'test',
+		'expr',
+	
+		'printf',
+		'echo',
+		'read',
+	
+		'cd',
+		'ls',
+		'dirname',
+		'pwd',
+	
+		'ln',
+		'cp',
+	
+		'rm',
+		'mkdir',
+		'rmdir',
+		'rmtree',
+	
+		'exec',
+		'exit',
+	
+		'chmod',
+		'chgrp',
+		'chown',
+	
+		'touch',
+		'cat',
+		'which',
+	
+		'sed',
+		'awk',
+		'lam',
+	]
+
+[ keywords ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`59 1 59 59`
+#!source
+	keywords = {y: y for y in map(fields.String, keyword_list)}
+
+[ cores ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`60 1 60 53`
+#!source
+	cores = {y: y for y in map(fields.String, core_list)}
+
+[ terminators ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`62 1 62 55`
+#!source
+	terminators = {y: y for y in map(fields.Constant, ";")}
+
+[ separators ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`63 1 63 54`
+#!source
+	separators = {y: y for y in map(fields.Constant, ",")}
+
+[ routers ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`64 1 64 54`
+#!source
+	routers = {y: y for y in map(fields.Constant, (".",))} # for common formatting
+
+[ operators ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`65 1 65 66`
+#!source
+	operators = {y: y for y in map(fields.Constant, "!&^*%+=-|\\/<>")}
+
+[ groupings ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`66 1 66 58`
+#!source
+	groupings = {y: y for y in map(fields.Constant, "()[]{}")}
+
+[ quotations ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`67 1 67 62`
+#!source
+	quotations = {y: y for y in map(fields.Constant, ("'", '"',))}

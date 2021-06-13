@@ -1,0 +1,376 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 322 0`
+Extensible project protocol for filesystem directories.
+
+
+[ typing ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`4 1 4 13`
+
+[ collections ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`5 1 5 18`
+
+[ itertools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`6 1 6 16`
+
+[ functools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`7 1 7 16`
+
+[ Cell ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`9 1 9 32`
+
+[ Segment ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`10 1 10 43`
+
+[ Selector ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`10 1 10 43`
+
+[ files ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`11 1 11 26`
+
+[ types ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`13 1 13 19`
+
+[ default_image_segment ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`16 1 16 56`
+#!source
+	default_image_segment = [['system', 'architecture'], []]
+
+[ unknown_factor_type ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`17 1 20 1`
+#!source
+	unknown_factor_type = types.Reference(
+		'http://if.fault.io/factors', types.factor@'meta.unknown',
+		'type', None
+	)
+
+[ image_factor_type ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`21 1 24 1`
+#!source
+	image_factor_type = types.Reference(
+		'http://if.fault.io/factors', types.factor@'meta.image',
+		'type', None
+	)
+
+[ references_factor_type ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`25 1 28 1`
+#!source
+	references_factor_type = types.Reference(
+		'http://if.fault.io/factors', types.factor@'meta.references',
+		'type', None
+	)
+
+[ system_factor_type ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`29 1 32 1`
+#!source
+	system_factor_type = types.Reference(
+		'http://if.fault.io/factors', types.factor@'system.references',
+		'type', None
+	)
+
+[ FactorDeclarationSignal ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`35 1 35 60`
+#!source
+	FactorDeclarationSignal = Segment.from_sequence(['.factor'])
+
+[ load_formats ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`37 1 63 26`
+(signature)`load_formats(file, continued, separator, Ref)`
+
+
+[ factor_images ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`65 1 72 36`
+(signature)`factor_images(project, factor, directory)`
+
+Retrieve the set of images produced by the (factor-local/parameter)&<#factor_images.Parameters.factor[factor]> contained by (factor-local/parameter)&<#factor_images.Parameters.project[project]>.
+A segment path is used to identify the factor in order to emphasize that
+a direct file path should not be used.
+
+
+[ compose_image_path ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`74 1 95 16`
+(signature)`compose_image_path(groups, default, variants, name, suffix)`
+
+Create a variant path (list of strings) according to the given (factor-local/parameter)&<#compose_image_path.Parameters.groups[groups]> and (factor-local/parameter)&<#compose_image_path.Parameters.variants[variants]>.
+
+
+[ structure_factor_declaration ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`97 1 103 59`
+(signature)`structure_factor_declaration(text, nl)`
+
+Split a `.factor` file into a type and symbol set pair.
+
+
+[ parse_image_descriptor_1 ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`105 1 129 54`
+		- (type/syntax)`typing.Iterator[typing.Sequence[str]]`
+		
+(signature)`parse_image_descriptor_1(string)`
+
+Given the data from a (system/filename)`fields.txt` file located inside
+a factor image set directory, return an iterator producing sequences that
+detail the groupings used to designate the location of a variant.
+
+Normally unused as the default groupings are encouraged.
+
+[ > Parameters ]
+
+/(parameter)`string`/
+	- (type/syntax)`str`
+	- (type/invalid/unknown)&<#str>
+	
+	The text format is newline separated records consisting of whitespace separated fields.
+	Each line containing fields designates a directory level that will contain
+	the variants expressed on subsequent lines. The final record designating the
+	variants used to specify the image file, often this should be "name".
+
+	No escaping mechanism is provided as the fields are required to be identifiers.
+
+
+[ V1 ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (source/area)`131 1 322 18`
+! INHERIT:
+	- (source/area)`131 10 131 23`
+	- (type/syntax)`types.Protocol`
+	- (type/project-local/factor-element)&<types#Protocol[fault.project.types.Protocol]>
+	
+polynomial-1 protocol implementation.
+
+
+[ V1 >> identifier ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`136 2 136 28`
+#!source
+	identifier = 'polynomial-1'
+
+[ V1 >> information ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`138 2 144 38`
+		- (type/syntax)`types.Information`
+		- (type/project-local/factor-element)&<types#Information[fault.project.types.Information]>
+		
+(signature)`information(self, project, filename)`
+
+Retrieve the information record of the project.
+
+
+[ V1 >> configure ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`146 2 172 56`
+(signature)`configure(self, route)`
+
+Inherit information and configuration from a context project.
+
+
+[ V1 >> image ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`174 2 184 21`
+		- (type/syntax)`Selector`
+		- (type/context-local/factor-element)&<fault.route/types#Selector[fault.route.types.Selector]>
+		
+(signature)`image(self, route, variants, fp, default, groups, suffix)`
+
+Retrieve the location of the factor's image for the given variants.
+
+
+[ V1 >> isource ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`186 2 201 13`
+(signature)`isource(self, route)`
+
+Determine if the route is a possible source file for a factor.
+
+
+[ V1 >> source_format_resolution ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`203 2 214 80`
+(signature)`source_format_resolution(self)`
+
+Construct a resolution (type) cache for the source extension map.
+
+
+[ V1 >> type_requirement_resolution ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`216 2 227 66`
+(signature)`type_requirement_resolution(empty)`
+
+Construct a resolution (type requirement) cache for the type requirements.
+
+
+[ V1 >> indirect_factor_records ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`229 2 243 67`
+(signature)`indirect_factor_records(self, typcache, paths, _nomap, _default)`
+
+Given an iterable of paths identifying Indirectly Typed Factors, resolve their
+type reference, factor type, and symbols using the given (factor-local/parameter)&<#V1.indirect_factor_records.Parameters.typcache[typcache]>.
+
+
+[ V1 >> collect_explicit_sources ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`245 2 260 36`
+(signature)`collect_explicit_sources(self, typcache, route)`
+
+Collect source files paired with their type reference for an
+Explicitly Typed Factor record.
+
+
+[ V1 >> iterfactors ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`262 2 322 18`
+		- (type/syntax)`typing.Iterable[types.FactorType]`
+		
+(signature)`iterfactors(self, refer, route, rpath, ignore)`
+
+Query the project (factor-local/parameter)&<#V1.iterfactors.Parameters.route[route]> for factor specifications contained within (factor-local/parameter)&<#V1.iterfactors.Parameters.rpath[rpath]>.
+

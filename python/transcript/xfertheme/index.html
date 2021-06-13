@@ -1,0 +1,19 @@
+<html><head><title>fault.transcript.xfertheme</title><meta charset="utf-8"/><link as="style" rel="preload" href="../../.legacy-web/core.css"></link><link as="style" rel="preload" href="../../.legacy-web/factor.css"></link><link rel="stylesheet" href="../../.legacy-web/core.css"></link><link rel="stylesheet" href="../../.legacy-web/factor.css"></link></head><body><main><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><span class="title">fault.transcript.xfertheme</span><span class="factor-type">http://if.fault.io/factors/python.module</span></h1><div class="text.abstract"><p><span class="text.normal">Source data for display layout for transfer metrics.</span></p></div><section class="import" documented="false" local-identifier="terminal" id="terminal"><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><a class="title" href="#terminal"><span class="text.normal">terminal</span></a><span class="abstract-type">import</span></h1></section><section class="import" documented="false" local-identifier="tools" id="tools"><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><a class="title" href="#tools"><span class="text.normal">tools</span></a><span class="abstract-type">import</span></h1></section><section class="data" documented="false" local-identifier="order" id="order"><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><a class="title" href="#order"><span class="text.normal">order</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code>order = [
+	('executing', 8),
+	('received', 8),
+	('transmitted', 8),
+	('failed', 8),
+	('completed', 8),
+]
+</code></pre></section><section class="data" documented="false" local-identifier="formats" id="formats"><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><a class="title" href="#formats"><span class="text.normal">formats</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code>formats = [
+	('x', "executing", 'orange', tools.partial(terminal.r_count, 'executing')),
+	('r', "rx", 'blue', tools.partial(terminal.r_count, 'received')),
+	('t', "tx", 'red', tools.partial(terminal.r_count, 'transmitted')),
+	('f', "failed", 'yellow', tools.partial(terminal.r_count, 'failed')),
+	('c', "completed", 'green', tools.partial(terminal.r_count, 'completed')),
+]
+</code></pre></section><section class="data" documented="false" local-identifier="types" id="types"><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><a class="title" href="#types"><span class="text.normal">types</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code>types = {
+	'received': 'rate',
+	'transmitted': 'rate',
+}
+</code></pre></section><h1 class="footing"></h1></main></body></html>

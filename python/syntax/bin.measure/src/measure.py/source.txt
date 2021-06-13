@@ -1,0 +1,31 @@
+"""
+# Measure various attributes of the lines of syntax.
+"""
+import sys
+from ...system import process
+
+def line_data(line):
+	il = line.count('\t')
+	fc = ''.join(line.strip().split())
+	nvc = len(fc)
+	nws = len(line) - nvc
+	return (il, nvc, nws)
+
+def format_metrics(nlines, nca, ila, zeros):
+	return '\n'.join([
+		'line-count: ' + str(nlines),
+		'average-character-count: %.2f' % (nca,),
+		'average-indentation-level: %.2f' % (ila,),
+		'empty-line-count: ' + str(zeros)
+	])
+
+def main(inv:process.Invocation) -> process.Exit:
+	src = sys.stdin.readlines()
+	nlines = len(src)
+	ldat = list(map(line_data, src))
+
+	nca = sum(x[1] for x in ldat) / nlines
+	ila = sum(x[0] for x in ldat) / nlines
+	zeros = sum(1 for x in ldat if x[1] == 0)
+
+	sys.stdout.write(format_metrics(nlines, nca, ila, zeros)+'\n')

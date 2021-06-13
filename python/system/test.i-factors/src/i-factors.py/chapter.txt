@@ -1,0 +1,67 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 32 0`
+
+[ os ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1 1 1 9`
+
+[ factors ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`3 1 3 22`
+
+[ test_IntegralFinder_empty ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`5 1 12 53`
+(signature)`test_IntegralFinder_empty(test)`
+
+Validate the no-op effect of an empty finder without connected paths.
+
+
+[ test_IntegralFinder_extension_loader ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`14 1 19 5`
+(signature)`test_IntegralFinder_extension_loader(test)`
+
+Validate the no-op effect of an empty finder without connected paths.
+
+
+[ test_IntegralFinder_source_loader ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`21 1 26 5`
+(signature)`test_IntegralFinder_source_loader(test)`
+
+Validate the no-op effect of an empty finder without connected paths.
+
+
+[ test_intergration_IntegralFinder ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`28 1 32 5`
+(signature)`test_intergration_IntegralFinder(test)`
+
+Check the functionality of the IntegralFinder.
+

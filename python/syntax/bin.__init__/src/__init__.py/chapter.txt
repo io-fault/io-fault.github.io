@@ -1,0 +1,18 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 4 0`
+Executables
+
+
+[ __factor_type__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`4 1 4 31`
+#!source
+	__factor_type__ = 'executables'

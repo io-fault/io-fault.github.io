@@ -1,0 +1,397 @@
+"""
+# Inline box rendering for replayable views of text content.
+
+# &.frames provides functions for formatting framed text from &Content.
+# &Content represents a sequence rows consisting of a single column;
+# the placement of &str instances within the tuples contained by the
+# sequence controls the alignment of the displayed text. A leading
+# &None within the instance causes a horizontal separator to be drawn
+# according to the selected box theme.
+
+# [ Engineering ]
+
+# Somewhat of a warning.
+# Raw (integer) indexes are commonly used within this module; the "themes" are regular
+# strings, &f_solid, and the indexes refer to the boundary character at that index within the theme.
+# The included themes have identical character counts, but customized themes may have extensions
+# in order to support transitions by &stitch.
+"""
+import typing
+import itertools
+import functools
+
+halves = "\u258C\u2590"
+
+def charif(characters):
+	"""
+	# Whether the character is a Unicode Box Drawing character.
+	"""
+	for x in characters:
+		if ord(x) in range(0x2500, 0x2580):
+			yield x
+
+# Primary input structure; given to &prepare.
+Content = typing.Sequence[
+	typing.Union[
+		# Left and Right text; use empty strings to disable a side.
+		typing.Tuple[str, str],
+		# Aligned center; only one field is allowed for centering.
+		typing.Tuple[str, None],
+		# Division (horizontal bar)
+		typing.Tuple[None],
+		# Division, custom horizontal.
+		typing.Tuple[None, str],
+	]
+]
+
+def dlength(field, str=str):
+	if field.__class__ is str:
+		return len(field)
+	else:
+		return field.dlength()
+
+def dformat(context, field, str=str):
+	if field.__class__ is str:
+		return field
+	else:
+		return field.dformat(context)
+
+def strings(sequence, context=None, cat=(''.join), Partial=functools.partial):
+	"""
+	# Emit the formatted lines of a prepared sequence as &str instances.
+	# Newline characters are *not* added to line.
+	"""
+	df = Partial(dformat, context)
+
+	for line in sequence:
+		yield cat(map(df, line))
+
+# Labels of the indexes of the frame parts within a theme.
+keys = [
+	'top-left-corner',
+	'top-horizontal-left',
+	'top-intersection',
+	'top-horizontal-right',
+	'top-right-corner',
+	'heading-vertical-open',
+	'space',
+	'heading-vertical-center',
+	'space',
+	'heading-vertical-close',
+	'left-intersection',
+	'body-horizontal-left',
+	'full-intersection',
+	'body-horizontal-right',
+	'right-intersection',
+	'body-vertical-open',
+	'space',
+	'body-vertical-center',
+	'space',
+	'body-vertical-close',
+	'bottom-left-corner',
+	'bottom-horizontal-left',
+	'bottom-intersection',
+	'bottom-horizontal-right',
+	'bottom-right-corner',
+	# Any extensions will be local to the frame theme.
+]
+
+corners = [
+	'top-left-corner',
+	'top-right-corner',
+	'bottom-left-corner',
+	'bottom-right-corner',
+]
+
+f_ascii = (
+	'+' '-' '+' '-' '+'
+	'|' ' ' '|' ' ' '|'
+	'+' '-' '+' '-' '+'
+	'|' ' ' '|' ' ' '|'
+	'+' '-' '+' '-' '+'
+)
+
+f_bold = (
+	'┏' '━' '┳' '━' '┓'
+	'┃' ' ' '┃' ' ' '┃'
+	'┣' '━' '╋' '━' '┫'
+	'┃' ' ' '┃' ' ' '┃'
+	'┗' '━' '┻' '━' '┛'
+)
+
+f_solid = (
+	'┌' '─' '┬' '─' '┐'
+	'│' ' ' '│' ' ' '│'
+	'├' '─' '┼' '─' '┤'
+	'│' ' ' '│' ' ' '│'
+	'└' '─' '┴' '─' '┘'
+)
+
+f_double = (
+	'╔' '═' '╦' '═' '╗'
+	'║' ' ' '║' ' ' '║'
+	'╠' '═' '╬' '═' '╣'
+	'║' ' ' '║' ' ' '║'
+	'╚' '═' '╩' '═' '╝'
+)
+
+rounds=('╭' '╮' '╰' '╯')
+
+def _corner_adjustments(space, selections):
+	for x in selections:
+		i_name = x+'-corner'
+		t_index = keys.index(i_name)
+		c_index = corners.index(i_name)
+		r = space[c_index]
+		yield (t_index, r)
+
+def round(theme, *corners):
+	"""
+	# Create a new theme based on &theme applying rounded corners where specified in &corners.
+
+	#!syntax/python
+		rdiagonal = round(f_solid, 'top-left', 'bottom-right')
+	"""
+	out = theme
+	for change, r in _corner_adjustments(rounds, corners):
+		out = out[:change] + r + out[change+1:]
+	return out
+
+def width(sequence, len=dlength):
+	"""
+	# Calculate the sum of the lengths of each item in the sequence;
+	# excepting values starting with &None representing a division.
+	"""
+	return (sum(y) for y in [map(len, x) for x in sequence if x[0] is not None])
+
+def prepare(theme, width, sequence, minimum=8, margins=(1,1), border=1, len=dlength):
+	"""
+	# Build sequences of strings providing the necessary formatting for the display
+	# of the framed data.
+
+	# [ Parameters ]
+	# /theme/
+		# The frame characters to use by default. Usually one of
+		# &f_ascii, &f_solid, &f_bold, &f_double.
+	# /width/
+		# The span of the data to align on. Usually, the maximum length of
+		# a row calculated by `max(width(sequence))`.
+	# /sequence/
+		# An iterable producing tuples of strings that will populate the
+		# displayed rows.
+	"""
+	if minimum < 0:
+		iwidth = width + (-minimum)
+	else:
+		iwidth = max(minimum, width)
+
+	pwidth = sum(margins) + iwidth
+	frame_width = pwidth + (border * 2)
+
+	horizontal = theme[11:12]
+
+	top = [theme[0:1], '', (theme[3:4] * (pwidth)), '', theme[4:5]]
+	bottom = [str(theme[-5]), '', (theme[23:24] * pwidth), '', str(theme[-1])]
+
+	item_boundary = initial_item_boundary = (theme[5:6], theme[9:10])
+	body_item_boundary = (theme[15:16], theme[19:20])
+	crossbar = (theme[10:11], theme[14:15])
+	crossed = False
+
+	if border:
+		yield top
+
+	for i in sequence:
+		string = i[0]
+
+		if string is None:
+			# Horizontal Division
+			middle = ""
+
+			if i[1:]:
+				middle = i[1]
+
+			left, bar, right = (crossbar[0], horizontal, crossbar[1])
+
+			fillc, final = divmod(pwidth, len(bar))
+			fillc -= len(middle)
+			half = (fillc // 2)
+			delta = fillc - (half * 2) # Adjustment for odd number of fill cells.
+			bar = (bar * half) + middle + (bar * (half + delta)) + bar[0:final]
+
+			yield [
+				left*border,
+				'', bar, '',
+				right*border
+			]
+			if not crossed:
+				item_boundary = body_item_boundary
+				crossed = True
+		else:
+			rhs = i[1:2]
+			vl = len(string)
+
+			if rhs:
+				rhs, = rhs
+				l = len(rhs)
+				fillc = (iwidth - l) - vl
+				s1 = string
+				s2 = fillc*' '
+				s3 = rhs
+			else:
+				# Centered
+				fillc = iwidth - len(string)
+				fillc, final = divmod(fillc, 2)
+				s1 = ' '*(fillc+final)
+				s2 = string
+				s3 = ' '*(fillc)
+
+			yield [
+				item_boundary[0]*border,
+				margins[0]*' ',
+				s1, s2, s3,
+				margins[1]*' ',
+				item_boundary[1]*border,
+			]
+
+	if border:
+		yield bottom
+
+def align(left, right, offsets=(0,0),
+		len=len, sum=sum, map=map, range=range
+	):
+	"""
+	# Vertically pad the two prepared images with empty records
+	# according to the describes &offsets.
+
+	# [ Parameters ]
+	# /left/
+		# The frame that will be placed on the left side.
+	# /right/
+		# The frame that will be placed on the right side.
+	# /offsets/
+		# The pair of vertical offsets for the &left and &right designating
+		# where their top will be placed. Defaults to zeros.
+	"""
+	lwidth = sum(map(len, left[0])) - 2
+	rwidth = sum(map(len, right[0])) - 2
+	lheight = le_position = len(left)
+	rheight = len(right)
+
+	lfill = [' ', '', ' '*lwidth, '', ' ']
+	rfill = [' ', '', ' '*rwidth, '', ' ']
+
+	lo, ro = offsets
+
+	# Normalize.
+	d = (lo - 0)
+	ro -= d
+	lo = 0
+
+	tl = []
+	tr = []
+
+	if lo != ro:
+		if lo < ro:
+			# fill top right
+			tr.extend(rfill for x in range(ro-lo))
+		else:
+			# fill top left
+			tl.extend(lfill for x in range(lo-ro))
+
+	bl = []
+	br = []
+
+	re_position = rheight + ro
+
+	if le_position != re_position:
+		if le_position < re_position:
+			# fill bottom left
+			bl.extend([lfill]*(re_position-le_position))
+		else:
+			# fill bottom right
+			br.extend([rfill]*(le_position-re_position))
+
+	return itertools.chain(tl, left, bl), itertools.chain(tr, right, br)
+
+# Numbers are indexes inside the frame themes (f_solid)
+combinations = {
+	(5, 1): 12,
+	(1, 5): 12,
+	(4, 10): 12,
+	(4, 20): 12,
+	(14, 0): 12,
+	(14, 10): 12,
+	(14, 20): 12,
+	(24, 10): 12,
+	(24, 0): 12,
+
+	(4, 5): 14,
+	(14, 5): 14,
+	(24, 5): 14,
+
+	(5, 20): 10,
+	(5, 10): 10,
+	(5, 0): 10,
+	(5, 15): 15,
+
+	(4, 0): 2,
+	(0, 4): 2,
+	(5, 24): 19,
+	(24, 20): 22,
+}
+
+# Handle body verticals.
+combinations.update([
+	(((x+10 if x == 5 else x), (y+10 if y == 5 else y)), z)
+	for ((x, y), z) in combinations.items()
+])
+
+def combine(theme, mapping, borders):
+	"""
+	# Calculate the combined border for the given characters according to the
+	# &theme, combination &mapping using the adjacent &borders.
+	"""
+	if not borders:
+		return ''
+	border = borders[0]
+
+	for x in borders[1:]:
+		li = theme.index(border)
+		ri = theme.index(x)
+		border = theme[mapping[(li, ri)]]
+
+	return border
+
+def stitch(aligned, combinations=combinations):
+	"""
+	# Connects prepared frames along the vertical borders.
+
+	# Join two prepared frames so that intersections are properly combined.
+	# Both the left and right sides are modified in place respecting the boundaries.
+
+	# If the two prepared frames are not of equal length (rows), &align must be called
+	# on the two frames before being given to &stitch.
+
+	# [ Parameters ]
+	# /aligned/
+		# An iterator of aligned pairs providing the left and right side
+		# to connect together into a combined image.
+
+		# Multiple pairs are accepted to stitch the vertical edges
+		# as well as the horizontal.
+	"""
+
+	for left, right in aligned:
+		lborder = left[-1].strip()
+		rborder = right[0].strip()
+
+		if lborder == rborder:
+			combined = [lborder]
+		elif not lborder or not rborder:
+			# Empty space on either border inherits non-empty.
+			combined = [rborder or lborder]
+		else:
+			combined = [combine(f_solid, combinations, lborder+rborder)]
+
+		yield left[:-1] + combined + right[1:]

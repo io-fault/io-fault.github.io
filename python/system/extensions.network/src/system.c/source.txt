@@ -1,0 +1,256 @@
+/**
+	// System call adapters.
+*/
+#include <string.h>
+#include <errno.h>
+#include <unistd.h>
+#include <fcntl.h>
+#include <sys/socket.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <sys/un.h>
+#include <arpa/inet.h>
+#include <netinet/in.h>
+#include <unistd.h>
+#include <sys/param.h>
+
+#include <fault/libc.h>
+#include <fault/symbols.h>
+#include <kcore.h>
+
+#define ERRNO_INJECTION(errsig, rptr, call, ...) *rptr = call(__VA_ARGS__)
+
+#define _RETRY_STATE _avail_retries
+#define RETRY_STATE_INIT int _RETRY_STATE = CONFIG_SYSCALL_RETRY
+#define LIMITED_RETRY() do { \
+	if (_RETRY_STATE > 0) { \
+		errno = 0; \
+		--_RETRY_STATE; \
+		goto RETRY_SYSCALL; \
+	} \
+} while(0);
+#define UNLIMITED_RETRY() errno = 0; goto RETRY_SYSCALL;
+
+#define CONFIG_SOCKET_TRANSFER_LIMIT 1
+
+struct socketmessage {
+	struct iovec iov;
+	struct msghdr mh;
+	union {
+		char buf[CMSG_SPACE(sizeof(kport_t) * CONFIG_SOCKET_TRANSFER_LIMIT)];
+		struct cmsghdr _align;
+	} ab;
+};
+
+STATIC(struct cmsghdr *)
+_init_socketmessage(struct socketmessage *m, char *buf, int bufsize)
+{
+	int i;
+	struct cmsghdr *cmsg;
+
+	memset(m, 0, sizeof(struct socketmessage));
+	memset(&(m->mh), 0, sizeof(m->mh));
+
+	m->mh.msg_name = NULL;
+	m->mh.msg_namelen = 0;
+	m->mh.msg_flags = 0;
+
+	m->iov.iov_base = buf;
+	m->iov.iov_len = bufsize;
+
+	m->mh.msg_iov = &m->iov;
+	m->mh.msg_iovlen = 1;
+
+	m->mh.msg_control = &m->ab.buf;
+	m->mh.msg_controllen = CMSG_LEN(sizeof(kport_t) * CONFIG_SOCKET_TRANSFER_LIMIT);
+
+	/**
+		// Configure message to duplicate the file descriptors
+		// held in CMSG_DATA(cmsg).
+	*/
+	cmsg = CMSG_FIRSTHDR(&(m->mh));
+	cmsg->cmsg_len = CMSG_LEN(sizeof(kport_t) * CONFIG_SOCKET_TRANSFER_LIMIT);
+	cmsg->cmsg_level = SOL_SOCKET;
+	cmsg->cmsg_type = SCM_RIGHTS;
+
+	for (i = 0; i < CONFIG_SOCKET_TRANSFER_LIMIT; ++i)
+	{
+		((int *) CMSG_DATA(cmsg))[i] = -1;
+	}
+
+	return(cmsg);
+}
+
+CONCEAL(int)
+sockets_receive(kport_t kp, kport_t buf[], uint32_t size)
+{
+	RETRY_STATE_INIT;
+	int i = 0, r;
+
+	struct cmsghdr *cmsg;
+	char _iovec_buf[8] = {0,};
+	struct socketmessage iom;
+
+	while (i < size)
+	{
+		buf[i] = -1;
+		cmsg = _init_socketmessage(&iom, _iovec_buf, 1);
+
+		RETRY_SYSCALL:
+		ERRNO_INJECTION(-1, &r, recvmsg, kp, &(iom.mh), 0);
+
+		if (r >= 0)
+		{
+			buf[i] = ((int *) CMSG_DATA(cmsg))[0];
+			++i;
+		}
+		else
+		{
+			switch (errno)
+			{
+				case EAGAIN:
+					errno = 0;
+					return(i);
+				break;
+
+				case ENOMEM:
+				case EINTR:
+					LIMITED_RETRY();
+				default:
+					return(-i);
+				break;
+			}
+		}
+	}
+
+	return(i);
+}
+
+CONCEAL(int)
+sockets_transmit(kport_t kp, kport_t buf[], uint32_t size)
+{
+	RETRY_STATE_INIT;
+	int i = 0, r;
+
+	struct cmsghdr *cmsg;
+	char _iovec_buf[8] = {'!',};
+	struct socketmessage iom;
+
+	while (i < size)
+	{
+		cmsg = _init_socketmessage(&iom, _iovec_buf, 1);
+		((int *) CMSG_DATA(cmsg))[0] = buf[i];
+
+		RETRY_SYSCALL:
+		ERRNO_INJECTION(-1, &r, sendmsg, kp, &(iom.mh), 0);
+
+		if (r >= 0)
+		{
+			buf[i] = 0;
+			++i;
+		}
+		else
+		{
+			switch (errno)
+			{
+				case EAGAIN:
+					errno = 0;
+					return(i);
+				break;
+
+				case ENOMEM:
+				case EINTR:
+					LIMITED_RETRY()
+				default:
+					buf[i] = errno;
+					errno = 0;
+					return(-i);
+				break;
+			}
+		}
+	}
+
+	return(i);
+}
+
+/**
+	// Regular socket accept from listening sockets.
+*/
+CONCEAL(int)
+sockets_accept(kport_t kp, kport_t buf[], uint32_t size)
+{
+	RETRY_STATE_INIT;
+	int i, fd;
+
+	for (i = 0; i < size; ++i)
+	{
+		RETRY_SYSCALL:
+		fd = -1;
+
+		ERRNO_INJECTION(-1, &fd, accept, kp, NULL, 0);
+
+		if (fd >= 0)
+		{
+			buf[i] = (kport_t) fd;
+		}
+		else
+		{
+			switch (errno)
+			{
+				case EAGAIN:
+					errno = 0;
+					return(i);
+				break;
+
+				case ECONNABORTED:
+				/*
+					// [ FreeBSD ]
+					// Socket was closed while in the listening queue.
+				*/
+
+				case EINTR:
+				case ENOMEM:
+					LIMITED_RETRY()
+				default:
+					return(-i);
+				break;
+			}
+		}
+	}
+
+	return(i);
+}
+
+CONCEAL(int)
+sockets_pipe(kport_t kp, kport_t buf[], uint32_t size)
+{
+	RETRY_STATE_INIT;
+	int st, i;
+
+	for (i = 0; i < size/2; ++i)
+	{
+		int *b;
+		b = &buf[i*2];
+
+		RETRY_SYSCALL:
+		st = -1;
+		ERRNO_INJECTION(-1, &st, socketpair, AF_LOCAL, SOCK_DGRAM, 0, b);
+		if (st == -1)
+		{
+			switch (errno)
+			{
+				case EINTR:
+					LIMITED_RETRY()
+				default:
+					return(-i);
+				break;
+			}
+		}
+
+		ERRNO_INJECTION(-1, &st, fcntl, b[0], F_SETFL, O_NONBLOCK);
+		ERRNO_INJECTION(-1, &st, fcntl, b[1], F_SETFL, O_NONBLOCK);
+		errno = 0;
+	}
+
+	return(i);
+}

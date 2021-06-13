@@ -1,0 +1,26 @@
+<html><head><title>fault.format.filesystem</title><meta charset="utf-8"/><link as="style" rel="preload" href="../../.legacy-web/core.css"></link><link as="style" rel="preload" href="../../.legacy-web/factor.css"></link><link rel="stylesheet" href="../../.legacy-web/core.css"></link><link rel="stylesheet" href="../../.legacy-web/factor.css"></link></head><body><main><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><span class="title">fault.format.filesystem</span><span class="factor-type">http://if.fault.io/factors/python.module</span></h1><div class="text.abstract"></div><section class="import" documented="false" local-identifier="files" id="files"><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><a class="title" href="#files"><span class="text.normal">files</span></a><span class="abstract-type">import</span></h1></section><section class="data" documented="false" local-identifier="file_type_codes" id="file_type_codes"><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><a class="title" href="#file_type_codes"><span class="text.normal">file_type_codes</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code>file_type_codes = {
+	k: ('type', v)
+	for k, v in files.type_codes.items()
+}
+</code></pre></section><section class="data" documented="false" local-identifier="type_colors" id="type_colors"><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><a class="title" href="#type_colors"><span class="text.normal">type_colors</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code>type_colors = {
+	'directory': 'blue',
+	None: 'gray',
+	'data': 'gray',
+
+	'link': 'purple',
+	'pipe': 'orange',
+	'device': 'orange',
+	'socket': 'orange',
+	'void': 'red',
+	'unknown': 'red',
+}
+</code></pre></section><section class="data" documented="false" local-identifier="requirement_codes" id="requirement_codes"><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><a class="title" href="#requirement_codes"><span class="text.normal">requirement_codes</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code>requirement_codes = {
+	'r': ('permitted', 'read'),
+	'w': ('permitted', 'write'),
+	'x': ('permitted', 'execute'),
+
+	'/': ('option', 'directory'),
+	'!': ('option', 'void'),
+	'?': ('option', 'unknown'),
+}
+</code></pre></section><section class="function" documented="true" local-identifier="requirement_fields" id="requirement_fields"><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><a class="title" href="#requirement_fields"><span class="text.normal">requirement_fields</span></a><span class="abstract-type">function</span></h1><p><code class="signature">requirement_fields(string)</code></p><p><span class="text.normal">Split the string into typed fields reducing superfluous</span><span class="text.line-break"> </span><span class="text.normal">entries</span></p></section><h1 class="footing"></h1></main></body></html>

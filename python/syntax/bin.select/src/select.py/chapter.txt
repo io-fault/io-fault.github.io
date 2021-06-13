@@ -1,0 +1,91 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 69 0`
+Collect the address ranges supplied to standard input and emit the slices of the syntax document
+given as the first argument to the command.
+
+
+[ sys ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`5 1 5 10`
+
+[ process ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`7 1 7 29`
+
+[ files ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`8 1 8 27`
+
+[ Area ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`10 1 10 24`
+
+[ delimit_start ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`13 1 13 31`
+#!source
+	delimit_start = '\x1b[38;5;23m'
+
+[ delimit_stop ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`14 1 14 24`
+#!source
+	delimit_stop = '\x1b[0m'
+
+[ highlight ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`16 1 47 9`
+(signature)`highlight(context, lines, startl, startc, stopl, stopc)`
+
+
+[ main ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`49 1 66 19`
+		- (type/syntax)`process.Exit`
+		- (type/context-local/factor-element)&<fault.system/process#Exit[fault.system.process.Exit]>
+		
+(signature)`main(inv)`
+

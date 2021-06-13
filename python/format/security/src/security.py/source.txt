@@ -1,0 +1,97 @@
+"""
+# Text frames for Certificates, Keys, and Contexts.
+"""
+import sys
+
+key_fields = set([
+	'algorithm',
+	'key-id', # Hash of key if necessary.
+])
+
+certificate_fields = set([
+	# Security Context data regarding its validity.
+	'validation',
+
+	'type', # Usually X.509
+	'interval', # validity; not-before, not-after
+
+	'serial', # Unique identifier.
+	'signature-type',
+	'signature-algorithm',
+
+	'issuer-organization',
+	'issuer-name', # domain
+
+	'subject-organization',
+	'subject-name', # domain
+
+	'extension-names',
+
+	'revocations', # CRL
+
+	'key-usage',
+	'key-algorithm',
+])
+
+def mkcertview(record):
+	"""
+	# Create record-frame for a certificate.
+	"""
+	from .terminal import Field
+
+	org = "%s" %(record['subject-organization'],)
+	issuer = "%s (%s)" %(record['issuer-organization'], record['issuer-name'])
+	issuer_field = Field('organization', issuer)
+
+	frame = [
+		(Field('object-type', "Certificate", icon="🔏"), Field('certificate-validity', "Expired")),
+		(None,),
+		(Field('field-title', "Organization:"), Field('organization', org)),
+		("", record['subject-name']),
+		(Field('field-title', "Issuer:"), issuer_field),
+
+		(None,),
+		(Field('field-title', "Serial:"), Field('identifier', record['serial'])),
+		(Field('field-title', "Key:"), Field('identifier', record['key-id'])),
+		(Field('field-title', "Reference:"), Field('url', "http://fault.io/security")),
+	]
+
+	return frame
+
+def pframe(data):
+	w = max(frames.width(data))
+	if w < 64:
+		w = 64
+	else:
+		w += 8
+	d = frames.prepare(frames.f_solid, w+16, data)
+
+	terminal.area.context_set_text_color(terminal.palette.colors['background-adjacent'])
+	sys.stdout.buffer.write(terminal.area.reset_text_color())
+
+	sys.stdout.buffer.write(b'\n'.join(terminal.strings(d, context=terminal.area)))
+	sys.stdout.write('\n')
+
+	terminal.area.context_set_text_color(terminal.palette.colors['terminal-default'])
+	sys.stdout.buffer.write(terminal.area.reset_text_color())
+
+	sys.stdout.flush()
+
+if __name__ == '__main__':
+	from ..time import system as time
+	record = {
+		'type': "X.509v3",
+		'interval': (time.utc(), time.utc()),
+
+		'issuer-organization': "Let's Encrypt",
+		'issuer-name': "letsencrypt.org",
+
+		'subject-organization': "Fault Engineering Laboratory",
+		'subject-name': "fault.io",
+		'key-id': "FA17",
+		'serial': "...",
+	}
+	from . import frames
+	from . import terminal
+
+	pframe(mkcertview(record))

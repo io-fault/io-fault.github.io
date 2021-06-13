@@ -1,0 +1,153 @@
+! CONTROL:
+	/type/
+		unit
+	/element/
+		- (source/area)``
+
+[ ClockType ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`179 9 189 2`
+(signature)`ClockType()`
+
+
+[ Clocks ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`191 9 193 92`
+(signature)`Clocks()`
+
+
+[ CLOCK_RECORD ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`240 9 240 85`
+#!source
+	#define CLOCK_RECORD(NAME, CLOCK_ID, DOCS) static PyTypeObject ClockType(NAME, DOCS);
+
+[ MODULE_FUNCTIONS ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`244 9 244 26`
+(signature)`MODULE_FUNCTIONS()`
+
+
+[ clockwork_get_positive_adjustment ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`21 2 34 2`
+		- (type/syntax)`unsigned long long`
+		
+(signature)`clockwork_get_positive_adjustment(cw)`
+
+
+[ clockwork_set ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`37 1 53 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`clockwork_set(self, args)`
+
+
+[ clockwork_get ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`55 1 62 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`clockwork_get(self)`
+
+
+[ clockwork_snapshot ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`64 1 74 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`clockwork_snapshot(self)`
+
+
+[ clockwork_adjust ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`76 1 88 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`clockwork_adjust(self, args)`
+
+
+[ clockwork_new ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`90 1 110 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`clockwork_new(subtype, args, kw)`
+
+
+[ Real_new ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`195 1 214 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`Real_new(subtype, args, kw)`
+
+
+[ Monotonic_new ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`216 1 235 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`Monotonic_new(subtype, args, kw)`
+

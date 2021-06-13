@@ -1,0 +1,100 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 59 0`
+Commands that primarily query the workspace's projects.
+
+
+[ files ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`5 1 5 30`
+
+[ execution ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`6 1 6 34`
+
+[ lsf ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`7 1 7 39`
+
+[ system ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`9 1 12 43`
+(signature)`system(command, argv, name)`
+
+
+[ srcindex ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`14 1 19 17`
+(signature)`srcindex(wkenv, factors)`
+
+
+[ edit ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`22 1 38 53`
+(signature)`edit(wkenv, config, command, *argv)`
+
+
+[ sources ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`41 1 45 33`
+(signature)`sources(wkenv, config, command, *argv)`
+
+
+[ project_list ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`48 1 51 28`
+(signature)`project_list(wkenv, config, command, *argv)`
+
+
+[ execute ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`54 1 59 30`
+(signature)`execute(wkenv, config, command, *argv)`
+

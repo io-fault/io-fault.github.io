@@ -1,0 +1,389 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 225 0`
+Endpoint and Service type for referencing internet addresses for
+Internet Protocol version 4 and 6.
+
+
+[ typing ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`5 1 5 13`
+
+[ ipaddress ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`6 1 6 16`
+
+[ valid_service_port ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`8 1 12 36`
+		- (type/syntax)`bool`
+		- (type/invalid/unknown)&<#bool>
+		
+(signature)`valid_service_port(port)`
+
+Whether or not the port is within the standard range.
+
+
+[ system_service_port ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`14 1 18 34`
+		- (type/syntax)`bool`
+		- (type/invalid/unknown)&<#bool>
+		
+(signature)`system_service_port(port)`
+
+Whether or not the port is considered a 'well known' port.
+
+
+[ ephemeral_service_port ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`20 1 24 40`
+		- (type/syntax)`bool`
+		- (type/invalid/unknown)&<#bool>
+		
+(signature)`ephemeral_service_port(port)`
+
+Whether or not the port is considered an 'ephemeral' port by IANA.
+
+
+[ common_services ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`27 1 44 1`
+#!source
+	common_services = {
+		'domain': 53,
+	
+		'http': 80,
+		'https': 443,
+		'ftp': 21,
+		'ftps': 990,
+	
+		'ssh': 22,
+		'telnet': 23,
+	
+		'smtp': 25,
+		'kerberos': 88,
+		'ntp': 123,
+		'bgp': 179,
+		'irc': 194,
+		'ldap': 389,
+	}
+
+[ Endpoint ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (source/area)`47 1 124 49`
+! INHERIT:
+	- (source/area)`47 16 47 20`
+	- (type/syntax)`tuple`
+	- (type/invalid/unknown)&<#tuple>
+	
+A precise Endpoint for internet addresses and local sockets.
+
+
+[ Endpoint >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`51 2 51 15`
+#!source
+	__slots__ = ()
+
+[ Endpoint >> address_types ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`53 2 55 13`
+#!source
+	address_types = (ipaddress.IPv4Address, ipaddress.IPv6Address)
+		@classmethod
+
+[ Endpoint >> create_ip4 ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (source/area)`56 2 63 13`
+(signature)`create_ip4(Class, string, port, Type)`
+
+Create an IPv4 Endpoint Instance
+
+
+[ Endpoint >> create_ip6 ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (source/area)`64 2 71 10`
+(signature)`create_ip6(Class, string, port, Type)`
+
+Create an IPv6 Endpoint Instance
+
+
+[ Endpoint >> protocol ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (source/area)`72 2 79 10`
+Addressing protocol; 4 or 6
+
+
+[ Endpoint >> interface ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (source/area)`80 2 84 16`
+The (none/invalid)&<http://fault.io/dev/null[ipaddress]> typed address.
+
+
+[ Endpoint >> address ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`85 2 87 10`
+#!source
+	address = interface
+		@property
+
+[ Endpoint >> port ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (source/area)`88 2 93 16`
+The (invalid/unknown)&<#Service> of the endpoint.
+
+
+[ Endpoint >> __str__ ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`95 2 104 52`
+(signature)`__str__(self)`
+
+"<address>:<port>" representation suitable for interpolation into
+an IRI network location.
+
+
+[ Endpoint >> __repr__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`106 2 112 59`
+(signature)`__repr__(self)`
+
+
+[ Endpoint >> __hash__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`114 2 117 13`
+(signature)`__hash__(self)`
+
+
+[ Endpoint >> create ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (source/area)`118 2 124 49`
+(signature)`create(Class, interface, port, construct)`
+
+Create an IPv4 or IPv6 endpoint based on the type detected from the string.
+
+The (none/invalid)&<http://fault.io/dev/null[ipaddress]> type will be selected by the (none/invalid)&<http://fault.io/dev/null[ipaddress.ip_address]> function.
+
+
+[ Reference ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (source/area)`126 1 192 55`
+! INHERIT:
+	- (source/area)`126 17 126 21`
+	- (type/syntax)`tuple`
+	- (type/invalid/unknown)&<#tuple>
+	
+A domain name referencing a set of endpoints.
+
+References are actually service references for a specific domain. They
+consist of protocol, address, port, and service fields that define
+the reference. Normally, protocol is "dns" and implies system DNS.
+
+Protocol variations can be used to describe more complicated name resolutions.
+
+
+[ Reference >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`136 2 136 15`
+#!source
+	__slots__ = ()
+
+[ Reference >> fields ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`138 2 145 10`
+#!source
+	fields = (
+		'protocol',
+		'address',
+		'port',
+		'service',
+	)
+		@property
+
+[ Reference >> protocol ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (source/area)`146 2 152 10`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+Resolution protocol to use to extract endpoints from (factor-local/property)&<#Reference.address[address]>. Usually, `'internet-names'`.
+
+
+[ Reference >> address ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (source/area)`153 2 159 10`
+		- (type/syntax)`object`
+		- (type/invalid/unknown)&<#object>
+		
+The unencoded domain name.
+
+
+[ Reference >> port ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (source/area)`160 2 166 10`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+The resolved or overridden port for the service.
+
+
+[ Reference >> service ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (source/area)`167 2 172 16`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+The actual service name being referred to.
+Used by resolvers that support service name resolution.
+
+
+[ Reference >> __str__ ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`174 2 179 79`
+(signature)`__str__(self)`
+
+Formatted reference for canonical printing.
+Return "<service>:[<protocol>]<name>:<port>".
+
+
+[ Reference >> __repr__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`181 2 187 13`
+(signature)`__repr__(self)`
+
+
+[ Reference >> from_domain ]
+! CONTROL:
+	/type/
+		classmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`188 2 192 55`
+(signature)`from_domain(Class, name, service, port)`
+
+
+[ realize ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`194 1 225 16`
+		- (type/syntax)`typing.Union[Reference, Endpoint]`
+		
+(signature)`realize(struct, scheme, host, port)`
+
+Construct an (factor-local/class)&<#Endpoint[Endpoint]> or (factor-local/class)&<#Reference[Reference]> from (factor-local/parameter)&<#realize.Parameters.struct[struct]>.
+
+#!syntax/python
+	Usual case:
+	from fault.internet import ri
+	target = host.realize(ri.parse(url))

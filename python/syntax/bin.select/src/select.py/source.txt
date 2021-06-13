@@ -1,0 +1,69 @@
+"""
+# Collect the address ranges supplied to standard input and emit the slices of the syntax document
+# given as the first argument to the command.
+"""
+import sys
+
+from ...system import process
+from ...system import files
+
+from ..types import Area
+
+# Teal
+delimit_start = '\x1b[38;5;23m'
+delimit_stop = '\x1b[0m'
+
+def highlight(context, lines, startl, startc, stopl, stopc):
+	startl -= 1
+	if stopc == 0:
+		stopc = len(lines[stopl-2]) + 1
+		stopl -= 1
+
+	revealed = lines[startl:stopl]
+
+	l = revealed[0]
+	start_record = l
+	l = revealed[0] = delimit_start.join((l[0:startc-1], l[startc-1:]))
+
+	# Probably bad, but the implementation was obvious so go with it for now.
+	stopi = stopl - 1
+	if stopi == startl:
+		# Compensate for prior insertion. Inherit `l` from prior manipulation.
+		stopc += len(delimit_start)
+		stop_record = start_record
+	else:
+		l = stop_record = revealed[-1]
+
+	revealed[-1] = delimit_stop.join((l[0:stopc-1], l[stopc-1:]))
+
+	context = '' if not context else ': '+context
+	if startl == stopl-1:
+		print('Line %d[%d-%d]%s'%(startl+1, startc, stopc, context))
+		print(revealed[0]+'\n')
+	else:
+		print('Lines %d[%d-%d] %d[%d-%d]%s'%(startl+1, startc, len(lines[startl]), stopl, 1, stopc, context))
+		initial = revealed[0]+'\n'+delimit_start
+		print(initial + (('\n'+delimit_start).join(revealed[1:])))
+		print()
+
+def main(inv:process.Invocation) -> process.Exit:
+	filepath, = inv.args # file path
+	src = files.Path.from_path(filepath)
+
+	# Parse slices.
+	units = sys.stdin.readlines()
+	areas = [
+		(Area.from_string(area), context)
+		for (area, context) in (
+			(line.split('\t', 1)+[None])[:2] for line in units
+		)
+	]
+
+	document = src.load(mode='r').split('\n')
+	for area, context in areas:
+		highlight(context, document, *area[0], *area[1])
+
+	return inv.exit(0)
+
+if __name__ == '__main__':
+	process.control(main, process.Invocation.system())

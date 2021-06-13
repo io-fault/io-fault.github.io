@@ -1,0 +1,36 @@
+"""
+# Definition for system context interface.
+"""
+import abc
+import types
+import typing
+import collections
+
+class Interrupt(BaseException, metaclass=abc.ABCMeta):
+	"""
+	# Interface describing an identifying feature of interrupt exceptions
+	# signalling the intent of the exception to clear the stack.
+	"""
+
+	@property
+	@abc.abstractmethod
+	def __kill__(self) -> int:
+		"""
+		# When present on the exception and set to a positive number,
+		# the exception should be treated in a manner similar to &KeyboardInterrupt.
+		"""
+
+class Option(types.ModuleType, metaclass=abc.ABCMeta):
+	"""
+	# Option module used to initialize Process Global State.
+
+	# Generally, any module with an &activate method can be perceived as an Option Module.
+	"""
+
+	@abc.abstractmethod
+	def activate(self):
+		"""
+		# Perform operations to setup Process Global State that is relevant to
+		# the containing module.
+		"""
+		pass

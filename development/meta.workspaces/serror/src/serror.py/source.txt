@@ -1,0 +1,4 @@
+# invalid
+
+def dbz(:
+	return 1 / 0

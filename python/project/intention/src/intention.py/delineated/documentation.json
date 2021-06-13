@@ -1,0 +1,1 @@
+[["Common intention data and option parser."], ["Recognize intention flags from the given list of options.", "", "Iterates over &options and the selects intersecting intentions from &codes."]]

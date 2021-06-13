@@ -1,0 +1,34 @@
+"""
+# fault.console based shell support and initialization.
+"""
+import sys
+import signal
+
+def foreground():
+	"""
+	# Foreground management controller for main thead.
+
+	# For &.system based processes, it is common to spawn
+	# threads to perform and manage work while the main thread is
+	# managed with &..system.library.protect. In the case of an interactive
+	# shell, the foreground needs special attention in order to respond
+	# to job suspension events. &foreground provides the necessary mechanics
+	# for signalling foreground completion to an &..io based shell.
+	"""
+	pass
+
+def initialize():
+	"""
+	# Initialize the process for use as a shell.
+	"""
+	global signal
+	intsh = sys.stdin.isatty()
+
+	# Ignore job control signals entirely.
+	signal.signal(signal.SIGINT, signal.SIG_IGN)
+	signal.signal(signal.SIGQUIT, signal.SIG_IGN)
+	signal.signal(signal.SIGTSTP, signal.SIG_IGN)
+	signal.signal(signal.SIGTTIN, signal.SIG_IGN)
+	signal.signal(signal.SIGTTOU, signal.SIG_IGN)
+	signal.signal(signal.SIGCHLD, signal.SIG_IGN)
+

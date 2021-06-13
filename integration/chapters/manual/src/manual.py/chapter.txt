@@ -1,0 +1,612 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 567 39`
+mdoc rendering for text element trees.
+
+
+[ sys ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`4 1 4 10`
+
+[ typing ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`5 1 5 13`
+
+[ itertools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`6 1 6 16`
+
+[ collections ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`7 1 7 18`
+
+[ tools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`9 1 9 31`
+
+[ comethod ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`10 1 10 34`
+
+[ nodes ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`11 1 11 28`
+
+[ files ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`12 1 12 30`
+
+[ get_properties ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`14 1 14 84`
+
+[ interpret_property_fragment ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`14 1 14 84`
+
+[ interpret_properties ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`14 1 14 84`
+
+[ prepare ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`15 1 15 35`
+
+[ formlink ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`15 1 15 35`
+
+[ escape_characters ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`17 1 22 1`
+#!source
+	escape_characters = {
+		"'": "\\[aq]",
+		"`": "\\*(ga",
+		'"': "\\*q",
+		"\\": "\\[char92]",
+	}
+
+[ escape ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`24 1 38 48`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+(signature)`escape(string, table, quote)`
+
+Escape text for use as macro arguments.
+
+
+[ _form ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`40 1 41 24`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+(signature)`_form(*fields)`
+
+
+[ literal_casts ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`43 1 66 1`
+#!source
+	literal_casts = {
+		'default': '.Ql',
+		'library': '.Lb',
+		'include': '.In',
+		'literal': '.Li',
+		'environ': '.Ev',
+		'errno': '.Er',
+		'internal-command': '.Ic',
+		'memory-address': '.Ad',
+		'path': '.Pa',
+		'function': '.Fn',
+		'function-type': '.Ft',
+		'function-argument': '.Fa',
+		'variable-type': '.Vt',
+		'variable': '.Va',
+		'const': '.Dv',
+		'option-flag': '.Fl',
+		'option-argument': '.Ar',
+		'optional': '.Op',
+		'author': '.An',
+		'tradename': '.Tn',
+		'standard': '.St',
+		'mdoc-comment': '.\\"',
+	}
+
+[ trim_option_flag ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`68 1 86 24`
+(signature)`trim_option_flag(opt)`
+
+Eliminate redundant slugs for mdoc macros and identify join.
+
+
+[ Render ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (source/area)`88 1 430 60`
+! INHERIT:
+	- (source/area)`88 14 88 28`
+	- (type/syntax)`comethod.object`
+	- (type/remote/factor-element)&<http://fault.io/python/context/comethod#object[fault.context.comethod.object]>
+	
+Render an HTML document for the configured text document.
+
+
+[ Render >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`93 2 103 20`
+(signature)`__init__(self, output, context, prefix, index, input, relation)`
+
+
+[ Render >> default_resolver ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`105 2 106 51`
+(signature)`default_resolver(self, capacity)`
+
+
+[ Render >> document ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`108 2 131 53`
+(signature)`document(self, type, identifier, resolver)`
+
+Render the manual document from the given chapter.
+
+
+[ Render >> root ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`133 2 153 29`
+(signature)`root(self, resolver, nodes, attr)`
+
+
+[ Render >> name_section ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`154 2 168 41`
+(signature)`name_section(self, resolver, nseq, attr)`
+
+
+[ Render >> command_synopsis_section ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`169 2 201 44`
+(signature)`command_synopsis_section(self, resolver, nseq, attr)`
+
+
+[ Render >> function_synopsis_section ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`202 2 222 21`
+(signature)`function_synopsis_section(self, resolver, nseq, attr)`
+
+
+[ Render >> subsection ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`223 2 228 32`
+(signature)`subsection(self, resolver, nodes, attr)`
+
+
+[ Render >> semantic_section ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`229 2 231 47`
+(signature)`semantic_section(self, resolver, nodes, attr)`
+
+
+[ Render >> switch ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`233 2 242 20`
+(signature)`switch(self, resolver, nodes, attr)`
+
+Perform the transformation for the given node.
+
+
+[ Render >> code_block ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`243 2 256 23`
+(signature)`code_block(self, resolver, nodes, attr)`
+
+
+[ Render >> normal_paragraph ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`257 2 261 58`
+(signature)`normal_paragraph(self, resolver, nodes, attr)`
+
+
+[ Render >> sequencing ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`263 2 272 17`
+(signature)`sequencing(self, type, resolver, items, attr)`
+
+
+[ Render >> unordered ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`273 2 276 22`
+(signature)`unordered(self, resolver, items, attr)`
+
+
+[ Render >> ordered ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`277 2 280 28`
+(signature)`ordered(self, resolver, items, attr)`
+
+
+[ Render >> paragraph_key ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`281 2 283 53`
+(signature)`paragraph_key(self, resolver, items, attr)`
+
+
+[ Render >> format_option_arguments ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`285 2 294 36`
+(signature)`format_option_arguments(self, arglist)`
+
+
+[ Render >> options_record ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`295 2 326 39`
+(signature)`options_record(self, resolver, items, attr)`
+
+Format the (id)`option-case` element substituted by (factor-local/function)&<#join_synopsis_details[join_synopsis_details]>.
+
+
+[ Render >> parameter_record ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`327 2 336 24`
+(signature)`parameter_record(self, resolver, items, attr)`
+
+Format the (id)`parameter-case` element substituted by (factor-local/function)&<#join_synopsis_details[join_synopsis_details]>.
+
+
+[ Render >> mapping ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`337 2 350 24`
+(signature)`mapping(self, resolver, items, attr)`
+
+
+[ Render >> block_admonition ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`351 2 367 34`
+(signature)`block_admonition(self, resolver, content, attr)`
+
+
+[ Render >> reference_section ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`368 2 371 36`
+(signature)`reference_section(self, resolver, context, text, *quals)`
+
+
+[ Render >> reference_ambiguous ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`372 2 381 36`
+(signature)`reference_ambiguous(self, resolver, context, text, *quals)`
+
+
+[ Render >> reference_hyperlink ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`382 2 387 28`
+(signature)`reference_hyperlink(self, resolver, context, text, *quals, title)`
+
+
+[ Render >> normal_text ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`388 2 391 32`
+(signature)`normal_text(self, resolver, context, text, *quals)`
+
+
+[ Render >> line_break ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`392 2 398 30`
+(signature)`line_break(self, resolver, context, text, *quals)`
+
+
+[ Render >> emphasized_text ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`399 2 409 37`
+(signature)`emphasized_text(self, resolver, context, text, level)`
+
+
+[ Render >> inline_literal ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`410 2 416 52`
+(signature)`inline_literal(self, resolver, context, text, *quals)`
+
+
+[ Render >> paragraph_content ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`418 2 419 75`
+(signature)`paragraph_content(self, resolver, content, attr)`
+
+
+[ Render >> paragraph ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`421 2 430 60`
+(signature)`paragraph(self, resolver, para, attr)`
+
+
+[ split_option_flags ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`432 1 448 20`
+(signature)`split_option_flags(p)`
+
+Retrieve the reference and any leading option fields.
+
+
+[ _pararefs ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`450 1 454 9`
+(signature)`_pararefs(n)`
+
+
+[ recognize_synopsis_options ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`456 1 471 2`
+(signature)`recognize_synopsis_options(section)`
+
+
+[ join_synopsis_details ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`473 1 560 16`
+(signature)`join_synopsis_details(context, index, synsect)`
+
+
+[ transform ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`562 1 568 38`
+(signature)`transform(prefix, chapter, identifier, type)`
+

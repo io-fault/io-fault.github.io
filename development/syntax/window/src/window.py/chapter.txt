@@ -1,0 +1,133 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 64 5`
+Implementations for Window event endpoints.
+
+
+[ delete_full ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`5 1 8 4`
+(signature)`delete_full(window)`
+
+???
+
+
+[ delete_current ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`10 1 13 4`
+(signature)`delete_current(window)`
+
+Close the refraction referenced by the current pane.
+
+
+[ delete_backward ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`15 1 18 4`
+(signature)`delete_backward(window)`
+
+Close the refraction referenced by the current pane.
+
+
+[ open_after ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`20 1 25 5`
+(signature)`open_after(window)`
+
+Split the pane vertically with a command refraction
+connected to the new area below the current pane.
+
+
+[ open_before ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`27 1 32 5`
+(signature)`open_before(window)`
+
+Split the pane vertically with a command refraction
+connected to the new area above the current pane.
+
+
+[ split ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`34 1 39 4`
+(signature)`split(window)`
+
+(default binding: 'n')
+Fork the pane creating a new refraction connected to
+the same document. The targeted pane will be split in half.
+
+
+[ join ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`41 1 45 4`
+(signature)`join(window)`
+
+Collapse the current pane expanding the area of the pane below.
+No-op if there's only one pane in the vertical.
+
+
+[ navigation_horizontal_forward ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`47 1 50 4`
+(signature)`navigation_horizontal_forward(window)`
+
+Select the pane right of the current pane.
+
+
+[ navigation_horizontal_backward ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`52 1 55 4`
+(signature)`navigation_horizontal_backward(window)`
+
+Select the pane left of the current pane.
+
+
+[ navigation_vertical_forward ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`57 1 60 4`
+(signature)`navigation_vertical_forward(window)`
+
+Select the pane below the current pane.
+
+
+[ navigation_vertical_backward ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`62 1 65 4`
+(signature)`navigation_vertical_backward(window)`
+
+Select the pane above the current pane.
+

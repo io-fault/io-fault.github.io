@@ -1,0 +1,99 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 36 0`
+Definition for system context interface.
+
+
+[ abc ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`4 1 4 10`
+
+[ types ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`5 1 5 12`
+
+[ typing ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`6 1 6 13`
+
+[ collections ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`7 1 7 18`
+
+[ Interrupt ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (source/area)`9 1 21 5`
+! INHERIT:
+	- (source/area)`9 17 9 29`
+	- (type/syntax)`BaseException`
+	- (type/invalid/unknown)&<#BaseException>
+	
+Interface describing an identifying feature of interrupt exceptions
+signalling the intent of the exception to clear the stack.
+
+
+[ Interrupt >> __kill__ ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (source/area)`17 2 21 5`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+When present on the exception and set to a positive number,
+the exception should be treated in a manner similar to (invalid/unknown)&<#KeyboardInterrupt>.
+
+
+[ Option ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (source/area)`23 1 36 6`
+! INHERIT:
+	- (source/area)`23 14 23 29`
+	- (type/syntax)`types.ModuleType`
+	- (type/none/invalid)&<http://fault.io/dev/null[types.ModuleType]>
+	
+Option module used to initialize Process Global State.
+
+Generally, any module with an (factor-local/method)&<#Option.activate[activate]> method can be perceived as an Option Module.
+
+
+[ Option >> activate ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`31 2 36 6`
+(signature)`activate(self)`
+
+Perform operations to setup Process Global State that is relevant to
+the containing module.
+
