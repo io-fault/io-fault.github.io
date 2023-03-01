@@ -38,7 +38,7 @@ settings, executable path, and command arguments.
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
-(signature)`serialize(triple, limit)`
+(signature)`serialize(triple)`
 
 Serialize the environment, execution path, and command arguments into a string.
 

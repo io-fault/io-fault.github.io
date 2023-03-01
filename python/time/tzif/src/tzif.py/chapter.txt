@@ -324,7 +324,7 @@ Given the parse fields from parse(), make a more accessible structure.
 		- `undocumented`
 	/element/
 		- (source/area)`209 1 210 34`
-(signature)`system_timezone_file(relativepath, tzdir, _join)`
+(signature)`system_timezone_file(relativepath)`
 
 
 [ get_timezone_data ]
@@ -344,7 +344,7 @@ Get the structured timezone data out of the specified file.
 		function
 	/element/
 		- (source/area)`222 1 234 76`
-(signature)`abbreviations(tzdir, _join, bytes, bool, int)`
+(signature)`abbreviations(tzdir)`
 
 Yield all abbreviations in the TZif files in the tzdir(/usr/share/zoneinfo).
 
@@ -355,7 +355,7 @@ Yield all abbreviations in the TZif files in the tzdir(/usr/share/zoneinfo).
 		function
 	/element/
 		- (source/area)`236 1 255 10`
-(signature)`abbreviation_map(tzdir)`
+(signature)`abbreviation_map()`
 
 Generate and return a mapping of zone abbreviations to their particular offsets.
 

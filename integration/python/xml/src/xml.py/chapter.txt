@@ -291,7 +291,7 @@ and the project module.
 		method
 	/element/
 		- (source/area)`108 2 125 36`
-(signature)`is_class_method(self, obj, getfullargspec, checks)`
+(signature)`is_class_method(self, obj)`
 
 Determine if the given object is a class method.
 
@@ -302,7 +302,7 @@ Determine if the given object is a class method.
 		method
 	/element/
 		- (source/area)`127 2 137 36`
-(signature)`is_class_property(self, obj, checks)`
+(signature)`is_class_property(self, obj)`
 
 Determine if the given object is a property.
 Get-Set Descriptors are also identified as properties.
@@ -325,7 +325,7 @@ Overrideable interface to (none/invalid)&<http://fault.io/dev/null[inspect.ismod
 		method
 	/element/
 		- (source/area)`145 2 149 59`
-(signature)`is_module_class(self, module, obj, isclass)`
+(signature)`is_module_class(self, module, obj)`
 
 The given object is a plainly defined class that belongs to the module.
 
@@ -336,7 +336,7 @@ The given object is a plainly defined class that belongs to the module.
 		method
 	/element/
 		- (source/area)`151 2 160 69`
-(signature)`is_module_function(self, module, obj, isroutine)`
+(signature)`is_module_function(self, module, obj)`
 
 The given object is a plainly defined function that belongs to the module.
 
@@ -347,7 +347,7 @@ The given object is a plainly defined function that belongs to the module.
 		method
 	/element/
 		- (source/area)`162 2 185 27`
-(signature)`docstr(self, obj, getattr)`
+(signature)`docstr(self, obj)`
 
 Variant of (none/invalid)&<http://fault.io/dev/null[inspect.getdoc]> that favors tab-indentations.
 
@@ -358,7 +358,7 @@ Variant of (none/invalid)&<http://fault.io/dev/null[inspect.getdoc]> that favors
 		method
 	/element/
 		- (source/area)`208 2 218 25`
-(signature)`addressable(self, obj, getmodule)`
+(signature)`addressable(self, obj)`
 
 Whether the object is independently addressable.
 Specifically, it is a module or inspect.getmodule() not return None
@@ -373,12 +373,12 @@ The last condition is used to prevent broken links.
 		method
 	/element/
 		- (source/area)`219 2 226 13`
-(signature)`canonical(self, name, Import)`
+(signature)`canonical(self, name)`
 
 Given an arbitrary module name, rewrite it to use the canonical
 name defined by the package set (package of Python packages).
 
-If there is no canonical package name, return (factor-local/parameter)&<#Context.canonical.Parameters.name[name]> exactly.
+If there is no canonical package name, return (invalid/unknown)&<#name> exactly.
 
 
 [ Context >> address ]
@@ -387,7 +387,7 @@ If there is no canonical package name, return (factor-local/parameter)&<#Context
 		method
 	/element/
 		- (source/area)`228 2 242 13`
-(signature)`address(self, obj, getmodule)`
+(signature)`address(self, obj)`
 
 Return the address of the given object; (invalid/unknown)&<#None> if unknown.
 
@@ -410,7 +410,7 @@ site-packages (distutils), or a Python builtin.
 		method
 	/element/
 		- (source/area)`264 2 288 51`
-(signature)`project(self, module, _get_route)`
+(signature)`project(self, module)`
 
 Return the project information about a particular module.
 
@@ -448,7 +448,7 @@ module relative to the floor.
 		- `undocumented`
 	/element/
 		- (source/area)`302 2 313 4`
-(signature)`d_signature_arguments(self, signature, km)`
+(signature)`d_signature_arguments(self, signature)`
 
 
 [ Context >> d_call_signature ]
@@ -459,7 +459,7 @@ module relative to the floor.
 		- `undocumented`
 	/element/
 		- (source/area)`315 2 325 45`
-(signature)`d_call_signature(self, obj, root)`
+(signature)`d_call_signature(self, obj)`
 
 
 [ Context >> d_type ]
@@ -514,7 +514,7 @@ module relative to the floor.
 		- `undocumented`
 	/element/
 		- (source/area)`375 2 386 51`
-(signature)`d_function(self, method, qname, ignored)`
+(signature)`d_function(self, method, qname)`
 
 
 [ Context >> d_class_content ]
@@ -525,7 +525,7 @@ module relative to the floor.
 		- `undocumented`
 	/element/
 		- (source/area)`388 2 491 5`
-(signature)`d_class_content(self, module, obj, name, *path, chain)`
+(signature)`d_class_content(self, module, obj, name, *path)`
 
 
 [ Context >> d_class ]
@@ -547,7 +547,7 @@ module relative to the floor.
 		- `undocumented`
 	/element/
 		- (source/area)`502 2 517 4`
-(signature)`d_context(self, package, project, getattr)`
+(signature)`d_context(self, package, project)`
 
 
 [ Context >> d_module ]
@@ -558,7 +558,7 @@ module relative to the floor.
 		- `undocumented`
 	/element/
 		- (source/area)`519 2 593 5`
-(signature)`d_module(self, factor_type, route, module, compressed)`
+(signature)`d_module(self, factor_type, route, module)`
 
 
 [ Context >> d_submodules ]
@@ -569,7 +569,7 @@ module relative to the floor.
 		- `undocumented`
 	/element/
 		- (source/area)`595 2 640 87`
-(signature)`d_submodules(self, route, module, element)`
+(signature)`d_submodules(self, route, module)`
 
 
 [ Context >> emit ]
@@ -589,7 +589,7 @@ module relative to the floor.
 		method
 	/element/
 		- (source/area)`651 2 721 3`
-(signature)`serialize(self, module, metrics)`
+(signature)`serialize(self, module)`
 
 Construct an interator emitting an XML Fragments document.
 

@@ -138,7 +138,7 @@ available under (project-local/unknown)&<system.factors.context>.
 Given a marshalled bytecode path and source file, load or compile whichever
 resource is available prioritizing the compiled form.
 
-(factor-local/parameter)&<#load_code.Parameters.name[name]> is ignored but required in order to allow overrides to use it
+(invalid/unknown)&<#name> is ignored but required in order to allow overrides to use it
 as a key instead of the file paths.
 
 
@@ -150,7 +150,7 @@ as a key instead of the file paths.
 		- (source/area)`70 1 85 9`
 (signature)`install_packages(rename, modules, bytecode, path, root, package_list)`
 
-Allocate new package module instances and assign them into (factor-local/parameter)&<#install_packages.Parameters.modules[modules]>.
+Allocate new package module instances and assign them into (invalid/unknown)&<#modules>.
 
 
 [ install_modules ]
@@ -161,7 +161,7 @@ Allocate new package module instances and assign them into (factor-local/paramet
 		- (source/area)`87 1 102 9`
 (signature)`install_modules(rename, modules, bytecode, path, root, module_list)`
 
-Allocate new module instances and assign them into (factor-local/parameter)&<#install_modules.Parameters.modules[modules]>.
+Allocate new module instances and assign them into (invalid/unknown)&<#modules>.
 
 
 [ install_operations ]
@@ -184,9 +184,9 @@ Allocate new module instances and assign them into (factor-local/parameter)&<#in
 		function
 	/element/
 		- (source/area)`109 1 114 71`
-(signature)`install(modules, bytecode, path, root, Rename)`
+(signature)`install(modules, bytecode, path, root)`
 
-Install the bootstrap factors into (factor-local/parameter)&<#install.Parameters.modules[modules]>. Normally, (none/invalid)&<http://fault.io/dev/null[sys.modules]>.
+Install the bootstrap factors into (invalid/unknown)&<#modules>. Normally, (none/invalid)&<http://fault.io/dev/null[sys.modules]>.
 
 
 [ finish ]
@@ -195,7 +195,7 @@ Install the bootstrap factors into (factor-local/parameter)&<#install.Parameters
 		function
 	/element/
 		- (source/area)`116 1 129 43`
-(signature)`finish(factors, finder, modules, Rename)`
+(signature)`finish(factors, finder, modules)`
 
 Given an activated (project-local/project-factor)&<fault.system/factors[fault.system.factors]> module, assign specs and loaders to the previously
 bootstrapped modules and to the factors module itself.
@@ -207,7 +207,7 @@ bootstrapped modules and to the factors module itself.
 		function
 	/element/
 		- (source/area)`131 1 149 15`
-(signature)`integrate(faultpath, faultname, faultform, integrals, system, python, arch, form, *products, modules)`
+(signature)`integrate(faultpath, faultname, faultform, integrals, system, python, arch, form, *products)`
 
 Integrate the factor environment into Python's import system.
 

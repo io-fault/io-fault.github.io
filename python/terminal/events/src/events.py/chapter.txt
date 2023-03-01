@@ -127,7 +127,7 @@ Terminal input events parser for common CSI, CSI-u, and ground characters.
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
-(signature)`ictlchr(ctlid, offset)`
+(signature)`ictlchr(ctlid)`
 
 Transform a `'control'`
 (project-local/factor-element)&<types#Event.identity[fault.terminal.types.Event.identity]> into its literal form.
@@ -148,7 +148,7 @@ event is qualified with some modifiers.
 		function
 	/element/
 		- (source/area)`39 1 61 24`
-(signature)`print(k, source, modifiers, Character, Space, ControlOffset)`
+(signature)`print(k)`
 
 Construct literal key press event.
 
@@ -161,7 +161,7 @@ Handles control and literals.
 		function
 	/element/
 		- (source/area)`62 1 68 23`
-(signature)`point(x, y, Type)`
+(signature)`point(x, y)`
 
 Build a (project-local/factor-element)&<types#Point[fault.terminal.types.Point]> for describing mount events.
 
@@ -174,7 +174,7 @@ Build a (project-local/factor-element)&<types#Point[fault.terminal.types.Point]>
 		- `undocumented`
 	/element/
 		- (source/area)`69 1 76 23`
-(signature)`interpret_modifiers(packed, Create)`
+(signature)`interpret_modifiers(packed)`
 
 
 [ interpret_key_modifiers ]
@@ -185,7 +185,7 @@ Build a (project-local/factor-element)&<types#Point[fault.terminal.types.Point]>
 		- `undocumented`
 	/element/
 		- (source/area)`77 1 80 24`
-(signature)`interpret_key_modifiers(packed, Create)`
+(signature)`interpret_key_modifiers(packed)`
 
 
 [ mouse ]
@@ -206,7 +206,7 @@ Construct a raw mouse event from the given string.
 		function
 	/element/
 		- (source/area)`123 1 140 13`
-(signature)`im_test(char, xstart, xstop)`
+(signature)`im_test(char)`
 
 Test if the character can be considered an intermediate.
 
@@ -222,7 +222,7 @@ to be used as intermediates.
 		- (source/area)`142 1 196 96`
 		- (type/syntax)`tuple[str, Sequence[int], str]`
 		
-(signature)`dispatch_sequence(region, separator)`
+(signature)`dispatch_sequence(region)`
 
 Parse, normally CSI, returning the intermediates, parameters, terminator,
 and any following text as a remainder.
@@ -346,7 +346,7 @@ Parse OSC returning the intermediates, parameters, and any following text.
 		- `undocumented`
 	/element/
 		- (source/area)`256 1 289 57`
-(signature)`sequence_map(escape, stype, action, region, remainder, Zero)`
+(signature)`sequence_map(escape, stype, action, region, remainder)`
 
 
 [ process_region_ground ]
@@ -357,7 +357,7 @@ Parse OSC returning the intermediates, parameters, and any following text.
 		- `undocumented`
 	/element/
 		- (source/area)`291 1 308 35`
-(signature)`process_region_ground(escape, region, Meta, Zero)`
+(signature)`process_region_ground(escape, region)`
 
 
 [ process_region_data ]
@@ -368,7 +368,7 @@ Parse OSC returning the intermediates, parameters, and any following text.
 		- `undocumented`
 	/element/
 		- (source/area)`310 1 332 49`
-(signature)`process_region_data(escape, region, Meta, Zero)`
+(signature)`process_region_data(escape, region)`
 
 
 [ Parser ]
@@ -379,7 +379,7 @@ Parse OSC returning the intermediates, parameters, and any following text.
 		- (source/area)`334 1 435 21`
 		- (type/syntax)`Generator[Sequence[Character], str, Sequence[Character]]`
 		
-(signature)`Parser(initial, escape, separator, Zero, Sequence, print, map)`
+(signature)`Parser()`
 
 VT100 CSI and Ground Parser constructing (project-local/factor-element)&<types#Event[fault.terminal.types.Event]> sequences from
 received (invalid/unknown)&<#str> instances.

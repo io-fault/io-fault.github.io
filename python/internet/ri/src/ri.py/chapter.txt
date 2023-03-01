@@ -91,7 +91,7 @@ is inspired by the URI and IRI standards:
 		- `undocumented`
 	/element/
 		- (source/area)`43 1 48 18`
-(signature)`_decode_parts(string, chr, int)`
+(signature)`_decode_parts(string)`
 
 
 [ decode_percent_escapes ]
@@ -102,7 +102,7 @@ is inspired by the URI and IRI standards:
 		- `undocumented`
 	/element/
 		- (source/area)`50 1 51 30`
-(signature)`decode_percent_escapes(string, parse)`
+(signature)`decode_percent_escapes(string)`
 
 
 [ strict ]
@@ -239,7 +239,7 @@ be created from the loader and (factor-local/function)&<#strict[strict]> should 
 		function
 	/element/
 		- (source/area)`136 1 238 58`
-(signature)`split(iri, _scheme_char_set)`
+(signature)`split(iri)`
 
 Split an IRI into its base components based on the markers:
 
@@ -286,7 +286,7 @@ Join a list of paths(strings) on "/" *after* escaping them.
 		function
 	/element/
 		- (source/area)`251 1 261 44`
-(signature)`split_path(p, fieldproc)`
+(signature)`split_path(p)`
 
 Return a list of unescaped strings split on "/".
 
@@ -322,7 +322,7 @@ Make an RI from a split RI(5-tuple)
 		function
 	/element/
 		- (source/area)`293 1 345 36`
-(signature)`split_netloc(netloc, fieldproc)`
+(signature)`split_netloc(netloc)`
 
 Split a net location into a 4-tuple, (user, password, host, port).
 
@@ -360,7 +360,7 @@ Create a netloc fragment from the given tuple(user,password,host,port).
 		- `undocumented`
 	/element/
 		- (source/area)`373 1 377 2`
-(signature)`parse_query(query, fieldproc)`
+(signature)`parse_query(query)`
 
 
 [ structure ]
@@ -369,7 +369,7 @@ Create a netloc fragment from the given tuple(user,password,host,port).
 		function
 	/element/
 		- (source/area)`379 1 419 9`
-(signature)`structure(t, fieldproc, tuple, list, map)`
+(signature)`structure(t)`
 
 Create a dictionary from a split RI(5-tuple).
 
@@ -405,11 +405,11 @@ Construct a RI tuple(5-tuple) from a dictionary object.
 		function
 	/element/
 		- (source/area)`472 1 480 52`
-(signature)`parse(iri, structure, split, fieldproc)`
+(signature)`parse(iri)`
 
 Parse an RI into a dictionary object. Synonym for `structure(split(x))`.
 
-Set (factor-local/parameter)&<#parse.Parameters.fieldproc[fieldproc]> to (invalid/unknown)&<#str> if the components' percent escapes should not be
+Set (invalid/unknown)&<#fieldproc> to (invalid/unknown)&<#str> if the components' percent escapes should not be
 decoded.
 
 
@@ -419,7 +419,7 @@ decoded.
 		function
 	/element/
 		- (source/area)`482 1 487 26`
-(signature)`serialize(x, join, construct)`
+(signature)`serialize(x)`
 
 Return an RI from a dictionary object. Synonym for `join(construct(x))`.
 
@@ -441,7 +441,7 @@ Return the HTTP Request-URI suitable for submission with an HTTP request.
 		function
 	/element/
 		- (source/area)`505 1 539 60`
-(signature)`context_tokens(scheme, type, user, password, host, port, ri_type_delimiters)`
+(signature)`context_tokens(scheme, type, user, password, host, port)`
 
 Format the authority fields of a Resource Indicator.
 
@@ -485,10 +485,10 @@ Format the authority fields of a Resource Indicator.
 		function
 	/element/
 		- (source/area)`618 1 632 53`
-(signature)`tokens(struct, list, map)`
+(signature)`tokens(struct)`
 
 Construct an iterator producing Resource Indicator Tokens.
 The items are pairs providing the type and the exact text
 to be used to reconstruct the Resource Indicator parsed
-into the given (factor-local/parameter)&<#tokens.Parameters.struct[struct]>.
+into the given (invalid/unknown)&<#struct>.
 

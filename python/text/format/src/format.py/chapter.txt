@@ -13,7 +13,7 @@ tokenizer enjoys an easily understood implementation, syntactic analysis
 [ Types ]
 
 /Tree/
-	The node tree produced by (factor-local/class)&<#Parser[Parser]> processing operations.
+	The element tree produced by (factor-local/class)&<#Parser[Parser]> processing operations.
 
 [ Engineering ]
 
@@ -99,7 +99,7 @@ implementation coherency should result in a rewrite.
 
 Given the contents of a section command or reference,
 return the depth and the section path specified within the
-given (factor-local/parameter)&<#parse_section_selector.Parameters.string[string]>.
+given (context-local/project-factor)&<fault.context/string[fault.context.string]>.
 
 
 [ Tokens ]
@@ -213,8 +213,8 @@ Configuration and state class for parsing kleptic text.
 		- (source/area)`103 2 113 10`
 (signature)`__init__(self)`
 
-Create a new parser instance initializing the (invalid/unknown)&<#stack> with the (factor-local/data)&<#Parser.default_commands[default_commands]>,
-and (factor-local/method)&<#Parser.process_paragraph_line[process_paragraph_line]> as the means to process lines.
+Create a new parser instance initializing the (invalid/unknown)&<#stack> with the (invalid/unknown)&<#default_commands>,
+and (invalid/unknown)&<#process_paragraph_line> as the means to process lines.
 
 
 [ Parser >> commands ]
@@ -232,10 +232,10 @@ Return the set of commands for the current working processor.
 		method
 	/element/
 		- (source/area)`120 2 165 10`
-(signature)`reference(self, string, punctuation, terminators)`
+(signature)`reference(self, string)`
 
 Split the string at the reference's boundary.
-The (factor-local/parameter)&<#Parser.reference.Parameters.string[string]> is presumed to be the start of a reference with
+The (context-local/project-factor)&<fault.context/string[fault.context.string]> is presumed to be the start of a reference with
 the indicator removed.
 
 #!text
@@ -281,7 +281,7 @@ Top of the (invalid/unknown)&<#stack>.
 		method
 	/element/
 		- (source/area)`179 2 192 14`
-(signature)`is_decoration(self, stripped, minimum, level, allowed)`
+(signature)`is_decoration(self, stripped)`
 
 Determine if the line is a decoration.
 
@@ -292,7 +292,7 @@ Determine if the line is a decoration.
 		staticmethod
 	/element/
 		- (source/area)`193 2 227 30`
-(signature)`emphasis(text, indicator, varsplit)`
+(signature)`emphasis(text)`
 
 Return a sequence of paragraph events noting the emphasis areas versus
 regular text.
@@ -304,7 +304,7 @@ regular text.
 		method
 	/element/
 		- (source/area)`229 2 256 24`
-(signature)`styles(self, string, edge, reference_indicator, chain)`
+(signature)`styles(self, string, edge)`
 
 Identify the styles and references for the given string.
 
@@ -324,7 +324,7 @@ Identify the styles and references for the given string.
 	- (type/syntax)`bool`
 	- (type/invalid/unknown)&<#bool>
 	
-	Whether the (factor-local/parameter)&<#Parser.styles.Parameters.string[string]> was on the edge of a literal.
+	Whether the (context-local/project-factor)&<fault.context/string[fault.context.string]> was on the edge of a literal.
 
 /(parameter)`reference_indicator`/
 	
@@ -341,7 +341,7 @@ Identify the styles and references for the given string.
 		method
 	/element/
 		- (source/area)`258 2 307 18`
-(signature)`structure_paragraph_line(self, line, chain)`
+(signature)`structure_paragraph_line(self, line)`
 
 Structure the paragraph line revealing emphasis,
 references, and inline literals.
@@ -400,7 +400,7 @@ Lines that begin with "!":
 		method
 	/element/
 		- (source/area)`372 2 381 61`
-(signature)`create_block(self, lineno, code, il, line, commands)`
+(signature)`create_block(self, lineno, code, il, line)`
 
 Code block of literal lines.
 
@@ -490,7 +490,7 @@ Tokenize the given source returning an iterator producing text events.
 		- `undocumented`
 	/element/
 		- (source/area)`497 2 803 7`
-(signature)`process(self, sections, root, node, indentation, iterator)`
+(signature)`process(self, sections, root, element, indentation, iterator)`
 
 
 [ Parser >> structure ]
@@ -504,7 +504,7 @@ Tokenize the given source returning an iterator producing text events.
 		
 (signature)`structure(self, lines)`
 
-Structure the given (factor-local/parameter)&<#Parser.structure.Parameters.lines[lines]> into an element tree.
+Structure the given (invalid/unknown)&<#lines> into an element tree.
 
 
 [ Parser >> parse ]
@@ -516,7 +516,7 @@ Structure the given (factor-local/parameter)&<#Parser.structure.Parameters.lines
 		- (type/syntax)`Tree`
 		- (type/factor-local/data)&<#Tree[Tree]>
 		
-(signature)`parse(self, source, newline)`
+(signature)`parse(self, source)`
 
 Parse the source source into a tree structure.
 

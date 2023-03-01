@@ -2,7 +2,7 @@
 	/type/
 		module
 	/element/
-		- (source/area)`1 1 1038 0`
+		- (source/area)`1 1 1078 0`
 Filesystem interfaces and data structures.
 
 Current working directory related interfaces are provided in (project-local/unknown)&<process>.
@@ -265,7 +265,7 @@ Exception raised by (factor-local/method)&<#Path.fs_require[Path.fs_require]> wh
 	- (type/invalid/unknown)&<#tuple>
 	
 File status interface providing symbolic names for the data packed in
-the system's status record, (factor-local/property)&<#Status.system[system]>.
+the system's status record, (invalid/unknown)&<#system>.
 
 [ > Engineering ]
 
@@ -442,7 +442,7 @@ Number of bytes contained by the file.
 For POSIX-type systems, designates the kind of (id)`device`:
 (id)`block` or (id)`character`.
 
-(invalid/unknown)&<#None> for status instances whose (factor-local/property)&<#Status.type[type]> is not (id)`device`.
+(invalid/unknown)&<#None> for status instances whose (invalid/unknown)&<#type> is not (id)`device`.
 
 
 [ Status >> created ]
@@ -570,7 +570,7 @@ Extended attributes are not checked.
 	/type/
 		class
 	/element/
-		- (source/area)`278 1 1036 14`
+		- (source/area)`278 1 1076 14`
 ! INHERIT:
 	- (source/area)`278 12 278 24`
 	- (type/syntax)`Selector[str]`
@@ -655,7 +655,7 @@ available for getting the working directory of the process.
 		- `undocumented`
 	/element/
 		- (source/area)`304 2 357 13`
-(signature)`fs_require(self, properties, type)`
+(signature)`fs_require(self)`
 
 
 [ Path >> from_path ]
@@ -664,7 +664,7 @@ available for getting the working directory of the process.
 		classmethod
 	/element/
 		- (source/area)`358 2 375 13`
-(signature)`from_path(Class, path, getcwd)`
+(signature)`from_path(Class, path)`
 
 Construct a (factor-local/class)&<#Path[Path]> instance from the given absolute or relative path
 provided for (invalid/unknown)&<#string>; if a relative path is specified, it will
@@ -682,14 +682,14 @@ directory is *not* the relevant context.
 		classmethod
 	/element/
 		- (source/area)`376 2 393 13`
-(signature)`from_relative(Class, context, path, chain)`
+(signature)`from_relative(Class, context, path)`
 
-Return a new Route pointing to the file referenced by (factor-local/parameter)&<#Path.from_relative.Parameters.path[path]>;
-where path is a path relative to the (factor-local/parameter)&<#Path.from_relative.Parameters.context[context]>
+Return a new Route pointing to the file referenced by (invalid/unknown)&<#path>;
+where path is a path relative to the (invalid/unknown)&<#context>
 (factor-local/class)&<#Path[Path]> instance.
 
 This function does *not* refer to the current working directory
-returned by (none/invalid)&<http://fault.io/dev/null[os.path.getcwd]>; if this is desired, (factor-local/classmethod)&<#Path.from_path[from_path]> is the
+returned by (none/invalid)&<http://fault.io/dev/null[os.path.getcwd]>; if this is desired, (invalid/unknown)&<#from_path> is the
 appropriate constructor to use.
 
 
@@ -701,7 +701,7 @@ appropriate constructor to use.
 		- `undocumented`
 	/element/
 		- (source/area)`394 2 397 13`
-(signature)`from_absolute(Class, path, tuple)`
+(signature)`from_absolute(Class, path)`
 
 
 [ Path >> from_absolute_parts ]
@@ -757,7 +757,7 @@ as distinct partitions.
 		classmethod
 	/element/
 		- (source/area)`432 2 453 15`
-(signature)`fs_tmpdir(Class, TemporaryDirectory)`
+(signature)`fs_tmpdir(Class)`
 
 Create a temporary directory at a new route using a context manager.
 
@@ -828,7 +828,7 @@ Returns the full filesystem path designated by the route.
 		- (type/invalid/unknown)&<#bytes>
 		
 Returns the full filesystem path designated by the route as a (invalid/unknown)&<#bytes> object
-returned by encoding the (factor-local/property)&<#Path.fullpath[fullpath]> in (none/invalid)&<http://fault.io/dev/null[sys.getfilesystemencoding]> with
+returned by encoding the (invalid/unknown)&<#fullpath> in (none/invalid)&<http://fault.io/dev/null[sys.getfilesystemencoding]> with
 `'surrogateescape'` as the error mode.
 
 
@@ -843,8 +843,8 @@ returned by encoding the (factor-local/property)&<#Path.fullpath[fullpath]> in (
 		
 (signature)`join(self, *parts)`
 
-Construct a string path using (factor-local/parameter)&<#Path.join.Parameters.self[self]> as the prefix and appending the path
-fragments from (factor-local/parameter)&<#Path.join.Parameters.parts[parts]>.
+Construct a string path using (invalid/unknown)&<#self> as the prefix and appending the path
+fragments from (invalid/unknown)&<#parts>.
 
 Segment instances should be given with an asterisk applied to the argument.
 
@@ -924,7 +924,7 @@ Returns a new (factor-local/class)&<#Path[Path]> Route.
 		- `undocumented`
 	/element/
 		- (source/area)`551 2 565 44`
-(signature)`__pos__(self, _chain)`
+(signature)`__pos__(self)`
 
 
 [ Path >> fs_status ]
@@ -938,7 +938,7 @@ Returns a new (factor-local/class)&<#Path[Path]> Route.
 		- (type/syntax)`Status`
 		- (type/factor-local/class)&<#Status[Status]>
 		
-(signature)`fs_status(self, stat)`
+(signature)`fs_status(self)`
 
 
 [ Path >> fs_type ]
@@ -950,7 +950,7 @@ Returns a new (factor-local/class)&<#Path[Path]> Route.
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
-(signature)`fs_type(self, ifmt, stat, type_map)`
+(signature)`fs_type(self)`
 
 The type of file the route points to. Transforms the result of an (none/invalid)&<http://fault.io/dev/null[os.path.stat]>
 call into a string describing the (python/attribute)`st_mode` field.
@@ -976,7 +976,7 @@ If no file is present at the path or a broken link is present, `'void'` will be 
 		- (type/syntax)`bool`
 		- (type/invalid/unknown)&<#bool>
 		
-(signature)`fs_executable(self, get_stat, mask)`
+(signature)`fs_executable(self)`
 
 Whether the file at the route is considered to be an executable.
 
@@ -991,7 +991,7 @@ Whether the file at the route is considered to be an executable.
 		- (source/area)`601 2 615 9`
 		- (type/syntax)`Iterable[Selector]`
 		
-(signature)`fs_follow_links(self, readlink, islink)`
+(signature)`fs_follow_links(self)`
 
 
 [ Path >> fs_iterfiles ]
@@ -1000,10 +1000,10 @@ Whether the file at the route is considered to be an executable.
 		method
 	/element/
 		- (source/area)`617 2 647 13`
-(signature)`fs_iterfiles(type, scandir)`
+(signature)`fs_iterfiles()`
 
 Generate (factor-local/class)&<#Path[Path]> instances identifying the files held by the directory, (invalid/unknown)&<#self>.
-By default, all file types are included, but if the (factor-local/parameter)&<#Path.fs_iterfiles.Parameters.type[type]> parameter is given,
+By default, all file types are included, but if the (invalid/unknown)&<#type> parameter is given,
 only files of that type are returned.
 
 If (invalid/unknown)&<#self> is not a directory or cannot be searched, an empty iterator is returned.
@@ -1015,9 +1015,9 @@ If (invalid/unknown)&<#self> is not a directory or cannot be searched, an empty 
 		method
 	/element/
 		- (source/area)`649 2 677 22`
-(signature)`fs_list(self, type, scandir)`
+(signature)`fs_list(self)`
 
-Retrieve the list of files contained by the directory referred to by (factor-local/parameter)&<#Path.fs_list.Parameters.self[self]>.
+Retrieve the list of files contained by the directory referred to by (invalid/unknown)&<#self>.
 Returns a pair, the sequence of directories and the sequence of data files.
 
 Sockets, pipes, devices, and other non-data files are not retained in the list.
@@ -1029,7 +1029,7 @@ Sockets, pipes, devices, and other non-data files are not retained in the list.
 		method
 	/element/
 		- (source/area)`679 2 700 18`
-(signature)`fs_index(self, type, Queue)`
+(signature)`fs_index(self)`
 
 Generate pairs of directories associated with their files.
 
@@ -1044,7 +1044,7 @@ Sockets, pipes, devices, broken links, and other non-data files are not retained
 		- `undocumented`
 	/element/
 		- (source/area)`702 2 780 17`
-(signature)`fs_snapshot(process, depth, limit, ifmt, Queue, scandir, lstat)`
+(signature)`fs_snapshot()`
 
 
 [ Path >> fs_since ]
@@ -1055,7 +1055,7 @@ Sockets, pipes, devices, broken links, and other non-data files are not retained
 		- (source/area)`782 2 817 52`
 		- (type/syntax)`Iterable[tuple[int, Selector]]`
 		
-(signature)`fs_since(self, since, traversed)`
+(signature)`fs_since(self, since)`
 
 Identify the set of files that have been modified
 since the given point in time.
@@ -1088,7 +1088,7 @@ The resulting iterable does not include directories.
 		- `undocumented`
 	/element/
 		- (source/area)`819 2 824 13`
-(signature)`fs_real(self, exists)`
+(signature)`fs_real(self)`
 
 
 [ Path >> exists ]
@@ -1100,7 +1100,7 @@ The resulting iterable does not include directories.
 		- (type/syntax)`bool`
 		- (type/invalid/unknown)&<#bool>
 		
-(signature)`exists(self, exists)`
+(signature)`exists(self)`
 
 Query the filesystem and return whether or not the file exists.
 
@@ -1113,9 +1113,9 @@ A Route to a symbolic link *will* return (invalid/unknown)&<#False> if the targe
 		method
 	/element/
 		- (source/area)`835 2 839 29`
-(signature)`fs_modified(self, utime)`
+(signature)`fs_modified(self)`
 
-Update the modification time of the file identified by (factor-local/parameter)&<#Path.fs_modified.Parameters.self[self]>.
+Update the modification time of the file identified by (invalid/unknown)&<#self>.
 
 
 [ Path >> fs_size ]
@@ -1127,7 +1127,7 @@ Update the modification time of the file identified by (factor-local/parameter)&
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
-(signature)`fs_size(self, stat)`
+(signature)`fs_size(self)`
 
 Return the size of the file as depicted by (none/invalid)&<http://fault.io/dev/null[os.path.stat]>.
 
@@ -1152,7 +1152,7 @@ Return the modification time of the file.
 		method
 	/element/
 		- (source/area)`854 2 859 62`
-(signature)`set_last_modified(self, time, utime)`
+(signature)`set_last_modified(self, time)`
 
 Set the modification time of the file identified by the (invalid/unknown)&<#Route>.
 
@@ -1166,7 +1166,7 @@ Set the modification time of the file identified by the (invalid/unknown)&<#Rout
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
-(signature)`get_text_content(self, encoding)`
+(signature)`get_text_content(self)`
 
 Retrieve the entire contents of the file as a (invalid/unknown)&<#str>.
 
@@ -1179,9 +1179,9 @@ Retrieve the entire contents of the file as a (invalid/unknown)&<#str>.
 		- (source/area)`868 2 873 18`
 		- (type/syntax)`None`
 		
-(signature)`set_text_content(self, string, encoding)`
+(signature)`set_text_content(self, string)`
 
-Modify the regular file identified by (factor-local/parameter)&<#Path.set_text_content.Parameters.self[self]> to contain the given (factor-local/parameter)&<#Path.set_text_content.Parameters.string[string]>.
+Modify the regular file identified by (invalid/unknown)&<#self> to contain the given (invalid/unknown)&<#string>.
 
 
 [ Path >> meta ]
@@ -1206,7 +1206,7 @@ Return file specific meta data.
 		- `undocumented`
 	/element/
 		- (source/area)`886 2 903 13`
-(signature)`fs_void(self, rmtree, remove)`
+(signature)`fs_void(self)`
 
 
 [ Path >> fs_replace ]
@@ -1217,7 +1217,29 @@ Return file specific meta data.
 		- `undocumented`
 	/element/
 		- (source/area)`905 2 914 13`
-(signature)`fs_replace(self, replacement, copytree, copyfile)`
+(signature)`fs_replace(self, replacement)`
+
+
+[ Path >> fs_linear ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`916 2 942 20`
+(signature)`fs_linear(self)`
+
+
+[ Path >> fs_reduce ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`944 2 954 13`
+(signature)`fs_reduce(self, discarded)`
 
 
 [ Path >> fs_link_relative ]
@@ -1227,8 +1249,8 @@ Return file specific meta data.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`916 2 929 13`
-(signature)`fs_link_relative(self, path, link)`
+		- (source/area)`956 2 969 13`
+(signature)`fs_link_relative(self, path)`
 
 
 [ Path >> fs_link_absolute ]
@@ -1238,8 +1260,8 @@ Return file specific meta data.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`931 2 942 13`
-(signature)`fs_link_absolute(self, path, link)`
+		- (source/area)`971 2 982 13`
+(signature)`fs_link_absolute(self, path)`
 
 
 [ Path >> fs_init ]
@@ -1247,15 +1269,15 @@ Return file specific meta data.
 	/type/
 		method
 	/element/
-		- (source/area)`944 2 974 13`
-(signature)`fs_init(self, data, mkdir, exists)`
+		- (source/area)`984 2 1014 13`
+(signature)`fs_init(self)`
 
-Create and initialize a data file at the route using the given (factor-local/parameter)&<#Path.fs_init.Parameters.data[data]>.
+Create and initialize a data file at the route using the given (invalid/unknown)&<#data>.
 
-If (factor-local/parameter)&<#Path.fs_init.Parameters.data[data]> is (invalid/unknown)&<#None>, no write operation will occur for pre-existing files.
-If (factor-local/parameter)&<#Path.fs_init.Parameters.data[data]> is not (invalid/unknown)&<#None>, the bytes will be written regardless.
+If (invalid/unknown)&<#data> is (invalid/unknown)&<#None>, no write operation will occur for pre-existing files.
+If (invalid/unknown)&<#data> is not (invalid/unknown)&<#None>, the bytes will be written regardless.
 
-Returns the route instance, (factor-local/parameter)&<#Path.fs_init.Parameters.self[self]>.
+Returns the route instance, (invalid/unknown)&<#self>.
 Leading directories will be created as needed.
 
 
@@ -1266,8 +1288,8 @@ Leading directories will be created as needed.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`976 2 987 13`
-(signature)`fs_alloc(self, mkdir)`
+		- (source/area)`1016 2 1027 13`
+(signature)`fs_alloc(self)`
 
 
 [ Path >> fs_mkdir ]
@@ -1277,8 +1299,8 @@ Leading directories will be created as needed.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`989 2 1007 27`
-(signature)`fs_mkdir(self, mkdir, exists)`
+		- (source/area)`1029 2 1047 27`
+(signature)`fs_mkdir(self)`
 
 
 [ Path >> fs_open ]
@@ -1286,7 +1308,7 @@ Leading directories will be created as needed.
 	/type/
 		method
 	/element/
-		- (source/area)`1008 2 1024 31`
+		- (source/area)`1048 2 1064 31`
 (signature)`fs_open(self, *args, **kw)`
 
 Open the file pointed to by the route.
@@ -1302,11 +1324,11 @@ leading up to the file don't exist, create the directories too.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`1026 2 1031 13`
+		- (source/area)`1066 2 1071 13`
 		- (type/syntax)`bytes`
 		- (type/invalid/unknown)&<#bytes>
 		
-(signature)`fs_load(self, mode)`
+(signature)`fs_load(self)`
 
 
 [ Path >> fs_store ]
@@ -1316,8 +1338,8 @@ leading up to the file don't exist, create the directories too.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`1033 2 1036 14`
-(signature)`fs_store(self, data, mode)`
+		- (source/area)`1073 2 1076 14`
+(signature)`fs_store(self, data)`
 
 
 [ root ]
@@ -1325,7 +1347,7 @@ leading up to the file don't exist, create the directories too.
 	/type/
 		data
 	/element/
-		- (source/area)`1038 1 1038 21`
+		- (source/area)`1078 1 1078 21`
 The (factor-local/class)&<#Path[Path]> to the root directory of the operating system.
 
 #!source

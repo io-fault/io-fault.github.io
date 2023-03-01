@@ -148,7 +148,7 @@ failures from unrelated Sectors can be communicated to callback.
 
 /callback/
 	The callable that is performed after the (invalid/unknown)&<#pending>
-	set has been emptied; defined by (factor-local/method)&<#Join.atexit[atexit]>.
+	set has been emptied; defined by (invalid/unknown)&<#atexit>.
 
 
 [ Join >> __slots__ ]
@@ -191,7 +191,7 @@ Connect the (factor-local/class)&<#Processor[Processor.atexit]> calls of the con
 		method
 	/element/
 		- (source/area)`70 2 75 41`
-(signature)`__iter__(self, iter)`
+(signature)`__iter__(self)`
 
 Return an iterator to the configured dependencies.
 
@@ -215,8 +215,8 @@ Get the dependency the given identifier.
 		- (source/area)`84 2 98 33`
 (signature)`exited(self, processor)`
 
-Record the exit of the given (factor-local/parameter)&<#Join.exited.Parameters.processor[processor]> and execute
-the (invalid/unknown)&<#callback> of the (factor-local/class)&<#Join[Join]> if the (factor-local/parameter)&<#Join.exited.Parameters.processor[processor]> is the last
+Record the exit of the given (invalid/unknown)&<#processor> and execute
+the (invalid/unknown)&<#callback> of the (factor-local/class)&<#Join[Join]> if the (invalid/unknown)&<#processor> is the last
 in the configured (invalid/unknown)&<#pending> set.
 
 
@@ -233,7 +233,7 @@ Assign the callback of the (factor-local/class)&<#Join[Join]>.
 If the (invalid/unknown)&<#pending> set is empty, the callback will be immediately executed,
 otherwise, overwrite the currently configured callback.
 
-The (factor-local/parameter)&<#Join.atexit.Parameters.callback[callback]> is executed with the (factor-local/class)&<#Join[Join]> instance as its sole parameter.
+The (invalid/unknown)&<#callback> is executed with the (factor-local/class)&<#Join[Join]> instance as its sole parameter.
 
 [ >> Parameters ]
 
@@ -298,7 +298,7 @@ an obstruction.
 
 /(parameter)`path`/
 	
-	The sequence of attributes to resolve relative to the (factor-local/parameter)&<#Condition.__init__.Parameters.focus[focus]>.
+	The sequence of attributes to resolve relative to the (invalid/unknown)&<#focus>.
 
 /(parameter)`parameter`/
 	
@@ -336,7 +336,7 @@ an obstruction.
 		- `undocumented`
 	/element/
 		- (source/area)`172 2 173 44`
-(signature)`attribute(self, ag)`
+(signature)`attribute(self)`
 
 
 [ Inexorable ]
@@ -511,7 +511,7 @@ process interrupts (unix.signal)`SIGINT`.
 		- `undocumented`
 	/element/
 		- (source/area)`238 2 239 35`
-(signature)`_set_sector_reference(self, obj, Ref)`
+(signature)`_set_sector_reference(self, obj)`
 
 
 [ Processor >> sector ]
@@ -718,9 +718,9 @@ overridden.
 		method
 	/element/
 		- (source/area)`349 2 359 13`
-(signature)`terminate(self, by)`
+(signature)`terminate(self)`
 
-Terminate the Processor using (factor-local/method)&<#Processor.interrupt[interrupt]> and exit.
+Terminate the Processor using (invalid/unknown)&<#interrupt> and exit.
 
 
 [ Processor >> interrupt ]
@@ -729,7 +729,7 @@ Terminate the Processor using (factor-local/method)&<#Processor.interrupt[interr
 		method
 	/element/
 		- (source/area)`361 2 373 6`
-(signature)`interrupt(self, context)`
+(signature)`interrupt(self)`
 
 Signal the Processor that the controlling Sector has been interrupted,
 and all processing of events should cease immediately.
@@ -747,7 +747,7 @@ may not have to perform any tasks at all.
 		method
 	/element/
 		- (source/area)`375 2 390 31`
-(signature)`fault(self, exception, association)`
+(signature)`fault(self, exception)`
 
 Note the given exception as an error on the (factor-local/class)&<#Processor[Processor]>.
 Exceptions identified as errors cause the (factor-local/class)&<#Processor[Processor]> to exit.
@@ -774,7 +774,7 @@ faulting Processor identified for subsequent scrutiny.
 		method
 	/element/
 		- (source/area)`398 2 404 41`
-(signature)`critical(self, task, partial, trap)`
+(signature)`critical(self, task)`
 
 Enqueue a task associated with the sector so that exceptions cause the sector to
 fault. This is the appropriate way for (factor-local/class)&<#Processor[Processor]> instances controlled by a sector
@@ -828,8 +828,8 @@ the groups and allow better runtime introspection.
 		- (source/area)`440 2 447 22`
 (signature)`substitute(self, processor)`
 
-Terminate the processor (factor-local/parameter)&<#Processor.substitute.Parameters.self[self]>, but reassign the exit hooks to be performed
-when the given (factor-local/parameter)&<#Processor.substitute.Parameters.processor[processor]> exits. (factor-local/parameter)&<#Processor.substitute.Parameters.processor[processor]> will be dispatched into the controlling
+Terminate the processor (invalid/unknown)&<#self>, but reassign the exit hooks to be performed
+when the given (invalid/unknown)&<#processor> exits. (invalid/unknown)&<#processor> will be dispatched into the controlling
 sector.
 
 
@@ -935,7 +935,7 @@ of entities (users) and their authorizing credentials.
 		- `undocumented`
 	/element/
 		- (source/area)`485 2 488 37`
-(signature)`__init__(self, *processors, Processors)`
+(signature)`__init__(self, *processors)`
 
 
 [ Sector >> actuate ]
@@ -944,7 +944,7 @@ of entities (users) and their authorizing credentials.
 		method
 	/element/
 		- (source/area)`490 2 514 18`
-(signature)`actuate(self, setattr, getattr, WR)`
+(signature)`actuate(self)`
 
 Actuate the Sector by actuating its processors.
 There is no guarantee to the order in which the controlled
@@ -953,7 +953,7 @@ processors are actuated.
 Exceptions that occur during actuation fault the Sector causing
 the *controlling sector* to exit. If faults should not cause
 the parent to be interrupted, they *must* be dispatched after
-(factor-local/parameter)&<#Sector.actuate.Parameters.self[self]> has been actuated.
+(invalid/unknown)&<#self> has been actuated.
 
 
 [ Sector >> _sector_terminated ]
@@ -975,7 +975,7 @@ the parent to be interrupted, they *must* be dispatched after
 		- `undocumented`
 	/element/
 		- (source/area)`518 2 531 13`
-(signature)`terminate(self, by)`
+(signature)`terminate(self)`
 
 
 [ Sector >> interrupt ]
@@ -984,7 +984,7 @@ the parent to be interrupted, they *must* be dispatched after
 		method
 	/element/
 		- (source/area)`533 2 552 33`
-(signature)`interrupt(self, by)`
+(signature)`interrupt(self)`
 
 Interrupt the Sector by interrupting all of the subprocessors.
 The order of interruption is random, and *should* be insignificant.
@@ -996,7 +996,7 @@ The order of interruption is random, and *should* be insignificant.
 		method
 	/element/
 		- (source/area)`554 2 571 27`
-(signature)`exited(self, processor, set)`
+(signature)`exited(self, processor)`
 
 Sector structure exit handler.
 
@@ -1010,9 +1010,9 @@ be contained within the Sector.
 		method
 	/element/
 		- (source/area)`573 2 589 18`
-(signature)`dispatch(self, processor, getattr, setattr, WR)`
+(signature)`dispatch(self, processor)`
 
-Dispatch the given (factor-local/parameter)&<#Sector.dispatch.Parameters.processor[processor]> inside the Sector.
+Dispatch the given (invalid/unknown)&<#processor> inside the Sector.
 
 Returns the given processor.
 
@@ -1034,7 +1034,7 @@ Returns the given processor.
 		method
 	/element/
 		- (source/area)`599 2 623 15`
-(signature)`reap(self, set)`
+(signature)`reap(self)`
 
 Empty the exit set and check for sector completion.
 
@@ -1120,7 +1120,7 @@ whereas `xact_` refers to operations that primary effect the
 		- (source/area)`674 2 683 33`
 (signature)`provide(self, identifier)`
 
-Export (factor-local/parameter)&<#Context.provide.Parameters.self[self]> as a named context inherited by all descending processors.
+Export (invalid/unknown)&<#self> as a named context inherited by all descending processors.
 
 
 [ Context >> xact_empty ]
@@ -1145,7 +1145,7 @@ Whether the Transaction has any processors aside from the Context.
 		- (source/area)`700 2 715 14`
 (signature)`xact_exit_if_empty(self)`
 
-Check for processors other than (factor-local/parameter)&<#Context.xact_exit_if_empty.Parameters.self[self]>, if there are none, exit the transaction.
+Check for processors other than (invalid/unknown)&<#self>, if there are none, exit the transaction.
 
 
 [ Context >> xact_contextstack ]
@@ -1158,8 +1158,8 @@ Check for processors other than (factor-local/parameter)&<#Context.xact_exit_if_
 		
 (signature)`xact_contextstack(self)`
 
-The complete context stack of the (factor-local/class)&<#Transaction[Transaction]> excluding (factor-local/parameter)&<#Context.xact_contextstack.Parameters.self[self]>.
-First entry is nearest to (factor-local/parameter)&<#Context.xact_contextstack.Parameters.self[self]>; last is furthest ascent.
+The complete context stack of the (factor-local/class)&<#Transaction[Transaction]> excluding (invalid/unknown)&<#self>.
+First entry is nearest to (invalid/unknown)&<#self>; last is furthest ascent.
 
 
 [ Context >> xact_subxacts ]
@@ -1179,7 +1179,7 @@ First entry is nearest to (factor-local/parameter)&<#Context.xact_contextstack.P
 		- (source/area)`735 2 741 13`
 (signature)`xact_dispatch(self, processor)`
 
-Dispatch the given (factor-local/parameter)&<#Context.xact_dispatch.Parameters.processor[processor]> into the (factor-local/class)&<#Transaction[Transaction]>.
+Dispatch the given (invalid/unknown)&<#processor> into the (factor-local/class)&<#Transaction[Transaction]>.
 
 
 [ Context >> xact_initialized ]
@@ -1202,7 +1202,7 @@ the proposed event set determined by actuation.
 		- (source/area)`750 2 754 6`
 (signature)`xact_exit(self, xact)`
 
-Subtransaction (factor-local/parameter)&<#Context.xact_exit.Parameters.xact[xact]> exited.
+Subtransaction (invalid/unknown)&<#xact> exited.
 
 
 [ Context >> xact_void ]
@@ -1213,7 +1213,7 @@ Subtransaction (factor-local/parameter)&<#Context.xact_exit.Parameters.xact[xact
 		- (source/area)`756 2 761 18`
 (signature)`xact_void(self, xact)`
 
-All subtransactions exited; (factor-local/parameter)&<#Context.xact_void.Parameters.xact[xact]> was final.
+All subtransactions exited; (invalid/unknown)&<#xact> was final.
 Defaults to termination of the context and transaction exit.
 
 
@@ -1277,7 +1277,7 @@ This is the appropriate way to instantiate (factor-local/class)&<#Transaction[Tr
 		- (source/area)`804 2 808 52`
 (signature)`isinstance(self, ContextClass)`
 
-Whether the Transaction's context, (invalid/unknown)&<#xact_context>, is an instance of the given (factor-local/parameter)&<#Transaction.isinstance.Parameters.ContextClass[ContextClass]>.
+Whether the Transaction's context, (invalid/unknown)&<#xact_context>, is an instance of the given (invalid/unknown)&<#ContextClass>.
 
 
 [ Transaction >> terminate ]
@@ -1382,7 +1382,7 @@ Transaction sequence created from an invocation.
 		- `undocumented`
 	/element/
 		- (source/area)`874 2 879 26`
-(signature)`__init__(self, invocation, identifier, Queue)`
+(signature)`__init__(self, invocation)`
 
 
 [ Executable >> actuate ]

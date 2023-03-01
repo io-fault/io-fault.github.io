@@ -192,7 +192,7 @@ The (factor-local/data)&<#mapping[mapping]> table provides the mapping to a term
 		function
 	/element/
 		- (source/area)`158 1 169 10`
-(signature)`select(char, tables)`
+(signature)`select(char)`
 
 Select the greek character or math symbol associated with
 the latin character.

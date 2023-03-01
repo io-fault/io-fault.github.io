@@ -227,7 +227,7 @@ type is considered to be within another:
 - `text/html;level=1 in text/html`
 - `text/html not in text/html;level=1`
 
-The (factor-local/classmethod)&<#Type.from_string[from_string]> classmethod is the common constructor.
+The (invalid/unknown)&<#from_string> classmethod is the common constructor.
 
 
 [ Type >> __slots__ ]
@@ -260,7 +260,7 @@ The (factor-local/classmethod)&<#Type.from_string[from_string]> classmethod is t
 		- `undocumented`
 	/element/
 		- (source/area)`171 2 183 10`
-(signature)`__bytes__(self, format)`
+(signature)`__bytes__(self)`
 
 
 [ Type >> cotype ]
@@ -286,7 +286,7 @@ The initial part of a MIME (media) type.
 		property
 	/element/
 		- (source/area)`199 2 205 10`
-Subtype; the specific form of the (factor-local/property)&<#Type.cotype[cotype]>.
+Subtype; the specific form of the (invalid/unknown)&<#cotype>.
 
 
 [ Type >> parameters ]
@@ -318,7 +318,7 @@ Whether the (factor-local/class)&<#Type[Type]> is a pattern and can match multip
 		- (source/area)`219 2 226 72`
 (signature)`push(self, subtype)`
 
-Return a new (factor-local/class)&<#Type[Type]> with the given (factor-local/parameter)&<#Type.push.Parameters.subtype[subtype]> appended to the instance's (project-local/unknown)&<subtype>.
+Return a new (factor-local/class)&<#Type[Type]> with the given (invalid/unknown)&<#subtype> appended to the instance's (project-local/unknown)&<subtype>.
 
 
 [ Type >> pop ]
@@ -411,7 +411,7 @@ highest precedence for each content type.
 		- (source/area)`292 2 322 13`
 (signature)`split(media_range)`
 
-Construct triples describing the (factor-local/parameter)&<#Range.split.Parameters.media_range[media_range]>.
+Construct triples describing the (invalid/unknown)&<#media_range>.
 
 
 [ Range >> from_string ]
@@ -431,9 +431,9 @@ Instantiate the Range from a string.
 		classmethod
 	/element/
 		- (source/area)`331 2 345 17`
-(signature)`from_bytes(Class, data, skey)`
+(signature)`from_bytes(Class, data)`
 
-Instantiate the Range from a bytes object; decoded and passed to (factor-local/classmethod)&<#Range.from_string[from_string]>.
+Instantiate the Range from a bytes object; decoded and passed to (invalid/unknown)&<#from_string>.
 
 
 [ Range >> quality ]

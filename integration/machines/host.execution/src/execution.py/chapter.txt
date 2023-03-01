@@ -92,5 +92,5 @@ Designate the priority of the architectures and their symbols.
 		- (source/area)`39 1 49 36`
 (signature)`initialize(target)`
 
-Initialize the (factor-local/parameter)&<#initialize.Parameters.target[target]> with the default host execution platform.
+Initialize the (invalid/unknown)&<#target> with the default host execution platform.
 

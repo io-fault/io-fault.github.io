@@ -42,7 +42,7 @@ The path to the device file.
 		
 (signature)`cells(text)`
 
-Calculate the number of character matrix cells needed to display the given (factor-local/parameter)&<#cells.Parameters.text[text]> string.
+Calculate the number of character matrix cells needed to display the given (invalid/unknown)&<#text> string.
 
 [ > Parameters ]
 
@@ -203,7 +203,7 @@ Store attribute retrieved using tcgetattr in the object.
 		- (source/area)`88 2 91 5`
 (signature)`restore(self)`
 
-Restore attribute using tcsetattr previously saved with (factor-local/method)&<#Device.record[record]>.
+Restore attribute using tcsetattr previously saved with (invalid/unknown)&<#record>.
 
 
 [ Device >> send_break ]
@@ -212,7 +212,7 @@ Restore attribute using tcsetattr previously saved with (factor-local/method)&<#
 		method
 	/element/
 		- (source/area)`93 2 96 5`
-(signature)`send_break(self, duration)`
+(signature)`send_break(self)`
 
 Send a break using tcsendbreak.
 

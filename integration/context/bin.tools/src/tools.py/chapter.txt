@@ -60,7 +60,7 @@ Executable factor index for (invalid/unknown)&<#fault.system.bin.tool> bindings.
 		- `undocumented`
 	/element/
 		- (source/area)`18 1 19 69`
-(signature)`activate(factor, element, interface)`
+(signature)`activate(factor, element)`
 
 
 [ main ]

@@ -82,7 +82,7 @@ Check integrations of internet.http and kernel.http
 		- `undocumented`
 	/element/
 		- (source/area)`17 1 44 50`
-(signature)`req(*headers, host, version, uri, method, body, ctype, chunks)`
+(signature)`req(*headers)`
 
 
 [ test_ranges ]

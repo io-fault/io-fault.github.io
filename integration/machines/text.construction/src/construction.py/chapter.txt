@@ -68,7 +68,7 @@ Host construction context initialization.
 		- `undocumented`
 	/element/
 		- (source/area)`14 1 23 2`
-(signature)`text(context, factor, name)`
+(signature)`text(context)`
 
 
 [ form_meta_type ]
@@ -101,7 +101,7 @@ Host construction context initialization.
 		- `undocumented`
 	/element/
 		- (source/area)`87 1 101 28`
-(signature)`mkvectors(context, route, name)`
+(signature)`mkvectors(context, route)`
 
 
 [ mkcc ]

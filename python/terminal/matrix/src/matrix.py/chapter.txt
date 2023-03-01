@@ -288,7 +288,7 @@ Currently unstable API. It was quickly ripped out of (factor-local/class)&<#Cont
 		- `undocumented`
 	/element/
 		- (source/area)`57 2 60 14`
-(signature)`select_foreground_16(code, offsets)`
+(signature)`select_foreground_16(code)`
 
 
 [ Type >> select_background_16 ]
@@ -299,7 +299,7 @@ Currently unstable API. It was quickly ripped out of (factor-local/class)&<#Cont
 		- `undocumented`
 	/element/
 		- (source/area)`61 2 62 38`
-(signature)`select_background_16(code, offsets)`
+(signature)`select_background_16(code)`
 
 
 [ Type >> select_foreground_256 ]
@@ -465,7 +465,7 @@ Operating System Command.
 		- (source/area)`119 2 125 56`
 (signature)`csi_filter_empty(self, terminator, *parts)`
 
-(factor-local/method)&<#Type.csi[csi]> variant that returns an empty string when (factor-local/parameter)&<#Type.csi_filter_empty.Parameters.parts[parts]> is empty.
+(invalid/unknown)&<#csi> variant that returns an empty string when (invalid/unknown)&<#parts> is empty.
 
 
 [ Type >> wm ]
@@ -543,7 +543,7 @@ Restore Private Mode values.
 (signature)`wm_title(self, title)`
 
 Instruct the emulator to use the given title for the window.
-The given (factor-local/parameter)&<#Type.wm_title.Parameters.title[title]> should be plain text and control characters will be translated.
+The given (invalid/unknown)&<#title> should be plain text and control characters will be translated.
 
 
 [ Type >> insert_characters ]
@@ -554,7 +554,7 @@ The given (factor-local/parameter)&<#Type.wm_title.Parameters.title[title]> shou
 		- (source/area)`171 2 175 58`
 (signature)`insert_characters(self, count)`
 
-ICH, make room for (factor-local/parameter)&<#Type.insert_characters.Parameters.count[count]> characters. Maintains characters after the insertion.
+ICH, make room for (invalid/unknown)&<#count> characters. Maintains characters after the insertion.
 
 
 [ Type >> delete_characters ]
@@ -576,7 +576,7 @@ DCH, delete character moving remaining characters left.
 		- (source/area)`183 2 187 58`
 (signature)`insert_lines(self, count)`
 
-IL, make room for (factor-local/parameter)&<#Type.insert_lines.Parameters.count[count]> lines. Maintains lines after the insertion.
+IL, make room for (invalid/unknown)&<#count> lines. Maintains lines after the insertion.
 
 
 [ Type >> delete_lines ]
@@ -587,7 +587,7 @@ IL, make room for (factor-local/parameter)&<#Type.insert_lines.Parameters.count[
 		- (source/area)`189 2 193 58`
 (signature)`delete_lines(self, count)`
 
-DL, remove (factor-local/parameter)&<#Type.delete_lines.Parameters.count[count]> lines. Moves lines following the deleted up.
+DL, remove (invalid/unknown)&<#count> lines. Moves lines following the deleted up.
 
 
 [ Type >> scroll_up ]
@@ -598,7 +598,7 @@ DL, remove (factor-local/parameter)&<#Type.delete_lines.Parameters.count[count]>
 		- (source/area)`195 2 199 58`
 (signature)`scroll_up(self, count)`
 
-SU, adjust the scrolling region's view by scrolling up (factor-local/parameter)&<#Type.scroll_up.Parameters.count[count]> lines.
+SU, adjust the scrolling region's view by scrolling up (invalid/unknown)&<#count> lines.
 
 
 [ Type >> scroll_down ]
@@ -609,7 +609,7 @@ SU, adjust the scrolling region's view by scrolling up (factor-local/parameter)&
 		- (source/area)`201 2 205 58`
 (signature)`scroll_down(self, count)`
 
-SD, adjust the scrolling region's view by scrolling down (factor-local/parameter)&<#Type.scroll_down.Parameters.count[count]> lines.
+SD, adjust the scrolling region's view by scrolling down (invalid/unknown)&<#count> lines.
 
 
 [ Type >> select_color ]
@@ -618,7 +618,7 @@ SD, adjust the scrolling region's view by scrolling down (factor-local/parameter
 		method
 	/element/
 		- (source/area)`207 2 254 14`
-(signature)`select_color(targets_rgb, targets_256, targets_reset, str, map)`
+(signature)`select_color()`
 
 Values beyond 24-bit are ignored.
 Negatives select from traditional palettes or stored references.
@@ -632,7 +632,7 @@ Negatives select from traditional palettes or stored references.
 		- `undocumented`
 	/element/
 		- (source/area)`255 2 269 14`
-(signature)`transition_traits(style_codes, from_traits, to_traits, chain)`
+(signature)`transition_traits(style_codes, from_traits, to_traits)`
 
 
 [ Type >> change_text_traits ]
@@ -656,9 +656,9 @@ Negatives select from traditional palettes or stored references.
 		
 (signature)`select_transition(self, former, latter)`
 
-Construct SGR codes necessary to transition the SGR state from (factor-local/parameter)&<#Type.select_transition.Parameters.former[former]> to (factor-local/parameter)&<#Type.select_transition.Parameters.latter[latter]>.
+Construct SGR codes necessary to transition the SGR state from (invalid/unknown)&<#former> to (invalid/unknown)&<#latter>.
 
-Usually called through (factor-local/method)&<#Type.transition_render_parameters[transition_render_parameters]>.
+Usually called through (invalid/unknown)&<#transition_render_parameters>.
 
 
 [ Type >> transition_render_parameters ]
@@ -691,7 +691,7 @@ Usually called through (factor-local/method)&<#Type.transition_render_parameters
 		- `undocumented`
 	/element/
 		- (source/area)`322 2 345 61`
-(signature)`__init__(self, encoding, errors, integer_encode_cache_size, word_encode_cache_size)`
+(signature)`__init__(self, encoding)`
 
 
 [ utf8_terminal_type ]
@@ -724,10 +724,10 @@ Methods beginning with (id)`context_` are Context configuration interfaces
 returning the instance for method chaining. After creating a (factor-local/class)&<#Context[Context]> instance,
 some of them may need to be called for proper usage:
 
-- (factor-local/method)&<#Context.context_set_position[context_set_position]>
-- (factor-local/method)&<#Context.context_set_dimensions[context_set_dimensions]>
-- (factor-local/method)&<#Context.context_set_text_color[context_set_text_color]>
-- (factor-local/method)&<#Context.context_set_cell_color[context_set_cell_color]>
+- (invalid/unknown)&<#context_set_position>
+- (invalid/unknown)&<#context_set_dimensions>
+- (invalid/unknown)&<#context_set_text_color>
+- (invalid/unknown)&<#context_set_cell_color>
 
 Majority of methods return (invalid/unknown)&<#bytes> or iterables of (invalid/unknown)&<#bytes> that should be sent
 to the terminal to cause the desired effect.
@@ -766,7 +766,7 @@ Alias to the builtin (invalid/unknown)&<#str>.
 		import
 	/element/
 		- (source/area)`387 2 394 6`
-Type containing data used to render (project-local/factor-element)&<types#Text[fault.terminal.types.Text]> with the configured attributes.
+Type containing data used to render (invalid/unknown)&<#Text> with the configured attributes.
 
 
 [ Context >> Words ]
@@ -775,7 +775,7 @@ Type containing data used to render (project-local/factor-element)&<types#Text[f
 		import
 	/element/
 		- (source/area)`387 2 394 6`
-Named type annotation describing the contents of a (project-local/factor-element)&<types#Phrase[fault.terminal.types.Phrase]>.
+Named type annotation describing the contents of a (invalid/unknown)&<#Phrase>.
 
 
 [ Context >> Phrase ]
@@ -784,8 +784,8 @@ Named type annotation describing the contents of a (project-local/factor-element
 		import
 	/element/
 		- (source/area)`387 2 394 6`
-Sequence of (project-local/factor-element)&<types#Words[fault.terminal.types.Words]> type. The primary interest of higher-level methods on (factor-local/class)&<#Context[Context]>.
-Passed to (factor-local/method)&<#Context.render[render]> and (factor-local/method)&<#Context.print[print]>.
+Sequence of (invalid/unknown)&<#Words> type. The primary interest of higher-level methods on (factor-local/class)&<#Context[Context]>.
+Passed to (invalid/unknown)&<#render> and (invalid/unknown)&<#print>.
 
 
 [ Context >> Page ]
@@ -794,7 +794,7 @@ Passed to (factor-local/method)&<#Context.render[render]> and (factor-local/meth
 		import
 	/element/
 		- (source/area)`387 2 394 6`
-Named type annotation for a sequence of (project-local/factor-element)&<types#Phrase[fault.terminal.types.Phrase]>.
+Named type annotation for a sequence of (invalid/unknown)&<#Phrase>.
 
 
 [ Context >> control_mapping ]
@@ -873,7 +873,7 @@ Named type annotation for a sequence of (project-local/factor-element)&<types#Ph
 		- `undocumented`
 	/element/
 		- (source/area)`407 2 422 10`
-(signature)`__init__(self, type)`
+(signature)`__init__(self)`
 
 
 [ Context >> _context_traits ]
@@ -903,7 +903,7 @@ Named type annotation for a sequence of (project-local/factor-element)&<types#Ph
 (signature)`context_set_position(self, point)`
 
 Designate the absolute positioning of the character matrix.
-Appropriate interface to use to set (factor-local/parameter)&<#Context.context_set_position.Parameters.self[self.point]>.
+Appropriate interface to use to set (invalid/unknown)&<#self.point>.
 
 
 [ Context >> context_set_dimensions ]
@@ -915,7 +915,7 @@ Appropriate interface to use to set (factor-local/parameter)&<#Context.context_s
 (signature)`context_set_dimensions(self, dimensions)`
 
 Designate the width and height of the character matrix being targeted.
-Initializes (factor-local/data)&<#Context.dimensions[Context.dimensions]>, (factor-local/data)&<#Context.width[width]>, and (invalid/unknown)&<#height>.
+Initializes (factor-local/data)&<#Context.dimensions[Context.dimensions]>, (invalid/unknown)&<#width>, and (invalid/unknown)&<#height>.
 
 
 [ Context >> context_set_text_color ]
@@ -927,7 +927,7 @@ Initializes (factor-local/data)&<#Context.dimensions[Context.dimensions]>, (fact
 (signature)`context_set_text_color(self, color_id)`
 
 Configure the default text color.
-Used by (factor-local/method)&<#Context.reset_text[reset_text]> and (factor-local/method)&<#Context.reset_text_color[reset_text_color]>.
+Used by (invalid/unknown)&<#reset_text> and (invalid/unknown)&<#reset_text_color>.
 
 
 [ Context >> context_set_cell_color ]
@@ -939,7 +939,7 @@ Used by (factor-local/method)&<#Context.reset_text[reset_text]> and (factor-loca
 (signature)`context_set_cell_color(self, color_id)`
 
 Configure the default cell color.
-Used by (factor-local/method)&<#Context.reset_text[reset_text]> and (factor-local/method)&<#Context.reset_cell_color[reset_cell_color]>.
+Used by (invalid/unknown)&<#reset_text> and (invalid/unknown)&<#reset_cell_color>.
 
 
 [ Context >> context_set_line_color ]
@@ -951,7 +951,7 @@ Used by (factor-local/method)&<#Context.reset_text[reset_text]> and (factor-loca
 (signature)`context_set_line_color(self, color_id)`
 
 Configure the default line color.
-Used by (factor-local/method)&<#Context.reset_text[reset_text]> and (factor-local/method)&<#Context.reset_line_color[reset_line_color]>.
+Used by (invalid/unknown)&<#reset_text> and (invalid/unknown)&<#reset_line_color>.
 
 
 [ Context >> draw_unit_vertical ]
@@ -1050,7 +1050,7 @@ Construct the escape sequence for selecting a different line (underline) color.
 		- (source/area)`527 2 531 92`
 (signature)`reset_text_color(self)`
 
-Use the text color configured with (factor-local/method)&<#Context.context_set_text_color[context_set_text_color]>.
+Use the text color configured with (invalid/unknown)&<#context_set_text_color>.
 
 
 [ Context >> reset_cell_color ]
@@ -1061,7 +1061,7 @@ Use the text color configured with (factor-local/method)&<#Context.context_set_t
 		- (source/area)`533 2 537 92`
 (signature)`reset_cell_color(self)`
 
-Use the cell color configured with (factor-local/method)&<#Context.context_set_cell_color[context_set_cell_color]>.
+Use the cell color configured with (invalid/unknown)&<#context_set_cell_color>.
 
 
 [ Context >> reset_line_color ]
@@ -1072,7 +1072,7 @@ Use the cell color configured with (factor-local/method)&<#Context.context_set_c
 		- (source/area)`539 2 543 92`
 (signature)`reset_line_color(self)`
 
-Use the cell color configured with (factor-local/method)&<#Context.context_set_cell_color[context_set_cell_color]>.
+Use the cell color configured with (invalid/unknown)&<#context_set_cell_color>.
 
 
 [ Context >> reset_colors ]
@@ -1083,7 +1083,7 @@ Use the cell color configured with (factor-local/method)&<#Context.context_set_c
 		- (source/area)`545 2 554 4`
 (signature)`reset_colors(self)`
 
-Using the cell and text colors stored on the Context, (factor-local/parameter)&<#Context.reset_colors.Parameters.self[self]>, construct
+Using the cell and text colors stored on the Context, (invalid/unknown)&<#self>, construct
 a sequence to instruct the terminal to use those colors.
 
 
@@ -1104,9 +1104,9 @@ Reset text traits and colors.
 		method
 	/element/
 		- (source/area)`567 2 573 73`
-(signature)`draw_words(self, phrasewordtext, control_map)`
+(signature)`draw_words(self, phrasewordtext)`
 
-Translate the given (invalid/unknown)&<#phraseword> with (factor-local/parameter)&<#Context.draw_words.Parameters.control_map[control_map]> and encode it
+Translate the given (invalid/unknown)&<#phraseword> with (invalid/unknown)&<#control_map> and encode it
 with the Context's configured encoding.
 
 
@@ -1120,8 +1120,8 @@ with the Context's configured encoding.
 		
 (signature)`render(self, phrase, rparams)`
 
-Render the given (factor-local/parameter)&<#Context.render.Parameters.phrase[phrase]> for display on the terminal.
-Unlike most Context methods, (factor-local/method)&<#Context.render[render]> returns an iterator
+Render the given (invalid/unknown)&<#phrase> for display on the terminal.
+Unlike most Context methods, (invalid/unknown)&<#render> returns an iterator
 producing the sequences necessary to represent the phrase.
 
 [ >> Parameters ]
@@ -1144,7 +1144,7 @@ producing the sequences necessary to represent the phrase.
 	
 	If (invalid/unknown)&<#None> is given, the configured text and cell colors are used for
 	identifying the initial transition into the Phrase.
-	When rendering multiple (project-local/factor-element)&<types#Phrase[fault.terminal.types.Phrase]> instances, the final triple of a phrase can be
+	When rendering multiple (invalid/unknown)&<#Phrase> instances, the final triple of a phrase can be
 	provided to the next render call to make minimal transitions.
 
 
@@ -1156,16 +1156,16 @@ producing the sequences necessary to represent the phrase.
 		- (source/area)`608 2 666 40`
 		- (type/syntax)`Iterable[bytes]`
 		
-(signature)`print(self, phrases, cellcounts, indentations, width, zip)`
+(signature)`print(self, phrases, cellcounts, width)`
 
-Print the page of phrases using (factor-local/method)&<#Context.render[render]>.
+Print the page of phrases using (invalid/unknown)&<#render>.
 
 Text Properties will be unconditionally reset, and lines will
 be presumed dirty causing a following erase to be emitted after
 the phrase is rendered.
 
-(factor-local/method)&<#Context.print[print]>, tentatively, expects the cursor to be at the desired starting location and
-that the number of (factor-local/parameter)&<#Context.print.Parameters.phrases[phrases]> not exceed the (invalid/unknown)&<#height> of the context.
+(invalid/unknown)&<#print>, tentatively, expects the cursor to be at the desired starting location and
+that the number of (invalid/unknown)&<#phrases> not exceed the (invalid/unknown)&<#height> of the context.
 
 [ >> Parameters ]
 
@@ -1177,13 +1177,13 @@ that the number of (factor-local/parameter)&<#Context.print.Parameters.phrases[p
 	- (type/syntax)`Page`
 	- (type/project-local/factor-element)&<types#Page[fault.terminal.types.Page]>
 	
-	The (project-local/factor-element)&<types#Phrase[fault.terminal.types.Phrase]> instances that populate each line in the page.
+	The (invalid/unknown)&<#Phrase> instances that populate each line in the page.
 
 /(parameter)`cellcounts`/
 	- (type/syntax)`Sequence[int]`
 	
-	The result of the corresponding (project-local/factor-element)&<types#Phrase.cellcount[fault.terminal.types.Phrase.cellcount]> method.
-	Usually cached alongside (factor-local/parameter)&<#Context.print.Parameters.phrases[phrases]>.
+	The result of the corresponding (invalid/unknown)&<#Phrase.cellcount> method.
+	Usually cached alongside (invalid/unknown)&<#phrases>.
 
 /(parameter)`indentations`/
 	- (type/syntax)`Sequence[int]`
@@ -1192,7 +1192,7 @@ that the number of (factor-local/parameter)&<#Context.print.Parameters.phrases[p
 
 /(parameter)`width`/
 	
-	Optional width override. Defaults to (factor-local/parameter)&<#Context.print.Parameters.self[self.width]>.
+	Optional width override. Defaults to (invalid/unknown)&<#self.width>.
 
 /(parameter)`zip`/
 	
@@ -1207,7 +1207,7 @@ that the number of (factor-local/parameter)&<#Context.print.Parameters.phrases[p
 		- (source/area)`668 2 676 53`
 (signature)`spaces(self, count)`
 
-Construct a sequence or characters necessary for writing (factor-local/parameter)&<#Context.spaces.Parameters.count[count]> spaces.
+Construct a sequence or characters necessary for writing (invalid/unknown)&<#count> spaces.
 Uses REP.
 
 
@@ -1230,7 +1230,7 @@ Uses REP.
 		- `undocumented`
 	/element/
 		- (source/area)`681 2 682 46`
-(signature)`clear_to_line(self, lineno)`
+(signature)`clear_to_line(self)`
 
 
 [ Context >> clear_to_bottom ]
@@ -1298,7 +1298,7 @@ Text properties will be reset; the cell color configured on the context will be 
 		- (source/area)`712 2 720 44`
 (signature)`erase(self, count)`
 
-Erase the given (factor-local/parameter)&<#Context.erase.Parameters.count[count]> of characters after the cursor.
+Erase the given (invalid/unknown)&<#count> of characters after the cursor.
 Cursor position should be unchanged after the erase.
 
 This should respect the current cell color, but not traits like underline.
@@ -1356,7 +1356,7 @@ Primitive relative seek; Context cursor position is *not* updated.
 
 Seek the first cell in the Context.
 
-Requires prior (factor-local/method)&<#Context.context_set_position[context_set_position]>.
+Requires prior (invalid/unknown)&<#context_set_position>.
 
 
 [ Context >> seek_last ]
@@ -1369,7 +1369,7 @@ Requires prior (factor-local/method)&<#Context.context_set_position[context_set_
 
 Seek the last cell in the Context.
 
-Requires prior (factor-local/method)&<#Context.context_set_dimensions[context_set_dimensions]>.
+Requires prior (invalid/unknown)&<#context_set_dimensions>.
 
 
 [ Context >> seek ]
@@ -1498,7 +1498,7 @@ for the duration of the process.
 (signature)`set_window_title_text(self, title)`
 
 Instruct the emulator to use the given title for the window.
-The given (factor-local/parameter)&<#Screen.set_window_title_text.Parameters.title[title]> should be plain text and control characters will be translated.
+The given (invalid/unknown)&<#title> should be plain text and control characters will be translated.
 
 
 [ Screen >> report_cursor_position ]
@@ -1587,7 +1587,7 @@ Set the scrolling region to the entire screen.
 (signature)`open_scrolling_region(self, top, bottom)`
 
 Set the scrolling region, enter it, and seek the bottom.
-Subsequent (factor-local/method)&<#Screen.exit_scrolling_region[exit_scrolling_region]> and (factor-local/method)&<#Screen.enter_scrolling_region[enter_scrolling_region]>
+Subsequent (invalid/unknown)&<#exit_scrolling_region> and (invalid/unknown)&<#enter_scrolling_region>
 should be use to maintain the SR's state.
 
 
@@ -1633,7 +1633,7 @@ Restore a previously stored cursor location.
 		- (source/area)`913 2 917 44`
 (signature)`scroll_up(self, count)`
 
-Adjust the scroll region's view by scrolling up (factor-local/parameter)&<#Screen.scroll_up.Parameters.count[count]> rows.
+Adjust the scroll region's view by scrolling up (invalid/unknown)&<#count> rows.
 
 
 [ Screen >> scroll_down ]
@@ -1644,7 +1644,7 @@ Adjust the scroll region's view by scrolling up (factor-local/parameter)&<#Scree
 		- (source/area)`919 2 923 44`
 (signature)`scroll_down(self, count)`
 
-Adjust the scroll region's view by scrolling down (factor-local/parameter)&<#Screen.scroll_down.Parameters.count[count]> rows.
+Adjust the scroll region's view by scrolling down (invalid/unknown)&<#count> rows.
 
 
 [ Screen >> scroll ]

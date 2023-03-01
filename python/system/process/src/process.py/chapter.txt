@@ -364,7 +364,7 @@ Mapping of signal codes to identifiers used in POSIX header files.
 		function
 	/element/
 		- (source/area)`131 1 144 43`
-(signature)`interject(main_thread_exec, replacement, signo)`
+(signature)`interject(main_thread_exec)`
 
 Trip the main thread by sending the process a SIGUSR2 signal in order to cause any
 running system call to exit early. Used in conjunction with
@@ -377,7 +377,7 @@ running system call to exit early. Used in conjunction with
 		function
 	/element/
 		- (source/area)`146 1 162 7`
-(signature)`clear_atexit_callbacks(pid)`
+(signature)`clear_atexit_callbacks()`
 
 In cases where there may be process dependent callbacks, add this to the
 (factor-local/data)&<#fork_child_callset[fork_child_callset]> to clear the callbacks.
@@ -467,7 +467,7 @@ A structure representing the invocation of a system process and the specificatio
 of the means of exiting. Normally, used to describe how the process was invoked and the
 corresponding parameters, argv and environ, in which the invocation should be reacting to.
 
-For system invocation, the (factor-local/data)&<#Invocation.parameters[parameters]> dictionary will have two entries by default:
+For system invocation, the (invalid/unknown)&<#parameters> dictionary will have two entries by default:
 `'system'` and `'type'`.
 
 
@@ -478,7 +478,7 @@ For system invocation, the (factor-local/data)&<#Invocation.parameters[parameter
 	/element/
 		- (source/area)`242 2 242 15`
 The Invocation that caused the creation of this (factor-local/class)&<#Invocation[Invocation]>.
-By default and when created from (factor-local/classmethod)&<#Invocation.system[system]>, this property is (invalid/unknown)&<#None>.
+By default and when created from (invalid/unknown)&<#system>, this property is (invalid/unknown)&<#None>.
 
 #!source
 	context = None
@@ -503,7 +503,7 @@ and `'structured'` keys are present.
 		- `undocumented`
 	/element/
 		- (source/area)`245 2 248 24`
-(signature)`__init__(self, exit_method, context)`
+(signature)`__init__(self, exit_method)`
 
 
 [ Invocation >> exit ]
@@ -567,8 +567,8 @@ The environment variables collected from the system during the creation of the i
 		- (source/area)`278 2 297 13`
 (signature)`imports(self, envvars)`
 
-Copy the given (factor-local/parameter)&<#Invocation.imports.Parameters.envvars[envvars]> from (none/invalid)&<http://fault.io/dev/null[os.environ]> into the invocation's (factor-local/data)&<#Invocation.parameters[parameters]>.
-The snapshot of imported environment variables may be accessed using (factor-local/property)&<#Invocation.environ[environ]>.
+Copy the given (invalid/unknown)&<#envvars> from (none/invalid)&<http://fault.io/dev/null[os.environ]> into the invocation's (invalid/unknown)&<#parameters>.
+The snapshot of imported environment variables may be accessed using (invalid/unknown)&<#environ>.
 
 [ >> Parameters ]
 
@@ -588,7 +588,7 @@ The snapshot of imported environment variables may be accessed using (factor-loc
 		classmethod
 	/element/
 		- (source/area)`298 2 332 13`
-(signature)`system(Class, context, environ, isinstance, str)`
+(signature)`system(Class, context, environ)`
 
 Create an instance representing that of the invocation from the operating
 system. Primarily, information is retrieved from the (none/invalid)&<http://fault.io/dev/null[sys]> and (none/invalid)&<http://fault.io/dev/null[os]> module.
@@ -701,7 +701,7 @@ An exception used to communicate that a fatal condition was identified.
 		function
 	/element/
 		- (source/area)`363 1 376 32`
-(signature)`panic(cause)`
+(signature)`panic()`
 
 Raise a (factor-local/class)&<#Critical[Critical]> exception in the main thread forcing the process to exit.
 
@@ -743,7 +743,7 @@ Primarily used to cause signal exit codes that are usually masked with
 		- `undocumented`
 	/element/
 		- (source/area)`389 2 391 20`
-(signature)`__init__(self, type, signo)`
+(signature)`__init__(self, type)`
 
 
 [ Interruption >> __str__ ]
@@ -799,7 +799,7 @@ Python-level signal handler that does nothing.
 		classmethod
 	/element/
 		- (source/area)`436 2 443 13`
-(signature)`filter(Class, *sigs, signal)`
+(signature)`filter(Class, *sigs)`
 
 Assign the void signal handler to the all of the given signal numbers.
 
@@ -810,7 +810,7 @@ Assign the void signal handler to the all of the given signal numbers.
 		classmethod
 	/element/
 		- (source/area)`444 2 452 27`
-(signature)`catch(Class, *sigs, signal)`
+(signature)`catch(Class, *sigs)`
 
 Assign the interrupt signal handler to the all of the given signal numbers.
 
@@ -821,7 +821,7 @@ Assign the interrupt signal handler to the all of the given signal numbers.
 		classmethod
 	/element/
 		- (source/area)`453 2 476 16`
-(signature)`trap(Class, catches, filters, signal, ign)`
+(signature)`trap(Class)`
 
 Signal handler for a root process.
 
@@ -891,7 +891,7 @@ by (factor-local/classmethod)&<#Fork.trap[Fork.trap]>.
 		- `undocumented`
 	/element/
 		- (source/area)`503 2 512 13`
-(signature)`pivot(self, T, fork)`
+(signature)`pivot(self, T)`
 
 
 [ Fork >> substitute ]
@@ -905,10 +905,10 @@ by (factor-local/classmethod)&<#Fork.trap[Fork.trap]>.
 Substitute the existing control call with the given one.
 
 Immediately raises a (factor-local/class)&<#Fork[Fork]> instance in the calling thread to be caught
-by a corresponding (factor-local/classmethod)&<#Fork.trap[trap]> call.
+by a corresponding (invalid/unknown)&<#trap> call.
 
 Only to be used in cases where it is known that the current frame stack is
-being managed by (factor-local/classmethod)&<#Fork.trap[trap]>.
+being managed by (invalid/unknown)&<#trap>.
 
 
 [ Fork >> dispatch ]
@@ -923,7 +923,7 @@ being managed by (factor-local/classmethod)&<#Fork.trap[trap]>.
 (signature)`dispatch(Class, controller, *args, **kw)`
 
 Execute the given callable with the given arguments in a child process.
-This performs an (factor-local/function)&<#interject[interject]> call. Given that (factor-local/method)&<#Fork.pivot[pivot]> was called to execute the
+This performs an (factor-local/function)&<#interject[interject]> call. Given that (invalid/unknown)&<#pivot> was called to execute the
 program, the pivot function will catch the exception, in the child, and
 execute the replacement.
 
@@ -1007,7 +1007,7 @@ For example:
 		function
 	/element/
 		- (source/area)`644 1 675 39`
-(signature)`protect(*init, looptime)`
+(signature)`protect(*init)`
 
 Perpetually protect the main thread using a sleep loop that can only exit
 using an interjection.
@@ -1036,7 +1036,7 @@ A program that calls this is making an explicit declaration that signals should 
 defaulted and the main thread should be protected from uninterruptable calls to allow
 prompt process exits while still performing critical state restoration.
 
-The given (factor-local/parameter)&<#control.Parameters.main[main]> is executed with the given positionals (factor-local/parameter)&<#control.Parameters.args[args]> and keywords (factor-local/parameter)&<#control.Parameters.kw[kw]> inside
+The given (invalid/unknown)&<#main> is executed with the given positionals (invalid/unknown)&<#args> and keywords (invalid/unknown)&<#kw> inside
 of a (factor-local/classmethod)&<#Fork.trap[Fork.trap]> call. (factor-local/class)&<#Fork[Fork]> handles formal exits and main-call substitution.
 
 
@@ -1046,7 +1046,7 @@ of a (factor-local/classmethod)&<#Fork.trap[Fork.trap]> call. (factor-local/clas
 		function
 	/element/
 		- (source/area)`722 1 733 29`
-(signature)`timeout(duration, update, signo)`
+(signature)`timeout()`
 
 (system/signal)`SIGALRM` based context manager for maximum time interruptions.
 
@@ -1057,7 +1057,7 @@ of a (factor-local/classmethod)&<#Fork.trap[Fork.trap]> call. (factor-local/clas
 		function
 	/element/
 		- (source/area)`735 1 795 30`
-(signature)`concurrently(controller, exe, waitpid)`
+(signature)`concurrently(controller)`
 
 Dispatch the given controller in a child process of a (factor-local/function)&<#control[control]> controlled process.
 The returned object is a reference to the result that will block until the child
@@ -1120,7 +1120,7 @@ Exceptions should not require (system/environ)`PWD` to be reset by the caller.
 
 [ > Returns ]
 
-The given (factor-local/parameter)&<#fs_chdir.Parameters.directory[directory]> for chaining if it is a (project-local/factor-element)&<files#Path[fault.system.files.Path]> instance.
+The given (invalid/unknown)&<#directory> for chaining if it is a (project-local/factor-element)&<files#Path[fault.system.files.Path]> instance.
 Otherwise, the result of (factor-local/function)&<#fs_pwd[fs_pwd]> is returned.
 
 
@@ -1144,7 +1144,7 @@ Otherwise, the result of (factor-local/function)&<#fs_pwd[fs_pwd]> is returned.
 		- (type/syntax)`kernel.Scheduler`
 		- (type/project-local/factor-element)&<kernel#Scheduler[fault.system.kernel.Scheduler]>
 		
-(signature)`Scheduling(limit, final, loop)`
+(signature)`Scheduling()`
 
 Initialize or return (project-local/unknown)&<process#scheduler[process.scheduler]>.
 

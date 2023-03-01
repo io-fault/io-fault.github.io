@@ -1,0 +1,9 @@
+! CONTROL:
+	/type/
+		factor
+	/element/
+		- (source/area)``
+! CONTEXT:
+	/protocol/
+		&<http://if.fault.io/chapters/meta.specification>
+

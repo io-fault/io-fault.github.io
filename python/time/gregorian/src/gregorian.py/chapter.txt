@@ -214,7 +214,7 @@ Gregorian calendar functions and data.
 		- `undocumented`
 	/element/
 		- (source/area)`88 1 93 73`
-(signature)`resolve_by_months(months, _select_months, _select_days, _calendar)`
+(signature)`resolve_by_months(months)`
 
 
 [ resolve_by_days ]
@@ -225,7 +225,7 @@ Gregorian calendar functions and data.
 		- `undocumented`
 	/element/
 		- (source/area)`95 1 100 71`
-(signature)`resolve_by_days(days, _select_months, _select_days, _calendar)`
+(signature)`resolve_by_days(days)`
 
 
 [ months_in_cycle ]
@@ -278,7 +278,7 @@ Given a gregorian calendar year, determine whether it is a leap year.
 		function
 	/element/
 		- (source/area)`117 1 125 38`
-(signature)`month_from_days(days, _resolver)`
+(signature)`month_from_days(days)`
 
 Convert the given number Earth-days to a month in the Gregorian cycle.
 
@@ -292,7 +292,7 @@ Convert the given number Earth-days to a month in the Gregorian cycle.
 		function
 	/element/
 		- (source/area)`127 1 133 47`
-(signature)`days_from_month(months, _resolver)`
+(signature)`days_from_month(months)`
 
 Convert the given months to the number of Earth-days leading up to the
 Gregorian month.
@@ -304,7 +304,7 @@ Gregorian month.
 		function
 	/element/
 		- (source/area)`135 1 142 58`
-(signature)`date_from_days(days, _resolver)`
+(signature)`date_from_days(days)`
 
 Convert the given Earth-days into a Gregorian date in the common form:
 (year, month, day).
@@ -316,7 +316,7 @@ Convert the given Earth-days into a Gregorian date in the common form:
 		function
 	/element/
 		- (source/area)`144 1 153 53`
-(signature)`days_from_date(date, _resolver)`
+(signature)`days_from_date(date)`
 
 Convert a Gregorian date in the common form, (year, month, day), to the number
 of days leading up to the date.

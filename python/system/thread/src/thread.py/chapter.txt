@@ -146,9 +146,9 @@ Select a set of threads from the same snapshot of frames.
 		function
 	/element/
 		- (source/area)`36 1 63 9`
-(signature)`interrupt(tid, exception, setexc, pthread_kill)`
+(signature)`interrupt(tid, exception)`
 
-Raise the given exception in the thread with the given identifier, (factor-local/parameter)&<#interrupt.Parameters.tid[tid]>.
+Raise the given exception in the thread with the given identifier, (invalid/unknown)&<#tid>.
 
 The thread being interrupted will be signalled after the exception has been set.
 This helps ensure that system calls will not stop the exception from being raised
@@ -234,7 +234,7 @@ Alternatively described as a queue with a transfer limit of one item.
 		- `undocumented`
 	/element/
 		- (source/area)`84 2 88 18`
-(signature)`__init__(self, mutex)`
+(signature)`__init__(self)`
 
 
 [ Transition >> __iter__ ]
@@ -270,5 +270,5 @@ A RuntimeError will be raised upon multiple invocations of commit.
 		- (source/area)`108 2 113 22`
 (signature)`transfer(self, message)`
 
-Send (factor-local/parameter)&<#Transition.transfer.Parameters.message[message]> to the receiving thread.
+Send (invalid/unknown)&<#message> to the receiving thread.
 

@@ -39,7 +39,7 @@
 		- `undocumented`
 	/element/
 		- (source/area)`5 1 9 13`
-(signature)`stack_1(error)`
+(signature)`stack_1()`
 
 
 [ stack_2 ]

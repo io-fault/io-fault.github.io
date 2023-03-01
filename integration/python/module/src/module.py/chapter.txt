@@ -79,7 +79,7 @@ Module compilation tools.
 		- `undocumented`
 	/element/
 		- (source/area)`13 1 23 21`
-(signature)`hash_syntax(source, encoding, hi, hash_chunks)`
+(signature)`hash_syntax(source)`
 
 
 [ mkconstant ]
@@ -88,7 +88,7 @@ Module compilation tools.
 		function
 	/element/
 		- (source/area)`25 1 35 9`
-(signature)`mkconstant(name, value, path, lineno)`
+(signature)`mkconstant(name, value)`
 
 Create a constant for injection into a module.
 
@@ -101,7 +101,7 @@ Create a constant for injection into a module.
 		- (source/area)`37 1 42 12`
 (signature)`inject(tree, constants)`
 
-Inject the (none/invalid)&<http://fault.io/dev/null[ast.Module]>, (factor-local/parameter)&<#inject.Parameters.tree[tree]>, with module-level assignments provided by (factor-local/parameter)&<#inject.Parameters.constants[constants]>.
+Inject the (none/invalid)&<http://fault.io/dev/null[ast.Module]>, (invalid/unknown)&<#tree>, with module-level assignments provided by (invalid/unknown)&<#constants>.
 
 
 [ compile ]

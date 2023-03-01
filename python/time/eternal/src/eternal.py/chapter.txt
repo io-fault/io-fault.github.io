@@ -78,5 +78,5 @@ Definite points in time are considered zero in the indefinite continuum.
 		- `undocumented`
 	/element/
 		- (source/area)`39 1 151 48`
-(signature)`context(ctx, qname)`
+(signature)`context(ctx)`
 

@@ -83,7 +83,7 @@ Exception signalling that options were not properly expressed.
 		- `undocumented`
 	/element/
 		- (source/area)`50 2 54 26`
-(signature)`__init__(self, mismatch, origin, option, argument)`
+(signature)`__init__(self, mismatch, origin, option)`
 
 
 [ UsageViolation >> __str__ ]
@@ -105,8 +105,8 @@ Exception signalling that options were not properly expressed.
 		- (source/area)`66 1 197 49`
 (signature)`legacy(restricted, required, options, trap, offset, signal, assignment)`
 
-Interpret an argument vector, (factor-local/parameter)&<#legacy.Parameters.options[options]>, according to the (factor-local/parameter)&<#legacy.Parameters.restricted[restricted]>
-and (factor-local/parameter)&<#legacy.Parameters.required[required]> option indexes. Identified signals are translated into
+Interpret an argument vector, (invalid/unknown)&<#options>, according to the (invalid/unknown)&<#restricted>
+and (invalid/unknown)&<#required> option indexes. Identified signals are translated into
 events describing the expected operation, target slot, and value to be
 processed by a configuration context.
 
@@ -201,8 +201,8 @@ to match an index entry.
 		- (source/area)`219 1 265 9`
 (signature)`merge(target, events, Interpreter, Operations)`
 
-Apply the values provided by (factor-local/parameter)&<#merge.Parameters.events[events]> into (factor-local/parameter)&<#merge.Parameters.target[target]> using
-the event's operation to select the merge method provided in (factor-local/parameter)&<#merge.Parameters.Operations[Operations]>.
+Apply the values provided by (invalid/unknown)&<#events> into (invalid/unknown)&<#target> using
+the event's operation to select the merge method provided in (invalid/unknown)&<#Operations>.
 
 [ > Parameters ]
 
@@ -226,7 +226,7 @@ the event's operation to select the merge method provided in (factor-local/param
 /(parameter)`Operations`/
 	
 	A mapping designating how an assignment operation is to be
-	performed against the (factor-local/parameter)&<#merge.Parameters.target[target]>.
+	performed against the (invalid/unknown)&<#target>.
 
 	Defaults to (factor-local/data)&<#operations[operations]>.
 

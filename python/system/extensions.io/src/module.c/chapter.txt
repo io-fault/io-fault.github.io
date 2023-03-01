@@ -936,7 +936,7 @@ the type is *not* exposed on the module.
 		- (source/area)``
 		- (type/syntax)`Array`
 		
-Subject (factor-local/type)&<#jxi.J.Array[Array]> producing events.
+Subject (invalid/unknown)&<#Array> producing events.
 
 
 [ jxi >> t ]
@@ -1027,7 +1027,7 @@ Iterator protocol next implementation.
 
 Acquire a resource for faciliting a transfer. Qualifies the Channel for transfers.
 
-The given (factor-local/parameter)&<#channel_acquire.Parameters.resource[resource]> object is set on the (invalid/unknown)&<#Channel> and the memory buffer is filled
+The given (invalid/unknown)&<#resource> object is set on the (invalid/unknown)&<#Channel> and the memory buffer is filled
 out based on the direction of the channel. If the Channel has been acquired
 by a (invalid/unknown)&<#Array>, the Channel will be marked and enqueued for a subsequent transfer
 attempt. Otherwise, the Channel is qualified for transfer allowing the subsequent
@@ -1300,7 +1300,7 @@ to the composition of datagrams to be emitted or received.
 		- (source/area)``
 		- (type/syntax)`uint32_t`
 		
-Number of entries in (factor-local/field)&<#DatagramArray.indexes[indexes]>.
+Number of entries in (invalid/unknown)&<#indexes>.
 
 
 [ DatagramArray >> addrlen ]

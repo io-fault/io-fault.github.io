@@ -2,7 +2,7 @@
 	/type/
 		module
 	/element/
-		- (source/area)`1 1 774 0`
+		- (source/area)`1 1 771 0`
 Client and server common IETF HTTP tools for (context-local/project-name)&<fault.kernel> based applications.
 
 [ Properties ]
@@ -92,23 +92,14 @@ Client and server common IETF HTTP tools for (context-local/project-name)&<fault
 	/element/
 		- (source/area)`16 1 16 27`
 
-[ protocoldata ]
+[ protocol ]
 ! CONTROL:
 	/type/
 		import
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`18 1 18 48`
-
-[ protocolcore ]
-! CONTROL:
-	/type/
-		import
-	/flags/
-		- `undocumented`
-	/element/
-		- (source/area)`19 1 19 43`
+		- (source/area)`18 1 18 39`
 
 [ media ]
 ! CONTROL:
@@ -117,7 +108,7 @@ Client and server common IETF HTTP tools for (context-local/project-name)&<fault
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`21 1 21 28`
+		- (source/area)`19 1 19 28`
 
 [ ri ]
 ! CONTROL:
@@ -126,7 +117,7 @@ Client and server common IETF HTTP tools for (context-local/project-name)&<fault
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`22 1 22 25`
+		- (source/area)`20 1 20 25`
 
 [ core ]
 ! CONTROL:
@@ -135,7 +126,7 @@ Client and server common IETF HTTP tools for (context-local/project-name)&<fault
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`24 1 24 25`
+		- (source/area)`22 1 22 25`
 
 [ flows ]
 ! CONTROL:
@@ -144,7 +135,7 @@ Client and server common IETF HTTP tools for (context-local/project-name)&<fault
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`25 1 25 26`
+		- (source/area)`23 1 23 26`
 
 [ HeaderSequence ]
 ! CONTROL:
@@ -153,7 +144,7 @@ Client and server common IETF HTTP tools for (context-local/project-name)&<fault
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`27 1 27 60`
+		- (source/area)`25 1 25 60`
 #!source
 	HeaderSequence = typing.Sequence[typing.Tuple[bytes, bytes]]
 
@@ -162,8 +153,8 @@ Client and server common IETF HTTP tools for (context-local/project-name)&<fault
 	/type/
 		function
 	/element/
-		- (source/area)`29 1 67 37`
-(signature)`ranges(length, range_header, decode_number)`
+		- (source/area)`27 1 65 37`
+(signature)`ranges(length, range_header)`
 
 Generator producing the integer ranges specified by the given Range header.
 
@@ -187,9 +178,9 @@ Generator producing the integer ranges specified by the given Range header.
 	/type/
 		class
 	/element/
-		- (source/area)`69 1 383 35`
+		- (source/area)`67 1 381 35`
 ! INHERIT:
-	- (source/area)`69 18 69 23`
+	- (source/area)`67 18 67 23`
 	- (type/syntax)`object`
 	- (type/invalid/unknown)&<#object>
 	
@@ -205,7 +196,7 @@ Primarily used to extract information from received response (client) or request
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`76 2 76 14`
+		- (source/area)`74 2 74 14`
 #!source
 	method = None
 
@@ -216,7 +207,7 @@ Primarily used to extract information from received response (client) or request
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`77 2 77 11`
+		- (source/area)`75 2 75 11`
 #!source
 	uri = None
 
@@ -227,7 +218,7 @@ Primarily used to extract information from received response (client) or request
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`78 2 78 18`
+		- (source/area)`76 2 76 18`
 #!source
 	pathstring = None
 
@@ -238,7 +229,7 @@ Primarily used to extract information from received response (client) or request
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`79 2 79 19`
+		- (source/area)`77 2 77 19`
 #!source
 	querystring = None
 
@@ -249,7 +240,7 @@ Primarily used to extract information from received response (client) or request
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`81 2 81 14`
+		- (source/area)`79 2 79 14`
 #!source
 	status = None
 
@@ -260,7 +251,7 @@ Primarily used to extract information from received response (client) or request
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`82 2 82 14`
+		- (source/area)`80 2 80 14`
 #!source
 	phrase = None
 
@@ -271,7 +262,7 @@ Primarily used to extract information from received response (client) or request
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`84 2 84 19`
+		- (source/area)`82 2 82 19`
 #!source
 	_uri_struct = None
 
@@ -282,7 +273,7 @@ Primarily used to extract information from received response (client) or request
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`85 2 85 18`
+		- (source/area)`83 2 83 18`
 #!source
 	_uri_parts = None
 
@@ -291,7 +282,7 @@ Primarily used to extract information from received response (client) or request
 	/type/
 		method
 	/element/
-		- (source/area)`87 2 100 24`
+		- (source/area)`85 2 98 24`
 (signature)`__init__(self, headers, *local)`
 
 Create a cache for a sequence of headers directly stored.
@@ -320,7 +311,7 @@ Create a cache for a sequence of headers directly stored.
 	/type/
 		method
 	/element/
-		- (source/area)`102 2 114 13`
+		- (source/area)`100 2 112 13`
 (signature)`set_request(self, method, uri)`
 
 Configure the structure as representing a request received by a server.
@@ -331,7 +322,7 @@ Configure the structure as representing a request received by a server.
 	/type/
 		method
 	/element/
-		- (source/area)`116 2 125 10`
+		- (source/area)`114 2 123 10`
 (signature)`set_status(self, status, phrase)`
 
 Configure the structure as representing a response received by a client.
@@ -342,7 +333,7 @@ Configure the structure as representing a response received by a client.
 	/type/
 		property
 	/element/
-		- (source/area)`126 2 132 16`
+		- (source/area)`124 2 130 16`
 		- (type/syntax)`bool`
 		- (type/invalid/unknown)&<#bool>
 		
@@ -356,7 +347,7 @@ Whether the response is a redirect.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`133 2 135 20`
+		- (source/area)`131 2 133 20`
 (signature)`cache(self)`
 
 
@@ -367,7 +358,7 @@ Whether the response is a redirect.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`137 2 141 4`
+		- (source/area)`135 2 139 4`
 (signature)`__str__(self)`
 
 
@@ -376,7 +367,7 @@ Whether the response is a redirect.
 	/type/
 		method
 	/element/
-		- (source/area)`143 2 163 16`
+		- (source/area)`141 2 161 16`
 (signature)`_init_headers(self, headers)`
 
 Set the headers to be cached and structured for use by an application.
@@ -389,7 +380,7 @@ Set the headers to be cached and structured for use by an application.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`164 2 170 16`
+		- (source/area)`162 2 168 16`
 (signature)`_uri_parts(self)`
 
 
@@ -400,7 +391,7 @@ Set the headers to be cached and structured for use by an application.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`171 2 174 10`
+		- (source/area)`169 2 172 10`
 (signature)`_uri_struct(self)`
 
 
@@ -409,7 +400,7 @@ Set the headers to be cached and structured for use by an application.
 	/type/
 		property
 	/element/
-		- (source/area)`175 2 181 10`
+		- (source/area)`173 2 179 10`
 		- (type/syntax)`typing.Sequence[str]`
 		
 The sequence of path items in pathstring.
@@ -420,7 +411,7 @@ The sequence of path items in pathstring.
 	/type/
 		property
 	/element/
-		- (source/area)`182 2 188 10`
+		- (source/area)`180 2 186 10`
 		- (type/syntax)`typing.Optional[dict]`
 		
 The query parameters of the URI.
@@ -431,7 +422,7 @@ The query parameters of the URI.
 	/type/
 		property
 	/element/
-		- (source/area)`189 2 195 10`
+		- (source/area)`187 2 193 10`
 		- (type/syntax)`bool`
 		- (type/invalid/unknown)&<#bool>
 		
@@ -443,7 +434,7 @@ Whether or not the request looking to perform protocol substitution.
 	/type/
 		property
 	/element/
-		- (source/area)`196 2 206 10`
+		- (source/area)`194 2 204 10`
 		- (type/syntax)`bool`
 		- (type/invalid/unknown)&<#bool>
 		
@@ -455,7 +446,7 @@ Whether the headers indicate an associated body.
 	/type/
 		property
 	/element/
-		- (source/area)`207 2 221 13`
+		- (source/area)`205 2 219 13`
 		- (type/syntax)`typing.Optional[int]`
 		
 The length of the content; positive if exact, (invalid/unknown)&<#None> if no content, and -1 if arbitrary.
@@ -467,7 +458,7 @@ For HTTP, arbitrary triggers chunked transfer encoding.
 	/type/
 		method
 	/element/
-		- (source/area)`223 2 231 16`
+		- (source/area)`221 2 229 16`
 (signature)`byte_ranges(self, length)`
 
 The byte ranges of the request.
@@ -478,7 +469,7 @@ The byte ranges of the request.
 	/type/
 		method
 	/element/
-		- (source/area)`232 2 247 58`
+		- (source/area)`230 2 245 58`
 (signature)`upgrade_insecure(self)`
 
 The (http/header-id)`Upgrade-Insecure-Requests` header as a boolean.
@@ -493,7 +484,7 @@ The (http/header-id)`Upgrade-Insecure-Requests` header as a boolean.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`249 2 314 10`
+		- (source/area)`247 2 312 10`
 #!source
 	cached_headers = set(
 		x.lower() for x in [
@@ -554,7 +545,7 @@ The (http/header-id)`Upgrade-Insecure-Requests` header as a boolean.
 	/type/
 		property
 	/element/
-		- (source/area)`315 2 322 17`
+		- (source/area)`313 2 320 17`
 		- (type/syntax)`bytes`
 		- (type/invalid/unknown)&<#bytes>
 		
@@ -566,8 +557,8 @@ Return the connection header stripped and lowered or `b''` if no header present.
 	/type/
 		staticmethod
 	/element/
-		- (source/area)`323 2 333 16`
-(signature)`media_range_cache(range_data, parse_range)`
+		- (source/area)`321 2 331 16`
+(signature)`media_range_cache(range_data)`
 
 Cached access to a media range header.
 
@@ -577,7 +568,7 @@ Cached access to a media range header.
 	/type/
 		method
 	/element/
-		- (source/area)`334 2 342 16`
+		- (source/area)`332 2 340 16`
 (signature)`media_range(self)`
 
 Structured form of the Accept header.
@@ -588,7 +579,7 @@ Structured form of the Accept header.
 	/type/
 		method
 	/element/
-		- (source/area)`343 2 350 16`
+		- (source/area)`341 2 348 16`
 		- (type/syntax)`media.Type`
 		- (type/context-local/factor-element)&<fault.internet/media#Type[fault.internet.media.Type]>
 		
@@ -602,11 +593,11 @@ The structured media type extracted from the (http/header-id)`Content-Type` head
 	/type/
 		method
 	/element/
-		- (source/area)`351 2 362 10`
+		- (source/area)`349 2 360 10`
 		- (type/syntax)`timetypes.Timestamp`
 		- (type/context-local/factor-element)&<fault.time/types#Timestamp[fault.time.types.Timestamp]>
 		
-(signature)`date(self, parse)`
+(signature)`date(self)`
 
 Date header timestamp.
 
@@ -616,7 +607,7 @@ Date header timestamp.
 	/type/
 		property
 	/element/
-		- (source/area)`363 2 369 10`
+		- (source/area)`361 2 367 10`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -628,7 +619,7 @@ Decoded host header.
 	/type/
 		property
 	/element/
-		- (source/area)`370 2 376 10`
+		- (source/area)`368 2 374 10`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -640,7 +631,7 @@ Character encoding of entity content. (invalid/unknown)&<#None> if not applicabl
 	/type/
 		property
 	/element/
-		- (source/area)`377 2 383 35`
+		- (source/area)`375 2 381 35`
 		- (type/syntax)`bool`
 		- (type/invalid/unknown)&<#bool>
 		
@@ -654,7 +645,7 @@ Whether this is suppoed to be the last transaction in the connection.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`385 1 387 31`
+		- (source/area)`383 1 385 31`
 (signature)`_join_send_wire(event, channel_id, transfer_events)`
 
 
@@ -665,7 +656,7 @@ Whether this is suppoed to be the last transaction in the connection.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`389 1 391 41`
+		- (source/area)`387 1 389 41`
 (signature)`_join_send_content(event, channel_id, transfer_events)`
 
 
@@ -676,7 +667,7 @@ Whether this is suppoed to be the last transaction in the connection.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`393 1 395 41`
+		- (source/area)`391 1 393 41`
 (signature)`_join_send_chunk(event, channel_id, transfer_events)`
 
 
@@ -687,8 +678,8 @@ Whether this is suppoed to be the last transaction in the connection.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`397 1 399 14`
-(signature)`_join_send_eom(event, channel_id, terminal, EOM)`
+		- (source/area)`395 1 397 14`
+(signature)`_join_send_eom(event, channel_id, terminal)`
 
 
 [ _join_initiate_response ]
@@ -698,8 +689,8 @@ Whether this is suppoed to be the last transaction in the connection.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`401 1 422 2`
-(signature)`_join_initiate_response(shared, commands, sequence, event, channel_id, init, fc_transfer)`
+		- (source/area)`399 1 420 2`
+(signature)`_join_initiate_response(shared, commands, sequence, event, channel_id, init)`
 
 
 [ _join_initiate_request ]
@@ -709,8 +700,8 @@ Whether this is suppoed to be the last transaction in the connection.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`424 1 448 2`
-(signature)`_join_initiate_request(shared, commands, sequence, event, channel_id, init, fc_transfer)`
+		- (source/area)`422 1 446 2`
+(signature)`_join_initiate_request(shared, commands, sequence, event, channel_id, init)`
 
 
 [ join ]
@@ -718,8 +709,8 @@ Whether this is suppoed to be the last transaction in the connection.
 	/type/
 		function
 	/element/
-		- (source/area)`450 1 489 18`
-(signature)`join(shared, sequence, fc_initiate, fc_terminate, fc_transfer, partial)`
+		- (source/area)`448 1 487 18`
+(signature)`join(shared, sequence)`
 
 Join flow events into a proper HTTP stream.
 
@@ -729,7 +720,7 @@ Join flow events into a proper HTTP stream.
 	/type/
 		function
 	/element/
-		- (source/area)`491 1 497 52`
+		- (source/area)`489 1 495 52`
 (signature)`_fork_response_sync(state)`
 
 Generator that can be used to communicate whether or not
@@ -741,8 +732,8 @@ the response will have a body. Used with client disposition.
 	/type/
 		function
 	/element/
-		- (source/area)`499 1 649 18`
-(signature)`fork(shared, allocate, close, overflow, rline, headers, trailers, content, chunk, violation, bypass, EOH, EOM, iter, map, len, chain, fc_initiate, fc_terminate, fc_transfer)`
+		- (source/area)`497 1 647 18`
+(signature)`fork(shared, allocate, close, overflow)`
 
 Split an HTTP stream into flow events for use by (context-local/factor-element)&<fault.kernel/flows#Division[fault.kernel.flows.Division]>.
 
@@ -754,7 +745,7 @@ Split an HTTP stream into flow events for use by (context-local/factor-element)&
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`651 1 668 17`
+		- (source/area)`649 1 665 17`
 (signature)`tg(ig)`
 
 
@@ -765,7 +756,7 @@ Split an HTTP stream into flow events for use by (context-local/factor-element)&
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`670 1 670 12`
+		- (source/area)`667 1 667 12`
 #!source
 	ifork = fork
 
@@ -776,7 +767,7 @@ Split an HTTP stream into flow events for use by (context-local/factor-element)&
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`671 1 672 30`
+		- (source/area)`668 1 669 30`
 (signature)`tfork(*args, **kw)`
 
 
@@ -785,7 +776,7 @@ Split an HTTP stream into flow events for use by (context-local/factor-element)&
 	/type/
 		data
 	/element/
-		- (source/area)`673 1 673 12`
+		- (source/area)`670 1 670 12`
 Split an HTTP stream into flow events for use by (context-local/factor-element)&<fault.kernel/flows#Division[fault.kernel.flows.Division]>.
 
 #!source
@@ -796,9 +787,9 @@ Split an HTTP stream into flow events for use by (context-local/factor-element)&
 	/type/
 		class
 	/element/
-		- (source/area)`675 1 704 23`
+		- (source/area)`672 1 701 23`
 ! INHERIT:
-	- (source/area)`675 18 675 31`
+	- (source/area)`672 18 672 31`
 	- (type/syntax)`flows.Protocol`
 	- (type/context-local/factor-element)&<fault.kernel/flows#Protocol[fault.kernel.flows.Protocol]>
 	
@@ -812,14 +803,14 @@ Protocol class sending HTTP messages.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`681 2 684 14`
+		- (source/area)`678 2 681 14`
 
 [ TXProtocol >> initiate_server_request ]
 ! CONTROL:
 	/type/
 		staticmethod
 	/element/
-		- (source/area)`685 2 692 14`
+		- (source/area)`682 2 689 14`
 (signature)`initiate_server_request(protocol, parameter)`
 
 Used by clients to select the proper initiation to send.
@@ -830,7 +821,7 @@ Used by clients to select the proper initiation to send.
 	/type/
 		staticmethod
 	/element/
-		- (source/area)`693 2 698 57`
+		- (source/area)`690 2 695 57`
 (signature)`initiate_client_response(protocol, parameter)`
 
 Used by servers to select the proper initiation to send.
@@ -843,7 +834,7 @@ Used by servers to select the proper initiation to send.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`700 2 704 23`
+		- (source/area)`697 2 701 23`
 (signature)`__init__(self, state, initiate)`
 
 
@@ -852,9 +843,9 @@ Used by servers to select the proper initiation to send.
 	/type/
 		class
 	/element/
-		- (source/area)`706 1 747 23`
+		- (source/area)`703 1 744 23`
 ! INHERIT:
-	- (source/area)`706 18 706 31`
+	- (source/area)`703 18 703 31`
 	- (type/syntax)`flows.Protocol`
 	- (type/context-local/factor-element)&<fault.kernel/flows#Protocol[fault.kernel.flows.Protocol]>
 	
@@ -868,14 +859,14 @@ Protocol class receiving HTTP messages.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`712 2 715 14`
+		- (source/area)`709 2 712 14`
 
 [ RXProtocol >> allocate_client_request ]
 ! CONTROL:
 	/type/
 		staticmethod
 	/element/
-		- (source/area)`716 2 723 14`
+		- (source/area)`713 2 720 14`
 (signature)`allocate_client_request(parameter)`
 
 For use by server receiving the client request.
@@ -886,7 +877,7 @@ For use by server receiving the client request.
 	/type/
 		staticmethod
 	/element/
-		- (source/area)`724 2 729 46`
+		- (source/area)`721 2 726 46`
 (signature)`allocate_server_response(parameter)`
 
 For use by clients receiving the server response.
@@ -899,7 +890,7 @@ For use by clients receiving the server response.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`731 2 732 6`
+		- (source/area)`728 2 729 6`
 (signature)`p_close(self)`
 
 
@@ -910,7 +901,7 @@ For use by clients receiving the server response.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`734 2 736 36`
+		- (source/area)`731 2 733 36`
 (signature)`p_correlate(self, send)`
 
 
@@ -921,7 +912,7 @@ For use by clients receiving the server response.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`738 2 741 31`
+		- (source/area)`735 2 738 31`
 (signature)`p_overflowing(self)`
 
 
@@ -932,7 +923,7 @@ For use by clients receiving the server response.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`743 2 747 23`
+		- (source/area)`740 2 744 23`
 (signature)`__init__(self, state, allocate)`
 
 
@@ -943,8 +934,8 @@ For use by clients receiving the server response.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`749 1 757 25`
-(signature)`allocate_client_protocol(version)`
+		- (source/area)`746 1 754 25`
+(signature)`allocate_client_protocol()`
 
 
 [ allocate_server_protocol ]
@@ -954,8 +945,8 @@ For use by clients receiving the server response.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`759 1 767 25`
-(signature)`allocate_server_protocol(version)`
+		- (source/area)`756 1 764 25`
+(signature)`allocate_server_protocol()`
 
 
 [ allocate_client_protocol_v1 ]
@@ -965,7 +956,7 @@ For use by clients receiving the server response.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`769 1 769 54`
+		- (source/area)`766 1 766 54`
 #!source
 	allocate_client_protocol_v1 = allocate_client_protocol
 
@@ -976,6 +967,6 @@ For use by clients receiving the server response.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`770 1 770 54`
+		- (source/area)`767 1 767 54`
 #!source
 	allocate_server_protocol_v1 = allocate_server_protocol

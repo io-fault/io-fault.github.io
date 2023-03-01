@@ -59,7 +59,7 @@
 		- `undocumented`
 	/element/
 		- (source/area)`9 1 15 13`
-(signature)`_error(n, _en)`
+(signature)`_error(n)`
 
 
 [ error ]

@@ -34,9 +34,9 @@ Common intention data and option parser.
 		function
 	/element/
 		- (source/area)`18 1 29 38`
-(signature)`select(options, index, sentinal, indicator)`
+(signature)`select(options)`
 
 Recognize intention flags from the given list of options.
 
-Iterates over (factor-local/parameter)&<#select.Parameters.options[options]> and the selects intersecting intentions from (factor-local/data)&<#codes[codes]>.
+Iterates over (invalid/unknown)&<#options> and the selects intersecting intentions from (factor-local/data)&<#codes[codes]>.
 

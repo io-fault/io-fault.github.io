@@ -155,7 +155,7 @@ the first argument.
 (signature)`__init__(self, call)`
 
 The partial application to the callable to perform.
-Usually, instantiating from (factor-local/classmethod)&<#Call.partial[partial]> is preferrable;
+Usually, instantiating from (invalid/unknown)&<#partial> is preferrable;
 however, given the presence of a (none/invalid)&<http://fault.io/dev/null[functools.partial]> instance,
 direct initialization is better.
 
@@ -274,7 +274,7 @@ to map completion to processor exit.
 		method
 	/element/
 		- (source/area)`101 2 109 26`
-(signature)`actuate(self, partial)`
+(signature)`actuate(self)`
 
 Start the coroutine.
 
@@ -414,9 +414,9 @@ Join the System process identifier, invocation object, and exit status.
 		- (source/area)`190 2 217 49`
 (signature)`from_invocation(Class, invocation, stdout, stdin, stderr)`
 
-Instantiation from an (factor-local/parameter)&<#Subprocess.from_invocation.Parameters.invocation[invocation]> executed with (factor-local/parameter)&<#Subprocess.from_invocation.Parameters.invocation[invocation.spawn]>.
+Instantiation from an (invalid/unknown)&<#invocation> executed with (invalid/unknown)&<#invocation.spawn>.
 The process' standard I/O must be explicitly designated using
-the (factor-local/parameter)&<#Subprocess.from_invocation.Parameters.stdin[stdin]>, (factor-local/parameter)&<#Subprocess.from_invocation.Parameters.stdout[stdout]>, and (factor-local/parameter)&<#Subprocess.from_invocation.Parameters.stderr[stderr]> parameters.
+the (invalid/unknown)&<#stdin>, (invalid/unknown)&<#stdout>, and (invalid/unknown)&<#stderr> parameters.
 Process will be reaped with (context-local/factor-element)&<fault.system/execution#reap[fault.system.execution.reap]>.
 
 [ >> Parameters ]
@@ -504,10 +504,10 @@ Initialize the system event callbacks for receiving process exit events.
 		method
 	/element/
 		- (source/area)`267 2 279 10`
-(signature)`interrupt(self, by, send_signal)`
+(signature)`interrupt(self)`
 
 Interrupt the running processes by issuing a SIGKILL signal to all active processes.
-Exit status will be reaped, but not reported to (factor-local/parameter)&<#Subprocess.interrupt.Parameters.self[self]>.
+Exit status will be reaped, but not reported to (invalid/unknown)&<#self>.
 
 
 [ Subprocess >> sp_only ]
@@ -549,7 +549,7 @@ Whether all the processes have been reaped.
 		method
 	/element/
 		- (source/area)`310 2 317 26`
-(signature)`sp_signal(self, signo, send_signal)`
+(signature)`sp_signal(self, signo)`
 
 Send the given signal number (os.kill) to the active processes
 being managed by the instance.
@@ -561,7 +561,7 @@ being managed by the instance.
 		method
 	/element/
 		- (source/area)`319 2 326 27`
-(signature)`sp_signal_group(self, signo, send_signal)`
+(signature)`sp_signal_group(self, signo)`
 
 Send the given signal number (os.kill) to the active processes
 being managed by the instance.
@@ -611,7 +611,7 @@ A local parallel process whose termination is connected to an instance.
 		- `undocumented`
 	/element/
 		- (source/area)`347 2 352 30`
-(signature)`cp_process_exit(self, status)`
+(signature)`cp_process_exit(self)`
 
 
 [ Coprocess >> cp_enqueue ]
@@ -656,7 +656,7 @@ Initialize the system event callbacks for receiving process exit events.
 (signature)`interrupt(self)`
 
 Interrupt the running processes by issuing a SIGKILL signal to all active processes.
-Exit status will be reaped, but not reported to (factor-local/parameter)&<#Coprocess.interrupt.Parameters.self[self]>.
+Exit status will be reaped, but not reported to (invalid/unknown)&<#self>.
 
 
 [ Coprocess >> terminate ]
@@ -718,7 +718,7 @@ Enqueue the initial execution of the recurrence.
 		method
 	/element/
 		- (source/area)`425 2 429 27`
-(signature)`occur(self, overflow)`
+(signature)`occur(self)`
 
 Invoke a recurrence and use its return to schedule its next iteration.
 
@@ -767,7 +767,7 @@ Timestamp based transaction scheduling using the system's Real Time clock.
 		- `undocumented`
 	/element/
 		- (source/area)`444 2 447 38`
-(signature)`__init__(self, clock, DefaultDict)`
+(signature)`__init__(self)`
 
 
 [ Scheduler >> actuate ]
@@ -857,7 +857,7 @@ finer granularity.
 		- (source/area)`503 2 512 28`
 (signature)`sched_cancel(self, pit, *xacts)`
 
-Cancel the given transactions that were scheduled for execution at the given (factor-local/parameter)&<#Scheduler.sched_cancel.Parameters.pit[pit]>.
+Cancel the given transactions that were scheduled for execution at the given (invalid/unknown)&<#pit>.
 
 Aside from the time and transaction, (factor-local/class)&<#Scheduler[Scheduler]> has no index for identifying
 scheduled events. When such a feature is necessary, an index must be managed
@@ -872,7 +872,7 @@ independently or a subclass must be created.
 		- (source/area)`514 2 523 67`
 (signature)`sched_insert(self, pit, *xacts)`
 
-Schedule the (factor-local/parameter)&<#Scheduler.sched_insert.Parameters.xacts[xacts]> to be executed at the specified Point In Time, (factor-local/parameter)&<#Scheduler.sched_insert.Parameters.pit[pit]>.
+Schedule the (invalid/unknown)&<#xacts> to be executed at the specified Point In Time, (invalid/unknown)&<#pit>.
 
 
 [ Scheduler >> sched_update ]
@@ -908,7 +908,7 @@ Schedule the (factor-local/parameter)&<#Scheduler.sched_insert.Parameters.xacts[
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
-(signature)`_sched_put(self, pit, xacts, push)`
+(signature)`_sched_put(self, pit, xacts)`
 
 
 [ Scheduler >> _sched_get ]
@@ -919,5 +919,5 @@ Schedule the (factor-local/parameter)&<#Scheduler.sched_insert.Parameters.xacts[
 		- `undocumented`
 	/element/
 		- (source/area)`550 2 572 15`
-(signature)`_sched_get(self, current, pop, push)`
+(signature)`_sched_get(self, current)`
 

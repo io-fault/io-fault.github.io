@@ -4,13 +4,14 @@ import itertools
 from fault.context import tools
 from fault.context import comethod
 from fault.internet import xml
+from fault.internet import ri
 
 from fault.text import document
 from fault.text.io import structure_chapter_lines, structure_chapter_text
 from fault.text.io import structure_paragraph_element as ipara
 
 from .protocol import setdirectory
-from . import query
+from .query import Cursor, navigate
 
 def formlink(reference:str) -> (str, str):
 	"""
@@ -75,17 +76,17 @@ def load_control_value(value):
 			del lines[-1:]
 		return (value[-1].get('type'), lines)
 
-def integrate(index, types, node):
+def integrate(index, types, element):
 	"""
-	# Traverse the sections of the &node converting CONTEXT and CONTROL
-	# admonition nodes into &node attributes.
+	# Traverse the sections of the &element converting CONTEXT and CONTROL
+	# admonition elements into &element attributes.
 	"""
-	attr = node[2]
+	attr = element[2]
 	subsect = []
-	index[tuple(attr.get('absolute', ()) or ())] = (node, subsect)
+	index[tuple(attr.get('absolute', ()) or ())] = (element, subsect)
 
 	try:
-		ftype, fnodes, fattr = node[1][0]
+		ftype, felements, fattr = element[1][0]
 	except (LookupError, ValueError):
 		# No elements at all
 		pass
@@ -94,10 +95,10 @@ def integrate(index, types, node):
 			meta = fattr['type'].lower()
 			data = {
 				k: load_control_value(v)
-				for k, v in document.dictionary_pairs(fnodes[0][1])
+				for k, v in document.directory_pairs(felements[0][1])
 			}
 			attr[meta] = data
-			del fnodes[:1]
+			del felements[:1]
 
 		if 'control' in attr:
 			ctl = attr['control']
@@ -119,18 +120,18 @@ def integrate(index, types, node):
 					attr['area'] = map(int, attr['element'][('source', 'area')].split())
 				#XXX if ('source', 'path') in attr['element']:
 
-	for x in node[1]:
+	for x in element[1]:
 		if x[0] == 'section':
 			sid = x[2].get('identifier', '')
 			subsect.append(sid)
 			integrate(index, types, x)
 
-	return node
+	return element
 
 def prepare(chapter, path=(), types={'CONTROL', 'CONTEXT'}):
-	# Prepare the chapter by relocating metadata nodes into preferred locations.
+	# Prepare the chapter's elements by relocating metadata elements into preferred locations.
 
-	idx = {}
+	idx = chapter[-1]['index'] = {}
 	integrate(idx, types, chapter)
 
 	if 'context' in chapter[-1]:
@@ -143,14 +144,90 @@ def prepare(chapter, path=(), types={'CONTROL', 'CONTEXT'}):
 	else:
 		ctx['section-type'] = 'unspecified'
 
-	chapter[-1]['index'] = idx
+	return chapter
 
-	return idx, ctx
+@tools.struct
+class PageSubject():
+	"""
+	# Page subject fields.
+	"""
+	ps_icon: str
+	ps_identifier: str
+	ps_type: str
+	ps_type_hyperlink: str
+
+@tools.struct
+class PageContext():
+	"""
+	# Page context fields.
+	"""
+	pc_icon: str
+	pc_identifier: str
+	pc_hyperlink: str
+
+def page_heading(tree, depth, subject, context):
+	"""
+	# Construct the elements of a page's initial heading.
+	"""
+
+	return itertools.chain(
+		tree.element('div',
+			itertools.chain(
+				r_icon(tree, subject.ps_icon, titled=False),
+				tree.element('span',
+					tree.escape(subject.ps_identifier),
+					('class', 'subject-identifier'),
+				),
+				tree.element('a',
+					tree.element('code',
+						tree.escape(subject.ps_type),
+						('class', 'type'),
+					),
+					('href', subject.ps_type_hyperlink),
+				),
+			),
+			('class', 'page-subject'),
+		),
+		tree.element('div',
+			itertools.chain(
+				tree.element('a',
+					r_icon(tree, context.pc_icon, titled=False)
+					if context.pc_icon else (),
+					('href', context.pc_hyperlink),
+				),
+				tree.element('span',
+					tree.escape(context.pc_identifier),
+					('class', 'context-identifier'),
+				),
+			),
+			('class', 'page-context'),
+		),
+	)
 
 class Render(comethod.object):
 	"""
-	# Render an HTML document for the configured text document.
+	# Rendering context for constructing an HTML document.
+
+	# [ Properties ]
+	# /output/
+		# The tree builder used to form elements and escape text.
+	# /prefix/
+		# The target prefix to remove from context-local references.
+	# /depth/
+		# The position of the document relative to the root of the collection.
+	# /context/
+		# The chapter's context information.
+	# /index/
+		# The chapter's element index constructed by &integrate.
+	# /input/
+		# The cursor identifying the root chapter element.
 	"""
+	output: object = None
+	prefix: str = None
+	depth: int = 0
+	context: dict
+	index: dict
+	input: Cursor
 
 	@staticmethod
 	@tools.cachedcalls(16)
@@ -171,25 +248,17 @@ class Render(comethod.object):
 
 		return prefixed
 
-	@classmethod
-	def from_chapter(Class, prefix, depth, chapter, encoding='utf-8'):
-		sx = xml.Serialization(xml_encoding=encoding)
-		n = query.navigate(structure_chapter_text(chapter))
-		r, = n.root
-		idx, ctx = prepare(r)
-		return Render(sx, ctx, prefix, depth, idx, n)
-
-	def __init__(self, output:xml.Serialization, context, prefix, depth, index, input:query.Cursor):
-		self.context = context
+	def __init__(self, output, prefix, depth, context, index, input):
+		self.output = output
 		self.prefix = prefix
 		self.depth = depth
-		self.input = input
+		self.context = context
 		self.index = index
-		self.output = output
+		self.input = input
 
 		# Shorthand
 		self.element = output.element
-		self.text = output.escape
+		self.escape = self.text = output.escape
 
 	def default_resolver(self, capacity=16):
 		return tools.cachedcalls(capacity)(self.comethod)
@@ -198,38 +267,21 @@ class Render(comethod.object):
 		return self.element(
 			tag,
 			itertools.chain(
-				self.element('div', itertools.chain(
-					self.element('div', self.text(''), ('class', 'left')),
-					self.element('div', self.text(''), ('class', 'right')),
-				), ('class', 'parallel')),
 				self.element('span', self.text(''), ('class', 'prefix')),
 				content,
 			),
 			('class', None if integrate == False else 'integrate')
 		)
 
-	def document(self, type, identifier, head=(), header=(), footer=(), resolver=None):
+	def document(self, subject, context, head=(), header=(), footer=(), resolver=None):
 		"""
 		# Render the HTML document from the given chapter.
 		"""
 
 		resolver = resolver or self.default_resolver()
-		rnode, = self.input.root
+		relement, = self.input.root
 
-		title = self.title(resolver,
-			itertools.chain(
-				self.element('span',
-					self.text(identifier),
-					('class', 'title'),
-				),
-				self.element('span',
-					self.text(type),
-					('class', 'factor-type'),
-				),
-			),
-			False
-		)
-
+		title = self.title(resolver, page_heading(self.output, 2, subject, context), False)
 		return self.element('html',
 			itertools.chain(
 				head,
@@ -239,7 +291,7 @@ class Render(comethod.object):
 						self.element('main',
 							itertools.chain(
 								title,
-								self.root(resolver, rnode[1], rnode[-1]),
+								self.root(resolver, relement[1], relement[-1]),
 								self.element('h1', self.text(''), ('class', 'footing')),
 							),
 						),
@@ -247,25 +299,26 @@ class Render(comethod.object):
 					)
 				),
 			),
+			('root', str(self.depth)),
 		)
 
-	def abstract(self, resolver, nodes, attr):
+	def abstract(self, resolver, elements, attr):
 		"""
 		# Extract the non-section content from the chapter.
 		"""
 		yield from self.element(
-			'div',
-			self.switch(resolver, nodes, attr),
-			('class', "text.abstract")
+			'section',
+			self.switch(resolver, elements, attr),
+			('class', "chapter")
 		)
 
-	def root(self, resolver, nodes, attr):
-		chapter_content = list(itertools.takewhile((lambda x: x[0] != 'section'), nodes))
+	def root(self, resolver, elements, attr):
+		chapter_content = list(itertools.takewhile((lambda x: x[0] != 'section'), elements))
 		yield from self.abstract(resolver, chapter_content, attr)
-		yield from self.switch(resolver, nodes[len(chapter_content):], attr)
+		yield from self.switch(resolver, elements[len(chapter_content):], attr)
 
 	@comethod('section')
-	def semantic_section(self, resolver, nodes, attr, adjustment=0, tag='section'):
+	def semantic_section(self, resolver, elements, attr, adjustment=0, tag='section'):
 		ref = attr.get('reference', None)
 		path = attr.get('absolute', ())
 		if path is None:
@@ -285,7 +338,7 @@ class Render(comethod.object):
 			if sl is not None and sl > 0 and len(sp or (1,2)) == 1:
 				integrate = True
 
-		subcount = sum(1 for x in nodes if x[0] == 'section')
+		subcount = sum(1 for x in elements if x[0] == 'section')
 		htag = 'h1'
 		leading = [(self.slug('.'.join(path[0:i+1])), path[i]) for i in range(depth - 1)]
 
@@ -339,7 +392,7 @@ class Render(comethod.object):
 			itertools.chain(
 				title,
 				self.reference_target(resolver, ref.sole[1]) if ref is not None else (),
-				self.switch(resolver, nodes, attr)
+				self.switch(resolver, elements, attr)
 			),
 			('class', typ),
 			('documented', str(documented).lower()),
@@ -363,35 +416,30 @@ class Render(comethod.object):
 			('class', 'subject-reference-display'),
 		)
 
-	def switch(self, resolver, nodes, attr):
+	def switch(self, resolver, elements, attr):
 		"""
-		# Perform the transformation for the given node.
+		# Perform the transformation for the given element.
 		"""
-		for node in nodes:
-			node[-1]['super'] = attr
-			yield from resolver(node[0])(resolver, node[1], node[-1])
+		for element in elements:
+			element[-1]['super'] = attr
+			yield from resolver(element[0])(resolver, element[1], element[-1])
 
 	@comethod('exception')
-	def error(self, resolver, nodes, attr):
-		yield from self.element('pre', self.text(str(nodes)))
+	def error(self, resolver, elements, attr):
+		yield from self.element('pre', self.text(str(elements)))
 
 	@comethod('syntax')
-	def code_block(self, resolver, nodes, attr):
-		lines = [x[1][0] + "\n" for x in nodes]
+	def code_block(self, resolver, elements, attr):
+		lines = [x[1][0] + "\n" for x in elements]
 		if lines[-1] == "\n":
 			ilines = itertools.islice(lines, 0, len(lines)-1)
 		else:
 			ilines = lines
 
-		if attr['type'].startswith('/pl/'):
-			cl = 'language-' + attr['type'][4:]
-		else:
-			cl = None
-
 		yield from self.element('pre',
 			self.element('code',
 				self.text(''.join(ilines)),
-				('class', cl)
+				('class', attr['type'] or None),
 			),
 			('class', 'text.syntax'),
 		)
@@ -456,15 +504,40 @@ class Render(comethod.object):
 		attr['super'] = sattr
 		attr['absolute'] = (sattr['absolute'] or ()) + (kpi,)
 
+		# Identify syntax only items to help with special cases in styling.
+		solecontent = None
+		if len(v[1]) == 1:
+			if v[1][0][0] == 'syntax':
+				# dl > div > dd[sole='syntax'] { ... }
+				solecontent = 'syntax'
+
 		try:
 			pset = dict(setdirectory.select(v[1]))
 		except Exception:
 			pset = None
 
+		# Append date given a time-context property.
+		dated = ()
+		pdate = None
 		if pset:
-			# First node was a property set.
+			# First element was a property set.
 			del v[1][0:1]
 			item_properties.update(pset.items())
+
+			pdate = pset.get(('time-context',)) or None
+			if pdate:
+				if ' ' in pdate or 'T' in pdate:
+					precision = None
+				else:
+					precision = 'day'
+
+				dated = self.element('time',
+					self.text(pdate),
+					('datetime', pdate),
+					('class', 'stamp'),
+					('positional-relation', '-1'),
+					('precision', precision),
+				)
 
 		documented = True
 		typannotation = ()
@@ -502,18 +575,27 @@ class Render(comethod.object):
 				self.element('dt',
 					itertools.chain(
 						self.dl_item_anchor(attr['absolute']),
-						self.paragraph_content(resolver, k[1], attr),
+						dated,
+						# Primary directory key content.
+						self.element('span',
+							self.paragraph_content(resolver, k[1], attr),
+							('class', 'directory-key'),
+						),
 						typannotation,
 					),
 				),
-				self.element('dd', self.switch(resolver, v[1], attr)),
+				self.element('dd',
+					self.switch(resolver, v[1], attr),
+					('sole', solecontent),
+				),
 			),
 			('id', self.slug(prefix(kpi))),
 			('class', iclass),
-			('documented', str(documented).lower())
+			('documented', str(documented).lower()),
+			('when', pdate),
 		)
 
-	@comethod('dictionary')
+	@comethod('directory')
 	def dl_dict(self, resolver, items, attr):
 		p = attr['super']
 		if p is not None:
@@ -523,7 +605,7 @@ class Render(comethod.object):
 			prefix = ('.'.join(p) + '.').__add__
 			attr['absolute'] = tuple(p)
 		else:
-			prefix = (lambda x: None)
+			prefix = (lambda x: x)
 			attr['absolute'] = None
 
 		yield from self.element(
@@ -743,65 +825,65 @@ class Render(comethod.object):
 
 			yield from self.comethod(typ, subtype)(resolver, attr, txt, *local)
 
-	def subtext(self, resolver, snodes, attr):
-		"""
-		# Currently unused.
+@tools.cachedcalls(16)
+def icon_identity(ftype):
+	"""
+	# Construct the `.icon` identifier from a factor type identifier.
+	"""
+	ftri = ri.parse(ftype.strip('/'))
+	return ftri['host'] + '/' + ftri['path'][-1].replace('.', '-')
 
-		# Originally, this parsed the syntax node content as kleptic text.
-		# Eventually &.join was changed to integrate the documentation into
-		# the generated sections leaving this unused.
-		"""
-		lines = [x[1][0] for x in snodes[0][1]]
-		sub = query.navigate(structure_chapter_lines(lines))
-		sub.filters['titled'] = (lambda x: bool(x[-1].get('identifier')))
+def factor_type_icon(depth, reference, prefix='.factor-type-icon/'):
+	"""
+	# Construct a hyperlink to a printed icon for the given factor type.
+	"""
 
-		# Build section index and assign paths.
-		r, = sub.root
+	# Factor Type Reference
+	prefix = ('../' * depth) + prefix
 
-		# Prefix with empty path.
-		r[-1]['absolute'] = ()
-		idx, ctx = prepare(r)
-		for v, subs in idx.values():
-			a = v[2]['absolute']
-			a = ('',) + tuple(a or ())
-			v[2]['absolute'] = a
+	try:
+		ii = icon_identity(reference)
+	except:
+		import traceback
+		traceback.print_exc()
+		ii = 'if.fault.io/meta-unknown'
 
-		# Module abstract.
-		chapter_content = list(itertools.takewhile((lambda x: x[0] != 'section'), r[1]))
-		yield from self.abstract(resolver, chapter_content, attr)
+	return prefix + ii + '.svg'
 
-		for snode in sub.select("/section"):
-			yield from self.semantic_section(resolver, snode[1], snode[-1], tag='article')
+def r_icon(sx, href, *, title:str=None, titled:bool=True):
+	if title is None:
+		title = href
 
-def r_icon(sx, i):
-	return sx.element('img', (), ('class', 'icon'), src=i)
+	return sx.element('img', (),
+		('class', 'icon'),
+		('src', href),
+		('title', title if titled else None),
+	)
 
 def r_index(sx, pathclass, abstractclass, listclass, index):
 	return sx.element('dl',
 		itertools.chain.from_iterable(
 			sx.element('a',
-				sx.element('div',
-					itertools.chain(
-						sx.element('dt',
-							itertools.chain(
-								sx.element('span',
-									icon,
-									('class', 'icon')
-								),
-								sx.element('span',
-									display,
-									('class', pathclass),
-								),
-							)
-						),
-						sx.element('dd',
+				sx.element('div', itertools.chain(
+					sx.element('dt',
+						itertools.chain(
 							sx.element('span',
-								abstract,
-								('class', abstractclass),
-							)
-						),
+								icon,
+								('class', 'icon')
+							),
+							sx.element('span',
+								display,
+								('class', pathclass),
+							),
+						)
 					),
-				),
+					sx.element('dd',
+						sx.element('span',
+							abstract,
+							('class', abstractclass),
+						)
+					),
+				)),
 				('href', link),
 			)
 			for link, icon, display, abstract in index
@@ -811,19 +893,20 @@ def r_index(sx, pathclass, abstractclass, listclass, index):
 
 def r_projects(sx, index):
 	i = (
-		(x[0] + '/', r_icon(sx, x[3]), sx.escape(x[1]), sx.escape(x[-1]))
+		(x[0] + '/', r_icon(sx, x[3]), sx.escape(x[1]), sx.escape(x[-1] or ''))
 		for x in index
 	)
 	return r_index(sx, 'factor-path', 'index-abstract', 'project-index', i)
 
 def r_factors(sx, index):
 	i = (
-		(x[0], r_icon(sx, x[1]), sx.escape(x[0]), sx.escape(x[1]))
+		(x[0], r_icon(sx, factor_type_icon(1, x[1])), sx.escape(x[0]), sx.escape(x[1]))
 		for x in index
 	)
 	return r_index(sx, 'factor-path', 'index-abstract', 'factor-index', i)
 
 def r_sources(sx, index, icon=(b"\xf0\x9f\x93\x84".decode('utf-8'))):
+	# If r_icon is ever used for source documents, the depth should always be 3.
 	i = (
 		(x[0], sx.escape(icon), sx.escape(x[0]), sx.escape('.'.join(x[1:2])))
 		for x in index
@@ -846,42 +929,52 @@ def r_head(sx, encoding, styles, title=None, preload=True):
 		)
 	)
 
-def indexframe(sx, type:str, identity:str, content, /, head=()):
+def indexframe(sx, head, subject, context, content, /, depth=0):
 	return sx.element('html',
 		itertools.chain(
 			head, # r_head(sx, encoding, styles, title='head title')
 			sx.element('body',
 				sx.element('main',
 					itertools.chain(
-						sx.element('h1',
-							itertools.chain(
-								sx.element('span', sx.escape(identity)),
-								sx.element('span',
-									sx.escape(type),
-									('class', 'abstract-type')
-								)
-							)
-						),
+						sx.element('h1', page_heading(sx, depth, subject, context)),
 						content,
 						sx.element('h1', sx.escape(''), ('class', 'footer')),
 					)
 				),
 				('class', 'index'),
 			),
-		)
+		),
+		('root', str(depth)),
 	)
 
-def sourceindex(sx, head, factor, index, type='source-index'):
-	return indexframe(sx, type, factor, r_sources(sx, index), head=head)
+def r_factor_page(sx, prefix, depth, subject, context, chapter:str, head=()):
+	"""
+	# Structure the given chapter text and prepare the context, index, and element query
+	# context for a new &Render instance.
+	"""
+	ce = prepare(structure_chapter_text(chapter))
+	r_ops = Render(sx, prefix, depth, ce[-1]['context'], ce[-1]['index'], navigate(ce))
+	return r_ops.document(subject, context, head=head)
 
-projectfactors='http://if.fault.io/factors/meta.project'
-def factorindex(sx, head, project, index, type=projectfactors):
-	return indexframe(sx, type, str(project), r_factors(sx, index), head=head)
+def r_page(chapter, styles, encoding='utf-8'):
+	"""
+	# Transform the given &chapter file into HTML.
+	"""
+	doctext = chapter.fs_load().decode('utf-8')
 
-def projectindex(sx, head, type, corpus, title, index):
-	return indexframe(sx, type, str(title), r_projects(sx, index), head=head)
+	sx = xml.Serialization(xml_encoding=encoding)
+	typ = '://if.fault.io/factors/meta.chapter'
+	sub = PageSubject('https' + typ + '/.http-resource/icon.svg',
+		chapter.identifier, 'meta.chapter', 'http' + typ
+	)
 
-def transform(sx, prefix, depth, chapter, head=(), identifier='', type=''):
-	return (Render
-		.from_chapter(prefix, depth, chapter, encoding=sx.xml_encoding)
-		.document(type, identifier, head=head))
+	ctxpath = chapter ** 1
+	ctxstr = str(ctxpath)
+	ctxtyp = '://if.fault.io/factors/meta.directory'
+	ctx = PageContext(
+		'https' + ctxtyp + '/.http-resource/icon.svg',
+		ctxstr, 'file://' + ctxstr,
+	)
+
+	head = r_head(sx, encoding, styles=styles)
+	return transform(sx, '', 0, sub, ctx, doctext, head=head)

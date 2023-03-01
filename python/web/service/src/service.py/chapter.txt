@@ -95,7 +95,7 @@ Service contexts for accepting HTTP requests.
 		- `undocumented`
 	/element/
 		- (source/area)`18 1 19 44`
-(signature)`_prepare_http_transports_v0(ifctx, ports, Protocol)`
+(signature)`_prepare_http_transports_v0(ifctx, ports)`
 
 
 [ _prepare_http_transports_v1 ]
@@ -106,7 +106,7 @@ Service contexts for accepting HTTP requests.
 		- `undocumented`
 	/element/
 		- (source/area)`21 1 22 44`
-(signature)`_prepare_http_transports_v1(ifctx, ports, Protocol)`
+(signature)`_prepare_http_transports_v1(ifctx, ports)`
 
 
 [ _prepare_http_transports_v2 ]
@@ -117,7 +117,7 @@ Service contexts for accepting HTTP requests.
 		- `undocumented`
 	/element/
 		- (source/area)`24 1 25 35`
-(signature)`_prepare_http_transports_v2(ifctx, ports, Protocol)`
+(signature)`_prepare_http_transports_v2(ifctx, ports)`
 
 
 [ protocols ]
@@ -193,8 +193,8 @@ Request execution controller for HTTP services.
 		
 (signature)`connect(self, channel)`
 
-Initiate the response causing headers to be sent and connect the (factor-local/parameter)&<#Controller.connect.Parameters.channel[channel]> as the
-HTTP response entity body. If (factor-local/parameter)&<#Controller.connect.Parameters.channel[channel]> is (invalid/unknown)&<#None>, no entity body will be supplied.
+Initiate the response causing headers to be sent and connect the (invalid/unknown)&<#channel> as the
+HTTP response entity body. If (invalid/unknown)&<#channel> is (invalid/unknown)&<#None>, no entity body will be supplied.
 
 
 [ Controller >> accept ]
@@ -205,8 +205,8 @@ HTTP response entity body. If (factor-local/parameter)&<#Controller.connect.Para
 		- (source/area)`73 2 78 37`
 (signature)`accept(self, channel)`
 
-Connect entity body of the request to the given (factor-local/parameter)&<#Controller.accept.Parameters.channel[channel]>.
-If (factor-local/parameter)&<#Controller.accept.Parameters.channel[channel]> is (invalid/unknown)&<#None>, any entity body sent will trigger a fault.
+Connect entity body of the request to the given (invalid/unknown)&<#channel>.
+If (invalid/unknown)&<#channel> is (invalid/unknown)&<#None>, any entity body sent will trigger a fault.
 
 
 [ Controller >> http_add_header ]
@@ -263,18 +263,18 @@ Add a sequence of headers.
 		method
 	/element/
 		- (source/area)`94 2 113 13`
-(signature)`http_set_response(self, code, descr, length, cotype)`
+(signature)`http_set_response(self, code, descr, length)`
 
 Assign the status of the response and designate the transfer encoding.
-Excepting (factor-local/parameter)&<#Controller.http_set_response.Parameters.length[length]>, all parameters *must* be (invalid/unknown)&<#bytes> instances;
+Excepting (invalid/unknown)&<#length>, all parameters *must* be (invalid/unknown)&<#bytes> instances;
 this is intended to emphasize that the fields are being directly inserted
 into the wire.
 
-If (factor-local/parameter)&<#Controller.http_set_response.Parameters.cotype[cotype]> is (invalid/unknown)&<#None>, neither (http/header)`Content-Length` nor
+If (invalid/unknown)&<#cotype> is (invalid/unknown)&<#None>, neither (http/header)`Content-Length` nor
 (http/header)`Transfer-Encoding` will be appended to the headers.
 
-If (factor-local/parameter)&<#Controller.http_set_response.Parameters.cotype[cotype]> is not (invalid/unknown)&<#None> and (factor-local/parameter)&<#Controller.http_set_response.Parameters.length[length]> is (invalid/unknown)&<#None>, chunked transfer encoding will be used.
-If (factor-local/parameter)&<#Controller.http_set_response.Parameters.cotype[cotype]> is not (invalid/unknown)&<#None> and (factor-local/parameter)&<#Controller.http_set_response.Parameters.length[length]> is an integer, (http/header)`Content-Length`
+If (invalid/unknown)&<#cotype> is not (invalid/unknown)&<#None> and (invalid/unknown)&<#length> is (invalid/unknown)&<#None>, chunked transfer encoding will be used.
+If (invalid/unknown)&<#cotype> is not (invalid/unknown)&<#None> and (invalid/unknown)&<#length> is an integer, (http/header)`Content-Length`
 will be provided.
 
 
@@ -338,7 +338,7 @@ Define the type and length of the entity body to be sent.
 		- (source/area)`151 2 163 29`
 (signature)`http_dispatch_output(self, channel)`
 
-Dispatch the given (factor-local/parameter)&<#Controller.http_dispatch_output.Parameters.channel[channel]> using a new (context-local/factor-element)&<fault.kernel/io#Transfer[fault.kernel.io.Transfer]> instance into (invalid/unknown)&<#invocations'>
+Dispatch the given (invalid/unknown)&<#channel> using a new (context-local/factor-element)&<fault.kernel/io#Transfer[fault.kernel.io.Transfer]> instance into (invalid/unknown)&<#invocations'>
 (context-local/factor-element)&<fault.kernel/io#Transport[fault.kernel.io.Transport]> transaction.
 
 
@@ -365,7 +365,7 @@ supporting the connection to the remote peer.
 		- (source/area)`177 2 185 44`
 (signature)`http_write_output(self, cotype, data)`
 
-Send the given (factor-local/parameter)&<#Controller.http_write_output.Parameters.data[data]> to the remote end with the given content type, (factor-local/parameter)&<#Controller.http_write_output.Parameters.cotype[cotype]>.
+Send the given (invalid/unknown)&<#data> to the remote end with the given content type, (invalid/unknown)&<#cotype>.
 If other headers are desired, they *must* be configured before running
 this method.
 
@@ -391,7 +391,7 @@ this method.
 		- (source/area)`198 2 217 50`
 (signature)`http_read_file_into_output(self, route, cotype)`
 
-Send the file referenced by (factor-local/parameter)&<#Controller.http_read_file_into_output.Parameters.route[route]> to the remote end as
+Send the file referenced by (invalid/unknown)&<#route> to the remote end as
 the (HTTP) entity body.
 
 [ >> Parameters ]
@@ -419,7 +419,7 @@ the (HTTP) entity body.
 		- (source/area)`219 2 237 20`
 (signature)`http_send_file_head(self, route, cotype)`
 
-Send the file referenced by (factor-local/parameter)&<#Controller.http_send_file_head.Parameters.route[route]> to the remote end as
+Send the file referenced by (invalid/unknown)&<#route> to the remote end as
 the (HTTP) entity body.
 
 [ >> Parameters ]
@@ -445,7 +445,7 @@ the (HTTP) entity body.
 		method
 	/element/
 		- (source/area)`239 2 255 23`
-(signature)`http_read_input_into_buffer(self, callback, *args, limit)`
+(signature)`http_read_input_into_buffer(self, callback, *args)`
 
 Connect the input Flow to a buffer that executes
 the given callback when the entity body has been transferred.
@@ -504,7 +504,7 @@ interface.
 		- `undocumented`
 	/element/
 		- (source/area)`285 2 288 25`
-(signature)`__init__(self, hostsrc)`
+(signature)`__init__(self)`
 
 
 [ Network >> net_dispatch ]
@@ -535,7 +535,7 @@ interface.
 		method
 	/element/
 		- (source/area)`300 2 319 10`
-(signature)`net_accept(self, invp, Constructor)`
+(signature)`net_accept(self, invp)`
 
 Route the protocol transactions to the designated host.
 This only enqueues the invocation for subsequent execution.
@@ -605,7 +605,7 @@ Base class for host applications.
 		- `undocumented`
 	/element/
 		- (source/area)`357 2 364 36`
-(signature)`__init__(self, path, argv)`
+(signature)`__init__(self, path)`
 
 
 [ Partition >> structure ]
@@ -636,9 +636,9 @@ Base class for host applications.
 		method
 	/element/
 		- (source/area)`376 2 382 44`
-(signature)`part_accept(self, invp, Constructor)`
+(signature)`part_accept(self, invp)`
 
-Allocate a sequence of controllers and process them using (factor-local/method)&<#Partition.part_select[part_select]>.
+Allocate a sequence of controllers and process them using (invalid/unknown)&<#part_select>.
 
 
 [ Partition >> part_select ]
@@ -732,7 +732,7 @@ and handling the representation of error cases.
 	to match patterns as well.
 
 /h_canonical/
-	The first name given to (factor-local/method)&<#Host.h_update_names[h_update_names]>. (invalid/unknown)&<#None>
+	The first name given to (invalid/unknown)&<#h_update_names>. (invalid/unknown)&<#None>
 	if no names were given and the name should be
 	inherited from requests.
 
@@ -762,7 +762,7 @@ initialized by a parent process.
 		staticmethod
 	/element/
 		- (source/area)`458 2 465 25`
-(signature)`strcache(obj, str)`
+(signature)`strcache(obj)`
 
 Cache for encoded identifiers often used with a host.
 
@@ -955,7 +955,7 @@ Modify the host names that this interface responds to.
 		method
 	/element/
 		- (source/area)`527 2 539 27`
-(signature)`h_configure(self, partitions, root, Index)`
+(signature)`h_configure(self, partitions)`
 
 Configure and dispatch the host's partitions.
 
@@ -968,7 +968,7 @@ Configure and dispatch the host's partitions.
 		- (source/area)`541 2 550 56`
 (signature)`h_connect(self, partition)`
 
-Add the given (factor-local/parameter)&<#Host.h_connect.Parameters.partition[partition]> to the host.
+Add the given (invalid/unknown)&<#partition> to the host.
 
 
 [ Host >> h_disconnect ]
@@ -1011,7 +1011,7 @@ Individual Resources may support an OPTIONS request as well.
 		method
 	/element/
 		- (source/area)`580 2 612 39`
-(signature)`h_error(self, ctl, code, exc, description)`
+(signature)`h_error(self, ctl, code, exc)`
 
 Host error handler. By default, emits an XML document with an assigned stylesheet
 that can be retrieved for formatting the error. Additional error data may by
@@ -1073,9 +1073,9 @@ Route the request to the identified partition.
 		method
 	/element/
 		- (source/area)`651 2 657 42`
-(signature)`h_accept(self, invp, Constructor)`
+(signature)`h_accept(self, invp)`
 
-Allocate a sequence of controllers and process them using (factor-local/method)&<#Host.h_route[h_route]>.
+Allocate a sequence of controllers and process them using (invalid/unknown)&<#h_route>.
 
 
 [ Host >> terminate ]

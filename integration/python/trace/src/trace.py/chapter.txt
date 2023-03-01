@@ -119,7 +119,7 @@ Python collector.
 		- `undocumented`
 	/element/
 		- (source/area)`56 2 72 22`
-(signature)`_collect(self, append, time_delta, frame, event, arg, event_map, isinstance)`
+(signature)`_collect(self, append, time_delta, frame, event, arg)`
 
 
 [ Collector >> __call__ ]
@@ -206,17 +206,17 @@ Cancel the collection of data in the current thread.
 		- (source/area)`109 1 134 25`
 		- (type/syntax)`typing.Tuple[Collector, typing.Sequence]`
 		
-(signature)`prepare(Sequence, Chronometer, Collector)`
+(signature)`prepare()`
 
 Construct trace event collection using a (invalid/unknown)&<#list> instance
 as the destination. This is the primary entry point for this module and should
-be used to create the necessary per-thread (factor-local/parameter)&<#prepare.Parameters.Collector[Collector]> instances.
+be used to create the necessary per-thread (factor-local/class)&<#Collector[Collector]> instances.
 
 [ > Effects ]
 
 /product/
-	Returns a pair containing the (factor-local/parameter)&<#prepare.Parameters.Collector[Collector]> instance and the events instance
-	of the configured (factor-local/parameter)&<#prepare.Parameters.Sequence[Sequence]> type.
+	Returns a pair containing the (factor-local/class)&<#Collector[Collector]> instance and the events instance
+	of the configured (invalid/unknown)&<#Sequence> type.
 
 
 [ Measurements ]
@@ -242,7 +242,7 @@ be used to create the necessary per-thread (factor-local/parameter)&<#prepare.Pa
 		- (type/syntax)`Measurements`
 		- (type/factor-local/data)&<#Measurements[Measurements]>
 		
-(signature)`measure(events, TRACE_LINE, TRACE_CALL, TRACE_RETURN, TRACE_EXCEPTION, TRACE_C_CALL, TRACE_C_RETURN, TRACE_C_EXCEPTION, IntegerSequence, deque, defaultdict, Counter)`
+(signature)`measure(events)`
 
 Measure line counts and call times from the collected trace data.
 

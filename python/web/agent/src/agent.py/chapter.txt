@@ -80,7 +80,7 @@ model should be sufficient in most cases.
 		- `undocumented`
 	/element/
 		- (source/area)`23 1 24 44`
-(signature)`_prepare_http_transports_v0(ifctx, ports, Protocol)`
+(signature)`_prepare_http_transports_v0(ifctx, ports)`
 
 
 [ _prepare_http_transports_v1 ]
@@ -91,7 +91,7 @@ model should be sufficient in most cases.
 		- `undocumented`
 	/element/
 		- (source/area)`26 1 27 44`
-(signature)`_prepare_http_transports_v1(ifctx, ports, Protocol)`
+(signature)`_prepare_http_transports_v1(ifctx, ports)`
 
 
 [ _prepare_http_transports_v2 ]
@@ -102,7 +102,7 @@ model should be sufficient in most cases.
 		- `undocumented`
 	/element/
 		- (source/area)`29 1 30 35`
-(signature)`_prepare_http_transports_v2(ifctx, ports, Protocol)`
+(signature)`_prepare_http_transports_v2(ifctx, ports)`
 
 
 [ protocols ]
@@ -235,16 +235,16 @@ Add a sequence of headers.
 		method
 	/element/
 		- (source/area)`82 2 106 13`
-(signature)`http_set_request(self, method, uri, length, cotype, final)`
+(signature)`http_set_request(self, method, uri, length)`
 
 Assign the method and URI of the request and designate the transfer encoding.
-Excepting (factor-local/parameter)&<#Controller.http_set_request.Parameters.length[length]>, all parameters *must* be (invalid/unknown)&<#bytes> instances.
+Excepting (invalid/unknown)&<#length>, all parameters *must* be (invalid/unknown)&<#bytes> instances.
 
-If (factor-local/parameter)&<#Controller.http_set_request.Parameters.cotype[cotype]> is (invalid/unknown)&<#None>, neither (http/header)`Content-Length` nor
+If (invalid/unknown)&<#cotype> is (invalid/unknown)&<#None>, neither (http/header)`Content-Length` nor
 (http/header)`Transfer-Encoding` will be appended to the headers.
 
-If (factor-local/parameter)&<#Controller.http_set_request.Parameters.cotype[cotype]> is not (invalid/unknown)&<#None> and (factor-local/parameter)&<#Controller.http_set_request.Parameters.length[length]> is (invalid/unknown)&<#None>, chunked transfer encoding will be used.
-If (factor-local/parameter)&<#Controller.http_set_request.Parameters.cotype[cotype]> is not (invalid/unknown)&<#None> and (factor-local/parameter)&<#Controller.http_set_request.Parameters.length[length]> is an integer, (http/header)`Content-Length`
+If (invalid/unknown)&<#cotype> is not (invalid/unknown)&<#None> and (invalid/unknown)&<#length> is (invalid/unknown)&<#None>, chunked transfer encoding will be used.
+If (invalid/unknown)&<#cotype> is not (invalid/unknown)&<#None> and (invalid/unknown)&<#length> is an integer, (http/header)`Content-Length`
 will be provided.
 
 
@@ -267,8 +267,8 @@ will be provided.
 		- (source/area)`109 2 117 29`
 (signature)`connect(self, channel)`
 
-Initiate the request causing headers to be sent and connect the (factor-local/parameter)&<#Controller.connect.Parameters.channel[channel]> as the
-HTTP request's entity body. If (factor-local/parameter)&<#Controller.connect.Parameters.channel[channel]> is (invalid/unknown)&<#None>, no entity body will be supplied.
+Initiate the request causing headers to be sent and connect the (invalid/unknown)&<#channel> as the
+HTTP request's entity body. If (invalid/unknown)&<#channel> is (invalid/unknown)&<#None>, no entity body will be supplied.
 
 
 [ Controller >> accept ]
@@ -279,8 +279,8 @@ HTTP request's entity body. If (factor-local/parameter)&<#Controller.connect.Par
 		- (source/area)`119 2 124 37`
 (signature)`accept(self, channel)`
 
-Accept the entity-body of the response into (factor-local/parameter)&<#Controller.accept.Parameters.channel[channel]>.
-If (factor-local/parameter)&<#Controller.accept.Parameters.channel[channel]> is (invalid/unknown)&<#None>, any entity body sent will trigger a fault.
+Accept the entity-body of the response into (invalid/unknown)&<#channel>.
+If (invalid/unknown)&<#channel> is (invalid/unknown)&<#None>, any entity body sent will trigger a fault.
 
 
 [ Controller >> _http_content_headers ]
@@ -302,7 +302,7 @@ Define the type and length of the entity body to be sent.
 		- (source/area)`140 2 152 36`
 (signature)`http_dispatch_output(self, channel)`
 
-Dispatch the given (factor-local/parameter)&<#Controller.http_dispatch_output.Parameters.channel[channel]> using a new (context-local/factor-element)&<fault.kernel/io#Transfer[fault.kernel.io.Transfer]> instance into (invalid/unknown)&<#invocations'>
+Dispatch the given (invalid/unknown)&<#channel> using a new (context-local/factor-element)&<fault.kernel/io#Transfer[fault.kernel.io.Transfer]> instance into (invalid/unknown)&<#invocations'>
 (context-local/factor-element)&<fault.kernel/io#Transport[fault.kernel.io.Transport]> transaction.
 
 
@@ -329,7 +329,7 @@ supporting the connection to the remote peer.
 		- (source/area)`166 2 174 44`
 (signature)`http_put_data(self, uri, cotype, data)`
 
-Send the given (factor-local/parameter)&<#Controller.http_put_data.Parameters.data[data]> to the remote end with the given content type, (factor-local/parameter)&<#Controller.http_put_data.Parameters.cotype[cotype]>.
+Send the given (invalid/unknown)&<#data> to the remote end with the given content type, (invalid/unknown)&<#cotype>.
 If other headers are desired, they *must* be configured before running
 this method.
 
@@ -340,7 +340,7 @@ this method.
 		method
 	/element/
 		- (source/area)`176 2 192 21`
-(signature)`http_read_input_into_buffer(self, callback, *args, limit)`
+(signature)`http_read_input_into_buffer(self, callback, *args)`
 
 Connect the input to a buffer that executes
 the given callback when the entity body has been transferred.
@@ -352,7 +352,7 @@ the given callback when the entity body has been transferred.
 		method
 	/element/
 		- (source/area)`194 2 209 10`
-(signature)`http_read_input_into_file(self, path, Terminal)`
+(signature)`http_read_input_into_file(self, path)`
 
 Connect the input to a buffer that executes
 the given callback when the entity body has been transferred.
@@ -460,7 +460,7 @@ Root agent context managing global headers, connection strategy cache, and host 
 		- (source/area)`256 2 261 38`
 (signature)`nav_connect(self, endpoint)`
 
-Allocate transport communicating with (factor-local/parameter)&<#Navigation.nav_connect.Parameters.endpoint[endpoint]> with respect to the navigation's
+Allocate transport communicating with (invalid/unknown)&<#endpoint> with respect to the navigation's
 perspective.
 
 

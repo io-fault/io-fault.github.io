@@ -1,0 +1,120 @@
+! CONTEXT:
+	/title/
+		`Factored Projects`
+
+Factored Projects is a set of protocols used to describe the components of a project with
+the primary purpose of system integration. The (term)`factor` is the core concept and is usually
+composed of a set of sources. The (term)`project` is the, developer, identified set of (term)`factors`
+that are intended for distribution to users. Networks of software are created from citing
+(term)`project` identifier qualified (term)`factors` as requirements of dependent (term)`factors`.
+
+[ Motivation ]
+
+Traditional integration tooling has usually been tightly coupled with the target platform.
+Substantial boilerplate and little support for languages that were not within the original
+scope or purpose of the tool provide developers with substantial platform dependent burdens.
+While it is common for ecosystems to manage their own tooling,
+it comes at the cost of redundant efforts and knowledge. Each ecosystem the developer participates
+in incurs overhead. Projects seeking to harness heterogenous ecosystems are likely better off
+splitting the project by language and tying them together at a higher level.
+
+It's not the goal to encourage heterogenous projects, but to make a toolchain that can seamlessly
+handle such cases when they arise. A notable case being language transitions where enough
+compatibility is present to allow incremental rewrites.
+
+[ Concepts ]
+
+/(control/type)`term`/
+	(control/type)`definition`
+/`developer`/
+	The entity composing and publishing corpora containing projects that may be integrated.
+	Casually, this may also refer to a project's authority.
+/`administrator`/
+	The entity responsible for product integration.
+/`authority`/
+	The entity controlling a project. This may not always be the original developer.
+	Usually coupled with contact information.
+/`source`/
+	An object or file that, usually, requires processing in order for its functionality
+	to be made available for use within a system.
+/`requirement`/
+	A `factor` that is cited as a dependency.
+/`factor`/
+	A collection of sources and requirements associated with a project relative factor path.
+/`project`/
+	A set of factors associated with an identified that can be used by other projects
+	to cite dependencies.
+/`product`/
+	A set of integrated projects on a system. For most systems, this is a filesystem
+	directory containing project directories.
+	The contents and structure of a product is wholly determined by the system
+	administrator. However, the `factors` may have internal expectations of the directory structure.
+/`corpus`/
+	A set of (developer) associated projects that may, presumably, be deployed into a product
+	for integration.
+/`machine`/
+	A conceptual device normally associated with a working implementation used to perform
+	instructions within a system context. When referring to the physical machine, the
+	(term)`host` is normally used.
+/`host`/
+	The physical or virtual device running the operating system.
+/`system context`/
+	Host environment configuration coupled with a project set (product) identifying
+	the machine implementations used. Provides the foundation for integration and execution of
+	factors.
+
+	A `host` may provide an arbitrary set of `system contexts` that `applications` will
+	perform their functionality on.
+/`application context`/
+	A `host` local `product` set and its associated `system context`. The environment
+	configuration required to perform the functionality within some set of factors.
+/`application`/
+	The specific functionality being ran by some `application context`.
+/`project protocol`/
+	The means by which a project's factor are interpreted.
+
+[ Goals ]
+
+The establishment of software networks and a nearly complete transition of responsibility
+over system integration to administration are the primary goals of Factored Projects.
+Indirectly, this seeks to illuminate the abstract properties of integration and system contexts.
+
+Modern build systems have made some progress with system integration, but there is still much
+responsibility on the developer. Factored Projects intends to allow the developer to provide
+factors and have the administration manage nearly all integration responsibilities. Developer
+defined build files, installation procedures, system specific compile time options would only
+be necessary in exceptional cases where another, even custom, build system may be preferred.
+
+Projects have explicitly defined identifiers so that factors may be referenced by other projects.
+These identifiers allow conceptual networks to be formed and dependencies resolved. Handling
+dependencies at this level helps eliminate per-project resolution logic and system probing. If
+a project cites a requirement, the integration tooling will connect it or emit an error.
+The responsibility is wholly taken on by the system so that probing can be *reduced* or eliminated.
+
+[ Factor Recognition ]
+
+Factors are recognized using project protocols which allows integration and execution tooling
+to understand their path, type, and composition.
+
+[ > Paths ]
+
+Factor Paths are the project relative, or product absolute, address used to identify the factor.
+It is the primary property used when selecting a subset of factors for usage.
+
+[ > Types ]
+
+Factor Types are Independent Identifiers used to recognize the developer's intended machine
+and function of a factor. Integration tooling uses this information to select the appropriate
+processing instructions so that the functionality of the factor can be used by a system context.
+
+[ > Composition ]
+
+The composition of a factor is the absolute set of sources *and* requirements needed to process
+the factor for integration. It is the definition of the functionality held by a factor.
+
+[ Product Integration ]
+
+The process of installing factors for use is called Product Integration. Projects are composed into
+a Product (a set of factors) which is connected to other Products that provide requirements needed
+to perform integration. Deployed Projects are identified by their local name or their independent
+identifiers.

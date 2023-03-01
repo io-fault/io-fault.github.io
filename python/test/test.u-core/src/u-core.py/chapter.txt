@@ -74,7 +74,7 @@
 		- `undocumented`
 	/element/
 		- (source/area)`33 1 122 21`
-(signature)`test_Contention(test, partial)`
+(signature)`test_Contention(test)`
 
 
 [ test_issubclass ]

@@ -104,7 +104,7 @@ Route for Python imports.
 (signature)`from_context(Class)`
 
 Return a new (factor-local/class)&<#Import[Import]> to the package containing the module that is executing
-(factor-local/classmethod)&<#Import.from_context[from_context]>.
+(invalid/unknown)&<#from_context>.
 
 
 [ Import >> from_fullname ]
@@ -147,10 +147,10 @@ instance to that path.
 		classmethod
 	/element/
 		- (source/area)`55 2 66 13`
-(signature)`from_attributes(Class, path, tuple)`
+(signature)`from_attributes(Class, path)`
 
-Create a (invalid/unknown)&<#Route> and an attributes sequence based on the given (factor-local/parameter)&<#Import.from_attributes.Parameters.path[path]> such that
-the (invalid/unknown)&<#Route> is the (factor-local/method)&<#Import.real[real]> portion of the (factor-local/parameter)&<#Import.from_attributes.Parameters.path[path]> and text following real module
+Create a (invalid/unknown)&<#Route> and an attributes sequence based on the given (invalid/unknown)&<#path> such that
+the (invalid/unknown)&<#Route> is the (invalid/unknown)&<#real> portion of the (invalid/unknown)&<#path> and text following real module
 path is the sequence of attributes.
 
 
@@ -276,7 +276,7 @@ The loader of the module.
 		method
 	/element/
 		- (source/area)`136 2 143 14`
-(signature)`spec(self, find_spec)`
+(signature)`spec(self)`
 
 The spec for loading the module.
 
@@ -299,7 +299,7 @@ However, the module may not be importable.
 		method
 	/element/
 		- (source/area)`153 2 162 39`
-(signature)`is_container(self, find_loader)`
+(signature)`is_container(self)`
 
 Interrogate the module's loader as to whether or not it's a "package module".
 
@@ -326,7 +326,7 @@ Interrogate the module's loader as to whether or not it's a "package module".
 The "real" portion of the Import.
 Greatest Absolute Route that *actually exists* on the file system.
 
-(invalid/unknown)&<#None> if no parts are real, and (factor-local/parameter)&<#Import.real.Parameters.self[self]> if the entire route exists.
+(invalid/unknown)&<#None> if no parts are real, and (invalid/unknown)&<#self> if the entire route exists.
 
 
 [ Import >> get_last_modified ]
@@ -350,7 +350,7 @@ Return the modification time of the module's file as a chronometry Timestamp.
 
 Return a list of module objects. The first being the outermost package module, the
 last being the module being pointed to, subject module, and the between being the
-packages leading to the (factor-local/parameter)&<#Import.stack.Parameters.self[self]>.
+packages leading to the (invalid/unknown)&<#self>.
 
 
 [ Import >> scan ]
@@ -361,8 +361,8 @@ packages leading to the (factor-local/parameter)&<#Import.stack.Parameters.self[
 		- (source/area)`204 2 213 36`
 (signature)`scan(self, attribute)`
 
-Scan the (factor-local/method)&<#Import.stack[stack]> of modules for the given attribute returning a pair
-containing the module and the object accessed with the (factor-local/parameter)&<#Import.scan.Parameters.attribute[attribute]>.
+Scan the (invalid/unknown)&<#stack> of modules for the given attribute returning a pair
+containing the module and the object accessed with the (invalid/unknown)&<#attribute>.
 
 
 [ Import >> module ]
@@ -371,7 +371,7 @@ containing the module and the object accessed with the (factor-local/parameter)&
 		method
 	/element/
 		- (source/area)`215 2 226 9`
-(signature)`module(self, trap, import_module)`
+(signature)`module(self)`
 
 Return the module that is being referred to by the path.
 
@@ -382,7 +382,7 @@ Return the module that is being referred to by the path.
 		method
 	/element/
 		- (source/area)`228 2 261 26`
-(signature)`subnodes(self, iter_modules)`
+(signature)`subnodes(self)`
 
 Return a pairs of sequences containing routes to the subnodes of the route.
 
@@ -393,7 +393,7 @@ Return a pairs of sequences containing routes to the subnodes of the route.
 		method
 	/element/
 		- (source/area)`263 2 282 19`
-(signature)`tree(self, deque)`
+(signature)`tree(self)`
 
 Return a package's full tree as a pair of lists.
 
@@ -404,7 +404,7 @@ Return a package's full tree as a pair of lists.
 		method
 	/element/
 		- (source/area)`284 2 294 24`
-(signature)`file(self, from_path, getattr)`
+(signature)`file(self)`
 
 Get the (project-local/factor-element)&<files#Path[fault.system.files.Path]> instance pointing to the module's file.
 
@@ -476,7 +476,7 @@ for structural purposes or origin tracking.
 		- `undocumented`
 	/element/
 		- (source/area)`329 2 332 13`
-(signature)`environment(Class, identifier, default, get)`
+(signature)`environment(Class, identifier, default)`
 
 
 [ Reference >> strings ]
@@ -500,7 +500,7 @@ if their determined value is not None.
 		- `undocumented`
 	/element/
 		- (source/area)`347 2 351 24`
-(signature)`__init__(self, type, get, identifier, default)`
+(signature)`__init__(self, type, get, identifier)`
 
 
 [ Reference >> __str__ ]
@@ -525,7 +525,7 @@ If the resolved value is (invalid/unknown)&<#None>, an empty string will be retu
 		- (source/area)`366 2 371 49`
 (signature)`item(self)`
 
-Return the (invalid/unknown)&<#identifier> - (factor-local/method)&<#Reference.value[value]> pair.
+Return the (invalid/unknown)&<#identifier> - (invalid/unknown)&<#value> pair.
 
 
 [ Reference >> items ]
@@ -536,7 +536,7 @@ Return the (invalid/unknown)&<#identifier> - (factor-local/method)&<#Reference.v
 		- (source/area)`373 2 377 19`
 (signature)`items(self)`
 
-Return (factor-local/method)&<#Reference.item[item]> in plural form; iterator that always returns a single pair.
+Return (invalid/unknown)&<#item> in plural form; iterator that always returns a single pair.
 
 
 [ Reference >> value ]

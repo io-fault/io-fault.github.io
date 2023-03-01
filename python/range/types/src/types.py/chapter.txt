@@ -93,7 +93,7 @@ the contiguous values.
 		function
 	/element/
 		- (source/area)`50 1 80 11`
-(signature)`combine(ranges, len, range)`
+(signature)`combine(ranges)`
 
 Combine the ranges into a sequence of ranges reducing them according
 to their overlaps and contiguity. Used by (factor-local/class)&<#Set[Set]> to implement unions.
@@ -230,8 +230,8 @@ Whether or not the range contains the given number.
 		- (source/area)`151 2 166 10`
 (signature)`relation(self, r)`
 
-The relation of (factor-local/parameter)&<#IRange.relation.Parameters.r[r]> with respect to the (factor-local/parameter)&<#IRange.relation.Parameters.self[self]>.
-Returns `-1` if (factor-local/parameter)&<#IRange.relation.Parameters.r[r]> is less than the start; `1` if (factor-local/parameter)&<#IRange.relation.Parameters.r[r]> is
+The relation of (invalid/unknown)&<#r> with respect to the (invalid/unknown)&<#self>.
+Returns `-1` if (invalid/unknown)&<#r> is less than the start; `1` if (invalid/unknown)&<#r> is
 greater than the stop, and `0` if it is contained.
 
 ! WARNING:
@@ -244,10 +244,10 @@ greater than the stop, and `0` if it is contained.
 		method
 	/element/
 		- (source/area)`168 2 174 43`
-(signature)`contiguous(self, r, tuple)`
+(signature)`contiguous(self, r)`
 
 The given range is contiguous with the other, but does *not*
-(factor-local/method)&<#IRange.overlaps[overlaps]>.
+(invalid/unknown)&<#overlaps>.
 
 
 [ IRange >> overlaps ]
@@ -256,7 +256,7 @@ The given range is contiguous with the other, but does *not*
 		method
 	/element/
 		- (source/area)`176 2 182 24`
-(signature)`overlaps(self, r, min, max)`
+(signature)`overlaps(self, r)`
 
 The ranges overlap onto each other.
 
@@ -278,7 +278,7 @@ The ranges are continuous: overlaps or contiguous.
 		method
 	/element/
 		- (source/area)`192 2 197 60`
-(signature)`join(self, r, min, max)`
+(signature)`join(self, r)`
 
 Combine the ranges regardless of adjacency.
 
@@ -291,7 +291,7 @@ Combine the ranges regardless of adjacency.
 		- (source/area)`199 2 238 11`
 (signature)`filter(self, ranges)`
 
-Modify (filter) the (factor-local/parameter)&<#IRange.filter.Parameters.ranges[ranges]> to be outside of (factor-local/parameter)&<#IRange.filter.Parameters.self[self]>.
+Modify (filter) the (invalid/unknown)&<#ranges> to be outside of (invalid/unknown)&<#self>.
 If a range is wholly contained, filter it entirely.
 
 The filter is a generator and is applied to an iterable of
@@ -322,7 +322,7 @@ contained ranges entirely from the generated sequence.
 		
 (signature)`intersect(self, ranges)`
 
-Identify the parts of the (factor-local/parameter)&<#IRange.intersect.Parameters.ranges[ranges]> that intersect with (factor-local/parameter)&<#IRange.intersect.Parameters.self[self]>.
+Identify the parts of the (invalid/unknown)&<#ranges> that intersect with (invalid/unknown)&<#self>.
 
 [ >> Parameters ]
 
@@ -333,7 +333,7 @@ Identify the parts of the (factor-local/parameter)&<#IRange.intersect.Parameters
 /(parameter)`ranges`/
 	- (type/syntax)`typing.Iterable["IRange"]`
 	
-	Sequence of (factor-local/class)&<#IRange[IRange]> instances to intersect with (factor-local/parameter)&<#IRange.intersect.Parameters.self[self]>.
+	Sequence of (factor-local/class)&<#IRange[IRange]> instances to intersect with (invalid/unknown)&<#self>.
 
 [ >> Returns ]
 
@@ -358,7 +358,7 @@ Return as an exclusive-end range pair.
 		method
 	/element/
 		- (source/area)`269 2 279 29`
-(signature)`units(self, step)`
+(signature)`units(self)`
 
 Return an iterator to the units in the range.
 
@@ -412,7 +412,7 @@ may need to convert the range set or portions thereof into a regular (invalid/un
 		- `undocumented`
 	/element/
 		- (source/area)`294 2 301 13`
-(signature)`from_string(Class, string, separator, tuple)`
+(signature)`from_string(Class, string)`
 
 
 [ Set >> from_set ]
@@ -524,7 +524,7 @@ have a length of `101`.
 		method
 	/element/
 		- (source/area)`344 2 367 11`
-(signature)`intersecting(self, range, RType, isinstance)`
+(signature)`intersecting(self, range)`
 
 Get the ranges in the set that have intersections with the given range.
 
@@ -537,7 +537,7 @@ Get the ranges in the set that have intersections with the given range.
 		- `undocumented`
 	/element/
 		- (source/area)`375 2 379 16`
-(signature)`get(self, item, default, RType)`
+(signature)`get(self, item)`
 
 
 [ Set >> __getitem__ ]
@@ -548,7 +548,7 @@ Get the ranges in the set that have intersections with the given range.
 		- `undocumented`
 	/element/
 		- (source/area)`381 2 385 22`
-(signature)`__getitem__(self, item, RType)`
+(signature)`__getitem__(self, item)`
 
 
 [ Set >> __contains__ ]
@@ -559,7 +559,7 @@ Get the ranges in the set that have intersections with the given range.
 		- `undocumented`
 	/element/
 		- (source/area)`387 2 392 15`
-(signature)`__contains__(self, item, RType)`
+(signature)`__contains__(self, item)`
 
 
 [ Set >> add ]
@@ -568,7 +568,7 @@ Get the ranges in the set that have intersections with the given range.
 		method
 	/element/
 		- (source/area)`394 2 416 66`
-(signature)`add(self, range, chain, zip, slice, max, map)`
+(signature)`add(self, range)`
 
 Add a range to the set combining it with any continuations.
 
@@ -579,7 +579,7 @@ Add a range to the set combining it with any continuations.
 		method
 	/element/
 		- (source/area)`418 2 443 29`
-(signature)`discard(self, range, slice, map, list, chain)`
+(signature)`discard(self, range)`
 
 Remove an arbitrary range from the set.
 
@@ -590,7 +590,7 @@ Remove an arbitrary range from the set.
 		method
 	/element/
 		- (source/area)`445 2 494 9`
-(signature)`intersection(self, range_set, iter, Queue)`
+(signature)`intersection(self, range_set)`
 
 Calculate the intersection between two (factor-local/class)&<#Set[Set]> instances.
 Low-level method. Use (python/operator)`|` for high-level purposes.
@@ -602,7 +602,7 @@ Low-level method. Use (python/operator)`|` for high-level purposes.
 		method
 	/element/
 		- (source/area)`496 2 537 15`
-(signature)`difference(self, range_set, iter, Queue)`
+(signature)`difference(self, range_set)`
 
 Calculate the difference between two (factor-local/class)&<#Set[Set]> instances.
 Low-level method. Use (python/operator)`-` for high-level purposes.
@@ -762,8 +762,8 @@ Whether or not the range contains the given number.
 		- (source/area)`609 2 624 10`
 (signature)`relation(self, r)`
 
-The relation of (factor-local/parameter)&<#XRange.relation.Parameters.r[r]> with respect to the (factor-local/parameter)&<#XRange.relation.Parameters.self[self]>.
-Returns `-1` if (factor-local/parameter)&<#XRange.relation.Parameters.r[r]> is less than the start; `1` if (factor-local/parameter)&<#XRange.relation.Parameters.r[r]> is
+The relation of (invalid/unknown)&<#r> with respect to the (invalid/unknown)&<#self>.
+Returns `-1` if (invalid/unknown)&<#r> is less than the start; `1` if (invalid/unknown)&<#r> is
 greater than the stop, and `0` if it is contained.
 
 ! WARNING:
@@ -776,9 +776,9 @@ greater than the stop, and `0` if it is contained.
 		method
 	/element/
 		- (source/area)`626 2 631 47`
-(signature)`contiguous(self, range, tuple)`
+(signature)`contiguous(self, range)`
 
-Whether the given (factor-local/parameter)&<#XRange.contiguous.Parameters.range[range]> is contiguous with (factor-local/parameter)&<#XRange.contiguous.Parameters.self[self]>.
+Whether the given (invalid/unknown)&<#range> is contiguous with (invalid/unknown)&<#self>.
 
 
 [ XRange >> join ]
@@ -800,7 +800,7 @@ Combine the ranges.
 		- (source/area)`640 2 645 13`
 (signature)`exclusive(self)`
 
-Returns (factor-local/parameter)&<#XRange.exclusive.Parameters.self[self]>.
+Returns (invalid/unknown)&<#self>.
 
 
 [ XRange >> units ]
@@ -809,7 +809,7 @@ Returns (factor-local/parameter)&<#XRange.exclusive.Parameters.self[self]>.
 		method
 	/element/
 		- (source/area)`647 2 657 33`
-(signature)`units(self, step)`
+(signature)`units(self)`
 
 Return an iterator to the units in the range.
 
@@ -847,7 +847,7 @@ execution (fewer stack frames) and memory (fewer instances) performance.
 		- `undocumented`
 	/element/
 		- (source/area)`673 2 676 19`
-(signature)`__init__(self, default)`
+(signature)`__init__(self)`
 
 
 [ Mapping >> keys ]
@@ -891,7 +891,7 @@ execution (fewer stack frames) and memory (fewer instances) performance.
 		- `undocumented`
 	/element/
 		- (source/area)`693 2 698 19`
-(signature)`get(self, key, default)`
+(signature)`get(self, key)`
 
 
 [ Mapping >> __getitem__ ]

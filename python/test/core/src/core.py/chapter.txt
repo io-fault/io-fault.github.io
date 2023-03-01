@@ -90,7 +90,7 @@ Exception raised by (factor-local/class)&<#Contention[Contention]> instances des
 		- `undocumented`
 	/element/
 		- (source/area)`42 2 46 24`
-(signature)`__init__(self, operator, former, latter, inverse)`
+(signature)`__init__(self, operator, former, latter)`
 
 
 [ Absurdity >> __str__ ]
@@ -164,7 +164,7 @@ underlying objects being examined.
 		- `undocumented`
 	/element/
 		- (source/area)`81 2 84 24`
-(signature)`__init__(self, test, object, inverse)`
+(signature)`__init__(self, test, object)`
 
 
 [ Contention >> _override ]
@@ -188,7 +188,7 @@ underlying objects being examined.
 		- `undocumented`
 	/element/
 		- (source/area)`111 2 112 48`
-(signature)`__enter__(self, partial)`
+(signature)`__enter__(self)`
 
 
 [ Contention >> __exit__ ]
@@ -210,7 +210,7 @@ underlying objects being examined.
 		- (source/area)`126 2 137 14`
 (signature)`__xor__(self, subject)`
 
-Contend that the (factor-local/parameter)&<#Contention.__xor__.Parameters.subject[subject]> raises the given exception when it is called::
+Contend that the (invalid/unknown)&<#subject> raises the given exception when it is called::
 
 #!syntax/python
 	test/Exception ^ (lambda: subject())
@@ -357,7 +357,7 @@ The Fate of a test. (factor-local/method)&<#Test.seal[Test.seal]> uses (factor-l
 		- `undocumented`
 	/element/
 		- (source/area)`177 2 181 10`
-(signature)`__init__(self, content, subtype)`
+(signature)`__init__(self, content)`
 
 
 [ Fate >> descriptor ]
@@ -421,7 +421,7 @@ a simple syntax.
 	determines the (invalid/unknown)&<#fate>.
 
 /fate/
-	The conclusion of the Test; pass, fail, error, skip. An instance of (factor-local/data)&<#Test.Fate[Fate]>.
+	The conclusion of the Test; pass, fail, error, skip. An instance of (factor-local/class)&<#Fate[Fate]>.
 
 /exits/
 	A (none/invalid)&<http://fault.io/dev/null[contextlib.ExitStack]> for cleaning up allocations made during the test.
@@ -495,7 +495,7 @@ a simple syntax.
 		- `undocumented`
 	/element/
 		- (source/area)`235 2 245 33`
-(signature)`__init__(self, identifier, subject, *constraints, ExitStack, Metrics)`
+(signature)`__init__(self, identifier, subject, *constraints)`
 
 
 [ Test >> __truediv__ ]
@@ -570,7 +570,7 @@ a simple syntax.
 		method
 	/element/
 		- (source/area)`273 2 331 48`
-(signature)`itertimer(count, time, scale, cycle, identity, min, range, int)`
+(signature)`itertimer(count, time, scale, cycle, identity, min, range)`
 
 Measure the relative performance of a loop's iterations.
 
@@ -591,7 +591,7 @@ Measure the relative performance of a loop's iterations.
 /(parameter)`cycle`/
 	
 	The maximum number of iterations to perform within a cycle.
-	Used to limit the effects of the (factor-local/parameter)&<#Test.itertimer.Parameters.scale[scale]> factor.
+	Used to limit the effects of the (invalid/unknown)&<#scale> factor.
 
 /(parameter)`identity`/
 	
@@ -627,13 +627,13 @@ Measure the relative performance of the given callable.
 		method
 	/element/
 		- (source/area)`340 2 380 32`
-(signature)`seal(self, isinstance, BaseException, Exception, Fate)`
+(signature)`seal(self)`
 
 Seal the fate of the Test by executing the subject-callable with the Test
 instance as the only parameter.
 
 Any exception that occurs is trapped and assigned to the (invalid/unknown)&<#fate> attribute
-on the Test instance. (invalid/unknown)&<#None> is always returned by (factor-local/method)&<#Test.seal[seal]>.
+on the Test instance. (invalid/unknown)&<#None> is always returned by (invalid/unknown)&<#seal>.
 
 
 [ Test >> skip ]
@@ -644,7 +644,7 @@ on the Test instance. (invalid/unknown)&<#None> is always returned by (factor-lo
 		- (source/area)`382 2 387 58`
 (signature)`skip(self, condition)`
 
-Used by test subjects to skip the test given that the provided (factor-local/parameter)&<#Test.skip.Parameters.condition[condition]> is
+Used by test subjects to skip the test given that the provided (invalid/unknown)&<#condition> is
 (invalid/unknown)&<#True>.
 
 
@@ -667,7 +667,7 @@ Used by test subjects to skip the test given that the provided (factor-local/par
 		- `undocumented`
 	/element/
 		- (source/area)`392 2 393 42`
-(signature)`timeout(self, *args, cause)`
+(signature)`timeout(self, *args)`
 
 
 [ Test >> trap ]
@@ -684,8 +684,8 @@ Set a trap for exceptions converting a would-be (invalid/unknown)&<#Error> fate 
 	with test.trap():
 		...
 	
-This allows (factor-local/method)&<#Test.fail[fail]> implementations set a trace prior to exiting
+This allows (invalid/unknown)&<#fail> implementations set a trace prior to exiting
 the test's (invalid/unknown)&<#subject>.
 
-(factor-local/data)&<#Test.Fate[Fate]> exceptions are not trapped.
+(factor-local/class)&<#Fate[Fate]> exceptions are not trapped.
 

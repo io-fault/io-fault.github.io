@@ -2,7 +2,7 @@
 	/type/
 		module
 	/element/
-		- (source/area)`1 1 629 23`
+		- (source/area)`1 1 670 23`
 Product and Project directory protocol support.
 
 Provides three classes of interest: (factor-local/class)&<#Project[Project]>, (factor-local/class)&<#Product[Product]>, and (factor-local/class)&<#Context[Context]>.
@@ -96,23 +96,10 @@ involves multiple directories, an abstraction provided by (factor-local/class)&<
 		- (source/area)`23 1 32 51`
 (signature)`parse_project_index(lines)`
 
-Generate tuples from the given space separated fields, (factor-local/parameter)&<#parse_project_index.Parameters.lines[lines]>.
+Generate tuples from the given space separated fields, (invalid/unknown)&<#lines>.
 Intended to be interpreted as a dictionary, the items' initial element should
 be the project's (universal) identifier. The second element is a tuple of the
 local name and project protocol identifier.
-
-
-[ parse_context_index ]
-! CONTROL:
-	/type/
-		function
-	/element/
-		- (source/area)`34 1 39 24`
-		- (type/syntax)`typing.Set[types.FactorPath]`
-		
-(signature)`parse_context_index(lines, Prefix)`
-
-Interpret the lines in the iterable as (project-local/factor-element)&<types#FactorPath[fault.project.types.FactorPath]> instances.
 
 
 [ parse_protocol_declaration ]
@@ -120,7 +107,7 @@ Interpret the lines in the iterable as (project-local/factor-element)&<types#Fac
 	/type/
 		function
 	/element/
-		- (source/area)`41 1 45 27`
+		- (source/area)`34 1 38 27`
 (signature)`parse_protocol_declaration(text)`
 
 Split the text and return the fields as a tuple.
@@ -131,8 +118,8 @@ Split the text and return the fields as a tuple.
 	/type/
 		function
 	/element/
-		- (source/area)`47 1 84 2`
-(signature)`structure_project_declaration(text, nl)`
+		- (source/area)`40 1 74 2`
+(signature)`structure_project_declaration(text)`
 
 Parse the contents of a `.project` file.
 
@@ -146,8 +133,8 @@ A pair, the project protocol and a (project-local/factor-element)&<types#Informa
 	/type/
 		function
 	/element/
-		- (source/area)`86 1 96 29`
-(signature)`sequence_project_declaration(nl, fs)`
+		- (source/area)`76 1 86 29`
+(signature)`sequence_project_declaration()`
 
 Format the contents of a `.project` file from the given protocol and
 (project-local/factor-element)&<types#Information[fault.project.types.Information]> structure.
@@ -158,8 +145,8 @@ Format the contents of a `.project` file from the given protocol and
 	/type/
 		function
 	/element/
-		- (source/area)`98 1 122 19`
-(signature)`scan_product_directory(read_protocol, route, limit)`
+		- (source/area)`88 1 112 19`
+(signature)`scan_product_directory(read_protocol, route)`
 
 Identify the projects within the given route.
 Usually only used through (factor-local/method)&<#Product.update[Product.update]>.
@@ -172,7 +159,7 @@ Usually only used through (factor-local/method)&<#Product.update[Product.update]
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`125 1 127 1`
+		- (source/area)`115 1 117 1`
 #!source
 	protocols = {
 		'factors/polynomial-1': (__package__ + '.polynomial', 'V1'),
@@ -183,9 +170,9 @@ Usually only used through (factor-local/method)&<#Product.update[Product.update]
 	/type/
 		class
 	/element/
-		- (source/area)`129 1 358 49`
+		- (source/area)`119 1 340 49`
 ! INHERIT:
-	- (source/area)`129 15 129 20`
+	- (source/area)`119 15 119 20`
 	- (type/syntax)`object`
 	- (type/invalid/unknown)&<#object>
 	
@@ -195,6 +182,17 @@ While often annotated as (context-local/factor-element)&<fault.route/types#Selec
 supported by the selector.
 
 
+[ Product >> project_identity_segment ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`127 2 127 77`
+#!source
+	project_identity_segment = Segment.from_sequence(['.project', 'f-identity'])
+
 [ Product >> default_meta_directory ]
 ! CONTROL:
 	/type/
@@ -202,34 +200,9 @@ supported by the selector.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`137 2 137 61`
+		- (source/area)`128 2 130 13`
 #!source
 	default_meta_directory = Segment.from_sequence(['.product'])
-
-[ Product >> project_declaration_filenames ]
-! CONTROL:
-	/type/
-		data
-	/flags/
-		- `undocumented`
-	/element/
-		- (source/area)`138 2 138 45`
-#!source
-	project_declaration_filenames = ['.project']
-
-[ Product >> protocol_declaration_filenames ]
-! CONTROL:
-	/type/
-		data
-	/flags/
-		- `undocumented`
-	/element/
-		- (source/area)`139 2 144 13`
-#!source
-	protocol_declaration_filenames = [
-		'.factor-protocol',
-		'.protocol',
-	]
 		@classmethod
 
 [ Product >> import_protocol ]
@@ -237,13 +210,13 @@ supported by the selector.
 	/type/
 		classmethod
 	/element/
-		- (source/area)`145 2 154 10`
-		- (type/syntax)`types.Protocol`
-		- (type/project-local/factor-element)&<types#Protocol[fault.project.types.Protocol]>
+		- (source/area)`131 2 140 10`
+		- (type/syntax)`types.FactorIsolationProtocol`
+		- (type/project-local/factor-element)&<types#FactorIsolationProtocol[fault.project.types.FactorIsolationProtocol]>
 		
 (signature)`import_protocol(Class, identifier)`
 
-Retrieve the protocol class using the (factor-local/parameter)&<#Product.import_protocol.Parameters.identifier[identifier]>.
+Retrieve the protocol class using the (invalid/unknown)&<#identifier>.
 
 
 [ Product >> project_index_route ]
@@ -251,7 +224,7 @@ Retrieve the protocol class using the (factor-local/parameter)&<#Product.import_
 	/type/
 		property
 	/element/
-		- (source/area)`155 2 161 10`
+		- (source/area)`141 2 147 10`
 		- (type/syntax)`Selector`
 		- (type/context-local/factor-element)&<fault.route/types#Selector[fault.route.types.Selector]>
 		
@@ -263,7 +236,7 @@ Materialized project index file path.
 	/type/
 		property
 	/element/
-		- (source/area)`162 2 168 10`
+		- (source/area)`148 2 154 10`
 		- (type/syntax)`Selector`
 		- (type/context-local/factor-element)&<fault.route/types#Selector[fault.route.types.Selector]>
 		
@@ -275,11 +248,11 @@ Connection list fulfilling requirements.
 	/type/
 		property
 	/element/
-		- (source/area)`169 2 182 55`
+		- (source/area)`155 2 168 55`
 The requirements of the product as a sequence of product directory routes.
 
 This sequence is not cached and constructed at access time by opening the
-file (factor-local/property)&<#Product.connections_index_route[connections_index_route]>.
+file (invalid/unknown)&<#connections_index_route>.
 
 
 [ Product >> clear ]
@@ -287,7 +260,7 @@ file (factor-local/property)&<#Product.connections_index_route[connections_index
 	/type/
 		method
 	/element/
-		- (source/area)`184 2 190 20`
+		- (source/area)`170 2 176 20`
 (signature)`clear(self)`
 
 Remove the instance local cache.
@@ -298,12 +271,12 @@ Remove the instance local cache.
 	/type/
 		method
 	/element/
-		- (source/area)`192 2 204 57`
-(signature)`__init__(self, route, limit, cache)`
+		- (source/area)`178 2 190 57`
+(signature)`__init__(self, route)`
 
-Initialize a (factor-local/class)&<#Product[Product]> using (factor-local/parameter)&<#Product.__init__.Parameters.route[route]> with an empty local instance cache.
+Initialize a (factor-local/class)&<#Product[Product]> using (invalid/unknown)&<#route> with an empty local instance cache.
 
-(factor-local/parameter)&<#Product.__init__.Parameters.cache[cache]> parameter is available as an override for the (filename)`.product`
+(invalid/unknown)&<#cache> parameter is available as an override for the (filename)`.product`
 directory location, but should normally not be used.
 
 
@@ -314,7 +287,7 @@ directory location, but should normally not be used.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`206 2 207 25`
+		- (source/area)`192 2 193 25`
 (signature)`__hash__(self)`
 
 
@@ -325,7 +298,7 @@ directory location, but should normally not be used.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`209 2 210 36`
+		- (source/area)`195 2 196 36`
 (signature)`__eq__(self, operand)`
 
 
@@ -334,13 +307,13 @@ directory location, but should normally not be used.
 	/type/
 		method
 	/element/
-		- (source/area)`212 2 218 41`
-		- (type/syntax)`typing.Tuple[str, types.Protocol]`
+		- (source/area)`198 2 204 41`
+		- (type/syntax)`typing.Tuple[str, types.FactorIsolationProtocol]`
 		
 (signature)`identifier_by_factor(self, factor)`
 
 Select the project identifier and protocol using a factor path (to the project).
-Uses the instance local cache populated by (factor-local/method)&<#Product.load[load]> or (factor-local/method)&<#Product.update[update]>.
+Uses the instance local cache populated by (invalid/unknown)&<#load> or (invalid/unknown)&<#update>.
 
 
 [ Product >> factor_by_identifier ]
@@ -348,13 +321,13 @@ Uses the instance local cache populated by (factor-local/method)&<#Product.load[
 	/type/
 		method
 	/element/
-		- (source/area)`220 2 226 41`
-		- (type/syntax)`typing.Tuple[types.FactorPath, types.Protocol]`
+		- (source/area)`206 2 212 41`
+		- (type/syntax)`typing.Tuple[types.FactorPath, types.FactorIsolationProtocol]`
 		
 (signature)`factor_by_identifier(self, identifier)`
 
 Select the factor path (to the project) and protocol using the project identifier.
-Uses the instance local cache populated by (factor-local/method)&<#Product.load[load]> or (factor-local/method)&<#Product.update[update]>.
+Uses the instance local cache populated by (invalid/unknown)&<#load> or (invalid/unknown)&<#update>.
 
 
 [ Product >> select ]
@@ -362,12 +335,12 @@ Uses the instance local cache populated by (factor-local/method)&<#Product.load[
 	/type/
 		method
 	/element/
-		- (source/area)`228 2 245 12`
+		- (source/area)`214 2 231 12`
 		- (type/syntax)`typing.Iterable[types.FactorPath]`
 		
 (signature)`select(self, constraint)`
 
-Retrieve project (path) entries that have the given prefix, (factor-local/parameter)&<#Product.select.Parameters.constraint[constraint]>.
+Retrieve project (path) entries that have the given prefix, (invalid/unknown)&<#constraint>.
 
 If the argument identifies a context, generate the projects contained therein.
 If the argument is a nil (project-local/factor-element)&<types#FactorPath[fault.project.types.FactorPath]>, generate all project paths.
@@ -378,13 +351,10 @@ If the argument is a nil (project-local/factor-element)&<types#FactorPath[fault.
 	/type/
 		method
 	/element/
-		- (source/area)`247 2 264 10`
+		- (source/area)`233 2 246 10`
 (signature)`read_protocol(self, route)`
 
-Retrieve the protocol data from the dot-protocol file
-contained in (factor-local/parameter)&<#Product.read_protocol.Parameters.route[route]>.
-
-(invalid/unknown)&<#None> if no protocol file is present.
+Retrieve the protocol data from the configured (invalid/unknown)&<#project_declaration_filesnames>.
 
 
 [ Product >> _spec ]
@@ -394,14 +364,14 @@ contained in (factor-local/parameter)&<#Product.read_protocol.Parameters.route[r
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`265 2 266 41`
+		- (source/area)`247 2 248 41`
 
 [ Product >> load ]
 ! CONTROL:
 	/type/
 		method
 	/element/
-		- (source/area)`268 2 282 13`
+		- (source/area)`250 2 264 13`
 (signature)`load(self)`
 
 Load the snapshot of the projects from the product's route.
@@ -412,8 +382,8 @@ Load the snapshot of the projects from the product's route.
 	/type/
 		method
 	/element/
-		- (source/area)`284 2 297 13`
-(signature)`store(self, SortKey, Chain)`
+		- (source/area)`266 2 279 13`
+(signature)`store(self)`
 
 Store the snapshot of the projects to the product's route.
 
@@ -423,11 +393,11 @@ Store the snapshot of the projects to the product's route.
 	/type/
 		method
 	/element/
-		- (source/area)`299 2 315 13`
+		- (source/area)`281 2 297 13`
 (signature)`update(self)`
 
 Update the snapshot of the projects by querying the filesystem.
-The effects of this should be recorded with a subsequent call to (factor-local/method)&<#Product.store[store]>.
+The effects of this should be recorded with a subsequent call to (invalid/unknown)&<#store>.
 
 
 [ Product >> iterprojects ]
@@ -435,8 +405,8 @@ The effects of this should be recorded with a subsequent call to (factor-local/m
 	/type/
 		method
 	/element/
-		- (source/area)`317 2 344 19`
-(signature)`iterprojects(self, limit, prefix)`
+		- (source/area)`299 2 326 19`
+(signature)`iterprojects(self)`
 
 Query the route and retrieve all projects within the product.
 
@@ -448,10 +418,10 @@ Results may be inconsistent with the instance cache.
 	/type/
 		method
 	/element/
-		- (source/area)`346 2 358 49`
+		- (source/area)`328 2 340 49`
 (signature)`split(self, fpath)`
 
-Separate the project portion from (factor-local/parameter)&<#Product.split.Parameters.fpath[fpath]>.
+Separate the project portion from (invalid/unknown)&<#fpath>.
 Returns a pair of (project-local/factor-element)&<types#FactorPath[fault.project.types.FactorPath]>; the project and the factor.
 
 
@@ -460,13 +430,36 @@ Returns a pair of (project-local/factor-element)&<types#FactorPath[fault.project
 	/type/
 		class
 	/element/
-		- (source/area)`360 1 485 57`
+		- (source/area)`342 1 526 57`
 ! INHERIT:
-	- (source/area)`360 15 360 20`
+	- (source/area)`342 15 342 20`
 	- (type/syntax)`object`
 	- (type/invalid/unknown)&<#object>
 	
 Project Interface joining relavant routes and protocol instances.
+
+
+[ Project >> meta_directory_path ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`346 2 348 22`
+#!source
+	meta_directory_path = Segment.from_sequence(['.project'])
+		@tools.cachedproperty
+
+[ Project >> meta ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`349 2 353 47`
+(signature)`meta(self)`
+
+The directory containing project metadata.
 
 
 [ Project >> __init__ ]
@@ -476,7 +469,7 @@ Project Interface joining relavant routes and protocol instances.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`365 2 373 22`
+		- (source/area)`355 2 366 22`
 (signature)`__init__(self, pd, pi, pf, proto)`
 
 
@@ -487,7 +480,7 @@ Project Interface joining relavant routes and protocol instances.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`374 2 381 10`
+		- (source/area)`367 2 374 10`
 (signature)`_iid_corpus_name_pair(self)`
 
 
@@ -496,7 +489,7 @@ Project Interface joining relavant routes and protocol instances.
 	/type/
 		property
 	/element/
-		- (source/area)`382 2 388 10`
+		- (source/area)`375 2 381 10`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -508,7 +501,7 @@ The leading portion of the independent identifier.
 	/type/
 		property
 	/element/
-		- (source/area)`389 2 393 38`
+		- (source/area)`382 2 386 38`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -520,7 +513,7 @@ The name of the project as defined by the independent identifier.
 	/type/
 		method
 	/element/
-		- (source/area)`395 2 429 22`
+		- (source/area)`388 2 422 22`
 (signature)`requirements(self, context)`
 
 Identify the unique set of projects required by this project.
@@ -531,13 +524,79 @@ Identify the unique set of projects required by this project.
 	/type/
 		method
 	/element/
-		- (source/area)`430 2 434 46`
+		- (source/area)`423 2 429 22`
 		- (type/syntax)`types.Information`
 		- (type/project-local/factor-element)&<types#Information[fault.project.types.Information]>
 		
 (signature)`information(self)`
 
 The identifying information of the project.
+
+
+[ Project >> extensions ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`430 2 437 3`
+		- (type/syntax)`types.Extensions`
+		- (type/project-local/factor-element)&<types#Extensions[fault.project.types.Extensions]>
+		
+(signature)`extensions(self)`
+
+Additional identifying information of the project.
+
+
+[ Project >> icon ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`439 2 456 13`
+		- (type/syntax)`bytes`
+		- (type/invalid/unknown)&<#bytes>
+		
+(signature)`icon(self)`
+
+Read the icon reference contained in (system/file)`.project/icon`.
+
+[ >> Returns ]
+
+/(syntax/python)`b''`/
+	When the filesystem resource could not be loaded or when
+	only whitespace is present.
+
+	Exceptions are suppressed.
+
+/(invalid/unknown)&<#bytes>/
+	The data content of the `self.meta / 'icon'` filesystem resource
+	as read by (invalid/unknown)&<#files.Path.fs_load>.
+
+
+[ Project >> synopsis ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (source/area)`458 2 475 13`
+		- (type/syntax)`bytes`
+		- (type/invalid/unknown)&<#bytes>
+		
+(signature)`synopsis(self)`
+
+Read the synopsis data contained in (system/file)`.project/synopsis`.
+
+[ >> Returns ]
+
+/(syntax/python)`b''`/
+	When the filesystem resource could not be loaded or when
+	only whitespace is present.
+
+	Exceptions are suppressed.
+
+/(invalid/unknown)&<#bytes>/
+	The data content of the `self.meta / 'synopsis'` filesystem resource
+	as read by (invalid/unknown)&<#files.Path.fs_load>.
 
 
 [ Project >> image ]
@@ -547,8 +606,8 @@ The identifying information of the project.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`436 2 437 69`
-(signature)`image(self, variants, fp, suffix)`
+		- (source/area)`477 2 478 69`
+(signature)`image(self, variants, fp)`
 
 
 [ Project >> select ]
@@ -556,7 +615,7 @@ The identifying information of the project.
 	/type/
 		method
 	/element/
-		- (source/area)`439 2 444 31`
+		- (source/area)`480 2 485 31`
 (signature)`select(self, factor)`
 
 Retrieve factors within the given path.
@@ -567,8 +626,8 @@ Retrieve factors within the given path.
 	/type/
 		method
 	/element/
-		- (source/area)`446 2 461 13`
-(signature)`split(self, fp, chain)`
+		- (source/area)`487 2 502 13`
+(signature)`split(self, fp)`
 
 Separate the factor path from the element path.
 Returns a pair, (project-local/factor-element)&<types#FactorPath[fault.project.types.FactorPath]> and a (invalid/unknown)&<#str>; the project and the factor.
@@ -579,7 +638,7 @@ Returns a pair, (project-local/factor-element)&<types#FactorPath[fault.project.t
 	/type/
 		method
 	/element/
-		- (source/area)`463 2 470 21`
+		- (source/area)`504 2 511 21`
 (signature)`fullsplit(self, qpath)`
 
 Separate the project path, factor path, and fragment path
@@ -591,13 +650,13 @@ from the given fully qualified factor path.
 	/type/
 		method
 	/element/
-		- (source/area)`472 2 485 57`
+		- (source/area)`513 2 526 57`
 		- (type/syntax)`types.Reference`
 		- (type/project-local/factor-element)&<types#Reference[fault.project.types.Reference]>
 		
-(signature)`refer(self, factorpath, context)`
+(signature)`refer(self, factorpath)`
 
-Construct a (project-local/factor-element)&<types#Reference[fault.project.types.Reference]> instance using the given (factor-local/parameter)&<#Project.refer.Parameters.factorpath[factorpath]>.
+Construct a (project-local/factor-element)&<types#Reference[fault.project.types.Reference]> instance using the given (invalid/unknown)&<#factorpath>.
 
 
 [ Context ]
@@ -605,9 +664,9 @@ Construct a (project-local/factor-element)&<types#Reference[fault.project.types.
 	/type/
 		class
 	/element/
-		- (source/area)`487 1 617 47`
+		- (source/area)`528 1 658 47`
 ! INHERIT:
-	- (source/area)`487 15 487 20`
+	- (source/area)`528 15 528 20`
 	- (type/syntax)`object`
 	- (type/invalid/unknown)&<#object>
 	
@@ -619,12 +678,12 @@ Construct a (project-local/factor-element)&<types#Reference[fault.project.types.
 	/type/
 		classmethod
 	/element/
-		- (source/area)`493 2 502 13`
-		- (type/syntax)`typing.Type[types.Protocol]`
+		- (source/area)`534 2 543 13`
+		- (type/syntax)`typing.Type[types.FactorIsolationProtocol]`
 		
 (signature)`import_protocol(Class, identifier)`
 
-Retrieve the protocol class using the (factor-local/parameter)&<#Context.import_protocol.Parameters.identifier[identifier]>.
+Retrieve the protocol class using the (invalid/unknown)&<#identifier>.
 
 
 [ Context >> from_product_connections ]
@@ -632,10 +691,10 @@ Retrieve the protocol class using the (factor-local/parameter)&<#Context.import_
 	/type/
 		classmethod
 	/element/
-		- (source/area)`503 2 510 10`
+		- (source/area)`544 2 551 10`
 (signature)`from_product_connections(Class, pd)`
 
-Create a (factor-local/class)&<#Context[Context]> initializing it with the immediate connections identified by (factor-local/parameter)&<#Context.from_product_connections.Parameters.pd[pd]>.
+Create a (factor-local/class)&<#Context[Context]> initializing it with the immediate connections identified by (invalid/unknown)&<#pd>.
 
 
 [ Context >> __init__ ]
@@ -645,7 +704,7 @@ Create a (factor-local/class)&<#Context[Context]> initializing it with the immed
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`512 2 514 26`
+		- (source/area)`553 2 555 26`
 (signature)`__init__(self)`
 
 
@@ -654,7 +713,7 @@ Create a (factor-local/class)&<#Context[Context]> initializing it with the immed
 	/type/
 		method
 	/element/
-		- (source/area)`516 2 532 11`
+		- (source/area)`557 2 573 11`
 		- (type/syntax)`Product`
 		- (type/factor-local/class)&<#Product[Product]>
 		
@@ -671,7 +730,7 @@ creates a new instance and places it in the cache.
 	/type/
 		method
 	/element/
-		- (source/area)`534 2 542 45`
+		- (source/area)`575 2 583 45`
 		- (type/syntax)`Project`
 		- (type/factor-local/class)&<#Project[Project]>
 		
@@ -690,12 +749,12 @@ Retrieve a (factor-local/class)&<#Project[Project]> instance from the context's 
 	/type/
 		method
 	/element/
-		- (source/area)`544 2 552 12`
+		- (source/area)`585 2 593 12`
 		- (type/syntax)`typing.Iterable[Project]`
 		
 (signature)`iterprojects(self)`
 
-Generate (factor-local/class)&<#Project[Project]> instances cached from a prior (factor-local/method)&<#Context.load[load]> call.
+Generate (factor-local/class)&<#Project[Project]> instances cached from a prior (invalid/unknown)&<#load> call.
 
 This includes any Context Projects.
 
@@ -705,7 +764,7 @@ This includes any Context Projects.
 	/type/
 		method
 	/element/
-		- (source/area)`554 2 563 61`
+		- (source/area)`595 2 604 61`
 (signature)`load(self)`
 
 Fully populate the instance cache with all of the projects from
@@ -717,7 +776,7 @@ all of the connected products.
 	/type/
 		method
 	/element/
-		- (source/area)`565 2 572 34`
+		- (source/area)`606 2 613 34`
 (signature)`configure(self)`
 
 Traverse the cached projects and apply protocol inheritance.
@@ -728,10 +787,10 @@ Traverse the cached projects and apply protocol inheritance.
 	/type/
 		method
 	/element/
-		- (source/area)`574 2 580 12`
+		- (source/area)`615 2 621 12`
 (signature)`index(self, product)`
 
-Find the index of the (factor-local/class)&<#Product[Product]> whose route is equal to (factor-local/parameter)&<#Context.index.Parameters.product[product]>.
+Find the index of the (factor-local/class)&<#Product[Product]> whose route is equal to (invalid/unknown)&<#product>.
 
 
 [ Context >> split ]
@@ -739,10 +798,10 @@ Find the index of the (factor-local/class)&<#Product[Product]> whose route is eq
 	/type/
 		method
 	/element/
-		- (source/area)`582 2 603 21`
+		- (source/area)`623 2 644 21`
 (signature)`split(self, qpath)`
 
-Identify the product, project, and factor path of the given (factor-local/parameter)&<#Context.split.Parameters.qpath[qpath]>.
+Identify the product, project, and factor path of the given (invalid/unknown)&<#qpath>.
 Returns a triple identifying the (factor-local/class)&<#Product[Product]>, (factor-local/class)&<#Project[Project]>, and remaining (project-local/factor-element)&<types#FactorPath[fault.project.types.FactorPath]>.
 
 [ >> Parameters ]
@@ -765,8 +824,8 @@ Returns a triple identifying the (factor-local/class)&<#Product[Product]>, (fact
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`605 2 607 47`
-(signature)`image(self, variants, fp, suffix)`
+		- (source/area)`646 2 648 47`
+(signature)`image(self, variants, fp)`
 
 
 [ Context >> refer ]
@@ -774,11 +833,11 @@ Returns a triple identifying the (factor-local/class)&<#Product[Product]>, (fact
 	/type/
 		method
 	/element/
-		- (source/area)`609 2 617 47`
-(signature)`refer(self, factorpath, context)`
+		- (source/area)`650 2 658 47`
+(signature)`refer(self, factorpath)`
 
-Construct a (project-local/factor-element)&<types#Reference[fault.project.types.Reference]> from the given (factor-local/parameter)&<#Context.refer.Parameters.factorpath[factorpath]> string.
+Construct a (project-local/factor-element)&<types#Reference[fault.project.types.Reference]> from the given (invalid/unknown)&<#factorpath> string.
 
-(factor-local/parameter)&<#Context.refer.Parameters.factorpath[factorpath]> is first processed with (project-local/factor-element)&<types#fpc[fault.project.types.fpc]> before being
-analyzed by (factor-local/method)&<#Context.split[split]>.
+(invalid/unknown)&<#factorpath> is first processed with (project-local/factor-element)&<types#fpc[fault.project.types.fpc]> before being
+analyzed by (invalid/unknown)&<#split>.
 

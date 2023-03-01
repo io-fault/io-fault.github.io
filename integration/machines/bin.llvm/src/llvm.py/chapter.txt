@@ -2,7 +2,7 @@
 	/type/
 		module
 	/element/
-		- (source/area)`1 1 95 20`
+		- (source/area)`1 1 93 20`
 Instantiate the `fault-llvm` tools project into a target directory.
 
 
@@ -87,15 +87,13 @@ Instantiate the `fault-llvm` tools project into a target directory.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`40 1 47 1`
+		- (source/area)`40 1 45 1`
 #!source
 	info = lsf.types.Information(
 		identifier = 'http://fault.io/integration/machines//llvm',
 		name = 'fault-llvm',
 		authority = 'fault.io',
-		abstract = "Tool adapter instance for LLVM.",
-		icon = dict([('emoji', "🛠️")]),
-		contact = "&<http://fault.io/critical>"
+		contact = "http://fault.io/critical"
 	)
 
 [ declare ]
@@ -105,7 +103,7 @@ Instantiate the `fault-llvm` tools project into a target directory.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`49 1 88 78`
+		- (source/area)`47 1 86 78`
 (signature)`declare()`
 
 
@@ -116,7 +114,7 @@ Instantiate the `fault-llvm` tools project into a target directory.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`90 1 96 19`
+		- (source/area)`88 1 94 19`
 		- (type/syntax)`process.Exit`
 		- (type/remote/factor-element)&<http://fault.io/python/system/process#Exit[fault.system.process.Exit]>
 		

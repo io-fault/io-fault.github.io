@@ -218,10 +218,10 @@ Software Construction Context implementation in Python.
 		function
 	/element/
 		- (source/area)`46 1 94 22`
-(signature)`prepare(command, args, log, output, input, executor)`
+(signature)`prepare(command, args, log, output, input)`
 
 Given a command and its constructed arguments, interpret the
-standard I/O fields in (factor-local/parameter)&<#prepare.Parameters.args[args]>, formulate a (remote/factor-element)&<http://fault.io/python/system/execution#KInvocation[fault.system.execution.KInvocation]>
+standard I/O fields in (invalid/unknown)&<#args>, formulate a (remote/factor-element)&<http://fault.io/python/system/execution#KInvocation[fault.system.execution.KInvocation]>
 instance for execution, and prepare stdio (remote/factor-element)&<http://fault.io/python/system/files#Path[fault.system.files.Path]>
 assignments.
 
@@ -229,7 +229,7 @@ assignments.
 
 /(parameter)`command`/
 	
-	The command prefix to be used with (factor-local/parameter)&<#prepare.Parameters.args[args]>.
+	The command prefix to be used with (invalid/unknown)&<#args>.
 
 /(parameter)`args`/
 	
@@ -282,7 +282,7 @@ assignments.
 		- `undocumented`
 	/element/
 		- (source/area)`108 1 110 28`
-(signature)`work(encoding)`
+(signature)`work()`
 
 
 [ rebuild ]
@@ -291,9 +291,9 @@ assignments.
 		function
 	/element/
 		- (source/area)`112 1 121 13`
-(signature)`rebuild(outputs, inputs, subfactor, cascade)`
+(signature)`rebuild(outputs, inputs)`
 
-Unconditionally report the (factor-local/parameter)&<#rebuild.Parameters.outputs[outputs]> as outdated.
+Unconditionally report the (invalid/unknown)&<#outputs> as outdated.
 
 
 [ updated ]
@@ -302,9 +302,9 @@ Unconditionally report the (factor-local/parameter)&<#rebuild.Parameters.outputs
 		function
 	/element/
 		- (source/area)`123 1 171 12`
-(signature)`updated(outputs, inputs, never, cascade, subfactor)`
+(signature)`updated(outputs, inputs)`
 
-Return whether or not the (factor-local/parameter)&<#updated.Parameters.outputs[outputs]> are up-to-date.
+Return whether or not the (invalid/unknown)&<#outputs> are up-to-date.
 
 (invalid/unknown)&<#False> returns means that the target should be reconstructed,
 and (invalid/unknown)&<#True> means that the file is up-to-date and needs no processing.
@@ -327,7 +327,7 @@ and (invalid/unknown)&<#True> means that the file is up-to-date and needs no pro
 		function
 	/element/
 		- (source/area)`184 1 220 82`
-(signature)`interpret_reference(cc, ctxpath, _factor, reference, rreqs, rsources)`
+(signature)`interpret_reference(cc, ctxpath, _factor, reference)`
 
 Extract the project identifier from the (invalid/unknown)&<#url> and find a corresponding project.
 
@@ -354,7 +354,7 @@ that should be connected in order to use the (invalid/unknown)&<#symbol>.
 		- (source/area)`249 1 259 50`
 (signature)`requirements(cc, ctxpath, factor)`
 
-Return the set of factors that is required to build this Target, (factor-local/parameter)&<#requirements.Parameters.factor[factor]>.
+Return the set of factors that is required to build this Target, (invalid/unknown)&<#factor>.
 
 
 [ Construction ]
@@ -380,7 +380,7 @@ dispatches the work to be performed for completion in the appropriate order.
 		- `undocumented`
 	/element/
 		- (source/area)`267 2 313 23`
-(signature)`__init__(self, executor, time, log, intentions, telemetry, cache, context, pcontext, ctxpath, project, factors, reconstruct, processors)`
+(signature)`__init__(self, executor, time, log, intentions, telemetry, cache, context, pcontext, ctxpath, project, factors)`
 
 
 [ Construction >> time ]
@@ -457,7 +457,7 @@ Initialize the work directory for the factor processing cache.
 		- (source/area)`406 2 534 35`
 (signature)`collect(self, intentions, mechanism, factor, requirements, dependents)`
 
-Collect the parameters and work to be done for processing the (factor-local/parameter)&<#Construction.collect.Parameters.factor[factor]>.
+Collect the parameters and work to be done for processing the (invalid/unknown)&<#factor>.
 
 [ >> Parameters ]
 
@@ -480,12 +480,12 @@ Collect the parameters and work to be done for processing the (factor-local/para
 
 /(parameter)`requirements`/
 	
-	The set of factors referred to by (factor-local/parameter)&<#Construction.collect.Parameters.factor[factor]>. Often, the
+	The set of factors referred to by (invalid/unknown)&<#factor>. Often, the
 	dependencies that need to be built in order to build the factor.
 
 /(parameter)`dependents`/
 	
-	The set of factors that refer to (factor-local/parameter)&<#Construction.collect.Parameters.factor[factor]>.
+	The set of factors that refer to (invalid/unknown)&<#factor>.
 
 
 [ Construction >> _reapusage ]
@@ -496,7 +496,7 @@ Collect the parameters and work to be done for processing the (factor-local/para
 		- `undocumented`
 	/element/
 		- (source/area)`536 2 539 42`
-(signature)`_reapusage(self, pid, partial)`
+(signature)`_reapusage(self, pid)`
 
 
 [ Construction >> process_execute ]
@@ -507,7 +507,7 @@ Collect the parameters and work to be done for processing the (factor-local/para
 		- `undocumented`
 	/element/
 		- (source/area)`541 2 580 13`
-(signature)`process_execute(self, instruction, f_target_path)`
+(signature)`process_execute(self, instruction)`
 
 
 [ Construction >> xact_exit ]
@@ -540,8 +540,8 @@ Collect the parameters and work to be done for processing the (factor-local/para
 		- (source/area)`645 2 669 28`
 (signature)`drain_process_queue(self)`
 
-After process slots have been cleared by (factor-local/method)&<#Construction.process_exit[process_exit]>,
-(factor-local/method)&<#Construction.continuation[continuation]> is called and performs this method to execute
+After process slots have been cleared by (invalid/unknown)&<#process_exit>,
+(invalid/unknown)&<#continuation> is called and performs this method to execute
 system processes enqueued in (invalid/unknown)&<#command_queue>.
 
 
@@ -554,7 +554,7 @@ system processes enqueued in (invalid/unknown)&<#command_queue>.
 (signature)`continuation(self)`
 
 Process exits occurred that may trigger an addition to the working set of tasks.
-Usually called indirectly by (factor-local/method)&<#Construction.process_exit[process_exit]>, this manages the collection
+Usually called indirectly by (invalid/unknown)&<#process_exit>, this manages the collection
 of further work identified by the sequenced dependency tree managed by (invalid/unknown)&<#sequence>.
 
 

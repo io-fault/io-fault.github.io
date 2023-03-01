@@ -74,7 +74,7 @@ The end of the range. Exclusive.
 		property
 	/element/
 		- (source/area)`31 2 36 16`
-The size of the range in terms of the (factor-local/property)&<#Time.start[start]>.
+The size of the range in terms of the (invalid/unknown)&<#start>.
 
 
 [ Time >> __contains__ ]
@@ -85,7 +85,7 @@ The size of the range in terms of the (factor-local/property)&<#Time.start[start
 		- (source/area)`37 2 45 21`
 (signature)`__contains__(self, pit)`
 
-Whether the given point falls between (factor-local/property)&<#Time.start[start]>, inclusive, and (factor-local/property)&<#Time.stop[stop]>, exclusive.
+Whether the given point falls between (invalid/unknown)&<#start>, inclusive, and (invalid/unknown)&<#stop>, exclusive.
 
 #!python
 	assert self.start >= pit and pit < self.stop
@@ -99,13 +99,13 @@ Whether the given point falls between (factor-local/property)&<#Time.start[start
 (signature)`of(Class, *times, **parts)`
 
 Create an instance of the type from the sum of the quantities
-specified by (factor-local/parameter)&<#Time.of.Parameters.times[times]> and (factor-local/parameter)&<#Time.of.Parameters.parts[parts]>:
+specified by (invalid/unknown)&<#times> and (invalid/unknown)&<#parts>:
 
 #!python
 	t = Time.of(hour = 33, microsecond = 44)
 	
 The above example only shows keyword use that is specific to the standard
-time context used by (project-local/project-name)&<fault.time>. Variable position arguments, (factor-local/parameter)&<#Time.of.Parameters.times[times]>,
+time context used by (project-local/project-name)&<fault.time>. Variable position arguments, (invalid/unknown)&<#times>,
 must be pre-existing (factor-local/class)&<#Measure[Measure]> instances.
 
 [ >> Parameters ]
@@ -220,7 +220,7 @@ It's existence as an interface is due to its utility.
 (signature)`truncate(self, unit)`
 
 Truncates the time instance to the specified boundary: remove units smaller
-than the given (factor-local/parameter)&<#Time.truncate.Parameters.unit[unit]>.
+than the given (invalid/unknown)&<#unit>.
 
 [ >> Parameters ]
 
@@ -324,7 +324,7 @@ The magnitude of the Time instance. For Measures, this is their integer value:
 		- (source/area)`198 2 217 16`
 (signature)`increase(self, *units, **parts)`
 
-Increase the measurement, repositioning the (factor-local/property)&<#Measure.stop[stop]>.
+Increase the measurement, repositioning the (invalid/unknown)&<#stop>.
 
 Returns a new Measure instance whose value is `self` increased by
 the given parameters.
@@ -357,7 +357,7 @@ This is equivalent to:
 		- (source/area)`218 2 238 5`
 (signature)`decrease(self, *units, **parts)`
 
-Decrease the measurement, repositioning the (factor-local/property)&<#Measure.stop[stop]>.
+Decrease the measurement, repositioning the (invalid/unknown)&<#stop>.
 
 Returns a new Measure instance whose value is `self` decreased by
 the given parameters.
@@ -469,8 +469,8 @@ The magnitude of the Point. For Points, this *must* be one:
 		- (source/area)`297 2 303 16`
 (signature)`measure(self, pit)`
 
-Return the measurement, (factor-local/property)&<#Point.Measure[Measure]> instance, between (factor-local/parameter)&<#Point.measure.Parameters.self[self]> and
-the given point in time, (factor-local/parameter)&<#Point.measure.Parameters.pit[pit]>. The delta between the two points.
+Return the measurement, (factor-local/class)&<#Measure[Measure]> instance, between (invalid/unknown)&<#self> and
+the given point in time, (invalid/unknown)&<#pit>. The delta between the two points.
 
 
 [ Point >> elapse ]
@@ -515,7 +515,7 @@ the parameters into negative values.
 (signature)`leads(self, pit)`
 
 Returns whether or not the Point in Time, self,
-comes *before* the given argument, (factor-local/parameter)&<#Point.leads.Parameters.pit[pit]>.
+comes *before* the given argument, (invalid/unknown)&<#pit>.
 
 
 [ Point >> follows ]
@@ -527,5 +527,5 @@ comes *before* the given argument, (factor-local/parameter)&<#Point.leads.Parame
 (signature)`follows(self, pit)`
 
 Returns whether or not the Point in Time, self,
-comes *after* the given argument, (factor-local/parameter)&<#Point.follows.Parameters.pit[pit]>.
+comes *after* the given argument, (invalid/unknown)&<#pit>.
 

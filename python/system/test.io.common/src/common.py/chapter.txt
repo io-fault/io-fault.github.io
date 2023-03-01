@@ -250,7 +250,7 @@ any common test related tools for array shutdown.
 		- `undocumented`
 	/element/
 		- (source/area)`90 1 93 46`
-(signature)`snapshot(array, list, map, construct)`
+(signature)`snapshot(array)`
 
 
 [ cycle ]
@@ -272,7 +272,7 @@ any common test related tools for array shutdown.
 		- `undocumented`
 	/element/
 		- (source/area)`99 1 106 6`
-(signature)`loop(deliver, array, cycle, snapshot)`
+(signature)`loop(deliver, array)`
 
 
 [ ArrayActionManager ]
@@ -529,7 +529,7 @@ For cases involving send and receives.
 		- `undocumented`
 	/element/
 		- (source/area)`259 2 271 3`
-(signature)`__init__(self, channels, bufsize)`
+(signature)`__init__(self, channels)`
 
 
 [ Endpoint >> _read_event ]

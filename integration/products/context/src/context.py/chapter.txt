@@ -50,7 +50,7 @@ Construction Context resolution support.
 		- (source/area)`10 1 37 39`
 		- (type/syntax)`tuple[str, files.Path]`
 		
-(signature)`select(local, environment, home, user)`
+(signature)`select(local)`
 
 Generate the possible locations of construction contexts.
 Usually, the first existing path should be used.
@@ -72,7 +72,7 @@ The first element of the tuples is a string describing the origin of the path.
 		- (source/area)`39 1 50 30`
 		- (type/syntax)`tuple[str, files.Path]`
 		
-(signature)`resolve(override)`
+(signature)`resolve()`
 
 Use (factor-local/function)&<#select[select]> to find the highest priority construction context whose directory
 exists on the filesystem. The identified path is not verified to conform

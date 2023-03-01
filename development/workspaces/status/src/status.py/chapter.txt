@@ -90,7 +90,7 @@ Status control.
 		- `undocumented`
 	/element/
 		- (source/area)`36 2 40 10`
-(signature)`alignment(self, pad)`
+(signature)`alignment(self)`
 
 
 [ Control >> render ]
@@ -132,7 +132,7 @@ Status control.
 		function
 	/element/
 		- (source/area)`84 1 122 36`
-(signature)`setup(lines, width, atrestore, type, destruct, Context)`
+(signature)`setup(lines)`
 
 Initialize the terminal for use with a scrolling region.
 Constructs a device using (invalid/unknown)&<#control.setup> and a (none/invalid)&<http://fault.io/dev/null[fault.terminal.matrix.Context]>

@@ -347,7 +347,7 @@ Secondarily, it provides the administrative interface.
 		- (source/area)`89 2 116 13`
 (signature)`s_invoke(self)`
 
-Invoke the service. Does nothing if (factor-local/data)&<#Service.s_status[s_status]> is `'executed'`.
+Invoke the service. Does nothing if (invalid/unknown)&<#s_status> is `'executed'`.
 
 
 [ Service >> occur ]
@@ -504,7 +504,7 @@ Create or Update the KInvocation instance used to launch the daemon.
 		- `undocumented`
 	/element/
 		- (source/area)`230 2 231 45`
-(signature)`prepare_http_v1(ifx, ports, Protocol)`
+(signature)`prepare_http_v1(ifx, ports)`
 
 
 [ Control >> __init__ ]
@@ -592,7 +592,7 @@ Create or Update the KInvocation instance used to launch the daemon.
 		- `undocumented`
 	/element/
 		- (source/area)`321 2 341 56`
-(signature)`_ctl_http_send(self, http, code, descr, objects, no_body)`
+(signature)`_ctl_http_send(self, http, code, descr, objects)`
 
 
 [ Control >> ctl_http_processor ]

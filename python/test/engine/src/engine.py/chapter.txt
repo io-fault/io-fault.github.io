@@ -30,7 +30,7 @@ Harness implementation and support functions.
 		function
 	/element/
 		- (source/area)`7 1 32 13`
-(signature)`get_test_index(tester, int, set, AttributeError)`
+(signature)`get_test_index(tester)`
 
 Returns the first line number of the underlying code object.
 
@@ -53,9 +53,9 @@ order to elevate a test's position given that it was explicitly listed.
 		function
 	/element/
 		- (source/area)`41 1 49 13`
-(signature)`gather(container, prefix, key, getattr)`
+(signature)`gather(container)`
 
-Returns an ordered list of attribute names that match the (factor-local/parameter)&<#gather.Parameters.prefix[prefix]>.
+Returns an ordered list of attribute names that match the (invalid/unknown)&<#prefix>.
 
 
 [ select ]
@@ -64,7 +64,7 @@ Returns an ordered list of attribute names that match the (factor-local/paramete
 		function
 	/element/
 		- (source/area)`51 1 79 9`
-(signature)`select(islice)`
+(signature)`select()`
 
 Slice the tests by comparing their identity to (invalid/unknown)&<#start> and (invalid/unknown)&<#stop>.
 
@@ -114,7 +114,7 @@ Execute a sequence of tests.
 		- `undocumented`
 	/element/
 		- (source/area)`90 2 98 10`
-(signature)`from_module(Class, module, identity, slices)`
+(signature)`from_module(Class, module)`
 
 
 [ Harness >> count ]
@@ -148,7 +148,7 @@ Initialize the members of the Harness.
 		- (source/area)`113 2 118 14`
 (signature)`dispatch(self, test)`
 
-Dispatch the given (factor-local/data)&<#Harness.Test[Test]> to resolve its fate.
+Dispatch the given (invalid/unknown)&<#Test> to resolve its fate.
 
 
 [ Harness >> reveal ]
@@ -170,6 +170,6 @@ Reveal the fate of the given tests.
 		- (source/area)`132 1 144 18`
 (signature)`execute(module)`
 
-Resolve the fate of the tests contained in (factor-local/parameter)&<#execute.Parameters.module[module]>. No status information
+Resolve the fate of the tests contained in (invalid/unknown)&<#module>. No status information
 is printed and the exception of the first failure will be raised.
 

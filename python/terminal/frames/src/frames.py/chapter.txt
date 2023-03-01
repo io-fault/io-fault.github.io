@@ -18,7 +18,7 @@ along the primary line pattern.
 		- (source/area)`9 1 20 30`
 (signature)`render_vertical(canvas, palette, expression)`
 
-Interpret the (factor-local/parameter)&<#render_vertical.Parameters.expression[expression]> in the context of the (factor-local/parameter)&<#render_vertical.Parameters.canvas[canvas]>
+Interpret the (invalid/unknown)&<#expression> in the context of the (invalid/unknown)&<#canvas>
 yielding the events necessary to cause the frame borders to be displayed.
 
 
@@ -30,7 +30,7 @@ yielding the events necessary to cause the frame borders to be displayed.
 		- (source/area)`22 1 33 30`
 (signature)`render_horizontal(canvas, palette, expression)`
 
-Interpret the (factor-local/parameter)&<#render_horizontal.Parameters.expression[expression]> in the context of the (factor-local/parameter)&<#render_horizontal.Parameters.canvas[canvas]>
+Interpret the (invalid/unknown)&<#expression> in the context of the (invalid/unknown)&<#canvas>
 yielding the events necessary to cause the frame borders to be displayed.
 
 
@@ -43,7 +43,7 @@ yielding the events necessary to cause the frame borders to be displayed.
 (signature)`render_box(canvas, corners, hpalette, vpalette, width, height)`
 
 Draw the border of a box with the given width and height.
-The (factor-local/parameter)&<#render_box.Parameters.width[width]> and (factor-local/parameter)&<#render_box.Parameters.height[height]> are the inclusive dimensions of the contents;
+The (invalid/unknown)&<#width> and (invalid/unknown)&<#height> are the inclusive dimensions of the contents;
 the frame will be drawn around that area.
 
 The yielded commands are entirely relative and can be cached

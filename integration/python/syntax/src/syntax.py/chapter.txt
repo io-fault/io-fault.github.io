@@ -41,8 +41,8 @@ Provides functions for instrumentation(future), constant injection, and coverabl
 		- (source/area)`15 1 24 20`
 (signature)`apply(path, callable)`
 
-Apply the given (factor-local/parameter)&<#apply.Parameters.callable[callable]> to the parsed AST of the file
-selected by the given (factor-local/parameter)&<#apply.Parameters.path[path]>.
+Apply the given (invalid/unknown)&<#callable> to the parsed AST of the file
+selected by the given (invalid/unknown)&<#path>.
 
 
 [ coverable ]
@@ -51,7 +51,7 @@ selected by the given (factor-local/parameter)&<#apply.Parameters.path[path]>.
 		function
 	/element/
 		- (source/area)`26 1 49 11`
-(signature)`coverable(tree, hasattr)`
+(signature)`coverable(tree)`
 
 Construct a (invalid/unknown)&<#set> of lines numbers that contains code
 that can be covered.

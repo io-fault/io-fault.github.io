@@ -1,0 +1,15 @@
+"""
+# High-level resource transfer tools.
+"""
+
+def transfer(xfers):
+	"""
+	# Transfer the remote resources to their associated location.
+	"""
+	from system.root import query
+	from fault.system import execution
+	fd = str(query.libexec() / 'fault-dispatch')
+
+	for remote, local in xfers:
+		ki = execution.KInvocation(fd, [fd, 'http-cache', str(remote), str(local)])
+		execution.perform(ki)

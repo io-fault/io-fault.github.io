@@ -367,7 +367,7 @@ Whether or not this is the last event from the Channel.
 		- `undocumented`
 	/element/
 		- (source/area)`98 3 101 14`
-(signature)`construct(Class, payload, demand, terminated)`
+(signature)`construct(Class)`
 
 
 [ Matrix >> Delta >> snapshot ]
@@ -387,7 +387,7 @@ Whether or not this is the last event from the Channel.
 		staticmethod
 	/element/
 		- (source/area)`120 2 165 14`
-(signature)`io_collect(transfers, Queue, snapshot, MemoryError, sleep)`
+(signature)`io_collect(transfers)`
 
 Process the array's transfer and construct a sequence of I/O events.
 
@@ -404,8 +404,8 @@ for processing in the main task queue.
 		- (source/area)`166 2 219 14`
 (signature)`io_deliver(error, events)`
 
-Send the individual (factor-local/parameter)&<#Matrix.io_deliver.Parameters.events[events]> originally prepared by
-(factor-local/staticmethod)&<#Matrix.io_collect[io_collect]> to their associated (factor-local/class)&<#KInput[KInput]> or (factor-local/class)&<#KOutput[KOutput]> flows.
+Send the individual (invalid/unknown)&<#events> originally prepared by
+(invalid/unknown)&<#io_collect> to their associated (factor-local/class)&<#KInput[KInput]> or (factor-local/class)&<#KOutput[KOutput]> flows.
 
 
 [ Matrix >> io_delta ]
@@ -427,7 +427,7 @@ Inline I/O handler for schduler based transfers.
 		- `undocumented`
 	/element/
 		- (source/area)`230 2 329 20`
-(signature)`io_loop(limit, iter, partial)`
+(signature)`io_loop()`
 
 
 [ Matrix >> __init__ ]
@@ -460,7 +460,7 @@ Inline I/O handler for schduler based transfers.
 		- `undocumented`
 	/element/
 		- (source/area)`345 2 354 18`
-(signature)`_get(self, get0)`
+(signature)`_get(self)`
 
 
 [ Matrix >> void ]
@@ -508,7 +508,7 @@ Terminate all arrays managed by the interchange.
 		method
 	/element/
 		- (source/area)`384 2 406 14`
-(signature)`acquire(self, channels, len)`
+(signature)`acquire(self, channels)`
 
 Acquire a set of channels accounting for volume limits.
 
@@ -546,7 +546,7 @@ Channel moving data in or out of the operating system's kernel.
 		- `undocumented`
 	/element/
 		- (source/area)`414 2 417 21`
-(signature)`__init__(self, channel)`
+(signature)`__init__(self)`
 
 
 [ KChannel >> actuate ]
@@ -646,7 +646,7 @@ unlink the channel.
 		- `undocumented`
 	/element/
 		- (source/area)`512 2 515 10`
-(signature)`f_transfer(self, event, source)`
+(signature)`f_transfer(self, event)`
 
 
 [ KChannel >> k_transferring ]
@@ -702,7 +702,7 @@ Transition in the next buffer provided that the Flow was not obstructed.
 		method
 	/element/
 		- (source/area)`553 2 559 22`
-(signature)`f_transfer(self, event, source)`
+(signature)`f_transfer(self, event)`
 
 Normally ignored, but will induce a transition if no transfer is occurring.
 
@@ -752,7 +752,7 @@ read events by accepting and transmitting the socket file descriptors.
 		- `undocumented`
 	/element/
 		- (source/area)`573 2 576 25`
-(signature)`__init__(self, kport, accept)`
+(signature)`__init__(self, kport)`
 
 
 [ KAccept >> actuate ]
@@ -847,7 +847,7 @@ Primarily used to read portions of a file.
 		- `undocumented`
 	/element/
 		- (source/area)`609 2 621 13`
-(signature)`k_set_limit(self, limit, repeat, chain)`
+(signature)`k_set_limit(self, limit)`
 
 
 [ KLimit >> k_transition ]
@@ -917,7 +917,7 @@ Queue entries exceeds limit.
 		- `undocumented`
 	/element/
 		- (source/area)`665 2 668 27`
-(signature)`__init__(self, channel, Queue)`
+(signature)`__init__(self, channel)`
 
 
 [ KOutput >> k_transition ]
@@ -937,7 +937,7 @@ Queue entries exceeds limit.
 		method
 	/element/
 		- (source/area)`687 2 703 5`
-(signature)`f_transfer(self, event, source, len)`
+(signature)`f_transfer(self, event)`
 
 Enqueue a sequence of transfers to be processed by the Transit.
 
@@ -1104,7 +1104,7 @@ Final (executable) transaction exited; system process context complete.
 		method
 	/element/
 		- (source/area)`786 2 815 9`
-(signature)`_defer_execute(self, link)`
+(signature)`_defer_execute(self)`
 
 Execute all tasks whose wait period has elapsed according to the system's clock.
 
@@ -1117,8 +1117,8 @@ Execute all tasks whose wait period has elapsed according to the system's clock.
 		- (source/area)`817 2 833 32`
 (signature)`defer(self, measure, *processors)`
 
-Defer the execution of the (id)`occur` methods on the given (factor-local/parameter)&<#Context.defer.Parameters.processors[processors]>
-by the given (factor-local/parameter)&<#Context.defer.Parameters.measure[measure]>.
+Defer the execution of the (id)`occur` methods on the given (invalid/unknown)&<#processors>
+by the given (invalid/unknown)&<#measure>.
 
 
 [ Context >> cancel ]
@@ -1165,7 +1165,7 @@ by the given (factor-local/parameter)&<#Context.defer.Parameters.measure[measure
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
-(signature)`_defer_put(self, current, measure, processors, push)`
+(signature)`_defer_put(self, current, measure, processors)`
 
 
 [ Context >> _defer_get ]
@@ -1176,7 +1176,7 @@ by the given (factor-local/parameter)&<#Context.defer.Parameters.measure[measure
 		- `undocumented`
 	/element/
 		- (source/area)`861 2 887 15`
-(signature)`_defer_get(self, current, pop, push)`
+(signature)`_defer_get(self, current)`
 
 
 [ Context >> structure ]
@@ -1251,7 +1251,7 @@ Send an overview of the logical process state to the given target.
 		method
 	/element/
 		- (source/area)`943 2 953 56`
-(signature)`_recur(self, frequency, task, cyclic)`
+(signature)`_recur(self, frequency, task)`
 
 Schedule the task for execution after the period of time (invalid/unknown)&<#measure> elapses.
 
@@ -1279,7 +1279,7 @@ Cancel a scheduled task.
 		- (source/area)`962 2 967 36`
 (signature)`inherit(self, context)`
 
-Inherit the exports from the given (factor-local/parameter)&<#Context.inherit.Parameters.context[context]>.
+Inherit the exports from the given (invalid/unknown)&<#context>.
 
 
 [ Context >> _io_cycle ]
@@ -1332,7 +1332,7 @@ Execute the given function in a thread associated with the specified controller.
 		method
 	/element/
 		- (source/area)`999 2 1008 44`
-(signature)`environ(self, identifier, default)`
+(signature)`environ(self, identifier)`
 
 Access the environment from the perspective of the context.
 Context overrides may hide process environment variables.
@@ -1412,11 +1412,11 @@ manage the connection's I/O.
 		method
 	/element/
 		- (source/area)`1058 2 1066 35`
-(signature)`read_file(self, path, mode)`
+(signature)`read_file(self, path)`
 
 Construct a channel for reading an entire file from the filesystem.
 The returned channel terminates when EOF occurs; often,
-(factor-local/method)&<#Context.read_file_range[read_file_range]> is preferrable to avoid status inconsistencies.
+(invalid/unknown)&<#read_file_range> is preferrable to avoid status inconsistencies.
 
 
 [ Context >> write_file ]
@@ -1425,9 +1425,9 @@ The returned channel terminates when EOF occurs; often,
 		method
 	/element/
 		- (source/area)`1068 2 1074 37`
-(signature)`write_file(self, path, mode)`
+(signature)`write_file(self, path)`
 
-Construct a channel for writing to the file identified by (factor-local/parameter)&<#Context.write_file.Parameters.path[path]>.
+Construct a channel for writing to the file identified by (invalid/unknown)&<#path>.
 
 
 [ Context >> read_file_range ]
@@ -1436,7 +1436,7 @@ Construct a channel for writing to the file identified by (factor-local/paramete
 		method
 	/element/
 		- (source/area)`1076 2 1096 8`
-(signature)`read_file_range(self, path, start, stop, open, seek, close)`
+(signature)`read_file_range(self, path, start, stop)`
 
 Construct a channel to read a specific range of a file.
 
@@ -1447,7 +1447,7 @@ Construct a channel to read a specific range of a file.
 		method
 	/element/
 		- (source/area)`1098 2 1104 37`
-(signature)`append_file(self, path, mode)`
+(signature)`append_file(self, path)`
 
 Open a set of files for appending through a (project-local/unknown)&<library.KernelPort>.
 
@@ -1458,7 +1458,7 @@ Open a set of files for appending through a (project-local/unknown)&<library.Ker
 		method
 	/element/
 		- (source/area)`1106 2 1116 19`
-(signature)`update_file(self, path, offset, size, mode)`
+(signature)`update_file(self, path, offset, size)`
 
 Allocate a channel for overwriting data at the given offset of
 the designated file.
@@ -1521,7 +1521,7 @@ of file descriptors.
 		- (source/area)`1152 2 1182 23`
 		- (type/syntax)`tuple[int, int]`
 		
-(signature)`daemon(self, invocation, close)`
+(signature)`daemon(self, invocation)`
 
 Execute the (context-local/factor-element)&<fault.system/execution#KInvocation[fault.system.execution.KInvocation]> instance with stdin and stdout closed.
 
@@ -1534,10 +1534,10 @@ Returns the process identifier and standard error's file descriptor as a tuple.
 		method
 	/element/
 		- (source/area)`1184 2 1212 12`
-(signature)`daemon_stderr(self, stderr, invocation, close)`
+(signature)`daemon_stderr(self, stderr, invocation)`
 
 Execute the (context-local/factor-element)&<fault.system/execution#KInvocation[fault.system.execution.KInvocation]> instance with stdin and stdout closed.
-The (factor-local/parameter)&<#Context.daemon_stderr.Parameters.stderr[stderr]> parameter will be passed in as the standard error file descriptor,
+The (invalid/unknown)&<#stderr> parameter will be passed in as the standard error file descriptor,
 and then *closed* before returning.
 
 Returns a (invalid/unknown)&<#Subprocess> instance containing a single Process-Id.
@@ -1565,7 +1565,7 @@ suspends TTY I/O until the child exits.
 		method
 	/element/
 		- (source/area)`1224 2 1241 44`
-(signature)`stream_shared_segments(self, path, range, *_, Segments)`
+(signature)`stream_shared_segments(self, path, range, *_)`
 
 Construct a new Flow with an initial Iterate Transformer
 flowing shared memory segments from the memory mapped file.
@@ -1634,7 +1634,7 @@ Thread manager for processes; thread pool with capacity to manage dedicated thre
 		- `undocumented`
 	/element/
 		- (source/area)`1254 2 1256 25`
-(signature)`__init__(self, process, proxy)`
+(signature)`__init__(self, process)`
 
 
 [ Fabric >> void ]
@@ -1670,7 +1670,7 @@ Create a dedicated thread and execute the given callable within it.
 Create a dedicated thread that is identified as a critical resource where exceptions
 trigger (context-local/factor-element)&<fault.system/process#Critical[fault.system.process.Critical]> exceptions in the main thread.
 
-The additional (factor-local/parameter)&<#Fabric.critical.Parameters.context[context]> parameter is an arbitrary object describing the resource;
+The additional (invalid/unknown)&<#context> parameter is an arbitrary object describing the resource;
 often the object whose method is considered critical.
 
 
@@ -1680,7 +1680,7 @@ often the object whose method is considered critical.
 		method
 	/element/
 		- (source/area)`1283 2 1290 12`
-(signature)`spawn(self, controller, callable, args, create_thread)`
+(signature)`spawn(self, controller, callable, args)`
 
 Add a thread to the fabric.
 This expands the "parallel" capacity of a (factor-local/class)&<#Process[Process]>.
@@ -1692,7 +1692,7 @@ This expands the "parallel" capacity of a (factor-local/class)&<#Process[Process
 		method
 	/element/
 		- (source/area)`1292 2 1316 54`
-(signature)`thread(self, *parameters, gettid)`
+(signature)`thread(self, *parameters)`
 
 Manage the execution of a thread.
 
@@ -1737,7 +1737,7 @@ in order to perform operations that would otherwise expect its own space.
 		staticmethod
 	/element/
 		- (source/area)`1340 2 1349 12`
-(signature)`current(tid)`
+(signature)`current()`
 
 Resolve the current logical process based on the thread's identifier.
 (invalid/unknown)&<#None> is returned if the thread was not created by a (factor-local/class)&<#Process[Process]>.
@@ -1809,7 +1809,7 @@ controlling processor.
 		method
 	/element/
 		- (source/area)`1391 2 1402 24`
-(signature)`terminate(self, status)`
+(signature)`terminate(self)`
 
 Terminate the process closing the task queue and running the invocation's exit.
 
@@ -1822,7 +1822,7 @@ Terminate the process closing the task queue and running the invocation's exit.
 		- (source/area)`1404 2 1419 15`
 (signature)`__init__(self, exit, identifier)`
 
-Initialize the Process instance using the designated (factor-local/parameter)&<#Process.__init__.Parameters.identifier[identifier]>.
+Initialize the Process instance using the designated (invalid/unknown)&<#identifier>.
 The identifier is essentially arbitrary, but must be hashable as it's
 used to distinguish one (invalid/unknown)&<#Representation> from another. However,
 usually there is only one process, so "root" or "main" is often used.
@@ -1893,7 +1893,7 @@ physical process fork.
 		method
 	/element/
 		- (source/area)`1453 2 1462 89`
-(signature)`error(title)`
+(signature)`error()`
 
 Handler for untrapped exceptions.
 
@@ -1959,7 +1959,7 @@ Reset the process global state of (project-local/unknown)&<system>.
 		function
 	/element/
 		- (source/area)`1483 1 1494 61`
-(signature)`exit(status)`
+(signature)`exit()`
 
 Default exit callback used to interrupt main thead task queue.
 
@@ -1975,10 +1975,10 @@ Sets the module attribute (factor-local/data)&<#main_thread_exit_status[main_thr
 		- (type/syntax)`Process`
 		- (type/factor-local/class)&<#Process[Process]>
 		
-(signature)`spawn(exit, identifier, executables, critical, partial)`
+(signature)`spawn(exit, identifier, executables)`
 
-Construct a (factor-local/class)&<#Process[Process]> using the given (factor-local/parameter)&<#spawn.Parameters.executables[executables]>.
-The (factor-local/parameter)&<#spawn.Parameters.identifier[identifier]> is usually `'root'` for the primary logical process.
+Construct a (factor-local/class)&<#Process[Process]> using the given (invalid/unknown)&<#executables>.
+The (invalid/unknown)&<#identifier> is usually `'root'` for the primary logical process.
 
 
 [ dispatch ]
@@ -1990,11 +1990,11 @@ The (factor-local/parameter)&<#spawn.Parameters.identifier[identifier]> is usual
 		- (type/syntax)`Process`
 		- (type/factor-local/class)&<#Process[Process]>
 		
-(signature)`dispatch(invocation, application, identifier, exit)`
+(signature)`dispatch(invocation, application)`
 
 Dispatch an application context instance within a new logical process.
 
-Construct a (factor-local/class)&<#Process[Process]> and (project-local/factor-element)&<core#Executable[fault.kernel.core.Executable]> for executing the (factor-local/parameter)&<#dispatch.Parameters.application[application]> context.
+Construct a (factor-local/class)&<#Process[Process]> and (project-local/factor-element)&<core#Executable[fault.kernel.core.Executable]> for executing the (invalid/unknown)&<#application> context.
 The (factor-local/class)&<#Process[Process]> created by the inner (factor-local/function)&<#spawn[spawn]> is returned.
 
 
@@ -2037,7 +2037,7 @@ Connect the system process termination signal to root transaction terminate.
 		function
 	/element/
 		- (source/area)`1569 1 1578 47`
-(signature)`control(errctl, **kw)`
+(signature)`control(**kw)`
 
 Control the main thread providing a low precision timer for deferred tasks.
 Called by an application's main entry point after booting the (factor-local/class)&<#Process[Process]> created
@@ -2052,5 +2052,5 @@ by (factor-local/function)&<#spawn[spawn]>.
 		- `undocumented`
 	/element/
 		- (source/area)`1580 1 1601 95`
-(signature)`protect(error_control, timeout)`
+(signature)`protect(error_control)`
 

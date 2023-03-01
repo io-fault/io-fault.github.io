@@ -172,7 +172,7 @@ Construct the targets of a package hierarchy for the selected context and role.
 		- `undocumented`
 	/element/
 		- (source/area)`29 2 48 13`
-(signature)`__init__(self, executor, context, cache, intentions, telemetry, product, projects, rebuild, connect)`
+(signature)`__init__(self, executor, context, cache, intentions, telemetry, product, projects)`
 
 
 [ Application >> from_command ]

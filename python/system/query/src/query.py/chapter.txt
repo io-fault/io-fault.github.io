@@ -75,7 +75,7 @@ All information is retrieved from the system when invoked.
 		- (type/syntax)`files.Path`
 		- (type/project-local/factor-element)&<files#Path[fault.system.files.Path]>
 		
-(signature)`paths(environment)`
+(signature)`paths()`
 
 Select paths present in the (system/environ)`PATH` variable.
 
@@ -89,12 +89,12 @@ Select paths present in the (system/environ)`PATH` variable.
 		- (type/syntax)`files.Path`
 		- (type/project-local/factor-element)&<files#Path[fault.system.files.Path]>
 		
-(signature)`executables(exename, environment)`
+(signature)`executables(exename)`
 
 Select executable paths from the environment, (system/environ)`PATH`.
 
 Iterate over the directories listed in `PATH` and yield paths that exist
-when the given (factor-local/parameter)&<#executables.Parameters.exename[exename]> is extended on the directory.
+when the given (invalid/unknown)&<#exename> is extended on the directory.
 
 The produced (project-local/unknown)&<files#Path[files.Path]> instances may refer to files of any type.
 Paths referring to broken links will not be included.
@@ -109,7 +109,7 @@ Paths referring to broken links will not be included.
 		- (type/syntax)`files.Path`
 		- (type/project-local/factor-element)&<files#Path[fault.system.files.Path]>
 		
-(signature)`home(environment)`
+(signature)`home()`
 
 Retrieve the user's home directory from the environment, (system/environ)`HOME`.
 
@@ -199,7 +199,7 @@ the POSIX (system/manual)`sysconf` call with (id)`SC_CLK_TCK`.
 		function
 	/element/
 		- (source/area)`106 1 126 43`
-(signature)`platform(system, environment)`
+(signature)`platform()`
 
 Create an (project-local/unknown)&<execution#Platform[execution.Platform]> instance using the environment.
 

@@ -78,7 +78,7 @@ each invocation, no caching is performed so each call represents
 the latest version.
 
 Defaults to `PATH`, (factor-local/function)&<#environ_paths[environ_paths]> can select an arbitrary environment variable
-to structure using the (factor-local/parameter)&<#environ_paths.Parameters.env[env]> keyword parameter.
+to structure using the (invalid/unknown)&<#env> keyword parameter.
 
 This function exists to support (factor-local/function)&<#search[search]> as `search(environ_paths(), {...})` is
 the most common use case.
@@ -106,7 +106,7 @@ the most common use case.
 
 Query the sequence of search paths for the given set of files.
 
-All paths will be scanned for each requested identifier in (factor-local/parameter)&<#search.Parameters.xset[xset]>. When an identifier
+All paths will be scanned for each requested identifier in (invalid/unknown)&<#xset>. When an identifier
 is found to exist, it is removed from the set that is being scanned for causing
 the first path match to be the one returned.
 
@@ -132,7 +132,7 @@ and the second is the set of executables that were not found in the path.
 		- (source/area)`79 1 102 18`
 (signature)`select(paths, possibilities, preferences)`
 
-Select a file from the given (factor-local/parameter)&<#select.Parameters.paths[paths]> using the (factor-local/parameter)&<#select.Parameters.possibilities[possibilities]> and (factor-local/parameter)&<#select.Parameters.preferences[preferences]>
+Select a file from the given (invalid/unknown)&<#paths> using the (invalid/unknown)&<#possibilities> and (invalid/unknown)&<#preferences>
 to identify the most desired.
 
 

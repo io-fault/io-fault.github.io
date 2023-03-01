@@ -246,7 +246,7 @@ Invoking without arguments displays help menu to standard error.
 		- `undocumented`
 	/element/
 		- (source/area)`148 1 194 3`
-(signature)`menu(route, syn, docs)`
+(signature)`menu(route)`
 
 
 [ main ]

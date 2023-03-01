@@ -166,9 +166,9 @@ Product builds and tests for system integration.
 		function
 	/element/
 		- (source/area)`41 1 73 29`
-(signature)`plan_build(command, ccontext, intentions, cache, argv, pcontext, identifier, executable, cache_type)`
+(signature)`plan_build(command, ccontext, intentions, cache, argv, pcontext, identifier)`
 
-Create an invocation for processing (invalid/unknown)&<#pj> with (factor-local/parameter)&<#plan_build.Parameters.ccontext[ccontext]>.
+Create an invocation for processing (invalid/unknown)&<#pj> with (invalid/unknown)&<#ccontext>.
 
 
 [ plan_test ]
@@ -179,7 +179,7 @@ Create an invocation for processing (invalid/unknown)&<#pj> with (factor-local/p
 		- (source/area)`75 1 102 59`
 (signature)`plan_test(intention, argv, pcontext, identifier)`
 
-Create an invocation for processing the project from (factor-local/parameter)&<#plan_test.Parameters.pcontext[pcontext]> selected using (factor-local/parameter)&<#plan_test.Parameters.identifier[identifier]>.
+Create an invocation for processing the project from (invalid/unknown)&<#pcontext> selected using (invalid/unknown)&<#identifier>.
 
 
 [ iterconstructs ]
@@ -201,7 +201,7 @@ Iterator producing (remote/factor-element)&<http://fault.io/python/project/syste
 		- (source/area)`117 1 140 25`
 (signature)`build(meta, log, factors, status, pd, contexts, intentions, cache, symbols)`
 
-Build all projects within the product using all (factor-local/parameter)&<#build.Parameters.contexts[contexts]>.
+Build all projects within the product using all (invalid/unknown)&<#contexts>.
 
 
 [ test ]
@@ -221,7 +221,7 @@ Test all projects.
 		function
 	/element/
 		- (source/area)`161 1 270 59`
-(signature)`integrate(meta, log, config, fx, cc, pdr, argv, intention)`
+(signature)`integrate(meta, log, config, fx, cc, pdr, argv)`
 
 Complete build connecting requirements and updating indexes.
 

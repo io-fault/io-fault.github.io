@@ -41,7 +41,7 @@ Commands that primarily query the workspace's projects.
 		- `undocumented`
 	/element/
 		- (source/area)`9 1 12 43`
-(signature)`system(command, argv, name)`
+(signature)`system(command, argv)`
 
 
 [ srcindex ]

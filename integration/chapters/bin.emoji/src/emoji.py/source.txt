@@ -22,13 +22,20 @@ restricted = {
 	# base64 default, lowercase to "disable".
 	'-b': ('field-replace', 'base64', 'escape'),
 	'-B': ('field-replace', 'percent', 'escape'),
+	'--xml': ('field-replace', 'none', 'escape'),
 }
 
-def icon(text, size=256, delta=8, position='92', ns='http://www.w3.org/2000/svg'):
+def texticon(text, size=256, delta=8, position='92', ns='http://www.w3.org/2000/svg'):
 	yield f'<svg xmlns="{ns}" width="{size}" height="{size}">'
 	yield f'<text x="{delta//2}" y="0.{position}em" font-size="{size-delta}">'
 	yield text
-	yield f'</text></svg>'
+	yield f"</text></svg>"
+
+def reference(href, size=256, delta=8, position='92', ns='http://www.w3.org/2000/svg'):
+	# Ignore fine positioning control for image references.
+	yield f'<svg xmlns="{ns}" width="{size}" height="{size}">'
+	yield f'<image width="100%" height="100%" x="0" y="0" href="{href}">'
+	yield f"</image></svg>"
 
 def percent_escape(s):
 	s = s.replace(b'"', b'%' + hex(ord(b'"')).encode('ascii')[2:])
@@ -50,7 +57,7 @@ def main(inv:process.Invocation) -> process.Exit:
 		'mime-type': 'image/svg+xml',
 		'read-stdin': False,
 		'verbose': False,
-		'namespace': "http://www.w3.org/2000/svg",
+		'namespace': 'http://www.w3.org/2000/svg',
 	}
 
 	v = recognition.legacy(restricted, required, inv.argv)
@@ -59,9 +66,10 @@ def main(inv:process.Invocation) -> process.Exit:
 	verbose = config['verbose']
 	ns = config['namespace']
 
-	encoder, eid = {
-		'base64': (base64_escapes, b';base64,'),
-		'percent': ((lambda: percent_escape), b','),
+	prefix, encoder, eid = {
+		'base64': (b'data:', base64_escapes, b';base64,'),
+		'percent': (b'data:', (lambda: percent_escape), b','),
+		'none': (b'', (lambda: (lambda x: x)), b''),
 	}[config['escape']]
 	encode = encoder()
 
@@ -71,21 +79,27 @@ def main(inv:process.Invocation) -> process.Exit:
 
 	write = sys.stdout.buffer.write
 	if config['read-stdin']:
-		x = sys.stdin.readlines()
+		ilines = sys.stdin.readlines()
 	else:
-		x = remainder
+		ilines = remainder
 
 	if verbose:
 		log = (lambda x: sys.stderr.write(x+'\n'))
 	else:
 		log = (lambda x: None)
 
-	for i in map(str.strip, x):
-		raw = ''.join(icon(i, s, d, p, ns=ns))
+	if prefix:
+		prefix += config['mime-type'].encode('ascii')
+
+	for i in map(str.strip, ilines):
+		if i.startswith('http://') or i.startswith('https://') or i.startswith('data:'):
+			raw = ''.join(reference(i, s, d, p, ns=ns))
+		else:
+			raw = ''.join(texticon(i, s, d, p, ns=ns))
 		log(raw)
 
 		data = encode(raw.encode(config['encoding']))
-		write(b'data:' + config['mime-type'].encode('ascii'))
+		write(prefix)
 		write(eid)
 		write(data)
 		write(b'\n')

@@ -24,7 +24,7 @@
 	/element/
 		- (source/area)`512 11 512 52`
 #!source
-	#define KFILTER(B, TYP) case B: fname = #B; break;
+	break;
 
 [ FLAG ]
 ! CONTROL:
@@ -35,7 +35,7 @@
 	/element/
 		- (source/area)`525 11 525 24`
 #!source
-	#define FLAG(FLG) "%s"
+	break;
 
 [ FLAG ]
 ! CONTROL:
@@ -46,7 +46,7 @@
 	/element/
 		- (source/area)`533 11 533 57`
 #!source
-	#define FLAG(FLG) (kev->flags & FLG) ? (#FLG "|") : "",
+	
 
 [ fs_event_open ]
 ! CONTROL:

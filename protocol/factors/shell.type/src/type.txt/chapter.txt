@@ -1,0 +1,27 @@
+! CONTROL:
+	/type/
+		factor
+	/element/
+		- (source/area)``
+! CONTEXT:
+	/protocol/
+		&<http://if.fault.io/text/type.factor>
+
+	/identifier/
+		&<http://if.fault.io/factors/shell.type>
+
+Abstract Factor Type for system shell factors.
+
+[ Types ]
+
+- (project-local/unknown)&<shell.script>
+- (project-local/unknown)&<shell.include>
+
+[ Sources ]
+
+/posix/
+	A POSIX compliant bourne shell script.
+
+/bash/
+	A Bourne-Again Shell script.
+

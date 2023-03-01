@@ -98,7 +98,7 @@ True is the segment has any points; False if zero.
 		- `undocumented`
 	/element/
 		- (source/area)`31 2 45 39`
-(signature)`segment(self, from_stem, Cache, RPath)`
+(signature)`segment(self)`
 
 
 [ Selector ]
@@ -126,9 +126,9 @@ by the sequence of identifiers contained within the selector instance.
 		- (type/syntax)`Segment`
 		- (type/factor-local/parameter)&<#Selector.segment.Parameters.Segment[Segment]>
 		
-(signature)`segment(self, from_stem, Segment, Cache, RPath)`
+(signature)`segment(self)`
 
-Construct a (factor-local/parameter)&<#Selector.segment.Parameters.Segment[Segment]> from (factor-local/parameter)&<#Selector.segment.Parameters.self[self]> starting at the position designated by (factor-local/parameter)&<#Selector.segment.Parameters.from_stem[from_stem]>.
+Construct a (factor-local/class)&<#Segment[Segment]> from (invalid/unknown)&<#self> starting at the position designated by (invalid/unknown)&<#from_stem>.
 If stem is not given, the entire selector will be converted.
 
 

@@ -3,7 +3,7 @@
 		module
 	/element/
 		- (source/area)`1 1 52 0`
-Query context for navigating chapter nodes.
+Query context for navigating chapter elements.
 
 
 [ Context ]
@@ -38,10 +38,10 @@ Query context for navigating chapter nodes.
 	/type/
 		function
 	/element/
-		- (source/area)`6 1 16 13`
-(signature)`identify(title, node)`
+		- (source/area)`6 1 16 16`
+(signature)`identify(title, element)`
 
-Identification function for chapter nodes providing
+Identification function for chapter elements providing
 shortcuts for directories and sequences.
 
 
@@ -63,7 +63,7 @@ shortcuts for directories and sequences.
 			'chapter',
 			'section',
 			'admonition',
-			'dictionary',
+			'directory',
 			'sequence',
 			'set',
 	
@@ -74,7 +74,7 @@ shortcuts for directories and sequences.
 		{
 			'p': 'paragraph',
 			'i': 'item',
-			'd': 'dictionary',
+			'd': 'directory',
 			's': 'sequence',
 			'S': 'section',
 			'C': 'chapter',
@@ -93,6 +93,6 @@ shortcuts for directories and sequences.
 		
 (signature)`navigate(chapter)`
 
-Construct a (remote/factor-element)&<http://fault.io/python/route/query#Cursor[fault.route.query.Cursor]> instance using the given (factor-local/parameter)&<#navigate.Parameters.chapter[chapter]> element
+Construct a (remote/factor-element)&<http://fault.io/python/route/query#Cursor[fault.route.query.Cursor]> instance using the given (invalid/unknown)&<#chapter> element
 with the configured expression (factor-local/data)&<#context[context]>.
 

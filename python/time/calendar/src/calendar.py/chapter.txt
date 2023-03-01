@@ -32,7 +32,7 @@ Used internally by (project-local/unknown)&<gregorian> in order to work with the
 		function
 	/element/
 		- (source/area)`11 1 42 2`
-(signature)`aggregate(node, chain, accumulate, isinstance, int, tuple, range, len, sum)`
+(signature)`aggregate(node)`
 
 Recursively aggregate the data in the node.
 
@@ -45,5 +45,5 @@ Recursively aggregate the data in the node.
 		- `undocumented`
 	/element/
 		- (source/area)`51 1 89 85`
-(signature)`resolve(selectors, iaddress, calendar, divmod, isinstance, range, len, int)`
+(signature)`resolve(selectors, iaddress, calendar)`
 

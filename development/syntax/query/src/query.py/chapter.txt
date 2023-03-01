@@ -116,7 +116,7 @@ Whether or not the non-formatting fields have content.
 		function
 	/element/
 		- (source/area)`89 1 121 29`
-(signature)`indentation_block(direction, initial, level, level_adjustment)`
+(signature)`indentation_block(direction, initial)`
 
 Select indentation block.
 
@@ -127,7 +127,7 @@ Select indentation block.
 		function
 	/element/
 		- (source/area)`123 1 145 25`
-(signature)`contiguous_block(direction, initial, level, level_adjustment)`
+(signature)`contiguous_block(direction, initial)`
 
 Select a contiguous range.
 

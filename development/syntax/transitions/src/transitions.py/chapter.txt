@@ -12,7 +12,7 @@ Implementations for Transition event endpoints.
 		function
 	/element/
 		- (source/area)`5 1 10 5`
-(signature)`open_vertical_after(refraction, quantity)`
+(signature)`open_vertical_after(refraction)`
 
 Split the pane vertically with a command refraction
 connected to the new area below the current pane.
@@ -24,7 +24,7 @@ connected to the new area below the current pane.
 		function
 	/element/
 		- (source/area)`12 1 17 5`
-(signature)`open_vertical_before(refraction, quantity)`
+(signature)`open_vertical_before(refraction)`
 
 Split the pane vertically with a command refraction
 connected to the new area above the current pane.
@@ -36,7 +36,7 @@ connected to the new area above the current pane.
 		function
 	/element/
 		- (source/area)`19 1 22 4`
-(signature)`open_vertical_between(refraction, quantity)`
+(signature)`open_vertical_between(refraction)`
 
 Split the current line at the cursor's current position.
 
@@ -47,7 +47,7 @@ Split the current line at the cursor's current position.
 		function
 	/element/
 		- (source/area)`24 1 27 4`
-(signature)`join_vertical(refraction, cursor, quantity)`
+(signature)`join_vertical(refraction, cursor)`
 
 Join the current line with the following line.
 

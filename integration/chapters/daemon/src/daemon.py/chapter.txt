@@ -95,7 +95,7 @@ Web application for serving a project corpus.
 		- `undocumented`
 	/element/
 		- (source/area)`15 1 18 88`
-(signature)`render_factor_html(prefix, depth, styles, type, identifier, chapter, Transform)`
+(signature)`render_factor_html(prefix, depth, styles, type, identifier, chapter)`
 
 
 [ buffer ]
@@ -106,7 +106,7 @@ Web application for serving a project corpus.
 		- `undocumented`
 	/element/
 		- (source/area)`20 1 33 10`
-(signature)`buffer(iterator, limit)`
+(signature)`buffer(iterator)`
 
 
 [ Select ]
@@ -203,7 +203,7 @@ Corpus selection structure separating project, factor, and source.
 		classmethod
 	/element/
 		- (source/area)`58 2 81 10`
-(signature)`from_request_uri(Class, rpath, prefix)`
+(signature)`from_request_uri(Class, rpath)`
 
 Identify the project, factor, and source selected by the path.
 
@@ -364,7 +364,7 @@ Catenate the chapters of all the source files.
 		- `undocumented`
 	/element/
 		- (source/area)`247 1 278 2`
-(signature)`r_sources(sx, index, icon)`
+(signature)`r_sources(sx, index)`
 
 
 [ Corpus ]
@@ -487,7 +487,7 @@ Read a resource from the configured archive.
 		method
 	/element/
 		- (source/area)`380 2 418 52`
-(signature)`cp_project_index(self, ctl, prefix)`
+(signature)`cp_project_index(self, ctl)`
 
 Handle root HTML requests.
 
@@ -498,7 +498,7 @@ Handle root HTML requests.
 		method
 	/element/
 		- (source/area)`420 2 466 52`
-(signature)`cp_factor_index(self, project, ctl, prefix)`
+(signature)`cp_factor_index(self, project, ctl)`
 
 Handle root HTML requests.
 
@@ -509,7 +509,7 @@ Handle root HTML requests.
 		method
 	/element/
 		- (source/area)`468 2 516 52`
-(signature)`cp_source_index(self, project, factor, ctl, prefix)`
+(signature)`cp_source_index(self, project, factor, ctl)`
 
 Handle root HTML requests.
 

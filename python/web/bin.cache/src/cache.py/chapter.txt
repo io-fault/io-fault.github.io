@@ -360,7 +360,7 @@ the local file system.
 		- `undocumented`
 	/element/
 		- (source/area)`123 2 174 13`
-(signature)`dl_status(self, time)`
+(signature)`dl_status(self)`
 
 
 [ Download >> dl_response_endpoint ]

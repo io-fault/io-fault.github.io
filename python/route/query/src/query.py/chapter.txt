@@ -83,7 +83,7 @@ Path string given to (factor-local/method)&<#Context.prepare[Context.prepare]> w
 		function
 	/element/
 		- (source/area)`19 1 42 12`
-(signature)`iselement(subject, len, isinstance)`
+(signature)`iselement(subject)`
 
 Determines whether the given object has the properties of an element.
 
@@ -158,7 +158,7 @@ Parse the path string into a selection plan.
 		- `undocumented`
 	/element/
 		- (source/area)`76 2 84 14`
-(signature)`__init__(self, selectors, aliases, filters, identify)`
+(signature)`__init__(self, selectors, aliases)`
 
 
 [ Context >> _identify_node ]
@@ -191,7 +191,7 @@ Parse the path string into a selection plan.
 		- `undocumented`
 	/element/
 		- (source/area)`104 2 117 15`
-(signature)`_read_string(itokens, terminator)`
+(signature)`_read_string(itokens)`
 
 
 [ Context >> structure ]
@@ -200,10 +200,10 @@ Parse the path string into a selection plan.
 		method
 	/element/
 		- (source/area)`119 2 229 20`
-(signature)`structure(self, tokens, start)`
+(signature)`structure(self, tokens)`
 
 Process tokens into selector sequences.
-Usually used indirectly by (factor-local/method)&<#Context.prepare[prepare]>.
+Usually used indirectly by (invalid/unknown)&<#prepare>.
 
 
 [ Context >> _select ]
@@ -280,7 +280,7 @@ Usually used indirectly by (factor-local/method)&<#Context.prepare[prepare]>.
 		- `undocumented`
 	/element/
 		- (source/area)`272 2 273 59`
-(signature)`switch(self, operation, nodes, getattr)`
+(signature)`switch(self, operation, nodes)`
 
 
 [ Context >> interpret ]
@@ -291,7 +291,7 @@ Usually used indirectly by (factor-local/method)&<#Context.prepare[prepare]>.
 		- `undocumented`
 	/element/
 		- (source/area)`275 2 298 14`
-(signature)`interpret(self, plan, root, context, chain, list)`
+(signature)`interpret(self, plan, root, context)`
 
 
 [ Cursor ]
@@ -327,7 +327,7 @@ Navigation state class providing a query interface to an element tree.
 		- (source/area)`312 2 317 13`
 (signature)`seek(self, path)`
 
-Adjust the cursor position to the nodes identified by (factor-local/parameter)&<#Cursor.seek.Parameters.path[path]>.
+Adjust the cursor position to the nodes identified by (invalid/unknown)&<#path>.
 
 
 [ Cursor >> reset ]
@@ -349,7 +349,7 @@ Select the root as the current working node.
 		- (source/area)`326 2 332 44`
 (signature)`fork(self, path)`
 
-Create a new instance using the given (factor-local/parameter)&<#Cursor.fork.Parameters.path[path]> to the select the nodes
+Create a new instance using the given (invalid/unknown)&<#path> to the select the nodes
 used as the root content of the new (factor-local/class)&<#Cursor[Cursor]>.
 
 
@@ -361,5 +361,5 @@ used as the root content of the new (factor-local/class)&<#Cursor[Cursor]>.
 		- (source/area)`334 2 338 76`
 (signature)`select(self, path)`
 
-Retrieve nodes relative to the context node using (factor-local/parameter)&<#Cursor.select.Parameters.path[path]>.
+Retrieve nodes relative to the context node using (invalid/unknown)&<#path>.
 

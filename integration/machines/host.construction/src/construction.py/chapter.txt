@@ -2,7 +2,7 @@
 	/type/
 		module
 	/element/
-		- (source/area)`1 1 358 0`
+		- (source/area)`1 1 356 0`
 Host construction context initialization.
 
 
@@ -94,7 +94,7 @@ Host construction context initialization.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`17 1 25 2`
+		- (source/area)`17 1 23 2`
 (signature)`mkinfo(path, name)`
 
 
@@ -105,8 +105,8 @@ Host construction context initialization.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`27 1 31 64`
-(signature)`mktype(semantics, type, language, identifier)`
+		- (source/area)`25 1 29 64`
+(signature)`mktype(semantics, type, language)`
 
 
 [ interfaces ]
@@ -116,7 +116,7 @@ Host construction context initialization.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`33 1 35 1`
+		- (source/area)`31 1 33 1`
 #!source
 	interfaces = [
 		lsf.types.Reference('http://fault.io/integration/machines', lsf.types.factor@'include'),
@@ -129,7 +129,7 @@ Host construction context initialization.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`37 1 50 1`
+		- (source/area)`35 1 48 1`
 #!source
 	formats = {
 		'http://if.fault.io/factors/system': [
@@ -153,7 +153,7 @@ Host construction context initialization.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`52 1 57 1`
+		- (source/area)`50 1 55 1`
 #!source
 	vformats = {
 		'http://if.fault.io/factors/vector': [
@@ -169,7 +169,7 @@ Host construction context initialization.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`59 1 59 20`
+		- (source/area)`57 1 57 20`
 #!source
 	vtype = 'vector.set'
 
@@ -180,7 +180,7 @@ Host construction context initialization.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`60 1 60 54`
+		- (source/area)`58 1 58 54`
 #!source
 	clang_delineate = (query.bindir() / 'clang-delineate')
 
@@ -191,7 +191,7 @@ Host construction context initialization.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`62 1 65 63`
+		- (source/area)`60 1 63 63`
 (signature)`system(path, *args)`
 
 
@@ -200,7 +200,7 @@ Host construction context initialization.
 	/type/
 		function
 	/element/
-		- (source/area)`67 1 76 10`
+		- (source/area)`65 1 74 10`
 (signature)`iproduct(route, connections)`
 
 Initialize the product index and return the created instance.
@@ -213,7 +213,7 @@ Initialize the product index and return the created instance.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`78 1 79 46`
+		- (source/area)`76 1 77 46`
 (signature)`mksole(fpath, type, source)`
 
 
@@ -224,7 +224,7 @@ Initialize the product index and return the created instance.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`81 1 82 76`
+		- (source/area)`79 1 80 76`
 (signature)`fx(fpath, name, *argv, **env)`
 
 
@@ -235,7 +235,7 @@ Initialize the product index and return the created instance.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`84 1 85 39`
+		- (source/area)`82 1 83 39`
 (signature)`mkset(fpath, type, symbols, sources)`
 
 
@@ -246,8 +246,8 @@ Initialize the product index and return the created instance.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`87 1 89 34`
-(signature)`getsource(project, name, ext)`
+		- (source/area)`85 1 87 34`
+(signature)`getsource(project, name)`
 
 
 [ comment ]
@@ -257,7 +257,7 @@ Initialize the product index and return the created instance.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`91 1 92 26`
+		- (source/area)`89 1 90 26`
 (signature)`comment(text)`
 
 
@@ -268,7 +268,7 @@ Initialize the product index and return the created instance.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`94 1 98 12`
+		- (source/area)`92 1 96 12`
 (signature)`constant(name, *types)`
 
 
@@ -279,7 +279,7 @@ Initialize the product index and return the created instance.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`100 1 105 9`
+		- (source/area)`98 1 103 9`
 (signature)`define(name, *types)`
 
 
@@ -290,7 +290,7 @@ Initialize the product index and return the created instance.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`107 1 139 14`
+		- (source/area)`105 1 137 14`
 (signature)`form_host_target(hlinker)`
 
 
@@ -301,8 +301,8 @@ Initialize the product index and return the created instance.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`141 1 147 16`
-(signature)`form_variants(system, architecture, forms)`
+		- (source/area)`139 1 145 16`
+(signature)`form_variants(system, architecture)`
 
 
 [ form_host_type ]
@@ -312,7 +312,7 @@ Initialize the product index and return the created instance.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`149 1 174 14`
+		- (source/area)`147 1 172 14`
 (signature)`form_host_type()`
 
 
@@ -323,8 +323,8 @@ Initialize the product index and return the created instance.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`176 1 201 2`
-(signature)`host(context, hlinker, hsystem, harch, factor, name, cc)`
+		- (source/area)`174 1 199 2`
+(signature)`host(context, hlinker, hsystem, harch)`
 
 
 [ form_python_type ]
@@ -334,7 +334,7 @@ Initialize the product index and return the created instance.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`203 1 218 14`
+		- (source/area)`201 1 216 14`
 (signature)`form_python_type()`
 
 
@@ -345,8 +345,8 @@ Initialize the product index and return the created instance.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`220 1 237 2`
-(signature)`python(context, psystem, parch, factor, name)`
+		- (source/area)`218 1 235 2`
+(signature)`python(context, psystem, parch)`
 
 
 [ mkctx ]
@@ -356,8 +356,8 @@ Initialize the product index and return the created instance.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`239 1 241 79`
-(signature)`mkctx(info, formats, product, context, soles)`
+		- (source/area)`237 1 239 79`
+(signature)`mkctx(info, formats, product, context)`
 
 
 [ mkproject ]
@@ -367,7 +367,7 @@ Initialize the product index and return the created instance.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`243 1 245 80`
+		- (source/area)`241 1 243 80`
 (signature)`mkproject(info, product, context, project, soles)`
 
 
@@ -378,8 +378,8 @@ Initialize the product index and return the created instance.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`247 1 250 25`
-(signature)`mktools(context, route, name)`
+		- (source/area)`245 1 248 25`
+(signature)`mktools(context, route)`
 
 
 [ system_select_linker ]
@@ -387,7 +387,7 @@ Initialize the product index and return the created instance.
 	/type/
 		function
 	/element/
-		- (source/area)`252 1 261 25`
+		- (source/area)`250 1 259 25`
 (signature)`system_select_linker(system)`
 
 Select the linker command interface to use based on the system's name.
@@ -400,7 +400,7 @@ Select the linker command interface to use based on the system's name.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`263 1 278 14`
+		- (source/area)`261 1 276 14`
 (signature)`form_meta_type()`
 
 
@@ -411,7 +411,7 @@ Select the linker command interface to use based on the system's name.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`280 1 321 2`
+		- (source/area)`278 1 319 2`
 (signature)`meta(context)`
 
 
@@ -422,8 +422,8 @@ Select the linker command interface to use based on the system's name.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`323 1 353 25`
-(signature)`mkvectors(context, route, name)`
+		- (source/area)`321 1 351 25`
+(signature)`mkvectors(context, route)`
 
 
 [ mkcc ]
@@ -433,6 +433,6 @@ Select the linker command interface to use based on the system's name.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`355 1 358 69`
+		- (source/area)`353 1 356 69`
 (signature)`mkcc(route)`
 

@@ -66,11 +66,11 @@ Formatting routines for representing processor hierarchies.
 		function
 	/element/
 		- (source/area)`11 1 40 9`
-(signature)`perspectives(resource, mro)`
+(signature)`perspectives(resource)`
 
 Return the stack of structures used for Resource introspection.
 
-Traverses the MRO of the (factor-local/parameter)&<#perspectives.Parameters.resource[resource]> class and executes the (invalid/unknown)&<#structure>
+Traverses the MRO of the (invalid/unknown)&<#resource> class and executes the (invalid/unknown)&<#structure>
 method; the corresponding class, properties, and subresources are
 then appended to a list describing the (invalid/unknown)&<#Resource> from the perspective
 of each class.
@@ -84,7 +84,7 @@ Returns `[(Class, properties, subresources), ...]`.
 		function
 	/element/
 		- (source/area)`42 1 71 74`
-(signature)`sequence(identity, resource, perspective, traversed, depth)`
+(signature)`sequence(identity, resource, perspective, traversed)`
 
 Convert the structure tree of a (invalid/unknown)&<#Resource> into a sequence of tuples to be
 formatted for display.
@@ -96,7 +96,7 @@ formatted for display.
 		function
 	/element/
 		- (source/area)`73 1 128 4`
-(signature)`format(identity, resource, sequenced, tabs)`
+(signature)`format(identity, resource)`
 
 Format the resource tree in fault.text.
 

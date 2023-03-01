@@ -42,7 +42,7 @@ it may be a reasonable implmentation selection.
 [ > Properties ]
 
 /sequences/
-	The set of sequences that will be scanned by (factor-local/method)&<#SubsequenceScan.matches[matches]>.
+	The set of sequences that will be scanned by (invalid/unknown)&<#matches>.
 
 /sizes/
 	The ordered sequence of slice sizes that sources
@@ -134,7 +134,7 @@ on the configured offset.
 		- `undocumented`
 	/element/
 		- (source/area)`94 2 97 16`
-(signature)`get(self, key, default)`
+(signature)`get(self, key)`
 
 
 [ SubsequenceScan >> __contains__ ]

@@ -2,19 +2,18 @@
 	/type/
 		module
 	/element/
-		- (source/area)`1 1 85 0`
-Project Directory Protocol for explicit factor specifications.
+		- (source/area)`1 1 13 0`
+Protocol implementation for explicit factor isolation.
 
-Explicitly Typed Factors is a project factor protocol designed for projects
-that primarily consist of factors that are composed of single source files.
-Notably, languages such as Interpreted Lisps and Python are likely users of (project-local/unknown)&<explicit>.
 
-Composites are designated as directories containing a (filename)`src` directory and a
-(filename)`factor.txt` file. When present, (factor-local/function)&<#query[query]> will associate the tree contained in
-the source directory as the sources composing the factor whose type is designted in
-the, previously mentioned, text file. All other directories are perceived to contain
-Whole Factors whose (term)`domain` is inferred from the file's identified language.
-
+[ typing ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`4 1 4 13`
 
 [ collections ]
 ! CONTROL:
@@ -23,7 +22,7 @@ Whole Factors whose (term)`domain` is inferred from the file's identified langua
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`14 1 14 18`
+		- (source/area)`5 1 5 18`
 
 [ itertools ]
 ! CONTROL:
@@ -32,7 +31,25 @@ Whole Factors whose (term)`domain` is inferred from the file's identified langua
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`15 1 15 16`
+		- (source/area)`6 1 6 16`
+
+[ json ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`7 1 7 11`
+
+[ Cell ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`9 1 9 32`
 
 [ Segment ]
 ! CONTROL:
@@ -41,7 +58,25 @@ Whole Factors whose (term)`domain` is inferred from the file's identified langua
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`17 1 17 33`
+		- (source/area)`10 1 10 43`
+
+[ Selector ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`10 1 10 43`
+
+[ files ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`11 1 11 26`
 
 [ types ]
 ! CONTROL:
@@ -50,80 +85,4 @@ Whole Factors whose (term)`domain` is inferred from the file's identified langua
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`19 1 19 19`
-
-[ struct ]
-! CONTROL:
-	/type/
-		import
-	/flags/
-		- `undocumented`
-	/element/
-		- (source/area)`20 1 20 20`
-
-[ ProjectSignal ]
-! CONTROL:
-	/type/
-		data
-	/flags/
-		- `undocumented`
-	/element/
-		- (source/area)`22 1 22 54`
-#!source
-	ProjectSignal = Segment.from_sequence(['project.txt'])
-
-[ ContextSignal ]
-! CONTROL:
-	/type/
-		data
-	/flags/
-		- `undocumented`
-	/element/
-		- (source/area)`23 1 23 65`
-#!source
-	ContextSignal = Segment.from_sequence(['context', 'project.txt'])
-
-[ SourceSignal ]
-! CONTROL:
-	/type/
-		data
-	/flags/
-		- `undocumented`
-	/element/
-		- (source/area)`24 1 24 45`
-#!source
-	SourceSignal = Segment.from_sequence(['src'])
-
-[ FactorDefinitionSignal ]
-! CONTROL:
-	/type/
-		data
-	/flags/
-		- `undocumented`
-	/element/
-		- (source/area)`25 1 25 62`
-#!source
-	FactorDefinitionSignal = Segment.from_sequence(['factor.txt'])
-
-[ isource ]
-! CONTROL:
-	/type/
-		function
-	/element/
-		- (source/area)`27 1 43 12`
-(signature)`isource(route)`
-
-Determine if the route is considered to be a source file for
-a composite factor.
-
-
-[ query ]
-! CONTROL:
-	/type/
-		function
-	/element/
-		- (source/area)`45 1 85 25`
-(signature)`query(route, ignore)`
-
-Query for identifying composite factors from an explicitly typed tree.
-
+		- (source/area)`13 1 13 19`

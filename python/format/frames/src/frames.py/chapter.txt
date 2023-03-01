@@ -100,7 +100,7 @@ Whether the character is a Unicode Box Drawing character.
 		- `undocumented`
 	/element/
 		- (source/area)`47 1 51 24`
-(signature)`dlength(field, str)`
+(signature)`dlength(field)`
 
 
 [ dformat ]
@@ -111,7 +111,7 @@ Whether the character is a Unicode Box Drawing character.
 		- `undocumented`
 	/element/
 		- (source/area)`53 1 57 31`
-(signature)`dformat(context, field, str)`
+(signature)`dformat(context, field)`
 
 
 [ strings ]
@@ -120,7 +120,7 @@ Whether the character is a Unicode Box Drawing character.
 		function
 	/element/
 		- (source/area)`59 1 67 26`
-(signature)`strings(sequence, context, cat, Partial)`
+(signature)`strings(sequence)`
 
 Emit the formatted lines of a prepared sequence as (invalid/unknown)&<#str> instances.
 Newline characters are *not* added to line.
@@ -278,7 +278,7 @@ Newline characters are *not* added to line.
 		- (source/area)`148 1 158 11`
 (signature)`round(theme, *corners)`
 
-Create a new theme based on (factor-local/parameter)&<#round.Parameters.theme[theme]> applying rounded corners where specified in (factor-local/parameter)&<#round.Parameters.corners[corners]>.
+Create a new theme based on (invalid/unknown)&<#theme> applying rounded corners where specified in (factor-local/data)&<#corners[corners]>.
 
 #!syntax/python
 	rdiagonal = round(f_solid, 'top-left', 'bottom-right')
@@ -289,7 +289,7 @@ Create a new theme based on (factor-local/parameter)&<#round.Parameters.theme[th
 		function
 	/element/
 		- (source/area)`160 1 165 77`
-(signature)`width(sequence, len)`
+(signature)`width(sequence)`
 
 Calculate the sum of the lengths of each item in the sequence;
 excepting values starting with (invalid/unknown)&<#None> representing a division.
@@ -301,7 +301,7 @@ excepting values starting with (invalid/unknown)&<#None> representing a division
 		function
 	/element/
 		- (source/area)`167 1 258 14`
-(signature)`prepare(theme, width, sequence, minimum, margins, border, len)`
+(signature)`prepare(theme, width, sequence)`
 
 Build sequences of strings providing the necessary formatting for the display
 of the framed data.
@@ -346,10 +346,10 @@ of the framed data.
 		function
 	/element/
 		- (source/area)`260 1 315 69`
-(signature)`align(left, right, offsets, len, sum, map, range)`
+(signature)`align(left, right, offsets)`
 
 Vertically pad the two prepared images with empty records
-according to the describes (factor-local/parameter)&<#align.Parameters.offsets[offsets]>.
+according to the describes (invalid/unknown)&<#offsets>.
 
 [ > Parameters ]
 
@@ -363,7 +363,7 @@ according to the describes (factor-local/parameter)&<#align.Parameters.offsets[o
 
 /(parameter)`offsets`/
 	
-	The pair of vertical offsets for the (factor-local/parameter)&<#align.Parameters.left[left]> and (factor-local/parameter)&<#align.Parameters.right[right]> designating
+	The pair of vertical offsets for the (invalid/unknown)&<#left> and (invalid/unknown)&<#right> designating
 	where their top will be placed. Defaults to zeros.
 
 /(parameter)`len`/
@@ -427,7 +427,7 @@ according to the describes (factor-local/parameter)&<#align.Parameters.offsets[o
 (signature)`combine(theme, mapping, borders)`
 
 Calculate the combined border for the given characters according to the
-(factor-local/parameter)&<#combine.Parameters.theme[theme]>, combination (factor-local/parameter)&<#combine.Parameters.mapping[mapping]> using the adjacent (factor-local/parameter)&<#combine.Parameters.borders[borders]>.
+(invalid/unknown)&<#theme>, combination (invalid/unknown)&<#mapping> using the adjacent (invalid/unknown)&<#borders>.
 
 
 [ stitch ]
@@ -436,7 +436,7 @@ Calculate the combined border for the given characters according to the
 		function
 	/element/
 		- (source/area)`366 1 397 40`
-(signature)`stitch(aligned, combinations)`
+(signature)`stitch(aligned)`
 
 Connects prepared frames along the vertical borders.
 

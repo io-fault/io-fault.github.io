@@ -67,7 +67,7 @@ the existing object if any.
 		
 (signature)`kernelq_cyclic_event(kq, cyclic, ln, kev)`
 
-Set or clear the cyclic flag on (factor-local/parameter)&<#kernelq_cyclic_event.Parameters.ln[ln]> or raise an error if
+Set or clear the cyclic flag on (invalid/unknown)&<#ln> or raise an error if
 it's not acceptable for the given filter.
 
 

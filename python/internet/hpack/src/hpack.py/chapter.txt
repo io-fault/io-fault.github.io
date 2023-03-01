@@ -411,7 +411,7 @@ http://tools.ietf.org/html/rfc7541
 		function
 	/element/
 		- (source/area)`344 1 377 20`
-(signature)`huffman_decode(field, h_range, index, bytes, range)`
+(signature)`huffman_decode(field)`
 
 Decode the byte string using the HPACK huffman code table.
 
@@ -426,7 +426,7 @@ Decode the byte string using the HPACK huffman code table.
 		function
 	/element/
 		- (source/area)`379 1 398 47`
-(signature)`huffman_encode(field, table, chain, len, int)`
+(signature)`huffman_encode(field)`
 
 Encode the byte string as using the HPACK huffman code table.
 
@@ -441,7 +441,7 @@ Encode the byte string as using the HPACK huffman code table.
 		function
 	/element/
 		- (source/area)`400 1 405 11`
-(signature)`encoder(hencode)`
+(signature)`encoder()`
 
 Encoding state for serializing headers.
 
@@ -452,7 +452,7 @@ Encoding state for serializing headers.
 		function
 	/element/
 		- (source/area)`407 1 412 11`
-(signature)`decoder(hdecode)`
+(signature)`decoder()`
 
 Decoding state for loading headers.
 

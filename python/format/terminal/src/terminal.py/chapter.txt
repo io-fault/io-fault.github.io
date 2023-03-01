@@ -199,7 +199,7 @@ Terminal formatting
 		- `undocumented`
 	/element/
 		- (source/area)`51 2 64 46`
-(signature)`__init__(self, type, *parameters, icon, icon_width)`
+(signature)`__init__(self, type, *parameters)`
 
 
 [ render ]
@@ -221,7 +221,7 @@ Terminal formatting
 		- `undocumented`
 	/element/
 		- (source/area)`102 1 106 31`
-(signature)`dformat(context, field, str)`
+(signature)`dformat(context, field)`
 
 
 [ strings ]
@@ -230,7 +230,7 @@ Terminal formatting
 		function
 	/element/
 		- (source/area)`108 1 116 26`
-(signature)`strings(sequence, context, cat, Partial)`
+(signature)`strings(sequence)`
 
 Emit the formatted lines of a prepared sequence as (invalid/unknown)&<#str> instances.
 Newline characters are *not* added to line.

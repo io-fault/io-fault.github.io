@@ -52,5 +52,5 @@ Carriage returns will be used to overwrite previous displays.
 		- `undocumented`
 	/element/
 		- (source/area)`11 1 20 13`
-(signature)`print_local_timestamp(now)`
+(signature)`print_local_timestamp()`
 

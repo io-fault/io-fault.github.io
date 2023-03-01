@@ -33,7 +33,7 @@ Supplemental string operations.
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
-(signature)`ilevel(string, indentation, take, sum)`
+(signature)`ilevel(string)`
 
 Return the indentation level of the given string.
 
@@ -47,9 +47,9 @@ Return the indentation level of the given string.
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
-(signature)`indent(string, level, indentwith)`
+(signature)`indent(string)`
 
-Indent the given (factor-local/parameter)&<#indent.Parameters.string[string]> using the (factor-local/parameter)&<#indent.Parameters.level[level]> * (factor-local/parameter)&<#indent.Parameters.indentwith[indentwith]>.
+Indent the given (invalid/unknown)&<#string> using the (invalid/unknown)&<#level> * (invalid/unknown)&<#indentwith>.
 
 
 [ normal ]
@@ -61,7 +61,7 @@ Indent the given (factor-local/parameter)&<#indent.Parameters.string[string]> us
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
-(signature)`normal(string, separator)`
+(signature)`normal(string)`
 
 Normalize the whitespace in the given string.
 
@@ -75,9 +75,9 @@ Normalize the whitespace in the given string.
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
-(signature)`slug(string, separators, replacement)`
+(signature)`slug(string)`
 
-Convert (factor-local/parameter)&<#slug.Parameters.separators[separators]> and spaces into single (factor-local/parameter)&<#slug.Parameters.replacement[replacement]> instances inside (factor-local/parameter)&<#slug.Parameters.string[string]>.
+Convert (invalid/unknown)&<#separators> and spaces into single (invalid/unknown)&<#replacement> instances inside (invalid/unknown)&<#string>.
 
 
 [ varsplit ]

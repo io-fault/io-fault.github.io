@@ -44,7 +44,7 @@ Find the prefix, suffix, and power that the given count should be classified as.
 		function
 	/element/
 		- (source/area)`29 1 60 42`
-(signature)`metric(value, decimal, formatting)`
+(signature)`metric(value, decimal)`
 
 Construct a sequence of strings that make up the formatted text to be printed.
 

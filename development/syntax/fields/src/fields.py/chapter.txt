@@ -161,7 +161,7 @@ Calculate the length of a delta.
 		function
 	/element/
 		- (source/area)`84 1 133 2`
-(signature)`address(seq, start, stop, len, range)`
+(signature)`address(seq, start, stop)`
 
 Find the address of the absolute slice.
 
@@ -174,7 +174,7 @@ Find the address of the absolute slice.
 		- `undocumented`
 	/element/
 		- (source/area)`135 1 181 11`
-(signature)`delete(seq, start, stop, empty, len, range)`
+(signature)`delete(seq, start, stop)`
 
 
 [ insert ]
@@ -185,7 +185,7 @@ Find the address of the absolute slice.
 		- `undocumented`
 	/element/
 		- (source/area)`183 1 246 15`
-(signature)`insert(seq, offset, insertion, empty, len)`
+(signature)`insert(seq, offset, insertion)`
 
 
 [ String ]
@@ -305,7 +305,7 @@ A constant string field. The contents are immutable and it identifies itself as 
 		- `undocumented`
 	/element/
 		- (source/area)`277 2 278 18`
-(signature)`length(self, len)`
+(signature)`length(self)`
 
 
 [ String >> characters ]
@@ -425,7 +425,7 @@ Explicitly styled text field.
 		- `undocumented`
 	/element/
 		- (source/area)`300 2 305 17`
-(signature)`__init__(self, text, fg)`
+(signature)`__init__(self)`
 
 
 [ Styled >> terminal ]
@@ -537,7 +537,7 @@ Whether or not more characters can be inserted.
 		- `undocumented`
 	/element/
 		- (source/area)`350 2 353 13`
-(signature)`__init__(self, string)`
+(signature)`__init__(self)`
 
 
 [ Text >> from_sequence ]
@@ -582,7 +582,7 @@ Set the text to an empty string.
 		- `undocumented`
 	/element/
 		- (source/area)`374 2 414 37`
-(signature)`insert(self, offset, string, op, len)`
+(signature)`insert(self, offset, string)`
 
 
 [ Text >> delete ]
@@ -659,7 +659,7 @@ Set the text to an empty string.
 		- `undocumented`
 	/element/
 		- (source/area)`453 2 454 77`
-(signature)`subfields(self, path)`
+(signature)`subfields(self)`
 
 
 [ Text >> __str__ ]
@@ -1262,7 +1262,7 @@ The number of fields immediately contained.
 		method
 	/element/
 		- (source/area)`620 2 631 39`
-(signature)`delete(self, *fields, get0)`
+(signature)`delete(self, *fields)`
 
 Delete a set of fields from the sequence.
 
@@ -1295,7 +1295,7 @@ Display string of the sequence of fields.
 		method
 	/element/
 		- (source/area)`644 2 648 34`
-(signature)`length(self, lenmethod)`
+(signature)`length(self)`
 
 The sum of the *display* length of the contained fields.
 
@@ -1317,9 +1317,9 @@ The sum of the *display* length of the contained fields.
 		method
 	/element/
 		- (source/area)`651 2 655 34`
-(signature)`cells(self, lenmethod)`
+(signature)`cells(self)`
 
-Sum of (factor-local/method)&<#Sequence.cells[cells]> of all the subfields.
+Sum of (invalid/unknown)&<#cells> of all the subfields.
 
 
 [ Sequence >> subfields ]
@@ -1328,7 +1328,7 @@ Sum of (factor-local/method)&<#Sequence.cells[cells]> of all the subfields.
 		method
 	/element/
 		- (source/area)`657 2 674 34`
-(signature)`subfields(self, path, range, len, isinstance)`
+(signature)`subfields(self)`
 
 Map the nested sequences into a serialized form.
 
@@ -1364,7 +1364,7 @@ Get the horizontal positioning of the field within the unit.
 		method
 	/element/
 		- (source/area)`696 2 726 39`
-(signature)`find(self, offset, state)`
+(signature)`find(self, offset)`
 
 Find the field at the relative offset.
 

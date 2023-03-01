@@ -48,10 +48,10 @@ Tools for building status data from Python exceptions, tracebacks, and frames.
 		function
 	/element/
 		- (source/area)`24 1 33 27`
-(signature)`line_syntax_area(start, stop)`
+(signature)`line_syntax_area(start)`
 
 Construct a syntax area representing the given line range.
-If (factor-local/parameter)&<#line_syntax_area.Parameters.stop[stop]> is (invalid/unknown)&<#None> or equal to (factor-local/parameter)&<#line_syntax_area.Parameters.start[start]>, the returned area will
+If (invalid/unknown)&<#stop> is (invalid/unknown)&<#None> or equal to (invalid/unknown)&<#start>, the returned area will
 represent a single line.
 
 
@@ -61,7 +61,7 @@ represent a single line.
 		function
 	/element/
 		- (source/area)`46 1 63 60`
-(signature)`python_syntax_error_frame(instance, name)`
+(signature)`python_syntax_error_frame(instance)`
 
 Extract virtual frame from a Python (invalid/unknown)&<#SyntaxError>.
 
@@ -74,7 +74,7 @@ Extract virtual frame from a Python (invalid/unknown)&<#SyntaxError>.
 		- (source/area)`65 1 75 15`
 (signature)`frames(context)`
 
-Get explicit frames from the (factor-local/parameter)&<#frames.Parameters.context[context]>.
+Get explicit frames from the (invalid/unknown)&<#context>.
 Prioritizes `traceframes` method.
 
 
@@ -121,7 +121,7 @@ Construct a generator producing frame-lineno pairs from a traceback.
 		- `undocumented`
 	/element/
 		- (source/area)`106 1 111 7`
-(signature)`syntax(getline)`
+(signature)`syntax()`
 
 
 [ _first ]
@@ -152,9 +152,9 @@ Strip whitespace only lines from the edges of the sequence.
 		function
 	/element/
 		- (source/area)`128 1 143 38`
-(signature)`map_instruction_position(co, ixn, start, stop)`
+(signature)`map_instruction_position(co, ixn, start)`
 
-Retrieve the syntax area associated with the instruction, (factor-local/parameter)&<#map_instruction_position.Parameters.ixn[ixn]>.
+Retrieve the syntax area associated with the instruction, (invalid/unknown)&<#ixn>.
 Constructs a vector of line-column pairs that use inclusive indexes.
 
 A zero column index on the stop indicates end of previous line.
@@ -168,7 +168,7 @@ A zero column index on the stop indicates end of previous line.
 		- `undocumented`
 	/element/
 		- (source/area)`145 1 153 35`
-(signature)`element_context_area(filepath, lineno, getline)`
+(signature)`element_context_area(filepath, lineno)`
 
 
 [ syntaxframe ]
@@ -177,7 +177,7 @@ A zero column index on the stop indicates end of previous line.
 		function
 	/element/
 		- (source/area)`155 1 182 2`
-(signature)`syntaxframe(syntaxcontext, getline)`
+(signature)`syntaxframe()`
 
 Construct a trace frame from the given arguments.
 
@@ -188,7 +188,7 @@ Construct a trace frame from the given arguments.
 		function
 	/element/
 		- (source/area)`184 1 239 2`
-(signature)`traceframe(syntaxcontext, getline)`
+(signature)`traceframe()`
 
 Represent the given (invalid/unknown)&<#pythonframe>, triple, as a trace frame.
 
@@ -199,7 +199,7 @@ Represent the given (invalid/unknown)&<#pythonframe>, triple, as a trace frame.
 		function
 	/element/
 		- (source/area)`241 1 291 92`
-(signature)`exception(instance, traceback, syntaxcontext)`
+(signature)`exception(instance, traceback)`
 
 Extract the necessary information for identifying
 the context and location that the given exception came from.
@@ -211,7 +211,7 @@ the context and location that the given exception came from.
 		function
 	/element/
 		- (source/area)`293 1 303 13`
-(signature)`failure(hasattr)`
+(signature)`failure()`
 
 Transform the exception and its trace into a serializable data structure.
 
@@ -224,7 +224,7 @@ Transform the exception and its trace into a serializable data structure.
 		- `undocumented`
 	/element/
 		- (source/area)`305 1 319 2`
-(signature)`fframe(index, factor, element, resource, area, level)`
+(signature)`fframe(index, factor, element, resource, area)`
 
 
 [ ftrace ]
@@ -235,7 +235,7 @@ Transform the exception and its trace into a serializable data structure.
 		- `undocumented`
 	/element/
 		- (source/area)`321 1 381 37`
-(signature)`ftrace(frames, marks, exclude, space, level, iframes)`
+(signature)`ftrace(frames)`
 
 
 [ fcontexts ]
@@ -246,7 +246,7 @@ Transform the exception and its trace into a serializable data structure.
 		- `undocumented`
 	/element/
 		- (source/area)`383 1 392 56`
-(signature)`fcontexts(xorigin, xdirectory, level, ichain)`
+(signature)`fcontexts(xorigin, xdirectory)`
 
 
 [ fexcept ]
@@ -257,7 +257,7 @@ Transform the exception and its trace into a serializable data structure.
 		- `undocumented`
 	/element/
 		- (source/area)`394 1 414 19`
-(signature)`fexcept(exception, level, ichain)`
+(signature)`fexcept(exception)`
 
 
 [ fchain ]
@@ -268,7 +268,7 @@ Transform the exception and its trace into a serializable data structure.
 		- `undocumented`
 	/element/
 		- (source/area)`416 1 428 51`
-(signature)`fchain(fexceptions, level, ichain)`
+(signature)`fchain(fexceptions)`
 
 
 [ format ]
@@ -279,7 +279,7 @@ Transform the exception and its trace into a serializable data structure.
 		- `undocumented`
 	/element/
 		- (source/area)`430 1 432 40`
-(signature)`format(fexceptions, indent, prefix, level, ichain)`
+(signature)`format(fexceptions)`
 
 
 [ hook ]

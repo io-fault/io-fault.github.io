@@ -83,7 +83,7 @@ the exception should be treated in a manner similar to (invalid/unknown)&<#Keybo
 	
 Option module used to initialize Process Global State.
 
-Generally, any module with an (factor-local/method)&<#Option.activate[activate]> method can be perceived as an Option Module.
+Generally, any module with an (invalid/unknown)&<#activate> method can be perceived as an Option Module.
 
 
 [ Option >> activate ]

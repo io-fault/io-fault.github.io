@@ -1,0 +1,24 @@
+"""
+# Display concealed data extension adjacent to the frame containing it.
+"""
+import sys
+import os
+
+from fault.system import files
+from fault.system import process
+from fault.context import tools
+from .. import frames
+from .. import transport
+
+def main(inv:process.Invocation) -> process.Exit:
+	for line in sys.stdin.readlines():
+		f = frames.structure(line)
+		if f.f_extension:
+			ext = transport.sequence(f.f_extension.items())
+			f.f_extension.clear()
+		else:
+			ext = ""
+		sys.stdout.write(frames.sequence(f))
+		sys.stdout.write(ext)
+
+	return inv.exit(0)

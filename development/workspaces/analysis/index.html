@@ -1,23 +1,27 @@
-<html><head><title>meta.workspaces.analysis</title><meta charset="utf-8"/><link as="style" rel="preload" href="../../.legacy-web/core.css"></link><link as="style" rel="preload" href="../../.legacy-web/factor.css"></link><link rel="stylesheet" href="../../.legacy-web/core.css"></link><link rel="stylesheet" href="../../.legacy-web/factor.css"></link></head><body><main><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><span class="title">meta.workspaces.analysis</span><span class="factor-type">http://if.fault.io/factors/python.module</span></h1><div class="text.abstract"><p><span class="text.normal">Testing and static analysis support.</span></p></div><section class="data" documented="false" local-identifier="test_type_map" id="test_type_map"><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><a class="title" href="#test_type_map"><span class="text.normal">test_type_map</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code>test_type_map = {
+<html root="2"><head><title>meta.workspaces.analysis</title><meta charset="utf-8"/><link as="style" rel="preload" href="../../.legacy-web/core.css"></link><link as="style" rel="preload" href="../../.legacy-web/factor.css"></link><link rel="stylesheet" href="../../.legacy-web/core.css"></link><link rel="stylesheet" href="../../.legacy-web/factor.css"></link></head><body><main><h1><span class="prefix"></span><div class="page-subject"><img class="icon" src="../../.factor-type-icon/if.fault.io/python-module.svg"></img><span class="subject-identifier">analysis</span><a href="http://if.fault.io/factors/python.module"><code class="type">python.module</code></a></div><div class="page-context"><a href="../"><img class="icon" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNTYiIGhlaWdodD0iMjU2Ij48dGV4dCB4PSI0IiB5PSIwLjg4ZW0iIGZvbnQtc2l6ZT0iMjQ4Ij7wn6eoPC90ZXh0Pjwvc3ZnPg=="></img></a><span class="context-identifier">meta.workspaces</span></div></h1><section class="chapter"><p><span class="text.normal">Testing and static analysis support.</span></p></section><section class="data" documented="false" local-identifier="test_type_map" id="test_type_map"><h1><span class="prefix"></span><a class="title" href="#test_type_map"><span class="text.normal">test_type_map</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code class="source">test_type_map = {
 	'integration': 'i-',
 	'unit': 'u-',
 	'performance': 'p-',
 	'explicit': 'x-',
+	'static': 's-',
 }
-</code></pre></section><section class="data" documented="false" local-identifier="test_type_set_control" id="test_type_set_control"><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><a class="title" href="#test_type_set_control"><span class="text.normal">test_type_set_control</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code>test_type_set_control = {
+</code></pre></section><section class="data" documented="false" local-identifier="test_type_set_control" id="test_type_set_control"><h1><span class="prefix"></span><a class="title" href="#test_type_set_control"><span class="text.normal">test_type_set_control</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code class="source">test_type_set_control = {
 	'--integration': ('set-add', 'integration', 'test-types'),
 	'--unit': ('set-add', 'unit', 'test-types'),
 	'--performance': ('set-add', 'performance', 'test-types'),
 	'--explicit': ('set-add', 'explicit', 'test-types'),
+	'--static': ('set-add', 'static', 'test-types'),
 
 	'-i': ('set-add', 'integration', 'test-types'),
 	'-u': ('set-add', 'unit', 'test-types'),
 	'-p': ('set-add', 'performance', 'test-types'),
 	'-x': ('set-add', 'explicit', 'test-types'),
+	'-s': ('set-add', 'static', 'test-types'),
 
 	'-I': ('set-discard', 'integration', 'test-types'),
 	'-U': ('set-discard', 'unit', 'test-types'),
 	'-P': ('set-discard', 'performance', 'test-types'),
 	'-X': ('set-discard', 'explicit', 'test-types'),
+	'-S': ('set-discard', 'static', 'test-types'),
 }
 </code></pre></section><h1 class="footing"></h1></main></body></html>

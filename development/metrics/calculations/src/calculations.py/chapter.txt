@@ -77,8 +77,8 @@ Calculations for project metrics.
 		- (source/area)`13 1 24 9`
 (signature)`edges(view, vector)`
 
-Get the minimums and maximums of the sorted (factor-local/parameter)&<#edges.Parameters.vector[vector]>.
-Where (factor-local/parameter)&<#edges.Parameters.view[view]>
+Get the minimums and maximums of the sorted (invalid/unknown)&<#vector>.
+Where (invalid/unknown)&<#view>
 
 
 [ deltas ]
@@ -87,9 +87,9 @@ Where (factor-local/parameter)&<#edges.Parameters.view[view]>
 		function
 	/element/
 		- (source/area)`26 1 40 21`
-(signature)`deltas(values, reference, exponent)`
+(signature)`deltas(values, reference)`
 
-Calculate running totals for measuring distance and variance relative to (factor-local/parameter)&<#deltas.Parameters.reference[reference]>.
+Calculate running totals for measuring distance and variance relative to (invalid/unknown)&<#reference>.
 
 Primarily used by (factor-local/function)&<#statistics[statistics]> to construct a (project-local/factor-element)&<types#Statistics[meta.metrics.types.Statistics]> instance.
 
@@ -103,7 +103,7 @@ Primarily used by (factor-local/function)&<#statistics[statistics]> to construct
 		- (type/syntax)`types.Statistics`
 		- (type/project-local/factor-element)&<types#Statistics[meta.metrics.types.Statistics]>
 		
-(signature)`statistics(source, view, scale, exponent, attributes, Counter, Product, Partial, sum, map, sorted)`
+(signature)`statistics(source, view, scale, exponent)`
 
 Construct a (project-local/factor-element)&<types#Statistics[meta.metrics.types.Statistics]> instance from the given iterable of numbers.
 
@@ -167,11 +167,11 @@ Construct a (project-local/factor-element)&<types#Statistics[meta.metrics.types.
 		- (type/syntax)`dict`
 		- (type/invalid/unknown)&<#dict>
 		
-(signature)`collapse(data, merge, dimensions)`
+(signature)`collapse(data, merge)`
 
-Collapse dimensions in the given (factor-local/parameter)&<#collapse.Parameters.data[data]> by removing
-the specified number of (factor-local/parameter)&<#collapse.Parameters.dimensions[dimensions]> from the key and merging
-data with the given (factor-local/parameter)&<#collapse.Parameters.merge[merge]> function.
+Collapse dimensions in the given (invalid/unknown)&<#data> by removing
+the specified number of (invalid/unknown)&<#dimensions> from the key and merging
+data with the given (invalid/unknown)&<#merge> function.
 
 Collapse is primarily used by (invalid/unknown)&<#aggregates>.
 
@@ -199,7 +199,7 @@ Collapse is primarily used by (invalid/unknown)&<#aggregates>.
 		function
 	/element/
 		- (source/area)`108 1 117 24`
-(signature)`aggregate(durations, islice)`
+(signature)`aggregate(durations)`
 
 Aggregate profile data using the (factor-local/function)&<#statistics[statistics]> function.
 (invalid/unknown)&<#data> is expected to be a sequence of positive numbers

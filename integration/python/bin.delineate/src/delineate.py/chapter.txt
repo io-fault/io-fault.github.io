@@ -198,14 +198,14 @@ Read the identifiers from an attribute series terminated with a name.
 (signature)`read_constants(ctx, v)`
 
 Retrieve the constants from the expression.
-Expressions within (factor-local/parameter)&<#read_constants.Parameters.v[v]> that are not simple containers are
+Expressions within (invalid/unknown)&<#v> that are not simple containers are
 handled by referring to the source.
 
 [ > Parameters ]
 
 /(parameter)`ctx`/
 	
-	The node fragment containing the expression, (factor-local/parameter)&<#read_constants.Parameters.v[v]>.
+	The node fragment containing the expression, (invalid/unknown)&<#v>.
 
 /(parameter)`v`/
 	
@@ -272,7 +272,7 @@ with respect to that node's context path.
 		- `undocumented`
 	/element/
 		- (source/area)`103 2 109 17`
-(signature)`async_def(self, Type)`
+(signature)`async_def(self)`
 
 
 [ Fragment >> decorator_names ]
@@ -357,7 +357,7 @@ Retrieve the named ancestor of the fragment.
 		property
 	/element/
 		- (source/area)`195 2 206 32`
-Construct a fragment path to the node using (factor-local/property)&<#Fragment.ancestor[ancestor]>.
+Construct a fragment path to the node using (invalid/unknown)&<#ancestor>.
 
 
 [ Fragment >> select ]
@@ -368,7 +368,7 @@ Construct a fragment path to the node using (factor-local/property)&<#Fragment.a
 		- (source/area)`208 2 213 40`
 (signature)`select(self)`
 
-Select the node's syntax from the reference's (factor-local/method)&<#Fragment.source[source]>.
+Select the node's syntax from the reference's (project-local/project-factor)&<source[system.python.source]>.
 
 
 [ Fragment >> syntax ]
@@ -390,7 +390,7 @@ Select the node's syntax from the reference's (factor-local/method)&<#Fragment.s
 		- (source/area)`220 2 224 47`
 (signature)`subnode(self, node, identifier)`
 
-Create a fragment using (factor-local/parameter)&<#Fragment.subnode.Parameters.self[self]> as the new fragment's context.
+Create a fragment using (invalid/unknown)&<#self> as the new fragment's context.
 
 
 [ Fragment >> descend ]
@@ -526,7 +526,7 @@ Extraction selector state.
 		- (source/area)`330 2 349 3`
 (signature)`annotation_type(self, fragment, node)`
 
-Construct an element type node from the annotation of the (factor-local/parameter)&<#Switch.annotation_type.Parameters.fragment[fragment]>.
+Construct an element type node from the annotation of the (invalid/unknown)&<#fragment>.
 
 
 [ Switch >> inherited_base ]
@@ -636,7 +636,7 @@ Construct an element type node from a class' base expression.
 		- `undocumented`
 	/element/
 		- (source/area)`489 2 515 25`
-(signature)`extract_import(self, fragment, prefix, depth)`
+(signature)`extract_import(self, fragment)`
 
 
 [ Switch >> extract_import_from ]
@@ -713,7 +713,7 @@ Construct an element type node from a class' base expression.
 		- `undocumented`
 	/element/
 		- (source/area)`556 1 572 12`
-(signature)`load(source_path, identifier)`
+(signature)`load(source_path)`
 
 
 [ LEncoder ]

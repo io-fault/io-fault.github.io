@@ -126,7 +126,7 @@ illustrate the distance from the reference point.
 		- `undocumented`
 	/element/
 		- (source/area)`95 1 108 3`
-(signature)`f_subsecond(relation, timestamp, precision, exponents)`
+(signature)`f_subsecond(relation, timestamp, precision)`
 
 
 [ f_timestamp ]
@@ -135,7 +135,7 @@ illustrate the distance from the reference point.
 		function
 	/element/
 		- (source/area)`110 1 121 56`
-(signature)`f_timestamp(relation, timestamp, precision)`
+(signature)`f_timestamp(relation, timestamp)`
 
-Format with respect to the (factor-local/parameter)&<#f_timestamp.Parameters.relation[relation]> point in time.
+Format with respect to the (invalid/unknown)&<#relation> point in time.
 

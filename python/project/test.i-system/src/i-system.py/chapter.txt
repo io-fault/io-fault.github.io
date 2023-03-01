@@ -2,7 +2,7 @@
 	/type/
 		module
 	/element/
-		- (source/area)`1 1 355 0`
+		- (source/area)`1 1 401 0`
 Product directory interface checks.
 
 
@@ -31,16 +31,16 @@ Product directory interface checks.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`6 1 6 60`
+		- (source/area)`6 1 6 75`
 
-[ Protocol ]
+[ FactorIsolationProtocol ]
 ! CONTROL:
 	/type/
 		import
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`6 1 6 60`
+		- (source/area)`6 1 6 75`
 
 [ Information ]
 ! CONTROL:
@@ -49,7 +49,7 @@ Product directory interface checks.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`6 1 6 60`
+		- (source/area)`6 1 6 75`
 
 [ Reference ]
 ! CONTROL:
@@ -58,7 +58,7 @@ Product directory interface checks.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`6 1 6 60`
+		- (source/area)`6 1 6 75`
 
 [ t_project_id ]
 ! CONTROL:
@@ -78,8 +78,8 @@ Product directory interface checks.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`10 1 14 10`
-(signature)`setup(pd, local_id, project)`
+		- (source/area)`10 1 16 10`
+(signature)`setup(pd)`
 
 
 [ product_a ]
@@ -89,8 +89,8 @@ Product directory interface checks.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`16 1 29 31`
-(signature)`product_a(test, name)`
+		- (source/area)`18 1 31 31`
+(signature)`product_a(test)`
 
 
 [ test_Product_attributes ]
@@ -98,7 +98,7 @@ Product directory interface checks.
 	/type/
 		function
 	/element/
-		- (source/area)`31 1 37 47`
+		- (source/area)`33 1 39 47`
 (signature)`test_Product_attributes(test)`
 
 - (project-local/factor-element)&<system#Product.project_index_route[fault.project.system.Product.project_index_route]>
@@ -109,7 +109,7 @@ Product directory interface checks.
 	/type/
 		function
 	/element/
-		- (source/area)`39 1 45 31`
+		- (source/area)`41 1 47 46`
 (signature)`test_Product_import(test)`
 
 - (project-local/factor-element)&<system#Product.import_protocol[fault.project.system.Product.import_protocol]>
@@ -120,7 +120,7 @@ Product directory interface checks.
 	/type/
 		function
 	/element/
-		- (source/area)`47 1 61 28`
+		- (source/area)`49 1 63 28`
 (signature)`test_iterprojects_root_no_context(test)`
 
 - (project-local/factor-element)&<system#Product.iterprojects[fault.project.system.Product.iterprojects]>
@@ -131,7 +131,7 @@ Product directory interface checks.
 	/type/
 		function
 	/element/
-		- (source/area)`63 1 78 25`
+		- (source/area)`65 1 80 25`
 (signature)`test_update(test)`
 
 - (project-local/factor-element)&<system#Product.update[fault.project.system.Product.update]>
@@ -142,7 +142,7 @@ Product directory interface checks.
 	/type/
 		function
 	/element/
-		- (source/area)`80 1 100 40`
+		- (source/area)`82 1 102 40`
 (signature)`test_update_nested(test)`
 
 - (project-local/factor-element)&<system#Product.update[fault.project.system.Product.update]>
@@ -153,7 +153,7 @@ Product directory interface checks.
 	/type/
 		function
 	/element/
-		- (source/area)`102 1 124 41`
+		- (source/area)`104 1 126 41`
 (signature)`test_cache_io(test)`
 
 - (project-local/factor-element)&<system#Product.store[fault.project.system.Product.store]>
@@ -165,7 +165,7 @@ Product directory interface checks.
 	/type/
 		function
 	/element/
-		- (source/area)`126 1 141 35`
+		- (source/area)`128 1 143 35`
 (signature)`test_Product_select(test)`
 
 - (project-local/factor-element)&<system#Product.identifier_by_factor[fault.project.system.Product.identifier_by_factor]>
@@ -177,7 +177,7 @@ Product directory interface checks.
 	/type/
 		function
 	/element/
-		- (source/area)`143 1 153 32`
+		- (source/area)`145 1 155 32`
 (signature)`test_Project_no_corpus_part(test)`
 
 - (project-local/factor-element)&<system#Project._iid_corpus_name_pair[fault.project.system.Project._iid_corpus_name_pair]>
@@ -190,7 +190,7 @@ Product directory interface checks.
 	/type/
 		function
 	/element/
-		- (source/area)`155 1 165 29`
+		- (source/area)`157 1 167 29`
 (signature)`test_Project_corpus_name(test)`
 
 - (project-local/factor-element)&<system#Project._iid_corpus_name_pair[fault.project.system.Project._iid_corpus_name_pair]>
@@ -203,7 +203,7 @@ Product directory interface checks.
 	/type/
 		function
 	/element/
-		- (source/area)`167 1 180 51`
+		- (source/area)`169 1 182 51`
 (signature)`test_Project_select_none(test)`
 
 - (project-local/factor-element)&<system#Project.select[fault.project.system.Project.select]>
@@ -214,7 +214,7 @@ Product directory interface checks.
 	/type/
 		function
 	/element/
-		- (source/area)`182 1 198 69`
+		- (source/area)`184 1 200 69`
 (signature)`test_Project_refer_absolute(test)`
 
 - (project-local/factor-element)&<system#Project.refer[fault.project.system.Project.refer]>
@@ -225,7 +225,7 @@ Product directory interface checks.
 	/type/
 		function
 	/element/
-		- (source/area)`200 1 218 77`
+		- (source/area)`202 1 220 77`
 (signature)`test_Project_refer_relative(test)`
 
 - (project-local/factor-element)&<system#Project.refer[fault.project.system.Project.refer]>
@@ -236,10 +236,40 @@ Product directory interface checks.
 	/type/
 		function
 	/element/
-		- (source/area)`220 1 253 94`
+		- (source/area)`222 1 255 94`
 (signature)`test_Project_image_polynomial(test)`
 
 - (project-local/factor-element)&<system#Project.image[fault.project.system.Project.image]>
+
+
+[ test_Project_extensions ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`257 1 273 76`
+(signature)`test_Project_extensions(test)`
+
+- (project-local/factor-element)&<system#Project.extensions[fault.project.system.Project.extensions]>
+- (project-local/factor-element)&<system#Project.icon[fault.project.system.Project.icon]>
+- (project-local/factor-element)&<system#Project.synopsis[fault.project.system.Project.synopsis]>
+
+Validate successful extensions.
+
+
+[ test_Project_extensions_vacancies ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`275 1 301 64`
+(signature)`test_Project_extensions_vacancies(test)`
+
+- (project-local/factor-element)&<system#Project.extensions[fault.project.system.Project.extensions]>
+- (project-local/factor-element)&<system#Project.icon[fault.project.system.Project.icon]>
+- (project-local/factor-element)&<system#Project.synopsis[fault.project.system.Project.synopsis]>
+
+Validate that exceptions aren't raised by icon and synopsis.
 
 
 [ test_Context_import_protocol ]
@@ -247,7 +277,7 @@ Product directory interface checks.
 	/type/
 		function
 	/element/
-		- (source/area)`255 1 260 84`
+		- (source/area)`303 1 308 86`
 (signature)`test_Context_import_protocol(test)`
 
 - (project-local/factor-element)&<system#Context.import_protocol[fault.project.system.Context.import_protocol]>
@@ -258,7 +288,7 @@ Product directory interface checks.
 	/type/
 		function
 	/element/
-		- (source/area)`262 1 275 45`
+		- (source/area)`310 1 323 45`
 (signature)`test_Context_connect(test)`
 
 - (project-local/factor-element)&<system#Context.connect[fault.project.system.Context.connect]>
@@ -269,7 +299,7 @@ Product directory interface checks.
 	/type/
 		function
 	/element/
-		- (source/area)`277 1 289 70`
+		- (source/area)`325 1 337 70`
 (signature)`test_Context_project(test)`
 
 - (project-local/factor-element)&<system#Context.project[fault.project.system.Context.project]>
@@ -280,7 +310,7 @@ Product directory interface checks.
 	/type/
 		function
 	/element/
-		- (source/area)`291 1 307 53`
+		- (source/area)`339 1 355 53`
 (signature)`test_Context_load(test)`
 
 - (project-local/factor-element)&<system#Context.load[fault.project.system.Context.load]>
@@ -291,7 +321,7 @@ Product directory interface checks.
 	/type/
 		function
 	/element/
-		- (source/area)`309 1 334 35`
+		- (source/area)`357 1 380 35`
 (signature)`test_project_declaration(test)`
 
 - (project-local/factor-element)&<system#structure_project_declaration[fault.project.system.structure_project_declaration]>
@@ -303,7 +333,7 @@ Product directory interface checks.
 	/type/
 		function
 	/element/
-		- (source/area)`336 1 355 23`
+		- (source/area)`382 1 401 23`
 (signature)`test_project_declaration_exceptions(test)`
 
 - (project-local/factor-element)&<system#structure_project_declaration[fault.project.system.structure_project_declaration]>

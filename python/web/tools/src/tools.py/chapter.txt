@@ -1,0 +1,18 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 14 24`
+High-level resource transfer tools.
+
+
+[ transfer ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`5 1 15 23`
+(signature)`transfer(xfers)`
+
+Transfer the remote resources to their associated location.
+

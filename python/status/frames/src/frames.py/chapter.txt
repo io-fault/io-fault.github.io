@@ -107,7 +107,7 @@ String identifying the status frames protocols.
 		- (type/syntax)`types.Frame`
 		- (type/project-local/factor-element)&<types#Frame[fault.status.types.Frame]>
 		
-(signature)`compose(ftype, synopsis, channel, extension, Class, Event)`
+(signature)`compose(ftype, synopsis)`
 
 Create a status frame using the envelope's symbol and synopsis.
 
@@ -123,7 +123,7 @@ Create a status frame using the envelope's symbol and synopsis.
 		- (type/syntax)`bytes`
 		- (type/invalid/unknown)&<#bytes>
 		
-(signature)`_frame_pack_extension(data, b64e, deflate, sequence)`
+(signature)`_frame_pack_extension(data)`
 
 
 [ _frame_unpack_extension ]
@@ -137,7 +137,7 @@ Create a status frame using the envelope's symbol and synopsis.
 		- (type/syntax)`object`
 		- (type/invalid/unknown)&<#object>
 		
-(signature)`_frame_unpack_extension(data, b64d, inflate, structure)`
+(signature)`_frame_unpack_extension(data)`
 
 
 [ protocol ]
@@ -383,7 +383,7 @@ Informative minimum size regarding tty-notation-1 status frames.
 		- (source/area)`190 1 242 26`
 		- (type/syntax)`tuple[str, bytes, str]`
 		
-(signature)`_pack(frame, channel, _fmt_lframe_start, _fmt_lframe_part, _fmt_lframe_stop, _fmt_eframe_stop, isinstance, list, map, len, str)`
+(signature)`_pack(frame)`
 
 Pack a status frame for transmission.
 
@@ -400,7 +400,7 @@ the encoded bytes of data extending the frame and the terminating trailer.
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
-(signature)`sequence(frame, channel)`
+(signature)`sequence(frame)`
 
 Pack a status frame into a (invalid/unknown)&<#str> for transmission.
 
@@ -428,7 +428,7 @@ Constructs a single (invalid/unknown)&<#str> instance.
 		- (type/syntax)`types.Frame`
 		- (type/project-local/factor-element)&<types#Frame[fault.status.types.Frame]>
 		
-(signature)`_unpack(line, offset, limit, _enter_data_len, _exit_extension_len, _ext_offset, _ext_indicator, _ext_signal, _create_message, _create_estruct, _get_type_symbol)`
+(signature)`_unpack(line, offset, limit)`
 
 Unpack a serialized status frame.
 
@@ -444,7 +444,7 @@ Unpack a serialized status frame.
 		
 (signature)`structure(line)`
 
-Extract a status frame, (project-local/factor-element)&<types#Frame[fault.status.types.Frame]>, from the given (factor-local/parameter)&<#structure.Parameters.line[line]>.
+Extract a status frame, (project-local/factor-element)&<types#Frame[fault.status.types.Frame]>, from the given (invalid/unknown)&<#line>.
 
 [ > Parameters ]
 
@@ -461,7 +461,7 @@ Extract a status frame, (project-local/factor-element)&<types#Frame[fault.status
 		function
 	/element/
 		- (source/area)`351 1 370 3`
-(signature)`declaration(channel, extension, format, compression, Frame)`
+(signature)`declaration()`
 
 Construct a custom protocol declaration message.
 
@@ -494,10 +494,10 @@ Construct a custom protocol declaration message.
 		function
 	/element/
 		- (source/area)`378 1 391 12`
-(signature)`message_directed_areas(fields, start, end, arrows)`
+(signature)`message_directed_areas(fields, start, end)`
 
 Return the slices marking the areas before and after the first item
-contained in (factor-local/parameter)&<#message_directed_areas.Parameters.arrows[arrows]>.
+contained in (invalid/unknown)&<#arrows>.
 
-(invalid/unknown)&<#None> if no items in (factor-local/parameter)&<#message_directed_areas.Parameters.fields[fields]> are contained in (factor-local/parameter)&<#message_directed_areas.Parameters.arrows[arrows]>.
+(invalid/unknown)&<#None> if no items in (invalid/unknown)&<#fields> are contained in (invalid/unknown)&<#arrows>.
 

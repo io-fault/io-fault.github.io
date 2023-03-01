@@ -134,7 +134,7 @@ Get the absolute position.
 
 Set the absolute position.
 
-Calculates a new (invalid/unknown)&<#offset> based on the absolute (factor-local/parameter)&<#Position.set.Parameters.position[position]>.
+Calculates a new (invalid/unknown)&<#offset> based on the absolute (invalid/unknown)&<#position>.
 
 
 [ Position >> configure ]
@@ -143,7 +143,7 @@ Calculates a new (invalid/unknown)&<#offset> based on the absolute (factor-local
 		method
 	/element/
 		- (source/area)`53 2 59 22`
-(signature)`configure(self, datum, magnitude, offset)`
+(signature)`configure(self, datum, magnitude)`
 
 Initialize the values of the position.
 
@@ -223,7 +223,7 @@ The (invalid/unknown)&<#datum> is not changed.
 		method
 	/element/
 		- (source/area)`112 2 136 15`
-(signature)`move(self, location, perspective)`
+(signature)`move(self)`
 
 Move the position relatively or absolutely.
 
@@ -231,7 +231,7 @@ Perspective is like the whence parameter, but uses slightly different values.
 
 `-1` is used to move the offset relative from the end.
 `+1` is used to move the offset relative to the beginning.
-Zero moves the offset relatively with (factor-local/method)&<#Position.update[update]>.
+Zero moves the offset relatively with (invalid/unknown)&<#update>.
 
 
 [ Position >> constrain ]
@@ -276,9 +276,9 @@ Relocate the origin, datum, to the offset and zero the magnitude and offset.
 		method
 	/element/
 		- (source/area)`174 2 183 14`
-(signature)`reposition(self, offset)`
+(signature)`reposition(self)`
 
-Reposition the (invalid/unknown)&<#datum> such that (factor-local/parameter)&<#Position.reposition.Parameters.offset[offset]> will be equal to the given parameter.
+Reposition the (invalid/unknown)&<#datum> such that (invalid/unknown)&<#offset> will be equal to the given parameter.
 
 The magnitude is untouched. The change to the origin, (invalid/unknown)&<#datum>, is returned.
 
@@ -335,7 +335,7 @@ Invert the position; causes the direction to change.
 		method
 	/element/
 		- (source/area)`214 2 220 43`
-(signature)`page(self, quantity)`
+(signature)`page(self)`
 
 Adjust the position's datum to be at the magnitude's position according
 to the given quantity. Essentially, this is used to "page" the position;
@@ -364,7 +364,7 @@ Adjust, decrease, the magnitude relative to a particular offset.
 Adjust the position to accomodate for a change that occurred
 to the reference space--insertion or removal.
 
-Similar to (factor-local/method)&<#Position.contract[contract]>, but attempts to maintain (factor-local/parameter)&<#Position.changed.Parameters.offset[offset]> when possible,
+Similar to (invalid/unknown)&<#contract>, but attempts to maintain (invalid/unknown)&<#offset> when possible,
 and takes an absolute offset instead of a relative one.
 
 
@@ -419,9 +419,9 @@ the start or stop to be on position.
 		method
 	/element/
 		- (source/area)`292 2 297 33`
-(signature)`slice(self, adjustment, step, Slice)`
+(signature)`slice(self)`
 
-Construct a (factor-local/method)&<#Position.slice[slice]> object that represents the range.
+Construct a (invalid/unknown)&<#slice> object that represents the range.
 
 
 [ Vector ]
@@ -614,7 +614,7 @@ Console clipboard.
 		- `undocumented`
 	/element/
 		- (source/area)`383 2 385 20`
-(signature)`__init__(self, limit)`
+(signature)`__init__(self)`
 
 
 [ Cache >> allocate ]
@@ -656,7 +656,7 @@ Put the given object as the cache entry.
 		method
 	/element/
 		- (source/area)`412 2 421 10`
-(signature)`get(self, key, offset)`
+(signature)`get(self, key)`
 
 Get the contents of the cache slot.
 
@@ -785,7 +785,7 @@ Return the (factor-local/class)&<#Position[Position]> of the last axis used.
 		method
 	/element/
 		- (source/area)`511 2 532 26`
-(signature)`route(self, event, scrollmap)`
+(signature)`route(self, event)`
 
 Route the event to the target given the current processing state.
 
@@ -796,7 +796,7 @@ Route the event to the target given the current processing state.
 		method
 	/element/
 		- (source/area)`534 2 585 12`
-(signature)`key(self, console, event, getattr, range)`
+(signature)`key(self, console, event)`
 
 Process the event.
 
@@ -842,7 +842,7 @@ Process the event.
 		- (source/area)`599 2 610 29`
 (signature)`adjust(self, point, dimensions)`
 
-Adjust the positioning and size of the view. (factor-local/parameter)&<#Refraction.adjust.Parameters.point[point]> is a pair of positive integers
+Adjust the positioning and size of the view. (invalid/unknown)&<#point> is a pair of positive integers
 describing the top-right corner on the screen and dimensions is a pair of positive
 integers describing the width.
 

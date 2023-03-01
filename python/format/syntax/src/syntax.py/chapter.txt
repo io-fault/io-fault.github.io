@@ -94,7 +94,7 @@ Highlight
 		function
 	/element/
 		- (source/area)`63 1 91 44`
-(signature)`qualify(tokens, context)`
+(signature)`qualify(tokens)`
 
 Convert a delimited KOS token stream into qualified tokens
 noting the context along with the event type.
@@ -106,7 +106,7 @@ noting the context along with the event type.
 		function
 	/element/
 		- (source/area)`93 1 101 10`
-(signature)`normalize(qfields, spaces)`
+(signature)`normalize(qfields)`
 
 Normalize tab characters.
 

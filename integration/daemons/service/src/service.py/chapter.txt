@@ -111,7 +111,7 @@ Manages the service state stored on disk.
 		function
 	/element/
 		- (source/area)`28 1 41 31`
-(signature)`identify_route(override)`
+(signature)`identify_route()`
 
 Return the service directory route.
 
@@ -125,7 +125,7 @@ Return the service directory route.
 (signature)`service_routes(route)`
 
 Collect the routes to the set of services in the directory.
-Regular files existing in (factor-local/parameter)&<#service_routes.Parameters.route[route]> are ignored.
+Regular files existing in (invalid/unknown)&<#route> are ignored.
 
 
 [ _actuation_map ]
@@ -216,7 +216,7 @@ Destroy the service directory.
 		- (source/area)`98 2 105 27`
 (signature)`update(self, fm)`
 
-Overwrite configuration fields present in the given mapping, (factor-local/parameter)&<#Configuration.update.Parameters.fm[fm]>.
+Overwrite configuration fields present in the given mapping, (invalid/unknown)&<#fm>.
 No merge logic is applied; the value in the mapping will replace the attribute value.
 
 
@@ -228,8 +228,8 @@ No merge logic is applied; the value in the mapping will replace the attribute v
 		- (source/area)`107 2 123 29`
 (signature)`__init__(self, route, identifier)`
 
-Initialize the Service structure selecting the (factor-local/parameter)&<#Configuration.__init__.Parameters.route[route]> as its
-storage location. The (factor-local/parameter)&<#Configuration.__init__.Parameters.route[route]> may not exist upon instantiation
+Initialize the Service structure selecting the (invalid/unknown)&<#route> as its
+storage location. The (invalid/unknown)&<#route> may not exist upon instantiation
 as it may be the first use in which the user may choose to
 initialize a directory or merely check for whether it is
 a service at all.
@@ -268,14 +268,14 @@ Return a tuple consisting of the executable and the parameters.
 		- (source/area)`142 2 166 14`
 (signature)`execute(self)`
 
-Execute the service replacing the process image. (factor-local/method)&<#Configuration.execute[execute]> does not return.
+Execute the service replacing the process image. (invalid/unknown)&<#execute> does not return.
 
 Environment variables will be updated by the running process,
 the current working directory will be switched to service's directory,
 (invalid/unknown)&<#route>, and the service with be executed according to the current
-working settings assigned to (factor-local/parameter)&<#Configuration.execute.Parameters.self[self]>.
+working settings assigned to (invalid/unknown)&<#self>.
 
-A call to (factor-local/method)&<#Configuration.load[load]> prior to running this is often reasonable.
+A call to (invalid/unknown)&<#load> prior to running this is often reasonable.
 
 
 [ Configuration >> create ]

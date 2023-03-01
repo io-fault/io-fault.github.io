@@ -117,7 +117,7 @@ Provides parsing, serialization, and allocation functions for application servic
 		- (type/syntax)`ISpecifications`
 		- (type/factor-local/data)&<#ISpecifications[ISpecifications]>
 		
-(signature)`if_structure(if_spec, type, if_select)`
+(signature)`if_structure(if_spec)`
 
 Parse an interface configuration file.
 
@@ -173,9 +173,9 @@ Serialize the endpoints relative to their protocol and option set.
 		- (source/area)`106 1 125 2`
 		- (type/syntax)`Sequence[tuple[IContext, KPorts]]`
 		
-(signature)`if_allocate(if_spec, encoding)`
+(signature)`if_allocate(if_spec)`
 
-Read the interfaces configuration file, (factor-local/parameter)&<#if_allocate.Parameters.if_spec[if_spec]>, and (project-local/factor-element)&<network#service[fault.system.network.service]>
+Read the interfaces configuration file, (invalid/unknown)&<#if_spec>, and (project-local/factor-element)&<network#service[fault.system.network.service]>
 the identified endpoints keeping the association with
 the endpoint's context.
 

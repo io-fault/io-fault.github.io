@@ -12,7 +12,7 @@ Critical functions supporting range types.
 		function
 	/element/
 		- (source/area)`5 1 40 21`
-(signature)`scale(n, target, origin, divmod)`
+(signature)`scale(n)`
 
 Given a number, target range, and a origin range. Project the number
 onto the target range so that the projected number

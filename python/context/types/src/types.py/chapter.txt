@@ -61,11 +61,11 @@ to be propagated without concern by the nodes along the call graph.
 		method
 	/element/
 		- (source/area)`28 2 36 21`
-(signature)`coalesce(self, default, abscence)`
+(signature)`coalesce(self, default)`
 
-Return the given (factor-local/parameter)&<#Cell.coalesce.Parameters.default[default]> if the element is (factor-local/parameter)&<#Cell.coalesce.Parameters.abscence[abscence]>.
+Return the given (invalid/unknown)&<#default> if the element is (invalid/unknown)&<#abscence>.
 
-By default, if the element is (invalid/unknown)&<#None>, return (factor-local/parameter)&<#Cell.coalesce.Parameters.default[default]>.
+By default, if the element is (invalid/unknown)&<#None>, return (invalid/unknown)&<#default>.
 
 
 [ Cell >> __init__ ]
@@ -168,7 +168,7 @@ By default, if the element is (invalid/unknown)&<#None>, return (factor-local/pa
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
-(signature)`index(self, value, start, stop)`
+(signature)`index(self, value)`
 
 
 [ Cell >> count ]
@@ -191,7 +191,7 @@ By default, if the element is (invalid/unknown)&<#None>, return (factor-local/pa
 		method
 	/element/
 		- (source/area)`81 2 85 6`
-(signature)`sort(self, key, reverse)`
+(signature)`sort(self)`
 
 Sort the Cell's elements by doing nothing.
 

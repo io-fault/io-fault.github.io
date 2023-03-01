@@ -3,7 +3,7 @@
 		module
 	/element/
 		- (source/area)`1 1 78 48`
-Analyze the (project-local/unknown)&<nodes.Cursor> implementation.
+Analyze the (project-local/unknown)&<query#Cursor[query.Cursor]> implementation.
 Currently, somewhat redundant with the route tests, but
 check the functionality with respect to the configured (project-local/factor-element)&<query#context[system.chapters.query.context]>.
 
@@ -155,7 +155,7 @@ check the functionality with respect to the configured (project-local/factor-ele
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`69 1 75 27`
+		- (source/area)`69 1 75 30`
 (signature)`test_filter(test)`
 
 

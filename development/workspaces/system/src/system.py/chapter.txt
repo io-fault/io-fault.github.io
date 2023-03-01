@@ -81,7 +81,7 @@ Support directory interface providing access to Construction Contexts and integr
 		- `undocumented`
 	/element/
 		- (source/area)`24 2 27 24`
-(signature)`__init__(self, route, Context)`
+(signature)`__init__(self, route)`
 
 
 [ Tooling >> load ]
@@ -292,5 +292,5 @@ Initialize the project (none/invalid)&<http://fault.io/dev/null[fault.project.sy
 		
 (signature)`select(self, project)`
 
-Get the (none/invalid)&<http://fault.io/dev/null[fault.project.system.Project]> instance for the given (factor-local/parameter)&<#Environment.select.Parameters.project[project]> path from the environment's project context.
+Get the (none/invalid)&<http://fault.io/dev/null[fault.project.system.Project]> instance for the given (invalid/unknown)&<#project> path from the environment's project context.
 

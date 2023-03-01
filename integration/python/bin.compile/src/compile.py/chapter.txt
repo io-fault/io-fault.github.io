@@ -61,7 +61,7 @@ Provide high-level functions for compiling Python module into stored bytecode.
 		- `undocumented`
 	/element/
 		- (source/area)`13 1 31 46`
-(signature)`mkbytecode(intention, target, unit, language, dialect, optimize, parameters)`
+(signature)`mkbytecode(intention, target, unit, language, dialect, optimize)`
 
 
 [ mkast ]
@@ -72,7 +72,7 @@ Provide high-level functions for compiling Python module into stored bytecode.
 		- `undocumented`
 	/element/
 		- (source/area)`33 1 57 38`
-(signature)`mkast(intention, target, origin, language, dialect, optimize, parameters)`
+(signature)`mkast(intention, target, origin, language, dialect, optimize)`
 
 
 [ delineate ]
@@ -105,7 +105,7 @@ Provide high-level functions for compiling Python module into stored bytecode.
 		- (source/area)`68 1 72 26`
 (signature)`archive(output, source)`
 
-Copy the units directory, (factor-local/parameter)&<#archive.Parameters.source[source]>, to the target image location (factor-local/parameter)&<#archive.Parameters.output[output]>.
+Copy the units directory, (invalid/unknown)&<#source>, to the target image location (invalid/unknown)&<#output>.
 
 
 [ main ]

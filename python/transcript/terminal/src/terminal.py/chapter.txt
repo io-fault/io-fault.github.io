@@ -134,7 +134,7 @@ The set, sizes, and ordering of fields present in a monitor.
 		staticmethod
 	/element/
 		- (source/area)`41 2 51 19`
-(signature)`separators(fields, termination, separation)`
+(signature)`separators(fields)`
 
 Generate a series of separators finished with a terminator.
 Given a number of a fields, emit separators until the final index
@@ -229,8 +229,8 @@ The rendering methods and parameters used by a (factor-local/class)&<#Status[Sta
 		- (source/area)`92 2 101 14`
 (signature)`default_render_method(self, key, field)`
 
-Renders the string form of (factor-local/parameter)&<#Theme.default_render_method.Parameters.field[field]> with the style set identified
-by (factor-local/parameter)&<#Theme.default_render_method.Parameters.key[key]>.
+Renders the string form of (invalid/unknown)&<#field> with the style set identified
+by (invalid/unknown)&<#key>.
 
 
 [ Theme >> r_transparent ]
@@ -264,10 +264,10 @@ Render method for common duration fields.
 		method
 	/element/
 		- (source/area)`124 2 129 65`
-(signature)`define(self, name, *args, using, **kw)`
+(signature)`define(self, name, *args, **kw)`
 
 Define a set of render parameters within the theme.
-Parameters aside from (factor-local/parameter)&<#Theme.define.Parameters.name[name]> are passed to (context-local/factor-element)&<fault.terminal/matrix#Context.RenderParameters.apply[fault.terminal.matrix.Context.RenderParameters.apply]>.
+Parameters aside from (invalid/unknown)&<#name> are passed to (context-local/factor-element)&<fault.terminal/matrix#Context.RenderParameters.apply[fault.terminal.matrix.Context.RenderParameters.apply]>.
 
 
 [ Theme >> implement ]
@@ -321,9 +321,9 @@ a (context-local/factor-element)&<fault.terminal/matrix#Context.Phrase[fault.ter
 		method
 	/element/
 		- (source/area)`169 2 174 45`
-(signature)`render(self, type, field, Phrase, partial)`
+(signature)`render(self, type, field)`
 
-Render the given (factor-local/parameter)&<#Theme.render.Parameters.field[field]> according to the configured (invalid/unknown)&<#type'> render method.
+Render the given (invalid/unknown)&<#field> according to the configured (invalid/unknown)&<#type'> render method.
 
 
 [ Status ]
@@ -392,7 +392,7 @@ function and an associated state snapshot.
 		- `undocumented`
 	/element/
 		- (source/area)`209 2 224 24`
-(signature)`_calculate_fields(self, alignment)`
+(signature)`_calculate_fields(self)`
 
 
 [ Status >> _update_field_cache ]
@@ -443,7 +443,7 @@ Update the time field on the last metrics record.
 		method
 	/element/
 		- (source/area)`252 2 262 9`
-(signature)`update(self, time, metrics, window)`
+(signature)`update(self, time, metrics)`
 
 Update the metrics record for the given point in time.
 
@@ -467,7 +467,7 @@ Update the metrics record for the given point in time.
 		- (source/area)`267 2 274 25`
 (signature)`cycle(self, field)`
 
-Select the next read type for the given field using the (factor-local/data)&<#Status.view_state_loop[view_state_loop]>.
+Select the next read type for the given field using the (invalid/unknown)&<#view_state_loop>.
 
 
 [ Status >> set_field_read_type ]
@@ -555,7 +555,7 @@ Calculate the current metrics window size.
 		- `undocumented`
 	/element/
 		- (source/area)`321 2 324 34`
-(signature)`edge(self, field, i)`
+(signature)`edge(self, field)`
 
 
 [ Status >> total ]
@@ -599,7 +599,7 @@ Calculate the current metrics window size.
 		- `undocumented`
 	/element/
 		- (source/area)`337 2 363 65`
-(signature)`render(self, filter, offset)`
+(signature)`render(self)`
 
 
 [ Status >> delta ]
@@ -610,7 +610,7 @@ Calculate the current metrics window size.
 		- `undocumented`
 	/element/
 		- (source/area)`365 2 389 65`
-(signature)`delta(self, fields, offset)`
+(signature)`delta(self, fields)`
 
 
 [ Status >> phrase ]
@@ -622,7 +622,7 @@ Calculate the current metrics window size.
 		- (type/syntax)`matrix.Context.Phrase`
 		- (type/context-local/factor-element)&<fault.terminal/matrix#Context.Phrase[fault.terminal.matrix.Context.Phrase]>
 		
-(signature)`phrase(self, filter)`
+(signature)`phrase(self)`
 
 The monitor's image as a single phrase instance.
 
@@ -636,7 +636,7 @@ The monitor's image as a single phrase instance.
 		- (type/syntax)`bytes`
 		- (type/invalid/unknown)&<#bytes>
 		
-(signature)`snapshot(self, encoding)`
+(signature)`snapshot(self)`
 
 A bytes form of the (factor-local/method)&<#Status.phrase[Status.phrase]>. (The image without cursor movement)
 
@@ -658,7 +658,7 @@ Construct a triple containing the start and stop time and the final metrics.
 		method
 	/element/
 		- (source/area)`421 2 441 17`
-(signature)`synopsis(self, context, vmap)`
+(signature)`synopsis(self)`
 
 Construct a status frame synopsis using the monitor's configuration and metrics.
 
@@ -669,7 +669,7 @@ Construct a status frame synopsis using the monitor's configuration and metrics.
 		method
 	/element/
 		- (source/area)`443 2 457 70`
-(signature)`frame(self, type, identifier, channel)`
+(signature)`frame(self, type, identifier)`
 
 Construct a transaction frame for reporting the status.
 Used after the completion of the dispatcher.
@@ -709,7 +709,7 @@ Terminal display management for monitoring changes in (factor-local/class)&<#Sta
 		- (type/syntax)`matrix.Context`
 		- (type/context-local/factor-element)&<fault.terminal/matrix#Context[fault.terminal.matrix.Context]>
 		
-(signature)`allocate(self, point, width, height)`
+(signature)`allocate(self, point)`
 
 Create a (context-local/factor-element)&<fault.terminal/matrix#Context[fault.terminal.matrix.Context]> instance relative to the (invalid/unknown)&<#Monitor'> status context.
 
@@ -731,9 +731,9 @@ Erase, reframe, and update the given monitor..
 		method
 	/element/
 		- (source/area)`497 2 530 52`
-(signature)`frame(self, monitor, offset)`
+(signature)`frame(self, monitor)`
 
-Render and emit the prefix, title, and suffix of the (factor-local/parameter)&<#Monitor.frame.Parameters.monitor[monitor]>.
+Render and emit the prefix, title, and suffix of the (invalid/unknown)&<#monitor>.
 
 Operation is buffered and must be flushed to be displayed.
 
@@ -744,9 +744,9 @@ Operation is buffered and must be flushed to be displayed.
 		method
 	/element/
 		- (source/area)`532 2 552 43`
-(signature)`update(self, monitor, fields, offset)`
+(signature)`update(self, monitor, fields)`
 
-Render and emit the given (factor-local/parameter)&<#Monitor.update.Parameters.fields[fields]>.
+Render and emit the given (invalid/unknown)&<#fields>.
 
 Operation is buffered and must be flushed to be displayed.
 
@@ -795,7 +795,7 @@ Used when transitioning monitor configurations.
 		- (source/area)`595 2 630 13`
 (signature)`configure(self, lines)`
 
-Configure the scrolling region allocating (factor-local/parameter)&<#Monitor.configure.Parameters.lines[lines]> at
+Configure the scrolling region allocating (invalid/unknown)&<#lines> at
 the top or bottom of the screen for status display.
 
 This method should be called after window changes of any type.
@@ -812,7 +812,7 @@ also be reallocated so that their Context positions can be adjusted.
 		- (type/syntax)`Monitor`
 		- (type/factor-local/class)&<#Monitor[Monitor]>
 		
-(signature)`setup(atrestore, type, destruct, Context)`
+(signature)`setup()`
 
 Initialize the terminal for use with a scrolling region.
 
@@ -863,7 +863,7 @@ not supported by this interface as (factor-local/class)&<#Monitor[Monitor]> only
 		- `undocumented`
 	/element/
 		- (source/area)`678 1 681 31`
-(signature)`_strings(value, formatting)`
+(signature)`_strings(value)`
 
 
 [ r_count ]
@@ -872,7 +872,7 @@ not supported by this interface as (factor-local/class)&<#Monitor[Monitor]> only
 		function
 	/element/
 		- (source/area)`683 1 701 2`
-(signature)`r_count(field, value, isinstance)`
+(signature)`r_count(field, value)`
 
 Render method for counts providing compression using metric units.
 
@@ -894,7 +894,7 @@ Render method for monitor titles.
 		function
 	/element/
 		- (source/area)`713 1 735 42`
-(signature)`form(module, colors)`
+(signature)`form(module)`
 
 Construct a (factor-local/class)&<#Layout[Layout]> and (factor-local/class)&<#Theme[Theme]> from the provided order and formatting structures.
 
@@ -905,9 +905,9 @@ Construct a (factor-local/class)&<#Layout[Layout]> and (factor-local/class)&<#Th
 		function
 	/element/
 		- (source/area)`737 1 757 20`
-(signature)`aggregate(control, module, lanes, width)`
+(signature)`aggregate(control, module)`
 
-Construct (factor-local/class)&<#Status[Status]> instances allocated using (factor-local/parameter)&<#aggregate.Parameters.control[control]> for
+Construct (factor-local/class)&<#Status[Status]> instances allocated using (invalid/unknown)&<#control> for
 displaying the aggregate of the dimension allocations.
 
 Returns a sequence of (factor-local/class)&<#Status[Status]> instances for the dimensions

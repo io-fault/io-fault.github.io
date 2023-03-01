@@ -1,4 +1,4 @@
-<html><head><title>meta.syntax.palette</title><meta charset="utf-8"/><link as="style" rel="preload" href="../../.legacy-web/core.css"></link><link as="style" rel="preload" href="../../.legacy-web/factor.css"></link><link rel="stylesheet" href="../../.legacy-web/core.css"></link><link rel="stylesheet" href="../../.legacy-web/factor.css"></link></head><body><main><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><span class="title">meta.syntax.palette</span><span class="factor-type">http://if.fault.io/factors/python.module</span></h1><div class="text.abstract"><p><span class="text.normal">Theme data. Colors and text borders.</span></p></div><section class="data" documented="false" local-identifier="colors" id="colors"><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><a class="title" href="#colors"><span class="text.normal">colors</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code>colors = (
+<html root="2"><head><title>meta.syntax.palette</title><meta charset="utf-8"/><link as="style" rel="preload" href="../../.legacy-web/core.css"></link><link as="style" rel="preload" href="../../.legacy-web/factor.css"></link><link rel="stylesheet" href="../../.legacy-web/core.css"></link><link rel="stylesheet" href="../../.legacy-web/factor.css"></link></head><body><main><h1><span class="prefix"></span><div class="page-subject"><img class="icon" src="../../.factor-type-icon/if.fault.io/python-module.svg"></img><span class="subject-identifier">palette</span><a href="http://if.fault.io/factors/python.module"><code class="type">python.module</code></a></div><div class="page-context"><a href="../"><img class="icon" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNTYiIGhlaWdodD0iMjU2Ij48dGV4dCB4PSI0IiB5PSIwLjg4ZW0iIGZvbnQtc2l6ZT0iMjQ4Ij7wn5OdPC90ZXh0Pjwvc3ZnPg=="></img></a><span class="context-identifier">meta.syntax</span></div></h1><section class="chapter"><p><span class="text.normal">Theme data. Colors and text borders.</span></p></section><section class="data" documented="false" local-identifier="colors" id="colors"><h1><span class="prefix"></span><a class="title" href="#colors"><span class="text.normal">colors</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code class="source">colors = (
 	# These are the symbols used to identify the sixteen colors commonly
 	# made available by terminals and emulators. Either this list can be
 	# reorganzied to match a terminal's existing configuration or the
@@ -27,7 +27,7 @@
 
 	'foreground-limit', # bright white (currently unused)
 )
-</code></pre></section><section class="data" documented="false" local-identifier="theme" id="theme"><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><a class="title" href="#theme"><span class="text.normal">theme</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code>theme = {
+</code></pre></section><section class="data" documented="false" local-identifier="theme" id="theme"><h1><span class="prefix"></span><a class="title" href="#theme"><span class="text.normal">theme</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code class="source">theme = {
 	'comment': -(512 + colors.index('comment')),
 	'quotation': -(512 + colors.index('gray')),
 	'indent': -(512 + colors.index('dark')),
@@ -44,7 +44,7 @@
 	'refraction-type': -(512 + colors.index('blue')),
 	'cursor-text': -(512 + colors.index('background-limit')),
 }
-</code></pre></section><section class="data" documented="false" local-identifier="range_colors" id="range_colors"><h1><div class="parallel"><div class="left"></div><div class="right"></div></div><span class="prefix"></span><a class="title" href="#range_colors"><span class="text.normal">range_colors</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code>range_colors = {
+</code></pre></section><section class="data" documented="false" local-identifier="range_colors" id="range_colors"><h1><span class="prefix"></span><a class="title" href="#range_colors"><span class="text.normal">range_colors</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code class="source">range_colors = {
 	'start-inclusive': -(512 + colors.index('start')),
 	'stop-inclusive': -(512 + colors.index('preprocessor')), # orange (between yellow and red)
 

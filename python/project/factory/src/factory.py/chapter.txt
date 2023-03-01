@@ -2,7 +2,7 @@
 	/type/
 		module
 	/element/
-		- (source/area)`1 1 260 4`
+		- (source/area)`1 1 282 4`
 Project materialization tools for instantiating polynomial-1 organized factor sets.
 
 
@@ -155,7 +155,7 @@ Project materialization tools for instantiating polynomial-1 organized factor se
 		function
 	/element/
 		- (source/area)`35 1 49 10`
-(signature)`sequence_format_declarations(formats, il, ls)`
+(signature)`sequence_format_declarations(formats)`
 
 factors/polynomial-1 .format serialization
 
@@ -269,8 +269,8 @@ Define an indirectly typed factor's composition.
 
 Define an explicitly typed factor's composition.
 
-Equivalent to the default constructor with the exception that (factor-local/parameter)&<#Composition.explicit.Parameters.requirements[requirements]>
-and (factor-local/parameter)&<#Composition.explicit.Parameters.sources[sources]> are copied into a new list.
+Equivalent to the default constructor with the exception that (invalid/unknown)&<#requirements>
+and (invalid/unknown)&<#sources> are copied into a new list.
 
 [ >> Parameters ]
 
@@ -296,7 +296,7 @@ and (factor-local/parameter)&<#Composition.explicit.Parameters.sources[sources]>
 	/type/
 		class
 	/element/
-		- (source/area)`104 1 162 45`
+		- (source/area)`104 1 174 79`
 ! INHERIT:
 	- (source/area)`104 18 104 23`
 	- (type/syntax)`object`
@@ -315,6 +315,9 @@ The necessary data for instantiating a project on the local system.
 /factors/
 	The set of factors that make up a project; a sequence of factor path-composition pairs.
 
+/extensions/
+	Additional project information.
+
 
 [ Parameters >> information ]
 ! CONTROL:
@@ -323,7 +326,7 @@ The necessary data for instantiating a project on the local system.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`116 2 116 40`
+		- (source/area)`118 2 118 40`
 		- (type/syntax)`types.Information`
 		- (type/project-local/factor-element)&<types#Information[fault.project.types.Information]>
 		
@@ -337,7 +340,7 @@ The necessary data for instantiating a project on the local system.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`117 2 117 25`
+		- (source/area)`119 2 119 25`
 		- (type/syntax)`object`
 		- (type/invalid/unknown)&<#object>
 		
@@ -351,11 +354,25 @@ The necessary data for instantiating a project on the local system.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`118 2 120 13`
+		- (source/area)`120 2 120 77`
 		- (type/syntax)`typing.Sequence[typing.Tuple[types.FactorPath, Composition]]`
 		
 #!source
 	factors: (typing.Sequence[typing.Tuple[types.FactorPath, Composition]]) = ()
+
+[ Parameters >> extensions ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`121 2 123 13`
+		- (type/syntax)`types.Extensions`
+		- (type/project-local/factor-element)&<types#Extensions[fault.project.types.Extensions]>
+		
+#!source
+	extensions: (types.Extensions) = None
 		@classmethod
 
 [ Parameters >> define ]
@@ -363,12 +380,12 @@ The necessary data for instantiating a project on the local system.
 	/type/
 		classmethod
 	/element/
-		- (source/area)`121 2 162 45`
-(signature)`define(Class, information, formats, soles, sets)`
+		- (source/area)`124 2 174 79`
+(signature)`define(Class, information, formats, soles, sets, icon, synopsis)`
 
 Create a parameter set for project instantiation applying the proper types
 to factor entries, and translating factor types to file extensions for defining
-(factor-local/parameter)&<#Parameters.define.Parameters.soles[soles]>.
+(invalid/unknown)&<#soles>.
 
 [ >> Parameters ]
 
@@ -393,14 +410,27 @@ to factor entries, and translating factor types to file extensions for defining
 	
 	A sequence of records defining factors with multiple sources.
 
+/(parameter)`icon`/
+	- (type/syntax)`str`
+	- (type/invalid/unknown)&<#str>
+	
+	An IRI identifying the image representing the project.
+	This includes `data` scheme IRIs.
+
+/(parameter)`synopsis`/
+	- (type/syntax)`str`
+	- (type/invalid/unknown)&<#str>
+	
+	A short string describing the project.
+
 
 [ plan ]
 ! CONTROL:
 	/type/
 		function
 	/element/
-		- (source/area)`164 1 201 39`
-(signature)`plan(info, formats, factors, dimensions, protocol)`
+		- (source/area)`176 1 222 39`
+(signature)`plan(info, formats, factors)`
 
 Generate the filesystem paths paired with the data that should be placed
 into that file relative to the project directory being materialized.
@@ -411,11 +441,11 @@ into that file relative to the project directory being materialized.
 	/type/
 		function
 	/element/
-		- (source/area)`203 1 241 29`
-(signature)`materialize(route, plans, encoding, isinstance)`
+		- (source/area)`224 1 262 29`
+(signature)`materialize(route, plans)`
 
-Create a Project instance using the filesystem API's provided by (factor-local/parameter)&<#materialize.Parameters.route[route]>
-from the instructions produced by the given (factor-local/parameter)&<#materialize.Parameters.plans[plans]>.
+Create a Project instance using the filesystem API's provided by (invalid/unknown)&<#route>
+from the instructions produced by the given (invalid/unknown)&<#plans>.
 
 ! WARNING:
 	Plan entries referring to files will cause the file content to be loaded entirely into memory.
@@ -449,10 +479,10 @@ from the instructions produced by the given (factor-local/parameter)&<#materiali
 	/type/
 		function
 	/element/
-		- (source/area)`243 1 261 3`
+		- (source/area)`264 1 283 3`
 (signature)`instantiate(project, route, *dimensions)`
 
-Materialize the plan of the given (factor-local/parameter)&<#instantiate.Parameters.project[project]> using the (factor-local/parameter)&<#instantiate.Parameters.route[route]> as the root directory of the project.
+Materialize the plan of the given (invalid/unknown)&<#project> using the (invalid/unknown)&<#route> as the root directory of the project.
 
 [ > Parameters ]
 

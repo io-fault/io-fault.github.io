@@ -62,7 +62,7 @@ Currently unused as the compiler driver is used for linkage.
 		- `undocumented`
 	/element/
 		- (source/area)`11 1 15 2`
-(signature)`prepare(select, pattern, adjust)`
+(signature)`prepare(select, pattern)`
 
 
 [ _search ]
@@ -77,7 +77,7 @@ Currently unused as the compiler driver is used for linkage.
 
 Query the sequence of search paths for the given set of files.
 
-All paths will be scanned for each requested identifier in (factor-local/parameter)&<#_search.Parameters.xset[xset]>. When an identifier
+All paths will be scanned for each requested identifier in (invalid/unknown)&<#xset>. When an identifier
 is found to exist, it is removed from the set that is being scanned for causing
 the first path match to be the one returned.
 

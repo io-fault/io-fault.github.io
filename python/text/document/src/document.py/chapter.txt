@@ -3,7 +3,7 @@
 		module
 	/element/
 		- (source/area)`1 1 514 3`
-Document finalization and query tools for raw text node trees.
+Document finalization and query tools for raw text element trees.
 
 
 [ itertools ]
@@ -53,7 +53,7 @@ Document finalization and query tools for raw text node trees.
 		
 (signature)`export(paragraph, literal, reference)`
 
-Convert the given paragraph node into terms defined by (project-local/project-factor)&<types[fault.text.types]>.
+Convert the given paragraph element into terms defined by (project-local/project-factor)&<types[fault.text.types]>.
 
 [ > Parameters ]
 
@@ -109,7 +109,7 @@ for repeat reads.
 		
 (signature)`concatenate(syntax)`
 
-Concatenate the lines of the given syntax node.
+Concatenate the lines of the given syntax element.
 
 
 [ context ]
@@ -117,8 +117,8 @@ Concatenate the lines of the given syntax node.
 	/type/
 		function
 	/element/
-		- (source/area)`101 1 106 37`
-(signature)`context(node)`
+		- (source/area)`101 1 106 36`
+(signature)`context(element)`
 
 Structure a common context admonition.
 
@@ -131,7 +131,7 @@ Structure a common context admonition.
 		- `undocumented`
 	/element/
 		- (source/area)`108 1 115 2`
-(signature)`paragraph_as_string(node)`
+(signature)`paragraph_as_string(element)`
 
 
 [ paragraph_only ]
@@ -140,9 +140,9 @@ Structure a common context admonition.
 		function
 	/element/
 		- (source/area)`117 1 127 13`
-(signature)`paragraph_only(node)`
+(signature)`paragraph_only(element)`
 
-Select the only paragraph in the given node.
+Select the only paragraph in the given element.
 
 
 [ paragraph_first ]
@@ -151,9 +151,9 @@ Select the only paragraph in the given node.
 		function
 	/element/
 		- (source/area)`129 1 135 11`
-(signature)`paragraph_first(node)`
+(signature)`paragraph_first(element)`
 
-Select the first paragraph in the given node.
+Select the first paragraph in the given element.
 
 
 [ paragraph_last ]
@@ -162,9 +162,9 @@ Select the first paragraph in the given node.
 		function
 	/element/
 		- (source/area)`137 1 143 11`
-(signature)`paragraph_last(node)`
+(signature)`paragraph_last(element)`
 
-Select the last paragraph in the given node.
+Select the last paragraph in the given element.
 
 
 [ paragraph_lines ]
@@ -175,7 +175,7 @@ Select the last paragraph in the given node.
 		- `undocumented`
 	/element/
 		- (source/area)`145 1 156 16`
-(signature)`paragraph_lines(node)`
+(signature)`paragraph_lines(element)`
 
 
 [ interpret_reference ]
@@ -186,7 +186,7 @@ Select the last paragraph in the given node.
 		- `undocumented`
 	/element/
 		- (source/area)`158 1 163 52`
-(signature)`interpret_reference(node)`
+(signature)`interpret_reference(element)`
 
 
 [ interpret_paragraph_single ]
@@ -196,19 +196,19 @@ Select the last paragraph in the given node.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`165 1 173 34`
-(signature)`interpret_paragraph_single(node)`
+		- (source/area)`165 1 173 37`
+(signature)`interpret_paragraph_single(element)`
 
 
-[ dictionary_pairs ]
+[ directory_pairs ]
 ! CONTROL:
 	/type/
 		function
 	/element/
 		- (source/area)`175 1 184 12`
-(signature)`dictionary_pairs(items)`
+(signature)`directory_pairs(items)`
 
-Iterate over the key-value pairs in the dictionary items.
+Iterate over the key-value pairs in the directory items.
 
 
 [ Tree ]
@@ -255,8 +255,8 @@ Empty with potential attributes.
 		- (source/area)`203 2 210 91`
 (signature)`element(self, element_name, content, *attributes, **kwattributes)`
 
-Serialize an element with the exact (factor-local/parameter)&<#Tree.element.Parameters.element_name[element_name]> with the contents of
-(invalid/unknown)&<#subnode_iterator> as the inner nodes. (invalid/unknown)&<#subnode_iterator> must produce
+Serialize an element with the exact (invalid/unknown)&<#element_name> with the contents of
+(invalid/unknown)&<#subelement_iterator> as the inner elements. (invalid/unknown)&<#subelement_iterator> must produce
 (invalid/unknown)&<#bytes> encoded objects.
 
 
@@ -364,7 +364,7 @@ Initialize a (factor-local/class)&<#Transform[Transform]> instance designating t
 		- `undocumented`
 	/element/
 		- (source/area)`248 2 249 28`
-(signature)`process_paragraph_text(self, tree, text, cast)`
+(signature)`process_paragraph_text(self, tree, text)`
 
 
 [ Transform >> process_paragraph_emphasis ]
@@ -375,7 +375,7 @@ Initialize a (factor-local/class)&<#Transform[Transform]> instance designating t
 		- `undocumented`
 	/element/
 		- (source/area)`251 2 255 3`
-(signature)`process_paragraph_emphasis(self, tree, data, weight)`
+(signature)`process_paragraph_emphasis(self, tree, data)`
 
 
 [ Transform >> process_paragraph_literal ]
@@ -386,7 +386,7 @@ Initialize a (factor-local/class)&<#Transform[Transform]> instance designating t
 		- `undocumented`
 	/element/
 		- (source/area)`257 2 261 3`
-(signature)`process_paragraph_literal(self, tree, data, cast)`
+(signature)`process_paragraph_literal(self, tree, data)`
 
 
 [ Transform >> process_paragraph_reference ]
@@ -395,7 +395,7 @@ Initialize a (factor-local/class)&<#Transform[Transform]> instance designating t
 		method
 	/element/
 		- (source/area)`263 2 309 3`
-(signature)`process_paragraph_reference(self, tree, source, type, title, action, cast)`
+(signature)`process_paragraph_reference(self, tree, source, type, title, action)`
 
 [ >> Parameters ]
 
@@ -439,7 +439,7 @@ Initialize a (factor-local/class)&<#Transform[Transform]> instance designating t
 		- `undocumented`
 	/element/
 		- (source/area)`311 2 312 11`
-(signature)`process_end_of_line(self, tree, text, cast)`
+(signature)`process_end_of_line(self, tree, text)`
 
 
 [ Transform >> process_init ]
@@ -479,7 +479,7 @@ Initialize a (factor-local/class)&<#Transform[Transform]> instance designating t
 		- `undocumented`
 	/element/
 		- (source/area)`326 2 345 4`
-(signature)`process_items(self, tree, node, name)`
+(signature)`process_items(self, tree, element, name)`
 
 
 [ Transform >> process_set ]
@@ -489,8 +489,8 @@ Initialize a (factor-local/class)&<#Transform[Transform]> instance designating t
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`347 2 348 46`
-(signature)`process_set(self, tree, node)`
+		- (source/area)`347 2 348 49`
+(signature)`process_set(self, tree, element)`
 
 
 [ Transform >> process_sequence ]
@@ -500,11 +500,11 @@ Initialize a (factor-local/class)&<#Transform[Transform]> instance designating t
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`350 2 351 51`
-(signature)`process_sequence(self, tree, node)`
+		- (source/area)`350 2 351 54`
+(signature)`process_sequence(self, tree, element)`
 
 
-[ Transform >> process_dictionary ]
+[ Transform >> process_directory ]
 ! CONTROL:
 	/type/
 		method
@@ -512,7 +512,7 @@ Initialize a (factor-local/class)&<#Transform[Transform]> instance designating t
 		- `undocumented`
 	/element/
 		- (source/area)`353 2 387 14`
-(signature)`process_dictionary(self, tree, vl_node)`
+(signature)`process_directory(self, tree, vl_element)`
 
 
 [ Transform >> empty_paragraph ]
@@ -617,7 +617,7 @@ regarding syntax that was not entirely comprehensible.
 		'paragraph': process_paragraph,
 		'set': process_set,
 		'sequence': process_sequence,
-		'dictionary': process_dictionary,
+		'directory': process_directory,
 		'syntax': process_syntax,
 		'admonition': process_admonition,
 		'section': create_section,

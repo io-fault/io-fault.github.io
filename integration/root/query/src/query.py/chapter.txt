@@ -98,7 +98,7 @@ Get the path to the `lib` directory used by the fault installation.
 		- (source/area)`40 1 46 42`
 (signature)`tool(name)`
 
-Prepare a structured plan for executing the tool identified by (factor-local/parameter)&<#tool.Parameters.name[name]>.
+Prepare a structured plan for executing the tool identified by (invalid/unknown)&<#name>.
 
 
 [ dispatch ]
@@ -109,7 +109,7 @@ Prepare a structured plan for executing the tool identified by (factor-local/par
 		- (source/area)`48 1 57 37`
 (signature)`dispatch(name)`
 
-Prepare a structured plan for executing the tool identified by (factor-local/parameter)&<#dispatch.Parameters.name[name]>.
+Prepare a structured plan for executing the tool identified by (invalid/unknown)&<#name>.
 
 This is intended for use by tools and daemons that spawn high-level
 operations as subprocesses.
@@ -123,7 +123,7 @@ operations as subprocesses.
 		- (source/area)`59 1 67 50`
 (signature)`dispatched(name, *argv, **environ)`
 
-Serialize an execution plan performing the given tool (factor-local/parameter)&<#dispatched.Parameters.name[name]> using `fault-dispatch`.
+Serialize an execution plan performing the given tool (invalid/unknown)&<#name> using `fault-dispatch`.
 
 
 [ platform ]

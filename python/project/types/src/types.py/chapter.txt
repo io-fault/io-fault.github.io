@@ -2,7 +2,7 @@
 	/type/
 		module
 	/element/
-		- (source/area)`1 1 324 0`
+		- (source/area)`1 1 333 0`
 Factored Projects data structures and types.
 
 [ FactorType ]
@@ -183,7 +183,7 @@ A triple of contrived identifiers that represent a classification.
 		- (source/area)`58 2 64 15`
 (signature)`reform(self, rform)`
 
-Reconstruct the instance with the given (factor-local/parameter)&<#Variants.reform.Parameters.rform[rform]> as the new (factor-local/data)&<#Variants.form[form]> value.
+Reconstruct the instance with the given (invalid/unknown)&<#rform> as the new (invalid/unknown)&<#form> value.
 
 
 [ Format ]
@@ -221,11 +221,11 @@ Source format structure holding the language and dialect.
 		classmethod
 	/element/
 		- (source/area)`73 2 84 68`
-(signature)`from_string(separator)`
+(signature)`from_string()`
 
 Split the format identifier by the first (char)`.` in (invalid/unknown)&<#string>.
 Creates an instance using the first field as the (invalid/unknown)&<#language> and second
-as the (factor-local/data)&<#Format.dialect[dialect]>. If there is no (char)`.` or the dialect is an empty string,
+as the (invalid/unknown)&<#dialect>. If there is no (char)`.` or the dialect is an empty string,
 the dialect will be (invalid/unknown)&<#None>,
 
 
@@ -311,11 +311,11 @@ Archived Factor.
 [ > Properties ]
 
 /root/
-	The route containing either the (factor-local/data)&<#FactorContextPaths.project[project]> or the (factor-local/data)&<#FactorContextPaths.context[context]> enclosure.
+	The route containing either the (invalid/unknown)&<#project> or the (invalid/unknown)&<#context> enclosure.
 	Also known as the Product Directory.
 
 /context/
-	The context project relevant to (factor-local/data)&<#FactorContextPaths.project[project]>.
+	The context project relevant to (invalid/unknown)&<#project>.
 	(invalid/unknown)&<#None> if the project is not managed within a Project Context.
 
 /project/
@@ -404,7 +404,7 @@ Construct a project factor path.
 	/type/
 		class
 	/element/
-		- (source/area)`158 1 188 15`
+		- (source/area)`158 1 181 10`
 ! INHERIT:
 	- (source/area)`158 19 158 24`
 	- (type/syntax)`object`
@@ -422,13 +422,6 @@ Project information structure usually extracted from (filename)`project.txt` fil
 	The canonical local name for the project.
 	Often, consistent with the directory or file containing the project's factors.
 
-/icon/
-	A property set defining visual symbols that can be used to identify the project.
-
-/abstract/
-	A sequence of paragraphs describing the project.
-	The first sentence of the first paragraph may be used in isolation in project lists.
-
 /authority/
 	An arbitrary string intended to identify the entity that controls the project.
 
@@ -444,7 +437,7 @@ Project information structure usually extracted from (filename)`project.txt` fil
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`181 2 181 25`
+		- (source/area)`176 2 176 25`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -458,40 +451,12 @@ Project information structure usually extracted from (filename)`project.txt` fil
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`182 2 182 19`
+		- (source/area)`177 2 177 19`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
 #!source
 	name: (str) = None
-
-[ Information >> icon ]
-! CONTROL:
-	/type/
-		data
-	/flags/
-		- `undocumented`
-	/element/
-		- (source/area)`183 2 183 20`
-		- (type/syntax)`dict`
-		- (type/invalid/unknown)&<#dict>
-		
-#!source
-	icon: (dict) = None
-
-[ Information >> abstract ]
-! CONTROL:
-	/type/
-		data
-	/flags/
-		- `undocumented`
-	/element/
-		- (source/area)`184 2 184 26`
-		- (type/syntax)`object`
-		- (type/invalid/unknown)&<#object>
-		
-#!source
-	abstract: (object) = None
 
 [ Information >> authority ]
 ! CONTROL:
@@ -500,7 +465,7 @@ Project information structure usually extracted from (filename)`project.txt` fil
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`185 2 185 24`
+		- (source/area)`178 2 178 24`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -514,12 +479,64 @@ Project information structure usually extracted from (filename)`project.txt` fil
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`186 2 188 15`
+		- (source/area)`179 2 181 10`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
 #!source
 		contact: (str) = None
+	
+	@dataclass
+
+[ Extensions ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (source/area)`182 1 196 15`
+! INHERIT:
+	- (source/area)`182 18 182 23`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+Project information extensions.
+
+[ > Properties ]
+
+/icon/
+	A hyperlink identifying an image that represents or symbolizes the project.
+
+/synopsis/
+	A brief, single sentence, description of the project.
+
+
+[ Extensions >> icon ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`193 2 193 19`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+#!source
+	icon: (str) = None
+
+[ Extensions >> synopsis ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`194 2 196 15`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+#!source
+		synopsis: (str) = None
 	
 	@tools.struct()
 
@@ -528,9 +545,9 @@ Project information structure usually extracted from (filename)`project.txt` fil
 	/type/
 		class
 	/element/
-		- (source/area)`189 1 272 63`
+		- (source/area)`197 1 280 63`
 ! INHERIT:
-	- (source/area)`189 17 189 22`
+	- (source/area)`197 17 197 22`
 	- (type/syntax)`object`
 	- (type/invalid/unknown)&<#object>
 	
@@ -562,8 +579,8 @@ needed to properly form the relationship for integration.
 	be used when integration is performed.
 
 /format/
-	In the case of `type` references, (factor-local/property)&<#Reference.format[format]> provides access to a structured
-	form of (factor-local/data)&<#Reference.isolation[isolation]>: a (factor-local/class)&<#Format[Format]> instance.
+	In the case of `type` references, (invalid/unknown)&<#format> provides access to a structured
+	form of (invalid/unknown)&<#isolation>: a (factor-local/class)&<#Format[Format]> instance.
 
 
 [ Reference >> method ]
@@ -573,7 +590,7 @@ needed to properly form the relationship for integration.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`220 2 220 21`
+		- (source/area)`228 2 228 21`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -587,7 +604,7 @@ needed to properly form the relationship for integration.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`221 2 221 24`
+		- (source/area)`229 2 229 24`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -599,12 +616,12 @@ needed to properly form the relationship for integration.
 	/type/
 		method
 	/element/
-		- (source/area)`223 2 231 74`
+		- (source/area)`231 2 239 74`
 (signature)`isolate(self, isolation)`
 
-Reconstruct the reference replacing its isolation field the given (factor-local/parameter)&<#Reference.isolate.Parameters.isolation[isolation]>.
+Reconstruct the reference replacing its isolation field the given (invalid/unknown)&<#isolation>.
 
-If (factor-local/parameter)&<#Reference.isolate.Parameters.isolation[isolation]> is already set, return (factor-local/parameter)&<#Reference.isolate.Parameters.self[self]>.
+If (invalid/unknown)&<#isolation> is already set, return (invalid/unknown)&<#self>.
 
 
 [ Reference >> __str__ ]
@@ -614,7 +631,7 @@ If (factor-local/parameter)&<#Reference.isolate.Parameters.isolation[isolation]>
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`233 2 241 10`
+		- (source/area)`241 2 249 10`
 (signature)`__str__(self)`
 
 
@@ -623,8 +640,8 @@ If (factor-local/parameter)&<#Reference.isolate.Parameters.isolation[isolation]>
 	/type/
 		property
 	/element/
-		- (source/area)`242 2 252 13`
-Construct the (factor-local/class)&<#Format[Format]> instance representing the (factor-local/data)&<#Reference.isolation[isolation]>.
+		- (source/area)`250 2 260 13`
+Construct the (factor-local/class)&<#Format[Format]> instance representing the (invalid/unknown)&<#isolation>.
 
 Format instances are cached and repeat reads across references
 with the same isolation should normally return the same object.
@@ -635,7 +652,7 @@ with the same isolation should normally return the same object.
 	/type/
 		classmethod
 	/element/
-		- (source/area)`253 2 272 63`
+		- (source/area)`261 2 280 63`
 (signature)`from_ri(Class, method, ri)`
 
 Create a reference from a resource indicator.
@@ -649,7 +666,7 @@ Splits on the fragment and the final path segment.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`274 1 280 1`
+		- (source/area)`282 1 288 1`
 #!source
 	FactorType = tuple[
 		tuple[FactorPath, Reference], # Project relative path and type.
@@ -659,66 +676,77 @@ Splits on the fragment and the final path segment.
 		],
 	]
 
-[ Protocol ]
+[ FactorIsolationProtocol ]
 ! CONTROL:
 	/type/
 		class
 	/element/
-		- (source/area)`282 1 293 83`
+		- (source/area)`290 1 301 83`
 ! INHERIT:
-	- (source/area)`282 16 282 21`
+	- (source/area)`290 31 290 36`
 	- (type/syntax)`object`
 	- (type/invalid/unknown)&<#object>
 	
 A project factor protocol.
 
 
-[ Protocol >> __init__ ]
+[ FactorIsolationProtocol >> __init__ ]
 ! CONTROL:
 	/type/
 		method
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`286 2 287 30`
+		- (source/area)`294 2 295 30`
 (signature)`__init__(self, parameters)`
 
 
-[ Protocol >> information ]
+[ FactorIsolationProtocol >> information ]
 ! CONTROL:
 	/type/
 		method
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`289 2 290 83`
+		- (source/area)`297 2 298 83`
 		- (type/syntax)`Information`
 		- (type/factor-local/class)&<#Information[Information]>
 		
 (signature)`information(self, route)`
 
 
-[ Protocol >> iterfactors ]
+[ FactorIsolationProtocol >> iterfactors ]
 ! CONTROL:
 	/type/
 		method
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`292 2 293 83`
+		- (source/area)`300 2 301 83`
 		- (type/syntax)`Iterable[FactorType]`
 		
 (signature)`iterfactors(self, route)`
 
+
+[ Protocol ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`302 1 302 34`
+#!source
+	Protocol = FactorIsolationProtocol
 
 [ ProtocolViolation ]
 ! CONTROL:
 	/type/
 		class
 	/element/
-		- (source/area)`295 1 300 22`
+		- (source/area)`304 1 309 22`
 ! INHERIT:
-	- (source/area)`295 25 295 33`
+	- (source/area)`304 25 304 33`
 	- (type/syntax)`Exception`
 	- (type/invalid/unknown)&<#Exception>
 	
@@ -730,7 +758,7 @@ The route was identified as not conforming to the protocol.
 	/type/
 		function
 	/element/
-		- (source/area)`301 1 324 26`
+		- (source/area)`310 1 333 26`
 		- (type/syntax)`FactorPath`
 		- (type/factor-local/class)&<#FactorPath[FactorPath]>
 		
@@ -739,8 +767,8 @@ The route was identified as not conforming to the protocol.
 (factor-local/class)&<#FactorPath[FactorPath]> instance cache for relative and absolute paths constructed
 from strings.
 
-When (factor-local/parameter)&<#fpc.Parameters.factorpath[factorpath]> has leading periods, `.`, the number of periods will
-select the ancestor of (factor-local/parameter)&<#fpc.Parameters.context[context]> to start the resulting (factor-local/class)&<#FactorPath[FactorPath]>
+When (invalid/unknown)&<#factorpath> has leading periods, `.`, the number of periods will
+select the ancestor of (invalid/unknown)&<#context> to start the resulting (factor-local/class)&<#FactorPath[FactorPath]>
 from.
 
 [ > Parameters ]
@@ -749,7 +777,7 @@ from.
 	- (type/syntax)`FactorPath`
 	- (type/factor-local/class)&<#FactorPath[FactorPath]>
 	
-	The relative position (factor-local/parameter)&<#fpc.Parameters.factorpath[factorpath]> is to be interpreted from when
+	The relative position (invalid/unknown)&<#factorpath> is to be interpreted from when
 	leading periods are present.
 
 /(parameter)`factorpath`/
@@ -760,6 +788,6 @@ from.
 
 /(parameter)`root`/
 	
-	The absolute position that (factor-local/parameter)&<#fpc.Parameters.factorpath[factorpath]> will extend given that
+	The absolute position that (invalid/unknown)&<#factorpath> will extend given that
 	it is not relative.
 

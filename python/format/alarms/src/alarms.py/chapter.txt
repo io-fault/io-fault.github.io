@@ -47,5 +47,5 @@ Timer related frames.
 		- (source/area)`8 1 11 4`
 (signature)`frame_scheduled(record)`
 
-Construct frame input for the given (factor-local/parameter)&<#frame_scheduled.Parameters.record[record]>.
+Construct frame input for the given (invalid/unknown)&<#record>.
 

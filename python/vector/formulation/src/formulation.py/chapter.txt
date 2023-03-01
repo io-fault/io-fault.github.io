@@ -64,7 +64,7 @@ The default tool set for vector expansion transformations.
 		- `undocumented`
 	/element/
 		- (source/area)`14 2 18 21`
-(signature)`__init__(self, environ, quotation, open, close)`
+(signature)`__init__(self, environ)`
 
 
 [ Functions >> Select ]
@@ -141,7 +141,7 @@ Append a dot-suffix to the string.
 		- (source/area)`74 2 78 69`
 (signature)`prefix(self, prefix, string)`
 
-Force the string to have the given (factor-local/parameter)&<#Functions.prefix.Parameters.prefix[prefix]>.
+Force the string to have the given (invalid/unknown)&<#prefix>.
 
 
 [ Context ]
@@ -157,7 +157,7 @@ Force the string to have the given (factor-local/parameter)&<#Functions.prefix.P
 	
 Composition data structure holding the conclusions and constants.
 
-Primarily providing the (factor-local/method)&<#Context.compose[compose]> interface for producing the
+Primarily providing the (invalid/unknown)&<#compose> interface for producing the
 final command constructors.
 
 
@@ -167,7 +167,7 @@ final command constructors.
 		method
 	/element/
 		- (source/area)`88 2 94 39`
-(signature)`__init__(self, conclusions, constants, tools)`
+(signature)`__init__(self, conclusions, constants)`
 
 Initialize the context identifying the set of available conditions.
 
@@ -191,7 +191,7 @@ Initialize the context identifying the set of available conditions.
 		- `undocumented`
 	/element/
 		- (source/area)`140 2 201 15`
-(signature)`resolve(Class, vf, vq, vi, index, slices, field)`
+(signature)`resolve(Class, vf, vq, vi, index, slices)`
 
 
 [ Context >> production ]
@@ -211,9 +211,9 @@ Initialize the context identifying the set of available conditions.
 		method
 	/element/
 		- (source/area)`264 2 314 23`
-(signature)`compose(self, index, selection, *argv, negative, repeat)`
+(signature)`compose(self, index, selection, *argv)`
 
-Compose a command constructor with respect to (factor-local/parameter)&<#Context.compose.Parameters.self[self]>.
+Compose a command constructor with respect to (invalid/unknown)&<#self>.
 
 
 [ Context >> chain ]
@@ -224,7 +224,7 @@ Compose a command constructor with respect to (factor-local/parameter)&<#Context
 		- (source/area)`316 2 322 3`
 (signature)`chain(self, query, index, selection)`
 
-Compose and command constructor and evaluate it with respect to (factor-local/parameter)&<#Context.chain.Parameters.query[query]>.
+Compose and command constructor and evaluate it with respect to (invalid/unknown)&<#query>.
 
 
 [ parameters ]
@@ -233,7 +233,7 @@ Compose and command constructor and evaluate it with respect to (factor-local/pa
 		function
 	/element/
 		- (source/area)`324 1 340 10`
-(signature)`parameters(string, start, stop)`
+(signature)`parameters(string)`
 
 Identify bracketed areas for substitution.
 
@@ -244,7 +244,7 @@ Identify bracketed areas for substitution.
 		function
 	/element/
 		- (source/area)`342 1 367 29`
-(signature)`quotations(args, quote)`
+(signature)`quotations(args)`
 
 Isolate quotations within a vector expression.
 Quotations have the highest precedence and must be isolated first.
@@ -267,9 +267,9 @@ Recognize the vector instruction present on a given line.
 		function
 	/element/
 		- (source/area)`416 1 453 25`
-(signature)`segments(lines, start, newline, indentation, comment)`
+(signature)`segments(lines)`
 
-Isolate the given (factor-local/parameter)&<#segments.Parameters.lines[lines]> into segments identified by the unindented line
+Isolate the given (invalid/unknown)&<#lines> into segments identified by the unindented line
 leading an indentation of text. The segments contain the indentations
 in the order presented by the iterator.
 
@@ -292,7 +292,7 @@ identifying the distinct sequences.
 		function
 	/element/
 		- (source/area)`471 1 477 33`
-(signature)`parse(text, origin)`
+(signature)`parse(text)`
 
-Split the (factor-local/parameter)&<#parse.Parameters.text[text]> into lines and return the (factor-local/function)&<#structure[structure]> form.
+Split the (invalid/unknown)&<#text> into lines and return the (factor-local/function)&<#structure[structure]> form.
 

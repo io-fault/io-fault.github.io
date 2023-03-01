@@ -142,7 +142,7 @@ Symbolic names for annotations used by (project-local/unknown)&<execution>.
 		- `undocumented`
 	/element/
 		- (source/area)`57 1 61 22`
-(signature)`default_python_script(index, script, arguments, name)`
+(signature)`default_python_script(index, script, arguments)`
 
 
 [ default_python_module ]
@@ -153,7 +153,7 @@ Symbolic names for annotations used by (project-local/unknown)&<execution>.
 		- `undocumented`
 	/element/
 		- (source/area)`63 1 67 22`
-(signature)`default_python_module(index, module, arguments, name)`
+(signature)`default_python_module(index, module, arguments)`
 
 
 [ default_executable ]
@@ -164,7 +164,7 @@ Symbolic names for annotations used by (project-local/unknown)&<execution>.
 		- `undocumented`
 	/element/
 		- (source/area)`69 1 72 26`
-(signature)`default_executable(index, executable, arguments, name)`
+(signature)`default_executable(index, executable, arguments)`
 
 
 [ _defaults ]
@@ -211,7 +211,7 @@ corresponding (invalid/unknown)&<#Method's>.
 		- `undocumented`
 	/element/
 		- (source/area)`90 2 92 19`
-(signature)`__init__(self, defaults, Storage)`
+(signature)`__init__(self)`
 
 
 [ Index >> fork ]
@@ -224,7 +224,7 @@ corresponding (invalid/unknown)&<#Method's>.
 		
 (signature)`fork(self, methods)`
 
-Duplicate the (factor-local/class)&<#Index[Index]> instance (factor-local/parameter)&<#Index.fork.Parameters.self[self]> and update it with the given (factor-local/parameter)&<#Index.fork.Parameters.methods[methods]>.
+Duplicate the (factor-local/class)&<#Index[Index]> instance (invalid/unknown)&<#self> and update it with the given (invalid/unknown)&<#methods>.
 
 
 [ Index >> install ]
@@ -238,8 +238,8 @@ Duplicate the (factor-local/class)&<#Index[Index]> instance (factor-local/parame
 		
 (signature)`install(self, method, new)`
 
-Register (factor-local/parameter)&<#Index.install.Parameters.new[new]> as the handler for (factor-local/parameter)&<#Index.install.Parameters.method[method]> and return the previously installed (factor-local/data)&<#Method[Method]>.
-Returns the old (factor-local/data)&<#Method[Method]> installed for (factor-local/parameter)&<#Index.install.Parameters.method[method]> identifier.
+Register (invalid/unknown)&<#new> as the handler for (invalid/unknown)&<#method> and return the previously installed (factor-local/data)&<#Method[Method]>.
+Returns the old (factor-local/data)&<#Method[Method]> installed for (invalid/unknown)&<#method> identifier.
 
 
 [ Index >> select ]
@@ -253,7 +253,7 @@ Returns the old (factor-local/data)&<#Method[Method]> installed for (factor-loca
 		
 (signature)`select(self, method)`
 
-Return the (factor-local/data)&<#Specification[Specification]> constructor identified by (factor-local/parameter)&<#Index.select.Parameters.method[method]>.
+Return the (factor-local/data)&<#Specification[Specification]> constructor identified by (invalid/unknown)&<#method>.
 
 
 [ Index >> prepare ]
@@ -265,7 +265,7 @@ Return the (factor-local/data)&<#Specification[Specification]> constructor ident
 		- (type/syntax)`Specification`
 		- (type/factor-local/data)&<#Specification[Specification]>
 		
-(signature)`prepare(self, method, executable, arguments, name)`
+(signature)`prepare(self, method, executable, arguments)`
 
 Construct a pair suitable for creating a (project-local/factor-element)&<kernel#Invocation[fault.system.kernel.Invocation]> instance.
 
@@ -422,7 +422,7 @@ Descriptor of change in a subprocess' state.
 		- (type/syntax)`Delta`
 		- (type/factor-local/class)&<#Delta[Delta]>
 		
-(signature)`decode_process_status(status, wasexit, getstatus, wassignal, getsig, wasstopped, getstop, wascontinued, wascore)`
+(signature)`decode_process_status(status)`
 
 The process or SIGCHLD signals. This is an abstraction to (none/invalid)&<http://fault.io/dev/null[os.waitpid]>
 and can only be used with child processes.
@@ -481,7 +481,7 @@ and can only be used with child processes.
 		- (source/area)`208 1 245 35`
 		- (type/syntax)`typing.Optional[Delta]`
 		
-(signature)`reap(pid, options, sysop)`
+(signature)`reap(pid, options)`
 
 Transform pending process events such as exits into a (factor-local/class)&<#Delta[Delta]> describing
 the event. Normally used to respond to process exit events in order to reap
@@ -520,7 +520,7 @@ and can only be used with child processes.
 		function
 	/element/
 		- (source/area)`272 1 312 31`
-(signature)`dereference(invocation, stderr, stdout)`
+(signature)`dereference(invocation)`
 
 Execute the given invocation collecting (system/file)`/dev/stdout` into a (invalid/unknown)&<#bytes> instance.
 (factor-local/function)&<#dereference[dereference]> blocks until EOF is read from the created pipe and should only be used to
@@ -556,7 +556,7 @@ execute reliable processes.
 		
 (signature)`perform(invocation)`
 
-Execute an (factor-local/parameter)&<#perform.Parameters.invocation[invocation]> waiting for the subprocess to exit before allowing
+Execute an (invalid/unknown)&<#invocation> waiting for the subprocess to exit before allowing
 the thread to continue. The invocation will inherit the process' standard
 input, output, and error.
 
@@ -644,7 +644,7 @@ Mapping of process identifiers to the standard error file descriptor.
 		- `undocumented`
 	/element/
 		- (source/area)`375 2 385 4`
-(signature)`__new__(Class, input, output, pids, errfds, tuple)`
+(signature)`__new__(Class, input, output, pids, errfds)`
 
 
 [ Pipeline >> void ]
@@ -655,7 +655,7 @@ Mapping of process identifiers to the standard error file descriptor.
 		- (source/area)`387 2 398 15`
 		- (type/syntax)`None`
 		
-(signature)`void(self, close)`
+(signature)`void(self)`
 
 Close all file descriptors and terminate all processes (SIGKILL) involved in the pipeline.
 Processes are *not* reaped.
@@ -748,7 +748,7 @@ pairs.
 		- (type/syntax)`Pipeline`
 		- (type/factor-local/class)&<#Pipeline[Pipeline]>
 		
-(signature)`spawn(self, signal, pipe, close, range)`
+(signature)`spawn(self, signal)`
 
 Execute the series of invocations returning a (factor-local/class)&<#Pipeline[Pipeline]> instance containing
 the file descriptors used for input, output and the standard error of all the commands.
@@ -811,7 +811,7 @@ settings, executable path, and command arguments.
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
-(signature)`serialize_sx_plan(triple, limit, inline)`
+(signature)`serialize_sx_plan(triple)`
 
 Serialize the environment, execution path, and command arguments into a string.
 
@@ -836,7 +836,7 @@ Factor Execution Platform structure for defining architecture specific runtimes.
 		staticmethod
 	/element/
 		- (source/area)`641 2 661 14`
-(signature)`parse_architecture_list(pfa, rsep, fsep)`
+(signature)`parse_architecture_list(pfa)`
 
 Produce the architectures and their synonyms from a string
 that uses newline separated records and space separated fields.
@@ -850,7 +850,7 @@ that uses newline separated records and space separated fields.
 		- `undocumented`
 	/element/
 		- (source/area)`662 2 665 14`
-(signature)`fs_load_system(path, encoding)`
+(signature)`fs_load_system(path)`
 
 
 [ Platform >> fs_load_plans ]
@@ -859,9 +859,9 @@ that uses newline separated records and space separated fields.
 		staticmethod
 	/element/
 		- (source/area)`666 2 673 13`
-(signature)`fs_load_plans(source, names, encoding)`
+(signature)`fs_load_plans(source, names)`
 
-Read the plans identified by (factor-local/parameter)&<#Platform.fs_load_plans.Parameters.names[names]> from the given directory, (factor-local/parameter)&<#Platform.fs_load_plans.Parameters.source[source]>.
+Read the plans identified by (invalid/unknown)&<#names> from the given directory, (invalid/unknown)&<#source>.
 
 
 [ Platform >> fs_load_sections ]
@@ -894,8 +894,8 @@ Create an instance from a platform directory.
 		- (source/area)`693 2 707 10`
 (signature)`from_system(Class, system, origins)`
 
-Compose an (invalid/unknown)&<#execution.Platform> from a sequence of paths given
-that they are extensions of (factor-local/parameter)&<#Platform.from_system.Parameters.system[system]>.
+Compose a (factor-local/class)&<#Platform[Platform]> from a sequence of paths given
+that they are extensions of (invalid/unknown)&<#system>.
 
 
 [ Platform >> __init__ ]

@@ -70,7 +70,7 @@ Unstable API. This module may be partitioned in order to eliminate the condition
 		
 (signature)`store(check, target, code, fileno, source)`
 
-Store the given (factor-local/parameter)&<#store.Parameters.code[code]> object at the (factor-local/parameter)&<#store.Parameters.target[target]> location system path.
+Store the given (invalid/unknown)&<#code> object at the (invalid/unknown)&<#target> location system path.
 The stored data should be suitable for use as a pycs file within __pycache__.
 
 [ > Parameters ]

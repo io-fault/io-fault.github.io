@@ -56,7 +56,7 @@ process image without having to discard listening sockets.
 		- (source/area)`14 1 19 13`
 (signature)`close(identifier)`
 
-Close the ports associated with the (factor-local/parameter)&<#close.Parameters.identifier[identifier]> and remove them from storage.
+Close the ports associated with the (invalid/unknown)&<#identifier> and remove them from storage.
 
 
 [ restore ]
@@ -69,7 +69,7 @@ Close the ports associated with the (factor-local/parameter)&<#close.Parameters.
 		
 (signature)`restore(identifier, ports)`
 
-Add (factor-local/parameter)&<#restore.Parameters.ports[ports]> to the set using the (factor-local/parameter)&<#restore.Parameters.identifier[identifier]> presuming that the ports
+Add (invalid/unknown)&<#ports> to the set using the (invalid/unknown)&<#identifier> presuming that the ports
 are properly configured. Used by daemon processes after performing
 (invalid/syscall)&<#exec> to refresh the process image.
 
@@ -84,10 +84,10 @@ are properly configured. Used by daemon processes after performing
 		
 (signature)`install(identifier, ports)`
 
-Add the (factor-local/parameter)&<#install.Parameters.ports[ports]> to the set making sure that they are properly configured
+Add the (invalid/unknown)&<#ports> to the set making sure that they are properly configured
 to persist across process images.
 
-If a sequence of ports is already installed with the (factor-local/parameter)&<#install.Parameters.identifier[identifier]>, it
+If a sequence of ports is already installed with the (invalid/unknown)&<#identifier>, it
 will be extended.
 
 

@@ -629,7 +629,7 @@ Yield a list of combinations using a mask
 		- `undocumented`
 	/element/
 		- (source/area)`506 1 510 41`
-(signature)`test_combinations(test, S, P)`
+(signature)`test_combinations(test)`
 
 
 [ test_strict ]

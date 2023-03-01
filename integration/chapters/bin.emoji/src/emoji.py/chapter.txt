@@ -2,7 +2,7 @@
 	/type/
 		module
 	/element/
-		- (source/area)`1 1 95 0`
+		- (source/area)`1 1 109 0`
 Render SVG data-IRIs for representing emoji as icons.
 
 
@@ -59,7 +59,7 @@ Render SVG data-IRIs for representing emoji as icons.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`18 1 25 1`
+		- (source/area)`18 1 26 1`
 #!source
 	restricted = {
 		'--stdin': ('field-replace', True, 'read-stdin'),
@@ -68,17 +68,29 @@ Render SVG data-IRIs for representing emoji as icons.
 		# base64 default, lowercase to "disable".
 		'-b': ('field-replace', 'base64', 'escape'),
 		'-B': ('field-replace', 'percent', 'escape'),
+		'--xml': ('field-replace', 'none', 'escape'),
 	}
 
-[ icon ]
+[ texticon ]
 ! CONTROL:
 	/type/
 		function
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`27 1 31 23`
-(signature)`icon(text, size, delta, position, ns)`
+		- (source/area)`28 1 32 23`
+(signature)`texticon(text)`
+
+
+[ reference ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`34 1 38 24`
+(signature)`reference(href)`
 
 
 [ percent_escape ]
@@ -88,7 +100,7 @@ Render SVG data-IRIs for representing emoji as icons.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`33 1 36 9`
+		- (source/area)`40 1 43 9`
 (signature)`percent_escape(s)`
 
 
@@ -99,7 +111,7 @@ Render SVG data-IRIs for representing emoji as icons.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`38 1 41 24`
+		- (source/area)`45 1 48 24`
 (signature)`base64_escapes()`
 
 
@@ -110,7 +122,7 @@ Render SVG data-IRIs for representing emoji as icons.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`43 1 95 19`
+		- (source/area)`50 1 109 19`
 		- (type/syntax)`process.Exit`
 		- (type/remote/factor-element)&<http://fault.io/python/system/process#Exit[fault.system.process.Exit]>
 		

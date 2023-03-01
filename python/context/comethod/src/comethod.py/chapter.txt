@@ -149,7 +149,7 @@ their aliases.
 		- (type/syntax)`types.MethodType`
 		- (type/none/invalid)&<http://fault.io/dev/null[types.MethodType]>
 		
-(signature)`__cobind__(self, *key, Method)`
+(signature)`__cobind__(self, *key)`
 
 
 [ object >> comethod ]
@@ -163,5 +163,5 @@ their aliases.
 		
 (signature)`comethod(self, *key)`
 
-Select the method associated with the given (factor-local/parameter)&<#object.comethod.Parameters.key[key]>.
+Select the method associated with the given (invalid/unknown)&<#key>.
 

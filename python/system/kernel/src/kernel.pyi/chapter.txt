@@ -186,7 +186,7 @@ A file descriptor identifying the source of events.
 		property
 	/element/
 		- (source/area)`74 2 80 10`
-For I/O, a file descriptor identifying the cited opposition of (factor-local/property)&<#Event.port[port]>.
+For I/O, a file descriptor identifying the cited opposition of (invalid/unknown)&<#port>.
 May be `-1`.
 
 
@@ -201,8 +201,8 @@ May be `-1`.
 		
 Position independent access to the file descriptor identifying the receive side.
 
-For (id)`io-transmit` events, this is the (factor-local/property)&<#Event.correlation[correlation]>.
-For (id)`io-receive` events, this is the (factor-local/property)&<#Event.port[port]>.
+For (id)`io-transmit` events, this is the (invalid/unknown)&<#correlation>.
+For (id)`io-receive` events, this is the (invalid/unknown)&<#port>.
 
 
 [ Event >> output ]
@@ -216,8 +216,8 @@ For (id)`io-receive` events, this is the (factor-local/property)&<#Event.port[po
 		
 Position independent access to the file descriptor identifying the transmit side.
 
-For (id)`io-transmit` events, this is the (factor-local/property)&<#Event.port[port]>.
-For (id)`io-receive` events, this is the (factor-local/property)&<#Event.correlation[correlation]>.
+For (id)`io-transmit` events, this is the (invalid/unknown)&<#port>.
+For (id)`io-receive` events, this is the (invalid/unknown)&<#correlation>.
 
 
 [ Event >> meta_actuate ]
@@ -226,7 +226,7 @@ For (id)`io-receive` events, this is the (factor-local/property)&<#Event.correla
 		classmethod
 	/element/
 		- (source/area)`99 2 105 13`
-(signature)`meta_actuate(Class, reference)`
+(signature)`meta_actuate(Class)`
 
 Construct an event that will occur upon the actuation of the (factor-local/class)&<#Scheduler[Scheduler]>
 instance that the operation was dispatched on.
@@ -238,7 +238,7 @@ instance that the operation was dispatched on.
 		classmethod
 	/element/
 		- (source/area)`106 2 112 13`
-(signature)`meta_terminate(Class, reference)`
+(signature)`meta_terminate(Class)`
 
 Construct an event that will occur upon the termination of the (factor-local/class)&<#Scheduler[Scheduler]>
 instance that the operation was dispatched on.
@@ -261,7 +261,7 @@ Construct an event that is known to never occur.
 		classmethod
 	/element/
 		- (source/area)`119 2 124 13`
-(signature)`time(Class, nanosecond, microsecond, millisecond, second)`
+(signature)`time(Class, nanosecond)`
 
 Construct an event that will occur after the specified duration occurs.
 
@@ -272,11 +272,11 @@ Construct an event that will occur after the specified duration occurs.
 		classmethod
 	/element/
 		- (source/area)`125 2 132 13`
-(signature)`process_exit(Class, pid, procfd)`
+(signature)`process_exit(Class, pid)`
 
 Construct an event identifier that will occur when process identified
-by (factor-local/parameter)&<#Event.process_exit.Parameters.pid[pid]> exits. If (factor-local/parameter)&<#Event.process_exit.Parameters.procfd[procfd]> is given on supporting systems, it will
-be used instead of allocating one or using the (factor-local/parameter)&<#Event.process_exit.Parameters.pid[pid]> directly.
+by (invalid/unknown)&<#pid> exits. If (invalid/unknown)&<#procfd> is given on supporting systems, it will
+be used instead of allocating one or using the (invalid/unknown)&<#pid> directly.
 
 
 [ Event >> process_signal ]
@@ -285,11 +285,11 @@ be used instead of allocating one or using the (factor-local/parameter)&<#Event.
 		classmethod
 	/element/
 		- (source/area)`133 2 140 13`
-(signature)`process_signal(Class, signo, sigfd)`
+(signature)`process_signal(Class, signo)`
 
 Construct an event identifier that will occur when the host process
-receives the cited signal. If (factor-local/parameter)&<#Event.process_signal.Parameters.sigfd[sigfd]> is given on supporting systems, it
-will be used instead of allocating one or using the (factor-local/parameter)&<#Event.process_signal.Parameters.signo[signo]> directly.
+receives the cited signal. If (invalid/unknown)&<#sigfd> is given on supporting systems, it
+will be used instead of allocating one or using the (invalid/unknown)&<#signo> directly.
 
 
 [ Event >> fs_status ]
@@ -298,10 +298,10 @@ will be used instead of allocating one or using the (factor-local/parameter)&<#E
 		classmethod
 	/element/
 		- (source/area)`141 2 147 13`
-(signature)`fs_status(Class, path, fileno)`
+(signature)`fs_status(Class, path)`
 
 Construct an event identifier that will occur when the status of the
-file identified by (factor-local/parameter)&<#Event.fs_status.Parameters.path[path]>, or (factor-local/parameter)&<#Event.fs_status.Parameters.fileno[fileno]>, has changed.
+file identified by (invalid/unknown)&<#path>, or (invalid/unknown)&<#fileno>, has changed.
 
 
 [ Event >> fs_delta ]
@@ -310,10 +310,10 @@ file identified by (factor-local/parameter)&<#Event.fs_status.Parameters.path[pa
 		classmethod
 	/element/
 		- (source/area)`148 2 154 13`
-(signature)`fs_delta(Class, path, fileno)`
+(signature)`fs_delta(Class, path)`
 
 Construct an event identifier that will occur when the file identified
-by (factor-local/parameter)&<#Event.fs_delta.Parameters.path[path]>, or (factor-local/parameter)&<#Event.fs_delta.Parameters.fileno[fileno]>, is modified.
+by (invalid/unknown)&<#path>, or (invalid/unknown)&<#fileno>, is modified.
 
 
 [ Event >> fs_void ]
@@ -322,10 +322,10 @@ by (factor-local/parameter)&<#Event.fs_delta.Parameters.path[path]>, or (factor-
 		classmethod
 	/element/
 		- (source/area)`155 2 161 13`
-(signature)`fs_void(Class, path, fileno)`
+(signature)`fs_void(Class, path)`
 
 Construct an event identifier that will occur when the file identified
-by (factor-local/parameter)&<#Event.fs_void.Parameters.path[path]>, or (factor-local/parameter)&<#Event.fs_void.Parameters.fileno[fileno]>, is deleted.
+by (invalid/unknown)&<#path>, or (invalid/unknown)&<#fileno>, is deleted.
 
 
 [ Event >> io_transmit ]
@@ -334,10 +334,10 @@ by (factor-local/parameter)&<#Event.fs_void.Parameters.path[path]>, or (factor-l
 		classmethod
 	/element/
 		- (source/area)`162 2 168 13`
-(signature)`io_transmit(Class, port, correlation)`
+(signature)`io_transmit(Class, port)`
 
 Event identifier that occurs when writes are possible
-on the given (factor-local/parameter)&<#Event.io_transmit.Parameters.port[port]> file descriptor.
+on the given (invalid/unknown)&<#port> file descriptor.
 
 
 [ Event >> io_receive ]
@@ -346,10 +346,10 @@ on the given (factor-local/parameter)&<#Event.io_transmit.Parameters.port[port]>
 		classmethod
 	/element/
 		- (source/area)`169 2 173 5`
-(signature)`io_receive(Class, port, correlation)`
+(signature)`io_receive(Class, port)`
 
 Event identifier that occurs when reads are possible
-on the given (factor-local/parameter)&<#Event.io_receive.Parameters.port[port]> file descriptor.
+on the given (invalid/unknown)&<#port> file descriptor.
 
 
 [ Link ]
@@ -374,7 +374,7 @@ An operation record to be dispatched by a (factor-local/class)&<#Scheduler[Sched
 		- `undocumented`
 	/element/
 		- (source/area)`180 2 183 10`
-(signature)`__new__(context)`
+(signature)`__new__()`
 
 
 [ Link >> context ]
@@ -553,12 +553,12 @@ The count of events that were received from the kernel.
 		
 (signature)`interrupt(self)`
 
-Interrupt a blocking (factor-local/method)&<#Scheduler.wait[wait]> call.
-Nothing if there is no concurrent (factor-local/method)&<#Scheduler.wait[wait]> call.
+Interrupt a blocking (invalid/unknown)&<#wait> call.
+Nothing if there is no concurrent (invalid/unknown)&<#wait> call.
 
 [ >> Returns ]
 
-Whether or not a (factor-local/method)&<#Scheduler.wait[wait]> call was interrupted.
+Whether or not a (invalid/unknown)&<#wait> call was interrupted.
 (invalid/unknown)&<#None> if the (factor-local/class)&<#Scheduler[Scheduler]> instance is closed.
 
 
@@ -574,7 +574,7 @@ Whether or not a (factor-local/method)&<#Scheduler.wait[wait]> call was interrup
 (signature)`execute(self, trap)`
 
 Execute enqueued tasks, FIFO.
-Concurrent calls with (factor-local/method)&<#Scheduler.wait[wait]> are prohibited.
+Concurrent calls with (invalid/unknown)&<#wait> are prohibited.
 
 [ >> Parameters ]
 
@@ -585,7 +585,7 @@ Concurrent calls with (factor-local/method)&<#Scheduler.wait[wait]> are prohibit
 /(parameter)`trap`/
 	
 	Callable performed when a task raises an exception.
-	(factor-local/parameter)&<#Scheduler.execute.Parameters.trap[trap]> will be given the task and a normalized exception instance.
+	(invalid/unknown)&<#trap> will be given the task and a normalized exception instance.
 
 	If (invalid/unknown)&<#None>, exceptions will be discarded.
 
@@ -636,5 +636,5 @@ Remove the operation from the scheduled set.
 		- (source/area)`301 2 304 5`
 (signature)`enqueue(self, task)`
 
-Schedule the (factor-local/parameter)&<#Scheduler.enqueue.Parameters.task[task]> for immediate execution by (factor-local/method)&<#Scheduler.execute[execute]>.
+Schedule the (invalid/unknown)&<#task> for immediate execution by (invalid/unknown)&<#execute>.
 

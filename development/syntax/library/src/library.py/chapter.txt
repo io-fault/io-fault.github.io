@@ -331,7 +331,7 @@ if any are necessary.
 		- `undocumented`
 	/element/
 		- (source/area)`69 1 87 13`
-(signature)`print_except_with_crlf(exc, val, tb, altbuffer, file)`
+(signature)`print_except_with_crlf(exc, val, tb)`
 
 
 [ contexts ]
@@ -406,7 +406,7 @@ if any are necessary.
 		function
 	/element/
 		- (source/area)`137 1 146 35`
-(signature)`_subresource(sub, ascent, WR)`
+(signature)`_subresource(sub, ascent)`
 
 Currently, this is being misused and will be eliminated once
 a proper processor hierarchy is established.
@@ -567,7 +567,7 @@ Calculate the selection from the vector position.
 		method
 	/element/
 		- (source/area)`199 2 208 82`
-(signature)`new(self, indentation, Class, Sequence, String)`
+(signature)`new(self)`
 
 Create and return new Field Sequence.
 
@@ -578,9 +578,9 @@ Create and return new Field Sequence.
 		method
 	/element/
 		- (source/area)`210 2 244 87`
-(signature)`open_vertical(self, il, position, quantity, temporary)`
+(signature)`open_vertical(self, il, position, quantity)`
 
-Create a quantity of new lines at the cursor (factor-local/parameter)&<#Fields.open_vertical.Parameters.position[position]>.
+Create a quantity of new lines at the cursor (invalid/unknown)&<#position>.
 
 
 [ Fields >> indentation ]
@@ -591,7 +591,7 @@ Create a quantity of new lines at the cursor (factor-local/parameter)&<#Fields.o
 		- (source/area)`246 2 257 28`
 (signature)`indentation(self, seq)`
 
-Return the indentation level of the sequence, (factor-local/parameter)&<#Fields.indentation.Parameters.seq[seq]>, or zero if none.
+Return the indentation level of the sequence, (invalid/unknown)&<#seq>, or zero if none.
 
 
 [ Fields >> has_content ]
@@ -622,7 +622,7 @@ Identify the range where the given condition remains true.
 		method
 	/element/
 		- (source/area)`301 2 338 30`
-(signature)`indentation_block(self, direction, initial, level, level_adjustment)`
+(signature)`indentation_block(self, direction, initial)`
 
 Detect indentation blocks.
 
@@ -633,7 +633,7 @@ Detect indentation blocks.
 		method
 	/element/
 		- (source/area)`340 2 366 26`
-(signature)`contiguous_block(self, direction, initial, level, level_adjustment)`
+(signature)`contiguous_block(self, direction, initial)`
 
 Detect a contiguous block at the designated indentation level.
 If the initial item is empty, the adjacent empty items will be selected,
@@ -646,7 +646,7 @@ if the initial item is not empty, only populated items will be selected.
 		method
 	/element/
 		- (source/area)`368 2 392 22`
-(signature)`block(self, index, ilevel, minimum, maximum)`
+(signature)`block(self, index)`
 
 Indentation block ranges.
 
@@ -668,7 +668,7 @@ Outer indentation block ranges.
 		method
 	/element/
 		- (source/area)`403 2 430 22`
-(signature)`adjacent(self, index, level, minimum, maximum)`
+(signature)`adjacent(self, index)`
 
 Adjacent block ranges.
 
@@ -681,7 +681,7 @@ Adjacent block ranges.
 		- `undocumented`
 	/element/
 		- (source/area)`432 2 440 22`
-(signature)`horizontal_select(self, path, field, offset)`
+(signature)`horizontal_select(self, path, field)`
 
 
 [ Fields >> select ]
@@ -726,7 +726,7 @@ Unconditionally update the vertical index and unit without scrolling.
 		method
 	/element/
 		- (source/area)`495 2 523 22`
-(signature)`update_vertical_state(self, force)`
+(signature)`update_vertical_state(self)`
 
 Update the cache of the position based on the vector.
 
@@ -828,7 +828,7 @@ Alter the vertical and horizontal query to search.
 		- `undocumented`
 	/element/
 		- (source/area)`708 2 709 21`
-(signature)`event_delta_undo(self, event, quantity)`
+(signature)`event_delta_undo(self, event)`
 
 
 [ Fields >> event_delta_redo ]
@@ -839,7 +839,7 @@ Alter the vertical and horizontal query to search.
 		- `undocumented`
 	/element/
 		- (source/area)`711 2 712 21`
-(signature)`event_delta_redo(self, event, quantity)`
+(signature)`event_delta_redo(self, event)`
 
 
 [ Fields >> event_delta_map ]
@@ -859,7 +859,7 @@ Map the the following commands across the vertical range.
 		staticmethod
 	/element/
 		- (source/area)`722 2 729 25`
-(signature)`tab(v, size)`
+(signature)`tab(v)`
 
 Draw a tab for display.
 
@@ -870,7 +870,7 @@ Draw a tab for display.
 		staticmethod
 	/element/
 		- (source/area)`730 2 735 37`
-(signature)`visible_tab(v, size)`
+(signature)`visible_tab(v)`
 
 Draw a visible tab for display. Used to construct the characters
 for an indented line that does not have content.
@@ -882,7 +882,7 @@ for an indented line that does not have content.
 		method
 	/element/
 		- (source/area)`737 2 761 60`
-(signature)`comment(self, iterator, color)`
+(signature)`comment(self, iterator)`
 
 Draw the content of a comment.
 
@@ -893,7 +893,7 @@ Draw the content of a comment.
 		method
 	/element/
 		- (source/area)`763 2 793 59`
-(signature)`quotation(self, q, iterator, color, cell)`
+(signature)`quotation(self, q, iterator)`
 
 Draw the quotation.
 
@@ -904,7 +904,7 @@ Draw the quotation.
 		method
 	/element/
 		- (source/area)`795 2 863 62`
-(signature)`specify(self, line, Indent, Constant, quotation, indent_cv, theme, defaultcell, defaulttraits, isinstance, len, hasattr, iter, next)`
+(signature)`specify(self, line)`
 
 Yield the WordSpecifications for constructing a Phrase.
 
@@ -917,7 +917,7 @@ Yield the WordSpecifications for constructing a Phrase.
 		- `undocumented`
 	/element/
 		- (source/area)`865 2 866 40`
-(signature)`phrase(self, line, Constructor)`
+(signature)`phrase(self, line)`
 
 
 [ Fields >> calculate_horizontal_start_indicator ]
@@ -939,7 +939,7 @@ Yield the WordSpecifications for constructing a Phrase.
 		- `undocumented`
 	/element/
 		- (source/area)`872 2 875 54`
-(signature)`calculate_horizontal_stop_indicator(self, empty, text, style, positions, combining_wedge)`
+(signature)`calculate_horizontal_stop_indicator(self, empty, text, style, positions)`
 
 
 [ Fields >> calculate_horizontal_position_indicator ]
@@ -950,7 +950,7 @@ Yield the WordSpecifications for constructing a Phrase.
 		- `undocumented`
 	/element/
 		- (source/area)`877 2 913 46`
-(signature)`calculate_horizontal_position_indicator(self, empty, text, style, positions, vc, fs, xc, range_color_palette, cursortext)`
+(signature)`calculate_horizontal_position_indicator(self, empty, text, style, positions)`
 
 
 [ Fields >> horizontal_transforms ]
@@ -974,7 +974,7 @@ Yield the WordSpecifications for constructing a Phrase.
 		method
 	/element/
 		- (source/area)`922 2 975 50`
-(signature)`collect_horizontal_range(self, line, positions, len, whole, address)`
+(signature)`collect_horizontal_range(self, line, positions)`
 
 Collect the fragments of the horizontal range from the Phrase.
 
@@ -987,7 +987,7 @@ Nearly identical to (project-local/factor-element)&<sequence#Segments.select[met
 		method
 	/element/
 		- (source/area)`977 2 1036 15`
-(signature)`collect_horizontal_positions(self, phrase, positions, len, list, set, iter, range, tuple)`
+(signature)`collect_horizontal_positions(self, phrase, positions)`
 
 Collect the style information and characters at the requested positions
 of the rendered unit.
@@ -1001,7 +1001,7 @@ Used to draw range boundaries and the cursor.
 		method
 	/element/
 		- (source/area)`1038 2 1073 30`
-(signature)`clear_horizontal_indicators(self, cells)`
+(signature)`clear_horizontal_indicators(self)`
 
 Called to clear the horizontal indicators for line switches.
 
@@ -1012,7 +1012,7 @@ Called to clear the horizontal indicators for line switches.
 		method
 	/element/
 		- (source/area)`1075 2 1198 36`
-(signature)`render_horizontal_indicators(self, unit, horizontal, names, starmap, cells, list, len, tuple, zip)`
+(signature)`render_horizontal_indicators(self, unit, horizontal)`
 
 Changes the horizontal position indicators surrounding the portal.
 
@@ -1078,7 +1078,7 @@ Move the current vertical position to the given index.
 		method
 	/element/
 		- (source/area)`1238 2 1276 24`
-(signature)`render(self, start, stop, len, max, min, list, range, zip)`
+(signature)`render(self, start, stop)`
 
 Render the given line range into the terminal view.
 
@@ -1091,7 +1091,7 @@ Returns the relative line range to be rendered.
 		method
 	/element/
 		- (source/area)`1278 2 1292 11`
-(signature)`update(self, start, stop, slice)`
+(signature)`update(self, start, stop)`
 
 Recognize the dirty range, update the local page,
 and emit the printed page to the terminal.
@@ -1105,7 +1105,7 @@ and emit the printed page to the terminal.
 		- `undocumented`
 	/element/
 		- (source/area)`1294 2 1311 12`
-(signature)`refresh(self, start, len, range, list, min, islice)`
+(signature)`refresh(self)`
 
 
 [ Fields >> insignificant ]
@@ -1125,11 +1125,11 @@ Determines whether the field as having insignifianct content.
 		method
 	/element/
 		- (source/area)`1319 2 1378 23`
-(signature)`rotate(self, direction, horizontal, unit, sequence, quantity, filtered, iter, cells)`
+(signature)`rotate(self, direction, horizontal, unit, sequence, quantity)`
 
 Select the next *significant* field, skipping the given quantity.
 
-The optional (factor-local/parameter)&<#Fields.rotate.Parameters.filtered[filtered]> parameter will be given candidate fields
+The optional (invalid/unknown)&<#filtered> parameter will be given candidate fields
 that can be skipped.
 
 
@@ -1218,7 +1218,7 @@ Remove a vertical range from the refraction.
 		- (source/area)`1433 2 1444 76`
 (signature)`translocate_vertical(self, index, units, target, start, stop)`
 
-Relocate the vertical range to the (factor-local/parameter)&<#Fields.translocate_vertical.Parameters.target[target]> position.
+Relocate the vertical range to the (invalid/unknown)&<#target> position.
 
 
 [ Fields >> translocate_horizontal ]
@@ -1293,7 +1293,7 @@ Remove the range of the last axis.
 		method
 	/element/
 		- (source/area)`1644 2 1668 37`
-(signature)`event_select_horizontal_line(self, event, quantity)`
+(signature)`event_select_horizontal_line(self, event)`
 
 Alter the horizontal range to be the length of the current vertical index.
 
@@ -1304,7 +1304,7 @@ Alter the horizontal range to be the length of the current vertical index.
 		method
 	/element/
 		- (source/area)`1670 2 1678 22`
-(signature)`event_select_vertical_line(self, event, quantity)`
+(signature)`event_select_vertical_line(self, event)`
 
 Alter the vertical range to contain a single line.
 
@@ -1329,7 +1329,7 @@ Modify the horizontal range to field beneath the position indicator.
 (signature)`event_select_absolute(self, target, ax, ay)`
 
 Map the absolute position to the relative position and
-perform the (factor-local/method)&<#Fields.event_select_series[event_select_series]> operation.
+perform the (invalid/unknown)&<#event_select_series> operation.
 
 
 [ Fields >> event_select_series ]
@@ -1338,7 +1338,7 @@ perform the (factor-local/method)&<#Fields.event_select_series[event_select_seri
 		method
 	/element/
 		- (source/area)`1748 2 1797 22`
-(signature)`event_select_series(self, event, Indentation)`
+(signature)`event_select_series(self, event)`
 
 Expand the horizontal range to include fields separated by an access, routing, delimiter.
 
@@ -1351,7 +1351,7 @@ Expand the horizontal range to include fields separated by an access, routing, d
 		- `undocumented`
 	/element/
 		- (source/area)`1799 2 1801 79`
-(signature)`event_select_block(self, event, quantity)`
+(signature)`event_select_block(self, event)`
 
 
 [ Fields >> event_select_outerblock ]
@@ -1362,7 +1362,7 @@ Expand the horizontal range to include fields separated by an access, routing, d
 		- `undocumented`
 	/element/
 		- (source/area)`1803 2 1805 50`
-(signature)`event_select_outerblock(self, event, quantity)`
+(signature)`event_select_outerblock(self, event)`
 
 
 [ Fields >> event_select_adjacent ]
@@ -1373,7 +1373,7 @@ Expand the horizontal range to include fields separated by an access, routing, d
 		- `undocumented`
 	/element/
 		- (source/area)`1807 2 1809 80`
-(signature)`event_select_adjacent(self, event, quantity)`
+(signature)`event_select_adjacent(self, event)`
 
 
 [ Fields >> event_place_start ]
@@ -1437,7 +1437,7 @@ Expand the horizontal range to include fields separated by an access, routing, d
 		method
 	/element/
 		- (source/area)`1844 2 1853 22`
-(signature)`event_navigation_vertical_forward(self, event, quantity)`
+(signature)`event_navigation_vertical_forward(self, event)`
 
 Move the position to the next line.
 
@@ -1448,7 +1448,7 @@ Move the position to the next line.
 		method
 	/element/
 		- (source/area)`1855 2 1864 22`
-(signature)`event_navigation_vertical_backward(self, event, quantity)`
+(signature)`event_navigation_vertical_backward(self, event)`
 
 Move the position to the previous line.
 
@@ -1459,7 +1459,7 @@ Move the position to the previous line.
 		method
 	/element/
 		- (source/area)`1866 2 1878 22`
-(signature)`event_navigation_vertical_paging(self, event, quantity)`
+(signature)`event_navigation_vertical_paging(self, event)`
 
 Modify the vertical range query for paging.
 
@@ -1472,7 +1472,7 @@ Modify the vertical range query for paging.
 		- `undocumented`
 	/element/
 		- (source/area)`1880 2 1889 22`
-(signature)`event_navigation_vertical_sections(self, event, quantity)`
+(signature)`event_navigation_vertical_sections(self, event)`
 
 
 [ Fields >> event_window_horizontal_forward ]
@@ -1481,7 +1481,7 @@ Modify the vertical range query for paging.
 		method
 	/element/
 		- (source/area)`1891 2 1898 17`
-(signature)`event_window_horizontal_forward(self, event, quantity, point)`
+(signature)`event_window_horizontal_forward(self, event)`
 
 Adjust the horizontal position of the window forward by the given quantity.
 
@@ -1492,7 +1492,7 @@ Adjust the horizontal position of the window forward by the given quantity.
 		method
 	/element/
 		- (source/area)`1900 2 1907 17`
-(signature)`event_window_horizontal_backward(self, event, quantity, point)`
+(signature)`event_window_horizontal_backward(self, event)`
 
 Adjust the horizontal position of the window forward by the given quantity.
 
@@ -1503,7 +1503,7 @@ Adjust the horizontal position of the window forward by the given quantity.
 		method
 	/element/
 		- (source/area)`1909 2 1917 17`
-(signature)`event_window_vertical_forward(self, event, quantity, point)`
+(signature)`event_window_vertical_forward(self, event)`
 
 Adjust the vertical position of the window forward by the
 given quantity.
@@ -1515,7 +1515,7 @@ given quantity.
 		method
 	/element/
 		- (source/area)`1919 2 1927 17`
-(signature)`event_window_vertical_backward(self, event, quantity, point)`
+(signature)`event_window_vertical_backward(self, event)`
 
 Adjust the vertical position of the window backward by the
 given quantity. (Moves view port).
@@ -1527,7 +1527,7 @@ given quantity. (Moves view port).
 		method
 	/element/
 		- (source/area)`1929 2 1937 17`
-(signature)`event_window_vertical_forward_jump(self, event, quantity, point)`
+(signature)`event_window_vertical_forward_jump(self, event)`
 
 Adjust the vertical position of the window forward by the
 given quantity.
@@ -1539,7 +1539,7 @@ given quantity.
 		method
 	/element/
 		- (source/area)`1939 2 1947 17`
-(signature)`event_window_vertical_backward_jump(self, event, quantity, point)`
+(signature)`event_window_vertical_backward_jump(self, event)`
 
 Adjust the vertical position of the window backward by the
 given quantity. (Moves view port).
@@ -1595,7 +1595,7 @@ Relocate the vertical position to the start of the vertical range.
 		method
 	/element/
 		- (source/area)`2057 2 2063 87`
-(signature)`event_navigation_horizontal_forward(self, event, quantity)`
+(signature)`event_navigation_horizontal_forward(self, event)`
 
 Move the selection to the next significant field.
 
@@ -1606,7 +1606,7 @@ Move the selection to the next significant field.
 		method
 	/element/
 		- (source/area)`2065 2 2071 104`
-(signature)`event_navigation_horizontal_backward(self, event, quantity)`
+(signature)`event_navigation_horizontal_backward(self, event)`
 
 Move the selection to the previous significant field.
 
@@ -1642,7 +1642,7 @@ Horizontally move the cursor to the end of the range.
 		- `undocumented`
 	/element/
 		- (source/area)`2126 2 2132 22`
-(signature)`event_navigation_forward_character(self, event, quantity)`
+(signature)`event_navigation_forward_character(self, event)`
 
 
 [ Fields >> event_control_space ]
@@ -1664,7 +1664,7 @@ Horizontally move the cursor to the end of the range.
 		- `undocumented`
 	/element/
 		- (source/area)`2135 2 2141 22`
-(signature)`event_navigation_backward_character(self, event, quantity)`
+(signature)`event_navigation_backward_character(self, event)`
 
 
 [ Fields >> event_control_backspace ]
@@ -1684,7 +1684,7 @@ Horizontally move the cursor to the end of the range.
 		method
 	/element/
 		- (source/area)`2144 2 2149 69`
-(signature)`indentation_adjustments(self, unit)`
+(signature)`indentation_adjustments(self)`
 
 Construct a string of tabs reprsenting the indentation of the given unit.
 
@@ -1695,7 +1695,7 @@ Construct a string of tabs reprsenting the indentation of the given unit.
 		method
 	/element/
 		- (source/area)`2151 2 2174 22`
-(signature)`event_navigation_jump_character(self, event, quantity)`
+(signature)`event_navigation_jump_character(self, event)`
 
 Horizontally move the cursor to the character in the event.
 
@@ -1706,7 +1706,7 @@ Horizontally move the cursor to the character in the event.
 		method
 	/element/
 		- (source/area)`2176 2 2200 22`
-(signature)`select_void(self, linerange, direction)`
+(signature)`select_void(self, linerange)`
 
 Select the first empty line without indentation.
 
@@ -1805,7 +1805,7 @@ Get the indentation level of the line at the current vertical position.
 		method
 	/element/
 		- (source/area)`2264 2 2271 22`
-(signature)`event_open_behind(self, event, quantity)`
+(signature)`event_open_behind(self, event)`
 
 Open a new vertical behind the current vertical position.
 
@@ -1816,7 +1816,7 @@ Open a new vertical behind the current vertical position.
 		method
 	/element/
 		- (source/area)`2273 2 2283 22`
-(signature)`event_open_ahead(self, event, quantity)`
+(signature)`event_open_ahead(self, event)`
 
 Open a new vertical ahead of the current vertical position.
 
@@ -1838,7 +1838,7 @@ Open a newline between the line at the current position with greater indentation
 		method
 	/element/
 		- (source/area)`2314 2 2320 22`
-(signature)`event_edit_return(self, event, quantity)`
+(signature)`event_edit_return(self, event)`
 
 Open a newline while in edit mode.
 
@@ -1882,7 +1882,7 @@ Substitute the horizontal selection with previous substitution later.
 		method
 	/element/
 		- (source/area)`2369 2 2392 32`
-(signature)`line_insert_characters(self, vertical, line, horizontal, characters, isinstance, StringField)`
+(signature)`line_insert_characters(self, vertical, line, horizontal, characters)`
 
 Insert characters at the horizontal focus.
 
@@ -1893,7 +1893,7 @@ Insert characters at the horizontal focus.
 		method
 	/element/
 		- (source/area)`2394 2 2420 32`
-(signature)`insert_characters(self, characters, isinstance, StringField)`
+(signature)`insert_characters(self, characters)`
 
 Insert characters at the horizontal focus.
 
@@ -1906,7 +1906,7 @@ Insert characters at the horizontal focus.
 		- (source/area)`2422 2 2456 10`
 (signature)`delete_characters(self, quantity)`
 
-Delete the (factor-local/parameter)&<#Fields.delete_characters.Parameters.quantity[quantity]> of characters from the horizontal focus.
+Delete the (invalid/unknown)&<#quantity> of characters from the horizontal focus.
 
 
 [ Fields >> insert_lines ]
@@ -1915,9 +1915,9 @@ Delete the (factor-local/parameter)&<#Fields.delete_characters.Parameters.quanti
 		method
 	/element/
 		- (source/area)`2458 2 2491 25`
-(signature)`insert_lines(self, index, lines, Sequence)`
+(signature)`insert_lines(self, index, lines)`
 
-Insert the given (factor-local/parameter)&<#Fields.insert_lines.Parameters.lines[lines]> at the absolute vertical (factor-local/parameter)&<#Fields.insert_lines.Parameters.index[index]>.
+Insert the given (invalid/unknown)&<#lines> at the absolute vertical (invalid/unknown)&<#index>.
 
 [ >> Parameters ]
 
@@ -2043,7 +2043,7 @@ Delete all characters between the current position and the end of the line.
 		method
 	/element/
 		- (source/area)`2665 2 2672 6`
-(signature)`event_delta_delete_backward_adjacent_class(self, event, classify)`
+(signature)`event_delta_delete_backward_adjacent_class(self, event)`
 
 Delete the characters before the position indicator
 until the class changes. Or, delete the previous word.
@@ -2055,7 +2055,7 @@ until the class changes. Or, delete the previous word.
 		method
 	/element/
 		- (source/area)`2674 2 2680 6`
-(signature)`event_delta_delete_forward_adjacent_class(self, event, classify)`
+(signature)`event_delta_delete_forward_adjacent_class(self, event)`
 
 Delete the characters after the position until the class changes.
 
@@ -2168,7 +2168,7 @@ Insert a literal space.
 		method
 	/element/
 		- (source/area)`2761 2 2776 35`
-(signature)`event_delta_indent_increment(self, event, quantity)`
+(signature)`event_delta_indent_increment(self, event)`
 
 Increment indentation of the current line.
 
@@ -2179,7 +2179,7 @@ Increment indentation of the current line.
 		method
 	/element/
 		- (source/area)`2778 2 2793 35`
-(signature)`event_delta_indent_decrement(self, event, quantity)`
+(signature)`event_delta_indent_decrement(self, event)`
 
 Decrement the indentation of the current line.
 
@@ -2190,7 +2190,7 @@ Decrement the indentation of the current line.
 		method
 	/element/
 		- (source/area)`2795 2 2800 53`
-(signature)`event_delta_indent_void(self, event, quantity)`
+(signature)`event_delta_indent_void(self, event)`
 
 Remove all indentation from the line.
 
@@ -2236,7 +2236,7 @@ Display the structure of the current unit to the transcript.
 		- `undocumented`
 	/element/
 		- (source/area)`2821 2 2827 23`
-(signature)`event_delta_delete_backward(self, event, quantity)`
+(signature)`event_delta_delete_backward(self, event)`
 
 
 [ Fields >> event_delta_delete_forward ]
@@ -2247,7 +2247,7 @@ Display the structure of the current unit to the transcript.
 		- `undocumented`
 	/element/
 		- (source/area)`2829 2 2835 23`
-(signature)`event_delta_delete_forward(self, event, quantity)`
+(signature)`event_delta_delete_forward(self, event)`
 
 
 [ Fields >> event_copy ]
@@ -2289,7 +2289,7 @@ Join the current line with the following.
 		method
 	/element/
 		- (source/area)`2900 2 2909 34`
-(signature)`unit_class(self, index, len)`
+(signature)`unit_class(self, index)`
 
 Get the corresponding line class for the index.
 
@@ -2333,7 +2333,7 @@ Paste cache contents before the current vertical position.
 		method
 	/element/
 		- (source/area)`2926 2 2952 15`
-(signature)`indent(self, sequence, quantity, ignore_empty)`
+(signature)`indent(self, sequence)`
 
 Increase or decrease the indentation level of the given sequence.
 
@@ -2358,7 +2358,7 @@ Go to a specific vertical index.
 		method
 	/element/
 		- (source/area)`2965 2 2970 35`
-(signature)`read(self, quantity, whence, line_separator)`
+(signature)`read(self)`
 
 Read string data from the refraction relative to its cursor position
 and selected vertical range.
@@ -2370,10 +2370,10 @@ and selected vertical range.
 		method
 	/element/
 		- (source/area)`2972 2 2984 63`
-(signature)`write(self, string, line_separator, Sequence)`
+(signature)`write(self, string, line_separator)`
 
 Write the given string at the current position. The string will be split
-by the (factor-local/parameter)&<#Fields.write.Parameters.line_separator[line_separator]> and processed independently
+by the (invalid/unknown)&<#line_separator> and processed independently
 
 [ >> Parameters ]
 
@@ -2413,7 +2413,7 @@ by the (factor-local/parameter)&<#Fields.write.Parameters.line_separator[line_se
 		- `undocumented`
 	/element/
 		- (source/area)`2989 2 2991 48`
-(signature)`paste(self, index, cache)`
+(signature)`paste(self, index)`
 
 
 [ Fields >> focus ]
@@ -2482,7 +2482,7 @@ Fields based line editor.
 		- `undocumented`
 	/element/
 		- (source/area)`3033 2 3045 46`
-(signature)`__init__(self, line_class)`
+(signature)`__init__(self)`
 
 
 [ Lines >> serialize ]
@@ -2491,9 +2491,9 @@ Fields based line editor.
 		method
 	/element/
 		- (source/area)`3047 2 3061 13`
-(signature)`serialize(self, write, chunk_size, encoding)`
+(signature)`serialize(self, write)`
 
-Serialize the Refraction's content into the given (factor-local/parameter)&<#Lines.serialize.Parameters.write[write]> function.
+Serialize the Refraction's content into the given (invalid/unknown)&<#write> function.
 
 
 [ Lines >> event_edit_return ]
@@ -2582,7 +2582,7 @@ The status line above the console prompt.
 		- `undocumented`
 	/element/
 		- (source/area)`3085 2 3087 21`
-(signature)`specify(self, unit, getattr)`
+(signature)`specify(self, unit)`
 
 
 [ Status >> refraction_changed ]
@@ -2776,7 +2776,7 @@ Select the shell state set used to execute processes in the given session.
 		method
 	/element/
 		- (source/area)`3218 2 3267 29`
-(signature)`command_open(self, source, type, mechanism, encoding)`
+(signature)`command_open(self, source)`
 
 Open a new refraction using the identified source.
 
@@ -3007,7 +3007,7 @@ Manage the state of mouse key presses and scroll events.
 		method
 	/element/
 		- (source/area)`3471 2 3488 10`
-(signature)`scroll(self, refraction, timestamp, event, Event)`
+(signature)`scroll(self, refraction, timestamp, event)`
 
 Record the scroll event for later propagation after counts have accumulated.
 
@@ -3029,7 +3029,7 @@ Record the scroll event for later propagation after counts have accumulated.
 		- `undocumented`
 	/element/
 		- (source/area)`3492 2 3516 15`
-(signature)`flush_scroll_events(self, ref, Event)`
+(signature)`flush_scroll_events(self)`
 
 
 [ IDeviceState >> key_delta ]
@@ -3120,7 +3120,7 @@ refractions are associated with panes that make up the total screen.
 		- (source/area)`3611 2 3645 44`
 (signature)`display_refraction(self, pane, refraction)`
 
-Display the (factor-local/parameter)&<#Console.display_refraction.Parameters.refraction[refraction]> on the designated visible pane index.
+Display the (invalid/unknown)&<#refraction> on the designated visible pane index.
 
 
 [ Console >> pane_verticals ]
@@ -3162,7 +3162,7 @@ Return the refraction that contains the given point.
 		method
 	/element/
 		- (source/area)`3730 2 3783 51`
-(signature)`frame(self, offset, color, nomap)`
+(signature)`frame(self, offset)`
 
 Draw the frame of the console. Vertical separators and horizontal.
 
@@ -3193,7 +3193,7 @@ Draw the frame of the console. Vertical separators and horizontal.
 		- `undocumented`
 	/element/
 		- (source/area)`3785 2 3896 15`
-(signature)`set_position_indicators(self, refraction, colors, range_color_palette, vprecede, vproceed, vwedges, hproceed, hprecede, zip, bytearray)`
+(signature)`set_position_indicators(self, refraction)`
 
 
 [ Console >> clear_position_indicators ]
@@ -3202,7 +3202,7 @@ Draw the frame of the console. Vertical separators and horizontal.
 		method
 	/element/
 		- (source/area)`3898 2 4000 15`
-(signature)`clear_position_indicators(self, refraction, v_line, h_line, h_intersection, h_bottom_left, h_bottom_right, color, bytearray, set, range)`
+(signature)`clear_position_indicators(self, refraction)`
 
 Clear the position indicators on the frame.
 
@@ -3215,7 +3215,7 @@ Clear the position indicators on the frame.
 		- `undocumented`
 	/element/
 		- (source/area)`4002 2 4008 25`
-(signature)`suspend(self, link)`
+(signature)`suspend(self)`
 
 
 [ Console >> delta ]
@@ -3224,7 +3224,7 @@ Clear the position indicators on the frame.
 		method
 	/element/
 		- (source/area)`4010 2 4028 25`
-(signature)`delta(self, link)`
+(signature)`delta(self)`
 
 The terminal window changed in size. Get the new dimensions and refresh the entire
 screen.
@@ -3316,7 +3316,7 @@ Toggle the focusing of the prompt.
 		method
 	/element/
 		- (source/area)`4150 2 4184 19`
-(signature)`event_pane_rotate_refraction(self, event, direction)`
+(signature)`event_pane_rotate_refraction(self, event)`
 
 Display the next refraction in the current working pane according to
 the persistent rotation state.
@@ -3361,7 +3361,7 @@ Select the previous pane horizontally. If on the first pane, select the last one
 		method
 	/element/
 		- (source/area)`4209 2 4306 22`
-(signature)`f_transfer(self, event, source, sto, sto_soon, trap, list, tuple)`
+(signature)`f_transfer(self, event)`
 
 Process key events received from the device.
 
@@ -3405,7 +3405,7 @@ Process key events received from the device.
 		function
 	/element/
 		- (source/area)`4326 1 4346 56`
-(signature)`thread_bytes_output(flow, queue, tty, bytearray)`
+(signature)`thread_bytes_output(flow, queue, tty)`
 
 Thread transformer function receiving display transactions and writing to the terminal.
 
@@ -3416,7 +3416,7 @@ Thread transformer function receiving display transactions and writing to the te
 		function
 	/element/
 		- (source/area)`4348 1 4369 13`
-(signature)`input_transformed(flow, queue, tty, maximum_read, partial)`
+(signature)`input_transformed(flow, queue, tty)`
 
 Thread transformer function translating input to Character events for (factor-local/class)&<#Console[Console]>.
 
@@ -3427,7 +3427,7 @@ Thread transformer function translating input to Character events for (factor-lo
 		function
 	/element/
 		- (source/area)`4371 1 4382 33`
-(signature)`thread_bytes_input(flow, queue, tty, maximum_read, partial)`
+(signature)`thread_bytes_input(flow, queue, tty)`
 
 Bytes input read loop minimizing time spent out of (none/invalid)&<http://fault.io/dev/null[os.read]>.
 

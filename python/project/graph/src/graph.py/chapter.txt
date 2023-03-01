@@ -124,7 +124,7 @@ State object for processing projects in dependency order.
 		- (source/area)`117 2 126 37`
 (signature)`__init__(self)`
 
-Allocate instance; follow with (factor-local/method)&<#Queue.extend[extend]>.
+Allocate instance; follow with (invalid/unknown)&<#extend>.
 
 
 [ Queue >> extend ]
@@ -137,7 +137,7 @@ Allocate instance; follow with (factor-local/method)&<#Queue.extend[extend]>.
 		
 (signature)`extend(self, context)`
 
-Extend the queue using the projects contained within (factor-local/parameter)&<#Queue.extend.Parameters.context[context]>.
+Extend the queue using the projects contained within (invalid/unknown)&<#context>.
 
 Returns any out-of-context requirements.
 
@@ -164,7 +164,7 @@ finished and the total number of projects.
 
 Note the projects as being processed.
 
-Returns instance for chaining with (factor-local/method)&<#Queue.take[take]>.
+Returns instance for chaining with (invalid/unknown)&<#take>.
 
 
 [ Queue >> take ]
@@ -188,7 +188,7 @@ Retrieve enqueued project IIDs in graph order.
 		- (source/area)`195 2 201 21`
 (signature)`interrupt(self)`
 
-Halt the queue causing (factor-local/method)&<#Queue.terminal[terminal]> to return (invalid/unknown)&<#True> and (factor-local/method)&<#Queue.take[take]> to return empty lists.
+Halt the queue causing (invalid/unknown)&<#terminal> to return (invalid/unknown)&<#True> and (invalid/unknown)&<#take> to return empty lists.
 The internal state will be discarded, but entries may still be finished.
 
 
@@ -203,7 +203,7 @@ The internal state will be discarded, but entries may still be finished.
 		
 (signature)`terminal(self)`
 
-Whether or not the queue has released all projects via (factor-local/method)&<#Queue.take[take]>.
+Whether or not the queue has released all projects via (invalid/unknown)&<#take>.
 
-This can return (invalid/unknown)&<#True> prior to a final (factor-local/method)&<#Queue.finish[finish]> call.
+This can return (invalid/unknown)&<#True> prior to a final (invalid/unknown)&<#finish> call.
 

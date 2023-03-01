@@ -39,7 +39,7 @@ Terminal Context Stack display for scrolling region capable emulators.
 		function
 	/element/
 		- (source/area)`8 1 20 14`
-(signature)`_close(screen, om, sm)`
+(signature)`_close(screen)`
 
 Construct a reset string to be used at exit.
 
@@ -50,7 +50,7 @@ Construct a reset string to be used at exit.
 		function
 	/element/
 		- (source/area)`22 1 56 19`
-(signature)`setup(screen, lines, width, atexit, type, destruct, Context)`
+(signature)`setup(screen, lines)`
 
 Initialize the terminal for use with a scrolling region.
 Constructs a device using (invalid/unknown)&<#control.setup> and a (context-local/factor-element)&<fault.terminal/matrix#Context[fault.terminal.matrix.Context]>

@@ -67,10 +67,10 @@ a no-op and performs empty functions in order to allow existing code to work.
 		function
 	/element/
 		- (source/area)`54 1 62 26`
-(signature)`location(pid, pattern)`
+(signature)`location(pid)`
 
 Given a process identifier, return the location of the corefile
-based on the (factor-local/parameter)&<#location.Parameters.pattern[pattern]>.
+based on the (invalid/unknown)&<#pattern>.
 
 
 [ constraint ]
@@ -79,7 +79,7 @@ based on the (factor-local/parameter)&<#location.Parameters.pattern[pattern]>.
 		function
 	/element/
 		- (source/area)`63 1 109 27`
-(signature)`constraint(image_size_limit, getrlimit, setrlimit, rtype)`
+(signature)`constraint(image_size_limit)`
 
 Constrain core dumps during the execution of the context. Useful for managing tests that
 may dump core. Alternatively, (factor-local/data)&<#enabled[enabled]> and (factor-local/data)&<#disabled[disabled]> can be used as shorthands for clarity.

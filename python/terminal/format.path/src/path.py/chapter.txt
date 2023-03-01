@@ -73,7 +73,7 @@ Color formatting for file paths, URIs, and timestamps.
 		- `undocumented`
 	/element/
 		- (source/area)`38 1 42 14`
-(signature)`route_is_link(route, islink)`
+(signature)`route_is_link(route)`
 
 
 [ _f_route_factor_type ]
@@ -84,7 +84,7 @@ Color formatting for file paths, URIs, and timestamps.
 		- `undocumented`
 	/element/
 		- (source/area)`44 1 57 21`
-(signature)`_f_route_factor_type(route, ia_link)`
+(signature)`_f_route_factor_type(route)`
 
 
 [ _f_route_path ]
@@ -95,7 +95,7 @@ Color formatting for file paths, URIs, and timestamps.
 		- `undocumented`
 	/element/
 		- (source/area)`59 1 78 20`
-(signature)`_f_route_path(root, route, _is_link)`
+(signature)`_f_route_path(root, route)`
 
 
 [ f_route_path ]
@@ -117,7 +117,7 @@ Color formatting for file paths, URIs, and timestamps.
 		- `undocumented`
 	/element/
 		- (source/area)`85 1 104 45`
-(signature)`f_route_identifier(route, warning)`
+(signature)`f_route_identifier(route)`
 
 
 [ f_route_absolute ]
@@ -126,7 +126,7 @@ Color formatting for file paths, URIs, and timestamps.
 		function
 	/element/
 		- (source/area)`106 1 131 97`
-(signature)`f_route_absolute(route, warning)`
+(signature)`f_route_absolute(route)`
 
 Format the absolute path of the given route.
 

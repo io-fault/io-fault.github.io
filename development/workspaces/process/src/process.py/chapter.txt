@@ -2,7 +2,7 @@
 	/type/
 		module
 	/element/
-		- (source/area)`1 1 300 0`
+		- (source/area)`1 1 304 0`
 Factor processing operations for build, test, delineate, and analyze.
 
 
@@ -212,7 +212,7 @@ with (none/invalid)&<http://fault.io/dev/null[fault.project.graph.Queue]>.
 		- (source/area)`56 1 92 36`
 (signature)`plan_testing(wkenv, prefixes, intention, argv, pcontext, identifier)`
 
-Create an invocation for processing the project from (factor-local/parameter)&<#plan_testing.Parameters.pcontext[pcontext]> selected using (factor-local/parameter)&<#plan_testing.Parameters.identifier[identifier]>.
+Create an invocation for processing the project from (invalid/unknown)&<#pcontext> selected using (invalid/unknown)&<#identifier>.
 
 
 [ plan_processing ]
@@ -223,7 +223,7 @@ Create an invocation for processing the project from (factor-local/parameter)&<#
 		- `undocumented`
 	/element/
 		- (source/area)`95 1 114 29`
-(signature)`plan_processing(link)`
+(signature)`plan_processing()`
 
 
 [ construct ]
@@ -233,7 +233,7 @@ Create an invocation for processing the project from (factor-local/parameter)&<#
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`116 1 144 45`
+		- (source/area)`116 1 146 45`
 (signature)`construct(wkenv, command, intentions, relevel, limit, control, projectvector)`
 
 
@@ -244,7 +244,7 @@ Create an invocation for processing the project from (factor-local/parameter)&<#
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`146 1 180 46`
+		- (source/area)`148 1 184 46`
 (signature)`coherency(wkenv, intentions, types, limit, control, pjv, argv)`
 
 
@@ -255,7 +255,7 @@ Create an invocation for processing the project from (factor-local/parameter)&<#
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`182 1 210 37`
+		- (source/area)`186 1 214 37`
 (signature)`configure(wkenv, lanes, relevel, argv)`
 
 
@@ -266,8 +266,8 @@ Create an invocation for processing the project from (factor-local/parameter)&<#
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`212 1 241 42`
-(signature)`check_keywords(keywords, name, Table)`
+		- (source/area)`216 1 245 42`
+(signature)`check_keywords(keywords, name)`
 
 
 [ build ]
@@ -277,7 +277,7 @@ Create an invocation for processing the project from (factor-local/parameter)&<#
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`243 1 249 68`
+		- (source/area)`247 1 253 68`
 (signature)`build(wkenv, intentions, relevel, lanes, argv)`
 
 
@@ -288,7 +288,7 @@ Create an invocation for processing the project from (factor-local/parameter)&<#
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`251 1 256 76`
+		- (source/area)`255 1 260 76`
 (signature)`delineate(wkenv, relevel, lanes, argv)`
 
 
@@ -299,7 +299,7 @@ Create an invocation for processing the project from (factor-local/parameter)&<#
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`258 1 265 72`
+		- (source/area)`262 1 269 72`
 (signature)`analyze(wkenv, relevel, lanes, argv)`
 
 
@@ -310,7 +310,7 @@ Create an invocation for processing the project from (factor-local/parameter)&<#
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`267 1 277 71`
+		- (source/area)`271 1 281 71`
 (signature)`measure(wkenv, intentions, relevel, lanes, argv)`
 
 
@@ -321,6 +321,6 @@ Create an invocation for processing the project from (factor-local/parameter)&<#
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`279 1 300 80`
+		- (source/area)`283 1 304 80`
 (signature)`test(wkenv, intentions, relevel, lanes, argv)`
 

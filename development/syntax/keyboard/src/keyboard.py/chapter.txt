@@ -66,7 +66,7 @@ container.
 		- `undocumented`
 	/element/
 		- (source/area)`35 2 38 23`
-(signature)`__init__(self, default)`
+(signature)`__init__(self)`
 
 
 [ Mapping >> assign ]
@@ -75,7 +75,7 @@ container.
 		method
 	/element/
 		- (source/area)`40 2 50 27`
-(signature)`assign(self, character, context, action, parameters)`
+(signature)`assign(self, character, context, action)`
 
 Assign the character sequence to action.
 
@@ -154,7 +154,7 @@ Return the action associated with the given keystroke.
 		- `undocumented`
 	/element/
 		- (source/area)`65 1 66 28`
-(signature)`lit(x, mods)`
+(signature)`lit(x)`
 
 
 [ ctl ]
@@ -165,7 +165,7 @@ Return the action associated with the given keystroke.
 		- `undocumented`
 	/element/
 		- (source/area)`67 1 68 28`
-(signature)`ctl(x, mods)`
+(signature)`ctl(x)`
 
 
 [ nav ]
@@ -176,7 +176,7 @@ Return the action associated with the given keystroke.
 		- `undocumented`
 	/element/
 		- (source/area)`69 1 70 31`
-(signature)`nav(x, mods)`
+(signature)`nav(x)`
 
 
 [ trap ]

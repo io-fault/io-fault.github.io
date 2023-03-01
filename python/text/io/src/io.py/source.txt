@@ -1,7 +1,7 @@
 """
 # Primary access to kleptic text parsing and serialization functions.
 
-#!python
+#!syntax/python
 	from fault.text import io as txt
 	src = "[ Section ]\\nParagraph.\\n"
 	element_tree = txt.structure_chapter_text(src)

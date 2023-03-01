@@ -68,7 +68,7 @@ Array qualities
 		function
 	/element/
 		- (source/area)`23 1 38 28`
-(signature)`test_array_set(test, count)`
+(signature)`test_array_set(test)`
 
 Sanity/smoke test validating the capacity to create some number of arrays.
 

@@ -81,7 +81,7 @@ Information units for human readable sizes.
 		- `undocumented`
 	/element/
 		- (source/area)`28 1 30 46`
-(signature)`identify(boundary, size, search)`
+(signature)`identify(boundary, size)`
 
 
 [ metric ]

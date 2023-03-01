@@ -58,7 +58,7 @@ Functions for manipulating the product index used to define the set of factors.
 		- (source/area)`24 1 41 12`
 (signature)`index(pd, statement)`
 
-Update the index according the requested (factor-local/parameter)&<#index.Parameters.statement[statement]>.
+Update the index according the requested (invalid/unknown)&<#statement>.
 
 
 [ connecting ]

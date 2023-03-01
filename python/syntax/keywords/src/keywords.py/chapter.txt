@@ -94,7 +94,7 @@ Data structure describing the elements of a Keyword Oriented Syntax.
 
 Empty strings present in any of these sets will usually refer to the End of Line.
 This notation is primarily intended for area exclusions for supporting line comments,
-but (factor-local/property)&<#Profile.literals[literals]> and (factor-local/property)&<#Profile.enclosures[enclosures]> may also use them to represent the beginning or end of a line.
+but (invalid/unknown)&<#literals> and (invalid/unknown)&<#enclosures> may also use them to represent the beginning or end of a line.
 
 While (factor-local/class)&<#Profile[Profile]> is a tuple subclass, indexes should *not* be used to access members.
 
@@ -119,7 +119,7 @@ While (factor-local/class)&<#Profile[Profile]> is a tuple subclass, indexes shou
 		- `undocumented`
 	/element/
 		- (source/area)`51 2 71 10`
-(signature)`from_keywords_v1(Class, exclusions, literals, enclosures, routers, operations, terminators, **wordtypes)`
+(signature)`from_keywords_v1(Class, **wordtypes)`
 
 
 [ Profile >> words ]
@@ -250,9 +250,9 @@ by multiple threads.
 
 [ > Engineering ]
 
-This is essentially a tightly coupled partial application for (factor-local/method)&<#Parser.tokenize[tokenize]>
-and (factor-local/method)&<#Parser.delimit[delimit]>. (factor-local/classmethod)&<#Parser.from_profile[from_profile]> builds necessary parameters using a (factor-local/class)&<#Profile[Profile]>
-instance and the internal constructor, (factor-local/method)&<#Parser.__init__[__init__]>, makes them available to the methods.
+This is essentially a tightly coupled partial application for (invalid/unknown)&<#tokenize>
+and (invalid/unknown)&<#delimit>. (invalid/unknown)&<#from_profile> builds necessary parameters using a (factor-local/class)&<#Profile[Profile]>
+instance and the internal constructor, (invalid/unknown)&<#__init__>, makes them available to the methods.
 
 Applications should create and cache an instance for a given language.
 
@@ -268,7 +268,7 @@ Applications should create and cache an instance for a given language.
 Primary constructor for (factor-local/class)&<#Parser[Parser]>.
 
 Instances should usually be cached when repeat use is expected as
-some amount of preparation is performed by (factor-local/classmethod)&<#Parser.from_profile[from_profile]>.
+some amount of preparation is performed by (invalid/unknown)&<#from_profile>.
 
 
 [ Parser >> __init__ ]
@@ -277,11 +277,11 @@ some amount of preparation is performed by (factor-local/classmethod)&<#Parser.f
 		method
 	/element/
 		- (source/area)`256 2 280 82`
-(signature)`__init__(self, profile, opset, opmap, delimiter, optable, exits, classify_id, classify_op, spaces, opcachesize)`
+(signature)`__init__(self, profile, opset, opmap, delimiter, optable, exits, classify_id, classify_op)`
 
 ! WARNING: Do not use directly.
 	The initializer's parameters are subject to change.
-	(factor-local/classmethod)&<#Parser.from_profile[from_profile]> should be used to build instances.
+	(invalid/unknown)&<#from_profile> should be used to build instances.
 
 
 [ Parser >> process_lines ]
@@ -292,10 +292,10 @@ some amount of preparation is performed by (factor-local/classmethod)&<#Parser.f
 		- (source/area)`282 2 297 59`
 		- (type/syntax)`typing.Iterable[typing.Iterable[Tokens]]`
 		
-(signature)`process_lines(self, lines, eol)`
+(signature)`process_lines(self, lines)`
 
 Process lines using context resets;
-(factor-local/method)&<#Parser.tokenize[tokenize]> and (factor-local/method)&<#Parser.delimit[delimit]> multiple (factor-local/parameter)&<#Parser.process_lines.Parameters.lines[lines]> resetting the context at the end of each line.
+(invalid/unknown)&<#tokenize> and (invalid/unknown)&<#delimit> multiple (invalid/unknown)&<#lines> resetting the context at the end of each line.
 
 This is the recommended method for extracting tokens from a file for syntax documents
 that are expected to restate line context, have inaccurate profiles, or are incomplete.
@@ -311,10 +311,10 @@ The produced iterators may be ran out of order as no parsing state is shared acr
 		- (source/area)`299 2 316 41`
 		- (type/syntax)`typing.Iterable[typing.Iterable[Tokens]]`
 		
-(signature)`process_document(self, lines, eol)`
+(signature)`process_document(self, lines)`
 
 Process lines of a complete source code file using continuous context;
-(factor-local/method)&<#Parser.tokenize[tokenize]> and (factor-local/method)&<#Parser.delimit[delimit]> multiple lines maintaining the context across all (factor-local/parameter)&<#Parser.process_document.Parameters.lines[lines]>.
+(invalid/unknown)&<#tokenize> and (invalid/unknown)&<#delimit> multiple lines maintaining the context across all (invalid/unknown)&<#lines>.
 
 This is the recommended method for extracting tokens from a file for syntax documents
 that are expected to *not* restate line context *and* have accurate profiles.
@@ -331,7 +331,7 @@ instances.
 		- (source/area)`318 2 322 30`
 (signature)`allocstack(self)`
 
-Allocate context stack for use with (factor-local/method)&<#Parser.delimit[delimit]>.
+Allocate context stack for use with (invalid/unknown)&<#delimit>.
 
 
 [ Parser >> delimit ]
@@ -343,16 +343,16 @@ Allocate context stack for use with (factor-local/method)&<#Parser.delimit[delim
 		- (type/syntax)`Tokens`
 		- (type/factor-local/data)&<#Tokens[Tokens]>
 		
-(signature)`delimit(self, context, tokens, eol, restate)`
+(signature)`delimit(self, context, tokens)`
 
 Insert switch tokens into an iteration of tokens marking the
 boundaries of expressions, comments and quotations.
 
-(factor-local/parameter)&<#Parser.delimit.Parameters.context[context]> is manipulated during the iteration and maintains the
-nested state of comments. (factor-local/method)&<#Parser.allocstack[allocstack]> may be used to allocate an
+(invalid/unknown)&<#context> is manipulated during the iteration and maintains the
+nested state of comments. (invalid/unknown)&<#allocstack> may be used to allocate an
 initial state.
 
-This is a relatively low-level method; (factor-local/method)&<#Parser.process_lines[process_lines]> or (factor-local/method)&<#Parser.process_document[process_document]>
+This is a relatively low-level method; (invalid/unknown)&<#process_lines> or (invalid/unknown)&<#process_document>
 should normally be used.
 
 
@@ -365,12 +365,12 @@ should normally be used.
 		- (type/syntax)`Tokens`
 		- (type/factor-local/data)&<#Tokens[Tokens]>
 		
-(signature)`tokenize(self, line, len, zip, list, varsplit)`
+(signature)`tokenize(self, line)`
 
 Tokenize a string of syntax according to the profile.
 
 Direct use of this is not recommended as boundaries are not signalled.
-(factor-local/method)&<#Parser.process_lines[process_lines]> or (factor-local/method)&<#Parser.process_document[process_document]> should be used.
+(invalid/unknown)&<#process_lines> or (invalid/unknown)&<#process_document> should be used.
 The raw tokens, however, are usable in contexts where boundary information is
 not desired or is not accurate enough for an application's use.
 

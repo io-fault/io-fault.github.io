@@ -70,7 +70,7 @@ have had their reports trapped in.
 (signature)`factor_records(root)`
 
 Scan the tree for data files and select the segment
-from (factor-local/parameter)&<#factor_records.Parameters.root[root]> that can be used to identify the origin of
+from (invalid/unknown)&<#root> that can be used to identify the origin of
 the record.
 
 Yields the path and segment identifying the data record.
@@ -106,7 +106,7 @@ Scan each data set for capture records.
 		- `undocumented`
 	/element/
 		- (source/area)`54 1 57 19`
-(signature)`integrate_syntax_profiles(path, sources, rpath)`
+(signature)`integrate_syntax_profiles(path, sources)`
 
 
 [ integrate_coverage_telemetry ]

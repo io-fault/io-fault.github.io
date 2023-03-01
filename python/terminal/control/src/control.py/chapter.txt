@@ -151,11 +151,11 @@ to allow applications to refer to and define groups of symbols.
 		- (type/syntax)`bytes`
 		- (type/invalid/unknown)&<#bytes>
 		
-(signature)`configuration(ttype, settings, options)`
+(signature)`configuration(ttype, settings)`
 
-Construct the initialization and restoration sequences for the given (factor-local/parameter)&<#configuration.Parameters.settings[settings]>.
+Construct the initialization and restoration sequences for the given (invalid/unknown)&<#settings>.
 
-(factor-local/parameter)&<#configuration.Parameters.settings[settings]> is normally retrieved by selecting an entry from (factor-local/data)&<#ctypes[ctypes]>.
+(invalid/unknown)&<#settings> is normally retrieved by selecting an entry from (factor-local/data)&<#ctypes[ctypes]>.
 
 
 [ ctypes ]
@@ -223,7 +223,7 @@ Construct the initialization and restoration sequences for the given (factor-loc
 		- `undocumented`
 	/element/
 		- (source/area)`175 1 196 59`
-(signature)`_terminal_ctl_exit(tty, ctype, write, restoration, limit)`
+(signature)`_terminal_ctl_exit(tty, ctype, write, restoration)`
 
 
 [ _terminal_ctl_init ]
@@ -234,7 +234,7 @@ Construct the initialization and restoration sequences for the given (factor-loc
 		- `undocumented`
 	/element/
 		- (source/area)`198 1 210 6`
-(signature)`_terminal_ctl_init(tty, ctype, mode, write, preparation, limit)`
+(signature)`_terminal_ctl_init(tty, ctype, mode, write, preparation)`
 
 
 [ setup ]
@@ -243,12 +243,12 @@ Construct the initialization and restoration sequences for the given (factor-loc
 		function
 	/element/
 		- (source/area)`212 1 286 35`
-(signature)`setup(ctype, ttype, destruct, ttydevice, atprepare, atrestore, limit)`
+(signature)`setup(ctype, ttype, destruct, ttydevice, atprepare, atrestore)`
 
 Construct a device instance and functions for preparing the terminal and
-kernel line discipline for the given (factor-local/parameter)&<#setup.Parameters.ctype[ctype]>.
+kernel line discipline for the given (invalid/unknown)&<#ctype>.
 
-The given (factor-local/parameter)&<#setup.Parameters.ttydevice[ttydevice]> or the one created will be returned along with two
+The given (invalid/unknown)&<#ttydevice> or the one created will be returned along with two
 functions that can be used to prepare and restore the terminal state.
 
 [ > Parameters ]
@@ -273,7 +273,7 @@ functions that can be used to prepare and restore the terminal state.
 /(parameter)`destruct`/
 	
 	Clear the module's globals ((project-local/unknown)&<control>) and remove it from (invalid/unknown)&<#sys.modules> after writing
-	the initialization string to (factor-local/parameter)&<#setup.Parameters.ttydevice[ttydevice.fileno]> and registering the atexit handler.
+	the initialization string to (invalid/unknown)&<#ttydevice.fileno> and registering the atexit handler.
 	For most applications using (project-local/unknown)&<control>, (factor-local/function)&<#setup[setup]> is called once and the module
 	is never used again. By default, this is (invalid/unknown)&<#False> and the module is retained in memory.
 

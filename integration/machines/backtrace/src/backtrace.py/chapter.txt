@@ -39,7 +39,7 @@ Tool interfaces for extracting information from corefiles.
 		function
 	/element/
 		- (source/area)`8 1 17 70`
-(signature)`debug(corefile, executable)`
+(signature)`debug(corefile)`
 
 Load the debugger for a given core file, `corefile` and `executable`.
 This will operate interactively and return the status code on exit.
@@ -81,7 +81,7 @@ By default, the executable is the Python executable.
 		function
 	/element/
 		- (source/area)`29 1 49 14`
-(signature)`snapshot(corefile, executable)`
+(signature)`snapshot(corefile)`
 
 Get a text dump of the corefile from either lldb or gdb.
 

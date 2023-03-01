@@ -153,7 +153,7 @@ High-level append.
 		
 (signature)`trap_execution_error(errctl, errctx, task)`
 
-Handle error cases using (factor-local/parameter)&<#trap_execution_error.Parameters.errctl[errctl]> and (invalid/unknown)&<#PyErr_WriteUnraisable>
+Handle error cases using (invalid/unknown)&<#errctl> and (invalid/unknown)&<#PyErr_WriteUnraisable>
 when it or other critical operations fail.
 
 

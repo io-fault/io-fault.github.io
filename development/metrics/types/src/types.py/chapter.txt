@@ -50,7 +50,7 @@ three different perspectives in order to collect the information provided by
 /subject/
 	The factor being multiplied by (invalid/unknown)&<#count>.
 	Often, the subject is calculated or recalculated by dividing the
-	total with the count. (factor-local/property)&<#Product.rational[rational]> should be used in order to obtain an
+	total with the count. (invalid/unknown)&<#rational> should be used in order to obtain an
 	accurate (invalid/unknown)&<#subject> value.
 
 /count/
@@ -64,7 +64,7 @@ three different perspectives in order to collect the information provided by
 		classmethod
 	/element/
 		- (source/area)`35 2 43 13`
-(signature)`from_vectors(Class, totals, counts, sum)`
+(signature)`from_vectors(Class, totals, counts)`
 
 Construct an aggregate from a pair of vectors of totals and counts.
 
@@ -321,5 +321,5 @@ Provides access to the total and count of values.
 		- `undocumented`
 	/element/
 		- (source/area)`225 2 242 3`
-(signature)`summary(self, deviation)`
+(signature)`summary(self)`
 

@@ -122,7 +122,7 @@ Context managing a *single* sequence of (project-local/factor-element)&<flows#Ch
 		- (type/syntax)`flows.Terminal`
 		- (type/project-local/factor-element)&<flows#Terminal[fault.kernel.flows.Terminal]>
 		
-(signature)`io_flow(self, series, Terminal)`
+(signature)`io_flow(self, series)`
 
 Connect a sequence of (project-local/factor-element)&<flows#Channel[fault.kernel.flows.Channel]> instances to a new (project-local/factor-element)&<flows#Terminal[fault.kernel.flows.Terminal]>
 instance that signals the (factor-local/class)&<#Transfer[Transfer]> when the Flow has completed.
@@ -306,7 +306,7 @@ Essentially, an internal method.
 		method
 	/element/
 		- (source/area)`142 2 162 21`
-(signature)`i_accept(self, partial)`
+(signature)`i_accept(self)`
 
 Accept a sequence of requests from a client configured remote endpoint.
 Routes the initiation parameter with callbacks to connect input and output.
@@ -334,7 +334,7 @@ Used by routers employed by clients to get the response of a protocol transactio
 		method
 	/element/
 		- (source/area)`175 2 189 32`
-(signature)`i_allocate(self, quantity, partial)`
+(signature)`i_allocate(self)`
 
 Allocate a channel for submitting a request.
 
@@ -385,7 +385,7 @@ used to facilitate arbitrary I/O streams.
 		classmethod
 	/element/
 		- (source/area)`209 2 219 13`
-(signature)`from_endpoint(Class, io, identifier)`
+(signature)`from_endpoint(Class, io)`
 
 Create and initialize an instance with the first transport layer.
 
@@ -421,7 +421,7 @@ Create and initialize an instance with using a stack.
 (signature)`tp_extend(self, entries)`
 
 Extend the transport stack with multiple intermediates.
-This method should only be used prior to (factor-local/method)&<#Transport.tp_connect[tp_connect]>.
+This method should only be used prior to (invalid/unknown)&<#tp_connect>.
 
 
 [ Transport >> tp_append ]
@@ -433,7 +433,7 @@ This method should only be used prior to (factor-local/method)&<#Transport.tp_co
 (signature)`tp_append(self, protocol)`
 
 Extend the transport stack with a single intermediate.
-This method should only be used prior to (factor-local/method)&<#Transport.tp_connect[tp_connect]>.
+This method should only be used prior to (invalid/unknown)&<#tp_connect>.
 
 
 [ Transport >> tp_connect ]
@@ -442,10 +442,10 @@ This method should only be used prior to (factor-local/method)&<#Transport.tp_co
 		method
 	/element/
 		- (source/area)`255 2 291 12`
-(signature)`tp_connect(self, router, protocol, Dispatch, Input, Output)`
+(signature)`tp_connect(self, router, protocol)`
 
 Connect the given mitre series, (invalid/unknown)&<#mitre>, to the configured transport stack.
-Usually called after dispatching an instance created with (factor-local/classmethod)&<#Transport.from_stack[from_stack]>.
+Usually called after dispatching an instance created with (invalid/unknown)&<#from_stack>.
 
 
 [ Transport >> tp_push ]
@@ -592,7 +592,7 @@ accepting sockets from the given listening sockets.
 		- (source/area)`369 2 384 24`
 (signature)`_if_dispatch(self, kports)`
 
-Allocate and dispatch accept flows for the given (factor-local/parameter)&<#Interface._if_dispatch.Parameters.kports[kports]>.
+Allocate and dispatch accept flows for the given (invalid/unknown)&<#kports>.
 
 
 [ Interface >> xact_exit ]
@@ -668,7 +668,7 @@ Application context managing accepted transports.
 		method
 	/element/
 		- (source/area)`417 2 434 34`
-(signature)`cxn_accept(self, packet, chain)`
+(signature)`cxn_accept(self, packet)`
 
 Moving to Sockets. Routing will be handled with flows.
 

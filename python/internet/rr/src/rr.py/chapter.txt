@@ -98,7 +98,7 @@ The canonical prefix to the resources.
 		- (type/syntax)`Vector`
 		- (type/factor-local/data)&<#Vector[Vector]>
 		
-(signature)`indicators(self, root)`
+(signature)`indicators(self)`
 
 
 [ References >> select ]
@@ -142,7 +142,7 @@ Extract the record prefix, qualifiers, and attributes from the header.
 		- `undocumented`
 	/element/
 		- (source/area)`94 1 103 46`
-(signature)`split(text, _filter)`
+(signature)`split(text)`
 
 
 [ structure ]

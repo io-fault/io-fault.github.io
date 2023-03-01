@@ -66,7 +66,7 @@ This special case is used to allow inclusive ranges to properly detect continuit
 		- `undocumented`
 	/element/
 		- (source/area)`22 2 24 46`
-(signature)`from_string(Class, source, Type, delimiter)`
+(signature)`from_string(Class, source)`
 
 
 [ Address >> __str__ ]
@@ -165,7 +165,7 @@ presumption that the address was referring to the end of the previos line.
 	/element/
 		- (source/area)`61 2 71 14`
 The column number identified by the address. (invalid/unknown)&<#None> if the address
-is referring to the end of the (factor-local/property)&<#Address.line[line]>.
+is referring to the end of the (invalid/unknown)&<#line>.
 
 
 [ Address >> normalize_stop ]
@@ -293,7 +293,7 @@ Construct an (factor-local/class)&<#Area[Area]> from the given indexes normalizi
 		classmethod
 	/element/
 		- (source/area)`148 2 175 13`
-(signature)`from_string(Class, string, delimiter)`
+(signature)`from_string(Class, string)`
 
 Construct an (factor-local/class)&<#Area[Area]> from the given string.
 
@@ -306,8 +306,8 @@ Construct an (factor-local/class)&<#Area[Area]> from the given string.
 		- (source/area)`176 2 184 4`
 (signature)`from_line_range(Class, pair)`
 
-Construct an (factor-local/class)&<#Area[Area]> from the inclusive line indexes in (factor-local/parameter)&<#Area.from_line_range.Parameters.pair[pair]>.
-The returned instance guarantees (factor-local/property)&<#Area.vertical[vertical]>.
+Construct an (factor-local/class)&<#Area[Area]> from the inclusive line indexes in (invalid/unknown)&<#pair>.
+The returned instance guarantees (invalid/unknown)&<#vertical>.
 
 
 [ Area >> Slice ]
@@ -332,5 +332,5 @@ The returned instance guarantees (factor-local/property)&<#Area.vertical[vertica
 		
 (signature)`select(self, lines)`
 
-Retrieve the prefix, suffix, and selected lines that are delieanted by the (factor-local/class)&<#Area[Area]>, (factor-local/parameter)&<#Area.select.Parameters.self[self]>.
+Retrieve the prefix, suffix, and selected lines that are delieanted by the (factor-local/class)&<#Area[Area]>, (invalid/unknown)&<#self>.
 

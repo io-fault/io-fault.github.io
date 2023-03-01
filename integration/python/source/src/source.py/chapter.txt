@@ -138,7 +138,7 @@ Python source (AST) processing tools.
 		function
 	/element/
 		- (source/area)`46 1 60 10`
-(signature)`shallow(node, iter_fields, isinstance, list)`
+(signature)`shallow(node)`
 
 (none/invalid)&<http://fault.io/dev/null[ast.iter_child_nodes]> implementation providing path context for node substitution.
 
@@ -149,7 +149,7 @@ Python source (AST) processing tools.
 		function
 	/element/
 		- (source/area)`62 1 73 9`
-(signature)`bottom(tree, listdir, Queue)`
+(signature)`bottom(tree)`
 
 (none/invalid)&<http://fault.io/dev/null[ast.walk]> implementation providing path context for node substitution.
 
@@ -162,7 +162,7 @@ Python source (AST) processing tools.
 		- (source/area)`75 1 80 47`
 (signature)`node_set_address(node, address)`
 
-Set the `lineno` and `col_offset` attributes on the (factor-local/parameter)&<#node_set_address.Parameters.node[node]>.
+Set the `lineno` and `col_offset` attributes on the (invalid/unknown)&<#node>.
 
 
 [ node_remove_docstring ]
@@ -173,7 +173,7 @@ Set the `lineno` and `col_offset` attributes on the (factor-local/parameter)&<#n
 		- (source/area)`82 1 101 22`
 (signature)`node_remove_docstring(container)`
 
-Remove the initial (none/invalid)&<http://fault.io/dev/null[ast.Expr]> node in the body of (factor-local/parameter)&<#node_remove_docstring.Parameters.container[container]> given
+Remove the initial (none/invalid)&<http://fault.io/dev/null[ast.Expr]> node in the body of (invalid/unknown)&<#container> given
 that it has the properties that would identify it as the docstring source.
 
 
@@ -183,13 +183,13 @@ that it has the properties that would identify it as the docstring source.
 		function
 	/element/
 		- (source/area)`103 1 150 48`
-(signature)`associate_siblings(following, nodes, iterate, chain, list, isinstance, hasattr, getattr)`
+(signature)`associate_siblings(following, nodes)`
 
-Associate the child nodes of (factor-local/parameter)&<#associate_siblings.Parameters.nodes[nodes]> with their following
+Associate the child nodes of (invalid/unknown)&<#nodes> with their following
 sibling taking care to communicate the parent's following
 sibling for the final child.
 
-(factor-local/parameter)&<#associate_siblings.Parameters.following[following]> can be (invalid/unknown)&<#None> if the node is at the end of the document.
+(invalid/unknown)&<#following> can be (invalid/unknown)&<#None> if the node is at the end of the document.
 
 
 [ map_tokens ]
@@ -198,7 +198,7 @@ sibling for the final child.
 		function
 	/element/
 		- (source/area)`152 1 167 17`
-(signature)`map_tokens(tokens, STRING)`
+(signature)`map_tokens(tokens)`
 
 Construct a dictionary associating addresses with their corresponding token.
 
@@ -211,7 +211,7 @@ Construct a dictionary associating addresses with their corresponding token.
 		- `undocumented`
 	/element/
 		- (source/area)`169 1 189 13`
-(signature)`count_trailing_insignificant(tokens, OP, NAME)`
+(signature)`count_trailing_insignificant(tokens)`
 
 
 [ identify_boundary ]
@@ -220,7 +220,7 @@ Construct a dictionary associating addresses with their corresponding token.
 		function
 	/element/
 		- (source/area)`191 1 216 35`
-(signature)`identify_boundary(tokens, start, end, OP, NAME)`
+(signature)`identify_boundary(tokens, start, end)`
 
 Narrows the token window by trimming insignificant (whitespace or certain keywords) tokens
 from the list.
@@ -235,7 +235,7 @@ identified following sibling, (factor-local/function)&<#associate_siblings[assoc
 		function
 	/element/
 		- (source/area)`218 1 238 23`
-(signature)`find_terminal(tokens, length, stop, condition, OP)`
+(signature)`find_terminal(tokens, length)`
 
 Find the end of the context tokens.
 
@@ -248,7 +248,7 @@ Find the end of the context tokens.
 		- `undocumented`
 	/element/
 		- (source/area)`240 1 243 14`
-(signature)`find_token(tokens, token_type, enum)`
+(signature)`find_token(tokens, token_type)`
 
 
 [ find_newline ]
@@ -259,7 +259,7 @@ Find the end of the context tokens.
 		- `undocumented`
 	/element/
 		- (source/area)`245 1 248 14`
-(signature)`find_newline(tokens, NEWLINE, enum)`
+(signature)`find_newline(tokens)`
 
 
 [ find_token_with_string ]
@@ -270,7 +270,7 @@ Find the end of the context tokens.
 		- `undocumented`
 	/element/
 		- (source/area)`250 1 253 14`
-(signature)`find_token_with_string(tokens, token_type, string, enum)`
+(signature)`find_token_with_string(tokens, token_type, string)`
 
 
 [ isolate_enclosure ]
@@ -281,7 +281,7 @@ Find the end of the context tokens.
 		- `undocumented`
 	/element/
 		- (source/area)`255 1 266 42`
-(signature)`isolate_enclosure(start, stop, tokens, OP)`
+(signature)`isolate_enclosure(start, stop)`
 
 
 [ isolate_name ]
@@ -290,9 +290,9 @@ Find the end of the context tokens.
 		function
 	/element/
 		- (source/area)`268 1 277 28`
-(signature)`isolate_name(tokens, NAME)`
+(signature)`isolate_name(tokens)`
 
-Return the first NAME token in (factor-local/parameter)&<#isolate_name.Parameters.tokens[tokens]> and remove it along with the
+Return the first NAME token in (invalid/unknown)&<#tokens> and remove it along with the
 ones that preceded it.
 
 
@@ -302,9 +302,9 @@ ones that preceded it.
 		function
 	/element/
 		- (source/area)`279 1 288 28`
-(signature)`isolate_number(tokens, NUMBER)`
+(signature)`isolate_number(tokens)`
 
-Return the first NAME token in (factor-local/parameter)&<#isolate_number.Parameters.tokens[tokens]> and remove it along with the
+Return the first NAME token in (invalid/unknown)&<#tokens> and remove it along with the
 ones that preceded it.
 
 
@@ -316,7 +316,7 @@ ones that preceded it.
 		- `undocumented`
 	/element/
 		- (source/area)`290 1 305 42`
-(signature)`isolate_string(tokens, STRING, enum)`
+(signature)`isolate_string(tokens)`
 
 
 [ isolate ]
@@ -349,7 +349,7 @@ ones that preceded it.
 		function
 	/element/
 		- (source/area)`322 1 334 7`
-(signature)`chain(tokens, nodes, node, address, following, OP)`
+(signature)`chain(tokens, nodes, node, address, following)`
 
 Delineate a chain of nodes that are identified by the same address.
 
@@ -398,7 +398,7 @@ and balancing nesting operators forward.
 		- `undocumented`
 	/element/
 		- (source/area)`383 1 406 36`
-(signature)`_lookup_region(associations, contexts, tokens, tmap, node, list, isinstance)`
+(signature)`_lookup_region(associations, contexts, tokens, tmap, node)`
 
 
 [ join ]
@@ -409,8 +409,8 @@ and balancing nesting operators forward.
 		- (source/area)`408 1 439 17`
 (signature)`join(lookup, nodes)`
 
-Assign the address information provided by (factor-local/parameter)&<#join.Parameters.lookup[lookup]> to the nodes
-generated by the (factor-local/parameter)&<#join.Parameters.nodes[nodes]> iterator.
+Assign the address information provided by (invalid/unknown)&<#lookup> to the nodes
+generated by the (invalid/unknown)&<#nodes> iterator.
 
 
 [ _prepare ]
@@ -421,7 +421,7 @@ generated by the (factor-local/parameter)&<#join.Parameters.nodes[nodes]> iterat
 		- `undocumented`
 	/element/
 		- (source/area)`441 1 456 39`
-(signature)`_prepare(nodes, tokens, filter, identify)`
+(signature)`_prepare(nodes, tokens)`
 
 
 [ shift_column ]
@@ -430,9 +430,9 @@ generated by the (factor-local/parameter)&<#join.Parameters.nodes[nodes]> iterat
 		function
 	/element/
 		- (source/area)`458 1 476 52`
-(signature)`shift_column(lines, ln, co, encoding)`
+(signature)`shift_column(lines, ln, co)`
 
-Adjust the (invalid/unknown)&<#str> column offset, (factor-local/parameter)&<#shift_column.Parameters.co[co]>, to its utf-8 position.
+Adjust the (invalid/unknown)&<#str> column offset, (invalid/unknown)&<#co>, to its utf-8 position.
 
 [ > Parameters ]
 
@@ -442,7 +442,7 @@ Adjust the (invalid/unknown)&<#str> column offset, (factor-local/parameter)&<#sh
 
 /(parameter)`ln`/
 	
-	The line number in (factor-local/parameter)&<#shift_column.Parameters.lines[lines]>.
+	The line number in (invalid/unknown)&<#lines>.
 
 /(parameter)`co`/
 	
@@ -464,8 +464,8 @@ Line number and column offset as a tuple.
 		function
 	/element/
 		- (source/area)`478 1 506 66`
-(signature)`parse(source, path, filter, encoding)`
+(signature)`parse(source, path)`
 
-Parse the given (factor-local/parameter)&<#parse.Parameters.source[source]> creating an (none/invalid)&<http://fault.io/dev/null[ast.Module]> whose child nodes have their exact areas
+Parse the given (invalid/unknown)&<#source> creating an (none/invalid)&<http://fault.io/dev/null[ast.Module]> whose child nodes have their exact areas
 assigned to the `_f_area` attribute.
 

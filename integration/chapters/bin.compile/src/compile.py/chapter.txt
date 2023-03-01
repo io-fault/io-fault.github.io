@@ -2,7 +2,7 @@
 	/type/
 		module
 	/element/
-		- (source/area)`1 1 53 0`
+		- (source/area)`1 1 86 0`
 Compile and archive text factors.
 
 
@@ -69,7 +69,7 @@ Copy the units directory, (factor-local/parameter)&<#archive.Parameters.source[s
 	/type/
 		function
 	/element/
-		- (source/area)`20 1 35 20`
+		- (source/area)`20 1 68 24`
 (signature)`delineate(output, source)`
 
 Parse kleptic text and serialize its element tree as JSON.
@@ -82,7 +82,7 @@ Parse kleptic text and serialize its element tree as JSON.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`37 1 53 19`
+		- (source/area)`70 1 86 19`
 		- (type/syntax)`process.Exit`
 		- (type/remote/factor-element)&<http://fault.io/python/system/process#Exit[fault.system.process.Exit]>
 		

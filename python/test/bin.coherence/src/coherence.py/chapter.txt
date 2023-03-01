@@ -287,7 +287,7 @@ The collection and execution of a series of tests.
 		- `undocumented`
 	/element/
 		- (source/area)`165 2 231 15`
-(signature)`execute(self, test, count)`
+(signature)`execute(self, test)`
 
 
 [ intercept ]

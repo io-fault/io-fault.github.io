@@ -39,5 +39,5 @@
 		- `undocumented`
 	/element/
 		- (source/area)`5 1 23 28`
-(signature)`test_loadall(test, _join, bytes, bool, int)`
+(signature)`test_loadall(test)`
 

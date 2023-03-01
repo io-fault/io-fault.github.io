@@ -12,7 +12,7 @@ Transport protocol implementation for identified data sets.
 		function
 	/element/
 		- (source/area)`5 1 14 14`
-(signature)`prepare(value, separator, Type, Convert)`
+(signature)`prepare(value)`
 
 Convert a value into a form suitable for sequencing.
 
@@ -23,9 +23,9 @@ Convert a value into a form suitable for sequencing.
 		function
 	/element/
 		- (source/area)`16 1 43 11`
-(signature)`isolate(lines, separator)`
+(signature)`isolate(lines)`
 
-Separate (factor-local/parameter)&<#isolate.Parameters.lines[lines]> into parts that can be processed by (factor-local/function)&<#identify[identify]>.
+Separate (invalid/unknown)&<#lines> into parts that can be processed by (factor-local/function)&<#identify[identify]>.
 
 
 [ identify ]
@@ -34,7 +34,7 @@ Separate (factor-local/parameter)&<#isolate.Parameters.lines[lines]> into parts 
 		function
 	/element/
 		- (source/area)`45 1 62 18`
-(signature)`identify(iseq, separator)`
+(signature)`identify(iseq)`
 
 Identify the slots and content of a transmission processed by (factor-local/function)&<#isolate[isolate]>.
 
@@ -47,7 +47,7 @@ Identify the slots and content of a transmission processed by (factor-local/func
 		- `undocumented`
 	/element/
 		- (source/area)`64 1 65 43`
-(signature)`structure(lines, separator)`
+(signature)`structure(lines)`
 
 
 [ sequence ]
@@ -58,5 +58,5 @@ Identify the slots and content of a transmission processed by (factor-local/func
 		- `undocumented`
 	/element/
 		- (source/area)`67 1 80 11`
-(signature)`sequence(pairs, empty)`
+(signature)`sequence(pairs)`
 

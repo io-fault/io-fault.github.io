@@ -45,9 +45,9 @@ Convert a fragment to a key-value pair.
 		- (source/area)`20 1 27 69`
 (signature)`interpret_set_items(items)`
 
-Get the set of unordered list based properties from the (factor-local/parameter)&<#interpret_set_items.Parameters.items[items]>.
+Get the set of unordered list based properties from the (invalid/unknown)&<#items>.
 
-Returns the number of items present in the initial set found in (invalid/unknown)&<#nodes>,
+Returns the number of items present in the initial set found in (invalid/unknown)&<#items>,
 and the set of sole paragraph fragments contained by each item.
 
 
@@ -57,13 +57,13 @@ and the set of sole paragraph fragments contained by each item.
 		function
 	/element/
 		- (source/area)`29 1 51 16`
-(signature)`select(nodes, index)`
+(signature)`select(elements)`
 
 Given the contents of an element, extract the properties from the set
-located at the designated (factor-local/parameter)&<#select.Parameters.index[index]>. Normally, properties are expected to be
-presented at the beginning of some content and, therefore, (factor-local/parameter)&<#select.Parameters.index[index]> defaults to `1`.
+located at the designated (invalid/unknown)&<#index>. Normally, properties are expected to be
+presented at the beginning of some content and, therefore, (invalid/unknown)&<#index> defaults to `1`.
 
-If the element at (factor-local/parameter)&<#select.Parameters.index[index]> is not a `'set'`, or (factor-local/parameter)&<#select.Parameters.nodes[nodes]> is an empty,
+If the element at (invalid/unknown)&<#index> is not a `'set'`, or (invalid/unknown)&<#elements> is empty,
 an empty iterator will be returned.
 
 Error conditions produced during the production of a property set indicate
@@ -79,7 +79,7 @@ that it is not a property set at all and will cause an empty list to be returned
 		- (type/syntax)`types.Fragment`
 		- (type/remote/factor-element)&<http://fault.io/python/text/types#Fragment[fault.text.types.Fragment]>
 		
-(signature)`formulate_fragment(item, isinstance)`
+(signature)`formulate_fragment(item)`
 
 Construct a (invalid/unknown)&<#Fragment> that represents the property in a (remote/factor-element)&<http://fault.io/python/text/types#Paragraph[fault.text.types.Paragraph]> instance.
 

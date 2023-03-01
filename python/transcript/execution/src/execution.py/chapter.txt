@@ -124,7 +124,7 @@ System process status display using transaction frames.
 		- `undocumented`
 	/element/
 		- (source/area)`27 1 46 35`
-(signature)`_launch(status, stderr, stdin)`
+(signature)`_launch(status)`
 
 
 [ _field ]
@@ -135,7 +135,7 @@ System process status display using transaction frames.
 		- `undocumented`
 	/element/
 		- (source/area)`48 1 53 16`
-(signature)`_field(key, ext, default)`
+(signature)`_field(key, ext)`
 
 
 [ _closed ]
@@ -144,7 +144,7 @@ System process status display using transaction frames.
 		function
 	/element/
 		- (source/area)`55 1 88 62`
-(signature)`_closed(executed, failure, ts)`
+(signature)`_closed()`
 
 Join a start and stop frame.
 
@@ -157,7 +157,7 @@ Join a start and stop frame.
 		- `undocumented`
 	/element/
 		- (source/area)`90 1 101 50`
-(signature)`_open_frame(status, fcompose)`
+(signature)`_open_frame(status)`
 
 
 [ dispatch ]
@@ -166,7 +166,7 @@ Join a start and stop frame.
 		function
 	/element/
 		- (source/area)`103 1 330 58`
-(signature)`dispatch(meta, log, plan, control, monitors, summary, title, queue, opened, select, alerts, window, frequency, kill, range, next)`
+(signature)`dispatch(meta, log, plan, control, monitors, summary, title, queue)`
 
 Execute a sequence of system commands while displaying their status
 according to the transaction messages they emit to standard out.

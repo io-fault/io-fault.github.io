@@ -132,7 +132,7 @@ Test the force method on lose-octets with a full write buffer.
 		- `undocumented`
 	/element/
 		- (source/area)`125 1 137 28`
-(signature)`test_multiple_arrays(test, number_to_check)`
+(signature)`test_multiple_arrays(test)`
 
 
 [ test_objects ]

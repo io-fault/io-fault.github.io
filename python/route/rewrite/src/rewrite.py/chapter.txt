@@ -23,7 +23,7 @@ Relative path resolution.
 		- (source/area)`6 1 28 9`
 		- (type/syntax)`Sequence[str]`
 		
-(signature)`relative(points, delta)`
+(signature)`relative(points)`
 
-Resolve relative accessors within (factor-local/parameter)&<#relative.Parameters.points[points]>.
+Resolve relative accessors within (invalid/unknown)&<#points>.
 

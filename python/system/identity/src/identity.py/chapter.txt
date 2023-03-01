@@ -73,9 +73,9 @@ overrides.
 		function
 	/element/
 		- (source/area)`22 1 31 36`
-(signature)`_uname(flag, path, encoding)`
+(signature)`_uname(flag)`
 
-Execute the (system/executable)`uname` returning its output for the given (factor-local/parameter)&<#_uname.Parameters.flag[flag]>.
+Execute the (system/executable)`uname` returning its output for the given (invalid/unknown)&<#flag>.
 
 
 [ _cache ]
@@ -86,7 +86,7 @@ Execute the (system/executable)`uname` returning its output for the given (facto
 		- `undocumented`
 	/element/
 		- (source/area)`33 1 51 16`
-(signature)`_cache(uname_system, uname_machine)`
+(signature)`_cache()`
 
 
 [ root_execution_context ]

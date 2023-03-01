@@ -94,7 +94,7 @@ Callable that returns the single argument that it was given.
 		function
 	/element/
 		- (source/area)`34 1 43 30`
-(signature)`constant(obj, partial)`
+(signature)`constant(obj)`
 
 Return a callable that returns the given object regardless of
 the given parameters.
@@ -106,13 +106,13 @@ the given parameters.
 		function
 	/element/
 		- (source/area)`45 1 73 9`
-(signature)`unique(iterable, *existing, set)`
+(signature)`unique(iterable, *existing)`
 
-Iterate through the contents of the (factor-local/parameter)&<#unique.Parameters.iterable[iterable]>,
+Iterate through the contents of the (invalid/unknown)&<#iterable>,
 but only allow an item to be emitted once.
 
 ! WARNING:
-	The implementation uses a (factor-local/parameter)&<#unique.Parameters.set[set]> to track which items have transpired.
+	The implementation uses a (invalid/unknown)&<#set> to track which items have transpired.
 	It is never reset internally, so the generator can allocate
 	arbitrary quantities of memory.
 
@@ -125,7 +125,7 @@ but only allow an item to be emitted once.
 /(parameter)`existing`/
 	
 	The initial items in the filter set. Arguments given as
-	(factor-local/parameter)&<#unique.Parameters.existing[existing]> will never be emitted. For instance, filtering
+	(invalid/unknown)&<#existing> will never be emitted. For instance, filtering
 	(invalid/unknown)&<#None> may be common.
 
 /(parameter)`set`/
@@ -139,7 +139,7 @@ but only allow an item to be emitted once.
 		function
 	/element/
 		- (source/area)`75 1 93 50`
-(signature)`interlace(*iters, next, cycle, map)`
+(signature)`interlace(*iters)`
 
 An iterator constructor that takes a sequence of
 iterables and interlaces their items one after another.
@@ -162,7 +162,7 @@ Interlace produces an iterator following the pattern:
 		function
 	/element/
 		- (source/area)`95 1 133 19`
-(signature)`compose(*callables, str, len, dict, zip, exec, range, _model)`
+(signature)`compose(*callables)`
 
 Return a composition of the given callable arguments.
 
@@ -185,7 +185,7 @@ function's "callables" attribute.
 		- (source/area)`135 1 140 27`
 (signature)`plural(f)`
 
-Create a function that pluralizes the return of the given callable, (factor-local/parameter)&<#plural.Parameters.f[f]>.
+Create a function that pluralizes the return of the given callable, (invalid/unknown)&<#f>.
 
 
 [ unroll ]
@@ -194,7 +194,7 @@ Create a function that pluralizes the return of the given callable, (factor-loca
 		function
 	/element/
 		- (source/area)`142 1 152 42`
-(signature)`unroll(f, Sequence, map)`
+(signature)`unroll(f)`
 
 Given a callable taking a single parameter, create another
 that maps the callable against a sequence.
@@ -221,25 +221,25 @@ Equivalence:
 		function
 	/element/
 		- (source/area)`156 1 189 27`
-(signature)`group(condition, iterable, initial, Sequence)`
+(signature)`group(condition, iterable, initial)`
 
-Structure the given (factor-local/parameter)&<#group.Parameters.iterable[iterable]> by the given (factor-local/parameter)&<#group.Parameters.condition[condition]>.
+Structure the given (invalid/unknown)&<#iterable> by the given (invalid/unknown)&<#condition>.
 Returns a generator producing (grouping, sequence) pairs.
 
-A (invalid/unknown)&<#True> result from (factor-local/parameter)&<#group.Parameters.condition[condition]> essentially terminates the subsequence,
-and creates a new sequence to be populated while (factor-local/parameter)&<#group.Parameters.condition[condition]> is (invalid/unknown)&<#False>.
+A (invalid/unknown)&<#True> result from (invalid/unknown)&<#condition> essentially terminates the subsequence,
+and creates a new sequence to be populated while (invalid/unknown)&<#condition> is (invalid/unknown)&<#False>.
 
 [ > Parameters ]
 
 /(parameter)`condition`/
 	
 	The grouping item in the tuple is the item that triggers
-	a (invalid/unknown)&<#True> result from (factor-local/parameter)&<#group.Parameters.condition[condition]>.
+	a (invalid/unknown)&<#True> result from (invalid/unknown)&<#condition>.
 
 /(parameter)`iterable`/
 	
 	The sequence item in the tuple is a sequence of items
-	where the result of the (factor-local/parameter)&<#group.Parameters.condition[condition]> was (invalid/unknown)&<#False>.
+	where the result of the (invalid/unknown)&<#condition> was (invalid/unknown)&<#False>.
 
 /(parameter)`initial`/
 	
@@ -275,7 +275,7 @@ Presumes the wrapped method name is consistent with the property name.
 		- `undocumented`
 	/element/
 		- (source/area)`198 2 201 38`
-(signature)`__init__(self, method, doc)`
+(signature)`__init__(self, method)`
 
 
 [ cachedproperty >> __get__ ]
@@ -298,9 +298,9 @@ Presumes the wrapped method name is consistent with the property name.
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
-(signature)`consistency(*iterables, takewhile, zip, sum, len, set)`
+(signature)`consistency(*iterables)`
 
-Return the level of consistency among the elements produced by the given (factor-local/parameter)&<#consistency.Parameters.iterables[iterables]>.
+Return the level of consistency among the elements produced by the given (invalid/unknown)&<#iterables>.
 The counting stops when an element is not equal to the others at the same index.
 
 More commonly, the common prefix depth or length of all the given iterables.

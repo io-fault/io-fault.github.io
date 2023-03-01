@@ -2,7 +2,7 @@
 	/type/
 		module
 	/element/
-		- (source/area)`1 1 240 0`
+		- (source/area)`1 1 243 0`
 Bind a system executable to a Python module factor.
 
 
@@ -77,7 +77,7 @@ Bind a system executable to a Python module factor.
 		function
 	/element/
 		- (source/area)`14 1 51 15`
-(signature)`compile_sc(target, source, include, compiler)`
+(signature)`compile_sc(target, source, include)`
 
 Construct the parameters to be used to compile and link the new executable according to
 (python/module)`sysconfig`.
@@ -221,7 +221,7 @@ Construct the parameters to be used to compile and link the new executable accor
 		- `undocumented`
 	/element/
 		- (source/area)`135 1 184 59`
-(signature)`options(argv, symbol)`
+(signature)`options(argv)`
 
 
 [ render ]
@@ -242,6 +242,6 @@ Construct the parameters to be used to compile and link the new executable accor
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`192 1 234 35`
+		- (source/area)`192 1 237 35`
 (signature)`main(sysargv)`
 

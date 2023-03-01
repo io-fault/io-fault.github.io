@@ -1,0 +1,108 @@
+"""
+# Render SVG data-IRIs for representing emoji as image resources.
+"""
+import sys
+from fault.vector import recognition
+from fault.system import process
+
+required = {
+	'--encoding': ('field-replace', 'encoding'),
+	'--escape': ('field-replace', 'escape'),
+	'--mime-type': ('field-replace', 'mime-type'),
+	'-s': ('field-replace', 'size'),
+	'-d': ('field-replace', 'delta'),
+	'-p': ('field-replace', 'position'),
+	'-N': ('field-replace', 'namespace'),
+}
+restricted = {
+	'--stdin': ('field-replace', True, 'read-stdin'),
+	'-v': ('field-replace', True, 'verbose'),
+
+	# base64 default, lowercase to "disable".
+	'-b': ('field-replace', 'base64', 'escape'),
+	'-B': ('field-replace', 'percent', 'escape'),
+	'--xml': ('field-replace', 'none', 'escape'),
+}
+
+def texticon(text, size=256, delta=8, position='92', ns='http://www.w3.org/2000/svg'):
+	yield f'<svg xmlns="{ns}" width="{size}" height="{size}">'
+	yield f'<text x="{delta//2}" y="0.{position}em" font-size="{size-delta}">'
+	yield text
+	yield f"</text></svg>"
+
+def reference(href, size=256, delta=8, position='92', ns='http://www.w3.org/2000/svg'):
+	# Ignore fine positioning control for image references.
+	yield f'<svg xmlns="{ns}" width="{size}" height="{size}">'
+	yield f'<image width="100%" height="100%" x="0" y="0" href="{href}">'
+	yield f"</image></svg>"
+
+def percent_escape(s):
+	s = s.replace(b'"', b'%' + hex(ord(b'"')).encode('ascii')[2:])
+	s = s.replace(b"'", b'%' + hex(ord(b"'")).encode('ascii')[2:])
+	return s
+
+def base64_escapes():
+	# Defer import.
+	import base64
+	return base64.b64encode
+
+def main(inv:process.Invocation) -> process.Exit:
+	config = {
+		'size': '256',
+		'delta': '8',
+		'position': '88',
+		'encoding': 'utf-8',
+		'escape': 'base64',
+		'mime-type': 'image/svg+xml',
+		'read-stdin': False,
+		'verbose': False,
+		'namespace': 'http://www.w3.org/2000/svg',
+	}
+
+	v = recognition.legacy(restricted, required, inv.argv)
+	remainder = recognition.merge(config, v)
+
+	verbose = config['verbose']
+	ns = config['namespace']
+
+	prefix, encoder, eid = {
+		'base64': (b'data:', base64_escapes, b';base64,'),
+		'percent': (b'data:', (lambda: percent_escape), b','),
+		'none': (b'', (lambda: (lambda x: x)), b''),
+	}[config['escape']]
+	encode = encoder()
+
+	s = int(config['size'])
+	d = int(config['delta'])
+	p = config['position']
+
+	write = sys.stdout.buffer.write
+	if config['read-stdin']:
+		ilines = sys.stdin.readlines()
+	else:
+		ilines = remainder
+
+	if verbose:
+		log = (lambda x: sys.stderr.write(x+'\n'))
+	else:
+		log = (lambda x: None)
+
+	if prefix:
+		prefix += config['mime-type'].encode('ascii')
+
+	for i in map(str.strip, ilines):
+		if i.startswith('http://') or i.startswith('https://') or i.startswith('data:'):
+			raw = ''.join(reference(i, s, d, p, ns=ns))
+		else:
+			raw = ''.join(texticon(i, s, d, p, ns=ns))
+		log(raw)
+
+		data = encode(raw.encode(config['encoding']))
+		write(prefix)
+		write(eid)
+		write(data)
+		write(b'\n')
+		sys.stderr.flush()
+		sys.stdout.flush()
+
+	return inv.exit(0)

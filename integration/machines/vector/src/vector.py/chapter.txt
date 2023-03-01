@@ -74,7 +74,7 @@ Persistence methods for argument vector execution platforms.
 		function
 	/element/
 		- (source/area)`12 1 19 14`
-(signature)`fs_initialize(target, system, encoding)`
+(signature)`fs_initialize(target, system)`
 
 Create directories and files for a stored logical platform.
 
@@ -88,9 +88,9 @@ Create directories and files for a stored logical platform.
 		- (type/syntax)`files.Path`
 		- (type/remote/factor-element)&<http://fault.io/python/system/files#Path[fault.system.files.Path]>
 		
-(signature)`fs_update(target, pf, encoding)`
+(signature)`fs_update(target, pf)`
 
-Using the given (factor-local/parameter)&<#fs_update.Parameters.target[target]> filesystem path, store the platform's specification.
+Using the given (invalid/unknown)&<#target> filesystem path, store the platform's specification.
 
 The system identifier, execution plans, and architecture priority list will be written
 under the presumption that the leading path already exists. No checks for suitability
@@ -106,7 +106,7 @@ are performed.
 		- (type/syntax)`files.Path`
 		- (type/remote/factor-element)&<http://fault.io/python/system/files#Path[fault.system.files.Path]>
 		
-(signature)`fs_update_sections(target, sections, encoding)`
+(signature)`fs_update_sections(target, sections)`
 
 Store the given sections in the target path.
 

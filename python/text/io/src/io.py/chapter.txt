@@ -5,7 +5,7 @@
 		- (source/area)`1 1 41 42`
 Primary access to kleptic text parsing and serialization functions.
 
-#!python
+#!syntax/python
 	from fault.text import io as txt
 	src = "[ Section ]\nParagraph.\n"
 	element_tree = txt.structure_chapter_text(src)
@@ -56,9 +56,9 @@ Primary access to kleptic text parsing and serialization functions.
 		- (type/syntax)`types.Paragraph`
 		- (type/project-local/factor-element)&<types#Paragraph[fault.text.types.Paragraph]>
 		
-(signature)`structure_paragraph_element(element, export)`
+(signature)`structure_paragraph_element(element)`
 
-Create a (project-local/factor-element)&<types#Paragraph[fault.text.types.Paragraph]> instance from the given raw paragraph (factor-local/parameter)&<#structure_paragraph_element.Parameters.element[element]>.
+Create a (project-local/factor-element)&<types#Paragraph[fault.text.types.Paragraph]> instance from the given raw paragraph (invalid/unknown)&<#element>.
 
 
 [ TreeOperations ]
@@ -78,7 +78,7 @@ Create a (project-local/factor-element)&<types#Paragraph[fault.text.types.Paragr
 		function
 	/element/
 		- (source/area)`24 1 32 74`
-(signature)`structure_chapter_lines(lines, Parser, Transform, list)`
+(signature)`structure_chapter_lines(lines)`
 
 Parse kleptic text lines into an element tree.
 
@@ -89,7 +89,7 @@ Parse kleptic text lines into an element tree.
 		function
 	/element/
 		- (source/area)`34 1 38 54`
-(signature)`structure_chapter_text(source, newline)`
+(signature)`structure_chapter_text(source)`
 
 Parse kleptic text source into an element tree.
 

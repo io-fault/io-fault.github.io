@@ -104,7 +104,7 @@ Construct a sequence of environment variables describing the factor's image.
 		- `undocumented`
 	/element/
 		- (source/area)`41 1 42 34`
-(signature)`_cvar(v, a, replace)`
+(signature)`_cvar(v, a)`
 
 
 [ image ]
@@ -113,7 +113,7 @@ Construct a sequence of environment variables describing the factor's image.
 		function
 	/element/
 		- (source/area)`44 1 53 16`
-(signature)`image(_cvar)`
+(signature)`image()`
 
 Identify the image and variants of the project's factor by scanning
 the filesystem for the given sequence of architectures.
@@ -127,7 +127,7 @@ the filesystem for the given sequence of architectures.
 		- (source/area)`57 1 66 44`
 (signature)`plan(execution, project, factor, variants, image, argv)`
 
-Plan the execution of a factor using the (factor-local/parameter)&<#plan.Parameters.execution[execution]> platform.
+Plan the execution of a factor using the (invalid/unknown)&<#execution> platform.
 Returns a triple suitable for use with (none/invalid)&<http://fault.io/dev/null[system.system.execution.KInvocation]>.
 
 
@@ -137,7 +137,7 @@ Returns a triple suitable for use with (none/invalid)&<http://fault.io/dev/null[
 		function
 	/element/
 		- (source/area)`68 1 95 43`
-(signature)`select(architecture, intention, form)`
+(signature)`select()`
 
 Identify the appropriate (factor-local/function)&<#plan[plan]> for executing the (invalid/unknown)&<#factor> in (invalid/unknown)&<#projects>
 using a runtime identified by the (invalid/unknown)&<#execution> platform.

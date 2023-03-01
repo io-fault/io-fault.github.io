@@ -109,15 +109,15 @@ This field *must not* be localized.
 		- (type/invalid/unknown)&<#str>
 		
 A string unambiguously identifying the event.
-Also recognized as the preferred string representation of (factor-local/property)&<#EStruct.code[code]> that can identify the event.
+Also recognized as the preferred string representation of (invalid/unknown)&<#code> that can identify the event.
 Formally referred to as "String Identifier".
 
-This must *not* be the symbolic name assigned to the (factor-local/property)&<#EStruct.code[code]>.
-For instance, the POSIX errno define (id)`EINTR` should be considered a (factor-local/property)&<#EStruct.symbol[symbol]>,
-not an (factor-local/property)&<#EStruct.identifier[identifier]>.
+This must *not* be the symbolic name assigned to the (invalid/unknown)&<#code>.
+For instance, the POSIX errno define (id)`EINTR` should be considered a (invalid/unknown)&<#symbol>,
+not an (invalid/unknown)&<#identifier>.
 
 For events with integer identifiers, this is normally the decimal representation string.
-If the (factor-local/property)&<#EStruct.protocol[protocol]> commonly refers to a different representation for the (factor-local/property)&<#EStruct.code[code]>,
+If the (invalid/unknown)&<#protocol> commonly refers to a different representation for the (invalid/unknown)&<#code>,
 then that string representation should used instead of the decimal string.
 
 This field *must not* be localized.
@@ -132,10 +132,10 @@ This field *must not* be localized.
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
-The integer form of the (factor-local/property)&<#EStruct.identifier[identifier]> or zero if none exists.
+The integer form of the (invalid/unknown)&<#identifier> or zero if none exists.
 Formally referred to as "Integer Code".
 
-Often, this is redundant with the (factor-local/property)&<#EStruct.identifier[identifier]> field aside from the data type.
+Often, this is redundant with the (invalid/unknown)&<#identifier> field aside from the data type.
 
 However, when the event's integer code is not normally presented or referenced to in
 decimal form, the redundancy allows the use of the proper form without having
@@ -144,7 +144,7 @@ string representation. SQL state codes being a notable example where having
 both forms might have some benefit during reporting.
 
 A value of zero *should* indicate that there is no integer form;
-normally, using the (factor-local/property)&<#EStruct.identifier[identifier]> is the preferred key when
+normally, using the (invalid/unknown)&<#identifier> is the preferred key when
 resolving additional metadata regarding the event.
 
 
@@ -159,11 +159,11 @@ resolving additional metadata regarding the event.
 		
 The symbolic name, label, or title used to identify the event.
 
-Often, a class name. This is distinct from (invalid/unknown)&<#identifer> and (factor-local/property)&<#EStruct.code[code]> in that
-it is usually how the (factor-local/property)&<#EStruct.identifier[identifier]> was originally selected. For instance,
+Often, a class name. This is distinct from (invalid/unknown)&<#identifer> and (invalid/unknown)&<#code> in that
+it is usually how the (invalid/unknown)&<#identifier> was originally selected. For instance,
 for a POSIX system error, errno, this might be (id)`EAGAIN` or (id)`EINTR`.
 
-In cases where an error is being represented that has a formless (factor-local/property)&<#EStruct.protocol[protocol]>,
+In cases where an error is being represented that has a formless (invalid/unknown)&<#protocol>,
 the symbol may be the only field that can be used to identify the event.
 
 This field *must not* be localized.
@@ -179,13 +179,13 @@ This field *must not* be localized.
 		- (type/invalid/unknown)&<#str>
 		
 Single sentence message describing the event.
-Often a constant string defined by the (factor-local/property)&<#EStruct.protocol[protocol]>, but potentially
+Often a constant string defined by the (invalid/unknown)&<#protocol>, but potentially
 overridden by the application.
 
 This field may be localized, but it is preferrable to use a consistent
 language that is common to the majority of the application's users.
 
-There is the potential that the (factor-local/property)&<#EStruct.protocol[protocol]> can be used to resolve
+There is the potential that the (invalid/unknown)&<#protocol> can be used to resolve
 a formatting routine for the display such that this message will not be shown.
 
 This field should *not* contain formatting codes.
@@ -201,7 +201,7 @@ should be used to create friendlier, human-readable abstracts.
 		- `undocumented`
 	/element/
 		- (source/area)`122 2 131 13`
-(signature)`from_fields_v1(Class, protocol, symbol, abstract, identifier, code)`
+(signature)`from_fields_v1(Class, protocol)`
 
 
 [ EStruct >> from_tuple_v1 ]
@@ -212,7 +212,7 @@ should be used to create friendlier, human-readable abstracts.
 		- (source/area)`132 2 144 13`
 (signature)`from_tuple_v1(Class, fields)`
 
-Create an instance using (factor-local/parameter)&<#EStruct.from_tuple_v1.Parameters.fields[fields]>; expects five objects in this order:
+Create an instance using (invalid/unknown)&<#fields>; expects five objects in this order:
 
 # Protocol as a string.
 # String Identifier of Event.
@@ -239,12 +239,12 @@ with where the fields are stored in the tuple.
 		classmethod
 	/element/
 		- (source/area)`153 2 176 56`
-(signature)`from_string_v1(Class, erstring, protocol)`
+(signature)`from_string_v1(Class, erstring)`
 
 Create an EStruct using a string following the format:
 (illustration)`SYMBOL[str-id int-code]: Abstract`.
 
-The protocol keyword can be used to designate the (factor-local/parameter)&<#EStruct.from_string_v1.Parameters.protocol[protocol]> field.
+The protocol keyword can be used to designate the (invalid/unknown)&<#protocol> field.
 
 
 [ Frame ]
@@ -338,7 +338,7 @@ The visible message of the status frame.
 		classmethod
 	/element/
 		- (source/area)`220 2 229 13`
-(signature)`from_string_v1(protocol, _EStruct)`
+(signature)`from_string_v1()`
 
 Create using an (factor-local/class)&<#EStruct[EStruct]> string and optional context.
 
@@ -349,7 +349,7 @@ Create using an (factor-local/class)&<#EStruct[EStruct]> string and optional con
 		classmethod
 	/element/
 		- (source/area)`230 2 234 43`
-(signature)`from_event_v1(Class, event, channel, extension)`
+(signature)`from_event_v1(Class, event)`
 
 Create using an (factor-local/class)&<#EStruct[EStruct]> instance and optional context.
 

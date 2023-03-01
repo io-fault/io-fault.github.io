@@ -2,14 +2,14 @@
 	/type/
 		module
 	/element/
-		- (source/area)`1 1 318 20`
+		- (source/area)`1 1 324 20`
 Format text elements into text images.
 
 Paragraph level formatting functions usually return (factor-local/data)&<#Fragment[Fragment]> while section-level
 returns (factor-local/data)&<#Image[Image]>.
 
 (factor-local/function)&<#chapter[chapter]> and (factor-local/function)&<#elements[elements]> are the primary entry points where chapter takes a single
-(element/type)`chapter` node and elements takes a sequence of arbitrary nodes.
+`chapter` element and elements takes a sequence of arbitrary elements.
 
 [ Types ]
 
@@ -103,7 +103,7 @@ returns (factor-local/data)&<#Image[Image]>.
 		
 (signature)`syntax(lines, syntype, qualifier, adjustment)`
 
-Generator producing sequences of line text for a syntax node.
+Generator producing sequences of line text for a syntax element.
 
 [ > Parameters ]
 
@@ -116,7 +116,7 @@ Generator producing sequences of line text for a syntax node.
 	- (type/syntax)`str`
 	- (type/invalid/unknown)&<#str>
 	
-	The syntax type of (factor-local/parameter)&<#syntax.Parameters.lines[lines]>.
+	The syntax type of (invalid/unknown)&<#lines>.
 
 /(parameter)`qualifier`/
 	
@@ -251,8 +251,8 @@ Generator producing an (factor-local/data)&<#Image[Image]> representing the give
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`135 1 138 40`
-(signature)`_chapter(depth, node)`
+		- (source/area)`135 1 138 43`
+(signature)`_chapter(depth, element)`
 
 
 [ _section ]
@@ -262,8 +262,8 @@ Generator producing an (factor-local/data)&<#Image[Image]> representing the give
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`140 1 145 33`
-(signature)`_section(depth, node)`
+		- (source/area)`140 1 145 36`
+(signature)`_section(depth, element)`
 
 
 [ _syn ]
@@ -285,7 +285,7 @@ Generator producing an (factor-local/data)&<#Image[Image]> representing the give
 		- `undocumented`
 	/element/
 		- (source/area)`159 1 169 16`
-(signature)`_para(depth, node, Paragraph)`
+(signature)`_para(depth, element)`
 
 
 [ _list ]
@@ -296,7 +296,7 @@ Generator producing an (factor-local/data)&<#Image[Image]> representing the give
 		- `undocumented`
 	/element/
 		- (source/area)`171 1 196 20`
-(signature)`_list(depth, node, list_type)`
+(signature)`_list(depth, element, list_type)`
 
 
 [ _sequence ]
@@ -306,8 +306,8 @@ Generator producing an (factor-local/data)&<#Image[Image]> representing the give
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`198 1 199 32`
-(signature)`_sequence(depth, node)`
+		- (source/area)`198 1 199 35`
+(signature)`_sequence(depth, element)`
 
 
 [ _set ]
@@ -317,19 +317,19 @@ Generator producing an (factor-local/data)&<#Image[Image]> representing the give
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`201 1 202 32`
-(signature)`_set(depth, node)`
+		- (source/area)`201 1 202 35`
+(signature)`_set(depth, element)`
 
 
-[ _dictionary ]
+[ _directory ]
 ! CONTROL:
 	/type/
 		function
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`204 1 230 34`
-(signature)`_dictionary(depth, node, Paragraph)`
+		- (source/area)`204 1 235 34`
+(signature)`_directory(depth, element)`
 
 
 [ _admonition ]
@@ -339,8 +339,8 @@ Generator producing an (factor-local/data)&<#Image[Image]> representing the give
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`232 1 239 35`
-(signature)`_admonition(depth, node)`
+		- (source/area)`237 1 244 38`
+(signature)`_admonition(depth, element)`
 
 
 [ _index ]
@@ -350,7 +350,7 @@ Generator producing an (factor-local/data)&<#Image[Image]> representing the give
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`241 1 254 1`
+		- (source/area)`246 1 260 1`
 #!source
 	_index = {
 		'section': _section,
@@ -361,7 +361,8 @@ Generator producing an (factor-local/data)&<#Image[Image]> representing the give
 	
 		'set': _set,
 		'sequence': _sequence,
-		'dictionary': _dictionary,
+		'dictionary': _directory,
+		'directory': _directory,
 	
 		# No-op element type often providing additional metadata.
 		'void': (lambda x, y: ()),
@@ -374,8 +375,8 @@ Generator producing an (factor-local/data)&<#Image[Image]> representing the give
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`256 1 259 37`
-(signature)`_tree(depth, nodes)`
+		- (source/area)`262 1 265 40`
+(signature)`_tree(depth, elements)`
 
 
 [ tree ]
@@ -383,19 +384,19 @@ Generator producing an (factor-local/data)&<#Image[Image]> representing the give
 	/type/
 		function
 	/element/
-		- (source/area)`261 1 279 19`
+		- (source/area)`267 1 285 19`
 		- (type/syntax)`Image`
 		- (type/factor-local/data)&<#Image[Image]>
 		
-(signature)`tree(node, adjustment, indentation, newline)`
+(signature)`tree(element, adjustment, indentation, newline)`
 
-Produce the image representing the given node including newline characters.
+Produce the image representing the given element including newline characters.
 
 [ > Parameters ]
 
-/(parameter)`node`/
+/(parameter)`element`/
 	
-	Any document node.
+	Any document element.
 
 /(parameter)`adjustment`/
 	- (type/syntax)`int`
@@ -422,17 +423,17 @@ Produce the image representing the given node including newline characters.
 	/type/
 		function
 	/element/
-		- (source/area)`281 1 299 19`
+		- (source/area)`287 1 305 19`
 		- (type/syntax)`Image`
 		- (type/factor-local/data)&<#Image[Image]>
 		
-(signature)`elements(nodes, adjustment, indentation, newline)`
+(signature)`elements(elements, adjustment, indentation, newline)`
 
-Produce the image representing the given (factor-local/parameter)&<#elements.Parameters.nodes[nodes]> sequence.
+Produce the image representing the given (factor-local/function)&<#elements[elements]> sequence.
 
 [ > Parameters ]
 
-/(parameter)`nodes`/
+/(parameter)`elements`/
 	
 	Sequence of arbitrary text elements.
 
@@ -461,19 +462,19 @@ Produce the image representing the given (factor-local/parameter)&<#elements.Par
 	/type/
 		function
 	/element/
-		- (source/area)`301 1 319 19`
+		- (source/area)`307 1 325 19`
 		- (type/syntax)`Image`
 		- (type/factor-local/data)&<#Image[Image]>
 		
-(signature)`chapter(node, adjustment, indentation, newline)`
+(signature)`chapter(element, adjustment, indentation, newline)`
 
-Produce the image representing the given chapter node including newline characters.
+Produce the image representing the given chapter element including newline characters.
 
 [ > Parameters ]
 
-/(parameter)`node`/
+/(parameter)`element`/
 	
-	Any document node.
+	Any document element.
 
 /(parameter)`adjustment`/
 	- (type/syntax)`int`

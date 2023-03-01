@@ -139,7 +139,7 @@ Traceback frame class to be instantiated for rendered.
 		function
 	/element/
 		- (source/area)`24 1 48 22`
-(signature)`frame(index, record, Field)`
+(signature)`frame(index, record)`
 
 Construct sequence for a single frame record.
 

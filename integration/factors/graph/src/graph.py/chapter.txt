@@ -34,7 +34,7 @@ Invert the directed graph of dependencies from the node.
 		function
 	/element/
 		- (source/area)`32 1 86 19`
-(signature)`sequence(directory, nodes, defaultdict, tuple)`
+(signature)`sequence(directory, nodes)`
 
 Generator maintaining the state of the sequencing of a traversed dependency
 graph. This generator emits factors as they are ready to be processed and receives

@@ -2,7 +2,7 @@
 	/type/
 		module
 	/element/
-		- (source/area)`1 1 108 0`
+		- (source/area)`1 1 117 0`
 Analyze core data types.
 
 
@@ -93,12 +93,23 @@ Analyze core data types.
 - (project-local/factor-element)&<types#Reference[fault.project.types.Reference]>
 
 
+[ test_Extensions_constructors ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`92 1 99 47`
+(signature)`test_Extensions_constructors(test)`
+
+- (project-local/factor-element)&<types#Extensions[fault.project.types.Extensions]>
+
+
 [ test_fpc ]
 ! CONTROL:
 	/type/
 		function
 	/element/
-		- (source/area)`92 1 108 82`
+		- (source/area)`101 1 117 82`
 (signature)`test_fpc(test)`
 
 - (project-local/factor-element)&<types#fpc[fault.project.types.fpc]>

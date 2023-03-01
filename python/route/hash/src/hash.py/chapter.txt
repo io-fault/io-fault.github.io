@@ -66,7 +66,7 @@ Hash path implementation for compressing file paths.
 		- `undocumented`
 	/element/
 		- (source/area)`14 2 15 16`
-(signature)`__init__(self, I)`
+(signature)`__init__(self)`
 
 
 [ FNV >> update ]
@@ -77,7 +77,7 @@ Hash path implementation for compressing file paths.
 		- `undocumented`
 	/element/
 		- (source/area)`17 2 24 13`
-(signature)`update(self, data, P, I, C)`
+(signature)`update(self, data)`
 
 
 [ FNV >> hexdigest ]
@@ -180,7 +180,7 @@ of divisions, and the character length of the hex digest.
 		classmethod
 	/element/
 		- (source/area)`78 2 98 56`
-(signature)`from_identity(Class, algorithm, depth, length)`
+(signature)`from_identity(Class)`
 
 Create an instance using the identity.
 
@@ -211,7 +211,7 @@ of each indentation block not being part of the key.
 		staticmethod
 	/element/
 		- (source/area)`112 2 145 13`
-(signature)`structure(seq, iter, next, tab)`
+(signature)`structure(seq)`
 
 Structure the indentation blocks into (key, entry) pairs.
 The keys are the indented section and the entries are the leading
@@ -259,7 +259,7 @@ Underscore attributes are representations of stored data.
 (signature)`load(self, lines)`
 
 Load the index from the given line sequence.
-(factor-local/parameter)&<#Index.load.Parameters.lines[lines]> items *must* have trailing newlines.
+(invalid/unknown)&<#lines> items *must* have trailing newlines.
 
 
 [ Index >> sequence ]
@@ -438,9 +438,9 @@ Returns an iterator to all the keys and their associated routes.
 		- (type/syntax)`object`
 		- (type/invalid/unknown)&<#object>
 		
-(signature)`allocate(self, key, filename)`
+(signature)`allocate(self, key)`
 
-Allocate a position for the given (factor-local/parameter)&<#Directory.allocate.Parameters.key[key]> and return its route.
+Allocate a position for the given (invalid/unknown)&<#key> and return its route.
 
 If already allocated, return the reference to the resource.
 
@@ -458,7 +458,7 @@ If already allocated, return the reference to the resource.
 
 Whether the resource has not been allocated.
 
-(invalid/unknown)&<#True> when (factor-local/parameter)&<#Directory.available.Parameters.key[key]> has *not* been associated with a resource.
+(invalid/unknown)&<#True> when (invalid/unknown)&<#key> has *not* been associated with a resource.
 
 
 [ Directory >> release ]
@@ -469,5 +469,5 @@ Whether the resource has not been allocated.
 		- (source/area)`322 2 345 20`
 (signature)`release(self, key)`
 
-Release the allocated resource associated with the (factor-local/parameter)&<#Directory.release.Parameters.key[key]> and delete it from the index.
+Release the allocated resource associated with the (invalid/unknown)&<#key> and delete it from the index.
 

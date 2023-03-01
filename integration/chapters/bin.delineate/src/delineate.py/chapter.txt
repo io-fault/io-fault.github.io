@@ -2,9 +2,18 @@
 	/type/
 		module
 	/element/
-		- (source/area)`1 1 26 0`
+		- (source/area)`1 1 61 0`
 Delineate a text file.
 
+
+[ functools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`4 1 4 16`
 
 [ json ]
 ! CONTROL:
@@ -13,16 +22,7 @@ Delineate a text file.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`4 1 4 11`
-
-[ parse ]
-! CONTROL:
-	/type/
-		import
-	/flags/
-		- `undocumented`
-	/element/
-		- (source/area)`6 1 6 32`
+		- (source/area)`5 1 5 11`
 
 [ files ]
 ! CONTROL:
@@ -42,6 +42,44 @@ Delineate a text file.
 	/element/
 		- (source/area)`8 1 8 32`
 
+[ structure_chapter_text ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`10 1 10 77`
+
+[ structure_paragraph_element ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`10 1 10 77`
+
+[ query ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`11 1 11 20`
+
+[ P ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`12 1 12 55`
+#!source
+	P = functools.partial(map, structure_paragraph_element)
+
 [ main ]
 ! CONTROL:
 	/type/
@@ -49,7 +87,7 @@ Delineate a text file.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`10 1 23 19`
+		- (source/area)`14 1 58 19`
 		- (type/syntax)`process.Exit`
 		- (type/remote/factor-element)&<http://fault.io/python/system/process#Exit[fault.system.process.Exit]>
 		

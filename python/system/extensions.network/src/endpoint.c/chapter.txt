@@ -172,7 +172,7 @@
 		
 (signature)`transport_type_string(socktype)`
 
-Retrieve the string identifier of the given socket type code, (factor-local/parameter)&<#transport_type_string.Parameters.socktype[socktype]>.
+Retrieve the string identifier of the given socket type code, (invalid/unknown)&<#socktype>.
 
 [ > Parameters ]
 
@@ -196,7 +196,7 @@ A constant string used by the Python interfaces to select a socket type.
 		
 (signature)`nw_socket_type(identifier)`
 
-Identify the socket type code that is being referred to by the given string, (factor-local/parameter)&<#nw_socket_type.Parameters.identifier[identifier]>.
+Identify the socket type code that is being referred to by the given string, (invalid/unknown)&<#identifier>.
 
 
 [ interpret_transport ]
@@ -274,8 +274,8 @@ Identify the socket type code that is being referred to by the given string, (fa
 		
 (signature)`get_address(ss, dst, dstlen)`
 
-Convert the address referenced by (factor-local/parameter)&<#get_address.Parameters.ss[ss]> into a string written
-into (factor-local/parameter)&<#get_address.Parameters.dst[dst]>.
+Convert the address referenced by (invalid/unknown)&<#ss> into a string written
+into (invalid/unknown)&<#dst>.
 
 [ > Parameters ]
 
@@ -293,12 +293,12 @@ into (factor-local/parameter)&<#get_address.Parameters.dst[dst]>.
 /(parameter)`dstlen`/
 	- (type/syntax)`size_t`
 	
-	Length of (factor-local/parameter)&<#get_address.Parameters.dst[dst]> string.
+	Length of (invalid/unknown)&<#dst> string.
 
 [ > Returns ]
 
-The (factor-local/parameter)&<#get_address.Parameters.ss[ss]> parameter is the destination of the address
-described in (factor-local/parameter)&<#get_address.Parameters.dst[dst]>.
+The (invalid/unknown)&<#ss> parameter is the destination of the address
+described in (invalid/unknown)&<#dst>.
 
 
 [ ip4_from_object ]

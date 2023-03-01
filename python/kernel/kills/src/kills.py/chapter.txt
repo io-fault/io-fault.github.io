@@ -113,7 +113,7 @@ Processor that faults when a timeout occurs.
 		method
 	/element/
 		- (source/area)`35 2 42 13`
-(signature)`terminate(self, by)`
+(signature)`terminate(self)`
 
 Cancel the effect of the timeout.
 

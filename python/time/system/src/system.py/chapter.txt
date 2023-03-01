@@ -77,7 +77,7 @@ via (factor-local/function)&<#elapsed[elapsed]>, (factor-local/function)&<#utc[u
 		- `undocumented`
 	/element/
 		- (source/area)`46 1 49 22`
-(signature)`_unix(ut, epoch)`
+(signature)`_unix(ut)`
 
 
 [ zone ]
@@ -89,7 +89,7 @@ via (factor-local/function)&<#elapsed[elapsed]>, (factor-local/function)&<#utc[u
 (signature)`zone(selector)`
 
 Using the zone definitions provided by the system,
-construct a view for the time zone identified by (factor-local/parameter)&<#zone.Parameters.selector[selector]>.
+construct a view for the time zone identified by (invalid/unknown)&<#selector>.
 
 [ > Parameters ]
 
@@ -108,7 +108,7 @@ construct a view for the time zone identified by (factor-local/parameter)&<#zone
 		- (type/syntax)`types.Timestamp`
 		- (type/project-local/factor-element)&<types#Timestamp[fault.time.types.Timestamp]>
 		
-(signature)`utc(Type)`
+(signature)`utc()`
 
 Get the current time according to the system's real clock.
 
@@ -122,7 +122,7 @@ Get the current time according to the system's real clock.
 		- (type/syntax)`types.Timestamp`
 		- (type/project-local/factor-element)&<types#Timestamp[fault.time.types.Timestamp]>
 		
-(signature)`local(Type)`
+(signature)`local()`
 
 Get the current time according to the system's real clock and
 the default time zone configured by the system.
@@ -143,7 +143,7 @@ The default zone can be changed by overriding the (factor-local/function)&<#zone
 		- (type/syntax)`types.Date`
 		- (type/project-local/factor-element)&<types#Date[fault.time.types.Date]>
 		
-(signature)`date(delta, Type)`
+(signature)`date(delta)`
 
 Using (factor-local/function)&<#local[local]>, identify the current date.
 
@@ -168,7 +168,7 @@ Using (factor-local/function)&<#local[local]>, identify the current date.
 		- (type/syntax)`types.Measure`
 		- (type/project-local/factor-element)&<types#Measure[fault.time.types.Measure]>
 		
-(signature)`elapsed(Type)`
+(signature)`elapsed()`
 
 Snapshot of the system's monotonic clock.
 

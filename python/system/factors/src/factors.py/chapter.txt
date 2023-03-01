@@ -39,9 +39,9 @@ Module finder and loader for Factored Projects.
 		function
 	/element/
 		- (source/area)`9 1 25 16`
-(signature)`compose_image_path(variants, default, groups)`
+(signature)`compose_image_path(variants)`
 
-Create a variant path according to the given (factor-local/parameter)&<#compose_image_path.Parameters.groups[groups]> and (factor-local/parameter)&<#compose_image_path.Parameters.variants[variants]>.
+Create a variant path according to the given (invalid/unknown)&<#groups> and (invalid/unknown)&<#variants>.
 
 
 [ IntegralFinder ]
@@ -136,7 +136,7 @@ against the source unlike Python's builtin loader.
 		- (source/area)`49 3 57 11`
 (signature)`from_nothing(Class, *args)`
 
-Create the (factor-local/class)&<#IntegralFinder.Loader[Loader]> instance with (factor-local/method)&<#IntegralFinder.Loader.get_code[get_code]> overridden to return
+Create the (invalid/unknown)&<#Loader> instance with (invalid/unknown)&<#get_code> overridden to return
 a code object created from a `pass` statement.
 
 
@@ -179,7 +179,7 @@ a code object created from a `pass` statement.
 		method
 	/element/
 		- (source/area)`85 2 112 14`
-(signature)`__init__(self, groups, python_bytecode_variants, extension_variants, form, image_container_name)`
+(signature)`__init__(self, groups, python_bytecode_variants, extension_variants)`
 
 Initialize a finder instance for use with the given variants.
 
@@ -238,7 +238,7 @@ Remove a route from the finder's set eliminating any relevant index entries.
 		- (source/area)`178 2 195 27`
 (signature)`find(self, name)`
 
-Retrieve the product with a root that matches the start of the given (factor-local/parameter)&<#IntegralFinder.find.Parameters.name[name]>.
+Retrieve the product with a root that matches the start of the given (invalid/unknown)&<#name>.
 
 
 [ IntegralFinder >> find_spec ]
@@ -247,7 +247,7 @@ Retrieve the product with a root that matches the start of the given (factor-loc
 		method
 	/element/
 		- (source/area)`197 2 280 13`
-(signature)`find_spec(self, name, path, target)`
+(signature)`find_spec(self, name, path)`
 
 Using the (invalid/unknown)&<#index>, check for the presence of (invalid/unknown)&<#name's> initial package.
 If found, the images contained by the connected directory will be
@@ -262,7 +262,7 @@ used to load either an extension module or a Python bytecode module.
 		- (source/area)`281 2 300 37`
 (signature)`create(Class, system, python, host, form)`
 
-Construct a standard loader selecting images with the given (factor-local/parameter)&<#IntegralFinder.create.Parameters.form[form]>.
+Construct a standard loader selecting images with the given (invalid/unknown)&<#form>.
 
 
 [ setup ]
@@ -271,7 +271,7 @@ Construct a standard loader selecting images with the given (factor-local/parame
 		function
 	/element/
 		- (source/area)`302 1 334 14`
-(signature)`setup(form, paths, platform)`
+(signature)`setup()`
 
 Create and install a configured (factor-local/class)&<#IntegralFinder[IntegralFinder]>.
 

@@ -170,7 +170,7 @@ Parse the contents of a `@host` section.
 		- `undocumented`
 	/element/
 		- (source/area)`161 1 189 11`
-(signature)`parse_network_config(string, indentation, level)`
+(signature)`parse_network_config(string)`
 
 
 [ load_partitions ]

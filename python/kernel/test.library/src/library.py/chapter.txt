@@ -79,7 +79,7 @@ Root controller for tests.
 		- `undocumented`
 	/element/
 		- (source/area)`22 2 23 28`
-(signature)`interrupt(self, by)`
+(signature)`interrupt(self)`
 
 
 [ Executable ]
@@ -128,7 +128,7 @@ ran in order to perform them.
 		- `undocumented`
 	/element/
 		- (source/area)`39 2 40 26`
-(signature)`enqueue(self, *tasks, controller)`
+(signature)`enqueue(self, *tasks)`
 
 
 [ Executable >> faulted ]
@@ -150,7 +150,7 @@ ran in order to perform them.
 		- `undocumented`
 	/element/
 		- (source/area)`49 2 57 7`
-(signature)`__call__(self, times)`
+(signature)`__call__(self)`
 
 
 [ Executable >> flush ]
@@ -161,7 +161,7 @@ ran in order to perform them.
 		- `undocumented`
 	/element/
 		- (source/area)`59 2 65 84`
-(signature)`flush(self, maximum)`
+(signature)`flush(self)`
 
 
 [ Executable >> defer ]
@@ -352,7 +352,7 @@ ran in order to perform them.
 		function
 	/element/
 		- (source/area)`114 1 129 12`
-(signature)`sector(count)`
+(signature)`sector()`
 
 Construct a root Sector and Context for testing.
 

@@ -59,7 +59,7 @@ System interfaces supporting web services.
 		- `undocumented`
 	/element/
 		- (source/area)`12 1 20 23`
-(signature)`calculate_range(ranges, size, list, sum)`
+(signature)`calculate_range(ranges, size)`
 
 
 [ render_xml_directory_listing ]

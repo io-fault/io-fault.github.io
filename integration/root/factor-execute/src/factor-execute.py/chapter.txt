@@ -86,9 +86,9 @@ will be created instead invoking this script with the necessary environment vari
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`17 1 17 72`
+		- (source/area)`17 1 17 65`
 #!source
-	subexec_module_path = '.'.join((fault_name, 'system', 'bin', 'subexec'))
+	subexec_module_path = '.'.join((fault_name, 'system', 'execute'))
 
 [ extend_python_path ]
 ! CONTROL:

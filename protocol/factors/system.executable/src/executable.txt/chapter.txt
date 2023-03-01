@@ -1,0 +1,17 @@
+! CONTROL:
+	/type/
+		factor
+	/element/
+		- (source/area)``
+! CONTEXT:
+	/protocol/
+		&<http://if.fault.io/text/type.factor>
+
+	/identifier/
+		&<http://if.fault.io/factors/system.executable>
+
+	/icon/
+		&<data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNTYiIGhlaWdodD0iMjU2Ij48dGV4dCB4PSI0IiB5PSIwLjg4ZW0iIGZvbnQtc2l6ZT0iMjQ4Ij7impnvuI88L3RleHQ+PC9zdmc+>
+
+A factor executable by the operating system.
+

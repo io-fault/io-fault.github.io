@@ -86,7 +86,7 @@ Status frame I/O support.
 		- `undocumented`
 	/element/
 		- (source/area)`14 1 15 84`
-(signature)`allocate_line_buffer(fd, encoding)`
+(signature)`allocate_line_buffer(fd)`
 
 
 [ job_priority ]
@@ -106,7 +106,7 @@ Status frame I/O support.
 		function
 	/element/
 		- (source/area)`26 1 73 86`
-(signature)`spawnframes(invocation, exceptions, stdin, stderr, readsize)`
+(signature)`spawnframes(invocation)`
 
 Generator emitting frames produced by the given invocation's standard out.
 If (invalid/unknown)&<#GeneratorExit> or (invalid/unknown)&<#KeyboardInterrupt> is thrown, the generator will send
@@ -146,7 +146,7 @@ IO array manager for frame sources.
 		- `undocumented`
 	/element/
 		- (source/area)`85 2 94 24`
-(signature)`__init__(self, readframe, encoding, newline, timeout)`
+(signature)`__init__(self)`
 
 
 [ FrameArray >> __enter__ ]
@@ -275,7 +275,7 @@ Status frame serialization interface and write buffer.
 		classmethod
 	/element/
 		- (source/area)`195 2 202 13`
-(signature)`stdout(Class, channel, encoding)`
+(signature)`stdout(Class)`
 
 Construct a (factor-local/class)&<#Log[Log]> instance for serializing frames to (none/invalid)&<http://fault.io/dev/null[sys.stdout]>.
 
@@ -286,7 +286,7 @@ Construct a (factor-local/class)&<#Log[Log]> instance for serializing frames to 
 		classmethod
 	/element/
 		- (source/area)`203 2 208 92`
-(signature)`stderr(Class, channel, encoding)`
+(signature)`stderr(Class)`
 
 Construct a (factor-local/class)&<#Log[Log]> instance for serializing frames to (none/invalid)&<http://fault.io/dev/null[sys.stderr]>.
 
@@ -299,7 +299,7 @@ Construct a (factor-local/class)&<#Log[Log]> instance for serializing frames to 
 		- `undocumented`
 	/element/
 		- (source/area)`210 2 218 17`
-(signature)`__init__(self, pack, stream, encoding, frequency, channel)`
+(signature)`__init__(self, pack, stream, encoding)`
 
 
 [ Log >> transaction ]
@@ -317,7 +317,7 @@ Increment the operation count and check if it exceeds the frequency.
 If in excess, flush the buffer causing serialized messages to be written
 to the configured stream.
 
-Return (invalid/unknown)&<#True> when a (factor-local/method)&<#Log.flush[flush]> is performed, otherwise (invalid/unknown)&<#False>.
+Return (invalid/unknown)&<#True> when a (invalid/unknown)&<#flush> is performed, otherwise (invalid/unknown)&<#False>.
 
 
 [ Log >> flush ]
@@ -370,7 +370,7 @@ Write text to the log's stream incrementing the transmit count.
 		method
 	/element/
 		- (source/area)`261 2 269 33`
-(signature)`declare(self, datum, timestamp)`
+(signature)`declare(self)`
 
 Emit a protocol declaration.
 
@@ -383,7 +383,7 @@ Emit a protocol declaration.
 		- `undocumented`
 	/element/
 		- (source/area)`271 2 294 54`
-(signature)`compose(self, type, severity, qualifier, text, extension, channel, _compose)`
+(signature)`compose(self, type, severity, qualifier, text, extension)`
 
 
 [ Log >> notice ]
@@ -394,7 +394,7 @@ Emit a protocol declaration.
 		- `undocumented`
 	/element/
 		- (source/area)`296 2 300 12`
-(signature)`notice(self, *text, extension, xid, label)`
+(signature)`notice(self, *text)`
 
 
 [ Log >> warning ]
@@ -405,7 +405,7 @@ Emit a protocol declaration.
 		- `undocumented`
 	/element/
 		- (source/area)`302 2 306 12`
-(signature)`warning(self, *text, extension, xid, label)`
+(signature)`warning(self, *text)`
 
 
 [ Log >> error ]
@@ -416,7 +416,7 @@ Emit a protocol declaration.
 		- `undocumented`
 	/element/
 		- (source/area)`308 2 312 12`
-(signature)`error(self, *text, extension, xid, label)`
+(signature)`error(self, *text)`
 
 
 [ Log >> xact_open ]

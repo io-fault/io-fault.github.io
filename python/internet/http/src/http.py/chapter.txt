@@ -390,13 +390,13 @@ protocol elements when interpreting HTTP data as events.
 		function
 	/element/
 		- (source/area)`111 1 671 24`
-(signature)`Tokenization(disposition, allocation, constraints, len, tuple, bytes, int, bytearray, bstrip, bastrip, map, range, max, CRLF, SP, PROTOCOLS, bypass_ev, rline_ev, headers_ev, content_ev, chunk_ev, trailers_ev, violation_ev, warning_ev)`
+(signature)`Tokenization()`
 
 An HTTP 1.0 and 1.1 message parser. Emits HTTP events from the given binary data.
-For proper response handling(HEAD), (factor-local/parameter)&<#Tokenization.Parameters.allocation[allocation]> must be properly constructed to retrieve
+For proper response handling(HEAD), (invalid/unknown)&<#allocation> must be properly constructed to retrieve
 the identifier and body expectation from the shared state.
 
-The generator is configured to continue as long as the given (factor-local/parameter)&<#Tokenization.Parameters.allocation[allocation]>
+The generator is configured to continue as long as the given (invalid/unknown)&<#allocation>
 iterator produces items.
 
 Primarily, this generator is concernced with:
@@ -431,7 +431,7 @@ Returns an already started (factor-local/data)&<#Disassembler[Disassembler]> gen
 		function
 	/element/
 		- (source/area)`683 1 688 57`
-(signature)`headers(headers, chain, CRLF, HFS)`
+(signature)`headers(headers)`
 
 Produce an iterator of (invalid/unknown)&<#bytes> instances making up a segment
 of headers that can be joined into a buffer.
@@ -458,7 +458,7 @@ of headers that can be joined into a buffer.
 		- `undocumented`
 	/element/
 		- (source/area)`692 1 693 30`
-(signature)`chunk_size(length, CRLF, hex)`
+(signature)`chunk_size(length)`
 
 
 [ chunk ]
@@ -467,7 +467,7 @@ of headers that can be joined into a buffer.
 		function
 	/element/
 		- (source/area)`695 1 710 43`
-(signature)`chunk(data, len, CRLF)`
+(signature)`chunk(data)`
 
 Returns a tuple of (chunk-size + CRLF, chunk-data, CRLF).
 
@@ -488,7 +488,7 @@ some of the purpose.
 		function
 	/element/
 		- (source/area)`712 1 751 22`
-(signature)`Serialization(chunk_map, bytearray, iter)`
+(signature)`Serialization()`
 
 Assemble HTTP events back into a sequences of bytes.
 

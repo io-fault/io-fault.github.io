@@ -85,7 +85,7 @@ AST manipulations for injecting coverage counters and profile timers into Python
 		function
 	/element/
 		- (source/area)`21 1 54 7`
-(signature)`visit_expression(node, parent, field, index, isinstance)`
+(signature)`visit_expression(node, parent, field, index)`
 
 Visit the node in a statement. Keyword defaults, expressions, statements.
 
@@ -98,7 +98,7 @@ Visit the node in a statement. Keyword defaults, expressions, statements.
 		- `undocumented`
 	/element/
 		- (source/area)`56 1 75 58`
-(signature)`visit_container(nodes, parent, field, isinstance)`
+(signature)`visit_container(nodes, parent, field)`
 
 
 [ visit ]
@@ -107,7 +107,7 @@ Visit the node in a statement. Keyword defaults, expressions, statements.
 		function
 	/element/
 		- (source/area)`77 1 87 7`
-(signature)`visit(node, parent, field, index, sequencing)`
+(signature)`visit(node)`
 
 Identify nodes that should be instrumented for coverage and profiling.
 
@@ -283,7 +283,7 @@ Identify nodes that should be instrumented for coverage and profiling.
 		- `undocumented`
 	/element/
 		- (source/area)`207 1 215 17`
-(signature)`construct_call_increment(node, area, path, lineno)`
+(signature)`construct_call_increment(node, area)`
 
 
 [ construct_boolop_increment ]
@@ -294,7 +294,7 @@ Identify nodes that should be instrumented for coverage and profiling.
 		- `undocumented`
 	/element/
 		- (source/area)`217 1 225 20`
-(signature)`construct_boolop_increment(node, area, path, lineno)`
+(signature)`construct_boolop_increment(node, area)`
 
 
 [ construct_profile_trap ]
@@ -305,7 +305,7 @@ Identify nodes that should be instrumented for coverage and profiling.
 		- `undocumented`
 	/element/
 		- (source/area)`227 1 236 12`
-(signature)`construct_profile_trap(identifier, container, nodes, path, lineno)`
+(signature)`construct_profile_trap(identifier, container, nodes)`
 
 
 [ construct_initialization_nodes ]
@@ -314,7 +314,7 @@ Identify nodes that should be instrumented for coverage and profiling.
 		function
 	/element/
 		- (source/area)`238 1 246 13`
-(signature)`construct_initialization_nodes(path)`
+(signature)`construct_initialization_nodes()`
 
 Construct instrumentation initialization nodes for injection into an (none/invalid)&<http://fault.io/dev/null[ast.Module]> body.
 
@@ -358,7 +358,7 @@ Adjust the AST so that (invalid/unknown)&<#node> will record its execution.
 		function
 	/element/
 		- (source/area)`297 1 323 38`
-(signature)`compile(factor, source, path, constants, parse, hash, filter)`
+(signature)`compile(factor, source, path, constants)`
 
 Compile Python source of a module into an instrumented (invalid/unknown)&<#types.CodeObject>
 

@@ -2,7 +2,7 @@
 	/type/
 		module
 	/element/
-		- (source/area)`1 1 326 0`
+		- (source/area)`1 1 445 0`
 Construct an archive for a Product's Internet Representation.
 
 This provides the input used by (project-local/unknown)&<daemon> web partitions.
@@ -152,7 +152,7 @@ This provides the input used by (project-local/unknown)&<daemon> web partitions.
 	/element/
 		- (source/area)`23 1 23 29`
 #!source
-	web_resources = ".legacy-web"
+	web_resources = '.legacy-web'
 
 [ core_style ]
 ! CONTROL:
@@ -163,7 +163,7 @@ This provides the input used by (project-local/unknown)&<daemon> web partitions.
 	/element/
 		- (source/area)`24 1 24 23`
 #!source
-	core_style = "core.css"
+	core_style = 'core.css'
 
 [ project_index_style ]
 ! CONTROL:
@@ -174,7 +174,7 @@ This provides the input used by (project-local/unknown)&<daemon> web partitions.
 	/element/
 		- (source/area)`26 1 26 34`
 #!source
-	project_index_style = "corpus.css"
+	project_index_style = 'corpus.css'
 
 [ factor_index_style ]
 ! CONTROL:
@@ -185,7 +185,7 @@ This provides the input used by (project-local/unknown)&<daemon> web partitions.
 	/element/
 		- (source/area)`27 1 27 34`
 #!source
-	factor_index_style = "project.css"
+	factor_index_style = 'project.css'
 
 [ factor_style ]
 ! CONTROL:
@@ -196,7 +196,7 @@ This provides the input used by (project-local/unknown)&<daemon> web partitions.
 	/element/
 		- (source/area)`28 1 28 27`
 #!source
-	factor_style = "factor.css"
+	factor_style = 'factor.css'
 
 [ chapter_style ]
 ! CONTROL:
@@ -207,7 +207,7 @@ This provides the input used by (project-local/unknown)&<daemon> web partitions.
 	/element/
 		- (source/area)`29 1 29 29`
 #!source
-	chapter_style = "chapter.css"
+	chapter_style = 'chapter.css'
 
 [ sources_style ]
 ! CONTROL:
@@ -218,7 +218,7 @@ This provides the input used by (project-local/unknown)&<daemon> web partitions.
 	/element/
 		- (source/area)`30 1 30 29`
 #!source
-	sources_style = "sources.css"
+	sources_style = 'sources.css'
 
 [ styles ]
 ! CONTROL:
@@ -228,18 +228,7 @@ This provides the input used by (project-local/unknown)&<daemon> web partitions.
 		- `undocumented`
 	/element/
 		- (source/area)`32 1 37 2`
-(signature)`styles(depth, type, directory)`
-
-
-[ abstract ]
-! CONTROL:
-	/type/
-		function
-	/flags/
-		- `undocumented`
-	/element/
-		- (source/area)`39 1 58 17`
-(signature)`abstract(project)`
+(signature)`styles(depth, type)`
 
 
 [ r_factor ]
@@ -249,7 +238,7 @@ This provides the input used by (project-local/unknown)&<daemon> web partitions.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`60 1 155 62`
+		- (source/area)`39 1 165 44`
 (signature)`r_factor(sx, prefixes, variants, req, ctx, pj, pjdir, fpath, type, requirements, sources)`
 
 
@@ -260,7 +249,7 @@ This provides the input used by (project-local/unknown)&<daemon> web partitions.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`157 1 175 79`
+		- (source/area)`167 1 192 101`
 (signature)`r_project(sx, prefixes, variants, req, ctx, pj, pjdir)`
 
 
@@ -269,8 +258,8 @@ This provides the input used by (project-local/unknown)&<daemon> web partitions.
 	/type/
 		function
 	/element/
-		- (source/area)`177 1 192 19`
-(signature)`hrinit(prefix, type, identifier, resource, meta)`
+		- (source/area)`194 1 209 19`
+(signature)`hrinit(prefix, type, identifier)`
 
 Initialize the `.http-resource` directory inside (invalid/unknown)&<#path>
 with a `meta.json` formed from (factor-local/parameter)&<#hrinit.Parameters.meta[meta]>, (factor-local/parameter)&<#hrinit.Parameters.type[type]>, and (factor-local/parameter)&<#hrinit.Parameters.identifier[identifier]>.
@@ -285,7 +274,7 @@ Returns the directory path that was created.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`194 1 255 22`
+		- (source/area)`211 1 272 22`
 (signature)`r_corpus(config, out, ctx, req, variants)`
 
 
@@ -296,7 +285,7 @@ Returns the directory path that was created.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`257 1 265 32`
+		- (source/area)`274 1 282 32`
 (signature)`first_sentence(p)`
 
 
@@ -307,7 +296,7 @@ Returns the directory path that was created.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`267 1 271 14`
+		- (source/area)`284 1 288 14`
 (signature)`removeprefix(prefixes, string)`
 
 
@@ -318,12 +307,13 @@ Returns the directory path that was created.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`273 1 277 1`
+		- (source/area)`290 1 295 1`
 #!source
 	required = {
 		'--corpus-root': ('field-replace', 'corpus-root'),
 		'--corpus-title': ('field-replace', 'corpus-title'),
 		'-P': ('set-add', 'prefixes'),
+		'-I': ('set-add', 'variants'),
 	}
 
 [ restricted ]
@@ -333,12 +323,75 @@ Returns the directory path that was created.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`279 1 282 1`
+		- (source/area)`297 1 300 1`
 #!source
 	restricted = {
 		'-W': ('field-replace', False, 'web-defaults'),
 		'-w': ('field-replace', True, 'web-defaults'),
 	}
+
+[ extract_image_reference ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`302 1 319 38`
+(signature)`extract_image_reference(svg)`
+
+Extract the hyperlink from the first image element in an SVG image.
+The `href` attribute must be directly adjacent to the `=` character.
+
+[ > Parameters ]
+
+/(parameter)`svg`/
+	
+	The SVG XML string.
+
+[ > Returns ]
+
+/(invalid/unknown)&<#str>/
+	The contents of the href attribute.
+
+[ > Exceptions ]
+
+/(invalid/unknown)&<#ValueError>/
+	No image tag with an href attribute.
+
+
+[ transfer ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`321 1 331 23`
+(signature)`transfer(xfers)`
+
+Transfer the remote resources to their associated filesystem location.
+
+
+[ icons ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`333 1 365 21`
+(signature)`icons(out, ctx, types)`
+
+Print the icons of the factor types used by the projects in (factor-local/parameter)&<#icons.Parameters.ctx[ctx]>.
+The icons are placed stored in `.factor-type-icon/` relative to (factor-local/parameter)&<#icons.Parameters.out[out]>
+according to (project-local/factor-element)&<html#icon_identity[system.chapters.html.icon_identity]>.
+
+
+[ web ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`367 1 432 10`
+(signature)`web(argv)`
+
+Print factor representations for web publication.
+
 
 [ main ]
 ! CONTROL:
@@ -347,7 +400,7 @@ Returns the directory path that was created.
 	/flags/
 		- `undocumented`
 	/element/
-		- (source/area)`284 1 326 19`
+		- (source/area)`434 1 445 27`
 		- (type/syntax)`process.Exit`
 		- (type/remote/factor-element)&<http://fault.io/python/system/process#Exit[fault.system.process.Exit]>
 		

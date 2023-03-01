@@ -463,7 +463,7 @@ The target's factor path.
 		- `undocumented`
 	/element/
 		- (source/area)`208 2 227 38`
-(signature)`__init__(self, project, route, type, requirements, sources, parameters, variants, method)`
+(signature)`__init__(self, project, route, type, requirements, sources)`
 
 
 [ Target >> __str__ ]
@@ -474,7 +474,7 @@ The target's factor path.
 		- `undocumented`
 	/element/
 		- (source/area)`229 2 232 10`
-(signature)`__str__(self, struct)`
+(signature)`__str__(self)`
 
 
 [ Target >> name ]

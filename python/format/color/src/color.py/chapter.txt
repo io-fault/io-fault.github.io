@@ -84,7 +84,7 @@ Convert the given RGB color into a hex string for display.
 		- (type/syntax)`matrix.Screen.Phrase`
 		- (type/context-local/factor-element)&<fault.terminal/matrix#Screen.Phrase[fault.terminal.matrix.Screen.Phrase]>
 		
-(signature)`inline(reference, swatch, rgb, from_words)`
+(signature)`inline(reference, swatch, rgb)`
 
 Construct a phrase for representing an RGB color.
 
