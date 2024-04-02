@@ -1,0 +1,58 @@
+#!/bin/sh
+SOURCE="$1"; shift 1
+
+# Allow fault installation override.
+if test x"$FAULT" = x""
+then
+	FAULT="$SOURCE"
+fi
+
+PUBLISH="$(pwd)/docs"
+
+x ()
+{
+	echo "-> $@"
+	"$@"
+}
+
+fault ()
+{
+	"$FAULT/bin/fault-tool" "$@"
+}
+
+FPYTHON='python+Python Framework+fault+http://fault.io/python'
+FSYSTEM='integration+System Integration+system+http://fault.io/integration'
+FTERMINAL='integration+Terminal+terminal+http://fault.io/terminal'
+FPROTOCOL='protocol+Interface Protocols+interface+http://fault.io/protocol'
+FENTITY='entity+Fault+fel+http://fault.io/entity'
+
+for y in "$FPYTHON" "$FSYSTEM" "$FTERMINAL" "$FPROTOCOL" "$FENTITY"
+do
+	(IFS='+'
+		set -- $y
+		unset IFS
+
+		ldir="$1"; shift 1
+		title="$1"; shift 1
+		fcontext="$1"; shift 1
+		uid="$1"; shift 1
+
+		if ! test -d "$SOURCE/$ldir"
+		then
+			echo >&2 "Directory '$SOURCE/$ldir' does not exist; skipping."
+			exit
+		fi
+
+		if test x"$FACTORS" = x"update"
+		then
+			x fault fictl delineate -D"$SOURCE/$ldir"
+		fi
+
+		x \
+		fault python \
+		system.chapters.print web factors \
+			--corpus-root="$uid" \
+			--corpus-title="$title" -P"$fcontext". \
+			"$PUBLISH/$ldir" "$SOURCE/$ldir"
+	)
+done

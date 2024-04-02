@@ -1,0 +1,7 @@
+#!/bin/sh
+set -x
+git add docs
+git add -u docs
+
+git commit -m "Syndication" .
+git push origin master
