@@ -1,0 +1,960 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 764 25`
+Root daemon process for service management and scheduled processes.
+
+(project-local/unknown)&<root> provides the primary support for (project-local/unknown)&<bin.rootd> which manages a set of daemons,
+
+Multiple instances of rootd may exist, but usually only one per-user is desired.
+The (system/home)`.fault` directory is used by default, but can be adjusted by a command
+line parameter. The daemon directory supplies all the necessary configuration,
+so few options are available from system invocation.
+
+
+[ os ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 1 11 9`
+
+[ sys ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`12 1 12 10`
+
+[ signal ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`13 1 13 13`
+
+[ functools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`14 1 14 16`
+
+[ itertools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`15 1 15 16`
+
+[ typing ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`16 1 16 13`
+
+[ json ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`17 1 17 11`
+
+[ libexec ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`19 1 19 45`
+
+[ network ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`20 1 20 32`
+
+[ Path ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`21 1 21 35`
+
+[ http ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`22 1 22 26`
+
+[ ri ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`23 1 23 29`
+
+[ kcore ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`25 1 25 38`
+
+[ kdispatch ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`26 1 26 46`
+
+[ kio ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`27 1 27 34`
+
+[ kflows ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`28 1 28 40`
+
+[ timetypes ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`30 1 30 41`
+
+[ service ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`32 1 32 21`
+
+[ Service ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`34 1 226 28`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`34 15 34 27`
+	- (type/syntax)`kcore.Context`
+	- (type/remote/factor-element)&<http://fault.io/python/kernel/core#Context[fault.kernel.core.Context]>
+	
+Service daemon state and control interface.
+
+Manages the interactions to daemons and commands.
+
+Service processors do not exit unless the service is *completely* removed
+by an administrative instruction; disabling a service does not remove it.
+They primarily respond to events in order to keep the daemon running.
+Secondarily, it provides the administrative interface.
+
+[ > Properties ]
+
+/s_minimum_runtime/
+	Identifies the minimum time required to identify a successful start.
+
+/s_retry_wait/
+	Duration to wait before automatically attemping to start the daemon again.
+
+/s_maximum_attempts/
+	Limit of attempts to make before giving up and inhibiting daemon start.
+
+
+[ Service >> s_minimum_runtime ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`54 2 54 52`
+#!source
+	s_minimum_runtime = timetypes.Measure.of(second=16)
+
+[ Service >> s_retry_wait ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`55 2 55 46`
+#!source
+	s_retry_wait = timetypes.Measure.of(second=2)
+
+[ Service >> s_maximum_attempts ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`56 2 56 23`
+#!source
+	s_maximum_attempts = 8
+
+[ Service >> structure ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`58 2 66 16`
+(signature)`structure(self)`
+
+
+[ Service >> s_critical ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`68 2 68 28`
+#!source
+	s_critical = "critical.log"
+
+[ Service >> s_status ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`70 2 70 21`
+#!source
+	s_status = 'unknown'
+
+[ Service >> s_config ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`71 2 71 16`
+#!source
+	s_config = None
+
+[ Service >> s_invocation ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`72 2 72 20`
+#!source
+	s_invocation = None
+
+[ Service >> s_inhibit_recovery ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`73 2 73 26`
+#!source
+	s_inhibit_recovery = None
+
+[ Service >> s_exit_events ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`74 2 74 19`
+#!source
+	s_exit_events = ()
+
+[ Service >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`76 2 80 23`
+(signature)`__init__(self, service_config)`
+
+
+[ Service >> actuate ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`82 2 87 31`
+(signature)`actuate(self)`
+
+
+[ Service >> s_invoke ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`89 2 116 13`
+(signature)`s_invoke(self)`
+
+Invoke the service. Does nothing if (factor-local/data)&<#Service.s_status[s_status]> is `'executed'`.
+
+
+[ Service >> occur ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`117 2 117 17`
+#!source
+	occur = s_invoke
+
+[ Service >> s_was_running ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`119 2 129 15`
+(signature)`s_was_running(self)`
+
+
+[ Service >> s_again ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`131 2 145 45`
+(signature)`s_again(self)`
+
+Called when a service process exits.
+
+
+[ Service >> s_update ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`147 2 167 24`
+(signature)`s_update(self)`
+
+Create or Update the KInvocation instance used to launch the daemon.
+
+
+[ Service >> xact_void ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`169 2 192 18`
+(signature)`xact_void(self, xact)`
+
+
+[ Service >> s_get_pid ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`194 2 198 12`
+(signature)`s_get_pid(self)`
+
+
+[ Service >> s_terminate ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`200 2 202 42`
+(signature)`s_terminate(self)`
+
+
+[ Service >> s_interrupt ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`204 2 206 41`
+(signature)`s_interrupt(self)`
+
+
+[ Service >> s_kill ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`208 2 210 42`
+(signature)`s_kill(self)`
+
+
+[ Service >> s_suspend ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`212 2 213 48`
+(signature)`s_suspend(self)`
+
+
+[ Service >> s_continue ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`215 2 216 48`
+(signature)`s_continue(self)`
+
+
+[ Service >> terminate ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`218 2 226 28`
+(signature)`terminate(self)`
+
+
+[ Control ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`228 1 673 71`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`228 15 228 27`
+	- (type/syntax)`kcore.Context`
+	- (type/remote/factor-element)&<http://fault.io/python/kernel/core#Context[fault.kernel.core.Context]>
+	
+
+[ Control >> prepare_http_v1 ]
+! CONTROL:
+	/type/
+		staticmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`230 2 231 45`
+(signature)`prepare_http_v1(ifx, ports)`
+
+
+[ Control >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`233 2 236 26`
+(signature)`__init__(self, path, rootset)`
+
+
+[ Control >> actuate ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`238 2 253 42`
+(signature)`actuate(self)`
+
+
+[ Control >> xact_exit ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`255 2 258 19`
+(signature)`xact_exit(self, xact)`
+
+
+[ Control >> xact_void ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`260 2 261 27`
+(signature)`xact_void(self, final)`
+
+
+[ Control >> terminate ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`263 2 269 19`
+(signature)`terminate(self)`
+
+
+[ Control >> ctl_select ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`271 2 272 46`
+(signature)`ctl_select(self, s_identifier)`
+
+
+[ Control >> ctl_update ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`274 2 319 62`
+(signature)`ctl_update(self, http, data)`
+
+
+[ Control >> _ctl_http_send ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`321 2 341 56`
+(signature)`_ctl_http_send(self, http, code, descr, objects)`
+
+
+[ Control >> ctl_http_processor ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`343 2 493 17`
+(signature)`ctl_http_processor(self, invp)`
+
+
+[ Control >> ctl_commands ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`495 2 512 3`
+#!source
+	ctl_commands = set([
+		'status',
+			'reload',
+		'normalize',
+		'disable',
+		'enable',
+			'restart',
+		'stop',
+		'start',
+		'interrupt',
+		'kill',
+			'sleep',
+		'hold',
+		'release',
+	])
+
+[ Control >> ctl_status ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`514 2 518 25`
+(signature)`ctl_status(self, serivce_id, context, config)`
+
+Return the status of the service process.
+
+
+[ Control >> ctl_suspend ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`520 2 529 50`
+(signature)`ctl_suspend(self, service_id, context, config)`
+
+Send a stop signal to the service.
+
+
+[ Control >> ctl_continue ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`531 2 540 50`
+(signature)`ctl_continue(self, service_id, context, config)`
+
+Send a continue signal to the service.
+
+
+[ Control >> ctl_enable ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`542 2 550 18`
+(signature)`ctl_enable(self, service_id, context, config)`
+
+Enable the service, but do not start it.
+
+
+[ Control >> ctl_disable ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`552 2 560 19`
+(signature)`ctl_disable(self, service_id, context, config)`
+
+Disable the service, but do not change its status.
+
+
+[ Control >> ctl_stop ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`562 2 577 40`
+(signature)`ctl_stop(self, service_id, context, config)`
+
+Signal the service to stop and inhibit it from being restarted if enabled.
+
+
+[ Control >> ctl_restart ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`579 2 590 38`
+(signature)`ctl_restart(self, service_id, context, config)`
+
+Signal the service to stop (SIGTERM) and allow it to restart.
+
+
+[ Control >> ctl_reload ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`592 2 601 58`
+(signature)`ctl_reload(self, service_id, context, config)`
+
+Send a SIGHUP to the service or launch the update command.
+
+
+[ Control >> ctl_start ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`603 2 613 19`
+(signature)`ctl_start(self, service_id, context, config)`
+
+Start the daemon unless it's already running; explicit starts ignore
+(project-local/factor-element)&<service#Configuration.actuates[system.daemons.service.Configuration.actuates]>.
+
+
+[ Control >> ctl_normalize ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`615 2 629 23`
+(signature)`ctl_normalize(self, service_id, context, config)`
+
+Normalize the state of the service.
+
+
+[ Control >> ctl_interrupt ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`631 2 646 40`
+(signature)`ctl_interrupt(self, service_id, context, config)`
+
+Interrupt the service.
+
+
+[ Control >> ctl_kill ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`648 2 663 41`
+(signature)`ctl_kill(self, service_id, context, config)`
+
+Force the daemon process to exit.
+
+
+[ Control >> ctl_void ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`665 2 673 71`
+(signature)`ctl_void(self, service_id, context, config)`
+
+Terminate the service and destroy its daemon directory.
+
+
+[ Set ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`675 1 765 24`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`675 11 675 23`
+	- (type/syntax)`kcore.Context`
+	- (type/remote/factor-element)&<http://fault.io/python/kernel/core#Context[fault.kernel.core.Context]>
+	
+Set of (factor-local/class)&<#Service[Service]> transactions managing the presence of the service process.
+
+
+[ Set >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`680 2 683 22`
+(signature)`__init__(self, route)`
+
+
+[ Set >> structure ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`685 2 689 16`
+(signature)`structure(self)`
+
+
+[ Set >> xact_void ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`691 2 702 28`
+(signature)`xact_void(self, final)`
+
+
+[ Set >> xact_exit ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`704 2 706 25`
+(signature)`xact_exit(self, xact)`
+
+
+[ Set >> actuate ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`708 2 739 28`
+(signature)`actuate(self)`
+
+Create the faultd context if it does not exist.
+
+
+[ Set >> terminate ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`741 2 745 17`
+(signature)`terminate(self)`
+
+
+[ Set >> r_dispatch ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`747 2 754 11`
+(signature)`r_dispatch(self, service)`
+
+Dispatch a new service.
+
+
+[ Set >> r_boot ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`756 2 765 24`
+(signature)`r_boot(self)`
+
+Dispatch all loaded service transactions.
+

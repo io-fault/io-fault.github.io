@@ -1,0 +1,112 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 111 0`
+
+[ module ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 1 40`
+
+[ test_Segments ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`3 1 33 15`
+(signature)`test_Segments(test)`
+
+- (context-local/factor-element)&<terminal.syntax/sequence#Segments[terminal.syntax.sequence.Segments]>
+
+
+[ test_Segments_Sequence_Interface ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`35 1 55 46`
+(signature)`test_Segments_Sequence_Interface(test)`
+
+- (context-local/factor-element)&<terminal.syntax/sequence#Segments[terminal.syntax.sequence.Segments]>
+
+
+[ test_Segments_select ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`57 1 60 57`
+(signature)`test_Segments_select(test)`
+
+
+[ test_Segments_select_reverse ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`62 1 64 59`
+(signature)`test_Segments_select_reverse(test)`
+
+
+[ test_Segments_select_all ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`66 1 69 65`
+(signature)`test_Segments_select_all(test)`
+
+
+[ test_Segments_select_all_reverse ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`71 1 74 76`
+(signature)`test_Segments_select_all_reverse(test)`
+
+
+[ test_Segments_deletion ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`76 1 84 20`
+(signature)`test_Segments_deletion(test)`
+
+
+[ test_Segments_getsetitem ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`86 1 107 19`
+(signature)`test_Segments_getsetitem(test)`
+

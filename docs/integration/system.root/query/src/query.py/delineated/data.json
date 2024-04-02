@@ -1,0 +1,1 @@
+[[["root_project_path"], ["installation_path"], ["installation_envstr"]], [{"syntax": "files.Path.from_absolute(__file__) ** 1", "area": [[8, 21], [8, 59]]}, {"syntax": "root_project_path ** 3", "area": [[9, 21], [9, 42]]}, {"syntax": "os.environ.get('FAULT_INSTALLATION', '').strip() or None", "area": [[12, 23], [12, 78]]}]]

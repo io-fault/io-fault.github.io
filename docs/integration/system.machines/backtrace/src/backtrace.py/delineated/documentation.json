@@ -1,0 +1,1 @@
+[["Tool interfaces for extracting information from corefiles."], ["Load the debugger for a given core file, `corefile` and `executable`.", "This will operate interactively and return the status code on exit.", "", "By default, the executable is the Python executable."], ["Get a text dump of the corefile from either lldb or gdb."]]

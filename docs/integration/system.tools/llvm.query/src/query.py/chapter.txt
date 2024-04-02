@@ -1,0 +1,145 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 245 0`
+System queries for extracting usage information from `clang` and `llvm-config`.
+
+
+[ sys ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 10`
+
+[ itertools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 16`
+
+[ execution ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 7 34`
+
+[ files ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 8 30`
+
+[ split_config_output ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 1 11 47`
+(signature)`split_config_output(flag, output)`
+
+
+[ profile_library ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`13 1 25 12`
+(signature)`profile_library(prefix, architecture)`
+
+
+[ compiler_libraries ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`27 1 38 15`
+(signature)`compiler_libraries(compiler, prefix, version, executable, target)`
+
+Attempt to select the compiler libraries directory containing compiler support
+libraries for profiling, sanity, and runtime.
+
+
+[ parse_clang_version_1 ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`40 1 71 54`
+(signature)`parse_clang_version_1(string)`
+
+clang --version parser.
+
+
+[ parse_clang_directories_1 ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`73 1 82 3`
+(signature)`parse_clang_directories_1(string)`
+
+Parse -print-search-dirs output.
+
+
+[ parse_clang_standards_1 ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`84 1 96 2`
+(signature)`parse_clang_standards_1(string)`
+
+After retrieving a list from standard error, extract as much information as possible.
+
+
+[ clang ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`98 1 175 13`
+(signature)`clang(executable)`
+
+Extract information from the given clang (factor-local/parameter)&<#clang.Parameters.executable[executable]>.
+
+
+[ instrumentation ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`177 1 240 65`
+(signature)`instrumentation(llvm_config_path)`
+
+Identify instrumentation related commands and libraries for making extraction tools.
+

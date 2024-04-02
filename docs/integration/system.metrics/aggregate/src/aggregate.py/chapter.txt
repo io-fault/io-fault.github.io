@@ -1,0 +1,130 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 74 0`
+Metrics aggregation command interface.
+
+Target executable for rendering metrics.
+Process the content of the work directory in conjunction with telemetry data.
+
+
+[ json ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 7 11`
+
+[ process ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 8 32`
+
+[ files ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`9 1 9 30`
+
+[ calculations ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 1 11 26`
+
+[ factor_records ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`13 1 26 20`
+(signature)`factor_records(root)`
+
+Scan the tree for data files and select the segment
+from (factor-local/parameter)&<#factor_records.Parameters.root[root]> that can be used to identify the origin of
+the record.
+
+Yields the path and segment identifying the data record.
+
+
+[ identify_captured_metrics ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`28 1 34 36`
+(signature)`identify_captured_metrics(path)`
+
+Scan each data set for capture records.
+
+
+[ integrate_test_reports ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`36 1 50 46`
+(signature)`integrate_test_reports(output, cache, telemetry)`
+
+
+[ integrate_syntax_profiles ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`52 1 55 19`
+(signature)`integrate_syntax_profiles(path, sources)`
+
+
+[ integrate_coverage_telemetry ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`57 1 59 6`
+(signature)`integrate_coverage_telemetry(output, telemetry)`
+
+
+[ main ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`61 1 74 19`
+		- (type/syntax)`process.Exit`
+		- (type/remote/factor-element)&<http://fault.io/python/system/process#Exit[fault.system.process.Exit]>
+		
+(signature)`main(inv)`
+

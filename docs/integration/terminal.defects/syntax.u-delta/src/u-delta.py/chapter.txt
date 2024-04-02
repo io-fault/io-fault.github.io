@@ -1,0 +1,166 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 138 0`
+Analyze (project-local/unknown)&<delta>
+
+
+[ module ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 37`
+
+[ test_Update ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 12 22`
+(signature)`test_Update(test)`
+
+
+[ test_Lines ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`14 1 18 22`
+(signature)`test_Lines(test)`
+
+
+[ test_Log_init ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`20 1 24 22`
+(signature)`test_Log_init(test)`
+
+
+[ sample1 ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`26 1 32 13`
+(signature)`sample1()`
+
+
+[ test_Log_insert ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`34 1 36 20`
+(signature)`test_Log_insert(test)`
+
+
+[ test_Log_undo ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`38 1 41 14`
+(signature)`test_Log_undo(test)`
+
+
+[ test_Log_redo ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`43 1 50 41`
+(signature)`test_Log_redo(test)`
+
+
+[ test_Log_checkpoint ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`52 1 61 20`
+(signature)`test_Log_checkpoint(test)`
+
+
+[ test_Log_update ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`63 1 69 31`
+(signature)`test_Log_update(test)`
+
+
+[ test_Log_collapse_inserts ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`71 1 89 26`
+(signature)`test_Log_collapse_inserts(test)`
+
+
+[ test_Log_collapse_deletes ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`91 1 114 23`
+(signature)`test_Log_collapse_deletes(test)`
+
+- (context-local/factor-element)&<terminal.syntax/delta#Update.combine[terminal.syntax.delta.Update.combine]>
+- (context-local/factor-element)&<terminal.syntax/delta#Log.collapse[terminal.syntax.delta.Log.collapse]>
+
+Validate that deletes following inserts can be combined.
+
+
+[ test_Log_collapsed_since ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`116 1 138 24`
+(signature)`test_Log_collapsed_since(test)`
+
+- (context-local/factor-element)&<terminal.syntax/delta#Log.collapse[terminal.syntax.delta.Log.collapse]>
+- (context-local/factor-element)&<terminal.syntax/delta#Log.since[terminal.syntax.delta.Log.since]>
+

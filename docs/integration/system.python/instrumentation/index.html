@@ -1,1 +1,117 @@
-<html root="2"><head><title>system.python.instrumentation</title><meta charset="utf-8"/><link as="style" rel="preload" href="../../.legacy-web/core.css"></link><link as="style" rel="preload" href="../../.legacy-web/factor.css"></link><link rel="stylesheet" href="../../.legacy-web/core.css"></link><link rel="stylesheet" href="../../.legacy-web/factor.css"></link></head><body><main><h1><span class="prefix"></span><div class="page-subject"><img class="icon" src="../../.factor-type-icon/if.fault.io/python-module.svg"></img><span class="subject-identifier">instrumentation</span><a href="http://if.fault.io/factors/python.module"><code class="type">python.module</code></a></div><div class="page-context"><a href="../"><img class="icon" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNTYiIGhlaWdodD0iMjU2Ij48dGV4dCB4PSI0IiB5PSIwLjg4ZW0iIGZvbnQtc2l6ZT0iMjQ4Ij7wn5CNPC90ZXh0Pjwvc3ZnPg=="></img></a><span class="context-identifier">system.python</span></div></h1><section class="chapter"></section><h1 class="footing"></h1></main></body></html>
+<html root="2"><head><title>system.python.instrumentation</title><meta charset="utf-8"/><link as="style" rel="preload" href="../../.legacy-web/core.css"></link><link as="style" rel="preload" href="../../.legacy-web/factor.css"></link><link rel="stylesheet" href="../../.legacy-web/core.css"></link><link rel="stylesheet" href="../../.legacy-web/factor.css"></link></head><body><main><h1><span class="prefix"></span><div class="page-subject"><img class="icon" src="../../.factor-type-icon/if.fault.io/python-module.svg"></img><span class="subject-identifier">instrumentation</span><a href="http://if.fault.io/factors/python.module"><code class="type">python.module</code></a></div><div class="page-context"><a href="../"><img class="icon" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNTYiIGhlaWdodD0iMjU2Ij48dGV4dCB4PSI0IiB5PSIwLjg4ZW0iIGZvbnQtc2l6ZT0iMjQ4Ij7wn5CNPC90ZXh0Pjwvc3ZnPg=="></img></a><span class="context-identifier">system.python</span></div></h1><section class="chapter"><p><span class="text.normal">AST manipulations for injecting coverage counters and profile timers into Python modules.</span></p></section><section class="import" documented="false" local-identifier="ast" id="ast"><h1><span class="prefix"></span><a class="title" href="#ast"><span class="text.normal">ast</span></a><span class="abstract-type">import</span></h1></section><section class="import" documented="false" local-identifier="builtins" id="builtins"><h1><span class="prefix"></span><a class="title" href="#builtins"><span class="text.normal">builtins</span></a><span class="abstract-type">import</span></h1></section><section class="import" documented="false" local-identifier="functools" id="functools"><h1><span class="prefix"></span><a class="title" href="#functools"><span class="text.normal">functools</span></a><span class="abstract-type">import</span></h1></section><section class="import" documented="false" local-identifier="module" id="module"><h1><span class="prefix"></span><a class="title" href="#module"><span class="text.normal">module</span></a><span class="abstract-type">import</span></h1></section><section class="import" documented="false" local-identifier="source" id="source"><h1><span class="prefix"></span><a class="title" href="#source"><span class="text.normal">source</span></a><span class="abstract-type">import</span></h1></section><section class="data" documented="false" local-identifier="BranchNodes" id="BranchNodes"><h1><span class="prefix"></span><a class="title" href="#BranchNodes"><span class="text.normal">BranchNodes</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code class="source">BranchNodes = (
+	ast.BoolOp,
+	ast.IfExp,
+)
+</code></pre></section><section class="data" documented="false" local-identifier="expression_mapping" id="expression_mapping"><h1><span class="prefix"></span><a class="title" href="#expression_mapping"><span class="text.normal">expression_mapping</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code class="source">expression_mapping = {
+	ast.withitem: 'context_expr',
+	ast.comprehension: 'value',
+}
+</code></pre></section><section class="function" documented="true" local-identifier="visit_expression" id="visit_expression"><h1><span class="prefix"></span><a class="title" href="#visit_expression"><span class="text.normal">visit_expression</span></a><span class="abstract-type">function</span></h1><p><code class="signature">visit_expression(node, parent, field, index)</code></p><p><span class="text.normal">Visit the node in a statement. Keyword defaults, expressions, statements.</span></p></section><section class="function" documented="false" local-identifier="visit_container" id="visit_container"><h1><span class="prefix"></span><a class="title" href="#visit_container"><span class="text.normal">visit_container</span></a><span class="abstract-type">function</span></h1><p><code class="signature">visit_container(nodes, parent, field)</code></p></section><section class="function" documented="true" local-identifier="visit" id="visit"><h1><span class="prefix"></span><a class="title" href="#visit"><span class="text.normal">visit</span></a><span class="abstract-type">function</span></h1><p><code class="signature">visit(node)</code></p><p><span class="text.normal">Identify nodes that should be instrumented for coverage and profiling.</span></p></section><section class="data" documented="false" local-identifier="coverage_module_context" id="coverage_module_context"><h1><span class="prefix"></span><a class="title" href="#coverage_module_context"><span class="text.normal">coverage_module_context</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code class="source">coverage_module_context = """
+if True:
+	import collections as _fi_cl
+	import atexit as _fi_ae
+	import functools as _fi_ft
+	import os as _fi_os
+
+	_fi_counters__ = _fi_cl.Counter()
+	_fi_identity = _fi_os.environ.get('METRICS_IDENTITY') or ''
+
+	def _fi_record(counters=_fi_counters__, origin=_fi_identity, Retry=32):
+		import sys, os, collections
+
+		if 'PROCESS_IDENTITY' in os.environ:
+			pid = os.environ['PROCESS_IDENTITY']
+		else:
+			pid = str(os.getpid())
+
+		if 'METRICS_CAPTURE' in os.environ:
+			# If capture is defined, qualify with the module name.
+			# /../metrics/{pid}/{module}/{project}/{factor}/{test}/.fault-syntax-counters
+			path = os.environ['METRICS_CAPTURE']
+			path += '/coverage'
+			path += '/' + pid
+			path += '/' + __name__
+		else:
+			try:
+				if __metrics_trap__ is None:
+					# No destination.
+					return
+			except NameError:
+				return
+
+			# /../metrics/coverage/{pid}/{project}/{factor}/{test}/.fault-syntax-counters
+			# Resolve __metrics_trap__ global at exit in order to allow the runtime
+			# to designate it given compile time absence.
+			path = __metrics_trap__
+			path += '/coverage'
+			path += '/' + pid
+
+		path += '/' + os.environ.get('METRICS_IDENTITY', '.fault-python')
+		path += '/.fault-syntax-counters'
+		for x in range(Retry):
+			try:
+				os.makedirs(path)
+			except FileExistsError:
+				pass
+			else:
+				break
+
+		# Vectorize the counters.
+		events = collections.defaultdict(list)
+		occurrences = collections.defaultdict(list)
+		for (fp, area), v in counters.items():
+			events[fp].append(area)
+			occurrences[fp].append(v)
+
+		# Sequence the sources for an index.
+		# The contents of the vectors will be emitted according to this list.
+		sources = list(events.keys())
+		sources.sort()
+
+		# Index designating sources and the number of counters.
+		# For Python, this will normally (always) be a single line.
+		# Append as PROCESS_IDENTITY may be intentionally redundant.
+		with open(path + '/sources', 'a') as f:
+			f.writelines(['%d %s\\n' %(len(events[x]), x) for x in sources])
+
+		with open(path + '/areas', 'a') as f:
+			for x in sources:
+				f.writelines(['%d %d %d %d\\n' % k for k in events[x]])
+
+		with open(path + '/counts', 'a') as f:
+			for x in sources:
+				f.writelines(['%d\\n' %(c,) for c in occurrences[x]])
+
+	_fi_ae.register(_fi_record)
+
+	try:
+		_FI_INCREMENT__ = _fi_ft.partial(_fi_cl._count_elements, _fi_counters__)
+	except:
+		_FI_INCREMENT__ = _fi_counters__.update
+
+	def _FI_COUNT__(area, rob, F=__file__, C=_FI_INCREMENT__):
+		C(((F, area),))
+		return rob
+
+	# Limit names left in the module globals.
+	del _fi_os, _fi_ft, _fi_cl, _fi_ae, _fi_record, _fi_identity
+""".strip() + '\n'
+</code></pre></section><section class="data" documented="false" local-identifier="count_boolop_expression" id="count_boolop_expression"><h1><span class="prefix"></span><a class="title" href="#count_boolop_expression"><span class="text.normal">count_boolop_expression</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code class="source">count_boolop_expression = "(_FI_INCREMENT__(((__file__, %r),)) or INSTRUMENTATION_ERROR)"
+</code></pre></section><section class="data" documented="false" local-identifier="count_call_expression" id="count_call_expression"><h1><span class="prefix"></span><a class="title" href="#count_call_expression"><span class="text.normal">count_call_expression</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code class="source">count_call_expression = "_FI_COUNT__(%r,None)"
+</code></pre></section><section class="data" documented="false" local-identifier="profile_transaction" id="profile_transaction"><h1><span class="prefix"></span><a class="title" href="#profile_transaction"><span class="text.normal">profile_transaction</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code class="source">profile_transaction = """
+if True:
+	try:
+		_FI_ENTER__(%r)
+		pass
+	finally:
+		_FI_EXIT__(%r)
+"""
+</code></pre></section><section class="data" documented="false" local-identifier="profile_pause" id="profile_pause"><h1><span class="prefix"></span><a class="title" href="#profile_pause"><span class="text.normal">profile_pause</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code class="source">profile_pause = """
+if True:
+	try:
+		_FI_SUSPEND__(%r)
+		pass
+	finally:
+		_FI_CONTINUE__(%r)
+"""
+</code></pre></section><section class="function" documented="false" local-identifier="construct_call_increment" id="construct_call_increment"><h1><span class="prefix"></span><a class="title" href="#construct_call_increment"><span class="text.normal">construct_call_increment</span></a><span class="abstract-type">function</span></h1><p><code class="signature">construct_call_increment(node, area)</code></p></section><section class="function" documented="false" local-identifier="construct_boolop_increment" id="construct_boolop_increment"><h1><span class="prefix"></span><a class="title" href="#construct_boolop_increment"><span class="text.normal">construct_boolop_increment</span></a><span class="abstract-type">function</span></h1><p><code class="signature">construct_boolop_increment(node, area)</code></p></section><section class="function" documented="false" local-identifier="construct_profile_trap" id="construct_profile_trap"><h1><span class="prefix"></span><a class="title" href="#construct_profile_trap"><span class="text.normal">construct_profile_trap</span></a><span class="abstract-type">function</span></h1><p><code class="signature">construct_profile_trap(identifier, container, nodes)</code></p></section><section class="function" documented="true" local-identifier="construct_initialization_nodes" id="construct_initialization_nodes"><h1><span class="prefix"></span><a class="title" href="#construct_initialization_nodes"><span class="text.normal">construct_initialization_nodes</span></a><span class="abstract-type">function</span></h1><p><code class="signature">construct_initialization_nodes()</code></p><p><span class="text.normal">Construct instrumentation initialization nodes for injection into an </span><a class="none" href="http://fault.io/dev/null"><span class="invalid">ast.Module</span></a><span class="text.normal"> body.</span></p></section><section class="function" documented="true" local-identifier="instrument" id="instrument"><h1><span class="prefix"></span><a class="title" href="#instrument"><span class="text.normal">instrument</span></a><span class="abstract-type">function</span></h1><p><code class="signature">instrument(path, noded, address)</code></p><p><span class="text.normal">Adjust the AST so that </span><a class="invalid" href="#node"><span class="unknown">node</span></a><span class="text.normal"> will record its execution.</span></p></section><section class="function" documented="false" local-identifier="delineate" id="delineate"><h1><span class="prefix"></span><a class="title" href="#delineate"><span class="text.normal">delineate</span></a><span class="abstract-type">function</span></h1><p><code class="signature">delineate(noded)</code></p></section><section class="function" documented="false" local-identifier="apply" id="apply"><h1><span class="prefix"></span><a class="title" href="#apply"><span class="text.normal">apply</span></a><span class="abstract-type">function</span></h1><p><code class="signature">apply(path, noded)</code></p></section><section class="function" documented="true" local-identifier="compile" id="compile"><h1><span class="prefix"></span><a class="title" href="#compile"><span class="text.normal">compile</span></a><span class="abstract-type">function</span></h1><p><code class="signature">compile(factor, source, path, constants)</code></p><p><span class="text.normal">Compile Python source of a module into an instrumented </span><a class="invalid" href="#types.CodeObject"><span class="unknown">types.CodeObject</span></a></p></section><h1 class="footing"></h1></main></body></html>

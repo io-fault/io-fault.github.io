@@ -1,0 +1,116 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 59 0`
+Python bytecode serialization.
+
+This supports modification time based pycs and hash based introduced in 3.7.
+
+[ Engineering ]
+
+Unstable API. This module may be partitioned in order to eliminate the conditions.
+
+
+[ os ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 1 10 9`
+
+[ types ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 1 11 12`
+
+[ importlib ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`12 1 12 16`
+
+[ marshal ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`13 1 13 14`
+
+[ serialize_timestamp_checked ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`28 1 28 52`
+#!source
+	serialize_timestamp_checked = _code_to_timestamp_pyc # Present regardless of version.
+
+[ store ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`30 1 59 22`
+		- (type/syntax)`types.CodeType`
+		- (type/none/invalid)&<http://fault.io/dev/null[types.CodeType]>
+		
+(signature)`store(check, target, code, fileno, source)`
+
+Store the given (factor-local/parameter)&<#store.Parameters.code[code]> object at the (factor-local/parameter)&<#store.Parameters.target[target]> location system path.
+The stored data should be suitable for use as a pycs file within __pycache__.
+
+[ > Parameters ]
+
+/(parameter)`check`/
+	- (type/syntax)`str`
+	- (type/invalid/unknown)&<#str>
+	
+	- `'never'`
+	- `'time'`
+	- `'hash'`
+	
+/(parameter)`target`/
+	- (type/syntax)`str`
+	- (type/invalid/unknown)&<#str>
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`code`/
+	- (type/syntax)`types.CodeType`
+	- (type/none/invalid)&<http://fault.io/dev/null[types.CodeType]>
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`fileno`/
+	- (type/syntax)`int`
+	- (type/invalid/unknown)&<#int>
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`source`/
+	- (type/syntax)`bytes`
+	- (type/invalid/unknown)&<#bytes>
+	
+	(control/absent)`Undocumented`.
+

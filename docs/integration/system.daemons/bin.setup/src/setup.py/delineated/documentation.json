@@ -1,0 +1,1 @@
+[["Initialize a root daemon directory for managing a set of services."], ["Given a &Service selecting an uninitialized file system path,", "configure the path as a root sector daemon."]]

@@ -1,0 +1,574 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 574 0`
+Web application for serving a project corpus.
+
+
+[ json ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 11`
+
+[ zipfile ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 14`
+
+[ collections ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 18`
+
+[ itertools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 7 16`
+
+[ dataclass ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 8 33`
+
+[ files ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 1 10 30`
+
+[ service ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 1 11 37`
+
+[ system ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 1 11 37`
+
+[ html ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`13 1 13 18`
+
+[ render_factor_html ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`15 1 18 88`
+(signature)`render_factor_html(prefix, depth, styles, type, identifier, chapter)`
+
+
+[ buffer ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`20 1 33 10`
+(signature)`buffer(iterator)`
+
+
+[ Select ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`34 1 151 16`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`34 14 34 19`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+Corpus selection structure separating project, factor, and source.
+
+[ > Properties ]
+
+/project/
+	The first path component of the request URI.
+	Empty string if root.
+
+/factor/
+	The second path component of the request URI.
+	(invalid/unknown)&<#None> if there is no second component or it's an empty string.
+
+/source/
+	The third and remaining path components as a string.
+	(invalid/unknown)&<#None> if there is no third component or it's an empty string.
+
+/index/
+	Boolean designating whether or not a trailing slash was present.
+
+
+[ Select >> project ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`52 2 52 20`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+#!source
+	project: str = None
+
+[ Select >> factor ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`53 2 53 19`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+#!source
+	factor: str = None
+
+[ Select >> source ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`54 2 54 19`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+#!source
+	source: str = None
+
+[ Select >> index ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`55 2 57 13`
+		- (type/syntax)`bool`
+		- (type/invalid/unknown)&<#bool>
+		
+#!source
+	index: bool = None
+		@classmethod
+
+[ Select >> from_request_uri ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`58 2 81 10`
+(signature)`from_request_uri(Class, rpath)`
+
+Identify the project, factor, and source selected by the path.
+
+
+[ Select >> depth ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`82 2 92 69`
+The number of path components.
+
+
+[ Select >> factorpath ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`94 2 95 46`
+(signature)`factorpath(self)`
+
+
+[ Select >> factorjoin ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`97 2 98 54`
+(signature)`factorjoin(self, *paths)`
+
+
+[ Select >> archivepath ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`100 2 119 21`
+(signature)`archivepath(self, plural, primary, factortype)`
+
+Calculate the archive path from the given project, factor, source triple.
+
+
+[ Select >> readmeta ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`121 2 126 29`
+(signature)`readmeta(self, corpus)`
+
+Retrieve the .meta.json entry for the factor being referenced.
+
+
+[ Select >> readchapter ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`128 2 134 52`
+(signature)`readchapter(self, corpus, meta)`
+
+Retrieve the chapter for the given identifier.
+
+
+[ Select >> catchapters ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`136 2 151 16`
+(signature)`catchapters(self, corpus, meta)`
+
+Catenate the chapters of all the source files.
+
+
+[ media_types ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`153 1 160 1`
+#!source
+	media_types = {
+		'json': b'application/json',
+		'txt': b'text/plain',
+		'html': b'text/html',
+		'css': b'text/css',
+		'svg': b'image/svg+xml',
+		'png': b'image/png',
+	}
+
+[ r_icon ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`162 1 164 24`
+(signature)`r_icon(sx, icons)`
+
+
+[ removeprefix ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`166 1 169 14`
+(signature)`removeprefix(prefix, string)`
+
+
+[ r_projects ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`171 1 202 2`
+(signature)`r_projects(prefix, sx, partition, index)`
+
+
+[ f_icon ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`204 1 212 26`
+(signature)`f_icon(sx, partition, type)`
+
+
+[ r_factors ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`214 1 245 2`
+(signature)`r_factors(sx, partition, index)`
+
+
+[ r_sources ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`247 1 278 2`
+(signature)`r_sources(sx, index)`
+
+
+[ Corpus ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`280 1 574 31`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`280 14 280 30`
+	- (type/syntax)`service.Partition`
+	- (type/remote/factor-element)&<http://fault.io/python/web/service#Partition[fault.web.service.Partition]>
+	
+Corpus application providing access to a set of projects and their factors.
+
+
+[ Corpus >> Archive ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`284 2 286 14`
+#!source
+	Archive = zipfile.ZipFile
+		@staticmethod
+
+[ Corpus >> cp_parse_arguments ]
+! CONTROL:
+	/type/
+		staticmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`287 2 297 106`
+(signature)`cp_parse_arguments(argv)`
+
+
+[ Corpus >> structure ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`299 2 302 10`
+(signature)`structure(self)`
+
+
+[ Corpus >> cp_update ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`304 2 309 72`
+(signature)`cp_update(self, route)`
+
+
+[ Corpus >> part_dispatched ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`311 2 335 26`
+(signature)`part_dispatched(self, argv)`
+
+
+[ Corpus >> cp_read_json ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`337 2 338 39`
+(signature)`cp_read_json(self, path)`
+
+
+[ Corpus >> cp_read ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`340 2 361 12`
+(signature)`cp_read(self, path)`
+
+Read a resource from the configured archive.
+
+
+[ Corpus >> cp_send_resource ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`363 2 373 36`
+(signature)`cp_send_resource(self, ctl, path)`
+
+
+[ Corpus >> cp_send_html ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`375 2 378 53`
+(signature)`cp_send_html(self, ctl, depth, chapter, factorpath, factortype)`
+
+
+[ Corpus >> cp_project_index ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`380 2 418 52`
+(signature)`cp_project_index(self, ctl)`
+
+Handle root HTML requests.
+
+
+[ Corpus >> cp_factor_index ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`420 2 466 52`
+(signature)`cp_factor_index(self, project, ctl)`
+
+Handle root HTML requests.
+
+
+[ Corpus >> cp_source_index ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`468 2 516 52`
+(signature)`cp_source_index(self, project, factor, ctl)`
+
+Handle root HTML requests.
+
+
+[ Corpus >> part_select ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`518 2 574 31`
+(signature)`part_select(self, ctl)`
+

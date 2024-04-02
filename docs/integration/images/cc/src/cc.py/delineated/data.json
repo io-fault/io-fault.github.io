@@ -1,0 +1,1 @@
+[[["open_fs_context"], ["devnull"], ["job_priority"]], [{"syntax": "vectorcontext.Context.from_directory", "area": [[28, 19], [28, 54]]}, {"syntax": "files.Path.from_absolute(os.devnull)", "area": [[29, 11], [29, 46]]}, 10]]

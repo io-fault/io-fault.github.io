@@ -1,0 +1,90 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 73 0`
+Functions for extracting and integrating set based properties.
+
+
+[ types ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 28`
+
+[ ipara ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 62`
+
+[ interpret_fragment ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 18 33`
+		- (type/syntax)`tuple[tuple, str]`
+		
+(signature)`interpret_fragment(property_item)`
+
+Convert a fragment to a key-value pair.
+
+
+[ interpret_set_items ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`20 1 27 69`
+(signature)`interpret_set_items(items)`
+
+Get the set of unordered list based properties from the (factor-local/parameter)&<#interpret_set_items.Parameters.items[items]>.
+
+Returns the number of items present in the initial set found in (factor-local/parameter)&<#interpret_set_items.Parameters.items[items]>,
+and the set of sole paragraph fragments contained by each item.
+
+
+[ select ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`29 1 55 13`
+(signature)`select(elements)`
+
+The interpreted property set items in (factor-local/parameter)&<#select.Parameters.elements[elements]> at (factor-local/parameter)&<#select.Parameters.index[index]>.
+
+[ > Returns ]
+
+An iterable of key-value pairs forming the property set
+or an empty iterable if not a property set or no properties
+were specified.
+
+
+[ formulate_fragment ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`57 1 73 52`
+		- (type/syntax)`types.Fragment`
+		- (type/remote/factor-element)&<http://fault.io/python/text/types#Fragment[fault.text.types.Fragment]>
+		
+(signature)`formulate_fragment(item)`
+
+Construct a (invalid/unknown)&<#Fragment> that represents the property in a (remote/factor-element)&<http://fault.io/python/text/types#Paragraph[fault.text.types.Paragraph]> instance.
+

@@ -1,0 +1,54 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 80 0`
+Factor graph primitives.
+
+Used by (project-local/unknown)&<cc> to order the target factors according to their dependencies.
+
+
+[ collections ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 18`
+
+[ traverse ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 30 48`
+(signature)`traverse(directory, working, tree, inverse, node)`
+
+Invert the directed graph of dependencies from the node.
+
+
+[ sequence ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`32 1 80 22`
+(signature)`sequence(directory, nodes)`
+
+Generator maintaining the state of the sequencing of a traversed dependency
+graph. This generator emits factors as they are ready to be processed and receives
+factors that have completed processing.
+
+When a set of dependencies has been processed, they should be sent to the generator
+as a collection; the generator identifies whether another set of modules can be
+processed based on the completed set.
+
+Completion is an abstract notion, (factor-local/function)&<#sequence[sequence]> has no requirements on the semantics of
+completion and its effects; it merely communicates what can now be processed based
+completion state.
+

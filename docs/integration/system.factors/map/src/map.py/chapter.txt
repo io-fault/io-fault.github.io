@@ -1,0 +1,484 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 230 0`
+Factor mapping tool for performing processing of factors with executable factors.
+
+
+[ os ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 9`
+
+[ contextlib ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 17`
+
+[ Sequence ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 36`
+
+[ Callable ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 7 27`
+
+[ tools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`9 1 9 31`
+
+[ process ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 1 10 32`
+
+[ files ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 1 11 30`
+
+[ recognition ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`12 1 12 36`
+
+[ terminal ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`14 1 14 37`
+
+[ execution ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`15 1 15 38`
+
+[ Log ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`16 1 16 35`
+
+[ KInvocation ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`18 1 18 46`
+
+[ lsf ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`19 1 19 39`
+
+[ query ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`21 1 21 24`
+
+[ resolve ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`22 1 22 28`
+
+[ filters ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`23 1 23 21`
+
+[ frame_type ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`25 1 32 13`
+(signature)`frame_type(sft)`
+
+
+[ restricted ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`34 1 37 1`
+#!source
+	restricted = {
+		'--opened-frames': ('field-replace', True, 'opened-frames'),
+		'--closed-frames': ('field-replace', False, 'opened-frames'),
+	}
+
+[ required ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`39 1 48 1`
+#!source
+	required = {
+		'--status-type': ('field-replace', 'status-frame-type'),
+		'-T': ('sequence-append', 'factor-types'),
+		'-L': ('field-replace', 'processing-lanes'),
+	
+		'-A': ('field-replace', 'execution-factor'),
+	
+		'-X': ('field-replace', 'execution-directory'),
+		'-D': ('field-replace', 'product-directory'),
+	}
+
+[ FilterType ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`50 1 53 15`
+		- (type/syntax)`bool`
+		- (type/invalid/unknown)&<#bool>
+		
+(signature)`FilterType(pj, fp, ft)`
+
+
+[ Controls ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`54 1 75 34`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`54 16 54 21`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+Parameters required for performing and customizing the map operation.
+
+
+[ Controls >> ctl_argv ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`65 2 65 25`
+		- (type/syntax)`list[str]`
+		
+#!source
+	ctl_argv: list[str] = ()
+
+[ Controls >> ctl_filter ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`66 2 66 98`
+		- (type/syntax)`Callable[[lsf.Project, lsf.types.FactorPath, lsf.types.Reference], bool]`
+		
+#!source
+	ctl_filter: Callable[[lsf.Project, lsf.types.FactorPath, lsf.types.Reference], bool] = FilterType
+
+[ Controls >> ctl_operation_identifier ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`67 2 67 48`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+#!source
+	ctl_operation_identifier: str = 'map-operation'
+
+[ Controls >> ctl_open_title ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`68 2 68 44`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+#!source
+	ctl_open_title: str = 'Operation Aggregate'
+
+[ Controls >> ctl_operating_title ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`69 2 69 49`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+#!source
+	ctl_operating_title: str = 'Operation Aggregate'
+
+[ Controls >> ctl_close_title ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`70 2 70 45`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+#!source
+	ctl_close_title: str = 'Operation Aggregate'
+
+[ Controls >> ctl_transcript_type ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`71 2 71 46`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+#!source
+	ctl_transcript_type: str = 'processing-units'
+
+[ Controls >> ctl_lanes ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`72 2 72 19`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+#!source
+	ctl_lanes: int = 4
+
+[ Controls >> ctl_display_limit ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`73 2 73 27`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+#!source
+	ctl_display_limit: int = 4
+
+[ Controls >> ctl_opened_frames ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`74 2 74 31`
+		- (type/syntax)`bool`
+		- (type/invalid/unknown)&<#bool>
+		
+#!source
+	ctl_opened_frames: bool = True
+
+[ Controls >> ctl_factor_types ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`75 2 75 34`
+		- (type/syntax)`set[str]`
+		
+#!source
+	ctl_factor_types: set[str] = None
+
+[ plan_select ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`77 1 117 34`
+(signature)`plan_select(factors, ctl, selection)`
+
+Create an invocation for processing the project from (factor-local/parameter)&<#plan_select.Parameters.factors[factors]> selected using (factor-local/parameter)&<#plan_select.Parameters.selection[selection]>.
+
+
+[ plan_project ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`119 1 132 29`
+(signature)`plan_project(factors, ctl, selection)`
+
+Create an invocation for processing (invalid/unknown)&<#pj> with (invalid/unknown)&<#cc>.
+
+
+[ construct_arguments ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`134 1 147 2`
+(signature)`construct_arguments(cc, ccmode, factors, features, cachetype, cachepath, identifier)`
+
+
+[ execute ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`149 1 174 17`
+(signature)`execute(exits, op, queue)`
+
+Execute the configured map operation described in (factor-local/parameter)&<#execute.Parameters.op[op]>
+
+
+[ configure ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`176 1 191 25`
+(signature)`configure(restricted, required, argv)`
+
+
+[ main ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`193 1 230 19`
+		- (type/syntax)`process.Exit`
+		- (type/remote/factor-element)&<http://fault.io/python/system/process#Exit[fault.system.process.Exit]>
+		
+(signature)`main(inv)`
+

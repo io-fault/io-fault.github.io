@@ -1,0 +1,95 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 53 0`
+Tool interfaces for extracting information from corefiles.
+
+
+[ sys ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 10`
+
+[ subprocess ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 17`
+
+[ shutil ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 13`
+
+[ debug ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 17 70`
+(signature)`debug(corefile)`
+
+Load the debugger for a given core file, `corefile` and `executable`.
+This will operate interactively and return the status code on exit.
+
+By default, the executable is the Python executable.
+
+
+[ gdb_snapshot ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`19 1 22 1`
+#!source
+	gdb_snapshot = [
+		'info shared',
+		'thread backtrace all',
+	]
+
+[ lldb_snapshot ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`24 1 27 1`
+#!source
+	lldb_snapshot = [
+		'image list',
+		'thread apply all bt full',
+	]
+
+[ snapshot ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`29 1 49 14`
+(signature)`snapshot(corefile)`
+
+Get a text dump of the corefile from either lldb or gdb.
+

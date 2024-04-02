@@ -1,0 +1,103 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 97 0`
+Product index delta implementation.
+
+Functions for manipulating the product index used to define the set of factors.
+
+
+[ lsf ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 39`
+
+[ files ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 7 30`
+
+[ options ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`9 1 22 1`
+#!source
+	options = (
+		{
+			# Defaults to never update.
+			'-u': ('field-replace', 'missing', 'update-product-index'),
+			'-U': ('field-replace', 'always', 'update-product-index'),
+			'--void': ('field-replace', True, 'remove-product-index'),
+		},
+		{
+			'-i': ('sequence-append', 'interpreted-connections'),
+			'-x': ('sequence-append', 'interpreted-disconnections'),
+			'-I': ('sequence-append', 'direct-connections'),
+			'-X': ('sequence-append', 'direct-disconnections'),
+		}
+	)
+
+[ index ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`24 1 41 12`
+(signature)`index(pd, statement)`
+
+Update the index according the requested (factor-local/parameter)&<#index.Parameters.statement[statement]>.
+
+
+[ connecting ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`43 1 53 14`
+(signature)`connecting(config)`
+
+
+[ reconnect ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`55 1 67 91`
+(signature)`reconnect(pd, insertions, deletions)`
+
+
+[ delta ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`70 1 97 10`
+(signature)`delta(exits, meta, log, config, cc, pdr, remainder)`
+
+Create or update the project index by scanning the filesystem.
+

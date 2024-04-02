@@ -1,0 +1,651 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 738 11`
+XML serialization for Python factors.
+
+
+[ sys ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 10`
+
+[ os ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 9`
+
+[ os ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 14`
+
+[ inspect ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 7 14`
+
+[ functools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 8 16`
+
+[ itertools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`9 1 9 16`
+
+[ hashlib ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 1 10 14`
+
+[ types ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 1 11 12`
+
+[ lzma ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`12 1 12 11`
+
+[ codecs ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`13 1 13 13`
+
+[ contextlib ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`14 1 14 17`
+
+[ importlib ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`15 1 15 16`
+
+[ typing ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`16 1 16 13`
+
+[ pickle ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`17 1 17 13`
+
+[ factors ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`19 1 19 32`
+
+[ python ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`20 1 20 31`
+
+[ files ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`21 1 21 30`
+
+[ libxml ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`23 1 23 35`
+
+[ xep ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`24 1 24 35`
+
+[ comments ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`26 1 26 30`
+
+[ serialization ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`28 1 28 35`
+#!source
+	serialization = xep.Serialization() # currently only utf-8 is used.
+
+[ Context ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`46 1 721 3`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`46 15 46 20`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+Delineation extraction context for Python.
+
+Manages the XML serialization Context and Cursor extracting
+the fragments of a module.
+
+
+[ Context >> class_ignore ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`54 2 65 2`
+#!source
+	class_ignore = {
+		'__doc__',     # Extracted explicitly.
+		'__weakref__', # Runtime specific information.
+		'__dict__',    # Class content.
+		'__module__',  # Supplied by context.
+			# Exception subclasses will have these attributes.
+		'__cause__',
+		'__context__',
+		'__suppress_context__',
+		'__traceback__',
+	}
+
+[ Context >> method_order ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`67 2 73 14`
+#!source
+	method_order = (
+		'__init__',
+		'__new__',
+		'__call__',
+	)
+		@staticmethod
+
+[ Context >> module_context ]
+! CONTROL:
+	/type/
+		staticmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`74 2 89 25`
+(signature)`module_context(route)`
+
+Given an import route, return the context package
+and the project module.
+
+
+[ Context >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`91 2 100 27`
+(signature)`__init__(self, route)`
+
+
+[ Context >> cursor ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`101 2 106 21`
+(signature)`cursor(self, name, obj)`
+
+
+[ Context >> is_class_method ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`108 2 125 36`
+(signature)`is_class_method(self, obj)`
+
+Determine if the given object is a class method.
+
+
+[ Context >> is_class_property ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`127 2 137 36`
+(signature)`is_class_property(self, obj)`
+
+Determine if the given object is a property.
+Get-Set Descriptors are also identified as properties.
+
+
+[ Context >> is_module ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`139 2 143 30`
+(signature)`is_module(self, obj)`
+
+Overrideable interface to (none/invalid)&<http://fault.io/dev/null[inspect.ismodule]>.
+
+
+[ Context >> is_module_class ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`145 2 149 59`
+(signature)`is_module_class(self, module, obj)`
+
+The given object is a plainly defined class that belongs to the module.
+
+
+[ Context >> is_module_function ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`151 2 160 69`
+(signature)`is_module_function(self, module, obj)`
+
+The given object is a plainly defined function that belongs to the module.
+
+
+[ Context >> docstr ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`162 2 185 27`
+(signature)`docstr(self, obj)`
+
+Variant of (none/invalid)&<http://fault.io/dev/null[inspect.getdoc]> that favors tab-indentations.
+
+
+[ Context >> addressable ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`208 2 218 25`
+(signature)`addressable(self, obj)`
+
+Whether the object is independently addressable.
+Specifically, it is a module or inspect.getmodule() not return None
+*and* can `obj` be found within the module's objects.
+
+The last condition is used to prevent broken links.
+
+
+[ Context >> canonical ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`219 2 226 13`
+(signature)`canonical(self, name)`
+
+Given an arbitrary module name, rewrite it to use the canonical
+name defined by the package set (package of Python packages).
+
+If there is no canonical package name, return (factor-local/parameter)&<#Context.canonical.Parameters.name[name]> exactly.
+
+
+[ Context >> address ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`228 2 242 13`
+(signature)`address(self, obj)`
+
+Return the address of the given object; (invalid/unknown)&<#None> if unknown.
+
+
+[ Context >> origin ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`244 2 263 25`
+(signature)`origin(self, obj)`
+
+Decide the module's origin; local to the documentation site, Python's
+site-packages (distutils), or a Python builtin.
+
+
+[ Context >> project ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`264 2 288 51`
+(signature)`project(self, module)`
+
+Return the project information about a particular module.
+
+Returns `None` if a builtin, an unregistered package, or package without a project
+module relative to the floor.
+
+
+[ Context >> d_object ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`290 2 293 3`
+(signature)`d_object(self, name, obj)`
+
+
+[ Context >> d_parameter ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`295 2 300 57`
+(signature)`d_parameter(self, parameter)`
+
+
+[ Context >> d_signature_arguments ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`302 2 313 4`
+(signature)`d_signature_arguments(self, signature)`
+
+
+[ Context >> d_call_signature ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`315 2 325 45`
+(signature)`d_call_signature(self, obj)`
+
+
+[ Context >> d_type ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`327 2 334 3`
+(signature)`d_type(self, obj)`
+
+
+[ Context >> d_doc ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`336 2 346 5`
+(signature)`d_doc(self, obj, prefix)`
+
+
+[ Context >> d_import ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`348 2 360 3`
+(signature)`d_import(self, context_module, imported, *path)`
+
+
+[ Context >> d_source_range ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`362 2 373 32`
+(signature)`d_source_range(self, obj)`
+
+
+[ Context >> d_function ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`375 2 386 51`
+(signature)`d_function(self, method, qname)`
+
+
+[ Context >> d_class_content ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`388 2 491 5`
+(signature)`d_class_content(self, module, obj, name, *path)`
+
+
+[ Context >> d_class ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`493 2 500 4`
+(signature)`d_class(self, module, obj, *path)`
+
+
+[ Context >> d_context ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`502 2 517 4`
+(signature)`d_context(self, package, project)`
+
+
+[ Context >> d_module ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`519 2 593 5`
+(signature)`d_module(self, factor_type, route, module)`
+
+
+[ Context >> d_submodules ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`595 2 640 87`
+(signature)`d_submodules(self, route, module)`
+
+
+[ Context >> emit ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`642 2 649 25`
+(signature)`emit(fs, key, iterator)`
+
+
+[ Context >> serialize ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`651 2 721 3`
+(signature)`serialize(self, module)`
+
+Construct an interator emitting an XML Fragments document.
+

@@ -1,0 +1,205 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 68 0`
+Interface for construction context build cache.
+
+
+[ tools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 31`
+
+[ files ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 30`
+
+[ Directory ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 19 49`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`7 17 7 22`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+A filesystem directory managing the build cache of a project set.
+
+
+[ Directory >> retained ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 2 11 16`
+#!source
+	retained = None
+
+[ Directory >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`12 2 13 20`
+(signature)`__init__(self, route)`
+
+
+[ Directory >> select ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`15 2 19 49`
+		- (type/syntax)`files.Path`
+		- (type/remote/factor-element)&<http://fault.io/python/system/files#Path[fault.system.files.Path]>
+		
+(signature)`select(self, project, factor, key)`
+
+Retrieve the route to the work directory for the project's factor.
+
+
+[ Persistent ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`21 1 38 59`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`21 18 21 26`
+	- (type/syntax)`Directory`
+	- (type/factor-local/class)&<#Directory[Directory]>
+	
+Cache directory interface for builds whose cache is expected to be reused.
+
+Uses a hashed-key path directory to store and recall entries.
+
+
+[ Persistent >> retained ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`28 2 30 22`
+#!source
+	retained = True
+		@tools.cachedproperty
+
+[ Persistent >> resource ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`31 2 34 33`
+(signature)`resource(self)`
+
+
+[ Persistent >> select ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`36 2 38 59`
+(signature)`select(self, project, factor, key)`
+
+
+[ Transient ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`40 1 68 43`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`40 17 40 25`
+	- (type/syntax)`Directory`
+	- (type/factor-local/class)&<#Directory[Directory]>
+	
+Cache directory interface for builds whose cache is expected to be removed.
+
+Uses an in memory index to recall positioning and counters to allocate new entries.
+
+
+[ Transient >> retained ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`47 2 49 22`
+#!source
+	retained = False
+		@tools.cachedproperty
+
+[ Transient >> counters ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`50 2 55 22`
+(signature)`counters(self)`
+
+
+[ Transient >> index ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`56 2 57 15`
+(signature)`index(self)`
+
+
+[ Transient >> select ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`59 2 68 43`
+(signature)`select(self, project, factor, key)`
+

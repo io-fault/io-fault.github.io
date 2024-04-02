@@ -1,0 +1,699 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 512 0`
+Construction Context implementation using vector formulations.
+
+
+[ sys ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 10`
+
+[ functools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 16`
+
+[ itertools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 16`
+
+[ typing ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 7 13`
+
+[ collections ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 8 18`
+
+[ dataclass ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`9 1 9 33`
+
+[ tools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 1 11 31`
+
+[ files ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`12 1 12 30`
+
+[ execution ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`13 1 13 34`
+
+[ lsf ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`14 1 14 39`
+
+[ vf ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`15 1 17 37`
+
+[ Void ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`18 1 33 69`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`18 12 18 20`
+	- (type/syntax)`Exception`
+	- (type/invalid/unknown)&<#Exception>
+	
+Raised when a empty vector is composed, but more than
+zero fields are required by the caller.
+
+[ > Properties ]
+
+/v_type/
+	A classification identifier for the type of request that caused the exception.
+
+/v_required/
+	The minimum number of fields required by the caller.
+
+
+[ Void >> v_required ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`30 2 30 20`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+#!source
+	v_required: int = 1
+
+[ Void >> __str__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`32 2 33 69`
+(signature)`__str__(self)`
+
+
+[ _feature_constants ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`35 1 36 28`
+(signature)`_feature_constants(features)`
+
+
+[ _feature_conclusions ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`38 1 39 48`
+(signature)`_feature_conclusions(features)`
+
+
+[ _variant_constants ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`41 1 46 2`
+(signature)`_variant_constants(variants)`
+
+
+[ _variant_conclusions ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`48 1 55 15`
+(signature)`_variant_conclusions(variants)`
+
+
+[ VectorParameters ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`56 1 79 45`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`56 24 56 29`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+
+[ VectorParameters >> constants ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`62 2 68 36`
+(signature)`constants(self)`
+
+
+[ VectorParameters >> conclusions ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`70 2 76 38`
+(signature)`conclusions(self)`
+
+
+[ VectorParameters >> context ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`78 2 79 45`
+(signature)`context(self)`
+
+
+[ Mechanism ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`81 1 146 47`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`81 17 81 22`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+A section of a construction context that can formulate adapters for factor processing.
+
+
+[ Mechanism >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`86 2 90 18`
+(signature)`__init__(self, context, mode, semantics)`
+
+
+[ Mechanism >> __repr__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`92 2 93 51`
+(signature)`__repr__(self)`
+
+
+[ Mechanism >> _cc ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`95 2 102 10`
+(signature)`_cc(self, phase, vtype, itype, xtype)`
+
+
+[ Mechanism >> vectortypes ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`104 2 108 76`
+(signature)`vectortypes(self, features)`
+
+Identify formulation types for the given form and feature set.
+
+
+[ Mechanism >> integrates ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`110 2 118 14`
+(signature)`integrates(self, vtype, itype)`
+
+Identify whether the mechanism is operable.
+
+
+[ Mechanism >> unit_name_delta ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`120 2 128 16`
+(signature)`unit_name_delta(self, vtype, itype)`
+
+Identify the prefix and suffix for the unit file.
+
+
+[ Mechanism >> prepare ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`130 2 134 51`
+(signature)`prepare(self, vtype, itype, srctype)`
+
+Construct the command constructor for source preparation.
+
+
+[ Mechanism >> translate ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`136 2 140 53`
+(signature)`translate(self, vtype, itype, srctype)`
+
+Construct the command constructor for translating sources.
+
+
+[ Mechanism >> render ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`142 2 146 47`
+(signature)`render(self, vtype, itype)`
+
+Construct the command constructor for rendering the factor's image.
+
+
+[ Context ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`148 1 486 12`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`148 15 148 20`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+Vectors Formulations based Mechanism set for building system argument vectors.
+
+
+[ Context >> _ref ]
+! CONTROL:
+	/type/
+		staticmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`154 2 167 13`
+(signature)`_ref(section, name)`
+
+
+[ Context >> from_directory ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`168 2 172 21`
+(signature)`from_directory(Class, route)`
+
+Create instance using a directory.
+
+
+[ Context >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`174 2 185 37`
+(signature)`__init__(self, route)`
+
+
+[ Context >> _modes ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`187 2 197 51`
+(signature)`_modes(self, factor)`
+
+Read the modes vector from factor.
+
+
+[ Context >> _variants ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`199 2 207 24`
+(signature)`_variants(self, factor)`
+
+Read the full product of system-architecture pairs from
+the given variants (factor-local/parameter)&<#Context._variants.Parameters.factor[factor]>.
+
+
+[ Context >> cc_unit_name_delta ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`209 2 228 33`
+(signature)`cc_unit_name_delta(self, vtype, itype)`
+
+
+[ Context >> cc_integration_types ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`230 2 242 81`
+(signature)`cc_integration_types(self, vtype, itype)`
+
+
+[ Context >> vectortypes ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`244 2 279 91`
+(signature)`vectortypes(self, mode, semantics, features)`
+
+Identify the (invalid/unknown)&<#VectorParameter> combinations to use for the given (factor-local/parameter)&<#Context.vectortypes.Parameters.semantics[semantics]> and (invalid/unknown)&<#modes>.
+
+
+[ Context >> _constants ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`281 2 294 11`
+(signature)`_constants(self, vtype, itype, xtype, **kw)`
+
+
+[ Context >> _conclusions ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`296 2 305 25`
+(signature)`_conclusions(self, vtype, itype, xtype)`
+
+
+[ Context >> _compose ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`307 2 321 45`
+(signature)`_compose(self, vctx, section, composition, itype, name, fallback)`
+
+
+[ Context >> _load_descriptor ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`323 2 342 24`
+(signature)`_load_descriptor(self, vctx, section, variants, phase, itype, xtype)`
+
+
+[ Context >> _read_merged ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`344 2 356 29`
+(signature)`_read_merged(self, vctx, section, variants, phase, itype, xtype)`
+
+
+[ Context >> cc_compose ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`358 2 370 67`
+(signature)`cc_compose(self, phase, vtype, itype, xtype)`
+
+
+[ Context >> _load_intercepts ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`372 2 388 25`
+(signature)`_load_intercepts(self, context)`
+
+
+[ Context >> load ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`390 2 397 13`
+(signature)`load(self)`
+
+Load the product indicies.
+
+
+[ Context >> configure ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`399 2 406 13`
+(signature)`configure(self)`
+
+Load the default factor semantics.
+
+
+[ Context >> _read_cell ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`408 2 421 16`
+(signature)`_read_cell(self, factor)`
+
+Get the sole source type and path of the given (factor-local/parameter)&<#Context._read_cell.Parameters.factor[factor]>.
+
+
+[ Context >> _load_vector ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`423 2 430 49`
+(signature)`_load_vector(self, factor)`
+
+Load vector formulations from the (factor-local/parameter)&<#Context._load_vector.Parameters.factor[factor]>.
+
+
+[ Context >> _load_system ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`432 2 441 63`
+(signature)`_load_system(self, factor)`
+
+Load system command vector identified by (factor-local/parameter)&<#Context._load_system.Parameters.factor[factor]>.
+
+
+[ Context >> _iq ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`443 2 445 11`
+(signature)`_iq(self, name)`
+
+
+[ Context >> _cat ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`447 2 454 46`
+(signature)`_cat(self, ctx, index, name)`
+
+Catenate the vectors selected in (factor-local/parameter)&<#Context._cat.Parameters.index[index]>.
+
+
+[ Context >> _v ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`456 2 461 29`
+(signature)`_v(self, factor)`
+
+
+[ Context >> _map_factor_semantics ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`463 2 486 12`
+(signature)`_map_factor_semantics(self, context)`
+
+Identify the projects providing adapters for the listed semantics.
+

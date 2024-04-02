@@ -1,1 +1,43 @@
-<html root="2"><head><title>system.machines.rt</title><meta charset="utf-8"/><link as="style" rel="preload" href="../../.legacy-web/core.css"></link><link as="style" rel="preload" href="../../.legacy-web/factor.css"></link><link rel="stylesheet" href="../../.legacy-web/core.css"></link><link rel="stylesheet" href="../../.legacy-web/factor.css"></link></head><body><main><h1><span class="prefix"></span><div class="page-subject"><img class="icon" src="../../.factor-type-icon/if.fault.io/python-module.svg"></img><span class="subject-identifier">rt</span><a href="http://if.fault.io/factors/python.module"><code class="type">python.module</code></a></div><div class="page-context"><a href="../"><img class="icon" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNTYiIGhlaWdodD0iMjU2Ij48dGV4dCB4PSI0IiB5PSIwLjg4ZW0iIGZvbnQtc2l6ZT0iMjQ4Ij7impnvuI88L3RleHQ+PC9zdmc+"></img></a><span class="context-identifier">system.machines</span></div></h1><section class="chapter"></section><h1 class="footing"></h1></main></body></html>
+<html root="2"><head><title>system.machines.rt</title><meta charset="utf-8"/><link as="style" rel="preload" href="../../.legacy-web/core.css"></link><link as="style" rel="preload" href="../../.legacy-web/factor.css"></link><link rel="stylesheet" href="../../.legacy-web/core.css"></link><link rel="stylesheet" href="../../.legacy-web/factor.css"></link></head><body><main><h1><span class="prefix"></span><div class="page-subject"><img class="icon" src="../../.factor-type-icon/if.fault.io/python-module.svg"></img><span class="subject-identifier">rt</span><a href="http://if.fault.io/factors/python.module"><code class="type">python.module</code></a></div><div class="page-context"><a href="../"><img class="icon" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNTYiIGhlaWdodD0iMjU2Ij48dGV4dCB4PSI0IiB5PSIwLjg4ZW0iIGZvbnQtc2l6ZT0iMjQ4Ij7impnvuI88L3RleHQ+PC9zdmc+"></img></a><span class="context-identifier">system.machines</span></div></h1><section class="chapter"><p><span class="text.normal">Runtime object patterns.</span><span class="text.line-break"> </span><span class="text.normal">Currently unused as the compiler driver is used for linkage.</span></p></section><section class="import" documented="false" local-identifier="Sequence" id="Sequence"><h1><span class="prefix"></span><a class="title" href="#Sequence"><span class="text.normal">Sequence</span></a><span class="abstract-type">import</span></h1></section><section class="import" documented="false" local-identifier="Set" id="Set"><h1><span class="prefix"></span><a class="title" href="#Set"><span class="text.normal">Set</span></a><span class="abstract-type">import</span></h1></section><section class="import" documented="false" local-identifier="Mapping" id="Mapping"><h1><span class="prefix"></span><a class="title" href="#Mapping"><span class="text.normal">Mapping</span></a><span class="abstract-type">import</span></h1></section><section class="import" documented="false" local-identifier="files" id="files"><h1><span class="prefix"></span><a class="title" href="#files"><span class="text.normal">files</span></a><span class="abstract-type">import</span></h1></section><section class="function" documented="false" local-identifier="strings" id="strings"><h1><span class="prefix"></span><a class="title" href="#strings"><span class="text.normal">strings</span></a><span class="abstract-type">function</span></h1><p><code class="signature">strings(x)</code></p></section><section class="function" documented="false" local-identifier="prepare" id="prepare"><h1><span class="prefix"></span><a class="title" href="#prepare"><span class="text.normal">prepare</span></a><span class="abstract-type">function</span></h1><p><code class="signature">prepare(select, pattern)</code></p></section><section class="function" documented="true" local-identifier="_search" id="_search"><h1><span class="prefix"></span><a class="title" href="#_search"><span class="text.normal">_search</span></a><span class="abstract-type">function</span><code class="type">tuple[Mapping[str, files.Path], Set[str]]</code></h1><p><code class="signature">_search(search_paths, xset)</code></p><p><span class="text.normal">Query the sequence of search paths for the given set of files.</span></p><p><span class="text.normal">All paths will be scanned for each requested identifier in </span><a class="factor-local" href="#_search.Parameters.xset"><span class="parameter">xset</span></a><span class="text.normal">. When an identifier</span><span class="text.line-break"> </span><span class="text.normal">is found to exist, it is removed from the set that is being scanned for causing</span><span class="text.line-break"> </span><span class="text.normal">the first path match to be the one returned.</span></p></section><section class="function" documented="false" local-identifier="search" id="search"><h1><span class="prefix"></span><a class="title" href="#search"><span class="text.normal">search</span></a><span class="abstract-type">function</span></h1><p><code class="signature">search(libdirs)</code></p></section><section class="data" documented="false" local-identifier="stem" id="stem"><h1><span class="prefix"></span><a class="title" href="#stem"><span class="text.normal">stem</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code class="source">stem = 'crt'
+</code></pre></section><section class="data" documented="false" local-identifier="objects" id="objects"><h1><span class="prefix"></span><a class="title" href="#objects"><span class="text.normal">objects</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code class="source">objects = set([
+	'crt0', # No constructor support.
+
+	# Executable with constructor support.
+	'crt1',
+
+	'Scrt1', # Position Independent Executables.
+	'gcrt1',
+	'crt1S',
+
+	'crtbeginT', # Statically Linked Executables.
+	'crtend',
+
+	# Shared Libraries
+	'crtbeginS', # Position Independent Code.
+	'crtendS',
+
+	# Init and eNd.
+	'crti',
+	'crtn',
+])
+</code></pre></section><section class="data" documented="false" local-identifier="posix_pde" id="posix_pde"><h1><span class="prefix"></span><a class="title" href="#posix_pde"><span class="text.normal">posix_pde</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code class="source">posix_pde = (
+	('crt1', 'crti', 'crtbegin'),
+	('crtend', 'crtn'),
+)
+</code></pre></section><section class="data" documented="false" local-identifier="posix_pie" id="posix_pie"><h1><span class="prefix"></span><a class="title" href="#posix_pie"><span class="text.normal">posix_pie</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code class="source">posix_pie = (
+	('Scrt1', 'crti', 'crtbeginS'),
+	('crtendS', 'crtn'),
+)
+</code></pre></section><section class="data" documented="false" local-identifier="apple_pie" id="apple_pie"><h1><span class="prefix"></span><a class="title" href="#apple_pie"><span class="text.normal">apple_pie</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code class="source">apple_pie = (
+	('crt1', 'crti', 'crtbeginS'),
+	('crtendS', 'crtn'),
+)
+</code></pre></section><section class="data" documented="false" local-identifier="posix_pdc" id="posix_pdc"><h1><span class="prefix"></span><a class="title" href="#posix_pdc"><span class="text.normal">posix_pdc</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code class="source">posix_pdc = (
+	('crti', 'crtbegin'),
+	('crtend', 'crtn'),
+)
+</code></pre></section><section class="data" documented="false" local-identifier="posix_pic" id="posix_pic"><h1><span class="prefix"></span><a class="title" href="#posix_pic"><span class="text.normal">posix_pic</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code class="source">posix_pic = (
+	('crti', 'crtbeginS'),
+	('crtendS', 'crtn'),
+)
+</code></pre></section><h1 class="footing"></h1></main></body></html>

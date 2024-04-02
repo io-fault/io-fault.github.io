@@ -1,0 +1,667 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 567 39`
+mdoc rendering for text element trees.
+
+
+[ sys ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 10`
+
+[ typing ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 13`
+
+[ itertools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 16`
+
+[ collections ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 7 18`
+
+[ files ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`9 1 9 30`
+
+[ tools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 1 10 31`
+
+[ comethod ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 1 11 34`
+
+[ structure_chapter_text ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`13 1 13 77`
+
+[ structure_paragraph_element ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`13 1 13 77`
+
+[ iparagraph ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`14 1 14 52`
+
+[ Cursor ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`15 1 15 35`
+
+[ navigate ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`15 1 15 35`
+
+[ prepare ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`16 1 16 35`
+
+[ formlink ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`16 1 16 35`
+
+[ escape_characters ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`18 1 23 1`
+#!source
+	escape_characters = {
+		"'": "\\[aq]",
+		"`": "\\*(ga",
+		'"': "\\*q",
+		"\\": "\\[char92]",
+	}
+
+[ escape ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`25 1 39 48`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+(signature)`escape(string)`
+
+Escape text for use as macro arguments.
+
+
+[ _form ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`41 1 42 24`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+(signature)`_form(*fields)`
+
+
+[ literal_casts ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`44 1 67 1`
+#!source
+	literal_casts = {
+		'default': '.Ql',
+		'library': '.Lb',
+		'include': '.In',
+		'literal': '.Li',
+		'environ': '.Ev',
+		'errno': '.Er',
+		'internal-command': '.Ic',
+		'memory-address': '.Ad',
+		'path': '.Pa',
+		'function': '.Fn',
+		'function-type': '.Ft',
+		'function-argument': '.Fa',
+		'variable-type': '.Vt',
+		'variable': '.Va',
+		'const': '.Dv',
+		'option-flag': '.Fl',
+		'option-argument': '.Ar',
+		'optional': '.Op',
+		'author': '.An',
+		'tradename': '.Tn',
+		'standard': '.St',
+		'mdoc-comment': '.\\"',
+	}
+
+[ trim_option_flag ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`69 1 87 24`
+(signature)`trim_option_flag(opt)`
+
+Eliminate redundant slugs for mdoc macros and identify join.
+
+
+[ Render ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`89 1 432 52`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`89 14 89 28`
+	- (type/syntax)`comethod.object`
+	- (type/remote/factor-element)&<http://fault.io/python/context/comethod#object[fault.context.comethod.object]>
+	
+Render an HTML document for the configured text document.
+
+
+[ Render >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`94 2 104 20`
+(signature)`__init__(self, output, context, prefix, index, input, relation)`
+
+
+[ Render >> default_resolver ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`106 2 107 51`
+(signature)`default_resolver(self)`
+
+
+[ Render >> document ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`109 2 132 59`
+(signature)`document(self, type, identifier)`
+
+Render the manual document from the given chapter.
+
+
+[ Render >> root ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`134 2 154 29`
+(signature)`root(self, resolver, elements, attr)`
+
+
+[ Render >> name_section ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`155 2 169 41`
+(signature)`name_section(self, resolver, nseq, attr)`
+
+
+[ Render >> command_synopsis_section ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`170 2 202 44`
+(signature)`command_synopsis_section(self, resolver, nseq, attr)`
+
+
+[ Render >> function_synopsis_section ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`203 2 223 21`
+(signature)`function_synopsis_section(self, resolver, nseq, attr)`
+
+
+[ Render >> subsection ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`224 2 229 32`
+(signature)`subsection(self, resolver, elements, attr)`
+
+
+[ Render >> semantic_section ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`230 2 232 50`
+(signature)`semantic_section(self, resolver, elements, attr)`
+
+
+[ Render >> switch ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`234 2 243 20`
+(signature)`switch(self, resolver, elements, attr)`
+
+Perform the transformation for the given element.
+
+
+[ Render >> code_block ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`244 2 255 46`
+(signature)`code_block(self, resolver, elements, attr)`
+
+
+[ Render >> sequencing ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`257 2 271 17`
+(signature)`sequencing(self, type, resolver, items, attr)`
+
+
+[ Render >> unordered ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`272 2 275 22`
+(signature)`unordered(self, resolver, items, attr)`
+
+
+[ Render >> ordered ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`276 2 279 28`
+(signature)`ordered(self, resolver, items, attr)`
+
+
+[ Render >> paragraph_key ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`280 2 282 53`
+(signature)`paragraph_key(self, resolver, items, attr)`
+
+
+[ Render >> format_option_arguments ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`284 2 293 36`
+(signature)`format_option_arguments(self, arglist)`
+
+
+[ Render >> options_record ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`294 2 325 39`
+(signature)`options_record(self, resolver, items, attr)`
+
+Format the (id)`option-case` element substituted by (factor-local/function)&<#join_synopsis_details[join_synopsis_details]>.
+
+
+[ Render >> parameter_record ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`326 2 335 23`
+(signature)`parameter_record(self, resolver, items, attr)`
+
+Format the (id)`parameter-case` element substituted by (factor-local/function)&<#join_synopsis_details[join_synopsis_details]>.
+
+
+[ Render >> mapping ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`336 2 349 24`
+(signature)`mapping(self, resolver, items, attr)`
+
+
+[ Render >> block_admonition ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`350 2 366 23`
+(signature)`block_admonition(self, resolver, content, attr)`
+
+
+[ Render >> normal_paragraph ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`367 2 371 53`
+(signature)`normal_paragraph(self, resolver, elements, attr)`
+
+
+[ Render >> paragraph ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`373 2 383 34`
+(signature)`paragraph(self, resolver, pnodes, attr)`
+
+
+[ Render >> reference_section ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`384 2 387 36`
+(signature)`reference_section(self, resolver, context, text, *quals)`
+
+
+[ Render >> reference_ambiguous ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`388 2 397 36`
+(signature)`reference_ambiguous(self, resolver, context, text, *quals)`
+
+
+[ Render >> reference_hyperlink ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`398 2 403 28`
+(signature)`reference_hyperlink(self, resolver, context, text, *quals)`
+
+
+[ Render >> normal_text ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`404 2 407 32`
+(signature)`normal_text(self, resolver, context, text, *quals)`
+
+
+[ Render >> line_break ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`408 2 414 30`
+(signature)`line_break(self, resolver, context, text, *quals)`
+
+
+[ Render >> emphasized_text ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`415 2 425 37`
+(signature)`emphasized_text(self, resolver, context, text, level)`
+
+
+[ Render >> inline_literal ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`426 2 432 52`
+(signature)`inline_literal(self, resolver, context, text, *quals)`
+
+
+[ split_option_flags ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`434 1 450 20`
+(signature)`split_option_flags(p)`
+
+Retrieve the reference and any leading option fields.
+
+
+[ _pararefs ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`452 1 456 9`
+(signature)`_pararefs(n)`
+
+
+[ recognize_synopsis_options ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`458 1 473 2`
+(signature)`recognize_synopsis_options(section)`
+
+
+[ join_synopsis_details ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`475 1 561 16`
+(signature)`join_synopsis_details(context, index)`
+
+Join some of the information defined in `OPTIONS` or `PARAMETERS`
+with the references cited in `SYNOPSIS`.
+
+
+[ transform ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`563 1 568 38`
+(signature)`transform(prefix, chapter)`
+

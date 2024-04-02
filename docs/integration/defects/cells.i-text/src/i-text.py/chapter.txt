@@ -1,0 +1,272 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 202 0`
+
+[ functools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 1 16`
+
+[ repeat ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`2 1 2 28`
+
+[ syscellcount ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`3 1 3 51`
+
+[ setlocale ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 39`
+
+[ types ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 26`
+
+[ module ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 7 35`
+
+[ mkscreen ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`12 1 14 40`
+(signature)`mkscreen(w, h)`
+
+
+[ test_graphemes_control ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`16 1 23 79`
+(signature)`test_graphemes_control(test)`
+
+- (project-local/unknown)&<module.graphemes>
+
+Validate control character length parameter.
+
+
+[ test_graphemes_tab ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`25 1 31 88`
+(signature)`test_graphemes_tab(test)`
+
+- (project-local/unknown)&<module.graphemes>
+
+Validate tab length parameter.
+
+
+[ test_words_unit ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`33 1 39 59`
+(signature)`test_words_unit(test)`
+
+- (project-local/unknown)&<module.graphemes>
+- (project-local/unknown)&<module.words>
+
+
+[ test_words_unit_tabs ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`41 1 49 74`
+(signature)`test_words_unit_tabs(test)`
+
+- (project-local/unknown)&<module.graphemes>
+- (project-local/unknown)&<module.words>
+
+Check tab sizing and unit isolation.
+
+
+[ test_words_zwj_unit ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`51 1 61 50`
+(signature)`test_words_zwj_unit(test)`
+
+- (project-local/unknown)&<module.graphemes>
+- (project-local/unknown)&<module.words>
+
+Even invalid sequences are grouped.
+Potentially incorrect display here as well given the unit's single cell count
+due to the maximum being selected.
+
+
+[ test_words_zwj_emoji ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`63 1 77 44`
+(signature)`test_words_zwj_emoji(test)`
+
+- (project-local/unknown)&<module.graphemes>
+- (project-local/unknown)&<module.words>
+
+Double check a few emoji expressions.
+
+
+[ test_words_combining_unit ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`79 1 90 68`
+(signature)`test_words_combining_unit(test)`
+
+- (project-local/unknown)&<module.graphemes>
+- (project-local/unknown)&<module.words>
+
+Validate properly grouped combining characters and their unit isolation.
+
+
+[ test_words_multiple_combining_unit ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`92 1 102 71`
+(signature)`test_words_multiple_combining_unit(test)`
+
+- (project-local/unknown)&<module.graphemes>
+- (project-local/unknown)&<module.words>
+
+Validate properly grouped combining characters and their unit isolation.
+
+
+[ test_words_chinese_sample ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`104 1 116 82`
+(signature)`test_words_chinese_sample(test)`
+
+- (project-local/unknown)&<module.graphemes>
+- (project-local/unknown)&<module.words>
+
+Validate wide characters and check cell rate word breaks.
+
+
+[ test_words_phrasing ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`118 1 130 24`
+(signature)`test_words_phrasing(test)`
+
+Validate that (project-local/unknown)&<module.words> can be processed by the Phrase constructor.
+
+
+[ test_Phrase_render ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`132 1 147 28`
+(signature)`test_Phrase_render(test)`
+
+- (context-local/factor-element)&<terminal.cells/text#Phrase.render[terminal.cells.text.Phrase.render]>
+- (context-local/factor-element)&<terminal.cells/text#Words.render[terminal.cells.text.Words.render]>
+- (context-local/factor-element)&<terminal.cells/text#Unit.render[terminal.cells.text.Unit.render]>
+
+Validate the creation of Glyph instances representing the phrase.
+
+
+[ test_Phrase_render_Define ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`149 1 174 23`
+(signature)`test_Phrase_render_Define(test)`
+
+- (context-local/factor-element)&<terminal.cells/text#Phrase.render[terminal.cells.text.Phrase.render]>
+- (context-local/factor-element)&<terminal.cells/text#Words.render[terminal.cells.text.Words.render]>
+- (context-local/factor-element)&<terminal.cells/text#Unit.render[terminal.cells.text.Unit.render]>
+- (context-local/factor-element)&<terminal.cells/text#Redirect.render[terminal.cells.text.Redirect.render]>
+
+Validate Define parameter usage.
+
+
+[ test_Phrase_render_double_width ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`176 1 200 21`
+(signature)`test_Phrase_render_double_width(test)`
+
+- (context-local/factor-element)&<terminal.cells/text#Phrase.render[terminal.cells.text.Phrase.render]>
+- (context-local/factor-element)&<terminal.cells/text#Words.render[terminal.cells.text.Words.render]>
+- (context-local/factor-element)&<terminal.cells/text#Unit.render[terminal.cells.text.Unit.render]>
+
+Validate the creation of Glyph instances representing a phrase with double-width characters.
+

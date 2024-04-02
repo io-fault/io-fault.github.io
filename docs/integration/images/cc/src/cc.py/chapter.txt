@@ -1,0 +1,674 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 810 0`
+Software Construction Context implementation in Python.
+
+
+[ os ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 9`
+
+[ sys ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 10`
+
+[ functools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 16`
+
+[ collections ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 7 18`
+
+[ contextlib ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 8 17`
+
+[ typing ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`9 1 9 13`
+
+[ dataclasses ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 1 10 18`
+
+[ itertools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 1 11 16`
+
+[ tools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`13 1 13 31`
+
+[ time ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`14 1 14 37`
+
+[ libexec ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`15 1 15 45`
+
+[ files ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`16 1 16 30`
+
+[ ri ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`17 1 17 29`
+
+[ kcore ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`19 1 19 38`
+
+[ kdispatch ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`20 1 20 46`
+
+[ metrics ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`22 1 22 36`
+
+[ graph ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`24 1 24 19`
+
+[ Target ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`25 1 25 50`
+
+[ SystemFactor ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`25 1 25 50`
+
+[ Integrand ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`25 1 25 50`
+
+[ vectorcontext ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`26 1 26 36`
+
+[ open_fs_context ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`28 1 28 54`
+#!source
+	open_fs_context = vectorcontext.Context.from_directory
+
+[ devnull ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`29 1 29 46`
+#!source
+	devnull = files.Path.from_absolute(os.devnull)
+
+[ job_priority ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`30 1 30 17`
+#!source
+	job_priority = 10
+
+[ local_query ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`43 1 49 47`
+(signature)`local_query(integrand, local, query)`
+
+
+[ prepare ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`51 1 99 22`
+(signature)`prepare(command, args, log, output, input)`
+
+Given a command and its constructed arguments, interpret the
+standard I/O fields in (factor-local/parameter)&<#prepare.Parameters.args[args]>, formulate a (remote/factor-element)&<http://fault.io/python/system/execution#KInvocation[fault.system.execution.KInvocation]>
+instance for execution, and prepare stdio (remote/factor-element)&<http://fault.io/python/system/files#Path[fault.system.files.Path]>
+assignments.
+
+[ > Parameters ]
+
+/(parameter)`command`/
+	
+	The command prefix to be used with (factor-local/parameter)&<#prepare.Parameters.args[args]>.
+
+/(parameter)`args`/
+	
+	The argument vector produced by the construction context.
+
+/(parameter)`log`/
+	
+	The (remote/factor-element)&<http://fault.io/python/system/files#Path[fault.system.files.Path]> identifying the default location for standard error.
+
+/(parameter)`output`/
+	
+	The (remote/factor-element)&<http://fault.io/python/system/files#Path[fault.system.files.Path]> identifying the file that will be created by the command.
+
+/(parameter)`input`/
+	
+	The (remote/factor-element)&<http://fault.io/python/system/files#Path[fault.system.files.Path]> identifying the source file being translated or the sole unit.
+
+/(parameter)`executor`/
+	
+	(control/absent)`Undocumented`.
+
+
+[ _ftype ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`100 1 103 21`
+(signature)`_ftype(itype)`
+
+
+[ work_key_cache ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`104 1 112 11`
+(signature)`work_key_cache(prefix, features, variants)`
+
+
+[ work ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`114 1 116 28`
+(signature)`work()`
+
+
+[ telemetry ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`118 1 121 28`
+(signature)`telemetry()`
+
+
+[ rebuild ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`123 1 133 13`
+(signature)`rebuild(outputs, inputs)`
+
+Unconditionally report the (factor-local/parameter)&<#rebuild.Parameters.outputs[outputs]> as outdated.
+
+
+[ updated ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`135 1 183 12`
+(signature)`updated(outputs, inputs)`
+
+Return whether or not the (factor-local/parameter)&<#updated.Parameters.outputs[outputs]> are up-to-date.
+
+(invalid/unknown)&<#False> returns means that the target should be reconstructed,
+and (invalid/unknown)&<#True> means that the file is up-to-date and needs no processing.
+
+
+[ construct_reference_target ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`185 1 194 54`
+(signature)`construct_reference_target(pj, reqs, rsrc, method, record)`
+
+
+[ interpret_reference ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`196 1 232 82`
+(signature)`interpret_reference(cc, ctxpath, _factor, reference)`
+
+Extract the project identifier from the (invalid/unknown)&<#url> and find a corresponding project.
+
+The fragment portion of the URL specifies the factor within the project
+that should be connected in order to use the (invalid/unknown)&<#symbol>.
+
+
+[ structure_system_references ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`234 1 246 75`
+(signature)`structure_system_references(source)`
+
+
+[ resolve_meta_references ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`248 1 285 10`
+(signature)`resolve_meta_references(ir, targets)`
+
+Construct (project-local/factor-element)&<types#SystemFactor[system.images.types.SystemFactor]> instances from the reference factors.
+
+
+[ requirements ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`287 1 299 50`
+(signature)`requirements(cc, ctxpath, factor)`
+
+Return the set of factors that is required to build this Target, (factor-local/parameter)&<#requirements.Parameters.factor[factor]>.
+
+
+[ Construction ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`301 1 810 35`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`301 20 301 32`
+	- (type/syntax)`kcore.Context`
+	- (type/remote/factor-element)&<http://fault.io/python/kernel/core#Context[fault.kernel.core.Context]>
+	
+Construction process manager. Maintains the set of targets to construct and
+dispatches the work to be performed for completion in the appropriate order.
+
+
+[ Construction >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`307 2 353 23`
+(signature)`__init__(self, executor, time, log, features, cache, context, mode, pcontext, ctxpath, project, factors)`
+
+
+[ Construction >> time ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`355 2 356 45`
+(signature)`time(self)`
+
+
+[ Construction >> actuate ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`358 2 378 26`
+(signature)`actuate(self)`
+
+
+[ Construction >> select ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`380 2 385 10`
+(signature)`select(self, ftype)`
+
+
+[ Construction >> finish ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`387 2 414 28`
+(signature)`finish(self, factors)`
+
+Called when a set of factors have been completed.
+
+
+[ Construction >> xact_void ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`416 2 418 28`
+(signature)`xact_void(self, final)`
+
+
+[ Construction >> _prepare_work_directory ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`420 2 450 21`
+(signature)`_prepare_work_directory(self, locations, sources)`
+
+Initialize the work directory for the factor processing cache.
+
+
+[ Construction >> collect ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`457 2 609 35`
+(signature)`collect(self, features, mechanism, factor, requirements, dependents)`
+
+Collect the parameters and work to be done for processing the (factor-local/parameter)&<#Construction.collect.Parameters.factor[factor]>.
+
+[ >> Parameters ]
+
+/(parameter)`self`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`features`/
+	
+	Image features to request. (debug/optimal/coverage/profile)
+
+/(parameter)`mechanism`/
+	
+	The abstraction to the Construction Context providing
+	translation and rendering command constructors for the variant set.
+
+/(parameter)`factor`/
+	
+	The (project-local/factor-element)&<types#Target[system.images.types.Target]> being built.
+
+/(parameter)`requirements`/
+	
+	The set of factors referred to by (factor-local/parameter)&<#Construction.collect.Parameters.factor[factor]>. Often, the
+	dependencies that need to be built in order to build the factor.
+
+/(parameter)`dependents`/
+	
+	The set of factors that refer to (factor-local/parameter)&<#Construction.collect.Parameters.factor[factor]>.
+
+
+[ Construction >> _reapusage ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`611 2 614 42`
+(signature)`_reapusage(self, pid)`
+
+
+[ Construction >> process_execute ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`616 2 655 13`
+(signature)`process_execute(self, instruction)`
+
+
+[ Construction >> xact_exit ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`657 2 661 48`
+(signature)`xact_exit(self, xact)`
+
+
+[ Construction >> process_exit ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`663 2 718 34`
+(signature)`process_exit(self, pid, delta, rusage, start_time, factor, log, cmd, tfile)`
+
+
+[ Construction >> drain_process_queue ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`720 2 744 28`
+(signature)`drain_process_queue(self)`
+
+After process slots have been cleared by (factor-local/method)&<#Construction.process_exit[process_exit]>,
+(factor-local/method)&<#Construction.continuation[continuation]> is called and performs this method to execute
+system processes enqueued in (invalid/unknown)&<#command_queue>.
+
+
+[ Construction >> continuation ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`746 2 792 28`
+(signature)`continuation(self)`
+
+Process exits occurred that may trigger an addition to the working set of tasks.
+Usually called indirectly by (factor-local/method)&<#Construction.process_exit[process_exit]>, this manages the collection
+of further work identified by the sequenced dependency tree managed by (invalid/unknown)&<#sequence>.
+
+
+[ Construction >> dispatch ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`794 2 810 35`
+(signature)`dispatch(self, factor)`
+
+Process the collected work for the factor.
+

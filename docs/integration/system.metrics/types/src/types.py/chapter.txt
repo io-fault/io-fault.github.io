@@ -1,0 +1,353 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 241 4`
+Structures for supporting the calculations and representations of factor statistics.
+
+
+[ Sequence ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 36`
+
+[ tools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 8 15`
+
+[ Product ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`9 1 117 15`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`9 15 9 20`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+Triple of integers representing a total product, subject factor, and integer count.
+Provides the core structure for the statistical elements used by (project-local/project-name)&<system.metrics>.
+
+The (vector) integers are represented using a triple as the vectors are analyzed from
+three different perspectives in order to collect the information provided by
+(factor-local/class)&<#Statistics[Statistics]>.
+
+[ > Properties ]
+
+/total/
+	The integer product calculated by multiplying (invalid/unknown)&<#subject> and (invalid/unknown)&<#count>.
+
+/subject/
+	The factor being multiplied by (invalid/unknown)&<#count>.
+	Often, the subject is calculated or recalculated by dividing the
+	total with the count. (factor-local/property)&<#Product.rational[rational]> should be used in order to obtain an
+	accurate (invalid/unknown)&<#subject> value.
+
+/count/
+	The number of times (invalid/unknown)&<#subject> occurred in a vector.
+	The factor used to multiply (invalid/unknown)&<#subject>.
+
+
+[ Product >> from_vectors ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`35 2 43 13`
+(signature)`from_vectors(Class, totals, counts)`
+
+Construct an aggregate from a pair of vectors of totals and counts.
+
+
+[ Product >> from_factors ]
+! CONTROL:
+	/type/
+		classmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`44 2 47 14`
+(signature)`from_factors(Class, subject, count)`
+
+
+[ Product >> frequency ]
+! CONTROL:
+	/type/
+		staticmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`48 2 54 14`
+(signature)`frequency(p)`
+
+Sort key for frequency profiles.
+
+
+[ Product >> value ]
+! CONTROL:
+	/type/
+		staticmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`55 2 59 18`
+(signature)`value(p)`
+
+Sort key for subject profiles.
+
+
+[ Product >> __repr__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`61 2 70 10`
+(signature)`__repr__(self)`
+
+
+[ Product >> remainder ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`71 2 78 10`
+The numerator of the average's fractional component.
+Where (invalid/unknown)&<#count> is the implied denominator.
+
+
+[ Product >> rational ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`79 2 83 53`
+Calculate the, true, (invalid/unknown)&<#subject> based on (invalid/unknown)&<#total> and (invalid/unknown)&<#count>.
+
+
+[ Product >> add ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`85 2 101 37`
+(signature)`add(self, values)`
+
+Apply a sequence of distinct values to the product's (invalid/unknown)&<#total>.
+
+The (invalid/unknown)&<#subject> is re-calculated based on the new total.
+
+
+[ Product >> adjust ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`103 2 112 3`
+(signature)`adjust(self, delta)`
+
+Increment the (invalid/unknown)&<#count> and perform the corresponding adjustments to the (invalid/unknown)&<#total>.
+Given delta
+
+
+[ Product >> __int__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`114 2 117 15`
+(signature)`__int__(self)`
+
+
+[ Profile ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`118 1 165 15`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`118 15 118 20`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+Common statistics regarding a set of values.
+
+[ > Properties ]
+
+/total/
+	Sum of the ordering key.
+
+/edges/
+	The minimums and maximums of the value set.
+
+
+[ Profile >> minimum ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`133 2 139 10`
+The lowest value recorded in (invalid/unknown)&<#edges>.
+
+
+[ Profile >> maximum ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`140 2 146 10`
+The highest value recorded in (invalid/unknown)&<#edges>.
+
+
+[ Profile >> span ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`147 2 151 55`
+The difference between the maximum and the minimum.
+
+
+[ Profile >> imin ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`153 2 157 40`
+(signature)`imin(self)`
+
+Iterator selecting the minimum (invalid/unknown)&<#Products> retained by the profile.
+
+
+[ Profile >> imax ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`159 2 165 15`
+(signature)`imax(self)`
+
+Iterator selecting the maximum (invalid/unknown)&<#Products> retained by the profile.
+
+
+[ Statistics ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`166 1 242 3`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`166 18 166 23`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+(factor-local/class)&<#Profile[Profile]> set and measurements for calculating statistical properties of a vector.
+
+[ > Properties ]
+
+/count/
+	The original unique number of elements that the profiles were built from.
+
+/deltas/
+	Sum of the distances from the average.
+	For distance measurement.
+
+/areas/
+	Sum of the areas, squares, from the average.
+	For standard deviation measurement.
+
+/frequency/
+	Profile of the numbers organized by their frequencies.
+	Totals the counts.
+
+/subjective/
+	Profile of the numbers organized by their unique instances.
+	Totals the subjects.
+
+/magnitude/
+	Profile of the numbers organized by their total values.
+	Totals the totals.
+
+
+[ Statistics >> mean ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`197 2 204 52`
+		- (type/syntax)`Product`
+		- (type/factor-local/class)&<#Product[Product]>
+		
+The (factor-local/class)&<#Product[Product]> representing the mean of the values.
+Provides access to the total and count of values.
+
+
+[ Statistics >> profiles ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`206 2 209 37`
+(signature)`profiles(self)`
+
+
+[ Statistics >> __str__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`211 2 223 5`
+(signature)`__str__(self)`
+
+
+[ Statistics >> summary ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`225 2 242 3`
+(signature)`summary(self)`
+

@@ -1,0 +1,875 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 1010 0`
+
+[ Sequence ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 1 36`
+
+[ itertools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`2 1 2 16`
+
+[ tools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 31`
+
+[ comethod ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 34`
+
+[ xml ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 30`
+
+[ ri ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 7 29`
+
+[ document ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`9 1 9 31`
+
+[ structure_chapter_lines ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 1 10 73`
+
+[ structure_chapter_text ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 1 10 73`
+
+[ ipara ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 1 11 62`
+
+[ setdirectory ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`13 1 13 34`
+
+[ Cursor ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`14 1 14 35`
+
+[ navigate ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`14 1 14 35`
+
+[ formlink ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`16 1 42 28`
+		- (type/syntax)`(str, str):`
+		
+(signature)`formlink(reference)`
+
+Construct a pair from the hyperlink reference string for constructing an anchor tag.
+
+First element is the display text, second is the content for the `href` attribute.
+
+
+[ formtype ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`44 1 62 18`
+(signature)`formtype(tree, element)`
+
+Construct HTML elements for representing a type given proper annotations.
+
+
+[ load_control_value ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`64 1 77 39`
+(signature)`load_control_value(value)`
+
+
+[ integrate ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`79 1 129 15`
+(signature)`integrate(index, types, element)`
+
+Traverse the sections of the (factor-local/parameter)&<#integrate.Parameters.element[element]> converting CONTEXT and CONTROL
+admonition elements into (factor-local/parameter)&<#integrate.Parameters.element[element]> attributes.
+
+
+[ prepare ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`131 1 149 13`
+(signature)`prepare(chapter)`
+
+
+[ PageSubject ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`150 1 159 13`
+Page subject fields.
+
+
+[ PageContext ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`160 1 166 18`
+Page context fields.
+
+
+[ page_heading ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`168 1 205 2`
+(signature)`page_heading(tree, depth, subject, context)`
+
+Construct the elements of a page's initial heading.
+
+
+[ Render ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`207 1 858 22`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`207 14 207 28`
+	- (type/syntax)`comethod.object`
+	- (type/remote/factor-element)&<http://fault.io/python/context/comethod#object[fault.context.comethod.object]>
+	
+Rendering context for constructing an HTML document.
+
+[ > Properties ]
+
+/output/
+	The tree builder used to form elements and escape text.
+
+/prefix/
+	The target prefix to remove from context-local references.
+
+/depth/
+	The position of the document relative to the root of the collection.
+
+/context/
+	The chapter's context information.
+
+/index/
+	The chapter's element index constructed by (factor-local/function)&<#integrate[integrate]>.
+
+/input/
+	The cursor identifying the root chapter element.
+
+
+[ Render >> output ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`225 2 225 22`
+		- (type/syntax)`object`
+		- (type/invalid/unknown)&<#object>
+		
+#!source
+	output: object = None
+
+[ Render >> prefix ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`226 2 226 19`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+#!source
+	prefix: str = None
+
+[ Render >> depth ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`227 2 227 15`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+#!source
+	depth: int = 0
+
+[ Render >> slug ]
+! CONTROL:
+	/type/
+		staticmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`234 2 240 23`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+(signature)`slug(ident)`
+
+
+[ Render >> steps ]
+! CONTROL:
+	/type/
+		classmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`241 2 249 17`
+(signature)`steps(Class, path)`
+
+
+[ Render >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`251 2 261 41`
+(signature)`__init__(self, output, prefix, depth, context, index, input)`
+
+
+[ Render >> default_resolver ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`263 2 264 51`
+(signature)`default_resolver(self)`
+
+
+[ Render >> title ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`266 2 274 3`
+(signature)`title(self, resolver, content, integrate)`
+
+
+[ Render >> document ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`276 2 303 3`
+(signature)`document(self, subject, context)`
+
+Render the HTML document from the given chapter.
+
+
+[ Render >> abstract ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`305 2 313 3`
+(signature)`abstract(self, resolver, elements, attr)`
+
+Extract the non-section content from the chapter.
+
+
+[ Render >> root ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`315 2 320 21`
+(signature)`root(self, resolver, elements, attr)`
+
+
+[ Render >> semantic_section ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`321 2 401 3`
+(signature)`semantic_section(self, resolver, elements, attr)`
+
+
+[ Render >> reference_target ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`403 2 417 3`
+(signature)`reference_target(self, resolver, ref)`
+
+Display the target of the concept's reference.
+
+
+[ Render >> switch ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`419 2 427 23`
+(signature)`switch(self, resolver, elements, attr)`
+
+Perform the transformation for the given element.
+
+
+[ Render >> error ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`428 2 431 20`
+(signature)`error(self, resolver, elements, attr)`
+
+
+[ Render >> code_block ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`432 2 447 23`
+(signature)`code_block(self, resolver, elements, attr)`
+
+
+[ Render >> normal_paragraph ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`448 2 451 3`
+(signature)`normal_paragraph(self, resolver, nodes, attr)`
+
+
+[ Render >> list_item ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`453 2 456 17`
+(signature)`list_item(self, resolver, item, attr)`
+
+
+[ Render >> ul_set ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`457 2 467 22`
+(signature)`ul_set(self, resolver, items, attr)`
+
+
+[ Render >> ol_seq ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`468 2 476 3`
+(signature)`ol_seq(self, resolver, items, attr)`
+
+
+[ Render >> dl_item_anchor ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`478 2 489 4`
+(signature)`dl_item_anchor(self, path)`
+
+
+[ Render >> dl_key_identifier ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`491 2 503 14`
+(signature)`dl_key_identifier(self, kpg)`
+
+
+[ Render >> dl_item ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`505 2 628 23`
+(signature)`dl_item(self, resolver, item, attr, sattr, prefix)`
+
+
+[ Render >> dl_dict ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`629 2 648 3`
+(signature)`dl_dict(self, resolver, items, attr)`
+
+
+[ Render >> admonition_table ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`650 2 667 24`
+(signature)`admonition_table(self, resolver, icon, severity, content)`
+
+
+[ Render >> block_admonition ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`668 2 692 3`
+(signature)`block_admonition(self, resolver, content, attr)`
+
+
+[ Render >> link ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`694 2 705 34`
+(signature)`link(self, eclass, content, href)`
+
+
+[ Render >> dereference_section ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`706 2 713 36`
+(signature)`dereference_section(self, resolver, context, text, *quals)`
+
+
+[ Render >> dereference_ambiguous ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`714 2 723 36`
+(signature)`dereference_ambiguous(self, resolver, context, text, *quals)`
+
+
+[ Render >> hyperlink ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`724 2 776 28`
+(signature)`hyperlink(self, resolver, context, text, *quals)`
+
+
+[ Render >> normal_text ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`777 2 784 32`
+(signature)`normal_text(self, resolver, context, text, *quals)`
+
+
+[ Render >> line_break ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`785 2 792 30`
+(signature)`line_break(self, resolver, context, text, *quals)`
+
+
+[ Render >> emphasized_text ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`793 2 807 3`
+(signature)`emphasized_text(self, resolver, context, text, level)`
+
+
+[ Render >> semantic_literals ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`810 2 828 37`
+#!source
+	semantic_literals = {
+		# (self, default-class-attribute, quals, literal-text)
+		'date': (
+			(lambda s, c, q, x: s.element(
+				'time', s.text(x),
+				('class', 'gregorian-calendar-date'),
+				('datetime', x),
+			))
+		),
+		'timestamp': (
+			(lambda s, c, q, x: s.element(
+				'time', s.text(x),
+				('class', 'point'),
+				('datetime', x),
+			))
+		),
+	}
+		@comethod('literal', 'grave-accent')
+
+[ Render >> inline_literal ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`829 2 842 4`
+(signature)`inline_literal(self, resolver, context, text, *quals)`
+
+
+[ Render >> paragraph_content ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`844 2 845 67`
+(signature)`paragraph_content(self, resolver, content, attr)`
+
+
+[ Render >> paragraph ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`847 2 858 22`
+(signature)`paragraph(self, resolver, para, attr)`
+
+
+[ icon_identity ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`859 1 864 63`
+(signature)`icon_identity(ftype)`
+
+Construct the `.icon` identifier from a factor type identifier.
+
+
+[ factor_type_icon ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`866 1 881 28`
+(signature)`factor_type_icon(depth, reference)`
+
+Construct a hyperlink to a printed icon for the given factor type.
+
+
+[ r_icon ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`883 1 891 2`
+(signature)`r_icon(sx, href)`
+
+
+[ r_index ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`893 1 922 2`
+(signature)`r_index(sx, pathclass, abstractclass, listclass, index)`
+
+
+[ r_projects ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`924 1 929 72`
+(signature)`r_projects(sx, index)`
+
+
+[ r_factors ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`931 1 936 71`
+(signature)`r_factors(sx, index)`
+
+
+[ r_sources ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`938 1 944 71`
+(signature)`r_sources(sx, index)`
+
+
+[ r_head ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`946 1 960 2`
+(signature)`r_head(sx, encoding, styles)`
+
+
+[ indexframe ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`962 1 978 2`
+(signature)`indexframe()`
+
+
+[ r_factor_page ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`980 1 987 51`
+(signature)`r_factor_page(sx, prefix, depth, subject, context, chapter)`
+
+Structure the given chapter text and prepare the context, index, and element query
+context for a new (factor-local/class)&<#Render[Render]> instance.
+
+
+[ r_page ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`989 1 1010 58`
+(signature)`r_page(chapter, styles)`
+
+Transform the given (factor-local/parameter)&<#r_page.Parameters.chapter[chapter]> file into HTML.
+
