@@ -1,0 +1,218 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 262 0`
+
+[ collections ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 1 18`
+
+[ functools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`2 1 2 16`
+
+[ typing ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`3 1 3 13`
+
+[ itertools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 16`
+
+[ module ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 40`
+
+[ core ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 7 26`
+
+[ flows ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 8 27`
+
+[ testlib ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`9 1 9 32`
+
+[ test_Call ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 1 35 26`
+(signature)`test_Call(test)`
+
+
+[ test_Coroutine ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`37 1 59 24`
+(signature)`test_Coroutine(test)`
+
+Evaluate the functions of a (context-local/factor-element)&<fault.kernel/dispatch#Coroutine[fault.kernel.dispatch.Coroutine]> process;
+notably the continuations and callback registration.
+
+
+[ SPTestSystem ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`61 1 63 6`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`61 20 61 25`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+
+[ SPTestSystem >> connect_process_exit ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`62 2 63 6`
+(signature)`connect_process_exit(self, proc, cb, *procs)`
+
+
+[ TestSubprocess ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`65 1 74 29`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`65 22 65 38`
+	- (type/syntax)`module.Subprocess`
+	- (type/context-local/factor-element)&<fault.kernel/dispatch#Subprocess[fault.kernel.dispatch.Subprocess]>
+	
+
+[ TestSubprocess >> actuate ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`66 2 71 19`
+(signature)`actuate(self)`
+
+
+[ TestSubprocess >> sp_signal ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`73 2 74 29`
+(signature)`sp_signal(self, signo)`
+
+
+[ test_Subprocess_termination ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`76 1 150 29`
+(signature)`test_Subprocess_termination(test)`
+
+- (context-local/factor-element)&<fault.kernel/dispatch#Subprocess[fault.kernel.dispatch.Subprocess]>
+
+Validate that process exits block termination.
+The subclasses are used for injections to avoid real system processes.
+
+
+[ test_Subprocess_only_status ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`152 1 184 24`
+(signature)`test_Subprocess_only_status(test)`
+
+- (context-local/factor-element)&<fault.kernel/dispatch#Subprocess.sp_only[fault.kernel.dispatch.Subprocess.sp_only]>
+
+
+[ test_Scheduler_operations ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`186 1 262 30`
+(signature)`test_Scheduler_operations(test)`
+

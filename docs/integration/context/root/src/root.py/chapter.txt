@@ -1,0 +1,8 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 2 4`
+System context project root.
+

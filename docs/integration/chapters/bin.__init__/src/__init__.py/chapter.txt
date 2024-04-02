@@ -1,0 +1,5 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 0 0`

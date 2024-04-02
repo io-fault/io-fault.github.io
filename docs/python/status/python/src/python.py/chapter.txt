@@ -1,0 +1,321 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 439 20`
+Tools for building status data from Python exceptions, tracebacks, and frames.
+
+
+[ itertools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 16`
+
+[ sys ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 10`
+
+[ typing ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 13`
+
+[ linecache ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 7 16`
+
+[ line_syntax_area ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`24 1 33 27`
+(signature)`line_syntax_area(start)`
+
+Construct a syntax area representing the given line range.
+If (factor-local/parameter)&<#line_syntax_area.Parameters.stop[stop]> is (invalid/unknown)&<#None> or equal to (factor-local/parameter)&<#line_syntax_area.Parameters.start[start]>, the returned area will
+represent a single line.
+
+
+[ python_syntax_error_frame ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`46 1 63 60`
+(signature)`python_syntax_error_frame(instance)`
+
+Extract virtual frame from a Python (invalid/unknown)&<#SyntaxError>.
+
+
+[ frames ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`65 1 75 15`
+(signature)`frames(context)`
+
+Get explicit frames from the (factor-local/parameter)&<#frames.Parameters.context[context]>.
+Prioritizes `traceframes` method.
+
+
+[ iterstack ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`77 1 84 14`
+(signature)`iterstack(frame)`
+
+Construct a generator producing frame-lineno pairs from a stack of frames.
+
+
+[ itertraceback ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`86 1 93 17`
+(signature)`itertraceback(traceback)`
+
+Construct a generator producing frame-lineno pairs from a traceback.
+
+
+[ iterlnotab ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`95 1 104 14`
+		- (type/syntax)`typing.Iterable[typing.Tuple[int, int]]`
+		
+(signature)`iterlnotab(lineno, encoded)`
+
+
+[ syntax ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`106 1 111 7`
+(signature)`syntax()`
+
+
+[ _first ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`113 1 118 15`
+(signature)`_first(iterlines, start, default)`
+
+
+[ trim ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`120 1 126 41`
+(signature)`trim(lineno, lines)`
+
+Strip whitespace only lines from the edges of the sequence.
+
+
+[ map_instruction_position ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`128 1 143 38`
+(signature)`map_instruction_position(co, ixn, start)`
+
+Retrieve the syntax area associated with the instruction, (factor-local/parameter)&<#map_instruction_position.Parameters.ixn[ixn]>.
+Constructs a vector of line-column pairs that use inclusive indexes.
+
+A zero column index on the stop indicates end of previous line.
+
+
+[ element_context_area ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`145 1 153 35`
+(signature)`element_context_area(filepath, lineno)`
+
+
+[ syntaxframe ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`155 1 182 2`
+(signature)`syntaxframe()`
+
+Construct a trace frame from the given arguments.
+
+
+[ traceframe ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`184 1 239 2`
+(signature)`traceframe()`
+
+Represent the given (invalid/unknown)&<#pythonframe>, triple, as a trace frame.
+
+
+[ exception ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`241 1 291 92`
+(signature)`exception(instance, traceback)`
+
+Extract the necessary information for identifying
+the context and location that the given exception came from.
+
+
+[ failure ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`293 1 303 13`
+(signature)`failure()`
+
+Transform the exception and its trace into a serializable data structure.
+
+
+[ fframe ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`305 1 319 2`
+(signature)`fframe(index, factor, element, resource, area)`
+
+
+[ ftrace ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`321 1 381 37`
+(signature)`ftrace(frames)`
+
+
+[ fcontexts ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`383 1 392 56`
+(signature)`fcontexts(xorigin, xdirectory)`
+
+
+[ fexcept ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`394 1 414 19`
+(signature)`fexcept(exception)`
+
+
+[ fchain ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`416 1 428 51`
+(signature)`fchain(fexceptions)`
+
+
+[ format ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`430 1 432 40`
+(signature)`format(fexceptions)`
+
+
+[ hook ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`434 1 440 19`
+(signature)`hook(e, v, tb)`
+
+(none/invalid)&<http://fault.io/dev/null[sys.excepthook]> implementation using (factor-local/function)&<#format[format]> and (factor-local/function)&<#failure[failure]>.
+

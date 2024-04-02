@@ -1,0 +1,213 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 85 0`
+Supplemental types.
+
+
+[ Cell ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 85 6`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`5 12 5 17`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+A Sequence implementation always containing a single element.
+
+[ > Engineering ]
+
+The purpose of this type is to provide a means to allow receivers
+of a sequence to know that the sequence produced in a particular case
+will never contain more than one element without having to explicitly
+communicate such a fact with another value sent alongside the sequence.
+
+While an explicit plural field is clear and desirable, it also carries
+the burden of having to be propagated with the sequence.
+Having the sequence type designate the constraint allows the information
+to be propagated without concern by the nodes along the call graph.
+
+
+[ Cell >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`20 2 22 13`
+#!source
+	__slots__ = ('element',)
+		@classmethod
+
+[ Cell >> __setup__ ]
+! CONTROL:
+	/type/
+		classmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`23 2 26 42`
+(signature)`__setup__(Class)`
+
+
+[ Cell >> coalesce ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`28 2 36 21`
+(signature)`coalesce(self, default)`
+
+Return the given (factor-local/parameter)&<#Cell.coalesce.Parameters.default[default]> if the element is (factor-local/parameter)&<#Cell.coalesce.Parameters.abscence[abscence]>.
+
+By default, if the element is (invalid/unknown)&<#None>, return (factor-local/parameter)&<#Cell.coalesce.Parameters.default[default]>.
+
+
+[ Cell >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`38 2 39 24`
+(signature)`__init__(self, element)`
+
+
+[ Cell >> __getitem__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`41 2 45 21`
+		- (type/syntax)`object`
+		- (type/invalid/unknown)&<#object>
+		
+(signature)`__getitem__(self, index)`
+
+
+[ Cell >> __iter__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`47 2 48 20`
+(signature)`__iter__(self)`
+
+
+[ Cell >> __reversed__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`50 2 51 13`
+(signature)`__reversed__(self)`
+
+
+[ Cell >> __len__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`53 2 54 10`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+(signature)`__len__(self)`
+
+
+[ Cell >> __eq__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`56 2 59 35`
+		- (type/syntax)`bool`
+		- (type/invalid/unknown)&<#bool>
+		
+(signature)`__eq__(self, operand)`
+
+
+[ Cell >> __contains__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`61 2 64 14`
+		- (type/syntax)`bool`
+		- (type/invalid/unknown)&<#bool>
+		
+(signature)`__contains__(self, item)`
+
+
+[ Cell >> index ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`66 2 73 65`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+(signature)`index(self, value)`
+
+
+[ Cell >> count ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`75 2 79 11`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+(signature)`count(self, value)`
+
+
+[ Cell >> sort ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`81 2 85 6`
+(signature)`sort(self)`
+
+Sort the Cell's elements by doing nothing.
+

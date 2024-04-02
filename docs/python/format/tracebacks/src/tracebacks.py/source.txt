@@ -1,0 +1,117 @@
+"""
+# Text frames for tracebacks.
+"""
+import typing
+
+from . import terminal
+
+syntax_divisor = (None, 48*"┄")
+frame_divisor = (None, "")
+
+from dataclasses import dataclass
+
+@dataclass
+class Frame:
+	"""
+	# Traceback frame class to be instantiated for rendered.
+	"""
+	resource:(str) = None
+	factor:(str) = None
+	element:(str) = None
+	area:(typing.Tuple[int, int]) = ()
+	source:(str) = None
+
+def frame(index, record, Field=terminal.Field):
+	"""
+	# Construct sequence for a single frame record.
+	"""
+	resource = record['resource']
+	funcname = record['function']
+	factor = record['factor']
+	area = record['area']
+	snapshot = record['source']
+	path = record.get('path')
+	context = factor.split('.')[-1]
+
+	frame_sequence = [
+		(Field('code-frame', funcname, index, path, context), Field('code-module', factor)),
+		("", Field('url', resource)),
+		# syntax_divisor,
+	]
+
+	lines = snapshot.split('\n')
+	frame_sequence.extend([
+		(Field('syntax', 'python', "%s" % linedata[1:]), "")
+		for linedata in zip(range(area, area+len(lines)), lines)
+	])
+
+	return frame_sequence
+
+def path(stack):
+	"""
+	# Construct frame for an entire stack.
+	"""
+
+	stack_frame = list(frame(1, stack[0]))
+	for index, rec in zip(range(len(stack)-1), stack[1:]):
+		#stack_frame.append(frame_divisor)
+		stack_frame.extend(frame(index, rec))
+
+	return stack_frame
+
+seq = [
+	{
+		'function': 'control',
+		'factor': "fault.system.process",
+		'resource': "/python/lib/fault/system/process.py",
+		'area': 731,
+		'source': "    Fork.trap(main, *args, **kw)",
+	}, {
+		'function': 'trap',
+		'factor': "fault.system.process",
+		'resource': "/python/lib/fault/system/process.py",
+		'area': 635,
+		'source': "return controller(*args, **kw) # Process replacement point.",
+	}, {
+		'function': 'main',
+		'factor': "fault.system.bin.subexec",
+		'resource': "/python/lib/fault/system/bin/subexec.py",
+		'area': 123,
+		'source': "module_path = inv.args[count] # No module specified?"
+	}
+]
+k = {
+	'exception': "IndexError",
+	'message': "list index out of range"
+}
+
+def pframe(data):
+	import sys
+	w = max(frames.width(data))
+	if w < 80:
+		w = 120
+	else:
+		w += 8
+
+	d = frames.prepare(frames.f_solid, w, data)
+	terminal.area.context_set_text_color(terminal.palette.colors['background-adjacent'])
+	sys.stdout.buffer.write(terminal.area.reset_text_color())
+
+	sys.stdout.buffer.write(b'\n'.join(terminal.strings(d, context=terminal.area)))
+
+	terminal.area.context_set_text_color(terminal.palette.colors['terminal-default'])
+	sys.stdout.buffer.write(terminal.area.reset_text_color())
+	sys.stdout.write('\n')
+	sys.stdout.flush()
+
+if __name__ == '__main__':
+	from . import frames
+	from . import terminal
+
+	stack = []
+	i = 0
+	for x in seq:
+		i += 1
+		stack.extend(frame(i, x))
+		stack.append(frame_divisor)
+	pframe(stack)

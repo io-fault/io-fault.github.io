@@ -1,0 +1,1 @@
+[[["handlers"]], [{"syntax": "{\n\t'-X': None,\n\t'-l': add_control_factor,\n\t'-L': add_product_path,\n\t'-d': connect_product_environ,\n\t'-P': add_path,\n\t'-D': define_parameter,\n\t'-U': remove_parameter,\n}", "area": [[29, 12], [37, 1]]}]]

@@ -1,0 +1,1 @@
+[[["media_types"], ["Corpus", "Archive"]], [{"syntax": "{\n\t'json': b'application/json',\n\t'txt': b'text/plain',\n\t'html': b'text/html',\n\t'css': b'text/css',\n\t'svg': b'image/svg+xml',\n\t'png': b'image/png',\n}", "area": [[153, 15], [160, 1]]}, {"syntax": "zipfile.ZipFile", "area": [[284, 12], [284, 26]]}]]

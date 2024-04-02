@@ -1,0 +1,93 @@
+<html root="2"><head><title>fault.internet.data.dns</title><meta charset="utf-8"/><link as="style" rel="preload" href="../../.legacy-web/core.css"></link><link as="style" rel="preload" href="../../.legacy-web/factor.css"></link><link rel="stylesheet" href="../../.legacy-web/core.css"></link><link rel="stylesheet" href="../../.legacy-web/factor.css"></link></head><body><main><h1><span class="prefix"></span><div class="page-subject"><img class="icon" src="../../.factor-type-icon/if.fault.io/python-module.svg"></img><span class="subject-identifier">dns</span><a href="http://if.fault.io/factors/python.module"><code class="type">python.module</code></a></div><div class="page-context"><a href="../"><img class="icon" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNTYiIGhlaWdodD0iMjU2Ij48dGV4dCB4PSI0IiB5PSIwLjg4ZW0iIGZvbnQtc2l6ZT0iMjQ4Ij7wn5OhPC90ZXh0Pjwvc3ZnPg=="></img></a><span class="context-identifier">fault.internet</span></div></h1><section class="chapter"><p><span class="text.normal">Data for working with DNS.</span></p><p><span class="text.normal">This module primarily consists of mapping of :py:class:</span><code class="">str</code><span class="text.normal"> identifiers to</span><span class="text.line-break"> </span><span class="text.normal">numeric identifiers for DNS types, classes, and errors.</span></p></section><section class="data" documented="false" local-identifier="type_to_id" id="type_to_id"><h1><span class="prefix"></span><a class="title" href="#type_to_id"><span class="text.normal">type_to_id</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code class="source">type_to_id = {
+	'A': 1,
+	'NS': 2,
+	'MD': 3,
+	'MF': 4,
+	'CNAME': 5,
+	'SOA': 6,
+	'MB': 7,
+	'MG': 8,
+	'MR': 9,
+	'NULL': 10,
+	'WKS': 11,
+	'PTR': 12,
+	'HINFO': 13,
+	'MINFO': 14,
+	'MX': 15,
+	'TXT': 16,
+	'RP': 17,
+	'AFSDB': 18,
+	'X25': 19,
+	'ISDN': 20,
+	'RT': 21,
+	'NSAP': 22,
+	'NSAP-PTR': 23,
+	'SIG': 24,
+	'KEY': 25,
+	'PX': 26,
+	'GPOS': 27,
+	'AAAA': 28,
+	'LOC': 29,
+	'NXT': 30,
+	'EID': 31,
+	'NIMLOC': 32,
+	'SRV': 33,
+	'ATMA': 34,
+	'NAPTR': 35,
+	'KX': 36,
+	'CERT': 37,
+	'A6': 38,
+	'DNAME': 39,
+	'SINK': 40,
+	'OPT': 41,
+	'APL': 42,
+	'DS': 43,
+	'SSHFP': 44,
+	'IPSECKEY': 45,
+	'RRSIG': 46,
+	'NSEC': 47,
+	'DNSKEY': 48,
+	'DHCID': 49,
+	'NSEC3': 50,
+	'NSEC3PARAM': 51,
+	'HIP': 55,
+	'SPF': 99,
+
+	'TKEY': 249,
+	'TSIG': 250,
+	'IXFR': 251,
+	'AXFR': 252,
+	'MAILB': 253,
+	'MAILA': 254,
+	'*': 255, # ANY
+	'TA': 32768,
+}
+</code></pre></section><section class="data" documented="false" local-identifier="id_to_type" id="id_to_type"><h1><span class="prefix"></span><a class="title" href="#id_to_type"><span class="text.normal">id_to_type</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code class="source">id_to_type = dict((y,x) for (x,y) in type_to_id.items())
+</code></pre></section><section class="data" documented="false" local-identifier="class_to_id" id="class_to_id"><h1><span class="prefix"></span><a class="title" href="#class_to_id"><span class="text.normal">class_to_id</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code class="source">class_to_id = {
+	'IN': 1,
+	'CS': 2,
+	'CH': 3,
+	'HS': 4,
+	'*': 255, # ANY
+}
+</code></pre></section><section class="data" documented="false" local-identifier="id_to_class" id="id_to_class"><h1><span class="prefix"></span><a class="title" href="#id_to_class"><span class="text.normal">id_to_class</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code class="source">id_to_class = dict((y,x) for (x,y) in class_to_id.items())
+</code></pre></section><section class="data" documented="false" local-identifier="id_to_operation" id="id_to_operation"><h1><span class="prefix"></span><a class="title" href="#id_to_operation"><span class="text.normal">id_to_operation</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code class="source">id_to_operation = (
+	'query',
+	'inverse',
+	'status',
+	'notify',
+	'update',
+)
+</code></pre></section><section class="data" documented="false" local-identifier="operation_to_id" id="operation_to_id"><h1><span class="prefix"></span><a class="title" href="#operation_to_id"><span class="text.normal">operation_to_id</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code class="source">operation_to_id = dict(
+	zip(id_to_operation, range(len(id_to_operation)))
+)
+</code></pre></section><section class="data" documented="false" local-identifier="error_to_id" id="error_to_id"><h1><span class="prefix"></span><a class="title" href="#error_to_id"><span class="text.normal">error_to_id</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code class="source">error_to_id = {
+	'NONE': 0,
+	'FORMAT': 1,
+	'SERVER': 2,
+	'NAME': 3,
+	'NOTIMPLEMENTED': 4,
+	'REFUSED': 5,
+}
+</code></pre></section><section class="data" documented="false" local-identifier="id_to_error" id="id_to_error"><h1><span class="prefix"></span><a class="title" href="#id_to_error"><span class="text.normal">id_to_error</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code class="source">id_to_error = dict((y,x) for (x,y) in error_to_id.items())
+</code></pre></section><h1 class="footing"></h1></main></body></html>

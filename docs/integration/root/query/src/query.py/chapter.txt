@@ -1,0 +1,151 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 73 0`
+Location information module for identifying directories prepared by (project-local/project-name)&<system.root>.
+
+
+[ os ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 9`
+
+[ files ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 30`
+
+[ root_project_path ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 8 59`
+#!source
+	root_project_path = files.Path.from_absolute(__file__) ** 1
+
+[ installation_path ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`9 1 9 42`
+#!source
+	installation_path = root_project_path ** 3
+
+[ installation_envstr ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`12 1 12 78`
+#!source
+	installation_envstr = os.environ.get('FAULT_INSTALLATION', '').strip() or None
+
+[ libexec ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`22 1 26 23`
+(signature)`libexec()`
+
+Get the path to the `libexec` directory used by the fault installation.
+
+
+[ bindir ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`28 1 32 19`
+(signature)`bindir()`
+
+Get the path to the user executable tools directory used by the fault installation.
+
+
+[ libdir ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`34 1 38 19`
+(signature)`libdir()`
+
+Get the path to the `lib` directory used by the fault installation.
+
+
+[ tool ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`40 1 46 42`
+(signature)`tool(name)`
+
+Prepare a structured plan for executing the tool identified by (factor-local/parameter)&<#tool.Parameters.name[name]>.
+
+
+[ dispatch ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`48 1 57 37`
+(signature)`dispatch(name)`
+
+Prepare a structured plan for executing the tool identified by (factor-local/parameter)&<#dispatch.Parameters.name[name]>.
+
+This is intended for use by tools and daemons that spawn high-level
+operations as subprocesses.
+
+
+[ dispatched ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`59 1 67 50`
+(signature)`dispatched(name, *argv, **environ)`
+
+Serialize an execution plan performing the given tool (factor-local/parameter)&<#dispatched.Parameters.name[name]> using `fault-dispatch`.
+
+
+[ platform ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`69 1 73 20`
+(signature)`platform()`
+
+Get the path to the logical platform used by the fault installation.
+

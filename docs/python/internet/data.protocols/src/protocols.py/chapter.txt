@@ -1,0 +1,269 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 64 39`
+Information and mappings regarding common ciphers and security related protocols.
+
+
+[ collections ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 18`
+
+[ Struct ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 24 15`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`6 14 6 18`
+	- (type/syntax)`tuple`
+	- (type/invalid/unknown)&<#tuple>
+	
+
+[ Struct >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 2 7 15`
+#!source
+	__slots__ = ()
+
+[ Struct >> _fields ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 2 8 13`
+#!source
+	_fields = ()
+
+[ Struct >> _nfields ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`9 2 11 10`
+#!source
+	_nfields = 0
+		@property
+
+[ Struct >> orderedmap ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`12 2 15 10`
+
+[ Struct >> pairs ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`16 2 19 13`
+
+[ Struct >> construct ]
+! CONTROL:
+	/type/
+		classmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`20 2 24 15`
+(signature)`construct(typ, **kw)`
+
+
+[ Organization ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`26 1 31 32`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`26 20 26 25`
+	- (type/syntax)`Struct`
+	- (type/factor-local/class)&<#Struct[Struct]>
+	
+Information About an Organization
+
+
+[ Organization >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`30 2 30 15`
+#!source
+	__slots__ = ()
+
+[ Organization >> _fields ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`31 2 31 32`
+#!source
+	_fields = ('domain', 'sector',)
+
+[ Protocol ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`33 1 44 24`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`33 16 33 21`
+	- (type/syntax)`Struct`
+	- (type/factor-local/class)&<#Struct[Struct]>
+	
+Information about a protocol.
+
+
+[ Protocol >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`37 2 37 15`
+#!source
+	__slots__ = ()
+
+[ Protocol >> _fields ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`38 2 43 2`
+#!source
+	_fields = (
+		'organization',
+		'identifier',
+		'name',
+		'version',
+	)
+
+[ Protocol >> _nfields ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`44 2 44 24`
+#!source
+	_nfields = len(_fields)
+
+[ IETF ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`46 1 46 40`
+#!source
+	IETF = Organization(('ietf.org', 'rfc'))
+
+[ Netscape ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`47 1 47 47`
+#!source
+	Netscape = Organization(('netscape.org', None))
+
+[ transport_security ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`50 1 57 3`
+#!source
+	transport_security = tuple(map(Protocol,[
+		(Netscape, None, "SSL", "1.0"),
+		(IETF, 6176, "SSL", "2.0"),
+		(IETF, 6101, "SSL", "3.0"),
+		(IETF, 2246, "TLS", "1.0"),
+		(IETF, 4346, "TLS", "1.1"),
+		(IETF, 5246, "TLS", "1.2"),
+	]))
+
+[ pki_structs ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`60 1 62 3`
+#!source
+	pki_structs = tuple(map(Protocol,[
+		(IETF, 5280, "X509", None),
+	]))
+
+[ insecure ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`65 1 65 38`
+#!source
+	insecure = set(transport_security[:2])

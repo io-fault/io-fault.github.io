@@ -1,0 +1,460 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 240 0`
+Access to timezone views for adjusting timestamps in and out of local forms.
+
+Usage:
+
+#!python
+	from fault.time import types, views
+	z = views.Zone.open(types.from_unix_timestamp, "America/Los_Angeles")
+
+[ os ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 1 10 9`
+
+[ os ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 1 11 14`
+
+[ functools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`12 1 12 16`
+
+[ tzif ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`13 1 13 18`
+
+[ abstract ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`14 1 14 22`
+
+[ Zone ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`16 1 240 39`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`16 12 16 17`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+An ordered sequence of transition times whose ranges correspond to a
+particular offset.
+
+[ > Properties ]
+
+/default/
+	The default (factor-local/class)&<#Zone.Offset[Offset]> of the (factor-local/class)&<#Zone[Zone]>.
+
+
+[ Zone >> Offset ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`26 2 105 4`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`26 15 26 19`
+	- (type/syntax)`tuple`
+	- (type/invalid/unknown)&<#tuple>
+	
+Offsets are constructed by a tuple of the form: `(offset, abbreviation, type)`.
+Primarily, the type signifies whether or not the offset is daylight
+savings or not.
+
+(factor-local/class)&<#Zone.Offset[Offset]> instances are usually extracted from (factor-local/class)&<#Zone[Zone]> objects which
+build a sequence of transitions for subsequent searching.
+
+
+[ Zone >> Offset >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`35 3 35 16`
+#!source
+	__slots__ = ()
+
+[ Zone >> Offset >> unit ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`37 3 37 17`
+#!source
+	unit = 'second'
+
+[ Zone >> Offset >> datum ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`38 3 40 11`
+#!source
+	datum = 0
+		@property
+
+[ Zone >> Offset >> magnitude ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`41 3 47 11`
+The offset in seconds from UTC.
+
+
+[ Zone >> Offset >> abbreviation ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`48 3 54 11`
+The Offset's timezone abbreviation; such as UTC, GMT, and EST.
+
+
+[ Zone >> Offset >> type ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`55 3 61 11`
+Field used to identify if the (factor-local/class)&<#Zone.Offset[Offset]> is daylight savings time.
+
+
+[ Zone >> Offset >> is_dst ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`62 3 67 28`
+Whether or not the (factor-local/class)&<#Zone.Offset[Offset]> is referring to a daylight savings time
+offset.
+
+
+[ Zone >> Offset >> __hash__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`69 3 70 28`
+(signature)`__hash__(self)`
+
+
+[ Zone >> Offset >> __str__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`72 3 77 4`
+(signature)`__str__(self)`
+
+
+[ Zone >> Offset >> __repr__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`79 3 80 86`
+(signature)`__repr__(self)`
+
+
+[ Zone >> Offset >> __eq__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`82 3 83 34`
+(signature)`__eq__(self, ob)`
+
+
+[ Zone >> Offset >> __int__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`85 3 86 24`
+(signature)`__int__(self)`
+
+
+[ Zone >> Offset >> iso ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`88 3 94 14`
+(signature)`iso(self, pit)`
+
+Return the offset-qualified ISO representation of the given point in time.
+
+
+[ Zone >> Offset >> from_tzinfo ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`95 3 105 4`
+(signature)`from_tzinfo(Class, tzinfo)`
+
+Construct a Zone instance from a (project-local/unknown)&<tzif#tzinfo[tzif.tzinfo]> tuple.
+
+
+[ Zone >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`109 2 114 18`
+(signature)`__init__(self, transitions, offsets, default, leaps, name)`
+
+
+[ Zone >> __repr__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`116 2 122 3`
+(signature)`__repr__(self)`
+
+
+[ Zone >> bisect ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`124 2 124 14`
+
+[ Zone >> find ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`125 2 141 10`
+(signature)`find(self, pit)`
+
+Get the appropriate offset in the zone for a given Point In Time, (factor-local/parameter)&<#Zone.find.Parameters.pit[pit]>.
+If the (factor-local/parameter)&<#Zone.find.Parameters.pit[pit]> does not fall within a known range, the (invalid/unknown)&<#default> will be returned.
+
+Returns an offset for the timestamp according to the Zone's transition times.
+
+[ >> Parameters ]
+
+/(parameter)`self`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`pit`/
+	
+	The (project-local/unknown)&<library.Timestamp> to use to find an offset with.
+
+/(parameter)`search`/
+	
+	(control/absent)`Undocumented`.
+
+
+[ Zone >> slice ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`143 2 163 25`
+(signature)`slice(self, start, stop)`
+
+Get a slice of transition points and time zone offsets
+relative to a given (factor-local/parameter)&<#Zone.slice.Parameters.start[start]> and (factor-local/parameter)&<#Zone.slice.Parameters.stop[stop]>.
+
+Returns an iterable of transitions and (factor-local/class)&<#Zone.Offset[Offset]> instances that have
+occurred during the period designated by the slice.
+
+[ >> Parameters ]
+
+/(parameter)`self`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`start`/
+	
+	The start of the period.
+
+/(parameter)`stop`/
+	
+	The end of the period.
+
+/(parameter)`search`/
+	
+	(control/absent)`Undocumented`.
+
+
+[ Zone >> localize ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`166 2 180 37`
+(signature)`localize(self, pit)`
+
+Given (factor-local/parameter)&<#Zone.localize.Parameters.pit[pit]>, return the localized version according to the zone's transitions.
+
+The given Point In Time is expected to have a perspective consistent with the zone's
+transition times. (In the same zone.)
+
+Returns the localized timestamp.
+
+[ >> Parameters ]
+
+/(parameter)`self`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`pit`/
+	
+	The timestamp to localize.
+
+
+[ Zone >> normalize ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`182 2 207 13`
+(signature)`normalize(self, offset, pit)`
+
+This function should be used in cases where adjustments are being made to
+an already zoned point in time. Once the adjustments are complete, the point should be
+normalized in order to properly represent the local point.
+
+If no change is necessary, the exact, given (factor-local/parameter)&<#Zone.normalize.Parameters.pit[pit]> will be returned.
+
+Returns the re-localized (factor-local/parameter)&<#Zone.normalize.Parameters.pit[pit]> and its new (factor-local/class)&<#Zone.Offset[Offset]> in a tuple.
+
+[ >> Parameters ]
+
+/(parameter)`self`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`offset`/
+	
+	The offset of the (factor-local/parameter)&<#Zone.normalize.Parameters.pit[pit]>.
+
+/(parameter)`pit`/
+	
+	The localized point in time to normalize.
+
+
+[ Zone >> from_tzif_data ]
+! CONTROL:
+	/type/
+		classmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`208 2 222 13`
+(signature)`from_tzif_data(Class, construct, tzd)`
+
+
+[ Zone >> from_file ]
+! CONTROL:
+	/type/
+		classmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`223 2 230 13`
+(signature)`from_file(Class, construct, filepath)`
+
+
+[ Zone >> open ]
+! CONTROL:
+	/type/
+		classmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`231 2 240 39`
+(signature)`open(Class, construct)`
+

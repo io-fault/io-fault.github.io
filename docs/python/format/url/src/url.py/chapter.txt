@@ -1,0 +1,96 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 66 4`
+Color formatting for URL strings.
+
+
+[ ri ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 26`
+
+[ palette ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 11 1`
+#!source
+	palette = {
+		'yellow': 0xffff87,
+		'blue': 0x0087ff,
+		'red': 0xff6961,
+		'orange': 0xffb347,
+	}
+
+[ colors ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`13 1 38 1`
+#!source
+	colors = {
+		'delimiter': 0x6c6c6c,
+		'scheme': palette['blue'],
+		'type': 0x6c6c6c,
+	
+		'user': 0xff5f00,
+		'password': 0x5f0000,
+	
+		'host': 0x875faf,
+		'address': palette['orange'],
+		'port': 0x005f5f,
+	
+		'path-root': -1024,
+		'path-segment': 0x6e6e6e,
+		'delimiter-path-only': 0x6e6e6e,
+		'delimiter-path-initial': 0x6e6e6e,
+		'delimiter-path-root': 0x6e6e6e,
+		'delimiter-path-segments': 0x6e6e6e,
+		'delimiter-path-final': 0x6e6e6e,
+		'resource': 0xFFFFFF,
+	
+		'query-key': 0x5fafff,
+		'query-value': 0x949494,
+		'fragment': 0x505050,
+		('delimiter', "#"): 0xFF0000,
+	}
+
+[ f_struct ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`40 1 42 39`
+(signature)`f_struct(struct)`
+
+
+[ f_string ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`44 1 48 34`
+(signature)`f_string(string)`
+
+Format the string returning an iterable for use with (project-local/unknown)&<matrix.Context.render>
+

@@ -1,0 +1,35 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 9 5`
+Abstract Bases for Syntax related types.
+
+
+[ abc ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 10`
+
+[ Document ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 10 4`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`6 16 6 26`
+	- (type/syntax)`abc.ABCMeta`
+	- (type/none/invalid)&<http://fault.io/dev/null[abc.ABCMeta]>
+	
+Interface for Syntax Documents providing query routines
+independent of the document's storage method.
+

@@ -1,0 +1,44 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 61 0`
+Functions for cleaning comments.
+
+
+[ remove_common_indentation ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 21 14`
+(signature)`remove_common_indentation(lines)`
+
+Remove the leading indentation level from the given lines.
+
+
+[ strip_notation_prefix ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`23 1 35 2`
+(signature)`strip_notation_prefix(lines)`
+
+Remove the comment notation prefix from a sequence of lines.
+
+
+[ normalize_documentation ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`37 1 61 14`
+(signature)`normalize_documentation(lines)`
+
+Remove the leading indentation level from the given lines.
+

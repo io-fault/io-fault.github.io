@@ -1,0 +1,13 @@
+! CONTROL:
+	/type/
+		factor
+	/element/
+		- (source/area)``
+[ Library ]
+
+Not documented.
+
+[ Executable ]
+
+Not documented.
+

@@ -1,0 +1,105 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 52 0`
+Query context for navigating chapter elements.
+
+
+[ Context ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 58`
+
+[ Cursor ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 58`
+
+[ InvalidPath ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 58`
+
+[ identify ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 16 16`
+(signature)`identify(title, element)`
+
+Identification function for chapter elements providing
+shortcuts for directories and sequences.
+
+
+[ context ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`19 1 45 1`
+#!source
+	context = Context(
+		{
+			'paragraph',
+			'syntax',
+			'line',
+	
+			'chapter',
+			'section',
+			'admonition',
+			'directory',
+			'sequence',
+			'set',
+	
+			'item',
+			'key',
+			'value',
+		},
+		{
+			'p': 'paragraph',
+			'i': 'item',
+			'd': 'directory',
+			's': 'sequence',
+			'S': 'section',
+			'C': 'chapter',
+		},
+		identify = identify,
+	)
+
+[ navigate ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`47 1 52 34`
+		- (type/syntax)`Cursor`
+		- (type/remote/factor-element)&<http://fault.io/python/route/query#Cursor[fault.route.query.Cursor]>
+		
+(signature)`navigate(chapter)`
+
+Construct a (remote/factor-element)&<http://fault.io/python/route/query#Cursor[fault.route.query.Cursor]> instance using the given (factor-local/parameter)&<#navigate.Parameters.chapter[chapter]> element
+with the configured expression (factor-local/data)&<#context[context]>.
+

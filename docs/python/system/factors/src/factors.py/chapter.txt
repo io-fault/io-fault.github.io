@@ -1,0 +1,297 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 300 15`
+Module finder and loader for Factored Projects.
+
+
+[ importlib ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 26`
+
+[ files ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 19`
+
+[ lsf ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 7 35`
+
+[ Segment ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 8 33`
+
+[ IntegralFinder ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 1 267 23`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`10 22 10 27`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+Select an image based on the configured variants querying the connected factor paths.
+
+
+[ IntegralFinder >> suffixes ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`15 2 15 19`
+#!source
+	suffixes = ['.py']
+
+[ IntegralFinder >> ModuleSpec ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`16 2 16 44`
+#!source
+	ModuleSpec = importlib.machinery.ModuleSpec
+
+[ IntegralFinder >> ExtensionFileLoader ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`17 2 17 62`
+#!source
+	ExtensionFileLoader = importlib.machinery.ExtensionFileLoader
+
+[ IntegralFinder >> Loader ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`19 2 66 91`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`19 15 19 50`
+	- (type/syntax)`importlib.machinery.SourceFileLoader`
+	- (type/none/invalid)&<http://fault.io/dev/null[importlib.machinery.machinery.SourceFileLoader]>
+	
+Loader for compiled Python factors. Compiled modules are not checked
+against the source unlike Python's builtin loader.
+
+
+[ IntegralFinder >> Loader >> _compile ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`24 3 24 74`
+#!source
+	_compile = staticmethod(importlib._bootstrap_external._compile_bytecode)
+
+[ IntegralFinder >> Loader >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`26 3 31 14`
+(signature)`__init__(self, bytecode, fullname, path)`
+
+
+[ IntegralFinder >> Loader >> from_nothing ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`32 3 40 11`
+(signature)`from_nothing(Class, *args)`
+
+Create the (factor-local/class)&<#IntegralFinder.Loader[Loader]> instance with (factor-local/method)&<#IntegralFinder.Loader.get_code[get_code]> overridden to return
+a code object created from a `pass` statement.
+
+
+[ IntegralFinder >> Loader >> exec_module ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`42 3 50 30`
+(signature)`exec_module(self, module)`
+
+
+[ IntegralFinder >> Loader >> get_code ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`52 3 63 79`
+(signature)`get_code(self, fullname)`
+
+
+[ IntegralFinder >> Loader >> set_data ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`65 3 66 91`
+(signature)`set_data(self, *args, **kw)`
+
+
+[ IntegralFinder >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`68 2 97 4`
+(signature)`__init__(self, python_bytecode_variants, extension_variants)`
+
+Initialize a finder instance for use with the given variants.
+
+
+[ IntegralFinder >> connect ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`99 2 108 13`
+(signature)`connect(self, route)`
+
+Add the route to finder connecting its subdirectories for import purposes.
+
+Similar to adding a filesystem path to Python's (invalid/unknown)&<#sys.path>.
+
+
+[ IntegralFinder >> disconnect ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`110 2 145 13`
+(signature)`disconnect(self, route)`
+
+Remove a route from the finder's set eliminating any relevant index entries.
+
+
+[ IntegralFinder >> invalidate_caches ]
+! CONTROL:
+	/type/
+		classmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`146 2 147 6`
+(signature)`invalidate_caches(self)`
+
+
+[ IntegralFinder >> find ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`149 2 166 27`
+(signature)`find(self, name)`
+
+Retrieve the product with a root that matches the start of the given (factor-local/parameter)&<#IntegralFinder.find.Parameters.name[name]>.
+
+
+[ IntegralFinder >> find_spec ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`168 2 249 13`
+(signature)`find_spec(self, name, path)`
+
+Using the (invalid/unknown)&<#index>, check for the presence of (invalid/unknown)&<#name's> initial package.
+If found, the images contained by the connected directory will be
+used to load either an extension module or a Python bytecode module.
+
+
+[ IntegralFinder >> create ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`250 2 267 23`
+(signature)`create(Class, system, python, host)`
+
+Construct a standard loader selecting images with the given (factor-local/parameter)&<#IntegralFinder.create.Parameters.form[form]>.
+
+
+[ setup ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`269 1 301 14`
+(signature)`setup()`
+
+Create and install a configured (factor-local/class)&<#IntegralFinder[IntegralFinder]>.
+
+The new finder is assigned to (invalid/unknown)&<#finder> and its (context-local/factor-element)&<fault.project/system#Context[fault.project.system.Context]> to (invalid/unknown)&<#context>.
+This is considered process global data and (invalid/unknown)&<#context> the method that should
+be used to resolve factors that are intended for application support.
+
+If called multiple times, a new finder will be created and the assignments
+will be overwritten. However, the old finder will remain active.
+

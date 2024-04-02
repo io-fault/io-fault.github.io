@@ -1,0 +1,286 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 229 0`
+Configuration command for daemon sets.
+
+Deals directly with the file system; running instances will not be explicitly signalled regarding changes.
+Invoking without arguments displays help menu to standard error.
+
+
+[ os ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 7 9`
+
+[ sys ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 8 10`
+
+[ string ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 1 10 32`
+
+[ Path ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 1 11 35`
+
+[ process ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`12 1 12 32`
+
+[ service ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`14 1 14 22`
+
+[ command_create ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`16 1 33 7`
+(signature)`command_create(srv, *params)`
+
+
+[ command_void ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`35 1 40 20`
+(signature)`command_void(srv)`
+
+
+[ command_define ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`42 1 50 12`
+(signature)`command_define(srv, *params)`
+
+
+[ command_enable ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`52 1 55 22`
+(signature)`command_enable(srv)`
+
+
+[ command_disable ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`57 1 60 22`
+(signature)`command_disable(srv)`
+
+
+[ command_environ_add ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`62 1 65 23`
+(signature)`command_environ_add(srv, *pairs)`
+
+
+[ command_environ_del ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`67 1 74 23`
+(signature)`command_environ_del(srv, *varnames)`
+
+
+[ command_report ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`76 1 100 21`
+(signature)`command_report(srv)`
+
+
+[ command_execute ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`102 1 104 14`
+(signature)`command_execute(srv)`
+
+
+[ command_update ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`106 1 108 27`
+(signature)`command_update(srv)`
+
+
+[ command_synopsis ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`110 1 114 1`
+#!source
+	command_synopsis = {
+		'create': "executable name [parameters]",
+		'env-add': "[VARNAME1 VALUE1 VARNAME2 VALUE2 ...]",
+		'env-del': "[VARNAME1 VARNAME2 ...]",
+	}
+
+[ command_map ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`116 1 129 1`
+#!source
+	command_map = {
+		'void': command_void,
+		'create': command_create,
+		'command': command_define,
+		'update': command_update,
+		'enable': command_enable,
+		'disable': command_disable,
+	
+		'env-add': command_environ_add,
+		'env-del': command_environ_del,
+	
+		'execute': command_execute,
+		'report': command_report,
+	}
+
+[ command_descriptions ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`131 1 146 1`
+#!source
+	command_descriptions = {
+		'create': "Create the service directory and initialize its settings.",
+		'void': "Remove the service directory and its contents.",
+		'enable':
+			"Enable the service causing it to be started when faultd is ran.",
+		'disable':
+			"Disable the service; attempts to start afterward will fail unless forced.",
+		'command': "Define the executable and its parameters for starting the service.",
+		'env-add':
+			"Add the given settings as environment variables. (No equal sign used in assignments)",
+		'env-del':
+			"Remove the given environment variables from the service.",
+		'report': "Report the service's definition to standard error.",
+		'execute':
+			"For testing, execute the service (using exec) as if it were ran by rootd.",
+	}
+
+[ menu ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`148 1 194 3`
+(signature)`menu(route)`
+
+
+[ main ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`196 1 226 21`
+		- (type/syntax)`process.Exit`
+		- (type/remote/factor-element)&<http://fault.io/python/system/process#Exit[fault.system.process.Exit]>
+		
+(signature)`main(inv)`
+

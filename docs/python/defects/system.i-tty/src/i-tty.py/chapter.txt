@@ -1,0 +1,39 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 18 0`
+
+[ sys ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 1 10`
+
+[ module ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`2 1 2 35`
+
+[ test_fs_device ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 18 43`
+(signature)`test_fs_device(test)`
+
+- (project-local/unknown)&<extensions.tty/module.c#fs_device>
+- (context-local/factor-element)&<fault.system/tty#fs_device[fault.system.tty.fs_device]>
+

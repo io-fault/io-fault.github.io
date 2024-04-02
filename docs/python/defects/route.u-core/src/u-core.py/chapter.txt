@@ -1,0 +1,126 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 154 0`
+Analyze implementation specific features of (project-local/unknown)&<core.PartitionedSequence> and other (project-local/unknown)&<core> functions.
+
+
+[ module ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 35`
+
+[ test_Route_iterpoints ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 19 58`
+(signature)`test_Route_iterpoints(test)`
+
+
+[ test_Route_iterinverse ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`21 1 34 75`
+(signature)`test_Route_iterinverse(test)`
+
+
+[ test_Route_sorting ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`36 1 55 48`
+(signature)`test_Route_sorting(test)`
+
+
+[ test_Route_delimit ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`57 1 66 37`
+(signature)`test_Route_delimit(test)`
+
+
+[ test_Route_iterpartitions ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`68 1 75 56`
+(signature)`test_Route_iterpartitions(test)`
+
+
+[ test_Route_from_partitions ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`77 1 94 14`
+(signature)`test_Route_from_partitions(test)`
+
+
+[ test_Router_container_skip ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`96 1 118 29`
+(signature)`test_Router_container_skip(test)`
+
+Make sure empty contexts are skipped when accessing a route's container.
+
+
+[ test_Route_pickling ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`120 1 139 41`
+(signature)`test_Route_pickling(test)`
+
+Check python.org/.../pickle support.
+
+
+[ test_Route_switch ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`141 1 154 34`
+(signature)`test_Route_switch(test)`
+
+- (context-local/factor-element)&<fault.route/core#PartitionedSequence.__mul__[fault.route.core.PartitionedSequence.__mul__]>
+

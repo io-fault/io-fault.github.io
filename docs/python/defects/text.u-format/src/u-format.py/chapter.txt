@@ -1,0 +1,28 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 37 0`
+
+[ module ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 1 36`
+
+[ test_Parser_emphasis ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`3 1 32 80`
+(signature)`test_Parser_emphasis(test)`
+
+- (context-local/factor-element)&<fault.text/format#Parser.emphasis[fault.text.format.Parser.emphasis]>
+

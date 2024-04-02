@@ -1,0 +1,174 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 99 0`
+Analyze polynomial using temporary directories.
+
+
+[ itertools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 16`
+
+[ files ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 27`
+
+[ types ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 8 28`
+
+[ module ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`9 1 9 43`
+
+[ python_factor_typref ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 1 16 1`
+#!source
+	python_factor_typref = types.Reference(
+		'http://if.fault.io/factors',
+		types.factor@'python.module',
+		'type',
+		'python.psf-v3',
+	)
+
+[ text_factor_typref ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`18 1 23 1`
+#!source
+	text_factor_typref = types.Reference(
+		'http://if.fault.io/factors',
+		types.factor@'text.chapter',
+		'type',
+		'kleptic',
+	)
+
+[ exe_typref ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`25 1 30 1`
+#!source
+	exe_typref = types.Reference(
+		'http://if.fault.io/factors',
+		types.factor@'system.executable',
+		'type',
+		None,
+	)
+
+[ extmap ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`32 1 35 1`
+#!source
+	extmap = {
+		'py': python_factor_typref,
+		'txt': text_factor_typref,
+	}
+
+[ mkfactor ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`37 1 40 24`
+(signature)`mkfactor(ftype, symbols)`
+
+
+[ test_V1_isource ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`42 1 53 33`
+(signature)`test_V1_isource(test)`
+
+
+[ test_V1_collect_explicit_sources ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`55 1 66 36`
+(signature)`test_V1_collect_explicit_sources(test)`
+
+
+[ test_V1_iterfactors_explicit_known ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`68 1 85 56`
+(signature)`test_V1_iterfactors_explicit_known(test)`
+
+
+[ test_V1_iterfactors_explicit_unknown ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`87 1 99 44`
+(signature)`test_V1_iterfactors_explicit_unknown(test)`
+

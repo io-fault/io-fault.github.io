@@ -1,0 +1,294 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 446 0`
+Check io.Octets interfaces.
+
+
+[ os ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 9`
+
+[ os ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 14`
+
+[ errno ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 12`
+
+[ time ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 7 11`
+
+[ tempfile ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 8 15`
+
+[ io ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 1 10 25`
+
+[ common ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 1 11 20`
+
+[ test_anonymous_endpoints_socketpair ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`13 1 28 17`
+(signature)`test_anonymous_endpoints_socketpair(test)`
+
+
+[ test_anonymous_endpoints_pipe ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`30 1 42 17`
+(signature)`test_anonymous_endpoints_pipe(test)`
+
+
+[ test_buffer_write_location ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`44 1 68 33`
+(signature)`test_buffer_write_location(test)`
+
+
+[ test_channel_force ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`70 1 94 7`
+(signature)`test_channel_force(test)`
+
+
+[ test_full_buffer_forced_write ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`96 1 123 40`
+(signature)`test_full_buffer_forced_write(test)`
+
+Test the force method on lose-octets with a full write buffer.
+
+
+[ test_multiple_arrays ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`125 1 137 28`
+(signature)`test_multiple_arrays(test)`
+
+
+[ test_objects ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`139 1 165 45`
+(signature)`test_objects(test)`
+
+
+[ test_array_void ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`167 1 201 7`
+(signature)`test_array_void(test)`
+
+
+[ test_octets_acquire_after_terminate ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`203 1 219 37`
+(signature)`test_octets_acquire_after_terminate(test)`
+
+
+[ test_array_flush_release ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`221 1 255 24`
+(signature)`test_array_flush_release(test)`
+
+
+[ test_octets_resource_error ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`257 1 282 6`
+(signature)`test_octets_resource_error(test)`
+
+
+[ test_terminating_exhaust ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`284 1 293 6`
+(signature)`test_terminating_exhaust(test)`
+
+
+[ array_termination ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`295 1 304 16`
+(signature)`array_termination(test, J)`
+
+
+[ test_octets_acquire_badfd_detect ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`306 1 324 10`
+(signature)`test_octets_acquire_badfd_detect(test)`
+
+
+[ test_ip4 ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`326 1 327 66`
+(signature)`test_ip4(test)`
+
+
+[ test_ip6 ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`329 1 330 60`
+(signature)`test_ip6(test)`
+
+
+[ file_test ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`332 1 440 42`
+(signature)`file_test(test, am, path, apath)`
+
+
+[ test_file ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`442 1 446 33`
+(signature)`test_file(test)`
+

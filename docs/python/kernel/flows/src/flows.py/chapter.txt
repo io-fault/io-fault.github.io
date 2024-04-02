@@ -1,0 +1,1736 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 1111 3`
+Channel Processors used to construct conceptual Flows.
+
+A (factor-local/class)&<#Channel[Channel]> represents an individual segment in a conceptual Flow. Channels
+connect together like UNIX pipes, but transfer typed messages (objects) instead
+of just data.
+
+
+[ sys ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 8 10`
+
+[ collections ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`9 1 9 18`
+
+[ functools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 1 10 16`
+
+[ weakref ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 1 11 14`
+
+[ typing ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`12 1 12 13`
+
+[ queue ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`13 1 13 12`
+
+[ core ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`15 1 15 18`
+
+[ Event ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`18 1 39 20`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`18 13 18 18`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+Signal objects used to communicate flow control operations
+for subflow management. These objects are used by (factor-local/class)&<#Catenation[Catenation]> and (factor-local/class)&<#Division[Division]>
+to index operations.
+
+
+[ Event >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`24 2 24 15`
+#!source
+	__slots__ = ()
+
+[ Event >> __int__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`26 2 32 18`
+(signature)`__int__(self)`
+
+
+[ Event >> __repr__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`34 2 35 23`
+(signature)`__repr__(self)`
+
+
+[ Event >> __str__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`37 2 39 20`
+(signature)`__str__(self)`
+
+
+[ fe_initiate ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`41 1 41 21`
+#!source
+	fe_initiate = Event()
+
+[ fe_clear ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`42 1 42 18`
+#!source
+	fe_clear = Event()
+
+[ fe_transfer ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`43 1 43 21`
+#!source
+	fe_transfer = Event()
+
+[ fe_obstruct ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`44 1 44 21`
+#!source
+	fe_obstruct = Event()
+
+[ fe_terminate ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`45 1 45 22`
+#!source
+	fe_terminate = Event()
+
+[ flow_events ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`47 1 53 1`
+#!source
+	flow_events = (
+		fe_terminate,
+		fe_obstruct,
+		fe_transfer,
+		fe_clear,
+		fe_initiate,
+	)
+
+[ Channel ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`55 1 349 6`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`55 15 55 28`
+	- (type/syntax)`core.Processor`
+	- (type/project-local/factor-element)&<core#Processor[fault.kernel.core.Processor]>
+	
+A Processor consisting of an arbitrary set of operations that
+can connect to other (factor-local/class)&<#Channel[Channel]> instances in order to make a series
+of transformations.
+
+Channels are the primary mechanism used to stream events; generally,
+anything that's a stream should be managed by (factor-local/class)&<#Channel[Channel]> instances in favor
+of other event callback mechanisms.
+
+[ > Properties ]
+
+/f_type/
+	The flow type describing what the instance does.
+	This property can be (invalid/unknown)&<#None> at the class level, but should be initialized
+	when an instance is created.
+
+	/(id)`source`/
+		Channel that primarily emits independent events for downstream processing.
+
+	/(id)`terminal`/
+		Channel processes events, but emits nothing.
+
+	/(id)`switch`/
+		Channel that takes events and distributes their transformation
+		to a mapping of receiving flows.
+
+	/(id)`join`/
+		Channel that receives events from a set of sources and combines
+		them into a single stream.
+
+	/(id)`transformer`/
+		Channel emits events strictly in response to processing. Transformers
+		may buffer events as needed.
+
+	/(invalid/unknown)&<#None>/
+		Unspecified type.
+
+/f_obstructions/
+	/(invalid/unknown)&<#None>/
+		No obstructions present.
+
+	/(none/invalid)&<http://fault.io/dev/null[typing.Mapping]>/
+		The objects that are obstructing the (factor-local/class)&<#Channel[Channel]> from
+		performing processing associated with the exact
+		condition causing it.
+
+/f_monitors/
+	The set of callbacks used to signal changes in the flow's
+	(factor-local/property)&<#Channel.f_obstructed[f_obstructed]> state.
+
+	/(invalid/unknown)&<#None>/
+		No monitors watching the flow state.
+
+/f_downstream/
+	The (factor-local/class)&<#Channel[Channel]> instance that receives events emitted by the instance
+	holding the attribute.
+
+
+[ Channel >> f_type ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`108 2 108 14`
+#!source
+	f_type = None
+
+[ Channel >> f_obstructions ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`109 2 109 22`
+#!source
+	f_obstructions = None
+
+[ Channel >> f_monitors ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`110 2 110 18`
+#!source
+	f_monitors = None
+
+[ Channel >> f_downstream ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`111 2 111 20`
+#!source
+	f_downstream = None
+
+[ Channel >> f_upstream ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`112 2 112 18`
+#!source
+	f_upstream = None
+
+[ Channel >> f_connect ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`114 2 134 31`
+(signature)`f_connect(self, flow)`
+
+Connect the Channel to the given object supporting the (invalid/unknown)&<#Flow> interface.
+Normally used with other Channels, but other objects may be connected.
+
+Downstream is *not* notified of upstream obstructions. Events run
+downstream and obstructions run up.
+
+
+[ Channel >> f_disconnect ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`136 2 146 33`
+(signature)`f_disconnect(self)`
+
+Disconnect from the downstream and cease emitting events into (factor-local/data)&<#Channel.f_downstream[f_downstream]>.
+
+
+[ Channel >> f_collapse ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`148 2 162 32`
+(signature)`f_collapse(self)`
+
+Connect the upstream to the downstream leaving the Channel (factor-local/parameter)&<#Channel.f_collapse.Parameters.self[self]>
+in a disconnected state with the old references remaining in place.
+
+
+[ Channel >> f_substitute ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`164 2 169 40`
+(signature)`f_substitute(self, series)`
+
+
+[ Channel >> __repr__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`171 2 172 67`
+(signature)`__repr__(self)`
+
+
+[ Channel >> structure ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`174 2 186 16`
+(signature)`structure(self)`
+
+Reveal the obstructions and monitors of the Channel.
+
+
+[ Channel >> terminate ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`188 2 201 13`
+(signature)`terminate(self)`
+
+Drain the Channel and finish termination by signalling the controller
+of its exit.
+
+
+[ Channel >> f_terminate ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`203 2 208 22`
+(signature)`f_terminate(self)`
+
+Termination signal received when the upstream no longer has
+flow transfers for the downstream Channel.
+
+
+[ Channel >> _f_terminated ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`210 2 225 27`
+(signature)`_f_terminated(self)`
+
+Used by subclasses to issue downstream termination and exit.
+
+Subclasses must call this or perform equivalent actions when termination
+of the conceptual flow is complete.
+
+
+[ Channel >> interrupt ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`227 2 230 38`
+(signature)`interrupt(self)`
+
+
+[ Channel >> f_transfer ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`232 2 237 20`
+(signature)`f_transfer(self, event)`
+
+Emit the (factor-local/parameter)&<#Channel.f_transfer.Parameters.event[event]> directly to the downstream.
+
+
+[ Channel >> f_emit ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`239 2 247 10`
+(signature)`f_emit(self, event)`
+
+Method replaced at runtime for selecting the recipient
+of a processed event.
+
+
+[ Channel >> f_empty ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`248 2 260 10`
+Whether the flow is actively performing a transfer.
+
+This property returns (invalid/unknown)&<#True> in cases where the Channel's
+state is such that it may independently send events downstream.
+
+Channels that have buffers *should* implement this method.
+
+
+[ Channel >> f_obstructed ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`261 2 268 10`
+Whether or not the (factor-local/class)&<#Channel[Channel]> is obstructed.
+
+
+[ Channel >> f_permanent ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`269 2 277 85`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+Whether or not there are Inexorable obstructions present.
+An integer specifying the number of (invalid/unknown)&<#Inexorable> obstructions or (invalid/unknown)&<#None>
+if there are no obstructions.
+
+
+[ Channel >> f_obstruct ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`279 2 298 19`
+(signature)`f_obstruct(self, by)`
+
+Instruct the Channel to signal the cessation of transfers.
+The cessation may be permanent depending on the condition.
+
+
+[ Channel >> f_clear ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`300 2 320 16`
+(signature)`f_clear(self, obstruction)`
+
+Clear the obstruction by the key given to (factor-local/parameter)&<#Channel.f_clear.Parameters.obstruction[obstruction]>.
+
+
+[ Channel >> f_watch ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`322 2 333 19`
+(signature)`f_watch(self, obstructed, cleared)`
+
+Assign the given functions as callbacks to obstruction events.
+First called when an obstruction occurs and second when its cleared.
+
+
+[ Channel >> f_ignore ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`335 2 341 49`
+(signature)`f_ignore(self, obstructed, cleared)`
+
+Stop watching the Flow's obstructed state.
+
+
+[ Channel >> f_discarding ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`343 2 349 6`
+(signature)`f_discarding(self)`
+
+Assigned to (invalid/unknown)&<#process> and (factor-local/method)&<#Channel.f_emit[f_emit]> after termination and interrupt in order
+to keep overruns from exercising the Transformations.
+
+
+[ Dispatch ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`351 1 361 20`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`351 16 351 22`
+	- (type/syntax)`Channel`
+	- (type/factor-local/class)&<#Channel[Channel]>
+	
+Channel dispatching events to the configured callable.
+
+
+[ Dispatch >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`356 2 357 28`
+(signature)`__init__(self, endpoint)`
+
+
+[ Dispatch >> f_transfer ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`359 2 361 20`
+(signature)`f_transfer(self, event)`
+
+
+[ Terminal ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`363 1 379 23`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`363 16 363 22`
+	- (type/syntax)`Channel`
+	- (type/factor-local/class)&<#Channel[Channel]>
+	
+Transparent channel that performs a callback when termination
+is received from the upstream channel.
+
+Used as an at-exit callback for flows.
+
+
+[ Terminal >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`371 2 372 28`
+(signature)`__init__(self, endpoint)`
+
+
+[ Terminal >> f_terminate ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`374 2 379 23`
+(signature)`f_terminate(self)`
+
+
+[ Monitor ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`381 1 446 43`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`381 15 381 22`
+	- (type/syntax)`Terminal`
+	- (type/factor-local/class)&<#Terminal[Terminal]>
+	
+Terminal measuring transfer throughput.
+
+
+[ Monitor >> actuate ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`386 2 394 57`
+(signature)`actuate(self)`
+
+
+[ Monitor >> f_transfer ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`396 2 400 10`
+(signature)`f_transfer(self, event)`
+
+
+[ Monitor >> tm_start ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`401 2 402 58`
+
+[ Monitor >> tm_archive ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`404 2 432 37`
+(signature)`tm_archive(self, pit)`
+
+Archive transfer data occurring before (factor-local/parameter)&<#Monitor.tm_archive.Parameters.pit[pit]>.
+
+
+[ Monitor >> tm_rate ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`434 2 446 43`
+(signature)`tm_rate(self, window)`
+
+
+[ Relay ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`448 1 471 21`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`448 13 448 19`
+	- (type/syntax)`Channel`
+	- (type/factor-local/class)&<#Channel[Channel]>
+	
+Relay intersector transfers.
+
+Initialized with the set of events that will be relayed,
+(factor-local/data)&<#fe_transfer[fe_transfer]>, (factor-local/data)&<#fe_terminate[fe_terminate]>, and (invalid/unknown)&<#fe_interrupt>.
+
+
+[ Relay >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`456 2 459 51`
+(signature)`__init__(self, integral, key)`
+
+
+[ Relay >> f_transfer ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`461 2 463 20`
+(signature)`f_transfer(self, event)`
+
+
+[ Relay >> f_terminate ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`465 2 467 23`
+(signature)`f_terminate(self)`
+
+
+[ Relay >> interrupt ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`469 2 471 21`
+(signature)`interrupt(self)`
+
+
+[ Receiver ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`473 1 501 33`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`473 16 473 22`
+	- (type/syntax)`Channel`
+	- (type/factor-local/class)&<#Channel[Channel]>
+	
+Receive intersector transfers.
+
+A simple (factor-local/class)&<#Channel[Channel]> expecting to receive events from a remote (factor-local/class)&<#Relay[Relay]>
+
+
+[ Receiver >> f_type ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`479 2 479 18`
+#!source
+	f_type = 'source'
+
+[ Receiver >> _r_connect ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`480 2 480 18`
+#!source
+	_r_connect = None
+
+[ Receiver >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`482 2 483 27`
+(signature)`__init__(self, connect)`
+
+
+[ Receiver >> f_transfer ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`485 2 488 21`
+(signature)`f_transfer(self, events)`
+
+
+[ Receiver >> int_transfer ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`490 2 492 43`
+(signature)`int_transfer(self, key, event)`
+
+
+[ Receiver >> int_terminate ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`494 2 501 33`
+(signature)`int_terminate(self, key)`
+
+
+[ Transformation ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`503 1 514 39`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`503 22 503 28`
+	- (type/syntax)`Channel`
+	- (type/factor-local/class)&<#Channel[Channel]>
+	
+A flow that performs a transformation on the received events.
+
+
+[ Transformation >> f_type ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`508 2 508 23`
+#!source
+	f_type = 'transformer'
+
+[ Transformation >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`510 2 511 31`
+(signature)`__init__(self, transform)`
+
+
+[ Transformation >> f_transfer ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`513 2 514 39`
+(signature)`f_transfer(self, event)`
+
+
+[ Iteration ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`516 1 569 44`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`516 17 516 23`
+	- (type/syntax)`Channel`
+	- (type/factor-local/class)&<#Channel[Channel]>
+	
+Channel that emits the contents of an (none/invalid)&<http://fault.io/dev/null[collections.abc.Iterator]> until
+an obstruction occurs or the iterator ends.
+
+
+[ Iteration >> f_type ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`521 2 521 18`
+#!source
+	f_type = 'source'
+
+[ Iteration >> f_clear ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`523 2 532 14`
+		- (type/syntax)`bool`
+		- (type/invalid/unknown)&<#bool>
+		
+(signature)`f_clear(self, *args)`
+
+Override of (factor-local/method)&<#Channel.f_clear[Channel.f_clear]> that enqueues an (factor-local/method)&<#Iteration.it_transition[it_transition]> call
+if it's no longer obstructed.
+
+
+[ Iteration >> it_transition ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`534 2 549 23`
+(signature)`it_transition(self)`
+
+Emit the next item in the iterator until an obstruction occurs or
+the iterator is exhausted.
+
+
+[ Iteration >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`551 2 559 35`
+(signature)`__init__(self, iterator)`
+
+[ >> Parameters ]
+
+/(parameter)`self`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`iterator`/
+	
+	The iterator that produces events.
+
+
+[ Iteration >> actuate ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`561 2 563 35`
+(signature)`actuate(self)`
+
+
+[ Iteration >> f_transfer ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`565 2 569 44`
+(signature)`f_transfer(self, it)`
+
+Raises exception as (factor-local/class)&<#Iteration[Iteration]> is a source.
+
+
+[ Collection ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`571 1 632 23`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`571 18 571 24`
+	- (type/syntax)`Channel`
+	- (type/factor-local/class)&<#Channel[Channel]>
+	
+Terminal (factor-local/class)&<#Channel[Channel]> collecting the events into a buffer for processing after
+termination.
+
+
+[ Collection >> f_type ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`576 2 576 20`
+#!source
+	f_type = 'terminal'
+
+[ Collection >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`578 2 582 13`
+(signature)`__init__(self, storage, operation)`
+
+
+[ Collection >> appended_list ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`583 2 588 27`
+(signature)`appended_list(Class)`
+
+Construct a (factor-local/class)&<#Collection[Collection]> instance that appends all events into a (factor-local/data)&<#Collection.list[list]>.
+
+
+[ Collection >> list ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`589 2 591 13`
+#!source
+	list = appended_list
+		@classmethod
+
+[ Collection >> extended_list ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`592 2 599 13`
+(signature)`extended_list(Class)`
+
+Construct a (factor-local/class)&<#Collection[Collection]> instance that extends all events into a (factor-local/data)&<#Collection.list[list]>.
+
+
+[ Collection >> dict ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`600 2 612 13`
+(signature)`dict(Class)`
+
+Construct a (factor-local/class)&<#Collection[Collection]> instance that builds the contents of a
+mapping from sequences of key-value pairs.
+
+
+[ Collection >> set ]
+! CONTROL:
+	/type/
+		classmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`613 2 617 14`
+(signature)`set(Class)`
+
+
+[ Collection >> _buffer_operation ]
+! CONTROL:
+	/type/
+		staticmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`618 2 621 13`
+(signature)`_buffer_operation(event)`
+
+
+[ Collection >> buffer ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`622 2 629 73`
+(signature)`buffer(Class)`
+
+Construct a (factor-local/class)&<#Collection[Collection]> instance that accumulates data from sequences
+of data into a single (factor-local/parameter)&<#Collection.buffer.Parameters.bytearray[bytearray]>.
+
+
+[ Collection >> f_transfer ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`631 2 632 23`
+(signature)`f_transfer(self, obj)`
+
+
+[ Parallel ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`634 1 692 38`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`634 16 634 22`
+	- (type/syntax)`Channel`
+	- (type/factor-local/class)&<#Channel[Channel]>
+	
+A dedicated thread for processing events emitted to the Flow.
+
+The requisite function should have the following signature:
+
+#!/pl/python
+	def thread_function(transformer, queue, *optional):
+		...
+	
+The queue provides access to the events that were received by the Transformer,
+and the (invalid/unknown)&<#transformer> argument allows the thread to cause obstructions by
+accessing its controller.
+
+
+[ Parallel >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`649 2 654 34`
+(signature)`__init__(self, target, *parameters)`
+
+
+[ Parallel >> terminate ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`656 2 666 13`
+(signature)`terminate(self)`
+
+Initiate termination of the thread.
+
+
+[ Parallel >> trap ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`668 2 677 7`
+(signature)`trap(self)`
+
+Internal; Trap exceptions in order to map them to faults.
+
+
+[ Parallel >> f_transfer ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`679 2 685 21`
+(signature)`f_transfer(self, event)`
+
+Send the event to the queue that the Thread is connected to.
+Injections performed by the thread will be enqueued into the main task queue.
+
+
+[ Parallel >> actuate ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`687 2 692 38`
+(signature)`actuate(self)`
+
+Execute the dedicated thread for the transformer.
+
+
+[ Protocol ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`694 1 720 21`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`694 16 694 22`
+	- (type/syntax)`Channel`
+	- (type/factor-local/class)&<#Channel[Channel]>
+	
+Protocol class for containing the state of a protocol layer.
+
+
+[ Protocol >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`699 2 702 28`
+(signature)`__init__(self, shared, local, transfer)`
+
+
+[ Protocol >> f_transfer ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`704 2 705 44`
+(signature)`f_transfer(self, event)`
+
+
+[ Protocol >> p_terminated ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`707 2 714 20`
+(signature)`p_terminated(self)`
+
+Called when the internal protocol state has completed termination.
+
+Defaults to (factor-local/method)&<#Channel.f_terminate[Channel.f_terminate]> but overridden in cases where
+synchronization needs to occur with a corresponding Protocol channel.
+
+
+[ Protocol >> p_drain ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`716 2 720 21`
+(signature)`p_drain(self)`
+
+Perform an empty transfer allowing any transmit buffers to be emptied.
+
+
+[ Catenation ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`722 1 941 32`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`722 18 722 24`
+	- (type/syntax)`Channel`
+	- (type/factor-local/class)&<#Channel[Channel]>
+	
+Sequence a set of flows in the enqueued order.
+
+Emulates parallel operation by facilitating the sequenced delivery of
+a sequence of flows where the first flow is carried until completion before
+the following flow may be processed.
+
+Essentially, this is a buffer array that uses Flow termination signals
+to manage the current working flow and queues to buffer the events to be emitted
+when next is promoted.
+
+[ > Engineering ]
+
+/notes/
+	Subjected to a number of adjustments, there may be a few reductions
+	that can be performed without impacting functionality.
+
+/Untested/
+	- Recursive transition() calls.
+	
+[ > Properties ]
+
+/cat_order/
+	Queue of channels dictating the order of the flows.
+
+/cat_connections/
+	Mapping of connected (invalid/unknown)&<#Flow> instances to their corresponding
+	queue, (invalid/unknown)&<#Layer>, and termination state.
+
+/cat_flows/
+	Channel identifier associated with weak reference to upstream.
+
+
+[ Catenation >> f_type ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`752 2 752 16`
+#!source
+	f_type = 'join'
+
+[ Catenation >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`754 2 759 22`
+(signature)`__init__(self)`
+
+
+[ Catenation >> cat_overflowing ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`761 2 774 15`
+(signature)`cat_overflowing(self, channel_id)`
+
+Whether the given flow's queue has too many items.
+
+
+[ Catenation >> int_transfer ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`776 2 796 50`
+(signature)`int_transfer(self, channel_id, events)`
+
+Emit point for Sequenced Flows
+
+
+[ Catenation >> int_connect ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`798 2 826 73`
+(signature)`int_connect(self, channel_id, initiate, flow)`
+
+Connect the flow to the (factor-local/parameter)&<#Catenation.int_connect.Parameters.channel_id[channel_id]> using the (factor-local/parameter)&<#Catenation.int_connect.Parameters.initiate[initiate]> parameter.
+
+
+[ Catenation >> int_reserve ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`828 2 834 35`
+(signature)`int_reserve(self, *channel_id)`
+
+Reserve a position in the sequencing of the flows. The given (invalid/unknown)&<#initiate> is the reference
+object used by (factor-local/method)&<#Catenation.int_connect[int_connect]> in order to actually connect flows.
+
+
+[ Catenation >> f_transfer ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`836 2 846 16`
+(signature)`f_transfer(self, events)`
+
+Transparency support allowing (factor-local/class)&<#Division[Division]> to be directly connected.
+Usually unused.
+
+
+[ Catenation >> int_terminate ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`848 2 858 67`
+(signature)`int_terminate(self, channel_id)`
+
+
+[ Catenation >> f_terminate ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`860 2 865 19`
+(signature)`f_terminate(self)`
+
+
+[ Catenation >> terminate ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`867 2 871 14`
+(signature)`terminate(self)`
+
+Termination signal ignored. Flow state dictates terminal state.
+
+
+[ Catenation >> cat_flush ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`873 2 883 23`
+(signature)`cat_flush(self)`
+
+Flush the accumulated events downstream.
+
+
+[ Catenation >> cat_drain ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`885 2 913 24`
+(signature)`cat_drain(self)`
+
+Drain the new head of line emitting any queued events and
+updating its entry in (invalid/unknown)&<#cat_connections> to immediately send events.
+
+
+[ Catenation >> cat_transition ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`915 2 941 32`
+(signature)`cat_transition(self)`
+
+Move the first enqueued flow to the front of the line;
+flush out the buffer and remove ourselves as an obstruction.
+
+
+[ Division ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`943 1 1112 2`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`943 16 943 22`
+	- (type/syntax)`Channel`
+	- (type/factor-local/class)&<#Channel[Channel]>
+	
+Coordination of the routing of a protocol's content.
+
+Protocols consisting of a series of requests, HTTP for instance,
+need to control where the content of a request goes. (invalid/unknown)&<#QueueProtocolInput>
+manages the connections to actual (invalid/unknown)&<#Flow> instances that delivers
+the transformed application level events.
+
+
+[ Division >> f_type ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`953 2 953 16`
+#!source
+	f_type = 'fork'
+
+[ Division >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`955 2 961 32`
+(signature)`__init__(self, dispatch)`
+
+
+[ Division >> f_transfer ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`963 2 976 28`
+(signature)`f_transfer(self, events)`
+
+Direct the given events to their corresponding action in order to
+map protocol stream events to (invalid/unknown)&<#Flow> instances.
+
+
+[ Division >> interrupt ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`978 2 991 21`
+(signature)`interrupt(self)`
+
+Interruptions on distributions translates to termination.
+
+
+[ Division >> f_terminate ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`993 2 1008 24`
+(signature)`f_terminate(self)`
+
+
+[ Division >> div_initiate ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`1010 2 1021 62`
+(signature)`div_initiate(self, f_event, channel_id, initiate)`
+
+Initiate a subflow using the given (factor-local/parameter)&<#Division.div_initiate.Parameters.channel_id[channel_id]> as its identity.
+The (factor-local/parameter)&<#Division.div_initiate.Parameters.channel_id[channel_id]> along with a callable performing (factor-local/method)&<#Division.div_connect[div_connect]> will be emitted
+to the (invalid/unknown)&<#Flow.f_connect> downstream.
+
+
+[ Division >> div_connect ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`1023 2 1066 40`
+(signature)`div_connect(self, channel_id, flow)`
+
+Associate the (factor-local/parameter)&<#Division.div_connect.Parameters.flow[flow]> with the (factor-local/parameter)&<#Division.div_connect.Parameters.channel_id[channel_id]> allowing transfers into the flow.
+
+Drains the queue that was collecting events associated with the (factor-local/parameter)&<#Division.div_connect.Parameters.channel_id[channel_id]>,
+and feeds them into the flow before destroying the queue. Layer connections
+without queues are the head of the line, and actively receiving transfers
+and control events.
+
+
+[ Division >> div_transfer ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`1068 2 1079 50`
+(signature)`div_transfer(self, f_event, channel_id, subflow_transfer)`
+
+Enqueue or transfer the events to the flow associated with the channel_id context.
+
+
+[ Division >> div_terminate ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`1081 2 1104 40`
+(signature)`div_terminate(self, f_event, channel_id, terminal)`
+
+End of subflow.
+
+
+[ Division >> div_operations ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1106 2 1112 2`
+#!source
+	div_operations = {
+		fe_initiate: div_initiate,
+		fe_terminate: div_terminate,
+		fe_obstruct: None,
+		fe_clear: None,
+		fe_transfer: div_transfer,
+	}

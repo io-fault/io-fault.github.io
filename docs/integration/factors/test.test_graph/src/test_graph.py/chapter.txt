@@ -1,0 +1,31 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 10 0`
+Factor dependency graph checks.
+
+
+[ files ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`4 1 4 30`
+
+[ test_sequence ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`6 1 10 29`
+(signature)`test_sequence(test)`
+
+Check the sequencing of a traversed Sources graph.
+
+/(parameter)`test`/
+	
+	(ctl/absent)`Undocumented`.
+

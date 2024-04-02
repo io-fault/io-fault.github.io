@@ -1,0 +1,567 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 337 6`
+Abstract base classes for time measures and points.
+
+Primarily, this module exists to document the interfaces to (factor-local/class)&<#Point[Point]> and (factor-local/class)&<#Measure[Measure]>.
+The redundant method declarations are intentional.
+
+
+[ abstractmethod ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 7 51`
+
+[ abstractclassmethod ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 7 51`
+
+[ typing ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 8 13`
+
+[ Time ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 1 130 5`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`10 12 10 26`
+	- (type/syntax)`typing.Protocol`
+	- (type/none/invalid)&<http://fault.io/dev/null[typing.Protocol]>
+	
+The abstract base class for *all* Time related types.
+
+
+[ Time >> start ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`17 2 23 16`
+The beginning of the range. Inclusive.
+
+
+[ Time >> stop ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`24 2 30 16`
+The end of the range. Exclusive.
+
+
+[ Time >> magnitude ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`31 2 36 16`
+The size of the range in terms of the (factor-local/property)&<#Time.start[start]>.
+
+
+[ Time >> __contains__ ]
+! CONTROL:
+	/type/
+		abstractmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`37 2 45 21`
+(signature)`__contains__(self, pit)`
+
+Whether the given point falls between (factor-local/property)&<#Time.start[start]>, inclusive, and (factor-local/property)&<#Time.stop[stop]>, exclusive.
+
+#!python
+	assert self.start >= pit and pit < self.stop
+
+[ Time >> of ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`46 2 66 16`
+(signature)`of(Class, *times, **parts)`
+
+Create an instance of the type from the sum of the quantities
+specified by (factor-local/parameter)&<#Time.of.Parameters.times[times]> and (factor-local/parameter)&<#Time.of.Parameters.parts[parts]>:
+
+#!python
+	t = Time.of(hour = 33, microsecond = 44)
+	
+The above example only shows keyword use that is specific to the standard
+time context used by (project-local/project-name)&<fault.time>. Variable position arguments, (factor-local/parameter)&<#Time.of.Parameters.times[times]>,
+must be pre-existing (factor-local/class)&<#Measure[Measure]> instances.
+
+[ >> Parameters ]
+
+/(parameter)`Class`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`times`/
+	
+	A sequence of (factor-local/class)&<#Time[Time]> instances.
+
+/(parameter)`parts`/
+	
+	Keyword names designate the unit of the corresponding value.
+	The time context dictates what that is.
+
+
+[ Time >> select ]
+! CONTROL:
+	/type/
+		abstractmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`67 2 95 16`
+(signature)`select(self, part, of, align)`
+
+Extract the number of complete parts designated by `part` after the last
+complete whole, `of`, with respect to the alignment, `align`.
+
+The result is an (invalid/unknown)&<#int> or an arbitrary object given that
+a Container part is referenced.
+
+Common cases:
+
+#!python
+	h = x.select('hour', 'day')
+	m = x.select('minute', 'hour')
+	s = x.select('second', 'minute')
+	u = x.select('microsecond', 'second')
+	
+[ >> Parameters ]
+
+/(parameter)`self`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`part`/
+	
+	The unit whose count is to be returned.
+
+/(parameter)`of`/
+	
+	The unit whose total wholes are subtracted
+	from `self` in order to find the correct total parts.
+
+/(parameter)`align`/
+	
+	How to align the given part.
+	Trivially, this is a difference that is applied
+	prior to removing wholes: `value = self - align`.
+
+
+[ Time >> update ]
+! CONTROL:
+	/type/
+		abstractmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`96 2 121 16`
+(signature)`update(self, part, replacement, of, align)`
+
+Construct and return a new instance adjusted by the difference between the
+selected part and the given value with respect to the specified alignment.
+
+The following holds true:
+
+#!python
+	updated = pit.update(part, replacement, of, align)
+	adjusted = this.adjust(**{part: replacement - pit.select(part, of, align)})
+	assert updated == adjusted
+	
+It's existence as an interface is due to its utility.
+
+[ >> Parameters ]
+
+/(parameter)`self`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`part`/
+	
+	The name of the Part unit to set.
+
+/(parameter)`replacement`/
+	
+	The new value to set.
+
+/(parameter)`of`/
+	
+	The name of the Whole unit that defines the boundary of the part.
+
+/(parameter)`align`/
+	
+	Defaults to zero; the adjustment applied to the boundary.
+
+
+[ Time >> truncate ]
+! CONTROL:
+	/type/
+		abstractmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`122 2 130 5`
+(signature)`truncate(self, unit)`
+
+Truncates the time instance to the specified boundary: remove units smaller
+than the given (factor-local/parameter)&<#Time.truncate.Parameters.unit[unit]>.
+
+[ >> Parameters ]
+
+/(parameter)`self`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`unit`/
+	
+	The minimum unit size to allow in the new time instance.
+
+
+[ Measure ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`132 1 238 5`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`132 15 132 18`
+	- (type/syntax)`Time`
+	- (type/factor-local/class)&<#Time[Time]>
+	
+An abstract quantity time. Usually, identified as a Scalar quantity unless
+subclassed.
+
+
+[ Measure >> kind ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`140 2 150 16`
+Classification for the unit type with respect to measurements.
+
+Currently, only three kinds exist: definite, subjective, and indefinite.
+
+Measures and Points of the same unit may have different unit kinds.
+
+
+[ Measure >> unit ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`151 2 159 16`
+Identifier of the unit of time--usually the english name.
+
+This *must* be a `str` where str(unit).isidentifier() is `True`.
+
+
+[ Measure >> name ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`160 2 168 16`
+Name of the unit of time. Normally equal to
+(factor-local/class)&<#Time[Time.unit]>, but potentially different in cases
+where the proper name is not an identifier.
+
+
+[ Measure >> start ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`169 2 178 16`
+For Measure instances, this property *must* be zero.
+
+#!python
+	assert measure.start == 0
+
+[ Measure >> stop ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`179 2 188 16`
+For Measure instances, this property *must* be the instance, (invalid/unknown)&<#self>:
+
+#!python
+	assert measure.stop is measure
+
+[ Measure >> magnitude ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`189 2 197 16`
+The magnitude of the Time instance. For Measures, this is their integer value:
+
+#!python
+	assert int(measure) == measure.magnitude
+
+[ Measure >> increase ]
+! CONTROL:
+	/type/
+		abstractmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`198 2 217 16`
+(signature)`increase(self, *units, **parts)`
+
+Increase the measurement, repositioning the (factor-local/property)&<#Measure.stop[stop]>.
+
+Returns a new Measure instance whose value is `self` increased by
+the given parameters.
+
+This is equivalent to:
+
+#!python
+	assert self.increase(*units, **parts) == self.of(self, *units, **parts)
+	
+[ >> Parameters ]
+
+/(parameter)`self`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`units`/
+	
+	Variable number of (factor-local/class)&<#Measure[Measure]> instances.
+
+/(parameter)`parts`/
+	
+	Variable keywords whose keys designate the unit.
+
+
+[ Measure >> decrease ]
+! CONTROL:
+	/type/
+		abstractmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`218 2 238 5`
+(signature)`decrease(self, *units, **parts)`
+
+Decrease the measurement, repositioning the (factor-local/property)&<#Measure.stop[stop]>.
+
+Returns a new Measure instance whose value is `self` decreased by
+the given parameters.
+
+This is equivalent to:
+
+#!python
+	neg_units = [-unit for unit in units]
+	neg_parts = {k:-v for (k,v) in parts}
+	
+	assert self.decrease(*units, **parts) == self.of(self, *neg_units, **neg_parts)
+	
+[ >> Parameters ]
+
+/(parameter)`self`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`units`/
+	
+	Variable number of (factor-local/class)&<#Measure[Measure]> instances.
+
+/(parameter)`parts`/
+	
+	Variable keywords whose keys designate the unit.
+
+
+[ Point ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`240 1 338 5`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`240 13 240 16`
+	- (type/syntax)`Time`
+	- (type/factor-local/class)&<#Time[Time]>
+	
+A point in time.
+
+
+[ Point >> kind ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`247 2 253 16`
+Classification for the unit type with respect to Points in Time.
+
+
+[ Point >> Measure ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`254 2 265 16`
+		- (type/syntax)`typing.Type[Measure]`
+		
+The Point's corresponding scalar class used to measure deltas.
+This provides access to a (project-local/unknown)&<abstract#Measure[abstract.Measure]> whose precision is consistent with the (factor-local/class)&<#Point[Point]>.
+
+[ >> Invariants ]
+
+#!python
+	assert point.Measure.unit == point.unit
+
+[ Point >> start ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`266 2 276 16`
+Points *must* return the instance, (invalid/unknown)&<#self>:
+
+[ >> Invariants ]
+
+#!python
+	assert point.start is point
+
+[ Point >> stop ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`277 2 287 16`
+The next Point according to the unit:
+
+[ >> Invariants ]
+
+#!python
+	assert point.stop == point.elapse(point.Measure(1))
+
+[ Point >> magnitude ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`288 2 296 16`
+The magnitude of the Point. For Points, this *must* be one:
+
+#!python
+	assert pit.magnitude == 1
+
+[ Point >> measure ]
+! CONTROL:
+	/type/
+		abstractmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`297 2 303 16`
+(signature)`measure(self, pit)`
+
+Return the measurement, (factor-local/property)&<#Point.Measure[Measure]> instance, between (factor-local/parameter)&<#Point.measure.Parameters.self[self]> and
+the given point in time, (factor-local/parameter)&<#Point.measure.Parameters.pit[pit]>. The delta between the two points.
+
+
+[ Point >> elapse ]
+! CONTROL:
+	/type/
+		abstractmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`304 2 314 16`
+(signature)`elapse(self, *units, **parts)`
+
+Returns an adjusted measure in time by the given arguments and keywords.
+
+Essentially, this is a call to the (invalid/unknown)&<#of>
+method with the instance as the first parameter.
+
+This is shorthand for `t.of(t, *units, **parts)`.
+
+
+[ Point >> rollback ]
+! CONTROL:
+	/type/
+		abstractmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`315 2 326 16`
+(signature)`rollback(self, *units, **parts)`
+
+The point in time that occurred the given number of units before this
+point. The semantics are identical to (factor-local/abstractmethod)&<#Point.elapse[Point.elapse]>, but transforms
+the parameters into negative values.
+
+[ >> Invariants ]
+
+#!python
+	pit == (pit.rollback(*measures, **units)).elapse(*measures, **units)
+
+[ Point >> leads ]
+! CONTROL:
+	/type/
+		abstractmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`327 2 333 16`
+(signature)`leads(self, pit)`
+
+Returns whether or not the Point in Time, self,
+comes *before* the given argument, (factor-local/parameter)&<#Point.leads.Parameters.pit[pit]>.
+
+
+[ Point >> follows ]
+! CONTROL:
+	/type/
+		abstractmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`334 2 338 5`
+(signature)`follows(self, pit)`
+
+Returns whether or not the Point in Time, self,
+comes *after* the given argument, (factor-local/parameter)&<#Point.follows.Parameters.pit[pit]>.
+

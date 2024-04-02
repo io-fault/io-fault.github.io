@@ -1,0 +1,1041 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 771 0`
+System process execution interfaces and
+process global registry for controlling the composition of (factor-local/data)&<#Specification[Specification]> for system process execution.
+
+[ Purpose ]
+
+Primarily, this process global registry is intended for test cases that need to allow the harness to
+override the execution methods for selecting the correct executable. However, general purpose usage
+is reasonable for formalizing system process execution.
+
+[ Interface ]
+
+The (factor-local/data)&<#select[select]> callable returns the handler for a given execution method (factor-local/data)&<#Identifier[Identifier]>. This allows the
+command constructor to be cached for repeat use. The (factor-local/data)&<#prepare[prepare]> callable selects and invokes
+the method returning the invocation specification.
+
+[ Default Methods ]
+
+/(id)`python-script`/
+	Execute a Python script selected using a file system path.
+
+/(id)`python-module`/
+	Execute a Python module available in the (none/invalid)&<http://fault.io/dev/null[sys.path]> of the Python subprocess.
+
+/(id)`system-file`/
+	Execute an executable file selected using a file system path.
+
+/(id)`factor`/
+	Execute a factor available on the factor path. Once the factor's type is identified,
+	either (string)`system-file` or (string)`python-module` will be used.
+
+[ Types ]
+
+Symbolic names for annotations used by (project-local/unknown)&<execution>.
+
+/(factor-local/data)&<#Specification[Specification]>/
+	A pair containing a selector for the executable and the argument vector to be used
+	upon invocation. (none/invalid)&<http://fault.io/dev/null[typing.AnyStr]> is used to denote the possibility of mixed encoded
+	and decoded strings. Usage may require resolutions depending on the target execution interface.
+
+/(factor-local/data)&<#Vector[Vector]>/
+	An argument vector used to designate the parameters to a process.
+	A sequence of any string types; this is used from the perspective of a
+	calling process whose arguments may require encoding or conversion.
+
+/(factor-local/data)&<#Method[Method]>/
+	Signature of a (factor-local/data)&<#Specification[Specification]> constructor.
+
+/(factor-local/data)&<#Identifier[Identifier]>/
+	The hashable used to access a (factor-local/data)&<#Method[Method]>.
+
+
+[ sys ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`46 1 46 10`
+
+[ os ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`47 1 47 9`
+
+[ typing ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`48 1 48 13`
+
+[ Identifier ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`50 1 50 28`
+#!source
+	Identifier = typing.Hashable
+
+[ Vector ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`51 1 51 39`
+#!source
+	Vector = typing.Sequence[typing.AnyStr]
+
+[ Specification ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`52 1 52 51`
+#!source
+	Specification = typing.Tuple[typing.AnyStr, Vector]
+
+[ Method ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`53 1 53 64`
+#!source
+	Method = typing.Callable[[typing.AnyStr, Vector], Specification]
+
+[ KInvocation ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`55 1 55 45`
+
+[ default_python_script ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`57 1 61 22`
+(signature)`default_python_script(index, script, arguments)`
+
+
+[ default_python_module ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`63 1 67 22`
+(signature)`default_python_module(index, module, arguments)`
+
+
+[ default_executable ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`69 1 72 26`
+(signature)`default_executable(index, executable, arguments)`
+
+
+[ _defaults ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`74 1 78 1`
+#!source
+	_defaults = (
+		('python-script', default_python_script),
+		('python-module', default_python_module),
+		('executable', default_executable),
+	)
+
+[ Index ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`83 1 125 61`
+Execution Method index associating a set of (invalid/unknown)&<#Identifier's> with their
+corresponding (invalid/unknown)&<#Method's>.
+
+
+[ Index >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`88 2 88 48`
+#!source
+	__slots__ = ('_get', '_storage', '__weakref__')
+
+[ Index >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`90 2 92 19`
+(signature)`__init__(self)`
+
+
+[ Index >> fork ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`94 2 99 30`
+		- (type/syntax)`"Index"`
+		
+(signature)`fork(self, methods)`
+
+Duplicate the (factor-local/class)&<#Index[Index]> instance (factor-local/parameter)&<#Index.fork.Parameters.self[self]> and update it with the given (factor-local/parameter)&<#Index.fork.Parameters.methods[methods]>.
+
+
+[ Index >> install ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`101 2 108 12`
+		- (type/syntax)`Method`
+		- (type/factor-local/data)&<#Method[Method]>
+		
+(signature)`install(self, method, new)`
+
+Register (factor-local/parameter)&<#Index.install.Parameters.new[new]> as the handler for (factor-local/parameter)&<#Index.install.Parameters.method[method]> and return the previously installed (factor-local/data)&<#Method[Method]>.
+Returns the old (factor-local/data)&<#Method[Method]> installed for (factor-local/parameter)&<#Index.install.Parameters.method[method]> identifier.
+
+
+[ Index >> select ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`110 2 114 26`
+		- (type/syntax)`Method`
+		- (type/factor-local/data)&<#Method[Method]>
+		
+(signature)`select(self, method)`
+
+Return the (factor-local/data)&<#Specification[Specification]> constructor identified by (factor-local/parameter)&<#Index.select.Parameters.method[method]>.
+
+
+[ Index >> prepare ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`116 2 125 61`
+		- (type/syntax)`Specification`
+		- (type/factor-local/data)&<#Specification[Specification]>
+		
+(signature)`prepare(self, method, executable, arguments)`
+
+Construct a pair suitable for creating a (project-local/factor-element)&<kernel#Invocation[fault.system.kernel.Invocation]> instance.
+
+
+[ root ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`128 1 128 14`
+#!source
+	root = Index()
+
+[ select ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`129 1 129 20`
+#!source
+	select = root.select
+
+[ prepare ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`130 1 130 22`
+#!source
+	prepare = root.prepare
+
+[ dataclass ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`132 1 133 10`
+
+[ Delta ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`134 1 157 29`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`134 13 134 18`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+Descriptor of change in a subprocess' state.
+
+
+[ Delta >> event ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`138 2 138 19`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+#!source
+	event:(str) = None
+
+[ Delta >> status ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`139 2 139 20`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+#!source
+	status:(int) = None
+
+[ Delta >> core ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`140 2 142 10`
+		- (type/syntax)`typing.Optional[bool]`
+		
+#!source
+	core:(typing.Optional[bool]) = None
+		@property
+
+[ Delta >> running ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`143 2 146 10`
+
+[ Delta >> exited ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`147 2 149 10`
+
+[ Delta >> cored ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`150 2 152 10`
+
+[ Delta >> continued ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`153 2 155 10`
+
+[ Delta >> stopped ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`156 2 157 29`
+
+[ decode_process_status ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`159 1 206 33`
+		- (type/syntax)`Delta`
+		- (type/factor-local/class)&<#Delta[Delta]>
+		
+(signature)`decode_process_status(status)`
+
+The process or SIGCHLD signals. This is an abstraction to (none/invalid)&<http://fault.io/dev/null[os.waitpid]>
+and can only be used with child processes.
+
+[ > Parameters ]
+
+/(parameter)`status`/
+	- (type/syntax)`int`
+	- (type/invalid/unknown)&<#int>
+	
+	The status code produced by (none/invalid)&<http://fault.io/dev/null[os.waitpid]>. (stat_loc)
+
+/(parameter)`wasexit`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`getstatus`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`wassignal`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`getsig`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`wasstopped`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`getstop`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`wascontinued`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`wascore`/
+	
+	(control/absent)`Undocumented`.
+
+[ > Exceptions ]
+
+/(invalid/unknown)&<#ValueError>/
+	Raised when the given status code could not be recognized.
+
+
+[ reap ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`208 1 245 35`
+		- (type/syntax)`typing.Optional[Delta]`
+		
+(signature)`reap(pid, options)`
+
+Transform pending process events such as exits into a (factor-local/class)&<#Delta[Delta]> describing
+the event. Normally used to respond to process exit events in order to reap
+the process or SIGCHLD signals. This is an abstraction to (none/invalid)&<http://fault.io/dev/null[os.waitpid]>
+and can only be used with child processes.
+
+[ > Parameters ]
+
+/(parameter)`pid`/
+	- (type/syntax)`int`
+	- (type/invalid/unknown)&<#int>
+	
+	The process identifier to reap.
+
+/(parameter)`options`/
+	
+	Keyword parameter defaulting to `os.WNOHANG | os.WUNTRACED`.
+	This can be altered in cases where the flags are not desired.
+
+/(parameter)`sysop`/
+	
+	(control/absent)`Undocumented`.
+
+[ > Returns ]
+
+/(factor-local/class)&<#Delta[Delta]>/
+	Core is (invalid/unknown)&<#True> or (invalid/unknown)&<#False> for exits, and (invalid/unknown)&<#None> in all other cases.
+
+/(invalid/unknown)&<#None>/
+	No status was available due to error.
+
+
+[ dereference ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`272 1 312 31`
+(signature)`dereference(invocation)`
+
+Execute the given invocation collecting (system/file)`/dev/stdout` into a (invalid/unknown)&<#bytes> instance.
+(factor-local/function)&<#dereference[dereference]> blocks until EOF is read from the created pipe and should only be used to
+execute reliable processes.
+
+If (system/signal)`SIGALRM` is not appropriate for timeouts, invocation should be managed
+directly.
+
+! RELATED: &execute
+
+[ effect ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`314 1 323 51`
+(signature)`effect(invocation)`
+
+Execute the given invocation collecting (system/file)`/dev/stderr` into a (invalid/unknown)&<#bytes> instance.
+(factor-local/function)&<#effect[effect]> blocks until EOF is read from the created pipe and should only be used to
+execute reliable processes.
+
+! RELATED: &dereference
+
+[ perform ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`325 1 337 35`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+(signature)`perform(invocation)`
+
+Execute an (factor-local/parameter)&<#perform.Parameters.invocation[invocation]> waiting for the subprocess to exit before allowing
+the thread to continue. The invocation will inherit the process' standard
+input, output, and error.
+
+Returns the status of the subprocess; negative if the process exited due to a signal.
+
+! RELATED: &effect
+
+[ Pipeline ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`339 1 398 15`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`339 16 339 20`
+	- (type/syntax)`tuple`
+	- (type/invalid/unknown)&<#tuple>
+	
+Structure holding the file descriptors associated with a *running* pipeline
+of operating system processes. Returned by called (factor-local/class)&<#PInvocation[PInvocation]> instances to
+provide access to the input and output pipes and the standard errors of each process.
+
+
+[ Pipeline >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`345 2 347 10`
+#!source
+	__slots__ = ()
+		@property
+
+[ Pipeline >> input ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`348 2 354 10`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+Pipe file descriptor for the pipeline's input.
+
+
+[ Pipeline >> output ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`355 2 361 10`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+Pipe file descriptor for the pipeline's output.
+
+
+[ Pipeline >> process_identifiers ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`362 2 368 10`
+The sequence of process identifiers of the commands that make up the pipeline.
+
+
+[ Pipeline >> standard_errors ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`369 2 373 16`
+		- (type/syntax)`typing.Sequence[int]`
+		
+Mapping of process identifiers to the standard error file descriptor.
+
+
+[ Pipeline >> __new__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`375 2 385 4`
+(signature)`__new__(Class, input, output, pids, errfds)`
+
+
+[ Pipeline >> void ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`387 2 398 15`
+		- (type/syntax)`None`
+		
+(signature)`void(self)`
+
+Close all file descriptors and terminate all processes (SIGKILL) involved in the pipeline.
+Processes are *not* reaped.
+
+
+[ PInvocation ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`400 1 514 17`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`400 19 400 23`
+	- (type/syntax)`tuple`
+	- (type/invalid/unknown)&<#tuple>
+	
+A sequence of (project-local/factor-element)&<kernel#Invocation[fault.system.kernel.Invocation]> instances used to form a pipeline for
+system processes; a process image where the file descriptors 0, 1, and 2
+refer to standard input, standard output, and standard error.
+
+Pipelines of zero commands can be created; it will merely represent a pipe
+with no standard errors and no process identifiers.
+
+
+[ PInvocation >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`409 2 409 15`
+#!source
+	__slots__ = ()
+
+[ PInvocation >> Invocation ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`410 2 412 13`
+#!source
+	Invocation = KInvocation
+		@classmethod
+
+[ PInvocation >> from_commands ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`413 2 433 13`
+(signature)`from_commands(Class, *commands)`
+
+Create a (factor-local/class)&<#PInvocation[PInvocation]> instance from a sequences of commands.
+
+#!/pl/python
+	pr = libexec.PInvocation.from_commands(
+		['/bin/cat', '/bin/cat', 'somefile'],
+		['/usr/bin/tee', 'tee', 'duplicate-1', 'duplicate-2'],
+	)
+	
+The command tuples must specify the absolute path to the executable
+as the first item, the second item is the program's runtime name
+that is accessible as the first argument. Often, the basename of the
+command if it were invoked using (system:environment)`PATH` resolution.
+
+
+[ PInvocation >> from_pairs ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`434 2 442 56`
+(signature)`from_pairs(Class, commands)`
+
+Create a Pipeline Invocation from a sequence of process-path and process-arguments
+pairs.
+
+#!/pl/python
+	pr = libexec.PInvocation.from_pairs([("/bin/cat", ("cat", "file", "-")), ...])
+
+[ PInvocation >> spawn ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`444 2 513 23`
+		- (type/syntax)`Pipeline`
+		- (type/factor-local/class)&<#Pipeline[Pipeline]>
+		
+(signature)`spawn(self, signal)`
+
+Execute the series of invocations returning a (factor-local/class)&<#Pipeline[Pipeline]> instance containing
+the file descriptors used for input, output and the standard error of all the commands.
+
+[ >> Parameters ]
+
+/(parameter)`self`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`signal`/
+	
+	The signal used to kill the process in case of an exception during spawn.
+	Defaults to (system/signal)`SIGKILL`.
+
+/(parameter)`pipe`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`close`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`range`/
+	
+	(control/absent)`Undocumented`.
+
+
+[ PInvocation >> __call__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`514 2 514 17`
+#!source
+	__call__ = spawn
+
+[ parse_sx_plan ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`516 1 551 75`
+		- (type/syntax)`typing.Tuple[		typing.Sequence[typing.Tuple[str, str]],		str,		typing.Sequence[str]	]`
+		
+(signature)`parse_sx_plan(text)`
+
+Parse a System Execution Plan string into structured environment
+settings, executable path, and command arguments.
+
+
+[ serialize_sx_plan ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`553 1 633 13`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+(signature)`serialize_sx_plan(triple)`
+
+Serialize the environment, execution path, and command arguments into a string.
+
+
+[ Platform ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`635 1 767 29`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`635 16 635 21`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+Factor Execution Platform structure for defining architecture specific runtimes.
+
+
+[ Platform >> parse_architecture_list ]
+! CONTROL:
+	/type/
+		staticmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`641 2 661 14`
+(signature)`parse_architecture_list(pfa)`
+
+Produce the architectures and their synonyms from a string
+that uses newline separated records and space separated fields.
+
+
+[ Platform >> fs_load_system ]
+! CONTROL:
+	/type/
+		staticmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`662 2 665 14`
+(signature)`fs_load_system(path)`
+
+
+[ Platform >> fs_load_plans ]
+! CONTROL:
+	/type/
+		staticmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`666 2 673 13`
+(signature)`fs_load_plans(source, names)`
+
+Read the plans identified by (factor-local/parameter)&<#Platform.fs_load_plans.Parameters.names[names]> from the given directory, (factor-local/parameter)&<#Platform.fs_load_plans.Parameters.source[source]>.
+
+
+[ Platform >> fs_load_sections ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`674 2 683 13`
+(signature)`fs_load_sections(Class, path)`
+
+Interpret a stored platform emitting section records.
+
+
+[ Platform >> from_directory ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`684 2 692 13`
+(signature)`from_directory(Class, path)`
+
+Create an instance from a platform directory.
+
+
+[ Platform >> from_system ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`693 2 707 10`
+(signature)`from_system(Class, system, origins)`
+
+Compose a (factor-local/class)&<#Platform[Platform]> from a sequence of paths given
+that they are extensions of (factor-local/parameter)&<#Platform.from_system.Parameters.system[system]>.
+
+
+[ Platform >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`709 2 714 18`
+(signature)`__init__(self, system)`
+
+
+[ Platform >> priority ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`716 2 717 38`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+(signature)`priority(self, architecture)`
+
+
+[ Platform >> identify ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`719 2 728 61`
+(signature)`identify(self, architecture)`
+
+Select the canonical identifier for the given architecture.
+
+
+[ Platform >> extend ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`730 2 745 13`
+(signature)`extend(self, architectures)`
+
+Define additional architectures extending the current set.
+
+
+[ Platform >> sections ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`747 2 754 24`
+(signature)`sections(self)`
+
+Iterate the platform's defined architectures with their synonyms and execution plans.
+
+
+[ Platform >> prepare ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`756 2 767 29`
+(signature)`prepare(self, architecture, identifier, argv)`
+
+Prepare the necessary information for dispatching an executable with the
+identified architecture on the host system.
+

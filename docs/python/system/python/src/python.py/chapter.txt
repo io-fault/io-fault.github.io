@@ -1,0 +1,603 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 384 0`
+Python Execution Context support functions and classes.
+
+
+[ sys ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 10`
+
+[ os ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 9`
+
+[ collections ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 18`
+
+[ pkgutil ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 7 14`
+
+[ importlib ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 8 16`
+
+[ Selector ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 1 10 34`
+
+[ files ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`12 1 12 19`
+
+[ Import ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`14 1 309 41`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`14 14 14 21`
+	- (type/syntax)`Selector`
+	- (type/context-local/factor-element)&<fault.route/types#Selector[fault.route.types.Selector]>
+	
+Route for Python imports.
+
+
+[ Import >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`18 2 20 13`
+#!source
+	__slots__ = ('context', 'points',)
+		@classmethod
+
+[ Import >> from_context ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`21 2 33 13`
+(signature)`from_context(Class)`
+
+Return a new (factor-local/class)&<#Import[Import]> to the package containing the module that is executing
+(factor-local/classmethod)&<#Import.from_context[from_context]>.
+
+
+[ Import >> from_fullname ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`34 2 40 13`
+(signature)`from_fullname(Class, module_path_string)`
+
+Given a valid `__name__`, return an (factor-local/class)&<#Import[Import]> instance to that path.
+
+
+[ Import >> from_module ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`41 2 48 13`
+(signature)`from_module(Class, module)`
+
+Given module containing a valid `__name__`, return an (factor-local/class)&<#Import[Import]>
+instance to that path.
+
+
+[ Import >> from_points ]
+! CONTROL:
+	/type/
+		classmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`49 2 54 13`
+(signature)`from_points(Class, context, *points)`
+
+
+[ Import >> from_attributes ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`55 2 66 13`
+(signature)`from_attributes(Class, path)`
+
+Create a (invalid/unknown)&<#Route> and an attributes sequence based on the given (factor-local/parameter)&<#Import.from_attributes.Parameters.path[path]> such that
+the (invalid/unknown)&<#Route> is the (factor-local/method)&<#Import.real[real]> portion of the (factor-local/parameter)&<#Import.from_attributes.Parameters.path[path]> and text following real module
+path is the sequence of attributes.
+
+
+[ Import >> dereference ]
+! CONTROL:
+	/type/
+		classmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`67 2 72 10`
+(signature)`dereference(Class, path)`
+
+
+[ Import >> __bool__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`74 2 75 41`
+(signature)`__bool__(self)`
+
+
+[ Import >> __str__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`77 2 78 22`
+(signature)`__str__(self)`
+
+
+[ Import >> __repr__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`80 2 81 96`
+(signature)`__repr__(self)`
+
+
+[ Import >> __contains__ ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`83 2 87 53`
+(signature)`__contains__(self, abs)`
+
+Whether or not the Path contains the given Pointer.
+
+
+[ Import >> __getitem__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`89 2 92 10`
+(signature)`__getitem__(self, req)`
+
+
+[ Import >> fullname ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`93 2 100 10`
+Return the absolute path of the module Route; dot separated module names.
+
+
+[ Import >> basename ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`101 2 109 10`
+The module's name relative to its package; node identifier used to refer to the module.
+Alias to (invalid/unknown)&<#identifier>.
+
+
+[ Import >> package ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`110 2 124 10`
+Return a (invalid/unknown)&<#Route> to the module's package.
+If the (invalid/unknown)&<#Route> is referencing a package, return (invalid/unknown)&<#self>.
+
+! WARNING:
+	This will be a method.
+
+
+[ Import >> root ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`125 2 128 10`
+
+[ Import >> loader ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`129 2 134 27`
+The loader of the module.
+
+
+[ Import >> spec ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`136 2 143 14`
+(signature)`spec(self)`
+
+The spec for loading the module.
+
+
+[ Import >> exists ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`145 2 151 34`
+(signature)`exists(self)`
+
+Whether or not the module exists inside the Python paths.
+However, the module may not be importable.
+
+
+[ Import >> is_container ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`153 2 162 39`
+(signature)`is_container(self)`
+
+Interrogate the module's loader as to whether or not it's a "package module".
+
+
+[ Import >> is_package ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`163 2 163 26`
+#!source
+	is_package = is_container
+
+[ Import >> real ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`165 2 178 18`
+(signature)`real(self)`
+
+The "real" portion of the Import.
+Greatest Absolute Route that *actually exists* on the file system.
+
+(invalid/unknown)&<#None> if no parts are real, and (factor-local/parameter)&<#Import.real.Parameters.self[self]> if the entire route exists.
+
+
+[ Import >> get_last_modified ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`180 2 184 40`
+(signature)`get_last_modified(self)`
+
+Return the modification time of the module's file as a chronometry Timestamp.
+
+
+[ Import >> stack ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`186 2 202 10`
+(signature)`stack(self)`
+
+Return a list of module objects. The first being the outermost package module, the
+last being the module being pointed to, subject module, and the between being the
+packages leading to the (factor-local/parameter)&<#Import.stack.Parameters.self[self]>.
+
+
+[ Import >> scan ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`204 2 213 36`
+(signature)`scan(self, attribute)`
+
+Scan the (factor-local/method)&<#Import.stack[stack]> of modules for the given attribute returning a pair
+containing the module and the object accessed with the (factor-local/parameter)&<#Import.scan.Parameters.attribute[attribute]>.
+
+
+[ Import >> module ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`215 2 226 9`
+(signature)`module(self)`
+
+Return the module that is being referred to by the path.
+
+
+[ Import >> subnodes ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`228 2 261 26`
+(signature)`subnodes(self)`
+
+Return a pairs of sequences containing routes to the subnodes of the route.
+
+
+[ Import >> tree ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`263 2 282 19`
+(signature)`tree(self)`
+
+Return a package's full tree as a pair of lists.
+
+
+[ Import >> file ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`284 2 294 24`
+(signature)`file(self)`
+
+Get the (project-local/factor-element)&<files#Path[fault.system.files.Path]> instance pointing to the module's file.
+
+
+[ Import >> directory ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`296 2 302 29`
+(signature)`directory(self)`
+
+The package directory of the module.
+
+
+[ Import >> cache ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`304 2 309 41`
+(signature)`cache(self)`
+
+The (filename)`__pycache__` directory associated with the module's file.
+
+
+[ Reference ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`311 1 384 51`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`311 17 311 22`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+Field reference for passing by reference.
+
+Primarily used in cases where the origin of a value should be retained
+for structural purposes or origin tracking.
+
+! DEVELOPMENT: Location
+	May not be the appropriate location for this class.
+	While an environment variable references are the primary use-case,
+	there are certainly others.
+
+	Also, (context-local/factor-element)&<fault.route/types#Selector[fault.route.types.Selector]> might be a more appropriate baseclass;
+	load instead of value, store for update/overwrite.
+
+
+[ Reference >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`326 2 328 13`
+#!source
+	__slots__ = ('type', 'container_get', 'identifier', 'default')
+		@classmethod
+
+[ Reference >> environment ]
+! CONTROL:
+	/type/
+		classmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`329 2 332 13`
+(signature)`environment(Class, identifier, default)`
+
+
+[ Reference >> strings ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`333 2 345 21`
+(signature)`strings(Class, iterator)`
+
+Process the iterator producing References or values such that
+values are emitted directly and references are only emitted
+if their determined value is not None.
+
+
+[ Reference >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`347 2 351 24`
+(signature)`__init__(self, type, get, identifier)`
+
+
+[ Reference >> __str__ ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`353 2 364 21`
+(signature)`__str__(self)`
+
+Return the string form of the container's value for the configured
+key when present, otherwise the configured default.
+
+If the resolved value is (invalid/unknown)&<#None>, an empty string will be returned.
+
+
+[ Reference >> item ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`366 2 371 49`
+(signature)`item(self)`
+
+Return the (invalid/unknown)&<#identifier> - (factor-local/method)&<#Reference.value[value]> pair.
+
+
+[ Reference >> items ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`373 2 377 19`
+(signature)`items(self)`
+
+Return (factor-local/method)&<#Reference.item[item]> in plural form; iterator that always returns a single pair.
+
+
+[ Reference >> value ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`379 2 384 51`
+(signature)`value(self)`
+
+Return the value of the container's entry using (invalid/unknown)&<#identifier> as the key.
+If no key exists, (invalid/unknown)&<#default> will be returned.
+

@@ -1,0 +1,100 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 39 0`
+
+[ module ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 1 38`
+
+[ test_bytes_metric ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`3 1 7 13`
+(signature)`test_bytes_metric(test)`
+
+
+[ test_bytes_iec ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`9 1 13 13`
+(signature)`test_bytes_iec(test)`
+
+
+[ test_kilobytes ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`15 1 19 17`
+(signature)`test_kilobytes(test)`
+
+
+[ test_gigabytes ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`21 1 25 17`
+(signature)`test_gigabytes(test)`
+
+
+[ test_formats ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`27 1 32 53`
+(signature)`test_formats(test)`
+
+
+[ test_negative_sizes ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`34 1 35 54`
+(signature)`test_negative_sizes(test)`
+
+
+[ test_final_order ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`37 1 39 48`
+(signature)`test_final_order(test)`
+

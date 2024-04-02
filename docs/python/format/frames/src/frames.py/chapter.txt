@@ -1,0 +1,487 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 397 0`
+Inline box rendering for replayable views of text content.
+
+(project-local/unknown)&<frames> provides functions for formatting framed text from (factor-local/data)&<#Content[Content]>.
+(factor-local/data)&<#Content[Content]> represents a sequence rows consisting of a single column;
+the placement of (invalid/unknown)&<#str> instances within the tuples contained by the
+sequence controls the alignment of the displayed text. A leading
+(invalid/unknown)&<#None> within the instance causes a horizontal separator to be drawn
+according to the selected box theme.
+
+[ Engineering ]
+
+Somewhat of a warning.
+Raw (integer) indexes are commonly used within this module; the "themes" are regular
+strings, (factor-local/data)&<#f_solid[f_solid]>, and the indexes refer to the boundary character at that index within the theme.
+The included themes have identical character counts, but customized themes may have extensions
+in order to support transitions by (factor-local/function)&<#stitch[stitch]>.
+
+
+[ typing ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`19 1 19 13`
+
+[ itertools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`20 1 20 16`
+
+[ functools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`21 1 21 16`
+
+[ halves ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`23 1 23 23`
+#!source
+	halves = "\u258C\u2590"
+
+[ charif ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`25 1 31 10`
+(signature)`charif(characters)`
+
+Whether the character is a Unicode Box Drawing character.
+
+
+[ Content ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`34 1 45 1`
+#!source
+	Content = typing.Sequence[
+		typing.Union[
+			# Left and Right text; use empty strings to disable a side.
+			typing.Tuple[str, str],
+			# Aligned center; only one field is allowed for centering.
+			typing.Tuple[str, None],
+			# Division (horizontal bar)
+			typing.Tuple[None],
+			# Division, custom horizontal.
+			typing.Tuple[None, str],
+		]
+	]
+
+[ dlength ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`47 1 51 24`
+(signature)`dlength(field)`
+
+
+[ dformat ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`53 1 57 31`
+(signature)`dformat(context, field)`
+
+
+[ strings ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`59 1 67 26`
+(signature)`strings(sequence)`
+
+Emit the formatted lines of a prepared sequence as (invalid/unknown)&<#str> instances.
+Newline characters are *not* added to line.
+
+
+[ keys ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`70 1 97 1`
+#!source
+	keys = [
+		'top-left-corner',
+		'top-horizontal-left',
+		'top-intersection',
+		'top-horizontal-right',
+		'top-right-corner',
+		'heading-vertical-open',
+		'space',
+		'heading-vertical-center',
+		'space',
+		'heading-vertical-close',
+		'left-intersection',
+		'body-horizontal-left',
+		'full-intersection',
+		'body-horizontal-right',
+		'right-intersection',
+		'body-vertical-open',
+		'space',
+		'body-vertical-center',
+		'space',
+		'body-vertical-close',
+		'bottom-left-corner',
+		'bottom-horizontal-left',
+		'bottom-intersection',
+		'bottom-horizontal-right',
+		'bottom-right-corner',
+		# Any extensions will be local to the frame theme.
+	]
+
+[ corners ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`99 1 104 1`
+#!source
+	corners = [
+		'top-left-corner',
+		'top-right-corner',
+		'bottom-left-corner',
+		'bottom-right-corner',
+	]
+
+[ f_ascii ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`106 1 112 1`
+#!source
+	f_ascii = (
+		'+' '-' '+' '-' '+'
+		'|' ' ' '|' ' ' '|'
+		'+' '-' '+' '-' '+'
+		'|' ' ' '|' ' ' '|'
+		'+' '-' '+' '-' '+'
+	)
+
+[ f_bold ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`114 1 120 1`
+#!source
+	f_bold = (
+		'┏' '━' '┳' '━' '┓'
+		'┃' ' ' '┃' ' ' '┃'
+		'┣' '━' '╋' '━' '┫'
+		'┃' ' ' '┃' ' ' '┃'
+		'┗' '━' '┻' '━' '┛'
+	)
+
+[ f_solid ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`122 1 128 1`
+#!source
+	f_solid = (
+		'┌' '─' '┬' '─' '┐'
+		'│' ' ' '│' ' ' '│'
+		'├' '─' '┼' '─' '┤'
+		'│' ' ' '│' ' ' '│'
+		'└' '─' '┴' '─' '┘'
+	)
+
+[ f_double ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`130 1 136 1`
+#!source
+	f_double = (
+		'╔' '═' '╦' '═' '╗'
+		'║' ' ' '║' ' ' '║'
+		'╠' '═' '╬' '═' '╣'
+		'║' ' ' '║' ' ' '║'
+		'╚' '═' '╩' '═' '╝'
+	)
+
+[ rounds ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`138 1 138 32`
+#!source
+	rounds=('╭' '╮' '╰' '╯')
+
+[ _corner_adjustments ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`140 1 146 20`
+(signature)`_corner_adjustments(space, selections)`
+
+
+[ round ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`148 1 158 11`
+(signature)`round(theme, *corners)`
+
+Create a new theme based on (factor-local/parameter)&<#round.Parameters.theme[theme]> applying rounded corners where specified in (factor-local/parameter)&<#round.Parameters.corners[corners]>.
+
+#!syntax/python
+	rdiagonal = round(f_solid, 'top-left', 'bottom-right')
+
+[ width ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`160 1 165 77`
+(signature)`width(sequence)`
+
+Calculate the sum of the lengths of each item in the sequence;
+excepting values starting with (invalid/unknown)&<#None> representing a division.
+
+
+[ prepare ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`167 1 258 14`
+(signature)`prepare(theme, width, sequence)`
+
+Build sequences of strings providing the necessary formatting for the display
+of the framed data.
+
+[ > Parameters ]
+
+/(parameter)`theme`/
+	
+	The frame characters to use by default. Usually one of
+	(factor-local/data)&<#f_ascii[f_ascii]>, (factor-local/data)&<#f_solid[f_solid]>, (factor-local/data)&<#f_bold[f_bold]>, (factor-local/data)&<#f_double[f_double]>.
+
+/(parameter)`width`/
+	
+	The span of the data to align on. Usually, the maximum length of
+	a row calculated by `max(width(sequence))`.
+
+/(parameter)`sequence`/
+	
+	An iterable producing tuples of strings that will populate the
+	displayed rows.
+
+/(parameter)`minimum`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`margins`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`border`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`len`/
+	
+	(control/absent)`Undocumented`.
+
+
+[ align ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`260 1 315 69`
+(signature)`align(left, right, offsets)`
+
+Vertically pad the two prepared images with empty records
+according to the describes (factor-local/parameter)&<#align.Parameters.offsets[offsets]>.
+
+[ > Parameters ]
+
+/(parameter)`left`/
+	
+	The frame that will be placed on the left side.
+
+/(parameter)`right`/
+	
+	The frame that will be placed on the right side.
+
+/(parameter)`offsets`/
+	
+	The pair of vertical offsets for the (factor-local/parameter)&<#align.Parameters.left[left]> and (factor-local/parameter)&<#align.Parameters.right[right]> designating
+	where their top will be placed. Defaults to zeros.
+
+/(parameter)`len`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`sum`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`map`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`range`/
+	
+	(control/absent)`Undocumented`.
+
+
+[ combinations ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`318 1 342 1`
+#!source
+	combinations = {
+		(5, 1): 12,
+		(1, 5): 12,
+		(4, 10): 12,
+		(4, 20): 12,
+		(14, 0): 12,
+		(14, 10): 12,
+		(14, 20): 12,
+		(24, 10): 12,
+		(24, 0): 12,
+	
+		(4, 5): 14,
+		(14, 5): 14,
+		(24, 5): 14,
+	
+		(5, 20): 10,
+		(5, 10): 10,
+		(5, 0): 10,
+		(5, 15): 15,
+	
+		(4, 0): 2,
+		(0, 4): 2,
+		(5, 24): 19,
+		(24, 20): 22,
+	}
+
+[ combine ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`350 1 364 14`
+(signature)`combine(theme, mapping, borders)`
+
+Calculate the combined border for the given characters according to the
+(factor-local/parameter)&<#combine.Parameters.theme[theme]>, combination (factor-local/parameter)&<#combine.Parameters.mapping[mapping]> using the adjacent (factor-local/parameter)&<#combine.Parameters.borders[borders]>.
+
+
+[ stitch ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`366 1 397 40`
+(signature)`stitch(aligned)`
+
+Connects prepared frames along the vertical borders.
+
+Join two prepared frames so that intersections are properly combined.
+Both the left and right sides are modified in place respecting the boundaries.
+
+If the two prepared frames are not of equal length (rows), (factor-local/function)&<#align[align]> must be called
+on the two frames before being given to (factor-local/function)&<#stitch[stitch]>.
+
+[ > Parameters ]
+
+/(parameter)`aligned`/
+	
+	An iterator of aligned pairs providing the left and right side
+	to connect together into a combined image.
+
+	Multiple pairs are accepted to stitch the vertical edges
+	as well as the horizontal.
+
+/(parameter)`combinations`/
+	
+	(control/absent)`Undocumented`.
+

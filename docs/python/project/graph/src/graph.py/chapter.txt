@@ -1,0 +1,226 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 235 0`
+Project Graph processing tools.
+
+Provides (factor-local/class)&<#Queue[Queue]> for managing the processing of projects in dependency order.
+
+[ Usage ]
+
+#!syntax/python
+	from fault.system import files
+	from fault.projects import system as lsf
+	from fault.projects import graph
+	ctx = lsf.Context()
+	# Configure paths making up the project context.
+	ctx.connect(files.root@"/product/path")
+	ctx.load()
+	q = Queue()
+	ext = q.extend(ctx)
+	
+	def process(projects):
+		# Print dependency order for this example.
+		for x in projects:
+			print(x)
+		return projects # Signals completion in this example.
+	
+	# Unconditionally take initial set.
+	jobs = list(q.take(4))
+	while not q.terminal() and jobs:
+		finished_set = process(jobs)
+		# Notify queue state of completions.
+		jobs = list(q.finish(*finished_set).take(4))
+	
+[ Engineering ]
+
+The functions here could be easily refactored into a properly generalized form, but
+considering the code size and the benefits of a self-contained implementation,
+it seemed reasonable to leave the weight here. Even in the case of some duplicate
+effort, this should likely stay as-is.
+
+
+[ typing ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`39 1 39 13`
+
+[ collections ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`40 1 40 18`
+
+[ itertools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`41 1 41 16`
+
+[ collect ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`43 1 55 21`
+(signature)`collect(context)`
+
+Collect the projects and requirements from the (project-local/unknown)&<system#Context[system.Context]> instance.
+
+
+[ structure ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`57 1 93 37`
+(signature)`structure(collected)`
+
+Structure the projects and the required factors produced by (factor-local/function)&<#collect[collect]>
+into a graph that may be processed with (factor-local/function)&<#sequence[sequence]>.
+
+
+[ sequence ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`95 1 111 23`
+(signature)`sequence(pair)`
+
+Sequence the nodes of a project graph according to the completion order recognized
+from the generator send calls.
+
+
+[ Queue ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`113 1 210 48`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`113 13 113 18`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+State object for processing projects in dependency order.
+
+
+[ Queue >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`118 2 127 37`
+(signature)`__init__(self)`
+
+Allocate instance; follow with (factor-local/method)&<#Queue.extend[extend]>.
+
+
+[ Queue >> extend ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`129 2 153 12`
+		- (type/syntax)`typing.List[str]`
+		
+(signature)`extend(self, context)`
+
+Extend the queue using the projects contained within (factor-local/parameter)&<#Queue.extend.Parameters.context[context]>.
+
+Returns any out-of-context requirements.
+
+
+[ Queue >> status ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`155 2 160 39`
+(signature)`status(self)`
+
+A tuple of integers telling how many projects have been reported as
+finished and the total number of projects.
+
+
+[ Queue >> finish ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`162 2 184 13`
+(signature)`finish(self, *projects)`
+
+Note the projects as being processed.
+
+Returns instance for chaining with (factor-local/method)&<#Queue.take[take]>.
+
+
+[ Queue >> take ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`186 2 194 7`
+		- (type/syntax)`typing.Iterator[object]`
+		
+(signature)`take(self, quantity)`
+
+Retrieve enqueued project IIDs in graph order.
+
+
+[ Queue >> interrupt ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`196 2 202 21`
+(signature)`interrupt(self)`
+
+Halt the queue causing (factor-local/method)&<#Queue.terminal[terminal]> to return (invalid/unknown)&<#True> and (factor-local/method)&<#Queue.take[take]> to return empty lists.
+The internal state will be discarded, but entries may still be finished.
+
+
+[ Queue >> terminal ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`204 2 210 48`
+		- (type/syntax)`bool`
+		- (type/invalid/unknown)&<#bool>
+		
+(signature)`terminal(self)`
+
+Whether or not the queue has released all projects via (factor-local/method)&<#Queue.take[take]>.
+
+This can return (invalid/unknown)&<#True> prior to a final (factor-local/method)&<#Queue.finish[finish]> call.
+

@@ -1,0 +1,183 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 68 0`
+
+[ typing ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 1 13`
+
+[ types ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`2 1 2 12`
+
+[ MethodNotFound ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 7 4`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`4 22 4 30`
+	- (type/syntax)`Exception`
+	- (type/invalid/unknown)&<#Exception>
+	
+Raised by (factor-local/classmethod)&<#object.__colookup__[object.__colookup__]> when the given key is not initialized.
+
+
+[ Type ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`9 1 34 10`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`9 12 9 15`
+	- (type/syntax)`type`
+	- (type/invalid/unknown)&<#type>
+	
+
+[ Type >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 2 12 13`
+#!source
+	__slots__ = ()
+		@classmethod
+
+[ Type >> __prepare__ ]
+! CONTROL:
+	/type/
+		classmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`13 2 27 3`
+(signature)`__prepare__(Class, name, bases, **kw)`
+
+
+[ Type >> __new__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`29 2 34 10`
+(signature)`__new__(*args, **kw)`
+
+
+[ object ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`36 1 68 59`
+Base class for objects maintaining method aliases.
+
+Subclasses of this type will have the `comethod` decorator
+available in the class body for designating the key that can
+be used to select the decorated method.
+
+After the subclass is created, the metaclass will convert
+the decorator into the query interface for retrieving methods by
+their aliases.
+
+
+[ object >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`49 2 49 15`
+#!source
+	__slots__ = ()
+
+[ object >> __comethods__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`50 2 52 13`
+#!source
+	__comethods__ = None
+		@classmethod
+
+[ object >> __colookup__ ]
+! CONTROL:
+	/type/
+		classmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`53 2 59 27`
+		- (type/syntax)`typing.Callable`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing.Callable]>
+		
+(signature)`__colookup__(Class, *key)`
+
+
+[ object >> __cobind__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`61 2 62 46`
+		- (type/syntax)`types.MethodType`
+		- (type/none/invalid)&<http://fault.io/dev/null[types.MethodType]>
+		
+(signature)`__cobind__(self, *key)`
+
+
+[ object >> comethod ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`64 2 68 59`
+		- (type/syntax)`types.MethodType`
+		- (type/none/invalid)&<http://fault.io/dev/null[types.MethodType]>
+		
+(signature)`comethod(self, *key)`
+
+Select the method associated with the given (factor-local/parameter)&<#object.comethod.Parameters.key[key]>.
+

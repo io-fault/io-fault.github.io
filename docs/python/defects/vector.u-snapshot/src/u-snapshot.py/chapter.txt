@@ -1,0 +1,184 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 213 40`
+
+[ module ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 1 40`
+
+[ test_parse_empty ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`3 1 8 39`
+(signature)`test_parse_empty(test)`
+
+- (context-local/factor-element)&<fault.vector/snapshot#parse[fault.vector.snapshot.parse]>
+
+
+[ test_parse_env ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 1 20 82`
+(signature)`test_parse_env(test)`
+
+- (context-local/factor-element)&<fault.vector/snapshot#parse[fault.vector.snapshot.parse]>
+
+
+[ test_parse_multiple_env ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`22 1 36 2`
+(signature)`test_parse_multiple_env(test)`
+
+- (context-local/factor-element)&<fault.vector/snapshot#parse[fault.vector.snapshot.parse]>
+
+
+[ test_parse_no_env ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`38 1 47 64`
+(signature)`test_parse_no_env(test)`
+
+- (context-local/factor-element)&<fault.vector/snapshot#parse[fault.vector.snapshot.parse]>
+
+
+[ test_parse_env_unset ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`49 1 59 77`
+(signature)`test_parse_env_unset(test)`
+
+- (context-local/factor-element)&<fault.vector/snapshot#parse[fault.vector.snapshot.parse]>
+
+
+[ test_parse_newlines ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`61 1 71 66`
+(signature)`test_parse_newlines(test)`
+
+- (context-local/factor-element)&<fault.vector/snapshot#parse[fault.vector.snapshot.parse]>
+
+
+[ test_parse_newlines_suffix ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`73 1 83 72`
+(signature)`test_parse_newlines_suffix(test)`
+
+- (context-local/factor-element)&<fault.vector/snapshot#parse[fault.vector.snapshot.parse]>
+
+
+[ test_parse_zero_newlines ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`85 1 95 70`
+(signature)`test_parse_zero_newlines(test)`
+
+- (context-local/factor-element)&<fault.vector/snapshot#parse[fault.vector.snapshot.parse]>
+
+
+[ test_parse_plural_newlines ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`97 1 107 76`
+(signature)`test_parse_plural_newlines(test)`
+
+- (context-local/factor-element)&<fault.vector/snapshot#parse[fault.vector.snapshot.parse]>
+
+
+[ test_parse_no_op ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`109 1 120 64`
+(signature)`test_parse_no_op(test)`
+
+- (context-local/factor-element)&<fault.vector/snapshot#parse[fault.vector.snapshot.parse]>
+
+
+[ test_parse_unknown_qual ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`122 1 131 49`
+(signature)`test_parse_unknown_qual(test)`
+
+- (context-local/factor-element)&<fault.vector/snapshot#parse[fault.vector.snapshot.parse]>
+
+
+[ test_serialize_escapes ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`133 1 157 2`
+(signature)`test_serialize_escapes(test)`
+
+- (context-local/factor-element)&<fault.vector/snapshot#parse[fault.vector.snapshot.parse]>
+
+
+[ test_serialize_none ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`159 1 182 2`
+(signature)`test_serialize_none(test)`
+
+- (context-local/factor-element)&<fault.vector/snapshot#parse[fault.vector.snapshot.parse]>
+
+
+[ test_parse_space_separated_fields ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`184 1 210 36`
+(signature)`test_parse_space_separated_fields(test)`
+
+- (context-local/factor-element)&<fault.vector/snapshot#parse[fault.vector.snapshot.parse]>
+

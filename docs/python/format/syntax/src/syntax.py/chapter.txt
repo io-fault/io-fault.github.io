@@ -1,0 +1,120 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 133 48`
+Highlight
+
+
+[ itertools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 16`
+
+[ collections ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 18`
+
+[ kos ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 36`
+
+[ palette ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 7 30`
+
+[ theme ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`9 1 44 1`
+#!source
+	theme = {
+		'inclusion-stop-exclusion': 'background-adjacent',
+		'inclusion-stop-literal': 'background-adjacent',
+	
+		'exclusion-start': 'background-adjacent',
+		'exclusion-stop': 'background-adjacent',
+		'exclusion-delimit': 'teal',
+		'exclusion-space': 'teal',
+		'exclusion-words': 'teal',
+		'exclusion-fragment': 'teal',
+	
+		'literal-start': 'gray',
+		'literal-stop': 'gray',
+		'literal-delimit': 'gray',
+		'literal-space': 'gray',
+		'literal-words': 'gray',
+		'literal-fragment': 'gray',
+	
+		'inclusion-projectword': 'pink',
+		'inclusion-highlight': 'yellow',
+		'inclusion-keyword': 'blue',
+		'inclusion-coreword': 'violet',
+		'inclusion-metaword': 'orange',
+		'inclusion-identifier': 'terminal-default',
+		'inclusion-fragment': 'background-adjacent',
+	
+		'inclusion-start-enclosure': 'terminal-default',
+		'inclusion-stop-enclosure': 'terminal-default',
+		'inclusion-router': 'terminal-default',
+		'inclusion-terminator': 'terminal-default',
+		'inclusion-operation': 'terminal-default',
+		'inclusion-space': 'terminal-default',
+	
+		'cell': 'terminal-default', # (terminal) default cell color
+		'border': 'application-border',
+	}
+
+[ qualify ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`63 1 91 44`
+(signature)`qualify(tokens)`
+
+Convert a delimited KOS token stream into qualified tokens
+noting the context along with the event type.
+
+
+[ normalize ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`93 1 101 10`
+(signature)`normalize(qfields)`
+
+Normalize tab characters.
+

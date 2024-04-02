@@ -1,0 +1,1 @@
+[["Execution Platform initialization tools for the host system."], ["Create the default native execution handler."], ["Assign the host Python to the context."], ["Designate the priority of the architectures and their symbols."], ["Initialize the &target with the default host execution platform."]]

@@ -1,0 +1,37 @@
+<html root="2"><head><title>fault.format.syntax</title><meta charset="utf-8"/><link as="style" rel="preload" href="../../.legacy-web/core.css"></link><link as="style" rel="preload" href="../../.legacy-web/factor.css"></link><link rel="stylesheet" href="../../.legacy-web/core.css"></link><link rel="stylesheet" href="../../.legacy-web/factor.css"></link></head><body><main><h1><span class="prefix"></span><div class="page-subject"><img class="icon" src="../../.factor-type-icon/if.fault.io/python-module.svg"></img><span class="subject-identifier">syntax</span><a href="http://if.fault.io/factors/python.module"><code class="type">python.module</code></a></div><div class="page-context"><a href="../"><img class="icon" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNTYiIGhlaWdodD0iMjU2Ij48dGV4dCB4PSI0IiB5PSIwLjg4ZW0iIGZvbnQtc2l6ZT0iMjQ4Ij7wn5KOPC90ZXh0Pjwvc3ZnPg=="></img></a><span class="context-identifier">fault.format</span></div></h1><section class="chapter"><p><span class="text.normal">Highlight</span></p></section><section class="import" documented="false" local-identifier="itertools" id="itertools"><h1><span class="prefix"></span><a class="title" href="#itertools"><span class="text.normal">itertools</span></a><span class="abstract-type">import</span></h1></section><section class="import" documented="false" local-identifier="collections" id="collections"><h1><span class="prefix"></span><a class="title" href="#collections"><span class="text.normal">collections</span></a><span class="abstract-type">import</span></h1></section><section class="import" documented="false" local-identifier="kos" id="kos"><h1><span class="prefix"></span><a class="title" href="#kos"><span class="text.normal">kos</span></a><span class="abstract-type">import</span></h1></section><section class="import" documented="false" local-identifier="palette" id="palette"><h1><span class="prefix"></span><a class="title" href="#palette"><span class="text.normal">palette</span></a><span class="abstract-type">import</span></h1></section><section class="data" documented="false" local-identifier="theme" id="theme"><h1><span class="prefix"></span><a class="title" href="#theme"><span class="text.normal">theme</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code class="source">theme = {
+	'inclusion-stop-exclusion': 'background-adjacent',
+	'inclusion-stop-literal': 'background-adjacent',
+
+	'exclusion-start': 'background-adjacent',
+	'exclusion-stop': 'background-adjacent',
+	'exclusion-delimit': 'teal',
+	'exclusion-space': 'teal',
+	'exclusion-words': 'teal',
+	'exclusion-fragment': 'teal',
+
+	'literal-start': 'gray',
+	'literal-stop': 'gray',
+	'literal-delimit': 'gray',
+	'literal-space': 'gray',
+	'literal-words': 'gray',
+	'literal-fragment': 'gray',
+
+	'inclusion-projectword': 'pink',
+	'inclusion-highlight': 'yellow',
+	'inclusion-keyword': 'blue',
+	'inclusion-coreword': 'violet',
+	'inclusion-metaword': 'orange',
+	'inclusion-identifier': 'terminal-default',
+	'inclusion-fragment': 'background-adjacent',
+
+	'inclusion-start-enclosure': 'terminal-default',
+	'inclusion-stop-enclosure': 'terminal-default',
+	'inclusion-router': 'terminal-default',
+	'inclusion-terminator': 'terminal-default',
+	'inclusion-operation': 'terminal-default',
+	'inclusion-space': 'terminal-default',
+
+	'cell': 'terminal-default', # (terminal) default cell color
+	'border': 'application-border',
+}
+</code></pre></section><section class="function" documented="true" local-identifier="qualify" id="qualify"><h1><span class="prefix"></span><a class="title" href="#qualify"><span class="text.normal">qualify</span></a><span class="abstract-type">function</span></h1><p><code class="signature">qualify(tokens)</code></p><p><span class="text.normal">Convert a delimited KOS token stream into qualified tokens</span><span class="text.line-break"> </span><span class="text.normal">noting the context along with the event type.</span></p></section><section class="function" documented="true" local-identifier="normalize" id="normalize"><h1><span class="prefix"></span><a class="title" href="#normalize"><span class="text.normal">normalize</span></a><span class="abstract-type">function</span></h1><p><code class="signature">normalize(qfields)</code></p><p><span class="text.normal">Normalize tab characters.</span></p></section><h1 class="footing"></h1></main></body></html>

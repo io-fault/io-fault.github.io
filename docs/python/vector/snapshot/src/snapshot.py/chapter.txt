@@ -1,0 +1,48 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 79 0`
+Parsing and serialization functions for system argument vector snapshots.
+
+
+[ string ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 28`
+
+[ parse ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 42 75`
+		- (type/syntax)`tuple[		list[tuple[str, str]],		str,		list[str]	]`
+		
+(signature)`parse(text)`
+
+Parse a System Execution Plan string into structured environment
+settings, executable path, and command arguments.
+
+
+[ serialize ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`44 1 79 13`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+(signature)`serialize(triple)`
+
+Serialize the environment, execution path, and command arguments into a string.
+

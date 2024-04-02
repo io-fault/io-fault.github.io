@@ -1,0 +1,79 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 51 15`
+Calculate syntax line statistics using the (factor-local/function)&<#profile[profile]> function.
+
+
+[ json ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 11`
+
+[ collections ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 18`
+
+[ Iterable ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 36`
+
+[ statistics ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 7 36`
+
+[ line_metrics ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`9 1 23 17`
+		- (type/syntax)`(int, int):`
+		
+(signature)`line_metrics(line)`
+
+Identify the indentation level and the number of visible characters.
+
+
+[ profile ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`25 1 52 14`
+		- (type/syntax)`Iterable[str]`
+		
+(signature)`profile(source)`
+
+Emit a statistics profile using (factor-local/function)&<#line_metrics[line_metrics]>
+against the given (factor-local/parameter)&<#profile.Parameters.source[source]> lines.
+
+The yieled values intend to form a JSON document.
+

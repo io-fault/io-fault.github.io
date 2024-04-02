@@ -1,0 +1,261 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 131 0`
+Text data structures for working with paragraph content.
+
+(factor-local/class)&<#Fragment[Fragment]> and (factor-local/class)&<#Paragraph[Paragraph]> are designed to be easily transformed and serialized
+using common tools. (factor-local/class)&<#Fragment[Fragment]>
+*should* always be a pair-tuple, and (factor-local/class)&<#Paragraph[Paragraph]> a
+sequence of Fragments. The JSON/msgpack representation would likely be
+a sequence of sequences or a pair of sequences to be recombined.
+
+These text structure primitives are not ideal for managing fine grained formatting
+control. They are intended for managing semantic markup. However, (factor-local/class)&<#Fragment[Fragment]>
+being arbitrarily typed allows for format control events that could be interpreted
+by a Processing Context for such a purpose.
+
+
+[ Sequence ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`14 1 14 55`
+
+[ Iterable ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`14 1 14 55`
+
+[ Mapping ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`14 1 14 55`
+
+[ ElementTree ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`16 1 16 58`
+#!source
+	ElementTree = tuple[str, Sequence['ElementTree'], Mapping]
+
+[ Fragment ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`18 1 74 28`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`18 16 18 20`
+	- (type/syntax)`tuple`
+	- (type/invalid/unknown)&<#tuple>
+	
+An explicitly typed portion of text used as part of a (factor-local/class)&<#Paragraph[Paragraph]>.
+
+
+[ Fragment >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`22 2 24 10`
+#!source
+	__slots__ = ()
+		@property
+
+[ Fragment >> typepath ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`25 2 28 10`
+		- (type/syntax)`Sequence[str]`
+		
+
+[ Fragment >> data ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`29 2 32 10`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+
+[ Fragment >> emphasis ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`33 2 44 10`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+Return the integer weight of the emphasized text.
+(invalid/unknown)&<#None> if the text is not emphasized.
+
+
+[ Fragment >> type ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`45 2 62 10`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+Type string of the fragment.
+
+Usually a (character)`/` separated string where the first two fields
+are supposed to exist unconditionally. Common prefixes:
+
+- (id)`text/normal`
+- (id)`text/emphasis/[0-9]*`
+- (id)`reference/hyperlink`
+- (id)`referance/section`
+- (id)`reference/ambiguous`
+- (id)`reference/parenthetical`
+- (id)`literal/grave-accent`
+
+
+[ Fragment >> root ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`63 2 69 13`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+Initial path entry. Usually `reference`, `literal`, or `text`.
+
+
+[ Fragment >> new ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`70 2 74 28`
+(signature)`new(Class, type, data)`
+
+Create a new instance with an explicitly declared type.
+
+
+[ Paragraph ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`76 1 131 16`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`76 17 76 20`
+	- (type/syntax)`list`
+	- (type/invalid/unknown)&<#list>
+	
+A sequence of (factor-local/class)&<#Fragment[Fragment]> instances forming a paragraph.
+
+
+[ Paragraph >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`80 2 80 15`
+#!source
+	__slots__ = ()
+
+[ Paragraph >> __repr__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`82 2 85 13`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+(signature)`__repr__(self)`
+
+
+[ Paragraph >> of ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`86 2 92 10`
+(signature)`of(Class, *sequence)`
+
+Variable argument based (factor-local/class)&<#Paragraph[Paragraph]> constructor.
+
+
+[ Paragraph >> sole ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`93 2 101 10`
+		- (type/syntax)`Fragment`
+		- (type/factor-local/class)&<#Fragment[Fragment]>
+		
+Return the first and only fragment of the Paragraph.
+If multiple fragments exist, a (invalid/unknown)&<#ValueError> is raised.
+
+
+[ Paragraph >> sentences ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`102 2 131 16`
+		- (type/syntax)`Iterable[Sequence[Fragment]]`
+		
+Iterator producing lists that contain the sentence contents.
+A sentence in a paragraph is delimited by (character)`.` contained
+within `'text'`
+

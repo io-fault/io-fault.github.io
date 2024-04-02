@@ -1,0 +1,51 @@
+! CONTROL:
+	/type/
+		factor
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+[ Transpired ]
+
+Committed log entries.
+
+[ Anticipated ]
+
+Ideas or plans for changes.
+
+[ > Execution Plan Abstractions ]
+
+(project-local/unknown)&<execution> defines serialization and parsing functions for system execution plans.
+Using these functions directly is not ideal as some semantics are implied with
+their usage(the exact format).
+
+Define a new interface for abstracting the implementation of the format:
+(project-local/unknown)&<execution.prepare> and (project-local/unknown)&<execution.snapshot>. In addition to parsing the plan
+string, this will construct a (project-local/unknown)&<execution.KInvocation> instance directly for use.
+On the inverse, (project-local/unknown)&<execution.snapshot>, will take a (project-local/unknown)&<execution.KInvocation> instance
+and return a serialized plan for storage.
+
+Interfaces working with plan files may also be created. (project-local/unknown)&<execution.fs_load> and
+(project-local/unknown)&<execution.fs_store>.
+
+[ > Integration of Thread Module ]
+
+(project-local/unknown)&<thread> provides a set of aliases to functions and types within Python's _thread module.
+(project-local/unknown)&<process> depends on it unconditionally and it is natural to consider threads
+a Process resource. (project-local/unknown)&<thread> as an independent module provides no utility outside
+of a categorization method.
+
+[ > Restricting I/O Transits to Octets ]
+
+Python's object system is flexible to accommodate (project-local/unknown)&<io'> current design. However, the design
+heavily favors stream connections and Transit types other than (project-local/unknown)&<io.Octets> are unlikely to be
+used. The connection-less nature of UDP makes Datagrams an odd choice of interface for
+services and sometimes clients.
+
+The one exception is (project-local/unknown)&<io.Sockets> which is a uni-directional Transit that accepts socket
+connections. In order to simplify (project-local/unknown)&<io>, (project-local/unknown)&<events> needs to take responsibility for managing
+listening sockets.
+
+[ Discarded ]
+
+Abandoned ideas.
+

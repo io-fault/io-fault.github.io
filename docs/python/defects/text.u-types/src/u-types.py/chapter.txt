@@ -1,0 +1,88 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 34 0`
+Validate the text document primitives (invalid/unknown)&<#Paragraph> and (invalid/unknown)&<#Fragment>.
+
+
+[ sys ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 10`
+
+[ module ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 35`
+
+[ test_Fragment ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 9 53`
+(signature)`test_Fragment(test)`
+
+
+[ test_Paragraph ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 1 12 5`
+(signature)`test_Paragraph(test)`
+
+
+[ test_Paragraph_of ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`14 1 22 57`
+(signature)`test_Paragraph_of(test)`
+
+- (context-local/factor-element)&<fault.text/types#Paragraph.of[fault.text.types.Paragraph.of]>
+
+
+[ test_Paragraph_sole ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`24 1 28 49`
+(signature)`test_Paragraph_sole(test)`
+
+
+[ test_Paragraph_sentences ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`30 1 34 24`
+(signature)`test_Paragraph_sentences(test)`
+

@@ -1,0 +1,79 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 42 0`
+
+[ module ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 1 38`
+
+[ sample ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`3 1 6 1`
+#!source
+	sample = [
+		'http://fault.io/src/',
+		'http://fault.io/src/project/',
+	]
+
+[ search_test ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 18 38`
+(signature)`search_test(test, ss)`
+
+
+[ test_SubsequenceScan_matches ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`20 1 22 22`
+(signature)`test_SubsequenceScan_matches(test)`
+
+
+[ test_SubsequenceScan_ascending ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`24 1 28 70`
+(signature)`test_SubsequenceScan_ascending(test)`
+
+
+[ test_SubsequenceScan_deltas ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`30 1 42 22`
+(signature)`test_SubsequenceScan_deltas(test)`
+

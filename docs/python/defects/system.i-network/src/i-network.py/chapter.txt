@@ -1,0 +1,197 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 180 0`
+
+[ module ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 1 39`
+
+[ test_endpoint_new ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`3 1 18 25`
+(signature)`test_endpoint_new(test)`
+
+
+[ test_endpoint_local_new ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`20 1 35 23`
+(signature)`test_endpoint_local_new(test)`
+
+
+[ test_endpoint_inconsistent_pf ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`37 1 48 33`
+(signature)`test_endpoint_inconsistent_pf(test)`
+
+
+[ test_endpoint_consistent_pf ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`50 1 58 38`
+(signature)`test_endpoint_consistent_pf(test)`
+
+
+[ test_endpoint_inequality ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`60 1 68 44`
+(signature)`test_endpoint_inequality(test)`
+
+
+[ test_endpoint_nicmp ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`70 1 72 23`
+(signature)`test_endpoint_nicmp(test)`
+
+
+[ test_endpoint_equality_type ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`74 1 87 14`
+(signature)`test_endpoint_equality_type(test)`
+
+
+[ test_endpoint_only_equals ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`89 1 99 8`
+(signature)`test_endpoint_only_equals(test)`
+
+
+[ test_endpoint_ip4_new ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`101 1 108 29`
+(signature)`test_endpoint_ip4_new(test)`
+
+
+[ test_endpoint_ip4_invalid ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`110 1 122 29`
+(signature)`test_endpoint_ip4_invalid(test)`
+
+
+[ test_endpoint_ip4_pton_error ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`124 1 132 22`
+(signature)`test_endpoint_ip4_pton_error(test)`
+
+
+[ test_endpoint_ip6_invalid_address ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`134 1 146 29`
+(signature)`test_endpoint_ip6_invalid_address(test)`
+
+
+[ test_endpoint_ip6_pton_error ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`148 1 158 22`
+(signature)`test_endpoint_ip6_pton_error(test)`
+
+
+[ test_endpoint_ip6_new ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`160 1 167 24`
+(signature)`test_endpoint_ip6_new(test)`
+
+
+[ test_Endpoint_posix_codes ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`169 1 180 33`
+(signature)`test_Endpoint_posix_codes(test)`
+
+Validate presence of integer codes identifying the protocol family,
+socket type, and transport protocol.
+

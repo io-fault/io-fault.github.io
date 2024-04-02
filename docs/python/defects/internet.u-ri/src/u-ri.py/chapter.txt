@@ -1,0 +1,701 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 552 0`
+
+[ module ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 1 36`
+
+[ cmbx ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`3 1 11 2`
+(signature)`cmbx(t)`
+
+Yield a list of combinations using a mask
+
+
+[ expectation_samples ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`13 1 337 1`
+#!source
+	expectation_samples = (
+		(
+			'',
+			('none', None, None, None, None, None),
+			{
+				'type': 'none',
+				'scheme': None,
+			}
+		),
+	
+		# cover the amorphous type.
+		# indicates a 'none' scheme, but where the remaining
+		(
+			'x@fault.io:80',
+			('amorphous', None, 'x@fault.io:80', None, None, None),
+			{
+				'type': 'amorphous',
+				'scheme' : None,
+				'host': 'fault.io',
+				'port': '80',
+				'user': 'x',
+			}
+		),
+	
+		(
+			'fault.io:80',
+			('amorphous', None, 'fault.io:80', None, None, None),
+			{
+				'type': 'amorphous',
+				'scheme' : None,
+				'host': 'fault.io',
+				'port': '80',
+			}
+		),
+	
+		(
+			'/path1/',
+			('none', None, None, 'path1/', None, None),
+			{
+				'type': 'none',
+				'scheme' : None,
+				'path' : ['path1',''],
+			}
+		),
+	
+		(
+			'host',
+			('none', None, 'host', None, None, None),
+			{
+				'type' : 'none',
+				'scheme': None,
+				'host' : 'host',
+			}
+		),
+	
+		(
+			'http://host',
+			('authority', 'http', 'host', None, None, None),
+			{
+				'type': 'authority',
+				'scheme' : 'http',
+				'host' : 'host',
+			}
+		),
+	
+		# arbitrary scheme support
+		(
+			'x-un+known://host',
+			('authority', 'x-un+known', 'host', None, None, None),
+			{
+				'type': 'authority',
+				'scheme' : 'x-un+known',
+				'host' : 'host',
+			}
+		),
+	
+		(
+			'http://host/',
+			('authority', 'http', 'host', '', None, None),
+			{
+				'type': 'authority',
+				'scheme' : 'http',
+				'host' : 'host',
+				'path' : [],
+			}
+		),
+	
+		(
+			'http://host/path1',
+			('authority', 'http', 'host', 'path1', None, None),
+			{
+				'type' : 'authority',
+				'scheme' : 'http',
+				'host' : 'host',
+				'path' : ['path1'],
+			}
+		),
+	
+		(
+			'mailto:',
+			('absolute', 'mailto', None, None, None, None),
+			{
+				'type': 'absolute',
+				'scheme' : 'mailto',
+			}
+		),
+	
+		(
+			'mailto:x@fault.io',
+			('absolute', 'mailto', 'x@fault.io', None, None, None),
+			{
+				'type': 'absolute',
+				'scheme' : 'mailto',
+				'user': 'x',
+				'host': 'fault.io',
+			}
+		),
+	
+		(
+			'mailto:x@fault.io?foo=bar',
+			('absolute', 'mailto', 'x@fault.io', None, 'foo=bar', None),
+			{
+				'type': 'absolute',
+				'scheme' : 'mailto',
+				'user': 'x',
+				'host': 'fault.io',
+				'query': [
+					('foo', 'bar')
+				]
+			}
+		),
+	
+		(
+			'//host:/path1/',
+			('relative', None, 'host:', 'path1/', None, None),
+			{
+				'type': 'relative',
+				'scheme' : None,
+				'host' : 'host',
+				'port' : '',
+				'path' : ['path1',''],
+			}
+		),
+	
+		(
+			'//host/path1/',
+			('relative', None, 'host', 'path1/', None, None),
+			{
+				'type': 'relative',
+				'scheme' : None,
+				'host' : 'host',
+				'path' : ['path1',''],
+			}
+		),
+	
+		(
+			'http://host/path1/',
+			('authority', 'http', 'host', 'path1/', None, None),
+			{
+				'type': 'authority',
+				'scheme' : 'http',
+				'host' : 'host',
+				'path' : ['path1',''],
+			}
+		),
+		(
+			'http://host/path1/path2',
+			('authority', 'http', 'host', 'path1/path2', None, None),
+			{
+				'type': 'authority',
+				'scheme' : 'http',
+				'host' : 'host',
+				'path' : ['path1','path2'],
+			}
+		),
+		(
+			'http://host/path1/path2?k=v&k2=v2',
+			('authority', 'http', 'host', 'path1/path2', 'k=v&k2=v2', None),
+			{
+				'type': 'authority',
+				'scheme' : 'http',
+				'host' : 'host',
+				'path' : ['path1','path2'],
+				'query' : [('k', 'v'), ('k2', 'v2')],
+			}
+		),
+		(
+			'http://host/path1/path2?k=v',
+			('authority', 'http', 'host', 'path1/path2', 'k=v', None),
+			{
+				'type': 'authority',
+				'scheme' : 'http',
+				'host' : 'host',
+				'path' : ['path1','path2'],
+				'query' : [('k', 'v')],
+			}
+		),
+		(
+			'http://host/path1/path2?k=v#',
+			('authority', 'http', 'host', 'path1/path2', 'k=v', ''),
+			{
+				'type': 'authority',
+				'scheme' : 'http',
+				'host' : 'host',
+				'path' : ['path1','path2'],
+				'query' : [('k', 'v')],
+				'fragment' : '',
+			}
+		),
+		(
+			'http://host/path1/path2?k=v#fragment',
+			('authority', 'http', 'host', 'path1/path2', 'k=v', 'fragment'),
+			{
+				'type': 'authority',
+				'scheme' : 'http',
+				'host' : 'host',
+				'path' : ['path1','path2'],
+				'query' : [('k', 'v')],
+				'fragment' : 'fragment',
+			}
+		),
+		(
+			'http://host:port/path1/path2?k=v#fragment',
+			('authority', 'http', 'host:port', 'path1/path2', 'k=v', 'fragment'),
+			{
+				'type': 'authority',
+				'scheme' : 'http',
+				'host' : 'host',
+				'port' : 'port',
+				'path' : ['path1','path2'],
+				'query' : [('k', 'v')],
+				'fragment' : 'fragment',
+			}
+		),
+		(
+			'http://user@host:port/path1/path2?k=v#fragment',
+			('authority', 'http', 'user@host:port', 'path1/path2', 'k=v', 'fragment'),
+			{
+				'type': 'authority',
+				'scheme' : 'http',
+				'user' : 'user',
+				'host' : 'host',
+				'port' : 'port',
+				'path' : ['path1','path2'],
+				'query' : [('k', 'v')],
+				'fragment' : 'fragment',
+			}
+		),
+		(
+			'http://user:pass@host:port/path1/path2?k=v#fragment',
+			('authority', 'http', 'user:pass@host:port', 'path1/path2', 'k=v', 'fragment'),
+			{
+				'type': 'authority',
+				'scheme' : 'http',
+				'user' : 'user',
+				'password' : 'pass',
+				'host' : 'host',
+				'port' : 'port',
+				'path' : ['path1','path2'],
+				'query' : [('k', 'v')],
+				'fragment' : 'fragment',
+			}
+		),
+		(
+			'ftp://user:pass@host:port/pa%2Fth1/path2?#',
+			('authority', 'ftp', 'user:pass@host:port', 'pa%2Fth1/path2', '', ''),
+			{
+				'type': 'authority',
+				'scheme' : 'ftp',
+				'user' : 'user',
+				'password' : 'pass',
+				'host' : 'host',
+				'port' : 'port',
+				'path' : ['pa/th1','path2'],
+				'query' : [],
+				'fragment' : '',
+			}
+		),
+		(
+			'ftp://us%40er:pa:ss@host:port/pa%2Fth1/path2?#',
+			('authority', 'ftp', 'us%40er:pa:ss@host:port', 'pa%2Fth1/path2', '', ''),
+			{
+				'type': 'authority',
+				'scheme' : 'ftp',
+				'user' : 'us@er',
+				'password' : 'pa:ss',
+				'host' : 'host',
+				'port' : 'port',
+				'path' : ['pa/th1','path2'],
+				'query' : [],
+				'fragment' : '',
+			}
+		),
+		(
+			'ftp://us%40er:pa:ss@host:port/pa%2Fth1/path2?%23=%23#',
+			('authority', 'ftp', 'us%40er:pa:ss@host:port', 'pa%2Fth1/path2', '%23=%23', ''),
+			{
+				'type': 'authority',
+				'scheme' : 'ftp',
+				'user' : 'us@er',
+				'password' : 'pa:ss',
+				'host' : 'host',
+				'port' : 'port',
+				'path' : ['pa/th1','path2'],
+				'query' : [('#', '#')],
+				'fragment' : '',
+			}
+		),
+		(
+			'http://us%40er:pa:ss@host[address]:port/pa%2Fth1/path2?%23=%23#',
+			('authority', 'http', 'us%40er:pa:ss@host[address]:port', 'pa%2Fth1/path2', '%23=%23', ''),
+			{
+				'type': 'authority',
+				'scheme': 'http',
+				'user': 'us@er',
+				'password': 'pa:ss',
+				'host': 'host',
+				'address': 'address',
+				'port': 'port',
+				'path': ['pa/th1','path2'],
+				'query': [('#', '#')],
+				'fragment': '',
+			}
+		),
+	)
+
+[ sample_join_netlocs ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`339 1 362 1`
+#!source
+	sample_join_netlocs = (
+		'sample.com',
+		'host',
+		'host:port',
+		'host:8080',
+		'@host',
+		'%40@',
+		'%40:@host',
+		'user@',
+		'user:@',
+		'user:pass@',
+		':@host',
+		':@host:8080',
+		'user:@host:8080',
+		'user:@host[addr]:8080',
+		'user:@host[127.1]:8080',
+		'user:@[]:8080',
+		'user:@[::1]:8080',
+		'user:@[text]:8080',
+		'user:@[:8080',
+		'user:@[fe80::1]:8080',
+		'user:pass@host:8080',
+		'user:pass@host',
+	)
+
+[ sample_split_netlocs ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`364 1 376 1`
+#!source
+	sample_split_netlocs = (
+		('user', 'pass', 'host', None, 'port'),
+		('@', ':', 'host', None, 'port'),
+		('@user', 'pass:', 'host', None, 'port'),
+		('@user', 'pass:', 'host', None, ''),
+		('@user', 'pass:', '', None, ''),
+		('user', '@', 'host.com', None, ''),
+		('user', '@', 'å.com', None, '8080'),
+		('user', '', 'x--na.com', None, '8080'),
+		('', '', 'x--na.com', None, '8080'),
+		('', '', '', None, '8080'),
+		('', '', '', None, ''),
+	)
+
+[ sample_join_paths ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`378 1 391 1`
+#!source
+	sample_join_paths = (
+		None,
+		'',
+		'/',
+		'///',
+		'/path',
+		'/path/path2',
+		'/path/path2/',
+		'/path2',
+		'/åß∂',
+		'/åß∂/',
+		'/åß∂//',
+		'/element1/element2/element3',
+	)
+
+[ sample_schemes ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`393 1 397 1`
+#!source
+	sample_schemes = (
+		('authority', 'http'),
+		('relative', None),
+		('absolute', 'https'),
+	)
+
+[ sample_users ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`399 1 406 1`
+#!source
+	sample_users = (
+		'',
+		':',
+		'@',
+		'user@',
+		'user',
+		'jæms',
+	)
+
+[ sample_passwords ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`408 1 413 1`
+#!source
+	sample_passwords = [
+		'',
+		':',
+		'@',
+		'æçèêí',
+	]
+
+[ sample_hosts ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`415 1 421 1`
+#!source
+	sample_hosts = [
+		'',
+		'host',
+		#'[::1', Fail case. Can't use this host and correctly identify the port.
+		#'::1]', Fail case. Can't use this host and correctly identify the port.
+		'remotehost.tld',
+	]
+
+[ sample_addresses ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`423 1 427 1`
+#!source
+	sample_addresses = [
+		None,
+		'',
+		'::1',
+	]
+
+[ sample_ports ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`429 1 434 1`
+#!source
+	sample_ports = [
+		'',
+		'80',
+		'foo',
+		':',
+	]
+
+[ sample_paths ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`436 1 443 1`
+#!source
+	sample_paths = (
+		[],
+		# [''], Fail case. Can't represent this structure consistently.
+		['', ''],
+		['/',],
+		['path/'],
+		['path','/path2'],
+	)
+
+[ sample_queries ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`445 1 451 1`
+#!source
+	sample_queries = (
+		[],
+		# [('', None)], Fail case. Can't represent this structure consistently.
+		[('key', None)],
+		[('key', 'val'), ('key', None), ('?', '=')],
+		[('=', '=')],
+	)
+
+[ sample_fragments ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`453 1 458 1`
+#!source
+	sample_fragments = (
+		'',
+		'#',
+		'\x05',
+		'%05',
+	)
+
+[ samples ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`460 1 486 17`
+(signature)`samples()`
+
+
+[ test_expectations ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`488 1 506 26`
+(signature)`test_expectations(test)`
+
+
+[ test_split_join_netloc ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`508 1 512 15`
+(signature)`test_split_join_netloc(test)`
+
+
+[ test_join_split_netloc ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`514 1 520 15`
+(signature)`test_join_split_netloc(test)`
+
+
+[ test_split_join_path ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`522 1 526 14`
+(signature)`test_split_join_path(test)`
+
+
+[ test_join_split_path ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`528 1 532 13`
+(signature)`test_join_split_path(test)`
+
+
+[ test_combinations ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`534 1 538 41`
+(signature)`test_combinations(test)`
+
+
+[ test_strict ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`540 1 552 48`
+(signature)`test_strict(test)`
+
+- (context-local/factor-element)&<fault.internet/ri#strict[fault.internet.ri.strict]>
+

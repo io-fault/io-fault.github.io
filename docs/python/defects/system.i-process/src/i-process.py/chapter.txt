@@ -1,0 +1,197 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 227 25`
+
+[ os ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 1 9`
+
+[ signal ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`2 1 2 13`
+
+[ module ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 39`
+
+[ thread ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 28`
+
+[ Trapped ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 11 5`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`7 15 7 23`
+	- (type/syntax)`Exception`
+	- (type/invalid/unknown)&<#Exception>
+	
+Exception Fixture for test_critical.
+
+
+[ test_critical ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`13 1 58 27`
+(signature)`test_critical(test)`
+
+- (context-local/factor-element)&<fault.system/process#critical[fault.system.process.critical]>
+
+
+[ test_panic ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`60 1 82 14`
+(signature)`test_panic(test)`
+
+- (context-local/factor-element)&<fault.system/process#panic[fault.system.process.panic]>
+
+Validate the effect of panic triggering a (context-local/factor-element)&<fault.system/process#Critical[fault.system.process.Critical]> exception
+on the main threaad.
+
+
+[ test_interject ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`84 1 103 22`
+(signature)`test_interject(test)`
+
+Validate that interject manages to run a callable in a reasonable number of cycles.
+
+
+[ test_Invocation_argument_vector ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`105 1 110 24`
+(signature)`test_Invocation_argument_vector(test)`
+
+Check for argument property existence.
+
+
+[ test_Invocation_imports ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`112 1 132 44`
+(signature)`test_Invocation_imports(test)`
+
+Check for a functioning imports method.
+
+
+[ test_fs_pwd_no_environ ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`134 1 148 21`
+(signature)`test_fs_pwd_no_environ(test)`
+
+- (context-local/factor-element)&<fault.system/process#fs_pwd[fault.system.process.fs_pwd]>
+
+Path instantiation should be successful in the case that PWD is not present.
+
+
+[ test_fs_pwd_environ_priority ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`150 1 158 29`
+(signature)`test_fs_pwd_environ_priority(test)`
+
+- (context-local/factor-element)&<fault.system/process#fs_pwd[fault.system.process.fs_pwd]>
+
+Environment variable is given priority over os.getcwd.
+
+
+[ test_fs_chdir ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`160 1 172 69`
+(signature)`test_fs_chdir(test)`
+
+- (context-local/factor-element)&<fault.system/process#fs_chdir[fault.system.process.fs_chdir]>
+
+Validate fs_chdir's side effects.
+
+
+[ test_scheduler_parallel_execute ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`174 1 201 10`
+(signature)`test_scheduler_parallel_execute(test)`
+
+- (context-local/factor-element)&<fault.system/process#Scheduling[fault.system.process.Scheduling]>
+- (context-local/factor-element)&<fault.system/process#scheduler[fault.system.process.scheduler]>
+
+Validate (context-local/factor-element)&<fault.system/process#scheduler[fault.system.process.scheduler]> initialization with thread execution.
+
+
+[ test_scheduler_parallel_close ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`203 1 228 24`
+(signature)`test_scheduler_parallel_close(test)`
+
+- (context-local/factor-element)&<fault.system/process#Scheduling[fault.system.process.Scheduling]>
+- (context-local/factor-element)&<fault.system/process#scheduler[fault.system.process.scheduler]>
+
+Validate that (context-local/factor-element)&<fault.system/process#scheduler[fault.system.process.scheduler]> loop exit remove the (project-local/unknown)&<process.scheduler> attribute.
+

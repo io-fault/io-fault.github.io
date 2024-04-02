@@ -1,0 +1,35 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 44 0`
+This file *should* contain system.io *specific* tests.
+Primarily, invasive tests that rely on implementation specific functionality.
+
+Arguably, there's quite a bit of redundancy in this file.
+However, cases analyzed here that appear similar often have one-off cases
+that make it rather annoying to generalize.
+
+
+[ io ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`9 1 9 25`
+
+[ test_port ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 1 44 12`
+(signature)`test_port(test)`
+

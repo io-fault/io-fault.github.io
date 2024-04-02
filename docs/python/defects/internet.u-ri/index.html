@@ -1,0 +1,435 @@
+<html root="2"><head><title>fault.defects.internet.u-ri</title><meta charset="utf-8"/><link as="style" rel="preload" href="../../.legacy-web/core.css"></link><link as="style" rel="preload" href="../../.legacy-web/factor.css"></link><link rel="stylesheet" href="../../.legacy-web/core.css"></link><link rel="stylesheet" href="../../.legacy-web/factor.css"></link></head><body><main><h1><span class="prefix"></span><div class="page-subject"><img class="icon" src="../../.factor-type-icon/if.fault.io/python-module.svg"></img><span class="subject-identifier">u-ri</span><a href="http://if.fault.io/factors/python.module"><code class="type">python.module</code></a></div><div class="page-context"><a href="../"><img class="icon" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNTYiIGhlaWdodD0iMjU2Ij48dGV4dCB4PSI0IiB5PSIwLjg4ZW0iIGZvbnQtc2l6ZT0iMjQ4Ij7impnvuI88L3RleHQ+PC9zdmc+"></img></a><span class="context-identifier">fault.defects</span></div></h1><section class="chapter"></section><section class="import" documented="false" local-identifier="module" id="module"><h1><span class="prefix"></span><a class="title" href="#module"><span class="text.normal">module</span></a><span class="abstract-type">import</span></h1></section><section class="function" documented="true" local-identifier="cmbx" id="cmbx"><h1><span class="prefix"></span><a class="title" href="#cmbx"><span class="text.normal">cmbx</span></a><span class="abstract-type">function</span></h1><p><code class="signature">cmbx(t)</code></p><p><span class="text.normal">Yield a list of combinations using a mask</span></p></section><section class="data" documented="false" local-identifier="expectation_samples" id="expectation_samples"><h1><span class="prefix"></span><a class="title" href="#expectation_samples"><span class="text.normal">expectation_samples</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code class="source">expectation_samples = (
+	(
+		'',
+		('none', None, None, None, None, None),
+		{
+			'type': 'none',
+			'scheme': None,
+		}
+	),
+
+	# cover the amorphous type.
+	# indicates a 'none' scheme, but where the remaining
+	(
+		'x@fault.io:80',
+		('amorphous', None, 'x@fault.io:80', None, None, None),
+		{
+			'type': 'amorphous',
+			'scheme' : None,
+			'host': 'fault.io',
+			'port': '80',
+			'user': 'x',
+		}
+	),
+
+	(
+		'fault.io:80',
+		('amorphous', None, 'fault.io:80', None, None, None),
+		{
+			'type': 'amorphous',
+			'scheme' : None,
+			'host': 'fault.io',
+			'port': '80',
+		}
+	),
+
+	(
+		'/path1/',
+		('none', None, None, 'path1/', None, None),
+		{
+			'type': 'none',
+			'scheme' : None,
+			'path' : ['path1',''],
+		}
+	),
+
+	(
+		'host',
+		('none', None, 'host', None, None, None),
+		{
+			'type' : 'none',
+			'scheme': None,
+			'host' : 'host',
+		}
+	),
+
+	(
+		'http://host',
+		('authority', 'http', 'host', None, None, None),
+		{
+			'type': 'authority',
+			'scheme' : 'http',
+			'host' : 'host',
+		}
+	),
+
+	# arbitrary scheme support
+	(
+		'x-un+known://host',
+		('authority', 'x-un+known', 'host', None, None, None),
+		{
+			'type': 'authority',
+			'scheme' : 'x-un+known',
+			'host' : 'host',
+		}
+	),
+
+	(
+		'http://host/',
+		('authority', 'http', 'host', '', None, None),
+		{
+			'type': 'authority',
+			'scheme' : 'http',
+			'host' : 'host',
+			'path' : [],
+		}
+	),
+
+	(
+		'http://host/path1',
+		('authority', 'http', 'host', 'path1', None, None),
+		{
+			'type' : 'authority',
+			'scheme' : 'http',
+			'host' : 'host',
+			'path' : ['path1'],
+		}
+	),
+
+	(
+		'mailto:',
+		('absolute', 'mailto', None, None, None, None),
+		{
+			'type': 'absolute',
+			'scheme' : 'mailto',
+		}
+	),
+
+	(
+		'mailto:x@fault.io',
+		('absolute', 'mailto', 'x@fault.io', None, None, None),
+		{
+			'type': 'absolute',
+			'scheme' : 'mailto',
+			'user': 'x',
+			'host': 'fault.io',
+		}
+	),
+
+	(
+		'mailto:x@fault.io?foo=bar',
+		('absolute', 'mailto', 'x@fault.io', None, 'foo=bar', None),
+		{
+			'type': 'absolute',
+			'scheme' : 'mailto',
+			'user': 'x',
+			'host': 'fault.io',
+			'query': [
+				('foo', 'bar')
+			]
+		}
+	),
+
+	(
+		'//host:/path1/',
+		('relative', None, 'host:', 'path1/', None, None),
+		{
+			'type': 'relative',
+			'scheme' : None,
+			'host' : 'host',
+			'port' : '',
+			'path' : ['path1',''],
+		}
+	),
+
+	(
+		'//host/path1/',
+		('relative', None, 'host', 'path1/', None, None),
+		{
+			'type': 'relative',
+			'scheme' : None,
+			'host' : 'host',
+			'path' : ['path1',''],
+		}
+	),
+
+	(
+		'http://host/path1/',
+		('authority', 'http', 'host', 'path1/', None, None),
+		{
+			'type': 'authority',
+			'scheme' : 'http',
+			'host' : 'host',
+			'path' : ['path1',''],
+		}
+	),
+	(
+		'http://host/path1/path2',
+		('authority', 'http', 'host', 'path1/path2', None, None),
+		{
+			'type': 'authority',
+			'scheme' : 'http',
+			'host' : 'host',
+			'path' : ['path1','path2'],
+		}
+	),
+	(
+		'http://host/path1/path2?k=v&#38;k2=v2',
+		('authority', 'http', 'host', 'path1/path2', 'k=v&#38;k2=v2', None),
+		{
+			'type': 'authority',
+			'scheme' : 'http',
+			'host' : 'host',
+			'path' : ['path1','path2'],
+			'query' : [('k', 'v'), ('k2', 'v2')],
+		}
+	),
+	(
+		'http://host/path1/path2?k=v',
+		('authority', 'http', 'host', 'path1/path2', 'k=v', None),
+		{
+			'type': 'authority',
+			'scheme' : 'http',
+			'host' : 'host',
+			'path' : ['path1','path2'],
+			'query' : [('k', 'v')],
+		}
+	),
+	(
+		'http://host/path1/path2?k=v#',
+		('authority', 'http', 'host', 'path1/path2', 'k=v', ''),
+		{
+			'type': 'authority',
+			'scheme' : 'http',
+			'host' : 'host',
+			'path' : ['path1','path2'],
+			'query' : [('k', 'v')],
+			'fragment' : '',
+		}
+	),
+	(
+		'http://host/path1/path2?k=v#fragment',
+		('authority', 'http', 'host', 'path1/path2', 'k=v', 'fragment'),
+		{
+			'type': 'authority',
+			'scheme' : 'http',
+			'host' : 'host',
+			'path' : ['path1','path2'],
+			'query' : [('k', 'v')],
+			'fragment' : 'fragment',
+		}
+	),
+	(
+		'http://host:port/path1/path2?k=v#fragment',
+		('authority', 'http', 'host:port', 'path1/path2', 'k=v', 'fragment'),
+		{
+			'type': 'authority',
+			'scheme' : 'http',
+			'host' : 'host',
+			'port' : 'port',
+			'path' : ['path1','path2'],
+			'query' : [('k', 'v')],
+			'fragment' : 'fragment',
+		}
+	),
+	(
+		'http://user@host:port/path1/path2?k=v#fragment',
+		('authority', 'http', 'user@host:port', 'path1/path2', 'k=v', 'fragment'),
+		{
+			'type': 'authority',
+			'scheme' : 'http',
+			'user' : 'user',
+			'host' : 'host',
+			'port' : 'port',
+			'path' : ['path1','path2'],
+			'query' : [('k', 'v')],
+			'fragment' : 'fragment',
+		}
+	),
+	(
+		'http://user:pass@host:port/path1/path2?k=v#fragment',
+		('authority', 'http', 'user:pass@host:port', 'path1/path2', 'k=v', 'fragment'),
+		{
+			'type': 'authority',
+			'scheme' : 'http',
+			'user' : 'user',
+			'password' : 'pass',
+			'host' : 'host',
+			'port' : 'port',
+			'path' : ['path1','path2'],
+			'query' : [('k', 'v')],
+			'fragment' : 'fragment',
+		}
+	),
+	(
+		'ftp://user:pass@host:port/pa%2Fth1/path2?#',
+		('authority', 'ftp', 'user:pass@host:port', 'pa%2Fth1/path2', '', ''),
+		{
+			'type': 'authority',
+			'scheme' : 'ftp',
+			'user' : 'user',
+			'password' : 'pass',
+			'host' : 'host',
+			'port' : 'port',
+			'path' : ['pa/th1','path2'],
+			'query' : [],
+			'fragment' : '',
+		}
+	),
+	(
+		'ftp://us%40er:pa:ss@host:port/pa%2Fth1/path2?#',
+		('authority', 'ftp', 'us%40er:pa:ss@host:port', 'pa%2Fth1/path2', '', ''),
+		{
+			'type': 'authority',
+			'scheme' : 'ftp',
+			'user' : 'us@er',
+			'password' : 'pa:ss',
+			'host' : 'host',
+			'port' : 'port',
+			'path' : ['pa/th1','path2'],
+			'query' : [],
+			'fragment' : '',
+		}
+	),
+	(
+		'ftp://us%40er:pa:ss@host:port/pa%2Fth1/path2?%23=%23#',
+		('authority', 'ftp', 'us%40er:pa:ss@host:port', 'pa%2Fth1/path2', '%23=%23', ''),
+		{
+			'type': 'authority',
+			'scheme' : 'ftp',
+			'user' : 'us@er',
+			'password' : 'pa:ss',
+			'host' : 'host',
+			'port' : 'port',
+			'path' : ['pa/th1','path2'],
+			'query' : [('#', '#')],
+			'fragment' : '',
+		}
+	),
+	(
+		'http://us%40er:pa:ss@host[address]:port/pa%2Fth1/path2?%23=%23#',
+		('authority', 'http', 'us%40er:pa:ss@host[address]:port', 'pa%2Fth1/path2', '%23=%23', ''),
+		{
+			'type': 'authority',
+			'scheme': 'http',
+			'user': 'us@er',
+			'password': 'pa:ss',
+			'host': 'host',
+			'address': 'address',
+			'port': 'port',
+			'path': ['pa/th1','path2'],
+			'query': [('#', '#')],
+			'fragment': '',
+		}
+	),
+)
+</code></pre></section><section class="data" documented="false" local-identifier="sample_join_netlocs" id="sample_join_netlocs"><h1><span class="prefix"></span><a class="title" href="#sample_join_netlocs"><span class="text.normal">sample_join_netlocs</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code class="source">sample_join_netlocs = (
+	'sample.com',
+	'host',
+	'host:port',
+	'host:8080',
+	'@host',
+	'%40@',
+	'%40:@host',
+	'user@',
+	'user:@',
+	'user:pass@',
+	':@host',
+	':@host:8080',
+	'user:@host:8080',
+	'user:@host[addr]:8080',
+	'user:@host[127.1]:8080',
+	'user:@[]:8080',
+	'user:@[::1]:8080',
+	'user:@[text]:8080',
+	'user:@[:8080',
+	'user:@[fe80::1]:8080',
+	'user:pass@host:8080',
+	'user:pass@host',
+)
+</code></pre></section><section class="data" documented="false" local-identifier="sample_split_netlocs" id="sample_split_netlocs"><h1><span class="prefix"></span><a class="title" href="#sample_split_netlocs"><span class="text.normal">sample_split_netlocs</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code class="source">sample_split_netlocs = (
+	('user', 'pass', 'host', None, 'port'),
+	('@', ':', 'host', None, 'port'),
+	('@user', 'pass:', 'host', None, 'port'),
+	('@user', 'pass:', 'host', None, ''),
+	('@user', 'pass:', '', None, ''),
+	('user', '@', 'host.com', None, ''),
+	('user', '@', 'å.com', None, '8080'),
+	('user', '', 'x--na.com', None, '8080'),
+	('', '', 'x--na.com', None, '8080'),
+	('', '', '', None, '8080'),
+	('', '', '', None, ''),
+)
+</code></pre></section><section class="data" documented="false" local-identifier="sample_join_paths" id="sample_join_paths"><h1><span class="prefix"></span><a class="title" href="#sample_join_paths"><span class="text.normal">sample_join_paths</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code class="source">sample_join_paths = (
+	None,
+	'',
+	'/',
+	'///',
+	'/path',
+	'/path/path2',
+	'/path/path2/',
+	'/path2',
+	'/åß∂',
+	'/åß∂/',
+	'/åß∂//',
+	'/element1/element2/element3',
+)
+</code></pre></section><section class="data" documented="false" local-identifier="sample_schemes" id="sample_schemes"><h1><span class="prefix"></span><a class="title" href="#sample_schemes"><span class="text.normal">sample_schemes</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code class="source">sample_schemes = (
+	('authority', 'http'),
+	('relative', None),
+	('absolute', 'https'),
+)
+</code></pre></section><section class="data" documented="false" local-identifier="sample_users" id="sample_users"><h1><span class="prefix"></span><a class="title" href="#sample_users"><span class="text.normal">sample_users</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code class="source">sample_users = (
+	'',
+	':',
+	'@',
+	'user@',
+	'user',
+	'jæms',
+)
+</code></pre></section><section class="data" documented="false" local-identifier="sample_passwords" id="sample_passwords"><h1><span class="prefix"></span><a class="title" href="#sample_passwords"><span class="text.normal">sample_passwords</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code class="source">sample_passwords = [
+	'',
+	':',
+	'@',
+	'æçèêí',
+]
+</code></pre></section><section class="data" documented="false" local-identifier="sample_hosts" id="sample_hosts"><h1><span class="prefix"></span><a class="title" href="#sample_hosts"><span class="text.normal">sample_hosts</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code class="source">sample_hosts = [
+	'',
+	'host',
+	#'[::1', Fail case. Can't use this host and correctly identify the port.
+	#'::1]', Fail case. Can't use this host and correctly identify the port.
+	'remotehost.tld',
+]
+</code></pre></section><section class="data" documented="false" local-identifier="sample_addresses" id="sample_addresses"><h1><span class="prefix"></span><a class="title" href="#sample_addresses"><span class="text.normal">sample_addresses</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code class="source">sample_addresses = [
+	None,
+	'',
+	'::1',
+]
+</code></pre></section><section class="data" documented="false" local-identifier="sample_ports" id="sample_ports"><h1><span class="prefix"></span><a class="title" href="#sample_ports"><span class="text.normal">sample_ports</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code class="source">sample_ports = [
+	'',
+	'80',
+	'foo',
+	':',
+]
+</code></pre></section><section class="data" documented="false" local-identifier="sample_paths" id="sample_paths"><h1><span class="prefix"></span><a class="title" href="#sample_paths"><span class="text.normal">sample_paths</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code class="source">sample_paths = (
+	[],
+	# [''], Fail case. Can't represent this structure consistently.
+	['', ''],
+	['/',],
+	['path/'],
+	['path','/path2'],
+)
+</code></pre></section><section class="data" documented="false" local-identifier="sample_queries" id="sample_queries"><h1><span class="prefix"></span><a class="title" href="#sample_queries"><span class="text.normal">sample_queries</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code class="source">sample_queries = (
+	[],
+	# [('', None)], Fail case. Can't represent this structure consistently.
+	[('key', None)],
+	[('key', 'val'), ('key', None), ('?', '=')],
+	[('=', '=')],
+)
+</code></pre></section><section class="data" documented="false" local-identifier="sample_fragments" id="sample_fragments"><h1><span class="prefix"></span><a class="title" href="#sample_fragments"><span class="text.normal">sample_fragments</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code class="source">sample_fragments = (
+	'',
+	'#',
+	'\x05',
+	'%05',
+)
+</code></pre></section><section class="function" documented="false" local-identifier="samples" id="samples"><h1><span class="prefix"></span><a class="title" href="#samples"><span class="text.normal">samples</span></a><span class="abstract-type">function</span></h1><p><code class="signature">samples()</code></p></section><section class="function" documented="false" local-identifier="test_expectations" id="test_expectations"><h1><span class="prefix"></span><a class="title" href="#test_expectations"><span class="text.normal">test_expectations</span></a><span class="abstract-type">function</span></h1><p><code class="signature">test_expectations(test)</code></p></section><section class="function" documented="false" local-identifier="test_split_join_netloc" id="test_split_join_netloc"><h1><span class="prefix"></span><a class="title" href="#test_split_join_netloc"><span class="text.normal">test_split_join_netloc</span></a><span class="abstract-type">function</span></h1><p><code class="signature">test_split_join_netloc(test)</code></p></section><section class="function" documented="false" local-identifier="test_join_split_netloc" id="test_join_split_netloc"><h1><span class="prefix"></span><a class="title" href="#test_join_split_netloc"><span class="text.normal">test_join_split_netloc</span></a><span class="abstract-type">function</span></h1><p><code class="signature">test_join_split_netloc(test)</code></p></section><section class="function" documented="false" local-identifier="test_split_join_path" id="test_split_join_path"><h1><span class="prefix"></span><a class="title" href="#test_split_join_path"><span class="text.normal">test_split_join_path</span></a><span class="abstract-type">function</span></h1><p><code class="signature">test_split_join_path(test)</code></p></section><section class="function" documented="false" local-identifier="test_join_split_path" id="test_join_split_path"><h1><span class="prefix"></span><a class="title" href="#test_join_split_path"><span class="text.normal">test_join_split_path</span></a><span class="abstract-type">function</span></h1><p><code class="signature">test_join_split_path(test)</code></p></section><section class="function" documented="false" local-identifier="test_combinations" id="test_combinations"><h1><span class="prefix"></span><a class="title" href="#test_combinations"><span class="text.normal">test_combinations</span></a><span class="abstract-type">function</span></h1><p><code class="signature">test_combinations(test)</code></p></section><section class="function" documented="true" local-identifier="test_strict" id="test_strict"><h1><span class="prefix"></span><a class="title" href="#test_strict"><span class="text.normal">test_strict</span></a><span class="abstract-type">function</span></h1><p><code class="signature">test_strict(test)</code></p><ul class="text.set"><li><p><a class="context-local" href="../../internet/ri#strict"><span class="factor-element">fault.internet.ri.strict</span></a></p></li></ul></section><h1 class="footing"></h1></main></body></html>

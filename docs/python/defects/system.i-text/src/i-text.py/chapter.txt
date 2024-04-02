@@ -1,0 +1,148 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 127 0`
+
+[ sys ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 1 10`
+
+[ module ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`2 1 2 36`
+
+[ test_setlocale ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 12 63`
+(signature)`test_setlocale(test)`
+
+- (project-local/unknown)&<extensions.text/module.c#dsetlocale>
+- (context-local/factor-element)&<fault.system/text#setlocale[fault.system.text.setlocale]>
+
+
+[ test_encoding ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`14 1 16 33`
+(signature)`test_encoding(test)`
+
+
+[ test_cells ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`18 1 27 36`
+(signature)`test_cells(test)`
+
+- (project-local/unknown)&<extensions.tty/module.c#cells>
+- (context-local/factor-element)&<fault.system/text#cells[fault.system.text.cells]>
+
+
+[ test_cells_chinese_sample ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`30 1 46 30`
+(signature)`test_cells_chinese_sample(test)`
+
+- (project-local/unknown)&<extensions.tty/module.c#cells>
+- (context-local/factor-element)&<fault.system/text#cells[fault.system.text.cells]>
+
+
+[ test_cells_ctlchars ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`48 1 59 39`
+(signature)`test_cells_ctlchars(test)`
+
+- (project-local/unknown)&<extensions.tty/module.c#cells>
+- (context-local/factor-element)&<fault.system/text#cells[fault.system.text.cells]>
+
+
+[ test_cells_combining ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`61 1 72 35`
+(signature)`test_cells_combining(test)`
+
+- (project-local/unknown)&<extensions.tty/module.c#cells>
+- (context-local/factor-element)&<fault.system/text#cells[fault.system.text.cells]>
+
+
+[ test_cells_vs ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`74 1 90 29`
+(signature)`test_cells_vs(test)`
+
+- (project-local/unknown)&<extensions.tty/module.c#cells>
+- (context-local/factor-element)&<fault.system/text#cells[fault.system.text.cells]>
+
+Variant Selectors.
+
+
+[ test_cells_sequences ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`92 1 107 35`
+(signature)`test_cells_sequences(test)`
+
+- (project-local/unknown)&<extensions.tty/module.c#cells>
+- (context-local/factor-element)&<fault.system/text#cells[fault.system.text.cells]>
+
+ZWJ sequences.
+
+
+[ test_cells_zerowidths ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`109 1 127 24`
+(signature)`test_cells_zerowidths(test)`
+
+- (project-local/unknown)&<extensions.tty/module.c#cells>
+- (context-local/factor-element)&<fault.system/text#cells[fault.system.text.cells]>
+
+Zero width cases.
+

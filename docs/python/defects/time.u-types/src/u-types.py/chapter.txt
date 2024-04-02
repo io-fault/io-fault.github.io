@@ -1,0 +1,383 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 346 0`
+
+[ fractions ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 1 16`
+
+[ module ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`2 1 2 35`
+
+[ test_classes ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 14 24`
+(signature)`test_classes(test)`
+
+
+[ test_select ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`16 1 27 59`
+(signature)`test_select(test)`
+
+- (context-local/factor-element)&<fault.time/types#select[fault.time.types.select]>
+
+
+[ test_instants ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`29 1 33 16`
+(signature)`test_instants(test)`
+
+
+[ test_ratios ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`35 1 37 86`
+(signature)`test_ratios(test)`
+
+
+[ test_of_Measure ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`39 1 103 71`
+(signature)`test_of_Measure(test)`
+
+
+[ test_of_months ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`105 1 109 17`
+(signature)`test_of_months(test)`
+
+
+[ test_of_iso ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`111 1 121 40`
+(signature)`test_of_iso(test)`
+
+
+[ test_of_iso_date ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`123 1 128 15`
+(signature)`test_of_iso_date(test)`
+
+
+[ leap_samples ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`130 1 138 1`
+#!source
+	leap_samples = [
+		(False, "1600-02-29T00:00:00.0"), # shouldnt wrap
+		(True, "1601-02-29T00:00:00.0"), # should wrap
+		(False, "1604-02-29T00:00:00.0"), # shouldn't wrap
+		(True, "1700-02-29T00:00:00.0"), # should wrap
+		(True, "1800-02-29T00:00:00.0"), # should wrap
+		(True, "1900-02-29T00:00:00.0"), # should wrap
+		(False, "2000-02-29T00:00:00.0"), # shouldn't wrap
+	]
+
+[ test_of_leaps ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`140 1 146 31`
+(signature)`test_of_leaps(test)`
+
+
+[ test_of_relative ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`148 1 154 51`
+(signature)`test_of_relative(test)`
+
+
+[ test_date_contains ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`156 1 166 13`
+(signature)`test_date_contains(test)`
+
+
+[ test_part_datetime ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`168 1 176 13`
+(signature)`test_part_datetime(test)`
+
+
+[ test_relative_times ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`178 1 193 35`
+(signature)`test_relative_times(test)`
+
+
+[ test_Timestamp_select ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`195 1 205 40`
+(signature)`test_Timestamp_select(test)`
+
+
+[ test_Timestamp_update ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`207 1 211 91`
+(signature)`test_Timestamp_update(test)`
+
+
+[ test_date ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`213 1 216 13`
+(signature)`test_date(test)`
+
+
+[ test_truncate ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`218 1 240 24`
+(signature)`test_truncate(test)`
+
+
+[ test_measure_method ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`242 1 246 52`
+(signature)`test_measure_method(test)`
+
+
+[ test_rollback ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`248 1 250 67`
+(signature)`test_rollback(test)`
+
+
+[ test_timeofday_select ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`252 1 262 17`
+(signature)`test_timeofday_select(test)`
+
+
+[ test_align ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`264 1 281 59`
+(signature)`test_align(test)`
+
+The most important use of alignment is for finding the n-th
+since the first or last of a month.
+
+
+[ test_unix ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`283 1 287 28`
+(signature)`test_unix(test)`
+
+
+[ test_hashing ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`289 1 301 17`
+(signature)`test_hashing(test)`
+
+
+[ test_subseconds ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`303 1 306 43`
+(signature)`test_subseconds(test)`
+
+
+[ test_Months_elapse ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`308 1 312 60`
+(signature)`test_Months_elapse(test)`
+
+
+[ test_indefinite_comparisons ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`314 1 324 38`
+(signature)`test_indefinite_comparisons(test)`
+
+
+[ test_indefinite_definite_comparisons ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`326 1 334 32`
+(signature)`test_indefinite_definite_comparisons(test)`
+
+
+[ test_representations ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`336 1 346 84`
+(signature)`test_representations(test)`
+

@@ -1,0 +1,336 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 216 0`
+Memory management classes for implementing usage constraints
+in parts of processes.
+
+
+[ os ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 9`
+
+[ weakref ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 14`
+
+[ collections ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 7 18`
+
+[ Memory ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`9 1 27 17`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`9 14 9 22`
+	- (type/syntax)`bytearray`
+	- (type/invalid/unknown)&<#bytearray>
+	
+bytearray subclass supporting weak-references and
+identifier hashing for memory-free signalling.
+
+
+[ Memory >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`21 2 21 29`
+#!source
+	__slots__ = ('__weakref__',)
+
+[ Memory >> __hash__ ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`23 2 27 17`
+(signature)`__hash__(self)`
+
+Object Identifier based hash for allowing indexing of allocated instances.
+
+
+[ MemoryContext ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`29 1 102 29`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`29 21 29 26`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+Memory pool that uses weakref's and context managers to reclaim memory.
+
+
+[ MemoryContext >> Memory ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`33 2 33 16`
+#!source
+	Memory = Memory # bytearray subclass with weakref support
+
+[ MemoryContext >> Reference ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`34 2 36 13`
+#!source
+	Reference = weakref.ref # for reclaiming memory
+		@classmethod
+
+[ MemoryContext >> from_mib ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`37 2 44 19`
+(signature)`from_mib(typ, size)`
+
+Construct a Reservoir from the given number of Mebibytes desired.
+
+
+[ MemoryContext >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`46 2 60 10`
+(signature)`__init__(self)`
+
+
+[ MemoryContext >> used ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`61 2 67 10`
+Memory units currently in use.
+
+
+[ MemoryContext >> available ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`68 2 72 27`
+Number of memory units available.
+
+
+[ MemoryContext >> allocate ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`74 2 83 12`
+(signature)`allocate(self)`
+
+Allocate a unit of memory for use. When Python references to the memory object
+no longer exist, another unit will be added.
+
+
+[ MemoryContext >> reclaim ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`85 2 96 7`
+(signature)`reclaim(self, memory)`
+
+
+[ MemoryContext >> acquire ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`98 2 102 29`
+(signature)`acquire(self, event)`
+
+Explicitly add an object to the available segments.
+
+
+[ Segments ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`104 1 216 50`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`104 16 104 21`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+Iterate over the slices of an active memory map;
+Weak references of the slices are held to track when
+its appropriate to close the memory map.
+
+
+[ Segments >> MemoryMap ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`111 2 111 35`
+
+[ Segments >> ACCESS_MODE ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`112 2 114 13`
+
+[ Segments >> open ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`115 2 128 10`
+(signature)`open(Class, path)`
+
+Open the file at the given path in read-only mode and
+create a (factor-local/class)&<#Segments[Segments]> providing a (none/invalid)&<http://fault.io/dev/null[mmap.mmap]> interface
+to the contents.
+
+
+[ Segments >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`130 2 140 32`
+(signature)`__init__(self, memory)`
+
+Initialize an instance using the given (factor-local/parameter)&<#Segments.__init__.Parameters.memory[memory]>. An instance
+created by (none/invalid)&<http://fault.io/dev/null[mmap.mmap]>.
+
+[ >> Parameters ]
+
+/(parameter)`self`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`memory`/
+	- (type/syntax)`MemoryMap`
+	- (type/none/invalid)&<http://fault.io/dev/null[mmap.mmap]>
+	
+	The `mmap.mmap` instance defining the total memory region.
+
+
+[ Segments >> __del__ ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`142 2 174 22`
+(signature)`__del__(self)`
+
+Manage the final stages of (factor-local/class)&<#Segments[Segments]> deallocation by transitioning
+to a finalization process where (factor-local/method)&<#Segments.select[select]> methods can no longer occur,
+and existing (invalid/unknown)&<#memoryview's> referencing (factor-local/parameter)&<#Segments.__del__.Parameters.self[self]>, (invalid/unknown)&<#weaks>, are
+used to construct a sequence of (none/invalid)&<http://fault.io/dev/null[weakref.finalize]> callbacks.
+
+Once in the final stage, a count of outstanding (invalid/unknown)&<#memoryview> instances
+is tracked and decremented with (factor-local/method)&<#Segments.decrement[decrement]> until there are no more references
+to the (factor-local/class)&<#Segments[Segments]> allowing the file descriptor associated with (invalid/unknown)&<#memory> to be closed.
+
+
+[ Segments >> decrement ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`176 2 185 18`
+(signature)`decrement(self)`
+
+Used internally by (factor-local/method)&<#Segments.__del__[__del__]> to manage the deallocation process
+when there are outstanding references to the memory mapped region.
+
+
+[ Segments >> select ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`187 2 210 15`
+(signature)`select(self, start, stop, size)`
+
+Constructs an iterator to the parameterized range over the
+(invalid/unknown)&<#memory> the (factor-local/class)&<#Segments[Segments]> instance was initialized with.
+
+
+[ Segments >> __iter__ ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`212 2 216 50`
+(signature)`__iter__(self)`
+
+Return an iterator to the entire region in sixteen kilobyte sizes.
+

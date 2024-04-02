@@ -1,0 +1,1 @@
+[[["status_identifiers"], ["Harness", "concurrently"]], [{"syntax": "{\n\t'skip': 'skipped',\n\t'return': 'passed',\n\t'pass': 'passed',\n\t'fail': 'failed',\n\t'core': 'failed',\n\t'error': 'failed',\n}", "area": [[25, 22], [32, 1]]}, {"syntax": "staticmethod(process.concurrently)", "area": [[38, 17], [38, 50]]}]]

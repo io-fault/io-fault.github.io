@@ -1,0 +1,317 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 158 0`
+(context-local/project-name)&<fault.kernel> protocol adapters for transport security contexts.
+
+
+[ weakref ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 14`
+
+[ types ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 12`
+
+[ importlib ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 26`
+
+[ weak ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 8 26`
+
+[ flows ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`9 1 9 26`
+
+[ identity ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 1 10 29`
+
+[ lsf ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 1 11 35`
+
+[ get_application_context ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`13 1 21 45`
+(signature)`get_application_context()`
+
+
+[ Violation ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`23 1 43 54`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`23 17 23 25`
+	- (type/syntax)`Exception`
+	- (type/invalid/unknown)&<#Exception>
+	
+Security Context restriction violation.
+
+Usually caused by implementation errors, violations are
+abstractions used to provide a symbolic identifier for
+the restriction that was violated.
+
+[ > Properties ]
+
+/identifier/
+	The symbolic identifier used to describe the error.
+
+/description/
+	An implementation specific description of the error.
+
+
+[ Violation >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`38 2 40 32`
+(signature)`__init__(self, identifier, description)`
+
+
+[ Violation >> __str__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`42 2 43 54`
+(signature)`__str__(self)`
+
+
+[ load_context ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`45 1 61 28`
+(signature)`load_context(route, type)`
+
+
+[ load ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`63 1 76 44`
+(signature)`load(type, application)`
+
+Load the extension module for the given (factor-local/parameter)&<#load.Parameters.type[type]> and (factor-local/parameter)&<#load.Parameters.application[application]>.
+
+[ > Parameters ]
+
+/(parameter)`type`/
+	- (type/syntax)`str`
+	- (type/invalid/unknown)&<#str>
+	
+	The identifier for the adapter's protocol.
+	Normally, (id)`kprotocol-client` or (id)`kprotocol-server`.
+
+/(parameter)`application`/
+	
+	The symbolic name for the application.
+	Defaults to (id)`http`.
+
+/(parameter)`name`/
+	
+	(control/absent)`Undocumented`.
+
+
+[ SecuredTransmit ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`78 1 117 17`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`78 23 78 36`
+	- (type/syntax)`flows.Protocol`
+	- (type/context-local/factor-element)&<fault.kernel/flows#Protocol[fault.kernel.flows.Protocol]>
+	
+Transport stack entry for secured output.
+Holds a weak reference to the corresponding (factor-local/class)&<#SecuredReceive[SecuredReceive]> instance
+using (invalid/unknown)&<#stx_receive_channel>.
+
+
+[ SecuredTransmit >> _stx_receive_closed ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`85 2 85 28`
+#!source
+	_stx_receive_closed = False
+
+[ SecuredTransmit >> stx_receive_closed ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`87 2 97 23`
+(signature)`stx_receive_closed(self)`
+
+Signal endpoint recognizing when the corresponding receive
+has seen a transport protocol level termination.
+
+
+[ SecuredTransmit >> stx_receive_interrupt ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`99 2 108 73`
+(signature)`stx_receive_interrupt(self)`
+
+Wire closed without protocol shutdown.
+
+
+[ SecuredTransmit >> f_terminate ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`110 2 117 17`
+(signature)`f_terminate(self)`
+
+
+[ SecuredReceive ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`119 1 139 22`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`119 22 119 35`
+	- (type/syntax)`flows.Protocol`
+	- (type/context-local/factor-element)&<fault.kernel/flows#Protocol[fault.kernel.flows.Protocol]>
+	
+Transport stack entry for secured input.
+Holds a strong reference to the corresponding (factor-local/class)&<#SecuredTransmit[SecuredTransmit]> instance
+using (invalid/unknown)&<#srx_transmit_channel>.
+
+
+[ SecuredReceive >> interrupt ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`126 2 128 51`
+(signature)`interrupt(self)`
+
+
+[ SecuredReceive >> p_terminated ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`130 2 132 48`
+(signature)`p_terminated(self)`
+
+
+[ SecuredReceive >> f_terminate ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`134 2 139 22`
+(signature)`f_terminate(self)`
+
+
+[ allocate ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`141 1 158 18`
+(signature)`allocate(tls)`
+
+Construct a protocol stack pair using the given (factor-local/parameter)&<#allocate.Parameters.tls[tls]> instance.
+

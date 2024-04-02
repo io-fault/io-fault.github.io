@@ -1,0 +1,748 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 430 0`
+Test framework primitives. Provides and defines (factor-local/class)&<#Test[Test]>, (factor-local/class)&<#Contention[Contention]>, (factor-local/class)&<#Absurdity[Absurdity]>, and (factor-local/class)&<#Fate[Fate]>.
+
+
+[ builtins ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 15`
+
+[ gc ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 9`
+
+[ operator ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 15`
+
+[ functools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 7 16`
+
+[ contextlib ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 8 17`
+
+[ Absurdity ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`27 1 56 3`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`27 17 27 25`
+	- (type/syntax)`Exception`
+	- (type/invalid/unknown)&<#Exception>
+	
+Exception raised by (factor-local/class)&<#Contention[Contention]> instances designating a failed assertion.
+
+
+[ Absurdity >> operator_names_mapping ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`33 2 40 2`
+#!source
+	operator_names_mapping = {
+		'__eq__': '==',
+		'__ne__': '!=',
+		'__le__': '<=',
+		'__ge__': '>=',
+			'__mod__': 'is',
+	}
+
+[ Absurdity >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`42 2 46 24`
+(signature)`__init__(self, operator, former, latter)`
+
+
+[ Absurdity >> __str__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`48 2 51 75`
+(signature)`__str__(self)`
+
+
+[ Absurdity >> __repr__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`53 2 56 3`
+(signature)`__repr__(self)`
+
+
+[ Contention ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`59 1 150 25`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`59 18 59 23`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+Contentions are objects used by (factor-local/class)&<#Test[Test]> objects to provide assertions.
+Usually, contention instances are made by the true division operator of
+(factor-local/class)&<#Test[Test]> instances passed into unit test subjects.
+
+#!syntax/python
+	import featurelib
+	
+	def test_feature(test):
+		expectation = ...
+		test/featurelib.functionality() == expectation
+	
+True division, "/", is used as it has high operator precedance that allows assertion
+expresssions to be constructed using minimal syntax that lends to readable failure
+conditions.
+
+All of the comparison operations are supported by Contention and are passed on to the
+underlying objects being examined.
+
+
+[ Contention >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`79 2 79 53`
+#!source
+	__slots__ = ('test', 'object', 'storage', 'inverse')
+
+[ Contention >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`81 2 84 24`
+(signature)`__init__(self, test, object)`
+
+
+[ Contention >> _override ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`87 2 89 2`
+#!source
+	_override = {
+		'__mod__' : ('is', lambda x,y: x is y)
+	}
+
+[ Contention >> __enter__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`111 2 112 48`
+(signature)`__enter__(self)`
+
+
+[ Contention >> __exit__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`114 2 124 13`
+(signature)`__exit__(self, typ, val, tb)`
+
+
+[ Contention >> __xor__ ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`126 2 137 14`
+(signature)`__xor__(self, subject)`
+
+Contend that the (factor-local/parameter)&<#Contention.__xor__.Parameters.subject[subject]> raises the given exception when it is called::
+
+#!syntax/python
+	test/Exception ^ (lambda: subject())
+	
+Reads: "Test that 'Exception' is raised by 'subject'".
+
+
+[ Contention >> __rxor__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`138 2 138 19`
+#!source
+	__rxor__ = __xor__
+
+[ Contention >> __lshift__ ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`140 2 149 31`
+(signature)`__lshift__(self, subject)`
+
+Contend that the parameter is contained by the object, (invalid/unknown)&<#Container>::
+
+#!syntax/python
+	test/Container << subject
+	
+Reads: "Test that 'Container' contains 'subject'".
+
+
+[ Contention >> __rlshift__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`150 2 150 25`
+#!source
+	__rlshift__ = __lshift__
+
+[ Fate ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`152 1 198 6`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`152 12 152 24`
+	- (type/syntax)`BaseException`
+	- (type/invalid/unknown)&<#BaseException>
+	
+The Fate of a test. (factor-local/method)&<#Test.seal[Test.seal]> uses (factor-local/class)&<#Fate[Fate]> exceptions to describe the result of a unit test.
+
+
+[ Fate >> name ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`156 2 156 14`
+#!source
+	name = 'fate'
+
+[ Fate >> content ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`157 2 157 15`
+#!source
+	content = None
+
+[ Fate >> impact ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`158 2 158 14`
+#!source
+	impact = None
+
+[ Fate >> line ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`159 2 159 12`
+#!source
+	line = None
+
+[ Fate >> color ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`160 2 160 16`
+#!source
+	color = 'white'
+
+[ Fate >> test_fate_descriptors ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`162 2 175 2`
+#!source
+	test_fate_descriptors = {
+		# Abstract, Impact, Numeric Identifier, Color
+		'return': ("passed", "The test returned without exception implying success",1,0,"green"),
+		'pass': ("passed", "The test was explicitly passed by raising its Fate",1,1,"green"),
+		'skip': ("skipped", "The test was skipped for a specific reason",0,3,"cyan"),
+		'divide': ("divided", "The test is a container of a set of tests",1,4,"blue"),
+		'fail': ("failed", "The test raised an exception or contended an absurdity",-1,5,"red"),
+		'absurdity': ("failed", "The test contended an absurdity",-1,5,"red"),
+		'exception': ("failed", "The test's execution resulted in an exception",-1,5,"red"),
+		'reveal': ("revealed", "The coverage data of the test does not meet expectations",-1,6,"red"),
+		'expire': ("expired", "The test did not finish in the configured time",-1,8,"yellow"),
+		'interrupt': ("interrupted", "The test was interrupted by a control exception",-1,9,"orange"),
+		'core': ("cored", "The test caused a core image to be produced by the operating system",-1,90,"orange"),
+	}
+
+[ Fate >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`177 2 181 10`
+(signature)`__init__(self, content)`
+
+
+[ Fate >> descriptor ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`182 2 185 10`
+
+[ Fate >> impact ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`186 2 189 10`
+
+[ Fate >> negative ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`190 2 196 10`
+Whether the fate's effect should be considered undesirable.
+
+
+[ Fate >> contention ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`197 2 198 6`
+
+[ Test ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`200 1 430 7`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`200 12 200 17`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+An object that manages an individual test and its execution.
+Provides interfaces for constructing and checking (invalid/unknown)&<#Contention's> using
+a simple syntax.
+
+[ > Properties ]
+
+/identifier/
+	The key used to retrieve the test function from the container.
+
+/subject/
+	The callable that performs a series of checks--using the (factor-local/class)&<#Test[Test]> instance--that
+	determines the (invalid/unknown)&<#fate>.
+
+/fate/
+	The conclusion of the Test; pass, fail, error, skip. An instance of (factor-local/data)&<#Test.Fate[Fate]>.
+
+/exits/
+	A (none/invalid)&<http://fault.io/dev/null[contextlib.ExitStack]> for cleaning up allocations made during the test.
+	The harness running the test decides when the stack's exit is processed.
+
+/metrics/
+	A set of measurements included in the test's report.
+	Primarily, `'duration'`, `'usage'`, `'contentions'`, `'timer'`, `'iterations'`.
+
+
+[ Test >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`226 2 226 82`
+#!source
+	__slots__ = ('subject', 'identifier', 'constraints', 'fate', 'exits', 'metrics',)
+
+[ Test >> Clock ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`230 2 230 26`
+#!source
+	Clock = system_time_clock
+
+[ Test >> Absurdity ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`231 2 231 22`
+#!source
+	Absurdity = Absurdity
+
+[ Test >> Contention ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`232 2 232 24`
+#!source
+	Contention = Contention
+
+[ Test >> Fate ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`233 2 233 12`
+#!source
+	Fate = Fate
+
+[ Test >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`235 2 245 33`
+(signature)`__init__(self, identifier, subject, *constraints)`
+
+
+[ Test >> __truediv__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`247 2 249 38`
+(signature)`__truediv__(self, object)`
+
+
+[ Test >> __rtruediv__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`251 2 253 38`
+(signature)`__rtruediv__(self, object)`
+
+
+[ Test >> __floordiv__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`255 2 257 44`
+(signature)`__floordiv__(self, object)`
+
+
+[ Test >> __rfloordiv__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`259 2 261 44`
+(signature)`__rfloordiv__(self, object)`
+
+
+[ Test >> isinstance ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`263 2 266 58`
+(signature)`isinstance(self, *args)`
+
+
+[ Test >> issubclass ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`268 2 271 58`
+(signature)`issubclass(self, *args)`
+
+
+[ Test >> itertimer ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`273 2 331 48`
+(signature)`itertimer(count, time, scale, cycle, identity, min, range)`
+
+Measure the relative performance of a loop's iterations.
+
+[ >> Parameters ]
+
+/(parameter)`count`/
+	
+	The maximum number of iterations to perform.
+
+/(parameter)`time`/
+	
+	The maximum duration of the timer in seconds.
+
+/(parameter)`scale`/
+	
+	The factor to increase the cycle loop count by.
+
+/(parameter)`cycle`/
+	
+	The maximum number of iterations to perform within a cycle.
+	Used to limit the effects of the (factor-local/parameter)&<#Test.itertimer.Parameters.scale[scale]> factor.
+
+/(parameter)`identity`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`min`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`range`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`int`/
+	
+	(control/absent)`Undocumented`.
+
+
+[ Test >> time ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`333 2 338 13`
+(signature)`time(self, callable, **kw)`
+
+Measure the relative performance of the given callable.
+
+
+[ Test >> seal ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`340 2 380 32`
+(signature)`seal(self)`
+
+Seal the fate of the Test by executing the subject-callable with the Test
+instance as the only parameter.
+
+Any exception that occurs is trapped and assigned to the (invalid/unknown)&<#fate> attribute
+on the Test instance. (invalid/unknown)&<#None> is always returned by (factor-local/method)&<#Test.seal[seal]>.
+
+
+[ Test >> skip ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`382 2 387 58`
+(signature)`skip(self, condition)`
+
+Used by test subjects to skip the test given that the provided (factor-local/parameter)&<#Test.skip.Parameters.condition[condition]> is
+(invalid/unknown)&<#True>.
+
+
+[ Test >> fail ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`389 2 390 40`
+(signature)`fail(self, cause)`
+
+
+[ Test >> timeout ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`392 2 393 42`
+(signature)`timeout(self, *args)`
+
+
+[ Test >> trap ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`395 2 408 32`
+(signature)`trap(self)`
+
+Set a trap for exceptions converting a would-be (invalid/unknown)&<#Error> fate on exit to a (invalid/unknown)&<#Failure>.
+
+#!syntax/python
+	with test.trap():
+		...
+	
+This allows (factor-local/method)&<#Test.fail[fail]> implementations set a trace prior to exiting
+the test's (invalid/unknown)&<#subject>.
+
+(factor-local/data)&<#Test.Fate[Fate]> exceptions are not trapped.
+

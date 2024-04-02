@@ -1,0 +1,1034 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 693 0`
+Defines the time Context that constructs unit types and manages their
+relationships to other unit types.
+
+
+[ collections ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 18`
+
+[ fractions ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 16`
+
+[ functools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 7 16`
+
+[ operator ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 8 15`
+
+[ builtins ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`9 1 9 15`
+
+[ Type ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 1 11 33`
+
+[ Sequence ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 1 11 33`
+
+[ abstract ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`12 1 12 22`
+
+[ kinds ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`17 1 21 1`
+#!source
+	kinds = (
+		'definite',
+		'indefinite',
+		'subjective',
+	)
+
+[ unix_epoch_delta ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`24 1 24 74`
+#!source
+	unix_epoch_delta = (((((2000-1970) * 365) + 7) * (24*60*60)) + (24*60*60))
+
+[ Exception ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`26 1 29 4`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`26 17 26 34`
+	- (type/syntax)`builtins.Exception`
+	- (type/none/invalid)&<http://fault.io/dev/null[builtins.Exception]>
+	
+Generic time exception.
+
+
+[ TransformException ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`31 1 42 24`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`31 26 31 34`
+	- (type/syntax)`Exception`
+	- (type/factor-local/class)&<#Exception[Exception]>
+	
+An attempt to transform units failed.
+
+
+[ TransformException >> unit_input ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`35 2 35 18`
+#!source
+	unit_input = None
+
+[ TransformException >> unit_output ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`36 2 36 19`
+#!source
+	unit_output = None
+
+[ TransformException >> context ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`37 2 37 15`
+#!source
+	context = None
+
+[ TransformException >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`39 2 42 24`
+(signature)`__init__(self, *args)`
+
+
+[ Inconceivable ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`44 1 51 4`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`44 21 44 38`
+	- (type/syntax)`TransformException`
+	- (type/factor-local/class)&<#TransformException[TransformException]>
+	
+An attempt to represent a unit in like-terms was not possible
+given the current implementation.
+
+Usually raised when a finite term attempts to convert an indefinite term or an
+ambiguous term.
+
+
+[ FormatError ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`53 1 54 5`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`53 19 53 27`
+	- (type/syntax)`Exception`
+	- (type/factor-local/class)&<#Exception[Exception]>
+	
+
+[ ParseError ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`56 1 65 53`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`56 18 56 28`
+	- (type/syntax)`FormatError`
+	- (type/factor-local/class)&<#FormatError[FormatError]>
+	
+The exception raised when a string representation of the datetime could not be parsed.
+
+
+[ ParseError >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`60 2 62 22`
+(signature)`__init__(self, source)`
+
+
+[ ParseError >> __str__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`64 2 65 53`
+(signature)`__str__(self)`
+
+
+[ StructureError ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`67 1 79 29`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`67 22 67 32`
+	- (type/syntax)`FormatError`
+	- (type/factor-local/class)&<#FormatError[FormatError]>
+	
+The exception raised when the structure of a parsed format could not be
+transformed.
+
+
+[ StructureError >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`72 2 75 22`
+(signature)`__init__(self, source, struct)`
+
+
+[ StructureError >> __str__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`77 2 79 29`
+(signature)`__str__(self)`
+
+
+[ IntegrityError ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`81 1 97 54`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`81 22 81 32`
+	- (type/syntax)`FormatError`
+	- (type/factor-local/class)&<#FormatError[FormatError]>
+	
+The exception raised when a parsed point in time is not consistent.
+
+Notably, in the RFC format, there are portions specifying intersecting
+parts of a timestamp. (The day of week field is arguably superfluous.)
+
+
+[ IntegrityError >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`88 2 92 22`
+(signature)`__init__(self, source, struct, tuple)`
+
+
+[ IntegrityError >> __str__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`94 2 97 54`
+(signature)`__str__(self)`
+
+
+[ Unit ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`99 1 247 63`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`99 12 99 14`
+	- (type/syntax)`int`
+	- (type/invalid/unknown)&<#int>
+	
+The base class for *finite*
+(project-local/unknown)&<abstract#Measure[abstract.Measure]> and (project-local/unknown)&<abstract#Point[abstract.Point]>
+subclasses across all (factor-local/class)&<#Context[Context]> instances.
+
+
+[ Unit >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`104 2 106 13`
+#!source
+	__slots__ = ()
+		@classmethod
+
+[ Unit >> construct ]
+! CONTROL:
+	/type/
+		classmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`107 2 184 13`
+(signature)`construct(Class, units, parts)`
+
+
+[ Unit >> of ]
+! CONTROL:
+	/type/
+		classmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`185 2 186 38`
+(signature)`of(Class, *units, **parts)`
+
+
+[ Unit >> update ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`188 2 192 4`
+(signature)`update(self)`
+
+
+[ Unit >> truncate ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`194 2 203 65`
+(signature)`truncate(self, unit)`
+
+
+[ Unit >> select ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`205 2 247 63`
+(signature)`select(self, part)`
+
+
+[ Measure ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`249 1 303 70`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`249 15 249 18`
+	- (type/syntax)`Unit`
+	- (type/factor-local/class)&<#Unit[Unit]>
+	
+
+[ Measure >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`250 2 252 10`
+#!source
+	__slots__ = ()
+		@property
+
+[ Measure >> start ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`253 2 256 10`
+
+[ Measure >> stop ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`257 2 258 13`
+
+[ Measure >> __neg__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`260 2 261 42`
+(signature)`__neg__(self)`
+
+
+[ Measure >> __abs__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`263 2 264 42`
+(signature)`__abs__(self)`
+
+
+[ Measure >> __str__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`266 2 267 36`
+(signature)`__str__(self)`
+
+
+[ Measure >> __repr__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`269 2 290 3`
+(signature)`__repr__(self)`
+
+
+[ Measure >> __contains__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`292 2 293 22`
+(signature)`__contains__(self, t)`
+
+
+[ Measure >> elapse ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`295 2 296 38`
+(signature)`elapse(self, *args, **parts)`
+
+
+[ Measure >> adjust ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`297 2 297 16`
+#!source
+	adjust = elapse
+
+[ Measure >> increase ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`299 2 300 51`
+(signature)`increase(self, *units, **parts)`
+
+
+[ Measure >> decrease ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`302 2 303 70`
+(signature)`decrease(self, *units, **parts)`
+
+
+[ Point ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`305 1 365 19`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`305 13 305 16`
+	- (type/syntax)`Unit`
+	- (type/factor-local/class)&<#Unit[Unit]>
+	
+
+[ Point >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`306 2 308 10`
+#!source
+	__slots__ = ()
+		@property
+
+[ Point >> start ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`309 2 312 10`
+
+[ Point >> stop ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`313 2 314 46`
+
+[ Point >> __contains__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`316 2 318 79`
+(signature)`__contains__(self, t)`
+
+
+[ Point >> __str__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`320 2 323 31`
+(signature)`__str__(self)`
+
+
+[ Point >> __repr__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`325 2 326 56`
+(signature)`__repr__(self)`
+
+
+[ Point >> rollback ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`328 2 329 83`
+(signature)`rollback(self, *units, **parts)`
+
+
+[ Point >> elapse ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`331 2 332 64`
+(signature)`elapse(self, *units, **parts)`
+
+
+[ Point >> measure ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`334 2 335 33`
+(signature)`measure(self, pit)`
+
+
+[ Point >> leads ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`337 2 349 20`
+(signature)`leads(self, pit)`
+
+
+[ Point >> precedes ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`350 2 350 17`
+#!source
+	precedes = leads
+
+[ Point >> follows ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`352 2 364 20`
+(signature)`follows(self, pit)`
+
+
+[ Point >> proceeds ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`365 2 365 19`
+#!source
+	proceeds = follows
+
+[ Context ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`367 1 584 16`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`367 15 367 20`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+A container for time units and transformations.
+
+
+[ Context >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`371 2 386 17`
+(signature)`__init__(self)`
+
+
+[ Context >> declare ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`388 2 402 23`
+(signature)`declare(self, id, datum)`
+
+Declare a fundamental unit for use in a context.
+
+All defined, (factor-local/method)&<#Context.define[Context.define]>, units are defined in terms of a declared unit.
+
+
+[ Context >> define ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`404 2 413 72`
+(signature)`define(self, id, term, exponent)`
+
+Defines a Unit in terms of another unit.
+
+
+[ Context >> bridge ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`415 2 422 49`
+(signature)`bridge(self, from_unit, to_unit, transformer)`
+
+Assign a "bridge" between two units.
+
+In the case where a unit cannot not be resolved from its definitions,
+bridges can be used to perform the conversion.
+
+
+[ Context >> container ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`424 2 427 38`
+(signature)`container(self, id, pack, unpack)`
+
+
+[ Context >> constant ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`429 2 432 23`
+(signature)`constant(self, id, value)`
+
+
+[ Context >> compose ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`433 2 448 11`
+(signature)`compose(self, from_unit, to_unit)`
+
+Compose two ratios into another so that the (factor-local/parameter)&<#Context.compose.Parameters.from_unit[from_unit]> can be converted
+into the (factor-local/parameter)&<#Context.compose.Parameters.to_unit[to_unit]>.
+
+Ratio compositions are LRU cached.
+
+
+[ Context >> convert ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`450 2 478 50`
+(signature)`convert(self, from_unit, to_unit, value)`
+
+Convert the (factor-local/parameter)&<#Context.convert.Parameters.value[value]> into (factor-local/parameter)&<#Context.convert.Parameters.to_unit[to_unit]> from the (factor-local/parameter)&<#Context.convert.Parameters.from_unit[from_unit]>.
+
+
+[ Context >> register_point_class ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`480 2 484 44`
+(signature)`register_point_class(self, Point)`
+
+
+[ Context >> register_measure_class ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`486 2 490 50`
+(signature)`register_measure_class(self, Measure)`
+
+
+[ Context >> new_measure_class ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`492 2 495 16`
+(signature)`new_measure_class(self, id)`
+
+
+[ Context >> new_point_class ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`497 2 500 14`
+(signature)`new_point_class(self, Measure)`
+
+
+[ Context >> datum_for_point ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`502 2 510 10`
+(signature)`datum_for_point(self, to_unit)`
+
+
+[ Context >> point_from_unit ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`512 2 516 16`
+(signature)`point_from_unit(self, unit)`
+
+
+[ Context >> measure_from_unit ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`518 2 522 16`
+(signature)`measure_from_unit(self, unit)`
+
+
+[ Context >> represent ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`524 2 525 35`
+(signature)`represent(self, term, unitseq)`
+
+
+[ Context >> point_factory ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`527 2 555 14`
+		- (type/syntax)`Type[abstract.Point]`
+		
+(signature)`point_factory(self, Measure, qname)`
+
+Construct a Point class from the given scalar.
+
+
+[ Context >> measure_factory ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`557 2 584 16`
+		- (type/syntax)`Type[abstract.Measure]`
+		
+(signature)`measure_factory(self, id, qname)`
+
+Construct a measure with the designated unit identifier and class.
+
+
+[ standard_context ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`586 1 693 35`
+		- (type/syntax)`tuple[Context, Sequence[abstract.Measure], Sequence[abstract.Point]]`
+		
+(signature)`standard_context(qname)`
+
+Construct the standard time context from the local modules.
+
+Normally called by (project-local/unknown)&<types> during import to initialize the primary data types.
+

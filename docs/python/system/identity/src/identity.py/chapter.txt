@@ -1,0 +1,123 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 67 0`
+Collection of identifiers that represent the host system's implementation.
+
+Primarily, this provides information about the Root Execution Context in addition
+to information regarding the host Python importing the module.
+
+The identifiers are intended to be wholly symbolic; versions should only be employed
+in certain contexts where the distinctions are understood by the administrator
+providing (system/environ)`FCI_SYSTEM` and (system/environ)`FCI_ARCHITECTURE`
+overrides.
+
+
+[ sys ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`13 1 13 10`
+
+[ _python_architecture ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`14 1 14 88`
+#!source
+	_python_architecture = sys.implementation.name + ''.join(map(str, sys.version_info[:2]))
+
+[ _python_architecture ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`15 1 15 60`
+#!source
+	_python_architecture = _python_architecture.replace('-', '')
+
+[ fci_system_envid ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`19 1 19 31`
+#!source
+	fci_system_envid = 'FCI_SYSTEM'
+
+[ fci_architecture_envid ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`20 1 20 43`
+#!source
+	fci_architecture_envid = 'FCI_ARCHITECTURE'
+
+[ _uname ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`22 1 31 36`
+(signature)`_uname(flag)`
+
+Execute the (system/executable)`uname` returning its output for the given (factor-local/parameter)&<#_uname.Parameters.flag[flag]>.
+
+
+[ _cache ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`33 1 51 16`
+(signature)`_cache()`
+
+
+[ root_execution_context ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`53 1 60 17`
+(signature)`root_execution_context()`
+
+Return the (operating system, architecture) pair identifying the Root Execution Context.
+
+
+[ python_execution_context ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`62 1 67 57`
+(signature)`python_execution_context()`
+
+Return the Python execution Context identification.
+Used to select marshalled code objects(bytecode).
+

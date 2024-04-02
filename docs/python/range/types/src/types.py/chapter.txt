@@ -1,0 +1,1058 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 756 0`
+Range classes for managing associations and sets whose items span ranges.
+
+[ Engineering ]
+
+Mapping, and a Stack thereof, are not yet implemented. Currently, there
+are some differences between the implementation of a Mapping and the extant
+Set. Notably, adjacent ranges can only be joined if the values are equivalent.
+Sets join adjacent ranges unconditionally.
+
+
+[ operator ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 1 11 15`
+
+[ itertools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`12 1 12 16`
+
+[ typing ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`13 1 13 13`
+
+[ collections ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`14 1 14 18`
+
+[ collections ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`15 1 15 22`
+
+[ builtins ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`16 1 16 15`
+
+[ inclusive_range_set ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`18 1 48 31`
+(signature)`inclusive_range_set(numbers)`
+
+Calculate the set of inclusive ranges.
+
+Given a iterable of numbers, sort them and create ranges from
+the contiguous values.
+
+[ > Parameters ]
+
+/(parameter)`numbers`/
+	
+	Iterable of Integers.
+
+
+[ combine ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`50 1 80 11`
+(signature)`combine(ranges)`
+
+Combine the ranges into a sequence of ranges reducing them according
+to their overlaps and contiguity. Used by (factor-local/class)&<#Set[Set]> to implement unions.
+
+
+[ IRange ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`82 1 279 29`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`82 14 82 18`
+	- (type/syntax)`tuple`
+	- (type/invalid/unknown)&<#tuple>
+	
+Fully Inclusive range used for cases where the range length always is one or more.
+
+
+[ IRange >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`86 2 86 15`
+#!source
+	__slots__ = ()
+
+[ IRange >> Type ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`88 2 90 10`
+		- (type/syntax)`type`
+		- (type/invalid/unknown)&<#type>
+		
+#!source
+	Type:(type) = int
+		@property
+
+[ IRange >> direction ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`91 2 97 10`
+Returns `-1` if the stop is less than the start. `1` if equal or greater than.
+
+
+[ IRange >> start ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`98 2 104 10`
+The beginning of the Range, inclusive.
+
+
+[ IRange >> stop ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`105 2 111 13`
+The end of the Range, inclusive.
+
+
+[ IRange >> normal ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`112 2 120 13`
+(signature)`normal(Class, *args)`
+
+Create a normal range using the given boundaries; the minimum given will be the
+start and the maximum will be the stop.
+
+
+[ IRange >> single ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`121 2 128 13`
+(signature)`single(Class, index)`
+
+Create a range consisting of a single unit.
+
+
+[ IRange >> from_string ]
+! CONTROL:
+	/type/
+		classmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`129 2 133 35`
+(signature)`from_string(Class, string)`
+
+
+[ IRange >> __contains__ ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`135 2 143 33`
+(signature)`__contains__(self, x)`
+
+Whether or not the range contains the given number.
+
+
+[ IRange >> __str__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`145 2 149 24`
+(signature)`__str__(self)`
+
+
+[ IRange >> relation ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`151 2 166 10`
+(signature)`relation(self, r)`
+
+The relation of (factor-local/parameter)&<#IRange.relation.Parameters.r[r]> with respect to the (factor-local/parameter)&<#IRange.relation.Parameters.self[self]>.
+Returns `-1` if (factor-local/parameter)&<#IRange.relation.Parameters.r[r]> is less than the start; `1` if (factor-local/parameter)&<#IRange.relation.Parameters.r[r]> is
+greater than the stop, and `0` if it is contained.
+
+! WARNING:
+	Does not compensate for negative direction ranges.
+
+
+[ IRange >> contiguous ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`168 2 174 43`
+(signature)`contiguous(self, r)`
+
+The given range is contiguous with the other, but does *not*
+(factor-local/method)&<#IRange.overlaps[overlaps]>.
+
+
+[ IRange >> overlaps ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`176 2 182 24`
+(signature)`overlaps(self, r)`
+
+The ranges overlap onto each other.
+
+
+[ IRange >> continuation ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`184 2 190 26`
+(signature)`continuation(self, r)`
+
+The ranges are continuous: overlaps or contiguous.
+
+
+[ IRange >> join ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`192 2 197 60`
+(signature)`join(self, r)`
+
+Combine the ranges regardless of adjacency.
+
+
+[ IRange >> filter ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`199 2 238 11`
+(signature)`filter(self, ranges)`
+
+Modify (filter) the (factor-local/parameter)&<#IRange.filter.Parameters.ranges[ranges]> to be outside of (factor-local/parameter)&<#IRange.filter.Parameters.self[self]>.
+If a range is wholly contained, filter it entirely.
+
+The filter is a generator and is applied to an iterable of
+ranges because it is the necessary framework for dropping
+wholly contained inclusive ranges. Inclusive ranges
+cannot represent zero length sizes, so it has to drop
+contained ranges entirely from the generated sequence.
+
+[ >> Parameters ]
+
+/(parameter)`self`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`ranges`/
+	- (type/syntax)`typing.Iterable["IRange"]`
+	
+	Sequence of (factor-local/class)&<#IRange[IRange]> instances to be filtered.
+
+
+[ IRange >> intersect ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`240 2 260 32`
+		- (type/syntax)`typing.Iterable["IRange"]`
+		
+(signature)`intersect(self, ranges)`
+
+Identify the parts of the (factor-local/parameter)&<#IRange.intersect.Parameters.ranges[ranges]> that intersect with (factor-local/parameter)&<#IRange.intersect.Parameters.self[self]>.
+
+[ >> Parameters ]
+
+/(parameter)`self`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`ranges`/
+	- (type/syntax)`typing.Iterable["IRange"]`
+	
+	Sequence of (factor-local/class)&<#IRange[IRange]> instances to intersect with (factor-local/parameter)&<#IRange.intersect.Parameters.self[self]>.
+
+[ >> Returns ]
+
+/(invalid/unknown)&<#Annotation>/
+	A iterable producing (factor-local/class)&<#IRange[IRange]> instances.
+
+
+[ IRange >> exclusive ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`262 2 267 29`
+(signature)`exclusive(self)`
+
+Return as an exclusive-end range pair.
+
+
+[ IRange >> units ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`269 2 279 29`
+(signature)`units(self)`
+
+Return an iterator to the units in the range.
+
+
+[ Set ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`280 1 553 73`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`280 11 280 16`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+A set of unique non-contiguous ranges.
+
+Implemented using a pair of sequences containing the start and the stop
+of each range. For sets consisting of single unit ranges, regular (invalid/unknown)&<#set>
+objects are more efficient. (invalid/unknown)&<#bisect> is used as the search algorithm
+when checking for containment, so applications requiring high performance
+may need to convert the range set or portions thereof into a regular (invalid/unknown)&<#set>.
+
+
+[ Set >> _search ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`290 2 290 37`
+
+[ Set >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`291 2 293 13`
+#!source
+	__slots__ = ('starts', 'stops')
+		@classmethod
+
+[ Set >> from_string ]
+! CONTROL:
+	/type/
+		classmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`294 2 301 13`
+(signature)`from_string(Class, string)`
+
+
+[ Set >> from_set ]
+! CONTROL:
+	/type/
+		classmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`302 2 306 13`
+(signature)`from_set(Class, iterable)`
+
+
+[ Set >> from_normal_sequence ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`307 2 312 64`
+(signature)`from_normal_sequence(Class, ranges)`
+
+Low-level constructor building a Set from an
+*ordered sequence* of *non-overlapping* range instances.
+
+
+[ Set >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`314 2 317 23`
+(signature)`__init__(self, pair)`
+
+
+[ Set >> __repr__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`319 2 320 84`
+(signature)`__repr__(self)`
+
+
+[ Set >> __reduce__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`322 2 323 51`
+(signature)`__reduce__(self)`
+
+
+[ Set >> __iter__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`325 2 326 50`
+(signature)`__iter__(self)`
+
+
+[ Set >> __str__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`328 2 329 33`
+(signature)`__str__(self)`
+
+
+[ Set >> __eq__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`331 2 332 60`
+(signature)`__eq__(self, ns)`
+
+
+[ Set >> __len__ ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`334 2 342 81`
+(signature)`__len__(self)`
+
+Total number of *individual units* held by the set.
+
+Working with inclusive ranges, this means that spans from `0` to `100` will
+have a length of `101`.
+
+
+[ Set >> intersecting ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`344 2 367 11`
+(signature)`intersecting(self, range)`
+
+Get the ranges in the set that have intersections with the given range.
+
+
+[ Set >> get ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`375 2 379 16`
+(signature)`get(self, item)`
+
+
+[ Set >> __getitem__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`381 2 385 22`
+(signature)`__getitem__(self, item)`
+
+
+[ Set >> __contains__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`387 2 392 15`
+(signature)`__contains__(self, item)`
+
+
+[ Set >> add ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`394 2 416 66`
+(signature)`add(self, range)`
+
+Add a range to the set combining it with any continuations.
+
+
+[ Set >> discard ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`418 2 443 29`
+(signature)`discard(self, range)`
+
+Remove an arbitrary range from the set.
+
+
+[ Set >> intersection ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`445 2 494 9`
+(signature)`intersection(self, range_set)`
+
+Calculate the intersection between two (factor-local/class)&<#Set[Set]> instances.
+Low-level method. Use (python/operator)`|` for high-level purposes.
+
+
+[ Set >> difference ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`496 2 537 15`
+(signature)`difference(self, range_set)`
+
+Calculate the difference between two (factor-local/class)&<#Set[Set]> instances.
+Low-level method. Use (python/operator)`-` for high-level purposes.
+
+
+[ Set >> union ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`539 2 546 58`
+(signature)`union(self, range_set)`
+
+Calculate the union between two (factor-local/class)&<#Set[Set]> instances.
+
+
+[ Set >> __add__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`547 2 547 16`
+#!source
+	__add__ = union
+
+[ Set >> __sub__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`549 2 550 78`
+(signature)`__sub__(self, range_set)`
+
+
+[ Set >> __or__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`552 2 553 73`
+(signature)`__or__(self, range_set)`
+
+
+[ XRange ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`555 1 657 33`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`555 14 555 18`
+	- (type/syntax)`tuple`
+	- (type/invalid/unknown)&<#tuple>
+	
+Exclusive numeric range. Only exclusive on the stop.
+Provides access to zero-sized ranges that need to maintain position.
+
+
+[ XRange >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`561 2 561 15`
+#!source
+	__slots__ = ()
+
+[ XRange >> Type ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`562 2 564 10`
+		- (type/syntax)`type`
+		- (type/invalid/unknown)&<#type>
+		
+#!source
+	Type:(type) = int
+		@property
+
+[ XRange >> direction ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`565 2 571 10`
+Returns -1 if the stop is less than the start.
+
+
+[ XRange >> start ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`572 2 578 10`
+The beginning of the Range, inclusive.
+
+
+[ XRange >> stop ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`579 2 585 13`
+The end of the Range, inclusive.
+
+
+[ XRange >> normal ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`586 2 594 13`
+(signature)`normal(Class, *args)`
+
+Create a normal range using the given boundaries; the minimum given will be the
+start and the maximum will be the stop.
+
+
+[ XRange >> single ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`595 2 600 32`
+(signature)`single(Class, index)`
+
+Create a range consisting of a single unit.
+
+
+[ XRange >> __contains__ ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`602 2 607 31`
+(signature)`__contains__(self, x)`
+
+Whether or not the range contains the given number.
+
+
+[ XRange >> relation ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`609 2 624 10`
+(signature)`relation(self, r)`
+
+The relation of (factor-local/parameter)&<#XRange.relation.Parameters.r[r]> with respect to the (factor-local/parameter)&<#XRange.relation.Parameters.self[self]>.
+Returns `-1` if (factor-local/parameter)&<#XRange.relation.Parameters.r[r]> is less than the start; `1` if (factor-local/parameter)&<#XRange.relation.Parameters.r[r]> is
+greater than the stop, and `0` if it is contained.
+
+! WARNING:
+	Does not compensate for negative direction ranges.
+
+
+[ XRange >> contiguous ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`626 2 631 47`
+(signature)`contiguous(self, range)`
+
+Whether the given (factor-local/parameter)&<#XRange.contiguous.Parameters.range[range]> is contiguous with (factor-local/parameter)&<#XRange.contiguous.Parameters.self[self]>.
+
+
+[ XRange >> join ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`633 2 638 60`
+(signature)`join(self, r)`
+
+Combine the ranges.
+
+
+[ XRange >> exclusive ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`640 2 645 13`
+(signature)`exclusive(self)`
+
+Returns (factor-local/parameter)&<#XRange.exclusive.Parameters.self[self]>.
+
+
+[ XRange >> units ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`647 2 657 33`
+(signature)`units(self)`
+
+Return an iterator to the units in the range.
+
+
+[ Mapping ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`658 1 756 10`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`658 15 658 20`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+A tiered, finite map of ranges explicitly associated with values.
+
+! WARNING:
+	Implementation is sensitive to the order in which items are set.
+	Keys intending to contain other Ranges must be set before the
+	narrow range is set.
+
+[ > Engineering ]
+
+Rewrite by vectorizing k-index and v-index to eliminate the recursive implementation.
+In cases of instances with large depths, a vectorized form should help with
+execution (fewer stack frames) and memory (fewer instances) performance.
+
+
+[ Mapping >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`673 2 676 19`
+(signature)`__init__(self)`
+
+
+[ Mapping >> keys ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`678 2 681 22`
+(signature)`keys(self)`
+
+
+[ Mapping >> values ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`683 2 688 24`
+(signature)`values(self)`
+
+
+[ Mapping >> items ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`690 2 691 40`
+(signature)`items(self)`
+
+
+[ Mapping >> get ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`693 2 698 19`
+(signature)`get(self, key)`
+
+
+[ Mapping >> __getitem__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`700 2 705 19`
+(signature)`__getitem__(self, key)`
+
+
+[ Mapping >> __setitem__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`707 2 711 14`
+(signature)`__setitem__(self, key, value)`
+
+
+[ Mapping >> update ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`713 2 720 14`
+(signature)`update(self, vs)`
+
+
+[ Mapping >> __delitem__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`722 2 729 12`
+(signature)`__delitem__(self, key)`
+
+
+[ Mapping >> path ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`732 2 738 26`
+(signature)`path(self, key)`
+
+For the given key, identify the containing range and its associated value
+at each level in the mapping.
+
+
+[ Mapping >> levels ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`740 2 750 14`
+(signature)`levels(self, key)`
+
+
+[ Mapping >> last ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`752 2 756 10`
+(signature)`last(self, key)`
+

@@ -1,0 +1,20 @@
+! CONTROL:
+	/type/
+		factor
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+! CONTEXT:
+	/protocol/
+		&<http://if.fault.io/text/type.factor>
+
+	/identifier/
+		&<http://if.fault.io/factors/meta.directory>
+
+	/icon/
+		&<data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNTYiIGhlaWdodD0iMjU2Ij48dGV4dCB4PSI0IiB5PSIwLjg4ZW0iIGZvbnQtc2l6ZT0iMjQ4Ij7wn5OBPC90ZXh0Pjwvc3ZnPg==>
+
+A factor identifying a collection of Factors.
+
+The Elements of a directory are Factors. Likely implied by Project interfaces.
+

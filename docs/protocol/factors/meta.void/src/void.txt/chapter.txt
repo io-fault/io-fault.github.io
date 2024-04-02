@@ -1,0 +1,21 @@
+! CONTROL:
+	/type/
+		factor
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+! CONTEXT:
+	/protocol/
+		&<http://if.fault.io/text/type.factor>
+
+	/identifier/
+		&<http://if.fault.io/factors/meta.void>
+
+	/icon/
+		&<data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNTYiIGhlaWdodD0iMjU2Ij48dGV4dCB4PSI0IiB5PSIwLjg4ZW0iIGZvbnQtc2l6ZT0iMjQ4Ij7wn5WzPC90ZXh0Pjwvc3ZnPg==>
+
+A factor identifying the absence of any real factors.
+
+Primarily used to maintain invariants.
+Essentially, the encapsulation of a missing factor error condition.
+

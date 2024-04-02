@@ -1,0 +1,116 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 33 0`
+
+[ module ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 1 37`
+
+[ Referenced ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`3 1 5 19`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`3 18 3 23`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+
+[ Referenced >> method ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 2 5 19`
+(signature)`method(self, *args, **kw)`
+
+
+[ instance ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 7 23`
+#!source
+	instance = Referenced()
+
+[ test_zero ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`9 1 10 55`
+(signature)`test_zero(test)`
+
+
+[ test_one ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`12 1 13 57`
+(signature)`test_one(test)`
+
+
+[ test_any ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`15 1 16 62`
+(signature)`test_any(test)`
+
+
+[ test_keywords ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`18 1 19 80`
+(signature)`test_keywords(test)`
+
+
+[ test_lost_target ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`21 1 33 29`
+(signature)`test_lost_target(test)`
+

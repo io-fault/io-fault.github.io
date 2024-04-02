@@ -1,0 +1,146 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 200 41`
+Test argument vector parsing in (project-local/unknown)&<recognition>.
+
+
+[ functools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 16`
+
+[ merge ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 63`
+
+[ legacy ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 63`
+
+[ UsageViolation ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 63`
+
+[ test_merge_operations ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 59 41`
+(signature)`test_merge_operations(test)`
+
+- (context-local/factor-element)&<fault.vector/recognition#merge[fault.vector.recognition.merge]>
+
+Check the default merge operations supported by (project-local/unknown)&<recognition.operations>.
+
+
+[ test_merge_usage_violations ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`61 1 71 88`
+(signature)`test_merge_usage_violations(test)`
+
+- (context-local/factor-element)&<fault.vector/recognition#merge[fault.vector.recognition.merge]>
+
+Check the (context-local/factor-element)&<fault.vector/recognition#UsageViolation[fault.vector.recognition.UsageViolation]> exceptions raised by (context-local/factor-element)&<fault.vector/recognition#merge[fault.vector.recognition.merge]>.
+
+
+[ test_merge_interpreter_exceptions ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`73 1 98 38`
+(signature)`test_merge_interpreter_exceptions(test)`
+
+- (context-local/factor-element)&<fault.vector/recognition#merge[fault.vector.recognition.merge]>
+
+Check the chaining of interpeter exceptions.
+
+
+[ test_legacy_restricted ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`100 1 125 40`
+(signature)`test_legacy_restricted(test)`
+
+- (context-local/factor-element)&<fault.vector/recognition#legacy[fault.vector.recognition.legacy]>
+
+Validate options that restrict parameters.
+
+
+[ test_legacy_required ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`127 1 157 40`
+(signature)`test_legacy_required(test)`
+
+- (context-local/factor-element)&<fault.vector/recognition#legacy[fault.vector.recognition.legacy]>
+
+Validate options that require parameters.
+
+
+[ test_legacy_trap ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`159 1 173 40`
+(signature)`test_legacy_trap(test)`
+
+- (context-local/factor-element)&<fault.vector/recognition#legacy[fault.vector.recognition.legacy]>
+
+Validate the trap case for long options.
+
+
+[ test_legacy_violations ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`175 1 201 40`
+(signature)`test_legacy_violations(test)`
+
+- (context-local/factor-element)&<fault.vector/recognition#legacy[fault.vector.recognition.legacy]>
+
+Validate that the expected violations are generated.
+

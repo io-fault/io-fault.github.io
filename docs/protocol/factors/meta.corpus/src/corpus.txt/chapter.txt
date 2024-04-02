@@ -1,0 +1,23 @@
+! CONTROL:
+	/type/
+		factor
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+! CONTEXT:
+	/protocol/
+		&<http://if.fault.io/text/type.factor>
+
+	/identifier/
+		&<http://if.fault.io/factors/meta.corpus>
+
+	/icon/
+		&<data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNTYiIGhlaWdodD0iMjU2Ij48dGV4dCB4PSI0IiB5PSIwLjg4ZW0iIGZvbnQtc2l6ZT0iMjQ4Ij7wn5OaPC90ZXh0Pjwvc3ZnPg==>
+
+A collection of resources that intends to constitute a set of projects.
+Usually, a corpus serves as a logical set of factors organized by their projects.
+When deployed within an environment, the projects are integrated into a (project-local/unknown)&<meta.product>.
+
+Corpora may be represented as factors with this type, but usually the concept exists
+outside of installations.
+

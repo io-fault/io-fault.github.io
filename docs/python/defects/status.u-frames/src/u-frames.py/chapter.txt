@@ -1,0 +1,142 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 172 0`
+Check serialization and parsing of frames.
+
+
+[ module ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 38`
+
+[ io ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 7 48`
+		- (type/syntax)`module.types.Frame`
+		- (type/context-local/factor-element)&<fault.status/frames#types.Frame[fault.status.frames.types.Frame]>
+		
+(signature)`io(frame)`
+
+
+[ test_identifier_set_limits ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`9 1 13 69`
+(signature)`test_identifier_set_limits(test)`
+
+- (context-local/factor-element)&<fault.status/frames#type_codes[fault.status.frames.type_codes]>
+
+
+[ test_code_conversion ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`15 1 25 60`
+(signature)`test_code_conversion(test)`
+
+- (context-local/factor-element)&<fault.status/frames#type_integer_code[fault.status.frames.type_integer_code]>
+- (context-local/factor-element)&<fault.status/frames#type_identifier_string[fault.status.frames.type_identifier_string]>
+
+
+[ test_unpack_unstructured ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`27 1 39 43`
+(signature)`test_unpack_unstructured(test)`
+
+- (context-local/factor-element)&<fault.status/frames#structure[fault.status.frames.structure]>
+
+
+[ test_unpack_unstructured_channel_escape ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`41 1 48 50`
+(signature)`test_unpack_unstructured_channel_escape(test)`
+
+- (context-local/factor-element)&<fault.status/frames#unpack[fault.status.frames.unpack]>
+
+
+[ test_frame_structured ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`50 1 74 68`
+(signature)`test_frame_structured(test)`
+
+- (context-local/project-factor)&<fault.status/frames[fault.status.frames]>
+
+
+[ test_frame_data_extension ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`76 1 105 54`
+(signature)`test_frame_data_extension(test)`
+
+- (context-local/project-factor)&<fault.status/frames[fault.status.frames]>
+
+
+[ test_frame_channel_only ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`107 1 133 93`
+(signature)`test_frame_channel_only(test)`
+
+- (context-local/project-factor)&<fault.status/frames[fault.status.frames]>
+
+
+[ test_message_directed_areas ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`135 1 153 41`
+(signature)`test_message_directed_areas(test)`
+
+- (context-local/factor-element)&<fault.status/frames#message_directed_areas[fault.status.frames.message_directed_areas]>
+
+
+[ test_declaration_constructor ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`155 1 172 47`
+(signature)`test_declaration_constructor(test)`
+
+- (context-local/factor-element)&<fault.status/frames#declaration[fault.status.frames.declaration]>
+

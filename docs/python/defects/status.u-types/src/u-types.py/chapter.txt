@@ -1,0 +1,72 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 83 0`
+Majority of tests here revolve around parameters. The other classes in (context-local/project-factor)&<fault.status/types[fault.status.types]>
+are mostly simple dataclasses only needing constructor and property sanity checks.
+
+
+[ types ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 27`
+
+[ test_EStruct_constructors_v1 ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 44 23`
+(signature)`test_EStruct_constructors_v1(test)`
+
+- (context-local/factor-element)&<fault.status/types#EStruct.from_fields_v1[fault.status.types.EStruct.from_fields_v1]>
+- (context-local/factor-element)&<fault.status/types#EStruct.from_arguments_v1[fault.status.types.EStruct.from_arguments_v1]>
+- (context-local/factor-element)&<fault.status/types#EStruct.from_tuple_v1[fault.status.types.EStruct.from_tuple_v1]>
+
+
+[ test_EStruct_immutable ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`46 1 54 74`
+(signature)`test_EStruct_immutable(test)`
+
+Warning test; just a notification of unexpected behaviour.
+
+
+[ test_Frame_constructors_v1 ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`56 1 67 25`
+(signature)`test_Frame_constructors_v1(test)`
+
+- (context-local/factor-element)&<fault.status/types#Frame.from_event_v1[fault.status.types.Frame.from_event_v1]>
+- (context-local/factor-element)&<fault.status/types#Frame.f_event[fault.status.types.Frame.f_event]>
+- (context-local/factor-element)&<fault.status/types#Frame.f_extension[fault.status.types.Frame.f_extension]>
+
+
+[ test_string_constructor ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`69 1 83 32`
+(signature)`test_string_constructor(test)`
+
+- (context-local/factor-element)&<fault.status/types#EStruct.from_string_v1[fault.status.types.EStruct.from_string_v1]>
+- (context-local/factor-element)&<fault.status/types#Frame.from_string_v1[fault.status.types.Frame.from_string_v1]>
+

@@ -1,0 +1,74 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 31 0`
+
+[ module ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 1 36`
+
+[ types ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`2 1 2 25`
+
+[ test_utc ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 8 47`
+(signature)`test_utc(test)`
+
+- (context-local/factor-element)&<fault.time/system#utc[fault.time.system.utc]>
+
+
+[ test_elapsed ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 1 14 49`
+(signature)`test_elapsed(test)`
+
+- (context-local/factor-element)&<fault.time/system#elapsed[fault.time.system.elapsed]>
+
+
+[ test_zone_local ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`16 1 23 34`
+(signature)`test_zone_local(test)`
+
+- (context-local/factor-element)&<fault.time/system#local[fault.time.system.local]>
+
+
+[ test_date ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`25 1 31 52`
+(signature)`test_date(test)`
+
+- (context-local/factor-element)&<fault.time/system#date[fault.time.system.date]>
+

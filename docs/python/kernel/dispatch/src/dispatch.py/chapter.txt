@@ -1,0 +1,1006 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 572 0`
+Executive processors containing a primitive execution unit.
+
+
+[ os ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 9`
+
+[ types ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 12`
+
+[ collections ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 18`
+
+[ functools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 7 16`
+
+[ typing ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 8 13`
+
+[ errno ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`9 1 9 12`
+
+[ signal ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 1 10 13`
+
+[ heapq ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 1 11 12`
+
+[ core ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`13 1 13 18`
+
+[ weak ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`14 1 14 26`
+
+[ execution ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`15 1 15 30`
+
+[ Call ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`17 1 60 26`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`17 12 17 25`
+	- (type/syntax)`core.Processor`
+	- (type/project-local/factor-element)&<core#Processor[fault.kernel.core.Processor]>
+	
+A single callable represented as a Processor.
+Used as an abstraction for explicit enqueues, and to trigger faults in Sectors.
+
+This should be rarely used in practice.
+
+
+[ Call >> c_execution ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`25 2 29 13`
+(signature)`c_execution(self)`
+
+
+[ Call >> partial ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`30 2 36 52`
+(signature)`partial(Class, call, *args, **kw)`
+
+Create a call applying the arguments to the callable upon actuation.
+The positional arguments will follow the (invalid/unknown)&<#Sector> instance passed as
+the first argument.
+
+
+[ Call >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`38 2 50 22`
+(signature)`__init__(self, call)`
+
+The partial application to the callable to perform.
+Usually, instantiating from (factor-local/classmethod)&<#Call.partial[partial]> is preferrable;
+however, given the presence of a (none/invalid)&<http://fault.io/dev/null[functools.partial]> instance,
+direct initialization is better.
+
+[ >> Parameters ]
+
+/(parameter)`self`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`call`/
+	- (type/syntax)`typing.Callable`
+	- (type/none/invalid)&<http://fault.io/dev/null[typing.Callable]>
+	
+	The callable to enqueue during actuation of the (invalid/unknown)&<#Processor>.
+
+
+[ Call >> actuate ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`52 2 53 33`
+(signature)`actuate(self)`
+
+
+[ Call >> structure ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`55 2 56 44`
+(signature)`structure(self)`
+
+
+[ Call >> terminate ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`58 2 60 26`
+(signature)`terminate(self)`
+
+
+[ Coroutine ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`62 1 121 37`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`62 17 62 30`
+	- (type/syntax)`core.Processor`
+	- (type/project-local/factor-element)&<core#Processor[fault.kernel.core.Processor]>
+	
+Processor for coroutines.
+
+Manages the generator state in order to signal the containing (invalid/unknown)&<#Sector> of its
+exit. Generator coroutines are the common method for serializing the dispatch of
+work to relevant (invalid/unknown)&<#Sector> instances.
+
+! WARNING: Untested.
+
+[ Coroutine >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`73 2 76 10`
+(signature)`__init__(self, coroutine)`
+
+
+[ Coroutine >> state ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`77 2 78 31`
+
+[ Coroutine >> _co_complete ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`80 2 82 26`
+(signature)`_co_complete(self)`
+
+
+[ Coroutine >> container ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`84 2 97 18`
+(signature)`container(self)`
+
+! INTERNAL: Private Method
+Container for the coroutine's execution in order
+to map completion to processor exit.
+
+
+[ Coroutine >> actuate ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`101 2 109 26`
+(signature)`actuate(self)`
+
+Start the coroutine.
+
+
+[ Coroutine >> terminate ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`111 2 118 13`
+(signature)`terminate(self)`
+
+Force the coroutine to close.
+
+
+[ Coroutine >> interrupt ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`120 2 121 37`
+(signature)`interrupt(self)`
+
+
+[ Thread ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`123 1 151 38`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`123 14 123 27`
+	- (type/syntax)`core.Processor`
+	- (type/project-local/factor-element)&<core#Processor[fault.kernel.core.Processor]>
+	
+A (invalid/unknown)&<#Processor> that runs a callable in a dedicated thread.
+
+
+[ Thread >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`128 2 129 26`
+(signature)`__init__(self, callable)`
+
+
+[ Thread >> trap ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`131 2 142 22`
+(signature)`trap(self)`
+
+
+[ Thread >> actuate ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`144 2 151 38`
+(signature)`actuate(self)`
+
+Create the thread and execute the target.
+
+Exceptions raised by the thread will cause the processor to fault.
+
+
+[ Subprocess ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`153 1 334 32`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`153 18 153 29`
+	- (type/syntax)`core.Context`
+	- (type/project-local/factor-element)&<core#Context[fault.kernel.core.Context]>
+	
+A set of running system processes.
+Terminates when all members of the set has exited *and* all subtransactions have completed.
+
+[ > Properties ]
+
+/sp_reaper/
+	The callable used to collect the process status using the system process identifier.
+
+/sp_exit_status/
+	A mapping of process identifiers to their corresponding exit status returned by
+	(invalid/unknown)&<#sp_reaper> after an exit event was received.
+
+/sp_processes/
+	A mapping of process identifiers to user-defined objects used to identify
+	all the processes associated with the instance.
+
+[ > Engineering ]
+
+While POSIX systems are the target platform, it's still preferrable to
+abstract the concepts. Everything here dealing with signals should be
+accessed through the system context.
+
+
+[ Subprocess >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`177 2 180 26`
+(signature)`__init__(self, reap, invocations)`
+
+
+[ Subprocess >> sp_report ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`182 2 189 13`
+(signature)`sp_report(self)`
+
+Join the System process identifier, invocation object, and exit status.
+
+
+[ Subprocess >> from_invocation ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`190 2 217 49`
+(signature)`from_invocation(Class, invocation, stdout, stdin, stderr)`
+
+Instantiation from an (factor-local/parameter)&<#Subprocess.from_invocation.Parameters.invocation[invocation]> executed with (factor-local/parameter)&<#Subprocess.from_invocation.Parameters.invocation[invocation.spawn]>.
+The process' standard I/O must be explicitly designated using
+the (factor-local/parameter)&<#Subprocess.from_invocation.Parameters.stdin[stdin]>, (factor-local/parameter)&<#Subprocess.from_invocation.Parameters.stdout[stdout]>, and (factor-local/parameter)&<#Subprocess.from_invocation.Parameters.stderr[stderr]> parameters.
+Process will be reaped with (context-local/factor-element)&<fault.system/execution#reap[fault.system.execution.reap]>.
+
+[ >> Parameters ]
+
+/(parameter)`Class`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`invocation`/
+	
+	The (context-local/factor-element)&<fault.system/execution#KInvocation[fault.system.execution.KInvocation]> instance to spawn.
+
+/(parameter)`stdout`/
+	
+	The file descriptor to map as standard output.
+
+/(parameter)`stdin`/
+	
+	The file descriptor to map as standard input.
+
+/(parameter)`stderr`/
+	
+	The file descriptor to map as standard error.
+
+
+[ Subprocess >> xact_void ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`219 2 221 28`
+(signature)`xact_void(self, last)`
+
+
+[ Subprocess >> sp_exit ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`223 2 239 28`
+(signature)`sp_exit(self, pid)`
+
+
+[ Subprocess >> terminate ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`241 2 249 21`
+(signature)`terminate(self)`
+
+If the process set isn't terminating, issue SIGTERM
+to all of the currently running processes.
+
+
+[ Subprocess >> structure ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`251 2 258 16`
+(signature)`structure(self)`
+
+
+[ Subprocess >> actuate ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`260 2 265 74`
+(signature)`actuate(self)`
+
+Initialize the system event callbacks for receiving process exit events.
+
+
+[ Subprocess >> interrupt ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`267 2 279 10`
+(signature)`interrupt(self)`
+
+Interrupt the running processes by issuing a SIGKILL signal to all active processes.
+Exit status will be reaped, but not reported to (factor-local/parameter)&<#Subprocess.interrupt.Parameters.self[self]>.
+
+
+[ Subprocess >> sp_only ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`280 2 294 10`
+The exit event of the only process in the set.
+(invalid/unknown)&<#None> if no exit has occurred or the number of processes exceeds one.
+
+
+[ Subprocess >> sp_waiting ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`295 2 303 10`
+		- (type/syntax)`typing.Set[int]`
+		
+Return the set of process identifiers that have yet to exit.
+
+
+[ Subprocess >> sp_reaped ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`304 2 308 59`
+		- (type/syntax)`bool`
+		- (type/invalid/unknown)&<#bool>
+		
+Whether all the processes have been reaped.
+
+
+[ Subprocess >> sp_signal ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`310 2 317 26`
+(signature)`sp_signal(self, signo)`
+
+Send the given signal number (os.kill) to the active processes
+being managed by the instance.
+
+
+[ Subprocess >> sp_signal_group ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`319 2 326 27`
+(signature)`sp_signal_group(self, signo)`
+
+Send the given signal number (os.kill) to the active processes
+being managed by the instance.
+
+
+[ Subprocess >> sp_abort ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`328 2 334 32`
+(signature)`sp_abort(self)`
+
+Interrupt the running processes by issuing a SIGQUIT signal.
+
+
+[ Coprocess ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`336 1 399 47`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`336 17 336 28`
+	- (type/syntax)`core.Context`
+	- (type/project-local/factor-element)&<core#Context[fault.kernel.core.Context]>
+	
+A local parallel process whose termination is connected to an instance.
+
+
+[ Coprocess >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`341 2 345 30`
+(signature)`__init__(self, identifier, application)`
+
+
+[ Coprocess >> cp_process_exit ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`347 2 352 30`
+(signature)`cp_process_exit(self)`
+
+
+[ Coprocess >> cp_enqueue ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`354 2 355 44`
+(signature)`cp_enqueue(self, task)`
+
+
+[ Coprocess >> structure ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`357 2 363 16`
+(signature)`structure(self)`
+
+
+[ Coprocess >> actuate ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`365 2 373 3`
+(signature)`actuate(self)`
+
+Initialize the system event callbacks for receiving process exit events.
+
+
+[ Coprocess >> interrupt ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`375 2 387 32`
+(signature)`interrupt(self)`
+
+Interrupt the running processes by issuing a SIGKILL signal to all active processes.
+Exit status will be reaped, but not reported to (factor-local/parameter)&<#Coprocess.interrupt.Parameters.self[self]>.
+
+
+[ Coprocess >> terminate ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`389 2 399 47`
+(signature)`terminate(self)`
+
+Interrupt the running processes by issuing a SIGQUIT signal.
+
+
+[ Recurrence ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`401 1 437 33`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`401 18 401 31`
+	- (type/syntax)`core.Processor`
+	- (type/project-local/factor-element)&<core#Processor[fault.kernel.core.Processor]>
+	
+Timer maintenance for recurring tasks.
+
+Usually used for short term recurrences such as animations and status updates.
+Recurrences work by deferring the execution of the configured target after
+each occurrence. This overhead means that (factor-local/class)&<#Recurrence[Recurrence]> is not well suited for
+high frequency executions, but useful in cases where it is important
+to avoid overlapping calls.
+
+
+[ Recurrence >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`412 2 415 41`
+(signature)`__init__(self, target, frequency)`
+
+
+[ Recurrence >> actuate ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`417 2 423 27`
+(signature)`actuate(self)`
+
+Enqueue the initial execution of the recurrence.
+
+
+[ Recurrence >> occur ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`425 2 429 27`
+(signature)`occur(self)`
+
+Invoke a recurrence and use its return to schedule its next iteration.
+
+
+[ Recurrence >> terminate ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`431 2 433 27`
+(signature)`terminate(self)`
+
+
+[ Recurrence >> interrupt ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`435 2 437 33`
+(signature)`interrupt(self)`
+
+
+[ Scheduler ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`439 1 572 15`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`439 17 439 28`
+	- (type/syntax)`core.Context`
+	- (type/project-local/factor-element)&<core#Context[fault.kernel.core.Context]>
+	
+Timestamp based transaction scheduling using the system's Real Time clock.
+
+
+[ Scheduler >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`444 2 447 38`
+(signature)`__init__(self)`
+
+
+[ Scheduler >> actuate ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`449 2 451 39`
+(signature)`actuate(self)`
+
+
+[ Scheduler >> structure ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`453 2 458 16`
+(signature)`structure(self)`
+
+
+[ Scheduler >> _terminal ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`460 2 462 6`
+(signature)`_terminal(self)`
+
+
+[ Scheduler >> terminate ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`464 2 473 28`
+(signature)`terminate(self)`
+
+
+[ Scheduler >> xact_void ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`475 2 478 28`
+(signature)`xact_void(self, final)`
+
+
+[ Scheduler >> interrupt ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`480 2 483 26`
+(signature)`interrupt(self)`
+
+
+[ Scheduler >> occur ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`485 2 501 30`
+(signature)`occur(self)`
+
+Execute the next task given that the period has elapsed.
+If the period has not elapsed, reschedule (invalid/unknown)&<#transition> in order to achieve
+finer granularity.
+
+
+[ Scheduler >> sched_cancel ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`503 2 512 28`
+(signature)`sched_cancel(self, pit, *xacts)`
+
+Cancel the given transactions that were scheduled for execution at the given (factor-local/parameter)&<#Scheduler.sched_cancel.Parameters.pit[pit]>.
+
+Aside from the time and transaction, (factor-local/class)&<#Scheduler[Scheduler]> has no index for identifying
+scheduled events. When such a feature is necessary, an index must be managed
+independently or a subclass must be created.
+
+
+[ Scheduler >> sched_insert ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`514 2 523 67`
+(signature)`sched_insert(self, pit, *xacts)`
+
+Schedule the (factor-local/parameter)&<#Scheduler.sched_insert.Parameters.xacts[xacts]> to be executed at the specified Point In Time, (factor-local/parameter)&<#Scheduler.sched_insert.Parameters.pit[pit]>.
+
+
+[ Scheduler >> sched_update ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`525 2 536 67`
+(signature)`sched_update(self, items)`
+
+
+[ Scheduler >> _sched_period ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`538 2 543 14`
+(signature)`_sched_period(self, current)`
+
+
+[ Scheduler >> _sched_put ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`545 2 548 38`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+(signature)`_sched_put(self, pit, xacts)`
+
+
+[ Scheduler >> _sched_get ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`550 2 572 15`
+(signature)`_sched_get(self, current)`
+

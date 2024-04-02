@@ -1,0 +1,107 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 38 0`
+Weak references tools and subclasses.
+
+
+[ weakref ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 14`
+
+[ Method ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 38 48`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`6 14 6 31`
+	- (type/syntax)`weakref.WeakMethod`
+	- (type/none/invalid)&<http://fault.io/dev/null[weakref.WeakMethod]>
+	
+(none/invalid)&<http://fault.io/dev/null[weakref.WeakMethod]> subclass providing execution methods for the target
+covering a few signatures.
+
+
+[ Method >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 2 11 15`
+#!source
+	__slots__ = ()
+
+[ Method >> _unlinked ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`13 2 14 78`
+(signature)`_unlinked(self, *args, **kw)`
+
+
+[ Method >> zero ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`16 2 20 37`
+(signature)`zero(self)`
+
+Execute with no arguments.
+
+
+[ Method >> one ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`22 2 26 40`
+(signature)`one(self, arg)`
+
+Execute with one argument.
+
+
+[ Method >> any ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`28 2 32 42`
+(signature)`any(self, *args)`
+
+Execute with all arguments.
+
+
+[ Method >> keywords ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`34 2 38 48`
+(signature)`keywords(self, *args, **kw)`
+
+Execute with all arguments and keywords.
+

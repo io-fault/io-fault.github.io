@@ -1,0 +1,106 @@
+! CONTROL:
+	/type/
+		factor
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+! CONTEXT:
+	/protocol/
+		&<http://if.fault.io/text/type.factor>
+
+	/identifier/
+		&<http://if.fault.io/factors/system>
+
+	/icon/
+		&<data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNTYiIGhlaWdodD0iMjU2Ij48dGV4dCB4PSI0IiB5PSIwLjg4ZW0iIGZvbnQtc2l6ZT0iMjQ4Ij7wn5alPC90ZXh0Pjwvc3ZnPg==>
+
+Type declaration for `system` factors.
+
+[ Source Formats ]
+
+/`c.header`/
+	A header file containing C elements.
+	A source file not intended to be directly processed by integration tooling.
+
+/`c`/
+	The C programming language with preprocessing.
+
+/`c.1990`/
+	The C programming language using ISO 9899:1990.
+
+/`c.1999`/
+	The C programming language using ISO 9899:1999.
+
+/`c.2011`/
+	The C programming language using ISO 9899:2011.
+
+/`c.2017`/
+	The C programming language using ISO 9899:2017.
+
+/`c.2018`/
+	The C programming language using ISO 9899:2018.
+
+/`cc.header`/
+	A header file containing C++ elements.
+	A source file not intended to be directly processed by integration tooling.
+
+/`cc`/
+	The C++ programming language with preprocessing, but
+	without RTTI and exceptions.
+
+/`cc.1998`/
+	The C++ programming language without RTTI and Exceptions
+	using ISO/IEC 14882:1998.
+
+/`cc.2003`/
+	The C++ programming language without RTTI and Exceptions
+	using ISO/IEC 14882:2003.
+
+/`cc.2011`/
+	The C++ programming language without RTTI and Exceptions
+	using ISO/IEC 14882:2011.
+
+/`cc.2014`/
+	The C++ programming language without RTTI and Exceptions
+	using ISO/IEC 14882:2014.
+
+/`cc.2017`/
+	The C++ programming language without RTTI and Exceptions
+	using ISO/IEC 14882:2017.
+
+/`cc.2020`/
+	The C++ programming language without RTTI and Exceptions
+	using ISO/IEC 14882:2020.
+
+[ Controls ]
+
+The set of runtime features needed for correct imaging.
+
+/`exceptions`/
+	System runtime exceptions support.
+
+	Stating `(control)&<http://if.fault.io/factors/system.type#exceptions>` as a requirement will
+	cause factors depending on the symbol to enable exceptions.
+
+	Primarily, this is intended for `C++`, but other languages that feature it as an option
+	may use this endpoint. Notably, this will effect `C` as well if designated as a requirement.
+
+	For `clang` and `gcc` compilers, this will issue `-fexceptions` as a compilation argument
+	instead of `-fno-exceptions`.
+
+/`rtti`/
+	Runtime Type Information support.
+
+	Stating `(control)&<http://if.fault.io/factors/system.type#rtti>` as a requirement will
+	cause factors depending on the symbol to enable RTTI.
+
+	Primarily, this is intended for `C++`, but other languages that feature it as an option
+	may use this endpoint.
+
+	For `clang` and `gcc` compilers, this will issue `-frtti` as a compilation argument instead
+	of `-fno-rtti`.
+
+/`pi`/
+	For systems supporting runtime relocations, this control field designates the image
+	as supporting independant positioning.
+

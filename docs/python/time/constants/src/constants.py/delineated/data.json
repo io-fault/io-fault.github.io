@@ -1,0 +1,1 @@
+[[["annum"], ["unix_epoch"], ["local_datum"]], [{"syntax": "types.Measure.of(second=(86400*365)+(86400//4))", "area": [[23, 9], [23, 55]]}, {"syntax": "types.Timestamp.of(year=1970)", "area": [[24, 14], [24, 42]]}, {"syntax": "types.Timestamp(0)", "area": [[25, 15], [25, 32]]}]]

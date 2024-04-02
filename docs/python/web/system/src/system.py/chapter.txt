@@ -1,0 +1,210 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 315 9`
+System interfaces supporting web services.
+
+
+[ itertools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 16`
+
+[ typing ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 13`
+
+[ media ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 7 28`
+
+[ xml ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 8 26`
+
+[ Path ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`9 1 9 31`
+
+[ calculate_range ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`12 1 20 23`
+(signature)`calculate_range(ranges, size)`
+
+
+[ render_xml_directory_listing ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`22 1 55 3`
+(signature)`render_xml_directory_listing(xs, dl, fl)`
+
+Iterator producing the XML elements describing the directory's content.
+
+
+[ render_directory_listing ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`57 1 78 65`
+(signature)`render_directory_listing(directories, files)`
+
+Object directory listing.
+
+
+[ xml_context_element ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`80 1 85 2`
+(signature)`xml_context_element(xs, hostname, root)`
+
+
+[ _render_index_xml ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`87 1 111 58`
+(signature)`_render_index_xml(xml, routes, rpath)`
+
+
+[ materialize_xml_index ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`113 1 143 3`
+(signature)`materialize_xml_index(ctl, root, rpath, rpoints, routes)`
+
+
+[ _render_index ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`145 1 169 45`
+(signature)`_render_index(routes, rpath)`
+
+
+[ materialize_json_index ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`171 1 174 49`
+(signature)`materialize_json_index(ctl, root, rpath, rpoints, routes)`
+
+
+[ materialize_text_index ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`176 1 184 19`
+(signature)`materialize_text_index(ctl, root, rpath, rpoints, routes)`
+
+
+[ supported_directory_types ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`186 1 190 1`
+#!source
+	supported_directory_types = (
+		media.type_from_bytes(b'application/json'),
+		media.type_from_bytes(b'text/xml'),
+		media.type_from_bytes(b'text/plain'),
+	)
+
+[ directory_materialization ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`192 1 196 1`
+#!source
+	directory_materialization = {
+		media.type_from_bytes(b'application/json'): materialize_json_index,
+		media.type_from_bytes(b'text/xml'): materialize_xml_index,
+		media.type_from_bytes(b'text/plain'): materialize_text_index,
+	}
+
+[ select_filesystem_resource ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`198 1 316 8`
+(signature)`select_filesystem_resource(error, routes, ctl, root, rpath)`
+
+Identify a target resource and materialize a response.
+

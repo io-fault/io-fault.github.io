@@ -1,0 +1,632 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 312 0`
+Implementation of the route base class and route tools.
+
+The primary class, (factor-local/class)&<#PartitionedSequence[PartitionedSequence]>, is essentially a unrolled linked list
+leveraging Python's reference counting to allow sharing of routes and segments
+across instances.
+
+Direct use of this class is likely inappropriate. Either (project-local/unknown)&<types#Selector[types.Selector]> or (project-local/unknown)&<types#Segment[types.Segment]>
+should be subclassed in order to convey the presence of a target resource.
+
+
+[ Iterable ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 1 11 66`
+
+[ Iterator ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 1 11 66`
+
+[ Sequence ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 1 11 66`
+
+[ Hashable ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 1 11 66`
+
+[ TypeVar ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`12 1 12 45`
+
+[ Generic ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`12 1 12 45`
+
+[ Optional ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`12 1 12 45`
+
+[ functools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`13 1 13 16`
+
+[ cachedcalls ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`15 1 15 52`
+
+[ consistency ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`15 1 15 52`
+
+[ Identifier ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`18 1 18 50`
+#!source
+	Identifier = TypeVar('Identifier', bound=Hashable)
+
+[ vcombine ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`21 1 22 12`
+(signature)`vcombine(*args)`
+
+
+[ partition_cache ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`23 1 23 43`
+#!source
+	partition_cache = cachedcalls(32)(vcombine)
+
+[ join ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`25 1 26 37`
+		- (type/syntax)`Sequence[Identifier]`
+		
+(signature)`join(head, tail)`
+
+
+[ absolute_cache ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`27 1 29 16`
+#!source
+	absolute_cache = cachedcalls(64)(join)
+	
+	@cachedcalls(32)
+
+[ construct_cache ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`30 1 31 30`
+(signature)`construct_cache(Class, context, points)`
+
+
+[ map_partitions ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`33 1 38 8`
+(signature)`map_partitions(parts)`
+
+
+[ relative_path ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`40 1 54 25`
+		- (type/syntax)`tuple[int, int, Sequence[Identifier]]`
+		
+(signature)`relative_path(target, source)`
+
+
+[ PartitionedSequence ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`55 1 312 54`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`55 27 55 45`
+	- (type/syntax)`Generic[Identifier]`
+	
+Route implementation class managing the path as a partitioned sequence.
+
+The stored sequences are usually tuples that are connected to a Context
+instance defining the preceeding points in the path. The intent of the
+structure is to allow path sharing for reducing memory use when working
+with long paths. However, this is not done automatically and the exact
+usage must be aware of how (invalid/unknown)&<#context> can eliminate redundant leading segments.
+
+
+[ PartitionedSequence >> correlate ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`68 2 83 13`
+		- (type/syntax)`tuple[int, Sequence[Identifier]]`
+		
+(signature)`correlate(self, target)`
+
+The relative positioning of (factor-local/parameter)&<#PartitionedSequence.correlate.Parameters.self[self]> with respect to (factor-local/parameter)&<#PartitionedSequence.correlate.Parameters.target[target]>.
+Provides the necessary information to form a relative path to (factor-local/parameter)&<#PartitionedSequence.correlate.Parameters.target[target]> from (factor-local/parameter)&<#PartitionedSequence.correlate.Parameters.self[self]>.
+
+Returns the number of steps to ascend and the sequence of identifiers to apply in
+order to arrive at (factor-local/parameter)&<#PartitionedSequence.correlate.Parameters.target[target]>.
+
+
+[ PartitionedSequence >> from_sequence ]
+! CONTROL:
+	/type/
+		classmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`84 2 95 13`
+(signature)`from_sequence(Class, points)`
+
+
+[ PartitionedSequence >> from_partitions ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`96 2 103 77`
+(signature)`from_partitions(Class, parts)`
+
+Construct a new instance from an iterable of partitions in root order.
+
+
+[ PartitionedSequence >> from_context ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`105 2 109 44`
+(signature)`from_context(self, *paths)`
+
+Construct a new route relative to (factor-local/parameter)&<#PartitionedSequence.from_context.Parameters.self[self.context]>.
+
+
+[ PartitionedSequence >> delimit ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`111 2 120 14`
+(signature)`delimit(self)`
+
+Create a new partitioned sequence designating (factor-local/parameter)&<#PartitionedSequence.delimit.Parameters.self[self]> as the context.
+
+If the context-relative path of (factor-local/parameter)&<#PartitionedSequence.delimit.Parameters.self[self]> is an empty sequence, (factor-local/parameter)&<#PartitionedSequence.delimit.Parameters.self[self]> is returned exactly.
+
+
+[ PartitionedSequence >> iterpartitions ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`122 2 132 16`
+(signature)`iterpartitions(self)`
+
+Produce the *partitions* of the sequence in inverse order.
+
+The identifiers *inside* the partitions will be in root order.
+
+
+[ PartitionedSequence >> partitions ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`134 2 141 10`
+(signature)`partitions(self)`
+
+Construct a sequence of partitions in root order.
+Result is a suitable parameter for (factor-local/classmethod)&<#PartitionedSequence.from_partitions[from_partitions]>.
+
+
+[ PartitionedSequence >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`143 2 145 22`
+(signature)`__init__(self, context, points)`
+
+
+[ PartitionedSequence >> __repr__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`147 2 148 79`
+(signature)`__repr__(self)`
+
+
+[ PartitionedSequence >> __reduce__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`150 2 151 53`
+(signature)`__reduce__(self)`
+
+
+[ PartitionedSequence >> __hash__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`153 2 154 28`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+(signature)`__hash__(self)`
+
+
+[ PartitionedSequence >> __eq__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`156 2 162 43`
+(signature)`__eq__(self, operand)`
+
+
+[ PartitionedSequence >> __lt__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`164 2 169 42`
+(signature)`__lt__(self, operand)`
+
+
+[ PartitionedSequence >> __len__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`173 2 174 45`
+(signature)`__len__(self)`
+
+
+[ PartitionedSequence >> __iter__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`176 2 178 15`
+		- (type/syntax)`Iterator[Identifier]`
+		
+(signature)`__iter__(self)`
+
+
+[ PartitionedSequence >> __contains__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`180 2 185 14`
+(signature)`__contains__(self, operand)`
+
+
+[ PartitionedSequence >> __getitem__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`187 2 188 27`
+(signature)`__getitem__(self, req)`
+
+
+[ PartitionedSequence >> __add__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`190 2 195 14`
+(signature)`__add__(self, tail)`
+
+
+[ PartitionedSequence >> __truediv__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`199 2 200 64`
+(signature)`__truediv__(self, addition)`
+
+
+[ PartitionedSequence >> __floordiv__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`202 2 206 23`
+(signature)`__floordiv__(self, route)`
+
+
+[ PartitionedSequence >> __mul__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`208 2 212 86`
+(signature)`__mul__(self, replacement)`
+
+
+[ PartitionedSequence >> __pow__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`214 2 222 10`
+(signature)`__pow__(self, strip)`
+
+
+[ PartitionedSequence >> __rshift__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`224 2 231 30`
+(signature)`__rshift__(self, segment)`
+
+
+[ PartitionedSequence >> __lshift__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`233 2 238 26`
+(signature)`__lshift__(self, segment)`
+
+
+[ PartitionedSequence >> __invert__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`240 2 244 18`
+(signature)`__invert__(self)`
+
+
+[ PartitionedSequence >> __xor__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`246 2 259 17`
+(signature)`__xor__(self, operand)`
+
+
+[ PartitionedSequence >> iterpoints ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`261 2 271 15`
+(signature)`iterpoints(self)`
+
+
+[ PartitionedSequence >> iterinverse ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`273 2 281 10`
+(signature)`iterinverse(self)`
+
+
+[ PartitionedSequence >> absolute ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`282 2 290 10`
+		- (type/syntax)`Sequence[Identifier]`
+		
+
+[ PartitionedSequence >> identifier ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`291 2 299 10`
+
+[ PartitionedSequence >> root ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`300 2 303 10`
+
+[ PartitionedSequence >> container ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`304 2 312 54`

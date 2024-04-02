@@ -1,0 +1,269 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 243 0`
+Bind a system executable to a Python module factor.
+
+
+[ os ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 9`
+
+[ sys ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 10`
+
+[ files ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 7 30`
+
+[ identity ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 8 33`
+
+[ execution ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`9 1 9 34`
+
+[ query ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 1 10 30`
+
+[ project_directory ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`12 1 12 61`
+#!source
+	project_directory = (files.Path.from_absolute(__file__) ** 2)
+
+[ compile_sc ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`14 1 51 15`
+(signature)`compile_sc(target, source, include)`
+
+Construct the parameters to be used to compile and link the new executable according to
+(python/module)`sysconfig`.
+
+
+[ _macrostr ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`53 1 54 35`
+(signature)`_macrostr(func, string)`
+
+
+[ requirements ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`56 1 76 1`
+#!source
+	requirements = [
+		'TARGET_MODULE',
+		'DEFAULT_ENTRY_POINT',
+		'ARGUMENT_COUNT',
+		'ARGUMENTS',
+	
+		'PYTHON_EXECUTABLE_PATH',
+		'PYTHON_PATH_STR',
+		'PYTHON_PATH',
+		'PYTHON_CONTROL_IMPORTS',
+	
+		'FACTOR_PATH_STR',
+		'FACTOR_PATH',
+		'FACTOR_SYSTEM',
+		'FACTOR_PYTHON',
+		'FACTOR_ARCHITECTURE',
+		'FACTOR_INTENTION',
+	
+		'FAULT_PYTHON_PRODUCT',
+		'FAULT_CONTEXT_NAME',
+	]
+
+[ chars ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`78 1 79 26`
+(signature)`chars(string)`
+
+
+[ escape ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`81 1 82 51`
+(signature)`escape(s)`
+
+
+[ static_array_terminated ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`84 1 85 42`
+(signature)`static_array_terminated(string)`
+
+
+[ quoted ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`87 1 88 26`
+(signature)`quoted(string)`
+
+
+[ qpaths ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`90 1 91 51`
+(signature)`qpaths(paths)`
+
+
+[ cpaths ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`93 1 94 31`
+(signature)`cpaths(paths)`
+
+
+[ ipaths ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`96 1 100 11`
+(signature)`ipaths(xmacro, paths)`
+
+
+[ binding ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`102 1 133 2`
+(signature)`binding(platform, struct, executable, target_module, entry_point, *argv)`
+
+
+[ options ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`135 1 184 59`
+(signature)`options(argv)`
+
+
+[ render ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`186 1 190 47`
+(signature)`render(output, factor_path, factor_argv, factor_element, platform, struct)`
+
+
+[ main ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`192 1 237 35`
+(signature)`main(sysargv)`
+

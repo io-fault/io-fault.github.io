@@ -1,0 +1,5 @@
+! CONTEXT:
+	/protocol/
+		&<.>
+
+Description of the properties shared by protocols defined in &<http://if.fault.io/chapters>

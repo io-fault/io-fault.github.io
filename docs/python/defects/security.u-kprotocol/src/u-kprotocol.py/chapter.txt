@@ -1,0 +1,184 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 105 28`
+Validate protocol implementations.
+
+
+[ module ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 43`
+
+[ TLS ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 26 14`
+
+[ TLS >> closed ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 2 7 15`
+#!source
+	closed = False
+
+[ TLS >> ri ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 2 8 11`
+#!source
+	ri = False
+
+[ TLS >> encipher ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 2 11 25`
+(signature)`encipher(self, data)`
+
+
+[ TLS >> decipher ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`13 2 14 25`
+(signature)`decipher(self, data)`
+
+
+[ TLS >> close ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`16 2 17 20`
+(signature)`close(self)`
+
+
+[ TLS >> receive_interrupt ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`19 2 20 16`
+(signature)`receive_interrupt(self)`
+
+
+[ TLS >> connect_transmit_ready ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`22 2 23 14`
+(signature)`connect_transmit_ready(self, cb)`
+
+
+[ TLS >> connect_receive_closed ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`25 2 26 14`
+(signature)`connect_receive_closed(self, cb)`
+
+
+[ test_allocate ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`28 1 33 38`
+(signature)`test_allocate(test)`
+
+
+[ test_transfers ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`35 1 44 52`
+(signature)`test_transfers(test)`
+
+Validate encrypt and decrypt methods.
+
+
+[ test_channel_interrupt ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`46 1 62 23`
+(signature)`test_channel_interrupt(test)`
+
+- (context-local/factor-element)&<fault.security/kprotocol#SecuredTransmit.stx_receive_interrupt[fault.security.kprotocol.SecuredTransmit.stx_receive_interrupt]>
+
+
+[ test_channel_terminate_callback ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`64 1 79 37`
+(signature)`test_channel_terminate_callback(test)`
+
+- (context-local/factor-element)&<fault.security/kprotocol#SecuredTransmit.stx_receive_closed[fault.security.kprotocol.SecuredTransmit.stx_receive_closed]>
+
+
+[ test_channel_terminate_full ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`81 1 106 27`
+(signature)`test_channel_terminate_full(test)`
+
+- (context-local/factor-element)&<fault.security/kprotocol#SecuredTransmit.stx_receive_closed[fault.security.kprotocol.SecuredTransmit.stx_receive_closed]>
+

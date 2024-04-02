@@ -1,0 +1,1 @@
+[[["sysint"], ["fv"]], [{"syntax": "os.environ['SYSTEM_PRODUCT']", "area": [[8, 10], [8, 37]]}, {"syntax": "Variants(*identity.root_execution_context(), 'optimal')", "area": [[12, 6], [12, 60]]}]]

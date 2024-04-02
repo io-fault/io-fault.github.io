@@ -1,0 +1,297 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 467 0`
+
+[ os ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 1 9`
+
+[ time ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`2 1 2 11`
+
+[ module ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`3 1 3 38`
+
+[ Violation ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 6 5`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`5 17 5 25`
+	- (type/syntax)`Exception`
+	- (type/invalid/unknown)&<#Exception>
+	
+
+[ test_Scheduler_close ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 28 22`
+(signature)`test_Scheduler_close(test)`
+
+- (context-local/factor-element)&<fault.system/kernel#Scheduler.close[fault.system.kernel.Scheduler.close]>
+- (context-local/factor-element)&<fault.system/kernel#Scheduler.closed[fault.system.kernel.Scheduler.closed]>
+
+Validate the effect of closing a scheduler instance.
+
+
+[ test_Scheduler_execute ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`30 1 51 23`
+(signature)`test_Scheduler_execute(test)`
+
+- (context-local/factor-element)&<fault.system/kernel#Scheduler.execute[fault.system.kernel.Scheduler.execute]>
+
+Validate the execution of enqueued tasks.
+
+
+[ test_Scheduler_exceptions ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`53 1 79 11`
+(signature)`test_Scheduler_exceptions(test)`
+
+- (context-local/factor-element)&<fault.system/kernel#Scheduler[fault.system.kernel.Scheduler]>
+- (context-local/factor-element)&<fault.system/kernel#Event.meta_exception[fault.system.kernel.Event.meta_exception]>
+
+Validate exception signalling.
+
+
+[ test_execute_nothing ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`81 1 89 23`
+(signature)`test_execute_nothing(test)`
+
+- (context-local/factor-element)&<fault.system/kernel#Scheduler.execute[fault.system.kernel.Scheduler.execute]>
+
+
+[ test_enqueue_interrupt ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`91 1 106 20`
+(signature)`test_enqueue_interrupt(test)`
+
+- (context-local/factor-element)&<fault.system/kernel#Scheduler.execute[fault.system.kernel.Scheduler.execute]>
+
+(context-local/factor-element)&<fault.system/kernel#Scheduler.enqueue[fault.system.kernel.Scheduler.enqueue]> should be sensitive to the event wait state.
+This validates that no timeout event is generated designating that a
+user event was received.
+
+
+[ test_dispatch_actuate ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`108 1 134 35`
+(signature)`test_dispatch_actuate(test)`
+
+- (context-local/factor-element)&<fault.system/kernel#Event.meta_actuate[fault.system.kernel.Event.meta_actuate]>
+
+Check that actuate is dispatched.
+
+
+[ test_dispatch_terminate ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`136 1 165 35`
+(signature)`test_dispatch_terminate(test)`
+
+- (context-local/factor-element)&<fault.system/kernel#Event.meta_terminate[fault.system.kernel.Event.meta_terminate]>
+
+Check that terminate is dispatched.
+
+
+[ test_Link_never_states ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`167 1 192 22`
+(signature)`test_Link_never_states(test)`
+
+- (context-local/factor-element)&<fault.system/kernel#Event.never[fault.system.kernel.Event.never]>
+
+Check that never is available and has no immediate effect.
+
+
+[ test_Link_scheduler_states ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`194 1 223 22`
+(signature)`test_Link_scheduler_states(test)`
+
+- (context-local/factor-element)&<fault.system/kernel#Event.time[fault.system.kernel.Event.time]>
+
+
+[ test_interrupt ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`225 1 250 16`
+(signature)`test_interrupt(test)`
+
+- (context-local/factor-element)&<fault.system/kernel#Scheduler.interrupt[fault.system.kernel.Scheduler.interrupt]>
+
+
+[ test_Event_time_units ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`252 1 265 23`
+(signature)`test_Event_time_units(test)`
+
+- (context-local/factor-element)&<fault.system/kernel#Event[fault.system.kernel.Event]>
+
+Time events are distinct regardless of their timing.
+
+
+[ test_Event_process_pid ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`267 1 292 35`
+(signature)`test_Event_process_pid(test)`
+
+- (context-local/factor-element)&<fault.system/kernel#Event.process_exit[fault.system.kernel.Event.process_exit]>
+
+
+[ test_Event_time ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`294 1 305 16`
+(signature)`test_Event_time(test)`
+
+
+[ test_interrupt_ignored ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`307 1 324 16`
+(signature)`test_interrupt_ignored(test)`
+
+Check that interrupt outside of wait has no effect.
+
+
+[ test_time_event_periodic ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`326 1 349 16`
+(signature)`test_time_event_periodic(test)`
+
+
+[ test_signal_trap ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`351 1 376 20`
+(signature)`test_signal_trap(test)`
+
+- (context-local/factor-element)&<fault.system/kernel#Event.process_signal[fault.system.kernel.Event.process_signal]>
+
+Validate the execution of system process exit events.
+
+
+[ test_process_exit ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`378 1 414 16`
+(signature)`test_process_exit(test)`
+
+- (context-local/factor-element)&<fault.system/kernel#Event.process_exit[fault.system.kernel.Event.process_exit]>
+
+Validate the execution of system process exit events.
+
+
+[ test_Scheduler_io_pipe ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`416 1 467 40`
+(signature)`test_Scheduler_io_pipe(test)`
+
+- (context-local/factor-element)&<fault.system/kernel#Event.io_transmit[fault.system.kernel.Event.io_transmit]>
+- (context-local/factor-element)&<fault.system/kernel#Event.io_receive[fault.system.kernel.Event.io_receive]>
+- (context-local/factor-element)&<fault.system/kernel#Scheduler.wait[fault.system.kernel.Scheduler.wait]>
+- (context-local/factor-element)&<fault.system/kernel#Scheduler.dispatch[fault.system.kernel.Scheduler.dispatch]>
+
+Validate transmit and receive signals on regular pipes.
+

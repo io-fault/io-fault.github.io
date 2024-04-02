@@ -1,0 +1,87 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 43 29`
+
+[ files ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 1 26`
+
+[ file_type_codes ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`3 1 6 1`
+#!source
+	file_type_codes = {
+		k: ('type', v)
+		for k, v in files.type_codes.items()
+	}
+
+[ type_colors ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 19 1`
+#!source
+	type_colors = {
+		'directory': 'blue',
+		None: 'gray',
+		'data': 'gray',
+	
+		'link': 'purple',
+		'pipe': 'orange',
+		'device': 'orange',
+		'socket': 'orange',
+		'void': 'red',
+		'unknown': 'red',
+	}
+
+[ requirement_codes ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`21 1 29 1`
+#!source
+	requirement_codes = {
+		'r': ('permitted', 'read'),
+		'w': ('permitted', 'write'),
+		'x': ('permitted', 'execute'),
+	
+		'/': ('option', 'directory'),
+		'!': ('option', 'void'),
+		'?': ('option', 'unknown'),
+	}
+
+[ requirement_fields ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`31 1 44 28`
+(signature)`requirement_fields(string)`
+
+Split the string into typed fields reducing superfluous
+entries
+

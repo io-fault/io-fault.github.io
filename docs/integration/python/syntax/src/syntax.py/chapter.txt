@@ -1,0 +1,69 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 49 1`
+AST tools for manipulating and querying a Python AST.
+
+Provides functions for instrumentation(future), constant injection, and coverable area detection(limited).
+
+
+[ ast ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 10`
+
+[ untraversable_nodes ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 13 1`
+#!source
+	untraversable_nodes = (
+		ast.Global, ast.Dict, ast.Str,
+		ast.Name, ast.List, ast.Tuple,
+		ast.arg,
+		ast.Assign,
+	)
+
+[ apply ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`15 1 24 20`
+(signature)`apply(path, callable)`
+
+Apply the given (factor-local/parameter)&<#apply.Parameters.callable[callable]> to the parsed AST of the file
+selected by the given (factor-local/parameter)&<#apply.Parameters.path[path]>.
+
+
+[ coverable ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`26 1 49 11`
+(signature)`coverable(tree)`
+
+Construct a (invalid/unknown)&<#set> of lines numbers that contains code
+that can be covered.
+
+Used by Python coverage reporting tools to identify coverage percentage.
+
+[ > Engineering ]
+
+Currently does not extract exact expression ranges.
+

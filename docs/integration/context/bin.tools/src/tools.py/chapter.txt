@@ -1,0 +1,78 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 24 0`
+Executable factor index for (invalid/unknown)&<#fault.system.bin.tool> bindings.
+
+
+[ importlib ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`4 1 4 16`
+
+[ context_name ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`5 1 5 40`
+
+[ process ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`6 1 6 32`
+
+[ index ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`8 1 16 1`
+#!source
+	index = {
+		'delineate-kleptic-text': context_name + '.chapters.bin.delineate',
+		'archive-delineated': context_name + '.machines.bin.delineated',
+		'text-cc': context_name + '.chapters.bin.compile',
+		'python-cc': context_name + '.python.bin.compile',
+		'factors-cc': context_name + '.factors.bin.construct',
+		'products-cc': context_name + '.products.bin.control',
+		'man': context_name + '.context.bin.manual',
+	}
+
+[ activate ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`18 1 19 69`
+(signature)`activate(factor, element)`
+
+
+[ main ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`21 1 24 36`
+		- (type/syntax)`process.Exit`
+		- (type/remote/factor-element)&<http://fault.io/python/system/process#Exit[fault.system.process.Exit]>
+		
+(signature)`main(inv)`
+

@@ -1,0 +1,261 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 116 0`
+Terminal formatting
+
+
+[ functools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 16`
+
+[ json ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 11`
+
+[ itertools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 16`
+
+[ palette ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 8 30`
+
+[ matrix ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`9 1 9 29`
+
+[ url ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 1 10 33`
+
+[ syntax ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`13 1 13 20`
+
+[ kos ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`14 1 14 36`
+
+[ area ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`16 1 16 23`
+#!source
+	area = matrix.Context()
+
+[ python ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`18 1 31 47`
+(signature)`python(context, language, source)`
+
+
+[ Field ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`33 1 64 46`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`33 13 33 18`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+
+[ Field >> objclass ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`34 2 34 85`
+#!source
+	objclass = area.RenderParameters.from_colors(palette.colors['relative-blue'], -1024)
+
+[ Field >> invalid ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`35 2 35 83`
+#!source
+	invalid = area.RenderParameters.from_colors(palette.colors['relative-red'], -1024)
+
+[ Field >> normal ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`36 2 36 57`
+#!source
+	normal = area.RenderParameters.from_colors(-1024, -1024)
+
+[ Field >> field ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`37 2 37 88`
+#!source
+	field = area.RenderParameters.from_colors(palette.colors['foreground-adjacent'], -1024)
+
+[ Field >> __str__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`39 2 40 47`
+(signature)`__str__(self)`
+
+
+[ Field >> dlength ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`42 2 43 68`
+(signature)`dlength(self)`
+
+
+[ Field >> dformat ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`45 2 49 62`
+(signature)`dformat(self, context)`
+
+
+[ Field >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`51 2 64 46`
+(signature)`__init__(self, type, *parameters)`
+
+
+[ render ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`66 1 100 10`
+(signature)`render(context, type, parameter)`
+
+
+[ dformat ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`102 1 106 31`
+(signature)`dformat(context, field)`
+
+
+[ strings ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`108 1 116 26`
+(signature)`strings(sequence)`
+
+Emit the formatted lines of a prepared sequence as (invalid/unknown)&<#str> instances.
+Newline characters are *not* added to line.
+

@@ -1,0 +1,102 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 112 0`
+
+[ module ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 1 35`
+
+[ files ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`2 1 2 27`
+
+[ test_Index_structure ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 24 49`
+(signature)`test_Index_structure(test)`
+
+
+[ test_Index ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`26 1 49 28`
+(signature)`test_Index(test)`
+
+
+[ test_Segmentation ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`51 1 56 26`
+(signature)`test_Segmentation(test)`
+
+
+[ test_Directory_operations ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`58 1 83 32`
+(signature)`test_Directory_operations(test)`
+
+- (context-local/factor-element)&<fault.route/hash#Directory.__init__[fault.route.hash.Directory.__init__]>
+- (context-local/factor-element)&<fault.route/hash#Directory.allocate[fault.route.hash.Directory.allocate]>
+- (context-local/factor-element)&<fault.route/hash#Directory.available[fault.route.hash.Directory.available]>
+- (context-local/factor-element)&<fault.route/hash#Directory.release[fault.route.hash.Directory.release]>
+
+
+[ test_Directory_updates ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`85 1 99 14`
+(signature)`test_Directory_updates(test)`
+
+- (context-local/factor-element)&<fault.route/hash#Index.load[fault.route.hash.Index.load]>
+- (context-local/factor-element)&<fault.route/hash#Index.sequence[fault.route.hash.Index.sequence]>
+
+
+[ test_Directory_items ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`101 1 112 58`
+(signature)`test_Directory_items(test)`
+
+- (context-local/factor-element)&<fault.route/hash#Directory.items[fault.route.hash.Directory.items]>
+

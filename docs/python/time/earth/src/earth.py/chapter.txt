@@ -1,0 +1,97 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 60 0`
+Earth-day related unit information.
+
+[ Properties ]
+
+/periods/
+	SI unit second definition constant with respect to caesium frequency.
+
+/seconds_in_minute/
+	Number of seconds contained in a minute.
+
+/minutes_in_hour/
+	Number of minutes contained in an hour.
+
+/hours_in_day/
+	Number of hours contained in a day.
+
+/days_in_four_annum/
+	Number of days in four annums.
+
+
+[ periods ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`18 1 18 20`
+#!source
+	periods = 9192631779
+
+[ seconds_in_minute ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`19 1 19 22`
+#!source
+	seconds_in_minute = 60
+
+[ minutes_in_hour ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`20 1 20 20`
+#!source
+	minutes_in_hour = 60
+
+[ hours_in_day ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`21 1 21 17`
+#!source
+	hours_in_day = 24
+
+[ days_in_four_annum ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`22 1 22 25`
+#!source
+	days_in_four_annum = 1461
+
+[ context ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`24 1 60 77`
+(signature)`context(context)`
+

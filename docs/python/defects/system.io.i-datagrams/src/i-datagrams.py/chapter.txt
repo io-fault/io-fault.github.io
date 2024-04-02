@@ -1,0 +1,156 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 254 0`
+
+[ common ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 1 20`
+
+[ io ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`2 1 2 25`
+
+[ network ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`3 1 3 30`
+
+[ service_alloc ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 79`
+#!source
+	service_alloc = network.Endpoint.from_ip4(('127.0.0.1', 0), 'udp', 'datagrams')
+
+[ mksrv ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 7 55`
+(signature)`mksrv()`
+
+
+[ error_cases ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`9 1 20 17`
+(signature)`error_cases(test, dg, idx)`
+
+
+[ test_DatagramArray_errors ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`22 1 50 33`
+(signature)`test_DatagramArray_errors(test)`
+
+
+[ test_DatagramArray ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`52 1 129 28`
+(signature)`test_DatagramArray(test)`
+
+
+[ alloc ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`131 1 132 39`
+(signature)`alloc(q)`
+
+
+[ test_Datagrams_transfer_one ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`134 1 156 10`
+(signature)`test_Datagrams_transfer_one(test)`
+
+
+[ test_Datagrams_transfer_one_of_two ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`158 1 183 10`
+(signature)`test_Datagrams_transfer_one_of_two(test)`
+
+
+[ test_Datagrams_transfer_two_of_one ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`185 1 229 10`
+(signature)`test_Datagrams_transfer_two_of_one(test)`
+
+
+[ test_Datagrams_invalid ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`231 1 254 10`
+(signature)`test_Datagrams_invalid(test)`
+

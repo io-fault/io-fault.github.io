@@ -1,0 +1,5 @@
+/* Python and fault locations for binding executable (factor) modules. */
+#define PYTHON_EXECUTABLE_PATH "/usr/local/bin/python3"
+#define FAULT_PYTHON_IMPLEMENTATION 1
+#define FAULT_PYTHON_PRODUCT "/x/canonical/python"
+#define FAULT_CONTEXT_NAME "fault"

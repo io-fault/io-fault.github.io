@@ -1,0 +1,66 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 105 42`
+Validate the operation of obstructing flows.
+
+
+[ flows ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 28`
+
+[ test_Flow_operation ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 20 37`
+(signature)`test_Flow_operation(test)`
+
+
+[ test_Flow_obstructions ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`22 1 52 29`
+(signature)`test_Flow_obstructions(test)`
+
+Validate that joins receive obstruction notifications.
+
+
+[ test_Flow_obstructions_initial ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`54 1 73 22`
+(signature)`test_Flow_obstructions_initial(test)`
+
+Validate obstruction signaling when obstruction is presented before the watch.
+
+
+[ test_Flow_obstructions ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`75 1 102 44`
+(signature)`test_Flow_obstructions(test)`
+
+Validate that joins receive obstruction notifications.
+

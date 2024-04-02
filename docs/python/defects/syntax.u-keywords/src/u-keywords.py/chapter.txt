@@ -1,0 +1,395 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 598 0`
+Keyword Language Class Parser and Profile tests.
+
+
+[ module ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 40`
+
+[ mkcsubset ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 20 2`
+(signature)`mkcsubset(Type)`
+
+
+[ test_Profile_constructors_v1 ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`22 1 61 93`
+(signature)`test_Profile_constructors_v1(test)`
+
+- (context-local/factor-element)&<fault.syntax/keywords#Profile[fault.syntax.keywords.Profile]>
+
+
+[ test_Parser_constructors ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`63 1 69 42`
+(signature)`test_Parser_constructors(test)`
+
+- (context-local/factor-element)&<fault.syntax/keywords#Parser.__init__[fault.syntax.keywords.Parser.__init__]>
+- (context-local/factor-element)&<fault.syntax/keywords#Parser.from_profile[fault.syntax.keywords.Parser.from_profile]>
+
+
+[ test_Parser_words ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`71 1 94 35`
+(signature)`test_Parser_words(test)`
+
+- (context-local/factor-element)&<fault.syntax/keywords#Parser[fault.syntax.keywords.Parser]>
+- (context-local/factor-element)&<fault.syntax/keywords#Parser.tokenize[fault.syntax.keywords.Parser.tokenize]>
+
+
+[ test_Parser_spaces ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`96 1 125 49`
+(signature)`test_Parser_spaces(test)`
+
+- (context-local/factor-element)&<fault.syntax/keywords#Parser[fault.syntax.keywords.Parser]>
+- (context-local/factor-element)&<fault.syntax/keywords#Parser.tokenize[fault.syntax.keywords.Parser.tokenize]>
+
+
+[ test_Parser_exclusion_classification ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`127 1 142 52`
+(signature)`test_Parser_exclusion_classification(test)`
+
+- (context-local/factor-element)&<fault.syntax/keywords#Parser[fault.syntax.keywords.Parser]>
+- (context-local/factor-element)&<fault.syntax/keywords#Parser.tokenize[fault.syntax.keywords.Parser.tokenize]>
+
+
+[ test_Parser_literal_classification ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`144 1 157 54`
+(signature)`test_Parser_literal_classification(test)`
+
+- (context-local/factor-element)&<fault.syntax/keywords#Parser[fault.syntax.keywords.Parser]>
+- (context-local/factor-element)&<fault.syntax/keywords#Parser.tokenize[fault.syntax.keywords.Parser.tokenize]>
+
+
+[ test_Parser_enclosure_classification ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`159 1 169 55`
+(signature)`test_Parser_enclosure_classification(test)`
+
+- (context-local/factor-element)&<fault.syntax/keywords#Parser[fault.syntax.keywords.Parser]>
+- (context-local/factor-element)&<fault.syntax/keywords#Parser.tokenize[fault.syntax.keywords.Parser.tokenize]>
+
+
+[ test_Parser_operation_classification ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`171 1 184 50`
+(signature)`test_Parser_operation_classification(test)`
+
+- (context-local/factor-element)&<fault.syntax/keywords#Parser[fault.syntax.keywords.Parser]>
+- (context-local/factor-element)&<fault.syntax/keywords#Parser.tokenize[fault.syntax.keywords.Parser.tokenize]>
+
+
+[ test_Parser_router_classification ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`186 1 197 44`
+(signature)`test_Parser_router_classification(test)`
+
+- (context-local/factor-element)&<fault.syntax/keywords#Parser[fault.syntax.keywords.Parser]>
+- (context-local/factor-element)&<fault.syntax/keywords#Parser.tokenize[fault.syntax.keywords.Parser.tokenize]>
+
+
+[ test_Parser_terminator_classification ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`199 1 211 52`
+(signature)`test_Parser_terminator_classification(test)`
+
+- (context-local/factor-element)&<fault.syntax/keywords#Parser[fault.syntax.keywords.Parser]>
+- (context-local/factor-element)&<fault.syntax/keywords#Parser.tokenize[fault.syntax.keywords.Parser.tokenize]>
+
+
+[ test_Parser_compound_operators ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`213 1 222 46`
+(signature)`test_Parser_compound_operators(test)`
+
+- (context-local/factor-element)&<fault.syntax/keywords#Parser[fault.syntax.keywords.Parser]>
+- (context-local/factor-element)&<fault.syntax/keywords#Parser.tokenize[fault.syntax.keywords.Parser.tokenize]>
+
+
+[ test_Parser_fragments ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`224 1 245 51`
+(signature)`test_Parser_fragments(test)`
+
+- (context-local/factor-element)&<fault.syntax/keywords#Parser[fault.syntax.keywords.Parser]>
+- (context-local/factor-element)&<fault.syntax/keywords#Parser.tokenize[fault.syntax.keywords.Parser.tokenize]>
+
+
+[ test_Parser_allocstack ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`247 1 255 33`
+(signature)`test_Parser_allocstack(test)`
+
+- (context-local/factor-element)&<fault.syntax/keywords#Parser.allocstack[fault.syntax.keywords.Parser.allocstack]>
+
+Sanity.
+
+
+[ test_Parser_delimit_note_nothing ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`257 1 280 22`
+(signature)`test_Parser_delimit_note_nothing(test)`
+
+- (context-local/factor-element)&<fault.syntax/keywords#Parser.delimit[fault.syntax.keywords.Parser.delimit]>
+
+Checks that the initial switch is injected in the stream.
+
+
+[ test_Parser_delimit_note_exclusion ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`282 1 309 36`
+(signature)`test_Parser_delimit_note_exclusion(test)`
+
+- (context-local/factor-element)&<fault.syntax/keywords#Parser.delimit[fault.syntax.keywords.Parser.delimit]>
+
+
+[ test_Parser_delimit_note_capture ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`311 1 345 36`
+(signature)`test_Parser_delimit_note_capture(test)`
+
+- (context-local/factor-element)&<fault.syntax/keywords#Parser.delimit[fault.syntax.keywords.Parser.delimit]>
+
+Checks that 'delimit' is transitioned to start and stop.
+
+
+[ delimit_nested ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`349 1 388 18`
+(signature)`delimit_nested(test, parser, t_type)`
+
+
+[ delimit_nested_inconsistent ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`390 1 422 36`
+(signature)`delimit_nested_inconsistent(test, parser, t_type)`
+
+
+[ delimit_nested_inconsistent_alteration ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`424 1 455 18`
+(signature)`delimit_nested_inconsistent_alteration(test, parser, t_type)`
+
+
+[ test_Parser_delimit_exclusion_nested ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`457 1 465 42`
+(signature)`test_Parser_delimit_exclusion_nested(test)`
+
+- (context-local/factor-element)&<fault.syntax/keywords#Parser.delimit[fault.syntax.keywords.Parser.delimit]>
+
+Checks that 'delimit' recognizes nested exclusions with redundant switches.
+
+
+[ test_Parser_delimit_exclusion_unnested ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`467 1 477 55`
+(signature)`test_Parser_delimit_exclusion_unnested(test)`
+
+- (context-local/factor-element)&<fault.syntax/keywords#Parser.delimit[fault.syntax.keywords.Parser.delimit]>
+
+Checks that 'delimit' avoids pushing the context
+when an inconsistent nested comment is found.
+"// /* Newline Comment in block */"
+
+
+[ test_Parser_delimit_exclusion_unnested_alternate ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`479 1 489 66`
+(signature)`test_Parser_delimit_exclusion_unnested_alternate(test)`
+
+- (context-local/factor-element)&<fault.syntax/keywords#Parser.delimit[fault.syntax.keywords.Parser.delimit]>
+
+Checks that 'delimit' avoids pushing the context
+when an inconsistent nested comment is found.
+"/* // Newline Comment in block */"
+
+
+[ test_Parser_delimit_literal_nested ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`493 1 505 40`
+(signature)`test_Parser_delimit_literal_nested(test)`
+
+- (context-local/factor-element)&<fault.syntax/keywords#Parser.delimit[fault.syntax.keywords.Parser.delimit]>
+
+Checks that 'delimit' recognizes nested exclusions with redundant switches.
+
+
+[ test_Parser_delimit_literal_unnested ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`507 1 521 53`
+(signature)`test_Parser_delimit_literal_unnested(test)`
+
+- (context-local/factor-element)&<fault.syntax/keywords#Parser.delimit[fault.syntax.keywords.Parser.delimit]>
+
+Checks that 'delimit' avoids pushing the context
+when an inconsistent nested comment is found.
+"// /* Newline Comment in block */"
+
+
+[ test_Parser_delimit_literal_unnested_alternate ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`523 1 537 64`
+(signature)`test_Parser_delimit_literal_unnested_alternate(test)`
+
+- (context-local/factor-element)&<fault.syntax/keywords#Parser.delimit[fault.syntax.keywords.Parser.delimit]>
+
+Checks that 'delimit' avoids pushing the context
+when an inconsistent nested comment is found.
+"/* // Newline Comment in block */"
+
+
+[ test_Parser_process_lines ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`539 1 568 18`
+(signature)`test_Parser_process_lines(test)`
+
+- (context-local/factor-element)&<fault.syntax/keywords#Parser.process_lines[fault.syntax.keywords.Parser.process_lines]>
+
+Sanity check and validation of context breaks.
+
+
+[ test_Parser_process_document ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`570 1 598 18`
+(signature)`test_Parser_process_document(test)`
+
+- (context-local/factor-element)&<fault.syntax/keywords#Parser.process_document[fault.syntax.keywords.Parser.process_document]>
+
+Sanity check and validation of context continuity.
+

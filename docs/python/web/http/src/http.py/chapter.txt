@@ -1,0 +1,1008 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 747 0`
+Client and server common IETF HTTP tools for (context-local/project-name)&<fault.kernel> based applications.
+
+[ Properties ]
+
+/HeaderSequence/
+	Type annotation for the header sequence used by (factor-local/class)&<#Structures[Structures]> instances.
+
+
+[ typing ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 8 13`
+
+[ collections ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`9 1 9 18`
+
+[ itertools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 1 10 16`
+
+[ functools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 1 11 16`
+
+[ tools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`13 1 13 27`
+
+[ cachedproperty ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`14 1 14 55`
+
+[ cachedcalls ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`14 1 14 55`
+
+[ timetypes ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`15 1 15 37`
+
+[ memory ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`16 1 16 27`
+
+[ protocol ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`18 1 18 39`
+
+[ media ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`19 1 19 28`
+
+[ ri ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`20 1 20 25`
+
+[ core ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`22 1 22 25`
+
+[ flows ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`23 1 23 26`
+
+[ HeaderSequence ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`25 1 25 60`
+#!source
+	HeaderSequence = typing.Sequence[typing.Tuple[bytes, bytes]]
+
+[ ranges ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`27 1 65 37`
+(signature)`ranges(length, range_header)`
+
+Generator producing the integer ranges specified by the given Range header.
+
+[ > Parameters ]
+
+/(parameter)`length`/
+	
+	The (http/header)`Content-Length` of the entity body being referenced.
+
+/(parameter)`range_header`/
+	
+	The (http/header)`Range` to be converted to slices.
+
+/(parameter)`decode_number`/
+	
+	(control/absent)`Undocumented`.
+
+
+[ Structures ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`67 1 381 35`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`67 18 67 23`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+Manages a sequence of HTTP headers and cached access to specific ones.
+
+Primarily used to extract information from received response (client) or request (server).
+
+
+[ Structures >> method ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`74 2 74 14`
+#!source
+	method = None
+
+[ Structures >> uri ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`75 2 75 11`
+#!source
+	uri = None
+
+[ Structures >> pathstring ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`76 2 76 18`
+#!source
+	pathstring = None
+
+[ Structures >> querystring ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`77 2 77 19`
+#!source
+	querystring = None
+
+[ Structures >> status ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`79 2 79 14`
+#!source
+	status = None
+
+[ Structures >> phrase ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`80 2 80 14`
+#!source
+	phrase = None
+
+[ Structures >> _uri_struct ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`82 2 82 19`
+#!source
+	_uri_struct = None
+
+[ Structures >> _uri_parts ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`83 2 83 18`
+#!source
+	_uri_parts = None
+
+[ Structures >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`85 2 98 24`
+(signature)`__init__(self, headers, *local)`
+
+Create a cache for a sequence of headers directly stored.
+
+[ >> Parameters ]
+
+/(parameter)`self`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`headers`/
+	- (type/syntax)`HeaderSequence`
+	- (type/factor-local/data)&<#HeaderSequence[HeaderSequence]>
+	
+	The sequence of pairs designating the storage area to use.
+
+/(parameter)`local`/
+	- (type/syntax)`bytes`
+	- (type/invalid/unknown)&<#bytes>
+	
+	Additional headers that should have cached access.
+
+
+[ Structures >> set_request ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`100 2 112 13`
+(signature)`set_request(self, method, uri)`
+
+Configure the structure as representing a request received by a server.
+
+
+[ Structures >> set_status ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`114 2 123 10`
+(signature)`set_status(self, status, phrase)`
+
+Configure the structure as representing a response received by a client.
+
+
+[ Structures >> redirected ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`124 2 130 16`
+		- (type/syntax)`bool`
+		- (type/invalid/unknown)&<#bool>
+		
+Whether the response is a redirect.
+
+
+[ Structures >> cache ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`131 2 133 20`
+(signature)`cache(self)`
+
+
+[ Structures >> __str__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`135 2 139 4`
+(signature)`__str__(self)`
+
+
+[ Structures >> _init_headers ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`141 2 161 16`
+(signature)`_init_headers(self, headers)`
+
+Set the headers to be cached and structured for use by an application.
+
+
+[ Structures >> _uri_parts ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`162 2 168 16`
+(signature)`_uri_parts(self)`
+
+
+[ Structures >> _uri_struct ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`169 2 172 10`
+(signature)`_uri_struct(self)`
+
+
+[ Structures >> path ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`173 2 179 10`
+		- (type/syntax)`typing.Sequence[str]`
+		
+The sequence of path items in pathstring.
+
+
+[ Structures >> query ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`180 2 186 10`
+		- (type/syntax)`typing.Optional[dict]`
+		
+The query parameters of the URI.
+
+
+[ Structures >> upgrade ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`187 2 193 10`
+		- (type/syntax)`bool`
+		- (type/invalid/unknown)&<#bool>
+		
+Whether or not the request looking to perform protocol substitution.
+
+
+[ Structures >> content ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`194 2 204 10`
+		- (type/syntax)`bool`
+		- (type/invalid/unknown)&<#bool>
+		
+Whether the headers indicate an associated body.
+
+
+[ Structures >> length ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`205 2 219 13`
+		- (type/syntax)`typing.Optional[int]`
+		
+The length of the content; positive if exact, (invalid/unknown)&<#None> if no content, and -1 if arbitrary.
+For HTTP, arbitrary triggers chunked transfer encoding.
+
+
+[ Structures >> byte_ranges ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`221 2 229 16`
+(signature)`byte_ranges(self, length)`
+
+The byte ranges of the request.
+
+
+[ Structures >> upgrade_insecure ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`230 2 245 58`
+(signature)`upgrade_insecure(self)`
+
+The (http/header-id)`Upgrade-Insecure-Requests` header as a boolean.
+(invalid/unknown)&<#None> if not the header was not present, (invalid/unknown)&<#True> if the header value was
+(octets)`1` and (invalid/unknown)&<#False> if (octets)`0`.
+
+
+[ Structures >> cached_headers ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`247 2 312 10`
+#!source
+	cached_headers = set(
+		x.lower() for x in [
+			b'Connection',
+			b'Upgrade',
+			b'Host',
+			b'Upgrade-Insecure-Requests',
+			b'Range',
+			b'Expect',
+				b'Transfer-Encoding',
+			b'Transfer-Extension',
+				b'TE',
+			b'Trailer',
+				b'Date',
+			b'Last-Modified',
+			b'Retry-After',
+				b'Server',
+			b'User-Agent',
+			b'From',
+			b'P3P',
+				b'Accept',
+			b'Accept-Encoding',
+			b'Accept-Language',
+			b'Accept-Ranges',
+			b'Accept-Charset',
+				b'Content-Type',
+			b'Content-Language',
+			b'Content-Length',
+			b'Content-Range',
+			b'Content-Location',
+			b'Content-Encoding',
+				b'Cache-Control',
+			b'ETag',
+			b'Expires',
+			b'If-Match',
+			b'If-Modified-Since',
+			b'If-None-Match',
+			b'If-Range',
+			b'If-Unmodified-Since',
+				b'Authorization',
+			b'WWW-Authenticate',
+			b'Proxy-Authenticate',
+			b'Proxy-Authorization',
+				b'Location',
+			b'Max-Forwards',
+				b'Via',
+			b'Vary',
+				b'Forwarded',
+			b'X-Forwarded-For',
+				b':Method',
+			b':URI',
+		]
+	)
+		@property
+
+[ Structures >> connection ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`313 2 320 17`
+		- (type/syntax)`bytes`
+		- (type/invalid/unknown)&<#bytes>
+		
+Return the connection header stripped and lowered or `b''` if no header present.
+
+
+[ Structures >> media_range_cache ]
+! CONTROL:
+	/type/
+		staticmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`321 2 331 16`
+(signature)`media_range_cache(range_data)`
+
+Cached access to a media range header.
+
+
+[ Structures >> media_range ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`332 2 340 16`
+(signature)`media_range(self)`
+
+Structured form of the Accept header.
+
+
+[ Structures >> media_type ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`341 2 348 16`
+		- (type/syntax)`media.Type`
+		- (type/context-local/factor-element)&<fault.internet/media#Type[fault.internet.media.Type]>
+		
+(signature)`media_type(self)`
+
+The structured media type extracted from the (http/header-id)`Content-Type` header.
+
+
+[ Structures >> date ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`349 2 360 10`
+		- (type/syntax)`timetypes.Timestamp`
+		- (type/context-local/factor-element)&<fault.time/types#Timestamp[fault.time.types.Timestamp]>
+		
+(signature)`date(self)`
+
+Date header timestamp.
+
+
+[ Structures >> host ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`361 2 367 10`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+Decoded host header.
+
+
+[ Structures >> encoding ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`368 2 374 10`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+Character encoding of entity content. (invalid/unknown)&<#None> if not applicable.
+
+
+[ Structures >> final ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`375 2 381 35`
+		- (type/syntax)`bool`
+		- (type/invalid/unknown)&<#bool>
+		
+Whether this is suppoed to be the last transaction in the connection.
+
+
+[ _join_send_wire ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`383 1 385 31`
+(signature)`_join_send_wire(event, channel_id, transfer_events)`
+
+
+[ _join_send_content ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`387 1 389 41`
+(signature)`_join_send_content(event, channel_id, transfer_events)`
+
+
+[ _join_send_chunk ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`391 1 393 41`
+(signature)`_join_send_chunk(event, channel_id, transfer_events)`
+
+
+[ _join_send_eom ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`395 1 397 14`
+(signature)`_join_send_eom(event, channel_id, terminal)`
+
+
+[ _join_initiate_response ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`399 1 420 2`
+(signature)`_join_initiate_response(shared, commands, sequence, event, channel_id, init)`
+
+
+[ _join_initiate_request ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`422 1 446 2`
+(signature)`_join_initiate_request(shared, commands, sequence, event, channel_id, init)`
+
+
+[ join ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`448 1 487 18`
+(signature)`join(shared, sequence)`
+
+Join flow events into a proper HTTP stream.
+
+
+[ _fork_response_sync ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`489 1 495 52`
+(signature)`_fork_response_sync(state)`
+
+Generator that can be used to communicate whether or not
+the response will have a body. Used with client disposition.
+
+
+[ fork ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`497 1 646 18`
+(signature)`fork(shared, allocate, close, overflow)`
+
+Split an HTTP stream into flow events for use by (context-local/factor-element)&<fault.kernel/flows#Division[fault.kernel.flows.Division]>.
+
+
+[ TXProtocol ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`648 1 677 23`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`648 18 648 31`
+	- (type/syntax)`flows.Protocol`
+	- (type/context-local/factor-element)&<fault.kernel/flows#Protocol[fault.kernel.flows.Protocol]>
+	
+Protocol class sending HTTP messages.
+
+
+[ TXProtocol >> http_version ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`654 2 657 14`
+
+[ TXProtocol >> initiate_server_request ]
+! CONTROL:
+	/type/
+		staticmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`658 2 665 14`
+(signature)`initiate_server_request(protocol, parameter)`
+
+Used by clients to select the proper initiation to send.
+
+
+[ TXProtocol >> initiate_client_response ]
+! CONTROL:
+	/type/
+		staticmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`666 2 671 57`
+(signature)`initiate_client_response(protocol, parameter)`
+
+Used by servers to select the proper initiation to send.
+
+
+[ TXProtocol >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`673 2 677 23`
+(signature)`__init__(self, state, initiate)`
+
+
+[ RXProtocol ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`679 1 720 23`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`679 18 679 31`
+	- (type/syntax)`flows.Protocol`
+	- (type/context-local/factor-element)&<fault.kernel/flows#Protocol[fault.kernel.flows.Protocol]>
+	
+Protocol class receiving HTTP messages.
+
+
+[ RXProtocol >> http_version ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`685 2 688 14`
+
+[ RXProtocol >> allocate_client_request ]
+! CONTROL:
+	/type/
+		staticmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`689 2 696 14`
+(signature)`allocate_client_request(parameter)`
+
+For use by server receiving the client request.
+
+
+[ RXProtocol >> allocate_server_response ]
+! CONTROL:
+	/type/
+		staticmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`697 2 702 46`
+(signature)`allocate_server_response(parameter)`
+
+For use by clients receiving the server response.
+
+
+[ RXProtocol >> p_close ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`704 2 705 6`
+(signature)`p_close(self)`
+
+
+[ RXProtocol >> p_correlate ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`707 2 709 36`
+(signature)`p_correlate(self, send)`
+
+
+[ RXProtocol >> p_overflowing ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`711 2 714 31`
+(signature)`p_overflowing(self)`
+
+
+[ RXProtocol >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`716 2 720 23`
+(signature)`__init__(self, state, allocate)`
+
+
+[ allocate_client_protocol ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`722 1 730 25`
+(signature)`allocate_client_protocol()`
+
+
+[ allocate_server_protocol ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`732 1 740 25`
+(signature)`allocate_server_protocol()`
+
+
+[ allocate_client_protocol_v1 ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`742 1 742 54`
+#!source
+	allocate_client_protocol_v1 = allocate_client_protocol
+
+[ allocate_server_protocol_v1 ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`743 1 743 54`
+#!source
+	allocate_server_protocol_v1 = allocate_server_protocol

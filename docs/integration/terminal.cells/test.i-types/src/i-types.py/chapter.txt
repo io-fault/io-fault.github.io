@@ -1,0 +1,224 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 304 0`
+Validate type interface.
+
+
+[ module ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 30`
+
+[ test_Line_type ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 37 39`
+(signature)`test_Line_type(test)`
+
+Check line patterns enumeration.
+
+
+[ test_Area_instances ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`39 1 61 19`
+(signature)`test_Area_instances(test)`
+
+Validate rectangle.
+
+
+[ test_Area_move ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`63 1 80 17`
+(signature)`test_Area_move(test)`
+
+- (project-local/project-factor)&<types.Area.move[terminal.cells.types.Area.move]>
+
+
+[ test_Area_resize ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`82 1 99 17`
+(signature)`test_Area_resize(test)`
+
+- (project-local/project-factor)&<types.Area.resize[terminal.cells.types.Area.resize]>
+
+
+[ test_Area_comparison ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`101 1 117 14`
+(signature)`test_Area_comparison(test)`
+
+- (project-local/project-factor)&<types.Area.__eq__[terminal.cells.types.Area.__eq__]>
+- (project-local/project-factor)&<types.Area.__ne__[terminal.cells.types.Area.__ne__]>
+
+
+[ test_Area_hash ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`119 1 139 16`
+(signature)`test_Area_hash(test)`
+
+- (project-local/project-factor)&<types.Area.__hash__[terminal.cells.types.Area.__hash__]>
+
+
+[ test_Glyph_instances ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`141 1 151 42`
+(signature)`test_Glyph_instances(test)`
+
+
+[ test_Glyph_negative_codepoints ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`153 1 159 32`
+(signature)`test_Glyph_negative_codepoints(test)`
+
+
+[ test_Glyph_update ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`161 1 173 85`
+(signature)`test_Glyph_update(test)`
+
+Validate field inheritance.
+
+
+[ test_Glyph_inscribe ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`175 1 191 32`
+(signature)`test_Glyph_inscribe(test)`
+
+Validate field inheritance and interface.
+
+
+[ test_Pixels_Cell ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`193 1 208 20`
+(signature)`test_Pixels_Cell(test)`
+
+Validate instantiation parameters and attributes.
+
+
+[ test_Screen_memory_requirements ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`210 1 219 15`
+(signature)`test_Screen_memory_requirements(test)`
+
+Validate that instances check that the available memory is enough
+for the cited number of cells in the screen.
+
+
+[ test_Screen_memory_release ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`221 1 233 23`
+(signature)`test_Screen_memory_release(test)`
+
+Validate that the buffer is released.
+
+
+[ test_Screen_empty ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`235 1 249 15`
+(signature)`test_Screen_empty(test)`
+
+Check empty screen cases.
+
+
+[ test_Screen_rewrite ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`251 1 267 69`
+(signature)`test_Screen_rewrite(test)`
+
+Validate Screen.rewrite.
+
+
+[ test_Screen_intersection ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`269 1 287 50`
+(signature)`test_Screen_intersection(test)`
+
+Validate that selecting areas beyond the screen are ignored.
+
+
+[ test_Screen_replicate ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`289 1 304 76`
+(signature)`test_Screen_replicate(test)`
+
+Validate cell replication.
+

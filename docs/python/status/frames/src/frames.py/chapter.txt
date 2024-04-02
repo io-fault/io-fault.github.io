@@ -1,0 +1,545 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 391 0`
+Formatting and parsing tools for status frame transport envelopes.
+
+This module provides conceptual definitions for Status Frame events ((project-local/factor-element)&<types#EStruct[fault.status.types.EStruct]>) and
+I/O operations supporting the transmission of those events.
+
+Status Frames are (project-local/factor-element)&<types#Frame[fault.status.types.Frame]> instances that can be serialized into and parsed from a data stream.
+
+[ Usage ]
+
+The operation used to serialize and load the data extension is decoupled, so an allocation
+function is provided to apply the defaults for the data extension transport:
+
+#!syntax/python
+	from fault.status import frames
+	
+Frame envelopes may or may not have content (data extensions):
+
+#!syntax/python
+	msg = compose('!#', "ERROR: no such resource")
+	sys.stdout.write(frames.sequence(msg))
+	
+	"[!# ERROR: no such resource]
+"
+
+Serialized messages are expected to include the trailing newline:
+
+#!syntax/python
+	for line in sys.stdin.readlines():
+		msg = frames.structure(line)
+	
+[ Properties ]
+
+/protocol/
+	String identifying the status frames protocols.
+
+/ttyn1_minimum_overhead/
+	Informative minimum size regarding tty-notation-1 status frames.
+
+
+[ typing ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`36 1 36 13`
+
+[ functools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`37 1 37 16`
+
+[ base64 ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`38 1 38 13`
+
+[ zlib ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`39 1 39 11`
+
+[ transport ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`41 1 41 23`
+
+[ types ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`42 1 42 19`
+
+[ protocol ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`44 1 44 45`
+#!source
+	protocol = 'http://if.fault.io/status/frames'
+
+[ compose ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`46 1 55 39`
+		- (type/syntax)`types.Frame`
+		- (type/project-local/factor-element)&<types#Frame[fault.status.types.Frame]>
+		
+(signature)`compose(ftype, synopsis)`
+
+Create a status frame using the envelope's symbol and synopsis.
+
+
+[ _frame_pack_extension ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`57 1 62 53`
+		- (type/syntax)`bytes`
+		- (type/invalid/unknown)&<#bytes>
+		
+(signature)`_frame_pack_extension(data)`
+
+
+[ _frame_unpack_extension ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`64 1 69 54`
+		- (type/syntax)`object`
+		- (type/invalid/unknown)&<#object>
+		
+(signature)`_frame_unpack_extension(data)`
+
+
+[ protocol ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`72 1 72 45`
+#!source
+	protocol = "http://if.fault.io/status/frames"
+
+[ type_codes ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`75 1 146 24`
+#!source
+	type_codes = {
+		# [!? PROTOCOL: http://if.fault.io/status/frames tty-notation-1 base64/deflate]
+		"!?": 'message-protocol',
+		"!&": 'reference',
+	
+		# Abstract Transaction progress.
+		"><": 'transaction-failed',
+		"<>": 'transaction-executed',
+		"->": 'transaction-started',
+		"--": 'transaction-event',
+		"<-": 'transaction-stopped',
+	
+		# Warnings, Errors, and Information with respect to some conceptual level of a frame source.
+		"!#": 'message-application',
+		"!*": 'message-framework',
+		"!~": 'message-trace',
+	
+		# Messages sent by user entities.
+		"!%": 'message-administrative',
+		"!>": 'message-entity',
+	
+		# Resource Content Manipulation
+		"+=": 'resource-inserted-units', # append
+		"-=": 'resource-deleted-units', # partial truncation
+	
+		# SCM Operation Reports
+		"Δ=": 'resource-delta',
+		"<=": 'resource-reverted',
+		"==": 'resource-committed',
+	
+		# Resource Container Manipulations
+		"+.": 'resource-initialized',
+		"%.": 'resource-truncated',
+		"-.": 'resource-deleted',
+	
+		"*.": 'resource-replicated',
+		"&.": 'resource-referenced',
+		"..": 'resource-relocated',
+		"Δ@": 'resource-property-delta',
+	
+		">|": 'resource-rewritten',
+		".|": 'resource-relocated-substitution',
+		"*|": 'resource-replicated-substitution',
+		"&|": 'resource-referenced-substitution',
+	
+		"*&": 'resource-hardlinked',
+		"*+": 'resource-replicated-merge',
+	
+		# Archive I/O
+		"^*": 'archive-extraction-replicated',
+		"^|": 'archive-extraction-replicated-substitution',
+		"^+": 'archive-extraction-replicated-merge',
+	
+		"√*": 'archive-delta-replicated-into',
+		"√|": 'archive-delta-replicated-substitution-into',
+		"√+": 'archive-delta-merged-into',
+		"√-": 'archive-delta-deleted',
+		"√&": 'archive-delta-referenced',
+	
+		# Transfer Snapshots.
+		"↑.": 'resource-transmitted',
+		"↓.": 'resource-received',
+		"↑|": 'resource-transmitted-substitution',
+		"↓|": 'resource-received-substitution',
+	
+		# Transfer Progress Information.
+		"↑:": 'data-transmitted',
+		"↓:": 'data-received',
+		"↓↑": 'data-transferred',
+	}
+	
+	@functools.lru_cache(16)
+
+[ type_integer_code ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`147 1 154 25`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+(signature)`type_integer_code(typstring)`
+
+Convert a two-character type code symbol into an unsigned 32-bit integer.
+Currently, only supporting unicode characters in the 16-bit range.
+
+
+[ type_identifier_string ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`156 1 160 71`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+(signature)`type_identifier_string(typcode)`
+
+Convert an integer type code into the two-character string used for serialization and display.
+
+
+[ _tty_open_extension ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`169 1 169 36`
+#!source
+	_tty_open_extension = "\x1b]8;1;2-x"
+
+[ _tty_exit_extension ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`171 1 171 34`
+#!source
+	_tty_exit_extension = "\x03\x1b\\"
+
+[ _tty_extension_signal ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`174 1 174 53`
+#!source
+	_tty_extension_signal = ("\x1b[32;2m", "\x1b[39;22m") # Green.
+
+[ ttyn1_minimum_overhead ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`178 1 181 15`
+#!source
+	ttyn1_minimum_overhead = \
+		len(_tty_open_extension) + \
+		len(_tty_exit_extension) + \
+		len("[-- ]\n")
+
+[ _frame_open ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`183 1 183 22`
+#!source
+	_frame_open = "[{ts} "
+
+[ _frame_exit ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`184 1 184 19`
+#!source
+	_frame_exit = "]\n"
+
+[ _loaded_frame_start ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`185 1 185 45`
+#!source
+	_loaded_frame_start = _frame_open + "{image}"
+
+[ _loaded_frame_partition ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`186 1 186 79`
+#!source
+	_loaded_frame_partition = " ({channel}{wrap[0]}{signal}{size}{wrap[1]}{hidden}"
+
+[ _loaded_frame_stop ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`187 1 187 35`
+#!source
+	_loaded_frame_stop = "{reveal})]\n"
+
+[ _empty_frame_stop ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`188 1 188 41`
+#!source
+	_empty_frame_stop = "{hidden}{reveal}]\n"
+
+[ _pack ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`190 1 242 26`
+		- (type/syntax)`typing.Tuple[str, bytes, str]`
+		
+(signature)`_pack(frame)`
+
+Pack a status frame for transmission.
+
+Constructs a triple containing the leading envelope string,
+the encoded bytes of data extending the frame and the terminating trailer.
+
+
+[ sequence ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`244 1 256 36`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+(signature)`sequence(frame)`
+
+Pack a status frame into a (invalid/unknown)&<#str> for transmission.
+
+Constructs a single (invalid/unknown)&<#str> instance.
+
+[ > Parameters ]
+
+/(parameter)`frame`/
+	- (type/syntax)`types.Frame`
+	- (type/project-local/factor-element)&<types#Frame[fault.status.types.Frame]>
+	
+	The status frame to be represented in serial form.
+
+/(parameter)`channel`/
+	
+	(control/absent)`Undocumented`.
+
+
+[ _unpack ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`258 1 338 3`
+		- (type/syntax)`types.Frame`
+		- (type/project-local/factor-element)&<types#Frame[fault.status.types.Frame]>
+		
+(signature)`_unpack(line, offset, limit)`
+
+Unpack a serialized status frame.
+
+
+[ structure ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`340 1 349 37`
+		- (type/syntax)`types.Frame`
+		- (type/project-local/factor-element)&<types#Frame[fault.status.types.Frame]>
+		
+(signature)`structure(line)`
+
+Extract a status frame, (project-local/factor-element)&<types#Frame[fault.status.types.Frame]>, from the given (factor-local/parameter)&<#structure.Parameters.line[line]>.
+
+[ > Parameters ]
+
+/(parameter)`line`/
+	- (type/syntax)`str`
+	- (type/invalid/unknown)&<#str>
+	
+	A single serialized line.
+
+
+[ declaration ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`351 1 370 3`
+(signature)`declaration()`
+
+Construct a custom protocol declaration message.
+
+
+[ tty_notation_1_message ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`373 1 373 38`
+#!source
+	tty_notation_1_message = declaration()
+
+[ tty_notation_1_string ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`376 1 376 80`
+#!source
+	tty_notation_1_string = "[!? " + tty_notation_1_message.f_event.abstract + "]\n"
+
+[ message_directed_areas ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`378 1 391 12`
+(signature)`message_directed_areas(fields, start, end)`
+
+Return the slices marking the areas before and after the first item
+contained in (factor-local/parameter)&<#message_directed_areas.Parameters.arrows[arrows]>.
+
+(invalid/unknown)&<#None> if no items in (factor-local/parameter)&<#message_directed_areas.Parameters.fields[fields]> are contained in (factor-local/parameter)&<#message_directed_areas.Parameters.arrows[arrows]>.
+

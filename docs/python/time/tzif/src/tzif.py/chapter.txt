@@ -1,0 +1,395 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 270 0`
+Read TZif, time zone information, files(zic output).
+
+! WARNING:
+	This module is intended for internal use only.
+	The APIs are subject to change without notice.
+
+
+[ os ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 8 9`
+
+[ os ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`9 1 9 14`
+
+[ struct ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 1 10 13`
+
+[ collections ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 1 11 18`
+
+[ magic ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`13 1 13 15`
+#!source
+	magic = b'TZif'
+
+[ tzdir ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`14 1 14 29`
+#!source
+	tzdir = '/usr/share/zoneinfo'
+
+[ tzdefault ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`15 1 15 28`
+#!source
+	tzdefault = '/etc/localtime'
+
+[ tzenviron ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`16 1 16 16`
+#!source
+	tzenviron = 'TZ'
+
+[ header_fields ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`18 1 25 1`
+#!source
+	header_fields = (
+		'tzh_ttisgmtcnt',  # The number of UTC/local indicators stored in the file.
+		'tzh_ttisstdcnt',  # The number of standard/wall indicators stored in the file.
+		'tzh_leapcnt',     # The number of leap seconds for which data is stored in the file.
+		'tzh_timecnt',     # The number of `transition times` for which data is stored in the file.
+		'tzh_typecnt',     # The number of `local time types` for which data is stored in the file (must not be zero).
+		'tzh_charcnt',     # The number of characters of `time zone abbreviation strings` stored in the file.
+	)
+
+[ tzinfo_header ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`26 1 26 70`
+#!source
+	tzinfo_header = collections.namedtuple('tzinfo_header', header_fields)
+
+[ header_struct_v1 ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`27 1 27 66`
+#!source
+	header_struct_v1 = struct.Struct("!" + (len(header_fields) * "l"))
+
+[ header_struct_v2 ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`28 1 28 66`
+#!source
+	header_struct_v2 = struct.Struct("!" + (len(header_fields) * "q"))
+
+[ ttinfo_fields ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`30 1 34 1`
+#!source
+	ttinfo_fields = (
+		'tt_gmtoff',
+		'tt_isdst',
+		'tt_abbrind',
+	)
+
+[ tzinfo_ttinfo ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`35 1 35 70`
+#!source
+	tzinfo_ttinfo = collections.namedtuple('tzinfo_ttinfo', ttinfo_fields)
+
+[ ttinfo_struct_v1 ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`36 1 36 40`
+#!source
+	ttinfo_struct_v1 = struct.Struct("!lbb")
+
+[ ttinfo_struct_v2 ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`37 1 37 40`
+#!source
+	ttinfo_struct_v2 = struct.Struct("!qbb")
+
+[ transtime_struct_v1 ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`39 1 39 41`
+#!source
+	transtime_struct_v1 = struct.Struct("!l")
+
+[ leappairs_struct_v1 ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`40 1 40 42`
+#!source
+	leappairs_struct_v1 = struct.Struct("!ll")
+
+[ transtime_struct_v2 ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`42 1 42 41`
+#!source
+	transtime_struct_v2 = struct.Struct("!q")
+
+[ leappairs_struct_v2 ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`43 1 43 42`
+#!source
+	leappairs_struct_v2 = struct.Struct("!qq")
+
+[ tzinfo ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`45 1 50 2`
+#!source
+	tzinfo = collections.namedtuple('tzinfo', (
+		'header',
+		'transitional_times',
+		'types',
+		'typinfo'
+	))
+
+[ parse_version_1 ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`52 1 107 58`
+(signature)`parse_version_1(data)`
+
+parse the raw data from a TZif file. 4-byte longs.
+
+Returns tuple of: (transtimes, types, timetypinfo, leaps, isstd, isgmt, abbr)
+See (invalid/unknown)&<#tzfile>(5) for information about the fields.
+
+
+[ parse_version_2 ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`109 1 164 58`
+(signature)`parse_version_2(data)`
+
+parse the raw data from a version 2 TZif file. 8-byte longs.
+
+Returns tuple of: (transtimes, types, timetypinfo, leaps, isstd, isgmt, abbr)
+See (invalid/unknown)&<#tzfile>(5) for information about the fields.
+
+
+[ parse ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`166 1 177 30`
+(signature)`parse(data)`
+
+Given TZif data, identify the appropriate version and unpack the timezone information.
+
+
+[ tzinfo ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`179 1 185 2`
+#!source
+	tzinfo = collections.namedtuple('tzinfo', (
+		'tz_abbrev',
+		'tz_offset',
+		'tz_isdst',
+		'tz_isstd',
+		'tz_isgmt',
+	))
+
+[ structure ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`186 1 207 28`
+(signature)`structure(tzif)`
+
+Given the parse fields from parse(), make a more accessible structure.
+
+
+[ system_timezone_file ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`209 1 210 34`
+(signature)`system_timezone_file(relativepath)`
+
+
+[ get_timezone_data ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`212 1 220 21`
+(signature)`get_timezone_data(filepath)`
+
+Get the structured timezone data out of the specified file.
+
+
+[ abbreviations ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`222 1 234 76`
+(signature)`abbreviations(tzdir)`
+
+Yield all abbreviations in the TZif files in the tzdir(/usr/share/zoneinfo).
+
+
+[ abbreviation_map ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`236 1 255 10`
+(signature)`abbreviation_map()`
+
+Generate and return a mapping of zone abbreviations to their particular offsets.
+
+Using this should mean that you know that abbreviations are ambiguous.
+This function is provided to aid common cases and popular mappings.
+

@@ -1,0 +1,108 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 87 0`
+
+[ types ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 1 25`
+
+[ views ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`2 1 2 25`
+
+[ system ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`3 1 3 26`
+
+[ zone ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 51`
+#!source
+	zone = (lambda x: views.Zone.open(system._unix, x))
+
+[ test_zone_data ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 27 38`
+(signature)`test_zone_data(test)`
+
+Presumes that Alaska is ~-10 and Japan is ~+10.
+
+
+[ test_zone_dst_offset ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`29 1 43 34`
+(signature)`test_zone_dst_offset(test)`
+
+
+[ test_zone_default_only ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`45 1 53 17`
+(signature)`test_zone_default_only(test)`
+
+
+[ test_zone_normalize ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`55 1 68 19`
+(signature)`test_zone_normalize(test)`
+
+
+[ test_zone_slice ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`70 1 87 48`
+(signature)`test_zone_slice(test)`
+

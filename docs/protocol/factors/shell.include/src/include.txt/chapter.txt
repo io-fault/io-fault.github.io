@@ -1,0 +1,15 @@
+! CONTROL:
+	/type/
+		factor
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+! CONTEXT:
+	/protocol/
+		&<http://if.fault.io/text/type.factor>
+
+	/identifier/
+		&<http://if.fault.io/factors/shell.include>
+
+A system file intending to be sourced by a (project-local/unknown)&<shell.script>.
+

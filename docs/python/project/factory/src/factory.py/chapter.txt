@@ -1,0 +1,538 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 282 4`
+Project materialization tools for instantiating polynomial-1 organized factor sets.
+
+
+[ functools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 16`
+
+[ typing ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 13`
+
+[ ModuleType ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 7 28`
+
+[ dataclass ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 8 33`
+
+[ Cell ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 1 10 32`
+
+[ Segment ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 1 11 33`
+
+[ Paragraph ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`12 1 12 34`
+
+[ render ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`13 1 13 25`
+
+[ files ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`14 1 14 26`
+
+[ sequence_project_declaration ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`16 1 16 48`
+
+[ types ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`17 1 17 19`
+
+[ _ktprotocol ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`19 1 24 2`
+(signature)`_ktprotocol(iri)`
+
+
+[ _poly_factor_header ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`27 1 27 70`
+#!source
+	_poly_factor_header = _ktprotocol("http://if.fault.io/project/factor")
+
+[ _literal ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`29 1 30 43`
+(signature)`_literal(text)`
+
+
+[ _ref ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`32 1 33 86`
+(signature)`_ref(format_id, *text)`
+
+
+[ sequence_format_declarations ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`35 1 49 10`
+(signature)`sequence_format_declarations(formats)`
+
+factors/polynomial-1 .format serialization
+
+
+[ Composition ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`50 1 103 10`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`50 19 50 24`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+The core data for composing a factor.
+
+[ > Properties ]
+
+/type/
+	The factor type.
+
+/requirements/
+	Set of factor references needed for integration.
+
+/sources/
+	A sequence of pairs defining the source name and the source content.
+
+	For polynomial-1, the source name is the extension that will be appended to
+	factor path if sources is a (context-local/factor-element)&<fault.context/types#Cell[fault.context.types.Cell]> instance.
+
+
+[ Composition >> type ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`65 2 65 17`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+#!source
+	type: str = None
+
+[ Composition >> requirements ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`66 2 66 25`
+		- (type/syntax)`[str]`
+		
+#!source
+	requirements: [str] = ()
+
+[ Composition >> sources ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`67 2 69 13`
+		- (type/syntax)`typing.Sequence[typing.Tuple[str, typing.Union[str, bytes, files.Path, ModuleType]]]`
+		
+#!source
+	sources: typing.Sequence[typing.Tuple[str, typing.Union[str, bytes, files.Path, ModuleType]]] = ()
+		@classmethod
+
+[ Composition >> indirect ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`70 2 85 13`
+(signature)`indirect(Class, extension, source, type)`
+
+Define an indirectly typed factor's composition.
+
+[ >> Parameters ]
+
+/(parameter)`Class`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`extension`/
+	
+	The dot extension that will be appended to the file to identify its type.
+
+/(parameter)`source`/
+	
+	The data or reference to the data that will be used to initialize the file.
+
+/(parameter)`type`/
+	
+	An optional factor type string. This is ignored by (factor-local/function)&<#plan[plan]> as this is composing
+	an indirectly typed factor.
+
+
+[ Composition >> explicit ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`86 2 103 10`
+(signature)`explicit(Class, type, requirements, sources)`
+
+Define an explicitly typed factor's composition.
+
+Equivalent to the default constructor with the exception that (factor-local/parameter)&<#Composition.explicit.Parameters.requirements[requirements]>
+and (factor-local/parameter)&<#Composition.explicit.Parameters.sources[sources]> are copied into a new list.
+
+[ >> Parameters ]
+
+/(parameter)`Class`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`type`/
+	
+	The type to be assigned to the factor.
+
+/(parameter)`requirements`/
+	
+	The set of factors needed for integration.
+
+/(parameter)`sources`/
+	
+	The iterable producing pairs defining the relative paths and sources.
+
+
+[ Parameters ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`104 1 174 79`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`104 18 104 23`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+The necessary data for instantiating a project on the local system.
+
+[ > Properties ]
+
+/information/
+	The (project-local/factor-element)&<types#Information[fault.project.types.Information]> instance defining the project's identity.
+
+/formats/
+	The source formats identified by the project.
+
+/factors/
+	The set of factors that make up a project; a sequence of factor path-composition pairs.
+
+/extensions/
+	Additional project information.
+
+
+[ Parameters >> information ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`118 2 118 40`
+		- (type/syntax)`types.Information`
+		- (type/project-local/factor-element)&<types#Information[fault.project.types.Information]>
+		
+#!source
+	information: (types.Information) = None
+
+[ Parameters >> formats ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`119 2 119 25`
+		- (type/syntax)`object`
+		- (type/invalid/unknown)&<#object>
+		
+#!source
+	formats: (object) = None
+
+[ Parameters >> factors ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`120 2 120 77`
+		- (type/syntax)`typing.Sequence[typing.Tuple[types.FactorPath, Composition]]`
+		
+#!source
+	factors: (typing.Sequence[typing.Tuple[types.FactorPath, Composition]]) = ()
+
+[ Parameters >> extensions ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`121 2 123 13`
+		- (type/syntax)`types.Extensions`
+		- (type/project-local/factor-element)&<types#Extensions[fault.project.types.Extensions]>
+		
+#!source
+	extensions: (types.Extensions) = None
+		@classmethod
+
+[ Parameters >> define ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`124 2 174 79`
+(signature)`define(Class, information, formats, soles, sets, icon, synopsis)`
+
+Create a parameter set for project instantiation applying the proper types
+to factor entries, and translating factor types to file extensions for defining
+(factor-local/parameter)&<#Parameters.define.Parameters.soles[soles]>.
+
+[ >> Parameters ]
+
+/(parameter)`Class`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`information`/
+	
+	The project's identification.
+
+/(parameter)`formats`/
+	
+	The project's source formats.
+
+/(parameter)`soles`/
+	
+	A sequence of records defining single source factors that should be
+	presented at a path consistent with the factor path.
+
+/(parameter)`sets`/
+	
+	A sequence of records defining factors with multiple sources.
+
+/(parameter)`icon`/
+	- (type/syntax)`str`
+	- (type/invalid/unknown)&<#str>
+	
+	An IRI identifying the image representing the project.
+	This includes `data` scheme IRIs.
+
+/(parameter)`synopsis`/
+	- (type/syntax)`str`
+	- (type/invalid/unknown)&<#str>
+	
+	A short string describing the project.
+
+
+[ plan ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`176 1 222 39`
+(signature)`plan(info, formats, factors)`
+
+Generate the filesystem paths paired with the data that should be placed
+into that file relative to the project directory being materialized.
+
+
+[ materialize ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`224 1 262 29`
+(signature)`materialize(route, plans)`
+
+Create a Project instance using the filesystem API's provided by (factor-local/parameter)&<#materialize.Parameters.route[route]>
+from the instructions produced by the given (factor-local/parameter)&<#materialize.Parameters.plans[plans]>.
+
+! WARNING:
+	Plan entries referring to files will cause the file content to be loaded entirely into memory.
+	Instantiating projects with large resources may require a side channel in order to achieve
+	reasonable memory usage.
+
+[ > Parameters ]
+
+/(parameter)`route`/
+	
+	A, usually filesystem, route to the directory that plan
+	segments will extend into.
+
+/(parameter)`plans`/
+	
+	An iterable of pairs where the first item is the segment, relative path,
+	and the second is either the data to be stored or a (context-local/factor-element)&<fault.system/files#Path[fault.system.files.Path]> instance
+	referring to the data to be stored.
+
+/(parameter)`encoding`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`isinstance`/
+	
+	(control/absent)`Undocumented`.
+
+
+[ instantiate ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`264 1 283 3`
+(signature)`instantiate(project, route, *dimensions)`
+
+Materialize the plan of the given (factor-local/parameter)&<#instantiate.Parameters.project[project]> using the (factor-local/parameter)&<#instantiate.Parameters.route[route]> as the root directory of the project.
+
+[ > Parameters ]
+
+/(parameter)`project`/
+	- (type/syntax)`Parameters`
+	- (type/factor-local/class)&<#Parameters[Parameters]>
+	
+	The set of parameters needed to plan and materialize a project.
+
+/(parameter)`route`/
+	
+	A route to the root target directory.
+
+/(parameter)`dimensions`/
+	- (type/syntax)`str`
+	- (type/invalid/unknown)&<#str>
+	
+	An optional sequence of strings that will be appended to the project's identifier.
+

@@ -1,0 +1,78 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 46 30`
+Sanity checks regarding presence.
+
+
+[ module ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 39`
+
+[ test_indefinites ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 22 57`
+(signature)`test_indefinites(test)`
+
+
+[ test_datums ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`24 1 26 65`
+(signature)`test_datums(test)`
+
+
+[ test_annum_value ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`28 1 29 22`
+(signature)`test_annum_value(test)`
+
+
+[ test_indefinite_representations ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`31 1 38 40`
+(signature)`test_indefinite_representations(test)`
+
+
+[ test_eternals_representations ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`40 1 47 29`
+(signature)`test_eternals_representations(test)`
+

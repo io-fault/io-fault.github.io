@@ -1,0 +1,455 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 525 0`
+Print representations of factors for publication and reading.
+
+
+[ sys ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 10`
+
+[ os ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 9`
+
+[ traceback ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 16`
+
+[ contextlib ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 7 17`
+
+[ json ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 8 11`
+
+[ recognition ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 1 10 36`
+
+[ tools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 1 11 31`
+
+[ Cell ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`12 1 12 36`
+
+[ files ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`13 1 13 30`
+
+[ process ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`14 1 14 32`
+
+[ lsf ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`15 1 15 39`
+
+[ structure_chapter_text ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`17 1 17 77`
+
+[ structure_paragraph_element ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`17 1 17 77`
+
+[ join ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`18 1 18 18`
+
+[ html ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`19 1 19 18`
+
+[ web_resources ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`21 1 21 29`
+#!source
+	web_resources = '.legacy-web'
+
+[ core_style ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`22 1 22 23`
+#!source
+	core_style = 'core.css'
+
+[ project_index_style ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`24 1 24 34`
+#!source
+	project_index_style = 'corpus.css'
+
+[ factor_index_style ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`25 1 25 34`
+#!source
+	factor_index_style = 'project.css'
+
+[ factor_style ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`26 1 26 27`
+#!source
+	factor_style = 'factor.css'
+
+[ chapter_style ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`27 1 27 29`
+#!source
+	chapter_style = 'chapter.css'
+
+[ sources_style ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`28 1 28 29`
+#!source
+	sources_style = 'sources.css'
+
+[ styles ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`30 1 35 2`
+(signature)`styles(depth, type)`
+
+
+[ r_factor ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`37 1 164 44`
+(signature)`r_factor(sx, prefixes, variants, req, ctx, pj, pjdir, fpath, type, requirements, sources)`
+
+
+[ r_project ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`166 1 191 101`
+(signature)`r_project(sx, prefixes, variants, req, ctx, pj, pjdir)`
+
+
+[ hrinit ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`193 1 208 19`
+(signature)`hrinit(prefix, type, identifier)`
+
+Initialize the `.http-resource` directory inside (invalid/unknown)&<#path>
+with a `meta.json` formed from (factor-local/parameter)&<#hrinit.Parameters.meta[meta]>, (factor-local/parameter)&<#hrinit.Parameters.type[type]>, and (factor-local/parameter)&<#hrinit.Parameters.identifier[identifier]>.
+
+Returns the directory path that was created.
+
+
+[ r_corpus ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`210 1 271 22`
+(signature)`r_corpus(config, out, ctx, req, variants)`
+
+
+[ first_sentence ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`273 1 281 32`
+(signature)`first_sentence(p)`
+
+
+[ removeprefix ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`283 1 287 14`
+(signature)`removeprefix(prefixes, string)`
+
+
+[ required ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`289 1 294 1`
+#!source
+	required = {
+		'--corpus-root': ('field-replace', 'corpus-root'),
+		'--corpus-title': ('field-replace', 'corpus-title'),
+		'-P': ('set-add', 'prefixes'),
+		'-I': ('set-add', 'variants'),
+	}
+
+[ restricted ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`296 1 299 1`
+#!source
+	restricted = {
+		'-W': ('field-replace', False, 'web-defaults'),
+		'-w': ('field-replace', True, 'web-defaults'),
+	}
+
+[ extract_image_reference ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`301 1 318 38`
+(signature)`extract_image_reference(svg)`
+
+Extract the hyperlink from the first image element in an SVG image.
+The `href` attribute must be directly adjacent to the `=` character.
+
+[ > Parameters ]
+
+/(parameter)`svg`/
+	
+	The SVG XML string.
+
+[ > Returns ]
+
+/(invalid/unknown)&<#str>/
+	The contents of the href attribute.
+
+[ > Exceptions ]
+
+/(invalid/unknown)&<#ValueError>/
+	No image tag with an href attribute.
+
+
+[ transfer ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`320 1 330 23`
+(signature)`transfer(xfers)`
+
+Transfer the remote resources to their associated filesystem location.
+
+
+[ icons ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`332 1 364 21`
+(signature)`icons(out, ctx, types)`
+
+Print the icons of the factor types used by the projects in (factor-local/parameter)&<#icons.Parameters.ctx[ctx]>.
+The icons are placed stored in `.factor-type-icon/` relative to (factor-local/parameter)&<#icons.Parameters.out[out]>
+according to (project-local/factor-element)&<html#icon_identity[system.chapters.html.icon_identity]>.
+
+
+[ manual ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`366 1 437 7`
+(signature)`manual(argv)`
+
+Print system manuals from chapter elements.
+
+
+[ web ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`439 1 506 10`
+(signature)`web(argv)`
+
+Print factor representations for web publication.
+
+
+[ main ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`508 1 525 27`
+		- (type/syntax)`process.Exit`
+		- (type/remote/factor-element)&<http://fault.io/python/system/process#Exit[fault.system.process.Exit]>
+		
+(signature)`main(inv)`
+

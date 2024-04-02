@@ -1,0 +1,1 @@
+[["cocoa", "http://if.fault.io/factors/system.references", []], ["include", "http://if.fault.io/factors/meta.sources", []], ["device", "http://if.fault.io/factors/system.library", ["http://fault.io/terminal/io/cocoa", "http://fault.io/terminal/io/include"]]]

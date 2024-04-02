@@ -1,0 +1,195 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 116 0`
+Naive prefix searching implementations.
+
+
+[ collections ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 22`
+
+[ typing ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 7 33`
+
+[ SubsequenceScan ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 116 37`
+Subsequence search implementation based on scanning the possible
+sizes and checking the candidate subsequence's presence in a set.
+
+This naive implementation is O(N) (hash checks and subsequence) worst
+case for first match, so it is inappropriate for large sets.
+
+However, when used as part of a tree where the sequence is kept small,
+it may be a reasonable implmentation selection.
+
+[ > Properties ]
+
+/sequences/
+	The set of sequences that will be scanned by (factor-local/method)&<#SubsequenceScan.matches[matches]>.
+
+/sizes/
+	The ordered sequence of slice sizes that sources
+	the match search.
+
+/offset/
+	The starting point of the subsequence's slice;
+	usually zero.
+
+
+[ SubsequenceScan >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`33 2 56 20`
+(signature)`__init__(self, sequences, offset, order)`
+
+Create a SubsequenceScan from the given set of sequences.
+
+[ >> Parameters ]
+
+/(parameter)`self`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`sequences`/
+	- (type/syntax)`typing.Sequence[typing.Hashable]`
+	
+	A sequence of sequences to scan. Usually, a list of (invalid/unknown)&<#str> instances.
+	This is transformed into a set of sequences.
+
+/(parameter)`offset`/
+	
+	The start of the subsequence to check; usually `0`.
+
+/(parameter)`order`/
+	
+	`True` means to match the longest subsequence first, and
+	`False` means to match the shortest first.
+	When `False`, the longest match will never be the first occurrence.
+
+
+[ SubsequenceScan >> add ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`58 2 67 37`
+(signature)`add(self, *values)`
+
+Add new values to the set of sequences.
+
+! WARNING:
+	Implementation reconstructs the (invalid/unknown)&<#sizes> sequence every call.
+
+
+[ SubsequenceScan >> discard ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`69 2 78 37`
+(signature)`discard(self, *values)`
+
+Remove values from the set of sequences.
+
+! WARNING:
+	Implementation reconstructs the (invalid/unknown)&<#sizes> sequence every call.
+
+
+[ SubsequenceScan >> matches ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`80 2 92 11`
+(signature)`matches(self, key)`
+
+Identify all strings in the set that match the given key based
+on the configured offset.
+
+
+[ SubsequenceScan >> get ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`94 2 97 16`
+(signature)`get(self, key)`
+
+
+[ SubsequenceScan >> __contains__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`99 2 102 14`
+(signature)`__contains__(self, key)`
+
+
+[ SubsequenceScan >> __getitem__ ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`104 2 110 21`
+(signature)`__getitem__(self, key)`
+
+Get the first match in the set of strings.
+
+
+[ SubsequenceScan >> values ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`112 2 113 29`
+(signature)`values(self)`
+
+
+[ SubsequenceScan >> keys ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`115 2 116 37`
+(signature)`keys(self)`
+

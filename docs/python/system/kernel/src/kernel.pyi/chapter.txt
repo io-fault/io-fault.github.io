@@ -1,0 +1,693 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 303 6`
+System kernel and Python runtime interfaces.
+
+
+[ collections ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 22`
+
+[ close ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 9 4`
+		- (type/syntax)`None`
+		
+(signature)`close(fds)`
+
+Close the file descriptors produced by the iterable.
+
+
+[ retained ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 1 14 4`
+		- (type/syntax)`None`
+		
+(signature)`retained(fds)`
+
+Preserve the given file descriptors across process image substitutions(exec).
+
+
+[ released ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`16 1 19 4`
+		- (type/syntax)`None`
+		
+(signature)`released(fds)`
+
+Configure the file descriptors to be released when the process is substituted(exec).
+
+
+[ hostname ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`21 1 24 4`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+(signature)`hostname()`
+
+Retrieve the hostname of the system using gethostname(2).
+
+
+[ machine ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`26 1 29 4`
+		- (type/syntax)`tuple[str, str]`
+		
+(signature)`machine()`
+
+Retrieve the system name and instruction architecture of the runtime using uname(2).
+
+
+[ clockticks ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`31 1 34 4`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+(signature)`clockticks()`
+
+Retrieve the (system/manual)`sysconf` value of (id)`SC_CLK_TCK`.
+
+
+[ signalexit ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`36 1 39 4`
+		- (type/syntax)`None`
+		
+(signature)`signalexit(signo)`
+
+Configure an atexit call to force the process to exit via a signal.
+
+
+[ initialize ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`41 1 47 34`
+(signature)`initialize()`
+
+Initialize the after fork callbacks.
+Called once by (project-local/unknown)&<process>. Do not use directly.
+
+
+[ Ports ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`48 1 54 5`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`48 13 48 18`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+File descriptor vector.
+
+
+[ Ports >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`53 2 54 5`
+(signature)`__init__(self, fds)`
+
+
+[ Event ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`56 1 173 5`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`56 13 56 18`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+Event data union and scheduling identity.
+
+
+[ Event >> type ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`62 2 67 10`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+A string identifying the type of event.
+
+
+[ Event >> port ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`68 2 73 10`
+A file descriptor identifying the source of events.
+
+
+[ Event >> correlation ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`74 2 80 10`
+For I/O, a file descriptor identifying the cited opposition of (factor-local/property)&<#Event.port[port]>.
+May be `-1`.
+
+
+[ Event >> input ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`81 2 89 10`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+Position independent access to the file descriptor identifying the receive side.
+
+For (id)`io-transmit` events, this is the (factor-local/property)&<#Event.correlation[correlation]>.
+For (id)`io-receive` events, this is the (factor-local/property)&<#Event.port[port]>.
+
+
+[ Event >> output ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`90 2 98 13`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+Position independent access to the file descriptor identifying the transmit side.
+
+For (id)`io-transmit` events, this is the (factor-local/property)&<#Event.port[port]>.
+For (id)`io-receive` events, this is the (factor-local/property)&<#Event.correlation[correlation]>.
+
+
+[ Event >> meta_actuate ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`99 2 105 13`
+(signature)`meta_actuate(Class)`
+
+Construct an event that will occur upon the actuation of the (factor-local/class)&<#Scheduler[Scheduler]>
+instance that the operation was dispatched on.
+
+
+[ Event >> meta_terminate ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`106 2 112 13`
+(signature)`meta_terminate(Class)`
+
+Construct an event that will occur upon the termination of the (factor-local/class)&<#Scheduler[Scheduler]>
+instance that the operation was dispatched on.
+
+
+[ Event >> never ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`113 2 118 13`
+(signature)`never(Class, reference)`
+
+Construct an event that is known to never occur.
+
+
+[ Event >> time ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`119 2 124 13`
+(signature)`time(Class, nanosecond)`
+
+Construct an event that will occur after the specified duration occurs.
+
+
+[ Event >> process_exit ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`125 2 132 13`
+(signature)`process_exit(Class, pid)`
+
+Construct an event identifier that will occur when process identified
+by (factor-local/parameter)&<#Event.process_exit.Parameters.pid[pid]> exits. If (factor-local/parameter)&<#Event.process_exit.Parameters.procfd[procfd]> is given on supporting systems, it will
+be used instead of allocating one or using the (factor-local/parameter)&<#Event.process_exit.Parameters.pid[pid]> directly.
+
+
+[ Event >> process_signal ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`133 2 140 13`
+(signature)`process_signal(Class, signo)`
+
+Construct an event identifier that will occur when the host process
+receives the cited signal. If (factor-local/parameter)&<#Event.process_signal.Parameters.sigfd[sigfd]> is given on supporting systems, it
+will be used instead of allocating one or using the (factor-local/parameter)&<#Event.process_signal.Parameters.signo[signo]> directly.
+
+
+[ Event >> fs_status ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`141 2 147 13`
+(signature)`fs_status(Class, path)`
+
+Construct an event identifier that will occur when the status of the
+file identified by (factor-local/parameter)&<#Event.fs_status.Parameters.path[path]>, or (factor-local/parameter)&<#Event.fs_status.Parameters.fileno[fileno]>, has changed.
+
+
+[ Event >> fs_delta ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`148 2 154 13`
+(signature)`fs_delta(Class, path)`
+
+Construct an event identifier that will occur when the file identified
+by (factor-local/parameter)&<#Event.fs_delta.Parameters.path[path]>, or (factor-local/parameter)&<#Event.fs_delta.Parameters.fileno[fileno]>, is modified.
+
+
+[ Event >> fs_void ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`155 2 161 13`
+(signature)`fs_void(Class, path)`
+
+Construct an event identifier that will occur when the file identified
+by (factor-local/parameter)&<#Event.fs_void.Parameters.path[path]>, or (factor-local/parameter)&<#Event.fs_void.Parameters.fileno[fileno]>, is deleted.
+
+
+[ Event >> io_transmit ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`162 2 168 13`
+(signature)`io_transmit(Class, port)`
+
+Event identifier that occurs when writes are possible
+on the given (factor-local/parameter)&<#Event.io_transmit.Parameters.port[port]> file descriptor.
+
+
+[ Event >> io_receive ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`169 2 173 5`
+(signature)`io_receive(Class, port)`
+
+Event identifier that occurs when reads are possible
+on the given (factor-local/parameter)&<#Event.io_receive.Parameters.port[port]> file descriptor.
+
+
+[ Link ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`175 1 224 5`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`175 12 175 17`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+An operation record to be dispatched by a (factor-local/class)&<#Scheduler[Scheduler]> instance.
+
+
+[ Link >> __new__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`180 2 183 10`
+(signature)`__new__()`
+
+
+[ Link >> context ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`184 2 189 10`
+		- (type/syntax)`object`
+		- (type/invalid/unknown)&<#object>
+		
+User storage slot intended to hold a reference to the object that created the (factor-local/class)&<#Link[Link]>.
+
+
+[ Link >> event ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`190 2 195 10`
+		- (type/syntax)`Event`
+		- (type/factor-local/class)&<#Event[Event]>
+		
+The original event that the (factor-local/class)&<#Link[Link]> was planned using.
+
+
+[ Link >> task ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`196 2 201 10`
+		- (type/syntax)`collections.abc.Callable`
+		- (type/none/invalid)&<http://fault.io/dev/null[collections.abc.abc.Callable]>
+		
+The object that will be executed when the event occurs.
+
+
+[ Link >> cyclic ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`202 2 208 10`
+		- (type/syntax)`bool`
+		- (type/invalid/unknown)&<#bool>
+		
+Whether or not the operation was dispatched with the expectation of
+multiple occurrences.
+
+
+[ Link >> cancelled ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`209 2 214 10`
+		- (type/syntax)`bool`
+		- (type/invalid/unknown)&<#bool>
+		
+Whether or not the operation has been removed from the scheduled set.
+
+
+[ Link >> dispatched ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`215 2 220 10`
+		- (type/syntax)`bool`
+		- (type/invalid/unknown)&<#bool>
+		
+Whether or not the operation has been scheduled.
+
+
+[ Link >> executing ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`221 2 224 5`
+		- (type/syntax)`bool`
+		- (type/invalid/unknown)&<#bool>
+		
+Whether or not the operation is currently executing.
+
+
+[ Scheduler ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`226 1 304 5`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`226 17 226 22`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+Kernel event management and task queue.
+
+
+[ Scheduler >> operations ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`231 2 234 5`
+		- (type/syntax)`collections.abc.Sequence[Link]`
+		
+(signature)`operations(self)`
+
+Construct a snapshot of the dispatched operations.
+
+
+[ Scheduler >> void ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`236 2 241 10`
+(signature)`void(self)`
+
+Immediately destroy the resources held by the scheduler.
+
+
+[ Scheduler >> closed ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`242 2 245 5`
+		- (type/syntax)`bool`
+		- (type/invalid/unknown)&<#bool>
+		
+Whether the scheduler has been closed.
+
+
+[ Scheduler >> close ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`247 2 250 5`
+(signature)`close(self)`
+
+Close the scheduler causing events from the kernel to no longer be retrieved.
+
+
+[ Scheduler >> wait ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`252 2 259 5`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+(signature)`wait(self)`
+
+Wait for events from the source(operating system) and enqueue their associated
+tasks for execution.
+
+[ >> Returns ]
+
+The count of events that were received from the kernel.
+
+
+[ Scheduler >> interrupt ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`261 2 269 5`
+		- (type/syntax)`bool`
+		- (type/invalid/unknown)&<#bool>
+		
+(signature)`interrupt(self)`
+
+Interrupt a blocking (factor-local/method)&<#Scheduler.wait[wait]> call.
+Nothing if there is no concurrent (factor-local/method)&<#Scheduler.wait[wait]> call.
+
+[ >> Returns ]
+
+Whether or not a (factor-local/method)&<#Scheduler.wait[wait]> call was interrupted.
+(invalid/unknown)&<#None> if the (factor-local/class)&<#Scheduler[Scheduler]> instance is closed.
+
+
+[ Scheduler >> execute ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`271 2 285 5`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+(signature)`execute(self, trap)`
+
+Execute enqueued tasks, FIFO.
+Concurrent calls with (factor-local/method)&<#Scheduler.wait[wait]> are prohibited.
+
+[ >> Parameters ]
+
+/(parameter)`self`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`trap`/
+	
+	Callable performed when a task raises an exception.
+	(factor-local/parameter)&<#Scheduler.execute.Parameters.trap[trap]> will be given the task and a normalized exception instance.
+
+	If (invalid/unknown)&<#None>, exceptions will be discarded.
+
+[ >> Returns ]
+
+The count of tasks that were executed.
+
+
+[ Scheduler >> dispatch ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`287 2 294 5`
+(signature)`dispatch(self, operation)`
+
+Execute the operation when its associated event occurs.
+
+[ >> Parameters ]
+
+/(parameter)`self`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`operation`/
+	- (type/syntax)`Link`
+	- (type/factor-local/class)&<#Link[Link]>
+	
+	The (factor-local/class)&<#Link[Link]> instance to attach to kernel events.
+
+
+[ Scheduler >> cancel ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`296 2 299 5`
+(signature)`cancel(self, operation)`
+
+Remove the operation from the scheduled set.
+
+
+[ Scheduler >> enqueue ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`301 2 304 5`
+(signature)`enqueue(self, task)`
+
+Schedule the (factor-local/parameter)&<#Scheduler.enqueue.Parameters.task[task]> for immediate execution by (factor-local/method)&<#Scheduler.execute[execute]>.
+

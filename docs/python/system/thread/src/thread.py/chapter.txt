@@ -1,0 +1,297 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 113 0`
+System thread primitives.
+
+/create/
+	Create a new thread and run the given callable inside of it.
+
+/amutex/
+	Allocate a synchronization primitive.
+
+/identify/
+	Acquire an identifier to the executing thread.
+
+
+[ sys ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 1 11 10`
+
+[ typing ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`12 1 12 13`
+
+[ types ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`13 1 13 12`
+
+[ signal ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`14 1 14 13`
+
+[ _thread ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`15 1 15 14`
+
+[ runtime ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`17 1 17 21`
+
+[ create ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`19 1 19 33`
+#!source
+	create = _thread.start_new_thread
+
+[ amutex ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`20 1 20 30`
+#!source
+	amutex = _thread.allocate_lock
+
+[ identify ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`21 1 21 28`
+#!source
+	identify = _thread.get_ident
+
+[ Sever ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`23 1 27 16`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`23 13 23 25`
+	- (type/syntax)`BaseException`
+	- (type/invalid/unknown)&<#BaseException>
+	
+Exception used to signal thread kills.
+
+
+[ Sever >> __kill__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`27 2 27 16`
+#!source
+	__kill__ = True
+
+[ snapshot ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`29 1 34 38`
+		- (type/syntax)`typing.Sequence[typing.Tuple[int, types.FrameType]]`
+		
+(signature)`snapshot(tids)`
+
+Select a set of threads from the same snapshot of frames.
+
+
+[ interrupt ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`36 1 63 9`
+(signature)`interrupt(tid, exception)`
+
+Raise the given exception in the thread with the given identifier, (factor-local/parameter)&<#interrupt.Parameters.tid[tid]>.
+
+The thread being interrupted will be signalled after the exception has been set.
+This helps ensure that system calls will not stop the exception from being raised
+in order to kill the thread.
+
+! WARNING:
+	Cases where usage is appropriate is rare. Managing the interruption
+	of threads in this fashion is only appropriate in certain applications.
+
+[ > Parameters ]
+
+/(parameter)`tid`/
+	
+	The thread's low-level identifier to interrupt.
+
+/(parameter)`exception`/
+	
+	The exception that is raised in the thread.
+
+/(parameter)`setexc`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`pthread_kill`/
+	
+	(control/absent)`Undocumented`.
+
+
+[ frame ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`65 1 75 38`
+		- (type/syntax)`types.FrameType`
+		- (type/none/invalid)&<http://fault.io/dev/null[types.FrameType]>
+		
+(signature)`frame(tid)`
+
+Select the frame of the thread's identifier.
+
+[ > Parameters ]
+
+/(parameter)`tid`/
+	- (type/syntax)`int`
+	- (type/invalid/unknown)&<#int>
+	
+	Identifier of the thread returned by (invalid/unknown)&<#create_thread> or (invalid/unknown)&<#identify_thread>.
+	Returns (invalid/unknown)&<#None> when the thread is not running.
+
+
+[ Transition ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`77 1 113 22`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`77 18 77 23`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+A synchronization mechanism used to perform a single transfer between threads.
+Alternatively described as a queue with a transfer limit of one item.
+
+
+[ Transition >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`82 2 82 33`
+#!source
+	__slots__ = ('mutex', 'message')
+
+[ Transition >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`84 2 88 18`
+(signature)`__init__(self)`
+
+
+[ Transition >> __iter__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`90 2 91 48`
+(signature)`__iter__(self)`
+
+
+[ Transition >> commit ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`93 2 106 17`
+(signature)`commit(self)`
+
+Commit to the transition. If the object
+hasn't been placed, block until it is.
+
+A RuntimeError will be raised upon multiple invocations of commit.
+
+
+[ Transition >> transfer ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`108 2 113 22`
+(signature)`transfer(self, message)`
+
+Send (factor-local/parameter)&<#Transition.transfer.Parameters.message[message]> to the receiving thread.
+

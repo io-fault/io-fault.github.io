@@ -1,0 +1,566 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 826 0`
+Parser implementation and supporting tools for the fault-text format.
+
+The parser is hand rolled in order to easily accommodate for grammar
+violations, and as an attempt to display the format's simplicity. While the
+tokenizer enjoys an easily understood implementation, syntactic analysis
+((factor-local/method)&<#Parser.structure[Parser.structure]>) is hacked and nearly unreadable demanding a replacement.
+
+[ Types ]
+
+/Tree/
+	The element tree produced by (factor-local/class)&<#Parser[Parser]> processing operations.
+
+[ Engineering ]
+
+The current implementation of the parser failed to achieve a desired level
+of simplicity. While it usually produces the desired result, the lack of
+implementation coherency should result in a rewrite.
+
+
+[ Sequence ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`20 1 20 45`
+
+[ Mapping ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`20 1 20 45`
+
+[ builtins ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`21 1 21 15`
+
+[ itertools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`22 1 22 16`
+
+[ string ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`24 1 24 28`
+
+[ tools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`25 1 25 27`
+
+[ Tree ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`28 1 28 44`
+#!source
+	Tree = tuple[str, Sequence['Tree'], Mapping]
+
+[ parse_section_selector ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`30 1 54 40`
+		- (type/syntax)`tuple[int, Sequence[str]]`
+		
+(signature)`parse_section_selector(string)`
+
+Given the contents of a section command or reference,
+return the depth and the section path specified within the
+given (factor-local/parameter)&<#parse_section_selector.Parameters.string[string]>.
+
+
+[ Tokens ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`58 1 82 22`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`58 14 58 19`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+Iterator that allows events to be replayed in order for them
+to be processed by the appropriate context.
+
+
+[ Tokens >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`63 2 63 27`
+#!source
+	__slots__ = ('iterators',)
+
+[ Tokens >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`65 2 66 35`
+(signature)`__init__(self, iterator)`
+
+
+[ Tokens >> replay ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`68 2 69 40`
+(signature)`replay(self, *events)`
+
+
+[ Tokens >> __iter__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`71 2 72 13`
+(signature)`__iter__(self)`
+
+
+[ Tokens >> __next__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`74 2 82 22`
+(signature)`__next__(self)`
+
+
+[ Parser ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`84 1 826 46`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`84 14 84 19`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+Configuration and state class for parsing kleptic text.
+
+[ > Properties ]
+
+/stack/
+	The stack of line processing callbacks for the given context.
+
+/paragraph/
+	A sequence representing the current working paragraph.
+
+/indentation/
+	The current indentation level.
+
+/path/
+	The current section path.
+
+/prefix/
+	The designated bottom of the (invalid/unknown)&<#path>.
+	Used to allow subchapter tokens to be introduced as an extension
+	of the root chapter.
+
+
+[ Parser >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`103 2 113 10`
+(signature)`__init__(self)`
+
+Create a new parser instance initializing the (invalid/unknown)&<#stack> with the (factor-local/data)&<#Parser.default_commands[default_commands]>,
+and (factor-local/method)&<#Parser.process_paragraph_line[process_paragraph_line]> as the means to process lines.
+
+
+[ Parser >> commands ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`114 2 118 27`
+Return the set of commands for the current working processor.
+
+
+[ Parser >> reference ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`120 2 165 10`
+(signature)`reference(self, string)`
+
+Split the string at the reference's boundary.
+The (factor-local/parameter)&<#Parser.reference.Parameters.string[string]> is presumed to be the start of a reference with
+the indicator removed.
+
+#!text
+	&<...>
+	&[Parameters(...)]
+	(int *)`3928+23192-203`
+
+[ Parser >> processor ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`166 2 171 23`
+The current processing method, command set, and indentation level.
+Top of the (invalid/unknown)&<#stack>.
+
+
+[ Parser >> push ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`173 2 174 44`
+(signature)`push(self, proc, il, command_set)`
+
+
+[ Parser >> pop ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`176 2 177 20`
+(signature)`pop(self)`
+
+
+[ Parser >> is_decoration ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`179 2 192 14`
+(signature)`is_decoration(self, stripped)`
+
+Determine if the line is a decoration.
+
+
+[ Parser >> emphasis ]
+! CONTROL:
+	/type/
+		staticmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`193 2 227 30`
+(signature)`emphasis(text)`
+
+Return a sequence of paragraph events noting the emphasis areas versus
+regular text.
+
+
+[ Parser >> styles ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`229 2 256 24`
+(signature)`styles(self, string, edge)`
+
+Identify the styles and references for the given string.
+
+[ >> Parameters ]
+
+/(parameter)`self`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`string`/
+	- (type/syntax)`str`
+	- (type/invalid/unknown)&<#str>
+	
+	The text between a literal area.
+
+/(parameter)`edge`/
+	- (type/syntax)`bool`
+	- (type/invalid/unknown)&<#bool>
+	
+	Whether the (factor-local/parameter)&<#Parser.styles.Parameters.string[string]> was on the edge of a literal.
+
+/(parameter)`reference_indicator`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`chain`/
+	
+	(control/absent)`Undocumented`.
+
+
+[ Parser >> structure_paragraph_line ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`258 2 307 18`
+(signature)`structure_paragraph_line(self, line)`
+
+Structure the paragraph line revealing emphasis,
+references, and inline literals.
+
+
+[ Parser >> process_paragraph_line ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`309 2 326 46`
+(signature)`process_paragraph_line(self, lineno, code, il, line)`
+
+Process a paragraph line identifying inline literals, references and emphasis.
+
+
+[ Parser >> process_literal_line ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`328 2 331 74`
+(signature)`process_literal_line(self, lineno, code, il, line)`
+
+
+[ Parser >> select_section ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`333 2 353 66`
+(signature)`select_section(self, lineno, code, il, line)`
+
+
+[ Parser >> create_admonition ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`355 2 370 61`
+(signature)`create_admonition(self, lineno, code, il, line)`
+
+Lines that begin with "!":
+
+#!text
+	" ! NOTE:
+		" Paragraphs.
+
+[ Parser >> create_block ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`372 2 381 61`
+(signature)`create_block(self, lineno, code, il, line)`
+
+Code block of literal lines.
+
+
+[ Parser >> create_variable_item ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`383 2 413 63`
+(signature)`create_variable_item(self, lineno, code, il, line)`
+
+
+[ Parser >> create_enumerated_item ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`415 2 420 49`
+(signature)`create_enumerated_item(self, lineno, code, il, line)`
+
+
+[ Parser >> create_unordered_item ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`422 2 427 48`
+(signature)`create_unordered_item(self, lineno, code, il, line)`
+
+
+[ Parser >> process ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`429 2 430 56`
+(signature)`process(self, lineno, code, il, line)`
+
+
+[ Parser >> default_commands ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`432 2 446 2`
+#!source
+	default_commands = {
+		'[': select_section,
+		'!': create_admonition,
+			'/': create_variable_item,
+		'-': create_unordered_item,
+		'#': {
+			# Sequence Item
+			None: create_enumerated_item,
+			# Syntax Area / Block Quote
+			'!': create_block,
+		},
+			None: process,
+	}
+
+[ Parser >> tokenize ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`448 2 497 62`
+(signature)`tokenize(self, lines)`
+
+Tokenize the given source returning an iterator producing text events.
+(invalid/unknown)&<#source> presumed to be is newline separated string.
+
+
+[ Parser >> process ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`499 2 806 7`
+(signature)`process(self, sections, root, element, indentation, iterator)`
+
+
+[ Parser >> structure ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`808 2 820 13`
+		- (type/syntax)`Tree`
+		- (type/factor-local/data)&<#Tree[Tree]>
+		
+(signature)`structure(self, lines)`
+
+Structure the given (factor-local/parameter)&<#Parser.structure.Parameters.lines[lines]> into an element tree.
+
+
+[ Parser >> parse ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`822 2 826 46`
+		- (type/syntax)`Tree`
+		- (type/factor-local/data)&<#Tree[Tree]>
+		
+(signature)`parse(self, source)`
+
+Parse the source source into a tree structure.
+

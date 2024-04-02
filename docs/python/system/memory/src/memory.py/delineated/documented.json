@@ -1,0 +1,1 @@
+[[], ["Memory"], ["Memory", "__hash__"], ["MemoryContext"], ["MemoryContext", "from_mib"], ["MemoryContext", "used"], ["MemoryContext", "available"], ["MemoryContext", "allocate"], ["MemoryContext", "acquire"], ["Segments"], ["Segments", "open"], ["Segments", "__init__"], ["Segments", "__del__"], ["Segments", "decrement"], ["Segments", "select"], ["Segments", "__iter__"]]

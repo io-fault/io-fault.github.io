@@ -1,0 +1,222 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 99 2`
+Runtime object patterns.
+Currently unused as the compiler driver is used for linkage.
+
+
+[ Sequence ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 50`
+
+[ Set ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 50`
+
+[ Mapping ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 50`
+
+[ files ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 30`
+
+[ strings ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 9 44`
+(signature)`strings(x)`
+
+
+[ prepare ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 1 15 2`
+(signature)`prepare(select, pattern)`
+
+
+[ _search ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`17 1 47 15`
+		- (type/syntax)`tuple[Mapping[str, files.Path], Set[str]]`
+		
+(signature)`_search(search_paths, xset)`
+
+Query the sequence of search paths for the given set of files.
+
+All paths will be scanned for each requested identifier in (factor-local/parameter)&<#_search.Parameters.xset[xset]>. When an identifier
+is found to exist, it is removed from the set that is being scanned for causing
+the first path match to be the one returned.
+
+
+[ search ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`49 1 52 13`
+(signature)`search(libdirs)`
+
+
+[ stem ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`54 1 54 12`
+#!source
+	stem = 'crt'
+
+[ objects ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`55 1 75 2`
+#!source
+	objects = set([
+		'crt0', # No constructor support.
+	
+		# Executable with constructor support.
+		'crt1',
+	
+		'Scrt1', # Position Independent Executables.
+		'gcrt1',
+		'crt1S',
+	
+		'crtbeginT', # Statically Linked Executables.
+		'crtend',
+	
+		# Shared Libraries
+		'crtbeginS', # Position Independent Code.
+		'crtendS',
+	
+		# Init and eNd.
+		'crti',
+		'crtn',
+	])
+
+[ posix_pde ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`77 1 80 1`
+#!source
+	posix_pde = (
+		('crt1', 'crti', 'crtbegin'),
+		('crtend', 'crtn'),
+	)
+
+[ posix_pie ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`82 1 85 1`
+#!source
+	posix_pie = (
+		('Scrt1', 'crti', 'crtbeginS'),
+		('crtendS', 'crtn'),
+	)
+
+[ apple_pie ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`87 1 90 1`
+#!source
+	apple_pie = (
+		('crt1', 'crti', 'crtbeginS'),
+		('crtendS', 'crtn'),
+	)
+
+[ posix_pdc ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`92 1 95 1`
+#!source
+	posix_pdc = (
+		('crti', 'crtbegin'),
+		('crtend', 'crtn'),
+	)
+
+[ posix_pic ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`97 1 100 1`
+#!source
+	posix_pic = (
+		('crti', 'crtbeginS'),
+		('crtendS', 'crtn'),
+	)

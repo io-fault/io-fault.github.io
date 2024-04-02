@@ -1,0 +1,231 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 204 0`
+Execute a factor or module as a substitution.
+
+
+[ importlib ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 16`
+
+[ process ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 21`
+
+[ add_control_factor ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 8 38`
+(signature)`add_control_factor(root, param)`
+
+
+[ add_product_path ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 1 11 36`
+(signature)`add_product_path(root, param)`
+
+
+[ connect_product_environ ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`13 1 17 19`
+(signature)`connect_product_environ(root, param)`
+
+
+[ add_path ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`19 1 20 28`
+(signature)`add_path(root, param)`
+
+
+[ define_parameter ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`22 1 24 26`
+(signature)`define_parameter(root, param)`
+
+
+[ remove_parameter ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`26 1 27 33`
+(signature)`remove_parameter(root, param)`
+
+
+[ handlers ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`29 1 37 1`
+#!source
+	handlers = {
+		'-X': None,
+		'-l': add_control_factor,
+		'-L': add_product_path,
+		'-d': connect_product_environ,
+		'-P': add_path,
+		'-D': define_parameter,
+		'-U': remove_parameter,
+	}
+
+[ parse ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`39 1 62 17`
+(signature)`parse(arguments)`
+
+Extract command line parameter options.
+
+
+[ apply ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`64 1 83 17`
+(signature)`apply(config, target, symbol)`
+
+
+[ script ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`85 1 98 19`
+(signature)`script(inv)`
+
+
+[ system ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`100 1 127 13`
+(signature)`system(inv)`
+
+Execute a system image using the system-architecture configured by (none/invalid)&<http://fault.io/dev/null[fault.factors]>.
+
+
+[ _alloc ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`129 1 138 14`
+(signature)`_alloc(init)`
+
+
+[ string ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`140 1 142 19`
+(signature)`string(inv)`
+
+
+[ module ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`144 1 151 19`
+(signature)`module(inv)`
+
+
+[ console ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`153 1 177 19`
+(signature)`console(inv)`
+
+
+[ main ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`179 1 201 65`
+		- (type/syntax)`process.Exit`
+		- (type/project-local/factor-element)&<process#Exit[fault.system.process.Exit]>
+		
+(signature)`main(inv)`
+

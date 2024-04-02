@@ -1,0 +1,54 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 37 0`
+Various constants.
+
+
+[ types ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`21 1 21 19`
+
+[ annum ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`23 1 23 55`
+#!source
+	annum = types.Measure.of(second=(86400*365)+(86400//4)) # Julian Year, 525960 minutes.
+
+[ unix_epoch ]
+! CONTROL:
+	/type/
+		data
+	/element/
+		- (control)`property-set`
+		- (source/area)`24 1 24 42`
+(project-local/factor-element)&<types#Timestamp[fault.time.types.Timestamp]> instance referring to 1970.
+
+#!source
+	unix_epoch = types.Timestamp.of(year=1970)
+
+[ local_datum ]
+! CONTROL:
+	/type/
+		data
+	/element/
+		- (control)`property-set`
+		- (source/area)`25 1 25 32`
+(project-local/factor-element)&<types#Timestamp[fault.time.types.Timestamp]> instance refrerring to the datum used by the project.
+
+#!source
+	local_datum = types.Timestamp(0)

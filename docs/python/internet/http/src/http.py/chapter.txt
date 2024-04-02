@@ -1,0 +1,554 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 760 10`
+Low-level Hypertext Transfer Protocol tools.
+
+Provides protocol tokenization, field parsers, and protocol serialization for
+implementing a server or a client.
+
+[ Events ]
+
+/(id)`BYPASS`/
+	((factor-local/data)&<#ev_bypass[ev_bypass]>, (invalid/unknown)&<#bytes>)
+
+/(id)`RLINE`/
+	For requests: ((factor-local/data)&<#ev_rline[ev_rline]>, (method, uri, version))
+	For responses: ((factor-local/data)&<#ev_rline[ev_rline]>, (version, response_code, description))
+
+/(id)`CHUNK`/
+	((factor-local/data)&<#ev_chunk[ev_chunk]>, (invalid/unknown)&<#bytearray>)
+
+/(id)`CONTENT`/
+	((factor-local/data)&<#ev_content[ev_content]>, (invalid/unknown)&<#bytearray>)
+
+/(id)`HEADERS`/
+	((factor-local/data)&<#ev_headers[ev_headers]>, [((invalid/unknown)&<#bytes>, (invalid/unknown)&<#bytes>),...])
+
+/(id)`TRAILERS`/
+	((factor-local/data)&<#ev_trailers[ev_trailers]>, [((invalid/unknown)&<#bytes>, (invalid/unknown)&<#bytes>),...])
+
+/(id)`MESSAGE`/
+	((factor-local/data)&<#ev_message[ev_message]>, (invalid/unknown)&<#None>)
+	End of message.
+
+/(id)`VIOLATION`/
+	((factor-local/data)&<#ev_trailers[ev_trailers]>, (type, identifier, message, context))
+
+	Where `type` is:
+
+	/`'limit'`/
+		A configured limit was exceeded.
+
+	/`'protocol'`/
+		A protocol error occurred.
+
+/(id)`WARNING`/
+	((factor-local/data)&<#ev_warning[ev_warning]>, (type, identifier, message, context))
+
+
+[ typing ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`46 1 46 13`
+
+[ itertools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`47 1 47 16`
+
+[ functools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`48 1 48 16`
+
+[ dataclass ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`49 1 49 33`
+
+[ protocoldata ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`50 1 50 38`
+
+[ ev_bypass ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`52 1 52 14`
+#!source
+	ev_bypass = -2
+
+[ ev_violation ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`53 1 53 17`
+#!source
+	ev_violation = -1
+
+[ ev_rline ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`54 1 54 12`
+#!source
+	ev_rline = 0
+
+[ ev_headers ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`55 1 55 14`
+#!source
+	ev_headers = 1
+
+[ ev_content ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`56 1 56 14`
+#!source
+	ev_content = 2
+
+[ ev_chunk ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`57 1 57 12`
+#!source
+	ev_chunk = 3
+
+[ ev_trailers ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`58 1 58 15`
+#!source
+	ev_trailers = 4
+
+[ ev_message ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`59 1 59 14`
+#!source
+	ev_message = 5 # end of message
+
+[ ev_warning ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`60 1 60 14`
+#!source
+	ev_warning = 6
+
+[ ev_wire ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`61 1 61 12`
+#!source
+	ev_wire = -3 # Serialization event for signalling raw transfer.
+
+[ event_symbols ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`63 1 73 1`
+#!source
+	event_symbols = {
+		ev_bypass: 'bypass',
+		ev_violation: 'violation',
+		ev_rline: 'rline',
+		ev_headers: 'headers',
+		ev_content: 'content',
+		ev_chunk: 'chunk',
+		ev_trailers: 'trailers',
+		ev_message: 'message',
+		ev_warning: 'warning',
+	}
+
+[ EOH ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`75 1 75 22`
+#!source
+	EOH = (ev_headers, ())
+
+[ EOM ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`76 1 78 10`
+#!source
+	EOM = (ev_message, None)
+	
+	@dataclass
+
+[ Limits ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`79 1 109 32`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`79 14 79 19`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+A set of numeric values used to define the limitations that should be enforced upon
+protocol elements when interpreting HTTP data as events.
+
+[ > Properties ]
+
+/max_line_size/
+	Maximum length of the Request-Line or Response-Line.
+
+/max_headers/
+	Maximum number of headers to accept.
+
+/max_trailers/
+	Maximum number of trailers to accept.
+
+/max_header_size/
+	len(field-name) + len(field-value)
+
+/max_header_set_size/
+	Maximum size to scan for EOH.
+
+/max_trailer_size/
+	len(field-name) + len(field-value)
+
+/max_chunk_line_size/
+	Chunk size portion, not the chunk data size.
+
+
+[ Limits >> max_line_size ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`103 2 103 26`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+#!source
+	max_line_size: int = 4096
+
+[ Limits >> max_headers ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`104 2 104 24`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+#!source
+	max_headers: int = 1024
+
+[ Limits >> max_trailers ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`105 2 105 23`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+#!source
+	max_trailers: int = 32
+
+[ Limits >> max_header_size ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`106 2 106 30`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+#!source
+	max_header_size: int = 1024*4
+
+[ Limits >> max_header_set_size ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`107 2 107 36`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+#!source
+	max_header_set_size: int = 1024*8*2
+
+[ Limits >> max_trailer_size ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`108 2 108 29`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+#!source
+	max_trailer_size: int = 1024
+
+[ Limits >> max_chunk_line_size ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`109 2 109 32`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+#!source
+	max_chunk_line_size: int = 1024
+
+[ Tokenization ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`111 1 671 24`
+(signature)`Tokenization()`
+
+An HTTP 1.0 and 1.1 message parser. Emits HTTP events from the given binary data.
+For proper response handling(HEAD), (factor-local/parameter)&<#Tokenization.Parameters.allocation[allocation]> must be properly constructed to retrieve
+the identifier and body expectation from the shared state.
+
+The generator is configured to continue as long as the given (factor-local/parameter)&<#Tokenization.Parameters.allocation[allocation]>
+iterator produces items.
+
+Primarily, this generator is concernced with:
+&<https://tools.ietf.org/html/rfc7230#section-3.3.3>
+
+
+[ Disassembler ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`672 1 672 27`
+#!source
+	Disassembler = Tokenization
+
+[ disassembly ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`674 1 681 9`
+(signature)`disassembly(**config)`
+
+Returns an already started (factor-local/data)&<#Disassembler[Disassembler]> generator.
+
+
+[ headers ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`683 1 688 57`
+(signature)`headers(headers)`
+
+Produce an iterator of (invalid/unknown)&<#bytes> instances making up a segment
+of headers that can be joined into a buffer.
+
+
+[ trailers ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`689 1 691 24`
+#!source
+	trailers = headers
+	
+	@functools.lru_cache(16)
+
+[ chunk_size ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`692 1 693 30`
+(signature)`chunk_size(length)`
+
+
+[ chunk ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`695 1 710 43`
+(signature)`chunk(data)`
+
+Returns a tuple of (chunk-size + CRLF, chunk-data, CRLF).
+
+Joining data into a single buffer is avoided for the express
+purpose of allowing the data buffer to be passed through.
+In cases where a shared memory segment is referenced, this
+can be critical for proper performance.
+
+Currently, (factor-local/function)&<#Serialization[Serialization]> will concatenate these, defeating
+some of the purpose.
+
+#!/pl/python
+	assert chunk(b"data") == (b"4\r\n", b"data", b"\r\n")
+
+[ Serialization ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`712 1 751 22`
+(signature)`Serialization()`
+
+Assemble HTTP events back into a sequences of bytes.
+
+
+[ Assembler ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`752 1 752 25`
+#!source
+	Assembler = Serialization
+
+[ assembly ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`754 1 761 9`
+(signature)`assembly(**config)`
+
+Return a started (factor-local/data)&<#Assembler[Assembler]> generator.
+

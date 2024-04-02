@@ -1,0 +1,384 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 415 0`
+Product directory interface checks.
+
+
+[ files ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 27`
+
+[ module ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 39`
+
+[ factor ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 84`
+
+[ FactorIsolationProtocol ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 84`
+
+[ Information ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 84`
+
+[ Reference ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 84`
+
+[ t_project_id ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 8 48`
+#!source
+	t_project_id = 'http://ni.fault.io/test/project'
+
+[ setup ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 1 16 10`
+(signature)`setup(pd)`
+
+
+[ product_a ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`18 1 31 31`
+(signature)`product_a(test)`
+
+
+[ test_Product_attributes ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`33 1 39 47`
+(signature)`test_Product_attributes(test)`
+
+- (context-local/factor-element)&<fault.project/system#Product.project_index_route[fault.project.system.Product.project_index_route]>
+
+
+[ test_Product_import ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`41 1 47 46`
+(signature)`test_Product_import(test)`
+
+- (context-local/factor-element)&<fault.project/system#Product.import_protocol[fault.project.system.Product.import_protocol]>
+
+
+[ test_iterprojects_root_no_context ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`49 1 63 28`
+(signature)`test_iterprojects_root_no_context(test)`
+
+- (context-local/factor-element)&<fault.project/system#Product.iterprojects[fault.project.system.Product.iterprojects]>
+
+
+[ test_update ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`65 1 80 25`
+(signature)`test_update(test)`
+
+- (context-local/factor-element)&<fault.project/system#Product.update[fault.project.system.Product.update]>
+
+
+[ test_update_nested ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`82 1 102 40`
+(signature)`test_update_nested(test)`
+
+- (context-local/factor-element)&<fault.project/system#Product.update[fault.project.system.Product.update]>
+
+
+[ test_cache_io ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`104 1 126 41`
+(signature)`test_cache_io(test)`
+
+- (context-local/factor-element)&<fault.project/system#Product.store[fault.project.system.Product.store]>
+- (context-local/factor-element)&<fault.project/system#Product.load[fault.project.system.Product.load]>
+
+
+[ test_Product_select ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`128 1 143 35`
+(signature)`test_Product_select(test)`
+
+- (context-local/factor-element)&<fault.project/system#Product.identifier_by_factor[fault.project.system.Product.identifier_by_factor]>
+- (context-local/factor-element)&<fault.project/system#Product.factor_by_identifier[fault.project.system.Product.factor_by_identifier]>
+
+
+[ test_Product_image ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`145 1 157 47`
+(signature)`test_Product_image(test)`
+
+- (context-local/factor-element)&<fault.project/system#Product.image[fault.project.system.Product.image]>
+
+
+[ test_Project_no_corpus_part ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`159 1 169 32`
+(signature)`test_Project_no_corpus_part(test)`
+
+- (context-local/factor-element)&<fault.project/system#Project._iid_corpus_name_pair[fault.project.system.Project._iid_corpus_name_pair]>
+- (context-local/factor-element)&<fault.project/system#Project.corpus[fault.project.system.Project.corpus]>
+- (context-local/factor-element)&<fault.project/system#Project.name[fault.project.system.Project.name]>
+
+
+[ test_Project_corpus_name ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`171 1 181 29`
+(signature)`test_Project_corpus_name(test)`
+
+- (context-local/factor-element)&<fault.project/system#Project._iid_corpus_name_pair[fault.project.system.Project._iid_corpus_name_pair]>
+- (context-local/factor-element)&<fault.project/system#Project.corpus[fault.project.system.Project.corpus]>
+- (context-local/factor-element)&<fault.project/system#Project.name[fault.project.system.Project.name]>
+
+
+[ test_Project_select_none ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`183 1 196 51`
+(signature)`test_Project_select_none(test)`
+
+- (context-local/factor-element)&<fault.project/system#Project.select[fault.project.system.Project.select]>
+
+
+[ test_Project_refer_absolute ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`198 1 214 69`
+(signature)`test_Project_refer_absolute(test)`
+
+- (context-local/factor-element)&<fault.project/system#Project.refer[fault.project.system.Project.refer]>
+
+
+[ test_Project_refer_relative ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`216 1 234 77`
+(signature)`test_Project_refer_relative(test)`
+
+- (context-local/factor-element)&<fault.project/system#Project.refer[fault.project.system.Project.refer]>
+
+
+[ test_Project_image_polynomial ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`236 1 269 94`
+(signature)`test_Project_image_polynomial(test)`
+
+- (context-local/factor-element)&<fault.project/system#Project.image[fault.project.system.Project.image]>
+
+
+[ test_Project_extensions ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`271 1 287 76`
+(signature)`test_Project_extensions(test)`
+
+- (context-local/factor-element)&<fault.project/system#Project.extensions[fault.project.system.Project.extensions]>
+- (context-local/factor-element)&<fault.project/system#Project.icon[fault.project.system.Project.icon]>
+- (context-local/factor-element)&<fault.project/system#Project.synopsis[fault.project.system.Project.synopsis]>
+
+Validate successful extensions.
+
+
+[ test_Project_extensions_vacancies ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`289 1 315 64`
+(signature)`test_Project_extensions_vacancies(test)`
+
+- (context-local/factor-element)&<fault.project/system#Project.extensions[fault.project.system.Project.extensions]>
+- (context-local/factor-element)&<fault.project/system#Project.icon[fault.project.system.Project.icon]>
+- (context-local/factor-element)&<fault.project/system#Project.synopsis[fault.project.system.Project.synopsis]>
+
+Validate that exceptions aren't raised by icon and synopsis.
+
+
+[ test_Context_import_protocol ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`317 1 322 86`
+(signature)`test_Context_import_protocol(test)`
+
+- (context-local/factor-element)&<fault.project/system#Context.import_protocol[fault.project.system.Context.import_protocol]>
+
+
+[ test_Context_connect ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`324 1 337 45`
+(signature)`test_Context_connect(test)`
+
+- (context-local/factor-element)&<fault.project/system#Context.connect[fault.project.system.Context.connect]>
+
+
+[ test_Context_project ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`339 1 351 70`
+(signature)`test_Context_project(test)`
+
+- (context-local/factor-element)&<fault.project/system#Context.project[fault.project.system.Context.project]>
+
+
+[ test_Context_load ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`353 1 369 53`
+(signature)`test_Context_load(test)`
+
+- (context-local/factor-element)&<fault.project/system#Context.load[fault.project.system.Context.load]>
+
+
+[ test_project_declaration ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`371 1 394 35`
+(signature)`test_project_declaration(test)`
+
+- (context-local/factor-element)&<fault.project/system#structure_project_declaration[fault.project.system.structure_project_declaration]>
+- (context-local/factor-element)&<fault.project/system#sequence_project_declaration[fault.project.system.sequence_project_declaration]>
+
+
+[ test_project_declaration_exceptions ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`396 1 415 23`
+(signature)`test_project_declaration_exceptions(test)`
+
+- (context-local/factor-element)&<fault.project/system#structure_project_declaration[fault.project.system.structure_project_declaration]>
+- (context-local/factor-element)&<fault.project/system#sequence_project_declaration[fault.project.system.sequence_project_declaration]>
+

@@ -1,0 +1,491 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 244 0`
+Endpoint and Service type for referencing internet addresses for
+Internet Protocol version 4 and 6.
+
+
+[ typing ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 13`
+
+[ ipaddress ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 16`
+
+[ Service ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 41 30`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`8 15 8 17`
+	- (type/syntax)`int`
+	- (type/invalid/unknown)&<#int>
+	
+Internet port identifier. Empty subclass for identification purposes.
+
+
+[ Service >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`12 2 12 15`
+#!source
+	__slots__ = ()
+
+[ Service >> valid_range ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`14 2 14 26`
+#!source
+	valid_range = (0, 0xFFFF)
+
+[ Service >> system_range ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`15 2 15 25`
+#!source
+	system_range = (0, 1024)
+
+[ Service >> epheremal_range ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`16 2 16 34`
+#!source
+	epheremal_range = (49152, 0xFFFF)
+
+[ Service >> valid ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`18 2 23 37`
+(signature)`valid(self)`
+
+Whether or not the Service port is within the standard range.
+
+
+[ Service >> system ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`25 2 30 34`
+(signature)`system(self)`
+
+Whether or not the Service port is considered a 'well known' port.
+
+
+[ Service >> ephemeral ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`32 2 39 13`
+(signature)`ephemeral(self)`
+
+Whether or not the Service port is considered an 'ephemeral' port by IANA.
+
+
+[ Service >> from_name ]
+! CONTROL:
+	/type/
+		classmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`40 2 41 30`
+(signature)`from_name(Class, name)`
+
+
+[ common_services ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`44 1 61 1`
+#!source
+	common_services = {
+		'domain': Service(53),
+	
+		'http': Service(80),
+		'https': Service(443),
+		'ftp': Service(21),
+		'ftps': Service(990),
+	
+		'ssh': Service(22),
+		'telnet': Service(23),
+	
+		'smtp': Service(25),
+		'kerberos': Service(88),
+		'ntp': Service(123),
+		'bgp': Service(179),
+		'irc': Service(194),
+		'ldap': Service(389),
+	}
+
+[ Endpoint ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`64 1 141 53`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`64 16 64 20`
+	- (type/syntax)`tuple`
+	- (type/invalid/unknown)&<#tuple>
+	
+A precise Endpoint for internet addresses and local sockets.
+
+
+[ Endpoint >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`68 2 68 15`
+#!source
+	__slots__ = ()
+
+[ Endpoint >> address_types ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`70 2 72 13`
+#!source
+	address_types = (ipaddress.IPv4Address, ipaddress.IPv6Address)
+		@classmethod
+
+[ Endpoint >> create_ip4 ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`73 2 80 13`
+(signature)`create_ip4(Class, string, port)`
+
+Create an IPv4 Endpoint Instance
+
+
+[ Endpoint >> create_ip6 ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`81 2 88 10`
+(signature)`create_ip6(Class, string, port)`
+
+Create an IPv6 Endpoint Instance
+
+
+[ Endpoint >> protocol ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`89 2 96 10`
+Addressing protocol; 4 or 6
+
+
+[ Endpoint >> interface ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`97 2 101 16`
+The (none/invalid)&<http://fault.io/dev/null[ipaddress]> typed address.
+
+
+[ Endpoint >> address ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`102 2 104 10`
+#!source
+	address = interface
+		@property
+
+[ Endpoint >> port ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`105 2 110 16`
+The (factor-local/class)&<#Service[Service]> of the endpoint.
+
+
+[ Endpoint >> __str__ ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`112 2 121 52`
+(signature)`__str__(self)`
+
+"<address>:<port>" representation suitable for interpolation into
+an IRI network location.
+
+
+[ Endpoint >> __repr__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`123 2 129 59`
+(signature)`__repr__(self)`
+
+
+[ Endpoint >> __hash__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`131 2 134 13`
+(signature)`__hash__(self)`
+
+
+[ Endpoint >> create ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`135 2 141 53`
+(signature)`create(Class, interface, port)`
+
+Create an IPv4 or IPv6 endpoint based on the type detected from the string.
+
+The (none/invalid)&<http://fault.io/dev/null[ipaddress]> type will be selected by the (none/invalid)&<http://fault.io/dev/null[ipaddress.ip_address]> function.
+
+
+[ Reference ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`143 1 211 55`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`143 17 143 21`
+	- (type/syntax)`tuple`
+	- (type/invalid/unknown)&<#tuple>
+	
+A domain name referencing a set of endpoints.
+
+References are actually service references for a specific domain. They
+consist of protocol, address, port, and service fields that define
+the reference. Normally, protocol is "dns" and implies system DNS.
+
+Protocol variations can be used to describe more complicated name resolutions.
+
+
+[ Reference >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`153 2 153 15`
+#!source
+	__slots__ = ()
+
+[ Reference >> fields ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`155 2 162 10`
+#!source
+	fields = (
+		'protocol',
+		'address',
+		'port',
+		'service',
+	)
+		@property
+
+[ Reference >> protocol ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`163 2 169 10`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+Resolution protocol to use to extract endpoints from (factor-local/property)&<#Reference.address[address]>. Usually, `'internet-names'`.
+
+
+[ Reference >> address ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`170 2 176 10`
+		- (type/syntax)`object`
+		- (type/invalid/unknown)&<#object>
+		
+The unencoded domain name.
+
+
+[ Reference >> port ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`177 2 185 10`
+		- (type/syntax)`Service`
+		- (type/factor-local/class)&<#Service[Service]>
+		
+The resolved or overridden port for the service.
+Usually, this is (invalid/unknown)&<#None> as the (factor-local/property)&<#Reference.service[service]> will refer to the desired (factor-local/class)&<#Service[Service]> port
+or the resolver will manage a
+
+
+[ Reference >> service ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`186 2 191 16`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+The actual service name being referred to.
+Used by resolvers that support service name resolution.
+
+
+[ Reference >> __str__ ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`193 2 198 79`
+(signature)`__str__(self)`
+
+Formatted reference for canonical printing.
+Return "<service>:[<protocol>]<name>:<port>".
+
+
+[ Reference >> __repr__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`200 2 206 13`
+(signature)`__repr__(self)`
+
+
+[ Reference >> from_domain ]
+! CONTROL:
+	/type/
+		classmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`207 2 211 55`
+(signature)`from_domain(Class, name, service)`
+
+
+[ realize ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`213 1 244 16`
+		- (type/syntax)`typing.Union[Reference, Endpoint]`
+		
+(signature)`realize(struct)`
+
+Construct an (factor-local/class)&<#Endpoint[Endpoint]> or (factor-local/class)&<#Reference[Reference]> from (factor-local/parameter)&<#realize.Parameters.struct[struct]>.
+
+#!/pl/python
+	Usual case:
+	from fault.internet import ri
+	target = host.realize(ri.parse(url))

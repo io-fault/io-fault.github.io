@@ -1,0 +1,16 @@
+! CONTROL:
+	/type/
+		factor
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+! CONTEXT:
+	/protocol/
+		&<http://if.fault.io/chapters/meta.specification>
+
+The element tree protocol for structured chapters.
+
+[ JSON ]
+
+Normally expressed in JSON.
+

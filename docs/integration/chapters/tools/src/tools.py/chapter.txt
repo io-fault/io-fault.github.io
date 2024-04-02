@@ -1,0 +1,168 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 76 0`
+Element tree (text) queries and tools relevant to factor rendering.
+
+
+[ typing ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`4 1 4 13`
+
+[ document ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`5 1 5 31`
+
+[ Paragraph ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`6 1 6 48`
+
+[ Fragment ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`6 1 6 48`
+
+[ select ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`8 1 14 10`
+(signature)`select(types, nodes)`
+
+Retrieve the nodes whose element type identifier is in (factor-local/parameter)&<#select.types[types]>.
+
+/(parameter)`types`/
+	- (type/syntax)`set`
+	- (type/invalid/unknown)&<#set>
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`nodes`/
+	- (type/syntax)`typing.Iterable`
+	- (type/none/invalid)&<http://fault.io/dev/null[typing.Iterable]>
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ first ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`16 1 22 12`
+(signature)`first(types, nodes)`
+
+Get the first node with an element type in (factor-local/parameter)&<#first.types[types]>.
+
+/(parameter)`types`/
+	- (type/syntax)`set`
+	- (type/invalid/unknown)&<#set>
+	
+	(ctl/absent)`Undocumented`.
+
+/(parameter)`nodes`/
+	- (type/syntax)`typing.Iterable`
+	- (type/none/invalid)&<http://fault.io/dev/null[typing.Iterable]>
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ interpret_property_fragment ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`24 1 32 93`
+(signature)`interpret_property_fragment(fragment)`
+
+Convert a fragment to a key-value pair. Inverse of (factor-local/function)&<#fragment_property[fragment_property]>.
+
+/(parameter)`fragment`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ interpret_properties ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`34 1 41 97`
+(signature)`interpret_properties(items)`
+
+Get the set of unordered list based properties from the (invalid/unknown)&<#nodes>.
+
+Returns the number of items present in the initial set found in (invalid/unknown)&<#nodes>,
+and the set of sole paragraph fragments contained by each item.
+
+/(parameter)`items`/
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ get_properties ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`43 1 53 14`
+(signature)`get_properties(nodes)`
+
+
+[ itemize_fragment ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`55 1 59 59`
+(signature)`itemize_fragment(pf)`
+
+Construct single paragraph item node for populating a set or sequence node.
+
+/(parameter)`pf`/
+	- (type/syntax)`Fragment`
+	- (type/remote/factor-element)&<http://fault.io/python/text/types#Fragment[fault.text.types.Fragment]>
+	
+	(ctl/absent)`Undocumented`.
+
+
+[ fragment_property ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (source/area)`61 1 76 46`
+		- (type/syntax)`Fragment`
+		- (type/remote/factor-element)&<http://fault.io/python/text/types#Fragment[fault.text.types.Fragment]>
+		
+(signature)`fragment_property(item)`
+
+Construct a fragment that can be directly serialized to represent the (factor-local/parameter)&<#fragment_property.item[item]>.
+
+/(parameter)`item`/
+	
+	(ctl/absent)`Undocumented`.
+

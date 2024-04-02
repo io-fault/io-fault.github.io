@@ -1,0 +1,125 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 81 0`
+Validate the field sets and functionality of the metrics module.
+
+
+[ fields ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 30`
+
+[ module ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 43`
+
+[ test_Work ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 14 20`
+(signature)`test_Work(test)`
+
+
+[ test_Work_add ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`16 1 18 45`
+(signature)`test_Work_add(test)`
+
+
+[ test_Adivsory ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`20 1 26 20`
+(signature)`test_Adivsory(test)`
+
+
+[ test_Adivsory_add ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`28 1 30 43`
+(signature)`test_Adivsory_add(test)`
+
+
+[ test_Resource ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`32 1 38 23`
+(signature)`test_Resource(test)`
+
+
+[ test_Resource_add ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`40 1 45 49`
+(signature)`test_Resource_add(test)`
+
+
+[ test_Procedure_io ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`47 1 72 53`
+(signature)`test_Procedure_io(test)`
+
+- (context-local/factor-element)&<fault.transcript/metrics#Procedure.sequence[fault.transcript.metrics.Procedure.sequence]>
+- (context-local/factor-element)&<fault.transcript/metrics#Procedure.structure[fault.transcript.metrics.Procedure.structure]>
+
+
+[ test_Procedure_indexing ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`74 1 81 39`
+(signature)`test_Procedure_indexing(test)`
+
+- (context-local/factor-element)&<fault.transcript/metrics#Procedure.__getitem__[fault.transcript.metrics.Procedure.__getitem__]>
+

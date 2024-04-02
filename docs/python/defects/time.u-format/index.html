@@ -1,0 +1,84 @@
+<html root="2"><head><title>fault.defects.time.u-format</title><meta charset="utf-8"/><link as="style" rel="preload" href="../../.legacy-web/core.css"></link><link as="style" rel="preload" href="../../.legacy-web/factor.css"></link><link rel="stylesheet" href="../../.legacy-web/core.css"></link><link rel="stylesheet" href="../../.legacy-web/factor.css"></link></head><body><main><h1><span class="prefix"></span><div class="page-subject"><img class="icon" src="../../.factor-type-icon/if.fault.io/python-module.svg"></img><span class="subject-identifier">u-format</span><a href="http://if.fault.io/factors/python.module"><code class="type">python.module</code></a></div><div class="page-context"><a href="../"><img class="icon" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNTYiIGhlaWdodD0iMjU2Ij48dGV4dCB4PSI0IiB5PSIwLjg4ZW0iIGZvbnQtc2l6ZT0iMjQ4Ij7impnvuI88L3RleHQ+PC9zdmc+"></img></a><span class="context-identifier">fault.defects</span></div></h1><section class="chapter"></section><section class="import" documented="false" local-identifier="core" id="core"><h1><span class="prefix"></span><a class="title" href="#core"><span class="text.normal">core</span></a><span class="abstract-type">import</span></h1></section><section class="import" documented="false" local-identifier="module" id="module"><h1><span class="prefix"></span><a class="title" href="#module"><span class="text.normal">module</span></a><span class="abstract-type">import</span></h1></section><section class="data" documented="false" local-identifier="samples" id="samples"><h1><span class="prefix"></span><a class="title" href="#samples"><span class="text.normal">samples</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code class="source">samples = [
+	('no_seconds', (
+		(2000, 1, 1, 0, 0, 0, 0), (
+			('rfc1123', "Sat, 1 Jan 2000 00:00 GMT"),
+			('iso8601', "2000-01-01T0:0Z"),
+		)
+	)),
+	('negative_year', (
+		(-800, 1, 1, 0, 0, 0, 0), (
+			('rfc1123', "Sat, 1 Jan -800 00:00:00 GMT"),
+			('iso8601', "-800-01-01T00:0:0.0Z"),
+		)
+	)),
+	('slight_cycle_offset', (
+		(2010, 7, 16, 2, 32, 39, 0), (
+			('rfc1123', "Fri, 16 Jul 2010 02:32:39 GMT"),
+			('iso8601', "2010-07-16T02:32:39.0Z"),
+		)
+	)),
+	('cycle_aligned', (
+		(1600, 1, 1, 0, 0, 0, 0), (
+			('rfc1123', "Sat, 1 Jan 1600 00:00:00 GMT"),
+			('iso8601', "1600-1-1T0:0:0Z"),
+		)
+	)),
+	('first_century', (
+		(1300, 1, 1, 0, 0, 0, 0), (
+			('rfc1123', "Fri, 1 Jan 1300 00:00:00 GMT"),
+			('iso8601', "1300-01-01T00:0:0.0Z"),
+		)
+	)),
+	# iso8601 allows for offsets to be defined.
+	# make sure that the timezone offsets get properly applied.
+	('iso_tz_offset', (
+		(2000, 1, 1, 10, 0, 0, 0), (
+			('iso8601', '2000-01-01T04:00:00.0+06:00'),
+			('iso8601', '2000-01-01T16:00:00.0-06:00'),
+			('iso8601', '2000-01-01T20:30:00.0-10:30'),
+			# no subseconds
+			('iso8601', '2000-01-01T10:30:00-00:30'),
+			('iso8601', '2000-01-01T04:00:00+06:00'),
+			('iso8601', '2000-01-01T16:00:00-06:00'),
+			('iso8601', '2000-01-01T20:30:00-10:30'),
+		)
+	)),
+	('iso_tz_offset_mins', (
+		(2000, 1, 1, 9, 60, 0, 0), (
+			('iso8601', '2000-01-01T09:30:00.0+00:30'),
+			#('iso8601', '2000-01-00T9:30:00.0+24:30'),
+			# no subseconds
+			('iso8601', '2000-01-01T09:30:00+00:30'),
+			#('iso8601', '2000-01-00T9:30:00+24:30'),
+		)
+	)),
+]
+</code></pre></section><section class="data" documented="false" local-identifier="exceptional_samples" id="exceptional_samples"><h1><span class="prefix"></span><a class="title" href="#exceptional_samples"><span class="text.normal">exceptional_samples</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code class="source">exceptional_samples = [
+	('iso8601', (
+		(core.ParseError, (
+			123, # not a string
+			None, # not a string
+			"Tue, 16 Jul 2010 02:32:39 GMT", # inappropriate format
+		)),
+		(core.StructureError, (
+			"2000-01-01T5:30:0-0A:00", # "0A" not an integer
+		)),
+		(core.IntegrityError, (
+			# no integrity checks performed by iso8601
+		)),
+	)),
+	('rfc1123', (
+		(core.ParseError, (
+			123, # not a string
+			None, # not a string
+		)),
+		(core.StructureError, (
+			"Fri, 16 Jel 2010 02:32:39 GMT", # can't structure with invalid month name
+		)),
+		(core.IntegrityError, (
+			#"Tue, 16 Jul 2010 02:32:39 GMT", invalid weekday
+			"Fri, 16 Jul 2010 02:32:39 PCT",
+		)),
+	)),
+]
+</code></pre></section><section class="function" documented="false" local-identifier="test_samples" id="test_samples"><h1><span class="prefix"></span><a class="title" href="#test_samples"><span class="text.normal">test_samples</span></a><span class="abstract-type">function</span></h1><p><code class="signature">test_samples(test)</code></p></section><section class="function" documented="false" local-identifier="test_errors" id="test_errors"><h1><span class="prefix"></span><a class="title" href="#test_errors"><span class="text.normal">test_errors</span></a><span class="abstract-type">function</span></h1><p><code class="signature">test_errors(test)</code></p></section><section class="function" documented="true" local-identifier="test_space_separated_iso" id="test_space_separated_iso"><h1><span class="prefix"></span><a class="title" href="#test_space_separated_iso"><span class="text.normal">test_space_separated_iso</span></a><span class="abstract-type">function</span></h1><p><code class="signature">test_space_separated_iso(test)</code></p><ul class="text.set"><li><p><a class="context-local" href="../../time/format#parse_iso8601"><span class="factor-element">fault.time.format.parse_iso8601</span></a></p></li></ul></section><section class="function" documented="true" local-identifier="test_isodate_format" id="test_isodate_format"><h1><span class="prefix"></span><a class="title" href="#test_isodate_format"><span class="text.normal">test_isodate_format</span></a><span class="abstract-type">function</span></h1><p><code class="signature">test_isodate_format(test)</code></p><ul class="text.set"><li><p><a class="context-local" href="../../time/format#format_iso8601_date"><span class="factor-element">fault.time.format.format_iso8601_date</span></a></p></li></ul></section><h1 class="footing"></h1></main></body></html>

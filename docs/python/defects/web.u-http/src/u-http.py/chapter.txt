@@ -1,0 +1,219 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 359 40`
+Check integrations of internet.http and kernel.http
+
+
+[ itertools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 16`
+
+[ library ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 34`
+
+[ flows ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 7 27`
+
+[ kcore ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 8 35`
+
+[ kio ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`9 1 9 31`
+
+[ testlib ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 1 10 39`
+
+[ default_headers ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`12 1 15 1`
+#!source
+	default_headers = [
+		(b'Host', b'test.fault.io'),
+		(b'Connection', b'keep-alive'),
+	]
+
+[ req ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`17 1 44 50`
+(signature)`req(*headers)`
+
+
+[ test_ranges ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`46 1 59 60`
+(signature)`test_ranges(test)`
+
+Check Range header parsing.
+
+
+[ allocate_transparent ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`61 1 61 70`
+#!source
+	allocate_transparent = (lambda x: (('line+headers',) + x, b'VERSION'))
+
+[ test_fork_headers_no_content ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`63 1 132 41`
+(signature)`test_fork_headers_no_content(test)`
+
+- (context-local/factor-element)&<fault.web/http#fork[fault.web.http.fork]>
+
+
+[ test_join ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`134 1 169 44`
+(signature)`test_join(test)`
+
+
+[ test_Structures_local ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`171 1 185 35`
+(signature)`test_Structures_local(test)`
+
+- (context-local/factor-element)&<fault.web/http#Structures[fault.web.http.Structures]>
+
+Check caching of local headers.
+
+
+[ test_Structures_cookies ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`187 1 191 5`
+(signature)`test_Structures_cookies(test)`
+
+- (context-local/factor-element)&<fault.web/http#Structures[fault.web.http.Structures]>
+
+
+[ test_TXProtocol_initiate_request ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`193 1 223 64`
+(signature)`test_TXProtocol_initiate_request(test)`
+
+- (context-local/factor-element)&<fault.web/http#TXProtocol[fault.web.http.TXProtocol]>
+
+
+[ test_RXProtocol_allocate_request ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`225 1 252 62`
+(signature)`test_RXProtocol_allocate_request(test)`
+
+- (context-local/factor-element)&<fault.web/http#RXProtocol[fault.web.http.RXProtocol]>
+
+
+[ test_client_transport ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`254 1 297 26`
+(signature)`test_client_transport(test)`
+
+- (context-local/factor-element)&<fault.web/http#RXProtocol[fault.web.http.RXProtocol]>
+- (context-local/factor-element)&<fault.web/http#TXProtocol[fault.web.http.TXProtocol]>
+
+
+[ test_server_transport ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`299 1 356 26`
+(signature)`test_server_transport(test)`
+
+- (context-local/factor-element)&<fault.web/http#RXProtocol[fault.web.http.RXProtocol]>
+- (context-local/factor-element)&<fault.web/http#TXProtocol[fault.web.http.TXProtocol]>
+

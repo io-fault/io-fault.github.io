@@ -1,0 +1,330 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 224 3`
+Function and iterator tools used by local projects.
+
+
+[ functools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 16`
+
+[ itertools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 16`
+
+[ typing ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 13`
+
+[ dataclasses ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 7 18`
+
+[ cachedcalls ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`9 1 9 33`
+#!source
+	cachedcalls = functools.lru_cache
+
+[ partial ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 1 10 27`
+#!source
+	partial = functools.partial
+
+[ nothing ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`12 1 16 5`
+		- (type/syntax)`None`
+		
+(signature)`nothing(*args, **kw)`
+
+Callable that returns (invalid/unknown)&<#None> regardless of the arguments and keywords given.
+
+
+[ reflect ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`18 1 22 11`
+(signature)`reflect(obj)`
+
+Callable that returns the single argument that it was given.
+
+
+[ constant ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`34 1 43 30`
+(signature)`constant(obj)`
+
+Return a callable that returns the given object regardless of
+the given parameters.
+
+
+[ unique ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`45 1 73 9`
+(signature)`unique(iterable, *existing)`
+
+Iterate through the contents of the (factor-local/parameter)&<#unique.Parameters.iterable[iterable]>,
+but only allow an item to be emitted once.
+
+! WARNING:
+	The implementation uses a (factor-local/parameter)&<#unique.Parameters.set[set]> to track which items have transpired.
+	It is never reset internally, so the generator can allocate
+	arbitrary quantities of memory.
+
+[ > Parameters ]
+
+/(parameter)`iterable`/
+	
+	The iterable whose duplicate items should be eliminated.
+
+/(parameter)`existing`/
+	
+	The initial items in the filter set. Arguments given as
+	(factor-local/parameter)&<#unique.Parameters.existing[existing]> will never be emitted. For instance, filtering
+	(invalid/unknown)&<#None> may be common.
+
+/(parameter)`set`/
+	
+	(control/absent)`Undocumented`.
+
+
+[ interlace ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`75 1 93 50`
+(signature)`interlace(*iters)`
+
+An iterator constructor that takes a sequence of
+iterables and interlaces their items one after another.
+While uncommon, the pattern produced by interlace is complicated
+enough that forcing its recreation is undesirable.
+
+Interlace produces an iterator following the pattern:
+
+#!text
+	interlace(i1, i2, ..., in) -> (
+		i1-0, i2-0, ..., in-0,
+		i1-1, i2-1, ..., in-1,
+		⋮
+		i1-n, i2-n, ..., in-n,
+	)
+
+[ compose ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`95 1 133 19`
+(signature)`compose(*callables)`
+
+Return a composition of the given callable arguments.
+
+Executing a composition is equivalent to: `g(f(x))` where
+g and f are the parameters to compose: `compose(g,f)(x)`.
+
+Compose has some trivial intelligence in that compositions
+of single functions return the function and compositions
+of no functions returns (factor-local/function)&<#reflect[reflect]>.
+
+The resulting composition exposes the callables on the
+function's "callables" attribute.
+
+
+[ plural ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`135 1 140 27`
+(signature)`plural(f)`
+
+Create a function that pluralizes the return of the given callable, (factor-local/parameter)&<#plural.Parameters.f[f]>.
+
+
+[ unroll ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`142 1 152 42`
+(signature)`unroll(f)`
+
+Given a callable taking a single parameter, create another
+that maps the callable against a sequence.
+
+Equivalence:
+
+#!syntax/python
+	unroll(f)(iterable) == [f(x) for x in iterable]
+
+[ sum_lengths ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`154 1 154 45`
+#!source
+	sum_lengths = compose(sum, partial(map, len))
+
+[ group ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`156 1 189 27`
+(signature)`group(condition, iterable, initial)`
+
+Structure the given (factor-local/parameter)&<#group.Parameters.iterable[iterable]> by the given (factor-local/parameter)&<#group.Parameters.condition[condition]>.
+Returns a generator producing (grouping, sequence) pairs.
+
+A (invalid/unknown)&<#True> result from (factor-local/parameter)&<#group.Parameters.condition[condition]> essentially terminates the subsequence,
+and creates a new sequence to be populated while (factor-local/parameter)&<#group.Parameters.condition[condition]> is (invalid/unknown)&<#False>.
+
+[ > Parameters ]
+
+/(parameter)`condition`/
+	
+	The grouping item in the tuple is the item that triggers
+	a (invalid/unknown)&<#True> result from (factor-local/parameter)&<#group.Parameters.condition[condition]>.
+
+/(parameter)`iterable`/
+	
+	The sequence item in the tuple is a sequence of items
+	where the result of the (factor-local/parameter)&<#group.Parameters.condition[condition]> was (invalid/unknown)&<#False>.
+
+/(parameter)`initial`/
+	
+	Designate the initial grouping to be emitted.
+	Defaults to (invalid/unknown)&<#None>.
+
+/(parameter)`Sequence`/
+	
+	(control/absent)`Undocumented`.
+
+
+[ cachedproperty ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`191 1 207 15`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`191 22 191 27`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+Attribute override for immutable property methods.
+
+Presumes the wrapped method name is consistent with the property name.
+
+
+[ cachedproperty >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`198 2 201 38`
+(signature)`__init__(self, method)`
+
+
+[ cachedproperty >> __get__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`203 2 207 15`
+(signature)`__get__(self, instance, Class)`
+
+
+[ consistency ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`209 1 225 2`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+(signature)`consistency(*iterables)`
+
+Return the level of consistency among the elements produced by the given (factor-local/parameter)&<#consistency.Parameters.iterables[iterables]>.
+The counting stops when an element is not equal to the others at the same index.
+
+More commonly, the common prefix depth or length of all the given iterables.
+Elements must be hashable; equality is indirectly performed by forming a set.
+

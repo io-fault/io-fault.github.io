@@ -1,0 +1,1 @@
+[["Analyze core data types."], ["- &module.Variant"], ["- &module.Format"], ["- &module.Reference.format"], ["- &module.FactorPath.__matmul__"], ["- &module.FactorPath.__str__", "- &module.FactorPath.__repr__"], ["- &module.Reference.isolate"], ["- &module.Reference"], ["- &module.Extensions"], ["- &module.fpc"]]

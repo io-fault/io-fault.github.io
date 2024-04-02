@@ -1,0 +1,556 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 400 0`
+Mime Type structures and parsers for content types and media ranges.
+
+Interfaces here work exclusively with character-strings; wire data must be decoded.
+
+[ References ]
+
+- &<http://tools.ietf.org/html/rfc6838>
+
+[ Properties ]
+
+/types/
+	A mapping of type names and file extensions to MIME type strings.
+
+/filename_extensions/
+	A mapping of filename extensions to type name.
+
+/iana_registered_types/
+	The IRI of the set of media types registered with IANA.
+
+[ Functions ]
+
+/type_from_string/
+	Construct a (factor-local/class)&<#Type[Type]> instance from a MIME type string.
+
+	Code:
+
+	#!/pl/python
+		from fault.internet import media
+		mt = media.type_from_string("text/xml")
+		
+	Equivalent to (factor-local/classmethod)&<#Type.from_string[Type.from_string]>, but cached.
+
+/range_from_string/
+	Construct a (factor-local/class)&<#Range[Range]> instance from a Media Range string like an Accept header.
+
+	Equivalent to (factor-local/classmethod)&<#Range.from_string[Range.from_string]>, but cached.
+
+
+[ operator ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`35 1 35 15`
+
+[ functools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`36 1 36 16`
+
+[ typing ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`37 1 37 13`
+
+[ tools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`38 1 38 19`
+
+[ iana_registered_types ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`40 1 40 86`
+#!source
+	iana_registered_types = 'https://www.iana.org/assignments/media-types/media-types.xml'
+
+[ types ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`42 1 135 24`
+#!source
+	types = {
+		'data': 'application/octet-stream', # browsers interpret this as a file download
+		'fail': 'application/failure+xml',
+	
+		'python-pickle': 'application/x-python-object+pickle',
+		'python-marshal': 'application/x-python-object+marshal',
+		'python-xml': 'application/x-python-object+xml', # fault.xml format
+		# 'structures': 'application/x-conceptual+xml',
+	
+		'text': 'text/plain',
+		'txt': 'text/plain',
+		'rtf': 'application/rtf',
+	
+		'cache': 'text/cache-manifest',
+		'html': 'text/html',
+		'htm': 'text/html',
+		'css': 'text/css',
+	
+		'pdf': 'application/pdf',
+		'postscript': 'application/postscript',
+	
+		'javascript': 'text/plain;pl=javascript',
+		'py': 'text/plain;pl=python',
+	
+		# Recommended types for .js files.
+		'json': 'application/json',
+		'js': 'application/javascript',
+	
+		'xml': 'text/xml',
+		'sgml': 'text/sgml',
+	
+		'rdf': 'application/rdf+xml',
+		'rss': 'application/rss+xml',
+		'atom': 'application/atom+xml',
+		'xslt': 'application/xslt+xml',
+		'xsl': 'application/xslt+xml',
+	
+		'zip': 'application/zip',
+		'gzip': 'application/gzip',
+		'gz': 'application/gzip',
+		'bzip2': 'application/x-bzip2',
+		'tar': 'application/x-tar',
+		'xz': 'application/x-xz',
+		'rar': 'application/x-rar-compressed',
+		'sit': 'application/x-stuffit',
+		'z': 'application/x-compress',
+	
+		'tgz': 'application/x-tar+gzip',
+		'txz': 'application/x-tar+x-xz',
+		'torrent': 'application/x-bittorrent',
+	
+		# images
+		'svg': 'image/svg+xml',
+		'png': 'image/png',
+		'gif': 'image/gif',
+		'tiff': 'image/tiff',
+		'tif': 'image/tiff',
+		'jpeg': 'image/jpeg',
+		'jpg': 'image/jpeg',
+	
+		# video
+		'mpg': 'video/mpeg',
+		'mpeg': 'video/mpeg',
+		'mp2': 'video/mpeg',
+		'mov': 'video/quicktime',
+		'mp4': 'video/mp4',
+		'webm': 'video/webm',
+		'ogv': 'video/ogg',
+		'avi': 'video/avi',
+	
+		# audio
+		'mp3': 'audio/mpeg',
+		'mid': 'audio/midi',
+		'wav': 'audio/x-wav',
+		'aif': 'audio/x-aiff',
+		'aiff': 'audio/x-aiff',
+	
+		'ogg': 'audio/ogg',
+		'opus': 'audio/ogg',
+		'oga': 'audio/ogg',
+		'ogx': 'application/ogg',
+		'spx': 'audio/ogg',
+	
+		# microsoft
+		'xls': 'application/vnd.ms-excel',
+		'doc': 'application/msword',
+		'xlsx': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+		'docx': 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+		'pptx': 'application/vnd.openxmlformats-officedocument.presentationml.presentation',
+		'ppsx': 'application/vnd.openxmlformats-officedocument.presentationml.slideshow',
+		'potx': 'application/vnd.openxmlformats-officedocument.presentationml.template',
+	}
+	
+	@functools.lru_cache(32)
+
+[ file_type ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`136 1 149 41`
+(signature)`file_type(filename)`
+
+Identify the MIME type from a filename using common file extensions.
+
+Unidentified extensions will likely return application/octets-stream.
+
+
+[ Type ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`151 1 275 14`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`151 12 151 16`
+	- (type/syntax)`tuple`
+	- (type/invalid/unknown)&<#tuple>
+	
+An IANA Media Type; the Content-Type, Subtype, and options triple describing
+the type of data.
+
+A container interface (`in`) is provided in order to identify if a given
+type is considered to be within another:
+
+- `text/html in */*`
+- `text/html in text/*`
+- `text/html;level=1 in text/html`
+- `text/html not in text/html;level=1`
+
+The (factor-local/classmethod)&<#Type.from_string[from_string]> classmethod is the common constructor.
+
+
+[ Type >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`166 2 166 15`
+#!source
+	__slots__ = ()
+
+[ Type >> __str__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`168 2 169 60`
+(signature)`__str__(self)`
+
+
+[ Type >> __bytes__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`171 2 183 10`
+(signature)`__bytes__(self)`
+
+
+[ Type >> cotype ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`184 2 198 10`
+Content Type; usually one of:
+
+- `application`
+- `text`
+- `image`
+- `video`
+- `model`
+
+The initial part of a MIME (media) type.
+
+
+[ Type >> subtype ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`199 2 205 10`
+Subtype; the specific form of the (factor-local/property)&<#Type.cotype[cotype]>.
+
+
+[ Type >> parameters ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`206 2 212 10`
+Parameters such as charset for encoding designation.
+
+
+[ Type >> pattern ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`213 2 217 24`
+		- (type/syntax)`bool`
+		- (type/invalid/unknown)&<#bool>
+		
+Whether the (factor-local/class)&<#Type[Type]> is a pattern and can match multiple types.
+
+
+[ Type >> push ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`219 2 226 72`
+(signature)`push(self, subtype)`
+
+Return a new (factor-local/class)&<#Type[Type]> with the given (factor-local/parameter)&<#Type.push.Parameters.subtype[subtype]> appended to the instance's (project-local/unknown)&<subtype>.
+
+
+[ Type >> pop ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`228 2 242 13`
+(signature)`pop(self)`
+
+Return a new (factor-local/class)&<#Type[Type]> with the last '+'-delimited subtype removed. (inverse of push).
+
+
+[ Type >> from_bytes ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`243 2 258 13`
+(signature)`from_bytes(Class, string, **parameters)`
+
+Split on the ';' and '/' separators and build an instance.
+
+Additional parameters or overrides may be given using keywords.
+
+
+[ Type >> from_string ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`259 2 265 82`
+(signature)`from_string(Class, string, **parameters)`
+
+Split on the ';' and '/' separators and build an instance.
+
+Additional parameters or overrides may be given using keywords.
+
+
+[ Type >> __contains__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`267 2 275 14`
+(signature)`__contains__(self, mtype)`
+
+
+[ Range ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`277 1 392 37`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`277 13 277 17`
+	- (type/syntax)`tuple`
+	- (type/invalid/unknown)&<#tuple>
+	
+Media Range class for supporting Accept headers.
+
+Ranges are a mapping of content-types to an ordered sequence of subtype sets.
+The ordering of the subtype sets indicates the relative quality.
+
+Querying the range for a set of types will return the types with the
+highest precedence for each content type.
+
+(invalid/unknown)&<#None> is used to represent any types, (text)`*`.
+
+
+[ Range >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`289 2 291 14`
+#!source
+	__slots__ = ()
+		@staticmethod
+
+[ Range >> split ]
+! CONTROL:
+	/type/
+		staticmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`292 2 322 13`
+(signature)`split(media_range)`
+
+Construct triples describing the (factor-local/parameter)&<#Range.split.Parameters.media_range[media_range]>.
+
+
+[ Range >> from_string ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`323 2 330 13`
+(signature)`from_string(Class, string)`
+
+Instantiate the Range from a string.
+
+
+[ Range >> from_bytes ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`331 2 345 17`
+(signature)`from_bytes(Class, data)`
+
+Instantiate the Range from a bytes object; decoded and passed to (factor-local/classmethod)&<#Range.from_string[from_string]>.
+
+
+[ Range >> quality ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`347 2 359 15`
+(signature)`quality(self, mimetype)`
+
+Search for a single MIME type in the range.
+Return identified quality of the type.
+
+The quality of a particular type is useful in cases where the
+server wants to give some precedence to another type.
+Given that the client accepts XML, but it is a lower quality than HTML,
+the server may want to send XML anyways.
+
+
+[ Range >> query ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`361 2 392 37`
+(signature)`query(self, *available)`
+
+Given a sequence of mime types, return the best match
+according to the qualities recorded in the range.
+
+
+[ any_type ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`394 1 394 40`
+#!source
+	any_type = Type(('*', '*', frozenset()))
+
+[ any_range ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`395 1 395 36`
+#!source
+	any_range = Range([(100, any_type)])
+
+[ type_from_bytes ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`398 1 398 58`
+#!source
+	type_from_bytes = functools.lru_cache(32)(Type.from_bytes)
+
+[ type_from_string ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`399 1 399 60`
+#!source
+	type_from_string = functools.lru_cache(32)(Type.from_string)
+
+[ range_from_string ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`400 1 400 62`
+#!source
+	range_from_string = functools.lru_cache(32)(Range.from_string)

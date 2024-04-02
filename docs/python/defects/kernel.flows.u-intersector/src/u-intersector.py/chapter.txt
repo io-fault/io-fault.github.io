@@ -1,0 +1,74 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 61 0`
+Check the (context-local/factor-element)&<fault.kernel/flows#Relay[fault.kernel.flows.Relay]>, (context-local/factor-element)&<fault.kernel/flows#Receiver[fault.kernel.flows.Receiver]>, and (context-local/factor-element)&<fault.kernel/flows#Inlet[fault.kernel.flows.Inlet]> types.
+
+
+[ testlib ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 33`
+
+[ library ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 39`
+
+[ io ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 25`
+
+[ test_Receiver ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 21 26`
+(signature)`test_Receiver(test)`
+
+
+[ test_Relay ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`23 1 42 26`
+(signature)`test_Relay(test)`
+
+
+[ test_Relay_interrupt ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`44 1 61 28`
+(signature)`test_Relay_interrupt(test)`
+

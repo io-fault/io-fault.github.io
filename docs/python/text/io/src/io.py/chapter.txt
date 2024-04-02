@@ -1,0 +1,116 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 41 42`
+Primary access to kleptic text parsing and serialization functions.
+
+#!syntax/python
+	from fault.text import io as txt
+	src = "[ Section ]\nParagraph.\n"
+	element_tree = txt.structure_chapter_text(src)
+	assert src == ''.join(txt.sequence_chapter_element(element_tree))
+
+[ format ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 1 10 20`
+
+[ document ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 1 11 22`
+
+[ render ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`12 1 12 20`
+
+[ types ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`13 1 13 19`
+
+[ structure_paragraph_element ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`15 1 19 26`
+		- (type/syntax)`types.Paragraph`
+		- (type/project-local/factor-element)&<types#Paragraph[fault.text.types.Paragraph]>
+		
+(signature)`structure_paragraph_element(element)`
+
+Create a (project-local/factor-element)&<types#Paragraph[fault.text.types.Paragraph]> instance from the given raw paragraph (factor-local/parameter)&<#structure_paragraph_element.Parameters.element[element]>.
+
+
+[ TreeOperations ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`22 1 22 32`
+#!source
+	TreeOperations = document.Tree()
+
+[ structure_chapter_lines ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`24 1 32 74`
+(signature)`structure_chapter_lines(lines)`
+
+Parse kleptic text lines into an element tree.
+
+
+[ structure_chapter_text ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`34 1 38 54`
+(signature)`structure_chapter_text(source)`
+
+Parse kleptic text source into an element tree.
+
+
+[ sequence_chapter_element ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`42 1 42 41`
+#!source
+	sequence_chapter_element = render.chapter

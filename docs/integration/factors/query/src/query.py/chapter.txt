@@ -1,0 +1,170 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 121 18`
+System feature probes for executables and the runtime environment.
+
+
+[ os ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 9`
+
+[ typing ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 13`
+
+[ functools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 16`
+
+[ collections ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 7 22`
+
+[ files ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`9 1 9 30`
+
+[ fs_routes ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 1 12 46`
+		- (type/syntax)`typing.Sequence[files.Path]`
+		
+(signature)`fs_routes(i)`
+
+
+[ environ_paths ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`14 1 37 11`
+(signature)`environ_paths(env, sep)`
+
+Construct a sequence of (remote/factor-element)&<http://fault.io/python/system/files#Path[fault.system.files.Path]> instances to the paths stored
+in an environment variable. (none/invalid)&<http://fault.io/dev/null[os.environ]> is referred to upon
+each invocation, no caching is performed so each call represents
+the latest version.
+
+Defaults to `PATH`, (factor-local/function)&<#environ_paths[environ_paths]> can select an arbitrary environment variable
+to structure using the (factor-local/parameter)&<#environ_paths.Parameters.env[env]> keyword parameter.
+
+This function exists to support (factor-local/function)&<#search[search]> as `search(environ_paths(), {...})` is
+the most common use case.
+
+[ > Parameters ]
+
+/(parameter)`env`/
+	
+	The environment variable containing absolute paths.
+
+/(parameter)`sep`/
+	
+	The path separator to split the environment variable on.
+
+
+[ search ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`39 1 69 15`
+		- (type/syntax)`typing.Tuple[typing.Mapping[str, files.Path], typing.Set[str]]`
+		
+(signature)`search(search_paths, xset)`
+
+Query the sequence of search paths for the given set of files.
+
+All paths will be scanned for each requested identifier in (factor-local/parameter)&<#search.Parameters.xset[xset]>. When an identifier
+is found to exist, it is removed from the set that is being scanned for causing
+the first path match to be the one returned.
+
+
+[ executables ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`71 1 77 37`
+(signature)`executables(xset)`
+
+Query the (system/envvar)`PATH` for executables with the exact name.
+Returns a pair whose first item is the matches that currently exist,
+and the second is the set of executables that were not found in the path.
+
+
+[ select ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`79 1 102 18`
+(signature)`select(paths, possibilities, preferences)`
+
+Select a file from the given (factor-local/parameter)&<#select.Parameters.paths[paths]> using the (factor-local/parameter)&<#select.Parameters.possibilities[possibilities]> and (factor-local/parameter)&<#select.Parameters.preferences[preferences]>
+to identify the most desired.
+
+
+[ sysctl ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`104 1 122 17`
+(signature)`sysctl(names, route)`
+
+Retrieve the system control variables using (system:executable)`sysctl`.
+
+[ > Parameters ]
+
+/(parameter)`names`/
+	
+	The settings to get.
+
+/(parameter)`route`/
+	
+	The route to the `sysctl` executable.
+

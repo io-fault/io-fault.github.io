@@ -1,0 +1,402 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 647 22`
+
+[ module ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 1 38`
+
+[ test_module_protocol ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 8 31`
+(signature)`test_module_protocol(test)`
+
+
+[ test_Disassembler_split_limit ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 1 20 17`
+(signature)`test_Disassembler_split_limit(test)`
+
+
+[ test_Disassembler_complete_request ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`22 1 32 17`
+(signature)`test_Disassembler_complete_request(test)`
+
+
+[ test_Disassembler_complete_response ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`34 1 44 17`
+(signature)`test_Disassembler_complete_response(test)`
+
+
+[ test_Disassembler_response_nobody ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`46 1 56 17`
+(signature)`test_Disassembler_response_nobody(test)`
+
+
+[ test_Disassembler_bypass ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`58 1 74 58`
+(signature)`test_Disassembler_bypass(test)`
+
+Check that data received after a connection close message
+is forwarded inside a bypass event.
+
+
+[ test_Disassembler_chunked_1 ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`76 1 103 17`
+(signature)`test_Disassembler_chunked_1(test)`
+
+Test one chunk.
+
+
+[ test_Disassembler_chunked_2 ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`105 1 145 21`
+(signature)`test_Disassembler_chunked_2(test)`
+
+Test one chunk with fragmented data.
+
+
+[ test_Disassembler_chunked_trailers_1 ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`147 1 176 21`
+(signature)`test_Disassembler_chunked_trailers_1(test)`
+
+Test one chunk.
+
+
+[ test_Disassembler_chunked_trailers_2 ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`178 1 218 21`
+(signature)`test_Disassembler_chunked_trailers_2(test)`
+
+Test one chunk.
+
+
+[ test_Disassembler_trailers_limit_bypass ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`220 1 266 62`
+(signature)`test_Disassembler_trailers_limit_bypass(test)`
+
+Test the trailer size limit and the subsequent bypass.
+
+
+[ test_Disassembler_max_trailers ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`268 1 293 62`
+(signature)`test_Disassembler_max_trailers(test)`
+
+Test the trailer size limit and the subsequent bypass.
+
+
+[ test_Disassembler_chunked_separated_size ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`295 1 337 26`
+(signature)`test_Disassembler_chunked_separated_size(test)`
+
+Test one chunk with fragmented data.
+
+
+[ test_Disassembler_crlf_prefix_strip ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`339 1 346 21`
+(signature)`test_Disassembler_crlf_prefix_strip(test)`
+
+
+[ test_Disassembler_pipelined ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`348 1 385 21`
+(signature)`test_Disassembler_pipelined(test)`
+
+
+[ test_Disassembler_type_error ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`387 1 390 39`
+(signature)`test_Disassembler_type_error(test)`
+
+
+[ test_Disassembler_limit_line_too_large ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`392 1 400 62`
+(signature)`test_Disassembler_limit_line_too_large(test)`
+
+
+[ test_Disassembler_limit_line_too_large_with_eof ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`402 1 410 62`
+(signature)`test_Disassembler_limit_line_too_large_with_eof(test)`
+
+
+[ test_Disassembler_invalid_content_length ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`412 1 433 58`
+(signature)`test_Disassembler_invalid_content_length(test)`
+
+Check that the value error is properly reported.
+
+
+[ test_Disassembler_invalid_chunk_field ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`435 1 456 62`
+(signature)`test_Disassembler_invalid_chunk_field(test)`
+
+
+[ test_Disassembler_chunk_no_terminator ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`458 1 480 62`
+(signature)`test_Disassembler_chunk_no_terminator(test)`
+
+
+[ test_Disassembler_limit_max_chunksize ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`482 1 502 62`
+(signature)`test_Disassembler_limit_max_chunksize(test)`
+
+
+[ test_Disassembler_limit_max_chunksize_split ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`504 1 517 62`
+(signature)`test_Disassembler_limit_max_chunksize_split(test)`
+
+
+[ test_Disassembler_limit_max_chunksize_split ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`519 1 537 62`
+(signature)`test_Disassembler_limit_max_chunksize_split(test)`
+
+
+[ test_Disassembler_limit_header_too_large ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`539 1 553 62`
+(signature)`test_Disassembler_limit_header_too_large(test)`
+
+
+[ test_Disassembler_limit_header_too_large_with_eof ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`555 1 569 62`
+(signature)`test_Disassembler_limit_header_too_large_with_eof(test)`
+
+
+[ test_Disassembler_limit_header_too_many ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`571 1 586 62`
+(signature)`test_Disassembler_limit_header_too_many(test)`
+
+
+[ test_Disassembler_zero_writes ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`588 1 599 2`
+(signature)`test_Disassembler_zero_writes(test)`
+
+
+[ test_headers ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`601 1 608 50`
+(signature)`test_headers(test)`
+
+
+[ test_chunk ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`610 1 617 47`
+(signature)`test_chunk(test)`
+
+
+[ test_assemble ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`619 1 638 24`
+(signature)`test_assemble(test)`
+
+
+[ test_assemble_ooo ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`640 1 648 21`
+(signature)`test_assemble_ooo(test)`
+
+Validate that we don't validate output state.
+Assembly presumes the user knows what she is doing.
+

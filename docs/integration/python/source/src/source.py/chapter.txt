@@ -1,0 +1,509 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 529 15`
+Python source (AST) processing tools.
+
+
+[ ast ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 10`
+
+[ tokenize ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 15`
+
+[ itertools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 16`
+
+[ collections ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 7 18`
+
+[ functools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 8 16`
+
+[ builtins ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`9 1 9 15`
+
+[ module ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 1 11 20`
+
+[ insignificant ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`14 1 22 2`
+#!source
+	insignificant = set([
+		tokenize.ENCODING,
+		tokenize.ENDMARKER,
+		tokenize.INDENT,
+		tokenize.DEDENT,
+		tokenize.NL,
+		tokenize.NEWLINE,
+		tokenize.COMMENT,
+	])
+
+[ InlineComprehension ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`24 1 28 1`
+#!source
+	InlineComprehension = (
+		ast.ListComp,
+		ast.GeneratorExp,
+		ast.DictComp,
+	)
+
+[ InterruptNodes ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`30 1 37 1`
+#!source
+	InterruptNodes = (
+		ast.Break,
+		ast.Continue,
+		ast.Raise,
+		ast.Return,
+		ast.Yield,
+		ast.YieldFrom,
+	)
+
+[ sequence_nodes ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`39 1 44 9`
+(signature)`sequence_nodes(node_list)`
+
+
+[ shallow ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`46 1 60 10`
+(signature)`shallow(node)`
+
+(none/invalid)&<http://fault.io/dev/null[ast.iter_child_nodes]> implementation providing path context for node substitution.
+
+
+[ bottom ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`62 1 73 9`
+(signature)`bottom(tree)`
+
+(none/invalid)&<http://fault.io/dev/null[ast.walk]> implementation providing path context for node substitution.
+
+
+[ node_set_address ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`75 1 80 47`
+(signature)`node_set_address(node, address)`
+
+Set the `lineno` and `col_offset` attributes on the (factor-local/parameter)&<#node_set_address.Parameters.node[node]>.
+
+
+[ node_remove_docstring ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`82 1 101 22`
+(signature)`node_remove_docstring(container)`
+
+Remove the initial (none/invalid)&<http://fault.io/dev/null[ast.Expr]> node in the body of (factor-local/parameter)&<#node_remove_docstring.Parameters.container[container]> given
+that it has the properties that would identify it as the docstring source.
+
+
+[ associate_siblings ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`103 1 150 48`
+(signature)`associate_siblings(following, nodes)`
+
+Associate the child nodes of (factor-local/parameter)&<#associate_siblings.Parameters.nodes[nodes]> with their following
+sibling taking care to communicate the parent's following
+sibling for the final child.
+
+(factor-local/parameter)&<#associate_siblings.Parameters.following[following]> can be (invalid/unknown)&<#None> if the node is at the end of the document.
+
+
+[ map_tokens ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`152 1 167 17`
+(signature)`map_tokens(tokens)`
+
+Construct a dictionary associating addresses with their corresponding token.
+
+
+[ count_trailing_insignificant ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`169 1 189 13`
+(signature)`count_trailing_insignificant(tokens)`
+
+
+[ identify_boundary ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`191 1 216 35`
+(signature)`identify_boundary(tokens, start, end)`
+
+Narrows the token window by trimming insignificant (whitespace or certain keywords) tokens
+from the list.
+
+The default token sequence for a node is constrained by the node's location and its
+identified following sibling, (factor-local/function)&<#associate_siblings[associate_siblings]>.
+
+
+[ find_terminal ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`218 1 238 23`
+(signature)`find_terminal(tokens, length)`
+
+Find the end of the context tokens.
+
+
+[ find_token ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`240 1 243 14`
+(signature)`find_token(tokens, token_type)`
+
+
+[ find_newline ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`245 1 248 14`
+(signature)`find_newline(tokens)`
+
+
+[ find_token_with_string ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`250 1 253 14`
+(signature)`find_token_with_string(tokens, token_type, string)`
+
+
+[ isolate_enclosure ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`255 1 266 42`
+(signature)`isolate_enclosure(start, stop)`
+
+
+[ isolate_name ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`268 1 277 28`
+(signature)`isolate_name(tokens)`
+
+Return the first NAME token in (factor-local/parameter)&<#isolate_name.Parameters.tokens[tokens]> and remove it along with the
+ones that preceded it.
+
+
+[ isolate_number ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`279 1 288 28`
+(signature)`isolate_number(tokens)`
+
+Return the first NAME token in (factor-local/parameter)&<#isolate_number.Parameters.tokens[tokens]> and remove it along with the
+ones that preceded it.
+
+
+[ isolate_string ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`290 1 305 42`
+(signature)`isolate_string(tokens)`
+
+
+[ isolate ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`307 1 320 1`
+#!source
+	isolate = {
+		ast.Bytes: isolate_string,
+		ast.Str: isolate_string,
+		ast.Num: isolate_number,
+		ast.Name: isolate_name,
+		ast.Attribute: isolate_name,
+		ast.NameConstant: isolate_name,
+		getattr(ast, 'Constant', None): isolate_string,
+		ast.Dict: functools.partial(isolate_enclosure, '{', '}'),
+		ast.Set: functools.partial(isolate_enclosure, '{', '}'),
+		ast.List: functools.partial(isolate_enclosure, '[', ']'),
+		ast.Subscript: functools.partial(isolate_enclosure, '[', ']'),
+		ast.Call: functools.partial(isolate_enclosure, '(', ')'),
+	}
+
+[ chain ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`322 1 334 7`
+(signature)`chain(tokens, nodes, node, address, following)`
+
+Delineate a chain of nodes that are identified by the same address.
+
+
+[ trim ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`336 1 344 13`
+(signature)`trim(tokens)`
+
+Identify the number of trailing whitespace tokens and remove them from the list.
+
+
+[ chain_classes ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`347 1 347 30`
+#!source
+	chain_classes = tuple(isolate)
+
+[ areas ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`349 1 381 35`
+(signature)`areas(token_map, tokens, context, node, address, following)`
+
+Given a node and the tokens from the start of the node,
+to the next following sibling node, identify the actual
+stop address of the node filtering whitespace backwards,
+and balancing nesting operators forward.
+
+
+[ _lookup_region ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`383 1 406 36`
+(signature)`_lookup_region(associations, contexts, tokens, tmap, node)`
+
+
+[ join ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`408 1 439 17`
+(signature)`join(lookup, nodes)`
+
+Assign the address information provided by (factor-local/parameter)&<#join.Parameters.lookup[lookup]> to the nodes
+generated by the (factor-local/parameter)&<#join.Parameters.nodes[nodes]> iterator.
+
+
+[ _prepare ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`441 1 456 39`
+(signature)`_prepare(nodes, tokens)`
+
+
+[ shift_column ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`458 1 476 52`
+(signature)`shift_column(lines, ln, co)`
+
+Adjust the (invalid/unknown)&<#str> column offset, (factor-local/parameter)&<#shift_column.Parameters.co[co]>, to its utf-8 position.
+
+[ > Parameters ]
+
+/(parameter)`lines`/
+	
+	The source as a sequence of lines.
+
+/(parameter)`ln`/
+	
+	The line number in (factor-local/parameter)&<#shift_column.Parameters.lines[lines]>.
+
+/(parameter)`co`/
+	
+	The column in the line's (invalid/unknown)&<#str> that will be
+	adjusted into its `utf-8` position.
+
+/(parameter)`encoding`/
+	
+	(control/absent)`Undocumented`.
+
+[ > Returns ]
+
+Line number and column offset as a tuple.
+
+
+[ parse ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`478 1 506 66`
+(signature)`parse(source, path)`
+
+Parse the given (factor-local/parameter)&<#parse.Parameters.source[source]> creating an (none/invalid)&<http://fault.io/dev/null[ast.Module]> whose child nodes have their exact areas
+assigned to the `_f_area` attribute.
+

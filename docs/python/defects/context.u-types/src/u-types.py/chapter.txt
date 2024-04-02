@@ -1,0 +1,76 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 64 0`
+
+[ module ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 1 38`
+
+[ test_Cell_iteration ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`3 1 11 14`
+(signature)`test_Cell_iteration(test)`
+
+- (context-local/factor-element)&<fault.context/types#Cell.__iter__[fault.context.types.Cell.__iter__]>
+
+
+[ test_Cell_coalesce ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`13 1 23 40`
+(signature)`test_Cell_coalesce(test)`
+
+- (context-local/factor-element)&<fault.context/types#Cell.coalesce[fault.context.types.Cell.coalesce]>
+
+
+[ test_Cell_sequence ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`25 1 42 25`
+(signature)`test_Cell_sequence(test)`
+
+
+[ test_Cell_equality ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`44 1 54 23`
+(signature)`test_Cell_equality(test)`
+
+- (context-local/factor-element)&<fault.context/types#Cell.__eq__[fault.context.types.Cell.__eq__]>
+
+
+[ test_Cell_setup ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`56 1 64 45`
+(signature)`test_Cell_setup(test)`
+
+- (context-local/factor-element)&<fault.context/types#Cell.__setup__[fault.context.types.Cell.__setup__]>
+

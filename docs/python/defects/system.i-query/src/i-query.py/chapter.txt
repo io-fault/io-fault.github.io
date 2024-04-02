@@ -1,0 +1,90 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 47 17`
+Limited tests as the information retrieved is expected to vary.
+
+
+[ module ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 37`
+
+[ test_paths ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 11 12`
+(signature)`test_paths(test)`
+
+- (context-local/factor-element)&<fault.system/query#paths[fault.system.query.paths]>
+
+
+[ test_executables_cat ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`13 1 19 17`
+(signature)`test_executables_cat(test)`
+
+- (context-local/factor-element)&<fault.system/query#executables[fault.system.query.executables]>
+
+
+[ test_executables_rm ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`21 1 27 17`
+(signature)`test_executables_rm(test)`
+
+- (context-local/factor-element)&<fault.system/query#executables[fault.system.query.executables]>
+
+
+[ test_username ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`29 1 34 18`
+(signature)`test_username(test)`
+
+- (context-local/factor-element)&<fault.system/query#username[fault.system.query.username]>
+
+
+[ test_usertitle ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`36 1 41 19`
+(signature)`test_usertitle(test)`
+
+- (context-local/factor-element)&<fault.system/query#usertitle[fault.system.query.usertitle]>
+
+
+[ test_shell ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`43 1 48 16`
+(signature)`test_shell(test)`
+
+- (context-local/factor-element)&<fault.system/query#shell[fault.system.query.shell]>
+

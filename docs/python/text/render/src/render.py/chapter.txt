@@ -1,0 +1,528 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 324 20`
+Format text elements into text images.
+
+Paragraph level formatting functions usually return (factor-local/data)&<#Fragment[Fragment]> while section-level
+returns (factor-local/data)&<#Image[Image]>.
+
+(factor-local/function)&<#chapter[chapter]> and (factor-local/function)&<#elements[elements]> are the primary entry points where chapter takes a single
+`chapter` element and elements takes a sequence of arbitrary elements.
+
+[ Types ]
+
+/Fragment/
+	A string without newlines.
+
+/Line/
+	A sequence of (factor-local/data)&<#Fragment[Fragment]> instances.
+
+/Image/
+	An iterator producing (factor-local/data)&<#Line[Line]> instances.
+
+
+[ Sequence ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`19 1 19 46`
+
+[ Iterable ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`19 1 19 46`
+
+[ types ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`20 1 20 19`
+
+[ document ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`21 1 21 22`
+
+[ Fragment ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`23 1 23 14`
+#!source
+	Fragment = str
+
+[ Line ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`24 1 24 25`
+#!source
+	Line = Sequence[Fragment]
+
+[ Image ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`25 1 25 22`
+#!source
+	Image = Iterable[Line]
+
+[ syntax ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`27 1 49 18`
+		- (type/syntax)`Image`
+		- (type/factor-local/data)&<#Image[Image]>
+		
+(signature)`syntax(lines, syntype, qualifier, adjustment)`
+
+Generator producing sequences of line text for a syntax element.
+
+[ > Parameters ]
+
+/(parameter)`lines`/
+	- (type/syntax)`Iterable[str]`
+	
+	Iterator of syntax lines without newlines.
+
+/(parameter)`syntype`/
+	- (type/syntax)`str`
+	- (type/invalid/unknown)&<#str>
+	
+	The syntax type of (factor-local/parameter)&<#syntax.Parameters.lines[lines]>.
+
+/(parameter)`qualifier`/
+	
+	The suffix of the syntax command line.
+
+/(parameter)`adjustment`/
+	
+	Indentation level adjustment.
+
+
+[ section_path ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`51 1 63 62`
+		- (type/syntax)`Line`
+		- (type/factor-local/data)&<#Line[Line]>
+		
+(signature)`section_path(rdepth, rmultiple, *path)`
+
+Construct a section selector from a relative depth and a section identifier path.
+
+
+[ ambiguous_reference ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`65 1 69 20`
+		- (type/syntax)`Fragment`
+		- (type/factor-local/data)&<#Fragment[Fragment]>
+		
+(signature)`ambiguous_reference(string)`
+
+Prefix the given string with an ampersand.
+
+
+[ section_reference ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`71 1 75 37`
+		- (type/syntax)`Fragment`
+		- (type/factor-local/data)&<#Fragment[Fragment]>
+		
+(signature)`section_reference(section_selector)`
+
+Prefix the given string with an ampersand after enclosing it with brackets.
+
+
+[ hyperlink ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`77 1 81 24`
+		- (type/syntax)`Fragment`
+		- (type/factor-local/data)&<#Fragment[Fragment]>
+		
+(signature)`hyperlink(url)`
+
+Prefix the given string with an ampersand after enclosing it with angle brackets.
+
+
+[ literal ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`83 1 87 45`
+		- (type/syntax)`Fragment`
+		- (type/factor-local/data)&<#Fragment[Fragment]>
+		
+(signature)`literal(string)`
+
+Surround the string with grave-accents and replace any grave-accent within with two.
+
+
+[ _p_fragments ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`89 1 97 1`
+#!source
+	_p_fragments = {
+		('reference', 'ambiguous'): ambiguous_reference,
+		('reference', 'hyperlink'): hyperlink,
+		('reference', 'section'): section_reference,
+		('literal', 'grave-accent'): literal,
+		('text', 'normal'): (lambda x: x),
+		('text', 'line-break'): (lambda x: " "),
+		('text', 'emphasis'): (lambda x: x),
+	}
+
+[ paragraph ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`99 1 130 12`
+		- (type/syntax)`Image`
+		- (type/factor-local/data)&<#Image[Image]>
+		
+(signature)`paragraph(para)`
+
+Generator producing an (factor-local/data)&<#Image[Image]> representing the given (project-local/factor-element)&<types#Paragraph[fault.text.types.Paragraph]>.
+
+
+[ inline_fragment ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`132 1 133 35`
+		- (type/syntax)`Fragment`
+		- (type/factor-local/data)&<#Fragment[Fragment]>
+		
+(signature)`inline_fragment(frag)`
+
+
+[ _chapter ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`135 1 138 43`
+(signature)`_chapter(depth, element)`
+
+
+[ _section ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`140 1 145 36`
+(signature)`_section(depth, element)`
+
+
+[ _syn ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`147 1 157 20`
+(signature)`_syn(depth, syntax)`
+
+
+[ _para ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`159 1 169 16`
+(signature)`_para(depth, element)`
+
+
+[ _list ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`171 1 196 20`
+(signature)`_list(depth, element, list_type)`
+
+
+[ _sequence ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`198 1 199 35`
+(signature)`_sequence(depth, element)`
+
+
+[ _set ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`201 1 202 35`
+(signature)`_set(depth, element)`
+
+
+[ _directory ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`204 1 235 34`
+(signature)`_directory(depth, element)`
+
+
+[ _admonition ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`237 1 244 38`
+(signature)`_admonition(depth, element)`
+
+
+[ _index ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`246 1 260 1`
+#!source
+	_index = {
+		'section': _section,
+		'chapter': _chapter,
+		'paragraph': _para,
+		'syntax': _syn,
+		'admonition': _admonition,
+	
+		'set': _set,
+		'sequence': _sequence,
+		'dictionary': _directory,
+		'directory': _directory,
+	
+		# No-op element type often providing additional metadata.
+		'void': (lambda x, y: ()),
+	}
+
+[ _tree ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`262 1 265 40`
+(signature)`_tree(depth, elements)`
+
+
+[ tree ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`267 1 285 19`
+		- (type/syntax)`Image`
+		- (type/factor-local/data)&<#Image[Image]>
+		
+(signature)`tree(element, adjustment, indentation, newline)`
+
+Produce the image representing the given element including newline characters.
+
+[ > Parameters ]
+
+/(parameter)`element`/
+	
+	Any document element.
+
+/(parameter)`adjustment`/
+	- (type/syntax)`int`
+	- (type/invalid/unknown)&<#int>
+	
+	The indentation difference to render Lines with. Zero by default.
+
+/(parameter)`indentation`/
+	- (type/syntax)`str`
+	- (type/invalid/unknown)&<#str>
+	
+	The indentation character or sequence to render lines with.
+
+/(parameter)`newline`/
+	- (type/syntax)`str`
+	- (type/invalid/unknown)&<#str>
+	
+	The character or sequence to append to each line in the image.
+	May be an empty string to supress line terminators.
+
+
+[ elements ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`287 1 305 19`
+		- (type/syntax)`Image`
+		- (type/factor-local/data)&<#Image[Image]>
+		
+(signature)`elements(elements, adjustment, indentation, newline)`
+
+Produce the image representing the given (factor-local/parameter)&<#elements.Parameters.elements[elements]> sequence.
+
+[ > Parameters ]
+
+/(parameter)`elements`/
+	
+	Sequence of arbitrary text elements.
+
+/(parameter)`adjustment`/
+	- (type/syntax)`int`
+	- (type/invalid/unknown)&<#int>
+	
+	The indentation difference to render Lines with. Zero by default.
+
+/(parameter)`indentation`/
+	- (type/syntax)`str`
+	- (type/invalid/unknown)&<#str>
+	
+	The indentation character or sequence to render lines with.
+
+/(parameter)`newline`/
+	- (type/syntax)`str`
+	- (type/invalid/unknown)&<#str>
+	
+	The character or sequence to append to each line in the image.
+	May be an empty string to supress line terminators.
+
+
+[ chapter ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`307 1 325 19`
+		- (type/syntax)`Image`
+		- (type/factor-local/data)&<#Image[Image]>
+		
+(signature)`chapter(element, adjustment, indentation, newline)`
+
+Produce the image representing the given chapter element including newline characters.
+
+[ > Parameters ]
+
+/(parameter)`element`/
+	
+	Any document element.
+
+/(parameter)`adjustment`/
+	- (type/syntax)`int`
+	- (type/invalid/unknown)&<#int>
+	
+	The indentation difference to render Lines with. Zero by default.
+
+/(parameter)`indentation`/
+	- (type/syntax)`str`
+	- (type/invalid/unknown)&<#str>
+	
+	The indentation character or sequence to render lines with.
+
+/(parameter)`newline`/
+	- (type/syntax)`str`
+	- (type/invalid/unknown)&<#str>
+	
+	The character or sequence to append to each line in the image.
+	May be an empty string to supress line terminators.
+

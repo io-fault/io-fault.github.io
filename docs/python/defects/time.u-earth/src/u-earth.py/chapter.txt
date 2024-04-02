@@ -1,0 +1,94 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 46 4`
+Check earth based units (days).
+
+
+[ itertools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 16`
+
+[ earth ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 25`
+
+[ types ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 25`
+
+[ from_units_data ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 16 1`
+#!source
+	from_units_data = [
+		types.Date.Measure(-1),
+		types.Date.Measure(0),
+		types.Date.Measure(0),
+		types.Date.Measure(0),
+		types.Date.Measure(0),
+		types.Date.Measure(0),
+		types.Date.Measure(1),
+	]
+
+[ check_from_units ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`18 1 21 14`
+(signature)`check_from_units(test, samples)`
+
+
+[ test_from_units_decimal ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`23 1 34 3`
+(signature)`test_from_units_decimal(test)`
+
+
+[ test_from_units_fraction ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`36 1 47 3`
+(signature)`test_from_units_fraction(test)`
+

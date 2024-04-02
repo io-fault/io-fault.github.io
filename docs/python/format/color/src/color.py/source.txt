@@ -1,0 +1,58 @@
+"""
+# Color representations for character matrix displays.
+# Uses 24-bit SGR codes for the swatch areas.
+
+# Usually, a hex code with a small leading swatch character styled with truecolor SGR codes.
+"""
+import itertools
+
+from ..terminal import matrix
+from ..terminal import palette
+
+# Any characters can be used, but store a small selection of recommendations.
+swatch = {
+	'circle': "\u25cf",
+	'ascii': "|=|",
+
+	'square': "\u25a0",
+	'triangle': "\u2582",
+	'star': "\u2605",
+
+	# short double wide triangle
+	'left': "\u25e2",
+	'right': "\u25e3",
+
+	'diamond': "\u25C0\u25b6", # horizontal diamond
+	'stripe': "\u25E2\u25E4", # diagonal stripe
+}
+
+def identifier(color:int) -> str:
+	"""
+	# Convert the given RGB color into a hex string for display.
+	"""
+	return '#' + hex(color)[2:].rjust(6, '0')
+
+def inline(reference, swatch:str, rgb:int, from_words=matrix.Screen.Phrase) -> matrix.Screen.Phrase:
+	"""
+	# Construct a phrase for representing an RGB color.
+	"""
+	c = reference.apply('bold', textcolor=rgb)
+	t = reference.apply(textcolor=palette.colors['application-border'])
+	b = t.apply('bold')
+
+	return from_words(itertools.chain.from_iterable([
+		b.form("("),
+		c.form(swatch),
+		t.form(" " + identifier(rgb)),
+		b.form(")"),
+	]))
+
+if __name__ == '__main__':
+	import sys
+	mctx = matrix.Screen()
+	n = mctx.terminal_type.normal_render_parameters
+	n = n.apply()
+	s = swatch['circle']
+	for a in sys.argv[1:]:
+		sys.stdout.buffer.write(b''.join(mctx.render(inline(n, s, int(a, 16)))))
+		print()

@@ -1,0 +1,175 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 184 15`
+Collection of parsers and formatters that apply to multiple protocols.
+
+Generally, a supplement for (project-local/unknown)&<http>, and a dependency of (project-local/unknown)&<media>.
+The tokenization that occurs in (project-local/unknown)&<http> is intentionally simple, but
+some of the unparsed fields may need to be structured by the downstream of
+a tokenization instance. Notably, cookie headers make use of parameter
+series that can be processed by (factor-local/function)&<#split_parameter_series[split_parameter_series]>.
+
+[ References ]
+
+/Cookies/
+	&<http://www.ietf.org/rfc/rfc2109.txt>
+
+
+[ itertools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`15 1 15 16`
+
+[ resolve_backslashes ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`17 1 30 11`
+		- (type/syntax)`bytes`
+		- (type/invalid/unknown)&<#bytes>
+		
+(signature)`resolve_backslashes(field)`
+
+Properly resolve backslashes inside `quoted-string` areas.
+
+
+[ http_separators ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`33 1 33 66`
+#!source
+	http_separators = b'()<>@,;:\\\"/[]?={} \t\x7f' + bytes(range(32))
+
+[ tmap ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`34 1 34 28`
+#!source
+	tmap = bytearray(range(256))
+
+[ _quote ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`38 1 65 11`
+(signature)`_quote(octets)`
+
+
+[ quote ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`69 1 77 32`
+(signature)`quote(octets)`
+
+Discover whether the octets should be quoted and backslash-escape any octets
+cited as needing escapes. (factor-local/function)&<#quote[quote]> is fairly expensive and should be avoided
+when possible. Given the case that it is known ahead of time that a quotation
+is unnecessary, (factor-local/function)&<#join_parameter_series[join_parameter_series.Parameters.quote]> provided.
+
+
+[ join_parameter_series ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`79 1 92 2`
+(signature)`join_parameter_series(fields)`
+
+Given an iterator of key-value pairs, construct a properly escaped
+parameters series that is commonly used within HTTP headers.
+
+The (factor-local/parameter)&<#join_parameter_series.Parameters.quote[quote]> parameter is provided in order to override the escape mechanism
+given the case that it is known that no escaping need happen.
+
+
+[ _normal_parameter_area ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`94 1 99 2`
+(signature)`_normal_parameter_area(more)`
+
+
+[ _normal_mediarange_area ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`101 1 114 2`
+(signature)`_normal_mediarange_area(more)`
+
+
+[ split_parameter_series ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`116 1 171 14`
+(signature)`split_parameter_series(series)`
+
+Given a series of `;` separated of key-value pairs, return the sequence
+of key value pairs parsing (rfc:http)`quoted-string` ranges properly.
+
+Specification designated invalid character sequences are not checked,
+and must be handled separately for strict conformance.
+
+
+[ decode_parameters ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`173 1 178 14`
+(signature)`decode_parameters(sequence)`
+
+
+[ encode_parameters ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`180 1 185 14`
+(signature)`encode_parameters(sequence)`
+

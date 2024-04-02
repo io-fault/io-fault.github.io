@@ -1,0 +1,366 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 211 0`
+Collection of data structures and functions for working with exact addresses in (syntax) text files.
+
+
+[ typing ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 13`
+
+[ rangetypes ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 39`
+
+[ Address ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 98 21`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`7 15 7 19`
+	- (type/syntax)`tuple`
+	- (type/invalid/unknown)&<#tuple>
+	
+A Line Number and Column address used to identify a position in a syntax file.
+Line numbers and columns are 1-based. There is no Line Zero and no column zero
+with exception to Addresses used in (context-local/factor-element)&<fault.range/types#IRange[fault.range.types.IRange]> instances.
+
+Address values must be constructed with one special condition:
+if the address is being used in a range where the last character of the line
+is being selected as the stop in the range,
+the instance must be created to refer to the following line and the zero-column.
+This special case is used to allow inclusive ranges to properly detect continuity.
+
+
+[ Address >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`19 2 21 13`
+#!source
+	__slots__ = ()
+		@classmethod
+
+[ Address >> from_string ]
+! CONTROL:
+	/type/
+		classmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`22 2 24 46`
+(signature)`from_string(Class, source)`
+
+
+[ Address >> __str__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`26 2 27 35`
+(signature)`__str__(self)`
+
+
+[ Address >> __add__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`29 2 30 45`
+(signature)`__add__(self, x)`
+
+
+[ Address >> __sub__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`32 2 33 45`
+(signature)`__sub__(self, x)`
+
+
+[ Address >> __mul__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`35 2 36 45`
+(signature)`__mul__(self, x)`
+
+
+[ Address >> __div__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`38 2 39 45`
+(signature)`__div__(self, x)`
+
+
+[ Address >> __rshift__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`41 2 42 53`
+(signature)`__rshift__(self, x)`
+
+
+[ Address >> __lshift__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`44 2 47 10`
+(signature)`__lshift__(self, x)`
+
+
+[ Address >> line ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`48 2 60 10`
+The line number identified by the address.
+
+When the column number is zero, the internal value is adjusted under the
+presumption that the address was referring to the end of the previos line.
+
+
+[ Address >> column ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`61 2 71 14`
+The column number identified by the address. (invalid/unknown)&<#None> if the address
+is referring to the end of the (factor-local/property)&<#Address.line[line]>.
+
+
+[ Address >> normalize_stop ]
+! CONTROL:
+	/type/
+		staticmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`72 2 86 10`
+(signature)`normalize_stop(line_length, line_number, column_number)`
+
+Adjust a stop (invalid/unknown)&<#Address'> pointers for use in an (factor-local/class)&<#Area[Area]> so that it can
+be recognized as reference to the final character in a line.
+
+If the given address points to the final position in the line, the line
+number will be incremented and its column set to zero. This allows
+(context-local/factor-element)&<fault.range/types#Set[fault.range.types.Set]> to detect continuity when working with (factor-local/class)&<#Area[Area]> instances.
+
+
+[ Address >> imaginary ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`87 2 98 21`
+		- (type/syntax)`bool`
+		- (type/invalid/unknown)&<#bool>
+		
+Whether the address refers to an imaginary location. An imaginary line is
+identified using `0` as addresses use `1` based indexes.
+
+Often, imaginary locations can be considered invalid by a given context, but when
+employed by AST nodes or stack traces, line zero can be used to refer to injected nodes
+that do not exist in the original Syntax Document. The column index of imaginary lines
+should be used to refer to meta data about the injection.
+
+
+[ Area ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`100 1 211 31`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`100 12 100 28`
+	- (type/syntax)`rangetypes.IRange`
+	- (type/context-local/factor-element)&<fault.range/types#IRange[fault.range.types.IRange]>
+	
+Inclsuive Range of (factor-local/class)&<#Address[Address]> instances. Usable with (context-local/factor-element)&<fault.range/types#Set[fault.range.types.Set]> and
+(context-local/factor-element)&<fault.range/types#Mapping[fault.range.types.Mapping]> instances.
+
+
+[ Area >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`105 2 105 15`
+#!source
+	__slots__ = ()
+
+[ Area >> Type ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`106 2 108 10`
+#!source
+	Type = Address
+		@property
+
+[ Area >> vertical ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`109 2 118 10`
+Whether the Area refers to a purely vertically area of the syntax without
+constraints on the columns.
+
+Zero-column references *must* be used to identify an Area as purely vertical.
+
+
+[ Area >> horizontal ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`119 2 129 13`
+Whether the area refers a purely horizontal area of the syntax within a single line.
+
+Zero-column references to the end of the line are not permitted to be used for
+pure horizontal Areas. The inherited limitation being that some continuity realizations
+requires additional contextual knowledge (line length).
+
+
+[ Area >> delineate ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`130 2 136 65`
+(signature)`delineate(Class, lstart, cstart, lstop, cstop, stop_line_length)`
+
+Construct an (factor-local/class)&<#Area[Area]> from the given indexes normalizing the stop address.
+
+
+[ Area >> __str__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`138 2 147 13`
+(signature)`__str__(self)`
+
+
+[ Area >> from_string ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`148 2 175 13`
+(signature)`from_string(Class, string)`
+
+Construct an (factor-local/class)&<#Area[Area]> from the given string.
+
+
+[ Area >> from_line_range ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`176 2 184 4`
+(signature)`from_line_range(Class, pair)`
+
+Construct an (factor-local/class)&<#Area[Area]> from the inclusive line indexes in (factor-local/parameter)&<#Area.from_line_range.Parameters.pair[pair]>.
+The returned instance guarantees (factor-local/property)&<#Area.vertical[vertical]>.
+
+
+[ Area >> Slice ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`186 2 186 77`
+#!source
+	Slice = typing.Tuple[typing.Text, typing.Text, typing.Sequence[typing.Text]]
+
+[ Area >> select ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`187 2 211 31`
+		- (type/syntax)`Slice`
+		- (type/factor-local/data)&<#Area.Slice[Slice]>
+		
+(signature)`select(self, lines)`
+
+Retrieve the prefix, suffix, and selected lines that are delieanted by the (factor-local/class)&<#Area[Area]>, (factor-local/parameter)&<#Area.select.Parameters.self[self]>.
+

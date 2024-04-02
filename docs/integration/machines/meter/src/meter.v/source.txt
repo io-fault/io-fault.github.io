@@ -1,0 +1,38 @@
+# Adapters for meter device measuring and identifying factor source.
+##
+
+[protocol]:
+	: http://if.fault.io/factors/integration.vectors
+
+[unit-suffix]:
+	fv-form-metrics:
+		: ""
+	fv-form-identity:
+		: ""
+
+[factor-type]:
+	: http://if.fault.io/factors/meter
+
+[integration-type]:
+	: syntax
+
+-stdio:
+	: "measure-source-file" input output
+
+-syntax-measure:
+	: "measure-syntax-properties" - -
+	: meta.measure-source -stdio
+
+-metrics-join:
+	: "aggregate-measurements" - -
+	: [factor-image] [work-directory]
+	: [project-path] [factor-relative-path]
+	: [units]
+
+-syntax-identity:
+	: "identify-syntax" - -
+
+-identity-join:
+	: "combine-identities" - -
+	: [factor-image]
+	: [units]

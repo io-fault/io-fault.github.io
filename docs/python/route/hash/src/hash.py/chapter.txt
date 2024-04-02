@@ -1,0 +1,515 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 344 21`
+Hash path implementation for compressing file paths.
+
+
+[ Sequence ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 46`
+
+[ Iterable ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 46`
+
+[ functools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 16`
+
+[ FNV ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 30 24`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`7 11 7 16`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+
+[ FNV >> compute ]
+! CONTROL:
+	/type/
+		classmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`9 2 12 10`
+(signature)`compute(Class, data)`
+
+
+[ FNV >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`14 2 15 16`
+(signature)`__init__(self)`
+
+
+[ FNV >> update ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`17 2 24 13`
+(signature)`update(self, data)`
+
+
+[ FNV >> hexdigest ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`26 2 27 28`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+(signature)`hexdigest(self)`
+
+
+[ FNV >> digest ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`29 2 30 24`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+(signature)`digest(self)`
+
+
+[ Segmentation ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`32 1 98 56`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`32 20 32 25`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+Hash implementation container providing division logic for constructing
+the path segment to be used by a resource's key.
+
+
+[ Segmentation >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`38 2 47 14`
+(signature)`__init__(self, implementation, algorithm, depth, length)`
+
+
+[ Segmentation >> divide ]
+! CONTROL:
+	/type/
+		staticmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`48 2 58 3`
+		- (type/syntax)`Sequence[str]`
+		
+(signature)`divide(digest, length, edge, step)`
+
+Split the hex digest into parts for building a Route to the bucket.
+
+
+[ Segmentation >> __call__ ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`60 2 68 63`
+		- (type/syntax)`Sequence[str]`
+		
+(signature)`__call__(self, key)`
+
+Hash the given key with the configured algorithm returning the divided digest.
+
+
+[ Segmentation >> identity ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`70 2 77 13`
+		- (type/syntax)`tuple[str, int, int]`
+		
+(signature)`identity(self)`
+
+Return a tuple consisting of the algorithm identifier, the number
+of divisions, and the character length of the hex digest.
+
+
+[ Segmentation >> from_identity ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`78 2 98 56`
+(signature)`from_identity(Class)`
+
+Create an instance using the identity.
+
+
+[ Index ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`100 1 230 14`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`100 13 100 18`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+A bucket index for (factor-local/class)&<#Directory[Directory]> resources.
+
+Manages the sequence of entries for a bucket.
+
+The index files are a series of entry identifiers followed
+by the key on a greater indentation level; the trailing newline
+of each indentation block not being part of the key.
+
+
+[ Index >> structure ]
+! CONTROL:
+	/type/
+		staticmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`112 2 145 13`
+(signature)`structure(seq)`
+
+Structure the indentation blocks into (key, entry) pairs.
+The keys are the indented section and the entries are the leading
+unindented identifier.
+
+Trailing newlines *MUST* be present.
+Structure presumes that the index file was loaded using readlines.
+
+Entries (unindented areas) must be a single line followed by one
+or more indented lines. The initial indentation level (first tab)
+will be remove; the content will be considered to be the continuation
+of the key (that's hashed to select this bucket's index).
+
+Underscore attributes are representations of stored data.
+
+
+[ Index >> from_path ]
+! CONTROL:
+	/type/
+		classmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`146 2 151 12`
+(signature)`from_path(Class, path)`
+
+
+[ Index >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`153 2 156 18`
+(signature)`__init__(self)`
+
+
+[ Index >> load ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`158 2 173 68`
+(signature)`load(self, lines)`
+
+Load the index from the given line sequence.
+(factor-local/parameter)&<#Index.load.Parameters.lines[lines]> items *must* have trailing newlines.
+
+
+[ Index >> sequence ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`175 2 181 88`
+(signature)`sequence(self)`
+
+Send the serialized index state to the given (invalid/unknown)&<#write> function.
+
+
+[ Index >> keys ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`183 2 187 25`
+(signature)`keys(self)`
+
+Iterator containing the keys loaded from the index.
+
+
+[ Index >> items ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`189 2 190 26`
+(signature)`items(self)`
+
+
+[ Index >> has_key ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`192 2 196 25`
+(signature)`has_key(self, key)`
+
+Check if a key exists in the index.
+
+
+[ Index >> __getitem__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`198 2 199 23`
+(signature)`__getitem__(self, key)`
+
+
+[ Index >> __delitem__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`201 2 202 20`
+(signature)`__delitem__(self, key)`
+
+
+[ Index >> allocate ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`204 2 213 3`
+(signature)`allocate(self, keys, filename)`
+
+Allocate a sequence of entries for the given keys.
+
+
+[ Index >> insert ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`215 2 222 10`
+(signature)`insert(self, key, filename)`
+
+Insert the key into the bucket. The key *must* not already be present.
+
+
+[ Index >> delete ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`224 2 230 14`
+(signature)`delete(self, key)`
+
+Delete the key from the index returning the entry for removal.
+
+
+[ Directory ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`232 1 345 20`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`232 17 232 22`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+Filesystem based hash tree.
+
+[ > Properties ]
+
+/addressing/
+	The address resolution method. Usually a (factor-local/class)&<#Segmentation[Segmentation]> instance.
+
+/path/
+	The route to the resource that contains the tree.
+
+
+[ Directory >> index_name ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`243 2 243 22`
+#!source
+	index_name = '.index'
+
+[ Directory >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`247 2 249 23`
+(signature)`__init__(self, addressing, directory)`
+
+
+[ Directory >> items ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`251 2 272 25`
+		- (type/syntax)`Iterable[(bytes, object)]`
+		
+(signature)`items(self)`
+
+Returns an iterator to all the keys and their associated routes.
+
+
+[ Directory >> _index ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`273 2 279 12`
+(signature)`_index(self, route)`
+
+
+[ Directory >> allocate ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`281 2 299 31`
+		- (type/syntax)`object`
+		- (type/invalid/unknown)&<#object>
+		
+(signature)`allocate(self, key)`
+
+Allocate a position for the given (factor-local/parameter)&<#Directory.allocate.Parameters.key[key]> and return its route.
+
+If already allocated, return the reference to the resource.
+
+
+[ Directory >> available ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`301 2 320 13`
+		- (type/syntax)`bool`
+		- (type/invalid/unknown)&<#bool>
+		
+(signature)`available(self, key)`
+
+Whether the resource has not been allocated.
+
+(invalid/unknown)&<#True> when (factor-local/parameter)&<#Directory.available.Parameters.key[key]> has *not* been associated with a resource.
+
+
+[ Directory >> release ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`322 2 345 20`
+(signature)`release(self, key)`
+
+Release the allocated resource associated with the (factor-local/parameter)&<#Directory.release.Parameters.key[key]> and delete it from the index.
+

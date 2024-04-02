@@ -1,0 +1,144 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 47 0`
+Fault inducing processors.
+
+
+[ functools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 16`
+
+[ core ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 18`
+
+[ Fatal ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 22 24`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`8 13 8 26`
+	- (type/syntax)`core.Processor`
+	- (type/project-local/factor-element)&<core#Processor[fault.kernel.core.Processor]>
+	
+Processor that faults the controlling Sector upon actuation.
+
+
+[ Fatal >> inject ]
+! CONTROL:
+	/type/
+		classmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`14 2 16 21`
+(signature)`inject(Class, sector, event)`
+
+
+[ Fatal >> actuate ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`18 2 19 54`
+(signature)`actuate(self)`
+
+
+[ Fatal >> process ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`21 2 22 24`
+(signature)`process(self, event)`
+
+
+[ Timeout ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`24 1 47 17`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`24 15 24 28`
+	- (type/syntax)`core.Processor`
+	- (type/project-local/factor-element)&<core#Processor[fault.kernel.core.Processor]>
+	
+Processor that faults when a timeout occurs.
+
+
+[ Timeout >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`29 2 30 32`
+(signature)`__init__(self, remainder)`
+
+
+[ Timeout >> actuate ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`32 2 33 67`
+(signature)`actuate(self)`
+
+
+[ Timeout >> terminate ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`35 2 42 13`
+(signature)`terminate(self)`
+
+Cancel the effect of the timeout.
+
+
+[ Timeout >> fto_execute ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`44 2 47 17`
+(signature)`fto_execute(self)`
+

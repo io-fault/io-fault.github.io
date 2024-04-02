@@ -1,0 +1,98 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 81 0`
+
+[ dataclasses ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 1 18`
+
+[ module ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`2 1 2 38`
+
+[ test_struct ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 18 24`
+(signature)`test_struct(test)`
+
+Validate that struct provides the expected defaults for (none/invalid)&<http://fault.io/dev/null[dataclasses.dataclass]>.
+
+
+[ test_compose ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`20 1 36 49`
+(signature)`test_compose(test)`
+
+
+[ test_unroll ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`38 1 40 42`
+(signature)`test_unroll(test)`
+
+
+[ test_unique ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`42 1 46 38`
+(signature)`test_unique(test)`
+
+
+[ test_sum_lengths ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`48 1 52 67`
+(signature)`test_sum_lengths(test)`
+
+
+[ test_consistency ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`54 1 81 41`
+(signature)`test_consistency(test)`
+

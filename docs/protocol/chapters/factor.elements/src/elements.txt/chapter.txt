@@ -1,0 +1,12 @@
+! CONTROL:
+	/type/
+		factor
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+! CONTEXT:
+	/protocol/
+		&<http://if.fault.io/chapters/meta.specification>
+
+Factor element protocol specifying how factors are represented.
+

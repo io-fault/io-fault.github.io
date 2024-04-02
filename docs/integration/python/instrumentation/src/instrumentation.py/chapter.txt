@@ -1,0 +1,381 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 328 0`
+AST manipulations for injecting coverage counters and profile timers into Python modules.
+
+
+[ ast ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 10`
+
+[ builtins ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 15`
+
+[ functools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 16`
+
+[ module ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 8 20`
+
+[ source ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`9 1 9 20`
+
+[ BranchNodes ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 1 14 1`
+#!source
+	BranchNodes = (
+		ast.BoolOp,
+		ast.IfExp,
+	)
+
+[ expression_mapping ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`16 1 19 1`
+#!source
+	expression_mapping = {
+		ast.withitem: 'context_expr',
+		ast.comprehension: 'value',
+	}
+
+[ visit_expression ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`21 1 54 7`
+(signature)`visit_expression(node, parent, field, index)`
+
+Visit the node in a statement. Keyword defaults, expressions, statements.
+
+
+[ visit_container ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`56 1 75 58`
+(signature)`visit_container(nodes, parent, field)`
+
+
+[ visit ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`77 1 87 7`
+(signature)`visit(node)`
+
+Identify nodes that should be instrumented for coverage and profiling.
+
+
+[ coverage_module_context ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`89 1 176 18`
+#!source
+	coverage_module_context = """
+	if True:
+		import collections as _fi_cl
+		import atexit as _fi_ae
+		import functools as _fi_ft
+		import os as _fi_os
+	
+		_fi_counters__ = _fi_cl.Counter()
+		_fi_identity = _fi_os.environ.get('METRICS_IDENTITY') or ''
+	
+		def _fi_record(counters=_fi_counters__, origin=_fi_identity):
+			import sys, os, collections
+	
+			if 'PROCESS_IDENTITY' in os.environ:
+				pid = os.environ['PROCESS_IDENTITY']
+			else:
+				pid = str(os.getpid())
+	
+			if 'METRICS_CAPTURE' in os.environ:
+				# If capture is defined, qualify with the module name.
+				# /../metrics/{pid}/{module}/{project}/{factor}/{test}/.fault-syntax-counters
+				path = os.environ['METRICS_CAPTURE']
+				path += '/coverage'
+				path += '/' + pid
+				path += '/' + __name__
+			else:
+				# /../metrics/coverage/{pid}/{project}/{factor}/{test}/.fault-syntax-counters
+	
+				# Resolve __metrics_trap__ global at exit in order to allow the runtime
+				# to designate it given compile time absence.
+				path = __metrics_trap__
+				path += '/coverage'
+				path += '/' + pid
+	
+			path += '/' + os.environ.get('METRICS_IDENTITY', '.fault-python')
+	
+			# Retry in case of conflicting capture prefix.
+			for x in range(8):
+				try:
+					os.makedirs(path)
+				except:
+					pass
+				else:
+					break
+	
+			path += '/.fault-syntax-counters'
+			os.makedirs(path)
+	
+			# Vectorize the counters.
+			events = collections.defaultdict(list)
+			occurrences = collections.defaultdict(list)
+			for (fp, area), v in counters.items():
+				events[fp].append(area)
+				occurrences[fp].append(v)
+	
+			# Sequence the sources for an index.
+			# The contents of the vectors will be emitted according to this list.
+			sources = list(events.keys())
+			sources.sort()
+	
+			# Index designating sources and the number of counters.
+			# For Python, this will normally (always) be a single line.
+			# Append as PROCESS_IDENTITY may be intentionally redundant.
+			with open(path + '/sources', 'a') as f:
+				f.writelines(['%d %s\\n' %(len(events[x]), x) for x in sources])
+	
+			with open(path + '/areas', 'a') as f:
+				for x in sources:
+					f.writelines(['%d %d %d %d\\n' % k for k in events[x]])
+	
+			with open(path + '/counts', 'a') as f:
+				for x in sources:
+					f.writelines(['%d\\n' %(c,) for c in occurrences[x]])
+	
+		_fi_ae.register(_fi_record)
+	
+		try:
+			_FI_INCREMENT__ = _fi_ft.partial(_fi_cl._count_elements, _fi_counters__)
+		except:
+			_FI_INCREMENT__ = _fi_counters__.update
+	
+		def _FI_COUNT__(area, rob, F=__file__, C=_FI_INCREMENT__):
+			C(((F, area),))
+			return rob
+	
+		# Limit names left in the module globals.
+		del _fi_os, _fi_ft, _fi_cl, _fi_ae, _fi_record, _fi_identity
+	""".strip() + '\n'
+
+[ count_boolop_expression ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`178 1 178 89`
+#!source
+	count_boolop_expression = "(_FI_INCREMENT__(((__file__, %r),)) or INSTRUMENTATION_ERROR)"
+
+[ count_call_expression ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`179 1 179 46`
+#!source
+	count_call_expression = "_FI_COUNT__(%r,None)"
+
+[ profile_transaction ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`182 1 189 3`
+#!source
+	profile_transaction = """
+	if True:
+		try:
+			_FI_ENTER__(%r)
+			pass
+		finally:
+			_FI_EXIT__(%r)
+	"""
+
+[ profile_pause ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`191 1 198 3`
+#!source
+	profile_pause = """
+	if True:
+		try:
+			_FI_SUSPEND__(%r)
+			pass
+		finally:
+			_FI_CONTINUE__(%r)
+	"""
+
+[ construct_call_increment ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`200 1 208 17`
+(signature)`construct_call_increment(node, area)`
+
+
+[ construct_boolop_increment ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`210 1 218 20`
+(signature)`construct_boolop_increment(node, area)`
+
+
+[ construct_profile_trap ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`220 1 229 12`
+(signature)`construct_profile_trap(identifier, container, nodes)`
+
+
+[ construct_initialization_nodes ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`231 1 239 13`
+(signature)`construct_initialization_nodes()`
+
+Construct instrumentation initialization nodes for injection into an (none/invalid)&<http://fault.io/dev/null[ast.Module]> body.
+
+
+[ instrument ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`241 1 270 12`
+(signature)`instrument(path, noded, address)`
+
+Adjust the AST so that (invalid/unknown)&<#node> will record its execution.
+
+
+[ delineate ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`272 1 279 12`
+(signature)`delineate(noded)`
+
+
+[ apply ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`281 1 288 37`
+(signature)`apply(path, noded)`
+
+
+[ compile ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`290 1 316 38`
+(signature)`compile(factor, source, path, constants)`
+
+Compile Python source of a module into an instrumented (invalid/unknown)&<#types.CodeObject>
+

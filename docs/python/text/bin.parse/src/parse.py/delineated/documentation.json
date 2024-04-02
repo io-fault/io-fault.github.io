@@ -1,0 +1,1 @@
+[["Parse the text file from standard input and serialize the element tree into standard output.", "", "The format of the output is designated using the first argument: print, json."]]

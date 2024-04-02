@@ -1,0 +1,807 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 424 0`
+Route interface descriptions for (factor-local/class)&<#Path[Path]> manipulations and (factor-local/class)&<#File[File]> system controls.
+
+[ File System Property Codes ]
+
+(factor-local/class)&<#File[File]> operations that analyze status properties use character codes to
+perform filtering. The codes listed here are primarily for POSIX filesystems
+and may have extensions or different meanings when used with emulated filesystems.
+
+[ > Permissions ]
+
+Character codes identifying available permissions.
+
+/`'r'`/
+	Readable.
+
+/`'w'`/
+	Writable.
+
+/`'x'`/
+	Executable or searchable.
+
+[ > Types ]
+
+Character codes identifying a type of file.
+
+/`'*'`/
+	Any.
+
+/`'!'`/
+	Void; file must not exist.
+
+/`'/'`/
+	Directory.
+
+/`'.'`/
+	Data. A "regular" file.
+
+/`'&'`/
+	A symbolic link.
+
+/`'|'`/
+	A named pipe.
+
+/`'@'`/
+	A file system socket file.
+
+/`'#'`/
+	A device file.
+
+/`'?'`/
+	Unknown type.
+	File exists, but it's type is not known and may be inaccessible.
+
+
+[ abstractmethod ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`43 1 43 30`
+
+[ Hashable ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`44 1 44 65`
+
+[ Iterable ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`44 1 44 65`
+
+[ Sequence ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`44 1 44 65`
+
+[ Mapping ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`44 1 44 65`
+
+[ Protocol ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`45 1 45 44`
+
+[ TypeAlias ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`45 1 45 44`
+
+[ Type ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`45 1 45 44`
+
+[ Element ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`47 1 49 18`
+		- (type/syntax)`TypeAlias`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing.TypeAlias]>
+		
+#!source
+	Element: TypeAlias = tuple[str, Sequence['Element'], Mapping]
+	
+	@Hashable.register
+
+[ Path ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`50 1 186 27`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`50 12 50 19`
+	- (type/syntax)`Protocol`
+	- (type/none/invalid)&<http://fault.io/dev/null[typing.Protocol]>
+	
+Primitive operations for manipulating a sequence of identifiers.
+
+
+[ Path >> container ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`57 2 64 16`
+		- (type/syntax)`Path`
+		- (type/factor-local/class)&<#Path[Path]>
+		
+The route containing the final identifier in (invalid/unknown)&<#self>.
+
+
+[ Path >> absolute ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`65 2 72 16`
+		- (type/syntax)`list[Hashable]`
+		
+The absolute sequence of identifiers.
+
+
+[ Path >> identifier ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`73 2 80 16`
+		- (type/syntax)`Hashable`
+		- (type/none/invalid)&<http://fault.io/dev/null[collections.abc.Hashable]>
+		
+The object identifying the resource relative to its immediate container.
+The last point in the route.
+
+
+[ Path >> truncate ]
+! CONTROL:
+	/type/
+		abstractmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`81 2 89 16`
+		- (type/syntax)`Path`
+		- (type/factor-local/class)&<#Path[Path]>
+		
+(signature)`truncate(self, identifier)`
+
+Construct a new route consisting of the existing sequence of points up to the *last*
+point specified by the (invalid/unknown)&<#point> argument. Similar to slicing a sequence from a
+reverse index search.
+
+
+[ Path >> __invert__ ]
+! CONTROL:
+	/type/
+		abstractmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`90 2 99 16`
+		- (type/syntax)`Iterable[Path]`
+		
+(signature)`__invert__(self)`
+
+Stepwise root ascension.
+
+#!python
+	assert list(~route) == [route ** 1, route ** 2, ..., route ** len(route)]
+
+[ Path >> __lshift__ ]
+! CONTROL:
+	/type/
+		abstractmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`100 2 106 16`
+		- (type/syntax)`Iterable[Path]`
+		
+(signature)`__lshift__(self, route)`
+
+Stepwise ascension path.
+
+
+[ Path >> __rshift__ ]
+! CONTROL:
+	/type/
+		abstractmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`107 2 113 16`
+		- (type/syntax)`Iterable[Path]`
+		
+(signature)`__rshift__(self, route)`
+
+Stepwise descension path.
+
+
+[ Path >> __xor__ ]
+! CONTROL:
+	/type/
+		abstractmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`114 2 120 16`
+		- (type/syntax)`Iterable[Path]`
+		
+(signature)`__xor__(self, route)`
+
+Stepwise traverse path.
+
+
+[ Path >> __matmul__ ]
+! CONTROL:
+	/type/
+		abstractmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`121 2 132 16`
+		- (type/syntax)`Path`
+		- (type/factor-local/class)&<#Path[Path]>
+		
+(signature)`__matmul__(self, path_expression)`
+
+Composite extension.
+Construct a new route by extending (factor-local/parameter)&<#Path.__matmul__.Parameters.self[self]> with the points expressed in (invalid/unknown)&<#path>.
+
+[ >> Parameters ]
+
+/(parameter)`self`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`path_expression`/
+	- (type/syntax)`str`
+	- (type/invalid/unknown)&<#str>
+	
+	A string that represents a relative or absolute path.
+
+
+[ Path >> __add__ ]
+! CONTROL:
+	/type/
+		abstractmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`133 2 143 16`
+		- (type/syntax)`Path`
+		- (type/factor-local/class)&<#Path[Path]>
+		
+(signature)`__add__(self, points)`
+
+Extension by iterable.
+Construct a new route by extending (factor-local/parameter)&<#Path.__add__.Parameters.self[self]> with (factor-local/parameter)&<#Path.__add__.Parameters.points[points]>.
+
+#!python
+	assert (route + points) == (route / points[0] / points[1] ... / points[n])
+
+[ Path >> __floordiv__ ]
+! CONTROL:
+	/type/
+		abstractmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`144 2 154 16`
+		- (type/syntax)`Path`
+		- (type/factor-local/class)&<#Path[Path]>
+		
+(signature)`__floordiv__(self, route)`
+
+Segment extension.
+Construct a new route by extending (factor-local/parameter)&<#Path.__floordiv__.Parameters.self[self]> with all the points in (factor-local/parameter)&<#Path.__floordiv__.Parameters.route[route]>.
+
+#!python
+	assert (route // segment) == (route + segment.absolute)
+
+[ Path >> __truediv__ ]
+! CONTROL:
+	/type/
+		abstractmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`155 2 165 16`
+		- (type/syntax)`Path`
+		- (type/factor-local/class)&<#Path[Path]>
+		
+(signature)`__truediv__(self, point)`
+
+Single extension.
+Construct a new route by extending (factor-local/parameter)&<#Path.__truediv__.Parameters.self[self]> with the sole (factor-local/parameter)&<#Path.__truediv__.Parameters.point[point]>.
+
+#!python
+	assert (route / identifier) == (route + [identifier])
+
+[ Path >> __mul__ ]
+! CONTROL:
+	/type/
+		abstractmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`166 2 176 16`
+		- (type/syntax)`Path`
+		- (type/factor-local/class)&<#Path[Path]>
+		
+(signature)`__mul__(self, identifier)`
+
+Identifier substitution.
+Construct a new route by extending (factor-local/parameter)&<#Path.__mul__.Parameters.self[self.container]> with (factor-local/parameter)&<#Path.__mul__.Parameters.identifier[identifier]>.
+
+#!python
+	assert (route * 'replacement') == (route.container / 'replacement')
+
+[ Path >> __pow__ ]
+! CONTROL:
+	/type/
+		abstractmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`177 2 186 27`
+		- (type/syntax)`Path`
+		- (type/factor-local/class)&<#Path[Path]>
+		
+(signature)`__pow__(self, nth)`
+
+Numeric ascension operation.
+Construct a new route representing the (factor-local/parameter)&<#Path.__pow__.Parameters.nth[nth]> container of (factor-local/parameter)&<#Path.__pow__.Parameters.self[self]>.
+
+#!python
+	assert (route ** 1) == (route.container)
+	assert (route ** 2) == (route.container.container)
+
+[ File ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`188 1 424 27`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`188 12 188 15`
+	- (type/syntax)`Path`
+	- (type/factor-local/class)&<#Path[Path]>
+	
+File system APIs for supporting common access functions.
+
+
+[ File >> Violation ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`195 2 202 16`
+		- (type/syntax)`Type[Exception]`
+		
+Exception describing the property violations found
+by a call to (factor-local/abstractmethod)&<#File.fs_require[fs_require]>.
+
+
+[ File >> fs_require ]
+! CONTROL:
+	/type/
+		abstractmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`203 2 224 16`
+(signature)`fs_require(self, properties, type)`
+
+Check the file for the expressed requirements.
+The (factor-local/parameter)&<#File.fs_require.Parameters.properties[properties]> string consists of characters described by
+&[File System Property Codes].
+
+[ >> Parameters ]
+
+/(parameter)`self`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`properties`/
+	- (type/syntax)`str`
+	- (type/invalid/unknown)&<#str>
+	
+	The required type, permissions and option control flags.
+
+/(parameter)`type`/
+	
+	The required file type, inclusive.
+	When (invalid/unknown)&<#None>, the default, the file type must not be a directory.
+
+	Overrides any file type codes present in (factor-local/parameter)&<#File.fs_require.Parameters.properties[properties]>.
+
+[ >> Exceptions ]
+
+/(factor-local/property)&<#File.Violation[Violation]>/
+	Raised when a designated property is not present on the file.
+
+
+[ File >> fs_replace ]
+! CONTROL:
+	/type/
+		abstractmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`225 2 237 16`
+(signature)`fs_replace(self, replacement)`
+
+Destroy the existing file or directory, (factor-local/parameter)&<#File.fs_replace.Parameters.self[self]>, and replace it with the
+file or directory at the given route, (factor-local/parameter)&<#File.fs_replace.Parameters.replacement[replacement]>.
+
+[ >> Parameters ]
+
+/(parameter)`self`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`replacement`/
+	
+	The route to the file or directory that will be used to replace
+	the one at (factor-local/parameter)&<#File.fs_replace.Parameters.self[self]>.
+
+
+[ File >> fs_void ]
+! CONTROL:
+	/type/
+		abstractmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`238 2 245 16`
+(signature)`fs_void(self)`
+
+Destroy the file or directory at the location identified by (factor-local/parameter)&<#File.fs_void.Parameters.self[self]>.
+For directories, this recursively removes content as well.
+
+
+[ File >> fs_reduce ]
+! CONTROL:
+	/type/
+		abstractmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`246 2 256 16`
+(signature)`fs_reduce(self, discarded)`
+
+Relocate the directory contents in (factor-local/parameter)&<#File.fs_reduce.Parameters.discarded[discarded]> into (factor-local/parameter)&<#File.fs_reduce.Parameters.self[self]>, and
+destroy the segment of directories between (factor-local/parameter)&<#File.fs_reduce.Parameters.self[self]> and (factor-local/parameter)&<#File.fs_reduce.Parameters.discarded[discarded]>.
+
+[ >> Returns ]
+
+(factor-local/parameter)&<#File.fs_reduce.Parameters.self[self]>
+
+
+[ File >> fs_alloc ]
+! CONTROL:
+	/type/
+		abstractmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`257 2 265 16`
+(signature)`fs_alloc(self)`
+
+Allocate the necessary resources to create the target path as a file or directory.
+
+Normally, this means creating the *leading* path to the identified resource.
+
+
+[ File >> fs_link_relative ]
+! CONTROL:
+	/type/
+		abstractmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`266 2 277 16`
+(signature)`fs_link_relative(self, path)`
+
+Create or update a *symbolic* link at (factor-local/parameter)&<#File.fs_link_relative.Parameters.self[self]> pointing to (factor-local/parameter)&<#File.fs_link_relative.Parameters.path[path]>, the target file.
+The linked target path will be relative to (invalid/unknown)&<#self'> route.
+
+[ >> Parameters ]
+
+/(parameter)`self`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`path`/
+	
+	The route identifying the target path of the symbolic link.
+
+
+[ File >> fs_link_absolute ]
+! CONTROL:
+	/type/
+		abstractmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`278 2 289 16`
+(signature)`fs_link_absolute(self, path)`
+
+Create or update a *symbolic* link at (factor-local/parameter)&<#File.fs_link_absolute.Parameters.self[self]> pointing to (factor-local/parameter)&<#File.fs_link_absolute.Parameters.path[path]>, the target file.
+The linked target path will be absolute.
+
+[ >> Parameters ]
+
+/(parameter)`self`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`path`/
+	
+	The route identifying the target path of the symbolic link.
+
+
+[ File >> fs_mkdir ]
+! CONTROL:
+	/type/
+		abstractmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`290 2 296 16`
+(signature)`fs_mkdir(self)`
+
+Create a directory at the location referenced by (factor-local/parameter)&<#File.fs_mkdir.Parameters.self[self]>.
+
+
+[ File >> fs_select ]
+! CONTROL:
+	/type/
+		abstractmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`297 2 307 16`
+		- (type/syntax)`Iterable[File]`
+		
+(signature)`fs_select(self)`
+
+Select the set of files contained within the directory identified by (factor-local/parameter)&<#File.fs_select.Parameters.self[self]>
+that match the required (factor-local/parameter)&<#File.fs_select.Parameters.properties[properties]>.
+
+The (factor-local/parameter)&<#File.fs_select.Parameters.properties[properties]> string consists of characters described by
+&[File System Property Codes].
+
+
+[ File >> fs_real ]
+! CONTROL:
+	/type/
+		abstractmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`308 2 314 16`
+		- (type/syntax)`File`
+		- (type/factor-local/class)&<#File[File]>
+		
+(signature)`fs_real(self)`
+
+Identify the portion of the route that actually exists on the filesystem.
+
+
+[ File >> fs_linear ]
+! CONTROL:
+	/type/
+		abstractmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`315 2 327 16`
+		- (type/syntax)`File`
+		- (type/factor-local/class)&<#File[File]>
+		
+(signature)`fs_linear(self)`
+
+Identify the next non-linear directory.
+
+Recursively scan the filesystem until a directory is found containing
+zero files, more than one file, or a sole non-directory file is found.
+
+[ >> Returns ]
+
+The path to the next non-linear directory as a (factor-local/class)&<#File[File]>.
+
+
+[ File >> fs_status ]
+! CONTROL:
+	/type/
+		abstractmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`328 2 334 16`
+(signature)`fs_status(self)`
+
+Construct a data structure representing the latest status of the file.
+
+
+[ File >> fs_update ]
+! CONTROL:
+	/type/
+		abstractmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`335 2 356 16`
+(signature)`fs_update(self, name, size, created, modified)`
+
+Update the status properties of the file identified by (factor-local/parameter)&<#File.fs_update.Parameters.self[self]>.
+If no arguments are supplied, not changes will be performed.
+
+[ >> Parameters ]
+
+/(parameter)`self`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`name`/
+	
+	Change the identifier used to select the file relative to
+	its parent directory.
+
+/(parameter)`size`/
+	
+	Adjust the size of the file, truncating or zero-padding as needed.
+
+/(parameter)`created`/
+	
+	The time that the file was said to be created.
+
+/(parameter)`modified`/
+	
+	The time that the file was said to be modified.
+
+
+[ File >> fs_load ]
+! CONTROL:
+	/type/
+		abstractmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`357 2 363 16`
+		- (type/syntax)`bytes`
+		- (type/invalid/unknown)&<#bytes>
+		
+(signature)`fs_load(self)`
+
+Retrieve the binary data stored at the location identified by (factor-local/parameter)&<#File.fs_load.Parameters.self[self]>.
+
+
+[ File >> fs_store ]
+! CONTROL:
+	/type/
+		abstractmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`364 2 370 16`
+(signature)`fs_store(self, data)`
+
+Store the given (factor-local/parameter)&<#File.fs_store.Parameters.data[data]> at the location referenced by (factor-local/parameter)&<#File.fs_store.Parameters.self[self]>.
+
+
+[ File >> fs_type ]
+! CONTROL:
+	/type/
+		abstractmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`371 2 379 16`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+(signature)`fs_type(self)`
+
+A string identifying the type of file selected by the (invalid/unknown)&<#Route>.
+Often a shorthand for accessing the type from the structure
+returned by (factor-local/abstractmethod)&<#File.fs_status[fs_status]>.
+
+
+[ File >> fs_executable ]
+! CONTROL:
+	/type/
+		abstractmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`380 2 388 16`
+		- (type/syntax)`bool`
+		- (type/invalid/unknown)&<#bool>
+		
+(signature)`fs_executable(self)`
+
+Whether or not the regular file is executable.
+
+Directories marked as executable are not considered executables.
+
+
+[ File >> fs_searchable ]
+! CONTROL:
+	/type/
+		abstractmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`389 2 397 16`
+		- (type/syntax)`bool`
+		- (type/invalid/unknown)&<#bool>
+		
+(signature)`fs_searchable(self)`
+
+Whether or not the directory's listing can be retrieved.
+
+Regular files marked as executable are not considered searchable.
+
+
+[ File >> fs_snapshot ]
+! CONTROL:
+	/type/
+		abstractmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`398 2 424 27`
+		- (type/syntax)`Sequence[Element]`
+		
+(signature)`fs_snapshot(self)`
+
+Construct an element tree of files from the directory identified by (factor-local/parameter)&<#File.fs_snapshot.Parameters.self[self]>.
+
+Exceptions raised by operations populating the tree are trapped
+as `'exception'` elements that are filtered by (invalid/unknown)&<#process> by default.
+
+[ >> Parameters ]
+
+/(parameter)`self`/
+	
+	(control/absent)`Undocumented`.
+
+[ >> Returns ]
+
+The sequence of elements that represent the directory's listing
+according to the given arguments.
+

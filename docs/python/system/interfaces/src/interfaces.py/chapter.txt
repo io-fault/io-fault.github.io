@@ -1,0 +1,212 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 124 3`
+Interface configuration format for binding application network services.
+
+Provides parsing, serialization, and allocation functions for application service interfaces.
+
+
+[ TypeAlias ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 28`
+
+[ Iterable ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 7 46`
+
+[ Sequence ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 7 46`
+
+[ files ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`9 1 9 19`
+
+[ KPorts ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 1 10 35`
+
+[ Endpoint ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 1 11 29`
+
+[ if_select ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`12 1 12 51`
+
+[ service ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`13 1 13 28`
+
+[ IContext ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`15 1 15 47`
+		- (type/syntax)`TypeAlias`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing.TypeAlias]>
+		
+#!source
+	IContext: TypeAlias = tuple[str, Sequence[str]]
+
+[ ISpecifications ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`16 1 16 74`
+		- (type/syntax)`TypeAlias`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing.TypeAlias]>
+		
+#!source
+	ISpecifications: TypeAlias = Iterable[tuple[IContext, Sequence[Endpoint]]]
+
+[ if_structure ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`18 1 83 35`
+		- (type/syntax)`ISpecifications`
+		- (type/factor-local/data)&<#ISpecifications[ISpecifications]>
+		
+(signature)`if_structure(if_spec)`
+
+Parse an interface configuration file.
+
+[ > Parameters ]
+
+/(parameter)`if_spec`/
+	- (type/syntax)`str`
+	- (type/invalid/unknown)&<#str>
+	
+	The configuration text.
+
+/(parameter)`type`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`if_select`/
+	
+	(control/absent)`Undocumented`.
+
+[ > Returns ]
+
+Iterator of pairs associating the protocol section and option set
+with the endpoints listed in the following indented area.
+
+
+[ if_sequence ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`85 1 104 33`
+		- (type/syntax)`Iterable[str]`
+		
+(signature)`if_sequence(if_spec)`
+
+Serialize the endpoints relative to their protocol and option set.
+
+[ > Parameters ]
+
+/(parameter)`if_spec`/
+	- (type/syntax)`ISpecifications`
+	- (type/factor-local/data)&<#ISpecifications[ISpecifications]>
+	
+	The series of protocol identifiers and option sets associated with
+	the sequence of (project-local/factor-element)&<network#Endpoint[fault.system.network.Endpoint]> instances.
+
+
+[ if_allocate ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`106 1 125 2`
+		- (type/syntax)`Sequence[tuple[IContext, KPorts]]`
+		
+(signature)`if_allocate(if_spec)`
+
+Read the interfaces configuration file, (factor-local/parameter)&<#if_allocate.Parameters.if_spec[if_spec]>, and (project-local/factor-element)&<network#service[fault.system.network.service]>
+the identified endpoints keeping the association with
+the endpoint's context.
+
+[ > Parameters ]
+
+/(parameter)`if_spec`/
+	- (type/syntax)`files.Path`
+	- (type/project-local/factor-element)&<files#Path[fault.system.files.Path]>
+	
+	Filesystem path to the interface specification file.
+
+/(parameter)`encoding`/
+	
+	(control/absent)`Undocumented`.
+
+[ > Returns ]
+
+A sequence of pairs where the former value is the protocol and option set and the latter
+is the (project-local/factor-element)&<kernel#Ports[fault.system.kernel.Ports]> instance holding the allocated file descriptors.
+

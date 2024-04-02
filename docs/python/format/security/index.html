@@ -1,0 +1,29 @@
+<html root="2"><head><title>fault.format.security</title><meta charset="utf-8"/><link as="style" rel="preload" href="../../.legacy-web/core.css"></link><link as="style" rel="preload" href="../../.legacy-web/factor.css"></link><link rel="stylesheet" href="../../.legacy-web/core.css"></link><link rel="stylesheet" href="../../.legacy-web/factor.css"></link></head><body><main><h1><span class="prefix"></span><div class="page-subject"><img class="icon" src="../../.factor-type-icon/if.fault.io/python-module.svg"></img><span class="subject-identifier">security</span><a href="http://if.fault.io/factors/python.module"><code class="type">python.module</code></a></div><div class="page-context"><a href="../"><img class="icon" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNTYiIGhlaWdodD0iMjU2Ij48dGV4dCB4PSI0IiB5PSIwLjg4ZW0iIGZvbnQtc2l6ZT0iMjQ4Ij7wn5KOPC90ZXh0Pjwvc3ZnPg=="></img></a><span class="context-identifier">fault.format</span></div></h1><section class="chapter"><p><span class="text.normal">Text frames for Certificates, Keys, and Contexts.</span></p></section><section class="import" documented="false" local-identifier="sys" id="sys"><h1><span class="prefix"></span><a class="title" href="#sys"><span class="text.normal">sys</span></a><span class="abstract-type">import</span></h1></section><section class="data" documented="false" local-identifier="key_fields" id="key_fields"><h1><span class="prefix"></span><a class="title" href="#key_fields"><span class="text.normal">key_fields</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code class="source">key_fields = set([
+	'algorithm',
+	'key-id', # Hash of key if necessary.
+])
+</code></pre></section><section class="data" documented="false" local-identifier="certificate_fields" id="certificate_fields"><h1><span class="prefix"></span><a class="title" href="#certificate_fields"><span class="text.normal">certificate_fields</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code class="source">certificate_fields = set([
+	# Security Context data regarding its validity.
+	'validation',
+
+	'type', # Usually X.509
+	'interval', # validity; not-before, not-after
+
+	'serial', # Unique identifier.
+	'signature-type',
+	'signature-algorithm',
+
+	'issuer-organization',
+	'issuer-name', # domain
+
+	'subject-organization',
+	'subject-name', # domain
+
+	'extension-names',
+
+	'revocations', # CRL
+
+	'key-usage',
+	'key-algorithm',
+])
+</code></pre></section><section class="function" documented="true" local-identifier="mkcertview" id="mkcertview"><h1><span class="prefix"></span><a class="title" href="#mkcertview"><span class="text.normal">mkcertview</span></a><span class="abstract-type">function</span></h1><p><code class="signature">mkcertview(record)</code></p><p><span class="text.normal">Create record-frame for a certificate.</span></p></section><section class="function" documented="false" local-identifier="pframe" id="pframe"><h1><span class="prefix"></span><a class="title" href="#pframe"><span class="text.normal">pframe</span></a><span class="abstract-type">function</span></h1><p><code class="signature">pframe(data)</code></p></section><h1 class="footing"></h1></main></body></html>

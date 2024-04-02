@@ -1,0 +1,1 @@
+[[["IContext"], ["ISpecifications"]], [{"syntax": "tuple[str, Sequence[str]]", "area": [[15, 23], [15, 47]]}, {"syntax": "Iterable[tuple[IContext, Sequence[Endpoint]]]", "area": [[16, 30], [16, 74]]}]]

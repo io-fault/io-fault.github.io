@@ -1,0 +1,80 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 28 0`
+Parse the text file from standard input and serialize the element tree into standard output.
+
+The format of the output is designated using the first argument: print, json.
+
+
+[ sys ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 10`
+
+[ importlib ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 7 16`
+
+[ process ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`9 1 9 29`
+
+[ txt ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 1 10 24`
+
+[ formats ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`12 1 15 1`
+#!source
+	formats = {
+		'json': ('json', (lambda m,f,a: m.dump(a, f))),
+		'print': ('pprint', (lambda m,f,a: f.write(m.pformat(a)))),
+	}
+
+[ main ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`17 1 28 19`
+		- (type/syntax)`process.Exit`
+		- (type/context-local/factor-element)&<fault.system/process#Exit[fault.system.process.Exit]>
+		
+(signature)`main(inv)`
+

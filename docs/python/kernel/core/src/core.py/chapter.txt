@@ -1,0 +1,1666 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 977 0`
+Core data types and classes.
+
+
+[ typing ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 13`
+
+[ functools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 16`
+
+[ builtins ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 15`
+
+[ operator ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 7 15`
+
+[ weakref ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 8 14`
+
+[ collections ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`9 1 9 18`
+
+[ itertools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 1 10 16`
+
+[ traceback ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 1 11 16`
+
+[ heapq ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`12 1 12 12`
+
+[ weak ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`14 1 14 26`
+
+[ set_actuated ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`16 1 18 17`
+(signature)`set_actuated(processor)`
+
+
+[ set_terminated ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`20 1 22 17`
+(signature)`set_terminated(processor)`
+
+
+[ Join ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`24 1 119 26`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`24 12 24 17`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+An object whose purpose is to join the completion of multiple
+processors into a single event. Joins are used to simplify coroutines
+whose progression depends on a set of processors instead of one.
+
+Joins also enable interrupts to trigger completion events so that
+failures from unrelated Sectors can be communicated to callback.
+
+[ > Properties ]
+
+/dependencies/
+	The original set of processors as a dictionary mapping
+	given names to the corresponding (factor-local/class)&<#Processor[Processor]>.
+
+/pending/
+	The current state of pending exits that must
+	occur prior to the join-operation's completion.
+
+/callback/
+	The callable that is performed after the (invalid/unknown)&<#pending>
+	set has been emptied; defined by (factor-local/method)&<#Join.atexit[atexit]>.
+
+
+[ Join >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`48 2 48 52`
+#!source
+	__slots__ = ('dependencies', 'pending', 'callback')
+
+[ Join >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`50 2 57 22`
+(signature)`__init__(self, **processors)`
+
+Initialize the join with the given (invalid/unknown)&<#processor> set.
+
+
+[ Join >> connect ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`59 2 68 13`
+(signature)`connect(self)`
+
+Connect the (factor-local/class)&<#Processor[Processor.atexit]> calls of the configured
+(invalid/unknown)&<#dependencies> to the (factor-local/class)&<#Join[Join]> instance.
+
+
+[ Join >> __iter__ ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`70 2 75 41`
+(signature)`__iter__(self)`
+
+Return an iterator to the configured dependencies.
+
+
+[ Join >> __getitem__ ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`77 2 82 29`
+(signature)`__getitem__(self, k)`
+
+Get the dependency the given identifier.
+
+
+[ Join >> exited ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`84 2 98 33`
+(signature)`exited(self, processor)`
+
+Record the exit of the given (factor-local/parameter)&<#Join.exited.Parameters.processor[processor]> and execute
+the (invalid/unknown)&<#callback> of the (factor-local/class)&<#Join[Join]> if the (factor-local/parameter)&<#Join.exited.Parameters.processor[processor]> is the last
+in the configured (invalid/unknown)&<#pending> set.
+
+
+[ Join >> atexit ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`100 2 119 26`
+(signature)`atexit(self, callback)`
+
+Assign the callback of the (factor-local/class)&<#Join[Join]>.
+
+If the (invalid/unknown)&<#pending> set is empty, the callback will be immediately executed,
+otherwise, overwrite the currently configured callback.
+
+The (factor-local/parameter)&<#Join.atexit.Parameters.callback[callback]> is executed with the (factor-local/class)&<#Join[Join]> instance as its sole parameter.
+
+[ >> Parameters ]
+
+/(parameter)`self`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`callback`/
+	
+	The task to perform when all the dependencies have exited.
+
+
+[ Condition ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`121 1 173 44`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`121 17 121 22`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+A *reference* to a logical expression or logical function.
+
+Conditional references are constructed from a subject object, attribute path, and parameters.
+Used to clearly describe the objects that participate in a logical conclusion of interest.
+
+Used by (invalid/unknown)&<#Flow> instances to describe the condition in which an obstruction is removed.
+Conditions provide introspecting utilities the capacity to identify the cause of
+an obstruction.
+
+
+[ Condition >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`133 2 133 43`
+#!source
+	__slots__ = ('focus', 'path', 'parameter')
+
+[ Condition >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`135 2 148 28`
+(signature)`__init__(self, focus, path, parameter)`
+
+[ >> Parameters ]
+
+/(parameter)`self`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`focus`/
+	
+	The root object that is safe to reference
+
+/(parameter)`path`/
+	
+	The sequence of attributes to resolve relative to the (factor-local/parameter)&<#Condition.__init__.Parameters.focus[focus]>.
+
+/(parameter)`parameter`/
+	
+	Determines the condition is a method and should be given this
+	as its sole parameter. (invalid/unknown)&<#None> indicates that the condition is a property.
+
+
+[ Condition >> __bool__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`150 2 157 19`
+(signature)`__bool__(self)`
+
+
+[ Condition >> __repr__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`159 2 170 3`
+(signature)`__repr__(self)`
+
+
+[ Condition >> attribute ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`172 2 173 44`
+(signature)`attribute(self)`
+
+
+[ Inexorable ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`176 1 176 44`
+#!source
+	Inexorable = Condition(builtins, ('False',))
+
+[ ExceptionStructure ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`178 1 204 16`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`178 26 178 31`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+Exception associated with an interface supporting the sequencing of processor trees.
+
+
+[ ExceptionStructure >> actuated ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`183 2 183 14`
+#!source
+	actuated=True
+
+[ ExceptionStructure >> terminated ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`184 2 184 17`
+#!source
+	terminated=False
+
+[ ExceptionStructure >> interrupted ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`185 2 185 18`
+#!source
+	interrupted=False
+
+[ ExceptionStructure >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`186 2 188 28`
+(signature)`__init__(self, identity, exception)`
+
+
+[ ExceptionStructure >> __getitem__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`190 2 191 33`
+(signature)`__getitem__(self, k)`
+
+
+[ ExceptionStructure >> structure ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`193 2 204 16`
+(signature)`structure(self)`
+
+
+[ Processor ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`206 1 447 22`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`206 17 206 22`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+A resource that maintains an arbitrary state.
+
+State Transition Sequence.
+
+# Instantiated
+# Actuated
+# Functioning
+# Terminating
+# Terminated
+
+Where the functioning state designates that the implementation specific state
+has been engaged. Often, actuation and termination intersect with implementation states.
+
+The interrupted state is special; its used as a frozen state of the machine and is normally
+associated with an exception. The term interrupt is used as it is nearly analogous with UNIX
+process interrupts (unix.signal)`SIGINT`.
+
+
+[ Processor >> _unset_sector ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`226 2 227 13`
+(signature)`_unset_sector(self)`
+
+
+[ Processor >> _sector_reference ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`228 2 228 34`
+#!source
+	_sector_reference = _unset_sector
+
+[ Processor >> _invert_sector_reference ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`231 2 233 47`
+(signature)`_invert_sector_reference(self)`
+
+
+[ Processor >> _dereference_sector ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`235 2 236 33`
+(signature)`_dereference_sector(self)`
+
+
+[ Processor >> _set_sector_reference ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`238 2 239 35`
+(signature)`_set_sector_reference(self, obj)`
+
+
+[ Processor >> sector ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`241 2 245 2`
+#!source
+	sector = controller = property(
+		fget = _dereference_sector,
+		fset = _set_sector_reference,
+		doc = "The managing processor."
+	)
+
+[ Processor >> controllerstack ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`249 2 261 14`
+(signature)`controllerstack(self)`
+
+Return the full sector stacks of the processor.
+
+
+[ Processor >> __repr__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`263 2 270 3`
+(signature)`__repr__(self)`
+
+
+[ Processor >> _pexe_state ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`272 2 272 16`
+#!source
+	_pexe_state = 0 # defaults to "object initialized"
+
+[ Processor >> _pexe_states ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`273 2 279 2`
+#!source
+	_pexe_states = (
+		('initialized', 0), # Created.
+		('actuated', 1), # Placed in Execution Context and started.
+		('terminating', 2), # Received and accepted termination request.
+		('terminated', -1), # Termination completed and the processor will exit().
+		('deallocating', 0), # Unused state.
+	)
+
+[ Processor >> _pexe_contexts ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`280 2 282 10`
+#!source
+	_pexe_contexts = ()
+		@property
+
+[ Processor >> actuated ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`283 2 289 10`
+		- (type/syntax)`bool`
+		- (type/invalid/unknown)&<#bool>
+		
+Whether the processor has been actuated, normally within a Sector.
+
+
+[ Processor >> terminating ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`290 2 296 10`
+		- (type/syntax)`bool`
+		- (type/invalid/unknown)&<#bool>
+		
+Whether the processor has started terminate.
+
+
+[ Processor >> terminated ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`297 2 303 10`
+		- (type/syntax)`bool`
+		- (type/invalid/unknown)&<#bool>
+		
+Whether the processor has been terminated.
+
+
+[ Processor >> status ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`304 2 307 10`
+
+[ Processor >> interrupted ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`308 2 313 14`
+		- (type/syntax)`typing.Union[bool]`
+		
+
+[ Processor >> exceptions ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`315 2 317 10`
+#!source
+	exceptions = None
+		@property
+
+[ Processor >> functioning ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`318 2 330 55`
+Whether or not the Processor is functioning.
+Indicates that the processor was actuated and is neither terminated nor interrupted.
+
+! NOTE:
+	Processors are functioning *during* termination; instances where
+	`Processor.terminating == True`.
+	Termination may cause limited access to functionality, but
+	are still considered functional.
+
+
+[ Processor >> actuate ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`332 2 340 6`
+(signature)`actuate(self)`
+
+Initialize the Processor for use within the controlling Sector.
+
+Initialization method called after a (factor-local/class)&<#Processor[Processor]> has been given execution context.
+(factor-local/method)&<#Processor.actuate[Processor.actuate]> performs no actions and does not need to be called when
+overridden.
+
+
+[ Processor >> start_termination ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`342 2 343 22`
+(signature)`start_termination(self)`
+
+
+[ Processor >> finish_termination ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`345 2 347 13`
+(signature)`finish_termination(self)`
+
+
+[ Processor >> terminate ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`349 2 359 13`
+(signature)`terminate(self)`
+
+Terminate the Processor using (factor-local/method)&<#Processor.interrupt[interrupt]> and exit.
+
+
+[ Processor >> interrupt ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`361 2 373 6`
+(signature)`interrupt(self)`
+
+Signal the Processor that the controlling Sector has been interrupted,
+and all processing of events should cease immediately.
+
+Subclasses that need to perform disconnects or cancellations should
+implement this method in order to ensure that event processing stops.
+However, interrupt procedures will automatically rewrite the (invalid/unknown)&<#process>
+method to perform a no-op if invoked, so carefully written subclasses
+may not have to perform any tasks at all.
+
+
+[ Processor >> fault ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`375 2 390 31`
+(signature)`fault(self, exception)`
+
+Note the given exception as an error on the (factor-local/class)&<#Processor[Processor]>.
+Exceptions identified as errors cause the (factor-local/class)&<#Processor[Processor]> to exit.
+
+Called internally when a task associated with a Processor raises
+an exception. The controlling Sector will be interrupted and the
+faulting Processor identified for subsequent scrutiny.
+
+
+[ Processor >> trap ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`392 2 396 18`
+(signature)`trap(self, task)`
+
+
+[ Processor >> critical ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`398 2 404 41`
+(signature)`critical(self, task)`
+
+Enqueue a task associated with the sector so that exceptions cause the sector to
+fault. This is the appropriate way for (factor-local/class)&<#Processor[Processor]> instances controlled by a sector
+to sequence processing.
+
+
+[ Processor >> exit ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`406 2 412 33`
+(signature)`exit(self)`
+
+Exit the processor by signalling the controlling processor that termination
+has completed.
+
+
+[ Processor >> structure ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`414 2 426 20`
+(signature)`structure(self)`
+
+Provides the structure stack with at-exit callbacks.
+
+
+[ Processor >> placement ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`428 2 438 23`
+(signature)`placement(self)`
+
+Define the set index to use when dispatched by a (factor-local/class)&<#Sector[Sector]>.
+
+By default, (factor-local/class)&<#Sector[Sector]> instances place (factor-local/class)&<#Processor[Processor]> instances into
+(invalid/unknown)&<#set> objects that stored inside a dictionary. The index used
+for placement is allowed to be overridden in order to optimize
+the groups and allow better runtime introspection.
+
+
+[ Processor >> substitute ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`440 2 447 22`
+(signature)`substitute(self, processor)`
+
+Terminate the processor (factor-local/parameter)&<#Processor.substitute.Parameters.self[self]>, but reassign the exit hooks to be performed
+when the given (factor-local/parameter)&<#Processor.substitute.Parameters.processor[processor]> exits. (factor-local/parameter)&<#Processor.substitute.Parameters.processor[processor]> will be dispatched into the controlling
+sector.
+
+
+[ Sector ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`449 1 650 24`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`449 14 449 22`
+	- (type/syntax)`Processor`
+	- (type/factor-local/class)&<#Processor[Processor]>
+	
+A processing sector; manages a set of (factor-local/class)&<#Processor[Processor]> resources according to their class.
+Termination of a (factor-local/class)&<#Sector[Sector]> is solely dependent whether or not there are any
+(factor-local/class)&<#Processor[Processor]> instances within the (factor-local/class)&<#Sector[Sector]>.
+
+Sectors are the primary (factor-local/class)&<#Processor[Processor]> class and have protocols for managing projections
+of entities (users) and their authorizing credentials.
+
+[ > Properties ]
+
+/processors/
+	A divided set of abstract processors currently running within a sector.
+	The sets are divided by their type inside a (none/invalid)&<http://fault.io/dev/null[collections.defaultdict]>.
+
+/exits/
+	Set of Processors that are currently exiting.
+	(invalid/unknown)&<#None> if nothing is currently exiting.
+
+
+[ Sector >> exits ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`469 2 469 13`
+#!source
+	exits = None
+
+[ Sector >> processors ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`470 2 470 18`
+#!source
+	processors = None
+
+[ Sector >> _sector_interrupted ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`471 2 473 10`
+#!source
+	_sector_interrupted = False
+		@property
+
+[ Sector >> interrupted ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`474 2 475 33`
+
+[ Sector >> iterprocessors ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`477 2 478 64`
+(signature)`iterprocessors(self)`
+
+
+[ Sector >> structure ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`480 2 483 16`
+(signature)`structure(self)`
+
+
+[ Sector >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`485 2 488 37`
+(signature)`__init__(self, *processors)`
+
+
+[ Sector >> actuate ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`490 2 514 18`
+(signature)`actuate(self)`
+
+Actuate the Sector by actuating its processors.
+There is no guarantee to the order in which the controlled
+processors are actuated.
+
+Exceptions that occur during actuation fault the Sector causing
+the *controlling sector* to exit. If faults should not cause
+the parent to be interrupted, they *must* be dispatched after
+(factor-local/parameter)&<#Sector.actuate.Parameters.self[self]> has been actuated.
+
+
+[ Sector >> _sector_terminated ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`516 2 516 36`
+#!source
+	_sector_terminated = Processor.exit
+
+[ Sector >> terminate ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`518 2 531 13`
+(signature)`terminate(self)`
+
+
+[ Sector >> interrupt ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`533 2 552 33`
+(signature)`interrupt(self)`
+
+Interrupt the Sector by interrupting all of the subprocessors.
+The order of interruption is random, and *should* be insignificant.
+
+
+[ Sector >> exited ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`554 2 571 27`
+(signature)`exited(self, processor)`
+
+Sector structure exit handler.
+
+Called when a Processor has reached termination and should no longer
+be contained within the Sector.
+
+
+[ Sector >> dispatch ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`573 2 589 18`
+(signature)`dispatch(self, processor)`
+
+Dispatch the given (factor-local/parameter)&<#Sector.dispatch.Parameters.processor[processor]> inside the Sector.
+
+Returns the given processor.
+
+
+[ Sector >> _flow ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`591 2 597 19`
+(signature)`_flow(self, series)`
+
+
+[ Sector >> reap ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`599 2 623 15`
+(signature)`reap(self)`
+
+Empty the exit set and check for sector completion.
+
+
+[ Sector >> reaped ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`625 2 635 28`
+(signature)`reaped(self)`
+
+Called once the set of exited processors has been reaped
+in order to identify if the Sector should notify the
+controlling Sector of an exit event..
+
+
+[ Sector >> placement ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`637 2 650 24`
+(signature)`placement(self)`
+
+Use (invalid/unknown)&<#Interface.if_sector_placement> if the sector has an Interface.
+Otherwise, (factor-local/class)&<#Sector[Sector]>.
+
+
+[ Context ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`652 1 772 33`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`652 15 652 23`
+	- (type/syntax)`Processor`
+	- (type/factor-local/class)&<#Processor[Processor]>
+	
+The base class for (factor-local/class)&<#Transaction[Transaction]> Context processors.
+
+Subclasses define the initialization process of a Transaction
+and the structures used to provide depending processors with the
+necessary information for performing their tasks.
+
+[ > Namespaces ]
+
+Context Processors employ two hard namespaces in its methods.
+The `xact_ctx_` and the `xact_`. Methods and properties
+that exist under `xact_ctx_` refer to generic Context operations
+whereas `xact_` refers to operations that primary effect the
+(factor-local/class)&<#Transaction[Transaction]> sector containing the context.
+
+
+[ Context >> placement ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`668 2 669 16`
+(signature)`placement(self)`
+
+
+[ Context >> require ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`671 2 672 6`
+(signature)`require(self, identifier)`
+
+
+[ Context >> provide ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`674 2 683 33`
+(signature)`provide(self, identifier)`
+
+Export (factor-local/parameter)&<#Context.provide.Parameters.self[self]> as a named context inherited by all descending processors.
+
+
+[ Context >> xact_empty ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`685 2 698 14`
+		- (type/syntax)`bool`
+		- (type/invalid/unknown)&<#bool>
+		
+(signature)`xact_empty(self)`
+
+Whether the Transaction has any processors aside from the Context.
+
+
+[ Context >> xact_exit_if_empty ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`700 2 715 14`
+(signature)`xact_exit_if_empty(self)`
+
+Check for processors other than (factor-local/parameter)&<#Context.xact_exit_if_empty.Parameters.self[self]>, if there are none, exit the transaction.
+
+
+[ Context >> xact_contextstack ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`717 2 731 10`
+		- (type/syntax)`typing.Iterable[Processor]`
+		
+(signature)`xact_contextstack(self)`
+
+The complete context stack of the (factor-local/class)&<#Transaction[Transaction]> excluding (factor-local/parameter)&<#Context.xact_contextstack.Parameters.self[self]>.
+First entry is nearest to (factor-local/parameter)&<#Context.xact_contextstack.Parameters.self[self]>; last is furthest ascent.
+
+
+[ Context >> xact_subxacts ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`732 2 733 44`
+
+[ Context >> xact_dispatch ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`735 2 741 13`
+(signature)`xact_dispatch(self, processor)`
+
+Dispatch the given (factor-local/parameter)&<#Context.xact_dispatch.Parameters.processor[processor]> into the (factor-local/class)&<#Transaction[Transaction]>.
+
+
+[ Context >> xact_initialized ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`743 2 748 6`
+(signature)`xact_initialized(self)`
+
+Called when the Transaction Context has been fully initialized with respect to
+the proposed event set determined by actuation.
+
+
+[ Context >> xact_exit ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`750 2 754 6`
+(signature)`xact_exit(self, xact)`
+
+Subtransaction (factor-local/parameter)&<#Context.xact_exit.Parameters.xact[xact]> exited.
+
+
+[ Context >> xact_void ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`756 2 761 18`
+(signature)`xact_void(self, xact)`
+
+All subtransactions exited; (factor-local/parameter)&<#Context.xact_void.Parameters.xact[xact]> was final.
+Defaults to termination of the context and transaction exit.
+
+
+[ Context >> interrupt ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`763 2 772 33`
+(signature)`interrupt(self)`
+
+Update Transaction Context callbacks to null operations.
+
+Sets (invalid/unknown)&<#interrupted> to (invalid/unknown)&<#True> and should be called by subclasses if overridden.
+
+
+[ Transaction ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`774 1 850 34`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`774 19 774 24`
+	- (type/syntax)`Sector`
+	- (type/factor-local/class)&<#Sector[Sector]>
+	
+A (factor-local/class)&<#Sector[Sector]> with Execution Context.
+
+Transactions are sectors with a single (factor-local/class)&<#Context[Context]> instance that is used to manage
+the state of the Sector. Regular Sectors exit when all the processors are shutdown,
+and Transactions do too. However, the (factor-local/class)&<#Context[Context]> is the controlling processor and
+must be the last to exit.
+
+[ > Properties ]
+
+/xact_context/
+	The Processor that will be dispatched to initialize the Transaction
+	Sector and control its effect. Also, the receiver of (factor-local/method)&<#Processor.terminate[Processor.terminate]>.
+
+
+[ Transaction >> create ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`791 2 802 13`
+(signature)`create(Class, xc)`
+
+Create a (factor-local/class)&<#Transaction[Transaction]> sector with the given (factor-local/class)&<#Context[Context]> initializaed
+as the first Processor to be actuated.
+
+This is the appropriate way to instantiate (factor-local/class)&<#Transaction[Transaction]> instances
+
+
+[ Transaction >> isinstance ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`804 2 808 52`
+(signature)`isinstance(self, ContextClass)`
+
+Whether the Transaction's context, (invalid/unknown)&<#xact_context>, is an instance of the given (factor-local/parameter)&<#Transaction.isinstance.Parameters.ContextClass[ContextClass]>.
+
+
+[ Transaction >> terminate ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`810 2 816 38`
+(signature)`terminate(self)`
+
+Invoke the (factor-local/class)&<#Context[Context.terminate]> method of the (invalid/unknown)&<#xact_context> property.
+The termination of the Transaction is managed entirely by the Context.
+
+
+[ Transaction >> placement ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`818 2 830 10`
+(signature)`placement(self)`
+
+Define the set index to use when dispatched by a (factor-local/class)&<#Sector[Sector]>.
+
+By default, (factor-local/class)&<#Sector[Sector]> instances place (factor-local/class)&<#Processor[Processor]> instances into
+(invalid/unknown)&<#set> objects that stored inside a dictionary. The index used
+for placement is allowed to be overridden in order to optimize
+the groups and allow better runtime introspection.
+
+
+[ Transaction >> subtransactions ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`831 2 835 45`
+The set of subtransactions currently running.
+
+
+[ Transaction >> iterprocesses ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`837 2 839 37`
+(signature)`iterprocesses()`
+
+
+[ Transaction >> exited ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`841 2 850 34`
+(signature)`exited(self, processor)`
+
+
+[ Executable ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`852 1 939 16`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`852 18 852 24`
+	- (type/syntax)`Context`
+	- (type/factor-local/class)&<#Context[Context]>
+	
+Transaction sequence created from an invocation.
+
+[ > Properties ]
+
+/exe_identifier/
+	A, usually, unique identifier for the executable.
+	The transaction context that the executable is dispatched within determines
+	any constraints, if any.
+
+/exe_invocation/
+	The primary set of parameters used by the executable.
+
+/exe_faults/
+	The set of sectors that were faulted within the context; usually keyed by
+	the identifier of the processor that was blamed.
+
+/exe_faults_count/
+	The total number of faults that occurred. In cases where faults have been
+	purged from (invalid/unknown)&<#exe_faults>, the count allows recognition of the purge.
+
+/exe_queue/
+	The transactions to be executed in order to complete execution.
+
+
+[ Executable >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`874 2 879 26`
+(signature)`__init__(self, invocation)`
+
+
+[ Executable >> actuate ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`881 2 882 28`
+(signature)`actuate(self)`
+
+
+[ Executable >> terminate ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`884 2 889 16`
+(signature)`terminate(self)`
+
+
+[ Executable >> xact_void ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`891 2 900 28`
+(signature)`xact_void(self, final)`
+
+Consume the next transaction in the queue.
+
+
+[ Executable >> exe_enqueue ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`902 2 903 57`
+(signature)`exe_enqueue(self, xact_context)`
+
+
+[ Executable >> exe_initialize ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`905 2 909 22`
+(signature)`exe_initialize(self)`
+
+Execute the enqueued transaction or cause the executable to exit.
+
+
+[ Executable >> faulted ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`911 2 930 32`
+		- (type/syntax)`None`
+		
+(signature)`faulted(self, proc)`
+
+Place the sector into the faults directory using the hex identifier
+as its name.
+
+
+[ Executable >> structure ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`932 2 939 16`
+(signature)`structure(self)`
+
+
+[ Sequenced ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`941 1 977 42`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`941 17 941 23`
+	- (type/syntax)`Context`
+	- (type/factor-local/class)&<#Context[Context]>
+	
+Transaction sequence created from a predefined sequence of (factor-local/class)&<#Context[Context]> instances.
+
+Subtransactions are dispatched in order and *terminated in reverse order*.
+
+
+[ Sequenced >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`948 2 949 30`
+(signature)`__init__(self, contexts)`
+
+
+[ Sequenced >> actuate ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`951 2 954 27`
+(signature)`actuate(self)`
+
+
+[ Sequenced >> xact_exit ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`956 2 968 29`
+(signature)`xact_exit(self, xact)`
+
+
+[ Sequenced >> xact_void ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`970 2 971 27`
+(signature)`xact_void(self, final)`
+
+
+[ Sequenced >> terminate ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`973 2 977 42`
+(signature)`terminate(self)`
+

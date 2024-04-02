@@ -1,0 +1,210 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 303 0`
+
+[ module ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 1 36`
+
+[ test_combine ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`3 1 18 32`
+(signature)`test_combine(test)`
+
+
+[ test_IRange ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`20 1 51 60`
+(signature)`test_IRange(test)`
+
+
+[ test_IRange_intersect ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`53 1 80 51`
+(signature)`test_IRange_intersect(test)`
+
+
+[ test_Set ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`82 1 118 35`
+(signature)`test_Set(test)`
+
+
+[ test_Set_difference ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`120 1 128 43`
+(signature)`test_Set_difference(test)`
+
+
+[ test_Set_intersection ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`130 1 139 50`
+(signature)`test_Set_intersection(test)`
+
+
+[ test_Set_union ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`141 1 147 62`
+(signature)`test_Set_union(test)`
+
+
+[ test_Set_len ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`149 1 163 18`
+(signature)`test_Set_len(test)`
+
+
+[ test_Set_pickle ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`165 1 171 26`
+(signature)`test_Set_pickle(test)`
+
+
+[ test_Mapping_narrow_indexing ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`173 1 190 57`
+(signature)`test_Mapping_narrow_indexing(test)`
+
+- (context-local/factor-element)&<fault.range/types#Mapping.__setitem__[fault.range.types.Mapping.__setitem__]>
+- (context-local/factor-element)&<fault.range/types#Mapping.__getitem__[fault.range.types.Mapping.__getitem__]>
+
+Check single level siblings access.
+
+
+[ test_Mapping_get ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`192 1 208 23`
+(signature)`test_Mapping_get(test)`
+
+- (context-local/factor-element)&<fault.range/types#Mapping.__setitem__[fault.range.types.Mapping.__setitem__]>
+- (context-local/factor-element)&<fault.range/types#Mapping.get[fault.range.types.Mapping.get]>
+
+Check single level siblings access.
+
+
+[ test_Mapping_depth_indexing ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`210 1 228 57`
+(signature)`test_Mapping_depth_indexing(test)`
+
+- (context-local/factor-element)&<fault.range/types#Mapping.__getitem__[fault.range.types.Mapping.__getitem__]>
+- (context-local/factor-element)&<fault.range/types#Mapping.__setitem__[fault.range.types.Mapping.__setitem__]>
+
+Check that inner values set after override initial values.
+
+
+[ test_Mapping_path ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`230 1 254 45`
+(signature)`test_Mapping_path(test)`
+
+- (context-local/factor-element)&<fault.range/types#Mapping.path[fault.range.types.Mapping.path]>
+
+Check that range paths are properly nested.
+
+
+[ test_Mapping_kv_query ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`256 1 280 71`
+(signature)`test_Mapping_kv_query(test)`
+
+- (context-local/factor-element)&<fault.range/types#Mapping.keys[fault.range.types.Mapping.keys]>
+- (context-local/factor-element)&<fault.range/types#Mapping.values[fault.range.types.Mapping.values]>
+- (context-local/factor-element)&<fault.range/types#Mapping.items[fault.range.types.Mapping.items]>
+
+
+[ test_Mapping_update ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`282 1 303 56`
+(signature)`test_Mapping_update(test)`
+
+- (context-local/factor-element)&<fault.range/types#Mapping.update[fault.range.types.Mapping.update]>
+- (context-local/factor-element)&<fault.range/types#Mapping.items[fault.range.types.Mapping.items]>
+

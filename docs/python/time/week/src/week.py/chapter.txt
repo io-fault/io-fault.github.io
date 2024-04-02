@@ -1,0 +1,129 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 60 0`
+Week based measures of time: days of seven.
+
+
+[ weekday_names ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 13 1`
+#!source
+	weekday_names = (
+		'sunday',
+		'monday',
+		'tuesday',
+		'wednesday',
+		'thursday',
+		'friday',
+		'saturday',
+	)
+
+[ days_in_week ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`16 1 16 33`
+#!source
+	days_in_week = len(weekday_names)
+
+[ weeks_in_fortnight ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`19 1 19 22`
+#!source
+	weeks_in_fortnight = 2
+
+[ weekday_abbreviations ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`22 1 24 1`
+#!source
+	weekday_abbreviations = (
+		'sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat',
+	)
+
+[ weekday_name_to_number ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`27 1 30 1`
+#!source
+	weekday_name_to_number = {
+		weekday_names[i]: i
+		for i in range(len(weekday_names))
+	}
+
+[ day_of_week ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`37 1 41 33`
+(signature)`day_of_week(offset, days)`
+
+Derive the canonical day of week from the given offset and days.
+
+
+[ week_from_days ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`43 1 44 28`
+(signature)`week_from_days(offset, days)`
+
+
+[ days_from_week ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`46 1 47 28`
+(signature)`days_from_week(offset, weeks)`
+
+
+[ context ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`49 1 60 51`
+(signature)`context(context)`
+

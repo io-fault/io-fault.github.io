@@ -1,0 +1,22 @@
+! CONTROL:
+	/type/
+		factor
+	/element/
+		- (source/area)``
+! CONTEXT:
+	/protocol/
+		&<http://if.fault.io/project/factor.type>
+
+	/identifier/
+		&<http://if.fault.io/factors/text>
+
+Abstract factor type for text factors.
+
+[ Source Formats ]
+
+/kleptic/
+	Text formatted using stolen syntax.
+
+/markdown/
+	Text formatted using Markdown.
+

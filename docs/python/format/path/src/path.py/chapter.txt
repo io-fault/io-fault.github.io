@@ -1,0 +1,134 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 120 25`
+Color formatting for file paths, URIs, and timestamps.
+
+
+[ os ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 9`
+
+[ palette ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 22`
+
+[ route_colors ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 30 1`
+#!source
+	route_colors = {
+		'filesystem-root': 0xfafafa,
+		'warning': palette.colors['yellow'],
+	
+		'directory': palette.colors['blue'],
+		'relatives': 0xff0000,
+		'executable': palette.colors['green'],
+		'data': 0xc6c6c6,
+	
+		'dot-file': palette.colors['gray'],
+		'file-not-found': palette.colors['red'],
+	
+		'link': palette.colors['violet'],
+		'device': 0xff5f00,
+		'socket': 0xff5f00,
+		'pipe': 0xff5f00,
+	
+		'path-separator': palette.colors['background-adjacent'],
+		'path-directory': palette.colors['gray'],
+		'path-link': palette.colors['violet'],
+	
+		None: None,
+	}
+
+[ route_is_link ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`32 1 36 14`
+(signature)`route_is_link(route)`
+
+
+[ _f_route_path ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`38 1 61 31`
+(signature)`_f_route_path(root, route)`
+
+
+[ f_route_path ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`63 1 66 9`
+(signature)`f_route_path(root, route)`
+
+
+[ f_route_identifier ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`68 1 86 31`
+(signature)`f_route_identifier(route)`
+
+
+[ f_route_absolute ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`88 1 98 88`
+(signature)`f_route_absolute(route)`
+
+Format the absolute path of the given route.
+
+
+[ f_route_absolute_colors ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`100 1 102 34`
+(signature)`f_route_absolute_colors(route)`
+

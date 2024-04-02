@@ -1,0 +1,547 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 709 0`
+Parse, Serialize, and Tokenize Resource Indicators
+
+(project-local/unknown)&<ri> provides tools for working with standard IRIs or URIs. However,
+it is not strict. It does not require exact formatting for a parse
+operation to succeed; rather, the validation of the output is left
+to the user.
+
+The module refers to IRI and URI strings as Resource Indicators.
+The distinction is made as the module deals with a slight generalization
+where constraints are not enforced or checked.
+
+[ Entry Points ]
+
+- (factor-local/function)&<#parse[parse]>
+- (factor-local/function)&<#serialize[serialize]>
+- (factor-local/function)&<#tokens[tokens]>
+
+[ Types ]
+
+A parsed indicator is designated a type. The set of possible types
+is inspired by the URI and IRI standards:
+
+/authority/
+	An authority indicator identified by the presence of (characters)`'://'`
+	following the scheme field.
+
+/absolute/
+	A colon following the scheme field.
+
+/relative/
+	A pair of slashes following the scheme field. Often, the scheme
+	is implied in these cases.
+
+/amorphous/
+	The absence of characters that allow the unambiguous identification
+	of a type. Usually indicates a value error.
+
+
+[ collections ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`36 1 36 18`
+
+[ scheme_chars ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`38 1 38 30`
+#!source
+	scheme_chars = '-.+0123456789'
+
+[ reserved_chars ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`39 1 39 38`
+#!source
+	reserved_chars = "%!*'();:@&=+$,/?#[]"
+
+[ _pct_encode ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`41 1 41 31`
+#!source
+	_pct_encode = '%%%0.2X'.__mod__
+
+[ _decode_parts ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`43 1 48 18`
+(signature)`_decode_parts(string)`
+
+
+[ decode_percent_escapes ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`50 1 51 30`
+(signature)`decode_percent_escapes(string)`
+
+
+[ strict ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`53 1 84 112`
+(signature)`strict()`
+
+Enable strict serializations.
+When performed on a cached import, this will effect the entire process.
+
+In order to isolate the effect to a certain part of the process, the module should
+be created from the loader and (factor-local/function)&<#strict[strict]> should be called relative to the local copy.
+
+
+[ _uri_escape ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`86 1 86 70`
+#!source
+	_uri_escape = (lambda x: ''.join(map(_pct_encode, x.encode('utf-8'))))
+
+[ _mktrans ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`87 1 87 105`
+#!source
+	_mktrans = (lambda z: str.maketrans({x:_pct_encode(x) for x in [ord(y) for y in z] + list(range(0,33))}))
+
+[ _percent_translations ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`88 1 88 37`
+#!source
+	_percent_translations = _mktrans("%")
+
+[ _user_percent_translations ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`89 1 89 47`
+#!source
+	_user_percent_translations = _mktrans("%@:/?#")
+
+[ _password_percent_translations ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`90 1 90 50`
+#!source
+	_password_percent_translations = _mktrans("%@/?#")
+
+[ _host_percent_translations ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`91 1 94 48`
+#!source
+	_host_percent_translations = \
+	_address_percent_translations = \
+	_port_percent_translations = \
+	_primary_percent_translations = _mktrans("%/?#")
+
+[ _fragment_percent_translations ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`95 1 95 48`
+#!source
+	_fragment_percent_translations = _mktrans("%?#")
+
+[ _query_key_percent_translations ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`96 1 96 50`
+#!source
+	_query_key_percent_translations = _mktrans("%&#=")
+
+[ _query_value_percent_translations ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`97 1 97 51`
+#!source
+	_query_value_percent_translations = _mktrans("%&#")
+
+[ Parts ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`138 1 140 1`
+#!source
+	Parts = collections.namedtuple("Parts",
+		('type', 'scheme', 'netloc', 'path', 'query', 'fragment')
+	)
+
+[ split ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`142 1 244 58`
+(signature)`split(iri)`
+
+Split an IRI into its base components based on the markers:
+
+(: | ://), /, ?, #
+
+Returns the top-level parts of the IRI as a namedtuple.
+
+[ > Parameters ]
+
+/(parameter)`iri`/
+	
+	A complete IRI or URI.
+
+/(parameter)`_scheme_char_set`/
+	
+	(control/absent)`Undocumented`.
+
+
+[ join_path ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`246 1 253 73`
+(signature)`join_path(p)`
+
+Join a list of paths(strings) on "/" *after* escaping them.
+
+
+[ unsplit_path ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`255 1 255 24`
+#!source
+	unsplit_path = join_path
+
+[ split_path ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`257 1 267 44`
+(signature)`split_path(p)`
+
+Return a list of unescaped strings split on "/".
+
+Set `fieldproc` to `str` if the components' percent escapes should not be
+decoded.
+
+
+[ join ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`269 1 295 9`
+(signature)`join(t)`
+
+Make an RI from a split RI(5-tuple)
+
+
+[ unsplit ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`297 1 297 14`
+#!source
+	unsplit = join
+
+[ remap_ipv4_address ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`299 1 316 22`
+(signature)`remap_ipv4_address(string)`
+
+Recognize IPv4 hosts as addresses.
+
+
+[ split_netloc ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`318 1 404 45`
+(signature)`split_netloc(netloc)`
+
+Split a network location into a 4-tuple, (user, password, host, port).
+
+Set `fieldproc` to `str` if the components' percent escapes should not be
+decoded.
+
+
+[ join_netloc ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`406 1 434 9`
+(signature)`join_netloc(t)`
+
+Create a netloc fragment from the given tuple(user, password, host, address, port).
+
+
+[ unsplit_netloc ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`436 1 436 28`
+#!source
+	unsplit_netloc = join_netloc
+
+[ parse_query ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`438 1 442 2`
+(signature)`parse_query(query)`
+
+
+[ structure ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`444 1 486 9`
+(signature)`structure(t)`
+
+Create a dictionary from a split RI(5-tuple).
+
+Set `fieldproc` to `str` if the components' percent escapes should not be
+decoded.
+
+
+[ construct_query ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`488 1 501 3`
+(signature)`construct_query(x)`
+
+Given a sequence of (key, value) pairs, construct.
+
+
+[ construct ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`503 1 533 2`
+(signature)`construct(x)`
+
+Construct a RI tuple(5-tuple) from a dictionary object.
+
+
+[ parse ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`535 1 543 52`
+(signature)`parse(iri)`
+
+Parse an RI into a dictionary object. Synonym for `structure(split(x))`.
+
+Set `fieldproc` to `str` if the components' percent escapes should not be
+decoded.
+
+
+[ serialize ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`545 1 550 26`
+(signature)`serialize(x)`
+
+Return an RI from a dictionary object. Synonym for `join(construct(x))`.
+
+
+[ http ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`552 1 566 9`
+(signature)`http(struct)`
+
+Return the HTTP Request-URI suitable for submission with an HTTP request.
+
+
+[ context_tokens ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`568 1 607 60`
+(signature)`context_tokens(scheme, type, user, password, host, address, port)`
+
+Format the authority fields of a Resource Indicator.
+
+
+[ query_tokens ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`609 1 632 80`
+(signature)`query_tokens(query)`
+
+
+[ fragment_tokens ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`634 1 638 71`
+(signature)`fragment_tokens(fragment)`
+
+
+[ path_tokens ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`640 1 684 67`
+(signature)`path_tokens(root, path)`
+
+
+[ tokens ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`686 1 700 53`
+(signature)`tokens(struct)`
+
+Construct an iterator producing Resource Indicator Tokens.
+The items are pairs providing the type and the exact text
+to be used to reconstruct the Resource Indicator parsed
+into the given (factor-local/parameter)&<#tokens.Parameters.struct[struct]>.
+

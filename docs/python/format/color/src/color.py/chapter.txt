@@ -1,0 +1,97 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 57 10`
+Color representations for character matrix displays.
+Uses 24-bit SGR codes for the swatch areas.
+
+Usually, a hex code with a small leading swatch character styled with truecolor SGR codes.
+
+
+[ itertools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 7 16`
+
+[ matrix ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`9 1 9 29`
+
+[ palette ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 1 10 30`
+
+[ swatch ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`13 1 27 1`
+#!source
+	swatch = {
+		'circle': "\u25cf",
+		'ascii': "|=|",
+	
+		'square': "\u25a0",
+		'triangle': "\u2582",
+		'star': "\u2605",
+	
+		# short double wide triangle
+		'left': "\u25e2",
+		'right': "\u25e3",
+	
+		'diamond': "\u25C0\u25b6", # horizontal diamond
+		'stripe': "\u25E2\u25E4", # diagonal stripe
+	}
+
+[ identifier ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`29 1 33 42`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+(signature)`identifier(color)`
+
+Convert the given RGB color into a hex string for display.
+
+
+[ inline ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`35 1 48 4`
+		- (type/syntax)`matrix.Screen.Phrase`
+		- (type/none/invalid)&<http://fault.io/dev/null[fault.terminal.matrix.Screen.Phrase]>
+		
+(signature)`inline(reference, swatch, rgb)`
+
+Construct a phrase for representing an RGB color.
+

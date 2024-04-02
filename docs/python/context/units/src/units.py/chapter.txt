@@ -1,0 +1,140 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 60 0`
+Information units for human readable sizes.
+
+
+[ bisect ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 13`
+
+[ formatting ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 28`
+#!source
+	formatting = "{0:0<5.4} {1}"
+
+[ orders ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 18 1`
+#!source
+	orders = {
+		0: ('', ''),
+		1: ('kilo', 'kibi'),
+		2: ('mega', 'mebi'),
+		3: ('giga', 'gibi'),
+		4: ('tera', 'tebi'),
+		5: ('peta', 'pebi'),
+		6: ('exa', 'exbi'),
+		7: ('zetta', 'zebi'),
+		8: ('yotta', 'yobi'),
+	}
+
+[ _metric ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`20 1 22 2`
+#!source
+	_metric = (1000, [
+		1000 ** o for o in orders
+	])
+
+[ _iec ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`24 1 26 2`
+#!source
+	_iec = (1024, [
+		1024 ** o for o in orders
+	])
+
+[ identify ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`28 1 30 46`
+(signature)`identify(boundary, size)`
+
+
+[ metric ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`32 1 34 40`
+(signature)`metric(size)`
+
+
+[ iec ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`36 1 38 40`
+(signature)`iec(size)`
+
+
+[ format_metric ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`40 1 49 35`
+(signature)`format_metric(size)`
+
+
+[ format_iec ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`51 1 60 35`
+(signature)`format_iec(size)`
+

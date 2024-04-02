@@ -1,0 +1,812 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 920 32`
+Join delineated source data into a text file for subsequent rendering.
+
+
+[ json ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 11`
+
+[ sys ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 10`
+
+[ typing ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 13`
+
+[ collections ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 7 18`
+
+[ comethod ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`9 1 9 34`
+
+[ tools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 1 10 31`
+
+[ string ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 1 11 32`
+
+[ process ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`13 1 13 32`
+
+[ files ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`14 1 14 30`
+
+[ lsf ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`15 1 15 39`
+
+[ Area ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`16 1 16 44`
+
+[ Address ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`16 1 16 44`
+
+[ render ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`18 1 18 29`
+
+[ structure_chapter_lines ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`19 1 19 49`
+
+[ ipara ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`20 1 20 62`
+
+[ Paragraph ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`21 1 21 48`
+
+[ Fragment ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`21 1 21 48`
+
+[ setdirectory ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`23 1 23 34`
+
+[ query ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`24 1 24 19`
+
+[ itruncate ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`26 1 43 2`
+(signature)`itruncate(lines)`
+
+Truncate the minimum common indentation in (factor-local/parameter)&<#itruncate.Parameters.lines[lines]>.
+
+
+[ interpret_directory_items ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`45 1 49 2`
+(signature)`interpret_directory_items(items)`
+
+
+[ prefix ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`51 1 74 21`
+(signature)`prefix(path, element)`
+
+Adjust the sections in (factor-local/parameter)&<#prefix.Parameters.element[element]> to be relative to (factor-local/parameter)&<#prefix.Parameters.path[path]>.
+
+
+[ extract ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`76 1 88 40`
+(signature)`extract(sub, section)`
+
+Extract the mapping from the identified (factor-local/parameter)&<#extract.Parameters.section[section]> removing its element from the tree.
+
+
+[ section_items ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`90 1 99 55`
+(signature)`section_items(chapter, section)`
+
+Get the first directory in (factor-local/parameter)&<#section_items.Parameters.section[section]> and its interpreted items.
+
+
+[ insert_before ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`101 1 107 25`
+(signature)`insert_before(type, elements, element)`
+
+
+[ control ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`109 1 121 2`
+(signature)`control(**kw)`
+
+Construct a CONTROL admonition element.
+
+
+[ type_property_fragments ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`123 1 139 75`
+(signature)`type_property_fragments(resolve, element)`
+
+Construct (remote/factor-element)&<http://fault.io/python/text/types#Fragment[fault.text.types.Fragment]> instances for populating a property set to describe the type.
+
+
+[ describe_type ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`141 1 156 60`
+(signature)`describe_type(resolve, element)`
+
+Produce tuples used to form `'item'` paragraphs describing the type
+element found within (factor-local/parameter)&<#describe_type.Parameters.element[element]>.
+
+
+[ property_item ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`158 1 162 59`
+(signature)`property_item(pf)`
+
+Construct single paragraph item elements for populating a set or sequence element.
+
+
+[ documented_field_item ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`164 1 189 9`
+(signature)`documented_field_item(cast, resolve, context, element, identifier, documentation)`
+
+Construct the directory item element for a documented field.
+
+
+[ undocumented_field_item ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`191 1 215 9`
+(signature)`undocumented_field_item(cast, resolve, context, element, identifier)`
+
+Construct the directory item element for representing an undocumented field.
+The (factor-local/parameter)&<#undocumented_field_item.Parameters.documentation[documentation]> parameter is provided for type consistency with (factor-local/function)&<#documented_field_item[documented_field_item]>.
+
+
+[ Text ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`217 1 530 18`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`217 12 217 26`
+	- (type/syntax)`comethod.object`
+	- (type/remote/factor-element)&<http://fault.io/python/context/comethod#object[fault.context.comethod.object]>
+	
+Linked chapter construction for factor elements.
+
+
+[ Text >> getdoc ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`222 2 231 10`
+(signature)`getdoc(self, path)`
+
+
+[ Text >> setdocs ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`233 2 238 3`
+(signature)`setdocs(self, path, cursor)`
+
+
+[ Text >> r_control ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`240 2 275 12`
+(signature)`r_control(self, factorelement, **ctlkeys)`
+
+
+[ Text >> r_root ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`277 2 297 39`
+(signature)`r_root(self, factor)`
+
+
+[ Text >> r_inherits ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`299 2 325 23`
+(signature)`r_inherits(self, path, element)`
+
+
+[ Text >> r_container ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`326 2 371 52`
+(signature)`r_container(self, path, element)`
+
+
+[ Text >> r_parameters ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`373 2 389 5`
+(signature)`r_parameters(self, element, path, parameters, documented)`
+
+
+[ Text >> section ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`391 2 396 21`
+(signature)`section(self, rdepth, rmult, path)`
+
+
+[ Text >> r_void ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`397 2 403 21`
+(signature)`r_void(self, path, element)`
+
+Unsupported element type.
+
+
+[ Text >> r_text ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`404 2 412 18`
+(signature)`r_text(self, path, element)`
+
+Rewrite references in the text tree and render the changes.
+
+
+[ Text >> r_source ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`413 2 434 17`
+(signature)`r_source(self, path, element)`
+
+Render a capture of the source after the documentation.
+
+
+[ Text >> r_element ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`436 2 498 31`
+(signature)`r_element(self, path, element)`
+
+Emit a section containing the element's documentation.
+
+The default switch target.
+
+
+[ Text >> switch ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`500 2 510 22`
+(signature)`switch(self, path, elements, *suffix)`
+
+
+[ Text >> source ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`511 2 513 17`
+(signature)`source(self)`
+
+
+[ Text >> selectlines ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`515 2 522 14`
+(signature)`selectlines(self, element)`
+
+
+[ Text >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`524 2 530 18`
+(signature)`__init__(self, resolution, elements, docs, data, source)`
+
+
+[ split_element ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`532 1 550 32`
+(signature)`split_element(project, factor)`
+
+Given a project relative factor path, split the path isolating
+the factor's element from the path and construct a triple containing
+the link, title, and target type describing the factor path.
+
+
+[ relation ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`552 1 564 17`
+(signature)`relation(origin, target)`
+
+Identify the relation of the (factor-local/parameter)&<#relation.Parameters.target[target]> project to (factor-local/parameter)&<#relation.Parameters.origin[origin]> project.
+
+
+[ dr_absolute_path ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`566 1 597 37`
+(signature)`dr_absolute_path(requirements, context, project, reference)`
+
+Resolve an absolute reference.
+
+
+[ dr_context_path ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`599 1 625 39`
+(signature)`dr_context_path(context, project, reference)`
+
+Resolve a root-Context relative reference.
+
+
+[ dr_project_path ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`627 1 645 19`
+(signature)`dr_project_path(project, reference)`
+
+Resolve a Project relative reference.
+
+
+[ index ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`647 1 677 11`
+(signature)`index(factor)`
+
+Construct an index of elements using the identifier paths.
+
+
+[ match ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`679 1 696 19`
+(signature)`match(index, path, subpath)`
+
+Check for the presence of (factor-local/parameter)&<#match.Parameters.subpath[subpath]> in the element identified by (factor-local/parameter)&<#match.Parameters.path[path]> in (factor-local/parameter)&<#match.Parameters.index[index]>.
+
+[ > Returns ]
+
+Returns the number of leading (factor-local/parameter)&<#match.Parameters.subpath[subpath]> items that matched at that position.
+
+
+[ find ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`698 1 723 15`
+(signature)`find(index, path, rpath)`
+
+Find all the matches for (factor-local/parameter)&<#find.Parameters.rpath[rpath]> in (factor-local/parameter)&<#find.Parameters.index[index]> by ascending through (factor-local/parameter)&<#find.Parameters.path[path]>.
+
+[ > Returns ]
+
+A sorted list identifying all non-zero matches is returned where the
+first entry is the deepest match in the nearest path. Consistency
+is given preference over location.
+
+
+[ Resolution ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`725 1 879 30`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`725 18 725 32`
+	- (type/syntax)`comethod.object`
+	- (type/remote/factor-element)&<http://fault.io/python/context/comethod#object[fault.context.comethod.object]>
+	
+Reference resolution interface for factored projects.
+
+
+[ Resolution >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`730 2 738 23`
+(signature)`__init__(self, requirements, context, project, factor)`
+
+
+[ Resolution >> disambiguate ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`739 2 754 18`
+(signature)`disambiguate(self, context, path, element, *suffix)`
+
+
+[ Resolution >> reflect ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`755 2 759 19`
+(signature)`reflect(self, context, path, element, *suffix)`
+
+Trap for elements where descent should not occur.
+
+
+[ Resolution >> switch ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`761 2 781 42`
+(signature)`switch(self, context, path, element, *suffix)`
+
+
+[ Resolution >> rewrite ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`783 2 793 13`
+(signature)`rewrite(self, context, root)`
+
+Rewrite the references in the element tree (factor-local/parameter)&<#Resolution.rewrite.Parameters.root[root]> as relative IRI's.
+
+[ >> Parameters ]
+
+/(parameter)`self`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`context`/
+	
+	The identifier path of the documented element.
+
+/(parameter)`root`/
+	
+	The documentation's chapter.
+
+
+[ Resolution >> resolve ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`795 2 873 62`
+(signature)`resolve(self, path, fragment)`
+
+
+[ Resolution >> partial ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`875 2 876 48`
+(signature)`partial(self, path, **kw)`
+
+
+[ Resolution >> add_index ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`878 2 879 30`
+(signature)`add_index(self, elements)`
+
+
+[ load ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`881 1 889 25`
+(signature)`load(f)`
+
+
+[ transform ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`891 1 921 31`
+(signature)`transform(resolution, datadir, source)`
+

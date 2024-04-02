@@ -1,0 +1,1455 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 888 0`
+Terminal support for status displays.
+
+
+[ os ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 9`
+
+[ io ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 9`
+
+[ typing ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 13`
+
+[ itertools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 7 16`
+
+[ collections ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 8 18`
+
+[ tools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 1 10 27`
+
+[ frames ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 1 11 27`
+
+[ duration_repr ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`13 1 28 19`
+		- (type/syntax)`typing.Tuple[float, str]`
+		
+(signature)`duration_repr(seconds)`
+
+
+[ Phrase ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`30 1 34 37`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`30 14 30 17`
+	- (type/syntax)`list`
+	- (type/invalid/unknown)&<#list>
+	
+
+[ Phrase >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`31 2 31 15`
+#!source
+	__slots__ = ()
+
+[ Phrase >> cellcount ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`33 2 34 37`
+(signature)`cellcount(self)`
+
+
+[ Legacy ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`36 1 207 26`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`36 14 36 19`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+Abstraction for legacy ANSI/DEC escapes.
+
+
+[ Legacy >> _escape ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`41 2 41 18`
+#!source
+	_escape = b'\x1b'
+
+[ Legacy >> _csi_open ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`42 2 42 27`
+#!source
+	_csi_open = _escape + b'['
+
+[ Legacy >> _pm_open ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`43 2 43 28`
+#!source
+	_pm_open = _csi_open + b'?'
+
+[ Legacy >> _pm_save ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`44 2 44 33`
+#!source
+	_pm_save = _pm_open + b'6;1049s'
+
+[ Legacy >> _pm_restore ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`45 2 45 36`
+#!source
+	_pm_restore = _pm_open + b'6;1049r'
+
+[ Legacy >> _pm_origin_set ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`46 2 46 34`
+#!source
+	_pm_origin_set = _pm_open + b'6h'
+
+[ Legacy >> _pm_origin_reset ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`47 2 47 36`
+#!source
+	_pm_origin_reset = _pm_open + b'6l'
+
+[ Legacy >> _pm_screen_set ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`48 2 48 37`
+#!source
+	_pm_screen_set = _pm_open + b'1049h'
+
+[ Legacy >> _pm_screen_reset ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`49 2 49 39`
+#!source
+	_pm_screen_reset = _pm_open + b'1049l'
+
+[ Legacy >> _pm_show_cursor ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`50 2 50 36`
+#!source
+	_pm_show_cursor = _pm_open + b'25h'
+
+[ Legacy >> _pm_hide_cursor ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`51 2 51 36`
+#!source
+	_pm_hide_cursor = _pm_open + b'25l'
+
+[ Legacy >> _restore_cursor ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`52 2 52 33`
+#!source
+	_restore_cursor = _escape + b'8'
+
+[ Legacy >> _store_cursor ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`53 2 53 31`
+#!source
+	_store_cursor = _escape + b'7'
+
+[ Legacy >> _nl ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`54 2 54 24`
+#!source
+	_nl = _csi_open + b'1B'
+
+[ Legacy >> _reset_sgr ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`55 2 55 40`
+#!source
+	_reset_sgr = _csi_open + b'0;39;49;59m'
+
+[ Legacy >> _styles ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`57 2 74 2`
+#!source
+	_styles = {
+		'default': b'39',
+		'black': b'30',
+		'red': b'31',
+		'green': b'32',
+		'yellow': b'33',
+		'blue': b'34',
+		'magenta': b'35',
+		'cyan': b'36',
+		'white': b'37',
+			'orange': b'38;5;208',
+		'violet': b'38;5;135',
+		'teal': b'38;5;23',
+		'purple': b'38;5;93',
+		'dark': b'38;5;236',
+		'gray': b'38;5;241',
+	}
+
+[ Legacy >> _reset_text ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`75 2 77 13`
+#!source
+	_reset_text = _csi_open + _styles['default'] + b'm'
+		@classmethod
+
+[ Legacy >> _join ]
+! CONTROL:
+	/type/
+		classmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`78 2 79 47`
+(signature)`_join(Class, *i)`
+
+
+[ Legacy >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`81 2 88 18`
+(signature)`__init__(self)`
+
+
+[ Legacy >> set_cursor_visible ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`90 2 98 30`
+(signature)`set_cursor_visible(self, visible)`
+
+Adjust cursor visibility.
+
+
+[ Legacy >> set_scrolling_region ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`100 2 105 60`
+(signature)`set_scrolling_region(self, top, bottom)`
+
+Confine the scrolling region to the given rows.
+
+
+[ Legacy >> reset_scrolling_region ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`107 2 112 30`
+(signature)`reset_scrolling_region(self)`
+
+Release confinements on scrolling region.
+
+
+[ Legacy >> open_scrolling_region ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`114 2 122 77`
+(signature)`open_scrolling_region(self, top, bottom)`
+
+Set the scrolling region, enter it, and seek the bottom.
+Subsequent (factor-local/method)&<#Legacy.exit_scrolling_region[exit_scrolling_region]> and (factor-local/method)&<#Legacy.enter_scrolling_region[enter_scrolling_region]>
+should be use to maintain the SR's state.
+
+
+[ Legacy >> close_scrolling_region ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`124 2 132 56`
+(signature)`close_scrolling_region(self)`
+
+Save the screen buffer, reset the scrolling region, and restore the buffer.
+This preserves the screen's state after the transition.
+
+
+[ Legacy >> enter_scrolling_region ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`134 2 141 23`
+(signature)`enter_scrolling_region(self)`
+
+Enter scrolling region; normal terminal output; restores cursor location.
+
+
+[ Legacy >> exit_scrolling_region ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`143 2 150 24`
+(signature)`exit_scrolling_region(self)`
+
+Exit scrolling region; allow out of region printing; saves cursor location.
+
+
+[ Legacy >> clear ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`152 2 158 61`
+(signature)`clear(self)`
+
+Clear the staionary area according to its configured width and default text properties.
+
+
+[ Legacy >> erase ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`160 2 166 42`
+(signature)`erase(self, area)`
+
+Erase the given area.
+
+
+[ Legacy >> seek ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`168 2 175 89`
+		- (type/syntax)`bytes`
+		- (type/invalid/unknown)&<#bytes>
+		
+(signature)`seek(self, monitor, top_offset, left_offset)`
+
+Primitive relative seek; Context cursor position is *not* updated.
+
+
+[ Legacy >> style ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`177 2 184 99`
+(signature)`style(self, name, text)`
+
+Style the given (factor-local/parameter)&<#Legacy.style.Parameters.text[text]> as (factor-local/parameter)&<#Legacy.style.Parameters.name[name]>.
+
+Text color will be reset to the default.
+
+
+[ Legacy >> render ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`186 2 192 32`
+(signature)`render(self, phrase)`
+
+Translate the color names to SGR codes.
+
+
+[ Legacy >> configure ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`194 2 205 10`
+(signature)`configure(self, height, width, lines)`
+
+Update the dimensions of the screen.
+
+
+[ Legacy >> position ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`206 2 207 26`
+
+[ Layout ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`209 1 260 32`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`209 14 209 19`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+The set, sizes, and ordering of fields present in a monitor.
+
+
+[ Layout >> Definition ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`215 2 215 36`
+#!source
+	Definition = typing.Tuple[str, int]
+
+[ Layout >> Fields ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`216 2 218 14`
+#!source
+	Fields = typing.Sequence[Definition]
+		@staticmethod
+
+[ Layout >> separators ]
+! CONTROL:
+	/type/
+		staticmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`219 2 229 19`
+(signature)`separators(fields)`
+
+Generate a series of separators finished with a terminator.
+Given a number of a fields, emit separators until the final index
+is reached.
+
+
+[ Layout >> label ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`231 2 235 27`
+(signature)`label(self, field, text)`
+
+The display text for the field's label.
+
+
+[ Layout >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`237 2 242 36`
+(signature)`__init__(self, fields, **updates)`
+
+
+[ Layout >> fields ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`244 2 249 70`
+(signature)`fields(self)`
+
+Iterate over the fields in their designated order along with separators
+that can be used to follow the rendered field.
+
+
+[ Layout >> positions ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`251 2 260 32`
+(signature)`positions(self)`
+
+Join the field identifier, cell allocation, and field label in
+the order designated by (invalid/unknown)&<#order>.
+
+
+[ Theme ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`262 1 345 44`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`262 13 262 18`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+The rendering methods and parameters used by a (factor-local/class)&<#Status[Status]>.
+
+
+[ Theme >> Formatter ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`267 2 267 28`
+#!source
+	Formatter = tuple[str, str]
+
+[ Theme >> default_render_method ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`269 2 278 14`
+(signature)`default_render_method(self, key, field)`
+
+Renders the string form of (factor-local/parameter)&<#Theme.default_render_method.Parameters.field[field]> with the style set identified
+by (factor-local/parameter)&<#Theme.default_render_method.Parameters.key[key]>.
+
+
+[ Theme >> r_transparent ]
+! CONTROL:
+	/type/
+		staticmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`279 2 288 14`
+(signature)`r_transparent(value)`
+
+Render method expecting and returning a sequence of formatting pairs.
+
+Used in cases where the field wishes to control theme-relative
+formatting directly.
+
+
+[ Theme >> r_duration ]
+! CONTROL:
+	/type/
+		staticmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`289 2 299 3`
+(signature)`r_duration(value)`
+
+Render method for common duration fields.
+
+
+[ Theme >> define ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`301 2 305 30`
+(signature)`define(self, name, style)`
+
+Define the (factor-local/parameter)&<#Theme.define.Parameters.style[style]> to use with the given (factor-local/parameter)&<#Theme.define.Parameters.name[name]>.
+
+
+[ Theme >> implement ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`307 2 311 34`
+(signature)`implement(self, type, render)`
+
+Assign a render method, (invalid/unknown)&<#call>, for the (invalid/unknown)&<#field>.
+
+
+[ Theme >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`313 2 315 24`
+(signature)`__init__(self)`
+
+
+[ Theme >> configure ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`317 2 328 13`
+(signature)`configure(self)`
+
+
+[ Theme >> style ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`330 2 337 31`
+(signature)`style(self, celltexts)`
+
+Emit words formatted according to their associated style set.
+
+
+[ Theme >> render ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`339 2 345 44`
+(signature)`render(self, type, field)`
+
+Render the given (factor-local/parameter)&<#Theme.render.Parameters.field[field]> according to the configured (invalid/unknown)&<#type'> render method.
+
+
+[ Status ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`347 1 628 48`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`347 14 347 19`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+Allocated area for status display of a set of changing fields.
+
+
+[ Status >> view_state_loop ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`352 2 356 2`
+#!source
+	view_state_loop = {
+		'total': 'rate_window',
+		'rate_window': 'rate_overall',
+		'rate_overall': 'total',
+	}
+
+[ Status >> unit_type_separators ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`358 2 362 2`
+#!source
+	unit_type_separators = {
+		'total': '+',
+		'rate_window': '<',
+		'rate_overall': '^',
+	}
+
+[ Status >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`364 2 375 28`
+(signature)`__init__(self, theme, layout, position)`
+
+
+[ Status >> _calculate_fields ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`377 2 392 24`
+(signature)`_calculate_fields(self)`
+
+
+[ Status >> _update_field_cache ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`394 2 399 3`
+(signature)`_update_field_cache(self)`
+
+
+[ Status >> reset ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`401 2 407 10`
+(signature)`reset(self, time, metrics)`
+
+Reset the metrics records using the given entry as the only one.
+
+
+[ Status >> current ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`408 2 409 28`
+
+[ Status >> elapse ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`411 2 418 48`
+(signature)`elapse(self, time)`
+
+Update the time field on the last metrics record.
+
+
+[ Status >> update ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`420 2 430 9`
+(signature)`update(self, time, metrics)`
+
+Update the metrics record for the given point in time.
+
+
+[ Status >> duration ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`432 2 433 51`
+(signature)`duration(self)`
+
+
+[ Status >> cycle ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`435 2 442 25`
+(signature)`cycle(self, field)`
+
+Select the next read type for the given field using the (factor-local/data)&<#Status.view_state_loop[view_state_loop]>.
+
+
+[ Status >> set_field_read_type ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`444 2 447 26`
+(signature)`set_field_read_type(self, field, units)`
+
+
+[ Status >> prefix ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`449 2 454 30`
+(signature)`prefix(self, *words)`
+
+Attach a constant phrase to the beginning of the monitor.
+
+
+[ Status >> suffix ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`456 2 461 30`
+(signature)`suffix(self, *words)`
+
+Attach a constant phrase to the end of the monitor.
+
+
+[ Status >> title ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`463 2 468 35`
+(signature)`title(self, title, *dimensions)`
+
+Assign the monitor's title and dimension identifiers.
+
+
+[ Status >> window_period ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`470 2 479 36`
+(signature)`window_period(self)`
+
+Calculate the current metrics window size.
+
+
+[ Status >> origin ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`481 2 482 34`
+(signature)`origin(self, field)`
+
+
+[ Status >> window_delta ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`484 2 490 21`
+(signature)`window_delta(self, field)`
+
+
+[ Status >> edge ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`492 2 495 34`
+(signature)`edge(self, field)`
+
+
+[ Status >> total ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`497 2 498 35`
+(signature)`total(self, field)`
+
+
+[ Status >> rate_window ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`500 2 502 37`
+(signature)`rate_window(self, field)`
+
+
+[ Status >> rate_overall ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`504 2 506 32`
+(signature)`rate_overall(self, field)`
+
+
+[ Status >> render ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`508 2 534 65`
+(signature)`render(self)`
+
+
+[ Status >> delta ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`536 2 560 65`
+(signature)`delta(self, fields)`
+
+
+[ Status >> phrase ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`562 2 575 54`
+(signature)`phrase(self)`
+
+The monitor's image as a single phrase instance.
+
+
+[ Status >> snapshot ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`577 2 582 64`
+(signature)`snapshot(self)`
+
+A bytes form of the (factor-local/method)&<#Status.phrase[Status.phrase]>. (The image without cursor movement)
+
+
+[ Status >> profile ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`584 2 589 71`
+(signature)`profile(self)`
+
+Construct a triple containing the start and stop time and the final metrics.
+
+
+[ Status >> synopsis ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`591 2 611 17`
+(signature)`synopsis(self)`
+
+Construct a status frame synopsis using the monitor's configuration and metrics.
+
+
+[ Status >> frame ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`613 2 628 48`
+(signature)`frame(self, control, type, identifier)`
+
+Construct a transaction frame for reporting the status.
+Used after the completion of the dispatcher.
+
+
+[ Monitor ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`630 1 759 80`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`630 15 630 20`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+Terminal display management for monitoring changes in (factor-local/class)&<#Status[Status]> instances.
+
+
+[ Monitor >> render_status_text ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`635 2 640 96`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+(signature)`render_status_text(self, monitor, identifier)`
+
+Construct the string representation of the given (invalid/unknown)&<#monitor'> status.
+
+
+[ Monitor >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`642 2 647 30`
+(signature)`__init__(self, screen, fileno)`
+
+
+[ Monitor >> install ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`649 2 656 40`
+(signature)`install(self, monitor)`
+
+Erase, reframe, and update the given monitor..
+
+
+[ Monitor >> frame ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`658 2 679 50`
+(signature)`frame(self, monitor)`
+
+Render and emit the prefix, title, and suffix of the (factor-local/parameter)&<#Monitor.frame.Parameters.monitor[monitor]>.
+
+Operation is buffered and must be flushed to be displayed.
+
+
+[ Monitor >> update ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`681 2 701 35`
+(signature)`update(self, monitor, fields)`
+
+Render and emit the given (factor-local/parameter)&<#Monitor.update.Parameters.fields[fields]>.
+
+Operation is buffered and must be flushed to be displayed.
+
+
+[ Monitor >> flush ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`703 2 721 23`
+(signature)`flush(self)`
+
+Write any buffered terminal changes to the device.
+
+
+[ Monitor >> clear ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`723 2 728 42`
+(signature)`clear(self)`
+
+Clear the entire status regions.
+
+
+[ Monitor >> configure ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`730 2 751 13`
+(signature)`configure(self, lines)`
+
+Configure the scrolling region allocating (factor-local/parameter)&<#Monitor.configure.Parameters.lines[lines]> at
+the top or bottom of the screen for status display.
+
+This method should be called after window changes of any type.
+The window size is refreshed from the device; monitors should
+also be reallocated so that their Context positions can be adjusted.
+
+
+[ Monitor >> _save ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`753 2 756 32`
+(signature)`_save(self)`
+
+
+[ Monitor >> _restore ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`758 2 759 80`
+(signature)`_restore(self)`
+
+
+[ _metric_units ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`761 1 771 1`
+#!source
+	_metric_units = [
+		('', '', 0),
+		('kilo', 'k', 3),
+		('mega', 'M', 6),
+		('giga', 'G', 9),
+		('tera', 'T', 12),
+		('peta', 'P', 15),
+		('exa', 'E', 18),
+		('zetta', 'Z', 21),
+		('yotta', 'Y', 24),
+	]
+
+[ _precision ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`773 1 779 10`
+(signature)`_precision(count)`
+
+
+[ _strings ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`781 1 784 31`
+(signature)`_strings(value)`
+
+
+[ r_count ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`786 1 804 2`
+(signature)`r_count(field, value)`
+
+Render method for counts providing compression using metric units.
+
+
+[ r_title ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`806 1 815 22`
+(signature)`r_title(value)`
+
+Render method for monitor titles.
+
+
+[ form ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`817 1 840 42`
+(signature)`form(module)`
+
+Construct a (factor-local/class)&<#Layout[Layout]> and (factor-local/class)&<#Theme[Theme]> from the provided order and formatting structures.
+
+
+[ identify_device ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`842 1 857 12`
+(signature)`identify_device()`
+
+Use the first three file descriptors to determine the
+path to the tty device. If no path can be identified,
+return the given (factor-local/parameter)&<#identify_device.Parameters.path[path]> which defaults to `/dev/tty`.
+
+
+[ setup ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`859 1 864 9`
+(signature)`setup()`
+
+
+[ aggregate ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`866 1 888 20`
+(signature)`aggregate(control, module)`
+
+Construct (factor-local/class)&<#Status[Status]> instances allocated using (factor-local/parameter)&<#aggregate.Parameters.control[control]> for
+displaying the aggregate of the dimension allocations.
+
+Returns a sequence of (factor-local/class)&<#Status[Status]> instances for the dimensions
+and a single Status for the aggregation.
+

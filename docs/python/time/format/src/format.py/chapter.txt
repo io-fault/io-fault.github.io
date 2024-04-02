@@ -1,0 +1,408 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 308 0`
+Format and parse datetime strings.
+
+Primarily this module exposes two functions: (factor-local/function)&<#parser[parser]>,
+(factor-local/function)&<#formatter[formatter]>. These functions provide access to datetime formats defined by a
+standard or deemed common enough to merit a builtin implementation.
+
+! NOTE:
+	Currently does not provide access to strptime and strftime functionality.
+
+While formatting PiTs can usually occur without error, parsing them from strings
+can result in a variety of errors. The parsers available in
+libformat can raise subclasses of (project-local/unknown)&<core#FormatError[core.FormatError]>.
+
+
+[ operator ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`15 1 15 15`
+
+[ functools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`16 1 16 16`
+
+[ fractions ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`17 1 17 16`
+
+[ math ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`18 1 18 11`
+
+[ core ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`20 1 20 18`
+
+[ gregorian ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`21 1 21 23`
+
+[ week ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`22 1 22 18`
+
+[ rfc1123 ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`24 1 24 84`
+#!source
+	rfc1123 = "{day_of_week}, {day:02} {month} {year} {hour:02}:{minute:02}:{second:02}"
+
+[ iso8601 ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`25 1 25 54`
+#!source
+	iso8601 = "{0}-{1:02}-{2:02}T{3:02}:{4:02}:{5:02}.{6}"
+
+[ iso8601_date ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`26 1 26 34`
+#!source
+	iso8601_date = "{0}-{1:02}-{2:02}"
+
+[ models ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`28 1 31 1`
+#!source
+	models = {
+		'rfc1123' : rfc1123,
+		'iso8601' : iso8601,
+	}
+
+[ split_clock_time ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`33 1 40 28`
+(signature)`split_clock_time(s)`
+
+
+[ parse_rfc1123 ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`42 1 72 2`
+(signature)`parse_rfc1123(s)`
+
+
+[ parse_iso8601 ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`74 1 127 2`
+(signature)`parse_iso8601(s)`
+
+
+[ parsers ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`129 1 132 1`
+#!source
+	parsers = {
+		'rfc1123': parse_rfc1123,
+		'iso8601': parse_iso8601,
+	}
+
+[ transform_iso8601 ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`134 1 153 2`
+(signature)`transform_iso8601(args)`
+
+
+[ transform_rfc1123 ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`155 1 171 2`
+(signature)`transform_rfc1123(args)`
+
+
+[ transformers ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`173 1 176 1`
+#!source
+	transformers = {
+		'iso8601' : transform_iso8601,
+		'rfc1123' : transform_rfc1123,
+	}
+
+[ validate_rfc1123 ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`178 1 190 11`
+(signature)`validate_rfc1123(args)`
+
+
+[ validators ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`192 1 194 1`
+#!source
+	validators = {
+		'rfc1123': validate_rfc1123,
+	}
+
+[ aliases ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`196 1 196 30`
+#!source
+	aliases = {'http' : 'rfc1123'}
+
+[ _parse ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`198 1 209 17`
+(signature)`_parse(fun, format)`
+
+
+[ _structure ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`211 1 222 17`
+(signature)`_structure(fun, format)`
+
+
+[ _integrity ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`224 1 235 17`
+(signature)`_integrity(fun, format)`
+
+
+[ parser ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`237 1 250 26`
+(signature)`parser(fmt)`
+
+Given a format idenifier, return the function that can be used to parse
+the formatted string into a Point instance.
+
+
+[ format_rfc1123 ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`252 1 263 2`
+(signature)`format_rfc1123(pitt, subsec, dow)`
+
+
+[ format_iso8601 ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`265 1 274 37`
+(signature)`format_iso8601(pitt, subsec, dow)`
+
+
+[ format_iso8601_date ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`276 1 277 23`
+(signature)`format_iso8601_date(pitt, subsec, dow)`
+
+
+[ formatters ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`279 1 282 1`
+#!source
+	formatters = {
+		'rfc1123' : format_rfc1123,
+		'iso8601' : format_iso8601,
+	}
+
+[ formatter ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`284 1 289 36`
+(signature)`formatter(fmt)`
+
+Given a format idenifier, return the function that can be used to format
+the Point in time.
+
+
+[ formats ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`291 1 294 1`
+#!source
+	formats = {
+		'iso' : 'iso8601',
+		'rfc' : 'rfc1123',
+	}
+
+[ context ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`296 1 308 59`
+(signature)`context(context)`
+

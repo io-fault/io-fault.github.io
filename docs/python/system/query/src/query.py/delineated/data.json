@@ -1,0 +1,1 @@
+[[["_path"], ["_dirs"]], [{"syntax": "tools.cachedcalls(16)(tools.compose(operator.methodcaller('delimit'), files.Path.from_absolute))", "area": [[13, 9], [13, 104]]}, {"syntax": "tools.cachedcalls(2)(operator.methodcaller('split', os.pathsep))", "area": [[14, 9], [14, 72]]}]]

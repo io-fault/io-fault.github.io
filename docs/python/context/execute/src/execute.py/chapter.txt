@@ -1,0 +1,81 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 20 0`
+Executable factor index for (invalid/unknown)&<#fault.system.tool> bindings.
+
+
+[ importlib ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 16`
+
+[ context_name ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 39`
+
+[ process ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 28`
+
+[ index ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 12 1`
+#!source
+	index = {
+		'python': context_name + '.system.execute',
+		'http-cache': context_name + '.web.bin.cache',
+		'test-python-module': context_name + '.test.bin.coherence',
+	}
+
+[ activate ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`14 1 15 69`
+(signature)`activate(factor, element)`
+
+
+[ main ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`17 1 20 36`
+		- (type/syntax)`process.Exit`
+		- (type/context-local/factor-element)&<fault.system/process#Exit[fault.system.process.Exit]>
+		
+(signature)`main(inv)`
+

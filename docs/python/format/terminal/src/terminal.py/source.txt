@@ -1,0 +1,116 @@
+"""
+# Terminal formatting
+"""
+import functools
+import json
+import itertools
+
+from ..terminal import palette
+from ..terminal import matrix
+from ..terminal.format import url
+
+# syntax highlighting
+from . import syntax
+from ..syntax import keywords as kos
+
+area = matrix.Context()
+
+def python(context, language, source):
+	from . import terminal
+	itc = itertools.chain.from_iterable
+	rp = context.terminal_type.normal_render_parameters
+
+	data = json.load(open('/x/syntax-profiles/' + language))
+	language = kos.Profile.from_keywords_v1(**data)
+	psp = kos.Parser.from_profile(language)
+	theme = {k:rp.apply(textcolor=palette.colors[v]) for k,v in syntax.theme.items()}
+
+	tokens = next(iter(psp.process_lines([source])))
+	buf = list(syntax.normalize(syntax.qualify(tokens), spaces='    '))
+
+	return itc(theme[ft].form(f) for ft, f in buf)
+
+class Field(object):
+	objclass = area.RenderParameters.from_colors(palette.colors['relative-blue'], -1024)
+	invalid = area.RenderParameters.from_colors(palette.colors['relative-red'], -1024)
+	normal = area.RenderParameters.from_colors(-1024, -1024)
+	field = area.RenderParameters.from_colors(palette.colors['foreground-adjacent'], -1024)
+
+	def __str__(self):
+		return self.icon + '..'.join(self.parameters)
+
+	def dlength(self):
+		return len(self.icon) + sum(map(len, (x[1] for x in self._cache)))
+
+	def dformat(self, context):
+		context = (context or area)
+		ph = [(0, self.icon, self.normal)]
+		ph.extend(self._cache)
+		return b''.join(context.render(ph)) + context.reset_colors()
+
+	def __init__(self, type:str, *parameters:str, icon:str="", icon_width=None):
+		self.type = type
+		self.icon = icon
+
+		if icon_width is None:
+			self._icon_width = len(icon)
+		else:
+			self._icon_width = icon_width
+
+		self.parameters = parameters
+		if icon and len(icon) < 2:
+			# Force emoji to be recognized as two codepoints.
+			self.icon += '\u200B' # zero width space
+		self._cache = render(area, type, parameters)
+
+def render(context, type, parameter):
+	ph = []
+
+	if type == 'object-type':
+		ph.append((0, parameter[0], Field.objclass))
+	elif type == 'field-title':
+		ph.append((0, parameter[0], Field.field))
+	elif type == 'certificate-validity':
+		ph.append((0, parameter[0], Field.invalid))
+	elif type == 'syntax':
+		ph.extend(python(context, *parameter))
+	elif type == 'code-frame':
+		# too much color
+		fname, index, path, context = parameter
+		if path is None:
+			ph.extend([
+				(0, '#'+str(index)+' ', Field.normal),
+				(0, context+'.', Field.field),
+				(0, fname, Field.objclass),
+			])
+		else:
+			ph.extend([
+				(0, '#'+str(index)+' ', Field.normal),
+				(0, path+'.', Field.objclass),
+				(0, fname, Field.objclass),
+			])
+	elif type == 'url':
+		ph.extend([
+			(0, x[0], context.RenderParameters.from_colors(x[1], -1024))
+			for x in url.f_string(parameter[0])
+		])
+	else:
+		ph.append((0, parameter[0], Field.normal))
+
+	return ph
+
+def dformat(context, field, str=str):
+	if field.__class__ is str:
+		return context.encode(field)
+	else:
+		return field.dformat(context)
+
+def strings(sequence, context=None, cat=(b''.join), Partial=functools.partial):
+	"""
+	# Emit the formatted lines of a prepared sequence as &str instances.
+	# Newline characters are *not* added to line.
+	"""
+	df = Partial(dformat, context)
+
+	for line in sequence:
+		yield cat(map(df, line))

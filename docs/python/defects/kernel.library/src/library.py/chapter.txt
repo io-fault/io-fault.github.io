@@ -1,0 +1,394 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 128 13`
+Support for running tests without full system/executable contexts.
+
+
+[ collections ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 18`
+
+[ core ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 26`
+
+[ ExitController ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 23 28`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`7 22 7 27`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+Root controller for tests.
+
+
+[ ExitController >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 2 14 22`
+(signature)`__init__(self)`
+
+
+[ ExitController >> exited ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`16 2 17 30`
+(signature)`exited(self, processor)`
+
+
+[ ExitController >> exit_event_connect ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`19 2 20 36`
+(signature)`exit_event_connect(self, subject, cb)`
+
+
+[ ExitController >> interrupt ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`22 2 23 28`
+(signature)`interrupt(self)`
+
+
+[ Executable ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`25 1 74 6`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`25 18 25 23`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+Critical difference between test.library.Context
+and io.library.Context is that tasks must be explicitly
+ran in order to perform them.
+
+
+[ Executable >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`32 2 34 18`
+(signature)`__init__(self)`
+
+
+[ Executable >> associate ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`36 2 37 29`
+(signature)`associate(self, processor)`
+
+
+[ Executable >> enqueue ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`39 2 40 26`
+(signature)`enqueue(self, *tasks)`
+
+
+[ Executable >> faulted ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`42 2 47 33`
+(signature)`faulted(self, resource)`
+
+
+[ Executable >> __call__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`49 2 57 7`
+(signature)`__call__(self)`
+
+
+[ Executable >> flush ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`59 2 65 84`
+(signature)`flush(self)`
+
+
+[ Executable >> defer ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`67 2 68 6`
+(signature)`defer(self, mt)`
+
+
+[ Executable >> cancel ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`70 2 71 6`
+(signature)`cancel(self, task)`
+
+
+[ Executable >> _io_attach ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`73 2 74 6`
+(signature)`_io_attach(self, *channel)`
+
+
+[ SystemChannel ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`76 1 87 6`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`76 21 76 26`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+
+[ SystemChannel >> link ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`77 2 77 12`
+#!source
+	link = None
+
+[ SystemChannel >> resource ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`78 2 78 16`
+#!source
+	resource = None
+
+[ SystemChannel >> k_transition ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`80 2 81 6`
+(signature)`k_transition(self)`
+
+
+[ SystemChannel >> acquire ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`83 2 84 21`
+(signature)`acquire(self, obj)`
+
+
+[ SystemChannel >> process ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`86 2 87 6`
+(signature)`process(self, event)`
+
+
+[ Root ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`89 1 112 21`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`89 12 89 17`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+
+[ Root >> _pexe_contexts ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`90 2 90 43`
+#!source
+	_pexe_contexts = ('executable', 'enqueue')
+
+[ Root >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`92 2 93 17`
+(signature)`__init__(self)`
+
+
+[ Root >> exited ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`95 2 96 26`
+(signature)`exited(self, procs)`
+
+
+[ Root >> sector ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`98 2 98 27`
+#!source
+	sector = controller = None
+
+[ Root >> enqueue ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`100 2 102 8`
+(signature)`enqueue(self, task)`
+
+
+[ Root >> dispatch ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`104 2 112 21`
+(signature)`dispatch(self, processor)`
+
+
+[ sector ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`114 1 129 12`
+(signature)`sector()`
+
+Construct a root Sector and Context for testing.
+

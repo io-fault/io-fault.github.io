@@ -1,0 +1,361 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 180 0`
+Gregorian calendar functions and data.
+
+
+[ operator ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 15`
+
+[ callib ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 32`
+
+[ centuries_in_cycle ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 8 22`
+#!source
+	centuries_in_cycle = 4
+
+[ years_in_century ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 1 11 22`
+#!source
+	years_in_century = 100
+
+[ years_in_decade ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`14 1 14 20`
+#!source
+	years_in_decade = 10
+
+[ centuries_in_millennium ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`17 1 17 28`
+#!source
+	centuries_in_millennium = 10
+
+[ month_names ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`20 1 33 1`
+#!source
+	month_names = (
+		"january",
+		"february",
+		"march",
+		"april",
+		"may",
+		"june",
+		"july",
+		"august",
+		"september",
+		"october",
+		"november",
+		"december",
+	)
+
+[ months_in_year ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`36 1 36 33`
+#!source
+	months_in_year = len(month_names)
+
+[ month_abbreviations ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`39 1 44 1`
+#!source
+	month_abbreviations = (
+		"jan", "feb", "mar",
+		"apr", "may", "jun",
+		"jul", "aug", "sep",
+		"oct", "nov", "dec",
+	)
+
+[ month_name_to_number ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`47 1 49 1`
+#!source
+	month_name_to_number = {
+		month_names[i] : i for i in range(len(month_names))
+	}
+
+[ calendar_year ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`55 1 59 1`
+#!source
+	calendar_year = (
+		31, 28, 31, 30,
+		31, 30, 31, 31,
+		30, 31, 30, 31
+	)
+
+[ calendar_leap ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`62 1 62 76`
+#!source
+	calendar_leap = (calendar_year[0], calendar_year[1] + 1) + calendar_year[2:] # Feb29
+
+[ leap_cycle ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`67 1 70 1`
+#!source
+	leap_cycle = (
+		('leap', 1, calendar_leap),
+		('years', 3, calendar_year)
+	)
+
+[ cycle ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`72 1 84 1`
+#!source
+	cycle = (
+		'gregorian-cycle', 1, (
+			# First century; normal leap cycle throughout.
+			('first-century', 25, leap_cycle),
+	
+			# Subsequent three centuries in the cycle.
+			# First year in century is leap exception.
+			('centuries', 3, (
+				('first-year-exception', 4, calendar_year),
+				('regular-cycle', 24, leap_cycle),
+			)),
+		)
+	)
+
+[ calendar ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`86 1 86 34`
+#!source
+	calendar = callib.aggregate(cycle)
+
+[ resolve_by_months ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`88 1 93 73`
+(signature)`resolve_by_months(months)`
+
+
+[ resolve_by_days ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`95 1 100 71`
+(signature)`resolve_by_days(days)`
+
+
+[ months_in_cycle ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`103 1 103 72`
+#!source
+	months_in_cycle = months_in_year * years_in_century * centuries_in_cycle
+
+[ r ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`106 1 106 40`
+#!source
+	r = resolve_by_months(months_in_cycle-1)
+
+[ days_in_cycle ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`107 1 107 28`
+#!source
+	days_in_cycle = r[1] + r[-1]
+
+[ year_is_leap ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`109 1 115 13`
+(signature)`year_is_leap(y)`
+
+Given a gregorian calendar year, determine whether it is a leap year.
+
+
+[ month_from_days ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`117 1 125 38`
+(signature)`month_from_days(days)`
+
+Convert the given number Earth-days to a month in the Gregorian cycle.
+
+! NOTE:
+	This does not communicate the remainder of days.
+
+
+[ days_from_month ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`127 1 133 47`
+(signature)`days_from_month(months)`
+
+Convert the given months to the number of Earth-days leading up to the
+Gregorian month.
+
+
+[ date_from_days ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`135 1 142 58`
+(signature)`date_from_days(days)`
+
+Convert the given Earth-days into a Gregorian date in the common form:
+(year, month, day).
+
+
+[ days_from_date ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`144 1 153 53`
+(signature)`days_from_date(date)`
+
+Convert a Gregorian date in the common form, (year, month, day), to the number
+of days leading up to the date.
+
+
+[ context ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`155 1 180 74`
+(signature)`context(context)`
+

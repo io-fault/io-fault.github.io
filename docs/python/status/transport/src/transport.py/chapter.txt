@@ -1,0 +1,68 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 79 12`
+Transport protocol implementation for identified data sets.
+
+
+[ prepare ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 14 14`
+(signature)`prepare(value)`
+
+Convert a value into a form suitable for sequencing.
+
+
+[ isolate ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`16 1 43 11`
+(signature)`isolate(lines)`
+
+Separate (factor-local/parameter)&<#isolate.Parameters.lines[lines]> into parts that can be processed by (factor-local/function)&<#identify[identify]>.
+
+
+[ identify ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`45 1 62 18`
+(signature)`identify(iseq)`
+
+Identify the slots and content of a transmission processed by (factor-local/function)&<#isolate[isolate]>.
+
+
+[ structure ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`64 1 65 43`
+(signature)`structure(lines)`
+
+
+[ sequence ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`67 1 80 11`
+(signature)`sequence(pairs)`
+

@@ -1,0 +1,80 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 33 0`
+
+[ iolib ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 1 33`
+
+[ xexport ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`3 1 4 5`
+(signature)`xexport(sector)`
+
+
+[ client_handler ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 14 53`
+(signature)`client_handler(sector, input, output)`
+
+
+[ coroutine ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`16 1 27 20`
+(signature)`coroutine(sector)`
+
+
+[ Interface ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`29 1 33 41`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`29 17 29 31`
+	- (type/syntax)`iolib.Interface`
+	- (type/context-local/factor-element)&<fault.kernel/io#Interface[fault.kernel.io.Interface]>
+	
+
+[ Interface >> connect ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`30 2 33 41`
+(signature)`connect(self, sector_xact, address, port, layer, input, output)`
+

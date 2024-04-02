@@ -1,0 +1,1 @@
+[[["optmap"]], [{"syntax": "{\n\t'-F': ('sequence-append', 'listening-interfaces'),\n\t'-L': ('field-replace', 'concurrency'),\n\t'-t': ('field-replace', 'trap-host'),\n}", "area": [[22, 10], [26, 1]]}]]

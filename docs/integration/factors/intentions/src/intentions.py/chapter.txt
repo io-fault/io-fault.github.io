@@ -1,0 +1,48 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 22 2`
+Data regarding Construction Context intentions.
+
+
+[ description ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 13 1`
+#!source
+	description = {
+		'optimal': "Subjective performance selection",
+		'debug': "Reduced optimizations and defines for emitting debugging information",
+	
+		'injections': "Debugging intention with support for injections for comprehensive testing",
+		'instruments': "Test intention with profiling and coverage collection enabled",
+	
+		'fragments': "Source file AST extraction context",
+	}
+
+[ flags ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`15 1 23 1`
+#!source
+	flags = {
+		'optimal': '-O',
+		'debug': '-g',
+	
+		'injections': '-J',
+		'instruments': '-M',
+	
+		'fragments': '-A',
+	}

@@ -1,0 +1,32 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 30 9`
+Check various expectations.
+
+
+[ test_module_protocol ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 15 38`
+(signature)`test_module_protocol(test)`
+
+
+[ test_no_subtyping ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`17 1 31 8`
+(signature)`test_no_subtyping(test)`
+

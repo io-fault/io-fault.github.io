@@ -1,0 +1,1194 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 669 0`
+Service contexts for accepting HTTP requests.
+
+
+[ functools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 16`
+
+[ typing ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 13`
+
+[ weakref ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 14`
+
+[ match ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 8 27`
+
+[ core ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 1 10 25`
+
+[ flows ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 1 11 26`
+
+[ io ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`12 1 12 23`
+
+[ ri ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`14 1 14 25`
+
+[ http ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`15 1 15 18`
+
+[ _prepare_http_transports_v0 ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`18 1 19 44`
+(signature)`_prepare_http_transports_v0(ifctx, ports)`
+
+
+[ _prepare_http_transports_v1 ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`21 1 22 44`
+(signature)`_prepare_http_transports_v1(ifctx, ports)`
+
+
+[ _prepare_http_transports_v2 ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`24 1 25 35`
+(signature)`_prepare_http_transports_v2(ifctx, ports)`
+
+
+[ protocols ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`27 1 31 1`
+#!source
+	protocols = {
+		'http': _prepare_http_transports_v0, # Adjustable.
+		'http-1': _prepare_http_transports_v1, # Strictly 1.0/1.1 only.
+		'http-2': _prepare_http_transports_v2, # Not implemented
+	}
+
+[ Controller ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`33 1 268 23`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`33 18 33 23`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+Request execution controller for HTTP services.
+
+
+[ Controller >> transport ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`39 2 42 13`
+		- (type/syntax)`io.Transport`
+		- (type/context-local/factor-element)&<fault.kernel/io#Transport[fault.kernel.io.Transport]>
+		
+
+[ Controller >> from_accept ]
+! CONTROL:
+	/type/
+		classmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`43 2 48 68`
+(signature)`from_accept(Class, invp, pair)`
+
+
+[ Controller >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`50 2 57 39`
+(signature)`__init__(self, invocations, request, connect_output, connect_input, channel_id)`
+
+
+[ Controller >> connect ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`59 2 71 48`
+		- (type/syntax)`None`
+		
+(signature)`connect(self, channel)`
+
+Initiate the response causing headers to be sent and connect the (factor-local/parameter)&<#Controller.connect.Parameters.channel[channel]> as the
+HTTP response entity body. If (factor-local/parameter)&<#Controller.connect.Parameters.channel[channel]> is (invalid/unknown)&<#None>, no entity body will be supplied.
+
+
+[ Controller >> accept ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`73 2 78 37`
+(signature)`accept(self, channel)`
+
+Connect entity body of the request to the given (factor-local/parameter)&<#Controller.accept.Parameters.channel[channel]>.
+If (factor-local/parameter)&<#Controller.accept.Parameters.channel[channel]> is (invalid/unknown)&<#None>, any entity body sent will trigger a fault.
+
+
+[ Controller >> http_add_header ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`80 2 84 49`
+		- (type/syntax)`None`
+		
+(signature)`http_add_header(self, key, value)`
+
+Append a single header to the header sequence that will be supplied by the response.
+
+
+[ Controller >> add_header ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`85 2 85 29`
+#!source
+	add_header = http_add_header
+
+[ Controller >> http_extend_headers ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`87 2 91 42`
+		- (type/syntax)`None`
+		
+(signature)`http_extend_headers(self, pairs)`
+
+Add a sequence of headers.
+
+
+[ Controller >> extend_headers ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`92 2 92 37`
+#!source
+	extend_headers = http_extend_headers
+
+[ Controller >> http_set_response ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`94 2 113 13`
+(signature)`http_set_response(self, code, descr, length)`
+
+Assign the status of the response and designate the transfer encoding.
+Excepting (factor-local/parameter)&<#Controller.http_set_response.Parameters.length[length]>, all parameters *must* be (invalid/unknown)&<#bytes> instances;
+this is intended to emphasize that the fields are being directly inserted
+into the wire.
+
+If (factor-local/parameter)&<#Controller.http_set_response.Parameters.cotype[cotype]> is (invalid/unknown)&<#None>, neither (http/header)`Content-Length` nor
+(http/header)`Transfer-Encoding` will be appended to the headers.
+
+If (factor-local/parameter)&<#Controller.http_set_response.Parameters.cotype[cotype]> is not (invalid/unknown)&<#None> and (factor-local/parameter)&<#Controller.http_set_response.Parameters.length[length]> is (invalid/unknown)&<#None>, chunked transfer encoding will be used.
+If (factor-local/parameter)&<#Controller.http_set_response.Parameters.cotype[cotype]> is not (invalid/unknown)&<#None> and (factor-local/parameter)&<#Controller.http_set_response.Parameters.length[length]> is an integer, (http/header)`Content-Length`
+will be provided.
+
+
+[ Controller >> set_response ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`114 2 114 33`
+#!source
+	set_response = http_set_response
+
+[ Controller >> http_continue ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`116 2 127 34`
+(signature)`http_continue(self, headers)`
+
+Emit a (http/code)`100` continue response
+with the given headers. Emitting a continuation
+after a non-100 response has been sent will fault
+the Transaction.
+
+[ >> Engineering ]
+
+Currently, the HTTP implementation presumes one response
+per transaction which is in conflict with HTTP/1.1's CONTINUE.
+
+
+[ Controller >> http_redirect ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`129 2 135 20`
+(signature)`http_redirect(self, location)`
+
+Location header redirect using a 301-MOVED PERMANENTLY response.
+
+
+[ Controller >> _http_content_headers ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`137 2 149 39`
+(signature)`_http_content_headers(self, cotype, length)`
+
+Define the type and length of the entity body to be sent.
+
+
+[ Controller >> http_dispatch_output ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`151 2 163 29`
+(signature)`http_dispatch_output(self, channel)`
+
+Dispatch the given (factor-local/parameter)&<#Controller.http_dispatch_output.Parameters.channel[channel]> using a new (context-local/factor-element)&<fault.kernel/io#Transfer[fault.kernel.io.Transfer]> instance into (invalid/unknown)&<#invocations'>
+(context-local/factor-element)&<fault.kernel/io#Transport[fault.kernel.io.Transport]> transaction.
+
+
+[ Controller >> http_iterate_output ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`165 2 175 39`
+(signature)`http_iterate_output(self, iterator)`
+
+Construct a Flow consisting of a single (context-local/factor-element)&<fault.kernel/flows#Iterate[fault.kernel.flows.Iterate]> instance
+used to stream output to the connection protocol state.
+
+The (context-local/factor-element)&<fault.kernel/io#Transfer[fault.kernel.io.Transfer]> transaction will be dispatched into the (context-local/factor-element)&<fault.kernel/io#Transport[fault.kernel.io.Transport]>
+supporting the connection to the remote peer.
+
+
+[ Controller >> http_write_output ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`177 2 185 44`
+(signature)`http_write_output(self, cotype, data)`
+
+Send the given (factor-local/parameter)&<#Controller.http_write_output.Parameters.data[data]> to the remote end with the given content type, (factor-local/parameter)&<#Controller.http_write_output.Parameters.cotype[cotype]>.
+If other headers are desired, they *must* be configured before running
+this method.
+
+
+[ Controller >> http_write_text ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`187 2 196 42`
+(signature)`http_write_text(self, string)`
+
+Send the given (invalid/unknown)&<#data> to the remote end with the given (invalid/unknown)&<#mime> type.
+If other headers are desired, they *must* be configured before running
+this method.
+
+
+[ Controller >> http_read_file_into_output ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`198 2 217 50`
+(signature)`http_read_file_into_output(self, route, cotype)`
+
+Send the file referenced by (factor-local/parameter)&<#Controller.http_read_file_into_output.Parameters.route[route]> to the remote end as
+the (HTTP) entity body.
+
+[ >> Parameters ]
+
+/(parameter)`self`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`route`/
+	
+	Route instance selecting the file.
+
+/(parameter)`cotype`/
+	- (type/syntax)`str`
+	- (type/invalid/unknown)&<#str>
+	
+	The content type to designate in the response.
+
+
+[ Controller >> http_send_file_head ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`219 2 237 20`
+(signature)`http_send_file_head(self, route, cotype)`
+
+Send the file referenced by (factor-local/parameter)&<#Controller.http_send_file_head.Parameters.route[route]> to the remote end as
+the (HTTP) entity body.
+
+[ >> Parameters ]
+
+/(parameter)`self`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`route`/
+	
+	Route instance selecting the file.
+
+/(parameter)`cotype`/
+	- (type/syntax)`str`
+	- (type/invalid/unknown)&<#str>
+	
+	The content type to designate in the response.
+
+
+[ Controller >> http_read_input_into_buffer ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`239 2 255 23`
+(signature)`http_read_input_into_buffer(self, callback, *args)`
+
+Connect the input Flow to a buffer that executes
+the given callback when the entity body has been transferred.
+
+
+[ Controller >> http_ignore_input ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`257 2 268 23`
+(signature)`http_ignore_input(self)`
+
+Connect the given input to a transfer that discards events.
+
+
+[ Network ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`270 1 342 28`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`270 15 270 26`
+	- (type/syntax)`core.Context`
+	- (type/context-local/factor-element)&<fault.kernel/core#Context[fault.kernel.core.Context]>
+	
+System Context for managing a set of (factor-local/class)&<#Host[Host]> instances.
+Provides grouping for hosts that share the same system network
+interface.
+
+[ > Properties ]
+
+/http_default_host/
+	The default HTTP Host; the (factor-local/class)&<#Host[Host]> to select in
+	cases where no (http/header)`Host` is designated by
+	a request.
+
+
+[ Network >> http_default_host ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`283 2 283 25`
+#!source
+	http_default_host = None
+
+[ Network >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`285 2 288 25`
+(signature)`__init__(self)`
+
+
+[ Network >> net_dispatch ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`290 2 295 33`
+(signature)`net_dispatch(self, host)`
+
+
+[ Network >> net_select_host ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`297 2 298 77`
+(signature)`net_select_host(self, name)`
+
+
+[ Network >> net_accept ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`300 2 319 10`
+(signature)`net_accept(self, invp)`
+
+Route the protocol transactions to the designated host.
+This only enqueues the invocation for subsequent execution.
+
+
+[ Network >> actuate ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`321 2 327 19`
+(signature)`actuate(self)`
+
+
+[ Network >> terminate ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`329 2 338 27`
+(signature)`terminate(self)`
+
+
+[ Network >> xact_void ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`340 2 342 28`
+(signature)`xact_void(self, final)`
+
+
+[ Partition ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`344 1 402 28`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`344 17 344 28`
+	- (type/syntax)`core.Context`
+	- (type/context-local/factor-element)&<fault.kernel/core#Context[fault.kernel.core.Context]>
+	
+Base class for host applications.
+
+[ > Properties ]
+
+/part_path/
+	The absolute (URI) path used to reach the partition.
+	For application servers, this is normally `'/'`.
+
+/part_argv/
+	The arguments that were configured with the partition.
+
+
+[ Partition >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`357 2 364 36`
+(signature)`__init__(self, path)`
+
+
+[ Partition >> structure ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`366 2 371 22`
+(signature)`structure(self)`
+
+
+[ Partition >> actuate ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`373 2 374 38`
+(signature)`actuate(self)`
+
+
+[ Partition >> part_accept ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`376 2 382 44`
+(signature)`part_accept(self, invp)`
+
+Allocate a sequence of controllers and process them using (factor-local/method)&<#Partition.part_select[part_select]>.
+
+
+[ Partition >> part_select ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`384 2 387 19`
+(signature)`part_select(self, ctl)`
+
+
+[ Partition >> terminate ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`389 2 398 27`
+(signature)`terminate(self)`
+
+
+[ Partition >> xact_void ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`400 2 402 28`
+(signature)`xact_void(self, final)`
+
+
+[ Files ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`404 1 418 87`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`404 13 404 21`
+	- (type/syntax)`Partition`
+	- (type/factor-local/class)&<#Partition[Partition]>
+	
+Read-only filesystem union for serving local files.
+
+
+[ Files >> part_dispatched ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`409 2 413 53`
+(signature)`part_dispatched(self, argv)`
+
+
+[ Files >> part_select ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`415 2 418 87`
+(signature)`part_select(self, ctl)`
+
+
+[ Host ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`420 1 669 28`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`420 12 420 23`
+	- (type/syntax)`core.Context`
+	- (type/context-local/factor-element)&<fault.kernel/core#Context[fault.kernel.core.Context]>
+	
+An HTTP Host interface for managing routing of service connections,
+and handling the representation of error cases.
+
+[ > Properties ]
+
+/h_names/
+	The set hostnames that this host can facilitate.
+	The object can be an arbitrary container in order
+	to match patterns as well.
+
+/h_canonical/
+	The first name given to (factor-local/method)&<#Host.h_update_names[h_update_names]>. (invalid/unknown)&<#None>
+	if no names were given and the name should be
+	inherited from requests.
+
+/h_root/
+	The root of the host's path as a (context-local/factor-element)&<fault.context/match#SubsequenceScan[fault.context.match.SubsequenceScan]>.
+	This is the initial path of the router in order to allow "mounts"
+	at arbitrary positions. Built from (invalid/unknown)&<#requisite> prefixes.
+
+/h_allowed_methods/
+	Method restrictions for the host. (invalid/unknown)&<#None> if not restricted.
+
+/h_headers/
+	Headers added to every response routed to this host.
+
+[ > Engineering ]
+
+While proper caching should be handled by a proxy, caching of "constants"
+should be performed here as well. A constant would be a resource
+that is designated as being the only possible version when given
+the same path. Constants would be shared across forks using a mmap region
+initialized by a parent process.
+
+
+[ Host >> strcache ]
+! CONTROL:
+	/type/
+		staticmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`458 2 465 25`
+(signature)`strcache(obj)`
+
+Cache for encoded identifiers often used with a host.
+
+
+[ Host >> descriptioncache ]
+! CONTROL:
+	/type/
+		staticmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`466 2 467 55`
+(signature)`descriptioncache(obj)`
+
+
+[ Host >> h_defaults ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`469 2 475 2`
+#!source
+	h_defaults = {
+		'h_options': (),
+		'h_allowed_methods': frozenset({
+			b'GET', b'HEAD', b'POST', b'PUT',
+			b'PATCH', b'DELETE', b'OPTIONS'
+		}),
+	}
+
+[ Host >> h_canonical ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`477 2 477 19`
+#!source
+	h_canonical = None
+
+[ Host >> h_names ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`478 2 478 15`
+#!source
+	h_names = None
+
+[ Host >> h_options ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`479 2 479 17`
+#!source
+	h_options = None
+
+[ Host >> h_allowed_methods ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`480 2 480 52`
+#!source
+	h_allowed_methods = h_defaults['h_allowed_methods']
+
+[ Host >> h_redirects ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`481 2 481 19`
+#!source
+	h_redirects = None
+
+[ Host >> h_headers ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`482 2 482 15`
+#!source
+	h_headers = ()
+
+[ Host >> actuate ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`484 2 486 69`
+(signature)`actuate(self)`
+
+
+[ Host >> h_enable_options ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`488 2 489 43`
+(signature)`h_enable_options(self, *option_identifiers)`
+
+
+[ Host >> h_disable_options ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`491 2 492 54`
+(signature)`h_disable_options(self, *option_identifiers)`
+
+
+[ Host >> h_set_headers ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`494 2 495 26`
+(signature)`h_set_headers(self, headers)`
+
+
+[ Host >> h_update_names ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`497 2 507 26`
+(signature)`h_update_names(self, *names)`
+
+Modify the host names that this interface responds to.
+
+
+[ Host >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`509 2 511 31`
+(signature)`__init__(self, partitions)`
+
+
+[ Host >> h_set_redirects ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`513 2 521 35`
+(signature)`h_set_redirects(self, target, origins)`
+
+
+[ Host >> h_clear_redirects ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`523 2 525 31`
+(signature)`h_clear_redirects(self)`
+
+
+[ Host >> h_configure ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`527 2 539 27`
+(signature)`h_configure(self, partitions)`
+
+Configure and dispatch the host's partitions.
+
+
+[ Host >> h_connect ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`541 2 550 56`
+(signature)`h_connect(self, partition)`
+
+Add the given (factor-local/parameter)&<#Host.h_connect.Parameters.partition[partition]> to the host.
+
+
+[ Host >> h_disconnect ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`552 2 557 42`
+(signature)`h_disconnect(self, partition)`
+
+Terminate and remove the partition identified by its path.
+
+
+[ Host >> structure ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`559 2 567 22`
+(signature)`structure(self)`
+
+
+[ Host >> h_options_request ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`569 2 578 19`
+(signature)`h_options_request(self, ctl)`
+
+Handle a request for (http/initiate)`OPTIONS * HTTP/x.x`.
+Individual Resources may support an OPTIONS request as well.
+
+
+[ Host >> h_error ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`580 2 612 39`
+(signature)`h_error(self, ctl, code, exc)`
+
+Host error handler. By default, emits an XML document with an assigned stylesheet
+that can be retrieved for formatting the error. Additional error data may by
+injected into the document in order to provide application-level error information.
+
+Given the details about an HTTP error message and the corresponding
+(project-local/factor-element)&<http#IO[fault.web.http.IO]>, emit the rendered error to the client.
+
+
+[ Host >> h_fallback ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`614 2 622 30`
+(signature)`h_fallback(self, ctl)`
+
+Method called when no prefix matches the request.
+
+Provided for subclasses in order to override the usual (http/error)`404`.
+
+
+[ Host >> h_route ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`624 2 643 14`
+(signature)`h_route(self, ctl)`
+
+Route the request to the identified partition.
+
+
+[ Host >> _h_redirected ]
+! CONTROL:
+	/type/
+		staticmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`644 2 646 34`
+(signature)`_h_redirected(target, ctl)`
+
+
+[ Host >> _h_direct ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`648 2 649 72`
+(signature)`_h_direct(self, ctl)`
+
+
+[ Host >> h_accept ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`651 2 657 42`
+(signature)`h_accept(self, invp)`
+
+Allocate a sequence of controllers and process them using (factor-local/method)&<#Host.h_route[h_route]>.
+
+
+[ Host >> terminate ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`659 2 665 27`
+(signature)`terminate(self)`
+
+
+[ Host >> xact_void ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`667 2 669 28`
+(signature)`xact_void(self, final)`
+

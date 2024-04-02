@@ -1,0 +1,242 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 259 0`
+System argument vector interpretation methods.
+
+(factor-local/function)&<#legacy[legacy]> is the only implemented method and should cover most use cases.
+
+[ Events ]
+
+/`mismatch-unrecognized`/
+	The signalled option did not appear in either index.
+
+/`mismatch-parameter-restricted`/
+	The long option was given a parameter, but the option takes none.
+
+/`mismatch-parameter-required`/
+	The option requires a parameter, but no argument was provided.
+	Either due to end of fields or explicit termination.
+
+/`sequence-append`/
+	Append the option's arguments to the slots.
+
+/`set-add`/
+	Add the option's argument to the set identified by the slot.
+
+/`field-replace`/
+	Assign the option's argument to the field identified by the slot.
+
+/`integer-add`/
+	Add a positive or negative integer to the field identified by the slot.
+
+/`subfield-replace`/
+	Using the mapping identified by the slot, assign the key and value extracted
+	from the argument.
+
+/`sequence-append-assignment`/
+	Using the sequence identified by the slot, append the tuple representing
+	assignment provided as the argument to the option.
+
+
+[ UsageViolation ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`31 1 64 42`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`31 22 31 30`
+	- (type/syntax)`Exception`
+	- (type/invalid/unknown)&<#Exception>
+	
+Exception signalling that options were not properly expressed.
+
+[ > Properties ]
+
+/mismatch/
+	/`'mismatch-unrecognized'`/
+		The option could not be mapped to an action and configuration slot.
+
+	/`'mismatch-parameter-required'`/
+		The option required a parameter and the argument vector had no more elements.
+
+	/`'mismatch-parameter-restricted'`/
+		The option was given an argument, but takes zero.
+
+/origin/
+	The location of the option as cited by the mismatch event.
+
+/option/
+	The identified option being processed.
+
+/argument/
+	The option's identified argument if any.
+
+
+[ UsageViolation >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`50 2 54 26`
+(signature)`__init__(self, mismatch, origin, option)`
+
+
+[ UsageViolation >> __str__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`56 2 64 42`
+(signature)`__str__(self)`
+
+
+[ legacy ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`66 1 197 49`
+(signature)`legacy(restricted, required, options, trap, offset, signal, assignment)`
+
+Interpret an argument vector, (factor-local/parameter)&<#legacy.Parameters.options[options]>, according to the (factor-local/parameter)&<#legacy.Parameters.restricted[restricted]>
+and (factor-local/parameter)&<#legacy.Parameters.required[required]> option indexes. Identified signals are translated into
+events describing the expected operation, target slot, and value to be
+processed by a configuration context.
+
+The produced events are terminated by a `'remainder'` event containing
+the excess fields that could not be translated. If all fields were processed
+as options, the remainder will be an empty list.
+
+In the case of an error, the event prior to the remainder will be identified
+as a mismatch operation with the slot identifying the option that failed
+to match an index entry.
+
+[ > Parameters ]
+
+/(parameter)`restricted`/
+	
+	Mapping designating the options that take no parameters.
+
+/(parameter)`required`/
+	
+	Mapping designating the options that require one or more parameters.
+
+/(parameter)`options`/
+	
+	The argument vector to interpret.
+
+/(parameter)`trap`/
+	
+	Optional slot identifier used when an unrecognized long option
+	is processed. Produces `sequence-append` events.
+
+/(parameter)`offset`/
+	
+	Defaults to zero; designates the offset to apply to field indexes
+	in order to properly mention a flag or parameter's location.
+
+/(parameter)`signal`/
+	
+	Defaults to `-`; the character used to identify options in the vector.
+
+/(parameter)`assignment`/
+	
+	Defaults to `=`; the character used to separate a long option's name
+	from its argument.
+
+
+[ _sfr ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`199 1 201 36`
+(signature)`_sfr(t, k, i, v)`
+
+
+[ _seq ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`203 1 205 44`
+(signature)`_seq(t, k, i, v)`
+
+
+[ operations ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`208 1 216 1`
+#!source
+	operations = {
+		'field-replace': (lambda t, k, i, v: t.__setitem__(k, i(k, v))),
+		'sequence-append': (lambda t, k, i, v: t[k].append(i(k, v))),
+		'set-add': (lambda t, k, i, v: t[k].add(i(k, v))),
+		'set-discard': (lambda t, k, i, v: t[k].discard(i(k, v))),
+		'integer-add': (lambda t, k, i, v: t.__setitem__(k, t.get(k, 0) + int(i(k, v)))),
+		'subfield-replace': _sfr,
+		'sequence-append-assignment': _seq,
+	}
+
+[ merge ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`219 1 259 9`
+(signature)`merge(target, events, Interpreter, Operations)`
+
+Apply the values provided by (factor-local/parameter)&<#merge.Parameters.events[events]> into (factor-local/parameter)&<#merge.Parameters.target[target]> using
+the event's operation to select the merge method provided in (factor-local/parameter)&<#merge.Parameters.Operations[Operations]>.
+
+[ > Parameters ]
+
+/(parameter)`target`/
+	
+	The object that the interpreted options and arguments are being
+	inserted into. A configuration dictionary.
+
+/(parameter)`events`/
+	
+	An iterable producing recognized option events.
+	Normally, constructed by (factor-local/function)&<#legacy[legacy]>.
+
+/(parameter)`Interpreter`/
+	
+	A function called with the slot being assigned and value that needs
+	to be interpreted prior to the storage operation.
+
+	Defaults to a reflection of the given value(no-op).
+
+/(parameter)`Operations`/
+	
+	A mapping designating how an assignment operation is to be
+	performed against the (factor-local/parameter)&<#merge.Parameters.target[target]>.
+
+	Defaults to (factor-local/data)&<#operations[operations]>.
+

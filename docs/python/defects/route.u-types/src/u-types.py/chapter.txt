@@ -1,0 +1,126 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 196 25`
+Check the sequence manipulations provided by the base classes.
+
+
+[ module ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 36`
+
+[ test_inconsistent_type_equality ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 23 14`
+(signature)`test_inconsistent_type_equality(test)`
+
+
+[ test_Route_operations ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`25 1 65 29`
+(signature)`test_Route_operations(test)`
+
+Check route specific operators
+
+
+[ test_Route_sequence ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`67 1 92 60`
+(signature)`test_Route_sequence(test)`
+
+
+[ test_Route_addition ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`94 1 108 37`
+(signature)`test_Route_addition(test)`
+
+- (context-local/factor-element)&<fault.route/types#Selector[fault.route.types.Selector]>
+
+
+[ test_Route_plural_division ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`110 1 133 37`
+(signature)`test_Route_plural_division(test)`
+
+Validate `r//segment` operations.
+
+
+[ test_Route_index_keys ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`135 1 143 23`
+(signature)`test_Route_index_keys(test)`
+
+
+[ test_Route_segment ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`145 1 158 77`
+(signature)`test_Route_segment(test)`
+
+
+[ test_Route_stepwise_shift ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`160 1 185 31`
+(signature)`test_Route_stepwise_shift(test)`
+
+
+[ test_Route_stepwise_ascent ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`187 1 197 24`
+(signature)`test_Route_stepwise_ascent(test)`
+

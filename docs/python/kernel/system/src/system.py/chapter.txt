@@ -1,0 +1,2232 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 1597 0`
+System abstractions and processors for managing a processing tree.
+
+
+[ os ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 9`
+
+[ sys ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 10`
+
+[ functools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 7 16`
+
+[ collections ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 8 18`
+
+[ contextlib ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`9 1 9 17`
+
+[ weakref ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 1 10 14`
+
+[ traceback ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 1 11 16`
+
+[ itertools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`12 1 12 16`
+
+[ signal ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`13 1 13 13`
+
+[ operator ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`14 1 14 15`
+
+[ heapq ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`15 1 15 12`
+
+[ sleep ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`16 1 16 22`
+
+[ tools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`18 1 18 27`
+
+[ weak ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`19 1 19 26`
+
+[ kernel ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`21 1 21 27`
+
+[ network ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`22 1 22 28`
+
+[ io ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`23 1 23 23`
+
+[ process ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`24 1 24 28`
+
+[ thread ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`25 1 25 27`
+
+[ memory ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`26 1 26 27`
+
+[ execution ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`27 1 27 30`
+
+[ time ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`29 1 29 33`
+
+[ core ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`31 1 31 18`
+
+[ flows ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`32 1 32 19`
+
+[ text ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`33 1 33 18`
+
+[ __process_index__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`35 1 35 26`
+#!source
+	__process_index__ = dict()
+
+[ Matrix ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`37 1 406 14`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`37 14 37 19`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+Collection of (context-local/factor-element)&<fault.system/io#Array[fault.system.io.Array]> instances connecting transfers to (factor-local/class)&<#KChannel[KChannel]> instances.
+
+
+[ Matrix >> Array ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`41 2 41 30`
+
+[ Matrix >> channels_per_array ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`42 2 42 31`
+#!source
+	channels_per_array = 1024 * 16
+
+[ Matrix >> Delta ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`44 2 119 14`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`44 14 44 18`
+	- (type/syntax)`tuple`
+	- (type/invalid/unknown)&<#tuple>
+	
+Transfer events snapshot delivered to I/O tasks.
+
+
+[ Matrix >> Delta >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`48 3 48 16`
+#!source
+	__slots__ = ()
+
+[ Matrix >> Delta >> __str__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`50 3 63 11`
+(signature)`__str__(self)`
+
+
+[ Matrix >> Delta >> __repr__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`65 3 70 11`
+(signature)`__repr__(self)`
+
+
+[ Matrix >> Delta >> payload ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`71 3 77 11`
+Units sent.
+
+
+[ Matrix >> Delta >> demand ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`78 3 84 11`
+The acquire method of the channel if exhausted. (invalid/unknown)&<#None> if not exhausted.
+
+
+[ Matrix >> Delta >> terminal ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`85 3 91 11`
+Whether or not this is the last event from the Channel.
+
+
+[ Matrix >> Delta >> endpoint ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`92 3 97 14`
+
+[ Matrix >> Delta >> construct ]
+! CONTROL:
+	/type/
+		classmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`98 3 101 14`
+(signature)`construct(Class)`
+
+
+[ Matrix >> Delta >> snapshot ]
+! CONTROL:
+	/type/
+		classmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`102 3 119 14`
+(signature)`snapshot(Class, channel)`
+
+
+[ Matrix >> io_collect ]
+! CONTROL:
+	/type/
+		staticmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`120 2 165 14`
+(signature)`io_collect(transfers)`
+
+Process the array's transfer and construct a sequence of I/O events.
+
+This is executed inside a thread managed by the interchange and *cannot* deliver
+the events to Transformers. (invalid/unknown)&<#synchronize_io_events> is used to deliver the queue
+for processing in the main task queue.
+
+
+[ Matrix >> io_deliver ]
+! CONTROL:
+	/type/
+		staticmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`166 2 219 14`
+(signature)`io_deliver(error, events)`
+
+Send the individual (factor-local/parameter)&<#Matrix.io_deliver.Parameters.events[events]> originally prepared by
+(factor-local/staticmethod)&<#Matrix.io_collect[io_collect]> to their associated (factor-local/class)&<#KInput[KInput]> or (factor-local/class)&<#KOutput[KOutput]> flows.
+
+
+[ Matrix >> io_delta ]
+! CONTROL:
+	/type/
+		staticmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`220 2 229 14`
+(signature)`io_delta(array)`
+
+Inline I/O handler for schduler based transfers.
+
+
+[ Matrix >> io_loop ]
+! CONTROL:
+	/type/
+		staticmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`230 2 329 20`
+(signature)`io_loop()`
+
+
+[ Matrix >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`331 2 335 61`
+(signature)`__init__(self, errors, synchronize, execute)`
+
+
+[ Matrix >> _alloc ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`337 2 343 17`
+(signature)`_alloc(self)`
+
+
+[ Matrix >> _get ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`345 2 354 18`
+(signature)`_get(self)`
+
+
+[ Matrix >> void ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`356 2 367 21`
+(signature)`void(self)`
+
+Violently destroy all channels and Arrays in the Matrix.
+
+All arrays allocated by the Matrix will be terminated.
+
+! WARNING:
+	This method should *only* be ran *after* forking and *inside the child process*.
+
+
+[ Matrix >> force ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`369 2 375 12`
+(signature)`force(self)`
+
+Execute the Array.force method on the set designated
+of Array instances designated by (invalid/unknown)&<#id>.
+
+
+[ Matrix >> terminate ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`377 2 382 16`
+(signature)`terminate(self)`
+
+Terminate all arrays managed by the interchange.
+
+
+[ Matrix >> acquire ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`384 2 406 14`
+(signature)`acquire(self, channels)`
+
+Acquire a set of channels accounting for volume limits.
+
+
+[ KChannel ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`408 1 528 13`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`408 16 408 28`
+	- (type/syntax)`flows.Channel`
+	- (type/project-local/factor-element)&<flows#Channel[fault.kernel.flows.Channel]>
+	
+Channel moving data in or out of the operating system's kernel.
+
+
+[ KChannel >> k_status ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`412 2 412 16`
+#!source
+	k_status = None
+
+[ KChannel >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`414 2 417 21`
+(signature)`__init__(self)`
+
+
+[ KChannel >> actuate ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`419 2 420 38`
+(signature)`actuate(self)`
+
+
+[ KChannel >> k_meta ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`422 2 426 23`
+(signature)`k_meta(self)`
+
+
+[ KChannel >> __repr__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`428 2 450 10`
+(signature)`__repr__(self)`
+
+
+[ KChannel >> structure ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`452 2 461 16`
+(signature)`structure(self)`
+
+
+[ KChannel >> k_transition ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`463 2 466 69`
+(signature)`k_transition(self)`
+
+
+[ KChannel >> k_kill ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`468 2 480 10`
+(signature)`k_kill(self)`
+
+Called by the controlling (invalid/unknown)&<#Flow>, acquire status information and
+unlink the channel.
+
+
+[ KChannel >> interrupt ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`482 2 485 21`
+(signature)`interrupt(self)`
+
+
+[ KChannel >> f_terminated ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`487 2 510 22`
+(signature)`f_terminated(self)`
+
+
+[ KChannel >> f_transfer ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`512 2 515 10`
+(signature)`f_transfer(self, event)`
+
+
+[ KChannel >> k_transferring ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`516 2 528 13`
+The length of the buffer being transferred into or out of the kernel.
+
+(invalid/unknown)&<#None> if no transfer is currently taking place.
+
+
+[ KAllocate ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`530 1 559 22`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`530 17 530 24`
+	- (type/syntax)`KChannel`
+	- (type/factor-local/class)&<#KChannel[KChannel]>
+	
+Flow that continually allocates memory for a channel transferring data into the process.
+
+
+[ KAllocate >> f_clear ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`537 2 539 22`
+(signature)`f_clear(self, obstruction)`
+
+
+[ KAllocate >> k_transition ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`541 2 551 55`
+(signature)`k_transition(self)`
+
+Transition in the next buffer provided that the Flow was not obstructed.
+
+
+[ KAllocate >> f_transfer ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`553 2 559 22`
+(signature)`f_transfer(self, event)`
+
+Normally ignored, but will induce a transition if no transfer is occurring.
+
+
+[ KAccept ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`561 1 589 23`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`561 15 561 27`
+	- (type/syntax)`flows.Channel`
+	- (type/project-local/factor-element)&<flows#Channel[fault.kernel.flows.Channel]>
+	
+Manage the event connection to a listening socket and process
+read events by accepting and transmitting the socket file descriptors.
+
+
+[ KAccept >> Allocate ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`567 2 567 33`
+#!source
+	Allocate = kernel.Ports.allocate
+
+[ KAccept >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`569 2 572 25`
+(signature)`__init__(self, kport)`
+
+
+[ KAccept >> actuate ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`574 2 575 55`
+(signature)`actuate(self)`
+
+
+[ KAccept >> f_transfer ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`577 2 580 18`
+(signature)`f_transfer(self, event)`
+
+
+[ KAccept >> interrupt ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`582 2 585 19`
+(signature)`interrupt(self)`
+
+
+[ KAccept >> f_terminate ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`587 2 589 23`
+(signature)`f_terminate(self)`
+
+
+[ KInput ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`591 1 596 54`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`591 14 591 22`
+	- (type/syntax)`KAllocate`
+	- (type/factor-local/class)&<#KAllocate[KAllocate]>
+	
+Receive octets from the system I/O channel.
+
+
+[ KLimit ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`598 1 633 27`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`598 14 598 19`
+	- (type/syntax)`KInput`
+	- (type/factor-local/class)&<#KInput[KInput]>
+	
+Receive octets from the system I/O channel with limited memory allocations.
+Primarily used to read portions of a file.
+
+
+[ KLimit >> k_limit ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`603 2 603 15`
+#!source
+	k_limit = None
+
+[ KLimit >> k_set_limit ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`605 2 617 13`
+(signature)`k_set_limit(self, limit)`
+
+
+[ KLimit >> k_transition ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`619 2 633 27`
+(signature)`k_transition(self)`
+
+Transition in the next buffer provided that the Flow was not obstructed.
+
+
+[ KOutput ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`635 1 714 13`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`635 15 635 22`
+	- (type/syntax)`KChannel`
+	- (type/factor-local/class)&<#KChannel[KChannel]>
+	
+Flow that transfers emitted events to be transferred into the kernel.
+
+The queue is limited to a certain number of items rather than a metadata constraint;
+for instance, the sum of the length of the buffer entries. This allows the connected
+Flows to dynamically choose the buffer size by adjusting the size of the events.
+
+
+[ KOutput >> ko_limit ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`644 2 646 10`
+#!source
+	ko_limit = 16
+		@property
+
+[ KOutput >> ko_overflow ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`647 2 653 10`
+Queue entries exceeds limit.
+
+
+[ KOutput >> f_empty ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`654 2 659 3`
+
+[ KOutput >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`661 2 664 27`
+(signature)`__init__(self, channel)`
+
+
+[ KOutput >> k_transition ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`666 2 681 24`
+(signature)`k_transition(self)`
+
+
+[ KOutput >> f_transfer ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`683 2 699 5`
+(signature)`f_transfer(self, event)`
+
+Enqueue a sequence of transfers to be processed by the Transit.
+
+
+[ KOutput >> f_terminate ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`701 2 714 13`
+(signature)`f_terminate(self)`
+
+
+[ Context ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`716 1 1243 65`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`716 15 716 26`
+	- (type/syntax)`core.Context`
+	- (type/project-local/factor-element)&<core#Context[fault.kernel.core.Context]>
+	
+System Transaction Context implementation providing
+Abstract Processors with access to the local system.
+
+
+[ Context >> xact_exit ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`722 2 731 22`
+(signature)`xact_exit(self, xact)`
+
+
+[ Context >> xact_void ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`733 2 740 32`
+(signature)`xact_void(self, final)`
+
+Final (executable) transaction exited; system process context complete.
+
+
+[ Context >> interrupt ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`742 2 745 32`
+(signature)`interrupt(self)`
+
+
+[ Context >> sigterm ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`747 2 749 18`
+(signature)`sigterm(self, link)`
+
+
+[ Context >> terminate ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`751 2 756 10`
+(signature)`terminate(self)`
+
+
+[ Context >> process ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`757 2 758 28`
+
+[ Context >> kdispatch ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`760 2 763 11`
+(signature)`kdispatch(self, event, task)`
+
+
+[ Context >> kcancel ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`765 2 766 43`
+(signature)`kcancel(self, event)`
+
+
+[ Context >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`768 2 775 43`
+(signature)`__init__(self, process)`
+
+
+[ Context >> uptime ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`777 2 777 36`
+#!source
+	uptime = staticmethod(time.elapsed)
+
+[ Context >> time ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`778 2 778 30`
+#!source
+	time = staticmethod(time.utc)
+
+[ Context >> _defer_reference ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`780 2 780 24`
+#!source
+	_defer_reference = None
+
+[ Context >> _defer_execute ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`782 2 811 9`
+(signature)`_defer_execute(self)`
+
+Execute all tasks whose wait period has elapsed according to the system's clock.
+
+
+[ Context >> defer ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`813 2 829 32`
+(signature)`defer(self, measure, *processors)`
+
+Defer the execution of the (id)`occur` methods on the given (factor-local/parameter)&<#Context.defer.Parameters.processors[processors]>
+by the given (factor-local/parameter)&<#Context.defer.Parameters.measure[measure]>.
+
+
+[ Context >> cancel ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`831 2 833 38`
+(signature)`cancel(self, processor)`
+
+
+[ Context >> _defer_update ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`835 2 841 90`
+(signature)`_defer_update(self, snapshot)`
+
+
+[ Context >> _defer_period ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`843 2 849 14`
+(signature)`_defer_period(self, current)`
+
+
+[ Context >> _defer_put ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`851 2 855 43`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+(signature)`_defer_put(self, current, measure, processors)`
+
+
+[ Context >> _defer_get ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`857 2 883 15`
+(signature)`_defer_get(self, current)`
+
+
+[ Context >> structure ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`885 2 897 16`
+(signature)`structure(self)`
+
+
+[ Context >> actuate ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`899 2 902 35`
+(signature)`actuate(self)`
+
+
+[ Context >> connect_process_signal ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`904 2 907 41`
+(signature)`connect_process_signal(self, xact_context, callback, signal)`
+
+
+[ Context >> connect_process_exit ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`909 2 918 33`
+(signature)`connect_process_exit(self, xact_context, callback, *processes)`
+
+
+[ Context >> allocate ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`920 2 929 28`
+(signature)`allocate(self, xactctx)`
+
+Launch an Executable for running application processors.
+
+
+[ Context >> report ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`931 2 937 14`
+(signature)`report(self, target)`
+
+Send an overview of the logical process state to the given target.
+
+
+[ Context >> _recur ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`939 2 949 56`
+(signature)`_recur(self, frequency, task)`
+
+Schedule the task for execution after the period of time (invalid/unknown)&<#measure> elapses.
+
+(project-local/unknown)&<core#Scheduler[core.Scheduler]> instances will resubmit a task if there is a substantial delay
+remaining. When large duration defers are placed, the seconds unit are used
+and decidedly inexact, so resubmission is used with a finer grain.
+
+
+[ Context >> _cancel ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`951 2 956 41`
+(signature)`_cancel(self, task)`
+
+Cancel a scheduled task.
+
+
+[ Context >> inherit ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`958 2 963 36`
+(signature)`inherit(self, context)`
+
+Inherit the exports from the given (factor-local/parameter)&<#Context.inherit.Parameters.context[context]>.
+
+
+[ Context >> _io_cycle ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`965 2 970 31`
+(signature)`_io_cycle(self)`
+
+Signal the (factor-local/class)&<#Process[Process]> that I/O occurred for this context.
+
+
+[ Context >> _io_attach ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`973 2 977 35`
+(signature)`_io_attach(self, *channels)`
+
+
+[ Context >> _io_flush ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`979 2 986 12`
+(signature)`_io_flush(self)`
+
+
+[ Context >> execute ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`988 2 993 71`
+(signature)`execute(self, controller, function, *parameters)`
+
+Execute the given function in a thread associated with the specified controller.
+
+
+[ Context >> environ ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`995 2 1004 44`
+(signature)`environ(self, identifier)`
+
+Access the environment from the perspective of the context.
+Context overrides may hide process environment variables.
+
+
+[ Context >> override ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`1006 2 1017 39`
+(signature)`override(self, identifier, value)`
+
+Override an environment variable for the execution context.
+
+Child processes spawned relative to the context will inherit the overrides.
+
+
+[ Context >> bindings ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`1019 2 1025 34`
+(signature)`bindings(self, *allocs)`
+
+Returns a sequence of file descriptors that can later be acquired by a Matrix.
+
+
+[ Context >> connect ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`1027 2 1039 54`
+(signature)`connect(self, endpoint)`
+
+Given an endpoint and a transport stack, return the series used to
+manage the connection's I/O.
+
+[ >> Parameters ]
+
+/(parameter)`self`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`endpoint`/
+	
+	The (project-local/unknown)&<library.Endpoint> instance describing the target of the connection.
+
+
+[ Context >> allocate_transport ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`1041 2 1052 40`
+(signature)`allocate_transport(self, fd)`
+
+Given a file descriptor and a transport stack, return the series used to
+manage the connection's I/O.
+
+[ >> Parameters ]
+
+/(parameter)`self`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`fd`/
+	
+	Socket file descriptor.
+
+
+[ Context >> read_file ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`1054 2 1062 35`
+(signature)`read_file(self, path)`
+
+Construct a channel for reading an entire file from the filesystem.
+The returned channel terminates when EOF occurs; often,
+(factor-local/method)&<#Context.read_file_range[read_file_range]> is preferrable to avoid status inconsistencies.
+
+
+[ Context >> write_file ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`1064 2 1070 37`
+(signature)`write_file(self, path)`
+
+Construct a channel for writing to the file identified by (factor-local/parameter)&<#Context.write_file.Parameters.path[path]>.
+
+
+[ Context >> read_file_range ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`1072 2 1092 8`
+(signature)`read_file_range(self, path, start, stop)`
+
+Construct a channel to read a specific range of a file.
+
+
+[ Context >> append_file ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`1094 2 1100 37`
+(signature)`append_file(self, path)`
+
+Open a set of files for appending through a (project-local/unknown)&<library.KernelPort>.
+
+
+[ Context >> update_file ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`1102 2 1112 19`
+(signature)`update_file(self, path, offset, size)`
+
+Allocate a channel for overwriting data at the given offset of
+the designated file.
+
+
+[ Context >> listen ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`1114 2 1124 24`
+(signature)`listen(self, interfaces)`
+
+On POSIX systems, this performs (system/manual)`bind`
+*and* (system/manual)`listen` system calls for receiving socket connections.
+
+Returns a generator producing (interface, KAccept) pairs.
+
+
+[ Context >> accept_sockets ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`1126 2 1130 20`
+(signature)`accept_sockets(self, kp)`
+
+Construct a Channel processor that emite accepted listening sockets.
+
+
+[ Context >> connect_output ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`1132 2 1138 37`
+(signature)`connect_output(self, fd)`
+
+Allocate channel instances for the given sequence
+of file descriptors.
+
+
+[ Context >> connect_input ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`1140 2 1146 35`
+(signature)`connect_input(self, fd)`
+
+Allocate channel instances for the given sequence
+of file descriptors.
+
+
+[ Context >> daemon ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`1148 2 1178 23`
+		- (type/syntax)`tuple[int, int]`
+		
+(signature)`daemon(self, invocation)`
+
+Execute the (context-local/factor-element)&<fault.system/execution#KInvocation[fault.system.execution.KInvocation]> instance with stdin and stdout closed.
+
+Returns the process identifier and standard error's file descriptor as a tuple.
+
+
+[ Context >> daemon_stderr ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`1180 2 1208 12`
+(signature)`daemon_stderr(self, stderr, invocation)`
+
+Execute the (context-local/factor-element)&<fault.system/execution#KInvocation[fault.system.execution.KInvocation]> instance with stdin and stdout closed.
+The (factor-local/parameter)&<#Context.daemon_stderr.Parameters.stderr[stderr]> parameter will be passed in as the standard error file descriptor,
+and then *closed* before returning.
+
+Returns a (invalid/unknown)&<#Subprocess> instance containing a single Process-Id.
+
+Used to launch a daemon with a specific standard error for monitoring purposes.
+
+
+[ Context >> system_execute ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`1210 2 1218 33`
+(signature)`system_execute(self, invocation)`
+
+Execute the (context-local/factor-element)&<fault.system/execution#KInvocation[fault.system.execution.KInvocation]> inheriting standard input, output, and error.
+
+This is used almost exclusively by shell-type processes where the calling process
+suspends TTY I/O until the child exits.
+
+
+[ Context >> stream_shared_segments ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`1220 2 1237 44`
+(signature)`stream_shared_segments(self, path, range, *_)`
+
+Construct a new Flow with an initial Iterate Transformer
+flowing shared memory segments from the memory mapped file.
+
+Returns a pair, the new Flow and a callable that causes the Flow to begin
+transferring memory segments.
+
+[ >> Parameters ]
+
+/(parameter)`self`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`path`/
+	- (type/syntax)`str`
+	- (type/invalid/unknown)&<#str>
+	
+	Local filesystem path to read from.
+
+/(parameter)`range`/
+	- (type/syntax)`tuple`
+	- (type/invalid/unknown)&<#tuple>
+	
+	A triple, (start, stop, size), or (invalid/unknown)&<#None> if the entire file should be used.
+	Where size is the size of the memory slices to emit.
+
+/(parameter)`_`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`Segments`/
+	
+	(control/absent)`Undocumented`.
+
+
+[ Context >> coprocess ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`1239 2 1243 65`
+(signature)`coprocess(self, identifier, exit, invocation, application)`
+
+Dispatch a local parallel process.
+
+
+[ Fabric ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`1245 1 1319 30`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`1245 14 1245 19`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+Thread manager for processes; thread pool with capacity to manage dedicated threads.
+
+
+[ Fabric >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1250 2 1252 25`
+(signature)`__init__(self, process)`
+
+
+[ Fabric >> void ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`1254 2 1259 24`
+(signature)`void(self)`
+
+Normally used after a process fork in the child.
+
+
+[ Fabric >> execute ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`1261 2 1266 53`
+(signature)`execute(self, controller, callable, *args)`
+
+Create a dedicated thread and execute the given callable within it.
+
+
+[ Fabric >> critical ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`1268 2 1277 83`
+(signature)`critical(self, controller, context, callable, *args)`
+
+Create a dedicated thread that is identified as a critical resource where exceptions
+trigger (context-local/factor-element)&<fault.system/process#Critical[fault.system.process.Critical]> exceptions in the main thread.
+
+The additional (factor-local/parameter)&<#Fabric.critical.Parameters.context[context]> parameter is an arbitrary object describing the resource;
+often the object whose method is considered critical.
+
+
+[ Fabric >> spawn ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`1279 2 1286 12`
+(signature)`spawn(self, controller, callable, args)`
+
+Add a thread to the fabric.
+This expands the "parallel" capacity of a (factor-local/class)&<#Process[Process]>.
+
+
+[ Fabric >> thread ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`1288 2 1312 54`
+(signature)`thread(self, *parameters)`
+
+Manage the execution of a thread.
+
+
+[ Fabric >> executing ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`1314 2 1319 30`
+(signature)`executing(self, tid)`
+
+Whether or not the given thread [identifier] is executing in this Fabric instance.
+
+
+[ Process ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`1321 1 1461 51`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`1321 15 1321 20`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+The representation of the system process that is running. Usually referred
+to as `process` by (factor-local/class)&<#Context[Context]> and other classes.
+
+Usually only one (factor-local/class)&<#Process[Process]> is active per-process, but it can be reasonable to launch multiple
+in order to perform operations that would otherwise expect its own space.
+
+[ > Properties ]
+
+/fabric/
+	The (factor-local/class)&<#Fabric[Fabric]> instance managing the threads controlled by the process.
+
+
+[ Process >> current ]
+! CONTROL:
+	/type/
+		staticmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`1336 2 1345 12`
+(signature)`current()`
+
+Resolve the current logical process based on the thread's identifier.
+(invalid/unknown)&<#None> is returned if the thread was not created by a (factor-local/class)&<#Process[Process]>.
+
+
+[ Process >> transaction ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`1347 2 1354 10`
+		- (type/syntax)`core.Transaction`
+		- (type/project-local/factor-element)&<core#Transaction[fault.kernel.core.Transaction]>
+		
+(signature)`transaction(self)`
+
+Return the primary (project-local/unknown)&<library.Unit> instance associated with the process.
+
+
+[ Process >> kernel ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1355 2 1356 26`
+
+[ Process >> actuate_root_transaction ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1358 2 1364 25`
+(signature)`actuate_root_transaction(self)`
+
+
+[ Process >> log ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`1366 2 1373 23`
+(signature)`log(self, data)`
+
+Append only access to a *critical* process log. Usually points to (none/invalid)&<http://fault.io/dev/null[sys.stderr]> and
+primarily used for process related issues.
+
+
+[ Process >> boot ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`1375 2 1385 13`
+(signature)`boot(self, *tasks)`
+
+Boot the Process with the given tasks enqueued in the Task queue.
+
+Only used inside the main thread for the initialization of the
+controlling processor.
+
+
+[ Process >> terminate ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`1387 2 1398 24`
+(signature)`terminate(self)`
+
+Terminate the process closing the task queue and running the invocation's exit.
+
+
+[ Process >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`1400 2 1415 15`
+(signature)`__init__(self, exit, identifier)`
+
+Initialize the Process instance using the designated (factor-local/parameter)&<#Process.__init__.Parameters.identifier[identifier]>.
+The identifier is essentially arbitrary, but must be hashable as it's
+used to distinguish one (invalid/unknown)&<#Representation> from another. However,
+usually there is only one process, so "root" or "main" is often used.
+
+Normally, (invalid/unknown)&<#execute> is used to manage the construction of the
+(factor-local/class)&<#Process[Process]> instance.
+
+
+[ Process >> _setup ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1417 2 1426 17`
+(signature)`_setup(self)`
+
+
+[ Process >> _init_exit ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1428 2 1430 30`
+(signature)`_init_exit(self)`
+
+
+[ Process >> _init_io ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1432 2 1434 55`
+(signature)`_init_io(self)`
+
+
+[ Process >> void ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`1436 2 1444 15`
+(signature)`void(self)`
+
+Tear down the existing logical process state. Usually used internally after a
+physical process fork.
+
+
+[ Process >> __repr__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1446 2 1447 83`
+(signature)`__repr__(self)`
+
+
+[ Process >> error ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`1449 2 1458 89`
+(signature)`error()`
+
+Handler for untrapped exceptions.
+
+
+[ Process >> titled_error ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1460 2 1461 51`
+(signature)`titled_error(self, title)`
+
+
+[ main_thread_task_queue ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1463 1 1463 29`
+#!source
+	main_thread_task_queue = None
+
+[ main_thread_interrupt ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1464 1 1464 28`
+#!source
+	main_thread_interrupt = None
+
+[ main_thread_exit_status ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1465 1 1465 29`
+#!source
+	main_thread_exit_status = 255
+
+[ reset ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`1467 1 1477 30`
+(signature)`reset()`
+
+Reset the process global state of (project-local/unknown)&<system>.
+
+
+[ exit ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`1479 1 1490 61`
+(signature)`exit()`
+
+Default exit callback used to interrupt main thead task queue.
+
+Sets the module attribute (factor-local/data)&<#main_thread_exit_status[main_thread_exit_status]> to the given status and closes the main task queue.
+
+
+[ spawn ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`1492 1 1508 12`
+		- (type/syntax)`Process`
+		- (type/factor-local/class)&<#Process[Process]>
+		
+(signature)`spawn(exit, identifier, executables)`
+
+Construct a (factor-local/class)&<#Process[Process]> using the given (factor-local/parameter)&<#spawn.Parameters.executables[executables]>.
+The (factor-local/parameter)&<#spawn.Parameters.identifier[identifier]> is usually `'root'` for the primary logical process.
+
+
+[ dispatch ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`1510 1 1524 15`
+		- (type/syntax)`Process`
+		- (type/factor-local/class)&<#Process[Process]>
+		
+(signature)`dispatch(invocation, application)`
+
+Dispatch an application context instance within a new logical process.
+
+Construct a (factor-local/class)&<#Process[Process]> and (project-local/factor-element)&<core#Executable[fault.kernel.core.Executable]> for executing the (factor-local/parameter)&<#dispatch.Parameters.application[application]> context.
+The (factor-local/class)&<#Process[Process]> created by the inner (factor-local/function)&<#spawn[spawn]> is returned.
+
+
+[ reports ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1526 1 1529 42`
+(signature)`reports(link)`
+
+
+[ set_root_process ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`1531 1 1550 25`
+(signature)`set_root_process(process)`
+
+Connect the system process termination signal to root transaction terminate.
+
+
+[ default_error_trap ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1552 1 1563 72`
+(signature)`default_error_trap(link, call, error)`
+
+
+[ control ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`1565 1 1574 47`
+(signature)`control(**kw)`
+
+Control the main thread providing a low precision timer for deferred tasks.
+Called by an application's main entry point after booting the (factor-local/class)&<#Process[Process]> created
+by (factor-local/function)&<#spawn[spawn]>.
+
+
+[ protect ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1576 1 1597 95`
+(signature)`protect(error_control)`
+

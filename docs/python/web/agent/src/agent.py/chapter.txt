@@ -1,0 +1,722 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 361 0`
+Client projection dispatch management.
+
+Provides Contexts for managing a client's sessions.
+
+[ Engineering ]
+
+Agents are fairly complicated with respect to preferences. The current
+implementation presumes (internet/protocol)`HTTP/1.1` in most cases where a protocol priority should
+be used to select a desired wire protocol.
+
+(factor-local/class)&<#Navigation[Navigation]> and (factor-local/class)&<#Session[Session]> are essentially unimplemented. Finding a generic structure
+that fits all use cases is unlikely; however, the direction of a traditional user agent
+model should be sufficient in most cases.
+
+
+[ typing ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`15 1 15 13`
+
+[ weakref ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`16 1 16 14`
+
+[ core ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`18 1 18 25`
+
+[ flows ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`19 1 19 26`
+
+[ io ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`20 1 20 23`
+
+[ http ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`21 1 21 18`
+
+[ _prepare_http_transports_v0 ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`23 1 24 44`
+(signature)`_prepare_http_transports_v0(ifctx, ports)`
+
+
+[ _prepare_http_transports_v1 ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`26 1 27 44`
+(signature)`_prepare_http_transports_v1(ifctx, ports)`
+
+
+[ _prepare_http_transports_v2 ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`29 1 30 35`
+(signature)`_prepare_http_transports_v2(ifctx, ports)`
+
+
+[ protocols ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`32 1 36 1`
+#!source
+	protocols = {
+		'http': _prepare_http_transports_v0, # Adjustable.
+		'http-1': _prepare_http_transports_v1, # Strictly 1.0/1.1 only.
+		'http-2': _prepare_http_transports_v2, # Not implemented
+	}
+
+[ Controller ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`38 1 222 21`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`38 18 38 23`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+Request execution controller for HTTP agents.
+
+[ > Properties ]
+
+/http_response/
+	The (project-local/unknown)&<http#Structures[http.Structures]> instance representing the response status and headers.
+
+
+[ Controller >> http_response ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`46 2 48 10`
+#!source
+	http_response = None
+		@property
+
+[ Controller >> transport ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`49 2 50 45`
+		- (type/syntax)`io.Transport`
+		- (type/context-local/factor-element)&<fault.kernel/io#Transport[fault.kernel.io.Transport]>
+		
+
+[ Controller >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`52 2 61 21`
+(signature)`__init__(self, invocations, channel_id, connect_output)`
+
+
+[ Controller >> _correlation ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`63 2 66 97`
+(signature)`_correlation(self, channel_id, parameters, connect_input)`
+
+
+[ Controller >> http_add_header ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`68 2 72 48`
+(signature)`http_add_header(self, key, value)`
+
+Append a single header to the header sequence that will be supplied by the response.
+
+
+[ Controller >> add_header ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`73 2 73 29`
+#!source
+	add_header = http_add_header
+
+[ Controller >> http_extend_headers ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`75 2 79 41`
+(signature)`http_extend_headers(self, pairs)`
+
+Add a sequence of headers.
+
+
+[ Controller >> extend_headers ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`80 2 80 37`
+#!source
+	extend_headers = http_extend_headers
+
+[ Controller >> http_set_request ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`82 2 106 13`
+(signature)`http_set_request(self, method, uri, length)`
+
+Assign the method and URI of the request and designate the transfer encoding.
+Excepting (factor-local/parameter)&<#Controller.http_set_request.Parameters.length[length]>, all parameters *must* be (invalid/unknown)&<#bytes> instances.
+
+If (factor-local/parameter)&<#Controller.http_set_request.Parameters.cotype[cotype]> is (invalid/unknown)&<#None>, neither (http/header)`Content-Length` nor
+(http/header)`Transfer-Encoding` will be appended to the headers.
+
+If (factor-local/parameter)&<#Controller.http_set_request.Parameters.cotype[cotype]> is not (invalid/unknown)&<#None> and (factor-local/parameter)&<#Controller.http_set_request.Parameters.length[length]> is (invalid/unknown)&<#None>, chunked transfer encoding will be used.
+If (factor-local/parameter)&<#Controller.http_set_request.Parameters.cotype[cotype]> is not (invalid/unknown)&<#None> and (factor-local/parameter)&<#Controller.http_set_request.Parameters.length[length]> is an integer, (http/header)`Content-Length`
+will be provided.
+
+
+[ Controller >> set_request ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`107 2 107 31`
+#!source
+	set_request = http_set_request
+
+[ Controller >> connect ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`109 2 117 29`
+(signature)`connect(self, channel)`
+
+Initiate the request causing headers to be sent and connect the (factor-local/parameter)&<#Controller.connect.Parameters.channel[channel]> as the
+HTTP request's entity body. If (factor-local/parameter)&<#Controller.connect.Parameters.channel[channel]> is (invalid/unknown)&<#None>, no entity body will be supplied.
+
+
+[ Controller >> accept ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`119 2 124 37`
+(signature)`accept(self, channel)`
+
+Accept the entity-body of the response into (factor-local/parameter)&<#Controller.accept.Parameters.channel[channel]>.
+If (factor-local/parameter)&<#Controller.accept.Parameters.channel[channel]> is (invalid/unknown)&<#None>, any entity body sent will trigger a fault.
+
+
+[ Controller >> _http_content_headers ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`126 2 138 39`
+(signature)`_http_content_headers(self, cotype, length)`
+
+Define the type and length of the entity body to be sent.
+
+
+[ Controller >> http_dispatch_output ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`140 2 152 36`
+(signature)`http_dispatch_output(self, channel)`
+
+Dispatch the given (factor-local/parameter)&<#Controller.http_dispatch_output.Parameters.channel[channel]> using a new (context-local/factor-element)&<fault.kernel/io#Transfer[fault.kernel.io.Transfer]> instance into (invalid/unknown)&<#invocations'>
+(context-local/factor-element)&<fault.kernel/io#Transport[fault.kernel.io.Transport]> transaction.
+
+
+[ Controller >> http_iterate_output ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`154 2 164 39`
+(signature)`http_iterate_output(self, iterator)`
+
+Construct a Flow consisting of a single (context-local/factor-element)&<fault.kernel/flows#Iterate[fault.kernel.flows.Iterate]> instance
+used to stream output to the connection protocol state.
+
+The (context-local/factor-element)&<fault.kernel/io#Transfer[fault.kernel.io.Transfer]> transaction will be dispatched into the (context-local/factor-element)&<fault.kernel/io#Transport[fault.kernel.io.Transport]>
+supporting the connection to the remote peer.
+
+
+[ Controller >> http_put_data ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`166 2 174 44`
+(signature)`http_put_data(self, uri, cotype, data)`
+
+Send the given (factor-local/parameter)&<#Controller.http_put_data.Parameters.data[data]> to the remote end with the given content type, (factor-local/parameter)&<#Controller.http_put_data.Parameters.cotype[cotype]>.
+If other headers are desired, they *must* be configured before running
+this method.
+
+
+[ Controller >> http_read_input_into_buffer ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`176 2 192 21`
+(signature)`http_read_input_into_buffer(self, callback, *args)`
+
+Connect the input to a buffer that executes
+the given callback when the entity body has been transferred.
+
+
+[ Controller >> http_read_input_into_file ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`194 2 209 10`
+(signature)`http_read_input_into_file(self, path)`
+
+Connect the input to a buffer that executes
+the given callback when the entity body has been transferred.
+
+
+[ Controller >> http_ignore_input ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`211 2 222 21`
+(signature)`http_ignore_input(self)`
+
+Connect the given input to a transfer that discards events.
+
+
+[ Session ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`224 1 243 25`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`224 15 224 26`
+	- (type/syntax)`core.Context`
+	- (type/context-local/factor-element)&<fault.kernel/core#Context[fault.kernel.core.Context]>
+	
+Session dispatching invocation projections for facilitating a request.
+
+
+[ Session >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`229 2 232 63`
+(signature)`__init__(self)`
+
+
+[ Session >> s_correlate ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`234 2 237 23`
+(signature)`s_correlate(self, inv)`
+
+
+[ Session >> xact_exit ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`239 2 240 31`
+(signature)`xact_exit(self, xact)`
+
+
+[ Session >> actuate ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`242 2 243 25`
+(signature)`actuate(self)`
+
+
+[ Navigation ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`245 1 283 28`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`245 18 245 29`
+	- (type/syntax)`core.Context`
+	- (type/context-local/factor-element)&<fault.kernel/core#Context[fault.kernel.core.Context]>
+	
+Root agent context managing global headers, connection strategy cache, and host state.
+
+
+[ Navigation >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`250 2 254 51`
+(signature)`__init__(self)`
+
+
+[ Navigation >> nav_connect ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`256 2 261 38`
+(signature)`nav_connect(self, endpoint)`
+
+Allocate transport communicating with (factor-local/parameter)&<#Navigation.nav_connect.Parameters.endpoint[endpoint]> with respect to the navigation's
+perspective.
+
+
+[ Navigation >> nav_route ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`263 2 264 6`
+(signature)`nav_route(self, io)`
+
+
+[ Navigation >> nav_open_session ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`266 2 273 12`
+(signature)`nav_open_session(self, session)`
+
+
+[ Navigation >> nav_close_session ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`275 2 276 6`
+(signature)`nav_close_session(self, sid)`
+
+
+[ Navigation >> actuate ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`278 2 279 28`
+(signature)`actuate(self)`
+
+
+[ Navigation >> xact_void ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`281 2 283 28`
+(signature)`xact_void(self, final)`
+
+
+[ RInvocation ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`285 1 361 43`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`285 19 285 24`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+An HTTP request received by a service and its determined response headers and status.
+
+The parameters should store exact bytes instances that were read by the transport.
+Higher-level interfaces, (project-local/unknown)&<http#Structures[http.Structures]>, should often decode these field accordingly.
+
+[ > Properties ]
+
+/headers/
+	The sequence of headers held by the parameters of the request.
+
+/method/
+	The request method held by the parameters.
+
+/path/
+	The request URI held by the parameters.
+
+
+[ RInvocation >> projection ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`302 2 302 18`
+#!source
+	projection = True
+
+[ RInvocation >> context ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`303 2 305 10`
+#!source
+	context = None
+		@property
+
+[ RInvocation >> headers ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`306 2 309 10`
+		- (type/syntax)`http.HeaderSequence`
+		- (type/project-local/factor-element)&<http#HeaderSequence[fault.web.http.HeaderSequence]>
+		
+
+[ RInvocation >> method ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`310 2 316 10`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+Decoded form of the request's method.
+
+
+[ RInvocation >> path ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`317 2 321 59`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+Decoded form of the request URI's path.
+
+
+[ RInvocation >> declare_output_length ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`323 2 325 30`
+(signature)`declare_output_length(self, length)`
+
+
+[ RInvocation >> declare_output_chunked ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`327 2 329 28`
+(signature)`declare_output_chunked(self)`
+
+
+[ RInvocation >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`331 2 342 3`
+(signature)`__init__(self, exit_method, method, path, headers)`
+
+
+[ RInvocation >> __str__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`344 2 353 13`
+(signature)`__str__(self)`
+
+
+[ RInvocation >> from_request ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`354 2 361 43`
+(signature)`from_request(Class, rline, headers)`
+
+Initialize an Invocation using a parsed request line and headers.
+Primarily, this is used by (invalid/unknown)&<#fork> in a server context.
+

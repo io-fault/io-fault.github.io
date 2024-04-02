@@ -1,0 +1,279 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 321 34`
+
+[ files ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 1 27`
+
+[ module ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`2 1 2 41`
+
+[ perform_cat ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`3 1 3 30`
+
+[ test_PInvocation ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 14 27`
+(signature)`test_PInvocation(test)`
+
+
+[ test_parse_sx_plan_empty ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`16 1 21 47`
+(signature)`test_parse_sx_plan_empty(test)`
+
+- (context-local/factor-element)&<fault.system/execution#parse_sx_plan[fault.system.execution.parse_sx_plan]>
+
+
+[ test_parse_sx_plan_env ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`23 1 33 90`
+(signature)`test_parse_sx_plan_env(test)`
+
+- (context-local/factor-element)&<fault.system/execution#parse_sx_plan[fault.system.execution.parse_sx_plan]>
+
+
+[ test_parse_sx_plan_multiple_env ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`35 1 46 110`
+(signature)`test_parse_sx_plan_multiple_env(test)`
+
+- (context-local/factor-element)&<fault.system/execution#parse_sx_plan[fault.system.execution.parse_sx_plan]>
+
+
+[ test_parse_sx_plan_no_env ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`48 1 57 72`
+(signature)`test_parse_sx_plan_no_env(test)`
+
+- (context-local/factor-element)&<fault.system/execution#parse_sx_plan[fault.system.execution.parse_sx_plan]>
+
+
+[ test_parse_sx_plan_env_unset ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`59 1 69 85`
+(signature)`test_parse_sx_plan_env_unset(test)`
+
+- (context-local/factor-element)&<fault.system/execution#parse_sx_plan[fault.system.execution.parse_sx_plan]>
+
+
+[ test_parse_sx_plan_newlines ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`71 1 81 74`
+(signature)`test_parse_sx_plan_newlines(test)`
+
+- (context-local/factor-element)&<fault.system/execution#parse_sx_plan[fault.system.execution.parse_sx_plan]>
+
+
+[ test_parse_sx_plan_newlines_suffix ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`83 1 93 80`
+(signature)`test_parse_sx_plan_newlines_suffix(test)`
+
+- (context-local/factor-element)&<fault.system/execution#parse_sx_plan[fault.system.execution.parse_sx_plan]>
+
+
+[ test_parse_sx_plan_zero_newlines ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`95 1 105 78`
+(signature)`test_parse_sx_plan_zero_newlines(test)`
+
+- (context-local/factor-element)&<fault.system/execution#parse_sx_plan[fault.system.execution.parse_sx_plan]>
+
+
+[ test_parse_sx_plan_plural_newlines ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`107 1 117 84`
+(signature)`test_parse_sx_plan_plural_newlines(test)`
+
+- (context-local/factor-element)&<fault.system/execution#parse_sx_plan[fault.system.execution.parse_sx_plan]>
+
+
+[ test_parse_sx_plan_no_op ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`119 1 130 72`
+(signature)`test_parse_sx_plan_no_op(test)`
+
+- (context-local/factor-element)&<fault.system/execution#parse_sx_plan[fault.system.execution.parse_sx_plan]>
+
+
+[ test_parse_sx_plan_unknown_qual ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`132 1 141 57`
+(signature)`test_parse_sx_plan_unknown_qual(test)`
+
+- (context-local/factor-element)&<fault.system/execution#parse_sx_plan[fault.system.execution.parse_sx_plan]>
+
+
+[ test_serialize_sx_plan_escapes ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`143 1 166 2`
+(signature)`test_serialize_sx_plan_escapes(test)`
+
+- (context-local/factor-element)&<fault.system/execution#parse_sx_plan[fault.system.execution.parse_sx_plan]>
+
+
+[ test_serialize_sx_plan_none ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`168 1 192 2`
+(signature)`test_serialize_sx_plan_none(test)`
+
+- (context-local/factor-element)&<fault.system/execution#parse_sx_plan[fault.system.execution.parse_sx_plan]>
+
+
+[ test_sx_plan_space_separated_fields ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`194 1 222 44`
+(signature)`test_sx_plan_space_separated_fields(test)`
+
+- (context-local/factor-element)&<fault.system/execution#parse_sx_plan[fault.system.execution.parse_sx_plan]>
+
+
+[ test_Platform_init ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`224 1 232 23`
+(signature)`test_Platform_init(test)`
+
+- (context-local/factor-element)&<fault.system/execution#Platform.__init__[fault.system.execution.Platform.__init__]>
+
+
+[ test_Platform_features ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`234 1 255 25`
+(signature)`test_Platform_features(test)`
+
+- (context-local/factor-element)&<fault.system/execution#Platform.prepare[fault.system.execution.Platform.prepare]>
+- (context-local/factor-element)&<fault.system/execution#Platform.identify[fault.system.execution.Platform.identify]>
+- (context-local/factor-element)&<fault.system/execution#Platform.priority[fault.system.execution.Platform.priority]>
+- (context-local/factor-element)&<fault.system/execution#Platform.sections[fault.system.execution.Platform.sections]>
+
+
+[ pfi ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`257 1 266 50`
+(signature)`pfi(path, pairs)`
+
+
+[ test_Platform_from_directory ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`268 1 290 43`
+(signature)`test_Platform_from_directory(test)`
+
+- (context-local/factor-element)&<fault.system/execution#Platform.from_directory[fault.system.execution.Platform.from_directory]>
+
+
+[ test_Platform_from_system ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`292 1 322 33`
+(signature)`test_Platform_from_system(test)`
+
+- (context-local/factor-element)&<fault.system/execution#Platform.from_system[fault.system.execution.Platform.from_system]>
+

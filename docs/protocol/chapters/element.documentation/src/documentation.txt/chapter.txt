@@ -1,0 +1,14 @@
+! CONTROL:
+	/type/
+		factor
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+! CONTEXT:
+	/protocol/
+		&<http://if.fault.io/chapters/meta.specification>
+
+The features available to chapters identified as element documentation.
+
+(project-local/unknown)&<project.documentation> is the corresponding factor-level protocol.
+

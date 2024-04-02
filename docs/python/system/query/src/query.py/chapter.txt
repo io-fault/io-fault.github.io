@@ -1,0 +1,221 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 126 0`
+High-level system inquiries for user information and environment derived paths.
+
+All information is retrieved from the system when invoked.
+
+
+[ os ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 9`
+
+[ operator ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 7 15`
+
+[ tools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`9 1 9 27`
+
+[ files ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 1 10 19`
+
+[ _path ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`13 1 13 104`
+#!source
+	_path = tools.cachedcalls(16)(tools.compose(operator.methodcaller('delimit'), files.Path.from_absolute))
+
+[ _dirs ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`14 1 14 72`
+#!source
+	_dirs = tools.cachedcalls(2)(operator.methodcaller('split', os.pathsep))
+
+[ paths ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`16 1 20 50`
+		- (type/syntax)`files.Path`
+		- (type/project-local/factor-element)&<files#Path[fault.system.files.Path]>
+		
+(signature)`paths()`
+
+Select paths present in the (system/environ)`PATH` variable.
+
+
+[ executables ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`22 1 38 13`
+		- (type/syntax)`files.Path`
+		- (type/project-local/factor-element)&<files#Path[fault.system.files.Path]>
+		
+(signature)`executables(exename)`
+
+Select executable paths from the environment, (system/environ)`PATH`.
+
+Iterate over the directories listed in `PATH` and yield paths that exist
+when the given (factor-local/parameter)&<#executables.Parameters.exename[exename]> is extended on the directory.
+
+The produced (project-local/unknown)&<files#Path[files.Path]> instances may refer to files of any type.
+Paths referring to broken links will not be included.
+
+
+[ home ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`40 1 54 14`
+		- (type/syntax)`files.Path`
+		- (type/project-local/factor-element)&<files#Path[fault.system.files.Path]>
+		
+(signature)`home()`
+
+Retrieve the user's home directory from the environment, (system/environ)`HOME`.
+
+If the environment variable is not set, the (id)`pw_dir` field will be retrieved
+using (invalid/unknown)&<#pwd>.
+
+
+[ username ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`56 1 64 13`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+(signature)`username()`
+
+Retrieve the user's name.
+
+
+[ usertitle ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`66 1 77 13`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+(signature)`usertitle()`
+
+Retrieve the user's title; the long name associated with the user.
+
+The (id)`pw_gecos` field is retrieved using (invalid/unknown)&<#pwd> without modification.
+If the system has no such concept or it cannot be resolved, (invalid/unknown)&<#None> is returned.
+
+
+[ shell ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`79 1 89 13`
+		- (type/syntax)`files.Path`
+		- (type/project-local/factor-element)&<files#Path[fault.system.files.Path]>
+		
+(signature)`shell()`
+
+Retrieve the path to the user's login shell.
+
+If the system has no such concept or it cannot be resolved, (invalid/unknown)&<#None> is returned.
+
+
+[ hostname ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`91 1 96 40`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+(signature)`hostname()`
+
+Retrieve the hostname using the POSIX (system/manual)`gethostname(2)` call.
+
+
+[ frequency ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`98 1 104 27`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+(signature)`frequency()`
+
+Retrieve the clock ticks necessary for calculating processing usage from
+the POSIX (system/manual)`sysconf` call with (id)`SC_CLK_TCK`.
+
+
+[ platform ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`106 1 126 43`
+(signature)`platform()`
+
+Create an (project-local/unknown)&<execution#Platform[execution.Platform]> instance using the environment.
+

@@ -1,0 +1,94 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 91 18`
+Terminal Context Stack display for scrolling region capable emulators.
+
+
+[ os ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 9`
+
+[ sys ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 10`
+
+[ matrix ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 29`
+
+[ _close ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 20 14`
+(signature)`_close(screen)`
+
+Construct a reset string to be used at exit.
+
+
+[ setup ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`22 1 56 19`
+(signature)`setup(screen, lines)`
+
+Initialize the terminal for use with a scrolling region.
+Constructs a device using (invalid/unknown)&<#control.setup> and a (none/invalid)&<http://fault.io/dev/null[fault.terminal.matrix.Context]>
+pointing to the status region.
+
+
+[ _enter ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`58 1 64 34`
+		- (type/syntax)`bytes`
+		- (type/invalid/unknown)&<#bytes>
+		
+(signature)`_enter(context, screen)`
+
+Enter scrolling region; normal terminal output.
+
+
+[ _exit ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`66 1 73 22`
+		- (type/syntax)`bytes`
+		- (type/invalid/unknown)&<#bytes>
+		
+(signature)`_exit(context, screen)`
+
+Exit scrolling region; status terminal output.
+

@@ -1,0 +1,1 @@
+[[["Address", "__slots__"], ["Area", "__slots__"], ["Area", "Type"], ["Area", "Slice"]], [[], [], {"syntax": "Address", "area": [[106, 9], [106, 15]]}, {"syntax": "typing.Tuple[typing.Text, typing.Text, typing.Sequence[typing.Text]]", "area": [[186, 10], [186, 77]]}]]

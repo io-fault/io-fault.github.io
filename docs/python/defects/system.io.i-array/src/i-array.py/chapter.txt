@@ -1,0 +1,214 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 219 8`
+Array qualities
+
+
+[ time ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 11`
+
+[ errno ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 12`
+
+[ sys ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 10`
+
+[ common ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 7 20`
+
+[ io ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`9 1 9 25`
+
+[ test_array_already_acquired ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 1 21 11`
+(signature)`test_array_already_acquired(test)`
+
+
+[ test_array_set ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`23 1 38 28`
+(signature)`test_array_set(test)`
+
+Sanity/smoke test validating the capacity to create some number of arrays.
+
+
+[ test_array_termination ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`40 1 54 26`
+(signature)`test_array_termination(test)`
+
+
+[ test_array_wait ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`56 1 64 27`
+(signature)`test_array_wait(test)`
+
+
+[ test_array_exceptions ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`66 1 86 10`
+(signature)`test_array_exceptions(test)`
+
+
+[ test_array_terminated ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`88 1 104 10`
+(signature)`test_array_terminated(test)`
+
+
+[ test_array_force ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`106 1 119 6`
+(signature)`test_array_force(test)`
+
+
+[ test_array_in_cycle ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`121 1 132 10`
+(signature)`test_array_in_cycle(test)`
+
+
+[ test_array_out_of_cycle ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`134 1 156 7`
+(signature)`test_array_out_of_cycle(test)`
+
+context manager to terminate on exit
+
+
+[ test_array_resize_exoresource ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`158 1 167 7`
+(signature)`test_array_resize_exoresource(test)`
+
+
+[ test_array_new_failure ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`169 1 178 22`
+(signature)`test_array_new_failure(test)`
+
+
+[ test_array_resize_exoresource ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`180 1 188 10`
+(signature)`test_array_resize_exoresource(test)`
+
+
+[ test_array_collection_countdown ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`190 1 220 7`
+(signature)`test_array_collection_countdown(test)`
+

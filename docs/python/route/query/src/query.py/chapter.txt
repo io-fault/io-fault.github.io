@@ -1,0 +1,400 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 338 0`
+Tools for navigating element trees.
+
+Provides the (factor-local/class)&<#Cursor[Cursor]> class for navigating and retrieving nodes identified
+using a limited path language.
+
+
+[ Sequence ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 7 45`
+
+[ Mapping ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 7 45`
+
+[ itertools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 8 16`
+
+[ functools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`9 1 9 16`
+
+[ comethod ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 1 11 30`
+
+[ keywords ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`12 1 12 29`
+
+[ InvalidPath ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`14 1 17 4`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`14 19 14 27`
+	- (type/syntax)`Exception`
+	- (type/invalid/unknown)&<#Exception>
+	
+Path string given to (factor-local/method)&<#Context.prepare[Context.prepare]> was not valid.
+
+
+[ iselement ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`19 1 42 12`
+(signature)`iselement(subject)`
+
+Determines whether the given object has the properties of an element.
+
+
+[ Context ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`44 1 298 14`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`44 15 44 29`
+	- (type/syntax)`comethod.object`
+	- (type/context-local/factor-element)&<fault.context/comethod#object[fault.context.comethod.object]>
+	
+Query expression context for parsing and interpreting paths.
+
+
+[ Context >> prepare ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`49 2 54 37`
+(signature)`prepare(self, path)`
+
+Parse the path string into a selection plan.
+
+
+[ Context >> _paths_profile ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`57 2 73 2`
+#!source
+	_paths_profile = keywords.Profile.from_keywords_v1(
+		routers = ["/"],
+		operations = [
+			"*", # Match any immediate descendant.
+			"#", # Slice nodes. 1-based, inclusive.
+			"?", # Apply context designated filter.
+				"\\\\", # Escape backslash in predicate string.
+			"\\]", # Escape predicate close.
+			"|",
+		],
+		terminators = [],
+		enclosures = [],
+		literals = [
+			["[", "]"], # Predicates are text strings.
+		],
+	)
+
+[ Context >> _parser ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`74 2 74 72`
+#!source
+	_parser = keywords.Parser.from_profile(_paths_profile).process_document
+
+[ Context >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`76 2 84 14`
+(signature)`__init__(self, selectors, aliases)`
+
+
+[ Context >> _identify_node ]
+! CONTROL:
+	/type/
+		staticmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`85 2 90 14`
+(signature)`_identify_node(predicate, node)`
+
+
+[ Context >> _parse_slice ]
+! CONTROL:
+	/type/
+		staticmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`91 2 103 14`
+(signature)`_parse_slice(string)`
+
+
+[ Context >> _read_string ]
+! CONTROL:
+	/type/
+		staticmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`104 2 117 15`
+(signature)`_read_string(itokens)`
+
+
+[ Context >> structure ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`119 2 229 20`
+(signature)`structure(self, tokens)`
+
+Process tokens into selector sequences.
+Usually used indirectly by (factor-local/method)&<#Context.prepare[prepare]>.
+
+
+[ Context >> _select ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`230 2 235 19`
+(signature)`_select(self, nodes, ident)`
+
+
+[ Context >> _index ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`236 2 239 23`
+(signature)`_index(self, nodes, eslice)`
+
+
+[ Context >> _predicate ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`240 2 245 17`
+(signature)`_predicate(self, nodes, title)`
+
+
+[ Context >> _all ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`246 2 250 20`
+(signature)`_all(self, nodes, type)`
+
+
+[ Context >> _filter ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`251 2 262 19`
+(signature)`_filter(self, nodes, *spec)`
+
+
+[ Context >> _union ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`263 2 270 19`
+(signature)`_union(self, origin_nodes, exprnodes)`
+
+
+[ Context >> switch ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`272 2 273 59`
+(signature)`switch(self, operation, nodes)`
+
+
+[ Context >> interpret ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`275 2 298 14`
+(signature)`interpret(self, plan, root, context)`
+
+
+[ Cursor ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`300 1 338 76`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`300 14 300 19`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+Navigation state class providing a query interface to an element tree.
+
+
+[ Cursor >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`305 2 310 37`
+(signature)`__init__(self, context, root)`
+
+
+[ Cursor >> seek ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`312 2 317 13`
+(signature)`seek(self, path)`
+
+Adjust the cursor position to the nodes identified by (factor-local/parameter)&<#Cursor.seek.Parameters.path[path]>.
+
+
+[ Cursor >> reset ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`319 2 324 13`
+(signature)`reset(self)`
+
+Select the root as the current working node.
+
+
+[ Cursor >> fork ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`326 2 332 44`
+(signature)`fork(self, path)`
+
+Create a new instance using the given (factor-local/parameter)&<#Cursor.fork.Parameters.path[path]> to the select the nodes
+used as the root content of the new (factor-local/class)&<#Cursor[Cursor]>.
+
+
+[ Cursor >> select ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`334 2 338 76`
+(signature)`select(self, path)`
+
+Retrieve nodes relative to the context node using (factor-local/parameter)&<#Cursor.select.Parameters.path[path]>.
+

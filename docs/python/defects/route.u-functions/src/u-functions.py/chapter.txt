@@ -1,0 +1,30 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 14 0`
+Check utility functions present in (project-local/unknown)&<__init__>.
+
+
+[ module ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 38`
+
+[ test_rewrite_relative ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 14 59`
+(signature)`test_rewrite_relative(test)`
+
+Check relative path resolution.
+

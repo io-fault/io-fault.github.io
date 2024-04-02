@@ -1,0 +1,399 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 315 0`
+Nested generator based HTML/XML serialization module.
+
+Provides primitives for generating XML using nested generators.
+
+[ Properties ]
+
+/namespaces/
+	Common namespace labels for various XML namespaces.
+
+
+[ functools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 1 10 16`
+
+[ itertools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 1 11 16`
+
+[ typing ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`12 1 12 13`
+
+[ namespaces ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`14 1 29 1`
+#!source
+	namespaces = (
+		('xml', "http://www.w3.org/XML/1998/namespace"),
+		('xmlns', "http://www.w3.org/2000/xmlns/"),
+		('schema', "http://www.w3.org/2001/XMLSchema"),
+		('schema-datatypes', "http://www.w3.org/2001/XMLSchema-datatypes"),
+		('relaxng', "http://relaxng.org/ns/structure/1.0"),
+		('schematron', "http://www.ascc.net/xml/schematron"),
+		('rdf', "http://www.w3.org/1999/02/22-rdf-syntax-ns#"),
+		('xlink', "http://www.w3.org/1999/xlink"),
+		('xinclude', "http://www.w3.org/2001/XInclude"),
+		('xslt', "http://www.w3.org/1999/XSL/Transform"),
+		('xhtml', "http://www.w3.org/1999/xhtml"),
+		('svg', "http://www.w3.org/2000/svg"),
+		('mathml', "http://www.w3.org/1998/Math/MathML"),
+		('l', "http://if.fault.io/xml/literals"),
+	)
+
+[ escape_element_bytes ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`31 1 46 15`
+(signature)`escape_element_bytes(data)`
+
+Escape bytes instances for storage inside an XML element.
+(invalid/unknown)&<#bytes> instances are yielded out as there may be a series of
+CDATA sections, and (factor-local/data)&<#element[element]> works with iterators when dealing
+with content.
+
+This returns an iterable suitable for use by (factor-local/data)&<#element[element]>.
+
+
+[ escape_element_string ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`48 1 61 62`
+(signature)`escape_element_string(string)`
+
+Escape and encode an arbitrary string for storage inside an
+XML element body. This depends on (factor-local/function)&<#escape_element_bytes[escape_element_bytes]>
+and has the same limitations with respect to control characters.
+
+This returns an iterable suitable for use by (factor-local/data)&<#element[element]>.
+
+
+[ escape_attribute_string ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`63 1 86 14`
+(signature)`escape_attribute_string(string)`
+
+Escape the given string for inclusion in an attribute value.
+Does *not* encode the result string.
+
+! WARNING:
+	This function only escapes ampersands, less-than comparison
+	characters, and quotes. Low-ASCII will not be escaped and must
+	be processed by a distinct function. This should only be used in cases
+	where the source is known to not produce low-ASCII.
+
+
+[ attribute ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`88 1 108 11`
+		- (type/syntax)`str`
+		- (type/factor-local/parameter)&<#attribute.Parameters.str[str]>
+		
+(signature)`attribute(identifier, value)`
+
+Construct an XML attribute from the identifier and its value.
+
+Does not encode the result string, and attribute values are subjected
+to the effect of (factor-local/function)&<#escape_attribute_string[escape_attribute_string]>.
+
+Returns a (factor-local/parameter)&<#attribute.Parameters.str[str]> as they are normally interpolated inside (factor-local/function)&<#encode_element[encode_element]>.
+
+
+[ empty ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`110 1 115 89`
+(signature)`empty(element_identifier)`
+
+Return an iterable to an empty element.
+
+
+[ encode_element ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`117 1 142 3`
+(signature)`encode_element(encoding, element_identifier, content, *attribute_sequence, **attributes)`
+
+Generate an entire element populating the body by yielding from the given content.
+
+
+[ element ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`144 1 144 52`
+#!source
+	element = functools.partial(encode_element, 'utf-8')
+
+[ Serialization ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`146 1 315 29`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`146 21 146 26`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+Base class for XML serialization instances.
+Used to localize encoding bindings and default element prefixes.
+
+After a Serialization instance is initialized,
+the (factor-local/method)&<#Serialization.element[element]> and (factor-local/method)&<#Serialization.escape[escape]> attributes will be available for use
+as they depend on the encoding. Serialization is strictly concerned
+with the binary emission of a document built for nested iterators.
+
+[ > Properties ]
+
+/xml_prefix/
+	The prefix to use when serializing elements with (factor-local/method)&<#Serialization.prefixed[prefixed]>.
+
+/xml_encoding/
+	The encoding to use when serializing (invalid/unknown)&<#str> objects.
+
+
+[ Serialization >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`164 2 174 74`
+(signature)`__init__(self)`
+
+Initialize the serializer to write XML data in the given encoding.
+
+
+[ Serialization >> declaration ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`176 2 188 26`
+(signature)`declaration(self, standalone)`
+
+Construct and return an ASCII encoded string representing
+the declaration consistent with the Serialization context.
+
+[ >> Parameters ]
+
+/(parameter)`self`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`standalone`/
+	
+	The `standalone` attribute for the declaration.
+
+
+[ Serialization >> encode ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`190 2 198 72`
+(signature)`encode(self, string)`
+
+Encode the given string in the configured encoding with `'xmlcharrefreplace'`
+on errors.
+
+Returns the encoded string in a tuple for placement into (factor-local/method)&<#Serialization.element[element]> calls.
+
+
+[ Serialization >> empty ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`200 2 205 46`
+(signature)`empty(self, name, *args, **kw)`
+
+Construct an empty XML element with the attributes
+defined by parameters.
+
+
+[ Serialization >> switch ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`207 2 215 12`
+(signature)`switch(self)`
+
+Create another (factor-local/class)&<#Serialization[Serialization]> instance using a different prefix.
+
+
+[ Serialization >> element ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`217 2 225 6`
+(signature)`element(self, element_name, subnode_iterator, *attributes, **kwattributes)`
+
+Serialize an element with the exact (factor-local/parameter)&<#Serialization.element.Parameters.element_name[element_name]> with the contents of
+(factor-local/parameter)&<#Serialization.element.Parameters.subnode_iterator[subnode_iterator]> as the inner nodes. (factor-local/parameter)&<#Serialization.element.Parameters.subnode_iterator[subnode_iterator]> must produce
+(invalid/unknown)&<#bytes> encoded objects.
+
+
+[ Serialization >> prefixed ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`227 2 235 66`
+(signature)`prefixed(self, element_name, *args, **kw)`
+
+Serialize an element using (factor-local/method)&<#Serialization.element[element]>, but prefix the element name with
+prefix configured at (invalid/unknown)&<#xml_prefix>.
+
+The configured prefix may or may not be an XML namespace.
+
+
+[ Serialization >> pi ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`237 2 248 8`
+(signature)`pi(self, target, data)`
+
+Emit an XML Processing Instruction.
+
+Processing Instruction productions are different than (factor-local/method)&<#Serialization.element[element]>
+productions as a single string is returned rather than an iterator.
+
+
+[ Serialization >> root ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`250 2 275 25`
+(signature)`root(self, name, content, *attributes)`
+
+Construct the root element of a document.
+
+
+[ Serialization >> literal ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`276 2 290 60`
+(signature)`literal(self, ordinal)`
+
+Create a literal element used to represent a disallowed XML character.
+
+Strict XML processing implementations may disallow many low-ascii characters,
+*even when encoded as an entity*. This restriction is problematic as it
+requires some compensation when working with binary data.
+
+(factor-local/method)&<#Serialization.literal[literal]> provides a way to escape any octet for encoding purposes. The given
+oridinal will be returned as an element in the `l` namespace. When serializing
+XML output that exercises (factor-local/method)&<#Serialization.literal[literal]>, the (xmlns:label)`l` namespace must be defined
+ahead of time.
+
+
+[ Serialization >> text ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`292 2 300 3`
+(signature)`text(self, *strings)`
+
+Emit a text node without escaping contents.
+Encoding errors will be raised.
+
+
+[ Serialization >> escape ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`302 2 309 3`
+(signature)`escape(self, string)`
+
+Escape the given (factor-local/parameter)&<#Serialization.escape.Parameters.string[string]> and encode it in the configured encoding.
+
+
+[ Serialization >> hyperlink ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`311 2 315 29`
+(signature)`hyperlink(self, href)`
+
+Emit the default hyperlink attribute representation.
+

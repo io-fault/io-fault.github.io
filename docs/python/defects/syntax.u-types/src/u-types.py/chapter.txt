@@ -1,0 +1,189 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 131 43`
+Validate library defined types and their integration with (context-local/project-name)&<fault.range>
+
+
+[ sys ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 10`
+
+[ pickle ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 13`
+
+[ module ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 37`
+
+[ test_Address_arithmetic ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 16 15`
+(signature)`test_Address_arithmetic(test)`
+
+
+[ test_Address_from_string ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`18 1 23 17`
+(signature)`test_Address_from_string(test)`
+
+
+[ test_Address_pickle ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`25 1 28 26`
+(signature)`test_Address_pickle(test)`
+
+
+[ test_Address_string ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`30 1 32 21`
+(signature)`test_Address_string(test)`
+
+
+[ test_Address_normalize_stop ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`34 1 43 58`
+(signature)`test_Address_normalize_stop(test)`
+
+
+[ test_Area ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`45 1 57 23`
+(signature)`test_Area(test)`
+
+Partially redundant with (project-local/unknown)&<module.rangetypes.IRange> tests,
+check the local interface for sanity assurance.
+
+
+[ test_Area_string ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`59 1 63 25`
+(signature)`test_Area_string(test)`
+
+
+[ test_Area_pickle ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`65 1 71 12`
+(signature)`test_Area_pickle(test)`
+
+
+[ test_Area_delineate ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`73 1 80 19`
+(signature)`test_Area_delineate(test)`
+
+
+[ test_Area_horizontals ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`82 1 92 27`
+(signature)`test_Area_horizontals(test)`
+
+
+[ sample ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`94 1 100 1`
+#!source
+	sample = [
+		"This(1) is the first line.",
+		"This(2) is the second line.",
+		"",
+		"This(3) is the third line.",
+		"This(4) is the fourth line.",
+	]
+
+[ test_Area_select ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`102 1 132 42`
+(signature)`test_Area_select(test)`
+

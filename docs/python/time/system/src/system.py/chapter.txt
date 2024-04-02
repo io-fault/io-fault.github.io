@@ -1,0 +1,187 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 97 0`
+Typed system clock access.
+
+Construct instances of both the real and monotonic clocks and provide access
+via (factor-local/function)&<#elapsed[elapsed]>, (factor-local/function)&<#utc[utc]>, (factor-local/function)&<#local[local]>, and (factor-local/function)&<#date[date]>.
+
+
+[ tools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 7 27`
+
+[ constants ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 8 23`
+
+[ types ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`9 1 9 19`
+
+[ _fault_clocks ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 1 15 2`
+(signature)`_fault_clocks(module, delta)`
+
+
+[ _stdlib_clocks ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`17 1 31 14`
+(signature)`_stdlib_clocks(module, delta)`
+
+
+[ setup ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`33 1 42 51`
+(signature)`setup()`
+
+
+[ _unix ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`46 1 49 22`
+(signature)`_unix(ut)`
+
+
+[ zone ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`50 1 61 64`
+(signature)`zone(selector)`
+
+Using the zone definitions provided by the system,
+construct a view for the time zone identified by (factor-local/parameter)&<#zone.Parameters.selector[selector]>.
+
+[ > Parameters ]
+
+/(parameter)`selector`/
+	
+	The zone's identifier.
+	If (invalid/unknown)&<#None>, the system default zone will be used.
+
+
+[ utc ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`63 1 67 32`
+		- (type/syntax)`types.Timestamp`
+		- (type/project-local/factor-element)&<types#Timestamp[fault.time.types.Timestamp]>
+		
+(signature)`utc()`
+
+Get the current time according to the system's real clock.
+
+
+[ local ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`69 1 80 52`
+		- (type/syntax)`types.Timestamp`
+		- (type/project-local/factor-element)&<types#Timestamp[fault.time.types.Timestamp]>
+		
+(signature)`local()`
+
+Get the current time according to the system's real clock and
+the default time zone configured by the system.
+
+The applied offset returned by (project-local/unknown)&<views#Zone.localize[views.Zone.localize]> is discarded by this
+function, and, therefore, it should only be used in cases where it is
+acceptable for the timestamp to be represented without a time zone.
+
+The default zone can be changed by overriding the (factor-local/function)&<#zone[zone]> function.
+
+
+[ date ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`82 1 91 42`
+		- (type/syntax)`types.Date`
+		- (type/project-local/factor-element)&<types#Date[fault.time.types.Date]>
+		
+(signature)`date(delta)`
+
+Using (factor-local/function)&<#local[local]>, identify the current date.
+
+[ > Parameters ]
+
+/(parameter)`delta`/
+	
+	The day offset to apply to the current date.
+	Defaults to zero.
+
+/(parameter)`Type`/
+	
+	(control/absent)`Undocumented`.
+
+
+[ elapsed ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`93 1 97 37`
+		- (type/syntax)`types.Measure`
+		- (type/project-local/factor-element)&<types#Measure[fault.time.types.Measure]>
+		
+(signature)`elapsed()`
+
+Snapshot of the system's monotonic clock.
+

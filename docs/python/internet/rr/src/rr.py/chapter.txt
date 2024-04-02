@@ -1,0 +1,71 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 95 11`
+Parse and query reference composition files.
+
+
+[ form ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 20 11`
+(signature)`form(records)`
+
+
+[ context ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`22 1 41 33`
+(signature)`context(rheader)`
+
+Extract the record prefix, qualifiers, and attributes from the header.
+
+
+[ split ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`43 1 52 46`
+(signature)`split(text)`
+
+
+[ structure ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`54 1 73 2`
+(signature)`structure(parts)`
+
+
+[ select ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`75 1 89 47`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+(signature)`select(struct, req, *fields)`
+
+Select fields from the representation records.
+

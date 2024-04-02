@@ -1,0 +1,1 @@
+[["Sanity and operations."], ["Validate that a reasonable OSError is raised when the executable doesn't exist."], ["Presumes integer size; failure of this test may not indicate dysfunction."]]

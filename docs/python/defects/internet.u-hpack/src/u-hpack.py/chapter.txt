@@ -1,0 +1,62 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 47 0`
+
+[ module ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 1 39`
+
+[ samples ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`3 1 12 1`
+#!source
+	samples = [
+	    b'www.example.com',
+	    b'www.com',
+	    b'www.',
+	    b'no-cache',
+	    b'af23958cbde0293cd099affff',
+	    b'\x00\x00\x00\x00',
+	    b'\xff\xff\xff\xff',
+	    bytes(range(256)),
+	]
+
+[ test_huffman_coding ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`14 1 17 46`
+(signature)`test_huffman_coding(test)`
+
+
+[ test_huffman_samples ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`19 1 47 37`
+(signature)`test_huffman_samples(test)`
+
+Tests comprised of data from examples in
+&<http://httpwg.org/specs/rfc7541.html>
+

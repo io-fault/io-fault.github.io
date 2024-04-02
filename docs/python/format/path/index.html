@@ -1,0 +1,24 @@
+<html root="2"><head><title>fault.format.path</title><meta charset="utf-8"/><link as="style" rel="preload" href="../../.legacy-web/core.css"></link><link as="style" rel="preload" href="../../.legacy-web/factor.css"></link><link rel="stylesheet" href="../../.legacy-web/core.css"></link><link rel="stylesheet" href="../../.legacy-web/factor.css"></link></head><body><main><h1><span class="prefix"></span><div class="page-subject"><img class="icon" src="../../.factor-type-icon/if.fault.io/python-module.svg"></img><span class="subject-identifier">path</span><a href="http://if.fault.io/factors/python.module"><code class="type">python.module</code></a></div><div class="page-context"><a href="../"><img class="icon" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNTYiIGhlaWdodD0iMjU2Ij48dGV4dCB4PSI0IiB5PSIwLjg4ZW0iIGZvbnQtc2l6ZT0iMjQ4Ij7wn5KOPC90ZXh0Pjwvc3ZnPg=="></img></a><span class="context-identifier">fault.format</span></div></h1><section class="chapter"><p><span class="text.normal">Color formatting for file paths, URIs, and timestamps.</span></p></section><section class="import" documented="false" local-identifier="os" id="os"><h1><span class="prefix"></span><a class="title" href="#os"><span class="text.normal">os</span></a><span class="abstract-type">import</span></h1></section><section class="import" documented="false" local-identifier="palette" id="palette"><h1><span class="prefix"></span><a class="title" href="#palette"><span class="text.normal">palette</span></a><span class="abstract-type">import</span></h1></section><section class="data" documented="false" local-identifier="route_colors" id="route_colors"><h1><span class="prefix"></span><a class="title" href="#route_colors"><span class="text.normal">route_colors</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code class="source">route_colors = {
+	'filesystem-root': 0xfafafa,
+	'warning': palette.colors['yellow'],
+
+	'directory': palette.colors['blue'],
+	'relatives': 0xff0000,
+	'executable': palette.colors['green'],
+	'data': 0xc6c6c6,
+
+	'dot-file': palette.colors['gray'],
+	'file-not-found': palette.colors['red'],
+
+	'link': palette.colors['violet'],
+	'device': 0xff5f00,
+	'socket': 0xff5f00,
+	'pipe': 0xff5f00,
+
+	'path-separator': palette.colors['background-adjacent'],
+	'path-directory': palette.colors['gray'],
+	'path-link': palette.colors['violet'],
+
+	None: None,
+}
+</code></pre></section><section class="function" documented="false" local-identifier="route_is_link" id="route_is_link"><h1><span class="prefix"></span><a class="title" href="#route_is_link"><span class="text.normal">route_is_link</span></a><span class="abstract-type">function</span></h1><p><code class="signature">route_is_link(route)</code></p></section><section class="function" documented="false" local-identifier="_f_route_path" id="_f_route_path"><h1><span class="prefix"></span><a class="title" href="#_f_route_path"><span class="text.normal">_f_route_path</span></a><span class="abstract-type">function</span></h1><p><code class="signature">_f_route_path(root, route)</code></p></section><section class="function" documented="false" local-identifier="f_route_path" id="f_route_path"><h1><span class="prefix"></span><a class="title" href="#f_route_path"><span class="text.normal">f_route_path</span></a><span class="abstract-type">function</span></h1><p><code class="signature">f_route_path(root, route)</code></p></section><section class="function" documented="false" local-identifier="f_route_identifier" id="f_route_identifier"><h1><span class="prefix"></span><a class="title" href="#f_route_identifier"><span class="text.normal">f_route_identifier</span></a><span class="abstract-type">function</span></h1><p><code class="signature">f_route_identifier(route)</code></p></section><section class="function" documented="true" local-identifier="f_route_absolute" id="f_route_absolute"><h1><span class="prefix"></span><a class="title" href="#f_route_absolute"><span class="text.normal">f_route_absolute</span></a><span class="abstract-type">function</span></h1><p><code class="signature">f_route_absolute(route)</code></p><p><span class="text.normal">Format the absolute path of the given route.</span></p></section><section class="function" documented="false" local-identifier="f_route_absolute_colors" id="f_route_absolute_colors"><h1><span class="prefix"></span><a class="title" href="#f_route_absolute_colors"><span class="text.normal">f_route_absolute_colors</span></a><span class="abstract-type">function</span></h1><p><code class="signature">f_route_absolute_colors(route)</code></p></section><h1 class="footing"></h1></main></body></html>

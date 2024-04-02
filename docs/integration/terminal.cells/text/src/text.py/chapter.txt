@@ -1,0 +1,863 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 634 0`
+Functions and types for representing text as cells.
+
+
+[ operator ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 15`
+
+[ itertools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 16`
+
+[ functools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 16`
+
+[ Iterable ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 7 36`
+
+[ Glyph ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`9 1 9 24`
+
+[ graphemes ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 1 129 23`
+(signature)`graphemes(Cells, ci, ctlsize, tabsize)`
+
+Recognize Character Units from an iterator of codepoints using (factor-local/parameter)&<#graphemes.Parameters.Cells[Cells]>.
+
+Identification of Character Units is performed by analyzing the cell usage of
+contiguous codepoints. When a change in cell usage occurs, presume that
+a new Character Unit has begun. However, do so while considering
+Variant Selector, ZWJ Sequence, and Regional Indicator exceptions.
+
+! WARNING:
+	ZWJ sequences are nearly presumed to be emoji sequences;
+	the maximum cell count of the codepoints in the sequence determines
+	the reported cells. While this may yield the correct alignment
+	outside of emoji, there are cases where a join intends to represent
+	two character units in which the identified maximum will be incorrect.
+
+[ > Parameters ]
+
+/(parameter)`Cells`/
+	
+	The function identifying the width of a character.
+
+/(parameter)`ci`/
+	- (type/syntax)`Iterable[str]`
+	
+	Iterable of unicode characters.
+
+/(parameter)`ctlsize`/
+	
+	Cell count to assign to low-ascii control characters.
+
+/(parameter)`tabsize`/
+	
+	Cell count to assign to tab characters.
+
+[ > Regional Indicators ]
+
+Currently uses range checks. If (python/keyword)`match` ever implements
+jump tables for constants, the following template can be used to generate
+the or-list.
+
+#!syntax/python
+	ri_offset = 0x1F1E6
+	ri_codes = [
+		(hex((x - ord('a')) + ri_offset))[2:].upper()
+		for x in range(ord('a'), ord('z'))
+	]
+	for p in ri_codes[0::4], ri_codes[1::4], ri_codes[2::4], ri_codes[3::4]:
+		print('"' + '" | "\U000'.join(p) + '" | \')
+
+[ words ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`131 1 170 46`
+		- (type/syntax)`tuple[int, str]`
+		
+(signature)`words(gi)`
+
+Group Character Units by the cell usage rate. Exceptions given to already plural
+strings which expect to be treated as units.
+
+Processes the (factor-local/function)&<#graphemes[graphemes]> generator into cell counts and string pairs providing
+the critical parameters for (project-local/unknown)&<types.Words> and (project-local/unknown)&<types.Unit> instances.
+
+[ > Parameters ]
+
+/(parameter)`gi`/
+	- (type/syntax)`Iterable[tuple[str, int]]`
+	
+	Iterator producing codepoint expression and cell count pairs.
+
+[ > Returns ]
+
+Iterator of cells and strings where negative cell counts indicate a
+a sole Character Unit.
+
+The integer and string positions are swapped in order to be consistent
+with (project-local/unknown)&<types.Words> order.
+
+
+[ Words ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`172 1 298 37`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`172 13 172 17`
+	- (type/syntax)`tuple`
+	- (type/invalid/unknown)&<#tuple>
+	
+(factor-local/class)&<#Phrase[Phrase]> segments identifying the cell count of the word text
+and the (project-local/project-factor)&<types.Glyph[terminal.cells.types.Glyph]> frame that should be used to style the text.
+
+
+[ Words >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`177 2 179 10`
+#!source
+	__slots__ = ()
+		@property
+
+[ Words >> unit ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`180 2 187 10`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+The codepoints per character units.
+Normally `1`. Codepoint length for (factor-local/class)&<#Unit[Unit]> and (factor-local/class)&<#Redirect[Redirect]>.
+
+
+[ Words >> cellrate ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`188 2 192 43`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+Number of cells required to display a *character unit* of the word text.
+
+
+[ Words >> text ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`196 2 196 40`
+#!source
+	text = property(operator.itemgetter(1))
+
+[ Words >> render ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`198 2 206 10`
+(signature)`render(self)`
+
+
+[ Words >> style ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`207 2 211 16`
+		- (type/syntax)`Glyph`
+		- (type/project-local/project-factor)&<types.Glyph[terminal.cells.types.Glyph]>
+		
+The traits and colors to use when rendering the text.
+
+
+[ Words >> split ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`213 2 223 3`
+(signature)`split(self, whence)`
+
+Split the word at the given codepoint offset, (factor-local/parameter)&<#Words.split.Parameters.whence[whence]>.
+
+
+[ Words >> cellcount ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`225 2 233 16`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+(signature)`cellcount(self)`
+
+Number of cells required to display the word text.
+
+This measurement is stored alongside of the string that will be rendered.
+It is possible, if not likely, that this override be respected above
+a system's `wcswidth` implementation.
+
+
+[ Words >> celloffset ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`235 2 239 53`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+(signature)`celloffset(self, offset)`
+
+Translate word relative codepoint offset to word relative cell offset.
+
+
+[ Words >> cellpoint ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`241 2 245 47`
+(signature)`cellpoint(self, celloffset)`
+
+Translate the word relative (factor-local/parameter)&<#Words.cellpoint.Parameters.celloffset[celloffset]> to the word relative codepoint offset.
+
+
+[ Words >> unitcount ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`247 2 251 48`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+(signature)`unitcount(self)`
+
+The number of character units in the (invalid/unknown)&<#codepoints>.
+
+
+[ Words >> unitoffset ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`253 2 257 37`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+(signature)`unitoffset(self, offset)`
+
+Translate word relative codepoint offset to word relative character unit offset.
+
+
+[ Words >> unitpoint ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`259 2 269 46`
+(signature)`unitpoint(self, unitoffset)`
+
+Translate word relative Character Unit offset into word relative codepoint offset.
+
+
+[ Words >> codecount ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`271 2 278 28`
+(signature)`codecount(self)`
+
+Number of codepoints used to represent the words' text.
+
+This is equivalent to `len(Words(...).text)`, but
+offers a point of abstraction in, very unlikely, implementation changes.
+
+
+[ Words >> codeoffset ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`280 2 284 19`
+(signature)`codeoffset(self, codeoffset)`
+
+The codepoint offset; returns (factor-local/parameter)&<#Words.codeoffset.Parameters.codeoffset[codeoffset]>.
+
+
+[ Words >> codepoint ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`286 2 298 37`
+(signature)`codepoint(self, codeoffset)`
+
+Translate the word relative (factor-local/method)&<#Words.codepoint[codepoint]> offset to the word relative codepoint offset.
+A reflective mapping, but bind the returned offset to the word's range returning
+overflow or underflow as the remainder.
+
+
+[ Unit ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`300 1 331 43`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`300 12 300 16`
+	- (type/syntax)`Words`
+	- (type/factor-local/class)&<#Words[Words]>
+	
+Words representing a single character unit composed from a
+unicode codepoint expression. Expressions being regional indicator
+pairs, emoji ZWJ sequences, and Variant Selector qualified codepoints.
+
+Unit words provides the necessary compensation for inconsistent (factor-local/property)&<#Words.cellrate[Words.cellrate]>.
+
+
+[ Unit >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`308 2 308 15`
+#!source
+	__slots__ = ()
+
+[ Unit >> render ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`310 2 319 10`
+(signature)`render(self)`
+
+
+[ Unit >> unit ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`320 2 321 28`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+
+[ Unit >> split ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`323 2 331 43`
+(signature)`split(self, offset)`
+
+Maintain (factor-local/method)&<#Words.split[Words.split]> interface, but always return a tuple with a sole element.
+
+
+[ Redirect ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`333 1 345 25`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`333 16 333 19`
+	- (type/syntax)`Unit`
+	- (type/factor-local/class)&<#Unit[Unit]>
+	
+A (factor-local/class)&<#Unit[Unit]> that explicitly remaps its display text.
+Used to control the transmitted representations of control characters and indentation.
+
+
+[ Redirect >> text ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`339 2 339 40`
+#!source
+	text = property(operator.itemgetter(3))
+
+[ Redirect >> render ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`341 2 345 25`
+(signature)`render(self)`
+
+
+[ Phrase ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`347 1 634 58`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`347 14 347 18`
+	- (type/syntax)`tuple`
+	- (type/invalid/unknown)&<#tuple>
+	
+A sequence (factor-local/class)&<#Words[Words]> providing translation interfaces for codepoints, cells, and character
+units.
+
+
+[ Phrase >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`352 2 352 15`
+#!source
+	__slots__ = ()
+
+[ Phrase >> render ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`354 2 362 14`
+(signature)`render(self)`
+
+Generate the cells that would represent the words of the phrase.
+
+
+[ Phrase >> frame_word ]
+! CONTROL:
+	/type/
+		staticmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`363 2 375 13`
+(signature)`frame_word(cf, cells, text)`
+
+Select the appropriate (factor-local/class)&<#Words[Words]> class for containing the (factor-local/parameter)&<#Phrase.frame_word.Parameters.text[text]>.
+Order of parameters is intended to support (factor-local/classmethod)&<#Phrase.from_segmentation[from_segmentation]>.
+
+
+[ Phrase >> segment ]
+! CONTROL:
+	/type/
+		classmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`376 2 386 3`
+(signature)`segment(Class, qwords)`
+
+
+[ Phrase >> m_unit ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`388 2 392 2`
+#!source
+	m_unit = (
+		Words.unitcount,
+		Words.unitoffset,
+		Words.unitpoint,
+	)
+
+[ Phrase >> m_cell ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`393 2 397 2`
+#!source
+	m_cell = (
+		Words.cellcount,
+		Words.celloffset,
+		Words.cellpoint,
+	)
+
+[ Phrase >> m_codepoint ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`398 2 404 10`
+#!source
+	m_codepoint = (
+		Words.codecount,
+		Words.codeoffset,
+		Words.codepoint,
+	)
+		@property
+
+[ Phrase >> text ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`405 2 412 13`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+The text content of the phrase.
+May not be consistent with what is sent to a display in (factor-local/class)&<#Redirect[Redirect]> cases.
+
+
+[ Phrase >> wordspace ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`413 2 419 13`
+(signature)`wordspace(Class)`
+
+Word specification consisting of a single space.
+
+
+[ Phrase >> from_words ]
+! CONTROL:
+	/type/
+		classmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`420 2 423 13`
+(signature)`from_words(Class, *words)`
+
+
+[ Phrase >> from_segmentation ]
+! CONTROL:
+	/type/
+		classmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`424 2 425 37`
+(signature)`from_segmentation(Class, qwords)`
+
+
+[ Phrase >> join ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`427 2 437 28`
+(signature)`join(self, phrases)`
+
+Create a new Phrase from (factor-local/parameter)&<#Phrase.join.Parameters.phrases[phrases]> by placing (factor-local/parameter)&<#Phrase.join.Parameters.self[self]> between each (factor-local/class)&<#Phrase[Phrase]> instance
+in (factor-local/parameter)&<#Phrase.join.Parameters.phrases[phrases]>.
+
+
+[ Phrase >> combine ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`439 2 455 28`
+(signature)`combine(self)`
+
+Combine word specifications with identical attributes(styles).
+Returns a new (factor-local/class)&<#Phrase[Phrase]> instance with any redundant word attributes eliminated.
+
+
+[ Phrase >> cellcount ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`457 2 461 32`
+(signature)`cellcount(self)`
+
+Number of cells that the phrase will occupy.
+
+
+[ Phrase >> unitcount ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`463 2 467 41`
+(signature)`unitcount(self)`
+
+Number of character units contained by the phrase.
+
+
+[ Phrase >> reverse ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`469 2 478 3`
+(signature)`reverse(self)`
+
+Construct an iterator to the concrete words for creating a new (factor-local/class)&<#Phrase[Phrase]>
+instance that is in reversed form of the words in (factor-local/parameter)&<#Phrase.reverse.Parameters.self[self]>.
+`assert phrase == Phrase(Phrase(phrase.reverse()).reverse())`
+
+
+[ Phrase >> subphrase ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`480 2 485 57`
+(signature)`subphrase(self, start, stop)`
+
+Extract the subphrase at the given cell offsets.
+
+
+[ Phrase >> select ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`487 2 515 44`
+(signature)`select(self, start, stop, adjust)`
+
+Extract the subphrase at the given indexes.
+
+[ >> Parameters ]
+
+/(parameter)`self`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`start`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`stop`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`adjust`/
+	
+	Callable that changes the text properties of the selected words.
+	Defaults to no change.
+
+
+[ Phrase >> seek ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`517 2 570 20`
+(signature)`seek(self, whence, offset)`
+
+Find the word offset and codepoint offset for the unit (factor-local/parameter)&<#Phrase.seek.Parameters.offset[offset]>
+relative to (factor-local/parameter)&<#Phrase.seek.Parameters.whence[whence]>.
+The (factor-local/parameter)&<#Phrase.seek.Parameters.offset[offset]> is traversed using (factor-local/parameter)&<#Phrase.seek.Parameters.ulength[ulength]>, (factor-local/parameter)&<#Phrase.seek.Parameters.uoffset[uoffset]>, and (invalid/unknown)&<#uindex>.
+
+
+[ Phrase >> afirst ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`572 2 587 18`
+(signature)`afirst(self, position)`
+
+Align the position to the beginning of the next word given
+that the character index is at the end of the word
+and that there is a following word. If realignment is not
+possible, return (factor-local/parameter)&<#Phrase.afirst.Parameters.position[position]>.
+
+
+[ Phrase >> alast ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`589 2 600 38`
+(signature)`alast(self, position)`
+
+Align the position to the end of the previous word given
+that the character index is at the start of the word
+and that there is a previous word. If realignment is not
+possible, return (factor-local/parameter)&<#Phrase.alast.Parameters.position[position]>.
+
+
+[ Phrase >> split ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`602 2 615 46`
+(signature)`split(self, whence)`
+
+Split the phrase at the given position, (factor-local/parameter)&<#Phrase.split.Parameters.whence[whence]>.
+
+
+[ Phrase >> tell ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`617 2 634 58`
+(signature)`tell(self, position)`
+
+Identify the absolute unit offset for the given phrase position.
+
+[ >> Parameters ]
+
+/(parameter)`self`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`position`/
+	
+	The Word-Codepoint offset pair being described.
+
+/(parameter)`ulength`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`uoffset`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`utranslate`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`sum`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`range`/
+	
+	(control/absent)`Undocumented`.
+

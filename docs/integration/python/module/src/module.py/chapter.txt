@@ -1,0 +1,128 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 53 0`
+Module compilation tools.
+
+
+[ ast ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 10`
+
+[ builtins ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 15`
+
+[ typing ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 13`
+
+[ hashlib ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 7 14`
+
+[ io ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 8 9`
+
+[ codecs ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`9 1 9 13`
+
+[ constant_expression ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 1 11 31`
+#!source
+	constant_expression = "%s = %r"
+
+[ hash_syntax ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`13 1 23 21`
+(signature)`hash_syntax(source)`
+
+
+[ mkconstant ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`25 1 35 9`
+(signature)`mkconstant(name, value)`
+
+Create a constant for injection into a module.
+
+
+[ inject ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`37 1 42 12`
+(signature)`inject(tree, constants)`
+
+Inject the (none/invalid)&<http://fault.io/dev/null[ast.Module]>, (factor-local/parameter)&<#inject.Parameters.tree[tree]>, with module-level assignments provided by (factor-local/parameter)&<#inject.Parameters.constants[constants]>.
+
+
+[ compile ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`44 1 53 31`
+(signature)`compile(factor, source, path, constants)`
+
+Compile a module's source injecting a factor identifier and source hash.
+

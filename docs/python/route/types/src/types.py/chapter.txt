@@ -1,0 +1,183 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 84 0`
+Segment and Selector implementation access.
+
+
+[ itertools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 16`
+
+[ core ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 18`
+
+[ rewrite ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 21`
+
+[ consistency ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 8 30`
+#!source
+	consistency = core.consistency # Ultimately from fault.context.tools
+
+[ Segment ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 1 45 39`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`10 15 10 55`
+	- (type/syntax)`core.PartitionedSequence[core.Identifier]`
+	
+Sequence of identifiers that may be incorporated into a selector subclass.
+
+
+[ Segment >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`15 2 15 35`
+#!source
+	__slots__ = ('context', 'points',)
+
+[ Segment >> __str__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`17 2 19 46`
+(signature)`__str__(self)`
+
+
+[ Segment >> __bool__ ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`21 2 29 14`
+(signature)`__bool__(self)`
+
+True is the segment has any points; False if zero.
+
+
+[ Segment >> segment ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`31 2 45 39`
+(signature)`segment(self)`
+
+
+[ Selector ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`47 1 84 54`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`47 16 47 56`
+	- (type/syntax)`core.PartitionedSequence[core.Identifier]`
+	
+Route domain base class.
+
+Subclasses provide access methods to a resource identified
+by the sequence of identifiers contained within the selector instance.
+
+
+[ Selector >> segment ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`55 2 74 32`
+		- (type/syntax)`Segment`
+		- (type/factor-local/parameter)&<#Selector.segment.Parameters.Segment[Segment]>
+		
+(signature)`segment(self)`
+
+Construct a (factor-local/parameter)&<#Selector.segment.Parameters.Segment[Segment]> from (factor-local/parameter)&<#Selector.segment.Parameters.self[self]> starting at the position designated by (factor-local/parameter)&<#Selector.segment.Parameters.from_stem[from_stem]>.
+If stem is not given, the entire selector will be converted.
+
+
+[ Selector >> __str__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`76 2 78 46`
+(signature)`__str__(self)`
+
+
+[ Selector >> __bool__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`80 2 82 13`
+(signature)`__bool__(self)`
+
+
+[ Selector >> _relative_resolution ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`84 2 84 54`
+#!source
+	_relative_resolution = staticmethod(rewrite.relative)

@@ -1,0 +1,1 @@
+[[["IRange", "__slots__"], ["IRange", "Type"], ["Set", "__slots__"], ["Set", "__add__"], ["XRange", "__slots__"], ["XRange", "Type"]], [[], {"syntax": "int", "area": [[88, 16], [88, 18]]}, ["starts", "stops"], {"syntax": "union", "area": [[547, 12], [547, 16]]}, [], {"syntax": "int", "area": [[562, 16], [562, 18]]}]]

@@ -1,0 +1,141 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 97 0`
+Time domain classes for points in time and measures of time.
+
+#!python
+	y2k = types.Timestamp.of(year=2000)
+	two_hours = types.Measure.of(hour=2)
+	
+	# Timestamp addition.
+	ts = y2k.elapse(two_hours, minute=2)
+	
+	# Type aware comparisons.
+	assert y2k.leads(ts) == True
+	assert y2k.follows(ts) == False
+	
+
+[ Union ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`37 1 37 24`
+
+[ abstract ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`38 1 38 22`
+
+[ core ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`39 1 39 18`
+
+[ MeasureTypes ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`44 1 44 27`
+#!source
+	MeasureTypes = MeasureTypes
+
+[ Timestamp ]
+! CONTROL:
+	/type/
+		data
+	/element/
+		- (control)`property-set`
+		- (source/area)`47 1 47 25`
+The nanosecond precision point in time type.
+
+#!source
+	Timestamp = PointTypes[0]
+
+[ Date ]
+! CONTROL:
+	/type/
+		data
+	/element/
+		- (control)`property-set`
+		- (source/area)`50 1 50 20`
+The earth-day precision point in time type.
+
+#!source
+	Date = PointTypes[1]
+
+[ Measure ]
+! CONTROL:
+	/type/
+		data
+	/element/
+		- (control)`property-set`
+		- (source/area)`54 1 54 25`
+The nanosecond precision time delta type.
+
+#!source
+	Measure = MeasureTypes[0]
+
+[ Months ]
+! CONTROL:
+	/type/
+		data
+	/element/
+		- (control)`property-set`
+		- (source/area)`57 1 57 24`
+The gregorian month precision time delta type.
+Necessary for representing months in certain cases as (factor-local/data)&<#Measure[Measure]>
+is in exact nanoseconds.
+
+#!source
+	Months = MeasureTypes[2]
+
+[ PointTypes ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`60 1 60 23`
+#!source
+	PointTypes = PointTypes
+
+[ select ]
+! CONTROL:
+	/type/
+		data
+	/element/
+		- (control)`property-set`
+		- (source/area)`62 1 62 34`
+Retrieve the most appropriate (project-local/factor-element)&<abstract#Measure[fault.time.abstract.Measure]> class available in (invalid/unknown)&<#Context> for use
+with the identified unit.
+
+#!python
+	assert issubclass(types.select('hour'), types.Measure)
+	assert issubclass(types.select('month'), types.Months)
+	assert issubclass(types.select('year'), types.Months)
+	
+#!source
+	select = Context.measure_from_unit

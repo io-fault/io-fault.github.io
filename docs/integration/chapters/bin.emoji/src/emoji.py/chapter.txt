@@ -1,0 +1,130 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 109 0`
+Render SVG data-IRIs for representing emoji as icons.
+
+
+[ sys ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`4 1 4 10`
+
+[ recognition ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`6 1 6 36`
+
+[ process ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`7 1 7 32`
+
+[ required ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`9 1 17 1`
+#!source
+	required = {
+		'--encoding': ('field-replace', 'encoding'),
+		'--escape': ('field-replace', 'escape'),
+		'--mime-type': ('field-replace', 'mime-type'),
+		'-s': ('field-replace', 'size'),
+		'-d': ('field-replace', 'delta'),
+		'-p': ('field-replace', 'position'),
+		'-N': ('field-replace', 'namespace'),
+	}
+
+[ restricted ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`18 1 26 1`
+#!source
+	restricted = {
+		'--stdin': ('field-replace', True, 'read-stdin'),
+		'-v': ('field-replace', True, 'verbose'),
+	
+		# base64 default, lowercase to "disable".
+		'-b': ('field-replace', 'base64', 'escape'),
+		'-B': ('field-replace', 'percent', 'escape'),
+		'--xml': ('field-replace', 'none', 'escape'),
+	}
+
+[ texticon ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`28 1 32 23`
+(signature)`texticon(text)`
+
+
+[ reference ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`34 1 38 24`
+(signature)`reference(href)`
+
+
+[ percent_escape ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`40 1 43 9`
+(signature)`percent_escape(s)`
+
+
+[ base64_escapes ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`45 1 48 24`
+(signature)`base64_escapes()`
+
+
+[ main ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`50 1 109 19`
+		- (type/syntax)`process.Exit`
+		- (type/remote/factor-element)&<http://fault.io/python/system/process#Exit[fault.system.process.Exit]>
+		
+(signature)`main(inv)`
+

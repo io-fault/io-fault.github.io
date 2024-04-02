@@ -1,0 +1,600 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 295 0`
+Data structures for storing and combining status metrics for progress notifications.
+
+
+[ struct ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 6 9`
+
+[ Work ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 90 9`
+Work unit progress metrics.
+
+[ > Properties ]
+
+/w_prepared/
+	Number of Work Units that will be performed.
+
+/w_failed/
+	Number of Work Units that indicated failure.
+
+/w_granted/
+	Number of Work Units that were already considered complete.
+	Tests skipped or cached results.
+
+/w_executed/
+	Number of Work Units executed that did not indicate failure.
+
+
+[ Work >> m_symbol ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`22 2 22 15`
+#!source
+	m_symbol = '%'
+
+[ Work >> w_prepared ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`24 2 24 20`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+#!source
+	w_prepared: int = 0
+
+[ Work >> w_executed ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`25 2 25 20`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+#!source
+	w_executed: int = 0
+
+[ Work >> w_granted ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`26 2 26 19`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+#!source
+	w_granted: int = 0
+
+[ Work >> w_failed ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`27 2 29 10`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+#!source
+	w_failed: int = 0
+		@property
+
+[ Work >> w_total ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`30 2 36 10`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+Number of failed, executed, or granted Works Units.
+
+
+[ Work >> w_executing ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`37 2 42 39`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+Number of prepared work units that were not granted and
+have not completed or failed.
+
+
+[ Work >> __str__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`44 2 52 3`
+(signature)`__str__(self)`
+
+
+[ Work >> empty ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`54 2 58 13`
+		- (type/syntax)`bool`
+		- (type/invalid/unknown)&<#bool>
+		
+(signature)`empty(self)`
+
+
+[ Work >> __add__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`60 2 68 13`
+(signature)`__add__(self, op)`
+
+
+[ Work >> split ]
+! CONTROL:
+	/type/
+		classmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`69 2 90 9`
+(signature)`split(Class, text)`
+
+
+[ Advisory ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`91 1 151 9`
+Advisory messaging metrics.
+
+[ > Properties ]
+
+/m_notices/
+	Messages emitted by the Work Units that were neither warnings or errors.
+
+/m_warnings/
+	Warnings issued by the Work Units to the Application.
+
+/m_errors/
+	Errors issued by the Work Units to the Application.
+
+
+[ Advisory >> m_symbol ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`103 2 103 15`
+#!source
+	m_symbol = '@'
+
+[ Advisory >> m_notices ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`105 2 105 19`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+#!source
+	m_notices: int = 0
+
+[ Advisory >> m_warnings ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`106 2 106 20`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+#!source
+	m_warnings: int = 0
+
+[ Advisory >> m_errors ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`107 2 109 10`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+#!source
+	m_errors: int = 0
+		@property
+
+[ Advisory >> m_total ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`110 2 114 57`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+Total number of errors, warnings, and notices.
+
+
+[ Advisory >> __str__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`116 2 121 5`
+(signature)`__str__(self)`
+
+
+[ Advisory >> empty ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`123 2 124 70`
+		- (type/syntax)`bool`
+		- (type/invalid/unknown)&<#bool>
+		
+(signature)`empty(self)`
+
+
+[ Advisory >> __add__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`126 2 133 13`
+(signature)`__add__(self, op)`
+
+
+[ Advisory >> split ]
+! CONTROL:
+	/type/
+		classmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`134 2 151 9`
+(signature)`split(Class, text)`
+
+
+[ Resource ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`152 1 211 9`
+Resource usage metrics.
+
+[ > Properties ]
+
+/r_divisions/
+	The number of system processes that used the measured resources.
+
+/r_time/
+	The sum of the duration of all divisions.
+
+/r_process/
+	Processor usage of the divisions.
+
+/r_memory/
+	Memory usage of the divisions.
+
+
+[ Resource >> m_symbol ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`166 2 166 15`
+#!source
+	m_symbol = '$'
+
+[ Resource >> r_divisions ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`168 2 168 21`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+#!source
+	r_divisions: int = 0
+
+[ Resource >> r_memory ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`169 2 169 18`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+#!source
+	r_memory: int = 0
+
+[ Resource >> r_process ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`170 2 170 19`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+#!source
+	r_process: int = 0
+
+[ Resource >> r_time ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`171 2 171 16`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+#!source
+	r_time: int = 0
+
+[ Resource >> __str__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`173 2 179 4`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+(signature)`__str__(self)`
+
+
+[ Resource >> empty ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`181 2 182 87`
+		- (type/syntax)`bool`
+		- (type/invalid/unknown)&<#bool>
+		
+(signature)`empty(self)`
+
+
+[ Resource >> __add__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`184 2 192 13`
+(signature)`__add__(self, op)`
+
+
+[ Resource >> split ]
+! CONTROL:
+	/type/
+		classmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`193 2 211 9`
+(signature)`split(Class, text)`
+
+
+[ Procedure ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`212 1 295 20`
+Collection of metrics regarding the status of an Abstract Procedure.
+
+[ > Properties ]
+
+/work/
+	Procedure Work Unit progress.
+
+/msg/
+	Procedure message counters.
+
+/usage/
+	Procedure resource usage.
+
+
+[ Procedure >> __iter__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`229 2 238 13`
+(signature)`__iter__(self)`
+
+
+[ Procedure >> create ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`239 2 243 46`
+(signature)`create(Class)`
+
+Create an empty Procedure.
+
+
+[ Procedure >> __getitem__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`245 2 254 19`
+(signature)`__getitem__(self, path)`
+
+
+[ Procedure >> __add__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`256 2 261 3`
+(signature)`__add__(self, operand)`
+
+
+[ Procedure >> _metrics_symbols ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`263 2 269 13`
+#!source
+	_metrics_symbols = {
+		'%': ('work', Work),
+		'@': ('msg', Advisory),
+		'$': ('usage', Resource),
+	}
+		@classmethod
+
+[ Procedure >> structure ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`270 2 281 24`
+(signature)`structure(Class, text)`
+
+Structure progress text into a (invalid/unknown)&<#Metrics> instance.
+
+
+[ Procedure >> sequence ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`283 2 295 20`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+(signature)`sequence(self)`
+
+Return the components making up the serialized string.
+

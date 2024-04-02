@@ -1,0 +1,115 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 57 0`
+Process state storage for residual file descriptors.
+
+(project-local/unknown)&<ports> manages the set of file descriptors that are intended to be kept across process images.
+This module is normally used exclusively by daemon processes that wish to update their
+process image without having to discard listening sockets.
+
+
+[ os ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 8 9`
+
+[ typing ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`9 1 9 13`
+
+[ kernel ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 1 10 20`
+
+[ _state ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`12 1 12 11`
+#!source
+	_state = {}
+
+[ close ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`14 1 19 13`
+(signature)`close(identifier)`
+
+Close the ports associated with the (factor-local/parameter)&<#close.Parameters.identifier[identifier]> and remove them from storage.
+
+
+[ restore ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`21 1 27 41`
+		- (type/syntax)`None`
+		
+(signature)`restore(identifier, ports)`
+
+Add (factor-local/parameter)&<#restore.Parameters.ports[ports]> to the set using the (factor-local/parameter)&<#restore.Parameters.identifier[identifier]> presuming that the ports
+are properly configured. Used by daemon processes after performing
+(invalid/syscall)&<#exec> to refresh the process image.
+
+
+[ install ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`29 1 43 24`
+		- (type/syntax)`None`
+		
+(signature)`install(identifier, ports)`
+
+Add the (factor-local/parameter)&<#install.Parameters.ports[ports]> to the set making sure that they are properly configured
+to persist across process images.
+
+If a sequence of ports is already installed with the (factor-local/parameter)&<#install.Parameters.identifier[identifier]>, it
+will be extended.
+
+
+[ allocate ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`45 1 57 13`
+		- (type/syntax)`typing.Mapping[str, kernel.Ports]`
+		
+(signature)`allocate()`
+
+Return the full set of installed ports for use within a worker process
+and remove the installed ports from process the global data.
+

@@ -1,0 +1,196 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 254 42`
+
+[ os ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 1 9`
+
+[ _thread ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`2 1 2 14`
+
+[ system ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`3 1 3 29`
+
+[ EMatrix ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 14 57`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`5 15 5 27`
+	- (type/syntax)`system.Matrix`
+	- (type/context-local/factor-element)&<fault.kernel/system#Matrix[fault.kernel.system.Matrix]>
+	
+
+[ EMatrix >> _err ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 2 9 14`
+(signature)`_err(self, *args)`
+
+
+[ EMatrix >> _exe ]
+! CONTROL:
+	/type/
+		staticmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 2 11 47`
+(signature)`_exe(ignored, target, *args)`
+
+
+[ EMatrix >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`13 2 14 57`
+(signature)`__init__(self)`
+
+
+[ test_delta ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`16 1 73 24`
+(signature)`test_delta(test)`
+
+
+[ test_matrix_empty ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`75 1 78 31`
+(signature)`test_matrix_empty(test)`
+
+
+[ test_matrix_termination ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`80 1 88 15`
+(signature)`test_matrix_termination(test)`
+
+
+[ test_idle_array_terminates ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`90 1 113 16`
+(signature)`test_idle_array_terminates(test)`
+
+Validate inactive termination.
+
+
+[ test_active_array_continues ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`115 1 160 16`
+(signature)`test_active_array_continues(test)`
+
+Validate active maintenance.
+
+
+[ test_matrix_transfer ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`162 1 199 16`
+(signature)`test_matrix_transfer(test)`
+
+
+[ test_alloc_single_matrix ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`201 1 224 16`
+(signature)`test_alloc_single_matrix(test)`
+
+
+[ test_matrix_overflow ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`226 1 245 16`
+(signature)`test_matrix_overflow(test)`
+
+Test the effect of the limit attribute.
+
+
+[ test_matrix_void ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`247 1 250 10`
+(signature)`test_matrix_void(test)`
+

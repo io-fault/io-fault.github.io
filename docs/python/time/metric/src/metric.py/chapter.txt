@@ -1,0 +1,109 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 87 4`
+Information about the metric second and its multiples.
+
+
+[ name_to_exponent ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 32 1`
+#!source
+	name_to_exponent = {
+		'quectosecond': -30,
+		'rontosecond': -27,
+		'yoctosecond': -24,
+		'zeptosecond': -21,
+		'attosecond': -19,
+		'femtosecond': -15,
+		'picosecond': -12,
+		'nanosecond': -9,
+		'microsecond': -6,
+		'millisecond': -3,
+		'centisecond': -2,
+		'decisecond': -1,
+		'second': 0,
+		'decasecond': 1,
+		'hectosecond': 2,
+		'kilosecond': 3,
+		'megasecond': 6,
+		'gigasecond': 9,
+		'terasecond': 12,
+		'petasecond': 15,
+		'exasecond': 18,
+		'zettasecond': 21,
+		'yottasecond': 24,
+		'ronnasecond': 27,
+		'quettasecond': 30,
+	}
+
+[ exponent_to_name ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`35 1 35 68`
+#!source
+	exponent_to_name = dict([(v,k) for k,v in name_to_exponent.items()])
+
+[ abbreviations ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`38 1 64 1`
+#!source
+	abbreviations = {
+		-1: 'ds',
+		-2: 'cs',
+		-3: 'ms',
+		-6: 'µs',
+		-9: 'ns',
+		-12: 'ps',
+		-15: 'fs',
+		-18: 'as',
+		-21: 'zs',
+		-24: 'ys',
+		-27: 'rs',
+		-30: 'qs',
+		0: 's',
+		1: 'das',
+		2: 'hs',
+		3: 'ks',
+		6: 'Ms',
+		9: 'Gs',
+		12: 'Ts',
+		15: 'Ps',
+		18: 'Es',
+		21: 'Zs',
+		24: 'Ys',
+		27: 'Rs',
+		30: 'Qs',
+	}
+
+[ context ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`66 1 88 3`
+(signature)`context(context)`
+
+Given a libunit.Context instance, define the metric units starting with the
+'second'.
+

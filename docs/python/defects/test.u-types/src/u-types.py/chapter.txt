@@ -1,0 +1,174 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 254 0`
+
+[ functools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 1 16`
+
+[ module ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`2 1 2 35`
+
+[ test_Test_fail ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 11 29`
+(signature)`test_Test_fail(test)`
+
+
+[ test_Test_error ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`13 1 19 30`
+(signature)`test_Test_error(test)`
+
+
+[ raise_parameter ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`21 1 22 15`
+(signature)`raise_parameter(excvalue)`
+
+
+[ test_Test_skip ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`24 1 31 30`
+(signature)`test_Test_skip(test)`
+
+
+[ test_Contention ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`33 1 122 21`
+(signature)`test_Contention(test)`
+
+
+[ test_issubclass ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`124 1 138 53`
+(signature)`test_issubclass(test)`
+
+
+[ test_isinstance ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`140 1 156 55`
+(signature)`test_isinstance(test)`
+
+
+[ test_itertimer_values ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`158 1 164 37`
+(signature)`test_itertimer_values(test)`
+
+- (context-local/factor-element)&<fault.test/types#Test.itertimer[fault.test.types.Test.itertimer]>
+
+
+[ test_itertimer_count_limit ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`166 1 173 35`
+(signature)`test_itertimer_count_limit(test)`
+
+- (context-local/factor-element)&<fault.test/types#Test.itertimer[fault.test.types.Test.itertimer]>
+
+
+[ test_itertimer_time_limit ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`175 1 182 34`
+(signature)`test_itertimer_time_limit(test)`
+
+- (context-local/factor-element)&<fault.test/types#Test.itertimer[fault.test.types.Test.itertimer]>
+
+
+[ test_function_timer ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`184 1 199 35`
+(signature)`test_function_timer(test)`
+
+- (context-local/factor-element)&<fault.test/types#Test.time[fault.test.types.Test.time]>
+
+Validate function timer variant.
+
+
+[ test_itertimer_Clock ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`201 1 249 29`
+(signature)`test_itertimer_Clock(test)`
+
+- (context-local/factor-element)&<fault.test/types#Test.itertimer[fault.test.types.Test.itertimer]>
+
+Validate clock influence.
+

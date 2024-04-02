@@ -1,0 +1,79 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 25 2`
+Source data for display layout for transfer metrics.
+
+
+[ terminal ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 22`
+
+[ tools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 27`
+
+[ order ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 13 1`
+#!source
+	order = [
+		('executing', 8),
+		('received', 8),
+		('transmitted', 8),
+		('failed', 8),
+		('completed', 8),
+	]
+
+[ formats ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`15 1 21 1`
+#!source
+	formats = [
+		('x', "executing", 'orange', tools.partial(terminal.r_count, 'executing')),
+		('r', "rx", 'blue', tools.partial(terminal.r_count, 'received')),
+		('t', "tx", 'red', tools.partial(terminal.r_count, 'transmitted')),
+		('f', "failed", 'yellow', tools.partial(terminal.r_count, 'failed')),
+		('c', "completed", 'green', tools.partial(terminal.r_count, 'completed')),
+	]
+
+[ types ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`23 1 26 1`
+#!source
+	types = {
+		'received': 'rate',
+		'transmitted': 'rate',
+	}

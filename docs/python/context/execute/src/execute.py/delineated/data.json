@@ -1,0 +1,1 @@
+[[["index"]], [{"syntax": "{\n\t'python': context_name + '.system.execute',\n\t'http-cache': context_name + '.web.bin.cache',\n\t'test-python-module': context_name + '.test.bin.coherence',\n}", "area": [[8, 9], [12, 1]]}]]

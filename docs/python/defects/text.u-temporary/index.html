@@ -1,0 +1,62 @@
+<html root="2"><head><title>fault.defects.text.u-temporary</title><meta charset="utf-8"/><link as="style" rel="preload" href="../../.legacy-web/core.css"></link><link as="style" rel="preload" href="../../.legacy-web/factor.css"></link><link rel="stylesheet" href="../../.legacy-web/core.css"></link><link rel="stylesheet" href="../../.legacy-web/factor.css"></link></head><body><main><h1><span class="prefix"></span><div class="page-subject"><img class="icon" src="../../.factor-type-icon/if.fault.io/python-module.svg"></img><span class="subject-identifier">u-temporary</span><a href="http://if.fault.io/factors/python.module"><code class="type">python.module</code></a></div><div class="page-context"><a href="../"><img class="icon" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNTYiIGhlaWdodD0iMjU2Ij48dGV4dCB4PSI0IiB5PSIwLjg4ZW0iIGZvbnQtc2l6ZT0iMjQ4Ij7impnvuI88L3RleHQ+PC9zdmc+"></img></a><span class="context-identifier">fault.defects</span></div></h1><section class="chapter"></section><section class="import" documented="false" local-identifier="sys" id="sys"><h1><span class="prefix"></span><a class="title" href="#sys"><span class="text.normal">sys</span></a><span class="abstract-type">import</span></h1></section><section class="import" documented="false" local-identifier="structure_chapter_text" id="structure_chapter_text"><h1><span class="prefix"></span><a class="title" href="#structure_chapter_text"><span class="text.normal">structure_chapter_text</span></a><span class="abstract-type">import</span></h1></section><section class="data" documented="false" local-identifier="txt" id="txt"><h1><span class="prefix"></span><a class="title" href="#txt"><span class="text.normal">txt</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code class="source">txt = """
+[Section 1]
+
+Paragraph 1.
+
+	- SetItem1
+	- SetItem2
+	- &#38;Reference
+
+/DictItem1/
+	DictValue1
+/DictItem2/
+	DictValue2
+/&#38;Reference/
+	DictValue3
+
+Implicit Title:
+	# SequenceItem1
+	# SequenceItem2
+	# SequenceItem3
+	# &#38;Reference
+
+#!python
+	# Typed Character Matrix
+
+#!python
+	# Subsequent Typed Character Matrix
+
+(title)`Paragraph Title`
+Paragraph 3. `Inline Literal`. (With-Cast)`Inline Literal`.
+
+Emphasis Types:
+	# *Plain*
+	# **Strong**
+	# ***Excessive***
+
+# References:
+	# &#38;&#60;URL&#62;
+	# &#38;[Section 2]
+	# &#38;NoTerminator
+
+! WARNING:
+	Admonition
+
+! ERROR:
+	Admonition
+	#!python
+		# AdmonitionCharacterMatrix
+
+[Section 1 &#62;&#62; Subsection 1]
+
+Subsection 1.1 Paragraph 1.
+
+Paragraph 2. &#38;[Section 1]
+
+[Section 2]
+
+Paragraph 1.
+
+Paragraph 2.
+"""
+</code></pre></section><section class="function" documented="true" local-identifier="test_parsing" id="test_parsing"><h1><span class="prefix"></span><a class="title" href="#test_parsing"><span class="text.normal">test_parsing</span></a><span class="abstract-type">function</span></h1><p><code class="signature">test_parsing(test)</code></p><p><span class="text.normal">Validate parsing of features.</span></p></section><h1 class="footing"></h1></main></body></html>

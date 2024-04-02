@@ -1,0 +1,676 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 515 3`
+Document finalization and query tools for raw text element trees.
+
+
+[ itertools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 16`
+
+[ typing ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 13`
+
+[ string ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 28`
+
+[ types ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 8 19`
+
+[ export ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 1 69 26`
+		- (type/syntax)`types.Paragraph`
+		- (type/project-local/factor-element)&<types#Paragraph[fault.text.types.Paragraph]>
+		
+(signature)`export(paragraph, literal, reference)`
+
+Convert the given paragraph element into terms defined by (project-local/project-factor)&<types[fault.text.types]>.
+
+[ > Parameters ]
+
+/(parameter)`paragraph`/
+	
+	The raw parse elements formed by (invalid/unknown)&<#Parser.process>.
+
+/(parameter)`literal`/
+	
+	Default cast for literals.
+
+/(parameter)`reference`/
+	
+	Default cast for references.
+
+
+[ sections ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`71 1 77 33`
+		- (type/syntax)`typing.Iterator[typing.Tuple[str, object]]`
+		
+(signature)`sections(root)`
+
+Iterator producing (section-identifier, section) pairs.
+
+
+[ section ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`79 1 90 12`
+		- (type/syntax)`object`
+		- (type/invalid/unknown)&<#object>
+		
+(signature)`section(root, identifier)`
+
+Select the section with the given identifier.
+Uses a full scan; index the results of (factor-local/function)&<#sections[sections]> using a (invalid/unknown)&<#dict>
+for repeat reads.
+
+
+[ concatenate ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`92 1 99 13`
+		- (type/syntax)`typing.Iterator[str]`
+		
+(signature)`concatenate(syntax)`
+
+Concatenate the lines of the given syntax element.
+
+
+[ context ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`101 1 106 36`
+(signature)`context(element)`
+
+Structure a common context admonition.
+
+
+[ paragraph_as_string ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`108 1 115 2`
+(signature)`paragraph_as_string(element)`
+
+
+[ paragraph_only ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`117 1 127 13`
+(signature)`paragraph_only(element)`
+
+Select the only paragraph in the given element.
+
+
+[ paragraph_first ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`129 1 135 11`
+(signature)`paragraph_first(element)`
+
+Select the first paragraph in the given element.
+
+
+[ paragraph_last ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`137 1 143 11`
+(signature)`paragraph_last(element)`
+
+Select the last paragraph in the given element.
+
+
+[ paragraph_lines ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`145 1 156 16`
+(signature)`paragraph_lines(element)`
+
+
+[ interpret_reference ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`158 1 163 52`
+(signature)`interpret_reference(element)`
+
+
+[ interpret_paragraph_single ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`165 1 173 37`
+(signature)`interpret_paragraph_single(element)`
+
+
+[ directory_pairs ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`175 1 184 12`
+(signature)`directory_pairs(items)`
+
+Iterate over the key-value pairs in the directory items.
+
+
+[ Tree ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`186 1 218 22`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`186 12 186 17`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+Serializer for (text) object trees.
+
+
+[ Tree >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`191 2 195 6`
+(signature)`__init__(self)`
+
+Initialize the tree builder.
+
+
+[ Tree >> empty ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`197 2 201 46`
+(signature)`empty(self, name, *args, **kw)`
+
+Empty with potential attributes.
+
+
+[ Tree >> element ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`203 2 210 91`
+(signature)`element(self, element_name, content, *attributes, **kwattributes)`
+
+Serialize an element with the exact (factor-local/parameter)&<#Tree.element.Parameters.element_name[element_name]> with the contents of
+(invalid/unknown)&<#subelement_iterator> as the inner elements. (invalid/unknown)&<#subelement_iterator> must produce
+(invalid/unknown)&<#bytes> encoded objects.
+
+
+[ Tree >> prefixed ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`212 2 212 19`
+#!source
+	prefixed = element
+
+[ Tree >> escape ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`214 2 215 17`
+(signature)`escape(self, string)`
+
+
+[ Tree >> hyperlink ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`217 2 218 22`
+(signature)`hyperlink(self, href)`
+
+
+[ Transform ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`220 1 516 2`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`220 17 220 22`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+Transform parse events into a form designated by the given AST constructor.
+
+
+[ Transform >> chain ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`224 2 224 52`
+#!source
+	chain = staticmethod(itertools.chain.from_iterable)
+
+[ Transform >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`226 2 242 39`
+(signature)`__init__(self, serialization, identify)`
+
+Initialize a (factor-local/class)&<#Transform[Transform]> instance designating the AST constructor.
+
+[ >> Parameters ]
+
+/(parameter)`self`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`serialization`/
+	
+	The serialization instance used to construct the tree.
+
+/(parameter)`identify`/
+	
+	The function used to prepare an identifier. Normally, a function
+	that prepends on some contextual identifier in order to guarantee
+	uniqueness. For example, `lambda x: 'ContextName' + x`.
+
+
+[ Transform >> process ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`244 2 246 69`
+(signature)`process(self, tree)`
+
+
+[ Transform >> process_paragraph_text ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`248 2 249 28`
+(signature)`process_paragraph_text(self, tree, text)`
+
+
+[ Transform >> process_paragraph_emphasis ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`251 2 255 3`
+(signature)`process_paragraph_emphasis(self, tree, data)`
+
+
+[ Transform >> process_paragraph_literal ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`257 2 261 3`
+(signature)`process_paragraph_literal(self, tree, data)`
+
+
+[ Transform >> process_paragraph_reference ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`263 2 309 3`
+(signature)`process_paragraph_reference(self, tree, source, type, title, action)`
+
+[ >> Parameters ]
+
+/(parameter)`self`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`tree`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`source`/
+	
+	The reference source; the actual string found to be
+	identified as a reference.
+
+/(parameter)`type`/
+	
+	The type of reference, one of: `'hyperlink'`, `'section'`, `None`.
+
+/(parameter)`title`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`action`/
+	
+	The effect desired by the reference: `'include'` or (invalid/unknown)&<#None>.
+	(invalid/unknown)&<#None> being a normal reference, and `'include'` being induced
+	with a `'*'` prefixed to the reference
+
+/(parameter)`cast`/
+	
+	(control/absent)`Undocumented`.
+
+
+[ Transform >> process_end_of_line ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`311 2 312 11`
+(signature)`process_end_of_line(self, tree, text)`
+
+
+[ Transform >> process_init ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`314 2 315 11`
+(signature)`process_init(self, tree, data, *params)`
+
+
+[ Transform >> paragraph_index ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`317 2 324 2`
+#!source
+	paragraph_index = {
+		'init': process_init,
+		'text': process_paragraph_text,
+		'eol': process_end_of_line,
+		'emphasis': process_paragraph_emphasis,
+		'literal': process_paragraph_literal,
+		'reference': process_paragraph_reference,
+	}
+
+[ Transform >> process_items ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`326 2 345 4`
+(signature)`process_items(self, tree, element, name)`
+
+
+[ Transform >> process_set ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`347 2 348 49`
+(signature)`process_set(self, tree, element)`
+
+
+[ Transform >> process_sequence ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`350 2 351 54`
+(signature)`process_sequence(self, tree, element)`
+
+
+[ Transform >> process_directory ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`353 2 388 14`
+(signature)`process_directory(self, tree, vl_element)`
+
+
+[ Transform >> empty_paragraph ]
+! CONTROL:
+	/type/
+		staticmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`389 2 407 14`
+(signature)`empty_paragraph(sequence)`
+
+Whether the paragraph should be considered to be empty.
+
+
+[ Transform >> paragraph_content ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`409 2 418 7`
+(signature)`paragraph_content(self, tree, sequence)`
+
+
+[ Transform >> process_paragraph ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`420 2 437 7`
+(signature)`process_paragraph(self, tree, paragraph)`
+
+
+[ Transform >> process_syntax ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`439 2 453 3`
+(signature)`process_syntax(self, tree, sequence)`
+
+
+[ Transform >> process_admonition ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`455 2 465 3`
+(signature)`process_admonition(self, tree, content)`
+
+
+[ Transform >> process_section ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`467 2 473 59`
+(signature)`process_section(self, tree, section)`
+
+
+[ Transform >> create_section ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`475 2 491 3`
+(signature)`create_section(self, tree, section)`
+
+
+[ Transform >> process_exception ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`493 2 505 3`
+(signature)`process_exception(self, tree, exception)`
+
+Emit an exception element in order to report warnings or failures
+regarding syntax that was not entirely comprehensible.
+
+
+[ Transform >> section_index ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`507 2 516 2`
+#!source
+	section_index = {
+		'paragraph': process_paragraph,
+		'set': process_set,
+		'sequence': process_sequence,
+		'directory': process_directory,
+		'syntax': process_syntax,
+		'admonition': process_admonition,
+		'section': create_section,
+		'exception': process_exception,
+	}

@@ -1,0 +1,231 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 155 0`
+Bootstrapping for applications that depend on the (project-local/project-factor)&<fault.system/factors[fault.system.factors]> loader.
+
+[ Rationale ]
+
+While (corpus)`fault.io/python` has alignment with the standard filesystem module
+protocol, `sys.path` compatible directory structure, it is preferred to load from
+the compiled bytecode when available so that any construction context dependent
+features are available to applications and so that the fault python context project is
+available under (project-local/unknown)&<system.factors.context>.
+
+
+[ types ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`12 1 12 12`
+
+[ sys ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`13 1 13 10`
+
+[ join ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`14 1 14 24`
+
+[ Load ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`16 1 16 32`
+
+[ Execute ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`17 1 17 36`
+
+[ Compile ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`18 1 18 39`
+
+[ pkglist ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`20 1 20 51`
+#!source
+	pkglist = ['context', 'system', 'route', 'project']
+
+[ modlist ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`21 1 36 1`
+#!source
+	modlist = [
+		'context.tools',
+		'context.types',
+		'context.string',
+	
+		'route.rewrite',
+		'route.core',
+		'route.types',
+		'system.files',
+	
+		'project.types',
+		'project.system',
+		'project.polynomial',
+	
+		'system.factors', # Must be final.
+	]
+
+[ package_import ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`38 1 43 59`
+(signature)`package_import(bytecode, path, root, pkg)`
+
+
+[ module_import ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`45 1 51 52`
+(signature)`module_import(bytecode, path, root, mod)`
+
+
+[ load_code ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`53 1 68 17`
+(signature)`load_code(name, bc, src)`
+
+Given a marshalled bytecode path and source file, load or compile whichever
+resource is available prioritizing the compiled form.
+
+(factor-local/parameter)&<#load_code.Parameters.name[name]> is ignored but required in order to allow overrides to use it
+as a key instead of the file paths.
+
+
+[ install_packages ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`70 1 91 9`
+(signature)`install_packages(rename, modules, bytecode, path, root, package_list)`
+
+Allocate new package module instances and assign them into (factor-local/parameter)&<#install_packages.Parameters.modules[modules]>.
+
+
+[ install_modules ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`93 1 108 9`
+(signature)`install_modules(rename, modules, bytecode, path, root, module_list)`
+
+Allocate new module instances and assign them into (factor-local/parameter)&<#install_modules.Parameters.modules[modules]>.
+
+
+[ install_operations ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`110 1 113 1`
+#!source
+	install_operations = [
+		(install_packages, pkglist),
+		(install_modules, modlist),
+	]
+
+[ install ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`115 1 120 71`
+(signature)`install(modules, bytecode, path, root)`
+
+Install the bootstrap factors into (factor-local/parameter)&<#install.Parameters.modules[modules]>. Normally, (none/invalid)&<http://fault.io/dev/null[sys.modules]>.
+
+
+[ finish ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`122 1 135 43`
+(signature)`finish(factors, finder, modules)`
+
+Given an activated (project-local/project-factor)&<fault.system/factors[fault.system.factors]> module, assign specs and loaders to the previously
+bootstrapped modules and to the factors module itself.
+
+
+[ integrate ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`137 1 155 15`
+(signature)`integrate(faultpath, faultname, faultform, images, system, python, arch, form, *products)`
+
+Integrate the factor environment into Python's import system.
+

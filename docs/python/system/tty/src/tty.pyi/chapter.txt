@@ -1,0 +1,294 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 120 6`
+System teletype interfaces.
+
+
+[ fs_device ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 17 4`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+(signature)`fs_device()`
+
+Attempt to identify the teletype device file associated with the process
+using the standard I/O file descriptors.
+
+[ > Returns ]
+
+The path to the device file.
+
+[ > Exceptions ]
+
+/OSError/
+	Raised when standard input, output, and error are not associated with a
+	teletype device.
+
+
+[ cells ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`19 1 29 4`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+(signature)`cells(text)`
+
+Calculate the number of character matrix cells needed to display the given (factor-local/parameter)&<#cells.Parameters.text[text]> string.
+
+[ > Parameters ]
+
+/(parameter)`text`/
+	- (type/syntax)`str`
+	- (type/invalid/unknown)&<#str>
+	
+	The characters being analyzed.
+
+[ > Returns ]
+
+Number of horizontal cells needed to display the text.
+
+
+[ Device ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`31 1 121 5`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`31 14 31 19`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+System teletype device abstraction.
+
+
+[ Device >> open ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`37 2 45 5`
+		- (type/syntax)`"Device"`
+		
+(signature)`open(Class, path)`
+
+Create a device instance by opening the given path.
+Opens the device with reading and writing.
+
+[ >> Parameters ]
+
+/(parameter)`Class`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`path`/
+	
+	The path to the (teletype) device file to open.
+
+
+[ Device >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`47 2 52 10`
+(signature)`__init__(self, fd)`
+
+Initialize the instance with an already opened teletype device file.
+
+
+[ Device >> kport ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`53 2 56 5`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+The file descriptor providing read and write operations to the device.
+
+
+[ Device >> fileno ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`58 2 61 5`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+(signature)`fileno(self)`
+
+The opened file descriptor.
+
+
+[ Device >> fs_path ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`63 2 66 5`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+(signature)`fs_path(self)`
+
+Get the filesystem path to the device.
+
+
+[ Device >> set_controlling_process ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`68 2 71 5`
+(signature)`set_controlling_process(self, pgid)`
+
+Update the controlling process group.
+
+
+[ Device >> get_controlling_process ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`73 2 76 5`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+(signature)`get_controlling_process(self)`
+
+Get the controlling process group.
+
+
+[ Device >> get_window_dimensions ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`78 2 81 5`
+		- (type/syntax)`tuple[int, int]`
+		
+(signature)`get_window_dimensions(self)`
+
+Get the number of horizontal and vertical cells that the terminal is displaying.
+
+
+[ Device >> record ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`83 2 86 5`
+(signature)`record(self)`
+
+Store attribute retrieved using tcgetattr in the object.
+
+
+[ Device >> restore ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`88 2 91 5`
+(signature)`restore(self)`
+
+Restore attribute using tcsetattr previously saved with (factor-local/method)&<#Device.record[record]>.
+
+
+[ Device >> send_break ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`93 2 96 5`
+(signature)`send_break(self)`
+
+Send a break using tcsendbreak.
+
+
+[ Device >> drain ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`98 2 101 5`
+(signature)`drain(self)`
+
+Drain output on device using tcdrain.
+
+
+[ Device >> set_message_limits ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`103 2 106 5`
+(signature)`set_message_limits(self, vmin, vtime)`
+
+Update the VMIN and VTIME attributes.
+
+
+[ Device >> set_raw ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`108 2 111 5`
+(signature)`set_raw(self)`
+
+Adjust the terminal flags to perform in raw mode.
+
+
+[ Device >> set_cbreak ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`113 2 116 5`
+(signature)`set_cbreak(self)`
+
+Adjust the terminal flags to perform in cbreak mode.
+
+
+[ Device >> set_cooked ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`118 2 121 5`
+(signature)`set_cooked(self)`
+
+Adjust the terminal flags to perform in sane mode.
+

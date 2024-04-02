@@ -1,0 +1,229 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 116 15`
+Text frames for tracebacks.
+
+
+[ typing ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 13`
+
+[ terminal ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 22`
+
+[ syntax_divisor ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 8 33`
+#!source
+	syntax_divisor = (None, 48*"┄")
+
+[ frame_divisor ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`9 1 9 26`
+#!source
+	frame_divisor = (None, "")
+
+[ dataclass ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 1 13 10`
+
+[ Frame ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`14 1 22 20`
+Traceback frame class to be instantiated for rendered.
+
+
+[ Frame >> resource ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`18 2 18 22`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+#!source
+	resource:(str) = None
+
+[ Frame >> factor ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`19 2 19 20`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+#!source
+	factor:(str) = None
+
+[ Frame >> element ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`20 2 20 21`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+#!source
+	element:(str) = None
+
+[ Frame >> area ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`21 2 21 35`
+		- (type/syntax)`typing.Tuple[int, int]`
+		
+#!source
+	area:(typing.Tuple[int, int]) = ()
+
+[ Frame >> source ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`22 2 22 20`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+#!source
+	source:(str) = None
+
+[ frame ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`24 1 48 22`
+(signature)`frame(index, record)`
+
+Construct sequence for a single frame record.
+
+
+[ path ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`50 1 60 19`
+(signature)`path(stack)`
+
+Construct frame for an entire stack.
+
+
+[ seq ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`62 1 82 1`
+#!source
+	seq = [
+		{
+			'function': 'control',
+			'factor': "fault.system.process",
+			'resource': "/python/lib/fault/system/process.py",
+			'area': 731,
+			'source': "    Fork.trap(main, *args, **kw)",
+		}, {
+			'function': 'trap',
+			'factor': "fault.system.process",
+			'resource': "/python/lib/fault/system/process.py",
+			'area': 635,
+			'source': "return controller(*args, **kw) # Process replacement point.",
+		}, {
+			'function': 'main',
+			'factor': "fault.system.bin.subexec",
+			'resource': "/python/lib/fault/system/bin/subexec.py",
+			'area': 123,
+			'source': "module_path = inv.args[count] # No module specified?"
+		}
+	]
+
+[ k ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`83 1 86 1`
+#!source
+	k = {
+		'exception': "IndexError",
+		'message': "list index out of range"
+	}
+
+[ pframe ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`88 1 105 19`
+(signature)`pframe(data)`
+

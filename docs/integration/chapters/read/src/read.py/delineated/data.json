@@ -1,0 +1,1 @@
+[[["variants"], ["restricted"], ["required"]], [{"syntax": "lsf.types.Variants('void', 'json', 'delineated')", "area": [[13, 12], [13, 59]]}, {"syntax": "{}", "area": [[62, 14], [62, 15]]}, {"syntax": "{\n\t'-D': ('set-add', 'product-paths'),\n}", "area": [[63, 12], [65, 1]]}]]

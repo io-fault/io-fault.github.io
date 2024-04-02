@@ -1,0 +1,153 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 133 63`
+Color formatting for dates and timestamps.
+
+Formats timestamps with respect to another point in time to
+illustrate the distance from the reference point.
+
+
+[ metric ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 7 26`
+
+[ behind ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 1 16 1`
+#!source
+	behind = (
+		0xff5f00,
+		0xd75f00,
+		0xaf5f00,
+		0x870000,
+		0x5f0000,
+	)
+
+[ ahead ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`17 1 23 1`
+#!source
+	ahead = (
+		0x005fff,
+		0x005fd7,
+		0x005faf,
+		0x005f87,
+		0x005f5f,
+	)
+
+[ equivalence ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`25 1 25 22`
+#!source
+	equivalence = 0x005f00
+
+[ irrelevant ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`26 1 26 21`
+#!source
+	irrelevant = 0x585858
+
+[ separator ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`27 1 27 20`
+#!source
+	separator = 0xFFFFFF
+
+[ f_time_palette ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`29 1 46 31`
+(signature)`f_time_palette(delta, rate)`
+
+
+[ f_date ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`48 1 65 2`
+(signature)`f_date(relation, subject)`
+
+
+[ f_time ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`67 1 93 3`
+(signature)`f_time(relation, subject)`
+
+
+[ f_subsecond ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`95 1 108 3`
+(signature)`f_subsecond(relation, timestamp, precision)`
+
+
+[ f_timestamp ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`110 1 121 56`
+(signature)`f_timestamp(relation, timestamp)`
+
+Format with respect to the (factor-local/parameter)&<#f_timestamp.Parameters.relation[relation]> point in time.
+

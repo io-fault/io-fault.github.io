@@ -1,0 +1,1254 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 867 0`
+Process invocation and management interfaces.
+
+
+[ sys ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`15 1 15 10`
+
+[ os ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`16 1 16 9`
+
+[ signal ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`17 1 17 13`
+
+[ functools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`18 1 18 16`
+
+[ contextlib ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`19 1 19 17`
+
+[ typing ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`20 1 20 13`
+
+[ types ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`21 1 21 12`
+
+[ builtins ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`22 1 22 15`
+
+[ kernel ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`24 1 24 20`
+
+[ runtime ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`25 1 25 21`
+
+[ thread ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`26 1 26 20`
+
+[ files ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`27 1 27 19`
+
+[ __control_lock__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`30 1 30 34`
+#!source
+	__control_lock__ = thread.amutex()
+
+[ __interject_lock__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`33 1 33 36`
+#!source
+	__interject_lock__ = thread.amutex()
+
+[ controlled ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`37 1 37 36`
+#!source
+	controlled = __control_lock__.locked
+
+[ current_process_id ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`40 1 40 32`
+#!source
+	current_process_id = os.getpid()
+
+[ parent_process_id ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`43 1 43 32`
+#!source
+	parent_process_id = os.getppid()
+
+[ main_thread_id ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`46 1 46 34`
+#!source
+	main_thread_id = thread.identify()
+
+[ index ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`47 1 49 1`
+#!source
+	index = {
+		'root': ('thread', thread.identify(), None),
+	}
+
+[ __fork_lock__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`52 1 52 31`
+#!source
+	__fork_lock__ = thread.amutex()
+
+[ fork_prepare_callset ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`56 1 56 28`
+#!source
+	fork_prepare_callset = set()
+
+[ fork_parent_callset ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`60 1 60 27`
+#!source
+	fork_parent_callset = set()
+
+[ fork_child_callset ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`65 1 65 26`
+#!source
+	fork_child_callset = set()
+
+[ fork_child_cleanup ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`69 1 69 26`
+#!source
+	fork_child_cleanup = set()
+
+[ getattr ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`71 1 71 15`
+#!source
+	getattr=getattr
+
+[ signal_codes ]
+! CONTROL:
+	/type/
+		data
+	/element/
+		- (control)`property-set`
+		- (source/area)`73 1 104 1`
+Mapping of categorized signal names to signal (integer) codes.
+
+#!source
+	signal_codes = {
+		'process/suspend': signal.SIGTSTP,
+		'process/resume': signal.SIGCONT,
+		'process/stop': signal.SIGSTOP,
+		'process/continue': signal.SIGCONT,
+		'process/terminate' : signal.SIGTERM,
+		'process/quit' : signal.SIGQUIT,
+		'process/interrupt' : signal.SIGINT,
+		'process/kill' : signal.SIGKILL,
+	
+		'limit/cpu': signal.SIGXCPU,
+		'limit/file': signal.SIGXFSZ,
+		'limit/time': signal.SIGVTALRM,
+	
+		'terminal/stop': signal.SIGTSTP,
+		'terminal/query': getattr(signal, 'SIGINFO', None) or getattr(signal, 'SIGUSR1', None),
+		'terminal/delta': getattr(signal, 'SIGWINCH', None),
+		'terminal/closed': signal.SIGHUP,
+		'terminal/background-read': signal.SIGTTIN,
+		'terminal/background-write': signal.SIGTTOU,
+	
+		'user/1': signal.SIGUSR1,
+		'user/2': signal.SIGUSR2,
+	
+		'exception/floating-point': signal.SIGFPE,
+		'exception/broken-pipe': signal.SIGPIPE,
+	
+		'error/invalid-memory-access': signal.SIGBUS,
+		'error/restricted-memory-access': signal.SIGSEGV,
+		'error/invalid-instruction': signal.SIGILL,
+		'error/invalid-system-call': signal.SIGSYS,
+	}
+
+[ signals ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`105 1 105 22`
+#!source
+	signals = signal_codes
+
+[ signal_names ]
+! CONTROL:
+	/type/
+		data
+	/element/
+		- (control)`property-set`
+		- (source/area)`108 1 108 62`
+Mapping of signal (integer) codes to categorized names.
+
+#!source
+	signal_names = dict([(v, k) for k, v in signal_codes.items()])
+
+[ fatal_signals ]
+! CONTROL:
+	/type/
+		data
+	/element/
+		- (control)`property-set`
+		- (source/area)`112 1 121 1`
+Set of signals that would cause an immediate exit if `SIG_DFL` were set.
+
+#!source
+	fatal_signals = {
+		signal.SIGINT,
+		signal.SIGTERM,
+		getattr(signal, 'SIGXCPU', None),
+		getattr(signal, 'SIGXFSZ', None),
+		getattr(signal, 'SIGVTALRM', None),
+		getattr(signal, 'SIGPROF', None),
+		getattr(signal, 'SIGUSR1', None),
+		getattr(signal, 'SIGUSR2', None),
+	}
+
+[ signal_identifiers ]
+! CONTROL:
+	/type/
+		data
+	/element/
+		- (control)`property-set`
+		- (source/area)`124 1 128 1`
+Mapping of signal codes to identifiers used in POSIX header files.
+
+#!source
+	signal_identifiers = {
+		getattr(signal, name): name
+		for name in dir(signal)
+		if name.startswith('SIG') and name[3] != '_' and isinstance(getattr(signal, name), int)
+	}
+
+[ interject ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`131 1 144 43`
+(signature)`interject(main_thread_exec)`
+
+Trip the main thread by sending the process a SIGUSR2 signal in order to cause any
+running system call to exit early. Used in conjunction with
+(project-local/factor-element)&<runtime#interject[fault.system.runtime.interject]>
+
+
+[ clear_atexit_callbacks ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`146 1 162 7`
+(signature)`clear_atexit_callbacks()`
+
+In cases where there may be process dependent callbacks, add this to the
+(factor-local/data)&<#fork_child_callset[fork_child_callset]> to clear the callbacks.
+
+
+[ _after_fork_parent ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`166 1 177 25`
+(signature)`_after_fork_parent(child_pid)`
+
+
+[ _after_fork_child ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`179 1 208 26`
+(signature)`_after_fork_child()`
+
+
+[ Exit ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`210 1 223 12`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`210 12 210 21`
+	- (type/syntax)`SystemExit`
+	- (type/invalid/unknown)&<#SystemExit>
+	
+Extension of SystemExit for use with interjections.
+
+
+[ Exit >> unspecified_status_code ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`216 2 216 30`
+#!source
+	unspecified_status_code = 255
+
+[ Exit >> usage_query_code ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`220 2 220 23`
+#!source
+	usage_query_code = 200
+
+[ Exit >> raised ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`222 2 223 12`
+(signature)`raised(self)`
+
+
+[ Invocation ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`225 1 340 37`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`225 18 225 23`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+A structure representing the invocation of a system process and the specification
+of the means of exiting. Normally, used to describe how the process was invoked and the
+corresponding parameters, argv and environ, in which the invocation should be reacting to.
+
+For system invocation, the (factor-local/data)&<#Invocation.parameters[parameters]> dictionary will have two entries by default:
+`'system'` and `'type'`.
+
+
+[ Invocation >> context ]
+! CONTROL:
+	/type/
+		data
+	/element/
+		- (control)`property-set`
+		- (source/area)`242 2 242 15`
+The Invocation that caused the creation of this (factor-local/class)&<#Invocation[Invocation]>.
+By default and when created from (factor-local/classmethod)&<#Invocation.system[system]>, this property is (invalid/unknown)&<#None>.
+
+#!source
+	context = None
+
+[ Invocation >> parameters ]
+! CONTROL:
+	/type/
+		data
+	/element/
+		- (control)`property-set`
+		- (source/area)`243 2 243 18`
+Arbitrary storage for the parameteres of the invocation. Usually, `'type'`, `'system'`,
+and `'structured'` keys are present.
+
+#!source
+	parameters = None
+
+[ Invocation >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`245 2 248 24`
+(signature)`__init__(self, exit_method)`
+
+
+[ Invocation >> exit ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`250 2 256 10`
+(signature)`exit(self, result)`
+
+Perform the exit method designated during the initialization of the invocation.
+
+
+[ Invocation >> fs_pwd ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`257 2 263 10`
+The working directory of the process when the (factor-local/class)&<#Invocation[Invocation]> was created.
+
+
+[ Invocation >> argv ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`264 2 268 47`
+Arguments provided by the system without the leading command name.
+
+
+[ Invocation >> args ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`269 2 271 10`
+#!source
+	args = argv
+		@property
+
+[ Invocation >> environ ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`272 2 276 49`
+		- (type/syntax)`dict`
+		- (type/invalid/unknown)&<#dict>
+		
+The environment variables collected from the system during the creation of the instance.
+
+
+[ Invocation >> imports ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`278 2 297 13`
+(signature)`imports(self, envvars)`
+
+Copy the given (factor-local/parameter)&<#Invocation.imports.Parameters.envvars[envvars]> from (none/invalid)&<http://fault.io/dev/null[os.environ]> into the invocation's (factor-local/data)&<#Invocation.parameters[parameters]>.
+The snapshot of imported environment variables may be accessed using (factor-local/property)&<#Invocation.environ[environ]>.
+
+[ >> Parameters ]
+
+/(parameter)`self`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`envvars`/
+	- (type/syntax)`typing.Iterable[str]`
+	
+	The collection of variables to copy from the environment.
+
+
+[ Invocation >> system ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`298 2 332 13`
+(signature)`system(Class, context, environ)`
+
+Create an instance representing that of the invocation from the operating
+system. Primarily, information is retrieved from the (none/invalid)&<http://fault.io/dev/null[sys]> and (none/invalid)&<http://fault.io/dev/null[os]> module.
+
+[ >> Parameters ]
+
+/(parameter)`Class`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`context`/
+	
+	A reference context identifying the (factor-local/class)&<#Invocation[Invocation]> caused this invocation to be created.
+
+/(parameter)`environ`/
+	
+	Sequence declaring the environment variables to acquire a snapshot of.
+
+/(parameter)`isinstance`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`str`/
+	
+	(control/absent)`Undocumented`.
+
+
+[ Invocation >> system_exit_method ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`333 2 340 37`
+(signature)`system_exit_method(Class, exit_status)`
+
+A means of exit used with a (factor-local/classmethod)&<#Fork.trap[Fork.trap]> managed process.
+
+Injecting the exception on the main thread, this can also
+be used within regular Python processes.
+
+
+[ ControlException ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`342 1 354 12`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`342 24 342 36`
+	- (type/syntax)`BaseException`
+	- (type/invalid/unknown)&<#BaseException>
+	
+Process control exceptions for significant events.
+
+This is a control exception inheriting from (invalid/unknown)&<#BaseException>.
+It should not be directly trapped, but subclasses may use it to classify
+exceptions that are not necessarily indicative of a failure.
+
+
+[ ControlException >> __kill__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`351 2 351 16`
+#!source
+	__kill__ = None
+
+[ ControlException >> raised ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`353 2 354 12`
+(signature)`raised(self)`
+
+
+[ Critical ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`356 1 361 16`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`356 16 356 31`
+	- (type/syntax)`ControlException`
+	- (type/factor-local/class)&<#ControlException[ControlException]>
+	
+An exception used to communicate that a fatal condition was identified.
+
+
+[ Critical >> __kill__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`361 2 361 16`
+#!source
+	__kill__ = True
+
+[ panic ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`363 1 376 32`
+(signature)`panic()`
+
+Raise a (factor-local/class)&<#Critical[Critical]> exception in the main thread forcing the process to exit.
+
+
+[ Interruption ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`378 1 476 16`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`378 20 378 35`
+	- (type/syntax)`ControlException`
+	- (type/factor-local/class)&<#ControlException[ControlException]>
+	
+Similar to (invalid/unknown)&<#KeyboardInterrupt>, but causes (factor-local/function)&<#control[control]> to exit with the signal,
+and calls critical status hooks.
+
+Primarily used to cause signal exit codes that are usually masked with
+(invalid/unknown)&<#KeyboardInterrupt>.
+
+
+[ Interruption >> __kill__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`387 2 387 16`
+#!source
+	__kill__ = True
+
+[ Interruption >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`389 2 391 20`
+(signature)`__init__(self, type)`
+
+
+[ Interruption >> __str__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`393 2 402 24`
+(signature)`__str__(self)`
+
+
+[ Interruption >> raised ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`404 2 417 13`
+(signature)`raised(self)`
+
+Register a system-level atexit handler that will cause the process to exit with
+the configured signal.
+
+
+[ Interruption >> interrupt ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`418 2 428 14`
+(signature)`interrupt(Class, signo, frame)`
+
+Signal handler that interjects an Interruption instance into the main thread.
+
+Default signal handler for SIGINT.
+
+
+[ Interruption >> void ]
+! CONTROL:
+	/type/
+		staticmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`429 2 435 13`
+(signature)`void(signo, frame)`
+
+Python-level signal handler that does nothing.
+
+
+[ Interruption >> filter ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`436 2 443 13`
+(signature)`filter(Class, *sigs)`
+
+Assign the void signal handler to the all of the given signal numbers.
+
+
+[ Interruption >> catch ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`444 2 452 27`
+(signature)`catch(Class, *sigs)`
+
+Assign the interrupt signal handler to the all of the given signal numbers.
+
+
+[ Interruption >> trap ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`453 2 476 16`
+(signature)`trap(Class)`
+
+Signal handler for a root process.
+
+
+[ Fork ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`478 1 607 21`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`478 12 478 27`
+	- (type/syntax)`ControlException`
+	- (type/factor-local/class)&<#ControlException[ControlException]>
+	
+Exception used to signal (factor-local/classmethod)&<#Fork.trap[Fork.trap]> to replace the existing managed call.
+
+Usual case is that a (factor-local/classmethod)&<#Fork.trap[Fork.trap]> call is made on the main thread where other threads are
+created to run the actual program. Given that the program is finished and another should be ran
+*as if the current program were never ran*, the (factor-local/class)&<#ControlException[ControlException]> can be raised in the
+main thread replacing the initial callable given to (factor-local/classmethod)&<#Fork.trap[Fork.trap]>.
+
+The exception should only be used through the provided classmethods.
+
+This exception should never be displayed in a traceback as it is intended to be caught
+by (factor-local/classmethod)&<#Fork.trap[Fork.trap]>.
+
+
+[ Fork >> __controlled_thread_id__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`493 2 493 32`
+#!source
+	__controlled_thread_id__ = None
+
+[ Fork >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`495 2 498 20`
+(signature)`__init__(self, controller, *args, **kw)`
+
+
+[ Fork >> __str__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`500 2 501 58`
+(signature)`__str__(self)`
+
+
+[ Fork >> pivot ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`503 2 512 13`
+(signature)`pivot(self, T)`
+
+
+[ Fork >> substitute ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`513 2 525 13`
+(signature)`substitute(Class, callable, *args, **kw)`
+
+Substitute the existing control call with the given one.
+
+Immediately raises a (factor-local/class)&<#Fork[Fork]> instance in the calling thread to be caught
+by a corresponding (factor-local/classmethod)&<#Fork.trap[trap]> call.
+
+Only to be used in cases where it is known that the current frame stack is
+being managed by (factor-local/classmethod)&<#Fork.trap[trap]>.
+
+
+[ Fork >> dispatch ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`526 2 575 13`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+(signature)`dispatch(Class, controller, *args, **kw)`
+
+Execute the given callable with the given arguments in a child process.
+This performs an (factor-local/function)&<#interject[interject]> call. Given that (factor-local/method)&<#Fork.pivot[pivot]> was called to execute the
+program, the pivot function will catch the exception, in the child, and
+execute the replacement.
+
+[ >> Parameters ]
+
+/(parameter)`Class`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`controller`/
+	
+	The object that will be called in the clone.
+
+/(parameter)`args`/
+	
+	Arguments given to the callable.
+
+/(parameter)`kw`/
+	
+	Keywords given to the callable.
+
+[ >> Returns ]
+
+/(invalid/unknown)&<#int>/
+	The child process' PID.
+
+[ >> Exceptions ]
+
+/(factor-local/class)&<#Critical[Critical]>/
+	Raised when the returns in the branches did not return.
+
+
+[ Fork >> trap ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`576 2 607 21`
+(signature)`trap(Class, controller, *args, **kw)`
+
+Establish a point for substituting the process. Trap provides an
+exception trap for replacing the controlling stack. This is used to
+perform safe fork operations that allow tear-down of process specific resources
+in a well defined manner.
+
+! NOTE:
+	Due to the varying global process state that may exist in a given process, it
+	is often better to start a new Python instance.
+
+
+[ critical ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`609 1 642 11`
+(signature)`critical(context, callable, *args, **kw)`
+
+A callable used to trap exceptions and interject a (factor-local/class)&<#Critical[Critical]> instance caused by the
+original. This function is intended for critical sections where the failure is likely
+to cause the application to become unresponsive via usual routes.
+
+(factor-local/function)&<#critical[critical]> may return, but must never raise.
+
+For example:
+
+#!syntax/python
+	from fault.system.process import critical
+	
+	def fun():
+		while True:
+			# critical loop
+			# any exception causes the process to terminate
+			...
+	
+	critical(None, fun)
+
+[ protect ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`644 1 675 39`
+(signature)`protect(*init)`
+
+Perpetually protect the main thread using a sleep loop that can only exit
+using an interjection.
+
+Used by (factor-local/function)&<#control[control]> to hold the main thread in (factor-local/classmethod)&<#Fork.trap[Fork.trap]> for applications
+that rely on a set of threads to perform the actual work.
+
+[ > Exceptions ]
+
+/(factor-local/class)&<#Critical[Critical]>/
+	Raised in cases where the infinite loop exits.
+
+/(factor-local/class)&<#Exit[Exit]>/
+	Raised by an application thread using (factor-local/function)&<#interject[interject]>.
+
+
+[ control ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`677 1 721 26`
+(signature)`control(main, *args, **kw)`
+
+A program that calls this is making an explicit declaration that signals should be
+defaulted and the main thread should be protected from uninterruptable calls to allow
+prompt process exits while still performing critical state restoration.
+
+The given (factor-local/parameter)&<#control.Parameters.main[main]> is executed with the given positionals (factor-local/parameter)&<#control.Parameters.args[args]> and keywords (factor-local/parameter)&<#control.Parameters.kw[kw]> inside
+of a (factor-local/classmethod)&<#Fork.trap[Fork.trap]> call. (factor-local/class)&<#Fork[Fork]> handles formal exits and main-call substitution.
+
+
+[ timeout ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`722 1 733 29`
+(signature)`timeout()`
+
+(system/signal)`SIGALRM` based context manager for maximum time interruptions.
+
+
+[ concurrently ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`735 1 795 30`
+(signature)`concurrently(controller)`
+
+Dispatch the given controller in a child process of a (factor-local/function)&<#control[control]> controlled process.
+The returned object is a reference to the result that will block until the child
+process has written the serialized response to a pipe.
+
+Used to create *very simple* fork trees or workers that need to send completion reports back to
+the parent. This expects the calling process to have been launched with (factor-local/function)&<#control[control]>.
+
+[ > Parameters ]
+
+/(parameter)`controller`/
+	- (type/syntax)`typing.Callable`
+	- (type/none/invalid)&<http://fault.io/dev/null[typing.Callable]>
+	
+	The object to call to use the child's controller.
+
+/(parameter)`exe`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`waitpid`/
+	
+	(control/absent)`Undocumented`.
+
+
+[ fs_pwd ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`797 1 806 70`
+		- (type/syntax)`files.Path`
+		- (type/project-local/factor-element)&<files#Path[fault.system.files.Path]>
+		
+(signature)`fs_pwd()`
+
+Construct a (project-local/factor-element)&<files#Path[fault.system.files.Path]> instance referring to (system/environ)`PWD` or
+the current working directory if the environment variable is not defined
+or it is an empty string.
+
+The returned path is not maintained within any cache so repeat calls
+will create a new instance.
+
+
+[ fs_chdir ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`808 1 822 68`
+		- (type/syntax)`files.Path`
+		- (type/project-local/factor-element)&<files#Path[fault.system.files.Path]>
+		
+(signature)`fs_chdir(directory)`
+
+Update (system/environ)`PWD` and the current working directory.
+
+The current working directory is set prior to the environment being updated.
+Exceptions should not require (system/environ)`PWD` to be reset by the caller.
+
+[ > Returns ]
+
+The given (factor-local/parameter)&<#fs_chdir.Parameters.directory[directory]> for chaining if it is a (project-local/factor-element)&<files#Path[fault.system.files.Path]> instance.
+Otherwise, the result of (factor-local/function)&<#fs_pwd[fs_pwd]> is returned.
+
+
+[ _scheduler_loop ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`824 1 841 35`
+(signature)`_scheduler_loop(ks, proxy, limit, final)`
+
+
+[ Scheduling ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`843 1 861 9`
+		- (type/syntax)`kernel.Scheduler`
+		- (type/project-local/factor-element)&<kernel#Scheduler[fault.system.kernel.Scheduler]>
+		
+(signature)`Scheduling()`
+
+Initialize or return (project-local/unknown)&<process#scheduler[process.scheduler]>.
+
+Accessing (project-local/unknown)&<process#scheduler[process.scheduler]> will perform this automatically.
+
+
+[ __getattr__ ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`864 1 867 27`
+(signature)`__getattr__(name)`
+

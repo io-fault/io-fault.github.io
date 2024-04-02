@@ -1,0 +1,94 @@
+<html root="2"><head><title>fault.internet.data.http</title><meta charset="utf-8"/><link as="style" rel="preload" href="../../.legacy-web/core.css"></link><link as="style" rel="preload" href="../../.legacy-web/factor.css"></link><link rel="stylesheet" href="../../.legacy-web/core.css"></link><link rel="stylesheet" href="../../.legacy-web/factor.css"></link></head><body><main><h1><span class="prefix"></span><div class="page-subject"><img class="icon" src="../../.factor-type-icon/if.fault.io/python-module.svg"></img><span class="subject-identifier">http</span><a href="http://if.fault.io/factors/python.module"><code class="type">python.module</code></a></div><div class="page-context"><a href="../"><img class="icon" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNTYiIGhlaWdodD0iMjU2Ij48dGV4dCB4PSI0IiB5PSIwLjg4ZW0iIGZvbnQtc2l6ZT0iMjQ4Ij7wn5OhPC90ZXh0Pjwvc3ZnPg=="></img></a><span class="context-identifier">fault.internet</span></div></h1><section class="chapter"></section><section class="data" documented="false" local-identifier="VERSION10" id="VERSION10"><h1><span class="prefix"></span><a class="title" href="#VERSION10"><span class="text.normal">VERSION10</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code class="source">VERSION10 = b'HTTP/1.0'
+</code></pre></section><section class="data" documented="false" local-identifier="VERSION11" id="VERSION11"><h1><span class="prefix"></span><a class="title" href="#VERSION11"><span class="text.normal">VERSION11</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code class="source">VERSION11 = b'HTTP/1.1'
+</code></pre></section><section class="data" documented="false" local-identifier="VERSIONS" id="VERSIONS"><h1><span class="prefix"></span><a class="title" href="#VERSIONS"><span class="text.normal">VERSIONS</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code class="source">VERSIONS = frozenset((VERSION10, VERSION11))
+</code></pre></section><section class="data" documented="false" local-identifier="CRLF" id="CRLF"><h1><span class="prefix"></span><a class="title" href="#CRLF"><span class="text.normal">CRLF</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code class="source">CRLF = b'\r\n'
+</code></pre></section><section class="data" documented="false" local-identifier="SP" id="SP"><h1><span class="prefix"></span><a class="title" href="#SP"><span class="text.normal">SP</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code class="source">SP = b' '
+</code></pre></section><section class="data" documented="false" local-identifier="HFS" id="HFS"><h1><span class="prefix"></span><a class="title" href="#HFS"><span class="text.normal">HFS</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code class="source">HFS = b': '
+</code></pre></section><section class="data" documented="false" local-identifier="classes" id="classes"><h1><span class="prefix"></span><a class="title" href="#classes"><span class="text.normal">classes</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code class="source">classes = dict(
+	CLASS_INFORMATIONAL = b'1',
+	CLASS_SUCCESS = b'2',
+	CLASS_REDIRECTION = b'3',
+	CLASS_CLIENT_ERROR = b'4',
+	CLASS_SERVER_ERROR = b'5',
+)
+</code></pre></section><section class="data" documented="false" local-identifier="class_names" id="class_names"><h1><span class="prefix"></span><a class="title" href="#class_names"><span class="text.normal">class_names</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code class="source">class_names = (
+	None,
+	'INFORMATIONAL',
+	'SUCCES',
+	'REDIRECTION',
+	'CLIENT_ERROR',
+	'SERVER_ERROR',
+)
+</code></pre></section><section class="data" documented="false" local-identifier="codes" id="codes"><h1><span class="prefix"></span><a class="title" href="#codes"><span class="text.normal">codes</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code class="source">codes = {
+	100: 'CONTINUE',
+	101: 'SWITCHING PROTOCOL',
+
+##
+# 2xx: Success
+#  The action was successfully received, understood, and accepted
+	200: 'OK',
+	201: 'CREATED',
+	202: 'ACCEPTED',
+	203: 'NON-AUTHORITATIVE',
+	204: 'NO CONTENT',
+	205: 'RESET CONTEXT',
+	206: 'PARTIAL CONTENT',
+	207: 'MULTI-STATUS',
+	208: 'ALREADY REPORTED',
+	226: 'IM USED',
+
+##
+# 3xx: Redirection
+#  Further action must be taken in order to complete the request
+	300: 'MULTIPLE CHOICES',
+	301: 'MOVED PERMANENTLY',
+	302: 'FOUND',
+	303: 'SEE OTHER',
+	304: 'NOT MODIFIED',
+	305: 'USE PROXY',
+	307: 'TEMPORARY REDIRECT',
+
+##
+# 4xx: Client Error
+#  The request contains bad syntax or cannot be fulfilled
+	400: 'BAD REQUEST',
+	401: 'UNAUTHORIZED',
+	402: 'PAYMENT REQUIRED',
+	403: 'FORBIDDEN',
+	404: 'NOT FOUND',
+	405: 'METHOD NOT ALLOWED',
+	406: 'NOT ACCEPTABLE',
+	407: 'PROXY AUTHENTICATION REQUIRED',
+	408: 'REQUEST TIMEOUT',
+	409: 'CONFLICT',
+	410: 'GONE',
+	411: 'LENGTH REQUIRED',
+	412: 'PRECONDITION FAILED',
+	413: 'REQUEST ENTITY TOO LARGE',
+	414: 'REQUEST URI TOO LARGE',
+	415: 'UNSUPPORTED MEDIA TYPE',
+	416: 'REQUESTED RANGE NOT SATISFIABLE',
+	417: 'EXPECTATION FAILED',
+	422: 'UNPROCESSABLE ENTITY',
+	423: 'LOCKED',
+	424: 'FAILED DEPENDENCY',
+	426: 'UPGRADE REQUIRED',
+	428: 'PRECONDITION REQUIRED',
+	429: 'TOO MANY REQUESTS',
+	431: 'REQUEST HEADER FIELDS TOO LARGE',
+
+##
+# 5xx: Server Error
+#  The server failed to fulfill an apparently valid request
+	500: 'INTERNAL SERVER ERROR',
+	501: 'NOT IMPLEMENTED',
+	502: 'BAD GATEWAY',
+	503: 'SERVICE UNAVAILABLE',
+	504: 'GATEWAY TIMEOUT',
+	505: 'UNSUPPORTED HTTP VERSION',
+	507: 'INSUFFICIENT STORAGE',
+	508: 'LOOP DETECTED',
+	510: 'NOT EXTENDED',
+	511: 'NETWORK AUTHENTICATION REQUIRED',
+}
+</code></pre></section><h1 class="footing"></h1></main></body></html>

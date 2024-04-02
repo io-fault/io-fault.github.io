@@ -1,0 +1,87 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 26 0`
+Executable factor index for (invalid/unknown)&<#fault.system.tool> bindings.
+
+
+[ importlib ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 16`
+
+[ context_name ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 39`
+
+[ process ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 32`
+
+[ index ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 18 1`
+#!source
+	index = {
+		'archive-delineated': context_name + '.factors.delineated',
+		'text-cc': context_name + '.chapters.compile',
+		'python-cc': context_name + '.python.compile',
+		'factors-cc': context_name + '.factors.construct',
+		'products-cc': context_name + '.products.control',
+		'pdctl': context_name + '.products.control',
+		'fictl': context_name + '.products.control',
+		'man': context_name + '.context.read',
+		'error': context_name + '.factors.error',
+	}
+
+[ activate ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`20 1 21 69`
+(signature)`activate(factor, element)`
+
+
+[ main ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`23 1 26 36`
+		- (type/syntax)`process.Exit`
+		- (type/remote/factor-element)&<http://fault.io/python/system/process#Exit[fault.system.process.Exit]>
+		
+(signature)`main(inv)`
+

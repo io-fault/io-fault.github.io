@@ -1,0 +1,92 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 97 0`
+Text frames for Certificates, Keys, and Contexts.
+
+
+[ sys ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 10`
+
+[ key_fields ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 9 2`
+#!source
+	key_fields = set([
+		'algorithm',
+		'key-id', # Hash of key if necessary.
+	])
+
+[ certificate_fields ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 1 34 2`
+#!source
+	certificate_fields = set([
+		# Security Context data regarding its validity.
+		'validation',
+	
+		'type', # Usually X.509
+		'interval', # validity; not-before, not-after
+	
+		'serial', # Unique identifier.
+		'signature-type',
+		'signature-algorithm',
+	
+		'issuer-organization',
+		'issuer-name', # domain
+	
+		'subject-organization',
+		'subject-name', # domain
+	
+		'extension-names',
+	
+		'revocations', # CRL
+	
+		'key-usage',
+		'key-algorithm',
+	])
+
+[ mkcertview ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`36 1 59 13`
+(signature)`mkcertview(record)`
+
+Create record-frame for a certificate.
+
+
+[ pframe ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`61 1 78 19`
+(signature)`pframe(data)`
+

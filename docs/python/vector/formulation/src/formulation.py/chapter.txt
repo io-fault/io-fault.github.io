@@ -1,0 +1,327 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 477 0`
+Parsing and processing tools for Vector Formulations.
+
+
+[ collections ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 18`
+
+[ itertools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 16`
+
+[ functools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 16`
+
+[ ilevel ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 8 35`
+
+[ Functions ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 1 78 69`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`10 17 10 22`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+The default tool set for vector expansion transformations.
+
+
+[ Functions >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`14 2 18 21`
+(signature)`__init__(self, environ)`
+
+
+[ Functions >> Select ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`20 2 31 11`
+(signature)`Select(self, fields)`
+
+Compose a vector generator from the expansion fields.
+
+
+[ Functions >> env ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`33 2 40 17`
+(signature)`env(self, name, default)`
+
+Override the fields with the identified environment variable.
+
+
+[ Functions >> quoted ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`42 2 47 52`
+(signature)`quoted(self, string)`
+
+Surround the string with quotations and replace any occurrence with two.
+
+
+[ Functions >> bracketed ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`49 2 53 42`
+(signature)`bracketed(self, string)`
+
+Surround the string with brackets.
+
+
+[ Functions >> resuffix ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`55 2 66 35`
+(signature)`resuffix(self, replacement, string)`
+
+Replace the dot-suffix at the end of the string with the designated replacement.
+
+
+[ Functions >> suffix ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`68 2 72 38`
+(signature)`suffix(self, extension, string)`
+
+Append a dot-suffix to the string.
+
+
+[ Functions >> prefix ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`74 2 78 69`
+(signature)`prefix(self, prefix, string)`
+
+Force the string to have the given (factor-local/parameter)&<#Functions.prefix.Parameters.prefix[prefix]>.
+
+
+[ Context ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`80 1 322 3`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`80 15 80 20`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+Composition data structure holding the conclusions and constants.
+
+Primarily providing the (factor-local/method)&<#Context.compose[compose]> interface for producing the
+final command constructors.
+
+
+[ Context >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`88 2 94 39`
+(signature)`__init__(self, conclusions, constants)`
+
+Initialize the context identifying the set of available conditions.
+
+
+[ Context >> constraint ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`96 2 139 13`
+(signature)`constraint(self, cset, matches, vparam)`
+
+
+[ Context >> resolve ]
+! CONTROL:
+	/type/
+		classmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`140 2 201 15`
+(signature)`resolve(Class, vf, vq, vi, index, slices)`
+
+
+[ Context >> production ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`203 2 262 51`
+(signature)`production(self, index, vf, vq, vp, vs, query)`
+
+
+[ Context >> compose ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`264 2 314 23`
+(signature)`compose(self, index, selection, *argv)`
+
+Compose a command constructor with respect to (factor-local/parameter)&<#Context.compose.Parameters.self[self]>.
+
+
+[ Context >> chain ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`316 2 322 3`
+(signature)`chain(self, query, index, selection)`
+
+Compose and command constructor and evaluate it with respect to (factor-local/parameter)&<#Context.chain.Parameters.query[query]>.
+
+
+[ parameters ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`324 1 340 10`
+(signature)`parameters(string)`
+
+Identify bracketed areas for substitution.
+
+
+[ quotations ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`342 1 367 29`
+(signature)`quotations(args)`
+
+Isolate quotations within a vector expression.
+Quotations have the highest precedence and must be isolated first.
+
+
+[ instruction ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`369 1 414 62`
+(signature)`instruction(lineno, line)`
+
+Recognize the vector instruction present on a given line.
+
+
+[ segments ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`416 1 453 25`
+(signature)`segments(lines)`
+
+Isolate the given (factor-local/parameter)&<#segments.Parameters.lines[lines]> into segments identified by the unindented line
+leading an indentation of text. The segments contain the indentations
+in the order presented by the iterator.
+
+
+[ structure ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`455 1 469 3`
+(signature)`structure(origin, iterlines)`
+
+Structure the formatted vector expressions into a mapping
+identifying the distinct sequences.
+
+
+[ parse ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`471 1 477 33`
+(signature)`parse(text)`
+
+Split the (factor-local/parameter)&<#parse.Parameters.text[text]> into lines and return the (factor-local/function)&<#structure[structure]> form.
+

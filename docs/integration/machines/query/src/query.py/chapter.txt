@@ -1,0 +1,159 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 94 0`
+Factor Execution tools for supporting (project-local/unknown)&<bin.switch>.
+
+
+[ replace ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 31`
+
+[ tools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 31`
+
+[ files ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 7 30`
+
+[ Context ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`9 1 9 40`
+
+[ Variants ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 1 10 40`
+
+[ Platform ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 1 11 43`
+
+[ IntegrationError ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`13 1 16 4`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`13 24 13 32`
+	- (type/syntax)`Exception`
+	- (type/invalid/unknown)&<#Exception>
+	
+An issue with the integration of a project was identified.
+
+
+[ project_environment ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`18 1 28 2`
+(signature)`project_environment(project, factor)`
+
+Construct a sequence of environment variables describing the executing factor.
+
+
+[ image_environment ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`30 1 40 21`
+(signature)`image_environment(variants, image)`
+
+Construct a sequence of environment variables describing the factor's image.
+
+
+[ _cvar ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`41 1 42 34`
+(signature)`_cvar(v, a)`
+
+
+[ image ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`44 1 53 16`
+(signature)`image()`
+
+Identify the image and variants of the project's factor by scanning
+the filesystem for the given sequence of architectures.
+
+
+[ plan ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`57 1 66 44`
+(signature)`plan(execution, project, factor, variants, image, argv)`
+
+Plan the execution of a factor using the (factor-local/parameter)&<#plan.Parameters.execution[execution]> platform.
+Returns a triple suitable for use with (none/invalid)&<http://fault.io/dev/null[system.system.execution.KInvocation]>.
+
+
+[ select ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`68 1 94 43`
+(signature)`select()`
+
+Identify the appropriate (factor-local/function)&<#plan[plan]> for executing the (invalid/unknown)&<#factor> in (invalid/unknown)&<#projects>
+using a runtime identified by the (invalid/unknown)&<#execution> platform.
+
