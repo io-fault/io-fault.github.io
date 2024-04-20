@@ -87,12 +87,12 @@ Connect an adapter to the stored security context.
 		- (control)`property-set`
 		- (source/area)`14 1 19 1`
 #!source
-	info = lsf.types.Information(
 		identifier = 'http://fault.io/python/security/kprotocol-',
 		name = 'kprotocol-',
 		authority = 'fault.io',
 		contact = "http://fault.io/critical"
 	)
+	
 
 [ requirements ]
 ! CONTROL:
@@ -104,10 +104,10 @@ Connect an adapter to the stored security context.
 		- (control)`property-set`
 		- (source/area)`21 1 24 2`
 #!source
-	requirements = '\n'.join([
 		'http://fault.io/python/system/extensions.interfaces',
 		'http://fault.io/python/security/implementations',
 	])
+	
 
 [ formats ]
 ! CONTROL:
@@ -119,7 +119,6 @@ Connect an adapter to the stored security context.
 		- (control)`property-set`
 		- (source/area)`26 1 39 1`
 #!source
-	formats = {
 		'http://if.fault.io/factors/system': [
 			('elements', 'c', '2011', 'c'),
 			('void', 'h', 'header', 'c'),
@@ -133,6 +132,7 @@ Connect an adapter to the stored security context.
 			('references', 'fr', 'lines', 'text'),
 		],
 	}
+	
 
 [ pyi ]
 ! CONTROL:
@@ -144,7 +144,7 @@ Connect an adapter to the stored security context.
 		- (control)`property-set`
 		- (source/area)`41 1 41 41`
 #!source
-	pyi = lsf.types.factor@'python.interface'
+	fr = lsf.types.factor@'meta.references'
 
 [ fr ]
 ! CONTROL:
@@ -156,7 +156,7 @@ Connect an adapter to the stored security context.
 		- (control)`property-set`
 		- (source/area)`42 1 42 39`
 #!source
-	fr = lsf.types.factor@'meta.references'
+	sr = lsf.types.factor@'system.references'
 
 [ sr ]
 ! CONTROL:
@@ -168,7 +168,7 @@ Connect an adapter to the stored security context.
 		- (control)`property-set`
 		- (source/area)`43 1 43 41`
 #!source
-	sr = lsf.types.factor@'system.references'
+	
 
 [ module_template ]
 ! CONTROL:
@@ -180,7 +180,6 @@ Connect an adapter to the stored security context.
 		- (control)`property-set`
 		- (source/area)`45 1 57 3`
 #!source
-	module_template = """
 		#define ADAPTER_{upper} 1
 		#define ADAPTER_TRANSPORT_NEW transport_new_{lower}
 		#define ADAPTER_VERIFY SSL_VERIFY_PEER
@@ -193,6 +192,7 @@ Connect an adapter to the stored security context.
 			return(init_implementation_data(module));
 		}}
 	"""
+	
 
 [ init_product ]
 ! CONTROL:

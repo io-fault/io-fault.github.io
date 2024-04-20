@@ -1,0 +1,106 @@
+! CONTROL:
+	/type/
+		unit
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+
+[ kernelq_clear ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`17 1 22 1`
+		- (type/syntax)`void`
+		
+(signature)`kernelq_clear(kq)`
+
+
+[ kernelq_traverse ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`24 1 30 1`
+		- (type/syntax)`int`
+		
+(signature)`kernelq_traverse(kq, visit, arg)`
+
+
+[ kernelq_reference_update ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`36 1 53 1`
+		- (type/syntax)`int`
+		
+(signature)`kernelq_reference_update(kq, ln, current)`
+
+Replace the link in the reference dictionary, but return
+the existing object if any.
+
+
+[ kernelq_reference_delete ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`55 1 71 1`
+		- (type/syntax)`int`
+		
+(signature)`kernelq_reference_delete(kq, ev)`
+
+
+[ kernelq_cyclic_event ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`78 1 122 1`
+		- (type/syntax)`int`
+		
+(signature)`kernelq_cyclic_event(kq, cyclic, ln, kev)`
+
+Set or clear the cyclic flag on (factor-local/parameter)&<#kernelq_cyclic_event.Parameters.ln[ln]> or raise an error if
+it's not acceptable for the given filter.
+
+
+[ kernelq_transition ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`124 1 193 1`
+		- (type/syntax)`int`
+		
+(signature)`kernelq_transition(kq, tq)`
+
+
+[ kernelq_cancel ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`195 1 264 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`kernelq_cancel(kq, ev)`
+

@@ -1,0 +1,441 @@
+! CONTROL:
+	/type/
+		unit
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+
+[ KPORT_TRANSFER ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`408 9 441 2`
+(signature)`KPORT_TRANSFER()`
+
+
+[ PortsType ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`499 9 499 28`
+#!source
+	#define PortsType KPortsType
+
+[ PYTHON_TYPES ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`500 9 505 14`
+(signature)`PYTHON_TYPES()`
+
+
+[ k_preserve ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`507 9 507 38`
+#!source
+	#define k_preserve kport_clear_cloexec
+
+[ k_released ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`508 9 508 36`
+#!source
+	#define k_released kport_set_cloexec
+
+[ k_hostname ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`509 9 509 31`
+#!source
+	#define k_hostname get_hostname
+
+[ k_machine_execution_context ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`510 9 510 45`
+#!source
+	#define k_machine_execution_context get_uname
+
+[ k_machine ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`511 9 511 27`
+#!source
+	#define k_machine get_uname
+
+[ k_clockticks ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`512 9 512 36`
+#!source
+	#define k_clockticks get_clock_ticks
+
+[ k_set_process_title ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`513 9 513 45`
+#!source
+	#define k_set_process_title set_process_title
+
+[ k_signalexit ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`514 9 514 31`
+#!source
+	#define k_signalexit signalexit
+
+[ PyMethod_Id ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`516 9 516 28`
+#!source
+	#define PyMethod_Id(N) k_##N
+
+[ MODULE_FUNCTIONS ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`517 9 535 27`
+(signature)`MODULE_FUNCTIONS()`
+
+
+[ ID ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`543 10 548 54`
+#!source
+	#define ID(NAME) \
+		if (PyType_Ready((PyTypeObject *) &( NAME##Type ))) \
+			goto error; \
+		Py_INCREF((PyObj) &( NAME##Type )); \
+		if (PyModule_AddObject(module, #NAME, (PyObj) &( NAME##Type )) < 0) \
+			{ Py_DECREF((PyObj) &( NAME##Type )); goto error; }
+
+[ get_hostname ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`26 1 41 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`get_hostname(mod)`
+
+
+[ get_uname ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`43 1 71 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`get_uname(mod)`
+
+
+[ utsname ]
+! CONTROL:
+	/type/
+		structure
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`47 2 47 15`
+
+[ get_clock_ticks ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`73 1 79 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`get_clock_ticks(mod)`
+
+
+[ set_process_title ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`81 1 102 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`set_process_title(mod, title)`
+
+
+[ inherit ]
+! CONTROL:
+	/type/
+		structure
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`106 1 108 1`
+
+[ inherit >> process_id ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`int`
+		
+
+[ prepare ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`110 1 115 1`
+		- (type/syntax)`void`
+		
+(signature)`prepare()`
+
+
+[ _after_fork_parent ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`122 1 131 1`
+		- (type/syntax)`int`
+		
+(signature)`_after_fork_parent(pc_param)`
+
+Execute the (project-local/unknown)&<process#_after_fork_parent[process._after_fork_parent]> object from a pending call.
+
+
+[ parent ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`133 1 159 1`
+		- (type/syntax)`void`
+		
+(signature)`parent()`
+
+
+[ _after_fork_child ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`164 1 171 1`
+		- (type/syntax)`int`
+		
+(signature)`_after_fork_child(pc_param)`
+
+Execute the (project-local/unknown)&<process#_after_fork_child[process._after_fork_child]> object from a pending call.
+
+
+[ child ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`176 1 200 1`
+		- (type/syntax)`void`
+		
+(signature)`child()`
+
+Synchronize with the parent process.
+
+
+[ ltracefunc ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`202 1 209 1`
+		- (type/syntax)`int`
+		
+(signature)`ltracefunc(ob, f, event, arg)`
+
+
+[ trace ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`216 1 293 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`trace(self, args)`
+
+Set the trace object on a set of threads.
+Only supports callable-object level.
+This is intended for debuggers.
+
+
+[ _exit_by_signal ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`298 1 313 1`
+		- (type/syntax)`void`
+		
+(signature)`_exit_by_signal()`
+
+Executed in atexit in order to preserve the signal's exit code.
+
+
+[ signalexit ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`318 1 337 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`signalexit(mod, ob)`
+
+Register low-level atexit handler for exiting via a signal.
+
+
+[ kport_clear_cloexec ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`346 1 375 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`kport_clear_cloexec(mod, seq)`
+
+Ensure that the kport is preserved across process images.
+Used by system to hold on to listening sockets.
+
+Generally, most file descriptors created by (project-local/unknown)&<system> will have
+the FD_CLOEXEC flag set.
+
+
+[ kport_set_cloexec ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`377 1 406 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`kport_set_cloexec(mod, seq)`
+
+
+[ k_initialize ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`457 1 476 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`k_initialize(mod, ctx)`
+

@@ -1,0 +1,243 @@
+! CONTROL:
+	/type/
+		unit
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+
+[ INITIAL_TASK_COUNT ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 10 11 29`
+#!source
+	#define INITIAL_TASK_COUNT 4
+
+[ MAX_TASKS_PER_SEGMENT ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`15 10 15 34`
+#!source
+	#define MAX_TASKS_PER_SEGMENT 128
+
+[ TASKQ_MEMORY_ERROR ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`18 9 19 43`
+(signature)`TASKQ_MEMORY_ERROR()`
+
+
+[ TASKQ_PARALLEL_ERROR ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`20 9 21 44`
+(signature)`TASKQ_PARALLEL_ERROR()`
+
+
+[ TASKQ_FULL ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`23 9 23 68`
+(signature)`TASKQ_FULL()`
+
+
+[ TASKQ_ALLOCATION_SIZE ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`25 9 26 42`
+(signature)`TASKQ_ALLOCATION_SIZE()`
+
+
+[ TASKQ_MEMORY_ACQUIRE ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`28 9 28 41`
+#!source
+	#define TASKQ_MEMORY_ACQUIRE PyMem_Malloc
+
+[ TASKQ_MEMORY_RELEASE ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`29 9 29 39`
+#!source
+	#define TASKQ_MEMORY_RELEASE PyMem_Free
+
+[ TASKQ_ALLOCATE ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`30 9 31 73`
+(signature)`TASKQ_ALLOCATE()`
+
+
+[ taskq_extend ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`36 1 61 1`
+		- (type/syntax)`int`
+		
+(signature)`taskq_extend(tq)`
+
+Append a memory allocation to the task queue.
+
+
+[ taskq_insert ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`67 1 77 1`
+		- (type/syntax)`int`
+		
+(signature)`taskq_insert(tq, callable)`
+
+Insert task at the end of the queue.
+Presume available space.
+
+
+[ taskq_enqueue ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`82 1 98 1`
+		- (type/syntax)`int`
+		
+(signature)`taskq_enqueue(tq, callable)`
+
+High-level append.
+
+
+[ trap_execution_error ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`104 1 160 1`
+		- (type/syntax)`void`
+		
+(signature)`trap_execution_error(errctl, errctx, task)`
+
+Handle error cases using (factor-local/parameter)&<#trap_execution_error.Parameters.errctl[errctl]> and (invalid/unknown)&<#PyErr_WriteUnraisable>
+when it or other critical operations fail.
+
+
+[ taskq_continue ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`165 1 189 1`
+		- (type/syntax)`int`
+		
+(signature)`taskq_continue(tq)`
+
+Pop segments from (invalid/unknown)&<#TaskQueue.q_executing>.
+
+
+[ taskq_execute ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`195 1 252 1`
+		- (type/syntax)`int`
+		
+(signature)`taskq_execute(tq, errctl, errctx)`
+
+Execute the tasks in the (invalid/unknown)&<#TaskQueue.q_executing>,
+and rotate (invalid/unknown)&<#TaskQueue.q_loading> for the next cycle.
+
+
+[ taskq_clear ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`257 1 309 1`
+		- (type/syntax)`void`
+		
+(signature)`taskq_clear(tq)`
+
+Release all objects held by the queue.
+
+
+[ taskq_traverse ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`314 1 346 1`
+		- (type/syntax)`int`
+		
+(signature)`taskq_traverse(tq, visit, arg)`
+
+Container traversal for GC support.
+
+
+[ taskq_initialize ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`351 1 377 1`
+		- (type/syntax)`int`
+		
+(signature)`taskq_initialize(tq)`
+
+Initialize the given, already allocated, task queue.
+

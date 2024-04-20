@@ -1,0 +1,150 @@
+! CONTROL:
+	/type/
+		unit
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+
+[ LF ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`15 9 22 2`
+#!source
+	#define LF(FLAG) \
+		STATIC(PyObj) \
+		ln_get_##FLAG(Link ln, void *closure) \
+		{ \
+			if (Link_Get(ln, FLAG)) \
+				Py_RETURN_TRUE; \
+			Py_RETURN_FALSE; \
+		}
+
+[ LF ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`29 10 30 45`
+#!source
+	#define LF(FLAG) \
+		{#FLAG, (getter)ln_get_##FLAG, NULL, NULL},
+
+[ ln_hash ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`45 1 54 1`
+		- (type/syntax)`Py_hash_t`
+		
+(signature)`ln_hash(ln)`
+
+
+[ ln_richcompare ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`56 1 69 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`ln_richcompare(ln, operand, cmpop)`
+
+
+[ ln_call ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`71 1 86 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`ln_call(ln, args, kw)`
+
+
+[ ln_clear ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`88 1 94 1`
+		- (type/syntax)`void`
+		
+(signature)`ln_clear(ln)`
+
+
+[ ln_traverse ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`96 1 105 1`
+		- (type/syntax)`int`
+		
+(signature)`ln_traverse(self, visit, arg)`
+
+
+[ ln_new ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`107 1 119 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`ln_new(typ, args, kw)`
+
+
+[ ln_dealloc ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`121 1 127 1`
+		- (type/syntax)`void`
+		
+(signature)`ln_dealloc(ln)`
+
+
+[ Link_Create ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`157 1 176 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`Link_Create(typ, ctx, ev, task)`
+

@@ -1,0 +1,291 @@
+! CONTROL:
+	/type/
+		unit
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+
+[ PyMethod_Id ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`417 10 417 30`
+#!source
+	#define PyMethod_Id(N) ks_##N
+
+[ interrupt_wait ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`29 1 60 1`
+		- (type/syntax)`int`
+		
+(signature)`interrupt_wait(ks)`
+
+Interrupt a running (project-local/unknown)&<kernel#Scheduler.wait[kernel.Scheduler.wait]> call.
+
+[ > Returns ]
+
+/`0`/
+	Not Waiting; no interrupt issued.
+
+/`1`/
+	Scheduler was waiting, but interrupt was already issued.
+
+/`2`/
+	Interrupt issued to system.
+
+
+[ timespec ]
+! CONTROL:
+	/type/
+		structure
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`32 2 32 16`
+
+[ ks_enqueue ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`65 1 78 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`ks_enqueue(ks, callable)`
+
+(project-local/unknown)&<kernel#Scheduler.enqueue[kernel.Scheduler.enqueue]>
+
+
+[ ks_execute ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`83 1 103 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`ks_execute(self)`
+
+(project-local/unknown)&<kernel#Scheduler.execute[kernel.Scheduler.execute]>
+
+
+[ ks_termination ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`105 1 154 1`
+		- (type/syntax)`int`
+		
+(signature)`ks_termination(ks, kq, tq)`
+
+
+[ ks_close ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`159 1 191 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`ks_close(self)`
+
+(project-local/unknown)&<kernel#Scheduler.close[kernel.Scheduler.close]>
+
+
+[ ks_void ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`196 1 205 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`ks_void(self)`
+
+(project-local/unknown)&<kernel#Scheduler.void[kernel.Scheduler.void]>
+
+
+[ ks_interrupt ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`210 1 237 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`ks_interrupt(self)`
+
+(project-local/unknown)&<kernel#Scheduler.interrupt[kernel.Scheduler.interrupt]>
+
+
+[ ks_dispatch ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`242 1 289 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`ks_dispatch(self, args, kw)`
+
+(project-local/unknown)&<kernel#Scheduler.dispatch[kernel.Scheduler.dispatch]>
+
+
+[ ks_cancel ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`294 1 346 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`ks_cancel(self, ref)`
+
+(project-local/unknown)&<kernel#Scheduler.cancel[kernel.Scheduler.cancel]>
+
+
+[ ks_operations ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`351 1 357 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`ks_operations(self)`
+
+(project-local/unknown)&<kernel#Scheduler.operations[kernel.Scheduler.operations]>
+
+
+[ ks__set_waiting ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`359 1 365 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`ks__set_waiting(self)`
+
+
+[ ks_wait ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`370 1 413 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`ks_wait(self, args)`
+
+(project-local/unknown)&<kernel#Scheduler.wait[kernel.Scheduler.wait]>
+
+
+[ ks_get_closed ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`441 1 450 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`ks_get_closed(self, closure)`
+
+
+[ ks_get_has_tasks ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`452 1 461 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`ks_get_has_tasks(self, closure)`
+
+
+[ ks_traverse ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`470 1 484 1`
+		- (type/syntax)`int`
+		
+(signature)`ks_traverse(self, visit, arg)`
+
+
+[ ks_clear ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`486 1 497 1`
+		- (type/syntax)`int`
+		
+(signature)`ks_clear(self)`
+
+
+[ ks_dealloc ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`502 1 514 1`
+		- (type/syntax)`void`
+		
+(signature)`ks_dealloc(self)`
+
+(project-local/unknown)&<kernel#Scheduler.__del__[kernel.Scheduler.__del__]>
+
+
+[ ks_new ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`519 1 550 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`ks_new(subtype, args, kw)`
+
+(project-local/unknown)&<kernel#Scheduler.__new__[kernel.Scheduler.__new__]>
+

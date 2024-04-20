@@ -1,0 +1,328 @@
+! CONTROL:
+	/type/
+		unit
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+
+[ EV_TYPE ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`266 9 286 2`
+#!source
+	#define EV_TYPE(NAME, CONVERT, CYCLIC) \
+		STATIC(PyObj) \
+		ev_##NAME(PyTypeObject *PYTYPE, PyObj args, PyObj kw) { \
+			PyObj ROB; \
+			Event ev; \
+			ROB = PYTYPE->tp_alloc(PYTYPE, 0); \
+			if (ROB == NULL) \
+				return(NULL); \
+			ev = (Event) ROB; \
+			Event_Type(ev) = EV_TYPE_ID(NAME); \
+			Event_SetTime(ev, 0); \
+			Event_SetSource(ev, NULL); \
+			Event_SetKPort(ev, -1); \
+			if (CONVERT(ev, args, kw) < 0) \
+			{ \
+				Py_DECREF(ROB); \
+				return(NULL); \
+			} \
+			Py_INCREF(Event_GetSource(ev)); \
+			return(ROB); \
+		}
+
+[ EV_TYPE ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`313 11 316 9`
+#!source
+	#define EV_TYPE(NAME, C, CYCLIC) \
+		case EV_TYPE_ID(NAME): \
+			normal = #NAME; \
+		break;
+
+[ PyMethod_Id ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`332 10 332 30`
+#!source
+	#define PyMethod_Id(N) ev_##N
+
+[ PyMethod_TypeControl ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`335 11 335 49`
+#!source
+	#define PyMethod_TypeControl PyMethod_ClassType
+
+[ EV_TYPE ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`339 12 339 60`
+#!source
+	#define EV_TYPE(NAME, C, CYCLIC) PyMethod_Keywords(NAME),
+
+[ ev_time_units ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`19 1 74 1`
+		- (type/syntax)`int`
+		
+(signature)`ev_time_units(ev, args, kw)`
+
+Initialize an event for scheduling a timer.
+
+
+[ ev_pid_reference ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`79 1 112 1`
+		- (type/syntax)`int`
+		
+(signature)`ev_pid_reference(ev, args, kw)`
+
+Initialize an event with a process identifier and optional port.
+
+
+[ ev_signal_reference ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`117 1 162 1`
+		- (type/syntax)`int`
+		
+(signature)`ev_signal_reference(ev, args, kw)`
+
+Initialize an event with a signal code and optional port.
+
+
+[ ev_reference ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`167 1 205 1`
+		- (type/syntax)`int`
+		
+(signature)`ev_reference(ev, args, kw)`
+
+Initialize an event with an arbitrary reference.
+
+
+[ ev_filesystem_reference ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`211 1 241 1`
+		- (type/syntax)`int`
+		
+(signature)`ev_filesystem_reference(ev, args, kw)`
+
+Initialize an event with a filesystem Path.
+Monitoring events(fs_delta, fs_void, fs_status).
+
+
+[ ev_io_reference ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`246 1 263 1`
+		- (type/syntax)`int`
+		
+(signature)`ev_io_reference(ev, args, kw)`
+
+Initialize an event with a pair of kport_t.
+
+
+[ ev_constructor ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`292 1 328 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`ev_constructor(typ, typstring)`
+
+
+[ ev_get_type ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`347 1 352 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`ev_get_type(ev, closure)`
+
+
+[ ev_get_port ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`354 1 358 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`ev_get_port(ev, closure)`
+
+
+[ ev_get_source ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`360 1 366 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`ev_get_source(ev, closure)`
+
+
+[ ev_hash ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`377 1 415 1`
+		- (type/syntax)`Py_hash_t`
+		
+(signature)`ev_hash(ev)`
+
+
+[ ev_richcompare ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`417 1 464 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`ev_richcompare(ev, operand, cmpop)`
+
+
+[ ev_new ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`469 1 496 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`ev_new(typ, args, kw)`
+
+Copy Event. Type specific constructors must be used to create new instances.
+
+
+[ ev_release ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`498 1 516 1`
+		- (type/syntax)`void`
+		
+(signature)`ev_release(ev)`
+
+
+[ ev_clear ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`518 1 522 1`
+		- (type/syntax)`void`
+		
+(signature)`ev_clear(ev)`
+
+
+[ ev_traverse ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`524 1 530 1`
+		- (type/syntax)`int`
+		
+(signature)`ev_traverse(self, visit, arg)`
+
+
+[ ev_dealloc ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`532 1 540 1`
+		- (type/syntax)`void`
+		
+(signature)`ev_dealloc(ev)`
+

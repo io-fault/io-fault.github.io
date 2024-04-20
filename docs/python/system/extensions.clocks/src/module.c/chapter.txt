@@ -1,0 +1,225 @@
+! CONTROL:
+	/type/
+		unit
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+
+[ ClockType ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`170 9 179 2`
+(signature)`ClockType()`
+
+
+[ Clocks ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`181 9 183 50`
+(signature)`Clocks()`
+
+
+[ CLOCK_RECORD ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`230 9 230 73`
+#!source
+	#define CLOCK_RECORD(NAME, CLOCK_ID) static PyTypeObject ClockType(NAME);
+
+[ PYTHON_TYPES ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`234 9 237 30`
+(signature)`PYTHON_TYPES()`
+
+
+[ MODULE_FUNCTIONS ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`239 9 239 26`
+(signature)`MODULE_FUNCTIONS()`
+
+
+[ ID ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`244 10 249 57`
+#!source
+	#define ID(NAME, TYPNAME) \
+		if (PyType_Ready((PyTypeObject *) &( TYPNAME##Type ))) \
+			goto error; \
+		Py_INCREF((PyObj) &( TYPNAME##Type )); \
+		if (PyModule_AddObject(module, #NAME, (PyObj) &( TYPNAME##Type )) < 0) \
+			{ Py_DECREF((PyObj) &( TYPNAME##Type )); goto error; }
+
+[ clockwork_get_positive_adjustment ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`21 2 34 2`
+		- (type/syntax)`unsigned long long`
+		
+(signature)`clockwork_get_positive_adjustment(cw)`
+
+
+[ timespec ]
+! CONTROL:
+	/type/
+		structure
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`26 3 26 17`
+
+[ clockwork_set ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`37 1 53 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`clockwork_set(self, args)`
+
+
+[ timespec ]
+! CONTROL:
+	/type/
+		structure
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`42 2 42 16`
+
+[ clockwork_get ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`55 1 62 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`clockwork_get(self)`
+
+
+[ clockwork_snapshot ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`64 1 74 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`clockwork_snapshot(self)`
+
+
+[ timespec ]
+! CONTROL:
+	/type/
+		structure
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`68 2 68 16`
+
+[ clockwork_adjust ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`76 1 88 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`clockwork_adjust(self, args)`
+
+
+[ clockwork_new ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`90 1 110 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`clockwork_new(subtype, args, kw)`
+
+
+[ Real_new ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`185 1 204 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`Real_new(subtype, args, kw)`
+
+
+[ Monotonic_new ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`206 1 225 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`Monotonic_new(subtype, args, kw)`
+

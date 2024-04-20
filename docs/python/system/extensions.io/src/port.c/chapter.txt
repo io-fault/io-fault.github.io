@@ -1,0 +1,441 @@
+! CONTROL:
+	/type/
+		unit
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+
+[ errpf ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`26 9 26 47`
+(signature)`errpf()`
+
+
+[ _RETRY_STATE ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`31 9 31 35`
+#!source
+	#define _RETRY_STATE _avail_retries
+
+[ RETRY_STATE_INIT ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`32 9 32 64`
+#!source
+	#define RETRY_STATE_INIT int _RETRY_STATE = CONFIG_SYSCALL_RETRY
+
+[ LIMITED_RETRY ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`33 9 39 11`
+(signature)`LIMITED_RETRY()`
+
+
+[ UNLIMITED_RETRY ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`40 9 40 56`
+(signature)`UNLIMITED_RETRY()`
+
+
+[ CONFIG_TRAFFIC_PORTS_PER_CALL ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`50 10 50 40`
+#!source
+	#define CONFIG_TRAFFIC_PORTS_PER_CALL 1
+
+[ port_nosigpipe ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`567 10 567 28`
+(signature)`port_nosigpipe()`
+
+
+[ pbin ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`604 10 604 18`
+(signature)`pbin()`
+
+
+[ socket_receive_buffer ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`53 1 60 1`
+		- (type/syntax)`int`
+		
+(signature)`socket_receive_buffer(kp)`
+
+
+[ socket_send_buffer ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`62 1 69 1`
+		- (type/syntax)`int`
+		
+(signature)`socket_send_buffer(kp)`
+
+
+[ map_st_mode ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`71 1 97 1`
+		- (type/syntax)`ktype_t`
+		
+(signature)`map_st_mode(mode)`
+
+
+[ port_identify_type ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`99 1 131 1`
+		- (type/syntax)`int`
+		
+(signature)`port_identify_type(p)`
+
+
+[ stat ]
+! CONTROL:
+	/type/
+		structure
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`106 2 106 12`
+
+[ port_getpeername ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`133 1 164 1`
+		- (type/syntax)`int`
+		
+(signature)`port_getpeername(p, addr, addrlen)`
+
+
+[ port_getsockname ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`166 1 197 1`
+		- (type/syntax)`int`
+		
+(signature)`port_getsockname(p, addr, addrlen)`
+
+
+[ port_set_socket_option ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`199 1 231 1`
+		- (type/syntax)`int`
+		
+(signature)`port_set_socket_option(p, option, setting)`
+
+
+[ port_kqueue ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`321 1 365 1`
+		- (type/syntax)`int`
+		
+(signature)`port_kqueue(p)`
+
+
+[ port_kevent ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`367 1 425 1`
+		- (type/syntax)`int`
+		
+(signature)`port_kevent(p, retry, out, changes, nchanges, events, nevents, timeout)`
+
+
+[ port_listen ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`429 1 454 1`
+		- (type/syntax)`int`
+		
+(signature)`port_listen(p, backlog)`
+
+
+[ init_socket ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`460 1 499 1`
+		- (type/syntax)`void`
+		
+(signature)`init_socket(kp)`
+
+These are technically optional, so clear errno and do not report failures.
+XXX: socket option warnings may be useful.
+
+
+[ init_listening_socket ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`501 1 521 1`
+		- (type/syntax)`void`
+		
+(signature)`init_listening_socket(kp)`
+
+
+[ port_init_socket ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`523 1 529 1`
+		- (type/syntax)`int`
+		
+(signature)`port_init_socket(p)`
+
+
+[ port_init_listening_socket ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`531 1 537 1`
+		- (type/syntax)`int`
+		
+(signature)`port_init_listening_socket(p)`
+
+
+[ port_noblocking ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`570 1 595 1`
+		- (type/syntax)`int`
+		
+(signature)`port_noblocking(p)`
+
+
+[ port_unlatch ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`611 1 764 1`
+		- (type/syntax)`void`
+		
+(signature)`port_unlatch(p, times)`
+
+Method to "close" a port.
+Manages the reference counts and the effect of the close.
+
+
+[ port_input_octets ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`767 1 843 1`
+		- (type/syntax)`io_status_t`
+		
+(signature)`port_input_octets(p, consumed, buf, size)`
+
+
+[ port_output_octets ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`845 1 916 1`
+		- (type/syntax)`io_status_t`
+		
+(signature)`port_output_octets(p, consumed, buf, size)`
+
+
+[ port_input_datagrams ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`918 1 983 1`
+		- (type/syntax)`io_status_t`
+		
+(signature)`port_input_datagrams(p, consumed, dg, quantity)`
+
+
+[ port_output_datagrams ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`985 1 1050 1`
+		- (type/syntax)`io_status_t`
+		
+(signature)`port_output_datagrams(p, consumed, dg, quantity)`
+
+
+[ ports_identify_socket ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`1060 1 1085 1`
+		- (type/syntax)`int`
+		
+(signature)`ports_identify_socket(p)`
+
+Sequence of Port operations (portS)
+
+These functions respresent a series of operations of that
+need to be successful in order for the port to function properly.
+If one step errors out, jump to the exit. The port_* interface will
+note the error on the port.
+
+
+[ ports_identify_input ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1087 1 1106 1`
+		- (type/syntax)`int`
+		
+(signature)`ports_identify_input(p)`
+
+
+[ ports_identify_output ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1108 1 1130 1`
+		- (type/syntax)`int`
+		
+(signature)`ports_identify_output(p)`
+

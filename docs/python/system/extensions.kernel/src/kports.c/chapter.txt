@@ -1,0 +1,252 @@
+! CONTROL:
+	/type/
+		unit
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+
+[ _kports_alloc ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`18 9 18 60`
+(signature)`_kports_alloc()`
+
+
+[ PyMethod_Id ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`127 10 127 30`
+#!source
+	#define PyMethod_Id(N) kp_##N
+
+[ PyMethod_TypeControl ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`135 11 135 49`
+#!source
+	#define PyMethod_TypeControl PyMethod_ClassType
+
+[ kports_alloc ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`20 1 34 1`
+		- (type/syntax)`KPorts`
+		
+(signature)`kports_alloc(fill, length)`
+
+
+[ kports_create ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`36 1 47 1`
+		- (type/syntax)`KPorts`
+		
+(signature)`kports_create(data, length)`
+
+
+[ kp_close ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`52 1 66 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`kp_close(self)`
+
+(project-local/unknown)&<kernel#Ports.close[kernel.Ports.close]>
+
+
+[ kp_configure ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`73 1 96 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`kp_configure(self)`
+
+
+[ kp_allocate ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`101 1 123 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`kp_allocate(subtype, length)`
+
+(project-local/unknown)&<kernel#Ports.allocate[kernel.Ports.allocate]>
+
+
+[ kports_richcompare ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`142 1 189 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`kports_richcompare(self, x, op)`
+
+
+[ kports_length ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`194 1 198 1`
+		- (type/syntax)`Py_ssize_t`
+		
+(signature)`kports_length(self)`
+
+(project-local/unknown)&<kernel#Ports.__len__[kernel.Ports.__len__]>
+
+
+[ kports_concat ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`203 1 219 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`kports_concat(self, x)`
+
+(project-local/unknown)&<kernel#Ports.__concat__[kernel.Ports.__concat__]>
+
+
+[ kports_repeat ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`224 1 240 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`kports_repeat(self, quantity)`
+
+(project-local/unknown)&<kernel#Ports.__repeat__[kernel.Ports.__repeat__]>
+
+
+[ kports_getitem ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`245 1 257 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`kports_getitem(self, index)`
+
+(project-local/unknown)&<kernel#Ports.__getitem__[kernel.Ports.__getitem__]>
+
+
+[ kports_setitem ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`262 1 281 1`
+		- (type/syntax)`int`
+		
+(signature)`kports_setitem(self, index, val)`
+
+(project-local/unknown)&<kernel#Ports.__setitem__[kernel.Ports.__setitem__]>
+
+
+[ kports_subscript ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`296 1 344 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`kports_subscript(self, item)`
+
+(project-local/unknown)&<kernel#Ports.__getitem__[kernel.Ports.__getitem__]>
+
+
+[ kports_getbuffer ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`353 1 358 1`
+		- (type/syntax)`int`
+		
+(signature)`kports_getbuffer(self, view, flags)`
+
+
+[ kports_new ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`369 1 443 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`kports_new(subtype, args, kw)`
+
+(project-local/unknown)&<kernel#Ports.__new__[kernel.Ports.__new__]>
+
+
+[ kports_dealloc ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`445 1 449 1`
+		- (type/syntax)`void`
+		
+(signature)`kports_dealloc(self)`
+

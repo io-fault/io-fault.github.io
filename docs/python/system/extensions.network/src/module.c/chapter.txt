@@ -1,0 +1,429 @@
+! CONTROL:
+	/type/
+		unit
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+
+[ Endpoint_Check ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`31 9 31 73`
+(signature)`Endpoint_Check()`
+
+
+[ _RETRY_STATE ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`39 9 39 35`
+#!source
+	#define _RETRY_STATE _avail_retries
+
+[ RETRY_STATE_INIT ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`40 9 40 64`
+#!source
+	#define RETRY_STATE_INIT int _RETRY_STATE = CONFIG_SYSCALL_RETRY
+
+[ LIMITED_RETRY ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`41 9 48 12`
+(signature)`LIMITED_RETRY()`
+
+
+[ UNLIMITED_RETRY ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`49 9 49 56`
+(signature)`UNLIMITED_RETRY()`
+
+
+[ X_EAI_ERRORS ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`54 9 64 20`
+(signature)`X_EAI_ERRORS()`
+
+
+[ X_EAI ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`81 11 84 9`
+#!source
+	#define X_EAI(X) \
+		case X: \
+			return(#X); \
+		break;
+
+[ PYTHON_TYPES ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`628 9 629 13`
+(signature)`PYTHON_TYPES()`
+
+
+[ nw_select_endpoints ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`631 9 631 51`
+#!source
+	#define nw_select_endpoints nw_select_endpoints_gai
+
+[ nw_select_interfaces ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`632 9 632 53`
+#!source
+	#define nw_select_interfaces nw_select_interfaces_gai
+
+[ PyMethod_Id ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`634 9 634 29`
+#!source
+	#define PyMethod_Id(N) nw_##N
+
+[ MODULE_FUNCTIONS ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`635 9 642 25`
+(signature)`MODULE_FUNCTIONS()`
+
+
+[ ID ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`650 10 655 54`
+#!source
+	#define ID(NAME) \
+		if (PyType_Ready((PyTypeObject *) &( NAME##Type ))) \
+			goto error; \
+		Py_INCREF((PyObj) &( NAME##Type )); \
+		if (PyModule_AddObject(module, #NAME, (PyObj) &( NAME##Type )) < 0) \
+			{ Py_DECREF((PyObj) &( NAME##Type )); goto error; }
+
+[ error_name_gai ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`76 1 117 1`
+		- (type/syntax)`const char *`
+		
+(signature)`error_name_gai(code)`
+
+Lookup the name of the EAI define that is associated with the given error code.
+
+[ > Parameters ]
+
+/(parameter)`code`/
+	- (type/syntax)`int`
+	
+	The EAI error.
+
+[ > Returns ]
+
+Constant string pointer.
+
+
+[ construct_error ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`119 1 141 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`construct_error(code)`
+
+
+[ nw_getaddrinfo ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`143 1 232 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`nw_getaddrinfo(stream_type, namestr, servicestr, socktype, flags)`
+
+
+[ addrinfo ]
+! CONTROL:
+	/type/
+		structure
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`149 2 149 16`
+
+[ nw_select_endpoints_gai ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`237 1 261 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`nw_select_endpoints_gai(mod, args)`
+
+Resolve transport selectors for the given host and service.
+
+
+[ nw_select_interfaces_gai ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`266 1 290 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`nw_select_interfaces_gai(mod, args)`
+
+Find service interfaces using GAI.
+
+
+[ bind_sequence ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`292 1 322 1`
+		- (type/syntax)`kport_t`
+		
+(signature)`bind_sequence(ep)`
+
+
+[ nw_bind_endpoint ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`324 1 347 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`nw_bind_endpoint(ep)`
+
+
+[ service_sequence ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`349 1 385 1`
+		- (type/syntax)`kport_t`
+		
+(signature)`service_sequence(ep, backlog)`
+
+
+[ nw_service_endpoint ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`387 1 410 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`nw_service_endpoint(ep, backlog)`
+
+
+[ i_connect ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`412 1 440 1`
+		- (type/syntax)`int`
+		
+(signature)`i_connect(fd, addr, addrlen)`
+
+
+[ connect_sequence ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`442 1 473 1`
+		- (type/syntax)`kport_t`
+		
+(signature)`connect_sequence(ep)`
+
+
+[ nw_connect_endpoint ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`475 1 498 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`nw_connect_endpoint(ep)`
+
+
+[ nw_connect ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`503 1 516 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`nw_connect(module, args, kw)`
+
+Python interface to POSIX connect.
+
+
+[ nw_service ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`521 1 535 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`nw_service(module, args, kw)`
+
+Python interface to POSIX bind and listen.
+
+
+[ nw_bind ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`540 1 553 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`nw_bind(module, args, kw)`
+
+Python interface to POSIX bind.
+
+
+[ nw_transmit_endpoint ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`555 1 578 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`nw_transmit_endpoint(module, fileno)`
+
+
+[ nw_receive_endpoint ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`580 1 614 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`nw_receive_endpoint(module, fileno)`
+

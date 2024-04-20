@@ -1,0 +1,93 @@
+! CONTROL:
+	/type/
+		unit
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+
+[ CELL_STACK_ALLOC ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`217 11 217 29`
+#!source
+	#define CELL_STACK_ALLOC 16
+
+[ MODULE_FUNCTIONS ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`254 9 257 43`
+(signature)`MODULE_FUNCTIONS()`
+
+
+[ dsetlocale ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`12 1 25 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`dsetlocale(self)`
+
+
+[ get_encoding ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`27 1 35 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`get_encoding(self)`
+
+
+[ measure ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`47 1 208 1`
+		- (type/syntax)`long`
+		
+(signature)`measure(wcv, ws, ctlen, tablen)`
+
+Process the codepoints in the string handling cases
+not covered by wcwidth.
+
+Sequences are presumed valid; when encountered, the character
+with the maximum cell count is used as the sequence cell count.
+
+This needs to be changed to only use the maximum given that wcswidth
+does recognize the sequence.
+
+
+[ cells ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`213 1 252 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`cells(self, args)`
+
+Cell count of string with some sequence and Variant Selector awareness.
+

@@ -1,0 +1,120 @@
+! CONTROL:
+	/type/
+		unit
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+
+[ IOPTION_SET_PGROUP ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 9 11 28`
+#!source
+	#define IOPTION_SET_PGROUP 1
+
+[ SPAWN_ATTRIBUTES ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`13 9 16 47`
+(signature)`SPAWN_ATTRIBUTES()`
+
+
+[ APPLE_SPAWN_EXTENSIONS ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`18 9 20 49`
+(signature)`APPLE_SPAWN_EXTENSIONS()`
+
+
+[ POSIX_SPAWN_ATTRIBUTES ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`27 9 29 55`
+(signature)`POSIX_SPAWN_ATTRIBUTES()`
+
+
+[ free_null_terminated_array ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`376 9 384 2`
+(signature)`free_null_terminated_array()`
+
+
+[ PyMethod_Id ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`422 10 422 31`
+#!source
+	#define PyMethod_Id(N) inv_##N
+
+[ inv_spawn ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`32 1 177 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`inv_spawn(self, args, kw)`
+
+
+[ inv_new ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`179 1 374 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`inv_new(subtype, args, kw)`
+
+
+[ inv_dealloc ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`386 1 418 1`
+		- (type/syntax)`void`
+		
+(signature)`inv_dealloc(self)`
+

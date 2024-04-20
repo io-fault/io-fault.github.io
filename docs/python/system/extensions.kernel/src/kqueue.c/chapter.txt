@@ -1,0 +1,284 @@
+! CONTROL:
+	/type/
+		unit
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+
+[ INITIAL_TASKS_ALLOCATED ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`17 10 17 34`
+#!source
+	#define INITIAL_TASKS_ALLOCATED 4
+
+[ O_EVTONLY ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`30 10 30 27`
+#!source
+	#define O_EVTONLY O_RDONLY
+
+[ KFILTER ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`541 11 541 52`
+#!source
+	#define KFILTER(B, TYP) case B: fname = #B; break;
+
+[ FLAG ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`554 11 554 24`
+#!source
+	#define FLAG(FLG) "%s"
+
+[ FLAG ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`562 11 562 57`
+#!source
+	#define FLAG(FLG) (kev->flags & FLG) ? (#FLG "|") : "",
+
+[ fs_event_open ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`36 1 46 1`
+		- (type/syntax)`kport_t`
+		
+(signature)`fs_event_open(path, ev_type)`
+
+ev_type is ignored here as the subevent set is determined by kernelq_identify.
+
+
+[ kernelq_delta ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`48 1 112 1`
+		- (type/syntax)`int`
+		
+(signature)`kernelq_delta(kq, ctl, kp, event)`
+
+
+[ timespec ]
+! CONTROL:
+	/type/
+		structure
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`51 2 51 16`
+
+[ kernelq_identify ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`117 1 233 1`
+		- (type/syntax)`int`
+		
+(signature)`kernelq_identify(kev, evs)`
+
+Interpret event_t for use with a kqueue filter.
+
+
+[ kernelq_interrupt ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`238 1 247 1`
+		- (type/syntax)`int`
+		
+(signature)`kernelq_interrupt(kq)`
+
+Called by (project-local/unknown)&<kernel#Scheduler.interrupt[kernel.Scheduler.interrupt]>.
+
+
+[ kernelq_interrupt_accept ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`252 1 256 1`
+		- (type/syntax)`int`
+		
+(signature)`kernelq_interrupt_accept(kq)`
+
+Nothing to do for kqueue.
+
+
+[ kernelq_interrupt_setup ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`258 1 267 1`
+		- (type/syntax)`int`
+		
+(signature)`kernelq_interrupt_setup(kq)`
+
+
+[ kevent_set_timer ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`269 1 322 1`
+		- (type/syntax)`void`
+		
+(signature)`kevent_set_timer(kev, ns)`
+
+
+[ kernelq_schedule ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`327 1 404 1`
+		- (type/syntax)`int`
+		
+(signature)`kernelq_schedule(kq, cyclic, ln)`
+
+Establish the link with the kernel event.
+
+
+[ kernelq_default_flags ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`410 1 422 1`
+		- (type/syntax)`int`
+		
+(signature)`kernelq_default_flags(kq)`
+
+
+[ kernelq_initialize ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`424 1 465 1`
+		- (type/syntax)`int`
+		
+(signature)`kernelq_initialize(kq)`
+
+
+[ timespec ]
+! CONTROL:
+	/type/
+		structure
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`427 8 427 22`
+
+[ kernelq_close ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`474 1 485 1`
+		- (type/syntax)`int`
+		
+(signature)`kernelq_close(kq)`
+
+Close the event queue kernel resources.
+
+[ > Returns ]
+
+Zero if already closed, one if resources were destroyed.
+Negative one if `errno` was set.
+
+
+[ kernelq_receive ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`491 1 532 1`
+		- (type/syntax)`int`
+		
+(signature)`kernelq_receive(kq, seconds, ns)`
+
+Receive events from the kernel.
+Retry logic is not desired here as the event loop will naturally try again.
+
+
+[ timespec ]
+! CONTROL:
+	/type/
+		structure
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`494 8 494 22`
+
+[ pkevent ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`534 1 569 1`
+		- (type/syntax)`void`
+		
+(signature)`pkevent(kev)`
+

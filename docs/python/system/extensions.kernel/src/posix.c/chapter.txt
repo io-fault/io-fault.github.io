@@ -1,0 +1,314 @@
+! CONTROL:
+	/type/
+		unit
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+
+[ POSIX_SYSCALL ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`22 9 23 41`
+(signature)`POSIX_SYSCALL()`
+
+
+[ RETRY_INIT ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`24 9 24 65`
+(signature)`RETRY_INIT()`
+
+
+[ RETRY ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`25 9 31 10`
+(signature)`RETRY()`
+
+
+[ CONFIG_SOCKET_TRANSFER_LIMIT ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`34 10 34 39`
+#!source
+	#define CONFIG_SOCKET_TRANSFER_LIMIT 1
+
+[ kp_message ]
+! CONTROL:
+	/type/
+		structure
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`37 1 44 1`
+
+[ kp_message >> iovec ]
+! CONTROL:
+	/type/
+		structure
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`38 2 38 13`
+
+[ kp_message >> iov ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`struct iovec`
+		
+
+[ kp_message >> msghdr ]
+! CONTROL:
+	/type/
+		structure
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`39 2 39 14`
+
+[ kp_message >> mh ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`struct msghdr`
+		
+
+[ kp_message >> buf ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`char[CMSG_SPACE(sizeof(kport_t) * 1)]`
+		
+
+[ kp_message >> cmsghdr ]
+! CONTROL:
+	/type/
+		structure
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`42 3 42 16`
+
+[ kp_message >> _align ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`struct cmsghdr`
+		
+
+[ kp_message >> ab ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`union (unnamed union at /x/p/python/fault/system/extensions/kernel/posix.c:40:2)`
+		
+
+[ kp_message >> buf ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`char[CMSG_SPACE(sizeof(kport_t) * 1)]`
+		
+
+[ kp_message >> cmsghdr ]
+! CONTROL:
+	/type/
+		structure
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`42 3 42 16`
+
+[ kp_message >> _align ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`struct cmsghdr`
+		
+
+[ _init_kp_message ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`46 1 83 1`
+		- (type/syntax)`struct cmsghdr *`
+		
+(signature)`_init_kp_message(m, buf, bufsize)`
+
+
+[ kp_chfd ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`85 1 109 1`
+		- (type/syntax)`int`
+		
+(signature)`kp_chfd(kp, op, delta)`
+
+
+[ kp_chfl ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`111 1 135 1`
+		- (type/syntax)`int`
+		
+(signature)`kp_chfl(kp, op, delta)`
+
+
+[ kp_receive ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`137 1 177 1`
+		- (type/syntax)`int`
+		
+(signature)`kp_receive(kp, buf, size)`
+
+
+[ kp_transmit ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`179 1 215 1`
+		- (type/syntax)`int`
+		
+(signature)`kp_transmit(kp, buf, size)`
+
+
+[ kp_accept ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`220 1 262 1`
+		- (type/syntax)`int`
+		
+(signature)`kp_accept(kp, buf, size)`
+
+Regular socket accept from listening sockets.
+
+
+[ kp_alloc_meta ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`267 1 293 1`
+		- (type/syntax)`int`
+		
+(signature)`kp_alloc_meta(kp, buf, size)`
+
+Allocate kport_t pairs capable of transmitting and receiving other kernel ports.
+
+
+[ kp_alloc_bidirectional ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`295 1 321 1`
+		- (type/syntax)`int`
+		
+(signature)`kp_alloc_bidirectional(kp, buf, size)`
+
+
+[ kp_alloc_unidirectional ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`323 1 349 1`
+		- (type/syntax)`int`
+		
+(signature)`kp_alloc_unidirectional(kp, buf, size)`
+

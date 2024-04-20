@@ -1,0 +1,119 @@
+! CONTROL:
+	/type/
+		unit
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+
+[ PYTHON_TYPES ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`157 9 157 22`
+(signature)`PYTHON_TYPES()`
+
+
+[ MODULE_FUNCTIONS ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`158 9 169 83`
+(signature)`MODULE_FUNCTIONS()`
+
+
+[ ID ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`175 10 180 54`
+#!source
+	#define ID(NAME) \
+		if (PyType_Ready((PyTypeObject *) &( NAME##Type ))) \
+			goto error; \
+		Py_INCREF((PyObj) &( NAME##Type )); \
+		if (PyModule_AddObject(module, #NAME, (PyObj) &( NAME##Type )) < 0) \
+			{ Py_DECREF((PyObj) &( NAME##Type )); goto error; }
+
+[ ltracefunc ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`13 1 20 1`
+		- (type/syntax)`int`
+		
+(signature)`ltracefunc(ob, f, event, arg)`
+
+
+[ trace ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`27 1 104 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`trace(self, args)`
+
+Set the trace object on a set of threads.
+Only supports callable-object level.
+This is intended for debuggers.
+
+
+[ _call ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`109 1 120 1`
+		- (type/syntax)`int`
+		
+(signature)`_call(ob)`
+
+AddPendingCall callback
+
+
+[ interject ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`125 1 139 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`interject(self, callable)`
+
+Expose AddPendingCall C-API to the Python language.
+
+
+[ interrupt ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`141 1 155 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`interrupt(self, args)`
+

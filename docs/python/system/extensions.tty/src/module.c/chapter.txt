@@ -1,0 +1,305 @@
+! CONTROL:
+	/type/
+		unit
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+
+[ IMAXBEL ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`262 11 262 19`
+#!source
+	#define IMAXBEL 0
+
+[ ECHOCTL ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`265 11 265 19`
+#!source
+	#define ECHOCTL 0
+
+[ PYTHON_TYPES ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`420 9 421 11`
+(signature)`PYTHON_TYPES()`
+
+
+[ MODULE_FUNCTIONS ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`423 9 424 50`
+(signature)`MODULE_FUNCTIONS()`
+
+
+[ ID ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`430 10 435 54`
+#!source
+	#define ID(NAME) \
+		if (PyType_Ready((PyTypeObject *) &( NAME##Type ))) \
+			goto error; \
+		Py_INCREF((PyObj) &( NAME##Type )); \
+		if (PyModule_AddObject(module, #NAME, (PyObj) &( NAME##Type )) < 0) \
+			{ Py_DECREF((PyObj) &( NAME##Type )); goto error; }
+
+[ fs_device ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`17 1 43 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`fs_device(self)`
+
+
+[ device_set_controlling_process ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`45 1 59 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`device_set_controlling_process(self, ob)`
+
+
+[ device_get_controlling_process ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`61 1 72 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`device_get_controlling_process(self)`
+
+
+[ device_get_window_dimensions ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`74 1 111 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`device_get_window_dimensions(self)`
+
+
+[ winsize ]
+! CONTROL:
+	/type/
+		structure
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`79 2 79 15`
+
+[ device_fs_path ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`113 1 126 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`device_fs_path(self)`
+
+
+[ device_send_break ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`128 1 142 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`device_send_break(self, args)`
+
+
+[ device_drain ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`144 1 154 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`device_drain(self)`
+
+
+[ device_record ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`156 1 166 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`device_record(self)`
+
+
+[ device_restore ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`168 1 178 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`device_restore(self)`
+
+
+[ device_set_message_limits ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`180 1 201 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`device_set_message_limits(self, args)`
+
+
+[ device_set_raw ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`203 1 225 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`device_set_raw(self)`
+
+
+[ device_set_cbreak ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`227 1 245 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`device_set_cbreak(self)`
+
+
+[ device_set_cooked ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`247 1 282 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`device_set_cooked(self)`
+
+
+[ device_open ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`284 1 317 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`device_open(subtype, args)`
+
+
+[ device_fileno ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`319 1 324 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`device_fileno(self)`
+
+
+[ device_new ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`357 1 375 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`device_new(subtype, args, kw)`
+

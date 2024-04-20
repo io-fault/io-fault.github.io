@@ -1,0 +1,2052 @@
+! CONTROL:
+	/type/
+		unit
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+
+[ CONFIG_DEFAULT_ARRAY_SIZE ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`40 10 40 37`
+#!source
+	#define CONFIG_DEFAULT_ARRAY_SIZE 16
+
+[ errpf ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`43 9 43 47`
+(signature)`errpf()`
+
+
+[ XDEF ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`58 11 58 42`
+#!source
+	#define XDEF(D, S) case D: return( #D );
+
+[ MIN ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`70 10 70 47`
+(signature)`MIN()`
+
+
+[ KC ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`211 10 211 62`
+#!source
+	#define KC(x) if (strcmp(#x, str) == 0) return (kc_##x); else
+
+[ KC ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`222 11 222 40`
+#!source
+	#define KC(x) case kc_##x: return(#x);
+
+[ PyErr_SetChannelTerminatedError ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`230 9 231 65`
+(signature)`PyErr_SetChannelTerminatedError()`
+
+
+[ PyErr_SetChannelResourceError ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`232 9 233 71`
+(signature)`PyErr_SetChannelResourceError()`
+
+
+[ XDEF ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`424 10 424 53`
+#!source
+	#define XDEF(sym, estr) case sym: str = estr; break;
+
+[ INIT_CHANNEL ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`575 9 584 10`
+(signature)`INIT_CHANNEL()`
+
+
+[ INIT_INPUT_CHANNEL ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`586 9 589 10`
+(signature)`INIT_INPUT_CHANNEL()`
+
+
+[ INIT_OUTPUT_CHANNEL ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`591 9 594 10`
+(signature)`INIT_OUTPUT_CHANNEL()`
+
+
+[ Array_Cycling ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`596 9 596 62`
+(signature)`Array_Cycling()`
+
+
+[ Array_GetChannelCount ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`597 9 597 55`
+(signature)`Array_GetChannelCount()`
+
+
+[ Array_ResetChannelCount ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`598 9 598 59`
+(signature)`Array_ResetChannelCount()`
+
+
+[ Array_IncrementChannelCount ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`599 9 599 68`
+(signature)`Array_IncrementChannelCount()`
+
+
+[ Array_DecrementChannelCount ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`600 9 600 68`
+(signature)`Array_DecrementChannelCount()`
+
+
+[ Channel_EnqueueDelta ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`605 9 611 10`
+(signature)`Channel_EnqueueDelta()`
+
+
+[ Channel_GetNextTransfer ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`619 9 619 58`
+(signature)`Channel_GetNextTransfer()`
+
+
+[ Channel_IsTransfer ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`620 9 620 77`
+(signature)`Channel_IsTransfer()`
+
+
+[ Channel_SetNextTransfer ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`621 9 621 76`
+(signature)`Channel_SetNextTransfer()`
+
+
+[ Array_AddTransfer ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`623 9 629 11`
+(signature)`Array_AddTransfer()`
+
+
+[ CHANNEL_JOIN ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`635 9 639 12`
+(signature)`CHANNEL_JOIN()`
+
+
+[ CHANNEL_ATTACH_SEGMENT_BEFORE ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`644 9 650 11`
+(signature)`CHANNEL_ATTACH_SEGMENT_BEFORE()`
+
+
+[ CHANNEL_ATTACH_SEGMENT_AFTER ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`655 9 660 11`
+(signature)`CHANNEL_ATTACH_SEGMENT_AFTER()`
+
+
+[ CHANNEL_RELOCATE_SEGMENT_AFTER ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`662 9 665 11`
+(signature)`CHANNEL_RELOCATE_SEGMENT_AFTER()`
+
+
+[ CHANNEL_DETACH_SEGMENT ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`667 9 671 10`
+(signature)`CHANNEL_DETACH_SEGMENT()`
+
+
+[ CHANNEL_RELOCATE_SEGMENT_BEFORE ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`673 9 676 11`
+(signature)`CHANNEL_RELOCATE_SEGMENT_BEFORE()`
+
+
+[ CHANNEL_DETACH ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`678 9 681 10`
+(signature)`CHANNEL_DETACH()`
+
+
+[ CHANNEL_ATTACH_BEFORE ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`683 9 684 56`
+(signature)`CHANNEL_ATTACH_BEFORE()`
+
+
+[ CHANNEL_ATTACH_AFTER ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`685 9 686 55`
+(signature)`CHANNEL_ATTACH_AFTER()`
+
+
+[ CHANNEL_ATTACH ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`687 9 688 58`
+(signature)`CHANNEL_ATTACH()`
+
+
+[ Channel_GetResourceArray ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`690 9 690 123`
+(signature)`Channel_GetResourceArray()`
+
+
+[ Channel_GetRemainder ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`691 9 691 108`
+(signature)`Channel_GetRemainder()`
+
+
+[ alloc_quad ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1552 9 1552 35`
+(signature)`alloc_quad()`
+
+
+[ alloc_pair ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1553 9 1553 35`
+(signature)`alloc_pair()`
+
+
+[ trace ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`3147 13 3147 22`
+#!source
+	#define trace(...)
+
+[ MODULE_FUNCTIONS ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`3637 9 3649 66`
+(signature)`MODULE_FUNCTIONS()`
+
+
+[ ID ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`3701 10 3705 14`
+#!source
+	#define ID(NAME, IGNORED) \
+		if (PyType_Ready((PyTypeObject *) &( NAME##Type ))) \
+			goto error; \
+		if (PyModule_AddObject(module, #NAME, (PyObj) &( NAME##Type )) < 0) \
+			goto error;
+
+[ errname ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`53 1 67 1`
+		- (type/syntax)`const char *`
+		
+(signature)`errname(err)`
+
+Get the name of the errno.
+
+
+[ polarity_t ]
+! CONTROL:
+	/type/
+		enumeration
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`73 1 77 1`
+(signature)`polarity_t()`
+
+
+[ p_output ]
+! CONTROL:
+	/type/
+		constant
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+(signature)`p_output()`
+
+
+[ p_neutral ]
+! CONTROL:
+	/type/
+		constant
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+(signature)`p_neutral()`
+
+
+[ p_input ]
+! CONTROL:
+	/type/
+		constant
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+(signature)`p_input()`
+
+
+[ polarity_t ]
+! CONTROL:
+	/type/
+		typedef
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`78 1 78 34`
+(signature)`polarity_t()`
+
+
+[ freight_charcode ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`80 1 99 1`
+		- (type/syntax)`char`
+		
+(signature)`freight_charcode(f)`
+
+
+[ freight_identifier ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`101 1 120 1`
+		- (type/syntax)`const char *`
+		
+(signature)`freight_identifier(f)`
+
+
+[ ktype_string ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`122 1 146 1`
+		- (type/syntax)`char *`
+		
+(signature)`ktype_string(kt)`
+
+
+[ inet6_from_pyint ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`148 1 171 1`
+		- (type/syntax)`int`
+		
+(signature)`inet6_from_pyint(out, ob)`
+
+
+[ inet4_from_pyint ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`173 1 196 1`
+		- (type/syntax)`int`
+		
+(signature)`inet4_from_pyint(out, ob)`
+
+
+[ kcall_id ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`203 1 215 1`
+		- (type/syntax)`kcall_t`
+		
+(signature)`kcall_id(str)`
+
+
+[ kcall_identifier ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`217 1 228 1`
+		- (type/syntax)`const char *`
+		
+(signature)`kcall_identifier(kc)`
+
+
+[ socket_receive_buffer ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`235 1 242 1`
+		- (type/syntax)`int`
+		
+(signature)`socket_receive_buffer(kp)`
+
+
+[ socket_send_buffer ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`244 1 251 1`
+		- (type/syntax)`int`
+		
+(signature)`socket_send_buffer(kp)`
+
+
+[ path ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`253 1 274 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`path(kp)`
+
+
+[ port_raised ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`279 1 294 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`port_raised(self)`
+
+Set a Python error from the `errno` associated with the port.
+
+
+[ port_exception ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`299 1 319 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`port_exception(self)`
+
+Return a Python error from the `errno` associated with the port.
+
+
+[ port_leak ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`321 1 334 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`port_leak(self)`
+
+
+[ port_shatter ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`336 1 349 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`port_shatter(self)`
+
+
+[ port_get_freight ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`374 1 379 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`port_get_freight(self, _)`
+
+
+[ port_get_call ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`381 1 390 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`port_get_call(self, _)`
+
+
+[ port_get_error_name ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`392 1 397 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`port_get_error_name(self, _)`
+
+
+[ port_get_error_description ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`399 1 416 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`port_get_error_description(self, _)`
+
+
+[ port_get_posix_description ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`418 1 436 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`port_get_posix_description(self, _)`
+
+
+[ port_str ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`450 1 478 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`port_str(self)`
+
+String representation suitable for text based displays.
+
+
+[ port_repr ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`480 1 494 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`port_repr(self)`
+
+
+[ port_new ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`496 1 524 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`port_new(subtype, args, kw)`
+
+
+[ port_dealloc ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`526 1 544 1`
+		- (type/syntax)`void`
+		
+(signature)`port_dealloc(self)`
+
+
+[ Datagrams ]
+! CONTROL:
+	/type/
+		structure
+	/element/
+		- (control)`property-set`
+		- (source/area)`570 1 573 1`
+Datagrams (invalid/struct)&<#Channel> Structure.
+
+
+[ Channel_ReleaseResource ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`696 1 709 1`
+		- (type/syntax)`void`
+		
+(signature)`Channel_ReleaseResource(t)`
+
+Requires GIL.
+
+
+[ Channel_ReleaseLink ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`714 1 725 1`
+		- (type/syntax)`void`
+		
+(signature)`Channel_ReleaseLink(t)`
+
+Requires GIL. Decrements the link reference and sets the field to (invalid/unknown)&<#NULL>.
+
+
+[ kfilter_cancel ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`854 1 865 1`
+		- (type/syntax)`void`
+		
+(signature)`kfilter_cancel(t, kev)`
+
+
+[ kfilter_attach ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`867 1 878 1`
+		- (type/syntax)`void`
+		
+(signature)`kfilter_attach(t, kev)`
+
+
+[ jxi ]
+! CONTROL:
+	/type/
+		structure
+	/element/
+		- (control)`property-set`
+		- (source/area)`896 1 908 1`
+Iterator created by (project-local/unknown)&<kernel#Array.transfer[kernel.Array.transfer]>().
+
+Given that this is restricted to iteration,
+the type is *not* exposed on the module.
+
+
+[ jxi >> J ]
+! CONTROL:
+	/type/
+		field
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`Array`
+		
+Subject (factor-local/type)&<#jxi.J.Array[Array]> producing events.
+
+
+[ jxi >> t ]
+! CONTROL:
+	/type/
+		field
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`Channel`
+		
+Position in transfer linked list.
+
+
+[ jxi_next ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`913 1 947 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`jxi_next(self)`
+
+Iterator protocol next implementation.
+
+
+[ jxi_dealloc ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`949 1 958 1`
+		- (type/syntax)`void`
+		
+(signature)`jxi_dealloc(self)`
+
+
+[ jxi_iter ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`960 1 965 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`jxi_iter(self)`
+
+
+[ new_jxi ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`977 1 992 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`new_jxi(J, polarity)`
+
+
+[ channel_can_acquire ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`994 1 1012 1`
+		- (type/syntax)`char`
+		
+(signature)`channel_can_acquire(t)`
+
+
+[ channel_acquire ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`1023 1 1087 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`channel_acquire(self, resource)`
+
+Acquire a resource for faciliting a transfer. Qualifies the Channel for transfers.
+
+The given (factor-local/parameter)&<#channel_acquire.Parameters.resource[resource]> object is set on the (invalid/unknown)&<#Channel> and the memory buffer is filled
+out based on the direction of the channel. If the Channel has been acquired
+by a (invalid/unknown)&<#Array>, the Channel will be marked and enqueued for a subsequent transfer
+attempt. Otherwise, the Channel is qualified for transfer allowing the subsequent
+(factor-local/function)&<#array_acquire[array_acquire]> to ready a transfer.
+
+
+[ channel_force ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1089 1 1104 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`channel_force(self)`
+
+
+[ channel_slice ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1107 1 1116 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`channel_slice(self)`
+
+
+[ channel_transfer ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1118 1 1139 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`channel_transfer(self)`
+
+
+[ channel_sizeof_transfer ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1141 1 1153 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`channel_sizeof_transfer(self)`
+
+
+[ channel_terminate ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1155 1 1197 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`channel_terminate(self)`
+
+
+[ channel_resize_exoresource ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1199 1 1203 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`channel_resize_exoresource(self, args)`
+
+
+[ channel_endpoint ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1205 1 1301 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`channel_endpoint(self)`
+
+
+[ channel_dealloc ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1334 1 1358 1`
+		- (type/syntax)`void`
+		
+(signature)`channel_dealloc(self)`
+
+
+[ channel_get_polarity ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1360 1 1371 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`channel_get_polarity(self, _)`
+
+
+[ channel_get_terminated ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1373 1 1386 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`channel_get_terminated(self, _)`
+
+
+[ channel_get_exhausted ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1388 1 1418 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`channel_get_exhausted(self, _)`
+
+
+[ channel_get_resource ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1420 1 1432 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`channel_get_resource(self, _)`
+
+
+[ octets_resize_exoresource ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1525 1 1550 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`octets_resize_exoresource(self, args)`
+
+
+[ alloc_port ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1555 1 1571 1`
+		- (type/syntax)`Port`
+		
+(signature)`alloc_port()`
+
+
+[ allockq ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1573 1 1609 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`allockq(isubtype, out)`
+
+
+[ alloci ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1611 1 1638 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`alloci(isubtype, out)`
+
+
+[ alloco ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1640 1 1667 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`alloco(osubtype, out)`
+
+
+[ allocio ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`1672 1 1717 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`allocio(isubtype, osubtype, out)`
+
+Create a pair of Objects and put them in a tuple to be returned.
+
+
+[ allociopair ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`1723 1 1756 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`allociopair(isubtype, osubtype, p)`
+
+Same as allocio, but the Ports for each Channel are distinct objects.
+(os.pipe(), dup() pairs.
+
+
+[ DatagramArray ]
+! CONTROL:
+	/type/
+		structure
+	/element/
+		- (control)`property-set`
+		- (source/area)`1784 1 1817 1`
+Structure for (project-local/unknown)&<kernel#DatagramArray[kernel.DatagramArray]> providing access
+to the composition of datagrams to be emitted or received.
+
+
+[ DatagramArray >> ngrams ]
+! CONTROL:
+	/type/
+		field
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`int`
+		
+Number of entries in (factor-local/field)&<#DatagramArray.indexes[indexes]>.
+
+
+[ DatagramArray >> addrlen ]
+! CONTROL:
+	/type/
+		field
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`int`
+		
+Address Length of endpoints.
+
+
+[ DatagramArray >> pf ]
+! CONTROL:
+	/type/
+		field
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`int`
+		
+Packet Family of endpoints.
+
+
+[ DatagramArray >> space ]
+! CONTROL:
+	/type/
+		field
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`int`
+		
+Address Space of endpoints.
+
+
+[ DatagramArray >> data ]
+! CONTROL:
+	/type/
+		field
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`Py_buffer`
+		
+Current transfer.
+
+
+[ DatagramArray >> indexes ]
+! CONTROL:
+	/type/
+		field
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`struct Datagram *[0]`
+		
+The indexes to the Datagrams held by the Array inside
+the buffer, `data`.
+
+
+[ datagramarray_get_memory ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1819 1 1865 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`datagramarray_get_memory(dga, offset)`
+
+
+[ datagramarray_get_endpoint ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1867 1 1881 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`datagramarray_get_endpoint(dga, offset)`
+
+
+[ datagramarray_payload ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1883 1 1893 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`datagramarray_payload(self, args)`
+
+
+[ datagramarray_endpoint ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1895 1 1905 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`datagramarray_endpoint(self, args)`
+
+
+[ datagramarray_set_endpoint ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1907 1 1945 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`datagramarray_set_endpoint(self, args)`
+
+
+[ allocdga ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1955 1 2041 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`allocdga(subtype, pf, space, ngrams)`
+
+
+[ slicedga ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`2043 1 2106 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`slicedga(src, start, stop)`
+
+
+[ datagramarray_new ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`2108 1 2133 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`datagramarray_new(subtype, args, kw)`
+
+
+[ datagramarray_length ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`2135 1 2140 1`
+		- (type/syntax)`Py_ssize_t`
+		
+(signature)`datagramarray_length(self)`
+
+
+[ datagramarray_getitem ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`2142 1 2171 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`datagramarray_getitem(self, index)`
+
+
+[ datagramarray_subscript ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`2173 1 2217 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`datagramarray_subscript(self, item)`
+
+
+[ datagramarray_getbuffer ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`2234 1 2250 1`
+		- (type/syntax)`int`
+		
+(signature)`datagramarray_getbuffer(self, view, flags)`
+
+
+[ datagramarray_iter ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`2258 1 2262 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`datagramarray_iter(self)`
+
+
+[ datagramarray_dealloc ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`2264 1 2272 1`
+		- (type/syntax)`void`
+		
+(signature)`datagramarray_dealloc(self)`
+
+
+[ datagrams_transfer ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`2289 1 2314 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`datagrams_transfer(self)`
+
+
+[ array_resize_exoresource ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`2344 1 2378 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`array_resize_exoresource(self, args)`
+
+
+[ array_acquire ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`2380 1 2441 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`array_acquire(self, ob)`
+
+
+[ array_init ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`2443 1 2486 1`
+		- (type/syntax)`void`
+		
+(signature)`array_init(J)`
+
+
+[ array_start_cycle ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`2488 1 2492 1`
+		- (type/syntax)`void`
+		
+(signature)`array_start_cycle(J)`
+
+
+[ array_finish_cycle ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`2494 1 2501 1`
+		- (type/syntax)`void`
+		
+(signature)`array_finish_cycle(J)`
+
+
+[ array_kevent_change ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`2506 1 2529 1`
+		- (type/syntax)`void`
+		
+(signature)`array_kevent_change(J)`
+
+
+[ array_kevent_collect ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`2532 1 2586 1`
+		- (type/syntax)`void`
+		
+(signature)`array_kevent_collect(J, waiting)`
+
+
+[ array_reload ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`2594 1 2606 1`
+		- (type/syntax)`void`
+		
+(signature)`array_reload(J)`
+
+Note tev_join events on all Channels.
+
+Run before array_transfer_delta to have all
+Channel's corresponding kevent filter to be loaded.
+
+
+[ array_transfer_delta ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`2611 1 2637 1`
+		- (type/syntax)`void`
+		
+(signature)`array_transfer_delta(J)`
+
+Enqueue the delta into the lltransfer list.
+
+
+[ array_current_kevent_slot ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`2639 1 2650 1`
+		- (type/syntax)`kevent_t *`
+		
+(signature)`array_current_kevent_slot(J)`
+
+
+[ array_apply_delta ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`2655 1 2750 1`
+		- (type/syntax)`void`
+		
+(signature)`array_apply_delta(J)`
+
+Process delta and setup for event processing
+
+
+[ array_kevent_transform ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`2818 1 2877 1`
+		- (type/syntax)`void`
+		
+(signature)`array_kevent_transform(J)`
+
+Transform the collected events into local Channel state.
+Place actionable events onto their respective transfer list.
+
+
+[ array_fall ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`2880 1 2912 1`
+		- (type/syntax)`int`
+		
+(signature)`array_fall(J, force)`
+
+
+[ array_force ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`2914 1 2926 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`array_force(self)`
+
+
+[ array_wait ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`2928 1 2941 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`array_wait(self, args)`
+
+
+[ _array_terminate ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`2943 1 2971 1`
+		- (type/syntax)`void`
+		
+(signature)`_array_terminate(J)`
+
+
+[ _array_flow ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`2976 1 3220 1`
+		- (type/syntax)`void`
+		
+(signature)`_array_flow(J)`
+
+Collect and process events.
+
+
+[ array_transfer ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`3231 1 3243 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`array_transfer(self)`
+
+Return an iterable to the collected events. (project-local/unknown)&<kernel#Array.transfer[kernel.Array.transfer]>
+
+
+[ array_sizeof_transfer ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`3245 1 3254 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`array_sizeof_transfer(self)`
+
+
+[ _array_flush ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`3256 1 3330 1`
+		- (type/syntax)`void`
+		
+(signature)`_array_flush(J)`
+
+
+[ array_void ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`3335 1 3379 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`array_void(self)`
+
+Close file descriptors and release references; destroy entire ring.
+
+
+[ array_enter ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`3384 1 3406 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`array_enter(self)`
+
+Begin a transfer processing cycle.
+
+
+[ array_exit ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`3411 1 3420 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`array_exit(self, args)`
+
+Close a transfer processing cycle.
+
+
+[ array_get_resource ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`3441 1 3466 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`array_get_resource(self, _)`
+
+
+[ array_dealloc ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`3473 1 3479 1`
+		- (type/syntax)`void`
+		
+(signature)`array_dealloc(self)`
+
+
+[ array_new ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`3481 1 3516 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`array_new(subtype, args, kw)`
+
+
+[ _talloc_octets_input ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`3534 1 3557 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`_talloc_octets_input(module, param)`
+
+
+[ _talloc_octets_output ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`3559 1 3582 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`_talloc_octets_output(module, param)`
+
+
+[ _talloc_datagrams_socket ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`3584 1 3607 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`_talloc_datagrams_socket(module, param)`
+
+
+[ _talloc_octets_socket ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`3609 1 3632 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`_talloc_octets_socket(module, param)`
+

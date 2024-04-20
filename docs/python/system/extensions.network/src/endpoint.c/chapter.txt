@@ -1,0 +1,583 @@
+! CONTROL:
+	/type/
+		unit
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+
+[ A ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`253 11 257 27`
+#!source
+	#define A(AF) \
+		case AF##_pf: { \
+			AF##_casted(afdata, ss); \
+			AF##_port(dst, dstlen, afdata); } \
+			return(AF##_port_kind);
+
+[ A ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`287 11 291 11`
+#!source
+	#define A(AF) \
+		case AF##_pf: { \
+			AF##_casted(afdata, ss); \
+			AF##_str(dst, dstlen, afdata); \
+		} break;
+
+[ A ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`674 9 674 75`
+#!source
+	#define A(AF) static PyObj endpoint_new_##AF(PyTypeObject *, PyObj, PyObj);
+
+[ A ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`681 10 685 4`
+#!source
+	#define A(AF) \
+		{"from_" #AF, \
+			(PyCFunction) endpoint_new_##AF , \
+			METH_VARARGS|METH_KEYWORDS|METH_CLASS, NULL \
+		},
+
+[ A ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`707 11 710 9`
+#!source
+	#define A(AF) \
+		case AF##_pf: \
+			return(PyUnicode_FromString(AF##_name)); \
+		break;
+
+[ A ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`910 9 965 1`
+#!source
+	#define A(DOMAIN) \
+	static PyObj \
+	endpoint_new_internal_##DOMAIN(PyTypeObject *subtype, PyObj rep) \
+	{ \
+		const int addrlen = sizeof(DOMAIN##_addr_t); \
+		int r; \
+		\
+		PyObj rob; \
+		Endpoint E; \
+		\
+		r = addrlen / subtype->tp_itemsize; \
+		if (r * subtype->tp_itemsize <= addrlen) \
+			++r; \
+		\
+		rob = subtype->tp_alloc(subtype, r); \
+		if (rob == NULL) \
+			return(NULL); \
+		E = (Endpoint) rob; \
+		E->type = -1; \
+		E->transport = -1; \
+		\
+		if (! (DOMAIN##_from_object(rep, (DOMAIN##_addr_t *) Endpoint_GetAddress(E)))) \
+		{ \
+			Py_DECREF(rob); \
+			return(NULL); \
+		} \
+		E->len = addrlen; \
+		\
+		return(rob); \
+	} \
+	\
+	static PyObj \
+	endpoint_new_##DOMAIN(PyTypeObject *subtype, PyObj args, PyObj kw) \
+	{ \
+		PyObj address, transport = NULL, type = NULL; \
+		static char *kwlist[] = {"address", "transport", "type", NULL}; \
+		Endpoint E; \
+		\
+		if (!PyArg_ParseTupleAndKeywords(args, kw, "O|OO", kwlist, &address, &transport, &type)) \
+			return(NULL); \
+		\
+		E = (Endpoint) endpoint_new_internal_##DOMAIN(subtype, address); \
+		if (E == NULL) \
+			return(NULL); \
+		if (interpret_transport(transport, &(E->transport))) \
+			goto error; \
+		if (interpret_type(type, &(E->type))) \
+			goto error; \
+		\
+		return((PyObj) E); \
+		error: \
+		{ \
+			Py_DECREF(E); \
+			return(NULL); \
+		} \
+	}
+
+[ endpoint_alloc ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`973 10 973 66`
+#!source
+	#define endpoint_alloc(x) EndpointType.tp_alloc(&EndpointType, x)
+
+[ A ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1009 10 1011 58`
+#!source
+	#define A(DOMAIN) \
+		else if (strcmp(domain, #DOMAIN) == 0) \
+			rob = endpoint_new_internal_##DOMAIN(subtype, address);
+
+[ transport_type_string ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`36 1 61 1`
+		- (type/syntax)`const char *`
+		
+(signature)`transport_type_string(socktype)`
+
+Retrieve the string identifier of the given socket type code, (factor-local/parameter)&<#transport_type_string.Parameters.socktype[socktype]>.
+
+[ > Parameters ]
+
+/(parameter)`socktype`/
+	- (type/syntax)`int`
+	
+	The integer code of the socket type to resolve.
+
+[ > Returns ]
+
+A constant string used by the Python interfaces to select a socket type.
+
+
+[ nw_socket_type ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`66 1 121 1`
+		- (type/syntax)`int`
+		
+(signature)`nw_socket_type(identifier)`
+
+Identify the socket type code that is being referred to by the given string, (factor-local/parameter)&<#nw_socket_type.Parameters.identifier[identifier]>.
+
+
+[ interpret_transport ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`123 1 164 1`
+		- (type/syntax)`int`
+		
+(signature)`interpret_transport(ob, out)`
+
+
+[ protoent ]
+! CONTROL:
+	/type/
+		structure
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`140 3 140 17`
+
+[ interpret_type ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`166 1 196 1`
+		- (type/syntax)`int`
+		
+(signature)`interpret_type(ob, out)`
+
+
+[ inet6_from_pyint ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`198 1 221 1`
+		- (type/syntax)`int`
+		
+(signature)`inet6_from_pyint(out, ob)`
+
+
+[ inet4_from_pyint ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`223 1 246 1`
+		- (type/syntax)`int`
+		
+(signature)`inet4_from_pyint(out, ob)`
+
+
+[ get_port ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`248 1 263 1`
+		- (type/syntax)`aport_kind_t`
+		
+(signature)`get_port(ss, dst, dstlen)`
+
+
+[ get_address ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`282 1 295 1`
+		- (type/syntax)`void`
+		
+(signature)`get_address(ss, dst, dstlen)`
+
+Convert the address referenced by (factor-local/parameter)&<#get_address.Parameters.ss[ss]> into a string written
+into (factor-local/parameter)&<#get_address.Parameters.dst[dst]>.
+
+[ > Parameters ]
+
+/(parameter)`ss`/
+	- (type/syntax)`any_addr_t *`
+	
+	Source address structure.
+
+/(parameter)`dst`/
+	- (type/syntax)`char *`
+	
+	Destination memory buffer for the address string
+	to be written to.
+
+/(parameter)`dstlen`/
+	- (type/syntax)`int`
+	
+	Length of (factor-local/parameter)&<#get_address.Parameters.dst[dst]> string.
+
+[ > Returns ]
+
+The (factor-local/parameter)&<#get_address.Parameters.ss[ss]> parameter is the destination of the address
+described in (factor-local/parameter)&<#get_address.Parameters.dst[dst]>.
+
+
+[ ip4_from_object ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`300 1 352 1`
+		- (type/syntax)`int`
+		
+(signature)`ip4_from_object(ob, out)`
+
+ParseTuple converter for IPv4 addresses.
+
+
+[ ip6_from_object ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`357 1 411 1`
+		- (type/syntax)`int`
+		
+(signature)`ip6_from_object(ob, out)`
+
+ParseTuple converter for IPv6 addresses.
+
+
+[ local_port_index ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`413 1 422 1`
+		- (type/syntax)`int`
+		
+(signature)`local_port_index(buf)`
+
+
+[ local_str ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`424 1 441 1`
+		- (type/syntax)`void`
+		
+(signature)`local_str(dst, dstsize, addr)`
+
+
+[ local_port ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`443 1 460 1`
+		- (type/syntax)`void`
+		
+(signature)`local_port(port, dstsize, addr)`
+
+
+[ local_from_object ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`465 1 519 1`
+		- (type/syntax)`int`
+		
+(signature)`local_from_object(ob, out)`
+
+ParseTuple converter for local file system sockets.
+
+
+[ endpoint_copy ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`521 1 542 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`endpoint_copy(endpoint)`
+
+
+[ endpoint_replace ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`544 1 672 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`endpoint_replace(self, args, kw)`
+
+
+[ endpoint_get_protocol_family ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`693 1 698 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`endpoint_get_protocol_family(self, _)`
+
+
+[ endpoint_get_address_type ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`700 1 717 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`endpoint_get_address_type(self, _)`
+
+
+[ endpoint_get_address ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`719 1 727 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`endpoint_get_address(self, _)`
+
+
+[ endpoint_get_port ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`729 1 751 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`endpoint_get_port(self, _)`
+
+
+[ endpoint_get_pair ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`753 1 780 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`endpoint_get_pair(self, _)`
+
+
+[ endpoint_richcompare ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`798 1 845 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`endpoint_richcompare(self, x, op)`
+
+
+[ endpoint_str ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`850 1 878 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`endpoint_str(self)`
+
+String representation suitable for text based displays.
+
+
+[ endpoint_repr ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`880 1 908 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`endpoint_repr(self)`
+
+
+[ endpoint_create ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`970 1 995 1`
+		- (type/syntax)`Endpoint`
+		
+(signature)`endpoint_create(type, transport, addr, addrlen)`
+
+
+[ endpoint_new ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`997 1 1036 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`endpoint_new(subtype, args, kw)`
+
