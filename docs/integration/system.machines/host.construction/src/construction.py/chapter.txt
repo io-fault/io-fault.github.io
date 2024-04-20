@@ -3,7 +3,7 @@
 		module
 	/element/
 		- (control)`property-set`
-		- (source/area)`1 1 518 0`
+		- (source/area)`1 1 519 0`
 Host construction context initialization.
 
 
@@ -411,8 +411,8 @@ Initialize the product index and return the created instance.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`190 1 215 6`
-(signature)`host(context, hlinker, hsystem, harch)`
+		- (source/area)`190 1 216 6`
+(signature)`host(route, context, hlinker, hsystem, harch)`
 
 
 [ form_python_type ]
@@ -423,7 +423,7 @@ Initialize the product index and return the created instance.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`217 1 232 14`
+		- (source/area)`218 1 233 14`
 (signature)`form_python_type()`
 
 
@@ -435,7 +435,7 @@ Initialize the product index and return the created instance.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`234 1 250 3`
+		- (source/area)`235 1 251 3`
 (signature)`python_bind(system, architecture, host)`
 
 
@@ -447,7 +447,7 @@ Initialize the product index and return the created instance.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`252 1 261 3`
+		- (source/area)`253 1 262 3`
 (signature)`python_runtime()`
 
 
@@ -459,7 +459,7 @@ Initialize the product index and return the created instance.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`263 1 273 3`
+		- (source/area)`264 1 274 3`
 (signature)`python_interfaces()`
 
 
@@ -471,7 +471,7 @@ Initialize the product index and return the created instance.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`275 1 288 3`
+		- (source/area)`276 1 289 3`
 (signature)`python_tool()`
 
 
@@ -483,7 +483,7 @@ Initialize the product index and return the created instance.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`291 1 301 3`
+		- (source/area)`292 1 302 3`
 (signature)`execute_python_image()`
 
 
@@ -495,7 +495,7 @@ Initialize the product index and return the created instance.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`304 1 332 2`
+		- (source/area)`305 1 333 2`
 (signature)`python(context, psystem, parch, harch)`
 
 
@@ -507,7 +507,7 @@ Initialize the product index and return the created instance.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`334 1 336 79`
+		- (source/area)`335 1 337 79`
 (signature)`mkctx(info, formats, product, context)`
 
 
@@ -519,7 +519,7 @@ Initialize the product index and return the created instance.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`338 1 340 82`
+		- (source/area)`339 1 341 82`
 (signature)`mkproject(info, product, context, project, soles)`
 
 
@@ -529,7 +529,7 @@ Initialize the product index and return the created instance.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`342 1 351 25`
+		- (source/area)`343 1 352 25`
 (signature)`system_select_linker(system)`
 
 Select the linker command interface to use based on the system's name.
@@ -543,7 +543,7 @@ Select the linker command interface to use based on the system's name.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`353 1 371 14`
+		- (source/area)`354 1 372 14`
 (signature)`form_meter_type()`
 
 
@@ -555,7 +555,7 @@ Select the linker command interface to use based on the system's name.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`373 1 411 2`
+		- (source/area)`374 1 412 2`
 (signature)`meter(context)`
 
 
@@ -567,7 +567,7 @@ Select the linker command interface to use based on the system's name.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`413 1 422 2`
+		- (source/area)`414 1 423 2`
 (signature)`text(context)`
 
 
@@ -579,7 +579,7 @@ Select the linker command interface to use based on the system's name.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`424 1 441 14`
+		- (source/area)`425 1 442 14`
 (signature)`form_meta_type()`
 
 
@@ -591,7 +591,7 @@ Select the linker command interface to use based on the system's name.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`443 1 457 2`
+		- (source/area)`444 1 458 2`
 (signature)`meta(context)`
 
 
@@ -601,7 +601,7 @@ Select the linker command interface to use based on the system's name.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`459 1 470 2`
+		- (source/area)`460 1 471 2`
 (signature)`execution_project(context, system, python)`
 
 Construct the execution project containing system.executable factors
@@ -616,7 +616,7 @@ providing system access to the configured machines.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`472 1 514 25`
+		- (source/area)`473 1 515 25`
 (signature)`mkvectors(context, route)`
 
 
@@ -628,6 +628,6 @@ providing system access to the configured machines.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`516 1 518 69`
+		- (source/area)`517 1 519 69`
 (signature)`mkcc(route)`
 

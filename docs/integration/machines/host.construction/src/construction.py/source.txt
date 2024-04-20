@@ -191,7 +191,7 @@ def host(route, context, hlinker, hsystem, harch, factor='type', name='host.cc',
 	machine_cc = getsource(machines_project, name)
 	deline = system(str(clang_delineate))
 	deline = query.dispatched(
-		'python', '-L', str(route), '.system', 'fault-metrics.llvm.delineate')
+		'python', '-L' + str(route), '.system', 'fault-metrics.llvm.delineate')
 	adeline = query.dispatched('archive-delineated')
 	cc_default = system(cc)
 

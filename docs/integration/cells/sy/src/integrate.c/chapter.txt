@@ -1,0 +1,70 @@
+! CONTROL:
+	/type/
+		unit
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+
+[ TARGET_MODULE ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`71 9 71 56`
+#!source
+	#define TARGET_MODULE FACTOR_CONTEXT(".", "syntax.edit")
+
+[ SYSTEM_ENTRY_POINT ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`72 9 72 45`
+#!source
+	#define SYSTEM_ENTRY_POINT _coprocess_rewrite
+
+[ FAULT_PYTHON_CONTROL_IMPORTS ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`73 9 73 36`
+#!source
+	#define FAULT_PYTHON_CONTROL_IMPORTS
+
+[ main ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`58 1 68 1`
+		- (type/syntax)`int`
+		
+(signature)`main(argc, argv)`
+
+
+[ coprocess_invocation ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`80 1 119 1`
+		- (type/syntax)`int`
+		
+(signature)`coprocess_invocation(ctx)`
+

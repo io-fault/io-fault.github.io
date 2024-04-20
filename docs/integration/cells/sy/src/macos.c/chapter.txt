@@ -1,0 +1,114 @@
+! CONTROL:
+	/type/
+		unit
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+
+[ BUNDLE_INFO_VERSION ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 10 5 34`
+#!source
+	#define BUNDLE_INFO_VERSION "6.0"
+
+[ BUNDLE_PACKAGE_TYPE ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 10 6 35`
+#!source
+	#define BUNDLE_PACKAGE_TYPE "APPL"
+
+[ BUNDLE_EXECUTABLE ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 10 7 35`
+#!source
+	#define BUNDLE_EXECUTABLE "Syntax"
+
+[ BUNDLE_VERSION ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 10 8 27`
+#!source
+	#define BUNDLE_VERSION "1"
+
+[ BUNDLE_SHORT_VERSION ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`9 10 9 35`
+#!source
+	#define BUNDLE_SHORT_VERSION "0.0"
+
+[ BUNDLE_NAME ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 10 10 29`
+#!source
+	#define BUNDLE_NAME "syntax"
+
+[ BUNDLE_ID ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 10 11 45`
+#!source
+	#define BUNDLE_ID "io.fault.terminal.syntax"
+
+[ BUNDLE_REGION ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`12 10 12 27`
+#!source
+	#define BUNDLE_REGION "en"
+
+[ PRINCIPAL_CLASS ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`13 10 13 40`
+#!source
+	#define PRINCIPAL_CLASS "NSApplication"

@@ -1,0 +1,958 @@
+! CONTROL:
+	/type/
+		unit
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+
+[ LP_NAME ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`53 10 63 16`
+#!source
+	#define LP_NAME(N) \
+		lo = (LineObject) PyAllocate(typ); \
+		if (lo == NULL) \
+			return(-1); \
+		lo->line = lp_##N; \
+		if (PyDict_SetItemString(td, #N, (PyObj) lo) < 0) \
+		{ \
+			Py_DECREF(lo); \
+			return(-1); \
+		} \
+		Py_DECREF(lo);
+
+[ T_AREA_SCALAR ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`175 10 175 31`
+#!source
+	#define T_AREA_SCALAR T_USHORT
+
+[ FIELDS ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`244 10 248 18`
+#!source
+	#define FIELDS \
+		&(ao->area.top_offset), \
+		&(ao->area.left_offset), \
+		&(ao->area.lines), \
+		&(ao->area.span)
+
+[ FIELDS ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`295 10 307 9`
+#!source
+	#define FIELDS \
+		&co->cell.c_codepoint, \
+		&co->cell.c_switch.txt.t_glyph, \
+		&co->cell.c_cell, \
+		&co->cell.c_switch.txt.t_line, \
+		&italic, \
+		&bold, \
+		&caps, \
+		&LineType, \
+		&underline, \
+		&LineType, \
+		&strikethrough, \
+		&window
+
+[ CELL_TRAIT ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`401 9 410 2`
+#!source
+	#define CELL_TRAIT(NAME) \
+		static PyObj \
+		glyph_get_##NAME(PyObj self, void *ctx) \
+		{ \
+			CellObject co = (CellObject) self; \
+			if (co->cell.c_switch.txt.t_traits.NAME) \
+				Py_RETURN_TRUE; \
+			else \
+				Py_RETURN_FALSE; \
+		}
+
+[ CELL_TRAIT ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`419 10 419 59`
+#!source
+	#define CELL_TRAIT(NAME) {#NAME, glyph_get_##NAME, NULL,},
+
+[ FIELDS ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`487 10 491 32`
+#!source
+	#define FIELDS \
+		&co->cell.c_codepoint, \
+		&co->cell.c_cell, \
+		&co->cell.c_switch.img.i_xtile, \
+		&co->cell.c_switch.img.i_ytile
+
+[ FIELDS ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`718 10 718 47`
+#!source
+	#define FIELDS &AreaType, &destination, &y, &x
+
+[ FIELDS ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`875 10 878 15`
+#!source
+	#define FIELDS \
+		&AreaType, \
+		&ao, \
+		&(so->memory)
+
+[ Device ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`929 9 929 54`
+(signature)`Device()`
+
+
+[ D ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`930 9 930 24`
+(signature)`D()`
+
+
+[ DeviceController ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`931 9 931 76`
+(signature)`DeviceController()`
+
+
+[ DeviceMatrixParameters ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`932 9 932 86`
+(signature)`DeviceMatrixParameters()`
+
+
+[ terminal_context ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`933 9 933 75`
+#!source
+	#define terminal_context (((DeviceObject) self)->dev_terminal->cmd_context)
+
+[ AI_DEFINE ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1003 12 1006 10`
+#!source
+	#define AI_DEFINE(CLASS, OPNAME) \
+		case ai_##CLASS##_##OPNAME: \
+			rob = PyUnicode_FromFormat("(%s/%s)%U", #CLASS, #OPNAME, modstr); \
+		break;
+
+[ PYTHON_TYPES ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1383 9 1390 11`
+(signature)`PYTHON_TYPES()`
+
+
+[ MODULE_FUNCTIONS ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1392 9 1392 26`
+(signature)`MODULE_FUNCTIONS()`
+
+
+[ ID ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1397 10 1402 54`
+#!source
+	#define ID(NAME) \
+		if (PyType_Ready((PyTypeObject *) &( NAME##Type ))) \
+			goto error; \
+		Py_INCREF((PyObj) &( NAME##Type )); \
+		if (PyModule_AddObject(module, #NAME, (PyObj) &( NAME##Type )) < 0) \
+			{ Py_DECREF((PyObj) &( NAME##Type )); goto error; }
+
+[ line_str ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`29 1 34 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`line_str(self)`
+
+
+[ line_repr ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`36 1 42 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`line_repr(self)`
+
+
+[ line_type_initialize ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`47 1 70 1`
+		- (type/syntax)`int`
+		
+(signature)`line_type_initialize(typ)`
+
+Setup enum constants.
+
+
+[ line_new ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`72 1 85 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`line_new(subtype, args, kw)`
+
+
+[ area_get_volume ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`102 1 108 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`area_get_volume(self, ctx)`
+
+
+[ area_copy ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`116 1 126 1`
+		- (type/syntax)`AreaObject`
+		
+(signature)`area_copy(ao)`
+
+
+[ area_move ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`128 1 145 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`area_move(self, args)`
+
+
+[ area_resize ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`147 1 164 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`area_resize(self, args)`
+
+
+[ area_hash ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`186 1 191 1`
+		- (type/syntax)`Py_hash_t`
+		
+(signature)`area_hash(self)`
+
+
+[ area_compare ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`193 1 226 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`area_compare(self, operand, op)`
+
+
+[ area_new ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`228 1 258 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`area_new(subtype, args, kw)`
+
+
+[ glyph_initialize ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`275 1 326 1`
+		- (type/syntax)`int`
+		
+(signature)`glyph_initialize(co, args, kw)`
+
+
+[ glyph_inscribe ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`328 1 348 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`glyph_inscribe(self, args)`
+
+
+[ glyph_update ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`350 1 368 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`glyph_update(self, args, kw)`
+
+
+[ glyph_size ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`379 1 383 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`glyph_size(self)`
+
+
+[ glyph_get_window ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`393 1 399 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`glyph_get_window(self, ctx)`
+
+
+[ glyph_new ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`425 1 452 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`glyph_new(subtype, args, kw)`
+
+
+[ pixels_initialize ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`477 1 499 1`
+		- (type/syntax)`int`
+		
+(signature)`pixels_initialize(co, args, kw)`
+
+
+[ pixels_switch ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`501 1 520 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`pixels_switch(self, args)`
+
+
+[ pixels_new ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`542 1 560 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`pixels_new(subtype, args, kw)`
+
+
+[ cell_type_initialize ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`579 1 597 1`
+		- (type/syntax)`int`
+		
+(signature)`cell_type_initialize(typ)`
+
+Setup size constants.
+
+
+[ screen_rewrite ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`599 1 654 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`screen_rewrite(self, args)`
+
+
+[ screen_select ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`656 1 700 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`screen_select(self, area)`
+
+
+[ screen_replicate ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`702 1 780 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`screen_replicate(self, args, kw)`
+
+
+[ screen_get_area ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`790 1 802 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`screen_get_area(self, ctx)`
+
+
+[ screen_get_volume ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`804 1 810 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`screen_get_volume(self, ctx)`
+
+
+[ screen_create ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`824 1 853 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`screen_create(subtype, image, area)`
+
+
+[ screen_new ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`855 1 899 1`
+		- (type/syntax)`PyObj`
+		
+(signature)`screen_new(subtype, args, kw)`
+
+
+[ screen_dealloc ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`901 1 908 1`
+		- (type/syntax)`void`
+		
+(signature)`screen_dealloc(self)`
+
+
+[ device_quantity ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`935 1 939 1`
+		- (type/syntax)`PyObject *`
+		
+(signature)`device_quantity(self)`
+
+
+[ device_cursor_pixel_status ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`941 1 947 1`
+		- (type/syntax)`PyObject *`
+		
+(signature)`device_cursor_pixel_status(self)`
+
+
+[ device_key ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`949 1 1035 1`
+		- (type/syntax)`PyObject *`
+		
+(signature)`device_key(self)`
+
+
+[ device_cursor_cell_status ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1037 1 1048 1`
+		- (type/syntax)`PyObject *`
+		
+(signature)`device_cursor_cell_status(self)`
+
+
+[ device_transfer_text ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1050 1 1064 1`
+		- (type/syntax)`PyObject *`
+		
+(signature)`device_transfer_text(self)`
+
+
+[ device_transmit ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1066 1 1077 1`
+		- (type/syntax)`PyObject *`
+		
+(signature)`device_transmit(self, args)`
+
+
+[ device_transfer_event ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1079 1 1083 1`
+		- (type/syntax)`PyObject *`
+		
+(signature)`device_transfer_event(self)`
+
+
+[ device_replicate_cells ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1085 1 1095 1`
+		- (type/syntax)`PyObject *`
+		
+(signature)`device_replicate_cells(self, args)`
+
+
+[ device_invalidate_cells ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1097 1 1107 1`
+		- (type/syntax)`PyObject *`
+		
+(signature)`device_invalidate_cells(self, args)`
+
+
+[ device_render_pixels ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1109 1 1117 1`
+		- (type/syntax)`PyObject *`
+		
+(signature)`device_render_pixels(self, args)`
+
+
+[ device_dispatch_frame ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1119 1 1124 1`
+		- (type/syntax)`PyObject *`
+		
+(signature)`device_dispatch_frame(self)`
+
+
+[ device_synchronize ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1126 1 1131 1`
+		- (type/syntax)`PyObject *`
+		
+(signature)`device_synchronize(self)`
+
+
+[ device_reconnect ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1133 1 1158 1`
+		- (type/syntax)`PyObject *`
+		
+(signature)`device_reconnect(self)`
+
+
+[ device_update_frame_status ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1160 1 1174 1`
+		- (type/syntax)`PyObject *`
+		
+(signature)`device_update_frame_status(self, args)`
+
+
+[ device_update_frame_list ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`1179 1 1205 1`
+		- (type/syntax)`PyObject *`
+		
+(signature)`device_update_frame_list(self, args)`
+
+Temporary solution.
+
+
+[ device_define ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1207 1 1226 1`
+		- (type/syntax)`PyObject *`
+		
+(signature)`device_define(self, args)`
+
+
+[ device_integrate ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1228 1 1242 1`
+		- (type/syntax)`PyObject *`
+		
+(signature)`device_integrate(self, args)`
+
+
+[ device_clear ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1280 1 1289 1`
+		- (type/syntax)`void`
+		
+(signature)`device_clear(self)`
+
+
+[ device_dealloc ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1291 1 1295 1`
+		- (type/syntax)`void`
+		
+(signature)`device_dealloc(self)`
+
+
+[ device_new ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1297 1 1366 1`
+		- (type/syntax)`PyObject *`
+		
+(signature)`device_new(subtype, args, kw)`
+
