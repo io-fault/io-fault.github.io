@@ -4,6 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 254 0`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`175`
 
 [ common ]
 ! CONTROL:
@@ -68,6 +70,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`9 1 20 17`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`8`
 (signature)`error_cases(test, dg, idx)`
 
 
@@ -80,6 +84,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`22 1 50 33`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`20`
 (signature)`test_DatagramArray_errors(test)`
 
 
@@ -92,6 +98,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`52 1 129 28`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`57`
 (signature)`test_DatagramArray(test)`
 
 
@@ -104,6 +112,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`131 1 132 39`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`alloc(q)`
 
 
@@ -116,6 +126,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`134 1 156 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`17`
 (signature)`test_Datagrams_transfer_one(test)`
 
 
@@ -128,6 +140,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`158 1 183 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`17`
 (signature)`test_Datagrams_transfer_one_of_two(test)`
 
 
@@ -140,6 +154,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`185 1 229 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`31`
 (signature)`test_Datagrams_transfer_two_of_one(test)`
 
 
@@ -152,5 +168,7 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`231 1 254 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`18`
 (signature)`test_Datagrams_invalid(test)`
 

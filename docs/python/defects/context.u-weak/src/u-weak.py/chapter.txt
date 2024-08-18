@@ -4,6 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 33 0`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`15`
 
 [ module ]
 ! CONTROL:
@@ -40,6 +42,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`4 2 5 19`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`method(self, *args, **kw)`
 
 
@@ -64,6 +68,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`9 1 10 55`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`test_zero(test)`
 
 
@@ -76,6 +82,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`12 1 13 57`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`test_one(test)`
 
 
@@ -88,6 +96,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`15 1 16 62`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`test_any(test)`
 
 
@@ -100,6 +110,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`18 1 19 80`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`test_keywords(test)`
 
 
@@ -112,5 +124,7 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`21 1 33 29`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`7`
 (signature)`test_lost_target(test)`
 

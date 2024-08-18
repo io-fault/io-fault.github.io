@@ -4,6 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 219 8`
+		- (coverage-zeros)`15`
+		- (coverage-counters)`154`
 Array qualities
 
 
@@ -66,6 +68,8 @@ Array qualities
 	/element/
 		- (control)`property-set`
 		- (source/area)`11 1 21 11`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`8`
 (signature)`test_array_already_acquired(test)`
 
 
@@ -76,6 +80,8 @@ Array qualities
 	/element/
 		- (control)`property-set`
 		- (source/area)`23 1 38 28`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`11`
 (signature)`test_array_set(test)`
 
 Sanity/smoke test validating the capacity to create some number of arrays.
@@ -90,6 +96,8 @@ Sanity/smoke test validating the capacity to create some number of arrays.
 	/element/
 		- (control)`property-set`
 		- (source/area)`40 1 54 26`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`10`
 (signature)`test_array_termination(test)`
 
 
@@ -102,6 +110,8 @@ Sanity/smoke test validating the capacity to create some number of arrays.
 	/element/
 		- (control)`property-set`
 		- (source/area)`56 1 64 27`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`8`
 (signature)`test_array_wait(test)`
 
 
@@ -114,6 +124,8 @@ Sanity/smoke test validating the capacity to create some number of arrays.
 	/element/
 		- (control)`property-set`
 		- (source/area)`66 1 86 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`17`
 (signature)`test_array_exceptions(test)`
 
 
@@ -126,6 +138,8 @@ Sanity/smoke test validating the capacity to create some number of arrays.
 	/element/
 		- (control)`property-set`
 		- (source/area)`88 1 104 10`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`12`
 (signature)`test_array_terminated(test)`
 
 
@@ -138,6 +152,8 @@ Sanity/smoke test validating the capacity to create some number of arrays.
 	/element/
 		- (control)`property-set`
 		- (source/area)`106 1 119 6`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`10`
 (signature)`test_array_force(test)`
 
 
@@ -150,6 +166,8 @@ Sanity/smoke test validating the capacity to create some number of arrays.
 	/element/
 		- (control)`property-set`
 		- (source/area)`121 1 132 10`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`10`
 (signature)`test_array_in_cycle(test)`
 
 
@@ -160,6 +178,8 @@ Sanity/smoke test validating the capacity to create some number of arrays.
 	/element/
 		- (control)`property-set`
 		- (source/area)`134 1 156 7`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`17`
 (signature)`test_array_out_of_cycle(test)`
 
 context manager to terminate on exit
@@ -174,6 +194,8 @@ context manager to terminate on exit
 	/element/
 		- (control)`property-set`
 		- (source/area)`158 1 167 7`
+		- (coverage-zeros)`8`
+		- (coverage-counters)`14`
 (signature)`test_array_resize_exoresource(test)`
 
 
@@ -186,6 +208,8 @@ context manager to terminate on exit
 	/element/
 		- (control)`property-set`
 		- (source/area)`169 1 178 22`
+		- (coverage-zeros)`5`
+		- (coverage-counters)`7`
 (signature)`test_array_new_failure(test)`
 
 
@@ -198,6 +222,8 @@ context manager to terminate on exit
 	/element/
 		- (control)`property-set`
 		- (source/area)`180 1 188 10`
+		- (coverage-zeros)`8`
+		- (coverage-counters)`14`
 (signature)`test_array_resize_exoresource(test)`
 
 
@@ -210,5 +236,7 @@ context manager to terminate on exit
 	/element/
 		- (control)`property-set`
 		- (source/area)`190 1 220 7`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`23`
 (signature)`test_array_collection_countdown(test)`
 

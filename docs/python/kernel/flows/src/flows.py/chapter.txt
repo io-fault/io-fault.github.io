@@ -4,6 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 1111 3`
+		- (coverage-zeros)`121`
+		- (coverage-counters)`418`
 Channel Processors used to construct conceptual Flows.
 
 A (factor-local/class)&<#Channel[Channel]> represents an individual segment in a conceptual Flow. Channels
@@ -88,6 +90,8 @@ of just data.
 	/element/
 		- (control)`property-set`
 		- (source/area)`18 1 39 20`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`18 13 18 18`
@@ -120,6 +124,8 @@ to index operations.
 	/element/
 		- (control)`property-set`
 		- (source/area)`26 2 32 18`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`6`
 (signature)`__int__(self)`
 
 
@@ -132,6 +138,8 @@ to index operations.
 	/element/
 		- (control)`property-set`
 		- (source/area)`34 2 35 23`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`__repr__(self)`
 
 
@@ -144,6 +152,8 @@ to index operations.
 	/element/
 		- (control)`property-set`
 		- (source/area)`37 2 39 20`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`__str__(self)`
 
 
@@ -232,6 +242,8 @@ to index operations.
 	/element/
 		- (control)`property-set`
 		- (source/area)`55 1 349 6`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`5`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`55 15 55 28`
@@ -362,6 +374,8 @@ of other event callback mechanisms.
 	/element/
 		- (control)`property-set`
 		- (source/area)`114 2 134 31`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`7`
 (signature)`f_connect(self, flow)`
 
 Connect the Channel to the given object supporting the (invalid/unknown)&<#Flow> interface.
@@ -378,6 +392,8 @@ downstream and obstructions run up.
 	/element/
 		- (control)`property-set`
 		- (source/area)`136 2 146 33`
+		- (coverage-zeros)`5`
+		- (coverage-counters)`5`
 (signature)`f_disconnect(self)`
 
 Disconnect from the downstream and cease emitting events into (factor-local/data)&<#Channel.f_downstream[f_downstream]>.
@@ -390,6 +406,8 @@ Disconnect from the downstream and cease emitting events into (factor-local/data
 	/element/
 		- (control)`property-set`
 		- (source/area)`148 2 162 32`
+		- (coverage-zeros)`9`
+		- (coverage-counters)`9`
 (signature)`f_collapse(self)`
 
 Connect the upstream to the downstream leaving the Channel (factor-local/parameter)&<#Channel.f_collapse.Parameters.self[self]>
@@ -405,6 +423,8 @@ in a disconnected state with the old references remaining in place.
 	/element/
 		- (control)`property-set`
 		- (source/area)`164 2 169 40`
+		- (coverage-zeros)`4`
+		- (coverage-counters)`4`
 (signature)`f_substitute(self, series)`
 
 
@@ -417,6 +437,8 @@ in a disconnected state with the old references remaining in place.
 	/element/
 		- (control)`property-set`
 		- (source/area)`171 2 172 67`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`__repr__(self)`
 
 
@@ -427,6 +449,8 @@ in a disconnected state with the old references remaining in place.
 	/element/
 		- (control)`property-set`
 		- (source/area)`174 2 186 16`
+		- (coverage-zeros)`4`
+		- (coverage-counters)`4`
 (signature)`structure(self)`
 
 Reveal the obstructions and monitors of the Channel.
@@ -439,6 +463,8 @@ Reveal the obstructions and monitors of the Channel.
 	/element/
 		- (control)`property-set`
 		- (source/area)`188 2 201 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`5`
 (signature)`terminate(self)`
 
 Drain the Channel and finish termination by signalling the controller
@@ -452,6 +478,8 @@ of its exit.
 	/element/
 		- (control)`property-set`
 		- (source/area)`203 2 208 22`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`f_terminate(self)`
 
 Termination signal received when the upstream no longer has
@@ -465,6 +493,8 @@ flow transfers for the downstream Channel.
 	/element/
 		- (control)`property-set`
 		- (source/area)`210 2 225 27`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`7`
 (signature)`_f_terminated(self)`
 
 Used by subclasses to issue downstream termination and exit.
@@ -482,6 +512,8 @@ of the conceptual flow is complete.
 	/element/
 		- (control)`property-set`
 		- (source/area)`227 2 230 38`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`interrupt(self)`
 
 
@@ -492,6 +524,8 @@ of the conceptual flow is complete.
 	/element/
 		- (control)`property-set`
 		- (source/area)`232 2 237 20`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`f_transfer(self, event)`
 
 Emit the (factor-local/parameter)&<#Channel.f_transfer.Parameters.event[event]> directly to the downstream.
@@ -504,6 +538,8 @@ Emit the (factor-local/parameter)&<#Channel.f_transfer.Parameters.event[event]> 
 	/element/
 		- (control)`property-set`
 		- (source/area)`239 2 247 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`f_emit(self, event)`
 
 Method replaced at runtime for selecting the recipient
@@ -542,6 +578,8 @@ Whether or not the (factor-local/class)&<#Channel[Channel]> is obstructed.
 	/element/
 		- (control)`property-set`
 		- (source/area)`269 2 277 85`
+		- (coverage-zeros)`4`
+		- (coverage-counters)`5`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
@@ -557,6 +595,8 @@ if there are no obstructions.
 	/element/
 		- (control)`property-set`
 		- (source/area)`279 2 298 19`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`8`
 (signature)`f_obstruct(self, by)`
 
 Instruct the Channel to signal the cessation of transfers.
@@ -570,6 +610,8 @@ The cessation may be permanent depending on the condition.
 	/element/
 		- (control)`property-set`
 		- (source/area)`300 2 320 16`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`10`
 (signature)`f_clear(self, obstruction)`
 
 Clear the obstruction by the key given to (factor-local/parameter)&<#Channel.f_clear.Parameters.obstruction[obstruction]>.
@@ -582,6 +624,8 @@ Clear the obstruction by the key given to (factor-local/parameter)&<#Channel.f_c
 	/element/
 		- (control)`property-set`
 		- (source/area)`322 2 333 19`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`6`
 (signature)`f_watch(self, obstructed, cleared)`
 
 Assign the given functions as callbacks to obstruction events.
@@ -595,6 +639,8 @@ First called when an obstruction occurs and second when its cleared.
 	/element/
 		- (control)`property-set`
 		- (source/area)`335 2 341 49`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`f_ignore(self, obstructed, cleared)`
 
 Stop watching the Flow's obstructed state.
@@ -607,6 +653,8 @@ Stop watching the Flow's obstructed state.
 	/element/
 		- (control)`property-set`
 		- (source/area)`343 2 349 6`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`f_discarding(self)`
 
 Assigned to (invalid/unknown)&<#process> and (factor-local/method)&<#Channel.f_emit[f_emit]> after termination and interrupt in order
@@ -620,6 +668,8 @@ to keep overruns from exercising the Transformations.
 	/element/
 		- (control)`property-set`
 		- (source/area)`351 1 361 20`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`351 16 351 22`
@@ -638,6 +688,8 @@ Channel dispatching events to the configured callable.
 	/element/
 		- (control)`property-set`
 		- (source/area)`356 2 357 28`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`__init__(self, endpoint)`
 
 
@@ -650,6 +702,8 @@ Channel dispatching events to the configured callable.
 	/element/
 		- (control)`property-set`
 		- (source/area)`359 2 361 20`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 (signature)`f_transfer(self, event)`
 
 
@@ -660,6 +714,8 @@ Channel dispatching events to the configured callable.
 	/element/
 		- (control)`property-set`
 		- (source/area)`363 1 379 23`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`363 16 363 22`
@@ -681,6 +737,8 @@ Used as an at-exit callback for flows.
 	/element/
 		- (control)`property-set`
 		- (source/area)`371 2 372 28`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`__init__(self, endpoint)`
 
 
@@ -693,6 +751,8 @@ Used as an at-exit callback for flows.
 	/element/
 		- (control)`property-set`
 		- (source/area)`374 2 379 23`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`f_terminate(self)`
 
 
@@ -703,6 +763,8 @@ Used as an at-exit callback for flows.
 	/element/
 		- (control)`property-set`
 		- (source/area)`381 1 446 43`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`2`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`381 15 381 22`
@@ -721,6 +783,8 @@ Terminal measuring transfer throughput.
 	/element/
 		- (control)`property-set`
 		- (source/area)`386 2 394 57`
+		- (coverage-zeros)`6`
+		- (coverage-counters)`6`
 (signature)`actuate(self)`
 
 
@@ -733,6 +797,8 @@ Terminal measuring transfer throughput.
 	/element/
 		- (control)`property-set`
 		- (source/area)`396 2 400 10`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 (signature)`f_transfer(self, event)`
 
 
@@ -753,6 +819,8 @@ Terminal measuring transfer throughput.
 	/element/
 		- (control)`property-set`
 		- (source/area)`404 2 432 37`
+		- (coverage-zeros)`17`
+		- (coverage-counters)`17`
 (signature)`tm_archive(self, pit)`
 
 Archive transfer data occurring before (factor-local/parameter)&<#Monitor.tm_archive.Parameters.pit[pit]>.
@@ -767,6 +835,8 @@ Archive transfer data occurring before (factor-local/parameter)&<#Monitor.tm_arc
 	/element/
 		- (control)`property-set`
 		- (source/area)`434 2 446 43`
+		- (coverage-zeros)`9`
+		- (coverage-counters)`9`
 (signature)`tm_rate(self, window)`
 
 
@@ -777,6 +847,8 @@ Archive transfer data occurring before (factor-local/parameter)&<#Monitor.tm_arc
 	/element/
 		- (control)`property-set`
 		- (source/area)`448 1 471 21`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`448 13 448 19`
@@ -798,6 +870,8 @@ Initialized with the set of events that will be relayed,
 	/element/
 		- (control)`property-set`
 		- (source/area)`456 2 459 51`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`__init__(self, integral, key)`
 
 
@@ -810,6 +884,8 @@ Initialized with the set of events that will be relayed,
 	/element/
 		- (control)`property-set`
 		- (source/area)`461 2 463 20`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`f_transfer(self, event)`
 
 
@@ -822,6 +898,8 @@ Initialized with the set of events that will be relayed,
 	/element/
 		- (control)`property-set`
 		- (source/area)`465 2 467 23`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`f_terminate(self)`
 
 
@@ -834,6 +912,8 @@ Initialized with the set of events that will be relayed,
 	/element/
 		- (control)`property-set`
 		- (source/area)`469 2 471 21`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`interrupt(self)`
 
 
@@ -844,6 +924,8 @@ Initialized with the set of events that will be relayed,
 	/element/
 		- (control)`property-set`
 		- (source/area)`473 1 501 33`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`473 16 473 22`
@@ -888,6 +970,8 @@ A simple (factor-local/class)&<#Channel[Channel]> expecting to receive events fr
 	/element/
 		- (control)`property-set`
 		- (source/area)`482 2 483 27`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`__init__(self, connect)`
 
 
@@ -900,6 +984,8 @@ A simple (factor-local/class)&<#Channel[Channel]> expecting to receive events fr
 	/element/
 		- (control)`property-set`
 		- (source/area)`485 2 488 21`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`f_transfer(self, events)`
 
 
@@ -912,6 +998,8 @@ A simple (factor-local/class)&<#Channel[Channel]> expecting to receive events fr
 	/element/
 		- (control)`property-set`
 		- (source/area)`490 2 492 43`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`int_transfer(self, key, event)`
 
 
@@ -924,6 +1012,8 @@ A simple (factor-local/class)&<#Channel[Channel]> expecting to receive events fr
 	/element/
 		- (control)`property-set`
 		- (source/area)`494 2 501 33`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`int_terminate(self, key)`
 
 
@@ -934,6 +1024,8 @@ A simple (factor-local/class)&<#Channel[Channel]> expecting to receive events fr
 	/element/
 		- (control)`property-set`
 		- (source/area)`503 1 514 39`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`503 22 503 28`
@@ -964,6 +1056,8 @@ A flow that performs a transformation on the received events.
 	/element/
 		- (control)`property-set`
 		- (source/area)`510 2 511 31`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`__init__(self, transform)`
 
 
@@ -976,6 +1070,8 @@ A flow that performs a transformation on the received events.
 	/element/
 		- (control)`property-set`
 		- (source/area)`513 2 514 39`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`f_transfer(self, event)`
 
 
@@ -986,6 +1082,8 @@ A flow that performs a transformation on the received events.
 	/element/
 		- (control)`property-set`
 		- (source/area)`516 1 569 44`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`516 17 516 23`
@@ -1015,6 +1113,8 @@ an obstruction occurs or the iterator ends.
 	/element/
 		- (control)`property-set`
 		- (source/area)`523 2 532 14`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 		- (type/syntax)`bool`
 		- (type/invalid/unknown)&<#bool>
 		
@@ -1031,6 +1131,8 @@ if it's no longer obstructed.
 	/element/
 		- (control)`property-set`
 		- (source/area)`534 2 549 23`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`5`
 (signature)`it_transition(self)`
 
 Emit the next item in the iterator until an obstruction occurs or
@@ -1044,6 +1146,8 @@ the iterator is exhausted.
 	/element/
 		- (control)`property-set`
 		- (source/area)`551 2 559 35`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`__init__(self, iterator)`
 
 [ >> Parameters ]
@@ -1066,6 +1170,8 @@ the iterator is exhausted.
 	/element/
 		- (control)`property-set`
 		- (source/area)`561 2 563 35`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`actuate(self)`
 
 
@@ -1076,6 +1182,8 @@ the iterator is exhausted.
 	/element/
 		- (control)`property-set`
 		- (source/area)`565 2 569 44`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 (signature)`f_transfer(self, it)`
 
 Raises exception as (factor-local/class)&<#Iteration[Iteration]> is a source.
@@ -1088,6 +1196,8 @@ Raises exception as (factor-local/class)&<#Iteration[Iteration]> is a source.
 	/element/
 		- (control)`property-set`
 		- (source/area)`571 1 632 23`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`571 18 571 24`
@@ -1119,6 +1229,8 @@ termination.
 	/element/
 		- (control)`property-set`
 		- (source/area)`578 2 582 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`__init__(self, storage, operation)`
 
 
@@ -1129,6 +1241,8 @@ termination.
 	/element/
 		- (control)`property-set`
 		- (source/area)`583 2 588 27`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`appended_list(Class)`
 
 Construct a (factor-local/class)&<#Collection[Collection]> instance that appends all events into a (factor-local/data)&<#Collection.list[list]>.
@@ -1154,6 +1268,8 @@ Construct a (factor-local/class)&<#Collection[Collection]> instance that appends
 	/element/
 		- (control)`property-set`
 		- (source/area)`592 2 599 13`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`3`
 (signature)`extended_list(Class)`
 
 Construct a (factor-local/class)&<#Collection[Collection]> instance that extends all events into a (factor-local/data)&<#Collection.list[list]>.
@@ -1166,6 +1282,8 @@ Construct a (factor-local/class)&<#Collection[Collection]> instance that extends
 	/element/
 		- (control)`property-set`
 		- (source/area)`600 2 612 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`5`
 (signature)`dict(Class)`
 
 Construct a (factor-local/class)&<#Collection[Collection]> instance that builds the contents of a
@@ -1181,6 +1299,8 @@ mapping from sequences of key-value pairs.
 	/element/
 		- (control)`property-set`
 		- (source/area)`613 2 617 14`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`set(Class)`
 
 
@@ -1193,6 +1313,8 @@ mapping from sequences of key-value pairs.
 	/element/
 		- (control)`property-set`
 		- (source/area)`618 2 621 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`_buffer_operation(event)`
 
 
@@ -1203,6 +1325,8 @@ mapping from sequences of key-value pairs.
 	/element/
 		- (control)`property-set`
 		- (source/area)`622 2 629 73`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 (signature)`buffer(Class)`
 
 Construct a (factor-local/class)&<#Collection[Collection]> instance that accumulates data from sequences
@@ -1218,6 +1342,8 @@ of data into a single (factor-local/parameter)&<#Collection.buffer.Parameters.by
 	/element/
 		- (control)`property-set`
 		- (source/area)`631 2 632 23`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`f_transfer(self, obj)`
 
 
@@ -1228,6 +1354,8 @@ of data into a single (factor-local/parameter)&<#Collection.buffer.Parameters.by
 	/element/
 		- (control)`property-set`
 		- (source/area)`634 1 692 38`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`634 16 634 22`
@@ -1256,6 +1384,8 @@ accessing its controller.
 	/element/
 		- (control)`property-set`
 		- (source/area)`649 2 654 34`
+		- (coverage-zeros)`4`
+		- (coverage-counters)`4`
 (signature)`__init__(self, target, *parameters)`
 
 
@@ -1266,6 +1396,8 @@ accessing its controller.
 	/element/
 		- (control)`property-set`
 		- (source/area)`656 2 666 13`
+		- (coverage-zeros)`4`
+		- (coverage-counters)`4`
 (signature)`terminate(self)`
 
 Initiate termination of the thread.
@@ -1278,6 +1410,8 @@ Initiate termination of the thread.
 	/element/
 		- (control)`property-set`
 		- (source/area)`668 2 677 7`
+		- (coverage-zeros)`6`
+		- (coverage-counters)`6`
 (signature)`trap(self)`
 
 Internal; Trap exceptions in order to map them to faults.
@@ -1290,6 +1424,8 @@ Internal; Trap exceptions in order to map them to faults.
 	/element/
 		- (control)`property-set`
 		- (source/area)`679 2 685 21`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 (signature)`f_transfer(self, event)`
 
 Send the event to the queue that the Thread is connected to.
@@ -1303,6 +1439,8 @@ Injections performed by the thread will be enqueued into the main task queue.
 	/element/
 		- (control)`property-set`
 		- (source/area)`687 2 692 38`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 (signature)`actuate(self)`
 
 Execute the dedicated thread for the transformer.
@@ -1315,6 +1453,8 @@ Execute the dedicated thread for the transformer.
 	/element/
 		- (control)`property-set`
 		- (source/area)`694 1 720 21`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`694 16 694 22`
@@ -1333,6 +1473,8 @@ Protocol class for containing the state of a protocol layer.
 	/element/
 		- (control)`property-set`
 		- (source/area)`699 2 702 28`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`__init__(self, shared, local, transfer)`
 
 
@@ -1345,6 +1487,8 @@ Protocol class for containing the state of a protocol layer.
 	/element/
 		- (control)`property-set`
 		- (source/area)`704 2 705 44`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`f_transfer(self, event)`
 
 
@@ -1355,6 +1499,8 @@ Protocol class for containing the state of a protocol layer.
 	/element/
 		- (control)`property-set`
 		- (source/area)`707 2 714 20`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 (signature)`p_terminated(self)`
 
 Called when the internal protocol state has completed termination.
@@ -1370,6 +1516,8 @@ synchronization needs to occur with a corresponding Protocol channel.
 	/element/
 		- (control)`property-set`
 		- (source/area)`716 2 720 21`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`p_drain(self)`
 
 Perform an empty transfer allowing any transmit buffers to be emptied.
@@ -1382,6 +1530,8 @@ Perform an empty transfer allowing any transmit buffers to be emptied.
 	/element/
 		- (control)`property-set`
 		- (source/area)`722 1 941 32`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`722 18 722 24`
@@ -1441,6 +1591,8 @@ when next is promoted.
 	/element/
 		- (control)`property-set`
 		- (source/area)`754 2 759 22`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 (signature)`__init__(self)`
 
 
@@ -1451,6 +1603,8 @@ when next is promoted.
 	/element/
 		- (control)`property-set`
 		- (source/area)`761 2 774 15`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 (signature)`cat_overflowing(self, channel_id)`
 
 Whether the given flow's queue has too many items.
@@ -1463,6 +1617,8 @@ Whether the given flow's queue has too many items.
 	/element/
 		- (control)`property-set`
 		- (source/area)`776 2 796 50`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`12`
 (signature)`int_transfer(self, channel_id, events)`
 
 Emit point for Sequenced Flows
@@ -1475,6 +1631,8 @@ Emit point for Sequenced Flows
 	/element/
 		- (control)`property-set`
 		- (source/area)`798 2 826 73`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`17`
 (signature)`int_connect(self, channel_id, initiate, flow)`
 
 Connect the flow to the (factor-local/parameter)&<#Catenation.int_connect.Parameters.channel_id[channel_id]> using the (factor-local/parameter)&<#Catenation.int_connect.Parameters.initiate[initiate]> parameter.
@@ -1487,6 +1645,8 @@ Connect the flow to the (factor-local/parameter)&<#Catenation.int_connect.Parame
 	/element/
 		- (control)`property-set`
 		- (source/area)`828 2 834 35`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`int_reserve(self, *channel_id)`
 
 Reserve a position in the sequencing of the flows. The given (invalid/unknown)&<#initiate> is the reference
@@ -1500,6 +1660,8 @@ object used by (factor-local/method)&<#Catenation.int_connect[int_connect]> in o
 	/element/
 		- (control)`property-set`
 		- (source/area)`836 2 846 16`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`8`
 (signature)`f_transfer(self, events)`
 
 Transparency support allowing (factor-local/class)&<#Division[Division]> to be directly connected.
@@ -1515,6 +1677,8 @@ Usually unused.
 	/element/
 		- (control)`property-set`
 		- (source/area)`848 2 858 67`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`5`
 (signature)`int_terminate(self, channel_id)`
 
 
@@ -1527,6 +1691,8 @@ Usually unused.
 	/element/
 		- (control)`property-set`
 		- (source/area)`860 2 865 19`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`f_terminate(self)`
 
 
@@ -1537,6 +1703,8 @@ Usually unused.
 	/element/
 		- (control)`property-set`
 		- (source/area)`867 2 871 14`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`terminate(self)`
 
 Termination signal ignored. Flow state dictates terminal state.
@@ -1549,6 +1717,8 @@ Termination signal ignored. Flow state dictates terminal state.
 	/element/
 		- (control)`property-set`
 		- (source/area)`873 2 883 23`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`6`
 (signature)`cat_flush(self)`
 
 Flush the accumulated events downstream.
@@ -1561,6 +1731,8 @@ Flush the accumulated events downstream.
 	/element/
 		- (control)`property-set`
 		- (source/area)`885 2 913 24`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`15`
 (signature)`cat_drain(self)`
 
 Drain the new head of line emitting any queued events and
@@ -1574,6 +1746,8 @@ updating its entry in (invalid/unknown)&<#cat_connections> to immediately send e
 	/element/
 		- (control)`property-set`
 		- (source/area)`915 2 941 32`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`12`
 (signature)`cat_transition(self)`
 
 Move the first enqueued flow to the front of the line;
@@ -1587,6 +1761,8 @@ flush out the buffer and remove ourselves as an obstruction.
 	/element/
 		- (control)`property-set`
 		- (source/area)`943 1 1112 2`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`943 16 943 22`
@@ -1622,6 +1798,8 @@ the transformed application level events.
 	/element/
 		- (control)`property-set`
 		- (source/area)`955 2 961 32`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`6`
 (signature)`__init__(self, dispatch)`
 
 
@@ -1632,6 +1810,8 @@ the transformed application level events.
 	/element/
 		- (control)`property-set`
 		- (source/area)`963 2 976 28`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`7`
 (signature)`f_transfer(self, events)`
 
 Direct the given events to their corresponding action in order to
@@ -1645,6 +1825,8 @@ map protocol stream events to (invalid/unknown)&<#Flow> instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`978 2 991 21`
+		- (coverage-zeros)`5`
+		- (coverage-counters)`5`
 (signature)`interrupt(self)`
 
 Interruptions on distributions translates to termination.
@@ -1659,6 +1841,8 @@ Interruptions on distributions translates to termination.
 	/element/
 		- (control)`property-set`
 		- (source/area)`993 2 1008 24`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`8`
 (signature)`f_terminate(self)`
 
 
@@ -1669,6 +1853,8 @@ Interruptions on distributions translates to termination.
 	/element/
 		- (control)`property-set`
 		- (source/area)`1010 2 1021 62`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`div_initiate(self, f_event, channel_id, initiate)`
 
 Initiate a subflow using the given (factor-local/parameter)&<#Division.div_initiate.Parameters.channel_id[channel_id]> as its identity.
@@ -1683,6 +1869,8 @@ to the (invalid/unknown)&<#Flow.f_connect> downstream.
 	/element/
 		- (control)`property-set`
 		- (source/area)`1023 2 1066 40`
+		- (coverage-zeros)`10`
+		- (coverage-counters)`25`
 (signature)`div_connect(self, channel_id, flow)`
 
 Associate the (factor-local/parameter)&<#Division.div_connect.Parameters.flow[flow]> with the (factor-local/parameter)&<#Division.div_connect.Parameters.channel_id[channel_id]> allowing transfers into the flow.
@@ -1700,6 +1888,8 @@ and control events.
 	/element/
 		- (control)`property-set`
 		- (source/area)`1068 2 1079 50`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`5`
 (signature)`div_transfer(self, f_event, channel_id, subflow_transfer)`
 
 Enqueue or transfer the events to the flow associated with the channel_id context.
@@ -1712,6 +1902,8 @@ Enqueue or transfer the events to the flow associated with the channel_id contex
 	/element/
 		- (control)`property-set`
 		- (source/area)`1081 2 1104 40`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`12`
 (signature)`div_terminate(self, f_event, channel_id, terminal)`
 
 End of subflow.

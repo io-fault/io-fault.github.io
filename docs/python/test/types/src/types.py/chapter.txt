@@ -4,6 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 430 0`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 Test framework primitives. Provides and defines (factor-local/class)&<#Test[Test]>, (factor-local/class)&<#Contention[Contention]>, (factor-local/class)&<#Absurdity[Absurdity]>, and (factor-local/class)&<#Fate[Fate]>.
 
 

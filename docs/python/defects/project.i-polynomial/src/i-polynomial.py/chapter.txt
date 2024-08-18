@@ -4,6 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 99 0`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`51`
 Analyze polynomial using temporary directories.
 
 
@@ -122,6 +124,8 @@ Analyze polynomial using temporary directories.
 	/element/
 		- (control)`property-set`
 		- (source/area)`37 1 40 24`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`mkfactor(ftype, symbols)`
 
 
@@ -134,6 +138,8 @@ Analyze polynomial using temporary directories.
 	/element/
 		- (control)`property-set`
 		- (source/area)`42 1 53 33`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`8`
 (signature)`test_V1_isource(test)`
 
 
@@ -146,6 +152,8 @@ Analyze polynomial using temporary directories.
 	/element/
 		- (control)`property-set`
 		- (source/area)`55 1 66 36`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`9`
 (signature)`test_V1_collect_explicit_sources(test)`
 
 
@@ -158,6 +166,8 @@ Analyze polynomial using temporary directories.
 	/element/
 		- (control)`property-set`
 		- (source/area)`68 1 85 56`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`13`
 (signature)`test_V1_iterfactors_explicit_known(test)`
 
 
@@ -170,5 +180,7 @@ Analyze polynomial using temporary directories.
 	/element/
 		- (control)`property-set`
 		- (source/area)`87 1 99 44`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`8`
 (signature)`test_V1_iterfactors_explicit_unknown(test)`
 

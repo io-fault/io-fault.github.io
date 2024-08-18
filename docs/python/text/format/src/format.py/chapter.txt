@@ -4,6 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 826 0`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 Parser implementation and supporting tools for the fault-text format.
 
 The parser is hand rolled in order to easily accommodate for grammar

@@ -3,7 +3,9 @@
 		module
 	/element/
 		- (control)`property-set`
-		- (source/area)`1 1 111 0`
+		- (source/area)`1 1 134 0`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 Compile Python modules into stored bytecode.
 
 Provide high-level functions for compiling Python module into stored bytecode.
@@ -71,6 +73,18 @@ Provide high-level functions for compiling Python module into stored bytecode.
 (signature)`mkbytecode(target, unit, language, dialect, optimize)`
 
 
+[ write_coverage_mapping ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`34 1 45 34`
+(signature)`write_coverage_mapping(path, cmd, areaset)`
+
+
 [ mkast ]
 ! CONTROL:
 	/type/
@@ -79,7 +93,7 @@ Provide high-level functions for compiling Python module into stored bytecode.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`34 1 59 38`
+		- (source/area)`47 1 82 38`
 (signature)`mkast(target, origin, language, dialect, optimize, instrumentation)`
 
 
@@ -91,7 +105,7 @@ Provide high-level functions for compiling Python module into stored bytecode.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`61 1 64 58`
+		- (source/area)`84 1 87 58`
 (signature)`delineate(output, origin, params)`
 
 
@@ -103,7 +117,7 @@ Provide high-level functions for compiling Python module into stored bytecode.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`66 1 68 28`
+		- (source/area)`89 1 91 28`
 (signature)`replicate(target, origin)`
 
 
@@ -113,7 +127,7 @@ Provide high-level functions for compiling Python module into stored bytecode.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`70 1 74 26`
+		- (source/area)`93 1 97 26`
 (signature)`archive(output, source)`
 
 Copy the units directory, (factor-local/parameter)&<#archive.Parameters.source[source]>, to the target image location (factor-local/parameter)&<#archive.Parameters.output[output]>.
@@ -127,7 +141,7 @@ Copy the units directory, (factor-local/parameter)&<#archive.Parameters.source[s
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`76 1 106 19`
+		- (source/area)`99 1 129 19`
 		- (type/syntax)`process.Exit`
 		- (type/remote/factor-element)&<http://fault.io/python/system/process#Exit[fault.system.process.Exit]>
 		

@@ -4,6 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 131 0`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 Text data structures for working with paragraph content.
 
 (factor-local/class)&<#Fragment[Fragment]> and (factor-local/class)&<#Paragraph[Paragraph]> are designed to be easily transformed and serialized

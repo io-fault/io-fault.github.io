@@ -4,6 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 126 0`
+		- (coverage-zeros)`24`
+		- (coverage-counters)`56`
 High-level system inquiries for user information and environment derived paths.
 
 All information is retrieved from the system when invoked.
@@ -80,6 +82,8 @@ All information is retrieved from the system when invoked.
 	/element/
 		- (control)`property-set`
 		- (source/area)`16 1 20 50`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 		- (type/syntax)`files.Path`
 		- (type/project-local/factor-element)&<files#Path[fault.system.files.Path]>
 		
@@ -95,6 +99,8 @@ Select paths present in the (system/environ)`PATH` variable.
 	/element/
 		- (control)`property-set`
 		- (source/area)`22 1 38 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`7`
 		- (type/syntax)`files.Path`
 		- (type/project-local/factor-element)&<files#Path[fault.system.files.Path]>
 		
@@ -116,6 +122,8 @@ Paths referring to broken links will not be included.
 	/element/
 		- (control)`property-set`
 		- (source/area)`40 1 54 14`
+		- (coverage-zeros)`5`
+		- (coverage-counters)`6`
 		- (type/syntax)`files.Path`
 		- (type/project-local/factor-element)&<files#Path[fault.system.files.Path]>
 		
@@ -134,6 +142,8 @@ using (invalid/unknown)&<#pwd>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`56 1 64 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -149,6 +159,8 @@ Retrieve the user's name.
 	/element/
 		- (control)`property-set`
 		- (source/area)`66 1 77 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -167,6 +179,8 @@ If the system has no such concept or it cannot be resolved, (invalid/unknown)&<#
 	/element/
 		- (control)`property-set`
 		- (source/area)`79 1 89 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 		- (type/syntax)`files.Path`
 		- (type/project-local/factor-element)&<files#Path[fault.system.files.Path]>
 		
@@ -184,6 +198,8 @@ If the system has no such concept or it cannot be resolved, (invalid/unknown)&<#
 	/element/
 		- (control)`property-set`
 		- (source/area)`91 1 96 40`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`4`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -199,6 +215,8 @@ Retrieve the hostname using the POSIX (system/manual)`gethostname(2)` call.
 	/element/
 		- (control)`property-set`
 		- (source/area)`98 1 104 27`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`4`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
@@ -215,6 +233,8 @@ the POSIX (system/manual)`sysconf` call with (id)`SC_CLK_TCK`.
 	/element/
 		- (control)`property-set`
 		- (source/area)`106 1 126 43`
+		- (coverage-zeros)`12`
+		- (coverage-counters)`12`
 (signature)`platform()`
 
 Create an (project-local/unknown)&<execution#Platform[execution.Platform]> instance using the environment.

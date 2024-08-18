@@ -4,6 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 180 0`
+		- (coverage-zeros)`22`
+		- (coverage-counters)`122`
 
 [ module ]
 ! CONTROL:
@@ -24,6 +26,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`3 1 18 25`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`14`
 (signature)`test_endpoint_new(test)`
 
 
@@ -36,6 +40,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`20 1 35 23`
+		- (coverage-zeros)`12`
+		- (coverage-counters)`12`
 (signature)`test_endpoint_local_new(test)`
 
 
@@ -48,6 +54,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`37 1 48 33`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`9`
 (signature)`test_endpoint_inconsistent_pf(test)`
 
 
@@ -60,6 +68,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`50 1 58 38`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`6`
 (signature)`test_endpoint_consistent_pf(test)`
 
 
@@ -72,6 +82,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`60 1 68 44`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`6`
 (signature)`test_endpoint_inequality(test)`
 
 
@@ -84,6 +96,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`70 1 72 23`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`test_endpoint_nicmp(test)`
 
 
@@ -96,6 +110,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`74 1 87 14`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`9`
 (signature)`test_endpoint_equality_type(test)`
 
 
@@ -108,6 +124,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`89 1 99 8`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`9`
 (signature)`test_endpoint_only_equals(test)`
 
 
@@ -120,6 +138,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`101 1 108 29`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`6`
 (signature)`test_endpoint_ip4_new(test)`
 
 
@@ -132,6 +152,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`110 1 122 29`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`11`
 (signature)`test_endpoint_ip4_invalid(test)`
 
 
@@ -144,6 +166,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`124 1 132 22`
+		- (coverage-zeros)`5`
+		- (coverage-counters)`6`
 (signature)`test_endpoint_ip4_pton_error(test)`
 
 
@@ -156,6 +180,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`134 1 146 29`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`11`
 (signature)`test_endpoint_ip6_invalid_address(test)`
 
 
@@ -168,6 +194,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`148 1 158 22`
+		- (coverage-zeros)`5`
+		- (coverage-counters)`6`
 (signature)`test_endpoint_ip6_pton_error(test)`
 
 
@@ -180,6 +208,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`160 1 167 24`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`6`
 (signature)`test_endpoint_ip6_new(test)`
 
 
@@ -190,6 +220,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`169 1 180 33`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`7`
 (signature)`test_Endpoint_posix_codes(test)`
 
 Validate presence of integer codes identifying the protocol family,

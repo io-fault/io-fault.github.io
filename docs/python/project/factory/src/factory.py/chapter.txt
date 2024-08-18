@@ -4,6 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 282 4`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 Project materialization tools for instantiating polynomial-1 organized factor sets.
 
 

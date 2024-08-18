@@ -1,0 +1,1 @@
+{"MethodNotFound": [1, 0, []], "Type": [1, 0, []], "Type.__prepare__": [9, 0, []], "Type.__new__": [3, 0, []], "object": [3, 0, []], "object.__colookup__": [5, 3, [[56, 9, 56, 17], [57, 3, 57, 7], [59, 2, 59, 27]]], "object.__cobind__": [3, 0, []], "object.comethod": [2, 1, [[65, 2, 67, 5]]], "/comethod.py": [3, 1, [[68, 2, 68, 59]]]}

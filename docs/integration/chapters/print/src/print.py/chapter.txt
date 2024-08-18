@@ -3,7 +3,9 @@
 		module
 	/element/
 		- (control)`property-set`
-		- (source/area)`1 1 534 0`
+		- (source/area)`1 1 608 0`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 Print representations of factors for publication and reading.
 
 
@@ -57,6 +59,16 @@ Print representations of factors for publication and reading.
 		- (control)`property-set`
 		- (source/area)`8 1 8 11`
 
+[ collections ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`9 1 9 18`
+
 [ recognition ]
 ! CONTROL:
 	/type/
@@ -65,7 +77,7 @@ Print representations of factors for publication and reading.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`10 1 10 36`
+		- (source/area)`11 1 11 36`
 
 [ tools ]
 ! CONTROL:
@@ -75,7 +87,7 @@ Print representations of factors for publication and reading.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`11 1 11 31`
+		- (source/area)`12 1 12 31`
 
 [ Cell ]
 ! CONTROL:
@@ -85,7 +97,7 @@ Print representations of factors for publication and reading.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`12 1 12 36`
+		- (source/area)`13 1 13 36`
 
 [ files ]
 ! CONTROL:
@@ -95,7 +107,7 @@ Print representations of factors for publication and reading.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`13 1 13 30`
+		- (source/area)`14 1 14 30`
 
 [ process ]
 ! CONTROL:
@@ -105,7 +117,7 @@ Print representations of factors for publication and reading.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`14 1 14 32`
+		- (source/area)`15 1 15 32`
 
 [ lsf ]
 ! CONTROL:
@@ -115,7 +127,7 @@ Print representations of factors for publication and reading.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`15 1 15 39`
+		- (source/area)`16 1 16 39`
 
 [ structure_chapter_text ]
 ! CONTROL:
@@ -125,7 +137,7 @@ Print representations of factors for publication and reading.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`17 1 17 77`
+		- (source/area)`18 1 18 77`
 
 [ structure_paragraph_element ]
 ! CONTROL:
@@ -135,7 +147,7 @@ Print representations of factors for publication and reading.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`17 1 17 77`
+		- (source/area)`18 1 18 77`
 
 [ join ]
 ! CONTROL:
@@ -145,7 +157,7 @@ Print representations of factors for publication and reading.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`18 1 18 18`
+		- (source/area)`19 1 19 18`
 
 [ html ]
 ! CONTROL:
@@ -155,7 +167,17 @@ Print representations of factors for publication and reading.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`19 1 19 18`
+		- (source/area)`20 1 20 18`
+
+[ coverage ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`21 1 21 30`
 
 [ web_resources ]
 ! CONTROL:
@@ -165,7 +187,7 @@ Print representations of factors for publication and reading.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`21 1 21 29`
+		- (source/area)`23 1 23 29`
 #!source
 	web_resources = '.legacy-web'
 
@@ -177,7 +199,7 @@ Print representations of factors for publication and reading.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`22 1 22 23`
+		- (source/area)`24 1 24 23`
 #!source
 	core_style = 'core.css'
 
@@ -189,7 +211,7 @@ Print representations of factors for publication and reading.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`24 1 24 34`
+		- (source/area)`26 1 26 34`
 #!source
 	project_index_style = 'corpus.css'
 
@@ -201,7 +223,7 @@ Print representations of factors for publication and reading.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`25 1 25 34`
+		- (source/area)`27 1 27 34`
 #!source
 	factor_index_style = 'project.css'
 
@@ -213,7 +235,7 @@ Print representations of factors for publication and reading.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`26 1 26 27`
+		- (source/area)`28 1 28 27`
 #!source
 	factor_style = 'factor.css'
 
@@ -225,7 +247,7 @@ Print representations of factors for publication and reading.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`27 1 27 29`
+		- (source/area)`29 1 29 29`
 #!source
 	chapter_style = 'chapter.css'
 
@@ -237,7 +259,7 @@ Print representations of factors for publication and reading.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`28 1 28 29`
+		- (source/area)`30 1 30 29`
 #!source
 	sources_style = 'sources.css'
 
@@ -249,7 +271,7 @@ Print representations of factors for publication and reading.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`30 1 35 2`
+		- (source/area)`32 1 37 2`
 (signature)`styles(depth, type)`
 
 
@@ -261,7 +283,7 @@ Print representations of factors for publication and reading.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`37 1 164 44`
+		- (source/area)`39 1 238 44`
 (signature)`r_factor(sx, prefixes, variants, req, ctx, pj, pjdir, fpath, type, requirements, sources)`
 
 
@@ -273,7 +295,7 @@ Print representations of factors for publication and reading.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`166 1 191 101`
+		- (source/area)`240 1 265 101`
 (signature)`r_project(sx, prefixes, variants, req, ctx, pj, pjdir)`
 
 
@@ -283,7 +305,7 @@ Print representations of factors for publication and reading.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`193 1 208 19`
+		- (source/area)`267 1 282 19`
 (signature)`hrinit(prefix, type, identifier)`
 
 Initialize the `.http-resource` directory inside (invalid/unknown)&<#path>
@@ -300,7 +322,7 @@ Returns the directory path that was created.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`210 1 271 22`
+		- (source/area)`284 1 345 22`
 (signature)`r_corpus(config, out, ctx, req, variants)`
 
 
@@ -312,7 +334,7 @@ Returns the directory path that was created.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`273 1 281 32`
+		- (source/area)`347 1 355 32`
 (signature)`first_sentence(p)`
 
 
@@ -324,7 +346,7 @@ Returns the directory path that was created.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`283 1 287 14`
+		- (source/area)`357 1 361 14`
 (signature)`removeprefix(prefixes, string)`
 
 
@@ -336,7 +358,7 @@ Returns the directory path that was created.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`289 1 293 1`
+		- (source/area)`363 1 367 1`
 #!source
 	required = {
 		'--corpus-root': ('field-replace', 'corpus-root'),
@@ -352,7 +374,7 @@ Returns the directory path that was created.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`295 1 298 1`
+		- (source/area)`369 1 372 1`
 #!source
 	restricted = {
 		'-W': ('field-replace', False, 'web-defaults'),
@@ -365,7 +387,7 @@ Returns the directory path that was created.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`300 1 318 38`
+		- (source/area)`374 1 392 38`
 (signature)`extract_image_reference(svg)`
 
 Extract the hyperlink from the first image element in an SVG image.
@@ -394,7 +416,7 @@ The `href` attribute must be directly adjacent to the `=` character.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`320 1 331 23`
+		- (source/area)`394 1 405 23`
 (signature)`transfer(xfers)`
 
 Transfer the remote resources to their associated filesystem location.
@@ -406,7 +428,7 @@ Transfer the remote resources to their associated filesystem location.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`333 1 366 21`
+		- (source/area)`407 1 440 21`
 (signature)`icons(out, ctx, types)`
 
 Print the icons of the factor types used by the projects in (factor-local/parameter)&<#icons.Parameters.ctx[ctx]>.
@@ -420,7 +442,7 @@ according to (project-local/factor-element)&<html#icon_identity[system.chapters.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`368 1 446 5`
+		- (source/area)`442 1 520 5`
 (signature)`manual(argv)`
 
 Print system manuals from chapter elements.
@@ -432,7 +454,7 @@ Print system manuals from chapter elements.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`448 1 515 10`
+		- (source/area)`522 1 589 10`
 (signature)`web(argv)`
 
 Print factor representations for web publication.
@@ -446,7 +468,7 @@ Print factor representations for web publication.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`517 1 534 27`
+		- (source/area)`591 1 608 27`
 		- (type/syntax)`process.Exit`
 		- (type/remote/factor-element)&<http://fault.io/python/system/process#Exit[fault.system.process.Exit]>
 		

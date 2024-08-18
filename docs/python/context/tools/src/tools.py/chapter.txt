@@ -4,6 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 224 3`
+		- (coverage-zeros)`23`
+		- (coverage-counters)`90`
 Function and iterator tools used by local projects.
 
 
@@ -78,6 +80,8 @@ Function and iterator tools used by local projects.
 	/element/
 		- (control)`property-set`
 		- (source/area)`12 1 16 5`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 		- (type/syntax)`None`
 		
 (signature)`nothing(*args, **kw)`
@@ -92,6 +96,8 @@ Callable that returns (invalid/unknown)&<#None> regardless of the arguments and 
 	/element/
 		- (control)`property-set`
 		- (source/area)`18 1 22 11`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`reflect(obj)`
 
 Callable that returns the single argument that it was given.
@@ -104,6 +110,8 @@ Callable that returns the single argument that it was given.
 	/element/
 		- (control)`property-set`
 		- (source/area)`34 1 43 30`
+		- (coverage-zeros)`4`
+		- (coverage-counters)`4`
 (signature)`constant(obj)`
 
 Return a callable that returns the given object regardless of
@@ -117,6 +125,8 @@ the given parameters.
 	/element/
 		- (control)`property-set`
 		- (source/area)`45 1 73 9`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`10`
 (signature)`unique(iterable, *existing)`
 
 Iterate through the contents of the (factor-local/parameter)&<#unique.Parameters.iterable[iterable]>,
@@ -151,6 +161,8 @@ but only allow an item to be emitted once.
 	/element/
 		- (control)`property-set`
 		- (source/area)`75 1 93 50`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`5`
 (signature)`interlace(*iters)`
 
 An iterator constructor that takes a sequence of
@@ -175,6 +187,8 @@ Interlace produces an iterator following the pattern:
 	/element/
 		- (control)`property-set`
 		- (source/area)`95 1 133 19`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`22`
 (signature)`compose(*callables)`
 
 Return a composition of the given callable arguments.
@@ -197,6 +211,8 @@ function's "callables" attribute.
 	/element/
 		- (control)`property-set`
 		- (source/area)`135 1 140 27`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 (signature)`plural(f)`
 
 Create a function that pluralizes the return of the given callable, (factor-local/parameter)&<#plural.Parameters.f[f]>.
@@ -209,6 +225,8 @@ Create a function that pluralizes the return of the given callable, (factor-loca
 	/element/
 		- (control)`property-set`
 		- (source/area)`142 1 152 42`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`unroll(f)`
 
 Given a callable taking a single parameter, create another
@@ -238,6 +256,8 @@ Equivalence:
 	/element/
 		- (control)`property-set`
 		- (source/area)`156 1 189 27`
+		- (coverage-zeros)`10`
+		- (coverage-counters)`10`
 (signature)`group(condition, iterable, initial)`
 
 Structure the given (factor-local/parameter)&<#group.Parameters.iterable[iterable]> by the given (factor-local/parameter)&<#group.Parameters.condition[condition]>.
@@ -275,6 +295,8 @@ and creates a new sequence to be populated while (factor-local/parameter)&<#grou
 	/element/
 		- (control)`property-set`
 		- (source/area)`191 1 207 15`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`191 22 191 27`
@@ -295,6 +317,8 @@ Presumes the wrapped method name is consistent with the property name.
 	/element/
 		- (control)`property-set`
 		- (source/area)`198 2 201 38`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`5`
 (signature)`__init__(self, method)`
 
 
@@ -307,6 +331,8 @@ Presumes the wrapped method name is consistent with the property name.
 	/element/
 		- (control)`property-set`
 		- (source/area)`203 2 207 15`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`4`
 (signature)`__get__(self, instance, Class)`
 
 
@@ -317,6 +343,8 @@ Presumes the wrapped method name is consistent with the property name.
 	/element/
 		- (control)`property-set`
 		- (source/area)`209 1 225 2`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`8`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		

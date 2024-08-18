@@ -4,6 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 227 25`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`115`
 
 [ os ]
 ! CONTROL:
@@ -52,6 +54,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`7 1 11 5`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`7 15 7 23`
@@ -68,6 +72,8 @@ Exception Fixture for test_critical.
 	/element/
 		- (control)`property-set`
 		- (source/area)`13 1 58 27`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`24`
 (signature)`test_critical(test)`
 
 - (context-local/factor-element)&<fault.system/process#critical[fault.system.process.critical]>
@@ -80,6 +86,8 @@ Exception Fixture for test_critical.
 	/element/
 		- (control)`property-set`
 		- (source/area)`60 1 82 14`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`11`
 (signature)`test_panic(test)`
 
 - (context-local/factor-element)&<fault.system/process#panic[fault.system.process.panic]>
@@ -95,6 +103,8 @@ on the main threaad.
 	/element/
 		- (control)`property-set`
 		- (source/area)`84 1 103 22`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`9`
 (signature)`test_interject(test)`
 
 Validate that interject manages to run a callable in a reasonable number of cycles.
@@ -107,6 +117,8 @@ Validate that interject manages to run a callable in a reasonable number of cycl
 	/element/
 		- (control)`property-set`
 		- (source/area)`105 1 110 24`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`test_Invocation_argument_vector(test)`
 
 Check for argument property existence.
@@ -119,6 +131,8 @@ Check for argument property existence.
 	/element/
 		- (control)`property-set`
 		- (source/area)`112 1 132 44`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`14`
 (signature)`test_Invocation_imports(test)`
 
 Check for a functioning imports method.
@@ -131,6 +145,8 @@ Check for a functioning imports method.
 	/element/
 		- (control)`property-set`
 		- (source/area)`134 1 148 21`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`8`
 (signature)`test_fs_pwd_no_environ(test)`
 
 - (context-local/factor-element)&<fault.system/process#fs_pwd[fault.system.process.fs_pwd]>
@@ -145,6 +161,8 @@ Path instantiation should be successful in the case that PWD is not present.
 	/element/
 		- (control)`property-set`
 		- (source/area)`150 1 158 29`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 (signature)`test_fs_pwd_environ_priority(test)`
 
 - (context-local/factor-element)&<fault.system/process#fs_pwd[fault.system.process.fs_pwd]>
@@ -159,6 +177,8 @@ Environment variable is given priority over os.getcwd.
 	/element/
 		- (control)`property-set`
 		- (source/area)`160 1 172 69`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`6`
 (signature)`test_fs_chdir(test)`
 
 - (context-local/factor-element)&<fault.system/process#fs_chdir[fault.system.process.fs_chdir]>
@@ -173,6 +193,8 @@ Validate fs_chdir's side effects.
 	/element/
 		- (control)`property-set`
 		- (source/area)`174 1 201 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`15`
 (signature)`test_scheduler_parallel_execute(test)`
 
 - (context-local/factor-element)&<fault.system/process#Scheduling[fault.system.process.Scheduling]>
@@ -188,6 +210,8 @@ Validate (context-local/factor-element)&<fault.system/process#scheduler[fault.sy
 	/element/
 		- (control)`property-set`
 		- (source/area)`203 1 228 24`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`14`
 (signature)`test_scheduler_parallel_close(test)`
 
 - (context-local/factor-element)&<fault.system/process#Scheduling[fault.system.process.Scheduling]>

@@ -4,6 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 391 0`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 Formatting and parsing tools for status frame transport envelopes.
 
 This module provides conceptual definitions for Status Frame events ((project-local/factor-element)&<types#EStruct[fault.status.types.EStruct]>) and

@@ -4,6 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 132 0`
+		- (coverage-zeros)`17`
+		- (coverage-counters)`82`
 Validate Transfer and Transport sanity.
 
 
@@ -96,6 +98,8 @@ Validate Transfer and Transport sanity.
 	/element/
 		- (control)`property-set`
 		- (source/area)`14 1 30 42`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`14`
 (signature)`test_Transfer_io_flow(test)`
 
 
@@ -106,6 +110,8 @@ Validate Transfer and Transport sanity.
 	/element/
 		- (control)`property-set`
 		- (source/area)`32 1 42 12`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`6`
 (signature)`test_Invocations_actuate(test)`
 
 - (context-local/factor-element)&<fault.kernel/io#Invocations.actuate[fault.kernel.io.Invocations.actuate]>
@@ -118,6 +124,8 @@ Validate Transfer and Transport sanity.
 	/element/
 		- (control)`property-set`
 		- (source/area)`44 1 53 39`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`6`
 (signature)`test_Invocations_allocate(test)`
 
 - (context-local/factor-element)&<fault.kernel/io#Invocations.i_allocate[fault.kernel.io.Invocations.i_allocate]>
@@ -130,6 +138,8 @@ Validate Transfer and Transport sanity.
 	/element/
 		- (control)`property-set`
 		- (source/area)`55 1 71 43`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`12`
 (signature)`test_Invocations_accept(test)`
 
 - (context-local/factor-element)&<fault.kernel/io#Invocations[fault.kernel.io.Invocations]>
@@ -144,5 +154,7 @@ Validate Transfer and Transport sanity.
 	/element/
 		- (control)`property-set`
 		- (source/area)`73 1 132 29`
+		- (coverage-zeros)`16`
+		- (coverage-counters)`34`
 (signature)`test_Transport_tp_connect(test)`
 

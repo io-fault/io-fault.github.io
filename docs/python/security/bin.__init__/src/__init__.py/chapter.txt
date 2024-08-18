@@ -4,5 +4,7 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 2 4`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 Executable entry points.
 

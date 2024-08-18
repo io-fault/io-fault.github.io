@@ -4,6 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 234 0`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 Data structures for holding failure, notification, and trace information.
 
 [ Constructor Versioning ]

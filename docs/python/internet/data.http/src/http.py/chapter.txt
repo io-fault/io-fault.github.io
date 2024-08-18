@@ -4,6 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 106 2`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 
 [ VERSION10 ]
 ! CONTROL:

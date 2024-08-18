@@ -4,6 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 67 0`
+		- (coverage-zeros)`7`
+		- (coverage-counters)`35`
 Collection of identifiers that represent the host system's implementation.
 
 Primarily, this provides information about the Root Execution Context in addition
@@ -80,6 +82,8 @@ overrides.
 	/element/
 		- (control)`property-set`
 		- (source/area)`22 1 31 36`
+		- (coverage-zeros)`5`
+		- (coverage-counters)`5`
 (signature)`_uname(flag)`
 
 Execute the (system/executable)`uname` returning its output for the given (factor-local/parameter)&<#_uname.Parameters.flag[flag]>.
@@ -94,6 +98,8 @@ Execute the (system/executable)`uname` returning its output for the given (facto
 	/element/
 		- (control)`property-set`
 		- (source/area)`33 1 51 16`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`17`
 (signature)`_cache()`
 
 

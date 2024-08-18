@@ -4,6 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 38 0`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`22`
 Weak references tools and subclasses.
 
 
@@ -24,6 +26,8 @@ Weak references tools and subclasses.
 	/element/
 		- (control)`property-set`
 		- (source/area)`6 1 38 48`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`6 14 6 31`
@@ -55,6 +59,8 @@ covering a few signatures.
 	/element/
 		- (control)`property-set`
 		- (source/area)`13 2 14 78`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`_unlinked(self, *args, **kw)`
 
 
@@ -65,6 +71,8 @@ covering a few signatures.
 	/element/
 		- (control)`property-set`
 		- (source/area)`16 2 20 37`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 (signature)`zero(self)`
 
 Execute with no arguments.
@@ -77,6 +85,8 @@ Execute with no arguments.
 	/element/
 		- (control)`property-set`
 		- (source/area)`22 2 26 40`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 (signature)`one(self, arg)`
 
 Execute with one argument.
@@ -89,6 +99,8 @@ Execute with one argument.
 	/element/
 		- (control)`property-set`
 		- (source/area)`28 2 32 42`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 (signature)`any(self, *args)`
 
 Execute with all arguments.
@@ -101,6 +113,8 @@ Execute with all arguments.
 	/element/
 		- (control)`property-set`
 		- (source/area)`34 2 38 48`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`keywords(self, *args, **kw)`
 
 Execute with all arguments and keywords.

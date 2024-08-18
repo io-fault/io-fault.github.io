@@ -4,6 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 338 0`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 Tools for navigating element trees.
 
 Provides the (factor-local/class)&<#Cursor[Cursor]> class for navigating and retrieving nodes identified

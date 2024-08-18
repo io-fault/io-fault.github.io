@@ -3,7 +3,9 @@
 		module
 	/element/
 		- (control)`property-set`
-		- (source/area)`1 1 330 0`
+		- (source/area)`1 1 334 0`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 AST manipulations for injecting coverage counters and profile timers into Python modules.
 
 
@@ -340,8 +342,8 @@ Construct instrumentation initialization nodes for injection into an (none/inval
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`243 1 272 12`
-(signature)`instrument(path, noded, address)`
+		- (source/area)`243 1 275 12`
+(signature)`instrument(record, path, noded, address)`
 
 Adjust the AST so that (invalid/unknown)&<#node> will record its execution.
 
@@ -354,7 +356,7 @@ Adjust the AST so that (invalid/unknown)&<#node> will record its execution.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`274 1 281 12`
+		- (source/area)`277 1 284 12`
 (signature)`delineate(noded)`
 
 
@@ -366,8 +368,8 @@ Adjust the AST so that (invalid/unknown)&<#node> will record its execution.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`283 1 290 37`
-(signature)`apply(path, noded)`
+		- (source/area)`286 1 293 45`
+(signature)`apply(record, path, noded)`
 
 
 [ compile ]
@@ -376,7 +378,7 @@ Adjust the AST so that (invalid/unknown)&<#node> will record its execution.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`292 1 318 38`
+		- (source/area)`295 1 322 38`
 (signature)`compile(factor, source, path, constants)`
 
 Compile Python source of a module into an instrumented (invalid/unknown)&<#types.CodeObject>

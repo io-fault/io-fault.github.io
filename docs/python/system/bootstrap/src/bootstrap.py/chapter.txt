@@ -4,6 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 155 0`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`76`
 Bootstrapping for applications that depend on the (project-local/project-factor)&<fault.system/factors[fault.system.factors]> loader.
 
 [ Rationale ]
@@ -123,6 +125,8 @@ available under (project-local/unknown)&<system.factors.context>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`38 1 43 59`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`5`
 (signature)`package_import(bytecode, path, root, pkg)`
 
 
@@ -135,6 +139,8 @@ available under (project-local/unknown)&<system.factors.context>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`45 1 51 52`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`6`
 (signature)`module_import(bytecode, path, root, mod)`
 
 
@@ -145,6 +151,8 @@ available under (project-local/unknown)&<system.factors.context>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`53 1 68 17`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`7`
 (signature)`load_code(name, bc, src)`
 
 Given a marshalled bytecode path and source file, load or compile whichever
@@ -161,6 +169,8 @@ as a key instead of the file paths.
 	/element/
 		- (control)`property-set`
 		- (source/area)`70 1 91 9`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`16`
 (signature)`install_packages(rename, modules, bytecode, path, root, package_list)`
 
 Allocate new package module instances and assign them into (factor-local/parameter)&<#install_packages.Parameters.modules[modules]>.
@@ -173,6 +183,8 @@ Allocate new package module instances and assign them into (factor-local/paramet
 	/element/
 		- (control)`property-set`
 		- (source/area)`93 1 108 9`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`12`
 (signature)`install_modules(rename, modules, bytecode, path, root, module_list)`
 
 Allocate new module instances and assign them into (factor-local/parameter)&<#install_modules.Parameters.modules[modules]>.
@@ -200,6 +212,8 @@ Allocate new module instances and assign them into (factor-local/parameter)&<#in
 	/element/
 		- (control)`property-set`
 		- (source/area)`115 1 120 71`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`install(modules, bytecode, path, root)`
 
 Install the bootstrap factors into (factor-local/parameter)&<#install.Parameters.modules[modules]>. Normally, (none/invalid)&<http://fault.io/dev/null[sys.modules]>.
@@ -212,6 +226,8 @@ Install the bootstrap factors into (factor-local/parameter)&<#install.Parameters
 	/element/
 		- (control)`property-set`
 		- (source/area)`122 1 135 43`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`8`
 (signature)`finish(factors, finder, modules)`
 
 Given an activated (project-local/project-factor)&<fault.system/factors[fault.system.factors]> module, assign specs and loaders to the previously
@@ -225,6 +241,8 @@ bootstrapped modules and to the factors module itself.
 	/element/
 		- (control)`property-set`
 		- (source/area)`137 1 155 15`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`8`
 (signature)`integrate(faultpath, faultname, faultform, images, system, python, arch, form, *products)`
 
 Integrate the factor environment into Python's import system.

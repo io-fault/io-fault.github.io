@@ -4,6 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 56 0`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 Start the user service daemon and detach the process from the terminal device.
 
 

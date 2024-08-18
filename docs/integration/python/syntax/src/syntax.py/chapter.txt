@@ -4,6 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 49 1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 AST tools for manipulating and querying a Python AST.
 
 Provides functions for instrumentation(future), constant injection, and coverable area detection(limited).

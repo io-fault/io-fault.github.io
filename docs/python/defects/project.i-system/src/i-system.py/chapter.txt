@@ -4,6 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 415 0`
+		- (coverage-zeros)`8`
+		- (coverage-counters)`226`
 Product directory interface checks.
 
 
@@ -88,6 +90,8 @@ Product directory interface checks.
 	/element/
 		- (control)`property-set`
 		- (source/area)`10 1 16 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`6`
 (signature)`setup(pd)`
 
 
@@ -100,6 +104,8 @@ Product directory interface checks.
 	/element/
 		- (control)`property-set`
 		- (source/area)`18 1 31 31`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`11`
 (signature)`product_a(test)`
 
 
@@ -110,6 +116,8 @@ Product directory interface checks.
 	/element/
 		- (control)`property-set`
 		- (source/area)`33 1 39 47`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 (signature)`test_Product_attributes(test)`
 
 - (context-local/factor-element)&<fault.project/system#Product.project_index_route[fault.project.system.Product.project_index_route]>
@@ -122,6 +130,8 @@ Product directory interface checks.
 	/element/
 		- (control)`property-set`
 		- (source/area)`41 1 47 46`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 (signature)`test_Product_import(test)`
 
 - (context-local/factor-element)&<fault.project/system#Product.import_protocol[fault.project.system.Product.import_protocol]>
@@ -134,6 +144,8 @@ Product directory interface checks.
 	/element/
 		- (control)`property-set`
 		- (source/area)`49 1 63 28`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`10`
 (signature)`test_iterprojects_root_no_context(test)`
 
 - (context-local/factor-element)&<fault.project/system#Product.iterprojects[fault.project.system.Product.iterprojects]>
@@ -146,6 +158,8 @@ Product directory interface checks.
 	/element/
 		- (control)`property-set`
 		- (source/area)`65 1 80 25`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`11`
 (signature)`test_update(test)`
 
 - (context-local/factor-element)&<fault.project/system#Product.update[fault.project.system.Product.update]>
@@ -158,6 +172,8 @@ Product directory interface checks.
 	/element/
 		- (control)`property-set`
 		- (source/area)`82 1 102 40`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`10`
 (signature)`test_update_nested(test)`
 
 - (context-local/factor-element)&<fault.project/system#Product.update[fault.project.system.Product.update]>
@@ -170,6 +186,8 @@ Product directory interface checks.
 	/element/
 		- (control)`property-set`
 		- (source/area)`104 1 126 41`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`10`
 (signature)`test_cache_io(test)`
 
 - (context-local/factor-element)&<fault.project/system#Product.store[fault.project.system.Product.store]>
@@ -183,6 +201,8 @@ Product directory interface checks.
 	/element/
 		- (control)`property-set`
 		- (source/area)`128 1 143 35`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`10`
 (signature)`test_Product_select(test)`
 
 - (context-local/factor-element)&<fault.project/system#Product.identifier_by_factor[fault.project.system.Product.identifier_by_factor]>
@@ -196,6 +216,8 @@ Product directory interface checks.
 	/element/
 		- (control)`property-set`
 		- (source/area)`145 1 157 47`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`8`
 (signature)`test_Product_image(test)`
 
 - (context-local/factor-element)&<fault.project/system#Product.image[fault.project.system.Product.image]>
@@ -208,6 +230,8 @@ Product directory interface checks.
 	/element/
 		- (control)`property-set`
 		- (source/area)`159 1 169 32`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`5`
 (signature)`test_Project_no_corpus_part(test)`
 
 - (context-local/factor-element)&<fault.project/system#Project._iid_corpus_name_pair[fault.project.system.Project._iid_corpus_name_pair]>
@@ -222,6 +246,8 @@ Product directory interface checks.
 	/element/
 		- (control)`property-set`
 		- (source/area)`171 1 181 29`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`5`
 (signature)`test_Project_corpus_name(test)`
 
 - (context-local/factor-element)&<fault.project/system#Project._iid_corpus_name_pair[fault.project.system.Project._iid_corpus_name_pair]>
@@ -236,6 +262,8 @@ Product directory interface checks.
 	/element/
 		- (control)`property-set`
 		- (source/area)`183 1 196 51`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`9`
 (signature)`test_Project_select_none(test)`
 
 - (context-local/factor-element)&<fault.project/system#Project.select[fault.project.system.Project.select]>
@@ -248,6 +276,8 @@ Product directory interface checks.
 	/element/
 		- (control)`property-set`
 		- (source/area)`198 1 214 69`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`12`
 (signature)`test_Project_refer_absolute(test)`
 
 - (context-local/factor-element)&<fault.project/system#Project.refer[fault.project.system.Project.refer]>
@@ -260,6 +290,8 @@ Product directory interface checks.
 	/element/
 		- (control)`property-set`
 		- (source/area)`216 1 234 77`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`13`
 (signature)`test_Project_refer_relative(test)`
 
 - (context-local/factor-element)&<fault.project/system#Project.refer[fault.project.system.Project.refer]>
@@ -272,6 +304,8 @@ Product directory interface checks.
 	/element/
 		- (control)`property-set`
 		- (source/area)`236 1 269 94`
+		- (coverage-zeros)`8`
+		- (coverage-counters)`16`
 (signature)`test_Project_image_polynomial(test)`
 
 - (context-local/factor-element)&<fault.project/system#Project.image[fault.project.system.Project.image]>
@@ -284,6 +318,8 @@ Product directory interface checks.
 	/element/
 		- (control)`property-set`
 		- (source/area)`271 1 287 76`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`9`
 (signature)`test_Project_extensions(test)`
 
 - (context-local/factor-element)&<fault.project/system#Project.extensions[fault.project.system.Project.extensions]>
@@ -300,6 +336,8 @@ Validate successful extensions.
 	/element/
 		- (control)`property-set`
 		- (source/area)`289 1 315 64`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`16`
 (signature)`test_Project_extensions_vacancies(test)`
 
 - (context-local/factor-element)&<fault.project/system#Project.extensions[fault.project.system.Project.extensions]>
@@ -316,6 +354,8 @@ Validate that exceptions aren't raised by icon and synopsis.
 	/element/
 		- (control)`property-set`
 		- (source/area)`317 1 322 86`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`test_Context_import_protocol(test)`
 
 - (context-local/factor-element)&<fault.project/system#Context.import_protocol[fault.project.system.Context.import_protocol]>
@@ -328,6 +368,8 @@ Validate that exceptions aren't raised by icon and synopsis.
 	/element/
 		- (control)`property-set`
 		- (source/area)`324 1 337 45`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`8`
 (signature)`test_Context_connect(test)`
 
 - (context-local/factor-element)&<fault.project/system#Context.connect[fault.project.system.Context.connect]>
@@ -340,6 +382,8 @@ Validate that exceptions aren't raised by icon and synopsis.
 	/element/
 		- (control)`property-set`
 		- (source/area)`339 1 351 70`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`9`
 (signature)`test_Context_project(test)`
 
 - (context-local/factor-element)&<fault.project/system#Context.project[fault.project.system.Context.project]>
@@ -352,6 +396,8 @@ Validate that exceptions aren't raised by icon and synopsis.
 	/element/
 		- (control)`property-set`
 		- (source/area)`353 1 369 53`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`11`
 (signature)`test_Context_load(test)`
 
 - (context-local/factor-element)&<fault.project/system#Context.load[fault.project.system.Context.load]>
@@ -364,6 +410,8 @@ Validate that exceptions aren't raised by icon and synopsis.
 	/element/
 		- (control)`property-set`
 		- (source/area)`371 1 394 35`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`12`
 (signature)`test_project_declaration(test)`
 
 - (context-local/factor-element)&<fault.project/system#structure_project_declaration[fault.project.system.structure_project_declaration]>
@@ -377,6 +425,8 @@ Validate that exceptions aren't raised by icon and synopsis.
 	/element/
 		- (control)`property-set`
 		- (source/area)`396 1 415 23`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`8`
 (signature)`test_project_declaration_exceptions(test)`
 
 - (context-local/factor-element)&<fault.project/system#structure_project_declaration[fault.project.system.structure_project_declaration]>

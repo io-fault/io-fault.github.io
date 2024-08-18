@@ -4,6 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 216 0`
+		- (coverage-zeros)`35`
+		- (coverage-counters)`83`
 Memory management classes for implementing usage constraints
 in parts of processes.
 
@@ -45,6 +47,8 @@ in parts of processes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`9 1 27 17`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`7`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`9 14 9 22`
@@ -74,6 +78,8 @@ identifier hashing for memory-free signalling.
 	/element/
 		- (control)`property-set`
 		- (source/area)`23 2 27 17`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 (signature)`__hash__(self)`
 
 Object Identifier based hash for allowing indexing of allocated instances.
@@ -86,6 +92,8 @@ Object Identifier based hash for allowing indexing of allocated instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`29 1 102 29`
+		- (coverage-zeros)`4`
+		- (coverage-counters)`7`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`29 21 29 26`
@@ -127,6 +135,8 @@ Memory pool that uses weakref's and context managers to reclaim memory.
 	/element/
 		- (control)`property-set`
 		- (source/area)`37 2 44 19`
+		- (coverage-zeros)`4`
+		- (coverage-counters)`4`
 (signature)`from_mib(typ, size)`
 
 Construct a Reservoir from the given number of Mebibytes desired.
@@ -141,6 +151,8 @@ Construct a Reservoir from the given number of Mebibytes desired.
 	/element/
 		- (control)`property-set`
 		- (source/area)`46 2 60 10`
+		- (coverage-zeros)`7`
+		- (coverage-counters)`7`
 (signature)`__init__(self)`
 
 
@@ -171,6 +183,8 @@ Number of memory units available.
 	/element/
 		- (control)`property-set`
 		- (source/area)`74 2 83 12`
+		- (coverage-zeros)`6`
+		- (coverage-counters)`6`
 (signature)`allocate(self)`
 
 Allocate a unit of memory for use. When Python references to the memory object
@@ -186,6 +200,8 @@ no longer exist, another unit will be added.
 	/element/
 		- (control)`property-set`
 		- (source/area)`85 2 96 7`
+		- (coverage-zeros)`4`
+		- (coverage-counters)`4`
 (signature)`reclaim(self, memory)`
 
 
@@ -196,6 +212,8 @@ no longer exist, another unit will be added.
 	/element/
 		- (control)`property-set`
 		- (source/area)`98 2 102 29`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 (signature)`acquire(self, event)`
 
 Explicitly add an object to the available segments.
@@ -208,6 +226,8 @@ Explicitly add an object to the available segments.
 	/element/
 		- (control)`property-set`
 		- (source/area)`104 1 216 50`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`104 16 104 21`
@@ -246,6 +266,8 @@ its appropriate to close the memory map.
 	/element/
 		- (control)`property-set`
 		- (source/area)`115 2 128 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`5`
 (signature)`open(Class, path)`
 
 Open the file at the given path in read-only mode and
@@ -260,6 +282,8 @@ to the contents.
 	/element/
 		- (control)`property-set`
 		- (source/area)`130 2 140 32`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`__init__(self, memory)`
 
 Initialize an instance using the given (factor-local/parameter)&<#Segments.__init__.Parameters.memory[memory]>. An instance
@@ -285,6 +309,8 @@ created by (none/invalid)&<http://fault.io/dev/null[mmap.mmap]>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`142 2 174 22`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`9`
 (signature)`__del__(self)`
 
 Manage the final stages of (factor-local/class)&<#Segments[Segments]> deallocation by transitioning
@@ -304,6 +330,8 @@ to the (factor-local/class)&<#Segments[Segments]> allowing the file descriptor a
 	/element/
 		- (control)`property-set`
 		- (source/area)`176 2 185 18`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 (signature)`decrement(self)`
 
 Used internally by (factor-local/method)&<#Segments.__del__[__del__]> to manage the deallocation process
@@ -317,6 +345,8 @@ when there are outstanding references to the memory mapped region.
 	/element/
 		- (control)`property-set`
 		- (source/area)`187 2 210 15`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`14`
 (signature)`select(self, start, stop, size)`
 
 Constructs an iterator to the parameterized range over the
@@ -330,6 +360,8 @@ Constructs an iterator to the parameterized range over the
 	/element/
 		- (control)`property-set`
 		- (source/area)`212 2 216 50`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`__iter__(self)`
 
 Return an iterator to the entire region in sixteen kilobyte sizes.

@@ -4,6 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 1019 0`
+		- (coverage-zeros)`10`
+		- (coverage-counters)`579`
 Check the implementation of filesystem routes.
 
 
@@ -78,6 +80,8 @@ Check the implementation of filesystem routes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`13 1 16 17`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`d_setup(x, path)`
 
 
@@ -90,6 +94,8 @@ Check the implementation of filesystem routes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`17 1 19 20`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`_(x, path)`
 
 
@@ -100,6 +106,8 @@ Check the implementation of filesystem routes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`21 1 39 59`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`12`
 (signature)`test_constants(test)`
 
 Check for (project-local/unknown)&<files.root> presence and sanity.
@@ -114,6 +122,8 @@ Check for (project-local/unknown)&<files.root> presence and sanity.
 	/element/
 		- (control)`property-set`
 		- (source/area)`41 1 50 65`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`7`
 (signature)`test_Path(test)`
 
 
@@ -126,6 +136,8 @@ Check for (project-local/unknown)&<files.root> presence and sanity.
 	/element/
 		- (control)`property-set`
 		- (source/area)`52 1 58 25`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`5`
 (signature)`test_Path_filename(test)`
 
 
@@ -138,6 +150,8 @@ Check for (project-local/unknown)&<files.root> presence and sanity.
 	/element/
 		- (control)`property-set`
 		- (source/area)`60 1 67 40`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`6`
 (signature)`test_Path_repr(test)`
 
 
@@ -150,6 +164,8 @@ Check for (project-local/unknown)&<files.root> presence and sanity.
 	/element/
 		- (control)`property-set`
 		- (source/area)`69 1 79 42`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`8`
 (signature)`test_Path_string_cache(test)`
 
 
@@ -162,6 +178,8 @@ Check for (project-local/unknown)&<files.root> presence and sanity.
 	/element/
 		- (control)`property-set`
 		- (source/area)`81 1 88 2`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`test_Path_from_partitioned_string(test)`
 
 
@@ -174,6 +192,8 @@ Check for (project-local/unknown)&<files.root> presence and sanity.
 	/element/
 		- (control)`property-set`
 		- (source/area)`90 1 92 34`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`test_Path_bytespath(test)`
 
 
@@ -186,6 +206,8 @@ Check for (project-local/unknown)&<files.root> presence and sanity.
 	/element/
 		- (control)`property-set`
 		- (source/area)`94 1 102 35`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`5`
 (signature)`test_Path_temporary(test)`
 
 
@@ -196,6 +218,8 @@ Check for (project-local/unknown)&<files.root> presence and sanity.
 	/element/
 		- (control)`property-set`
 		- (source/area)`104 1 129 18`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`17`
 (signature)`test_Path_list(test)`
 
 - (factor-local/data)&<#lib[lib.Path.fs_list]>
@@ -208,6 +232,8 @@ Check for (project-local/unknown)&<files.root> presence and sanity.
 	/element/
 		- (control)`property-set`
 		- (source/area)`131 1 171 40`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`29`
 (signature)`test_Path_iterfiles(test)`
 
 - (factor-local/data)&<#lib[lib.Path.fs_iterfiles]>
@@ -220,6 +246,8 @@ Check for (project-local/unknown)&<files.root> presence and sanity.
 	/element/
 		- (control)`property-set`
 		- (source/area)`173 1 197 23`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`13`
 (signature)`test_Path_index(test)`
 
 - (factor-local/data)&<#lib[lib.Path.fs_index]>
@@ -233,6 +261,8 @@ Check for (project-local/unknown)&<files.root> presence and sanity.
 	/element/
 		- (control)`property-set`
 		- (source/area)`199 1 221 22`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`13`
 (signature)`test_Path_snapshot(test)`
 
 - (factor-local/data)&<#lib[lib.Path.fs_snapshot]>
@@ -245,6 +275,8 @@ Check for (project-local/unknown)&<files.root> presence and sanity.
 	/element/
 		- (control)`property-set`
 		- (source/area)`223 1 238 22`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`10`
 (signature)`test_Path_real(test)`
 
 - (factor-local/data)&<#lib[lib.Path.fs_real]>
@@ -259,6 +291,8 @@ Check for (project-local/unknown)&<files.root> presence and sanity.
 	/element/
 		- (control)`property-set`
 		- (source/area)`240 1 268 36`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`23`
 (signature)`test_Path_replace(test)`
 
 
@@ -269,6 +303,8 @@ Check for (project-local/unknown)&<files.root> presence and sanity.
 	/element/
 		- (control)`property-set`
 		- (source/area)`270 1 286 43`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`10`
 (signature)`test_Path_init(test)`
 
 Test (factor-local/data)&<#lib[lib.Path.fs_init]> checking that the parent directories are
@@ -282,6 +318,8 @@ properly created regardless of the selected type.
 	/element/
 		- (control)`property-set`
 		- (source/area)`288 1 304 30`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`10`
 (signature)`test_Path_mkdir(test)`
 
 Test (factor-local/data)&<#lib[lib.Path.fs_mkdir]> checking that the parent directories are
@@ -295,6 +333,8 @@ properly created regardless of the selected type.
 	/element/
 		- (control)`property-set`
 		- (source/area)`306 1 328 28`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`16`
 (signature)`test_Path_type_void(test)`
 
 - (factor-local/data)&<#lib[lib.Path.fs_type]>
@@ -309,6 +349,8 @@ properly created regardless of the selected type.
 	/element/
 		- (control)`property-set`
 		- (source/area)`330 1 335 26`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 (signature)`test_Path_extension(test)`
 
 
@@ -321,6 +363,8 @@ properly created regardless of the selected type.
 	/element/
 		- (control)`property-set`
 		- (source/area)`337 1 349 23`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`10`
 (signature)`test_Path_size(test)`
 
 
@@ -331,6 +375,8 @@ properly created regardless of the selected type.
 	/element/
 		- (control)`property-set`
 		- (source/area)`351 1 376 33`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`15`
 (signature)`test_Path_get_last_modified(test)`
 
 System check.
@@ -343,6 +389,8 @@ System check.
 	/element/
 		- (control)`property-set`
 		- (source/area)`378 1 397 61`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`12`
 (signature)`test_Path_set_last_modified(test)`
 
 System check.
@@ -355,6 +403,8 @@ System check.
 	/element/
 		- (control)`property-set`
 		- (source/area)`399 1 409 38`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`7`
 (signature)`test_Path_get_text_content(test)`
 
 Validate (factor-local/data)&<#lib[lib.Path.get_text_content]>.
@@ -367,6 +417,8 @@ Validate (factor-local/data)&<#lib[lib.Path.get_text_content]>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`411 1 420 27`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`6`
 (signature)`test_Path_set_text_content(test)`
 
 Validate (factor-local/data)&<#lib[lib.Path.set_text_content]>.
@@ -379,6 +431,8 @@ Validate (factor-local/data)&<#lib[lib.Path.set_text_content]>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`422 1 443 40`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`14`
 (signature)`test_Path_since(test)`
 
 (factor-local/data)&<#lib[lib.Path.fs_since]>
@@ -391,6 +445,8 @@ Validate (factor-local/data)&<#lib[lib.Path.set_text_content]>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`445 1 470 49`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`13`
 (signature)`test_Path_construct(test)`
 
 Test the various classmethods that construct file instances.
@@ -403,6 +459,8 @@ Test the various classmethods that construct file instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`472 1 490 34`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`10`
 (signature)`test_Path_relative_resolution(test)`
 
 - (factor-local/data)&<#lib[lib.Path.__pos__]>
@@ -415,6 +473,8 @@ Test the various classmethods that construct file instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`492 1 502 59`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`7`
 (signature)`test_Path_basename_manipulations(test)`
 
 - (factor-local/data)&<#lib[lib.Path.prefix_filename]>
@@ -428,6 +488,8 @@ Test the various classmethods that construct file instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`504 1 517 78`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`8`
 (signature)`test_Path_join(test)`
 
 - (factor-local/data)&<#lib[lib.Path.join]>
@@ -442,6 +504,8 @@ Test the various classmethods that construct file instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`519 1 530 37`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`8`
 (signature)`test_Path_properties(test)`
 
 
@@ -452,6 +516,8 @@ Test the various classmethods that construct file instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`532 1 554 41`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`14`
 (signature)`test_Path_open(test)`
 
 - (factor-local/data)&<#lib[lib.File.fs_open]>
@@ -464,6 +530,8 @@ Test the various classmethods that construct file instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`556 1 569 59`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`8`
 (signature)`test_Path_open_exception(test)`
 
 - (factor-local/data)&<#lib[lib.File.fs_open]>
@@ -476,6 +544,8 @@ Test the various classmethods that construct file instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`571 1 593 28`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`16`
 (signature)`test_Path_void(test)`
 
 - (factor-local/data)&<#lib[lib.Path.fs_void]>
@@ -490,6 +560,8 @@ Test the various classmethods that construct file instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`595 1 626 37`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`24`
 (signature)`link_checks(test, create_link)`
 
 
@@ -500,6 +572,8 @@ Test the various classmethods that construct file instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`628 1 632 45`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`test_Path_relative_links(test)`
 
 (factor-local/data)&<#lib[lib.Path.fs_link_relative]>
@@ -512,6 +586,8 @@ Test the various classmethods that construct file instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`634 1 638 45`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`test_Path_absolute_links(test)`
 
 (factor-local/data)&<#lib[lib.Path.fs_link_absolute]>
@@ -524,6 +600,8 @@ Test the various classmethods that construct file instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`640 1 663 64`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`16`
 (signature)`test_Path_recursive_since(test)`
 
 (factor-local/data)&<#lib[lib.Path.fs_since]> with recursive directories.
@@ -536,6 +614,8 @@ Test the various classmethods that construct file instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`665 1 686 64`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`14`
 (signature)`test_Path_follow_links(test)`
 
 - (factor-local/data)&<#lib[lib.Path.fs_follow_links]>
@@ -548,6 +628,8 @@ Test the various classmethods that construct file instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`688 1 707 33`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`13`
 (signature)`test_Path_io(test)`
 
 - (factor-local/data)&<#lib[lib.Path.fs_load]>
@@ -561,6 +643,8 @@ Test the various classmethods that construct file instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`709 1 716 34`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`5`
 (signature)`test_Path_python_protocol(test)`
 
 - (factor-local/data)&<#lib[lib.Path.__fspath__]>
@@ -573,6 +657,8 @@ Test the various classmethods that construct file instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`718 1 740 53`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`9`
 (signature)`test_Path_snapshot_sanity(test)`
 
 - (factor-local/data)&<#lib[lib.Path.fs_snapshot]>
@@ -585,6 +671,8 @@ Test the various classmethods that construct file instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`742 1 766 19`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`11`
 (signature)`test_Path_snapshot_limit(test)`
 
 - (factor-local/data)&<#lib[lib.Path.fs_snapshot]>
@@ -597,6 +685,8 @@ Test the various classmethods that construct file instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`768 1 821 37`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`25`
 (signature)`test_Path_snapshot_depth(test)`
 
 - (factor-local/data)&<#lib[lib.Path.fs_snapshot]>
@@ -609,6 +699,8 @@ Test the various classmethods that construct file instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`823 1 847 32`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`15`
 (signature)`test_Path_fs_alloc(test)`
 
 - (factor-local/data)&<#lib[lib.Path.fs_alloc]>
@@ -621,6 +713,8 @@ Test the various classmethods that construct file instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`849 1 891 50`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`25`
 (signature)`test_Path_fs_require_void(test)`
 
 - (factor-local/data)&<#lib[lib.Path.fs_require]>
@@ -636,6 +730,8 @@ Validate that missing file cases are handled.
 	/element/
 		- (control)`property-set`
 		- (source/area)`893 1 923 44`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`17`
 (signature)`test_Path_fs_require_type(test)`
 
 - (factor-local/data)&<#lib[lib.Path.fs_require]>
@@ -651,6 +747,8 @@ Validate that fs_require checks the type.
 	/element/
 		- (control)`property-set`
 		- (source/area)`925 1 950 44`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`14`
 (signature)`test_Path_fs_require_permissions(test)`
 
 - (factor-local/data)&<#lib[lib.Path.fs_require]>
@@ -666,6 +764,8 @@ Validate that fs_require checks the properties.
 	/element/
 		- (control)`property-set`
 		- (source/area)`952 1 991 44`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`22`
 (signature)`test_Path_fs_require_directory_control(test)`
 
 - (factor-local/data)&<#lib[lib.Path.fs_require]>
@@ -681,6 +781,8 @@ Validate that fs_require allows for optional directory.
 	/element/
 		- (control)`property-set`
 		- (source/area)`993 1 1019 55`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`11`
 (signature)`test_Path_fs_require_accessibility(test)`
 
 - (factor-local/data)&<#lib[lib.Path.fs_require]>

@@ -4,6 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 24 22`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 Execute the (system/command)`man` found in (system/environ)`PATH` with the environment
 configured to find fault manual pages provided by the product set initialized by (context-local/project-name)&<system.root>.
 

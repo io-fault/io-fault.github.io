@@ -4,6 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 300 15`
+		- (coverage-zeros)`28`
+		- (coverage-counters)`145`
 Module finder and loader for Factored Projects.
 
 
@@ -54,6 +56,8 @@ Module finder and loader for Factored Projects.
 	/element/
 		- (control)`property-set`
 		- (source/area)`10 1 267 23`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`10 22 10 27`
@@ -106,6 +110,8 @@ Select an image based on the configured variants querying the connected factor p
 	/element/
 		- (control)`property-set`
 		- (source/area)`19 2 66 91`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`19 15 19 50`
@@ -137,6 +143,8 @@ against the source unlike Python's builtin loader.
 	/element/
 		- (control)`property-set`
 		- (source/area)`26 3 31 14`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`__init__(self, bytecode, fullname, path)`
 
 
@@ -147,6 +155,8 @@ against the source unlike Python's builtin loader.
 	/element/
 		- (control)`property-set`
 		- (source/area)`32 3 40 11`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`5`
 (signature)`from_nothing(Class, *args)`
 
 Create the (factor-local/class)&<#IntegralFinder.Loader[Loader]> instance with (factor-local/method)&<#IntegralFinder.Loader.get_code[get_code]> overridden to return
@@ -162,6 +172,8 @@ a code object created from a `pass` statement.
 	/element/
 		- (control)`property-set`
 		- (source/area)`42 3 50 30`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`6`
 (signature)`exec_module(self, module)`
 
 
@@ -174,6 +186,8 @@ a code object created from a `pass` statement.
 	/element/
 		- (control)`property-set`
 		- (source/area)`52 3 63 79`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`5`
 (signature)`get_code(self, fullname)`
 
 
@@ -186,6 +200,8 @@ a code object created from a `pass` statement.
 	/element/
 		- (control)`property-set`
 		- (source/area)`65 3 66 91`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`set_data(self, *args, **kw)`
 
 
@@ -196,6 +212,8 @@ a code object created from a `pass` statement.
 	/element/
 		- (control)`property-set`
 		- (source/area)`68 2 97 4`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`11`
 (signature)`__init__(self, python_bytecode_variants, extension_variants)`
 
 Initialize a finder instance for use with the given variants.
@@ -208,6 +226,8 @@ Initialize a finder instance for use with the given variants.
 	/element/
 		- (control)`property-set`
 		- (source/area)`99 2 108 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 (signature)`connect(self, route)`
 
 Add the route to finder connecting its subdirectories for import purposes.
@@ -222,6 +242,8 @@ Similar to adding a filesystem path to Python's (invalid/unknown)&<#sys.path>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`110 2 145 13`
+		- (coverage-zeros)`22`
+		- (coverage-counters)`22`
 (signature)`disconnect(self, route)`
 
 Remove a route from the finder's set eliminating any relevant index entries.
@@ -236,6 +258,8 @@ Remove a route from the finder's set eliminating any relevant index entries.
 	/element/
 		- (control)`property-set`
 		- (source/area)`146 2 147 6`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`invalidate_caches(self)`
 
 
@@ -246,6 +270,8 @@ Remove a route from the finder's set eliminating any relevant index entries.
 	/element/
 		- (control)`property-set`
 		- (source/area)`149 2 166 27`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`8`
 (signature)`find(self, name)`
 
 Retrieve the product with a root that matches the start of the given (factor-local/parameter)&<#IntegralFinder.find.Parameters.name[name]>.
@@ -258,6 +284,8 @@ Retrieve the product with a root that matches the start of the given (factor-loc
 	/element/
 		- (control)`property-set`
 		- (source/area)`168 2 249 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`46`
 (signature)`find_spec(self, name, path)`
 
 Using the (invalid/unknown)&<#index>, check for the presence of (invalid/unknown)&<#name's> initial package.
@@ -272,6 +300,8 @@ used to load either an extension module or a Python bytecode module.
 	/element/
 		- (control)`property-set`
 		- (source/area)`250 2 267 23`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 (signature)`create(Class, system, python, host)`
 
 Construct a standard loader selecting images with the given (factor-local/parameter)&<#IntegralFinder.create.Parameters.form[form]>.
@@ -284,6 +314,8 @@ Construct a standard loader selecting images with the given (factor-local/parame
 	/element/
 		- (control)`property-set`
 		- (source/area)`269 1 301 14`
+		- (coverage-zeros)`4`
+		- (coverage-counters)`16`
 (signature)`setup()`
 
 Create and install a configured (factor-local/class)&<#IntegralFinder[IntegralFinder]>.

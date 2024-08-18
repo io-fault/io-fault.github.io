@@ -4,6 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 78 0`
+		- (coverage-zeros)`15`
+		- (coverage-counters)`47`
 
 [ os ]
 ! CONTROL:
@@ -64,6 +66,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`7 1 58 45`
+		- (coverage-zeros)`15`
+		- (coverage-counters)`32`
 (signature)`fork_and_circulate(test, am, channels)`
 
 
@@ -74,6 +78,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`60 1 66 39`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 (signature)`test_bidirectional(test)`
 
 Check for IPC via bidirectional spawns
@@ -86,6 +92,8 @@ Check for IPC via bidirectional spawns
 	/element/
 		- (control)`property-set`
 		- (source/area)`68 1 78 39`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`5`
 (signature)`test_unidirectional(test)`
 
 Check for IPC via unidirectional spawns

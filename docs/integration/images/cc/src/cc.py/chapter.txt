@@ -4,6 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 810 0`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 Software Construction Context implementation in Python.
 
 

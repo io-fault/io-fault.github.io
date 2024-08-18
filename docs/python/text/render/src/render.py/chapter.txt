@@ -4,6 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 324 20`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 Format text elements into text images.
 
 Paragraph level formatting functions usually return (factor-local/data)&<#Fragment[Fragment]> while section-level

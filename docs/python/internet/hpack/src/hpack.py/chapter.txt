@@ -4,6 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 411 12`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 HTTP/2 header compression tools.
 
 Provides state machines for managing the dynamic tables needed for connections.

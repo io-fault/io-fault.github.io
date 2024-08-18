@@ -4,6 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 116 0`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`36`
 Naive prefix searching implementations.
 
 
@@ -34,6 +36,8 @@ Naive prefix searching implementations.
 	/element/
 		- (control)`property-set`
 		- (source/area)`8 1 116 37`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 Subsequence search implementation based on scanning the possible
 sizes and checking the candidate subsequence's presence in a set.
 
@@ -64,6 +68,8 @@ it may be a reasonable implmentation selection.
 	/element/
 		- (control)`property-set`
 		- (source/area)`33 2 56 20`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`6`
 (signature)`__init__(self, sequences, offset, order)`
 
 Create a SubsequenceScan from the given set of sequences.
@@ -98,6 +104,8 @@ Create a SubsequenceScan from the given set of sequences.
 	/element/
 		- (control)`property-set`
 		- (source/area)`58 2 67 37`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 (signature)`add(self, *values)`
 
 Add new values to the set of sequences.
@@ -113,6 +121,8 @@ Add new values to the set of sequences.
 	/element/
 		- (control)`property-set`
 		- (source/area)`69 2 78 37`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 (signature)`discard(self, *values)`
 
 Remove values from the set of sequences.
@@ -128,6 +138,8 @@ Remove values from the set of sequences.
 	/element/
 		- (control)`property-set`
 		- (source/area)`80 2 92 11`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`7`
 (signature)`matches(self, key)`
 
 Identify all strings in the set that match the given key based
@@ -143,6 +155,8 @@ on the configured offset.
 	/element/
 		- (control)`property-set`
 		- (source/area)`94 2 97 16`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`3`
 (signature)`get(self, key)`
 
 
@@ -155,6 +169,8 @@ on the configured offset.
 	/element/
 		- (control)`property-set`
 		- (source/area)`99 2 102 14`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`__contains__(self, key)`
 
 
@@ -165,6 +181,8 @@ on the configured offset.
 	/element/
 		- (control)`property-set`
 		- (source/area)`104 2 110 21`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 (signature)`__getitem__(self, key)`
 
 Get the first match in the set of strings.
@@ -179,6 +197,8 @@ Get the first match in the set of strings.
 	/element/
 		- (control)`property-set`
 		- (source/area)`112 2 113 29`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`values(self)`
 
 

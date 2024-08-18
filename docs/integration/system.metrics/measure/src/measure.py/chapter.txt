@@ -4,6 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 18 0`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 Measure the source presented on standard input using (project-local/factor-element)&<syntax#profile[system.metrics.syntax.profile]>
 and write the JSON document to standard output.
 

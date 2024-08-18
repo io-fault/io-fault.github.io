@@ -4,6 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 20 0`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`10`
 Executable factor index for (invalid/unknown)&<#fault.system.tool> bindings.
 
 
@@ -62,6 +64,8 @@ Executable factor index for (invalid/unknown)&<#fault.system.tool> bindings.
 	/element/
 		- (control)`property-set`
 		- (source/area)`14 1 15 69`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`activate(factor, element)`
 
 
@@ -74,6 +78,8 @@ Executable factor index for (invalid/unknown)&<#fault.system.tool> bindings.
 	/element/
 		- (control)`property-set`
 		- (source/area)`17 1 20 36`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`3`
 		- (type/syntax)`process.Exit`
 		- (type/context-local/factor-element)&<fault.system/process#Exit[fault.system.process.Exit]>
 		

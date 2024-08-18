@@ -4,6 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 79 0`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`37`
 
 [ core ]
 ! CONTROL:
@@ -24,6 +26,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`3 1 38 21`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`13`
 (signature)`test_Condition(test)`
 
 
@@ -36,6 +40,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`40 1 43 38`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`test_Inexorable(test)`
 
 
@@ -48,5 +54,7 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`45 1 79 26`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`19`
 (signature)`test_Join(test)`
 

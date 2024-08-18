@@ -4,6 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 73 0`
+		- (coverage-zeros)`8`
+		- (coverage-counters)`55`
 
 [ os ]
 ! CONTROL:
@@ -44,6 +46,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`6 1 39 33`
+		- (coverage-zeros)`4`
+		- (coverage-counters)`27`
 (signature)`test_unidirectional(test)`
 
 
@@ -56,5 +60,7 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`42 1 73 44`
+		- (coverage-zeros)`4`
+		- (coverage-counters)`24`
 (signature)`test_bidirectional(test)`
 

@@ -3,7 +3,9 @@
 		module
 	/element/
 		- (control)`property-set`
-		- (source/area)`1 1 920 32`
+		- (source/area)`1 1 949 32`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 Join delineated source data into a text file for subsequent rendering.
 
 
@@ -203,7 +205,7 @@ Join delineated source data into a text file for subsequent rendering.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`26 1 43 2`
+		- (source/area)`26 1 44 2`
 (signature)`itruncate(lines)`
 
 Truncate the minimum common indentation in (factor-local/parameter)&<#itruncate.Parameters.lines[lines]>.
@@ -217,7 +219,7 @@ Truncate the minimum common indentation in (factor-local/parameter)&<#itruncate.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`45 1 49 2`
+		- (source/area)`46 1 50 2`
 (signature)`interpret_directory_items(items)`
 
 
@@ -227,7 +229,7 @@ Truncate the minimum common indentation in (factor-local/parameter)&<#itruncate.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`51 1 74 21`
+		- (source/area)`52 1 76 21`
 (signature)`prefix(path, element)`
 
 Adjust the sections in (factor-local/parameter)&<#prefix.Parameters.element[element]> to be relative to (factor-local/parameter)&<#prefix.Parameters.path[path]>.
@@ -239,7 +241,7 @@ Adjust the sections in (factor-local/parameter)&<#prefix.Parameters.element[elem
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`76 1 88 40`
+		- (source/area)`78 1 91 40`
 (signature)`extract(sub, section)`
 
 Extract the mapping from the identified (factor-local/parameter)&<#extract.Parameters.section[section]> removing its element from the tree.
@@ -251,7 +253,7 @@ Extract the mapping from the identified (factor-local/parameter)&<#extract.Param
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`90 1 99 55`
+		- (source/area)`93 1 103 55`
 (signature)`section_items(chapter, section)`
 
 Get the first directory in (factor-local/parameter)&<#section_items.Parameters.section[section]> and its interpreted items.
@@ -265,7 +267,7 @@ Get the first directory in (factor-local/parameter)&<#section_items.Parameters.s
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`101 1 107 25`
+		- (source/area)`105 1 111 25`
 (signature)`insert_before(type, elements, element)`
 
 
@@ -275,7 +277,7 @@ Get the first directory in (factor-local/parameter)&<#section_items.Parameters.s
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`109 1 121 2`
+		- (source/area)`113 1 126 2`
 (signature)`control(**kw)`
 
 Construct a CONTROL admonition element.
@@ -287,7 +289,7 @@ Construct a CONTROL admonition element.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`123 1 139 75`
+		- (source/area)`128 1 145 75`
 (signature)`type_property_fragments(resolve, element)`
 
 Construct (remote/factor-element)&<http://fault.io/python/text/types#Fragment[fault.text.types.Fragment]> instances for populating a property set to describe the type.
@@ -299,7 +301,7 @@ Construct (remote/factor-element)&<http://fault.io/python/text/types#Fragment[fa
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`141 1 156 60`
+		- (source/area)`147 1 163 60`
 (signature)`describe_type(resolve, element)`
 
 Produce tuples used to form `'item'` paragraphs describing the type
@@ -312,7 +314,7 @@ element found within (factor-local/parameter)&<#describe_type.Parameters.element
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`158 1 162 59`
+		- (source/area)`165 1 169 59`
 (signature)`property_item(pf)`
 
 Construct single paragraph item elements for populating a set or sequence element.
@@ -324,7 +326,7 @@ Construct single paragraph item elements for populating a set or sequence elemen
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`164 1 189 9`
+		- (source/area)`171 1 197 9`
 (signature)`documented_field_item(cast, resolve, context, element, identifier, documentation)`
 
 Construct the directory item element for a documented field.
@@ -336,7 +338,7 @@ Construct the directory item element for a documented field.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`191 1 215 9`
+		- (source/area)`199 1 224 9`
 (signature)`undocumented_field_item(cast, resolve, context, element, identifier)`
 
 Construct the directory item element for representing an undocumented field.
@@ -349,10 +351,10 @@ The (factor-local/parameter)&<#undocumented_field_item.Parameters.documentation[
 		class
 	/element/
 		- (control)`property-set`
-		- (source/area)`217 1 530 18`
+		- (source/area)`226 1 550 18`
 ! INHERIT:
 	- (control)`property-set`
-	- (source/area)`217 12 217 26`
+	- (source/area)`226 12 226 26`
 	- (type/syntax)`comethod.object`
 	- (type/remote/factor-element)&<http://fault.io/python/context/comethod#object[fault.context.comethod.object]>
 	
@@ -367,7 +369,7 @@ Linked chapter construction for factor elements.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`222 2 231 10`
+		- (source/area)`231 2 240 10`
 (signature)`getdoc(self, path)`
 
 
@@ -379,7 +381,7 @@ Linked chapter construction for factor elements.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`233 2 238 3`
+		- (source/area)`242 2 247 3`
 (signature)`setdocs(self, path, cursor)`
 
 
@@ -391,8 +393,8 @@ Linked chapter construction for factor elements.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`240 2 275 12`
-(signature)`r_control(self, factorelement, **ctlkeys)`
+		- (source/area)`249 2 290 12`
+(signature)`r_control(self, path, factorelement, **ctlkeys)`
 
 
 [ Text >> r_root ]
@@ -403,7 +405,7 @@ Linked chapter construction for factor elements.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`277 2 297 39`
+		- (source/area)`292 2 312 39`
 (signature)`r_root(self, factor)`
 
 
@@ -415,7 +417,7 @@ Linked chapter construction for factor elements.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`299 2 325 23`
+		- (source/area)`314 2 340 23`
 (signature)`r_inherits(self, path, element)`
 
 
@@ -427,7 +429,7 @@ Linked chapter construction for factor elements.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`326 2 371 52`
+		- (source/area)`341 2 386 52`
 (signature)`r_container(self, path, element)`
 
 
@@ -439,7 +441,7 @@ Linked chapter construction for factor elements.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`373 2 389 5`
+		- (source/area)`388 2 404 5`
 (signature)`r_parameters(self, element, path, parameters, documented)`
 
 
@@ -451,7 +453,7 @@ Linked chapter construction for factor elements.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`391 2 396 21`
+		- (source/area)`406 2 411 21`
 (signature)`section(self, rdepth, rmult, path)`
 
 
@@ -461,7 +463,7 @@ Linked chapter construction for factor elements.
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`397 2 403 21`
+		- (source/area)`412 2 419 21`
 (signature)`r_void(self, path, element)`
 
 Unsupported element type.
@@ -473,7 +475,7 @@ Unsupported element type.
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`404 2 412 18`
+		- (source/area)`420 2 429 18`
 (signature)`r_text(self, path, element)`
 
 Rewrite references in the text tree and render the changes.
@@ -485,7 +487,7 @@ Rewrite references in the text tree and render the changes.
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`413 2 434 17`
+		- (source/area)`430 2 452 17`
 (signature)`r_source(self, path, element)`
 
 Render a capture of the source after the documentation.
@@ -497,7 +499,7 @@ Render a capture of the source after the documentation.
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`436 2 498 31`
+		- (source/area)`454 2 517 31`
 (signature)`r_element(self, path, element)`
 
 Emit a section containing the element's documentation.
@@ -513,7 +515,7 @@ The default switch target.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`500 2 510 22`
+		- (source/area)`519 2 529 22`
 (signature)`switch(self, path, elements, *suffix)`
 
 
@@ -525,7 +527,7 @@ The default switch target.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`511 2 513 17`
+		- (source/area)`530 2 532 17`
 (signature)`source(self)`
 
 
@@ -537,7 +539,7 @@ The default switch target.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`515 2 522 14`
+		- (source/area)`534 2 541 14`
 (signature)`selectlines(self, element)`
 
 
@@ -549,8 +551,8 @@ The default switch target.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`524 2 530 18`
-(signature)`__init__(self, resolution, elements, docs, data, source)`
+		- (source/area)`543 2 550 18`
+(signature)`__init__(self, annotations, resolution, elements, docs, data, source)`
 
 
 [ split_element ]
@@ -559,7 +561,7 @@ The default switch target.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`532 1 550 32`
+		- (source/area)`552 1 571 32`
 (signature)`split_element(project, factor)`
 
 Given a project relative factor path, split the path isolating
@@ -573,7 +575,7 @@ the link, title, and target type describing the factor path.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`552 1 564 17`
+		- (source/area)`573 1 586 17`
 (signature)`relation(origin, target)`
 
 Identify the relation of the (factor-local/parameter)&<#relation.Parameters.target[target]> project to (factor-local/parameter)&<#relation.Parameters.origin[origin]> project.
@@ -585,7 +587,7 @@ Identify the relation of the (factor-local/parameter)&<#relation.Parameters.targ
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`566 1 597 37`
+		- (source/area)`588 1 620 37`
 (signature)`dr_absolute_path(requirements, context, project, reference)`
 
 Resolve an absolute reference.
@@ -597,7 +599,7 @@ Resolve an absolute reference.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`599 1 625 39`
+		- (source/area)`622 1 649 39`
 (signature)`dr_context_path(context, project, reference)`
 
 Resolve a root-Context relative reference.
@@ -609,7 +611,7 @@ Resolve a root-Context relative reference.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`627 1 645 19`
+		- (source/area)`651 1 670 19`
 (signature)`dr_project_path(project, reference)`
 
 Resolve a Project relative reference.
@@ -621,7 +623,7 @@ Resolve a Project relative reference.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`647 1 677 11`
+		- (source/area)`672 1 703 11`
 (signature)`index(factor)`
 
 Construct an index of elements using the identifier paths.
@@ -633,7 +635,7 @@ Construct an index of elements using the identifier paths.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`679 1 696 19`
+		- (source/area)`705 1 723 19`
 (signature)`match(index, path, subpath)`
 
 Check for the presence of (factor-local/parameter)&<#match.Parameters.subpath[subpath]> in the element identified by (factor-local/parameter)&<#match.Parameters.path[path]> in (factor-local/parameter)&<#match.Parameters.index[index]>.
@@ -649,7 +651,7 @@ Returns the number of leading (factor-local/parameter)&<#match.Parameters.subpat
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`698 1 723 15`
+		- (source/area)`725 1 750 15`
 (signature)`find(index, path, rpath)`
 
 Find all the matches for (factor-local/parameter)&<#find.Parameters.rpath[rpath]> in (factor-local/parameter)&<#find.Parameters.index[index]> by ascending through (factor-local/parameter)&<#find.Parameters.path[path]>.
@@ -667,10 +669,10 @@ is given preference over location.
 		class
 	/element/
 		- (control)`property-set`
-		- (source/area)`725 1 879 30`
+		- (source/area)`752 1 908 30`
 ! INHERIT:
 	- (control)`property-set`
-	- (source/area)`725 18 725 32`
+	- (source/area)`752 18 752 32`
 	- (type/syntax)`comethod.object`
 	- (type/remote/factor-element)&<http://fault.io/python/context/comethod#object[fault.context.comethod.object]>
 	
@@ -685,7 +687,7 @@ Reference resolution interface for factored projects.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`730 2 738 23`
+		- (source/area)`757 2 765 23`
 (signature)`__init__(self, requirements, context, project, factor)`
 
 
@@ -697,7 +699,7 @@ Reference resolution interface for factored projects.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`739 2 754 18`
+		- (source/area)`766 2 781 18`
 (signature)`disambiguate(self, context, path, element, *suffix)`
 
 
@@ -707,7 +709,7 @@ Reference resolution interface for factored projects.
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`755 2 759 19`
+		- (source/area)`782 2 787 19`
 (signature)`reflect(self, context, path, element, *suffix)`
 
 Trap for elements where descent should not occur.
@@ -721,7 +723,7 @@ Trap for elements where descent should not occur.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`761 2 781 42`
+		- (source/area)`789 2 809 42`
 (signature)`switch(self, context, path, element, *suffix)`
 
 
@@ -731,7 +733,7 @@ Trap for elements where descent should not occur.
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`783 2 793 13`
+		- (source/area)`811 2 822 13`
 (signature)`rewrite(self, context, root)`
 
 Rewrite the references in the element tree (factor-local/parameter)&<#Resolution.rewrite.Parameters.root[root]> as relative IRI's.
@@ -759,7 +761,7 @@ Rewrite the references in the element tree (factor-local/parameter)&<#Resolution
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`795 2 873 62`
+		- (source/area)`824 2 902 62`
 (signature)`resolve(self, path, fragment)`
 
 
@@ -771,7 +773,7 @@ Rewrite the references in the element tree (factor-local/parameter)&<#Resolution
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`875 2 876 48`
+		- (source/area)`904 2 905 48`
 (signature)`partial(self, path, **kw)`
 
 
@@ -783,7 +785,7 @@ Rewrite the references in the element tree (factor-local/parameter)&<#Resolution
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`878 2 879 30`
+		- (source/area)`907 2 908 30`
 (signature)`add_index(self, elements)`
 
 
@@ -795,7 +797,7 @@ Rewrite the references in the element tree (factor-local/parameter)&<#Resolution
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`881 1 889 25`
+		- (source/area)`910 1 918 25`
 (signature)`load(f)`
 
 
@@ -807,6 +809,6 @@ Rewrite the references in the element tree (factor-local/parameter)&<#Resolution
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`891 1 921 31`
-(signature)`transform(resolution, datadir, source)`
+		- (source/area)`920 1 950 31`
+(signature)`transform(annotations, resolution, datadir, source)`
 

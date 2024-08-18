@@ -4,6 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 124 3`
+		- (coverage-zeros)`14`
+		- (coverage-counters)`65`
 Interface configuration format for binding application network services.
 
 Provides parsing, serialization, and allocation functions for application service interfaces.
@@ -98,6 +100,8 @@ Provides parsing, serialization, and allocation functions for application servic
 	/element/
 		- (control)`property-set`
 		- (source/area)`15 1 15 47`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 		- (type/syntax)`TypeAlias`
 		- (type/none/invalid)&<http://fault.io/dev/null[typing.TypeAlias]>
 		
@@ -113,6 +117,8 @@ Provides parsing, serialization, and allocation functions for application servic
 	/element/
 		- (control)`property-set`
 		- (source/area)`16 1 16 74`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 		- (type/syntax)`TypeAlias`
 		- (type/none/invalid)&<http://fault.io/dev/null[typing.TypeAlias]>
 		
@@ -126,6 +132,8 @@ Provides parsing, serialization, and allocation functions for application servic
 	/element/
 		- (control)`property-set`
 		- (source/area)`18 1 83 35`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`37`
 		- (type/syntax)`ISpecifications`
 		- (type/factor-local/data)&<#ISpecifications[ISpecifications]>
 		
@@ -162,6 +170,8 @@ with the endpoints listed in the following indented area.
 	/element/
 		- (control)`property-set`
 		- (source/area)`85 1 104 33`
+		- (coverage-zeros)`12`
+		- (coverage-counters)`13`
 		- (type/syntax)`Iterable[str]`
 		
 (signature)`if_sequence(if_spec)`
@@ -185,6 +195,8 @@ Serialize the endpoints relative to their protocol and option set.
 	/element/
 		- (control)`property-set`
 		- (source/area)`106 1 125 2`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`5`
 		- (type/syntax)`Sequence[tuple[IContext, KPorts]]`
 		
 (signature)`if_allocate(if_spec)`

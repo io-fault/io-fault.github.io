@@ -4,6 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 384 0`
+		- (coverage-zeros)`63`
+		- (coverage-counters)`156`
 Python Execution Context support functions and classes.
 
 
@@ -84,6 +86,8 @@ Python Execution Context support functions and classes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`14 1 309 41`
+		- (coverage-zeros)`6`
+		- (coverage-counters)`14`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`14 14 14 21`
@@ -113,6 +117,8 @@ Route for Python imports.
 	/element/
 		- (control)`property-set`
 		- (source/area)`21 2 33 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`6`
 (signature)`from_context(Class)`
 
 Return a new (factor-local/class)&<#Import[Import]> to the package containing the module that is executing
@@ -126,6 +132,8 @@ Return a new (factor-local/class)&<#Import[Import]> to the package containing th
 	/element/
 		- (control)`property-set`
 		- (source/area)`34 2 40 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`from_fullname(Class, module_path_string)`
 
 Given a valid `__name__`, return an (factor-local/class)&<#Import[Import]> instance to that path.
@@ -138,6 +146,8 @@ Given a valid `__name__`, return an (factor-local/class)&<#Import[Import]> insta
 	/element/
 		- (control)`property-set`
 		- (source/area)`41 2 48 13`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 (signature)`from_module(Class, module)`
 
 Given module containing a valid `__name__`, return an (factor-local/class)&<#Import[Import]>
@@ -153,6 +163,8 @@ instance to that path.
 	/element/
 		- (control)`property-set`
 		- (source/area)`49 2 54 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`from_points(Class, context, *points)`
 
 
@@ -163,6 +175,8 @@ instance to that path.
 	/element/
 		- (control)`property-set`
 		- (source/area)`55 2 66 13`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`8`
 (signature)`from_attributes(Class, path)`
 
 Create a (invalid/unknown)&<#Route> and an attributes sequence based on the given (factor-local/parameter)&<#Import.from_attributes.Parameters.path[path]> such that
@@ -179,6 +193,8 @@ path is the sequence of attributes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`67 2 72 10`
+		- (coverage-zeros)`5`
+		- (coverage-counters)`5`
 (signature)`dereference(Class, path)`
 
 
@@ -191,6 +207,8 @@ path is the sequence of attributes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`74 2 75 41`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`__bool__(self)`
 
 
@@ -203,6 +221,8 @@ path is the sequence of attributes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`77 2 78 22`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`__str__(self)`
 
 
@@ -215,6 +235,8 @@ path is the sequence of attributes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`80 2 81 96`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`__repr__(self)`
 
 
@@ -225,6 +247,8 @@ path is the sequence of attributes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`83 2 87 53`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 (signature)`__contains__(self, abs)`
 
 Whether or not the Path contains the given Pointer.
@@ -239,6 +263,8 @@ Whether or not the Path contains the given Pointer.
 	/element/
 		- (control)`property-set`
 		- (source/area)`89 2 92 10`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`__getitem__(self, req)`
 
 
@@ -304,6 +330,8 @@ The loader of the module.
 	/element/
 		- (control)`property-set`
 		- (source/area)`136 2 143 14`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`3`
 (signature)`spec(self)`
 
 The spec for loading the module.
@@ -316,6 +344,8 @@ The spec for loading the module.
 	/element/
 		- (control)`property-set`
 		- (source/area)`145 2 151 34`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 (signature)`exists(self)`
 
 Whether or not the module exists inside the Python paths.
@@ -329,6 +359,8 @@ However, the module may not be importable.
 	/element/
 		- (control)`property-set`
 		- (source/area)`153 2 162 39`
+		- (coverage-zeros)`4`
+		- (coverage-counters)`4`
 (signature)`is_container(self)`
 
 Interrogate the module's loader as to whether or not it's a "package module".
@@ -353,6 +385,8 @@ Interrogate the module's loader as to whether or not it's a "package module".
 	/element/
 		- (control)`property-set`
 		- (source/area)`165 2 178 18`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`6`
 (signature)`real(self)`
 
 The "real" portion of the Import.
@@ -368,6 +402,8 @@ Greatest Absolute Route that *actually exists* on the file system.
 	/element/
 		- (control)`property-set`
 		- (source/area)`180 2 184 40`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`get_last_modified(self)`
 
 Return the modification time of the module's file as a chronometry Timestamp.
@@ -380,6 +416,8 @@ Return the modification time of the module's file as a chronometry Timestamp.
 	/element/
 		- (control)`property-set`
 		- (source/area)`186 2 202 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`9`
 (signature)`stack(self)`
 
 Return a list of module objects. The first being the outermost package module, the
@@ -394,6 +432,8 @@ packages leading to the (factor-local/parameter)&<#Import.stack.Parameters.self[
 	/element/
 		- (control)`property-set`
 		- (source/area)`204 2 213 36`
+		- (coverage-zeros)`5`
+		- (coverage-counters)`5`
 (signature)`scan(self, attribute)`
 
 Scan the (factor-local/method)&<#Import.stack[stack]> of modules for the given attribute returning a pair
@@ -407,6 +447,8 @@ containing the module and the object accessed with the (factor-local/parameter)&
 	/element/
 		- (control)`property-set`
 		- (source/area)`215 2 226 9`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`5`
 (signature)`module(self)`
 
 Return the module that is being referred to by the path.
@@ -419,6 +461,8 @@ Return the module that is being referred to by the path.
 	/element/
 		- (control)`property-set`
 		- (source/area)`228 2 261 26`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`20`
 (signature)`subnodes(self)`
 
 Return a pairs of sequences containing routes to the subnodes of the route.
@@ -431,6 +475,8 @@ Return a pairs of sequences containing routes to the subnodes of the route.
 	/element/
 		- (control)`property-set`
 		- (source/area)`263 2 282 19`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`11`
 (signature)`tree(self)`
 
 Return a package's full tree as a pair of lists.
@@ -443,6 +489,8 @@ Return a package's full tree as a pair of lists.
 	/element/
 		- (control)`property-set`
 		- (source/area)`284 2 294 24`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 (signature)`file(self)`
 
 Get the (project-local/factor-element)&<files#Path[fault.system.files.Path]> instance pointing to the module's file.
@@ -455,6 +503,8 @@ Get the (project-local/factor-element)&<files#Path[fault.system.files.Path]> ins
 	/element/
 		- (control)`property-set`
 		- (source/area)`296 2 302 29`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`3`
 (signature)`directory(self)`
 
 The package directory of the module.
@@ -467,6 +517,8 @@ The package directory of the module.
 	/element/
 		- (control)`property-set`
 		- (source/area)`304 2 309 41`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 (signature)`cache(self)`
 
 The (filename)`__pycache__` directory associated with the module's file.
@@ -479,6 +531,8 @@ The (filename)`__pycache__` directory associated with the module's file.
 	/element/
 		- (control)`property-set`
 		- (source/area)`311 1 384 51`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`311 17 311 22`
@@ -521,6 +575,8 @@ for structural purposes or origin tracking.
 	/element/
 		- (control)`property-set`
 		- (source/area)`329 2 332 13`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`environment(Class, identifier, default)`
 
 
@@ -531,6 +587,8 @@ for structural purposes or origin tracking.
 	/element/
 		- (control)`property-set`
 		- (source/area)`333 2 345 21`
+		- (coverage-zeros)`7`
+		- (coverage-counters)`7`
 (signature)`strings(Class, iterator)`
 
 Process the iterator producing References or values such that
@@ -547,6 +605,8 @@ if their determined value is not None.
 	/element/
 		- (control)`property-set`
 		- (source/area)`347 2 351 24`
+		- (coverage-zeros)`4`
+		- (coverage-counters)`4`
 (signature)`__init__(self, type, get, identifier)`
 
 
@@ -557,6 +617,8 @@ if their determined value is not None.
 	/element/
 		- (control)`property-set`
 		- (source/area)`353 2 364 21`
+		- (coverage-zeros)`5`
+		- (coverage-counters)`5`
 (signature)`__str__(self)`
 
 Return the string form of the container's value for the configured
@@ -572,6 +634,8 @@ If the resolved value is (invalid/unknown)&<#None>, an empty string will be retu
 	/element/
 		- (control)`property-set`
 		- (source/area)`366 2 371 49`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`3`
 (signature)`item(self)`
 
 Return the (invalid/unknown)&<#identifier> - (factor-local/method)&<#Reference.value[value]> pair.
@@ -584,6 +648,8 @@ Return the (invalid/unknown)&<#identifier> - (factor-local/method)&<#Reference.v
 	/element/
 		- (control)`property-set`
 		- (source/area)`373 2 377 19`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 (signature)`items(self)`
 
 Return (factor-local/method)&<#Reference.item[item]> in plural form; iterator that always returns a single pair.
@@ -596,6 +662,8 @@ Return (factor-local/method)&<#Reference.item[item]> in plural form; iterator th
 	/element/
 		- (control)`property-set`
 		- (source/area)`379 2 384 51`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`value(self)`
 
 Return the value of the container's entry using (invalid/unknown)&<#identifier> as the key.

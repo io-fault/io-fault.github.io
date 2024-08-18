@@ -4,6 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 764 25`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 Root daemon process for service management and scheduled processes.
 
 (project-local/unknown)&<root> provides the primary support for (project-local/unknown)&<bin.rootd> which manages a set of daemons,

@@ -4,6 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 87 0`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`44`
 
 [ types ]
 ! CONTROL:
@@ -54,6 +56,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`7 1 27 38`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`12`
 (signature)`test_zone_data(test)`
 
 Presumes that Alaska is ~-10 and Japan is ~+10.
@@ -68,6 +72,8 @@ Presumes that Alaska is ~-10 and Japan is ~+10.
 	/element/
 		- (control)`property-set`
 		- (source/area)`29 1 43 34`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`10`
 (signature)`test_zone_dst_offset(test)`
 
 
@@ -80,6 +86,8 @@ Presumes that Alaska is ~-10 and Japan is ~+10.
 	/element/
 		- (control)`property-set`
 		- (source/area)`45 1 53 17`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`7`
 (signature)`test_zone_default_only(test)`
 
 
@@ -92,6 +100,8 @@ Presumes that Alaska is ~-10 and Japan is ~+10.
 	/element/
 		- (control)`property-set`
 		- (source/area)`55 1 68 19`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`7`
 (signature)`test_zone_normalize(test)`
 
 
@@ -104,5 +114,7 @@ Presumes that Alaska is ~-10 and Japan is ~+10.
 	/element/
 		- (control)`property-set`
 		- (source/area)`70 1 87 48`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`test_zone_slice(test)`
 

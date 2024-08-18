@@ -4,6 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 151 0`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 Eternals are measures of indefinite units of time. They are used to represent concepts of
 now, never, and the furthest point in time in the past--genesis.
 

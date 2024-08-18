@@ -4,6 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 172 0`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`77`
 Check serialization and parsing of frames.
 
 
@@ -26,6 +28,8 @@ Check serialization and parsing of frames.
 	/element/
 		- (control)`property-set`
 		- (source/area)`6 1 7 48`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 		- (type/syntax)`module.types.Frame`
 		- (type/context-local/factor-element)&<fault.status/frames#types.Frame[fault.status.frames.types.Frame]>
 		
@@ -39,6 +43,8 @@ Check serialization and parsing of frames.
 	/element/
 		- (control)`property-set`
 		- (source/area)`9 1 13 69`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`test_identifier_set_limits(test)`
 
 - (context-local/factor-element)&<fault.status/frames#type_codes[fault.status.frames.type_codes]>
@@ -51,6 +57,8 @@ Check serialization and parsing of frames.
 	/element/
 		- (control)`property-set`
 		- (source/area)`15 1 25 60`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`7`
 (signature)`test_code_conversion(test)`
 
 - (context-local/factor-element)&<fault.status/frames#type_integer_code[fault.status.frames.type_integer_code]>
@@ -64,6 +72,8 @@ Check serialization and parsing of frames.
 	/element/
 		- (control)`property-set`
 		- (source/area)`27 1 39 43`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`7`
 (signature)`test_unpack_unstructured(test)`
 
 - (context-local/factor-element)&<fault.status/frames#structure[fault.status.frames.structure]>
@@ -76,6 +86,8 @@ Check serialization and parsing of frames.
 	/element/
 		- (control)`property-set`
 		- (source/area)`41 1 48 50`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 (signature)`test_unpack_unstructured_channel_escape(test)`
 
 - (context-local/factor-element)&<fault.status/frames#unpack[fault.status.frames.unpack]>
@@ -88,6 +100,8 @@ Check serialization and parsing of frames.
 	/element/
 		- (control)`property-set`
 		- (source/area)`50 1 74 68`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`9`
 (signature)`test_frame_structured(test)`
 
 - (context-local/project-factor)&<fault.status/frames[fault.status.frames]>
@@ -100,6 +114,8 @@ Check serialization and parsing of frames.
 	/element/
 		- (control)`property-set`
 		- (source/area)`76 1 105 54`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`10`
 (signature)`test_frame_data_extension(test)`
 
 - (context-local/project-factor)&<fault.status/frames[fault.status.frames]>
@@ -112,6 +128,8 @@ Check serialization and parsing of frames.
 	/element/
 		- (control)`property-set`
 		- (source/area)`107 1 133 93`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`11`
 (signature)`test_frame_channel_only(test)`
 
 - (context-local/project-factor)&<fault.status/frames[fault.status.frames]>
@@ -124,6 +142,8 @@ Check serialization and parsing of frames.
 	/element/
 		- (control)`property-set`
 		- (source/area)`135 1 153 41`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`12`
 (signature)`test_message_directed_areas(test)`
 
 - (context-local/factor-element)&<fault.status/frames#message_directed_areas[fault.status.frames.message_directed_areas]>
@@ -136,6 +156,8 @@ Check serialization and parsing of frames.
 	/element/
 		- (control)`property-set`
 		- (source/area)`155 1 172 47`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`10`
 (signature)`test_declaration_constructor(test)`
 
 - (context-local/factor-element)&<fault.status/frames#declaration[fault.status.frames.declaration]>

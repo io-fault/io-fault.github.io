@@ -4,6 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 36 0`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`19`
 Tool execution factor for explicitly linked command sets.
 
 
@@ -56,6 +58,8 @@ Tool execution factor for explicitly linked command sets.
 	/element/
 		- (control)`property-set`
 		- (source/area)`10 1 18 31`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`extend(*select)`
 
 Add lookup functions for extending the set of executable tools.
@@ -74,6 +78,8 @@ that no match could be made.
 	/element/
 		- (control)`property-set`
 		- (source/area)`20 1 27 74`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`5`
 (signature)`query(name)`
 
 
@@ -86,6 +92,8 @@ that no match could be made.
 	/element/
 		- (control)`property-set`
 		- (source/area)`29 1 36 49`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`6`
 		- (type/syntax)`process.Exit`
 		- (type/project-local/factor-element)&<process#Exit[fault.system.process.Exit]>
 		

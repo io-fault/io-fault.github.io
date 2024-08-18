@@ -4,6 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 446 0`
+		- (coverage-zeros)`13`
+		- (coverage-counters)`316`
 Check io.Octets interfaces.
 
 
@@ -86,6 +88,8 @@ Check io.Octets interfaces.
 	/element/
 		- (control)`property-set`
 		- (source/area)`13 1 28 17`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`11`
 (signature)`test_anonymous_endpoints_socketpair(test)`
 
 
@@ -98,6 +102,8 @@ Check io.Octets interfaces.
 	/element/
 		- (control)`property-set`
 		- (source/area)`30 1 42 17`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`8`
 (signature)`test_anonymous_endpoints_pipe(test)`
 
 
@@ -110,6 +116,8 @@ Check io.Octets interfaces.
 	/element/
 		- (control)`property-set`
 		- (source/area)`44 1 68 33`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`19`
 (signature)`test_buffer_write_location(test)`
 
 
@@ -122,6 +130,8 @@ Check io.Octets interfaces.
 	/element/
 		- (control)`property-set`
 		- (source/area)`70 1 94 7`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`16`
 (signature)`test_channel_force(test)`
 
 
@@ -132,6 +142,8 @@ Check io.Octets interfaces.
 	/element/
 		- (control)`property-set`
 		- (source/area)`96 1 123 40`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`22`
 (signature)`test_full_buffer_forced_write(test)`
 
 Test the force method on lose-octets with a full write buffer.
@@ -146,6 +158,8 @@ Test the force method on lose-octets with a full write buffer.
 	/element/
 		- (control)`property-set`
 		- (source/area)`125 1 137 28`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`10`
 (signature)`test_multiple_arrays(test)`
 
 
@@ -158,6 +172,8 @@ Test the force method on lose-octets with a full write buffer.
 	/element/
 		- (control)`property-set`
 		- (source/area)`139 1 165 45`
+		- (coverage-zeros)`4`
+		- (coverage-counters)`21`
 (signature)`test_objects(test)`
 
 
@@ -170,6 +186,8 @@ Test the force method on lose-octets with a full write buffer.
 	/element/
 		- (control)`property-set`
 		- (source/area)`167 1 201 7`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`28`
 (signature)`test_array_void(test)`
 
 
@@ -182,6 +200,8 @@ Test the force method on lose-octets with a full write buffer.
 	/element/
 		- (control)`property-set`
 		- (source/area)`203 1 219 37`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`11`
 (signature)`test_octets_acquire_after_terminate(test)`
 
 
@@ -194,6 +214,8 @@ Test the force method on lose-octets with a full write buffer.
 	/element/
 		- (control)`property-set`
 		- (source/area)`221 1 255 24`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`23`
 (signature)`test_array_flush_release(test)`
 
 
@@ -206,6 +228,8 @@ Test the force method on lose-octets with a full write buffer.
 	/element/
 		- (control)`property-set`
 		- (source/area)`257 1 282 6`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`17`
 (signature)`test_octets_resource_error(test)`
 
 
@@ -218,6 +242,8 @@ Test the force method on lose-octets with a full write buffer.
 	/element/
 		- (control)`property-set`
 		- (source/area)`284 1 293 6`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`9`
 (signature)`test_terminating_exhaust(test)`
 
 
@@ -230,6 +256,8 @@ Test the force method on lose-octets with a full write buffer.
 	/element/
 		- (control)`property-set`
 		- (source/area)`295 1 304 16`
+		- (coverage-zeros)`8`
+		- (coverage-counters)`8`
 (signature)`array_termination(test, J)`
 
 
@@ -242,6 +270,8 @@ Test the force method on lose-octets with a full write buffer.
 	/element/
 		- (control)`property-set`
 		- (source/area)`306 1 324 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`14`
 (signature)`test_octets_acquire_badfd_detect(test)`
 
 
@@ -254,6 +284,8 @@ Test the force method on lose-octets with a full write buffer.
 	/element/
 		- (control)`property-set`
 		- (source/area)`326 1 327 66`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`test_ip4(test)`
 
 
@@ -266,6 +298,8 @@ Test the force method on lose-octets with a full write buffer.
 	/element/
 		- (control)`property-set`
 		- (source/area)`329 1 330 60`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`test_ip6(test)`
 
 
@@ -278,6 +312,8 @@ Test the force method on lose-octets with a full write buffer.
 	/element/
 		- (control)`property-set`
 		- (source/area)`332 1 440 42`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`84`
 (signature)`file_test(test, am, path, apath)`
 
 
@@ -290,5 +326,7 @@ Test the force method on lose-octets with a full write buffer.
 	/element/
 		- (control)`property-set`
 		- (source/area)`442 1 446 33`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 (signature)`test_file(test)`
 

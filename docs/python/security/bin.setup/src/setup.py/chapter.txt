@@ -4,6 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 14 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 Initialize a stored security context on the filesystem.
 
 

@@ -4,6 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 62 0`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`33`
 
 [ sys ]
 ! CONTROL:
@@ -44,6 +46,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`5 1 9 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`stack_1()`
 
 
@@ -56,6 +60,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`11 1 12 27`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`stack_2(error)`
 
 
@@ -68,6 +74,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`14 1 15 27`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`stack_3(error)`
 
 
@@ -80,6 +88,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`17 1 18 27`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`stack_4(error)`
 
 
@@ -92,6 +102,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`20 1 21 27`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`stack_5(error)`
 
 
@@ -102,6 +114,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`23 1 36 39`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`6`
 (signature)`test_iterstack(test)`
 
 - (context-local/factor-element)&<fault.status/python#iterstack[fault.status.python.iterstack]>
@@ -116,6 +130,8 @@ Additionally checks coherency of the Python runtime.
 	/element/
 		- (control)`property-set`
 		- (source/area)`38 1 62 39`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`12`
 (signature)`test_itertraceback(test)`
 
 - (context-local/factor-element)&<fault.status/python#itertraceback[fault.status.python.itertraceback]>

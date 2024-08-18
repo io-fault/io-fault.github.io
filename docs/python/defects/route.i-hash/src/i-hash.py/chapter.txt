@@ -4,6 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 112 0`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`53`
 
 [ module ]
 ! CONTROL:
@@ -34,6 +36,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`4 1 24 49`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`5`
 (signature)`test_Index_structure(test)`
 
 
@@ -46,6 +50,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`26 1 49 28`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`13`
 (signature)`test_Index(test)`
 
 
@@ -58,6 +64,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`51 1 56 26`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 (signature)`test_Segmentation(test)`
 
 
@@ -68,6 +76,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`58 1 83 32`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`12`
 (signature)`test_Directory_operations(test)`
 
 - (context-local/factor-element)&<fault.route/hash#Directory.__init__[fault.route.hash.Directory.__init__]>
@@ -83,6 +93,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`85 1 99 14`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`9`
 (signature)`test_Directory_updates(test)`
 
 - (context-local/factor-element)&<fault.route/hash#Index.load[fault.route.hash.Index.load]>
@@ -96,6 +108,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`101 1 112 58`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`7`
 (signature)`test_Directory_items(test)`
 
 - (context-local/factor-element)&<fault.route/hash#Directory.items[fault.route.hash.Directory.items]>

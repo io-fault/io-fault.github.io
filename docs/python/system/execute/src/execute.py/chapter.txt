@@ -4,6 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 204 0`
+		- (coverage-zeros)`62`
+		- (coverage-counters)`113`
 Execute a factor or module as a substitution.
 
 
@@ -36,6 +38,8 @@ Execute a factor or module as a substitution.
 	/element/
 		- (control)`property-set`
 		- (source/area)`7 1 8 38`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`add_control_factor(root, param)`
 
 
@@ -48,6 +52,8 @@ Execute a factor or module as a substitution.
 	/element/
 		- (control)`property-set`
 		- (source/area)`10 1 11 36`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`add_product_path(root, param)`
 
 
@@ -60,6 +66,8 @@ Execute a factor or module as a substitution.
 	/element/
 		- (control)`property-set`
 		- (source/area)`13 1 17 19`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 (signature)`connect_product_environ(root, param)`
 
 
@@ -72,6 +80,8 @@ Execute a factor or module as a substitution.
 	/element/
 		- (control)`property-set`
 		- (source/area)`19 1 20 28`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`add_path(root, param)`
 
 
@@ -84,6 +94,8 @@ Execute a factor or module as a substitution.
 	/element/
 		- (control)`property-set`
 		- (source/area)`22 1 24 26`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 (signature)`define_parameter(root, param)`
 
 
@@ -126,6 +138,8 @@ Execute a factor or module as a substitution.
 	/element/
 		- (control)`property-set`
 		- (source/area)`39 1 62 17`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`10`
 (signature)`parse(arguments)`
 
 Extract command line parameter options.
@@ -140,6 +154,8 @@ Extract command line parameter options.
 	/element/
 		- (control)`property-set`
 		- (source/area)`64 1 83 17`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`12`
 (signature)`apply(config, target, symbol)`
 
 
@@ -152,6 +168,8 @@ Extract command line parameter options.
 	/element/
 		- (control)`property-set`
 		- (source/area)`85 1 98 19`
+		- (coverage-zeros)`11`
+		- (coverage-counters)`11`
 (signature)`script(inv)`
 
 
@@ -162,6 +180,8 @@ Extract command line parameter options.
 	/element/
 		- (control)`property-set`
 		- (source/area)`100 1 127 13`
+		- (coverage-zeros)`20`
+		- (coverage-counters)`20`
 (signature)`system(inv)`
 
 Execute a system image using the system-architecture configured by (none/invalid)&<http://fault.io/dev/null[fault.factors]>.
@@ -176,6 +196,8 @@ Execute a system image using the system-architecture configured by (none/invalid
 	/element/
 		- (control)`property-set`
 		- (source/area)`129 1 138 14`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`7`
 (signature)`_alloc(init)`
 
 
@@ -188,6 +210,8 @@ Execute a system image using the system-architecture configured by (none/invalid
 	/element/
 		- (control)`property-set`
 		- (source/area)`140 1 142 19`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`string(inv)`
 
 
@@ -200,6 +224,8 @@ Execute a system image using the system-architecture configured by (none/invalid
 	/element/
 		- (control)`property-set`
 		- (source/area)`144 1 151 19`
+		- (coverage-zeros)`5`
+		- (coverage-counters)`5`
 (signature)`module(inv)`
 
 
@@ -212,6 +238,8 @@ Execute a system image using the system-architecture configured by (none/invalid
 	/element/
 		- (control)`property-set`
 		- (source/area)`153 1 177 19`
+		- (coverage-zeros)`16`
+		- (coverage-counters)`16`
 (signature)`console(inv)`
 
 
@@ -224,6 +252,8 @@ Execute a system image using the system-architecture configured by (none/invalid
 	/element/
 		- (control)`property-set`
 		- (source/area)`179 1 201 65`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`15`
 		- (type/syntax)`process.Exit`
 		- (type/project-local/factor-element)&<process#Exit[fault.system.process.Exit]>
 		

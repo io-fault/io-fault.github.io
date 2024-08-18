@@ -4,6 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 81 0`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`53`
 
 [ dataclasses ]
 ! CONTROL:
@@ -32,6 +34,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`4 1 18 24`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`9`
 (signature)`test_struct(test)`
 
 Validate that struct provides the expected defaults for (none/invalid)&<http://fault.io/dev/null[dataclasses.dataclass]>.
@@ -46,6 +50,8 @@ Validate that struct provides the expected defaults for (none/invalid)&<http://f
 	/element/
 		- (control)`property-set`
 		- (source/area)`20 1 36 49`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`12`
 (signature)`test_compose(test)`
 
 
@@ -58,6 +64,8 @@ Validate that struct provides the expected defaults for (none/invalid)&<http://f
 	/element/
 		- (control)`property-set`
 		- (source/area)`38 1 40 42`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`test_unroll(test)`
 
 
@@ -70,6 +78,8 @@ Validate that struct provides the expected defaults for (none/invalid)&<http://f
 	/element/
 		- (control)`property-set`
 		- (source/area)`42 1 46 38`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 (signature)`test_unique(test)`
 
 
@@ -82,6 +92,8 @@ Validate that struct provides the expected defaults for (none/invalid)&<http://f
 	/element/
 		- (control)`property-set`
 		- (source/area)`48 1 52 67`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 (signature)`test_sum_lengths(test)`
 
 
@@ -94,5 +106,7 @@ Validate that struct provides the expected defaults for (none/invalid)&<http://f
 	/element/
 		- (control)`property-set`
 		- (source/area)`54 1 81 41`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`19`
 (signature)`test_consistency(test)`
 

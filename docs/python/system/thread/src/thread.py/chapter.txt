@@ -4,6 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 113 0`
+		- (coverage-zeros)`25`
+		- (coverage-counters)`40`
 System thread primitives.
 
 /create/
@@ -119,6 +121,8 @@ System thread primitives.
 	/element/
 		- (control)`property-set`
 		- (source/area)`23 1 27 16`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`23 13 23 25`
@@ -147,6 +151,8 @@ Exception used to signal thread kills.
 	/element/
 		- (control)`property-set`
 		- (source/area)`29 1 34 38`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`4`
 		- (type/syntax)`typing.Sequence[typing.Tuple[int, types.FrameType]]`
 		
 (signature)`snapshot(tids)`
@@ -161,6 +167,8 @@ Select a set of threads from the same snapshot of frames.
 	/element/
 		- (control)`property-set`
 		- (source/area)`36 1 63 9`
+		- (coverage-zeros)`7`
+		- (coverage-counters)`7`
 (signature)`interrupt(tid, exception)`
 
 Raise the given exception in the thread with the given identifier, (factor-local/parameter)&<#interrupt.Parameters.tid[tid]>.
@@ -199,6 +207,8 @@ in order to kill the thread.
 	/element/
 		- (control)`property-set`
 		- (source/area)`65 1 75 38`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`4`
 		- (type/syntax)`types.FrameType`
 		- (type/none/invalid)&<http://fault.io/dev/null[types.FrameType]>
 		
@@ -223,6 +233,8 @@ Select the frame of the thread's identifier.
 	/element/
 		- (control)`property-set`
 		- (source/area)`77 1 113 22`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`77 18 77 23`
@@ -254,6 +266,8 @@ Alternatively described as a queue with a transfer limit of one item.
 	/element/
 		- (control)`property-set`
 		- (source/area)`84 2 88 18`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`3`
 (signature)`__init__(self)`
 
 
@@ -266,6 +280,8 @@ Alternatively described as a queue with a transfer limit of one item.
 	/element/
 		- (control)`property-set`
 		- (source/area)`90 2 91 48`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`__iter__(self)`
 
 
@@ -276,6 +292,8 @@ Alternatively described as a queue with a transfer limit of one item.
 	/element/
 		- (control)`property-set`
 		- (source/area)`93 2 106 17`
+		- (coverage-zeros)`5`
+		- (coverage-counters)`5`
 (signature)`commit(self)`
 
 Commit to the transition. If the object
@@ -291,6 +309,8 @@ A RuntimeError will be raised upon multiple invocations of commit.
 	/element/
 		- (control)`property-set`
 		- (source/area)`108 2 113 22`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 (signature)`transfer(self, message)`
 
 Send (factor-local/parameter)&<#Transition.transfer.Parameters.message[message]> to the receiving thread.

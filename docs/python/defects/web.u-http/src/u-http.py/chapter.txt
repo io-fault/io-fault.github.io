@@ -4,6 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 359 40`
+		- (coverage-zeros)`4`
+		- (coverage-counters)`231`
 Check integrations of internet.http and kernel.http
 
 
@@ -91,6 +93,8 @@ Check integrations of internet.http and kernel.http
 	/element/
 		- (control)`property-set`
 		- (source/area)`17 1 44 50`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`20`
 (signature)`req(*headers)`
 
 
@@ -101,6 +105,8 @@ Check integrations of internet.http and kernel.http
 	/element/
 		- (control)`property-set`
 		- (source/area)`46 1 59 60`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`7`
 (signature)`test_ranges(test)`
 
 Check Range header parsing.
@@ -125,6 +131,8 @@ Check Range header parsing.
 	/element/
 		- (control)`property-set`
 		- (source/area)`63 1 132 41`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`50`
 (signature)`test_fork_headers_no_content(test)`
 
 - (context-local/factor-element)&<fault.web/http#fork[fault.web.http.fork]>
@@ -139,6 +147,8 @@ Check Range header parsing.
 	/element/
 		- (control)`property-set`
 		- (source/area)`134 1 169 44`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`23`
 (signature)`test_join(test)`
 
 
@@ -149,6 +159,8 @@ Check Range header parsing.
 	/element/
 		- (control)`property-set`
 		- (source/area)`171 1 185 35`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`5`
 (signature)`test_Structures_local(test)`
 
 - (context-local/factor-element)&<fault.web/http#Structures[fault.web.http.Structures]>
@@ -163,6 +175,8 @@ Check caching of local headers.
 	/element/
 		- (control)`property-set`
 		- (source/area)`187 1 191 5`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`test_Structures_cookies(test)`
 
 - (context-local/factor-element)&<fault.web/http#Structures[fault.web.http.Structures]>
@@ -175,6 +189,8 @@ Check caching of local headers.
 	/element/
 		- (control)`property-set`
 		- (source/area)`193 1 223 64`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`18`
 (signature)`test_TXProtocol_initiate_request(test)`
 
 - (context-local/factor-element)&<fault.web/http#TXProtocol[fault.web.http.TXProtocol]>
@@ -187,6 +203,8 @@ Check caching of local headers.
 	/element/
 		- (control)`property-set`
 		- (source/area)`225 1 252 62`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`16`
 (signature)`test_RXProtocol_allocate_request(test)`
 
 - (context-local/factor-element)&<fault.web/http#RXProtocol[fault.web.http.RXProtocol]>
@@ -199,6 +217,8 @@ Check caching of local headers.
 	/element/
 		- (control)`property-set`
 		- (source/area)`254 1 297 26`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`34`
 (signature)`test_client_transport(test)`
 
 - (context-local/factor-element)&<fault.web/http#RXProtocol[fault.web.http.RXProtocol]>
@@ -212,6 +232,8 @@ Check caching of local headers.
 	/element/
 		- (control)`property-set`
 		- (source/area)`299 1 356 26`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`43`
 (signature)`test_server_transport(test)`
 
 - (context-local/factor-element)&<fault.web/http#RXProtocol[fault.web.http.RXProtocol]>

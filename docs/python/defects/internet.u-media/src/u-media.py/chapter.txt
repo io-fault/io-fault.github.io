@@ -4,6 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 163 75`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`73`
 
 [ library ]
 ! CONTROL:
@@ -24,6 +26,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`3 1 5 29`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`test_module_protocol(test)`
 
 
@@ -36,6 +40,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`7 1 51 38`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`35`
 (signature)`test_Type(test)`
 
 
@@ -46,6 +52,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`53 1 158 50`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`31`
 (signature)`test_Range(test)`
 
 Media range queries for managing Accept headers.
@@ -60,5 +68,7 @@ Media range queries for managing Accept headers.
 	/element/
 		- (control)`property-set`
 		- (source/area)`160 1 164 74`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`test_file_type(test)`
 

@@ -4,6 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 182 42`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`127`
 Primarily interested in (project-local/unknown)&<flows.Catenation> and (project-local/unknown)&<flows.Division>;
 tunneling and expansion of flow events.
 
@@ -85,6 +87,8 @@ tunneling and expansion of flow events.
 	/element/
 		- (control)`property-set`
 		- (source/area)`14 1 28 35`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`9`
 (signature)`test_event_identifiers(test)`
 
 Validate primitives.
@@ -97,6 +101,8 @@ Validate primitives.
 	/element/
 		- (control)`property-set`
 		- (source/area)`30 1 136 26`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`76`
 (signature)`test_Catenation(test)`
 
 Subflow sequencing tests.
@@ -109,6 +115,8 @@ Subflow sequencing tests.
 	/element/
 		- (control)`property-set`
 		- (source/area)`138 1 179 26`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`30`
 (signature)`test_Division(test)`
 
 - (invalid/unknown)&<#library.Division>

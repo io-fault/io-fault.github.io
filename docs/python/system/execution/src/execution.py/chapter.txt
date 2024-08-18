@@ -4,6 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 771 0`
+		- (coverage-zeros)`97`
+		- (coverage-counters)`335`
 System process execution interfaces and
 process global registry for controlling the composition of (factor-local/data)&<#Specification[Specification]> for system process execution.
 
@@ -152,6 +154,8 @@ Symbolic names for annotations used by (project-local/unknown)&<execution>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`57 1 61 22`
+		- (coverage-zeros)`6`
+		- (coverage-counters)`6`
 (signature)`default_python_script(index, script, arguments)`
 
 
@@ -164,6 +168,8 @@ Symbolic names for annotations used by (project-local/unknown)&<execution>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`63 1 67 22`
+		- (coverage-zeros)`6`
+		- (coverage-counters)`6`
 (signature)`default_python_module(index, module, arguments)`
 
 
@@ -176,6 +182,8 @@ Symbolic names for annotations used by (project-local/unknown)&<execution>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`69 1 72 26`
+		- (coverage-zeros)`5`
+		- (coverage-counters)`5`
 (signature)`default_executable(index, executable, arguments)`
 
 
@@ -202,6 +210,8 @@ Symbolic names for annotations used by (project-local/unknown)&<execution>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`83 1 125 61`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 Execution Method index associating a set of (invalid/unknown)&<#Identifier's> with their
 corresponding (invalid/unknown)&<#Method's>.
 
@@ -227,6 +237,8 @@ corresponding (invalid/unknown)&<#Method's>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`90 2 92 19`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`__init__(self)`
 
 
@@ -237,6 +249,8 @@ corresponding (invalid/unknown)&<#Method's>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`94 2 99 30`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`4`
 		- (type/syntax)`"Index"`
 		
 (signature)`fork(self, methods)`
@@ -251,6 +265,8 @@ Duplicate the (factor-local/class)&<#Index[Index]> instance (factor-local/parame
 	/element/
 		- (control)`property-set`
 		- (source/area)`101 2 108 12`
+		- (coverage-zeros)`4`
+		- (coverage-counters)`5`
 		- (type/syntax)`Method`
 		- (type/factor-local/data)&<#Method[Method]>
 		
@@ -267,6 +283,8 @@ Returns the old (factor-local/data)&<#Method[Method]> installed for (factor-loca
 	/element/
 		- (control)`property-set`
 		- (source/area)`110 2 114 26`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`3`
 		- (type/syntax)`Method`
 		- (type/factor-local/data)&<#Method[Method]>
 		
@@ -282,6 +300,8 @@ Return the (factor-local/data)&<#Specification[Specification]> constructor ident
 	/element/
 		- (control)`property-set`
 		- (source/area)`116 2 125 61`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`3`
 		- (type/syntax)`Specification`
 		- (type/factor-local/data)&<#Specification[Specification]>
 		
@@ -343,6 +363,8 @@ Construct a pair suitable for creating a (project-local/factor-element)&<kernel#
 	/element/
 		- (control)`property-set`
 		- (source/area)`134 1 157 29`
+		- (coverage-zeros)`7`
+		- (coverage-counters)`8`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`134 13 134 18`
@@ -361,6 +383,8 @@ Descriptor of change in a subprocess' state.
 	/element/
 		- (control)`property-set`
 		- (source/area)`138 2 138 19`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -376,6 +400,8 @@ Descriptor of change in a subprocess' state.
 	/element/
 		- (control)`property-set`
 		- (source/area)`139 2 139 20`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
@@ -391,6 +417,8 @@ Descriptor of change in a subprocess' state.
 	/element/
 		- (control)`property-set`
 		- (source/area)`140 2 142 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 		- (type/syntax)`typing.Optional[bool]`
 		
 #!source
@@ -454,6 +482,8 @@ Descriptor of change in a subprocess' state.
 	/element/
 		- (control)`property-set`
 		- (source/area)`159 1 206 33`
+		- (coverage-zeros)`12`
+		- (coverage-counters)`20`
 		- (type/syntax)`Delta`
 		- (type/factor-local/class)&<#Delta[Delta]>
 		
@@ -515,6 +545,8 @@ and can only be used with child processes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`208 1 245 35`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`7`
 		- (type/syntax)`typing.Optional[Delta]`
 		
 (signature)`reap(pid, options)`
@@ -557,6 +589,8 @@ and can only be used with child processes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`272 1 312 31`
+		- (coverage-zeros)`18`
+		- (coverage-counters)`18`
 (signature)`dereference(invocation)`
 
 Execute the given invocation collecting (system/file)`/dev/stdout` into a (invalid/unknown)&<#bytes> instance.
@@ -575,6 +609,8 @@ directly.
 	/element/
 		- (control)`property-set`
 		- (source/area)`314 1 323 51`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 (signature)`effect(invocation)`
 
 Execute the given invocation collecting (system/file)`/dev/stderr` into a (invalid/unknown)&<#bytes> instance.
@@ -590,6 +626,8 @@ execute reliable processes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`325 1 337 35`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`4`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
@@ -610,6 +648,8 @@ Returns the status of the subprocess; negative if the process exited due to a si
 	/element/
 		- (control)`property-set`
 		- (source/area)`339 1 398 15`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`339 16 339 20`
@@ -641,6 +681,8 @@ provide access to the input and output pipes and the standard errors of each pro
 	/element/
 		- (control)`property-set`
 		- (source/area)`348 2 354 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
@@ -654,6 +696,8 @@ Pipe file descriptor for the pipeline's input.
 	/element/
 		- (control)`property-set`
 		- (source/area)`355 2 361 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
@@ -677,6 +721,8 @@ The sequence of process identifiers of the commands that make up the pipeline.
 	/element/
 		- (control)`property-set`
 		- (source/area)`369 2 373 16`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 		- (type/syntax)`typing.Sequence[int]`
 		
 Mapping of process identifiers to the standard error file descriptor.
@@ -691,6 +737,8 @@ Mapping of process identifiers to the standard error file descriptor.
 	/element/
 		- (control)`property-set`
 		- (source/area)`375 2 385 4`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`__new__(Class, input, output, pids, errfds)`
 
 
@@ -701,6 +749,8 @@ Mapping of process identifiers to the standard error file descriptor.
 	/element/
 		- (control)`property-set`
 		- (source/area)`387 2 398 15`
+		- (coverage-zeros)`7`
+		- (coverage-counters)`7`
 		- (type/syntax)`None`
 		
 (signature)`void(self)`
@@ -716,6 +766,8 @@ Processes are *not* reaped.
 	/element/
 		- (control)`property-set`
 		- (source/area)`400 1 514 17`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`400 19 400 23`
@@ -762,6 +814,8 @@ with no standard errors and no process identifiers.
 	/element/
 		- (control)`property-set`
 		- (source/area)`413 2 433 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`from_commands(Class, *commands)`
 
 Create a (factor-local/class)&<#PInvocation[PInvocation]> instance from a sequences of commands.
@@ -785,6 +839,8 @@ command if it were invoked using (system:environment)`PATH` resolution.
 	/element/
 		- (control)`property-set`
 		- (source/area)`434 2 442 56`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 (signature)`from_pairs(Class, commands)`
 
 Create a Pipeline Invocation from a sequence of process-path and process-arguments
@@ -800,6 +856,8 @@ pairs.
 	/element/
 		- (control)`property-set`
 		- (source/area)`444 2 513 23`
+		- (coverage-zeros)`7`
+		- (coverage-counters)`33`
 		- (type/syntax)`Pipeline`
 		- (type/factor-local/class)&<#Pipeline[Pipeline]>
 		
@@ -851,6 +909,8 @@ the file descriptors used for input, output and the standard error of all the co
 	/element/
 		- (control)`property-set`
 		- (source/area)`516 1 551 75`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`24`
 		- (type/syntax)`typing.Tuple[		typing.Sequence[typing.Tuple[str, str]],		str,		typing.Sequence[str]	]`
 		
 (signature)`parse_sx_plan(text)`
@@ -866,6 +926,8 @@ settings, executable path, and command arguments.
 	/element/
 		- (control)`property-set`
 		- (source/area)`553 1 633 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`54`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -881,6 +943,8 @@ Serialize the environment, execution path, and command arguments into a string.
 	/element/
 		- (control)`property-set`
 		- (source/area)`635 1 767 29`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`635 16 635 21`
@@ -897,6 +961,8 @@ Factor Execution Platform structure for defining architecture specific runtimes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`641 2 661 14`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`11`
 (signature)`parse_architecture_list(pfa)`
 
 Produce the architectures and their synonyms from a string
@@ -912,6 +978,8 @@ that uses newline separated records and space separated fields.
 	/element/
 		- (control)`property-set`
 		- (source/area)`662 2 665 14`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`fs_load_system(path)`
 
 
@@ -922,6 +990,8 @@ that uses newline separated records and space separated fields.
 	/element/
 		- (control)`property-set`
 		- (source/area)`666 2 673 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`fs_load_plans(source, names)`
 
 Read the plans identified by (factor-local/parameter)&<#Platform.fs_load_plans.Parameters.names[names]> from the given directory, (factor-local/parameter)&<#Platform.fs_load_plans.Parameters.source[source]>.
@@ -934,6 +1004,8 @@ Read the plans identified by (factor-local/parameter)&<#Platform.fs_load_plans.P
 	/element/
 		- (control)`property-set`
 		- (source/area)`674 2 683 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`5`
 (signature)`fs_load_sections(Class, path)`
 
 Interpret a stored platform emitting section records.
@@ -946,6 +1018,8 @@ Interpret a stored platform emitting section records.
 	/element/
 		- (control)`property-set`
 		- (source/area)`684 2 692 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 (signature)`from_directory(Class, path)`
 
 Create an instance from a platform directory.
@@ -958,6 +1032,8 @@ Create an instance from a platform directory.
 	/element/
 		- (control)`property-set`
 		- (source/area)`693 2 707 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`8`
 (signature)`from_system(Class, system, origins)`
 
 Compose a (factor-local/class)&<#Platform[Platform]> from a sequence of paths given
@@ -973,6 +1049,8 @@ that they are extensions of (factor-local/parameter)&<#Platform.from_system.Para
 	/element/
 		- (control)`property-set`
 		- (source/area)`709 2 714 18`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`5`
 (signature)`__init__(self, system)`
 
 
@@ -985,6 +1063,8 @@ that they are extensions of (factor-local/parameter)&<#Platform.from_system.Para
 	/element/
 		- (control)`property-set`
 		- (source/area)`716 2 717 38`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
@@ -998,6 +1078,8 @@ that they are extensions of (factor-local/parameter)&<#Platform.from_system.Para
 	/element/
 		- (control)`property-set`
 		- (source/area)`719 2 728 61`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`6`
 (signature)`identify(self, architecture)`
 
 Select the canonical identifier for the given architecture.
@@ -1010,6 +1092,8 @@ Select the canonical identifier for the given architecture.
 	/element/
 		- (control)`property-set`
 		- (source/area)`730 2 745 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`9`
 (signature)`extend(self, architectures)`
 
 Define additional architectures extending the current set.
@@ -1022,6 +1106,8 @@ Define additional architectures extending the current set.
 	/element/
 		- (control)`property-set`
 		- (source/area)`747 2 754 24`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`5`
 (signature)`sections(self)`
 
 Iterate the platform's defined architectures with their synonyms and execution plans.
@@ -1034,6 +1120,8 @@ Iterate the platform's defined architectures with their synonyms and execution p
 	/element/
 		- (control)`property-set`
 		- (source/area)`756 2 767 29`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`7`
 (signature)`prepare(self, architecture, identifier, argv)`
 
 Prepare the necessary information for dispatching an executable with the

@@ -4,6 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 113 59`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 Data for working with DNS.
 
 This module primarily consists of mapping of :py:class:`str` identifiers to

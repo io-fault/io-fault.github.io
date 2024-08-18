@@ -4,6 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 45 0`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`24`
 
 [ module ]
 ! CONTROL:
@@ -24,6 +26,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`3 1 7 71`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 (signature)`test_normal(test)`
 
 
@@ -36,6 +40,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`9 1 14 51`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`test_slug(test)`
 
 
@@ -48,6 +54,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`16 1 37 43`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`10`
 (signature)`test_varsplit(test)`
 
 
@@ -60,5 +68,7 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`39 1 41 45`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`test_ilevel(test)`
 
