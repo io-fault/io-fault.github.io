@@ -3,9 +3,9 @@
 		module
 	/element/
 		- (control)`property-set`
-		- (source/area)`1 1 466 38`
-		- (coverage-zeros)`4`
-		- (coverage-counters)`183`
+		- (source/area)`1 1 511 38`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 Programming language profile and parser class for Keyword Oriented Syntax.
 
 Provides a data structure for describing keyword based languages that allows
@@ -94,8 +94,6 @@ and leverage whitespace for isolation of fields.
 	/element/
 		- (control)`property-set`
 		- (source/area)`38 1 170 37`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`38 15 38 19`
@@ -133,8 +131,6 @@ While (factor-local/class)&<#Profile[Profile]> is a tuple subclass, indexes shou
 	/element/
 		- (control)`property-set`
 		- (source/area)`51 2 71 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`from_keywords_v1(Class, **wordtypes)`
 
 
@@ -145,8 +141,6 @@ While (factor-local/class)&<#Profile[Profile]> is a tuple subclass, indexes shou
 	/element/
 		- (control)`property-set`
 		- (source/area)`72 2 78 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 		- (type/syntax)`typing.Mapping[str, typing.Set[str]]`
 		
 Dictionary associating sets of identifier strings with a classification identifier.
@@ -159,8 +153,6 @@ Dictionary associating sets of identifier strings with a classification identifi
 	/element/
 		- (control)`property-set`
 		- (source/area)`79 2 87 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 		- (type/syntax)`typing.Set[typing.Tuple[str,str]]`
 		
 Comment start and stop pairs delimiting an excluded area from the source.
@@ -175,8 +167,6 @@ Exclusions are given the second highest priority by (factor-local/class)&<#Parse
 	/element/
 		- (control)`property-set`
 		- (source/area)`88 2 98 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 		- (type/syntax)`typing.Set[typing.Tuple[str,str]]`
 		
 The start and stop pairs delimiting a literal area within the syntax document.
@@ -193,8 +183,6 @@ Literals are given the highest priority by (factor-local/class)&<#Parser[Parser]
 	/element/
 		- (control)`property-set`
 		- (source/area)`99 2 107 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 		- (type/syntax)`typing.Set[typing.Tuple[str,str]]`
 		
 The start and stop pairs delimiting an expression.
@@ -209,8 +197,6 @@ Enclosures have the highest precedence during expression processing.
 	/element/
 		- (control)`property-set`
 		- (source/area)`108 2 114 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 		- (type/syntax)`typing.Set[str]`
 		
 Operators used to designate a resolution path for selecting an object to be used.
@@ -223,8 +209,6 @@ Operators used to designate a resolution path for selecting an object to be used
 	/element/
 		- (control)`property-set`
 		- (source/area)`115 2 122 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 		- (type/syntax)`typing.Set[str]`
 		
 Set of operators that can perform some manipulation to the objects associated
@@ -238,8 +222,6 @@ with the adjacent identifiers.
 	/element/
 		- (control)`property-set`
 		- (source/area)`123 2 129 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 		- (type/syntax)`typing.Set[str]`
 		
 Operators used to designate the end of a statement, expression, or field.
@@ -252,8 +234,6 @@ Operators used to designate the end of a statement, expression, or field.
 	/element/
 		- (control)`property-set`
 		- (source/area)`130 2 170 37`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`20`
 		- (type/syntax)`typing.Iterable[str]`
 		
 Emit all unit operators employed by the language associated with a rank and context effect.
@@ -278,9 +258,7 @@ later classes will overwrite earlier entries in cases of ambiguity.
 		class
 	/element/
 		- (control)`property-set`
-		- (source/area)`172 1 467 37`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
+		- (source/area)`172 1 512 37`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`172 14 172 19`
@@ -301,15 +279,36 @@ instance and the internal constructor, (factor-local/method)&<#Parser.__init__[_
 Applications should create and cache an instance for a given language.
 
 
+[ Parser >> integrate_switches ]
+! CONTROL:
+	/type/
+		staticmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`189 2 223 13`
+(signature)`integrate_switches(tokens, context)`
+
+Qualify the syntax fields in (factor-local/parameter)&<#Parser.integrate_switches.Parameters.tokens[tokens]> by interpreting switches.
+
+[ >> Parameters ]
+
+/(parameter)`tokens`/
+	
+	Iteraable of triples produced by (factor-local/method)&<#Parser.process_document[process_document]> or (factor-local/method)&<#Parser.process_lines[process_lines]>.
+
+/(parameter)`context`/
+	
+	The presumed switch state, `'inclusion'`, `'exclusion'`, or `'literal'`.
+	Defaults to `'inclusion'`.
+
+
 [ Parser >> from_profile ]
 ! CONTROL:
 	/type/
 		classmethod
 	/element/
 		- (control)`property-set`
-		- (source/area)`189 2 254 3`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`29`
+		- (source/area)`224 2 289 3`
 (signature)`from_profile(Class, profile)`
 
 Primary constructor for (factor-local/class)&<#Parser[Parser]>.
@@ -324,14 +323,26 @@ some amount of preparation is performed by (factor-local/classmethod)&<#Parser.f
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`256 2 280 82`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`11`
+		- (source/area)`291 2 315 82`
 (signature)`__init__(self, profile, opset, opmap, delimiter, optable, exits, classify_id, classify_op)`
 
 ! WARNING: Do not use directly.
 	The initializer's parameters are subject to change.
 	(factor-local/classmethod)&<#Parser.from_profile[from_profile]> should be used to build instances.
+
+
+[ Parser >> process_line ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`317 2 322 74`
+		- (type/syntax)`typing.Iterable[Tokens]`
+		
+(signature)`process_line(self, line)`
+
+Process a single line of syntax into tokens.
 
 
 [ Parser >> process_lines ]
@@ -340,9 +351,7 @@ some amount of preparation is performed by (factor-local/classmethod)&<#Parser.f
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`282 2 297 59`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
+		- (source/area)`324 2 341 59`
 		- (type/syntax)`typing.Iterable[typing.Iterable[Tokens]]`
 		
 (signature)`process_lines(self, lines)`
@@ -355,6 +364,8 @@ that are expected to restate line context, have inaccurate profiles, or are inco
 
 The produced iterators may be ran out of order as no parsing state is shared across lines.
 
+Essentially, `map(Parser.process_line, line_iter)`.
+
 
 [ Parser >> process_document ]
 ! CONTROL:
@@ -362,9 +373,7 @@ The produced iterators may be ran out of order as no parsing state is shared acr
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`299 2 316 41`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`7`
+		- (source/area)`343 2 360 41`
 		- (type/syntax)`typing.Iterable[typing.Iterable[Tokens]]`
 		
 (signature)`process_document(self, lines)`
@@ -385,9 +394,7 @@ instances.
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`318 2 322 30`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
+		- (source/area)`362 2 367 30`
 (signature)`allocstack(self)`
 
 Allocate context stack for use with (factor-local/method)&<#Parser.delimit[delimit]>.
@@ -399,9 +406,7 @@ Allocate context stack for use with (factor-local/method)&<#Parser.delimit[delim
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`324 2 399 15`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`41`
+		- (source/area)`369 2 444 15`
 		- (type/syntax)`Tokens`
 		- (type/factor-local/data)&<#Tokens[Tokens]>
 		
@@ -424,9 +429,7 @@ should normally be used.
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`401 2 467 37`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`33`
+		- (source/area)`446 2 512 37`
 		- (type/syntax)`Tokens`
 		- (type/factor-local/data)&<#Tokens[Tokens]>
 		
@@ -435,7 +438,7 @@ should normally be used.
 Tokenize a string of syntax according to the profile.
 
 Direct use of this is not recommended as boundaries are not signalled.
-(factor-local/method)&<#Parser.process_lines[process_lines]> or (factor-local/method)&<#Parser.process_document[process_document]> should be used.
+(factor-local/method)&<#Parser.process_line[process_line]>, (factor-local/method)&<#Parser.process_lines[process_lines]>, or (factor-local/method)&<#Parser.process_document[process_document]> should be used.
 The raw tokens, however, are usable in contexts where boundary information is
 not desired or is not accurate enough for an application's use.
 

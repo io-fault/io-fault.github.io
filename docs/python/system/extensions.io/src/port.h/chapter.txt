@@ -6,3 +6,841 @@
 		- (source/area)``
 		- (coverage-zeros)`0`
 		- (coverage-counters)`0`
+
+[ _SYSTEM_IO_PORT_H_included_ ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`2 9 2 35`
+#!source
+	#define _SYSTEM_IO_PORT_H_included_
+
+[ DEFAULT_BACKLOG ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`21 9 21 26`
+#!source
+	#define DEFAULT_BACKLOG 64
+
+[ CONFIG_OPEN_FLAGS ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`24 10 24 28`
+#!source
+	#define CONFIG_OPEN_FLAGS 0
+
+[ AGAIN ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`39 10 39 21`
+#!source
+	#define AGAIN EAGAIN
+
+[ SIZE_T_MAX ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`43 10 43 28`
+#!source
+	#define SIZE_T_MAX SIZE_MAX
+
+[ EVMECH_KQUEUE ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`53 11 53 23`
+#!source
+	#define EVMECH_KQUEUE
+
+[ KQ_FILTERS ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`66 10 74 22`
+(signature)`KQ_FILTERS()`
+
+
+[ KQ_FLAGS ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`76 10 85 16`
+(signature)`KQ_FLAGS()`
+
+
+[ SIGNED_MAX ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`88 9 88 67`
+(signature)`SIGNED_MAX()`
+
+
+[ SIGNED_MIN ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`89 9 89 55`
+(signature)`SIGNED_MIN()`
+
+
+[ Port_SetError ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`163 9 167 11`
+(signature)`Port_SetError()`
+
+
+[ Port_NoteError ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`169 9 172 11`
+(signature)`Port_NoteError()`
+
+
+[ Ports_NoteError ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`177 9 183 11`
+(signature)`Ports_NoteError()`
+
+
+[ kevent ]
+! CONTROL:
+	/type/
+		structure
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`65 10 65 22`
+
+[ kevent_t ]
+! CONTROL:
+	/type/
+		typedef
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`65 2 65 31`
+(signature)`kevent_t()`
+
+
+[ freight ]
+! CONTROL:
+	/type/
+		enumeration
+	/element/
+		- (control)`property-set`
+		- (source/area)`94 9 101 1`
+(signature)`freight()`
+
+Freight types conveyed by a Channel.
+
+
+[ f_void ]
+! CONTROL:
+	/type/
+		constant
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+(signature)`f_void()`
+
+
+[ f_events ]
+! CONTROL:
+	/type/
+		constant
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+(signature)`f_events()`
+
+
+[ f_octets ]
+! CONTROL:
+	/type/
+		constant
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+(signature)`f_octets()`
+
+
+[ f_datagrams ]
+! CONTROL:
+	/type/
+		constant
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+(signature)`f_datagrams()`
+
+
+[ f_sockets ]
+! CONTROL:
+	/type/
+		constant
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+(signature)`f_sockets()`
+
+
+[ f_ports ]
+! CONTROL:
+	/type/
+		constant
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+(signature)`f_ports()`
+
+
+[ freight_t ]
+! CONTROL:
+	/type/
+		typedef
+	/element/
+		- (control)`property-set`
+		- (source/area)`94 1 101 11`
+(signature)`freight_t()`
+
+Freight types conveyed by a Channel.
+
+
+[ freight ]
+! CONTROL:
+	/type/
+		enumeration
+	/element/
+		- (control)`property-set`
+		- (source/area)`94 9 101 1`
+(signature)`freight()`
+
+Freight types conveyed by a Channel.
+
+
+[ f_void ]
+! CONTROL:
+	/type/
+		constant
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+(signature)`f_void()`
+
+
+[ f_events ]
+! CONTROL:
+	/type/
+		constant
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+(signature)`f_events()`
+
+
+[ f_octets ]
+! CONTROL:
+	/type/
+		constant
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+(signature)`f_octets()`
+
+
+[ f_datagrams ]
+! CONTROL:
+	/type/
+		constant
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+(signature)`f_datagrams()`
+
+
+[ f_sockets ]
+! CONTROL:
+	/type/
+		constant
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+(signature)`f_sockets()`
+
+
+[ f_ports ]
+! CONTROL:
+	/type/
+		constant
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+(signature)`f_ports()`
+
+
+[ ktype ]
+! CONTROL:
+	/type/
+		enumeration
+	/element/
+		- (control)`property-set`
+		- (source/area)`107 9 117 1`
+(signature)`ktype()`
+
+local identifiers for the particular types of file descriptors.
+Primarily used in cases where the channel supports multiple kinds.
+
+
+[ kt_unknown ]
+! CONTROL:
+	/type/
+		constant
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+(signature)`kt_unknown()`
+
+
+[ kt_socket ]
+! CONTROL:
+	/type/
+		constant
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+(signature)`kt_socket()`
+
+
+[ kt_pipe ]
+! CONTROL:
+	/type/
+		constant
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+(signature)`kt_pipe()`
+
+
+[ kt_fifo ]
+! CONTROL:
+	/type/
+		constant
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+(signature)`kt_fifo()`
+
+
+[ kt_device ]
+! CONTROL:
+	/type/
+		constant
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+(signature)`kt_device()`
+
+
+[ kt_tty ]
+! CONTROL:
+	/type/
+		constant
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+(signature)`kt_tty()`
+
+
+[ kt_file ]
+! CONTROL:
+	/type/
+		constant
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+(signature)`kt_file()`
+
+
+[ kt_kqueue ]
+! CONTROL:
+	/type/
+		constant
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+(signature)`kt_kqueue()`
+
+
+[ kt_bad ]
+! CONTROL:
+	/type/
+		constant
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+(signature)`kt_bad()`
+
+
+[ ktype_t ]
+! CONTROL:
+	/type/
+		typedef
+	/element/
+		- (control)`property-set`
+		- (source/area)`107 1 117 9`
+(signature)`ktype_t()`
+
+local identifiers for the particular types of file descriptors.
+Primarily used in cases where the channel supports multiple kinds.
+
+
+[ ktype ]
+! CONTROL:
+	/type/
+		enumeration
+	/element/
+		- (control)`property-set`
+		- (source/area)`107 9 117 1`
+(signature)`ktype()`
+
+local identifiers for the particular types of file descriptors.
+Primarily used in cases where the channel supports multiple kinds.
+
+
+[ kt_unknown ]
+! CONTROL:
+	/type/
+		constant
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+(signature)`kt_unknown()`
+
+
+[ kt_socket ]
+! CONTROL:
+	/type/
+		constant
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+(signature)`kt_socket()`
+
+
+[ kt_pipe ]
+! CONTROL:
+	/type/
+		constant
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+(signature)`kt_pipe()`
+
+
+[ kt_fifo ]
+! CONTROL:
+	/type/
+		constant
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+(signature)`kt_fifo()`
+
+
+[ kt_device ]
+! CONTROL:
+	/type/
+		constant
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+(signature)`kt_device()`
+
+
+[ kt_tty ]
+! CONTROL:
+	/type/
+		constant
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+(signature)`kt_tty()`
+
+
+[ kt_file ]
+! CONTROL:
+	/type/
+		constant
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+(signature)`kt_file()`
+
+
+[ kt_kqueue ]
+! CONTROL:
+	/type/
+		constant
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+(signature)`kt_kqueue()`
+
+
+[ kt_bad ]
+! CONTROL:
+	/type/
+		constant
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+(signature)`kt_bad()`
+
+
+[ io_status ]
+! CONTROL:
+	/type/
+		enumeration
+	/element/
+		- (control)`property-set`
+		- (source/area)`122 9 126 1`
+(signature)`io_status()`
+
+Channel status codes used to signal the reaction to the success or failure of a system call.
+
+
+[ io_stop ]
+! CONTROL:
+	/type/
+		constant
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+(signature)`io_stop()`
+
+
+[ io_flow ]
+! CONTROL:
+	/type/
+		constant
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+(signature)`io_flow()`
+
+
+[ io_terminate ]
+! CONTROL:
+	/type/
+		constant
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+(signature)`io_terminate()`
+
+
+[ io_status_t ]
+! CONTROL:
+	/type/
+		typedef
+	/element/
+		- (control)`property-set`
+		- (source/area)`122 1 126 13`
+(signature)`io_status_t()`
+
+Channel status codes used to signal the reaction to the success or failure of a system call.
+
+
+[ io_status ]
+! CONTROL:
+	/type/
+		enumeration
+	/element/
+		- (control)`property-set`
+		- (source/area)`122 9 126 1`
+(signature)`io_status()`
+
+Channel status codes used to signal the reaction to the success or failure of a system call.
+
+
+[ io_stop ]
+! CONTROL:
+	/type/
+		constant
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+(signature)`io_stop()`
+
+
+[ io_flow ]
+! CONTROL:
+	/type/
+		constant
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+(signature)`io_flow()`
+
+
+[ io_terminate ]
+! CONTROL:
+	/type/
+		constant
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+(signature)`io_terminate()`
+
+
+[ Port ]
+! CONTROL:
+	/type/
+		structure
+	/element/
+		- (control)`property-set`
+		- (source/area)`136 1 146 1`
+Kernel Port (file descriptor) structure representation.
+
+This structure exists because of sockets.
+It was the best way to allow the Channels to synchronize their release
+of the file descriptor resource. Arguably, a bitmap could be used as well,
+but this easier and provides utility beyond that necessity. (port specific introspection)
+
+
+[ Port >> kport_t ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`int`
+		
+
+[ Port >> error ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`kerror_t`
+		
+
+[ Port >> cause ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`int`
+		
+
+[ Port >> type ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`int`
+		
+
+[ Port >> freight ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`int`
+		
+
+[ Port >> latches ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`int`
+		
+
+[ Port ]
+! CONTROL:
+	/type/
+		typedef
+	/element/
+		- (control)`property-set`
+		- (source/area)`148 1 148 26`
+(signature)`Port()`
+
+Kernel Port (file descriptor) structure representation.
+
+This structure exists because of sockets.
+It was the best way to allow the Channels to synchronize their release
+of the file descriptor resource. Arguably, a bitmap could be used as well,
+but this easier and provides utility beyond that necessity. (port specific introspection)
+
+
+[ io_op_t ]
+! CONTROL:
+	/type/
+		typedef
+	/element/
+		- (control)`property-set`
+		- (source/area)`154 1 154 96`
+(signature)`io_op_t()`
+
+I/O operation pointer used by ChannelType class instances to
+specify the read and write operation.
+

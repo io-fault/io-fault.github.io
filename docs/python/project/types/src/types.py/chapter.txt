@@ -3,7 +3,7 @@
 		module
 	/element/
 		- (control)`property-set`
-		- (source/area)`1 1 333 0`
+		- (source/area)`1 1 337 0`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`0`
 Factored Projects data structures and types.
@@ -112,7 +112,7 @@ Annotation signature for factor data produced by project protocols.
 		class
 	/element/
 		- (control)`property-set`
-		- (source/area)`26 1 64 15`
+		- (source/area)`26 1 68 15`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`26 16 26 21`
@@ -134,8 +134,12 @@ A triple of contrived identifiers that represent a classification.
 
 /form/
 	Identifier for the specialization of the image.
-	Commonly used for providing an allocation for build intentions, and
-	version specific images.
+
+	Defaults to `'executable'`; the most likely intent of an image.
+
+	This is has no semantic relation to factor types; it is provided
+	to allow parallel storage of data that serves a purpose other than
+	supporting the execution of a project's functionality.
 
 
 [ Variants >> form ]
@@ -146,7 +150,7 @@ A triple of contrived identifiers that represent a classification.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`46 2 46 26`
+		- (source/area)`50 2 50 26`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -161,7 +165,7 @@ A triple of contrived identifiers that represent a classification.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`48 2 50 42`
+		- (source/area)`52 2 54 42`
 (signature)`__repr__(self)`
 
 
@@ -173,7 +177,7 @@ A triple of contrived identifiers that represent a classification.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`52 2 53 64`
+		- (source/area)`56 2 57 64`
 (signature)`__str__(self)`
 
 
@@ -185,7 +189,7 @@ A triple of contrived identifiers that represent a classification.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`55 2 56 27`
+		- (source/area)`59 2 60 27`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -198,7 +202,7 @@ A triple of contrived identifiers that represent a classification.
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`58 2 64 15`
+		- (source/area)`62 2 68 15`
 (signature)`reform(self, rform)`
 
 Reconstruct the instance with the given (factor-local/parameter)&<#Variants.reform.Parameters.rform[rform]> as the new (factor-local/data)&<#Variants.form[form]> value.
@@ -210,10 +214,10 @@ Reconstruct the instance with the given (factor-local/parameter)&<#Variants.refo
 		class
 	/element/
 		- (control)`property-set`
-		- (source/area)`65 1 84 68`
+		- (source/area)`69 1 88 68`
 ! INHERIT:
 	- (control)`property-set`
-	- (source/area)`65 14 65 19`
+	- (source/area)`69 14 69 19`
 	- (type/syntax)`object`
 	- (type/invalid/unknown)&<#object>
 	
@@ -228,7 +232,7 @@ Source format structure holding the language and dialect.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`70 2 72 13`
+		- (source/area)`74 2 76 13`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -242,7 +246,7 @@ Source format structure holding the language and dialect.
 		classmethod
 	/element/
 		- (control)`property-set`
-		- (source/area)`73 2 84 68`
+		- (source/area)`77 2 88 68`
 (signature)`from_string()`
 
 Split the format identifier by the first (char)`.` in (invalid/unknown)&<#string>.
@@ -257,10 +261,10 @@ the dialect will be (invalid/unknown)&<#None>,
 		class
 	/element/
 		- (control)`property-set`
-		- (source/area)`86 1 113 37`
+		- (source/area)`90 1 117 37`
 ! INHERIT:
 	- (control)`property-set`
-	- (source/area)`86 18 86 24`
+	- (source/area)`90 18 90 24`
 	- (type/syntax)`Segment`
 	- (type/context-local/factor-element)&<fault.route/types#Segment[fault.route.types.Segment]>
 	
@@ -278,7 +282,7 @@ Identifiers in the path exclude any filename extensions.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`94 2 95 32`
+		- (source/area)`98 2 99 32`
 (signature)`__str__(self)`
 
 
@@ -290,7 +294,7 @@ Identifiers in the path exclude any filename extensions.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`97 2 98 36`
+		- (source/area)`101 2 102 36`
 (signature)`__repr__(self)`
 
 
@@ -300,7 +304,7 @@ Identifiers in the path exclude any filename extensions.
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`100 2 113 37`
+		- (source/area)`104 2 117 37`
 (signature)`__matmul__(self, fpath)`
 
 Relative and absolute constructor.
@@ -314,7 +318,7 @@ Relative and absolute constructor.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`115 1 117 10`
+		- (source/area)`119 1 121 10`
 #!source
 	factor = FactorPath(None, ())
 	
@@ -326,10 +330,10 @@ Relative and absolute constructor.
 		class
 	/element/
 		- (control)`property-set`
-		- (source/area)`118 1 157 10`
+		- (source/area)`122 1 161 10`
 ! INHERIT:
 	- (control)`property-set`
-	- (source/area)`118 26 118 31`
+	- (source/area)`122 26 122 31`
 	- (type/syntax)`object`
 	- (type/invalid/unknown)&<#object>
 	
@@ -360,7 +364,7 @@ Archived Factor.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`136 2 136 20`
+		- (source/area)`140 2 140 20`
 		- (type/syntax)`Path`
 		- (type/context-local/factor-element)&<fault.system/files#Path[fault.system.files.Path]>
 		
@@ -375,7 +379,7 @@ Archived Factor.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`137 2 137 29`
+		- (source/area)`141 2 141 29`
 		- (type/syntax)`FactorPath`
 		- (type/factor-local/class)&<#FactorPath[FactorPath]>
 		
@@ -390,7 +394,7 @@ Archived Factor.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`138 2 140 10`
+		- (source/area)`142 2 144 10`
 		- (type/syntax)`Path`
 		- (type/context-local/factor-element)&<fault.system/files#Path[fault.system.files.Path]>
 		
@@ -404,7 +408,7 @@ Archived Factor.
 		property
 	/element/
 		- (control)`property-set`
-		- (source/area)`141 2 145 29`
+		- (source/area)`145 2 149 29`
 		- (type/syntax)`bool`
 		- (type/invalid/unknown)&<#bool>
 		
@@ -419,7 +423,7 @@ Whether the original subject was referring to an enclosure.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`147 2 149 30`
+		- (source/area)`151 2 153 30`
 (signature)`select(self, factor)`
 
 
@@ -429,7 +433,7 @@ Whether the original subject was referring to an enclosure.
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`151 2 157 10`
+		- (source/area)`155 2 161 10`
 (signature)`factor(self)`
 
 Construct a project factor path.
@@ -441,10 +445,10 @@ Construct a project factor path.
 		class
 	/element/
 		- (control)`property-set`
-		- (source/area)`158 1 181 10`
+		- (source/area)`162 1 185 10`
 ! INHERIT:
 	- (control)`property-set`
-	- (source/area)`158 19 158 24`
+	- (source/area)`162 19 162 24`
 	- (type/syntax)`object`
 	- (type/invalid/unknown)&<#object>
 	
@@ -476,7 +480,7 @@ Project information structure usually extracted from (filename)`project.txt` fil
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`176 2 176 25`
+		- (source/area)`180 2 180 25`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -491,7 +495,7 @@ Project information structure usually extracted from (filename)`project.txt` fil
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`177 2 177 19`
+		- (source/area)`181 2 181 19`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -506,7 +510,7 @@ Project information structure usually extracted from (filename)`project.txt` fil
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`178 2 178 24`
+		- (source/area)`182 2 182 24`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -521,7 +525,7 @@ Project information structure usually extracted from (filename)`project.txt` fil
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`179 2 181 10`
+		- (source/area)`183 2 185 10`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -536,10 +540,10 @@ Project information structure usually extracted from (filename)`project.txt` fil
 		class
 	/element/
 		- (control)`property-set`
-		- (source/area)`182 1 196 15`
+		- (source/area)`186 1 200 15`
 ! INHERIT:
 	- (control)`property-set`
-	- (source/area)`182 18 182 23`
+	- (source/area)`186 18 186 23`
 	- (type/syntax)`object`
 	- (type/invalid/unknown)&<#object>
 	
@@ -562,7 +566,7 @@ Project information extensions.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`193 2 193 19`
+		- (source/area)`197 2 197 19`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -577,7 +581,7 @@ Project information extensions.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`194 2 196 15`
+		- (source/area)`198 2 200 15`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -592,10 +596,10 @@ Project information extensions.
 		class
 	/element/
 		- (control)`property-set`
-		- (source/area)`197 1 280 63`
+		- (source/area)`201 1 284 63`
 ! INHERIT:
 	- (control)`property-set`
-	- (source/area)`197 17 197 22`
+	- (source/area)`201 17 201 22`
 	- (type/syntax)`object`
 	- (type/invalid/unknown)&<#object>
 	
@@ -639,7 +643,7 @@ needed to properly form the relationship for integration.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`228 2 228 21`
+		- (source/area)`232 2 232 21`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -654,7 +658,7 @@ needed to properly form the relationship for integration.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`229 2 229 24`
+		- (source/area)`233 2 233 24`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -667,7 +671,7 @@ needed to properly form the relationship for integration.
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`231 2 239 74`
+		- (source/area)`235 2 243 74`
 (signature)`isolate(self, isolation)`
 
 Reconstruct the reference replacing its isolation field the given (factor-local/parameter)&<#Reference.isolate.Parameters.isolation[isolation]>.
@@ -683,7 +687,7 @@ If (factor-local/parameter)&<#Reference.isolate.Parameters.isolation[isolation]>
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`241 2 249 10`
+		- (source/area)`245 2 253 10`
 (signature)`__str__(self)`
 
 
@@ -693,7 +697,7 @@ If (factor-local/parameter)&<#Reference.isolate.Parameters.isolation[isolation]>
 		property
 	/element/
 		- (control)`property-set`
-		- (source/area)`250 2 260 13`
+		- (source/area)`254 2 264 13`
 Construct the (factor-local/class)&<#Format[Format]> instance representing the (factor-local/data)&<#Reference.isolation[isolation]>.
 
 Format instances are cached and repeat reads across references
@@ -706,7 +710,7 @@ with the same isolation should normally return the same object.
 		classmethod
 	/element/
 		- (control)`property-set`
-		- (source/area)`261 2 280 63`
+		- (source/area)`265 2 284 63`
 (signature)`from_ri(Class, method, ri)`
 
 Create a reference from a resource indicator.
@@ -721,7 +725,7 @@ Splits on the fragment and the final path segment.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`282 1 288 1`
+		- (source/area)`286 1 292 1`
 #!source
 	FactorType = tuple[
 		tuple[FactorPath, Reference], # Project relative path and type.
@@ -737,10 +741,10 @@ Splits on the fragment and the final path segment.
 		class
 	/element/
 		- (control)`property-set`
-		- (source/area)`290 1 301 83`
+		- (source/area)`294 1 305 83`
 ! INHERIT:
 	- (control)`property-set`
-	- (source/area)`290 31 290 36`
+	- (source/area)`294 31 294 36`
 	- (type/syntax)`object`
 	- (type/invalid/unknown)&<#object>
 	
@@ -755,7 +759,7 @@ A project factor protocol.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`294 2 295 30`
+		- (source/area)`298 2 299 30`
 (signature)`__init__(self, parameters)`
 
 
@@ -767,7 +771,7 @@ A project factor protocol.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`297 2 298 83`
+		- (source/area)`301 2 302 83`
 		- (type/syntax)`Information`
 		- (type/factor-local/class)&<#Information[Information]>
 		
@@ -782,7 +786,7 @@ A project factor protocol.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`300 2 301 83`
+		- (source/area)`304 2 305 83`
 		- (type/syntax)`Iterable[FactorType]`
 		
 (signature)`iterfactors(self, route)`
@@ -796,7 +800,7 @@ A project factor protocol.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`302 1 302 34`
+		- (source/area)`306 1 306 34`
 #!source
 	Protocol = FactorIsolationProtocol
 
@@ -806,10 +810,10 @@ A project factor protocol.
 		class
 	/element/
 		- (control)`property-set`
-		- (source/area)`304 1 309 22`
+		- (source/area)`308 1 313 22`
 ! INHERIT:
 	- (control)`property-set`
-	- (source/area)`304 25 304 33`
+	- (source/area)`308 25 308 33`
 	- (type/syntax)`Exception`
 	- (type/invalid/unknown)&<#Exception>
 	
@@ -822,7 +826,7 @@ The route was identified as not conforming to the protocol.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`310 1 333 26`
+		- (source/area)`314 1 337 26`
 		- (type/syntax)`FactorPath`
 		- (type/factor-local/class)&<#FactorPath[FactorPath]>
 		

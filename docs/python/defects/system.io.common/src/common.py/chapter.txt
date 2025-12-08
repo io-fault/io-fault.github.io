@@ -3,12 +3,10 @@
 		module
 	/element/
 		- (control)`property-set`
-		- (source/area)`1 1 672 0`
-		- (coverage-zeros)`52`
-		- (coverage-counters)`382`
-There is a large intersection of the kinds of tests that we do againsts
-connections managed by a given array. This module contains those and
-any common test related tools for array shutdown.
+		- (source/area)`1 1 712 0`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
+Common tools and tests employed across fault.defects.system.io tests.
 
 
 [ pickle ]
@@ -19,7 +17,7 @@ any common test related tools for array shutdown.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`6 1 6 13`
+		- (source/area)`4 1 4 13`
 
 [ threading ]
 ! CONTROL:
@@ -29,7 +27,7 @@ any common test related tools for array shutdown.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`7 1 7 16`
+		- (source/area)`5 1 5 16`
 
 [ contextlib ]
 ! CONTROL:
@@ -39,7 +37,7 @@ any common test related tools for array shutdown.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`8 1 8 17`
+		- (source/area)`6 1 6 17`
 
 [ os ]
 ! CONTROL:
@@ -49,7 +47,7 @@ any common test related tools for array shutdown.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`9 1 9 9`
+		- (source/area)`7 1 7 9`
 
 [ socket ]
 ! CONTROL:
@@ -59,7 +57,17 @@ any common test related tools for array shutdown.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`10 1 10 13`
+		- (source/area)`8 1 8 13`
+
+[ time ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`9 1 9 11`
 
 [ io ]
 ! CONTROL:
@@ -69,7 +77,7 @@ any common test related tools for array shutdown.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`11 1 11 25`
+		- (source/area)`10 1 10 25`
 
 [ network ]
 ! CONTROL:
@@ -79,9 +87,19 @@ any common test related tools for array shutdown.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`12 1 12 30`
+		- (source/area)`11 1 11 30`
 
 [ kernel ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`12 1 12 29`
+
+[ thread ]
 ! CONTROL:
 	/type/
 		import
@@ -100,8 +118,6 @@ any common test related tools for array shutdown.
 	/element/
 		- (control)`property-set`
 		- (source/area)`15 1 20 2`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`allocpipe(A)`
 
 
@@ -114,8 +130,6 @@ any common test related tools for array shutdown.
 	/element/
 		- (control)`property-set`
 		- (source/area)`22 1 28 15`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
 (signature)`allocsockets(A)`
 
 
@@ -128,8 +142,6 @@ any common test related tools for array shutdown.
 	/element/
 		- (control)`property-set`
 		- (source/area)`30 1 36 15`
-		- (coverage-zeros)`6`
-		- (coverage-counters)`6`
 (signature)`allocports(A)`
 
 
@@ -156,8 +168,6 @@ any common test related tools for array shutdown.
 	/element/
 		- (control)`property-set`
 		- (source/area)`42 1 43 49`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`rallocate(channel, quantity)`
 
 
@@ -170,8 +180,6 @@ any common test related tools for array shutdown.
 	/element/
 		- (control)`property-set`
 		- (source/area)`45 1 46 5`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`45 18 45 26`
@@ -187,9 +195,7 @@ any common test related tools for array shutdown.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`48 1 88 50`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`9`
+		- (source/area)`48 1 92 70`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`48 13 48 17`
@@ -240,7 +246,7 @@ any common test related tools for array shutdown.
 		- (control)`property-set`
 		- (source/area)`60 2 65 10`
 
-[ Delta >> resource ]
+[ Delta >> terminated ]
 ! CONTROL:
 	/type/
 		property
@@ -250,7 +256,7 @@ any common test related tools for array shutdown.
 		- (control)`property-set`
 		- (source/area)`66 2 69 10`
 
-[ Delta >> slice ]
+[ Delta >> resource ]
 ! CONTROL:
 	/type/
 		property
@@ -260,6 +266,16 @@ any common test related tools for array shutdown.
 		- (control)`property-set`
 		- (source/area)`70 2 73 10`
 
+[ Delta >> slice ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`74 2 77 10`
+
 [ Delta >> transferred ]
 ! CONTROL:
 	/type/
@@ -268,7 +284,7 @@ any common test related tools for array shutdown.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`74 2 79 13`
+		- (source/area)`78 2 83 13`
 
 [ Delta >> construct ]
 ! CONTROL:
@@ -278,9 +294,7 @@ any common test related tools for array shutdown.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`80 2 88 50`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`7`
+		- (source/area)`84 2 92 70`
 (signature)`construct(typ, channel)`
 
 
@@ -292,9 +306,7 @@ any common test related tools for array shutdown.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`90 1 93 46`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
+		- (source/area)`94 1 97 46`
 (signature)`snapshot(array)`
 
 
@@ -306,9 +318,7 @@ any common test related tools for array shutdown.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`95 1 97 24`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
+		- (source/area)`99 1 101 24`
 (signature)`cycle(array)`
 
 
@@ -316,14 +326,12 @@ any common test related tools for array shutdown.
 ! CONTROL:
 	/type/
 		function
-	/flags/
-		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`99 1 106 6`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`6`
+		- (source/area)`103 1 114 6`
 (signature)`loop(deliver, array)`
+
+Continuously (factor-local/parameter)&<#loop.Parameters.deliver[deliver]> transfers enqueued into the (factor-local/parameter)&<#loop.Parameters.array[array]>.
 
 
 [ ArrayActionManager ]
@@ -332,12 +340,10 @@ any common test related tools for array shutdown.
 		class
 	/element/
 		- (control)`property-set`
-		- (source/area)`108 1 188 8`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
+		- (source/area)`116 1 209 14`
 ! INHERIT:
 	- (control)`property-set`
-	- (source/area)`108 26 108 31`
+	- (source/area)`116 26 116 31`
 	- (type/syntax)`object`
 	- (type/invalid/unknown)&<#object>
 	
@@ -353,9 +359,7 @@ of event collection.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`113 2 118 19`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
+		- (source/area)`122 2 127 19`
 (signature)`__init__(self)`
 
 
@@ -365,9 +369,7 @@ of event collection.
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`120 2 133 15`
-		- (coverage-zeros)`6`
-		- (coverage-counters)`6`
+		- (source/area)`129 2 144 15`
 (signature)`view(self)`
 
 Utility function for displaying the contents of a Array.
@@ -381,9 +383,7 @@ Utility function for displaying the contents of a Array.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`135 2 136 20`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
+		- (source/area)`146 2 147 20`
 (signature)`force(self)`
 
 
@@ -395,9 +395,7 @@ Utility function for displaying the contents of a Array.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`138 2 144 19`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
+		- (source/area)`149 2 156 20`
 (signature)`cycle(self, activity)`
 
 
@@ -409,9 +407,7 @@ Utility function for displaying the contents of a Array.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`146 2 149 27`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
+		- (source/area)`158 2 161 27`
 (signature)`loop(self)`
 
 
@@ -423,9 +419,7 @@ Utility function for displaying the contents of a Array.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`150 2 161 27`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`8`
+		- (source/area)`162 2 172 27`
 (signature)`thread(self)`
 
 
@@ -437,9 +431,7 @@ Utility function for displaying the contents of a Array.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`162 2 179 9`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`14`
+		- (source/area)`173 2 190 9`
 (signature)`manage(self, ct)`
 
 
@@ -449,12 +441,10 @@ Utility function for displaying the contents of a Array.
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`181 2 188 8`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
+		- (source/area)`192 2 209 14`
 (signature)`delta(self)`
 
-wait for a cycle to occur; use to regulate
+Wait for a cycle to occur; use to regulate transfer progress.
 
 
 [ Events ]
@@ -463,12 +453,10 @@ wait for a cycle to occur; use to regulate
 		class
 	/element/
 		- (control)`property-set`
-		- (source/area)`190 1 253 22`
-		- (coverage-zeros)`5`
-		- (coverage-counters)`15`
+		- (source/area)`211 1 292 22`
 ! INHERIT:
 	- (control)`property-set`
-	- (source/area)`190 14 190 19`
+	- (source/area)`211 14 211 19`
 	- (type/syntax)`object`
 	- (type/invalid/unknown)&<#object>
 	
@@ -485,9 +473,7 @@ No autoread setup.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`196 2 202 39`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
+		- (source/area)`217 2 223 39`
 (signature)`__init__(self, *channels)`
 
 
@@ -499,9 +485,7 @@ No autoread setup.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`204 2 206 16`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
+		- (source/area)`225 2 227 16`
 (signature)`terminate(self)`
 
 
@@ -513,9 +497,7 @@ No autoread setup.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`208 2 211 29`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`3`
+		- (source/area)`229 2 232 29`
 (signature)`_term_check(self)`
 
 
@@ -527,10 +509,20 @@ No autoread setup.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`213 2 217 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
+		- (source/area)`234 2 236 18`
 (signature)`raised(self)`
+
+
+[ Events >> vacancies ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`238 2 245 10`
+(signature)`vacancies(self)`
 
 
 [ Events >> terminated ]
@@ -541,7 +533,19 @@ No autoread setup.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`218 2 224 10`
+		- (source/area)`246 2 250 14`
+
+[ Events >> exhausted ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`252 2 259 10`
+(signature)`exhausted(self)`
+
 
 [ Events >> exhaustions ]
 ! CONTROL:
@@ -551,7 +555,7 @@ No autoread setup.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`225 2 228 10`
+		- (source/area)`260 2 263 10`
 
 [ Events >> sockets ]
 ! CONTROL:
@@ -561,7 +565,19 @@ No autoread setup.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`229 2 236 10`
+		- (source/area)`264 2 269 16`
+
+[ Events >> get_data ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`271 2 279 10`
+(signature)`get_data(self)`
+
 
 [ Events >> data ]
 ! CONTROL:
@@ -571,7 +587,7 @@ No autoread setup.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`237 2 242 16`
+		- (source/area)`280 2 281 24`
 
 [ Events >> clear ]
 ! CONTROL:
@@ -581,9 +597,7 @@ No autoread setup.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`244 2 245 20`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
+		- (source/area)`283 2 284 25`
 (signature)`clear(self)`
 
 
@@ -595,9 +609,7 @@ No autoread setup.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`247 2 249 36`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
+		- (source/area)`286 2 288 36`
 (signature)`setup_read(self, quantity)`
 
 
@@ -609,9 +621,7 @@ No autoread setup.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`251 2 253 22`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
+		- (source/area)`290 2 292 22`
 (signature)`setup_write(self, resource)`
 
 
@@ -621,12 +631,10 @@ No autoread setup.
 		class
 	/element/
 		- (control)`property-set`
-		- (source/area)`255 1 354 38`
-		- (coverage-zeros)`6`
-		- (coverage-counters)`23`
+		- (source/area)`294 1 394 38`
 ! INHERIT:
 	- (control)`property-set`
-	- (source/area)`255 16 255 21`
+	- (source/area)`294 16 294 21`
 	- (type/syntax)`object`
 	- (type/invalid/unknown)&<#object>
 	
@@ -641,9 +649,7 @@ For cases involving send and receives.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`259 2 271 3`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
+		- (source/area)`299 2 311 3`
 (signature)`__init__(self, channels)`
 
 
@@ -655,9 +661,7 @@ For cases involving send and receives.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`273 2 280 35`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
+		- (source/area)`313 2 320 35`
 (signature)`_read_event(self, activity)`
 
 
@@ -669,9 +673,7 @@ For cases involving send and receives.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`282 2 284 16`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
+		- (source/area)`322 2 324 16`
 (signature)`terminate(self)`
 
 
@@ -683,9 +685,7 @@ For cases involving send and receives.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`286 2 288 86`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`2`
+		- (source/area)`326 2 328 86`
 (signature)`_write_term_check(self)`
 
 
@@ -697,9 +697,7 @@ For cases involving send and receives.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`290 2 294 10`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`2`
+		- (source/area)`330 2 334 10`
 (signature)`_read_term_check(self)`
 
 
@@ -711,7 +709,7 @@ For cases involving send and receives.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`295 2 299 10`
+		- (source/area)`335 2 339 10`
 
 [ Endpoint >> write_exhaustions ]
 ! CONTROL:
@@ -721,7 +719,7 @@ For cases involving send and receives.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`300 2 304 10`
+		- (source/area)`340 2 344 10`
 
 [ Endpoint >> read_payload_int ]
 ! CONTROL:
@@ -731,7 +729,7 @@ For cases involving send and receives.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`305 2 313 10`
+		- (source/area)`345 2 353 10`
 
 [ Endpoint >> read_payload ]
 ! CONTROL:
@@ -741,7 +739,7 @@ For cases involving send and receives.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`314 2 322 10`
+		- (source/area)`354 2 362 10`
 
 [ Endpoint >> units_written ]
 ! CONTROL:
@@ -751,7 +749,7 @@ For cases involving send and receives.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`323 2 329 10`
+		- (source/area)`363 2 369 10`
 
 [ Endpoint >> units_read ]
 ! CONTROL:
@@ -761,7 +759,7 @@ For cases involving send and receives.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`330 2 334 4`
+		- (source/area)`370 2 374 4`
 
 [ Endpoint >> clear ]
 ! CONTROL:
@@ -771,9 +769,7 @@ For cases involving send and receives.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`336 2 339 22`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
+		- (source/area)`376 2 379 22`
 (signature)`clear(self)`
 
 
@@ -785,9 +781,7 @@ For cases involving send and receives.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`341 2 343 22`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
+		- (source/area)`381 2 383 22`
 (signature)`clear_reads(self)`
 
 
@@ -799,9 +793,7 @@ For cases involving send and receives.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`345 2 346 26`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
+		- (source/area)`385 2 386 26`
 (signature)`clear_writes(self)`
 
 
@@ -813,9 +805,7 @@ For cases involving send and receives.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`348 2 350 70`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
+		- (source/area)`388 2 390 70`
 (signature)`setup_read(self, rallocation)`
 
 
@@ -827,9 +817,7 @@ For cases involving send and receives.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`352 2 354 38`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
+		- (source/area)`392 2 394 38`
 (signature)`setup_write(self, resource)`
 
 
@@ -839,12 +827,10 @@ For cases involving send and receives.
 		class
 	/element/
 		- (control)`property-set`
-		- (source/area)`356 1 416 31`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`3`
+		- (source/area)`396 1 459 31`
 ! INHERIT:
 	- (control)`property-set`
-	- (source/area)`356 15 356 20`
+	- (source/area)`396 15 396 20`
 	- (type/syntax)`object`
 	- (type/invalid/unknown)&<#object>
 	
@@ -859,9 +845,7 @@ Endpoint that transfers objects.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`360 2 374 62`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
+		- (source/area)`401 2 415 62`
 (signature)`__init__(self, channels)`
 
 
@@ -873,9 +857,7 @@ Endpoint that transfers objects.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`376 2 387 38`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`9`
+		- (source/area)`417 2 430 38`
 (signature)`_read_event(self, activity)`
 
 
@@ -887,9 +869,7 @@ Endpoint that transfers objects.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`389 2 391 26`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
+		- (source/area)`432 2 434 26`
 (signature)`_write_event(self, activity)`
 
 
@@ -901,9 +881,7 @@ Endpoint that transfers objects.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`393 2 395 16`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
+		- (source/area)`436 2 438 16`
 (signature)`terminate(self)`
 
 
@@ -915,9 +893,7 @@ Endpoint that transfers objects.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`397 2 399 86`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`2`
+		- (source/area)`440 2 442 86`
 (signature)`_write_term_check(self)`
 
 
@@ -929,9 +905,7 @@ Endpoint that transfers objects.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`401 2 405 10`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
+		- (source/area)`444 2 448 10`
 (signature)`_read_term_check(self)`
 
 
@@ -943,7 +917,7 @@ Endpoint that transfers objects.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`406 2 408 37`
+		- (source/area)`449 2 451 37`
 
 [ Objects >> clear ]
 ! CONTROL:
@@ -953,9 +927,7 @@ Endpoint that transfers objects.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`410 2 411 30`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
+		- (source/area)`453 2 454 30`
 (signature)`clear(self)`
 
 
@@ -967,24 +939,8 @@ Endpoint that transfers objects.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`413 2 416 31`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
+		- (source/area)`456 2 459 31`
 (signature)`send(self, obj)`
-
-
-[ child_echo ]
-! CONTROL:
-	/type/
-		function
-	/element/
-		- (control)`property-set`
-		- (source/area)`418 1 435 20`
-		- (coverage-zeros)`12`
-		- (coverage-counters)`12`
-(signature)`child_echo(am, objects)`
-
-Echos objects received back at the sender.
 
 
 [ exchange_nothing ]
@@ -995,9 +951,7 @@ Echos objects received back at the sender.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`437 1 438 5`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
+		- (source/area)`461 1 462 5`
 (signature)`exchange_nothing(test, am, client, server)`
 
 
@@ -1009,9 +963,7 @@ Echos objects received back at the sender.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`440 1 477 54`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`29`
+		- (source/area)`464 1 501 54`
 (signature)`exchange_few_bytes(test, am, client, server)`
 
 
@@ -1023,9 +975,7 @@ Echos objects received back at the sender.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`479 1 515 41`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`27`
+		- (source/area)`503 1 539 41`
 (signature)`exchange_many_bytes(test, am, client, server)`
 
 
@@ -1037,9 +987,7 @@ Echos objects received back at the sender.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`517 1 547 16`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`23`
+		- (source/area)`541 1 571 16`
 (signature)`exchange_many_bytes_many_times(test, am, client, server)`
 
 
@@ -1051,9 +999,7 @@ Echos objects received back at the sender.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`549 1 562 8`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`12`
+		- (source/area)`573 1 586 8`
 (signature)`exchange_kilobytes(test, am, client, server)`
 
 
@@ -1065,7 +1011,7 @@ Echos objects received back at the sender.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`564 1 570 1`
+		- (source/area)`588 1 594 1`
 #!source
 	transfer_cases = [
 		exchange_nothing,
@@ -1083,9 +1029,7 @@ Echos objects received back at the sender.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`572 1 592 16`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`13`
+		- (source/area)`596 1 616 16`
 (signature)`echo_objects(test, am, client, server)`
 
 
@@ -1097,7 +1041,7 @@ Echos objects received back at the sender.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`594 1 596 1`
+		- (source/area)`618 1 620 1`
 #!source
 	object_transfer_cases = [
 		echo_objects,
@@ -1111,8 +1055,6 @@ Echos objects received back at the sender.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`598 1 672 33`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`56`
+		- (source/area)`622 1 712 33`
 (signature)`stream_listening_connection(test, version, address)`
 

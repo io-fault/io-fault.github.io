@@ -3,7 +3,7 @@
 		module
 	/element/
 		- (control)`property-set`
-		- (source/area)`1 1 756 0`
+		- (source/area)`1 1 755 0`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`0`
 Range classes for managing associations and sets whose items span ranges.
@@ -893,7 +893,7 @@ Return an iterator to the units in the range.
 		class
 	/element/
 		- (control)`property-set`
-		- (source/area)`658 1 756 10`
+		- (source/area)`658 1 755 10`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`658 15 658 20`
@@ -1043,7 +1043,7 @@ at each level in the mapping.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`740 2 750 14`
+		- (source/area)`740 2 749 14`
 (signature)`levels(self, key)`
 
 
@@ -1055,6 +1055,6 @@ at each level in the mapping.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`752 2 756 10`
+		- (source/area)`751 2 755 10`
 (signature)`last(self, key)`
 

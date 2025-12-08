@@ -5,7 +5,7 @@
 		- (control)`property-set`
 		- (source/area)`1 1 46 30`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`29`
+		- (coverage-counters)`0`
 Sanity checks regarding presence.
 
 
@@ -28,8 +28,6 @@ Sanity checks regarding presence.
 	/element/
 		- (control)`property-set`
 		- (source/area)`6 1 22 57`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`12`
 (signature)`test_indefinites(test)`
 
 
@@ -42,8 +40,6 @@ Sanity checks regarding presence.
 	/element/
 		- (control)`property-set`
 		- (source/area)`24 1 26 65`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`test_datums(test)`
 
 
@@ -56,8 +52,6 @@ Sanity checks regarding presence.
 	/element/
 		- (control)`property-set`
 		- (source/area)`28 1 29 22`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`test_annum_value(test)`
 
 
@@ -70,8 +64,6 @@ Sanity checks regarding presence.
 	/element/
 		- (control)`property-set`
 		- (source/area)`31 1 38 40`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
 (signature)`test_indefinite_representations(test)`
 
 
@@ -84,7 +76,5 @@ Sanity checks regarding presence.
 	/element/
 		- (control)`property-set`
 		- (source/area)`40 1 47 29`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
 (signature)`test_eternals_representations(test)`
 

@@ -1,1 +1,1 @@
-[[["Harness", "Test"], ["Harness", "collect"]], [{"syntax": "types.Test", "area": [[86, 9], [86, 18]]}, {"syntax": "staticmethod(gather)", "area": [[87, 12], [87, 31]]}]]
+[[["Harness", "TestType"], ["Harness", "collect"]], [{"syntax": "types.Test", "area": [[86, 13], [86, 22]]}, {"syntax": "staticmethod(gather)", "area": [[87, 12], [87, 31]]}]]

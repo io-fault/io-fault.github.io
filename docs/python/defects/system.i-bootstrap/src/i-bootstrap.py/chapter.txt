@@ -5,7 +5,7 @@
 		- (control)`property-set`
 		- (source/area)`1 1 96 0`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`48`
+		- (coverage-counters)`0`
 Check bootstrapping operations.
 
 
@@ -46,8 +46,6 @@ Check bootstrapping operations.
 	/element/
 		- (control)`property-set`
 		- (source/area)`8 1 32 2`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`8`
 (signature)`test_import_constructions(test)`
 
 - (context-local/factor-element)&<fault.system/bootstrap#package_import[fault.system.bootstrap.package_import]>
@@ -61,8 +59,6 @@ Check bootstrapping operations.
 	/element/
 		- (control)`property-set`
 		- (source/area)`34 1 56 43`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`16`
 (signature)`test_load_code(test)`
 
 - (context-local/factor-element)&<fault.system/bootstrap#load_code[fault.system.bootstrap.load_code]>
@@ -75,8 +71,6 @@ Check bootstrapping operations.
 	/element/
 		- (control)`property-set`
 		- (source/area)`58 1 96 69`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`19`
 (signature)`test_integration(test)`
 
 - (context-local/factor-element)&<fault.system/bootstrap#install_root[fault.system.bootstrap.install_root]>

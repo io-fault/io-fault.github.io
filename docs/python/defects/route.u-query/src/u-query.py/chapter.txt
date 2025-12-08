@@ -5,7 +5,7 @@
 		- (control)`property-set`
 		- (source/area)`1 1 269 0`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`110`
+		- (coverage-counters)`0`
 Analyze the query module.
 
 
@@ -26,8 +26,6 @@ Analyze the query module.
 	/element/
 		- (control)`property-set`
 		- (source/area)`6 1 21 37`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`11`
 (signature)`test_iselement(test)`
 
 - (context-local/factor-element)&<fault.route/query#iselement[fault.route.query.iselement]>
@@ -40,8 +38,6 @@ Analyze the query module.
 	/element/
 		- (control)`property-set`
 		- (source/area)`23 1 29 87`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
 (signature)`test_Context_initialization(test)`
 
 - (context-local/factor-element)&<fault.route/query#Context.__init__[fault.route.query.Context.__init__]>
@@ -54,8 +50,6 @@ Analyze the query module.
 	/element/
 		- (control)`property-set`
 		- (source/area)`31 1 38 56`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
 (signature)`test_Context_parse_slice(test)`
 
 - (context-local/factor-element)&<fault.route/query#Context._parse_slice[fault.route.query.Context._parse_slice]>
@@ -68,8 +62,6 @@ Analyze the query module.
 	/element/
 		- (control)`property-set`
 		- (source/area)`40 1 47 61`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
 (signature)`test_Context_identify_node(test)`
 
 - (context-local/factor-element)&<fault.route/query#Context._identify_node[fault.route.query.Context._identify_node]>
@@ -82,8 +74,6 @@ Analyze the query module.
 	/element/
 		- (control)`property-set`
 		- (source/area)`49 1 55 18`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
 (signature)`test_Context_prepare_empty(test)`
 
 - (context-local/factor-element)&<fault.route/query#Context.prepare[fault.route.query.Context.prepare]>
@@ -96,8 +86,6 @@ Analyze the query module.
 	/element/
 		- (control)`property-set`
 		- (source/area)`57 1 85 30`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`12`
 (signature)`test_Context_invalid_path(test)`
 
 - (context-local/factor-element)&<fault.route/query#Context.structure[fault.route.query.Context.structure]>
@@ -111,8 +99,6 @@ Analyze the query module.
 	/element/
 		- (control)`property-set`
 		- (source/area)`87 1 105 29`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`8`
 (signature)`test_Context_filters(test)`
 
 - (context-local/factor-element)&<fault.route/query#Context.structure[fault.route.query.Context.structure]>
@@ -126,8 +112,6 @@ Analyze the query module.
 	/element/
 		- (control)`property-set`
 		- (source/area)`107 1 120 44`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
 (signature)`test_Context_all(test)`
 
 - (context-local/factor-element)&<fault.route/query#Context.structure[fault.route.query.Context.structure]>
@@ -141,8 +125,6 @@ Analyze the query module.
 	/element/
 		- (control)`property-set`
 		- (source/area)`122 1 146 46`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`12`
 (signature)`test_Context_index(test)`
 
 - (context-local/factor-element)&<fault.route/query#Context._index[fault.route.query.Context._index]>
@@ -156,8 +138,6 @@ Analyze the query module.
 	/element/
 		- (control)`property-set`
 		- (source/area)`148 1 164 47`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
 (signature)`test_Context_predicate(test)`
 
 - (context-local/factor-element)&<fault.route/query#Context._predicate[fault.route.query.Context._predicate]>
@@ -171,8 +151,6 @@ Analyze the query module.
 	/element/
 		- (control)`property-set`
 		- (source/area)`166 1 184 56`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`8`
 (signature)`test_Context_union(test)`
 
 - (context-local/factor-element)&<fault.route/query#Context._union[fault.route.query.Context._union]>
@@ -186,8 +164,6 @@ Analyze the query module.
 	/element/
 		- (control)`property-set`
 		- (source/area)`186 1 210 58`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`8`
 (signature)`test_Cursor_select(test)`
 
 - (context-local/factor-element)&<fault.route/query#Context._select[fault.route.query.Context._select]>
@@ -203,8 +179,6 @@ Analyze the query module.
 	/element/
 		- (control)`property-set`
 		- (source/area)`212 1 231 25`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`7`
 (signature)`test_Cursor_seek(test)`
 
 - (context-local/factor-element)&<fault.route/query#Cursor.seek[fault.route.query.Cursor.seek]>
@@ -217,8 +191,6 @@ Analyze the query module.
 	/element/
 		- (control)`property-set`
 		- (source/area)`233 1 251 35`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`7`
 (signature)`test_Cursor_reset(test)`
 
 - (context-local/factor-element)&<fault.route/query#Cursor.reset[fault.route.query.Cursor.reset]>
@@ -231,8 +203,6 @@ Analyze the query module.
 	/element/
 		- (control)`property-set`
 		- (source/area)`253 1 269 65`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
 (signature)`test_Cursor_fork(test)`
 
 - (context-local/factor-element)&<fault.route/query#Cursor.fork[fault.route.query.Cursor.fork]>

@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 127 0`
-		- (coverage-zeros)`4`
-		- (coverage-counters)`57`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 
 [ sys ]
 ! CONTROL:
@@ -34,8 +34,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`6 1 12 63`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`test_setlocale(test)`
 
 - (project-local/unknown)&<extensions.text/module.c#dsetlocale>
@@ -51,8 +49,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`14 1 16 33`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`test_encoding(test)`
 
 
@@ -63,8 +59,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`18 1 27 36`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
 (signature)`test_cells(test)`
 
 - (project-local/unknown)&<extensions.tty/module.c#cells>
@@ -78,8 +72,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`30 1 46 30`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`10`
 (signature)`test_cells_chinese_sample(test)`
 
 - (project-local/unknown)&<extensions.tty/module.c#cells>
@@ -93,8 +85,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`48 1 59 39`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`7`
 (signature)`test_cells_ctlchars(test)`
 
 - (project-local/unknown)&<extensions.tty/module.c#cells>
@@ -108,8 +98,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`61 1 72 35`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
 (signature)`test_cells_combining(test)`
 
 - (project-local/unknown)&<extensions.tty/module.c#cells>
@@ -123,8 +111,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`74 1 90 29`
-		- (coverage-zeros)`4`
-		- (coverage-counters)`7`
 (signature)`test_cells_vs(test)`
 
 - (project-local/unknown)&<extensions.tty/module.c#cells>
@@ -140,8 +126,6 @@ Variant Selectors.
 	/element/
 		- (control)`property-set`
 		- (source/area)`92 1 107 35`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`7`
 (signature)`test_cells_sequences(test)`
 
 - (project-local/unknown)&<extensions.tty/module.c#cells>
@@ -157,8 +141,6 @@ ZWJ sequences.
 	/element/
 		- (control)`property-set`
 		- (source/area)`109 1 127 24`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`7`
 (signature)`test_cells_zerowidths(test)`
 
 - (project-local/unknown)&<extensions.tty/module.c#cells>

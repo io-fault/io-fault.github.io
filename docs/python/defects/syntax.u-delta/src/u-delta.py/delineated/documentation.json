@@ -1,0 +1,1 @@
+[["Analyze &.delta"], ["- &module.Log.truncate", "", "Validate negative interpretations, uncommitted retention, and full truncation."], ["- &module.Update.combine", "- &module.Log.collapse", "", "Validate that deletes following inserts can be combined."], ["- &module.Log.collapse", "- &module.Log.since"]]

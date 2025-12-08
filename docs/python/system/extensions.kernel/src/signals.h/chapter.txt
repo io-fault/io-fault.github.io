@@ -6,3 +6,30 @@
 		- (source/area)``
 		- (coverage-zeros)`0`
 		- (coverage-counters)`0`
+
+[ SIG ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`13 11 14 46`
+#!source
+	#define SIG(SID, CAT, SYM, ...) \
+		case SIG##SID: return #CAT "/" #SYM; break;
+
+[ signal_string ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 23 1`
+		- (type/syntax)`const char *`
+		
+(signature)`signal_string(sig)`
+

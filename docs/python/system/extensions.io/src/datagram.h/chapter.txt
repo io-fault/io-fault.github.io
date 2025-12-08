@@ -6,3 +6,217 @@
 		- (source/area)``
 		- (coverage-zeros)`0`
 		- (coverage-counters)`0`
+
+[ DatagramHeaderSize ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`15 9 15 52`
+#!source
+	#define DatagramHeaderSize (sizeof(struct Datagram))
+
+[ DatagramGetAddress ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`17 9 17 85`
+(signature)`DatagramGetAddress()`
+
+
+[ DatagramGetData ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`18 9 18 78`
+(signature)`DatagramGetData()`
+
+
+[ DatagramGetSize ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`20 9 20 40`
+(signature)`DatagramGetSize()`
+
+
+[ DatagramSetSize ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`21 9 21 62`
+(signature)`DatagramSetSize()`
+
+
+[ DatagramGetSpace ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`22 9 22 42`
+(signature)`DatagramGetSpace()`
+
+
+[ DatagramSetSpace ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`23 9 23 64`
+(signature)`DatagramSetSpace()`
+
+
+[ DatagramGetAddressLength ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`24 9 24 48`
+(signature)`DatagramGetAddressLength()`
+
+
+[ DatagramCalculateUnit ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`25 9 25 88`
+(signature)`DatagramCalculateUnit()`
+
+
+[ DatagramGetArea ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`30 9 31 75`
+(signature)`DatagramGetArea()`
+
+
+[ DatagramIsValid ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`38 9 41 1`
+(signature)`DatagramIsValid()`
+
+
+[ DatagramNext ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`43 9 44 69`
+(signature)`DatagramNext()`
+
+
+[ Datagram ]
+! CONTROL:
+	/type/
+		structure
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 13 1`
+A single datagram transmitted by (project-local/unknown)&<kernel#Datagrams[kernel.Datagrams]> channels.
+
+
+[ Datagram >> gramspace ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`int`
+		
+
+[ Datagram >> gramsize ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`int`
+		
+
+[ Datagram >> addrlen ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`int`
+		
+
+[ Datagram >> addr ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`int[0]`
+		
+
+[ Datagram >> gram ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`char[0]`
+		

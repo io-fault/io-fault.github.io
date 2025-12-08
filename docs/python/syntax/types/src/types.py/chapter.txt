@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 211 0`
-		- (coverage-zeros)`34`
-		- (coverage-counters)`81`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 Collection of data structures and functions for working with exact addresses in (syntax) text files.
 
 
@@ -36,8 +36,6 @@ Collection of data structures and functions for working with exact addresses in 
 	/element/
 		- (control)`property-set`
 		- (source/area)`7 1 98 21`
-		- (coverage-zeros)`7`
-		- (coverage-counters)`9`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`7 15 7 19`
@@ -77,8 +75,6 @@ This special case is used to allow inclusive ranges to properly detect continuit
 	/element/
 		- (control)`property-set`
 		- (source/area)`22 2 24 46`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`from_string(Class, source)`
 
 
@@ -91,8 +87,6 @@ This special case is used to allow inclusive ranges to properly detect continuit
 	/element/
 		- (control)`property-set`
 		- (source/area)`26 2 27 35`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`__str__(self)`
 
 
@@ -105,8 +99,6 @@ This special case is used to allow inclusive ranges to properly detect continuit
 	/element/
 		- (control)`property-set`
 		- (source/area)`29 2 30 45`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`__add__(self, x)`
 
 
@@ -119,8 +111,6 @@ This special case is used to allow inclusive ranges to properly detect continuit
 	/element/
 		- (control)`property-set`
 		- (source/area)`32 2 33 45`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`__sub__(self, x)`
 
 
@@ -133,8 +123,6 @@ This special case is used to allow inclusive ranges to properly detect continuit
 	/element/
 		- (control)`property-set`
 		- (source/area)`35 2 36 45`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`__mul__(self, x)`
 
 
@@ -147,8 +135,6 @@ This special case is used to allow inclusive ranges to properly detect continuit
 	/element/
 		- (control)`property-set`
 		- (source/area)`38 2 39 45`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`__div__(self, x)`
 
 
@@ -161,8 +147,6 @@ This special case is used to allow inclusive ranges to properly detect continuit
 	/element/
 		- (control)`property-set`
 		- (source/area)`41 2 42 53`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`__rshift__(self, x)`
 
 
@@ -175,8 +159,6 @@ This special case is used to allow inclusive ranges to properly detect continuit
 	/element/
 		- (control)`property-set`
 		- (source/area)`44 2 47 10`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`__lshift__(self, x)`
 
 
@@ -211,8 +193,6 @@ is referring to the end of the (factor-local/property)&<#Address.line[line]>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`72 2 86 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
 (signature)`normalize_stop(line_length, line_number, column_number)`
 
 Adjust a stop (invalid/unknown)&<#Address'> pointers for use in an (factor-local/class)&<#Area[Area]> so that it can
@@ -230,8 +210,6 @@ number will be incremented and its column set to zero. This allows
 	/element/
 		- (control)`property-set`
 		- (source/area)`87 2 98 21`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`3`
 		- (type/syntax)`bool`
 		- (type/invalid/unknown)&<#bool>
 		
@@ -251,8 +229,6 @@ should be used to refer to meta data about the injection.
 	/element/
 		- (control)`property-set`
 		- (source/area)`100 1 211 31`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`14`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`100 12 100 28`
@@ -322,8 +298,6 @@ requires additional contextual knowledge (line length).
 	/element/
 		- (control)`property-set`
 		- (source/area)`130 2 136 65`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`delineate(Class, lstart, cstart, lstop, cstop, stop_line_length)`
 
 Construct an (factor-local/class)&<#Area[Area]> from the given indexes normalizing the stop address.
@@ -338,8 +312,6 @@ Construct an (factor-local/class)&<#Area[Area]> from the given indexes normalizi
 	/element/
 		- (control)`property-set`
 		- (source/area)`138 2 147 13`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`5`
 (signature)`__str__(self)`
 
 
@@ -350,8 +322,6 @@ Construct an (factor-local/class)&<#Area[Area]> from the given indexes normalizi
 	/element/
 		- (control)`property-set`
 		- (source/area)`148 2 175 13`
-		- (coverage-zeros)`15`
-		- (coverage-counters)`15`
 (signature)`from_string(Class, string)`
 
 Construct an (factor-local/class)&<#Area[Area]> from the given string.
@@ -364,8 +334,6 @@ Construct an (factor-local/class)&<#Area[Area]> from the given string.
 	/element/
 		- (control)`property-set`
 		- (source/area)`176 2 184 4`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 (signature)`from_line_range(Class, pair)`
 
 Construct an (factor-local/class)&<#Area[Area]> from the inclusive line indexes in (factor-local/parameter)&<#Area.from_line_range.Parameters.pair[pair]>.
@@ -391,8 +359,6 @@ The returned instance guarantees (factor-local/property)&<#Area.vertical[vertica
 	/element/
 		- (control)`property-set`
 		- (source/area)`187 2 211 31`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`13`
 		- (type/syntax)`Slice`
 		- (type/factor-local/data)&<#Area.Slice[Slice]>
 		

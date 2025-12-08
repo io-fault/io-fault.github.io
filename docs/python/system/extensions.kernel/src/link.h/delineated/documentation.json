@@ -1,1 +1,1 @@
-[]
+[["The set of control flags used to identify the Link's state.","","/lnf_cancelled/","\tWhether or not the operation has been disconnected from events.","\tResources associated with the event may still be open.","/lnf_dispatched/","\tWhether or not the operation has been scheduled with","\t&.kernel.Scheduler.dispatch.","/lnf_executing/","\tWhether or not the operation's task is being executed right now.","\tPrimarily used as a safety to prevent unwanted recursion.","/lnf_cyclic/","\tWhether or not the task can be executed more than once.",""]]

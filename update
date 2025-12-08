@@ -22,7 +22,7 @@ fault ()
 
 FPYTHON='python+Python Framework+fault+http://fault.io/python'
 FSYSTEM='integration+System Integration+system+http://fault.io/integration'
-FTERMINAL='integration+Terminal+terminal+http://fault.io/terminal'
+FTERMINAL='interface+Terminal+terminal+http://fault.io/terminal'
 FPROTOCOL='protocol+Interface Protocols+interface+http://fault.io/protocol'
 FENTITY='entity+Fault+fel+http://fault.io/entity'
 

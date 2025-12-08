@@ -3,7 +3,7 @@
 		module
 	/element/
 		- (control)`property-set`
-		- (source/area)`1 1 391 0`
+		- (source/area)`1 1 363 0`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`0`
 Formatting and parsing tools for status frame transport envelopes.
@@ -11,7 +11,8 @@ Formatting and parsing tools for status frame transport envelopes.
 This module provides conceptual definitions for Status Frame events ((project-local/factor-element)&<types#EStruct[fault.status.types.EStruct]>) and
 I/O operations supporting the transmission of those events.
 
-Status Frames are (project-local/factor-element)&<types#Frame[fault.status.types.Frame]> instances that can be serialized into and parsed from a data stream.
+Status Frames are (project-local/factor-element)&<types#Frame[fault.status.types.Frame]> instances that can be serialized into and parsed from a
+data stream.
 
 [ Usage ]
 
@@ -39,10 +40,7 @@ Serialized messages are expected to include the trailing newline:
 [ Properties ]
 
 /protocol/
-	String identifying the status frames protocols.
-
-/ttyn1_minimum_overhead/
-	Informative minimum size regarding tty-notation-1 status frames.
+	String identifying the status frames (event) protocol.
 
 
 [ typing ]
@@ -53,7 +51,7 @@ Serialized messages are expected to include the trailing newline:
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`36 1 36 13`
+		- (source/area)`34 1 34 13`
 
 [ functools ]
 ! CONTROL:
@@ -63,7 +61,7 @@ Serialized messages are expected to include the trailing newline:
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`37 1 37 16`
+		- (source/area)`35 1 35 16`
 
 [ base64 ]
 ! CONTROL:
@@ -73,17 +71,7 @@ Serialized messages are expected to include the trailing newline:
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`38 1 38 13`
-
-[ zlib ]
-! CONTROL:
-	/type/
-		import
-	/flags/
-		- `undocumented`
-	/element/
-		- (control)`property-set`
-		- (source/area)`39 1 39 11`
+		- (source/area)`36 1 36 13`
 
 [ transport ]
 ! CONTROL:
@@ -93,7 +81,7 @@ Serialized messages are expected to include the trailing newline:
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`41 1 41 23`
+		- (source/area)`38 1 38 23`
 
 [ types ]
 ! CONTROL:
@@ -103,7 +91,7 @@ Serialized messages are expected to include the trailing newline:
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`42 1 42 19`
+		- (source/area)`39 1 39 19`
 
 [ protocol ]
 ! CONTROL:
@@ -113,9 +101,21 @@ Serialized messages are expected to include the trailing newline:
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`44 1 44 45`
+		- (source/area)`41 1 41 51`
 #!source
-	protocol = 'http://if.fault.io/status/frames'
+	protocol = 'http://fault.io/protocol/status/frames'
+
+[ ttyn_data_url ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`42 1 42 56`
+#!source
+	ttyn_data_url = b'data:text/plain;charset=utf-8;base64,'
 
 [ compose ]
 ! CONTROL:
@@ -123,7 +123,7 @@ Serialized messages are expected to include the trailing newline:
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`46 1 55 39`
+		- (source/area)`44 1 53 39`
 		- (type/syntax)`types.Frame`
 		- (type/project-local/factor-element)&<types#Frame[fault.status.types.Frame]>
 		
@@ -140,7 +140,7 @@ Create a status frame using the envelope's symbol and synopsis.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`57 1 62 53`
+		- (source/area)`55 1 59 60`
 		- (type/syntax)`bytes`
 		- (type/invalid/unknown)&<#bytes>
 		
@@ -155,7 +155,7 @@ Create a status frame using the envelope's symbol and synopsis.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`64 1 69 54`
+		- (source/area)`61 1 66 44`
 		- (type/syntax)`object`
 		- (type/invalid/unknown)&<#object>
 		
@@ -170,9 +170,9 @@ Create a status frame using the envelope's symbol and synopsis.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`72 1 72 45`
+		- (source/area)`69 1 69 51`
 #!source
-	protocol = "http://if.fault.io/status/frames"
+	protocol = "http://fault.io/protocol/status/frames"
 
 [ type_codes ]
 ! CONTROL:
@@ -182,10 +182,10 @@ Create a status frame using the envelope's symbol and synopsis.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`75 1 146 24`
+		- (source/area)`72 1 128 24`
 #!source
 	type_codes = {
-		# [!? PROTOCOL: http://if.fault.io/status/frames tty-notation-1 base64/deflate]
+		# [!? PROTOCOL: http://fault.io/protocol/status/frames tty-notation-1]
 		"!?": 'message-protocol',
 		"!&": 'reference',
 	
@@ -205,40 +205,27 @@ Create a status frame using the envelope's symbol and synopsis.
 		"!%": 'message-administrative',
 		"!>": 'message-entity',
 	
-		# Resource Content Manipulation
-		"+=": 'resource-inserted-units', # append
-		"-=": 'resource-deleted-units', # partial truncation
-	
-		# SCM Operation Reports
-		"Δ=": 'resource-delta',
-		"<=": 'resource-reverted',
-		"==": 'resource-committed',
+		# Resource Content Manipulations
+		"+=": 'elements-inserted', # Added
+		"-=": 'elements-deleted', # Removed
+		"Δ=": 'elements-delta', # Compound Change
+		"<=": 'elements-reverted',
+		"==": 'elements-committed',
 	
 		# Resource Container Manipulations
 		"+.": 'resource-initialized',
-		"%.": 'resource-truncated',
 		"-.": 'resource-deleted',
-	
+		"±.": 'resource-relocated',
 		"*.": 'resource-replicated',
 		"&.": 'resource-referenced',
-		"..": 'resource-relocated',
-		"Δ@": 'resource-property-delta',
-	
-		">|": 'resource-rewritten',
-		".|": 'resource-relocated-substitution',
-		"*|": 'resource-replicated-substitution',
-		"&|": 'resource-referenced-substitution',
-	
-		"*&": 'resource-hardlinked',
-		"*+": 'resource-replicated-merge',
+		"=.": 'resource-rewritten',
+		"Δ.": 'resource-delta', # Property/metadata changes.
 	
 		# Archive I/O
 		"^*": 'archive-extraction-replicated',
-		"^|": 'archive-extraction-replicated-substitution',
 		"^+": 'archive-extraction-replicated-merge',
 	
 		"√*": 'archive-delta-replicated-into',
-		"√|": 'archive-delta-replicated-substitution-into',
 		"√+": 'archive-delta-merged-into',
 		"√-": 'archive-delta-deleted',
 		"√&": 'archive-delta-referenced',
@@ -246,8 +233,6 @@ Create a status frame using the envelope's symbol and synopsis.
 		# Transfer Snapshots.
 		"↑.": 'resource-transmitted',
 		"↓.": 'resource-received',
-		"↑|": 'resource-transmitted-substitution',
-		"↓|": 'resource-received-substitution',
 	
 		# Transfer Progress Information.
 		"↑:": 'data-transmitted',
@@ -263,7 +248,7 @@ Create a status frame using the envelope's symbol and synopsis.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`147 1 154 25`
+		- (source/area)`129 1 136 25`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
@@ -279,7 +264,7 @@ Currently, only supporting unicode characters in the 16-bit range.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`156 1 160 71`
+		- (source/area)`138 1 142 71`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -288,7 +273,7 @@ Currently, only supporting unicode characters in the 16-bit range.
 Convert an integer type code into the two-character string used for serialization and display.
 
 
-[ _tty_open_extension ]
+[ _ttyn_signature ]
 ! CONTROL:
 	/type/
 		data
@@ -296,11 +281,11 @@ Convert an integer type code into the two-character string used for serializatio
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`169 1 169 36`
+		- (source/area)`147 1 147 35`
 #!source
-	_tty_open_extension = "\x1b]8;1;2-x"
+	_ttyn_signature = "\x1b]\x03\x1b\\"
 
-[ _tty_exit_extension ]
+[ _ttyn_open_url ]
 ! CONTROL:
 	/type/
 		data
@@ -308,11 +293,11 @@ Convert an integer type code into the two-character string used for serializatio
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`171 1 171 34`
+		- (source/area)`150 1 150 40`
 #!source
-	_tty_exit_extension = "\x03\x1b\\"
+	_ttyn_open_url = "\x1b[34;2m" "\x1b]8;;"
 
-[ _tty_extension_signal ]
+[ _ttyn_close_url ]
 ! CONTROL:
 	/type/
 		data
@@ -320,11 +305,11 @@ Convert an integer type code into the two-character string used for serializatio
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`174 1 174 53`
+		- (source/area)`151 1 151 26`
 #!source
-	_tty_extension_signal = ("\x1b[32;2m", "\x1b[39;22m") # Green.
+	_ttyn_close_url = "\x1b\\"
 
-[ ttyn1_minimum_overhead ]
+[ _ttyn_reset_url ]
 ! CONTROL:
 	/type/
 		data
@@ -332,12 +317,9 @@ Convert an integer type code into the two-character string used for serializatio
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`178 1 181 15`
+		- (source/area)`152 1 152 51`
 #!source
-	ttyn1_minimum_overhead = \
-		len(_tty_open_extension) + \
-		len(_tty_exit_extension) + \
-		len("[-- ]\n")
+	_ttyn_reset_url = "\x1b]8;;" "\x1b\\" "\x1b[39;22m"
 
 [ _frame_open ]
 ! CONTROL:
@@ -347,7 +329,7 @@ Convert an integer type code into the two-character string used for serializatio
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`183 1 183 22`
+		- (source/area)`154 1 154 22`
 #!source
 	_frame_open = "[{ts} "
 
@@ -359,7 +341,7 @@ Convert an integer type code into the two-character string used for serializatio
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`184 1 184 19`
+		- (source/area)`155 1 155 19`
 #!source
 	_frame_exit = "]\n"
 
@@ -371,7 +353,7 @@ Convert an integer type code into the two-character string used for serializatio
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`185 1 185 45`
+		- (source/area)`156 1 156 45`
 #!source
 	_loaded_frame_start = _frame_open + "{image}"
 
@@ -383,9 +365,9 @@ Convert an integer type code into the two-character string used for serializatio
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`186 1 186 79`
+		- (source/area)`157 1 157 45`
 #!source
-	_loaded_frame_partition = " ({channel}{wrap[0]}{signal}{size}{wrap[1]}{hidden}"
+	_loaded_frame_partition = " ({channel}{open}"
 
 [ _loaded_frame_stop ]
 ! CONTROL:
@@ -395,9 +377,9 @@ Convert an integer type code into the two-character string used for serializatio
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`187 1 187 35`
+		- (source/area)`158 1 158 79`
 #!source
-	_loaded_frame_stop = "{reveal})]\n"
+	_loaded_frame_stop = "{finish}{signal}{size}{close}" + _ttyn_signature + ")]\n"
 
 [ _empty_frame_stop ]
 ! CONTROL:
@@ -407,9 +389,9 @@ Convert an integer type code into the two-character string used for serializatio
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`188 1 188 41`
+		- (source/area)`159 1 159 43`
 #!source
-	_empty_frame_stop = "{hidden}{reveal}]\n"
+	_empty_frame_stop = _ttyn_signature + "]\n"
 
 [ _pack ]
 ! CONTROL:
@@ -417,7 +399,7 @@ Convert an integer type code into the two-character string used for serializatio
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`190 1 242 26`
+		- (source/area)`161 1 213 26`
 		- (type/syntax)`typing.Tuple[str, bytes, str]`
 		
 (signature)`_pack(frame)`
@@ -434,7 +416,7 @@ the encoded bytes of data extending the frame and the terminating trailer.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`244 1 256 36`
+		- (source/area)`215 1 227 36`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -463,7 +445,7 @@ Constructs a single (invalid/unknown)&<#str> instance.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`258 1 338 3`
+		- (source/area)`229 1 312 3`
 		- (type/syntax)`types.Frame`
 		- (type/project-local/factor-element)&<types#Frame[fault.status.types.Frame]>
 		
@@ -478,7 +460,7 @@ Unpack a serialized status frame.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`340 1 349 37`
+		- (source/area)`314 1 323 37`
 		- (type/syntax)`types.Frame`
 		- (type/project-local/factor-element)&<types#Frame[fault.status.types.Frame]>
 		
@@ -501,7 +483,7 @@ Extract a status frame, (project-local/factor-element)&<types#Frame[fault.status
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`351 1 370 3`
+		- (source/area)`325 1 342 3`
 (signature)`declaration()`
 
 Construct a custom protocol declaration message.
@@ -515,7 +497,7 @@ Construct a custom protocol declaration message.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`373 1 373 38`
+		- (source/area)`345 1 345 38`
 #!source
 	tty_notation_1_message = declaration()
 
@@ -527,7 +509,7 @@ Construct a custom protocol declaration message.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`376 1 376 80`
+		- (source/area)`348 1 348 80`
 #!source
 	tty_notation_1_string = "[!? " + tty_notation_1_message.f_event.abstract + "]\n"
 
@@ -537,7 +519,7 @@ Construct a custom protocol declaration message.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`378 1 391 12`
+		- (source/area)`350 1 363 12`
 (signature)`message_directed_areas(fields, start, end)`
 
 Return the slices marking the areas before and after the first item

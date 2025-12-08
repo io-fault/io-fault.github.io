@@ -1,1 +1,1 @@
-[[], ["Absurdity"], ["Contention"], ["Contention", "__xor__"], ["Contention", "__lshift__"], ["Fate"], ["Fate", "negative"], ["Test"], ["Test", "itertimer"], ["Test", "time"], ["Test", "seal"], ["Test", "skip"], ["Test", "trap"]]
+[[], ["FailureType"], ["TestConclusion"], ["Conclude"], ["Absurdity"], ["Contention"], ["Contention", "__xor__"], ["Contention", "__lshift__"], ["Test"], ["Test", "invert"], ["Test", "itertimer"], ["Test", "time"], ["Test", "skip"], ["Test", "fail"]]

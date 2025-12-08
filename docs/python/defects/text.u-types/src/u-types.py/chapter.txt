@@ -5,7 +5,7 @@
 		- (control)`property-set`
 		- (source/area)`1 1 34 0`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`17`
+		- (coverage-counters)`0`
 Validate the text document primitives (invalid/unknown)&<#Paragraph> and (invalid/unknown)&<#Fragment>.
 
 
@@ -38,8 +38,6 @@ Validate the text document primitives (invalid/unknown)&<#Paragraph> and (invali
 	/element/
 		- (control)`property-set`
 		- (source/area)`7 1 9 53`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`test_Fragment(test)`
 
 
@@ -52,8 +50,6 @@ Validate the text document primitives (invalid/unknown)&<#Paragraph> and (invali
 	/element/
 		- (control)`property-set`
 		- (source/area)`11 1 12 5`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`test_Paragraph(test)`
 
 
@@ -64,8 +60,6 @@ Validate the text document primitives (invalid/unknown)&<#Paragraph> and (invali
 	/element/
 		- (control)`property-set`
 		- (source/area)`14 1 22 57`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
 (signature)`test_Paragraph_of(test)`
 
 - (context-local/factor-element)&<fault.text/types#Paragraph.of[fault.text.types.Paragraph.of]>
@@ -80,8 +74,6 @@ Validate the text document primitives (invalid/unknown)&<#Paragraph> and (invali
 	/element/
 		- (control)`property-set`
 		- (source/area)`24 1 28 49`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`test_Paragraph_sole(test)`
 
 
@@ -94,7 +86,5 @@ Validate the text document primitives (invalid/unknown)&<#Paragraph> and (invali
 	/element/
 		- (control)`property-set`
 		- (source/area)`30 1 34 24`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`test_Paragraph_sentences(test)`
 

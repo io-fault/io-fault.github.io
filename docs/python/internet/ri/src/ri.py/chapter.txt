@@ -3,7 +3,7 @@
 		module
 	/element/
 		- (control)`property-set`
-		- (source/area)`1 1 709 0`
+		- (source/area)`1 1 713 0`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`0`
 Parse, Serialize, and Tokenize Resource Indicators
@@ -350,7 +350,7 @@ Make an RI from a split RI(5-tuple)
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`299 1 316 22`
+		- (source/area)`299 1 319 22`
 (signature)`remap_ipv4_address(string)`
 
 Recognize IPv4 hosts as addresses.
@@ -362,7 +362,7 @@ Recognize IPv4 hosts as addresses.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`318 1 404 45`
+		- (source/area)`321 1 407 45`
 (signature)`split_netloc(netloc)`
 
 Split a network location into a 4-tuple, (user, password, host, port).
@@ -377,7 +377,7 @@ decoded.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`406 1 434 9`
+		- (source/area)`409 1 437 9`
 (signature)`join_netloc(t)`
 
 Create a netloc fragment from the given tuple(user, password, host, address, port).
@@ -391,7 +391,7 @@ Create a netloc fragment from the given tuple(user, password, host, address, por
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`436 1 436 28`
+		- (source/area)`439 1 439 28`
 #!source
 	unsplit_netloc = join_netloc
 
@@ -403,7 +403,7 @@ Create a netloc fragment from the given tuple(user, password, host, address, por
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`438 1 442 2`
+		- (source/area)`441 1 445 2`
 (signature)`parse_query(query)`
 
 
@@ -413,7 +413,7 @@ Create a netloc fragment from the given tuple(user, password, host, address, por
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`444 1 486 9`
+		- (source/area)`447 1 489 9`
 (signature)`structure(t)`
 
 Create a dictionary from a split RI(5-tuple).
@@ -428,7 +428,7 @@ decoded.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`488 1 501 3`
+		- (source/area)`491 1 504 3`
 (signature)`construct_query(x)`
 
 Given a sequence of (key, value) pairs, construct.
@@ -440,7 +440,7 @@ Given a sequence of (key, value) pairs, construct.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`503 1 533 2`
+		- (source/area)`506 1 536 2`
 (signature)`construct(x)`
 
 Construct a RI tuple(5-tuple) from a dictionary object.
@@ -452,7 +452,7 @@ Construct a RI tuple(5-tuple) from a dictionary object.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`535 1 543 52`
+		- (source/area)`538 1 546 52`
 (signature)`parse(iri)`
 
 Parse an RI into a dictionary object. Synonym for `structure(split(x))`.
@@ -467,7 +467,7 @@ decoded.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`545 1 550 26`
+		- (source/area)`548 1 553 26`
 (signature)`serialize(x)`
 
 Return an RI from a dictionary object. Synonym for `join(construct(x))`.
@@ -479,7 +479,7 @@ Return an RI from a dictionary object. Synonym for `join(construct(x))`.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`552 1 566 9`
+		- (source/area)`555 1 569 9`
 (signature)`http(struct)`
 
 Return the HTTP Request-URI suitable for submission with an HTTP request.
@@ -491,7 +491,7 @@ Return the HTTP Request-URI suitable for submission with an HTTP request.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`568 1 607 60`
+		- (source/area)`571 1 611 60`
 (signature)`context_tokens(scheme, type, user, password, host, address, port)`
 
 Format the authority fields of a Resource Indicator.
@@ -505,7 +505,7 @@ Format the authority fields of a Resource Indicator.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`609 1 632 80`
+		- (source/area)`613 1 636 80`
 (signature)`query_tokens(query)`
 
 
@@ -517,7 +517,7 @@ Format the authority fields of a Resource Indicator.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`634 1 638 71`
+		- (source/area)`638 1 642 71`
 (signature)`fragment_tokens(fragment)`
 
 
@@ -529,7 +529,7 @@ Format the authority fields of a Resource Indicator.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`640 1 684 67`
+		- (source/area)`644 1 688 67`
 (signature)`path_tokens(root, path)`
 
 
@@ -539,7 +539,7 @@ Format the authority fields of a Resource Indicator.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`686 1 700 53`
+		- (source/area)`690 1 704 53`
 (signature)`tokens(struct)`
 
 Construct an iterator producing Resource Indicator Tokens.

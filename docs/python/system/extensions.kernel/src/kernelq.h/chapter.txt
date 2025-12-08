@@ -6,3 +6,155 @@
 		- (source/area)``
 		- (coverage-zeros)`0`
 		- (coverage-counters)`0`
+
+[ _SYSTEM_KERNEL_KERNELQ_H_included_ ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 9 6 42`
+#!source
+	#define _SYSTEM_KERNEL_KERNELQ_H_included_
+
+[ _RETRY_STATE ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`13 9 13 35`
+#!source
+	#define _RETRY_STATE _avail_retries
+
+[ RETRY_STATE_INIT ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`14 9 14 64`
+#!source
+	#define RETRY_STATE_INIT int _RETRY_STATE = CONFIG_SYSCALL_RETRY
+
+[ LIMITED_RETRY ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`15 9 21 11`
+(signature)`LIMITED_RETRY()`
+
+
+[ UNLIMITED_RETRY ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`22 9 22 56`
+(signature)`UNLIMITED_RETRY()`
+
+
+[ KernelQueue ]
+! CONTROL:
+	/type/
+		structure
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`24 9 24 26`
+
+[ KernelQueue ]
+! CONTROL:
+	/type/
+		typedef
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`24 1 24 39`
+(signature)`KernelQueue()`
+
+
+[ KernelQueue ]
+! CONTROL:
+	/type/
+		structure
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`25 1 36 1`
+
+[ KernelQueue >> kq_references ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`int`
+		
+
+[ KernelQueue >> kq_cancellations ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`int`
+		
+
+[ KernelQueue >> kq_event_position ]
+! CONTROL:
+	/type/
+		field
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`int`
+		
+kport_t kq_root; // epoll and kqueue
+
+
+[ KernelQueue >> kq_event_count ]
+! CONTROL:
+	/type/
+		field
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`int`
+		
+kport_t kq_root; // epoll and kqueue
+
+
+[ KernelQueue >> kq_array ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`int`
+		

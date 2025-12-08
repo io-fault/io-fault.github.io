@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)``
-		- (coverage-zeros)`0`
-		- (coverage-counters)`0`
+		- (coverage-zeros)`465`
+		- (coverage-counters)`645`
 
 [ errpf ]
 ! CONTROL:
@@ -399,19 +399,14 @@ Manages the reference counts and the effect of the close.
 ! CONTROL:
 	/type/
 		function
+	/flags/
+		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`1060 1 1085 1`
+		- (source/area)`1061 1 1086 1`
 		- (type/syntax)`int`
 		
 (signature)`ports_identify_socket(p)`
-
-Sequence of Port operations (portS)
-
-These functions respresent a series of operations of that
-need to be successful in order for the port to function properly.
-If one step errors out, jump to the exit. The port_* interface will
-note the error on the port.
 
 
 [ ports_identify_input ]
@@ -422,7 +417,7 @@ note the error on the port.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`1087 1 1106 1`
+		- (source/area)`1088 1 1107 1`
 		- (type/syntax)`int`
 		
 (signature)`ports_identify_input(p)`
@@ -436,7 +431,7 @@ note the error on the port.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`1108 1 1130 1`
+		- (source/area)`1109 1 1131 1`
 		- (type/syntax)`int`
 		
 (signature)`ports_identify_output(p)`

@@ -1,1 +1,1 @@
-[["Check for IPC via bidirectional spawns"], ["Check for IPC via unidirectional spawns"]]
+[["Echos objects received back at the sender."], ["Check for IPC via bidirectional kernel ports."], ["Check for IPC via unidirectional kernel ports."]]

@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)``
-		- (coverage-zeros)`0`
-		- (coverage-counters)`0`
+		- (coverage-zeros)`144`
+		- (coverage-counters)`144`
 
 [ INITIAL_TASK_COUNT ]
 ! CONTROL:
@@ -187,13 +187,27 @@ when it or other critical operations fail.
 Pop segments from (invalid/unknown)&<#TaskQueue.q_executing>.
 
 
+[ taskq_cycle ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`191 1 202 1`
+		- (type/syntax)`int`
+		
+(signature)`taskq_cycle(tq)`
+
+
 [ taskq_execute ]
 ! CONTROL:
 	/type/
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`195 1 252 1`
+		- (source/area)`208 1 249 1`
 		- (type/syntax)`int`
 		
 (signature)`taskq_execute(tq, errctl, errctx)`
@@ -208,7 +222,7 @@ and rotate (invalid/unknown)&<#TaskQueue.q_loading> for the next cycle.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`257 1 309 1`
+		- (source/area)`254 1 306 1`
 		- (type/syntax)`void`
 		
 (signature)`taskq_clear(tq)`
@@ -222,7 +236,7 @@ Release all objects held by the queue.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`314 1 346 1`
+		- (source/area)`311 1 343 1`
 		- (type/syntax)`int`
 		
 (signature)`taskq_traverse(tq, visit, arg)`
@@ -236,7 +250,7 @@ Container traversal for GC support.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`351 1 377 1`
+		- (source/area)`348 1 374 1`
 		- (type/syntax)`int`
 		
 (signature)`taskq_initialize(tq)`

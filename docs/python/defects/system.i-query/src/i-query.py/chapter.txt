@@ -5,7 +5,7 @@
 		- (control)`property-set`
 		- (source/area)`1 1 47 17`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`22`
+		- (coverage-counters)`0`
 Limited tests as the information retrieved is expected to vary.
 
 
@@ -26,8 +26,6 @@ Limited tests as the information retrieved is expected to vary.
 	/element/
 		- (control)`property-set`
 		- (source/area)`6 1 11 12`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`test_paths(test)`
 
 - (context-local/factor-element)&<fault.system/query#paths[fault.system.query.paths]>
@@ -40,8 +38,6 @@ Limited tests as the information retrieved is expected to vary.
 	/element/
 		- (control)`property-set`
 		- (source/area)`13 1 19 17`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
 (signature)`test_executables_cat(test)`
 
 - (context-local/factor-element)&<fault.system/query#executables[fault.system.query.executables]>
@@ -54,8 +50,6 @@ Limited tests as the information retrieved is expected to vary.
 	/element/
 		- (control)`property-set`
 		- (source/area)`21 1 27 17`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
 (signature)`test_executables_rm(test)`
 
 - (context-local/factor-element)&<fault.system/query#executables[fault.system.query.executables]>
@@ -68,8 +62,6 @@ Limited tests as the information retrieved is expected to vary.
 	/element/
 		- (control)`property-set`
 		- (source/area)`29 1 34 18`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`test_username(test)`
 
 - (context-local/factor-element)&<fault.system/query#username[fault.system.query.username]>
@@ -82,8 +74,6 @@ Limited tests as the information retrieved is expected to vary.
 	/element/
 		- (control)`property-set`
 		- (source/area)`36 1 41 19`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`test_usertitle(test)`
 
 - (context-local/factor-element)&<fault.system/query#usertitle[fault.system.query.usertitle]>
@@ -96,8 +86,6 @@ Limited tests as the information retrieved is expected to vary.
 	/element/
 		- (control)`property-set`
 		- (source/area)`43 1 48 16`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`test_shell(test)`
 
 - (context-local/factor-element)&<fault.system/query#shell[fault.system.query.shell]>

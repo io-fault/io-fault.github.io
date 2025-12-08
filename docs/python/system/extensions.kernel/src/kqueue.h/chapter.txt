@@ -6,3 +6,445 @@
 		- (source/area)``
 		- (coverage-zeros)`0`
 		- (coverage-counters)`0`
+
+[ _SYSTEM_KERNEL_KQUEUE_H_included_ ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 9 5 41`
+#!source
+	#define _SYSTEM_KERNEL_KQUEUE_H_included_
+
+[ AEV_TRANSMITS ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`9 9 9 55`
+(signature)`AEV_TRANSMITS()`
+
+
+[ AEV_CREATE ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 9 11 25`
+#!source
+	#define AEV_CREATE EV_ADD
+
+[ AEV_DELETE ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`12 9 12 28`
+#!source
+	#define AEV_DELETE EV_DELETE
+
+[ AEV_UPDATE ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`13 9 13 25`
+#!source
+	#define AEV_UPDATE EV_ADD
+
+[ AEV_CYCLIC ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`15 9 15 52`
+(signature)`AEV_CYCLIC()`
+
+
+[ AEV_CYCLIC_ENABLE ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`16 9 16 60`
+(signature)`AEV_CYCLIC_ENABLE()`
+
+
+[ AEV_CYCLIC_DISABLE ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`17 9 17 60`
+(signature)`AEV_CYCLIC_DISABLE()`
+
+
+[ AEV_LINK ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`19 9 19 43`
+(signature)`AEV_LINK()`
+
+
+[ AEV_KPORT ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`20 9 20 64`
+(signature)`AEV_KPORT()`
+
+
+[ KQ_FRAGMENT ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`22 9 22 36`
+#!source
+	#define KQ_FRAGMENT kport_t kq_root;
+
+[ NOTE_MSECONDS ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`26 10 26 24`
+#!source
+	#define NOTE_MSECONDS 0
+
+[ EVFILT_SYSCOUNT ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`30 10 30 27`
+#!source
+	#define EVFILT_SYSCOUNT 32
+
+[ EVFILT_EXCEPT ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`37 10 37 46`
+#!source
+	#define EVFILT_EXCEPT (-16 - EVFILT_SYSCOUNT)
+
+[ KQ_EXCEPT_FILTERS ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`38 10 39 33`
+(signature)`KQ_EXCEPT_FILTERS()`
+
+
+[ EVFILT_PROCDESC ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`46 10 46 47`
+#!source
+	#define EVFILT_PROCDESC (-4 - EVFILT_SYSCOUNT)
+
+[ KQ_PROCDESC_FILTERS ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`47 10 48 35`
+(signature)`KQ_PROCDESC_FILTERS()`
+
+
+[ KQ_USER_FILTERS ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`65 10 65 26`
+(signature)`KQ_USER_FILTERS()`
+
+
+[ EV_USER_SETUP ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`67 10 72 11`
+(signature)`EV_USER_SETUP()`
+
+
+[ EV_USER_TRIGGER ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`74 10 78 11`
+(signature)`EV_USER_TRIGGER()`
+
+
+[ EVFILT_VNODE ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`85 10 85 45`
+#!source
+	#define EVFILT_VNODE (-32 - EVFILT_SYSCOUNT)
+
+[ KQ_FILESYSTEM_FILTERS ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`86 10 87 32`
+(signature)`KQ_FILESYSTEM_FILTERS()`
+
+
+[ EVFILT_MACHPORT ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`95 10 95 49`
+#!source
+	#define EVFILT_MACHPORT (-128 - EVFILT_SYSCOUNT)
+
+[ KQ_MACHPORT_FILTERS ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`96 10 97 35`
+(signature)`KQ_MACHPORT_FILTERS()`
+
+
+[ KQ_FILTER_LIST ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`100 9 109 24`
+(signature)`KQ_FILTER_LIST()`
+
+
+[ EV_OOBAND ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`112 10 112 20`
+#!source
+	#define EV_OOBAND 0
+
+[ KQ_FLAG_LIST ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`115 9 128 15`
+(signature)`KQ_FLAG_LIST()`
+
+
+[ KFILTER_ERROR ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`130 9 130 74`
+(signature)`KFILTER_ERROR()`
+
+
+[ NOTE_CLOSE_WRITE ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`133 10 133 27`
+#!source
+	#define NOTE_CLOSE_WRITE 0
+
+[ NOTE_OPEN ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`137 10 137 20`
+#!source
+	#define NOTE_OPEN 0
+
+[ NOTE_CLOSE ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`141 10 141 21`
+#!source
+	#define NOTE_CLOSE 0
+
+[ KQ_VNODE_EVENT_LIST ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`144 9 155 23`
+(signature)`KQ_VNODE_EVENT_LIST()`
+
+
+[ EVENT_FS_VOID_FLAGS ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`157 9 157 63`
+#!source
+	#define EVENT_FS_VOID_FLAGS NOTE_RENAME|NOTE_DELETE|NOTE_REVOKE
+
+[ EVENT_FS_DELTA_FLAGS ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`158 9 158 51`
+#!source
+	#define EVENT_FS_DELTA_FLAGS NOTE_WRITE|NOTE_EXTEND
+
+[ EVENT_FS_STATUS_FLAGS ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`159 9 159 72`
+#!source
+	#define EVENT_FS_STATUS_FLAGS EVENT_FS_VOID_FLAGS | EVENT_FS_DELTA_FLAGS
+
+[ kevent ]
+! CONTROL:
+	/type/
+		structure
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`23 9 23 21`
+
+[ kevent_t ]
+! CONTROL:
+	/type/
+		typedef
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`23 1 23 30`
+(signature)`kevent_t()`
+

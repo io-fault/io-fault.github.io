@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 85 0`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`34`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 Supplemental types.
 
 
@@ -16,8 +16,6 @@ Supplemental types.
 	/element/
 		- (control)`property-set`
 		- (source/area)`5 1 85 6`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`5 12 5 17`
@@ -61,8 +59,6 @@ to be propagated without concern by the nodes along the call graph.
 	/element/
 		- (control)`property-set`
 		- (source/area)`23 2 26 42`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`__setup__(Class)`
 
 
@@ -73,8 +69,6 @@ to be propagated without concern by the nodes along the call graph.
 	/element/
 		- (control)`property-set`
 		- (source/area)`28 2 36 21`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
 (signature)`coalesce(self, default)`
 
 Return the given (factor-local/parameter)&<#Cell.coalesce.Parameters.default[default]> if the element is (factor-local/parameter)&<#Cell.coalesce.Parameters.abscence[abscence]>.
@@ -91,8 +85,6 @@ By default, if the element is (invalid/unknown)&<#None>, return (factor-local/pa
 	/element/
 		- (control)`property-set`
 		- (source/area)`38 2 39 24`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`__init__(self, element)`
 
 
@@ -105,8 +97,6 @@ By default, if the element is (invalid/unknown)&<#None>, return (factor-local/pa
 	/element/
 		- (control)`property-set`
 		- (source/area)`41 2 45 21`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`4`
 		- (type/syntax)`object`
 		- (type/invalid/unknown)&<#object>
 		
@@ -122,8 +112,6 @@ By default, if the element is (invalid/unknown)&<#None>, return (factor-local/pa
 	/element/
 		- (control)`property-set`
 		- (source/area)`47 2 48 20`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`__iter__(self)`
 
 
@@ -136,8 +124,6 @@ By default, if the element is (invalid/unknown)&<#None>, return (factor-local/pa
 	/element/
 		- (control)`property-set`
 		- (source/area)`50 2 51 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`__reversed__(self)`
 
 
@@ -150,8 +136,6 @@ By default, if the element is (invalid/unknown)&<#None>, return (factor-local/pa
 	/element/
 		- (control)`property-set`
 		- (source/area)`53 2 54 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
@@ -167,8 +151,6 @@ By default, if the element is (invalid/unknown)&<#None>, return (factor-local/pa
 	/element/
 		- (control)`property-set`
 		- (source/area)`56 2 59 35`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 		- (type/syntax)`bool`
 		- (type/invalid/unknown)&<#bool>
 		
@@ -184,8 +166,6 @@ By default, if the element is (invalid/unknown)&<#None>, return (factor-local/pa
 	/element/
 		- (control)`property-set`
 		- (source/area)`61 2 64 14`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 		- (type/syntax)`bool`
 		- (type/invalid/unknown)&<#bool>
 		
@@ -201,8 +181,6 @@ By default, if the element is (invalid/unknown)&<#None>, return (factor-local/pa
 	/element/
 		- (control)`property-set`
 		- (source/area)`66 2 73 65`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`7`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
@@ -218,8 +196,6 @@ By default, if the element is (invalid/unknown)&<#None>, return (factor-local/pa
 	/element/
 		- (control)`property-set`
 		- (source/area)`75 2 79 11`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
@@ -233,8 +209,6 @@ By default, if the element is (invalid/unknown)&<#None>, return (factor-local/pa
 	/element/
 		- (control)`property-set`
 		- (source/area)`81 2 85 6`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`sort(self)`
 
 Sort the Cell's elements by doing nothing.

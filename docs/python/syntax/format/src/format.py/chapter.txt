@@ -1,0 +1,375 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 265 0`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
+Line and character format interpretation and serialization.
+
+
+[ Sequence ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 46`
+
+[ Iterable ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 46`
+
+[ Callable ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 38`
+
+[ TypeAlias ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 38`
+
+[ partial ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 7 35`
+
+[ struct ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 10 9`
+
+[ Fields ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 1 57 9`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`11 14 11 19`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+Format configuration for separating the fields in a line of syntax.
+
+Essentially, a structured (factor-local/method)&<#Fields.partial[partial]> instance that provides an interface
+consistent with other (project-local/unknown)&<format> data structures. (invalid/unknown)&<#separation> intends
+to be used to identify the configuration that (invalid/unknown)&<#isolate> uses in order
+separate the fields of a string. In many cases, (invalid/unknown)&<#separation> should be
+the instance of a class and (invalid/unknown)&<#isolate> should be an unbound method that
+performs the desired functionality.
+
+
+[ Fields >> partial ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`34 2 40 60`
+(signature)`partial(self, *argv, **kw)`
+
+Construct a direct call to (invalid/unknown)&<#isolate> with (invalid/unknown)&<#separation>
+and the given arguments bound to the call.
+
+
+[ Fields >> structure ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`42 2 47 46`
+		- (type/syntax)`Iterable[Sequence[tuple[str,str]]]`
+		
+(signature)`structure(self, lines)`
+
+Perform (invalid/unknown)&<#isolate> against the given (factor-local/parameter)&<#Fields.structure.Parameters.lines[lines]>.
+
+
+[ Fields >> sequence ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`49 2 57 9`
+		- (type/syntax)`Iterable[str]`
+		
+(signature)`sequence(self, fields)`
+
+Reconstruct the original lines from the given field vectors.
+
+
+[ Lines ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`58 1 173 9`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`58 13 58 18`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+Format configuration for reading and writing indented syntax lines.
+
+
+[ Lines >> termination ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`63 2 63 24`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+#!source
+	termination: str = '\n'
+
+[ Lines >> indentation ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`64 2 66 14`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+#!source
+	indentation: str = '\t'
+		@staticmethod
+
+[ Lines >> _splitpartial ]
+! CONTROL:
+	/type/
+		staticmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`67 2 91 25`
+		- (type/syntax)`tuple[str, Sequence[str]]`
+		
+(signature)`_splitpartial(lt, text)`
+
+Interpret the given (factor-local/parameter)&<#Lines._splitpartial.Parameters.text[text]> as a sequence of lines using the
+configured (factor-local/data)&<#Lines.termination[termination]> character.
+
+The (factor-local/parameter)&<#Lines._splitpartial.Parameters.leading[leading]> string is prefixed to the first line in the split,
+and the final line is removed and returned as the remainder to
+be passed back in as (factor-local/parameter)&<#Lines._splitpartial.Parameters.leading[leading]> to the next call.
+
+Use (invalid/unknown)&<#split> when (factor-local/parameter)&<#Lines._splitpartial.Parameters.text[text]> is known to be complete.
+
+[ >> Returns ]
+
+A pair of values. The remainder from the split and the
+split lines with the given (factor-local/parameter)&<#Lines._splitpartial.Parameters.leading[leading]> prefixed on the first line.
+
+
+[ Lines >> measure_partial_termination ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`93 2 102 10`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+(signature)`measure_partial_termination(self, line)`
+
+Identify the number of characters at the end of the (factor-local/parameter)&<#Lines.measure_partial_termination.Parameters.line[line]> that
+intersect with (factor-local/data)&<#Lines.termination[termination]>.
+
+
+[ Lines >> measure_indentation ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`104 2 120 18`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+(signature)`measure_indentation(self, line)`
+
+Identify the indentation level of the given (factor-local/parameter)&<#Lines.measure_indentation.Parameters.line[line]> by counting the
+leading (factor-local/data)&<#Lines.indentation[indentation]> characters.
+
+
+[ Lines >> level ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`122 2 131 29`
+		- (type/syntax)`tuple[int, str]`
+		
+(signature)`level(self, line)`
+
+Measure the indentation of (factor-local/parameter)&<#Lines.level.Parameters.line[line]> and reconstruct it as a tuple
+expressing the indentation level as an integer and the content
+of the line without the indentation characters.
+
+
+[ Lines >> structure ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`133 2 160 25`
+		- (type/syntax)`Iterable[tuple[int, str]]`
+		
+(signature)`structure(self, itext)`
+
+Structure the given iterator of strings as an iterator of lines.
+
+Excludes a final empty line.
+
+
+[ Lines >> sequence ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`162 2 173 9`
+		- (type/syntax)`Iterable[str]`
+		
+(signature)`sequence(self, ilines)`
+
+Reconstruct the original lines from an iterable of indentation level
+and line content pairs.
+
+Includes a final empty line.
+
+
+[ Characters ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`174 1 265 16`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`174 18 174 23`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+Character encoding and decoding configuration.
+
+Primarily, a minor abstraction for Python's codecs providing
+(factor-local/method)&<#Characters.structure[structure]> and (factor-local/method)&<#Characters.sequence[sequence]> interfaces that can be composed with (factor-local/class)&<#Lines[Lines]>.
+
+
+[ Characters >> _alloc_coder_pair ]
+! CONTROL:
+	/type/
+		staticmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`206 2 211 14`
+(signature)`_alloc_coder_pair(coder, method, final)`
+
+
+[ Characters >> _alloc_codec_constructors ]
+! CONTROL:
+	/type/
+		staticmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`212 2 219 13`
+(signature)`_alloc_codec_constructors(ci, errors)`
+
+
+[ Characters >> from_codec ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`220 2 243 3`
+(signature)`from_codec(Class, encoding, errors)`
+
+Create an instance using a Python (factor-local/parameter)&<#Characters.from_codec.Parameters.encoding[encoding]> and (factor-local/parameter)&<#Characters.from_codec.Parameters.errors[errors]> handling scheme.
+
+If mixed error handling is needed in one instance, create two instances
+with (factor-local/classmethod)&<#Characters.from_codec[from_codec]> and combine the fields as needed into a third
+instance.
+
+
+[ Characters >> sequence ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`245 2 254 16`
+		- (type/syntax)`Iterable[bytes]`
+		
+(signature)`sequence(self, itext)`
+
+Encode the strings produced by (factor-local/parameter)&<#Characters.sequence.Parameters.itext[itext]> as (invalid/unknown)&<#bytes>.
+
+
+[ Characters >> structure ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`256 2 265 16`
+		- (type/syntax)`Iterable[str]`
+		
+(signature)`structure(self, ibytes)`
+
+Decode the data produced by (factor-local/parameter)&<#Characters.structure.Parameters.ibytes[ibytes]> as unicode strings.
+

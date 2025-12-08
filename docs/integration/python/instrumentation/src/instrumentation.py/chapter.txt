@@ -148,6 +148,11 @@ Identify nodes that should be instrumented for coverage and profiling.
 		def _fi_record(counters=_fi_counters__, origin=_fi_identity, Retry=32):
 			import sys, os, collections
 	
+			if 'METRICS_ISOLATION' in os.environ:
+				mid = os.environ['METRICS_ISOLATION']
+			else:
+				mid = 'unspecified'
+	
 			if 'PROCESS_IDENTITY' in os.environ:
 				pid = os.environ['PROCESS_IDENTITY']
 			else:
@@ -155,7 +160,7 @@ Identify nodes that should be instrumented for coverage and profiling.
 	
 			if 'METRICS_CAPTURE' in os.environ:
 				# If capture is defined, qualify with the module name.
-				# /../metrics/{pid}/{module}/{project}/{factor}/{test}/.fault-syntax-counters
+				# .metrics/../{pid}/{module}/{project}/{factor}/{test}/.fault-syntax-counters
 				path = os.environ['METRICS_CAPTURE']
 				path += '/coverage'
 				path += '/' + pid
@@ -168,7 +173,7 @@ Identify nodes that should be instrumented for coverage and profiling.
 				except NameError:
 					return
 	
-				# /../metrics/coverage/{pid}/{project}/{factor}/{test}/.fault-syntax-counters
+				# .metrics/../coverage/{pid}/{project}/{factor}/{test}/.fault-syntax-counters
 				# Resolve __metrics_trap__ global at exit in order to allow the runtime
 				# to designate it given compile time absence.
 				path = __metrics_trap__
@@ -201,7 +206,7 @@ Identify nodes that should be instrumented for coverage and profiling.
 			# For Python, this will normally (always) be a single line.
 			# Append as PROCESS_IDENTITY may be intentionally redundant.
 			with open(path + '/sources', 'a') as f:
-				f.writelines(['%d %s\\n' %(len(events[x]), x) for x in sources])
+				f.writelines(['%s %d %s\\n' %(mid, len(events[x]), x) for x in sources])
 	
 			with open(path + '/areas', 'a') as f:
 				for x in sources:
@@ -220,11 +225,6 @@ Identify nodes that should be instrumented for coverage and profiling.
 	
 		def _FI_COUNT__(area, rob, F=__file__, C=_FI_INCREMENT__):
 			C(((F, area),))
-			return rob
-	
-		# Limit names left in the module globals.
-		del _fi_os, _fi_ft, _fi_cl, _fi_ae, _fi_record, _fi_identity
-	""".strip() + '\n'
 
 [ count_boolop_expression ]
 ! CONTROL:
@@ -236,7 +236,7 @@ Identify nodes that should be instrumented for coverage and profiling.
 		- (control)`property-set`
 		- (source/area)`180 1 180 89`
 #!source
-	count_boolop_expression = "(_FI_INCREMENT__(((__file__, %r),)) or INSTRUMENTATION_ERROR)"
+	
 
 [ count_call_expression ]
 ! CONTROL:
@@ -248,7 +248,7 @@ Identify nodes that should be instrumented for coverage and profiling.
 		- (control)`property-set`
 		- (source/area)`181 1 181 46`
 #!source
-	count_call_expression = "_FI_COUNT__(%r,None)"
+	# Limit names left in the module globals.
 
 [ profile_transaction ]
 ! CONTROL:
@@ -260,14 +260,14 @@ Identify nodes that should be instrumented for coverage and profiling.
 		- (control)`property-set`
 		- (source/area)`184 1 191 3`
 #!source
+	
+	count_boolop_expression = "(_FI_INCREMENT__(((__file__, %r),)) or INSTRUMENTATION_ERROR)"
+	count_call_expression = "_FI_COUNT__(%r,None)"
+	
+	# Seeks the pass for the replacement point.
 	profile_transaction = """
 	if True:
 		try:
-			_FI_ENTER__(%r)
-			pass
-		finally:
-			_FI_EXIT__(%r)
-	"""
 
 [ profile_pause ]
 ! CONTROL:
@@ -279,14 +279,14 @@ Identify nodes that should be instrumented for coverage and profiling.
 		- (control)`property-set`
 		- (source/area)`193 1 200 3`
 #!source
+			pass
+		finally:
+			_FI_EXIT__(%r)
+	"""
+	
 	profile_pause = """
 	if True:
 		try:
-			_FI_SUSPEND__(%r)
-			pass
-		finally:
-			_FI_CONTINUE__(%r)
-	"""
 
 [ construct_call_increment ]
 ! CONTROL:

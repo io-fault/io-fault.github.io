@@ -3,7 +3,7 @@
 		module
 	/element/
 		- (control)`property-set`
-		- (source/area)`1 1 143 19`
+		- (source/area)`1 1 148 0`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`0`
 Harness implementation and support functions.
@@ -84,17 +84,17 @@ Slice the tests by comparing their identity to (invalid/unknown)&<#start> and (i
 		class
 	/element/
 		- (control)`property-set`
-		- (source/area)`81 1 130 28`
+		- (source/area)`81 1 134 28`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`81 15 81 20`
 	- (type/syntax)`object`
 	- (type/invalid/unknown)&<#object>
 	
-Execute a sequence of tests.
+Execute a collection of tests.
 
 
-[ Harness >> Test ]
+[ Harness >> TestType ]
 ! CONTROL:
 	/type/
 		data
@@ -102,9 +102,9 @@ Execute a sequence of tests.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`86 2 86 18`
+		- (source/area)`86 2 86 22`
 #!source
-	Test = types.Test
+	TestType = types.Test
 
 [ Harness >> collect ]
 ! CONTROL:
@@ -137,7 +137,7 @@ Execute a sequence of tests.
 		property
 	/element/
 		- (control)`property-set`
-		- (source/area)`99 2 103 24`
+		- (source/area)`99 2 104 24`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
@@ -150,7 +150,7 @@ Number of tests that have been prepared for execution.
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`105 2 111 20`
+		- (source/area)`106 2 113 20`
 (signature)`__init__(self, identity, container, tests)`
 
 Initialize the members of the Harness.
@@ -162,22 +162,22 @@ Initialize the members of the Harness.
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`113 2 118 14`
+		- (source/area)`115 2 121 23`
 (signature)`dispatch(self, test)`
 
-Dispatch the given (factor-local/data)&<#Harness.Test[Test]> to resolve its fate.
+Dispatch the given (invalid/unknown)&<#Test> to resolve its fate.
 
 
-[ Harness >> reveal ]
+[ Harness >> execute_tests ]
 ! CONTROL:
 	/type/
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`120 2 130 28`
-(signature)`reveal(self)`
+		- (source/area)`123 2 134 28`
+(signature)`execute_tests(self)`
 
-Reveal the fate of the given tests.
+Perform the collected tests.
 
 
 [ execute ]
@@ -186,7 +186,7 @@ Reveal the fate of the given tests.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`132 1 144 18`
+		- (source/area)`136 1 148 23`
 (signature)`execute(module)`
 
 Resolve the fate of the tests contained in (factor-local/parameter)&<#execute.Parameters.module[module]>. No status information

@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 92 42`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`64`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 Miscellaneous flow tests.
 
 
@@ -78,8 +78,6 @@ Miscellaneous flow tests.
 	/element/
 		- (control)`property-set`
 		- (source/area)`12 1 40 26`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`24`
 (signature)`test_Transformation(test)`
 
 
@@ -102,8 +100,6 @@ Miscellaneous flow tests.
 	/element/
 		- (control)`property-set`
 		- (source/area)`52 1 89 33`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`23`
 (signature)`test_Flow_connect_events(test)`
 
 Validate events of connected Flows across Sector boundaries.

@@ -1,0 +1,1 @@
+[["fault/terminal/device.h", "c", "header"], ["fault/terminal/mirror.h", "c", "header"], ["fault/terminal/python-rt.h", "c", "header"], ["fault/terminal/xdg-xcb.h", "c", "header"], ["fault/terminal/cocoa.h", "c", "header"], ["fault/terminal/controller.h", "c", "header"], ["fault/terminal/static.h", "c", "header"], ["fault/terminal/screen.h", "c", "header"]]

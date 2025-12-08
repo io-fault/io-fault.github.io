@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)``
-		- (coverage-zeros)`0`
-		- (coverage-counters)`0`
+		- (coverage-zeros)`193`
+		- (coverage-counters)`193`
 
 [ PyMethod_Id ]
 ! CONTROL:
@@ -15,7 +15,7 @@
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`417 10 417 30`
+		- (source/area)`437 10 437 30`
 #!source
 	#define PyMethod_Id(N) ks_##N
 
@@ -25,7 +25,7 @@
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`29 1 60 1`
+		- (source/area)`29 1 56 1`
 		- (type/syntax)`int`
 		
 (signature)`interrupt_wait(ks)`
@@ -60,7 +60,7 @@ Interrupt a running (project-local/unknown)&<kernel#Scheduler.wait[kernel.Schedu
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`65 1 78 1`
+		- (source/area)`61 1 84 1`
 		- (type/syntax)`PyObj`
 		
 (signature)`ks_enqueue(ks, callable)`
@@ -74,7 +74,7 @@ Interrupt a running (project-local/unknown)&<kernel#Scheduler.wait[kernel.Schedu
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`83 1 103 1`
+		- (source/area)`89 1 119 1`
 		- (type/syntax)`PyObj`
 		
 (signature)`ks_execute(self)`
@@ -90,7 +90,7 @@ Interrupt a running (project-local/unknown)&<kernel#Scheduler.wait[kernel.Schedu
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`105 1 154 1`
+		- (source/area)`121 1 170 1`
 		- (type/syntax)`int`
 		
 (signature)`ks_termination(ks, kq, tq)`
@@ -102,7 +102,7 @@ Interrupt a running (project-local/unknown)&<kernel#Scheduler.wait[kernel.Schedu
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`159 1 191 1`
+		- (source/area)`175 1 207 1`
 		- (type/syntax)`PyObj`
 		
 (signature)`ks_close(self)`
@@ -116,7 +116,7 @@ Interrupt a running (project-local/unknown)&<kernel#Scheduler.wait[kernel.Schedu
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`196 1 205 1`
+		- (source/area)`212 1 221 1`
 		- (type/syntax)`PyObj`
 		
 (signature)`ks_void(self)`
@@ -130,7 +130,7 @@ Interrupt a running (project-local/unknown)&<kernel#Scheduler.wait[kernel.Schedu
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`210 1 237 1`
+		- (source/area)`226 1 253 1`
 		- (type/syntax)`PyObj`
 		
 (signature)`ks_interrupt(self)`
@@ -144,7 +144,7 @@ Interrupt a running (project-local/unknown)&<kernel#Scheduler.wait[kernel.Schedu
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`242 1 289 1`
+		- (source/area)`258 1 305 1`
 		- (type/syntax)`PyObj`
 		
 (signature)`ks_dispatch(self, args, kw)`
@@ -158,7 +158,7 @@ Interrupt a running (project-local/unknown)&<kernel#Scheduler.wait[kernel.Schedu
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`294 1 346 1`
+		- (source/area)`310 1 365 1`
 		- (type/syntax)`PyObj`
 		
 (signature)`ks_cancel(self, ref)`
@@ -172,7 +172,7 @@ Interrupt a running (project-local/unknown)&<kernel#Scheduler.wait[kernel.Schedu
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`351 1 357 1`
+		- (source/area)`370 1 376 1`
 		- (type/syntax)`PyObj`
 		
 (signature)`ks_operations(self)`
@@ -188,7 +188,7 @@ Interrupt a running (project-local/unknown)&<kernel#Scheduler.wait[kernel.Schedu
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`359 1 365 1`
+		- (source/area)`378 1 384 1`
 		- (type/syntax)`PyObj`
 		
 (signature)`ks__set_waiting(self)`
@@ -200,7 +200,7 @@ Interrupt a running (project-local/unknown)&<kernel#Scheduler.wait[kernel.Schedu
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`370 1 413 1`
+		- (source/area)`389 1 433 1`
 		- (type/syntax)`PyObj`
 		
 (signature)`ks_wait(self, args)`
@@ -216,7 +216,7 @@ Interrupt a running (project-local/unknown)&<kernel#Scheduler.wait[kernel.Schedu
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`441 1 450 1`
+		- (source/area)`461 1 470 1`
 		- (type/syntax)`PyObj`
 		
 (signature)`ks_get_closed(self, closure)`
@@ -230,7 +230,7 @@ Interrupt a running (project-local/unknown)&<kernel#Scheduler.wait[kernel.Schedu
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`452 1 461 1`
+		- (source/area)`472 1 481 1`
 		- (type/syntax)`PyObj`
 		
 (signature)`ks_get_has_tasks(self, closure)`
@@ -244,7 +244,7 @@ Interrupt a running (project-local/unknown)&<kernel#Scheduler.wait[kernel.Schedu
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`470 1 484 1`
+		- (source/area)`490 1 504 1`
 		- (type/syntax)`int`
 		
 (signature)`ks_traverse(self, visit, arg)`
@@ -258,7 +258,7 @@ Interrupt a running (project-local/unknown)&<kernel#Scheduler.wait[kernel.Schedu
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`486 1 497 1`
+		- (source/area)`506 1 517 1`
 		- (type/syntax)`int`
 		
 (signature)`ks_clear(self)`
@@ -270,7 +270,7 @@ Interrupt a running (project-local/unknown)&<kernel#Scheduler.wait[kernel.Schedu
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`502 1 514 1`
+		- (source/area)`522 1 534 1`
 		- (type/syntax)`void`
 		
 (signature)`ks_dealloc(self)`
@@ -284,7 +284,7 @@ Interrupt a running (project-local/unknown)&<kernel#Scheduler.wait[kernel.Schedu
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`519 1 550 1`
+		- (source/area)`539 1 570 1`
 		- (type/syntax)`PyObj`
 		
 (signature)`ks_new(subtype, args, kw)`

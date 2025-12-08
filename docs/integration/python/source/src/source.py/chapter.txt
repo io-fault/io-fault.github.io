@@ -359,20 +359,20 @@ ones that preceded it.
 		- (control)`property-set`
 		- (source/area)`307 1 320 1`
 #!source
-	isolate = {
-		ast.Bytes: isolate_string,
-		ast.Str: isolate_string,
-		ast.Num: isolate_number,
-		ast.Name: isolate_name,
-		ast.Attribute: isolate_name,
-		ast.NameConstant: isolate_name,
-		getattr(ast, 'Constant', None): isolate_string,
-		ast.Dict: functools.partial(isolate_enclosure, '{', '}'),
-		ast.Set: functools.partial(isolate_enclosure, '{', '}'),
-		ast.List: functools.partial(isolate_enclosure, '[', ']'),
-		ast.Subscript: functools.partial(isolate_enclosure, '[', ']'),
-		ast.Call: functools.partial(isolate_enclosure, '(', ')'),
-	}
+		# Return the first NAME token in &tokens and remove it along with the
+		# ones that preceded it.
+		"""
+	
+		k = find_token(tokens, NUMBER)
+		t_offset, t = k
+		del tokens[:t_offset+1]
+		return t, t, t.start, t.end
+	
+	def isolate_string(tokens, STRING=tokenize.STRING, enum=enumerate):
+		t_offset, first = find_token(tokens, STRING)
+		del tokens[:t_offset+1]
+	
+		last = first
 
 [ chain ]
 ! CONTROL:
@@ -408,7 +408,7 @@ Identify the number of trailing whitespace tokens and remove them from the list.
 		- (control)`property-set`
 		- (source/area)`347 1 347 30`
 #!source
-	chain_classes = tuple(isolate)
+	
 
 [ areas ]
 ! CONTROL:

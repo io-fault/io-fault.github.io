@@ -5,7 +5,7 @@
 		- (control)`property-set`
 		- (source/area)`1 1 196 25`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`116`
+		- (coverage-counters)`0`
 Check the sequence manipulations provided by the base classes.
 
 
@@ -28,8 +28,6 @@ Check the sequence manipulations provided by the base classes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`6 1 23 14`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`10`
 (signature)`test_inconsistent_type_equality(test)`
 
 
@@ -40,8 +38,6 @@ Check the sequence manipulations provided by the base classes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`25 1 65 29`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`29`
 (signature)`test_Route_operations(test)`
 
 Check route specific operators
@@ -56,8 +52,6 @@ Check route specific operators
 	/element/
 		- (control)`property-set`
 		- (source/area)`67 1 92 60`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`14`
 (signature)`test_Route_sequence(test)`
 
 
@@ -68,8 +62,6 @@ Check route specific operators
 	/element/
 		- (control)`property-set`
 		- (source/area)`94 1 108 37`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`10`
 (signature)`test_Route_addition(test)`
 
 - (context-local/factor-element)&<fault.route/types#Selector[fault.route.types.Selector]>
@@ -82,8 +74,6 @@ Check route specific operators
 	/element/
 		- (control)`property-set`
 		- (source/area)`110 1 133 37`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`17`
 (signature)`test_Route_plural_division(test)`
 
 Validate `r//segment` operations.
@@ -98,8 +88,6 @@ Validate `r//segment` operations.
 	/element/
 		- (control)`property-set`
 		- (source/area)`135 1 143 23`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`7`
 (signature)`test_Route_index_keys(test)`
 
 
@@ -112,8 +100,6 @@ Validate `r//segment` operations.
 	/element/
 		- (control)`property-set`
 		- (source/area)`145 1 158 77`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`9`
 (signature)`test_Route_segment(test)`
 
 
@@ -126,8 +112,6 @@ Validate `r//segment` operations.
 	/element/
 		- (control)`property-set`
 		- (source/area)`160 1 185 31`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`13`
 (signature)`test_Route_stepwise_shift(test)`
 
 
@@ -140,7 +124,5 @@ Validate `r//segment` operations.
 	/element/
 		- (control)`property-set`
 		- (source/area)`187 1 197 24`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
 (signature)`test_Route_stepwise_ascent(test)`
 

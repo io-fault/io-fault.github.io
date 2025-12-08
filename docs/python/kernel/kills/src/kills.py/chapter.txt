@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 47 0`
-		- (coverage-zeros)`10`
-		- (coverage-counters)`19`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 Fault inducing processors.
 
 
@@ -36,8 +36,6 @@ Fault inducing processors.
 	/element/
 		- (control)`property-set`
 		- (source/area)`8 1 22 24`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`8 13 8 26`
@@ -56,8 +54,6 @@ Processor that faults the controlling Sector upon actuation.
 	/element/
 		- (control)`property-set`
 		- (source/area)`14 2 16 21`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 (signature)`inject(Class, sector, event)`
 
 
@@ -70,8 +66,6 @@ Processor that faults the controlling Sector upon actuation.
 	/element/
 		- (control)`property-set`
 		- (source/area)`18 2 19 54`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`actuate(self)`
 
 
@@ -84,8 +78,6 @@ Processor that faults the controlling Sector upon actuation.
 	/element/
 		- (control)`property-set`
 		- (source/area)`21 2 22 24`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`process(self, event)`
 
 
@@ -96,8 +88,6 @@ Processor that faults the controlling Sector upon actuation.
 	/element/
 		- (control)`property-set`
 		- (source/area)`24 1 47 17`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`24 15 24 28`
@@ -116,8 +106,6 @@ Processor that faults when a timeout occurs.
 	/element/
 		- (control)`property-set`
 		- (source/area)`29 2 30 32`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`__init__(self, remainder)`
 
 
@@ -130,8 +118,6 @@ Processor that faults when a timeout occurs.
 	/element/
 		- (control)`property-set`
 		- (source/area)`32 2 33 67`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`actuate(self)`
 
 
@@ -142,8 +128,6 @@ Processor that faults when a timeout occurs.
 	/element/
 		- (control)`property-set`
 		- (source/area)`35 2 42 13`
-		- (coverage-zeros)`4`
-		- (coverage-counters)`4`
 (signature)`terminate(self)`
 
 Cancel the effect of the timeout.
@@ -158,7 +142,5 @@ Cancel the effect of the timeout.
 	/element/
 		- (control)`property-set`
 		- (source/area)`44 2 47 17`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`fto_execute(self)`
 

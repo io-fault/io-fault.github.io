@@ -5,7 +5,7 @@
 		- (control)`property-set`
 		- (source/area)`1 1 154 0`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`80`
+		- (coverage-counters)`0`
 Analyze implementation specific features of (project-local/unknown)&<core.PartitionedSequence> and other (project-local/unknown)&<core> functions.
 
 
@@ -28,8 +28,6 @@ Analyze implementation specific features of (project-local/unknown)&<core.Partit
 	/element/
 		- (control)`property-set`
 		- (source/area)`6 1 19 58`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`8`
 (signature)`test_Route_iterpoints(test)`
 
 
@@ -42,8 +40,6 @@ Analyze implementation specific features of (project-local/unknown)&<core.Partit
 	/element/
 		- (control)`property-set`
 		- (source/area)`21 1 34 75`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`8`
 (signature)`test_Route_iterinverse(test)`
 
 
@@ -56,8 +52,6 @@ Analyze implementation specific features of (project-local/unknown)&<core.Partit
 	/element/
 		- (control)`property-set`
 		- (source/area)`36 1 55 48`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`12`
 (signature)`test_Route_sorting(test)`
 
 
@@ -70,8 +64,6 @@ Analyze implementation specific features of (project-local/unknown)&<core.Partit
 	/element/
 		- (control)`property-set`
 		- (source/area)`57 1 66 37`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`8`
 (signature)`test_Route_delimit(test)`
 
 
@@ -84,8 +76,6 @@ Analyze implementation specific features of (project-local/unknown)&<core.Partit
 	/element/
 		- (control)`property-set`
 		- (source/area)`68 1 75 56`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
 (signature)`test_Route_iterpartitions(test)`
 
 
@@ -98,8 +88,6 @@ Analyze implementation specific features of (project-local/unknown)&<core.Partit
 	/element/
 		- (control)`property-set`
 		- (source/area)`77 1 94 14`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`8`
 (signature)`test_Route_from_partitions(test)`
 
 
@@ -110,8 +98,6 @@ Analyze implementation specific features of (project-local/unknown)&<core.Partit
 	/element/
 		- (control)`property-set`
 		- (source/area)`96 1 118 29`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`10`
 (signature)`test_Router_container_skip(test)`
 
 Make sure empty contexts are skipped when accessing a route's container.
@@ -124,8 +110,6 @@ Make sure empty contexts are skipped when accessing a route's container.
 	/element/
 		- (control)`property-set`
 		- (source/area)`120 1 139 41`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`11`
 (signature)`test_Route_pickling(test)`
 
 Check python.org/.../pickle support.
@@ -138,8 +122,6 @@ Check python.org/.../pickle support.
 	/element/
 		- (control)`property-set`
 		- (source/area)`141 1 154 34`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`7`
 (signature)`test_Route_switch(test)`
 
 - (context-local/factor-element)&<fault.route/core#PartitionedSequence.__mul__[fault.route.core.PartitionedSequence.__mul__]>

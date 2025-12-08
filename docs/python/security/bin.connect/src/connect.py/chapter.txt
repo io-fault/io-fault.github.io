@@ -3,7 +3,7 @@
 		module
 	/element/
 		- (control)`property-set`
-		- (source/area)`1 1 118 0`
+		- (source/area)`1 1 108 20`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`0`
 Connect an adapter to the stored security context.
@@ -49,16 +49,6 @@ Connect an adapter to the stored security context.
 		- (control)`property-set`
 		- (source/area)`8 1 8 29`
 
-[ execution ]
-! CONTROL:
-	/type/
-		import
-	/flags/
-		- `undocumented`
-	/element/
-		- (control)`property-set`
-		- (source/area)`9 1 9 31`
-
 [ lsf ]
 ! CONTROL:
 	/type/
@@ -67,7 +57,7 @@ Connect an adapter to the stored security context.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`11 1 11 36`
+		- (source/area)`10 1 10 36`
 
 [ factory ]
 ! CONTROL:
@@ -77,7 +67,7 @@ Connect an adapter to the stored security context.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`12 1 12 30`
+		- (source/area)`11 1 11 30`
 
 [ info ]
 ! CONTROL:
@@ -87,14 +77,14 @@ Connect an adapter to the stored security context.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`14 1 19 1`
+		- (source/area)`13 1 18 1`
 #!source
+	info = lsf.types.Information(
 		identifier = 'http://fault.io/python/security/kprotocol-',
 		name = 'kprotocol-',
 		authority = 'fault.io',
 		contact = "http://fault.io/critical"
 	)
-	
 
 [ requirements ]
 ! CONTROL:
@@ -104,12 +94,12 @@ Connect an adapter to the stored security context.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`21 1 24 2`
+		- (source/area)`20 1 23 2`
 #!source
+	requirements = '\n'.join([
 		'http://fault.io/python/system/extensions.interfaces',
 		'http://fault.io/python/security/implementations',
 	])
-	
 
 [ formats ]
 ! CONTROL:
@@ -119,8 +109,9 @@ Connect an adapter to the stored security context.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`26 1 39 1`
+		- (source/area)`25 1 38 1`
 #!source
+	formats = {
 		'http://if.fault.io/factors/system': [
 			('elements', 'c', '2011', 'c'),
 			('void', 'h', 'header', 'c'),
@@ -134,7 +125,6 @@ Connect an adapter to the stored security context.
 			('references', 'fr', 'lines', 'text'),
 		],
 	}
-	
 
 [ pyi ]
 ! CONTROL:
@@ -144,9 +134,9 @@ Connect an adapter to the stored security context.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`41 1 41 41`
+		- (source/area)`40 1 40 41`
 #!source
-	fr = lsf.types.factor@'meta.references'
+	pyi = lsf.types.factor@'python.interface'
 
 [ fr ]
 ! CONTROL:
@@ -156,9 +146,9 @@ Connect an adapter to the stored security context.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`42 1 42 39`
+		- (source/area)`41 1 41 39`
 #!source
-	sr = lsf.types.factor@'system.references'
+	fr = lsf.types.factor@'meta.references'
 
 [ sr ]
 ! CONTROL:
@@ -168,9 +158,9 @@ Connect an adapter to the stored security context.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`43 1 43 41`
+		- (source/area)`42 1 42 41`
 #!source
-	
+	sr = lsf.types.factor@'system.references'
 
 [ module_template ]
 ! CONTROL:
@@ -180,8 +170,9 @@ Connect an adapter to the stored security context.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`45 1 57 3`
+		- (source/area)`44 1 56 3`
 #!source
+	module_template = """
 		#define ADAPTER_{upper} 1
 		#define ADAPTER_TRANSPORT_NEW transport_new_{lower}
 		#define ADAPTER_VERIFY SSL_VERIFY_PEER
@@ -194,7 +185,6 @@ Connect an adapter to the stored security context.
 			return(init_implementation_data(module));
 		}}
 	"""
-	
 
 [ init_product ]
 ! CONTROL:
@@ -204,7 +194,7 @@ Connect an adapter to the stored security context.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`59 1 66 10`
+		- (source/area)`58 1 65 10`
 (signature)`init_product(route, roots)`
 
 
@@ -216,7 +206,7 @@ Connect an adapter to the stored security context.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`68 1 101 30`
+		- (source/area)`67 1 100 30`
 (signature)`init_project(product, orientation, interfaces, libraries)`
 
 
@@ -228,7 +218,7 @@ Connect an adapter to the stored security context.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`103 1 118 46`
+		- (source/area)`102 1 109 19`
 		- (type/syntax)`process.Exit`
 		- (type/context-local/factor-element)&<fault.system/process#Exit[fault.system.process.Exit]>
 		

@@ -3,9 +3,9 @@
 		module
 	/element/
 		- (control)`property-set`
-		- (source/area)`1 1 216 0`
-		- (coverage-zeros)`35`
-		- (coverage-counters)`83`
+		- (source/area)`1 1 205 0`
+		- (coverage-zeros)`34`
+		- (coverage-counters)`82`
 Memory management classes for implementing usage constraints
 in parts of processes.
 
@@ -225,7 +225,7 @@ Explicitly add an object to the available segments.
 		class
 	/element/
 		- (control)`property-set`
-		- (source/area)`104 1 216 50`
+		- (source/area)`104 1 205 50`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
 ! INHERIT:
@@ -308,31 +308,26 @@ created by (none/invalid)&<http://fault.io/dev/null[mmap.mmap]>.
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`142 2 174 22`
-		- (coverage-zeros)`1`
+		- (source/area)`142 2 164 22`
+		- (coverage-zeros)`0`
 		- (coverage-counters)`9`
 (signature)`__del__(self)`
 
-Manage the final stages of (factor-local/class)&<#Segments[Segments]> deallocation by transitioning
-to a finalization process where (factor-local/method)&<#Segments.select[select]> methods can no longer occur,
-and existing (invalid/unknown)&<#memoryview's> referencing (factor-local/parameter)&<#Segments.__del__.Parameters.self[self]>, (invalid/unknown)&<#weaks>, are
-used to construct a sequence of (none/invalid)&<http://fault.io/dev/null[weakref.finalize]> callbacks.
-
-Once in the final stage, a count of outstanding (invalid/unknown)&<#memoryview> instances
-is tracked and decremented with (factor-local/method)&<#Segments.decrement[decrement]> until there are no more references
-to the (factor-local/class)&<#Segments[Segments]> allowing the file descriptor associated with (invalid/unknown)&<#memory> to be closed.
+If no weak references are open, close the memory map. Otherwise,
+add finalize each view such that the memory map is closed when the last
+reference is released.
 
 
-[ Segments >> decrement ]
+[ Segments >> _decrement ]
 ! CONTROL:
 	/type/
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`176 2 185 18`
+		- (source/area)`166 2 174 22`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
-(signature)`decrement(self)`
+		- (coverage-counters)`3`
+(signature)`_decrement(self)`
 
 Used internally by (factor-local/method)&<#Segments.__del__[__del__]> to manage the deallocation process
 when there are outstanding references to the memory mapped region.
@@ -344,7 +339,7 @@ when there are outstanding references to the memory mapped region.
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`187 2 210 15`
+		- (source/area)`176 2 199 15`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`14`
 (signature)`select(self, start, stop, size)`
@@ -359,7 +354,7 @@ Constructs an iterator to the parameterized range over the
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`212 2 216 50`
+		- (source/area)`201 2 205 50`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`1`
 (signature)`__iter__(self)`

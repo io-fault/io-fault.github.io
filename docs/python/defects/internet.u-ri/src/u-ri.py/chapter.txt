@@ -3,9 +3,9 @@
 		module
 	/element/
 		- (control)`property-set`
-		- (source/area)`1 1 552 0`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`82`
+		- (source/area)`1 1 590 0`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 
 [ module ]
 ! CONTROL:
@@ -24,8 +24,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`3 1 11 2`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`7`
 (signature)`cmbx(t)`
 
 Yield a list of combinations using a mask
@@ -629,8 +627,6 @@ Yield a list of combinations using a mask
 	/element/
 		- (control)`property-set`
 		- (source/area)`488 1 506 26`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`14`
 (signature)`test_expectations(test)`
 
 
@@ -643,8 +639,6 @@ Yield a list of combinations using a mask
 	/element/
 		- (control)`property-set`
 		- (source/area)`508 1 512 15`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
 (signature)`test_split_join_netloc(test)`
 
 
@@ -657,8 +651,6 @@ Yield a list of combinations using a mask
 	/element/
 		- (control)`property-set`
 		- (source/area)`514 1 520 15`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
 (signature)`test_join_split_netloc(test)`
 
 
@@ -671,8 +663,6 @@ Yield a list of combinations using a mask
 	/element/
 		- (control)`property-set`
 		- (source/area)`522 1 526 14`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
 (signature)`test_split_join_path(test)`
 
 
@@ -685,8 +675,6 @@ Yield a list of combinations using a mask
 	/element/
 		- (control)`property-set`
 		- (source/area)`528 1 532 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
 (signature)`test_join_split_path(test)`
 
 
@@ -699,8 +687,6 @@ Yield a list of combinations using a mask
 	/element/
 		- (control)`property-set`
 		- (source/area)`534 1 538 41`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`5`
 (signature)`test_combinations(test)`
 
 
@@ -711,9 +697,22 @@ Yield a list of combinations using a mask
 	/element/
 		- (control)`property-set`
 		- (source/area)`540 1 552 48`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`8`
 (signature)`test_strict(test)`
 
 - (context-local/factor-element)&<fault.internet/ri#strict[fault.internet.ri.strict]>
+
+
+[ test_address_extension ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`554 1 590 56`
+(signature)`test_address_extension(test)`
+
+- (context-local/factor-element)&<fault.internet/ri#split_netloc[fault.internet.ri.split_netloc]>
+- (context-local/factor-element)&<fault.internet/ri#structure[fault.internet.ri.structure]>
+
+Validate the address extension.
 

@@ -6,3 +6,63 @@
 		- (source/area)``
 		- (coverage-zeros)`0`
 		- (coverage-counters)`0`
+
+[ CONFIG_STATIC_KEVENTS ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`25 10 25 33`
+#!source
+	#define CONFIG_STATIC_KEVENTS 16
+
+[ CONFIG_SYSCALL_RETRY ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`29 10 29 32`
+#!source
+	#define CONFIG_SYSCALL_RETRY 16
+
+[ __EV_KQUEUE__ ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`36 9 36 26`
+(signature)`__EV_KQUEUE__()`
+
+
+[ __EV_EPOLL__ ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`37 9 37 25`
+(signature)`__EV_EPOLL__()`
+
+
+[ __EV_KQUEUE__ ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`45 10 45 27`
+(signature)`__EV_KQUEUE__()`
+

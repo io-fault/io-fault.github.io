@@ -5,7 +5,7 @@
 		- (control)`property-set`
 		- (source/area)`1 1 47 0`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`16`
+		- (coverage-counters)`0`
 
 [ module ]
 ! CONTROL:
@@ -47,8 +47,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`14 1 17 46`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`test_huffman_coding(test)`
 
 
@@ -59,8 +57,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`19 1 47 37`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`10`
 (signature)`test_huffman_samples(test)`
 
 Tests comprised of data from examples in

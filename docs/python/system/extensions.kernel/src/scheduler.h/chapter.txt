@@ -6,3 +6,187 @@
 		- (source/area)``
 		- (coverage-zeros)`0`
 		- (coverage-counters)`0`
+
+[ _SYSTEM_KERNEL_SCHEDULER_H_included_ ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 9 5 44`
+#!source
+	#define _SYSTEM_KERNEL_SCHEDULER_H_included_
+
+[ Scheduler_GetTaskQueue ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 9 7 49`
+(signature)`Scheduler_GetTaskQueue()`
+
+
+[ Scheduler_GetKernelQueue ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 9 8 51`
+(signature)`Scheduler_GetKernelQueue()`
+
+
+[ Scheduler_GetExceptionTrap ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 9 10 53`
+(signature)`Scheduler_GetExceptionTrap()`
+
+
+[ Scheduler_SetExceptionTrap ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 9 11 80`
+(signature)`Scheduler_SetExceptionTrap()`
+
+
+[ Scheduler_UpdateExceptionTrap ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`12 9 16 10`
+(signature)`Scheduler_UpdateExceptionTrap()`
+
+
+[ Scheduler ]
+! CONTROL:
+	/type/
+		structure
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`18 9 18 24`
+
+[ Scheduler ]
+! CONTROL:
+	/type/
+		typedef
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`18 1 18 35`
+(signature)`Scheduler()`
+
+
+[ Scheduler ]
+! CONTROL:
+	/type/
+		structure
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`19 1 27 1`
+
+[ Scheduler >> PyObj ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`int`
+		
+
+[ Scheduler >> ks_waiting ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`int`
+		
+
+[ Scheduler >> ks_exc ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`int`
+		
+
+[ Scheduler >> TaskQueue ]
+! CONTROL:
+	/type/
+		structure
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`25 2 25 17`
+
+[ Scheduler >> ks_tq ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`struct TaskQueue`
+		
+
+[ Scheduler >> KernelQueue ]
+! CONTROL:
+	/type/
+		structure
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`26 2 26 19`
+
+[ Scheduler >> ks_eq ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`struct KernelQueue`
+		

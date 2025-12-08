@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)``
-		- (coverage-zeros)`0`
-		- (coverage-counters)`0`
+		- (coverage-zeros)`266`
+		- (coverage-counters)`266`
 
 [ CELL_STACK_ALLOC ]
 ! CONTROL:
@@ -15,7 +15,7 @@
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`217 11 217 29`
+		- (source/area)`229 11 229 29`
 #!source
 	#define CELL_STACK_ALLOC 16
 
@@ -27,7 +27,7 @@
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`254 9 257 43`
+		- (source/area)`266 9 269 43`
 (signature)`MODULE_FUNCTIONS()`
 
 
@@ -65,7 +65,7 @@
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`47 1 208 1`
+		- (source/area)`47 1 220 1`
 		- (type/syntax)`long`
 		
 (signature)`measure(wcv, ws, ctlen, tablen)`
@@ -86,7 +86,7 @@ does recognize the sequence.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`213 1 252 1`
+		- (source/area)`225 1 264 1`
 		- (type/syntax)`PyObj`
 		
 (signature)`cells(self, args)`

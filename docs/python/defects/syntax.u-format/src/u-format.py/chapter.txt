@@ -1,0 +1,230 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 227 0`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
+Validate the format module's functionality.
+
+
+[ module ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 38`
+
+[ test_Fields_operations ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 18 64`
+(signature)`test_Fields_operations(test)`
+
+- (context-local/factor-element)&<fault.syntax/format#Fields[fault.syntax.format.Fields]>
+
+
+[ test_Fields_partial ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`20 1 35 66`
+(signature)`test_Fields_partial(test)`
+
+- (context-local/factor-element)&<fault.syntax/format#Fields.partial[fault.syntax.format.Fields.partial]>
+
+
+[ test_Lines_defaults ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`37 1 44 27`
+(signature)`test_Lines_defaults(test)`
+
+- (context-local/factor-element)&<fault.syntax/format#Lines[fault.syntax.format.Lines]>
+
+
+[ test_partial_termination ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`46 1 62 55`
+(signature)`test_partial_termination(test)`
+
+- (context-local/factor-element)&<fault.syntax/format#Lines.measure_partial_termination[fault.syntax.format.Lines.measure_partial_termination]>
+
+
+[ test_Lines_splitpartial ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`64 1 74 45`
+(signature)`test_Lines_splitpartial(test)`
+
+- (context-local/factor-element)&<fault.syntax/format#Lines._splitpartial[fault.syntax.format.Lines._splitpartial]>
+
+
+[ test_Lines_splitpartial_plural ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`76 1 87 47`
+(signature)`test_Lines_splitpartial_plural(test)`
+
+- (context-local/factor-element)&<fault.syntax/format#Lines._splitpartial[fault.syntax.format.Lines._splitpartial]>
+
+
+[ test_Lines_measure_indentation ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`89 1 101 67`
+(signature)`test_Lines_measure_indentation(test)`
+
+- (context-local/factor-element)&<fault.syntax/format#Lines.measure_indentation[fault.syntax.format.Lines.measure_indentation]>
+
+
+[ test_Lines_level ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`103 1 115 66`
+(signature)`test_Lines_level(test)`
+
+- (context-local/factor-element)&<fault.syntax/format#Lines.level[fault.syntax.format.Lines.level]>
+
+
+[ test_Lines_structure ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`117 1 144 2`
+(signature)`test_Lines_structure(test)`
+
+- (context-local/factor-element)&<fault.syntax/format#Lines.structure[fault.syntax.format.Lines.structure]>
+
+
+[ progression ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`146 1 157 46`
+(signature)`progression(test, ft, limit)`
+
+
+[ test_Lines_progression_spaces ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`159 1 166 26`
+(signature)`test_Lines_progression_spaces(test)`
+
+- (context-local/factor-element)&<fault.syntax/format#Lines.structure[fault.syntax.format.Lines.structure]>
+
+
+[ test_Lines_progression_tabs ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`168 1 174 38`
+(signature)`test_Lines_progression_tabs(test)`
+
+- (context-local/factor-element)&<fault.syntax/format#Lines.structure[fault.syntax.format.Lines.structure]>
+
+
+[ test_Lines_sequence ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`176 1 182 64`
+(signature)`test_Lines_sequence(test)`
+
+- (context-local/factor-element)&<fault.syntax/format#Lines.sequence[fault.syntax.format.Lines.sequence]>
+
+
+[ test_Characters_from_codec ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`184 1 200 69`
+(signature)`test_Characters_from_codec(test)`
+
+- (context-local/factor-element)&<fault.syntax/format#Characters.from_codec[fault.syntax.format.Characters.from_codec]>
+
+
+[ test_Characters_structure ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`202 1 208 63`
+(signature)`test_Characters_structure(test)`
+
+- (context-local/factor-element)&<fault.syntax/format#Characters.structure[fault.syntax.format.Characters.structure]>
+
+
+[ text_samples ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`210 1 215 1`
+#!source
+	text_samples = [
+		"test",
+		"测试",
+		b'\xFF\xFF\xFF\x00'.decode('utf-8', 'surrogateescape'),
+		"",
+	]
+
+[ test_Characters_io_fragments ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`217 1 227 59`
+(signature)`test_Characters_io_fragments(test)`
+
+- (context-local/factor-element)&<fault.syntax/format#Characters.structure[fault.syntax.format.Characters.structure]>
+- (context-local/factor-element)&<fault.syntax/format#Characters.sequence[fault.syntax.format.Characters.sequence]>
+

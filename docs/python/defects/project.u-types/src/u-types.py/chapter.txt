@@ -5,7 +5,7 @@
 		- (control)`property-set`
 		- (source/area)`1 1 117 0`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`65`
+		- (coverage-counters)`0`
 Analyze core data types.
 
 
@@ -26,8 +26,6 @@ Analyze core data types.
 	/element/
 		- (control)`property-set`
 		- (source/area)`6 1 18 28`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`9`
 (signature)`test_Variants(test)`
 
 - (context-local/factor-element)&<fault.project/types#Variant[fault.project.types.Variant]>
@@ -40,8 +38,6 @@ Analyze core data types.
 	/element/
 		- (control)`property-set`
 		- (source/area)`20 1 29 58`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
 (signature)`test_Format(test)`
 
 - (context-local/factor-element)&<fault.project/types#Format[fault.project.types.Format]>
@@ -54,8 +50,6 @@ Analyze core data types.
 	/element/
 		- (control)`property-set`
 		- (source/area)`31 1 36 42`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`test_Reference_format(test)`
 
 - (context-local/factor-element)&<fault.project/types#Reference.format[fault.project.types.Reference.format]>
@@ -68,8 +62,6 @@ Analyze core data types.
 	/element/
 		- (control)`property-set`
 		- (source/area)`38 1 48 56`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
 (signature)`test_FactorPath_constructors(test)`
 
 - (context-local/factor-element)&<fault.project/types#FactorPath.__matmul__[fault.project.types.FactorPath.__matmul__]>
@@ -82,8 +74,6 @@ Analyze core data types.
 	/element/
 		- (control)`property-set`
 		- (source/area)`50 1 57 55`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
 (signature)`test_FactorPath_strings(test)`
 
 - (context-local/factor-element)&<fault.project/types#FactorPath.__str__[fault.project.types.FactorPath.__str__]>
@@ -97,8 +87,6 @@ Analyze core data types.
 	/element/
 		- (control)`property-set`
 		- (source/area)`59 1 67 34`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
 (signature)`test_Reference_isolate(test)`
 
 - (context-local/factor-element)&<fault.project/types#Reference.isolate[fault.project.types.Reference.isolate]>
@@ -111,8 +99,6 @@ Analyze core data types.
 	/element/
 		- (control)`property-set`
 		- (source/area)`69 1 90 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`15`
 (signature)`test_Reference_constructors(test)`
 
 - (context-local/factor-element)&<fault.project/types#Reference[fault.project.types.Reference]>
@@ -125,8 +111,6 @@ Analyze core data types.
 	/element/
 		- (control)`property-set`
 		- (source/area)`92 1 99 47`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
 (signature)`test_Extensions_constructors(test)`
 
 - (context-local/factor-element)&<fault.project/types#Extensions[fault.project.types.Extensions]>
@@ -139,8 +123,6 @@ Analyze core data types.
 	/element/
 		- (control)`property-set`
 		- (source/area)`101 1 117 82`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`9`
 (signature)`test_fpc(test)`
 
 - (context-local/factor-element)&<fault.project/types#fpc[fault.project.types.fpc]>

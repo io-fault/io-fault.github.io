@@ -5,7 +5,7 @@
 		- (control)`property-set`
 		- (source/area)`1 1 42 0`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`25`
+		- (coverage-counters)`0`
 
 [ io ]
 ! CONTROL:
@@ -36,7 +36,5 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`4 1 42 20`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`22`
 (signature)`perform_cat(pids, input, output, data, *errors)`
 

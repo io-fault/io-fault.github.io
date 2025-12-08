@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 127 5`
-		- (coverage-zeros)`74`
-		- (coverage-counters)`81`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 Formatting routines for representing processor hierarchies.
 
 
@@ -76,8 +76,6 @@ Formatting routines for representing processor hierarchies.
 	/element/
 		- (control)`property-set`
 		- (source/area)`11 1 40 9`
-		- (coverage-zeros)`13`
-		- (coverage-counters)`13`
 (signature)`perspectives(resource)`
 
 Return the stack of structures used for Resource introspection.
@@ -97,8 +95,6 @@ Returns `[(Class, properties, subresources), ...]`.
 	/element/
 		- (control)`property-set`
 		- (source/area)`42 1 71 74`
-		- (coverage-zeros)`15`
-		- (coverage-counters)`15`
 (signature)`sequence(identity, resource, perspective, traversed)`
 
 Convert the structure tree of a (invalid/unknown)&<#Resource> into a sequence of tuples to be
@@ -112,8 +108,6 @@ formatted for display.
 	/element/
 		- (control)`property-set`
 		- (source/area)`73 1 128 4`
-		- (coverage-zeros)`46`
-		- (coverage-counters)`46`
 (signature)`format(identity, resource)`
 
 Format the (invalid/unknown)&<#Resource> tree in fault.text.

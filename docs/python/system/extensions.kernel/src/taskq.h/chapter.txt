@@ -6,3 +6,187 @@
 		- (source/area)``
 		- (coverage-zeros)`0`
 		- (coverage-counters)`0`
+
+[ TQ_LQUEUE_HAS_TASKS ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`33 9 33 81`
+(signature)`TQ_LQUEUE_HAS_TASKS()`
+
+
+[ TQ_XQUEUE_HAS_TASKS ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`34 9 34 90`
+(signature)`TQ_XQUEUE_HAS_TASKS()`
+
+
+[ TQ_HAS_TASKS ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`35 9 35 74`
+(signature)`TQ_HAS_TASKS()`
+
+
+[ Tasks ]
+! CONTROL:
+	/type/
+		structure
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 9 4 20`
+A linked list of vectors used to manage the queue's storage.
+
+
+[ Tasks ]
+! CONTROL:
+	/type/
+		typedef
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 27`
+(signature)`Tasks()`
+
+A linked list of vectors used to manage the queue's storage.
+
+
+[ Tasks ]
+! CONTROL:
+	/type/
+		structure
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 10 1`
+A linked list of vectors used to manage the queue's storage.
+
+
+[ Tasks >> t_next ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`Tasks`
+		
+
+[ Tasks >> t_allocated ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`int`
+		
+
+[ Tasks >> t_vector ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`int[0]`
+		
+
+[ TaskQueue ]
+! CONTROL:
+	/type/
+		structure
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`24 9 24 24`
+
+[ TaskQueue ]
+! CONTROL:
+	/type/
+		typedef
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`24 1 24 35`
+(signature)`TaskQueue()`
+
+
+[ TaskQueue ]
+! CONTROL:
+	/type/
+		structure
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`25 1 31 1`
+
+[ TaskQueue >> q_executing ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`struct Tasks *`
+		
+
+[ TaskQueue >> q_loading ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`struct Tasks *`
+		
+
+[ TaskQueue >> q_tail ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`struct Tasks *`
+		
+
+[ TaskQueue >> q_tailcursor ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`int`
+		

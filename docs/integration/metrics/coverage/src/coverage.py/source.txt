@@ -10,11 +10,19 @@ from fault.range.types import Mapping
 from fault.syntax.types import Area, Address
 
 # "{record-count} {source-file-path}\n"
-def _parse_sources(lines):
+def _parse_map_sources(lines):
 	i = 0
 	for line in lines:
 		rcount, src = line.split(maxsplit=1)
 		yield i, int(rcount), src
+		i += 1
+
+# "{metrics-isolation} {record-count} {source-file-path}\n"
+def _parse_sources(lines):
+	i = 0
+	for line in lines:
+		isolation, rcount, src = line.split(maxsplit=2)
+		yield isolation, i, int(rcount), src
 		i += 1
 
 def _parse_areas(lines):
@@ -22,6 +30,56 @@ def _parse_areas(lines):
 		yield tuple(map(int, line.split(maxsplit=4)))
 		#startl, startc, stopl, stopc = map(int, line.split(maxsplit=4))
 		#yield Area((Address((startl, startc)), Address((stopl, stopc))))
+
+def index_regions(regions):
+	"""
+	# Construct an index from source regions for used with &integrate_dcounters.
+	"""
+
+	idx = {}
+	for src, areas in regions.items():
+		for a in areas:
+			ln, co, eln, eco = map(int, a)
+			idx[(src, ln, co)] = f"{ln} {co} {eln} {eco}\n"
+
+	return idx
+
+def integrate_dcounters(index, fsc, dcounters):
+	"""
+	# Convert the counters in &dcounters into fault syntax counters, &fsc, using
+	# the given &index to identify the full region.
+	"""
+
+	isolation = None
+	srcfile = None
+	counters = 0
+
+	with contextlib.ExitStack() as stack:
+		src = stack.enter_context((fsc/'sources').fs_open('a'))
+		counts = stack.enter_context((fsc/'counts').fs_open('a'))
+		areas = stack.enter_context((fsc/'areas').fs_open('a'))
+
+		for line in dcounters:
+			if line[:1] == '@':
+				# Change file.
+				srcfile = line[1:].strip()
+			elif line[:1] == '&':
+				# Change isolation
+				isolation = line[1:].strip()
+			else:
+				ln, co, count = map(int, line.split())
+				try:
+					sa = index[(srcfile, ln, co)]
+				except KeyError:
+					continue
+
+				counters += 1
+				areas.write(sa)
+				counts.write(str(count) + '\n')
+				continue
+
+			# When switching the file or isolation, flush the count.
+			src.write(f"{isolation} {counters} {srcfile}\n")
 
 def factor_records(root):
 	"""
@@ -43,9 +101,10 @@ def identify_source_areas(path):
 	# Scan the directory for nodes containing regular files.
 	"""
 
-	for d, df in path.fs_index():
-		if df:
-			yield d
+	for subdir in path.fs_iterfiles('directory'):
+		for d, df in subdir.fs_index():
+			if df:
+				yield d
 
 def identify_captured_metrics(path):
 	"""
@@ -84,7 +143,7 @@ def load_fault_syntax_areas(sources, areas, types):
 			typ = None
 			typiter = repeat('+')
 
-		srciter = _parse_sources(map(str.strip, src.readlines()))
+		srciter = _parse_map_sources(map(str.strip, src.readlines()))
 		aiter = _parse_areas(map(str.strip, sas.readlines()))
 
 		return join_fault_syntax_areas(srciter, aiter, typiter)
@@ -92,7 +151,7 @@ def load_fault_syntax_areas(sources, areas, types):
 def join_fault_syntax_counters(sources, areas, counts, *, Type=Counter):
 	counters = defaultdict(Type)
 
-	for lineno, rcount, src in sources:
+	for isolation, lineno, rcount, src in sources:
 		c = counters[src]
 		for k, d in zip(islice(areas, 0, rcount), islice(counts, 0, rcount)):
 			c[k] += d

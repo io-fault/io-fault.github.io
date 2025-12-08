@@ -4,5 +4,688 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)``
-		- (coverage-zeros)`0`
-		- (coverage-counters)`0`
+		- (coverage-zeros)`104`
+		- (coverage-counters)`104`
+
+[ _SYSTEM_KERNEL_EVENT_H_included_ ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 9 5 40`
+#!source
+	#define _SYSTEM_KERNEL_EVENT_H_included_
+
+[ EV_CYCLIC ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 9 7 19`
+#!source
+	#define EV_CYCLIC 1
+
+[ EVENT_TYPE_META_LIST ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`12 9 15 50`
+(signature)`EVENT_TYPE_META_LIST()`
+
+
+[ EVENT_TYPE_TIME_LIST ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`20 9 22 41`
+(signature)`EVENT_TYPE_TIME_LIST()`
+
+
+[ EVENT_TYPE_IP_LIST ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`27 9 29 52`
+(signature)`EVENT_TYPE_IP_LIST()`
+
+
+[ EVENT_TYPE_FS_LIST ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`34 9 37 54`
+(signature)`EVENT_TYPE_FS_LIST()`
+
+
+[ EVENT_TYPE_IO_LIST ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`42 9 45 49`
+(signature)`EVENT_TYPE_IO_LIST()`
+
+
+[ EVENT_TYPE_LIST ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`50 9 55 21`
+(signature)`EVENT_TYPE_LIST()`
+
+
+[ EV_TYPE_ID ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`60 9 60 35`
+(signature)`EV_TYPE_ID()`
+
+
+[ EV_TYPE ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`63 10 63 51`
+#!source
+	#define EV_TYPE(NAME, C, CYCLIC) EV_TYPE_ID(NAME),
+
+[ EV_TYPE ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`73 11 76 9`
+#!source
+	#define EV_TYPE(NAME, C, CYCLIC) \
+		case EV_TYPE_ID(NAME): \
+			return(#NAME); \
+		break;
+
+[ _SHIFT ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`88 10 88 29`
+#!source
+	#define _SHIFT(B,O) (B << O)
+
+[ STRSHIFT ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`89 10 90 65`
+#!source
+	#define STRSHIFT(a) \
+		(_SHIFT(a[0],24)|_SHIFT(a[1],16)|_SHIFT(a[2],8)|_SHIFT(a[3],0))
+
+[ STRCASE ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`91 10 92 53`
+#!source
+	#define STRCASE(a,b,c,d) \
+		(_SHIFT(a,24)|_SHIFT(b,16)|_SHIFT(c,8)|_SHIFT(d,0))
+
+[ EV_TYPE ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`197 11 200 9`
+#!source
+	#define EV_TYPE(NAME, C, CYCLIC) \
+		case EV_TYPE_ID(NAME): \
+			*typname = #NAME; \
+		break;
+
+[ EV_TYPE ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`219 11 222 9`
+#!source
+	#define EV_TYPE(NAME, C, CYCLIC) \
+		case EV_TYPE_ID(NAME): \
+			return("evt_" #NAME); \
+		break;
+
+[ Event_Specification ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`233 9 233 46`
+(signature)`Event_Specification()`
+
+
+[ Event_Type ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`234 9 234 58`
+(signature)`Event_Type()`
+
+
+[ Event_GetSource ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`236 9 236 52`
+(signature)`Event_GetSource()`
+
+
+[ Event_GetKPort ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`237 9 237 54`
+(signature)`Event_GetKPort()`
+
+
+[ Event_GetTime ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`238 9 238 54`
+(signature)`Event_GetTime()`
+
+
+[ Event_GetProcess ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`239 9 239 60`
+(signature)`Event_GetProcess()`
+
+
+[ Event_GetSignal ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`240 9 240 63`
+(signature)`Event_GetSignal()`
+
+
+[ Event_GetCorrelation ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`241 9 241 68`
+(signature)`Event_GetCorrelation()`
+
+
+[ Event_SetSource ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`243 9 243 58`
+(signature)`Event_SetSource()`
+
+
+[ Event_SetKPort ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`244 9 244 56`
+(signature)`Event_SetKPort()`
+
+
+[ Event_SetTime ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`245 9 245 58`
+(signature)`Event_SetTime()`
+
+
+[ Event_SetProcess ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`246 9 246 68`
+(signature)`Event_SetProcess()`
+
+
+[ Event_SetSignal ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`247 9 247 60`
+(signature)`Event_SetSignal()`
+
+
+[ Event_SetCorrelation ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`248 9 248 68`
+(signature)`Event_SetCorrelation()`
+
+
+[ EventType ]
+! CONTROL:
+	/type/
+		enumeration
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`61 1 66 1`
+(signature)`EventType()`
+
+
+[ evt_invalid ]
+! CONTROL:
+	/type/
+		constant
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+(signature)`evt_invalid()`
+
+
+[ ev_type_name ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`68 1 83 1`
+		- (type/syntax)`const char *`
+		
+(signature)`ev_type_name(etyp)`
+
+
+[ ev_type_code ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`85 1 170 1`
+		- (type/syntax)`enum EventType`
+		
+(signature)`ev_type_code(n)`
+
+
+[ EventSpecification ]
+! CONTROL:
+	/type/
+		structure
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`172 9 172 33`
+
+[ event_t ]
+! CONTROL:
+	/type/
+		typedef
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`172 1 172 41`
+(signature)`event_t()`
+
+
+[ EventSpecification ]
+! CONTROL:
+	/type/
+		structure
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`173 1 188 1`
+
+[ EventSpecification >> evs_type ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`enum EventType`
+		
+
+[ EventSpecification >> evs_source ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`int`
+		
+
+[ EventSpecification >> evs_kresource ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`int`
+		
+
+[ EventSpecification >> time ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`int`
+		
+
+[ EventSpecification >> process ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`int`
+		
+
+[ EventSpecification >> signal_code ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`int`
+		
+
+[ EventSpecification >> correlation ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`int`
+		
+
+[ EventSpecification >> evs_field ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`union (unnamed union at /x/p/python/fault/system/extensions/kernel/event.h:180:2)`
+		
+
+[ EventSpecification >> time ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`int`
+		
+
+[ EventSpecification >> process ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`int`
+		
+
+[ EventSpecification >> signal_code ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`int`
+		
+
+[ EventSpecification >> correlation ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`int`
+		
+
+[ EventSpecification >> evs_terminal ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`int[0]`
+		
+
+[ evs_type_name ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`190 1 212 1`
+		- (type/syntax)`int`
+		
+(signature)`evs_type_name(evs, typname)`
+
+
+[ evs_type_identifier ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`214 1 231 1`
+		- (type/syntax)`const char *`
+		
+(signature)`evs_type_identifier(evs)`
+
+
+[ Event ]
+! CONTROL:
+	/type/
+		structure
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`250 9 250 20`
+
+[ Event ]
+! CONTROL:
+	/type/
+		typedef
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`250 1 250 27`
+(signature)`Event()`
+
+
+[ Event ]
+! CONTROL:
+	/type/
+		structure
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`251 1 254 1`
+
+[ Event >> event_t ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`int`
+		

@@ -1,0 +1,1 @@
+[[["text_samples"]], [["test", "\u6d4b\u8bd5", {"syntax": "b'\\xFF\\xFF\\xFF\\x00'.decode('utf-8', 'surrogateescape')", "area": [[213, 2], [213, 55]]}, ""]]]

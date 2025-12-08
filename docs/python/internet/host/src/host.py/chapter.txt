@@ -3,7 +3,7 @@
 		module
 	/element/
 		- (control)`property-set`
-		- (source/area)`1 1 244 0`
+		- (source/area)`1 1 246 0`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`0`
 Endpoint and Service type for referencing internet addresses for
@@ -480,14 +480,14 @@ Return "<service>:[<protocol>]<name>:<port>".
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`213 1 244 16`
+		- (source/area)`213 1 246 16`
 		- (type/syntax)`typing.Union[Reference, Endpoint]`
 		
 (signature)`realize(struct)`
 
 Construct an (factor-local/class)&<#Endpoint[Endpoint]> or (factor-local/class)&<#Reference[Reference]> from (factor-local/parameter)&<#realize.Parameters.struct[struct]>.
 
-#!/pl/python
+#!syntax/python
 	Usual case:
 	from fault.internet import ri
 	target = host.realize(ri.parse(url))

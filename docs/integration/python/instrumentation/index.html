@@ -19,6 +19,11 @@ if True:
 	def _fi_record(counters=_fi_counters__, origin=_fi_identity, Retry=32):
 		import sys, os, collections
 
+		if 'METRICS_ISOLATION' in os.environ:
+			mid = os.environ['METRICS_ISOLATION']
+		else:
+			mid = 'unspecified'
+
 		if 'PROCESS_IDENTITY' in os.environ:
 			pid = os.environ['PROCESS_IDENTITY']
 		else:
@@ -26,7 +31,7 @@ if True:
 
 		if 'METRICS_CAPTURE' in os.environ:
 			# If capture is defined, qualify with the module name.
-			# /../metrics/{pid}/{module}/{project}/{factor}/{test}/.fault-syntax-counters
+			# .metrics/../{pid}/{module}/{project}/{factor}/{test}/.fault-syntax-counters
 			path = os.environ['METRICS_CAPTURE']
 			path += '/coverage'
 			path += '/' + pid
@@ -39,7 +44,7 @@ if True:
 			except NameError:
 				return
 
-			# /../metrics/coverage/{pid}/{project}/{factor}/{test}/.fault-syntax-counters
+			# .metrics/../coverage/{pid}/{project}/{factor}/{test}/.fault-syntax-counters
 			# Resolve __metrics_trap__ global at exit in order to allow the runtime
 			# to designate it given compile time absence.
 			path = __metrics_trap__
@@ -72,7 +77,7 @@ if True:
 		# For Python, this will normally (always) be a single line.
 		# Append as PROCESS_IDENTITY may be intentionally redundant.
 		with open(path + '/sources', 'a') as f:
-			f.writelines(['%d %s\\n' %(len(events[x]), x) for x in sources])
+			f.writelines(['%s %d %s\\n' %(mid, len(events[x]), x) for x in sources])
 
 		with open(path + '/areas', 'a') as f:
 			for x in sources:
@@ -91,27 +96,22 @@ if True:
 
 	def _FI_COUNT__(area, rob, F=__file__, C=_FI_INCREMENT__):
 		C(((F, area),))
-		return rob
+</code></pre></section><section class="data" documented="false" local-identifier="count_boolop_expression" id="count_boolop_expression"><h1><span class="prefix"></span><a class="title" href="#count_boolop_expression"><span class="text.normal">count_boolop_expression</span></a><span class="element-status"></span><div class="factor-element-meta"><span class="abstract-type">data</span></div></h1><pre class="text.syntax"><code class="source">
+</code></pre></section><section class="data" documented="false" local-identifier="count_call_expression" id="count_call_expression"><h1><span class="prefix"></span><a class="title" href="#count_call_expression"><span class="text.normal">count_call_expression</span></a><span class="element-status"></span><div class="factor-element-meta"><span class="abstract-type">data</span></div></h1><pre class="text.syntax"><code class="source"># Limit names left in the module globals.
+</code></pre></section><section class="data" documented="false" local-identifier="profile_transaction" id="profile_transaction"><h1><span class="prefix"></span><a class="title" href="#profile_transaction"><span class="text.normal">profile_transaction</span></a><span class="element-status"></span><div class="factor-element-meta"><span class="abstract-type">data</span></div></h1><pre class="text.syntax"><code class="source">
+count_boolop_expression = "(_FI_INCREMENT__(((__file__, %r),)) or INSTRUMENTATION_ERROR)"
+count_call_expression = "_FI_COUNT__(%r,None)"
 
-	# Limit names left in the module globals.
-	del _fi_os, _fi_ft, _fi_cl, _fi_ae, _fi_record, _fi_identity
-""".strip() + '\n'
-</code></pre></section><section class="data" documented="false" local-identifier="count_boolop_expression" id="count_boolop_expression"><h1><span class="prefix"></span><a class="title" href="#count_boolop_expression"><span class="text.normal">count_boolop_expression</span></a><span class="element-status"></span><div class="factor-element-meta"><span class="abstract-type">data</span></div></h1><pre class="text.syntax"><code class="source">count_boolop_expression = "(_FI_INCREMENT__(((__file__, %r),)) or INSTRUMENTATION_ERROR)"
-</code></pre></section><section class="data" documented="false" local-identifier="count_call_expression" id="count_call_expression"><h1><span class="prefix"></span><a class="title" href="#count_call_expression"><span class="text.normal">count_call_expression</span></a><span class="element-status"></span><div class="factor-element-meta"><span class="abstract-type">data</span></div></h1><pre class="text.syntax"><code class="source">count_call_expression = "_FI_COUNT__(%r,None)"
-</code></pre></section><section class="data" documented="false" local-identifier="profile_transaction" id="profile_transaction"><h1><span class="prefix"></span><a class="title" href="#profile_transaction"><span class="text.normal">profile_transaction</span></a><span class="element-status"></span><div class="factor-element-meta"><span class="abstract-type">data</span></div></h1><pre class="text.syntax"><code class="source">profile_transaction = """
+# Seeks the pass for the replacement point.
+profile_transaction = """
 if True:
 	try:
-		_FI_ENTER__(%r)
-		pass
+</code></pre></section><section class="data" documented="false" local-identifier="profile_pause" id="profile_pause"><h1><span class="prefix"></span><a class="title" href="#profile_pause"><span class="text.normal">profile_pause</span></a><span class="element-status"></span><div class="factor-element-meta"><span class="abstract-type">data</span></div></h1><pre class="text.syntax"><code class="source">		pass
 	finally:
 		_FI_EXIT__(%r)
 """
-</code></pre></section><section class="data" documented="false" local-identifier="profile_pause" id="profile_pause"><h1><span class="prefix"></span><a class="title" href="#profile_pause"><span class="text.normal">profile_pause</span></a><span class="element-status"></span><div class="factor-element-meta"><span class="abstract-type">data</span></div></h1><pre class="text.syntax"><code class="source">profile_pause = """
+
+profile_pause = """
 if True:
 	try:
-		_FI_SUSPEND__(%r)
-		pass
-	finally:
-		_FI_CONTINUE__(%r)
-"""
 </code></pre></section><section class="function" documented="false" local-identifier="construct_call_increment" id="construct_call_increment"><h1><span class="prefix"></span><a class="title" href="#construct_call_increment"><span class="text.normal">construct_call_increment</span></a><span class="element-status"></span><div class="factor-element-meta"><span class="abstract-type">function</span></div></h1><p><code class="signature">construct_call_increment(node, area)</code></p></section><section class="function" documented="false" local-identifier="construct_boolop_increment" id="construct_boolop_increment"><h1><span class="prefix"></span><a class="title" href="#construct_boolop_increment"><span class="text.normal">construct_boolop_increment</span></a><span class="element-status"></span><div class="factor-element-meta"><span class="abstract-type">function</span></div></h1><p><code class="signature">construct_boolop_increment(node, area)</code></p></section><section class="function" documented="false" local-identifier="construct_profile_trap" id="construct_profile_trap"><h1><span class="prefix"></span><a class="title" href="#construct_profile_trap"><span class="text.normal">construct_profile_trap</span></a><span class="element-status"></span><div class="factor-element-meta"><span class="abstract-type">function</span></div></h1><p><code class="signature">construct_profile_trap(identifier, container, nodes)</code></p></section><section class="function" documented="true" local-identifier="construct_initialization_nodes" id="construct_initialization_nodes"><h1><span class="prefix"></span><a class="title" href="#construct_initialization_nodes"><span class="text.normal">construct_initialization_nodes</span></a><span class="element-status"></span><div class="factor-element-meta"><span class="abstract-type">function</span></div></h1><p><code class="signature">construct_initialization_nodes()</code></p><p><span class="text.normal">Construct instrumentation initialization nodes for injection into an </span><a class="none" href="http://fault.io/dev/null"><span class="invalid">ast.Module</span></a><span class="text.normal"> body.</span></p></section><section class="function" documented="true" local-identifier="instrument" id="instrument"><h1><span class="prefix"></span><a class="title" href="#instrument"><span class="text.normal">instrument</span></a><span class="element-status"></span><div class="factor-element-meta"><span class="abstract-type">function</span></div></h1><p><code class="signature">instrument(record, path, noded, address)</code></p><p><span class="text.normal">Adjust the AST so that </span><a class="invalid" href="#node"><span class="unknown">node</span></a><span class="text.normal"> will record its execution.</span></p></section><section class="function" documented="false" local-identifier="delineate" id="delineate"><h1><span class="prefix"></span><a class="title" href="#delineate"><span class="text.normal">delineate</span></a><span class="element-status"></span><div class="factor-element-meta"><span class="abstract-type">function</span></div></h1><p><code class="signature">delineate(noded)</code></p></section><section class="function" documented="false" local-identifier="apply" id="apply"><h1><span class="prefix"></span><a class="title" href="#apply"><span class="text.normal">apply</span></a><span class="element-status"></span><div class="factor-element-meta"><span class="abstract-type">function</span></div></h1><p><code class="signature">apply(record, path, noded)</code></p></section><section class="function" documented="true" local-identifier="compile" id="compile"><h1><span class="prefix"></span><a class="title" href="#compile"><span class="text.normal">compile</span></a><span class="element-status"></span><div class="factor-element-meta"><span class="abstract-type">function</span></div></h1><p><code class="signature">compile(factor, source, path, constants)</code></p><p><span class="text.normal">Compile Python source of a module into an instrumented </span><a class="invalid" href="#types.CodeObject"><span class="unknown">types.CodeObject</span></a></p></section><h1 class="footing"></h1></main></body></html>

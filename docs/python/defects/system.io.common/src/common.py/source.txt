@@ -1,16 +1,16 @@
 """
-# There is a large intersection of the kinds of tests that we do againsts
-# connections managed by a given array. This module contains those and
-# any common test related tools for array shutdown.
+# Common tools and tests employed across fault.defects.system.io tests.
 """
 import pickle
 import threading
 import contextlib
 import os
 import socket
+import time
 from ....system import io
 from ....system import network
 from ....system import kernel
+from ....system import thread
 
 def allocpipe(A):
 	r, w = os.pipe()
@@ -63,6 +63,10 @@ class Delta(tuple):
 		return None
 
 	@property
+	def terminated(self):
+		return self[4]
+
+	@property
 	def resource(self):
 		return self[1]
 
@@ -85,9 +89,9 @@ class Delta(tuple):
 		a = None
 		if channel.exhausted:
 			a = channel.acquire
-		return typ((channel, channel.resource, s, x, a))
+		return typ((channel, channel.resource, s, x, channel.terminated, a))
 
-def snapshot(array, list = list, map = map, construct = Delta.construct):
+def snapshot(array, list=list, map=map, construct=Delta.construct):
 	# list() is invoked here as materialization of the
 	# snapshot is needed in cases where the cycle exits.
 	return list(map(construct, array.transfer()))
@@ -96,7 +100,11 @@ def cycle(array):
 	with array:
 		return snapshot(array)
 
-def loop(deliver, array, cycle = cycle, snapshot = snapshot):
+def loop(deliver, array, cycle=cycle, snapshot=snapshot):
+	"""
+	# Continuously &deliver transfers enqueued into the &array.
+	"""
+
 	while not array.terminated:
 		with array:
 			deliver(snapshot(array))
@@ -110,10 +118,11 @@ class ArrayActionManager(object):
 	# Manages the Array cycle in a separate thread to avoid inline management
 	# of event collection.
 	"""
+
 	def __init__(self):
 		self.array = io.Array()
-		self.cycled = threading.Event() # set everytime a cycle is completed
-		self.cycled.set()
+		self.cycled = thread.amutex()
+		self.cycles = 0
 		self.effects = {}
 		self.deadend = []
 
@@ -121,13 +130,15 @@ class ArrayActionManager(object):
 		"""
 		# Utility function for displaying the contents of a Array.
 		"""
+
 		r = self.array.resource
 		for x in r:
+			re = x.resource
 			print(
 				'polarity:', x.polarity,
 				'terminated:', x.terminated,
 				'endpoint:', x.endpoint(),
-				'resource', bytes(x.resource) if x.resource else None
+				'resource', bytes(re) if re else None
 			)
 		else:
 			print('eoj')
@@ -136,12 +147,13 @@ class ArrayActionManager(object):
 		self.array.force()
 
 	def cycle(self, activity):
-		for x in activity:
-			# append all events.
-			# for testing, we're primarily interested in
-			# the sequence for a given channel.
-			self.effects.get(x.channel, self.deadend.append)(x)
-		self.cycled.set()
+		with self.cycled:
+			for x in activity:
+				# append all events.
+				# for testing, we're primarily interested in
+				# the sequence for a given channel.
+				self.effects.get(x.channel, self.deadend.append)(x)
+				self.cycles += 1
 
 	def loop(self):
 		loop(self.cycle, self.array)
@@ -154,7 +166,6 @@ class ArrayActionManager(object):
 			yield
 		finally:
 			self.array.terminate()
-			self.array.force()
 			t.join()
 			del self.deadend[:]
 
@@ -179,13 +190,23 @@ class ArrayActionManager(object):
 			del ct
 
 	def delta(self):
-		'wait for a cycle to occur; use to regulate'
+		"""
+		# Wait for a cycle to occur; use to regulate transfer progress.
+		"""
+
 		self.array.force()
+		i = 0
 
 		while True:
-			self.cycled.wait()
-			self.cycled.clear()
-			yield
+			if i != self.cycles:
+				with self.cycled:
+					i = self.cycles
+					# Hold the cycle lock while integrating the changes.
+					yield i
+			else:
+				# Avoid using a lock here to simplify termination.
+				time.sleep(0.0001)
+				yield None
 
 class Events(object):
 	"""
@@ -214,6 +235,13 @@ class Events(object):
 		for x in self.channels:
 			x.port.raised()
 
+	def vacancies(self):
+		i = 0
+		for x in self.channels:
+			if x.resource is None:
+				i += 1
+		return i
+
 	@property
 	def terminated(self):
 		for x in self.channels:
@@ -221,9 +249,16 @@ class Events(object):
 				return True
 		return False
 
+	def exhausted(self, limit=None):
+		i = 0
+		for x in self.events[:limit]:
+			if x.demand:
+				i += 1
+		return i
+
 	@property
 	def exhaustions(self):
-		return sum([1 if x.demand else 0 for x in self.events])
+		return self.exhausted()
 
 	@property
 	def sockets(self):
@@ -233,16 +268,20 @@ class Events(object):
 				payload += x.transferred
 		return payload
 
-	@property
-	def data(self):
+	def get_data(self, limit=None):
 		payload = bytearray(0)
-		for x in list(self.events):
-			if x.transferred is not None:
-				payload.extend(x.transferred)
+		for x in list(self.events)[:limit]:
+			xfer = x.transferred
+			if xfer is not None:
+				payload.extend(xfer)
 		return payload
 
-	def clear(self):
-		del self.events[:]
+	@property
+	def data(self):
+		return self.get_data()
+
+	def clear(self, limit=None):
+		del self.events[:limit]
 
 	def setup_read(self, quantity):
 		for x in self.channels:
@@ -256,6 +295,7 @@ class Endpoint(object):
 	"""
 	# For cases involving send and receives.
 	"""
+
 	def __init__(self, channels, bufsize = 64):
 		self.channels = channels
 		self.read_channel, self.write_channel = channels
@@ -357,6 +397,7 @@ class Objects(object):
 	"""
 	# Endpoint that transfers objects.
 	"""
+
 	def __init__(self, channels):
 		self.channels = channels
 		self.read_channel, self.write_channel = channels
@@ -375,14 +416,16 @@ class Objects(object):
 
 	def _read_event(self, activity):
 		d = activity.demand
-		if activity.transferred is not None:
-			self._read_buf += activity.transferred
+		xfer = activity.transferred
+		if xfer is not None:
+			self._read_buf += xfer
 			try:
 				objs = pickle.loads(self._read_buf)
-				self.received_objects.append(objs)
-				del self._read_buf[:]
 			except:
 				pass
+			else:
+				self.received_objects.append(objs)
+				del self._read_buf[:]
 		if d is not None:
 			d(rallocate(activity.channel, 512))
 
@@ -414,25 +457,6 @@ class Objects(object):
 		self._write_term_check()
 		d = pickle.dumps(obj)
 		self.write_channel.acquire(d)
-
-def child_echo(am, objects):
-	"""
-	# Echos objects received back at the sender.
-	"""
-	for x in am.delta():
-		# continually echo the received objects until termination
-		if objects.read_channel.terminated:
-			# expecting to be killed by receiving a None object.
-			objects.read_channel.port.raised()
-		if objects.write_channel.exhausted:
-			if objects.received_objects:
-				ob = objects.received_objects[0]
-				del objects.received_objects[0]
-				# terminate on None
-				if ob is None:
-					break
-				objects.send(ob)
-				am.array.force()
 
 def exchange_nothing(test, am, client, server):
 	pass
@@ -607,7 +631,7 @@ def stream_listening_connection(test, version, address):
 		while kpv[0] == -1:
 			kernel.accept_ports(ls, kpv)
 			ic += 1
-			if ic > 256:
+			if ic > 512:
 				raise Exception("accept limit reached")
 		return kpv
 
@@ -618,8 +642,10 @@ def stream_listening_connection(test, version, address):
 			client_channels = io.alloc_octets(pfd)
 
 			client_channels[0].port.raised()
-			client_channels[0].resize_exoresource(1024 * 32)
-			client_channels[1].resize_exoresource(1024 * 32)
+			# Adjusting the kernel's buffer size isn't critical, but
+			# do so to exercise the code path for all stream types.
+			client_channels[0].resize_exoresource(1024 * 8)
+			client_channels[1].resize_exoresource(1024 * 8)
 			client = Endpoint(client_channels)
 
 			test.isinstance(client_channels[0].port.freight, str)
@@ -652,9 +678,16 @@ def stream_listening_connection(test, version, address):
 				test/server.channels[1].terminated == True
 				test/server.channels[0].exhausted == False
 				test/server.channels[1].exhausted == False
-				for i in range(2):
+
+				# Endpoint information is still accessible until the system finishes
+				# the disconnect. Loop until it disappears.
+				ep0, ep1 = [x.endpoint for x in server.channels]
+				active = True
+				while active:
 					for x in am.delta():
 						break
+					active = bool(ep0() is not None or ep1() is not None)
+
 				test/server.channels[0].endpoint() == None
 				test/server.channels[1].endpoint() == None
 				del server
@@ -663,8 +696,15 @@ def stream_listening_connection(test, version, address):
 			test/client.channels[1].terminated == True
 			test/client.channels[0].exhausted == False
 			test/client.channels[1].exhausted == False
-			for x in am.delta():
-				break
+
+			# Endpoint information is still accessible until the system finishes
+			# the disconnect. Loop until it disappears.
+			ep0, ep1 = [x.endpoint for x in client.channels]
+			active = True
+			while active:
+				for x in am.delta():
+					break
+				active = bool(ep0() is not None or ep1() is not None)
 			test/client.channels[0].endpoint() == None
 			test/client.channels[1].endpoint() == None
 			del client

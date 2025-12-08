@@ -4,7 +4,7 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 124 3`
-		- (coverage-zeros)`14`
+		- (coverage-zeros)`2`
 		- (coverage-counters)`65`
 Interface configuration format for binding application network services.
 
@@ -170,7 +170,7 @@ with the endpoints listed in the following indented area.
 	/element/
 		- (control)`property-set`
 		- (source/area)`85 1 104 33`
-		- (coverage-zeros)`12`
+		- (coverage-zeros)`0`
 		- (coverage-counters)`13`
 		- (type/syntax)`Iterable[str]`
 		

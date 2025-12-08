@@ -1,1 +1,1 @@
-[["Yield a list of combinations using a mask"], ["- &module.strict"]]
+[["Yield a list of combinations using a mask"], ["- &module.strict"], ["- &module.split_netloc", "- &module.structure", "", "Validate the address extension."]]

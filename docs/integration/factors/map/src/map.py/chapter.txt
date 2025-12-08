@@ -210,12 +210,12 @@ Factor mapping tool for performing processing of factors with executable factors
 		'--status-type': ('field-replace', 'status-frame-type'),
 		'-T': ('sequence-append', 'factor-types'),
 		'-L': ('field-replace', 'processing-lanes'),
+		'-M': ('field-replace', 'status-monitors'),
 	
 		'-A': ('field-replace', 'execution-factor'),
 	
 		'-X': ('field-replace', 'execution-directory'),
 		'-D': ('field-replace', 'product-directory'),
-	}
 
 [ FilterType ]
 ! CONTROL:
@@ -260,7 +260,7 @@ Parameters required for performing and customizing the map operation.
 		- (type/syntax)`list[str]`
 		
 #!source
-	ctl_argv: list[str] = ()
+	ctl_plan: Callable[[object, object], object]
 
 [ Controls >> ctl_filter ]
 ! CONTROL:
@@ -274,7 +274,7 @@ Parameters required for performing and customizing the map operation.
 		- (type/syntax)`Callable[[lsf.Project, lsf.types.FactorPath, lsf.types.Reference], bool]`
 		
 #!source
-	ctl_filter: Callable[[lsf.Project, lsf.types.FactorPath, lsf.types.Reference], bool] = FilterType
+	ctl_argv: list[str] = ()
 
 [ Controls >> ctl_operation_identifier ]
 ! CONTROL:
@@ -289,7 +289,7 @@ Parameters required for performing and customizing the map operation.
 		- (type/invalid/unknown)&<#str>
 		
 #!source
-	ctl_operation_identifier: str = 'map-operation'
+	ctl_filter: Callable[[lsf.Project, lsf.types.FactorPath, lsf.types.Reference], bool] = FilterType
 
 [ Controls >> ctl_open_title ]
 ! CONTROL:
@@ -304,7 +304,7 @@ Parameters required for performing and customizing the map operation.
 		- (type/invalid/unknown)&<#str>
 		
 #!source
-	ctl_open_title: str = 'Operation Aggregate'
+	ctl_operation_identifier: str = 'map-operation'
 
 [ Controls >> ctl_operating_title ]
 ! CONTROL:
@@ -319,7 +319,7 @@ Parameters required for performing and customizing the map operation.
 		- (type/invalid/unknown)&<#str>
 		
 #!source
-	ctl_operating_title: str = 'Operation Aggregate'
+	ctl_open_title: str = 'Operation Aggregate'
 
 [ Controls >> ctl_close_title ]
 ! CONTROL:
@@ -334,7 +334,7 @@ Parameters required for performing and customizing the map operation.
 		- (type/invalid/unknown)&<#str>
 		
 #!source
-	ctl_close_title: str = 'Operation Aggregate'
+	ctl_operating_title: str = 'Operation Aggregate'
 
 [ Controls >> ctl_transcript_type ]
 ! CONTROL:
@@ -349,7 +349,7 @@ Parameters required for performing and customizing the map operation.
 		- (type/invalid/unknown)&<#str>
 		
 #!source
-	ctl_transcript_type: str = 'processing-units'
+	ctl_close_title: str = 'Operation Aggregate'
 
 [ Controls >> ctl_lanes ]
 ! CONTROL:
@@ -364,7 +364,7 @@ Parameters required for performing and customizing the map operation.
 		- (type/invalid/unknown)&<#int>
 		
 #!source
-	ctl_lanes: int = 4
+	ctl_transcript_type: str = 'processing-units'
 
 [ Controls >> ctl_display_limit ]
 ! CONTROL:
@@ -379,7 +379,7 @@ Parameters required for performing and customizing the map operation.
 		- (type/invalid/unknown)&<#int>
 		
 #!source
-	ctl_display_limit: int = 4
+	ctl_lanes: int = 4
 
 [ Controls >> ctl_opened_frames ]
 ! CONTROL:
@@ -394,7 +394,7 @@ Parameters required for performing and customizing the map operation.
 		- (type/invalid/unknown)&<#bool>
 		
 #!source
-	ctl_opened_frames: bool = True
+	ctl_monitors: int = 4
 
 [ Controls >> ctl_factor_types ]
 ! CONTROL:
@@ -408,7 +408,7 @@ Parameters required for performing and customizing the map operation.
 		- (type/syntax)`set[str]`
 		
 #!source
-	ctl_factor_types: set[str] = None
+	ctl_opened_frames: bool = True
 
 [ plan_select ]
 ! CONTROL:

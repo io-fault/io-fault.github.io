@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 200 41`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`87`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 Test argument vector parsing in (project-local/unknown)&<recognition>.
 
 
@@ -56,8 +56,6 @@ Test argument vector parsing in (project-local/unknown)&<recognition>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`8 1 59 41`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`21`
 (signature)`test_merge_operations(test)`
 
 - (context-local/factor-element)&<fault.vector/recognition#merge[fault.vector.recognition.merge]>
@@ -72,8 +70,6 @@ Check the default merge operations supported by (project-local/unknown)&<recogni
 	/element/
 		- (control)`property-set`
 		- (source/area)`61 1 71 88`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
 (signature)`test_merge_usage_violations(test)`
 
 - (context-local/factor-element)&<fault.vector/recognition#merge[fault.vector.recognition.merge]>
@@ -88,8 +84,6 @@ Check the (context-local/factor-element)&<fault.vector/recognition#UsageViolatio
 	/element/
 		- (control)`property-set`
 		- (source/area)`73 1 98 38`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`12`
 (signature)`test_merge_interpreter_exceptions(test)`
 
 - (context-local/factor-element)&<fault.vector/recognition#merge[fault.vector.recognition.merge]>
@@ -104,8 +98,6 @@ Check the chaining of interpeter exceptions.
 	/element/
 		- (control)`property-set`
 		- (source/area)`100 1 125 40`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`12`
 (signature)`test_legacy_restricted(test)`
 
 - (context-local/factor-element)&<fault.vector/recognition#legacy[fault.vector.recognition.legacy]>
@@ -120,8 +112,6 @@ Validate options that restrict parameters.
 	/element/
 		- (control)`property-set`
 		- (source/area)`127 1 157 40`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`15`
 (signature)`test_legacy_required(test)`
 
 - (context-local/factor-element)&<fault.vector/recognition#legacy[fault.vector.recognition.legacy]>
@@ -136,8 +126,6 @@ Validate options that require parameters.
 	/element/
 		- (control)`property-set`
 		- (source/area)`159 1 173 40`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
 (signature)`test_legacy_trap(test)`
 
 - (context-local/factor-element)&<fault.vector/recognition#legacy[fault.vector.recognition.legacy]>
@@ -152,8 +140,6 @@ Validate the trap case for long options.
 	/element/
 		- (control)`property-set`
 		- (source/area)`175 1 201 40`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`11`
 (signature)`test_legacy_violations(test)`
 
 - (context-local/factor-element)&<fault.vector/recognition#legacy[fault.vector.recognition.legacy]>

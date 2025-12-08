@@ -1,0 +1,20 @@
+/**
+	// Alternatively: -Wl,-sectcreate,__TEXT,__entitlements,entitlements.plist
+*/
+#include "plist.h"
+
+const char
+__attribute__((section("__TEXT,__entitlements")))
+embedded_entitlements_plist_xml[] =
+	"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"
+	"<!DOCTYPE plist PUBLIC \"-//Apple//DTD PLIST 1.0//EN\" "
+	"\"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">\n"
+	"<plist version=\"" PLIST_VERSION "\"><dict>"
+		#ifdef IF_debug
+			// Enable writing cores.
+			PLTRUE(com.apple.security.get-task-allow)
+			PLTRUE(com.apple.security.cs.disable-library-validation)
+			PLTRUE(com.apple.security.cs.allow-dyld-environment-variables)
+		#endif
+	"</dict></plist>"
+;

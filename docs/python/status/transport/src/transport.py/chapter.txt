@@ -3,7 +3,7 @@
 		module
 	/element/
 		- (control)`property-set`
-		- (source/area)`1 1 79 12`
+		- (source/area)`1 1 81 12`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`0`
 Transport protocol implementation for identified data sets.
@@ -15,7 +15,7 @@ Transport protocol implementation for identified data sets.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`5 1 14 14`
+		- (source/area)`5 1 15 14`
 (signature)`prepare(value)`
 
 Convert a value into a form suitable for sequencing.
@@ -27,7 +27,7 @@ Convert a value into a form suitable for sequencing.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`16 1 43 11`
+		- (source/area)`17 1 44 11`
 (signature)`isolate(lines)`
 
 Separate (factor-local/parameter)&<#isolate.Parameters.lines[lines]> into parts that can be processed by (factor-local/function)&<#identify[identify]>.
@@ -39,7 +39,7 @@ Separate (factor-local/parameter)&<#isolate.Parameters.lines[lines]> into parts 
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`45 1 62 18`
+		- (source/area)`46 1 64 18`
 (signature)`identify(iseq)`
 
 Identify the slots and content of a transmission processed by (factor-local/function)&<#isolate[isolate]>.
@@ -53,7 +53,7 @@ Identify the slots and content of a transmission processed by (factor-local/func
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`64 1 65 43`
+		- (source/area)`66 1 67 43`
 (signature)`structure(lines)`
 
 
@@ -65,6 +65,6 @@ Identify the slots and content of a transmission processed by (factor-local/func
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`67 1 80 11`
+		- (source/area)`69 1 82 11`
 (signature)`sequence(pairs)`
 

@@ -6,3 +6,254 @@
 		- (source/area)``
 		- (coverage-zeros)`0`
 		- (coverage-counters)`0`
+
+[ _SYSTEM_KERNEL_LINK_H_included_ ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 9 5 39`
+#!source
+	#define _SYSTEM_KERNEL_LINK_H_included_
+
+[ LinkFlag ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 9 7 38`
+(signature)`LinkFlag()`
+
+
+[ Link_Get ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 9 8 52`
+(signature)`Link_Get()`
+
+
+[ Link_Set ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`9 9 9 53`
+(signature)`Link_Set()`
+
+
+[ Link_Clear ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 9 10 56`
+(signature)`Link_Clear()`
+
+
+[ Link_Closed ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 9 11 46`
+(signature)`Link_Closed()`
+
+
+[ LINK_FLAG_LIST ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`13 9 17 11`
+(signature)`LINK_FLAG_LIST()`
+
+
+[ LinkFlags ]
+! CONTROL:
+	/type/
+		enumeration
+	/element/
+		- (control)`property-set`
+		- (source/area)`34 1 40 1`
+(signature)`LinkFlags()`
+
+The set of control flags used to identify the Link's state.
+
+/lnf_cancelled/
+	Whether or not the operation has been disconnected from events.
+	Resources associated with the event may still be open.
+
+/lnf_dispatched/
+	Whether or not the operation has been scheduled with
+	(project-local/unknown)&<kernel#Scheduler.dispatch[kernel.Scheduler.dispatch]>.
+
+/lnf_executing/
+	Whether or not the operation's task is being executed right now.
+	Primarily used as a safety to prevent unwanted recursion.
+
+/lnf_cyclic/
+	Whether or not the task can be executed more than once.
+
+
+[ lnf_void ]
+! CONTROL:
+	/type/
+		constant
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+(signature)`lnf_void()`
+
+
+[ lnf_cancelled ]
+! CONTROL:
+	/type/
+		constant
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+(signature)`lnf_cancelled()`
+
+
+[ lnf_dispatched ]
+! CONTROL:
+	/type/
+		constant
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+(signature)`lnf_dispatched()`
+
+
+[ lnf_executing ]
+! CONTROL:
+	/type/
+		constant
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+(signature)`lnf_executing()`
+
+
+[ lnf_cyclic ]
+! CONTROL:
+	/type/
+		constant
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+(signature)`lnf_cyclic()`
+
+
+[ Link ]
+! CONTROL:
+	/type/
+		structure
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`42 9 42 19`
+
+[ Link ]
+! CONTROL:
+	/type/
+		typedef
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`42 1 42 25`
+(signature)`Link()`
+
+
+[ Link ]
+! CONTROL:
+	/type/
+		structure
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`43 1 50 1`
+
+[ Link >> PyObj ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`int`
+		
+
+[ Link >> ln_event ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`int`
+		
+
+[ Link >> ln_task ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`int`
+		
+
+[ Link >> ln_flags ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`int`
+		

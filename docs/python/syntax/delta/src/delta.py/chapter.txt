@@ -1,0 +1,1008 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 723 0`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
+Element change logs for managing deltas, undo, and redo.
+
+
+[ itertools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 16`
+
+[ Protocol ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 27`
+
+[ struct ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 38`
+
+[ Summary ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 36 5`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`8 15 8 22`
+	- (type/syntax)`Protocol`
+	- (type/none/invalid)&<http://fault.io/dev/null[typing.Protocol]>
+	
+Interface for communicating changes to lines and codepoints.
+
+Used by (factor-local/method)&<#Log.track[Log.track]> to communicate change summaries for cursor motion
+and view stabilization.
+
+[ > Engineering ]
+
+Implementing this using an abstraction that received changes the same way
+that a log's storage target does was not entirely trivial. Line deltas
+could be easily summarized, but reconstructing the codepoint deltas from
+(factor-local/class)&<#Update[Update.apply's]> usage required multiple levels of reconstruction.
+
+Creating an explicit protocol is somewhat undiresable, but using an abstraction
+that required such tight coupling to (factor-local/class)&<#Update[Update.apply's]> implementation appeared
+inferior. Additionally, this provides a relevant location for checkpoint or
+commit reporting given the need.
+
+
+[ Summary >> line_delta ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`27 2 30 5`
+(signature)`line_delta(self, ln_offset, deleted, inserted)`
+
+Report that lines were (factor-local/parameter)&<#Summary.line_delta.Parameters.deleted[deleted]> and (factor-local/parameter)&<#Summary.line_delta.Parameters.inserted[inserted]> at (factor-local/parameter)&<#Summary.line_delta.Parameters.ln_offset[ln_offset]>.
+
+
+[ Summary >> codepoint_delta ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`32 2 36 5`
+(signature)`codepoint_delta(self, ln_offset, cp_offset, deleted, inserted)`
+
+Report that codepoints were (factor-local/parameter)&<#Summary.codepoint_delta.Parameters.deleted[deleted]> and (factor-local/parameter)&<#Summary.codepoint_delta.Parameters.inserted[inserted]>
+at (factor-local/parameter)&<#Summary.codepoint_delta.Parameters.cp_offset[cp_offset]> in the line identified by (factor-local/parameter)&<#Summary.codepoint_delta.Parameters.ln_offset[ln_offset]>.
+
+
+[ Record ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`38 1 96 9`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`38 14 38 21`
+	- (type/syntax)`Protocol`
+	- (type/none/invalid)&<http://fault.io/dev/null[typing.Protocol]>
+	
+An indvidial record of change.
+
+
+[ Record >> span ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`44 2 49 10`
+The element offset and count of elements that were changed.
+
+
+[ Record >> change ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`50 2 54 5`
+The change in the elements' length that occurred.
+Length of insertions minus length of deletions.
+
+
+[ Record >> usage ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`56 2 61 11`
+(signature)`usage(self)`
+
+Memory usage of the record. The given (invalid/unknown)&<#count> will
+measure an object's size if it hasn't already been seen.
+
+
+[ Record >> size ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`63 2 67 10`
+(signature)`size(self, encoding)`
+
+Change in bytes of the target resource after the record is applied.
+
+
+[ Record >> invert ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`69 2 73 5`
+(signature)`invert(self)`
+
+Construct the version of the record that reverses the effect
+of the change.
+
+
+[ Record >> revert ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`75 2 78 5`
+(signature)`revert(self)`
+
+Reconstruct (factor-local/parameter)&<#Record.revert.Parameters.self[self]> to perform an ineffective operation.
+
+
+[ Record >> track ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`80 2 83 5`
+(signature)`track(self, target)`
+
+Communicate the change to (factor-local/parameter)&<#Record.track.Parameters.target[target]>.
+
+
+[ Record >> apply ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`85 2 88 5`
+(signature)`apply(self, target)`
+
+Perform the change to the given (factor-local/parameter)&<#Record.apply.Parameters.target[target]>.
+
+
+[ Record >> retract ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`90 2 96 9`
+(signature)`retract(self, target)`
+
+Perform the inverse, restoring the (factor-local/parameter)&<#Record.retract.Parameters.target[target]> to the state that it was
+in prior to (factor-local/method)&<#Record.apply[apply]> being performed.
+
+
+[ Checkpoint ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`97 1 143 9`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`97 18 97 23`
+	- (type/syntax)`Record`
+	- (type/factor-local/class)&<#Record[Record]>
+	
+A no-op change holding a creation timestamp.
+
+Used to delimit (factor-local/class)&<#Record[Record]> groups for (factor-local/method)&<#Log.undo[Log.undo]> and (factor-local/method)&<#Log.redo[Log.redo]>.
+
+
+[ Checkpoint >> change ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`107 2 110 10`
+
+[ Checkpoint >> span ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`111 2 112 18`
+
+[ Checkpoint >> element ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`115 2 115 15`
+#!source
+	element = None
+
+[ Checkpoint >> insertion ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`116 2 116 17`
+#!source
+	insertion = None
+
+[ Checkpoint >> deletion ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`117 2 117 16`
+#!source
+	deletion = None
+
+[ Checkpoint >> usage ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`119 2 120 26`
+(signature)`usage(self)`
+
+
+[ Checkpoint >> invert ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`122 2 123 13`
+(signature)`invert(self)`
+
+
+[ Checkpoint >> track ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`125 2 126 6`
+(signature)`track(self, target)`
+
+
+[ Checkpoint >> apply ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`128 2 129 19`
+(signature)`apply(self, target)`
+
+
+[ Checkpoint >> retract ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`131 2 132 19`
+(signature)`retract(self, target)`
+
+
+[ Checkpoint >> revert ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`134 2 135 13`
+(signature)`revert(self)`
+
+
+[ Checkpoint >> combine ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`137 2 143 9`
+(signature)`combine(self, following)`
+
+
+[ Update ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`144 1 298 9`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`144 14 144 19`
+	- (type/syntax)`Record`
+	- (type/factor-local/class)&<#Record[Record]>
+	
+Individual record update.
+
+
+[ Update >> change ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`165 2 171 10`
+Change in *elements*. Always zero for (factor-local/class)&<#Update[Update]>.
+
+
+[ Update >> span ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`172 2 173 26`
+
+[ Update >> usage ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`175 2 176 75`
+(signature)`usage(self)`
+
+
+[ Update >> size ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`178 2 182 3`
+(signature)`size(self, encoding)`
+
+
+[ Update >> invert ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`184 2 194 3`
+(signature)`invert(self)`
+
+Recreate the record where insertion and deletion are swapped.
+
+
+[ Update >> track ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`196 2 199 63`
+(signature)`track(self, target)`
+
+
+[ Update >> apply ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`201 2 205 24`
+(signature)`apply(self, target)`
+
+
+[ Update >> retract ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`207 2 211 24`
+(signature)`retract(self, target)`
+
+
+[ Update >> revert ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`213 2 222 58`
+(signature)`revert(self)`
+
+
+[ Update >> combine ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`224 2 298 9`
+(signature)`combine(self, following)`
+
+Construct a new (factor-local/class)&<#Update[Update]> instance by combining (factor-local/parameter)&<#Update.combine.Parameters.self[self]> with (factor-local/parameter)&<#Update.combine.Parameters.following[following]>.
+(invalid/unknown)&<#None> when (factor-local/parameter)&<#Update.combine.Parameters.following[following]> cannot be combined with (factor-local/parameter)&<#Update.combine.Parameters.self[self]>.
+
+
+[ Lines ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`299 1 381 9`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`299 13 299 18`
+	- (type/syntax)`Record`
+	- (type/factor-local/class)&<#Record[Record]>
+	
+Insertion and/or deletion of zero or more elements.
+
+
+[ Lines >> change ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`317 2 320 10`
+
+[ Lines >> span ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`321 2 322 69`
+
+[ Lines >> usage ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`324 2 331 26`
+(signature)`usage(self)`
+
+
+[ Lines >> size ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`333 2 337 3`
+(signature)`size(self, encoding)`
+
+
+[ Lines >> invert ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`339 2 348 3`
+(signature)`invert(self)`
+
+Recreate the record where insertion and deletion are swapped.
+
+
+[ Lines >> track ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`350 2 353 43`
+(signature)`track(self, target)`
+
+
+[ Lines >> apply ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`355 2 359 49`
+(signature)`apply(self, target)`
+
+
+[ Lines >> retract ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`361 2 365 49`
+(signature)`retract(self, target)`
+
+
+[ Lines >> revert ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`367 2 376 43`
+(signature)`revert(self)`
+
+
+[ Lines >> combine ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`378 2 381 9`
+(signature)`combine(self, following)`
+
+
+[ Cursor ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`382 1 444 13`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`382 14 382 19`
+	- (type/syntax)`Record`
+	- (type/factor-local/class)&<#Record[Record]>
+	
+Change
+
+
+[ Cursor >> change ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`401 2 404 10`
+
+[ Cursor >> span ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`405 2 406 69`
+
+[ Cursor >> usage ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`408 2 409 81`
+(signature)`usage(self)`
+
+
+[ Cursor >> size ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`411 2 412 10`
+(signature)`size(self, encoding)`
+
+
+[ Cursor >> invert ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`414 2 424 3`
+(signature)`invert(self)`
+
+Recreate the record where insertion and deletion are swapped.
+
+
+[ Cursor >> track ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`426 2 435 50`
+(signature)`track(self, target)`
+
+
+[ Cursor >> apply ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`437 2 438 6`
+(signature)`apply(self, target)`
+
+
+[ Cursor >> retract ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`440 2 441 6`
+(signature)`retract(self, target)`
+
+
+[ Cursor >> combine ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`443 2 444 13`
+(signature)`combine(self, following)`
+
+
+[ Log ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`446 1 723 17`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`446 11 446 16`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+The (factor-local/class)&<#Record[Record]> vector tracking the changes.
+
+
+[ Log >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`461 2 466 18`
+(signature)`__init__(self)`
+
+
+[ Log >> revert ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`468 2 474 20`
+(signature)`revert(self, target)`
+
+Retract all committed changes on (factor-local/parameter)&<#Log.revert.Parameters.target[target]>.
+
+
+[ Log >> truncate ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`476 2 494 20`
+(signature)`truncate(self)`
+
+
+[ Log >> size ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`496 2 501 52`
+(signature)`size(self, encoding)`
+
+Total size of the logged changes.
+
+
+[ Log >> usage ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`503 2 512 23`
+(signature)`usage(self)`
+
+
+[ Log >> snapshot ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`514 2 519 68`
+(signature)`snapshot(self)`
+
+Construct a reference to the current version.
+
+
+[ Log >> since ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`521 2 542 51`
+(signature)`since(self, snapshot)`
+
+Generate a sequence of changes since (invalid/unknown)&<#version>.
+
+
+[ Log >> write ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`544 2 551 13`
+(signature)`write(self, record)`
+
+Append a delta to the log.
+
+
+[ Log >> pending ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`553 2 558 48`
+(signature)`pending(self)`
+
+Return the uncommitted deltas.
+
+
+[ Log >> track ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`560 2 567 13`
+(signature)`track(self, target)`
+
+Update (factor-local/parameter)&<#Log.track.Parameters.target[target]> by reporting the change summaries.
+
+
+[ Log >> apply ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`569 2 576 13`
+(signature)`apply(self, target)`
+
+Update (factor-local/parameter)&<#Log.apply.Parameters.target[target]> by applying the current transaction.
+
+
+[ Log >> retract ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`578 2 585 13`
+(signature)`retract(self, target)`
+
+Update (factor-local/parameter)&<#Log.retract.Parameters.target[target]> by previously applied retracting records.
+
+
+[ Log >> collapse ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`587 2 616 13`
+(signature)`collapse(self)`
+
+Commit the leading deltas of the current transaction
+by combining records.
+
+Primarily intended to eliminate successive character insertions
+and deletions when typing in insert mode.
+
+
+[ Log >> commit ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`618 2 628 13`
+(signature)`commit(self)`
+
+Update the commit position.
+Normally called directly after (factor-local/method)&<#Log.apply[apply]>.
+
+
+[ Log >> abort ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`630 2 642 13`
+(signature)`abort(self)`
+
+Remove any records written since (invalid/unknown)&<#committed> and update (invalid/unknown)&<#count>
+to reflect the new (invalid/unknown)&<#records> state.
+
+Not normally used as deleting records will likely cause display inconsistencies.
+In most cases, (factor-local/method)&<#Log.undo[undo]> should be used.
+
+
+[ Log >> checkpoint ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`644 2 660 13`
+(signature)`checkpoint(self)`
+
+Write a checkpoint clearing any uncommitted writes.
+
+
+[ Log >> undo ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`662 2 692 39`
+(signature)`undo(self)`
+
+Retract delta records effecting (invalid/unknown)&<#target> until the given (factor-local/parameter)&<#Log.undo.Parameters.quantity[quantity]>
+of checkpoints have been traversed or the beginning of the log has been
+reached.
+
+
+[ Log >> redo ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`694 2 723 17`
+(signature)`redo(self, target)`
+
+Replay delta records effecting (factor-local/parameter)&<#Log.redo.Parameters.target[target]> until the given (factor-local/parameter)&<#Log.redo.Parameters.quantity[quantity]>
+of checkpoints have been traversed or the end of the log has been
+reached.
+

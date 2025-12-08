@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 254 42`
-		- (coverage-zeros)`10`
-		- (coverage-counters)`144`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 
 [ os ]
 ! CONTROL:
@@ -46,8 +46,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`5 1 14 57`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`5 15 5 27`
@@ -64,8 +62,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`6 2 9 14`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`_err(self, *args)`
 
 
@@ -78,8 +74,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`10 2 11 47`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`_exe(ignored, target, *args)`
 
 
@@ -92,8 +86,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`13 2 14 57`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`__init__(self)`
 
 
@@ -106,8 +98,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`16 1 73 24`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`33`
 (signature)`test_delta(test)`
 
 
@@ -120,8 +110,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`75 1 78 31`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`test_matrix_empty(test)`
 
 
@@ -134,8 +122,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`80 1 88 15`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
 (signature)`test_matrix_termination(test)`
 
 
@@ -146,8 +132,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`90 1 113 16`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`12`
 (signature)`test_idle_array_terminates(test)`
 
 Validate inactive termination.
@@ -160,8 +144,6 @@ Validate inactive termination.
 	/element/
 		- (control)`property-set`
 		- (source/area)`115 1 160 16`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`24`
 (signature)`test_active_array_continues(test)`
 
 Validate active maintenance.
@@ -176,8 +158,6 @@ Validate active maintenance.
 	/element/
 		- (control)`property-set`
 		- (source/area)`162 1 199 16`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`28`
 (signature)`test_matrix_transfer(test)`
 
 
@@ -190,8 +170,6 @@ Validate active maintenance.
 	/element/
 		- (control)`property-set`
 		- (source/area)`201 1 224 16`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`17`
 (signature)`test_alloc_single_matrix(test)`
 
 
@@ -202,8 +180,6 @@ Validate active maintenance.
 	/element/
 		- (control)`property-set`
 		- (source/area)`226 1 245 16`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`10`
 (signature)`test_matrix_overflow(test)`
 
 Test the effect of the limit attribute.
@@ -218,7 +194,5 @@ Test the effect of the limit attribute.
 	/element/
 		- (control)`property-set`
 		- (source/area)`247 1 250 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`test_matrix_void(test)`
 

@@ -185,6 +185,41 @@ class Parser(object):
 	# Applications should create and cache an instance for a given language.
 	"""
 
+	@staticmethod
+	def integrate_switches(tokens, context='inclusion'):
+		"""
+		# Qualify the syntax fields in &tokens by interpreting switches.
+
+		# [ Parameters ]
+		# /tokens/
+			# Iteraable of triples produced by &process_document or &process_lines.
+		# /context/
+			# The presumed switch state, `'inclusion'`, `'exclusion'`, or `'literal'`.
+			# Defaults to `'inclusion'`.
+		"""
+
+		for t in tokens:
+			typ, qual, chars = t
+			if typ == 'switch':
+				context = qual
+				continue
+
+			if context == 'inclusion':
+				if qual == 'event':
+					yield ("-".join((context, typ)), chars)
+				else:
+					if typ == 'space':
+						yield ("-".join((context, typ)), chars)
+					else:
+						yield ("-".join((context, qual, typ)), chars)
+			else:
+				if typ == 'space':
+					yield ("-".join((context, 'space')), chars)
+				elif qual == 'event' or typ == 'enclosure':
+					yield ("-".join((context, 'words')), chars)
+				else:
+					yield ("-".join((context, qual)), chars)
+
 	@classmethod
 	def from_profile(Class, profile:Profile):
 		"""
@@ -279,6 +314,13 @@ class Parser(object):
 		self._classify_op = classify_op
 		self._opcache = functools.lru_cache(opcachesize)(lambda x: list(classify_op(x)))
 
+	def process_line(self, line:str, eol='\n') -> typing.Iterable[Tokens]:
+		"""
+		# Process a single line of syntax into tokens.
+		"""
+
+		return self.delimit([('inclusion', None)], self.tokenize(line), eol=eol)
+
 	def process_lines(self, lines:typing.Iterable[str], eol='\n') -> typing.Iterable[typing.Iterable[Tokens]]:
 		"""
 		# Process lines using context resets;
@@ -288,6 +330,8 @@ class Parser(object):
 		# that are expected to restate line context, have inaccurate profiles, or are incomplete.
 
 		# The produced iterators may be ran out of order as no parsing state is shared across lines.
+
+		# Essentially, `map(Parser.process_line, line_iter)`.
 		"""
 
 		tok = self.tokenize
@@ -319,6 +363,7 @@ class Parser(object):
 		"""
 		# Allocate context stack for use with &delimit.
 		"""
+
 		return [('inclusion', None)]
 
 	def delimit(self, context, tokens:Tokens, eol='\n', restate=True) -> Tokens:
@@ -406,7 +451,7 @@ class Parser(object):
 		# Tokenize a string of syntax according to the profile.
 
 		# Direct use of this is not recommended as boundaries are not signalled.
-		# &process_lines or &process_document should be used.
+		# &process_line, &process_lines, or &process_document should be used.
 		# The raw tokens, however, are usable in contexts where boundary information is
 		# not desired or is not accurate enough for an application's use.
 		"""

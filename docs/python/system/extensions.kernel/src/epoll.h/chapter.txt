@@ -6,3 +6,133 @@
 		- (source/area)``
 		- (coverage-zeros)`0`
 		- (coverage-counters)`0`
+
+[ EPOLL_FLAGS ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`12 9 12 30`
+#!source
+	#define EPOLL_FLAGS EPOLLRDHUP
+
+[ AEV_CREATE ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`14 9 14 32`
+#!source
+	#define AEV_CREATE EPOLL_CTL_ADD
+
+[ AEV_DELETE ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`15 9 15 32`
+#!source
+	#define AEV_DELETE EPOLL_CTL_DEL
+
+[ AEV_UPDATE ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`16 9 16 32`
+#!source
+	#define AEV_UPDATE EPOLL_CTL_MOD
+
+[ AEV_CYCLIC ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`21 9 21 55`
+(signature)`AEV_CYCLIC()`
+
+
+[ AEV_CYCLIC_ENABLE ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`22 9 22 63`
+(signature)`AEV_CYCLIC_ENABLE()`
+
+
+[ AEV_CYCLIC_DISABLE ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`23 9 23 63`
+(signature)`AEV_CYCLIC_DISABLE()`
+
+
+[ AEV_LINK ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`25 9 25 46`
+(signature)`AEV_LINK()`
+
+
+[ KQ_FRAGMENT ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`27 9 27 58`
+#!source
+	#define KQ_FRAGMENT kport_t kq_root, kq_eventfd_interrupt;
+
+[ epoll_event ]
+! CONTROL:
+	/type/
+		structure
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`28 9 28 26`
+
+[ kevent_t ]
+! CONTROL:
+	/type/
+		typedef
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`28 1 28 35`
+(signature)`kevent_t()`
+

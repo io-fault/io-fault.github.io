@@ -5,7 +5,7 @@
 		- (control)`property-set`
 		- (source/area)`1 1 61 0`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`46`
+		- (coverage-counters)`0`
 Check the (context-local/factor-element)&<fault.kernel/flows#Relay[fault.kernel.flows.Relay]>, (context-local/factor-element)&<fault.kernel/flows#Receiver[fault.kernel.flows.Receiver]>, and (context-local/factor-element)&<fault.kernel/flows#Inlet[fault.kernel.flows.Inlet]> types.
 
 
@@ -48,8 +48,6 @@ Check the (context-local/factor-element)&<fault.kernel/flows#Relay[fault.kernel.
 	/element/
 		- (control)`property-set`
 		- (source/area)`8 1 21 26`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`12`
 (signature)`test_Receiver(test)`
 
 
@@ -62,8 +60,6 @@ Check the (context-local/factor-element)&<fault.kernel/flows#Relay[fault.kernel.
 	/element/
 		- (control)`property-set`
 		- (source/area)`23 1 42 26`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`16`
 (signature)`test_Relay(test)`
 
 
@@ -76,7 +72,5 @@ Check the (context-local/factor-element)&<fault.kernel/flows#Relay[fault.kernel.
 	/element/
 		- (control)`property-set`
 		- (source/area)`44 1 61 28`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`13`
 (signature)`test_Relay_interrupt(test)`
 

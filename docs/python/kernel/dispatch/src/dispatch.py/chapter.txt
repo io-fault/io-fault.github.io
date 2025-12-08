@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 572 0`
-		- (coverage-zeros)`102`
-		- (coverage-counters)`209`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 Executive processors containing a primitive execution unit.
 
 
@@ -126,8 +126,6 @@ Executive processors containing a primitive execution unit.
 	/element/
 		- (control)`property-set`
 		- (source/area)`17 1 60 26`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`17 12 17 25`
@@ -149,8 +147,6 @@ This should be rarely used in practice.
 	/element/
 		- (control)`property-set`
 		- (source/area)`25 2 29 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`c_execution(self)`
 
 
@@ -161,8 +157,6 @@ This should be rarely used in practice.
 	/element/
 		- (control)`property-set`
 		- (source/area)`30 2 36 52`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`partial(Class, call, *args, **kw)`
 
 Create a call applying the arguments to the callable upon actuation.
@@ -177,8 +171,6 @@ the first argument.
 	/element/
 		- (control)`property-set`
 		- (source/area)`38 2 50 22`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`__init__(self, call)`
 
 The partial application to the callable to perform.
@@ -208,8 +200,6 @@ direct initialization is better.
 	/element/
 		- (control)`property-set`
 		- (source/area)`52 2 53 33`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`actuate(self)`
 
 
@@ -222,8 +212,6 @@ direct initialization is better.
 	/element/
 		- (control)`property-set`
 		- (source/area)`55 2 56 44`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`structure(self)`
 
 
@@ -236,8 +224,6 @@ direct initialization is better.
 	/element/
 		- (control)`property-set`
 		- (source/area)`58 2 60 26`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`terminate(self)`
 
 
@@ -248,8 +234,6 @@ direct initialization is better.
 	/element/
 		- (control)`property-set`
 		- (source/area)`62 1 121 37`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`5`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`62 17 62 30`
@@ -273,8 +257,6 @@ work to relevant (invalid/unknown)&<#Sector> instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`73 2 76 10`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`__init__(self, coroutine)`
 
 
@@ -297,8 +279,6 @@ work to relevant (invalid/unknown)&<#Sector> instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`80 2 82 26`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 (signature)`_co_complete(self)`
 
 
@@ -309,8 +289,6 @@ work to relevant (invalid/unknown)&<#Sector> instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`84 2 97 18`
-		- (coverage-zeros)`6`
-		- (coverage-counters)`6`
 (signature)`container(self)`
 
 ! INTERNAL: Private Method
@@ -325,8 +303,6 @@ to map completion to processor exit.
 	/element/
 		- (control)`property-set`
 		- (source/area)`101 2 109 26`
-		- (coverage-zeros)`4`
-		- (coverage-counters)`4`
 (signature)`actuate(self)`
 
 Start the coroutine.
@@ -339,8 +315,6 @@ Start the coroutine.
 	/element/
 		- (control)`property-set`
 		- (source/area)`111 2 118 13`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`3`
 (signature)`terminate(self)`
 
 Force the coroutine to close.
@@ -355,8 +329,6 @@ Force the coroutine to close.
 	/element/
 		- (control)`property-set`
 		- (source/area)`120 2 121 37`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`interrupt(self)`
 
 
@@ -367,8 +339,6 @@ Force the coroutine to close.
 	/element/
 		- (control)`property-set`
 		- (source/area)`123 1 151 38`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`123 14 123 27`
@@ -387,8 +357,6 @@ A (invalid/unknown)&<#Processor> that runs a callable in a dedicated thread.
 	/element/
 		- (control)`property-set`
 		- (source/area)`128 2 129 26`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`__init__(self, callable)`
 
 
@@ -401,8 +369,6 @@ A (invalid/unknown)&<#Processor> that runs a callable in a dedicated thread.
 	/element/
 		- (control)`property-set`
 		- (source/area)`131 2 142 22`
-		- (coverage-zeros)`6`
-		- (coverage-counters)`6`
 (signature)`trap(self)`
 
 
@@ -413,8 +379,6 @@ A (invalid/unknown)&<#Processor> that runs a callable in a dedicated thread.
 	/element/
 		- (control)`property-set`
 		- (source/area)`144 2 151 38`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 (signature)`actuate(self)`
 
 Create the thread and execute the target.
@@ -429,8 +393,6 @@ Exceptions raised by the thread will cause the processor to fault.
 	/element/
 		- (control)`property-set`
 		- (source/area)`153 1 334 32`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`153 18 153 29`
@@ -469,8 +431,6 @@ accessed through the system context.
 	/element/
 		- (control)`property-set`
 		- (source/area)`177 2 180 26`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`__init__(self, reap, invocations)`
 
 
@@ -481,8 +441,6 @@ accessed through the system context.
 	/element/
 		- (control)`property-set`
 		- (source/area)`182 2 189 13`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`3`
 (signature)`sp_report(self)`
 
 Join the System process identifier, invocation object, and exit status.
@@ -495,8 +453,6 @@ Join the System process identifier, invocation object, and exit status.
 	/element/
 		- (control)`property-set`
 		- (source/area)`190 2 217 49`
-		- (coverage-zeros)`10`
-		- (coverage-counters)`10`
 (signature)`from_invocation(Class, invocation, stdout, stdin, stderr)`
 
 Instantiation from an (factor-local/parameter)&<#Subprocess.from_invocation.Parameters.invocation[invocation]> executed with (factor-local/parameter)&<#Subprocess.from_invocation.Parameters.invocation[invocation.spawn]>.
@@ -536,8 +492,6 @@ Process will be reaped with (context-local/factor-element)&<fault.system/executi
 	/element/
 		- (control)`property-set`
 		- (source/area)`219 2 221 28`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`xact_void(self, last)`
 
 
@@ -550,8 +504,6 @@ Process will be reaped with (context-local/factor-element)&<fault.system/executi
 	/element/
 		- (control)`property-set`
 		- (source/area)`223 2 239 28`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`5`
 (signature)`sp_exit(self, pid)`
 
 
@@ -562,8 +514,6 @@ Process will be reaped with (context-local/factor-element)&<fault.system/executi
 	/element/
 		- (control)`property-set`
 		- (source/area)`241 2 249 21`
-		- (coverage-zeros)`4`
-		- (coverage-counters)`4`
 (signature)`terminate(self)`
 
 If the process set isn't terminating, issue SIGTERM
@@ -579,8 +529,6 @@ to all of the currently running processes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`251 2 258 16`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 (signature)`structure(self)`
 
 
@@ -591,8 +539,6 @@ to all of the currently running processes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`260 2 265 74`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`actuate(self)`
 
 Initialize the system event callbacks for receiving process exit events.
@@ -605,8 +551,6 @@ Initialize the system event callbacks for receiving process exit events.
 	/element/
 		- (control)`property-set`
 		- (source/area)`267 2 279 10`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`5`
 (signature)`interrupt(self)`
 
 Interrupt the running processes by issuing a SIGKILL signal to all active processes.
@@ -631,8 +575,6 @@ The exit event of the only process in the set.
 	/element/
 		- (control)`property-set`
 		- (source/area)`295 2 303 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
 		- (type/syntax)`typing.Set[int]`
 		
 Return the set of process identifiers that have yet to exit.
@@ -645,8 +587,6 @@ Return the set of process identifiers that have yet to exit.
 	/element/
 		- (control)`property-set`
 		- (source/area)`304 2 308 59`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 		- (type/syntax)`bool`
 		- (type/invalid/unknown)&<#bool>
 		
@@ -660,8 +600,6 @@ Whether all the processes have been reaped.
 	/element/
 		- (control)`property-set`
 		- (source/area)`310 2 317 26`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`3`
 (signature)`sp_signal(self, signo)`
 
 Send the given signal number (os.kill) to the active processes
@@ -675,8 +613,6 @@ being managed by the instance.
 	/element/
 		- (control)`property-set`
 		- (source/area)`319 2 326 27`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`3`
 (signature)`sp_signal_group(self, signo)`
 
 Send the given signal number (os.kill) to the active processes
@@ -690,8 +626,6 @@ being managed by the instance.
 	/element/
 		- (control)`property-set`
 		- (source/area)`328 2 334 32`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`3`
 (signature)`sp_abort(self)`
 
 Interrupt the running processes by issuing a SIGQUIT signal.
@@ -704,8 +638,6 @@ Interrupt the running processes by issuing a SIGQUIT signal.
 	/element/
 		- (control)`property-set`
 		- (source/area)`336 1 399 47`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`336 17 336 28`
@@ -724,8 +656,6 @@ A local parallel process whose termination is connected to an instance.
 	/element/
 		- (control)`property-set`
 		- (source/area)`341 2 345 30`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 (signature)`__init__(self, identifier, application)`
 
 
@@ -738,8 +668,6 @@ A local parallel process whose termination is connected to an instance.
 	/element/
 		- (control)`property-set`
 		- (source/area)`347 2 352 30`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`3`
 (signature)`cp_process_exit(self)`
 
 
@@ -752,8 +680,6 @@ A local parallel process whose termination is connected to an instance.
 	/element/
 		- (control)`property-set`
 		- (source/area)`354 2 355 44`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`cp_enqueue(self, task)`
 
 
@@ -766,8 +692,6 @@ A local parallel process whose termination is connected to an instance.
 	/element/
 		- (control)`property-set`
 		- (source/area)`357 2 363 16`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 (signature)`structure(self)`
 
 
@@ -778,8 +702,6 @@ A local parallel process whose termination is connected to an instance.
 	/element/
 		- (control)`property-set`
 		- (source/area)`365 2 373 3`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 (signature)`actuate(self)`
 
 Initialize the system event callbacks for receiving process exit events.
@@ -792,8 +714,6 @@ Initialize the system event callbacks for receiving process exit events.
 	/element/
 		- (control)`property-set`
 		- (source/area)`375 2 387 32`
-		- (coverage-zeros)`4`
-		- (coverage-counters)`4`
 (signature)`interrupt(self)`
 
 Interrupt the running processes by issuing a SIGKILL signal to all active processes.
@@ -807,8 +727,6 @@ Exit status will be reaped, but not reported to (factor-local/parameter)&<#Copro
 	/element/
 		- (control)`property-set`
 		- (source/area)`389 2 399 47`
-		- (coverage-zeros)`5`
-		- (coverage-counters)`5`
 (signature)`terminate(self)`
 
 Interrupt the running processes by issuing a SIGQUIT signal.
@@ -821,8 +739,6 @@ Interrupt the running processes by issuing a SIGQUIT signal.
 	/element/
 		- (control)`property-set`
 		- (source/area)`401 1 437 33`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`401 18 401 31`
@@ -847,8 +763,6 @@ to avoid overlapping calls.
 	/element/
 		- (control)`property-set`
 		- (source/area)`412 2 415 41`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`3`
 (signature)`__init__(self, target, frequency)`
 
 
@@ -859,8 +773,6 @@ to avoid overlapping calls.
 	/element/
 		- (control)`property-set`
 		- (source/area)`417 2 423 27`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`3`
 (signature)`actuate(self)`
 
 Enqueue the initial execution of the recurrence.
@@ -873,8 +785,6 @@ Enqueue the initial execution of the recurrence.
 	/element/
 		- (control)`property-set`
 		- (source/area)`425 2 429 27`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 (signature)`occur(self)`
 
 Invoke a recurrence and use its return to schedule its next iteration.
@@ -889,8 +799,6 @@ Invoke a recurrence and use its return to schedule its next iteration.
 	/element/
 		- (control)`property-set`
 		- (source/area)`431 2 433 27`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 (signature)`terminate(self)`
 
 
@@ -903,8 +811,6 @@ Invoke a recurrence and use its return to schedule its next iteration.
 	/element/
 		- (control)`property-set`
 		- (source/area)`435 2 437 33`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 (signature)`interrupt(self)`
 
 
@@ -915,8 +821,6 @@ Invoke a recurrence and use its return to schedule its next iteration.
 	/element/
 		- (control)`property-set`
 		- (source/area)`439 1 572 15`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`439 17 439 28`
@@ -935,8 +839,6 @@ Timestamp based transaction scheduling using the system's Real Time clock.
 	/element/
 		- (control)`property-set`
 		- (source/area)`444 2 447 38`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`__init__(self)`
 
 
@@ -949,8 +851,6 @@ Timestamp based transaction scheduling using the system's Real Time clock.
 	/element/
 		- (control)`property-set`
 		- (source/area)`449 2 451 39`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`2`
 (signature)`actuate(self)`
 
 
@@ -963,8 +863,6 @@ Timestamp based transaction scheduling using the system's Real Time clock.
 	/element/
 		- (control)`property-set`
 		- (source/area)`453 2 458 16`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`3`
 (signature)`structure(self)`
 
 
@@ -977,8 +875,6 @@ Timestamp based transaction scheduling using the system's Real Time clock.
 	/element/
 		- (control)`property-set`
 		- (source/area)`460 2 462 6`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`_terminal(self)`
 
 
@@ -991,8 +887,6 @@ Timestamp based transaction scheduling using the system's Real Time clock.
 	/element/
 		- (control)`property-set`
 		- (source/area)`464 2 473 28`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
 (signature)`terminate(self)`
 
 
@@ -1005,8 +899,6 @@ Timestamp based transaction scheduling using the system's Real Time clock.
 	/element/
 		- (control)`property-set`
 		- (source/area)`475 2 478 28`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`xact_void(self, final)`
 
 
@@ -1019,8 +911,6 @@ Timestamp based transaction scheduling using the system's Real Time clock.
 	/element/
 		- (control)`property-set`
 		- (source/area)`480 2 483 26`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`interrupt(self)`
 
 
@@ -1031,8 +921,6 @@ Timestamp based transaction scheduling using the system's Real Time clock.
 	/element/
 		- (control)`property-set`
 		- (source/area)`485 2 501 30`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
 (signature)`occur(self)`
 
 Execute the next task given that the period has elapsed.
@@ -1047,8 +935,6 @@ finer granularity.
 	/element/
 		- (control)`property-set`
 		- (source/area)`503 2 512 28`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`3`
 (signature)`sched_cancel(self, pit, *xacts)`
 
 Cancel the given transactions that were scheduled for execution at the given (factor-local/parameter)&<#Scheduler.sched_cancel.Parameters.pit[pit]>.
@@ -1065,8 +951,6 @@ independently or a subclass must be created.
 	/element/
 		- (control)`property-set`
 		- (source/area)`514 2 523 67`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
 (signature)`sched_insert(self, pit, *xacts)`
 
 Schedule the (factor-local/parameter)&<#Scheduler.sched_insert.Parameters.xacts[xacts]> to be executed at the specified Point In Time, (factor-local/parameter)&<#Scheduler.sched_insert.Parameters.pit[pit]>.
@@ -1081,8 +965,6 @@ Schedule the (factor-local/parameter)&<#Scheduler.sched_insert.Parameters.xacts[
 	/element/
 		- (control)`property-set`
 		- (source/area)`525 2 536 67`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`8`
 (signature)`sched_update(self, items)`
 
 
@@ -1095,8 +977,6 @@ Schedule the (factor-local/parameter)&<#Scheduler.sched_insert.Parameters.xacts[
 	/element/
 		- (control)`property-set`
 		- (source/area)`538 2 543 14`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`_sched_period(self, current)`
 
 
@@ -1109,8 +989,6 @@ Schedule the (factor-local/parameter)&<#Scheduler.sched_insert.Parameters.xacts[
 	/element/
 		- (control)`property-set`
 		- (source/area)`545 2 548 38`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
@@ -1126,7 +1004,5 @@ Schedule the (factor-local/parameter)&<#Scheduler.sched_insert.Parameters.xacts[
 	/element/
 		- (control)`property-set`
 		- (source/area)`550 2 572 15`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`10`
 (signature)`_sched_get(self, current)`
 

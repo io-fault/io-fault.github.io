@@ -5,7 +5,7 @@
 		- (control)`property-set`
 		- (source/area)`1 1 39 0`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`24`
+		- (coverage-counters)`0`
 
 [ module ]
 ! CONTROL:
@@ -26,8 +26,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`3 1 7 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
 (signature)`test_bytes_metric(test)`
 
 
@@ -40,8 +38,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`9 1 13 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
 (signature)`test_bytes_iec(test)`
 
 
@@ -54,8 +50,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`15 1 19 17`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
 (signature)`test_kilobytes(test)`
 
 
@@ -68,8 +62,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`21 1 25 17`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
 (signature)`test_gigabytes(test)`
 
 
@@ -82,8 +74,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`27 1 32 53`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
 (signature)`test_formats(test)`
 
 
@@ -96,8 +86,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`34 1 35 54`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`test_negative_sizes(test)`
 
 
@@ -110,7 +98,5 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`37 1 39 48`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`test_final_order(test)`
 

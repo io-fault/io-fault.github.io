@@ -5,7 +5,7 @@
 		- (control)`property-set`
 		- (source/area)`1 1 83 62`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`47`
+		- (coverage-counters)`0`
 
 [ os ]
 ! CONTROL:
@@ -54,8 +54,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`7 1 21 15`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`9`
 (signature)`test_Invocation(test)`
 
 Sanity and operations.
@@ -68,8 +66,6 @@ Sanity and operations.
 	/element/
 		- (control)`property-set`
 		- (source/area)`23 1 33 33`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`7`
 (signature)`test_Invocation_file_not_found(test)`
 
 Validate that a reasonable OSError is raised when the executable doesn't exist.
@@ -84,8 +80,6 @@ Validate that a reasonable OSError is raised when the executable doesn't exist.
 	/element/
 		- (control)`property-set`
 		- (source/area)`35 1 53 17`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`12`
 (signature)`test_Invocation_execute(test)`
 
 
@@ -98,8 +92,6 @@ Validate that a reasonable OSError is raised when the executable doesn't exist.
 	/element/
 		- (control)`property-set`
 		- (source/area)`55 1 61 33`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
 (signature)`test_Ports_new(test)`
 
 
@@ -112,8 +104,6 @@ Validate that a reasonable OSError is raised when the executable doesn't exist.
 	/element/
 		- (control)`property-set`
 		- (source/area)`63 1 76 18`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`7`
 (signature)`test_Ports_sequence(test)`
 
 
@@ -124,8 +114,6 @@ Validate that a reasonable OSError is raised when the executable doesn't exist.
 	/element/
 		- (control)`property-set`
 		- (source/area)`78 1 84 61`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`test_Ports_overflow(test)`
 
 Presumes integer size; failure of this test may not indicate dysfunction.

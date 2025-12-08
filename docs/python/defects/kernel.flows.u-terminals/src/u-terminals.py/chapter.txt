@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 96 42`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`62`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 
 [ collections ]
 ! CONTROL:
@@ -84,8 +84,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`10 1 45 14`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`21`
 (signature)`test_Terminal(test)`
 
 Check that terminals don't stop events (trailing processors).
@@ -101,7 +99,5 @@ Check that f_terminate performs the designated callback.
 	/element/
 		- (control)`property-set`
 		- (source/area)`47 1 93 33`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`30`
 (signature)`test_Collection(test)`
 

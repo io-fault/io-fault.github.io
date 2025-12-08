@@ -3,9 +3,9 @@
 		module
 	/element/
 		- (control)`property-set`
-		- (source/area)`1 1 1084 0`
-		- (coverage-zeros)`104`
-		- (coverage-counters)`521`
+		- (source/area)`1 1 1108 0`
+		- (coverage-zeros)`94`
+		- (coverage-counters)`533`
 Filesystem interfaces and data structures.
 
 Current working directory related interfaces are provided in (project-local/unknown)&<process>.
@@ -649,9 +649,9 @@ Extended attributes are not checked.
 		class
 	/element/
 		- (control)`property-set`
-		- (source/area)`282 1 1080 14`
+		- (source/area)`282 1 1104 14`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`17`
+		- (coverage-counters)`18`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`282 12 282 24`
@@ -689,7 +689,7 @@ available for getting the working directory of the process.
 #!source
 	Violation = RequirementViolation
 
-[ Path >> _path_separator ]
+[ Path >> _root_path ]
 ! CONTROL:
 	/type/
 		data
@@ -697,9 +697,9 @@ available for getting the working directory of the process.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`295 2 295 30`
+		- (source/area)`295 2 295 43`
 #!source
-	_path_separator = os.path.sep
+	_root_path = _path_separator = os.path.sep
 
 [ Path >> _fs_access ]
 ! CONTROL:
@@ -709,12 +709,12 @@ available for getting the working directory of the process.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`296 2 299 2`
+		- (source/area)`296 2 299 3`
 #!source
-	_fs_access = functools.partial(
+	_fs_access = staticmethod(functools.partial(
 		os.access,
 		effective_ids=(os.access in os.supports_effective_ids)
-	)
+	))
 
 [ Path >> _fs_access_map ]
 ! CONTROL:
@@ -906,27 +906,10 @@ behavior on some platforms.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`466 2 467 22`
+		- (source/area)`466 2 469 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
 (signature)`__str__(self)`
-
-
-[ Path >> __fspath__ ]
-! CONTROL:
-	/type/
-		method
-	/flags/
-		- `undocumented`
-	/element/
-		- (control)`property-set`
-		- (source/area)`469 2 472 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
-		- (type/syntax)`str`
-		- (type/invalid/unknown)&<#str>
-		
-(signature)`__fspath__(self)`
 
 
 [ Path >> fullpath ]
@@ -935,7 +918,7 @@ behavior on some platforms.
 		property
 	/element/
 		- (control)`property-set`
-		- (source/area)`473 2 485 10`
+		- (source/area)`470 2 482 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`9`
 		- (type/syntax)`str`
@@ -950,7 +933,7 @@ Returns the full filesystem path designated by the route.
 		property
 	/element/
 		- (control)`property-set`
-		- (source/area)`486 2 493 58`
+		- (source/area)`483 2 490 58`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
 		- (type/syntax)`bytes`
@@ -967,7 +950,7 @@ returned by encoding the (factor-local/property)&<#Path.fullpath[fullpath]> in (
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`495 2 514 10`
+		- (source/area)`492 2 511 10`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`11`
 		- (type/syntax)`str`
@@ -987,7 +970,7 @@ Segment instances should be given with an asterisk applied to the argument.
 		property
 	/element/
 		- (control)`property-set`
-		- (source/area)`515 2 521 10`
+		- (source/area)`512 2 518 10`
 Filesystem specific alias for (invalid/unknown)&<#identifier>.
 
 
@@ -997,7 +980,7 @@ Filesystem specific alias for (invalid/unknown)&<#identifier>.
 		property
 	/element/
 		- (control)`property-set`
-		- (source/area)`522 2 533 16`
+		- (source/area)`519 2 530 16`
 Return the last dot-extension of the filename.
 (invalid/unknown)&<#None> if the filename has no `.` characters at all.
 
@@ -1008,7 +991,7 @@ Return the last dot-extension of the filename.
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`535 2 542 51`
+		- (source/area)`532 2 539 51`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
 (signature)`suffix_filename(self, appended_suffix)`
@@ -1026,7 +1009,7 @@ Returns a new (factor-local/class)&<#Path[Path]> Route.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`543 2 543 25`
+		- (source/area)`540 2 540 25`
 #!source
 	suffix = suffix_filename
 
@@ -1036,7 +1019,7 @@ Returns a new (factor-local/class)&<#Path[Path]> Route.
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`545 2 552 49`
+		- (source/area)`542 2 549 49`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
 (signature)`prefix_filename(self, prefix_string)`
@@ -1054,7 +1037,7 @@ Returns a new (factor-local/class)&<#Path[Path]> Route.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`553 2 553 25`
+		- (source/area)`550 2 550 25`
 #!source
 	prefix = prefix_filename
 
@@ -1066,11 +1049,43 @@ Returns a new (factor-local/class)&<#Path[Path]> Route.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`555 2 569 44`
-		- (coverage-zeros)`5`
+		- (source/area)`552 2 566 44`
+		- (coverage-zeros)`0`
 		- (coverage-counters)`14`
 (signature)`__pos__(self)`
 
+
+[ Path >> fs_path_string ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`568 2 592 3`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`11`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+(signature)`fs_path_string(self)`
+
+Construct a normalized string representing the path to the file.
+
+Relative resolution must still be explicitly performed, but empty
+path entries delimiting partitions are eliminated.
+
+
+[ Path >> __fspath__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`593 2 593 28`
+#!source
+	__fspath__ = fs_path_string
 
 [ Path >> fs_status ]
 ! CONTROL:
@@ -1080,7 +1095,7 @@ Returns a new (factor-local/class)&<#Path[Path]> Route.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`571 2 572 55`
+		- (source/area)`595 2 596 55`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
 		- (type/syntax)`Status`
@@ -1095,9 +1110,9 @@ Returns a new (factor-local/class)&<#Path[Path]> Route.
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`574 2 595 49`
+		- (source/area)`598 2 619 49`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`9`
+		- (coverage-counters)`11`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -1124,7 +1139,7 @@ If no file is present at the path or a broken link is present, `'void'` will be 
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`597 2 603 27`
+		- (source/area)`621 2 627 27`
 		- (coverage-zeros)`3`
 		- (coverage-counters)`6`
 		- (type/syntax)`bool`
@@ -1143,7 +1158,7 @@ Whether the file at the route is considered to be an executable.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`605 2 619 9`
+		- (source/area)`629 2 643 9`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`12`
 		- (type/syntax)`Iterable[Selector]`
@@ -1157,7 +1172,7 @@ Whether the file at the route is considered to be an executable.
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`621 2 651 13`
+		- (source/area)`645 2 675 13`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`16`
 (signature)`fs_iterfiles()`
@@ -1175,7 +1190,7 @@ If (invalid/unknown)&<#self> is not a directory or cannot be searched, an empty 
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`653 2 681 22`
+		- (source/area)`677 2 705 22`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`16`
 (signature)`fs_list(self)`
@@ -1192,7 +1207,7 @@ Sockets, pipes, devices, and other non-data files are not retained in the list.
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`683 2 704 18`
+		- (source/area)`707 2 728 18`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`11`
 (signature)`fs_index(self)`
@@ -1210,7 +1225,7 @@ Sockets, pipes, devices, broken links, and other non-data files are not retained
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`706 2 784 17`
+		- (source/area)`730 2 808 17`
 		- (coverage-zeros)`13`
 		- (coverage-counters)`48`
 (signature)`fs_snapshot()`
@@ -1222,7 +1237,7 @@ Sockets, pipes, devices, broken links, and other non-data files are not retained
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`786 2 821 52`
+		- (source/area)`810 2 845 52`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`15`
 		- (type/syntax)`Iterable[tuple[int, Selector]]`
@@ -1260,7 +1275,7 @@ The resulting iterable does not include directories.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`823 2 828 13`
+		- (source/area)`847 2 852 13`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`4`
 (signature)`fs_real(self)`
@@ -1272,7 +1287,7 @@ The resulting iterable does not include directories.
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`830 2 837 30`
+		- (source/area)`854 2 861 30`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`3`
 		- (type/syntax)`bool`
@@ -1291,8 +1306,8 @@ A Route to a symbolic link *will* return (invalid/unknown)&<#False> if the targe
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`839 2 843 29`
-		- (coverage-zeros)`2`
+		- (source/area)`863 2 867 29`
+		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
 (signature)`fs_modified(self)`
 
@@ -1305,7 +1320,7 @@ Update the modification time of the file identified by (factor-local/parameter)&
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`845 2 849 58`
+		- (source/area)`869 2 873 58`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
 		- (type/syntax)`int`
@@ -1322,7 +1337,7 @@ Return the size of the file as depicted by (none/invalid)&<http://fault.io/dev/n
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`851 2 856 39`
+		- (source/area)`875 2 880 39`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
 		- (type/syntax)`int`
@@ -1339,7 +1354,7 @@ Return the modification time of the file.
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`858 2 863 62`
+		- (source/area)`882 2 887 62`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
 (signature)`set_last_modified(self, time)`
@@ -1353,7 +1368,7 @@ Set the modification time of the file identified by the (invalid/unknown)&<#Rout
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`865 2 870 18`
+		- (source/area)`889 2 894 18`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
 		- (type/syntax)`str`
@@ -1370,7 +1385,7 @@ Retrieve the entire contents of the file as a (invalid/unknown)&<#str>.
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`872 2 877 18`
+		- (source/area)`896 2 901 18`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
 		- (type/syntax)`None`
@@ -1386,7 +1401,7 @@ Modify the regular file identified by (factor-local/parameter)&<#Path.set_text_c
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`879 2 888 51`
+		- (source/area)`903 2 912 51`
 		- (coverage-zeros)`3`
 		- (coverage-counters)`3`
 (signature)`meta(self)`
@@ -1405,7 +1420,7 @@ Return file specific meta data.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`890 2 907 13`
+		- (source/area)`914 2 931 13`
 		- (coverage-zeros)`3`
 		- (coverage-counters)`10`
 (signature)`fs_void(self)`
@@ -1419,7 +1434,7 @@ Return file specific meta data.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`909 2 918 13`
+		- (source/area)`933 2 942 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`9`
 (signature)`fs_replace(self, replacement)`
@@ -1433,7 +1448,7 @@ Return file specific meta data.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`920 2 946 20`
+		- (source/area)`944 2 970 20`
 		- (coverage-zeros)`15`
 		- (coverage-counters)`16`
 (signature)`fs_linear(self)`
@@ -1447,7 +1462,7 @@ Return file specific meta data.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`948 2 958 13`
+		- (source/area)`972 2 982 13`
 		- (coverage-zeros)`8`
 		- (coverage-counters)`11`
 (signature)`fs_reduce(self, discarded)`
@@ -1461,7 +1476,7 @@ Return file specific meta data.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`960 2 973 13`
+		- (source/area)`984 2 997 13`
 		- (coverage-zeros)`5`
 		- (coverage-counters)`11`
 (signature)`fs_link_relative(self, path)`
@@ -1475,7 +1490,7 @@ Return file specific meta data.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`975 2 986 13`
+		- (source/area)`999 2 1010 13`
 		- (coverage-zeros)`5`
 		- (coverage-counters)`9`
 (signature)`fs_link_absolute(self, path)`
@@ -1487,7 +1502,7 @@ Return file specific meta data.
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`988 2 1018 13`
+		- (source/area)`1012 2 1042 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`20`
 (signature)`fs_init(self)`
@@ -1509,7 +1524,7 @@ Leading directories will be created as needed.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`1020 2 1031 13`
+		- (source/area)`1044 2 1055 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`9`
 (signature)`fs_alloc(self)`
@@ -1523,7 +1538,7 @@ Leading directories will be created as needed.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`1033 2 1051 27`
+		- (source/area)`1057 2 1075 27`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`15`
 (signature)`fs_mkdir(self)`
@@ -1535,8 +1550,8 @@ Leading directories will be created as needed.
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`1052 2 1068 31`
-		- (coverage-zeros)`3`
+		- (source/area)`1076 2 1092 31`
+		- (coverage-zeros)`0`
 		- (coverage-counters)`8`
 (signature)`fs_open(self, *args, **kw)`
 
@@ -1554,7 +1569,7 @@ leading up to the file don't exist, create the directories too.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`1070 2 1075 13`
+		- (source/area)`1094 2 1099 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
 		- (type/syntax)`bytes`
@@ -1571,7 +1586,7 @@ leading up to the file don't exist, create the directories too.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`1077 2 1080 14`
+		- (source/area)`1101 2 1104 14`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
 (signature)`fs_store(self, data)`
@@ -1583,7 +1598,7 @@ leading up to the file don't exist, create the directories too.
 		data
 	/element/
 		- (control)`property-set`
-		- (source/area)`1082 1 1082 21`
+		- (source/area)`1106 1 1106 21`
 The (factor-local/class)&<#Path[Path]> to the root directory of the operating system.
 
 #!source
@@ -1595,7 +1610,7 @@ The (factor-local/class)&<#Path[Path]> to the root directory of the operating sy
 		data
 	/element/
 		- (control)`property-set`
-		- (source/area)`1083 1 1083 24`
+		- (source/area)`1107 1 1107 24`
 The (factor-local/class)&<#Path[Path]> to the file that has no content and will discard writes.
 
 #!source
@@ -1607,7 +1622,7 @@ The (factor-local/class)&<#Path[Path]> to the file that has no content and will 
 		data
 	/element/
 		- (control)`property-set`
-		- (source/area)`1084 1 1084 38`
+		- (source/area)`1108 1 1108 38`
 The (factor-local/class)&<#Path[Path]> to the directory that contains no files.
 
 #!source

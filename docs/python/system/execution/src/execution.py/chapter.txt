@@ -3,9 +3,9 @@
 		module
 	/element/
 		- (control)`property-set`
-		- (source/area)`1 1 771 0`
+		- (source/area)`1 1 772 0`
 		- (coverage-zeros)`97`
-		- (coverage-counters)`335`
+		- (coverage-counters)`336`
 System process execution interfaces and
 process global registry for controlling the composition of (factor-local/data)&<#Specification[Specification]> for system process execution.
 
@@ -482,7 +482,7 @@ Descriptor of change in a subprocess' state.
 	/element/
 		- (control)`property-set`
 		- (source/area)`159 1 206 33`
-		- (coverage-zeros)`12`
+		- (coverage-zeros)`7`
 		- (coverage-counters)`20`
 		- (type/syntax)`Delta`
 		- (type/factor-local/class)&<#Delta[Delta]>
@@ -545,7 +545,7 @@ and can only be used with child processes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`208 1 245 35`
-		- (coverage-zeros)`1`
+		- (coverage-zeros)`2`
 		- (coverage-counters)`7`
 		- (type/syntax)`typing.Optional[Delta]`
 		
@@ -765,7 +765,7 @@ Processes are *not* reaped.
 		class
 	/element/
 		- (control)`property-set`
-		- (source/area)`400 1 514 17`
+		- (source/area)`400 1 515 17`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
 ! INHERIT:
@@ -855,9 +855,9 @@ pairs.
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`444 2 513 23`
+		- (source/area)`444 2 514 23`
 		- (coverage-zeros)`7`
-		- (coverage-counters)`33`
+		- (coverage-counters)`34`
 		- (type/syntax)`Pipeline`
 		- (type/factor-local/class)&<#Pipeline[Pipeline]>
 		
@@ -898,7 +898,7 @@ the file descriptors used for input, output and the standard error of all the co
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`514 2 514 17`
+		- (source/area)`515 2 515 17`
 #!source
 	__call__ = spawn
 
@@ -908,7 +908,7 @@ the file descriptors used for input, output and the standard error of all the co
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`516 1 551 75`
+		- (source/area)`517 1 552 75`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`24`
 		- (type/syntax)`typing.Tuple[		typing.Sequence[typing.Tuple[str, str]],		str,		typing.Sequence[str]	]`
@@ -925,8 +925,8 @@ settings, executable path, and command arguments.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`553 1 633 13`
-		- (coverage-zeros)`0`
+		- (source/area)`554 1 634 13`
+		- (coverage-zeros)`4`
 		- (coverage-counters)`54`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
@@ -942,12 +942,12 @@ Serialize the environment, execution path, and command arguments into a string.
 		class
 	/element/
 		- (control)`property-set`
-		- (source/area)`635 1 767 29`
+		- (source/area)`636 1 768 29`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
-	- (source/area)`635 16 635 21`
+	- (source/area)`636 16 636 21`
 	- (type/syntax)`object`
 	- (type/invalid/unknown)&<#object>
 	
@@ -960,7 +960,7 @@ Factor Execution Platform structure for defining architecture specific runtimes.
 		staticmethod
 	/element/
 		- (control)`property-set`
-		- (source/area)`641 2 661 14`
+		- (source/area)`642 2 662 14`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`11`
 (signature)`parse_architecture_list(pfa)`
@@ -977,7 +977,7 @@ that uses newline separated records and space separated fields.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`662 2 665 14`
+		- (source/area)`663 2 666 14`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
 (signature)`fs_load_system(path)`
@@ -989,7 +989,7 @@ that uses newline separated records and space separated fields.
 		staticmethod
 	/element/
 		- (control)`property-set`
-		- (source/area)`666 2 673 13`
+		- (source/area)`667 2 674 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
 (signature)`fs_load_plans(source, names)`
@@ -1003,7 +1003,7 @@ Read the plans identified by (factor-local/parameter)&<#Platform.fs_load_plans.P
 		classmethod
 	/element/
 		- (control)`property-set`
-		- (source/area)`674 2 683 13`
+		- (source/area)`675 2 684 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
 (signature)`fs_load_sections(Class, path)`
@@ -1017,7 +1017,7 @@ Interpret a stored platform emitting section records.
 		classmethod
 	/element/
 		- (control)`property-set`
-		- (source/area)`684 2 692 13`
+		- (source/area)`685 2 693 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
 (signature)`from_directory(Class, path)`
@@ -1031,7 +1031,7 @@ Create an instance from a platform directory.
 		classmethod
 	/element/
 		- (control)`property-set`
-		- (source/area)`693 2 707 10`
+		- (source/area)`694 2 708 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`8`
 (signature)`from_system(Class, system, origins)`
@@ -1048,7 +1048,7 @@ that they are extensions of (factor-local/parameter)&<#Platform.from_system.Para
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`709 2 714 18`
+		- (source/area)`710 2 715 18`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
 (signature)`__init__(self, system)`
@@ -1062,7 +1062,7 @@ that they are extensions of (factor-local/parameter)&<#Platform.from_system.Para
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`716 2 717 38`
+		- (source/area)`717 2 718 38`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
 		- (type/syntax)`int`
@@ -1077,7 +1077,7 @@ that they are extensions of (factor-local/parameter)&<#Platform.from_system.Para
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`719 2 728 61`
+		- (source/area)`720 2 729 61`
 		- (coverage-zeros)`3`
 		- (coverage-counters)`6`
 (signature)`identify(self, architecture)`
@@ -1091,7 +1091,7 @@ Select the canonical identifier for the given architecture.
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`730 2 745 13`
+		- (source/area)`731 2 746 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`9`
 (signature)`extend(self, architectures)`
@@ -1105,7 +1105,7 @@ Define additional architectures extending the current set.
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`747 2 754 24`
+		- (source/area)`748 2 755 24`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
 (signature)`sections(self)`
@@ -1119,7 +1119,7 @@ Iterate the platform's defined architectures with their synonyms and execution p
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`756 2 767 29`
+		- (source/area)`757 2 768 29`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
 (signature)`prepare(self, architecture, identifier, argv)`

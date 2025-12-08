@@ -3,9 +3,9 @@
 		module
 	/element/
 		- (control)`property-set`
-		- (source/area)`1 1 1019 0`
-		- (coverage-zeros)`10`
-		- (coverage-counters)`579`
+		- (source/area)`1 1 1042 55`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 Check the implementation of filesystem routes.
 
 
@@ -49,18 +49,6 @@ Check the implementation of filesystem routes.
 		- (control)`property-set`
 		- (source/area)`8 1 8 37`
 
-[ lib ]
-! CONTROL:
-	/type/
-		data
-	/flags/
-		- `undocumented`
-	/element/
-		- (control)`property-set`
-		- (source/area)`9 1 9 12`
-#!source
-	lib = module
-
 [ time ]
 ! CONTROL:
 	/type/
@@ -69,7 +57,7 @@ Check the implementation of filesystem routes.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`10 1 12 25`
+		- (source/area)`9 1 11 25`
 
 [ d_setup ]
 ! CONTROL:
@@ -79,9 +67,7 @@ Check the implementation of filesystem routes.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`13 1 16 17`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
+		- (source/area)`12 1 15 17`
 (signature)`d_setup(x, path)`
 
 
@@ -93,9 +79,7 @@ Check the implementation of filesystem routes.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`17 1 19 20`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
+		- (source/area)`16 1 18 20`
 (signature)`_(x, path)`
 
 
@@ -105,9 +89,7 @@ Check the implementation of filesystem routes.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`21 1 39 59`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`12`
+		- (source/area)`20 1 38 59`
 (signature)`test_constants(test)`
 
 Check for (project-local/unknown)&<files.root> presence and sanity.
@@ -121,9 +103,7 @@ Check for (project-local/unknown)&<files.root> presence and sanity.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`41 1 50 65`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`7`
+		- (source/area)`40 1 49 68`
 (signature)`test_Path(test)`
 
 
@@ -135,9 +115,7 @@ Check for (project-local/unknown)&<files.root> presence and sanity.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`52 1 58 25`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
+		- (source/area)`51 1 57 25`
 (signature)`test_Path_filename(test)`
 
 
@@ -149,9 +127,7 @@ Check for (project-local/unknown)&<files.root> presence and sanity.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`60 1 67 40`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
+		- (source/area)`59 1 66 40`
 (signature)`test_Path_repr(test)`
 
 
@@ -163,9 +139,7 @@ Check for (project-local/unknown)&<files.root> presence and sanity.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`69 1 79 42`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`8`
+		- (source/area)`68 1 78 45`
 (signature)`test_Path_string_cache(test)`
 
 
@@ -177,9 +151,7 @@ Check for (project-local/unknown)&<files.root> presence and sanity.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`81 1 88 2`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
+		- (source/area)`80 1 87 2`
 (signature)`test_Path_from_partitioned_string(test)`
 
 
@@ -191,9 +163,7 @@ Check for (project-local/unknown)&<files.root> presence and sanity.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`90 1 92 34`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
+		- (source/area)`89 1 91 34`
 (signature)`test_Path_bytespath(test)`
 
 
@@ -205,9 +175,7 @@ Check for (project-local/unknown)&<files.root> presence and sanity.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`94 1 102 35`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
+		- (source/area)`93 1 101 35`
 (signature)`test_Path_temporary(test)`
 
 
@@ -217,12 +185,10 @@ Check for (project-local/unknown)&<files.root> presence and sanity.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`104 1 129 18`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`17`
+		- (source/area)`103 1 128 18`
 (signature)`test_Path_list(test)`
 
-- (factor-local/data)&<#lib[lib.Path.fs_list]>
+- (context-local/factor-element)&<fault.system/files#Path.fs_list[fault.system.files.Path.fs_list]>
 
 
 [ test_Path_iterfiles ]
@@ -231,12 +197,10 @@ Check for (project-local/unknown)&<files.root> presence and sanity.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`131 1 171 40`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`29`
+		- (source/area)`130 1 170 40`
 (signature)`test_Path_iterfiles(test)`
 
-- (factor-local/data)&<#lib[lib.Path.fs_iterfiles]>
+- (context-local/factor-element)&<fault.system/files#Path.fs_iterfiles[fault.system.files.Path.fs_iterfiles]>
 
 
 [ test_Path_index ]
@@ -245,13 +209,11 @@ Check for (project-local/unknown)&<files.root> presence and sanity.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`173 1 197 23`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`13`
+		- (source/area)`172 1 196 23`
 (signature)`test_Path_index(test)`
 
-- (factor-local/data)&<#lib[lib.Path.fs_index]>
-- (factor-local/data)&<#lib[lib.Path.fs_list]>
+- (context-local/factor-element)&<fault.system/files#Path.fs_index[fault.system.files.Path.fs_index]>
+- (context-local/factor-element)&<fault.system/files#Path.fs_list[fault.system.files.Path.fs_list]>
 
 
 [ test_Path_snapshot ]
@@ -260,12 +222,10 @@ Check for (project-local/unknown)&<files.root> presence and sanity.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`199 1 221 22`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`13`
+		- (source/area)`198 1 220 22`
 (signature)`test_Path_snapshot(test)`
 
-- (factor-local/data)&<#lib[lib.Path.fs_snapshot]>
+- (context-local/factor-element)&<fault.system/files#Path.fs_snapshot[fault.system.files.Path.fs_snapshot]>
 
 
 [ test_Path_real ]
@@ -274,12 +234,10 @@ Check for (project-local/unknown)&<files.root> presence and sanity.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`223 1 238 22`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`10`
+		- (source/area)`222 1 237 22`
 (signature)`test_Path_real(test)`
 
-- (factor-local/data)&<#lib[lib.Path.fs_real]>
+- (context-local/factor-element)&<fault.system/files#Path.fs_real[fault.system.files.Path.fs_real]>
 
 
 [ test_Path_replace ]
@@ -290,9 +248,7 @@ Check for (project-local/unknown)&<files.root> presence and sanity.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`240 1 268 36`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`23`
+		- (source/area)`239 1 267 36`
 (signature)`test_Path_replace(test)`
 
 
@@ -302,12 +258,10 @@ Check for (project-local/unknown)&<files.root> presence and sanity.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`270 1 286 43`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`10`
+		- (source/area)`269 1 285 43`
 (signature)`test_Path_init(test)`
 
-Test (factor-local/data)&<#lib[lib.Path.fs_init]> checking that the parent directories are
+Test (context-local/factor-element)&<fault.system/files#Path.fs_init[fault.system.files.Path.fs_init]> checking that the parent directories are
 properly created regardless of the selected type.
 
 
@@ -317,12 +271,10 @@ properly created regardless of the selected type.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`288 1 304 30`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`10`
+		- (source/area)`287 1 303 30`
 (signature)`test_Path_mkdir(test)`
 
-Test (factor-local/data)&<#lib[lib.Path.fs_mkdir]> checking that the parent directories are
+Test (context-local/factor-element)&<fault.system/files#Path.fs_mkdir[fault.system.files.Path.fs_mkdir]> checking that the parent directories are
 properly created regardless of the selected type.
 
 
@@ -332,12 +284,10 @@ properly created regardless of the selected type.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`306 1 328 28`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`16`
+		- (source/area)`305 1 327 28`
 (signature)`test_Path_type_void(test)`
 
-- (factor-local/data)&<#lib[lib.Path.fs_type]>
+- (context-local/factor-element)&<fault.system/files#Path.fs_type[fault.system.files.Path.fs_type]>
 
 
 [ test_Path_extension ]
@@ -348,9 +298,7 @@ properly created regardless of the selected type.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`330 1 335 26`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
+		- (source/area)`329 1 334 26`
 (signature)`test_Path_extension(test)`
 
 
@@ -362,9 +310,7 @@ properly created regardless of the selected type.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`337 1 349 23`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`10`
+		- (source/area)`336 1 348 23`
 (signature)`test_Path_size(test)`
 
 
@@ -374,9 +320,7 @@ properly created regardless of the selected type.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`351 1 376 33`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`15`
+		- (source/area)`350 1 375 33`
 (signature)`test_Path_get_last_modified(test)`
 
 System check.
@@ -388,9 +332,7 @@ System check.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`378 1 397 61`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`12`
+		- (source/area)`377 1 396 61`
 (signature)`test_Path_set_last_modified(test)`
 
 System check.
@@ -402,12 +344,10 @@ System check.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`399 1 409 38`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`7`
+		- (source/area)`398 1 408 38`
 (signature)`test_Path_get_text_content(test)`
 
-Validate (factor-local/data)&<#lib[lib.Path.get_text_content]>.
+Validate (context-local/factor-element)&<fault.system/files#Path.get_text_content[fault.system.files.Path.get_text_content]>.
 
 
 [ test_Path_set_text_content ]
@@ -416,12 +356,10 @@ Validate (factor-local/data)&<#lib[lib.Path.get_text_content]>.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`411 1 420 27`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
+		- (source/area)`410 1 419 27`
 (signature)`test_Path_set_text_content(test)`
 
-Validate (factor-local/data)&<#lib[lib.Path.set_text_content]>.
+Validate (context-local/factor-element)&<fault.system/files#Path.set_text_content[fault.system.files.Path.set_text_content]>.
 
 
 [ test_Path_since ]
@@ -430,12 +368,10 @@ Validate (factor-local/data)&<#lib[lib.Path.set_text_content]>.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`422 1 443 40`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`14`
+		- (source/area)`421 1 442 40`
 (signature)`test_Path_since(test)`
 
-(factor-local/data)&<#lib[lib.Path.fs_since]>
+(context-local/factor-element)&<fault.system/files#Path.fs_since[fault.system.files.Path.fs_since]>
 
 
 [ test_Path_construct ]
@@ -444,9 +380,7 @@ Validate (factor-local/data)&<#lib[lib.Path.set_text_content]>.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`445 1 470 49`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`13`
+		- (source/area)`444 1 469 52`
 (signature)`test_Path_construct(test)`
 
 Test the various classmethods that construct file instances.
@@ -458,12 +392,10 @@ Test the various classmethods that construct file instances.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`472 1 490 34`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`10`
+		- (source/area)`471 1 489 37`
 (signature)`test_Path_relative_resolution(test)`
 
-- (factor-local/data)&<#lib[lib.Path.__pos__]>
+- (context-local/factor-element)&<fault.system/files#Path.__pos__[fault.system.files.Path.__pos__]>
 
 
 [ test_Path_basename_manipulations ]
@@ -472,13 +404,11 @@ Test the various classmethods that construct file instances.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`492 1 502 59`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`7`
+		- (source/area)`491 1 501 59`
 (signature)`test_Path_basename_manipulations(test)`
 
-- (factor-local/data)&<#lib[lib.Path.prefix_filename]>
-- (factor-local/data)&<#lib[lib.Path.suffix_filename]>
+- (context-local/factor-element)&<fault.system/files#Path.prefix_filename[fault.system.files.Path.prefix_filename]>
+- (context-local/factor-element)&<fault.system/files#Path.suffix_filename[fault.system.files.Path.suffix_filename]>
 
 
 [ test_Path_join ]
@@ -487,12 +417,10 @@ Test the various classmethods that construct file instances.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`504 1 517 78`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`8`
+		- (source/area)`503 1 516 78`
 (signature)`test_Path_join(test)`
 
-- (factor-local/data)&<#lib[lib.Path.join]>
+- (context-local/factor-element)&<fault.system/files#Path.join[fault.system.files.Path.join]>
 
 
 [ test_Path_properties ]
@@ -503,9 +431,7 @@ Test the various classmethods that construct file instances.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`519 1 530 37`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`8`
+		- (source/area)`518 1 529 37`
 (signature)`test_Path_properties(test)`
 
 
@@ -515,12 +441,10 @@ Test the various classmethods that construct file instances.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`532 1 554 41`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`14`
+		- (source/area)`531 1 553 41`
 (signature)`test_Path_open(test)`
 
-- (factor-local/data)&<#lib[lib.File.fs_open]>
+- (context-local/factor-element)&<fault.system/files#File.fs_open[fault.system.files.File.fs_open]>
 
 
 [ test_Path_open_exception ]
@@ -529,12 +453,10 @@ Test the various classmethods that construct file instances.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`556 1 569 59`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`8`
+		- (source/area)`555 1 568 59`
 (signature)`test_Path_open_exception(test)`
 
-- (factor-local/data)&<#lib[lib.File.fs_open]>
+- (context-local/factor-element)&<fault.system/files#File.fs_open[fault.system.files.File.fs_open]>
 
 
 [ test_Path_void ]
@@ -543,12 +465,10 @@ Test the various classmethods that construct file instances.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`571 1 593 28`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`16`
+		- (source/area)`570 1 592 28`
 (signature)`test_Path_void(test)`
 
-- (factor-local/data)&<#lib[lib.Path.fs_void]>
+- (context-local/factor-element)&<fault.system/files#Path.fs_void[fault.system.files.Path.fs_void]>
 
 
 [ link_checks ]
@@ -559,9 +479,7 @@ Test the various classmethods that construct file instances.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`595 1 626 37`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`24`
+		- (source/area)`594 1 625 37`
 (signature)`link_checks(test, create_link)`
 
 
@@ -571,12 +489,10 @@ Test the various classmethods that construct file instances.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`628 1 632 45`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
+		- (source/area)`627 1 631 48`
 (signature)`test_Path_relative_links(test)`
 
-(factor-local/data)&<#lib[lib.Path.fs_link_relative]>
+(context-local/factor-element)&<fault.system/files#Path.fs_link_relative[fault.system.files.Path.fs_link_relative]>
 
 
 [ test_Path_absolute_links ]
@@ -585,12 +501,10 @@ Test the various classmethods that construct file instances.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`634 1 638 45`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
+		- (source/area)`633 1 637 48`
 (signature)`test_Path_absolute_links(test)`
 
-(factor-local/data)&<#lib[lib.Path.fs_link_absolute]>
+(context-local/factor-element)&<fault.system/files#Path.fs_link_absolute[fault.system.files.Path.fs_link_absolute]>
 
 
 [ test_Path_recursive_since ]
@@ -599,12 +513,10 @@ Test the various classmethods that construct file instances.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`640 1 663 64`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`16`
+		- (source/area)`639 1 662 64`
 (signature)`test_Path_recursive_since(test)`
 
-(factor-local/data)&<#lib[lib.Path.fs_since]> with recursive directories.
+(context-local/factor-element)&<fault.system/files#Path.fs_since[fault.system.files.Path.fs_since]> with recursive directories.
 
 
 [ test_Path_follow_links ]
@@ -613,12 +525,10 @@ Test the various classmethods that construct file instances.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`665 1 686 64`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`14`
+		- (source/area)`664 1 685 64`
 (signature)`test_Path_follow_links(test)`
 
-- (factor-local/data)&<#lib[lib.Path.fs_follow_links]>
+- (context-local/factor-element)&<fault.system/files#Path.fs_follow_links[fault.system.files.Path.fs_follow_links]>
 
 
 [ test_Path_io ]
@@ -627,13 +537,11 @@ Test the various classmethods that construct file instances.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`688 1 707 33`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`13`
+		- (source/area)`687 1 706 33`
 (signature)`test_Path_io(test)`
 
-- (factor-local/data)&<#lib[lib.Path.fs_load]>
-- (factor-local/data)&<#lib[lib.Path.fs_store]>
+- (context-local/factor-element)&<fault.system/files#Path.fs_load[fault.system.files.Path.fs_load]>
+- (context-local/factor-element)&<fault.system/files#Path.fs_store[fault.system.files.Path.fs_store]>
 
 
 [ test_Path_python_protocol ]
@@ -642,12 +550,10 @@ Test the various classmethods that construct file instances.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`709 1 716 34`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
+		- (source/area)`708 1 715 34`
 (signature)`test_Path_python_protocol(test)`
 
-- (factor-local/data)&<#lib[lib.Path.__fspath__]>
+- (context-local/factor-element)&<fault.system/files#Path.__fspath__[fault.system.files.Path.__fspath__]>
 
 
 [ test_Path_snapshot_sanity ]
@@ -656,12 +562,10 @@ Test the various classmethods that construct file instances.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`718 1 740 53`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`9`
+		- (source/area)`717 1 739 53`
 (signature)`test_Path_snapshot_sanity(test)`
 
-- (factor-local/data)&<#lib[lib.Path.fs_snapshot]>
+- (context-local/factor-element)&<fault.system/files#Path.fs_snapshot[fault.system.files.Path.fs_snapshot]>
 
 
 [ test_Path_snapshot_limit ]
@@ -670,12 +574,10 @@ Test the various classmethods that construct file instances.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`742 1 766 19`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`11`
+		- (source/area)`741 1 765 19`
 (signature)`test_Path_snapshot_limit(test)`
 
-- (factor-local/data)&<#lib[lib.Path.fs_snapshot]>
+- (context-local/factor-element)&<fault.system/files#Path.fs_snapshot[fault.system.files.Path.fs_snapshot]>
 
 
 [ test_Path_snapshot_depth ]
@@ -684,12 +586,10 @@ Test the various classmethods that construct file instances.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`768 1 821 37`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`25`
+		- (source/area)`767 1 820 37`
 (signature)`test_Path_snapshot_depth(test)`
 
-- (factor-local/data)&<#lib[lib.Path.fs_snapshot]>
+- (context-local/factor-element)&<fault.system/files#Path.fs_snapshot[fault.system.files.Path.fs_snapshot]>
 
 
 [ test_Path_fs_alloc ]
@@ -698,12 +598,10 @@ Test the various classmethods that construct file instances.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`823 1 847 32`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`15`
+		- (source/area)`822 1 846 32`
 (signature)`test_Path_fs_alloc(test)`
 
-- (factor-local/data)&<#lib[lib.Path.fs_alloc]>
+- (context-local/factor-element)&<fault.system/files#Path.fs_alloc[fault.system.files.Path.fs_alloc]>
 
 
 [ test_Path_fs_require_void ]
@@ -712,13 +610,11 @@ Test the various classmethods that construct file instances.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`849 1 891 50`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`25`
+		- (source/area)`848 1 890 50`
 (signature)`test_Path_fs_require_void(test)`
 
-- (factor-local/data)&<#lib[lib.Path.fs_require]>
-- (factor-local/data)&<#lib[lib.RequirementViolation]>
+- (context-local/factor-element)&<fault.system/files#Path.fs_require[fault.system.files.Path.fs_require]>
+- (context-local/factor-element)&<fault.system/files#RequirementViolation[fault.system.files.RequirementViolation]>
 
 Validate that missing file cases are handled.
 
@@ -729,13 +625,11 @@ Validate that missing file cases are handled.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`893 1 923 44`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`17`
+		- (source/area)`892 1 922 44`
 (signature)`test_Path_fs_require_type(test)`
 
-- (factor-local/data)&<#lib[lib.Path.fs_require]>
-- (factor-local/data)&<#lib[lib.RequirementViolation]>
+- (context-local/factor-element)&<fault.system/files#Path.fs_require[fault.system.files.Path.fs_require]>
+- (context-local/factor-element)&<fault.system/files#RequirementViolation[fault.system.files.RequirementViolation]>
 
 Validate that fs_require checks the type.
 
@@ -746,13 +640,11 @@ Validate that fs_require checks the type.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`925 1 950 44`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`14`
+		- (source/area)`924 1 949 44`
 (signature)`test_Path_fs_require_permissions(test)`
 
-- (factor-local/data)&<#lib[lib.Path.fs_require]>
-- (factor-local/data)&<#lib[lib.RequirementViolation]>
+- (context-local/factor-element)&<fault.system/files#Path.fs_require[fault.system.files.Path.fs_require]>
+- (context-local/factor-element)&<fault.system/files#RequirementViolation[fault.system.files.RequirementViolation]>
 
 Validate that fs_require checks the properties.
 
@@ -763,13 +655,11 @@ Validate that fs_require checks the properties.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`952 1 991 44`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`22`
+		- (source/area)`951 1 990 44`
 (signature)`test_Path_fs_require_directory_control(test)`
 
-- (factor-local/data)&<#lib[lib.Path.fs_require]>
-- (factor-local/data)&<#lib[lib.RequirementViolation]>
+- (context-local/factor-element)&<fault.system/files#Path.fs_require[fault.system.files.Path.fs_require]>
+- (context-local/factor-element)&<fault.system/files#RequirementViolation[fault.system.files.RequirementViolation]>
 
 Validate that fs_require allows for optional directory.
 
@@ -780,15 +670,40 @@ Validate that fs_require allows for optional directory.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`993 1 1019 55`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`11`
+		- (source/area)`992 1 1018 55`
 (signature)`test_Path_fs_require_accessibility(test)`
 
-- (factor-local/data)&<#lib[lib.Path.fs_require]>
-- (factor-local/data)&<#lib[lib.RequirementViolation]>
+- (context-local/factor-element)&<fault.system/files#Path.fs_require[fault.system.files.Path.fs_require]>
+- (context-local/factor-element)&<fault.system/files#RequirementViolation[fault.system.files.RequirementViolation]>
 
 Validate that the implied accessibility constraint is
 communicated when paths traverse through regular files or
 directories without the necessary permissions.
+
+
+[ test_root_instance ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1020 1 1023 47`
+(signature)`test_root_instance(test)`
+
+
+[ test_Path_fs_path_string ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`1025 1 1043 54`
+(signature)`test_Path_fs_path_string(test)`
+
+- (context-local/factor-element)&<fault.system/files#Path.fs_path_string[fault.system.files.Path.fs_path_string]>
+
+Validate path normalization by making sure partitions
+are properly eliminated.
 

@@ -3,7 +3,7 @@
 		module
 	/element/
 		- (control)`property-set`
-		- (source/area)`1 1 320 0`
+		- (source/area)`1 1 334 0`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`0`
 System process status display using transaction frames.
@@ -173,12 +173,12 @@ Join a start and stop frame.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`93 1 320 58`
+		- (source/area)`93 1 334 58`
 (signature)`dispatch(meta, log, plan, control, monitors, summary, title, queue)`
 
-Execute a sequence of system commands while displaying their status
+Execute system commands while displaying their status
 according to the transaction messages they emit to standard out.
 
-Commands are executed simultaneously so long as a monitor is available to display
-their status.
+(factor-local/parameter)&<#dispatch.Parameters.monitors[monitors]> corresponds to the processing lanes of the operation, but
+the configured allocations in (factor-local/parameter)&<#dispatch.Parameters.control[control]> may limit what is displayed.
 

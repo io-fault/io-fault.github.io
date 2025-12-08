@@ -5,7 +5,7 @@
 		- (control)`property-set`
 		- (source/area)`1 1 61 0`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`35`
+		- (coverage-counters)`0`
 Check the implementation of import routes.
 
 
@@ -38,8 +38,6 @@ Check the implementation of import routes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`7 1 36 17`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`18`
 (signature)`test_Import(test)`
 
 
@@ -52,8 +50,6 @@ Check the implementation of import routes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`38 1 42 58`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`test_Import_real(test)`
 
 
@@ -66,8 +62,6 @@ Check the implementation of import routes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`44 1 47 16`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`test_Import_from_attributes(test)`
 
 
@@ -80,8 +74,6 @@ Check the implementation of import routes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`49 1 56 36`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
 (signature)`test_Import_tree(test)`
 
 
@@ -94,7 +86,5 @@ Check the implementation of import routes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`58 1 61 63`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`test_Import_get_last_modified(test)`
 

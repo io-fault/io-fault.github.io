@@ -3,9 +3,9 @@
 		module
 	/element/
 		- (control)`property-set`
-		- (source/area)`1 1 303 0`
+		- (source/area)`1 1 317 0`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`193`
+		- (coverage-counters)`0`
 
 [ module ]
 ! CONTROL:
@@ -26,8 +26,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`3 1 18 32`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`10`
 (signature)`test_combine(test)`
 
 
@@ -40,8 +38,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`20 1 51 60`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`23`
 (signature)`test_IRange(test)`
 
 
@@ -54,8 +50,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`53 1 80 51`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`19`
 (signature)`test_IRange_intersect(test)`
 
 
@@ -68,8 +62,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`82 1 118 35`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`29`
 (signature)`test_Set(test)`
 
 
@@ -82,8 +74,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`120 1 128 43`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
 (signature)`test_Set_difference(test)`
 
 
@@ -96,8 +86,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`130 1 139 50`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`7`
 (signature)`test_Set_intersection(test)`
 
 
@@ -110,8 +98,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`141 1 147 62`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
 (signature)`test_Set_union(test)`
 
 
@@ -124,8 +110,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`149 1 163 18`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`10`
 (signature)`test_Set_len(test)`
 
 
@@ -138,8 +122,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`165 1 171 26`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
 (signature)`test_Set_pickle(test)`
 
 
@@ -150,8 +132,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`173 1 190 57`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`11`
 (signature)`test_Mapping_narrow_indexing(test)`
 
 - (context-local/factor-element)&<fault.range/types#Mapping.__setitem__[fault.range.types.Mapping.__setitem__]>
@@ -167,8 +147,6 @@ Check single level siblings access.
 	/element/
 		- (control)`property-set`
 		- (source/area)`192 1 208 23`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`10`
 (signature)`test_Mapping_get(test)`
 
 - (context-local/factor-element)&<fault.range/types#Mapping.__setitem__[fault.range.types.Mapping.__setitem__]>
@@ -183,9 +161,7 @@ Check single level siblings access.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`210 1 228 57`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`12`
+		- (source/area)`210 1 237 30`
 (signature)`test_Mapping_depth_indexing(test)`
 
 - (context-local/factor-element)&<fault.range/types#Mapping.__getitem__[fault.range.types.Mapping.__getitem__]>
@@ -200,14 +176,12 @@ Check that inner values set after override initial values.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`230 1 254 45`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`16`
+		- (source/area)`239 1 266 64`
 (signature)`test_Mapping_path(test)`
 
 - (context-local/factor-element)&<fault.range/types#Mapping.path[fault.range.types.Mapping.path]>
 
-Check that range paths are properly nested.
+Check the effect of stacked ranges on path.
 
 
 [ test_Mapping_kv_query ]
@@ -216,9 +190,7 @@ Check that range paths are properly nested.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`256 1 280 71`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`16`
+		- (source/area)`268 1 294 71`
 (signature)`test_Mapping_kv_query(test)`
 
 - (context-local/factor-element)&<fault.range/types#Mapping.keys[fault.range.types.Mapping.keys]>
@@ -232,9 +204,7 @@ Check that range paths are properly nested.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`282 1 303 56`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`11`
+		- (source/area)`296 1 317 56`
 (signature)`test_Mapping_update(test)`
 
 - (context-local/factor-element)&<fault.range/types#Mapping.update[fault.range.types.Mapping.update]>

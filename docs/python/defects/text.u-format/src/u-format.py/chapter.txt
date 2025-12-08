@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 37 0`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`20`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 
 [ module ]
 ! CONTROL:
@@ -24,8 +24,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`3 1 32 80`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`15`
 (signature)`test_Parser_emphasis(test)`
 
 - (context-local/factor-element)&<fault.text/format#Parser.emphasis[fault.text.format.Parser.emphasis]>

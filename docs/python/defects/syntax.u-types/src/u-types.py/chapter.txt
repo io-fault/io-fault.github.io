@@ -5,7 +5,7 @@
 		- (control)`property-set`
 		- (source/area)`1 1 131 43`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`74`
+		- (coverage-counters)`0`
 Validate library defined types and their integration with (context-local/project-name)&<fault.range>
 
 
@@ -48,8 +48,6 @@ Validate library defined types and their integration with (context-local/project
 	/element/
 		- (control)`property-set`
 		- (source/area)`8 1 16 15`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`7`
 (signature)`test_Address_arithmetic(test)`
 
 
@@ -62,8 +60,6 @@ Validate library defined types and their integration with (context-local/project
 	/element/
 		- (control)`property-set`
 		- (source/area)`18 1 23 17`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
 (signature)`test_Address_from_string(test)`
 
 
@@ -76,8 +72,6 @@ Validate library defined types and their integration with (context-local/project
 	/element/
 		- (control)`property-set`
 		- (source/area)`25 1 28 26`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`test_Address_pickle(test)`
 
 
@@ -90,8 +84,6 @@ Validate library defined types and their integration with (context-local/project
 	/element/
 		- (control)`property-set`
 		- (source/area)`30 1 32 21`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`test_Address_string(test)`
 
 
@@ -104,8 +96,6 @@ Validate library defined types and their integration with (context-local/project
 	/element/
 		- (control)`property-set`
 		- (source/area)`34 1 43 58`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`7`
 (signature)`test_Address_normalize_stop(test)`
 
 
@@ -116,8 +106,6 @@ Validate library defined types and their integration with (context-local/project
 	/element/
 		- (control)`property-set`
 		- (source/area)`45 1 57 23`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`8`
 (signature)`test_Area(test)`
 
 Partially redundant with (project-local/unknown)&<module.rangetypes.IRange> tests,
@@ -133,8 +121,6 @@ check the local interface for sanity assurance.
 	/element/
 		- (control)`property-set`
 		- (source/area)`59 1 63 25`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
 (signature)`test_Area_string(test)`
 
 
@@ -147,8 +133,6 @@ check the local interface for sanity assurance.
 	/element/
 		- (control)`property-set`
 		- (source/area)`65 1 71 12`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
 (signature)`test_Area_pickle(test)`
 
 
@@ -161,8 +145,6 @@ check the local interface for sanity assurance.
 	/element/
 		- (control)`property-set`
 		- (source/area)`73 1 80 19`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
 (signature)`test_Area_delineate(test)`
 
 
@@ -175,8 +157,6 @@ check the local interface for sanity assurance.
 	/element/
 		- (control)`property-set`
 		- (source/area)`82 1 92 27`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`7`
 (signature)`test_Area_horizontals(test)`
 
 
@@ -207,7 +187,5 @@ check the local interface for sanity assurance.
 	/element/
 		- (control)`property-set`
 		- (source/area)`102 1 132 42`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`15`
 (signature)`test_Area_select(test)`
 

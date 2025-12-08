@@ -5,7 +5,7 @@
 		- (control)`property-set`
 		- (source/area)`1 1 14 0`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`8`
+		- (coverage-counters)`0`
 Check utility functions present in (project-local/unknown)&<__init__>.
 
 
@@ -26,8 +26,6 @@ Check utility functions present in (project-local/unknown)&<__init__>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`6 1 14 59`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
 (signature)`test_rewrite_relative(test)`
 
 Check relative path resolution.

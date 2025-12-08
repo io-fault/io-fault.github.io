@@ -5,7 +5,7 @@
 		- (control)`property-set`
 		- (source/area)`1 1 64 0`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`43`
+		- (coverage-counters)`0`
 
 [ module ]
 ! CONTROL:
@@ -24,8 +24,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`3 1 11 14`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
 (signature)`test_Cell_iteration(test)`
 
 - (context-local/factor-element)&<fault.context/types#Cell.__iter__[fault.context.types.Cell.__iter__]>
@@ -38,8 +36,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`13 1 23 40`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`7`
 (signature)`test_Cell_coalesce(test)`
 
 - (context-local/factor-element)&<fault.context/types#Cell.coalesce[fault.context.types.Cell.coalesce]>
@@ -54,8 +50,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`25 1 42 25`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`15`
 (signature)`test_Cell_sequence(test)`
 
 
@@ -66,8 +60,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`44 1 54 23`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`8`
 (signature)`test_Cell_equality(test)`
 
 - (context-local/factor-element)&<fault.context/types#Cell.__eq__[fault.context.types.Cell.__eq__]>
@@ -80,8 +72,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`56 1 64 45`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
 (signature)`test_Cell_setup(test)`
 
 - (context-local/factor-element)&<fault.context/types#Cell.__setup__[fault.context.types.Cell.__setup__]>

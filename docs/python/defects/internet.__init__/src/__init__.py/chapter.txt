@@ -5,7 +5,7 @@
 		- (control)`property-set`
 		- (source/area)`1 1 1 0`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
+		- (coverage-counters)`0`
 
 [ __factor_type__ ]
 ! CONTROL:

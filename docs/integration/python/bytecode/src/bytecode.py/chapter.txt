@@ -65,7 +65,7 @@ Unstable API. This module may be partitioned in order to eliminate the condition
 		- (control)`property-set`
 		- (source/area)`28 1 28 52`
 #!source
-	serialize_timestamp_checked = _code_to_timestamp_pyc # Present regardless of version.
+	
 
 [ store ]
 ! CONTROL:

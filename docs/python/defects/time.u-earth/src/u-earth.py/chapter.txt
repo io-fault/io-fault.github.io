@@ -5,7 +5,7 @@
 		- (control)`property-set`
 		- (source/area)`1 1 46 4`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`14`
+		- (coverage-counters)`0`
 Check earth based units (days).
 
 
@@ -68,8 +68,6 @@ Check earth based units (days).
 	/element/
 		- (control)`property-set`
 		- (source/area)`18 1 21 14`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`check_from_units(test, samples)`
 
 
@@ -82,8 +80,6 @@ Check earth based units (days).
 	/element/
 		- (control)`property-set`
 		- (source/area)`23 1 34 3`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`test_from_units_decimal(test)`
 
 
@@ -96,7 +92,5 @@ Check earth based units (days).
 	/element/
 		- (control)`property-set`
 		- (source/area)`36 1 47 3`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`test_from_units_fraction(test)`
 

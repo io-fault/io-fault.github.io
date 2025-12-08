@@ -1,0 +1,19 @@
+"""
+# Stencils and defaults for session frames.
+
+# Provides access to a set of patterns that may be selected when creating a new frame.
+"""
+
+# Division layout templates.
+stencils = {
+	# Two single-width verticals followed by a single-width split.
+	'pairs': [(1, 1, 'sub'), (1, 1, 'test'), (2, 1, 'Reference', 'Console')],
+
+	# One double-width vertical followed by a single-width split.
+	# Intended for system console usage.
+	'icons': [(1, 2, 'Console'), (2, 1, 'Reference', 'Editor')],
+
+	# Single division frame.
+	'sole': [(1, 0, 'Sole')],
+}
+

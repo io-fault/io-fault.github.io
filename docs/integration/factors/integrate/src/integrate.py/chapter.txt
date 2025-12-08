@@ -211,8 +211,8 @@ Factor integration execution for building images using a system context.
 	
 		'-D': ('field-replace', 'product-directory'),
 		'-L': ('field-replace', 'processing-lanes'),
+		'-M': ('field-replace', 'status-monitors'),
 		'-C': ('field-replace', 'persistent-cache'),
-	}
 
 [ plan ]
 ! CONTROL:

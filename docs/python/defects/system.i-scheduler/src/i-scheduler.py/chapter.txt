@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 467 0`
-		- (coverage-zeros)`9`
-		- (coverage-counters)`262`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 
 [ os ]
 ! CONTROL:
@@ -46,8 +46,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`5 1 6 5`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`5 17 5 25`
@@ -62,8 +60,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`8 1 28 22`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`10`
 (signature)`test_Scheduler_close(test)`
 
 - (context-local/factor-element)&<fault.system/kernel#Scheduler.close[fault.system.kernel.Scheduler.close]>
@@ -79,8 +75,6 @@ Validate the effect of closing a scheduler instance.
 	/element/
 		- (control)`property-set`
 		- (source/area)`30 1 51 23`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`11`
 (signature)`test_Scheduler_execute(test)`
 
 - (context-local/factor-element)&<fault.system/kernel#Scheduler.execute[fault.system.kernel.Scheduler.execute]>
@@ -95,8 +89,6 @@ Validate the execution of enqueued tasks.
 	/element/
 		- (control)`property-set`
 		- (source/area)`53 1 79 11`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`15`
 (signature)`test_Scheduler_exceptions(test)`
 
 - (context-local/factor-element)&<fault.system/kernel#Scheduler[fault.system.kernel.Scheduler]>
@@ -112,8 +104,6 @@ Validate exception signalling.
 	/element/
 		- (control)`property-set`
 		- (source/area)`81 1 89 23`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
 (signature)`test_execute_nothing(test)`
 
 - (context-local/factor-element)&<fault.system/kernel#Scheduler.execute[fault.system.kernel.Scheduler.execute]>
@@ -126,8 +116,6 @@ Validate exception signalling.
 	/element/
 		- (control)`property-set`
 		- (source/area)`91 1 106 20`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
 (signature)`test_enqueue_interrupt(test)`
 
 - (context-local/factor-element)&<fault.system/kernel#Scheduler.execute[fault.system.kernel.Scheduler.execute]>
@@ -144,8 +132,6 @@ user event was received.
 	/element/
 		- (control)`property-set`
 		- (source/area)`108 1 134 35`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`14`
 (signature)`test_dispatch_actuate(test)`
 
 - (context-local/factor-element)&<fault.system/kernel#Event.meta_actuate[fault.system.kernel.Event.meta_actuate]>
@@ -160,8 +146,6 @@ Check that actuate is dispatched.
 	/element/
 		- (control)`property-set`
 		- (source/area)`136 1 165 35`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`16`
 (signature)`test_dispatch_terminate(test)`
 
 - (context-local/factor-element)&<fault.system/kernel#Event.meta_terminate[fault.system.kernel.Event.meta_terminate]>
@@ -176,8 +160,6 @@ Check that terminate is dispatched.
 	/element/
 		- (control)`property-set`
 		- (source/area)`167 1 192 22`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`15`
 (signature)`test_Link_never_states(test)`
 
 - (context-local/factor-element)&<fault.system/kernel#Event.never[fault.system.kernel.Event.never]>
@@ -192,8 +174,6 @@ Check that never is available and has no immediate effect.
 	/element/
 		- (control)`property-set`
 		- (source/area)`194 1 223 22`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`18`
 (signature)`test_Link_scheduler_states(test)`
 
 - (context-local/factor-element)&<fault.system/kernel#Event.time[fault.system.kernel.Event.time]>
@@ -206,8 +186,6 @@ Check that never is available and has no immediate effect.
 	/element/
 		- (control)`property-set`
 		- (source/area)`225 1 250 16`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`17`
 (signature)`test_interrupt(test)`
 
 - (context-local/factor-element)&<fault.system/kernel#Scheduler.interrupt[fault.system.kernel.Scheduler.interrupt]>
@@ -220,8 +198,6 @@ Check that never is available and has no immediate effect.
 	/element/
 		- (control)`property-set`
 		- (source/area)`252 1 265 23`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`8`
 (signature)`test_Event_time_units(test)`
 
 - (context-local/factor-element)&<fault.system/kernel#Event[fault.system.kernel.Event]>
@@ -236,8 +212,6 @@ Time events are distinct regardless of their timing.
 	/element/
 		- (control)`property-set`
 		- (source/area)`267 1 292 35`
-		- (coverage-zeros)`6`
-		- (coverage-counters)`16`
 (signature)`test_Event_process_pid(test)`
 
 - (context-local/factor-element)&<fault.system/kernel#Event.process_exit[fault.system.kernel.Event.process_exit]>
@@ -252,8 +226,6 @@ Time events are distinct regardless of their timing.
 	/element/
 		- (control)`property-set`
 		- (source/area)`294 1 305 16`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`9`
 (signature)`test_Event_time(test)`
 
 
@@ -264,8 +236,6 @@ Time events are distinct regardless of their timing.
 	/element/
 		- (control)`property-set`
 		- (source/area)`307 1 324 16`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`13`
 (signature)`test_interrupt_ignored(test)`
 
 Check that interrupt outside of wait has no effect.
@@ -280,8 +250,6 @@ Check that interrupt outside of wait has no effect.
 	/element/
 		- (control)`property-set`
 		- (source/area)`326 1 349 16`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`16`
 (signature)`test_time_event_periodic(test)`
 
 
@@ -292,8 +260,6 @@ Check that interrupt outside of wait has no effect.
 	/element/
 		- (control)`property-set`
 		- (source/area)`351 1 376 20`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`15`
 (signature)`test_signal_trap(test)`
 
 - (context-local/factor-element)&<fault.system/kernel#Event.process_signal[fault.system.kernel.Event.process_signal]>
@@ -308,8 +274,6 @@ Validate the execution of system process exit events.
 	/element/
 		- (control)`property-set`
 		- (source/area)`378 1 414 16`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`20`
 (signature)`test_process_exit(test)`
 
 - (context-local/factor-element)&<fault.system/kernel#Event.process_exit[fault.system.kernel.Event.process_exit]>
@@ -324,8 +288,6 @@ Validate the execution of system process exit events.
 	/element/
 		- (control)`property-set`
 		- (source/area)`416 1 467 40`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`33`
 (signature)`test_Scheduler_io_pipe(test)`
 
 - (context-local/factor-element)&<fault.system/kernel#Event.io_transmit[fault.system.kernel.Event.io_transmit]>

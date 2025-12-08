@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)``
-		- (coverage-zeros)`0`
-		- (coverage-counters)`0`
+		- (coverage-zeros)`342`
+		- (coverage-counters)`342`
 
 [ Endpoint_Check ]
 ! CONTROL:

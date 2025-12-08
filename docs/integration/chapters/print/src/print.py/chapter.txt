@@ -360,11 +360,11 @@ Returns the directory path that was created.
 		- (control)`property-set`
 		- (source/area)`363 1 367 1`
 #!source
+			if string.startswith(prefix):
+				return string[len(prefix):]
+		return string
+	
 	required = {
-		'--corpus-root': ('field-replace', 'corpus-root'),
-		'--corpus-title': ('field-replace', 'corpus-title'),
-		'-P': ('set-add', 'prefixes'),
-	}
 
 [ restricted ]
 ! CONTROL:
@@ -376,10 +376,10 @@ Returns the directory path that was created.
 		- (control)`property-set`
 		- (source/area)`369 1 372 1`
 #!source
-	restricted = {
-		'-W': ('field-replace', False, 'web-defaults'),
-		'-w': ('field-replace', True, 'web-defaults'),
+		'--corpus-title': ('field-replace', 'corpus-title'),
+		'-P': ('set-add', 'prefixes'),
 	}
+	
 
 [ extract_image_reference ]
 ! CONTROL:

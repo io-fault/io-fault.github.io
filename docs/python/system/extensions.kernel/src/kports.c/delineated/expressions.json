@@ -41,7 +41,7 @@
 	[[78,2],["statement/declaration",78,28]],
 	[[78,15],["cast",78,27]],
 	[[78,24],["reference/name",78,27]],
-	[[80,2],["expansion",80,23]],
+	[[80,2],["expansion",80,20]],
 	[[82,3],["statement/for",91,3]],
 	[[82,8],["operator/binary",82,12],["reference/name",82,8]],
 	[[82,15],["operator/binary",82,39],["reference/name",82,15]],

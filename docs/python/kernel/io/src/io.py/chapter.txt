@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 460 0`
-		- (coverage-zeros)`114`
-		- (coverage-counters)`217`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 I/O Transaction Contexts for managing transfers and protocol transports.
 
 I/O is managed using three types: (factor-local/class)&<#Transfer[Transfer]>, (factor-local/class)&<#Transport[Transport]>, and (factor-local/class)&<#Interface[Interface]>.
@@ -80,8 +80,6 @@ stream.
 	/element/
 		- (control)`property-set`
 		- (source/area)`16 1 88 21`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`16 16 16 27`
@@ -100,8 +98,6 @@ Context managing a *single* sequence of (project-local/factor-element)&<flows#Ch
 	/element/
 		- (control)`property-set`
 		- (source/area)`21 2 22 26`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`actuate(self)`
 
 
@@ -127,8 +123,6 @@ Context managing a *single* sequence of (project-local/factor-element)&<flows#Ch
 	/element/
 		- (control)`property-set`
 		- (source/area)`27 2 28 44`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`4`
 		- (type/syntax)`bool`
 		- (type/invalid/unknown)&<#bool>
 		
@@ -140,8 +134,6 @@ Context managing a *single* sequence of (project-local/factor-element)&<flows#Ch
 	/element/
 		- (control)`property-set`
 		- (source/area)`30 2 54 12`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`14`
 		- (type/syntax)`flows.Terminal`
 		- (type/project-local/factor-element)&<flows#Terminal[fault.kernel.flows.Terminal]>
 		
@@ -161,8 +153,6 @@ count will be incremented.
 	/element/
 		- (control)`property-set`
 		- (source/area)`56 2 60 35`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 (signature)`io_execute(self)`
 
 Signal the first (project-local/factor-element)&<flows#Channel[fault.kernel.flows.Channel]> that it should begin performing transfers.
@@ -175,8 +165,6 @@ Signal the first (project-local/factor-element)&<flows#Channel[fault.kernel.flow
 	/element/
 		- (control)`property-set`
 		- (source/area)`62 2 69 22`
-		- (coverage-zeros)`4`
-		- (coverage-counters)`4`
 (signature)`io_terminate(self)`
 
 Explicitly terminate the managed flow.
@@ -191,8 +179,6 @@ Explicitly terminate the managed flow.
 	/element/
 		- (control)`property-set`
 		- (source/area)`71 2 73 28`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`_io_check_terminate(self)`
 
 
@@ -203,8 +189,6 @@ Explicitly terminate the managed flow.
 	/element/
 		- (control)`property-set`
 		- (source/area)`76 2 81 40`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`_io_transfer_terminated(self, terminal)`
 
 Complete the termination of the transfer.
@@ -219,8 +203,6 @@ Complete the termination of the transfer.
 	/element/
 		- (control)`property-set`
 		- (source/area)`83 2 88 21`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`3`
 (signature)`terminate(self)`
 
 
@@ -231,8 +213,6 @@ Complete the termination of the transfer.
 	/element/
 		- (control)`property-set`
 		- (source/area)`90 1 189 32`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`90 19 90 32`
@@ -251,8 +231,6 @@ Dispatch processor for (factor-local/class)&<#Transport[Transport]> instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`95 2 99 28`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`__init__(self, catenate, router)`
 
 
@@ -265,8 +243,6 @@ Dispatch processor for (factor-local/class)&<#Transport[Transport]> instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`101 2 102 75`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`actuate(self)`
 
 
@@ -279,8 +255,6 @@ Dispatch processor for (factor-local/class)&<#Transport[Transport]> instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`104 2 105 27`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`terminate(self)`
 
 
@@ -293,8 +267,6 @@ Dispatch processor for (factor-local/class)&<#Transport[Transport]> instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`107 2 108 16`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`i_receive_closed(self)`
 
 
@@ -307,8 +279,6 @@ Dispatch processor for (factor-local/class)&<#Transport[Transport]> instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`110 2 118 31`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
 (signature)`i_dispatch(self, events)`
 
 
@@ -319,8 +289,6 @@ Dispatch processor for (factor-local/class)&<#Transport[Transport]> instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`120 2 124 24`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 (signature)`i_update(self, router)`
 
 Update the router used to facilitate a protocol transaction.
@@ -333,8 +301,6 @@ Update the router used to facilitate a protocol transaction.
 	/element/
 		- (control)`property-set`
 		- (source/area)`126 2 131 28`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`i_signal(self)`
 
 Method enqueued by (invalid/unknown)&<#f_transfer> to flush the protocol transaction queue.
@@ -350,8 +316,6 @@ Essentially, an internal method.
 	/element/
 		- (control)`property-set`
 		- (source/area)`133 2 134 46`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`i_close(self)`
 
 
@@ -364,8 +328,6 @@ Essentially, an internal method.
 	/element/
 		- (control)`property-set`
 		- (source/area)`136 2 140 11`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`_i_transition(self)`
 
 
@@ -376,8 +338,6 @@ Essentially, an internal method.
 	/element/
 		- (control)`property-set`
 		- (source/area)`142 2 162 21`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`11`
 (signature)`i_accept(self)`
 
 Accept a sequence of requests from a client configured remote endpoint.
@@ -393,8 +353,6 @@ Used by routers employed by servers to get protocol transactions.
 	/element/
 		- (control)`property-set`
 		- (source/area)`164 2 173 29`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`i_correlate(self)`
 
 Received a set of responses. Join with requests, and
@@ -410,8 +368,6 @@ Used by routers employed by clients to get the response of a protocol transactio
 	/element/
 		- (control)`property-set`
 		- (source/area)`175 2 189 32`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`7`
 (signature)`i_allocate(self)`
 
 Allocate a channel for submitting a request.
@@ -427,8 +383,6 @@ initiate parameter and upstream channel.
 	/element/
 		- (control)`property-set`
 		- (source/area)`191 1 334 44`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`191 17 191 28`
@@ -448,8 +402,6 @@ used to facilitate arbitrary I/O streams.
 	/element/
 		- (control)`property-set`
 		- (source/area)`197 2 198 6`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`actuate(self)`
 
 
@@ -462,8 +414,6 @@ used to facilitate arbitrary I/O streams.
 	/element/
 		- (control)`property-set`
 		- (source/area)`200 2 208 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`__init__(self)`
 
 
@@ -474,8 +424,6 @@ used to facilitate arbitrary I/O streams.
 	/element/
 		- (control)`property-set`
 		- (source/area)`209 2 219 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
 (signature)`from_endpoint(Class, io)`
 
 Create and initialize an instance with the first transport layer.
@@ -488,8 +436,6 @@ Create and initialize an instance with the first transport layer.
 	/element/
 		- (control)`property-set`
 		- (source/area)`220 2 225 30`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`3`
 (signature)`from_stack(Class, entries)`
 
 Create and initialize an instance with using a stack.
@@ -504,8 +450,6 @@ Create and initialize an instance with using a stack.
 	/element/
 		- (control)`property-set`
 		- (source/area)`227 2 229 18`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 (signature)`xact_void(self, xact)`
 
 
@@ -516,8 +460,6 @@ Create and initialize an instance with using a stack.
 	/element/
 		- (control)`property-set`
 		- (source/area)`231 2 243 13`
-		- (coverage-zeros)`7`
-		- (coverage-counters)`7`
 (signature)`tp_extend(self, entries)`
 
 Extend the transport stack with multiple intermediates.
@@ -531,8 +473,6 @@ This method should only be used prior to (factor-local/method)&<#Transport.tp_co
 	/element/
 		- (control)`property-set`
 		- (source/area)`245 2 253 13`
-		- (coverage-zeros)`4`
-		- (coverage-counters)`4`
 (signature)`tp_append(self, protocol)`
 
 Extend the transport stack with a single intermediate.
@@ -546,8 +486,6 @@ This method should only be used prior to (factor-local/method)&<#Transport.tp_co
 	/element/
 		- (control)`property-set`
 		- (source/area)`255 2 291 12`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`22`
 (signature)`tp_connect(self, router, protocol)`
 
 Connect the given mitre series, (invalid/unknown)&<#mitre>, to the configured transport stack.
@@ -561,8 +499,6 @@ Usually called after dispatching an instance created with (factor-local/classmet
 	/element/
 		- (control)`property-set`
 		- (source/area)`293 2 305 31`
-		- (coverage-zeros)`9`
-		- (coverage-counters)`9`
 (signature)`tp_push(self, state, io)`
 
 Push the protocol channels on to the stack.
@@ -575,8 +511,6 @@ Push the protocol channels on to the stack.
 	/element/
 		- (control)`property-set`
 		- (source/area)`307 2 311 30`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 (signature)`tp_protocol_terminated(self, state)`
 
 Called by a protocol stack entry when both sides of the state have been closed.
@@ -591,8 +525,6 @@ Called by a protocol stack entry when both sides of the state have been closed.
 	/element/
 		- (control)`property-set`
 		- (source/area)`313 2 317 35`
-		- (coverage-zeros)`4`
-		- (coverage-counters)`4`
 (signature)`tp_remove(self, state)`
 
 
@@ -605,8 +537,6 @@ Called by a protocol stack entry when both sides of the state have been closed.
 	/element/
 		- (control)`property-set`
 		- (source/area)`319 2 325 26`
-		- (coverage-zeros)`5`
-		- (coverage-counters)`5`
 (signature)`tp_get(self, label)`
 
 
@@ -619,8 +549,6 @@ Called by a protocol stack entry when both sides of the state have been closed.
 	/element/
 		- (control)`property-set`
 		- (source/area)`327 2 328 41`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`io_execute(self)`
 
 
@@ -631,8 +559,6 @@ Called by a protocol stack entry when both sides of the state have been closed.
 	/element/
 		- (control)`property-set`
 		- (source/area)`330 2 334 44`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 (signature)`io_transmit_close(self)`
 
 Close the outgoing transfer context.
@@ -645,8 +571,6 @@ Close the outgoing transfer context.
 	/element/
 		- (control)`property-set`
 		- (source/area)`336 1 406 27`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`3`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`336 17 336 28`
@@ -677,8 +601,6 @@ Application context managing logical interfaces.
 	/element/
 		- (control)`property-set`
 		- (source/area)`342 2 344 27`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 (signature)`__init__(self, target, prepare)`
 
 
@@ -691,8 +613,6 @@ Application context managing logical interfaces.
 	/element/
 		- (control)`property-set`
 		- (source/area)`346 2 349 23`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`3`
 (signature)`actuate(self)`
 
 
@@ -705,8 +625,6 @@ Application context managing logical interfaces.
 	/element/
 		- (control)`property-set`
 		- (source/area)`351 2 353 59`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 (signature)`if_transition(self, ports)`
 
 
@@ -717,8 +635,6 @@ Application context managing logical interfaces.
 	/element/
 		- (control)`property-set`
 		- (source/area)`355 2 367 28`
-		- (coverage-zeros)`6`
-		- (coverage-counters)`6`
 (signature)`if_install(self, kports)`
 
 Given file descriptors, install a new set of flows
@@ -732,8 +648,6 @@ accepting sockets from the given listening sockets.
 	/element/
 		- (control)`property-set`
 		- (source/area)`369 2 384 24`
-		- (coverage-zeros)`12`
-		- (coverage-counters)`12`
 (signature)`_if_dispatch(self, kports)`
 
 Allocate and dispatch accept flows for the given (factor-local/parameter)&<#Interface._if_dispatch.Parameters.kports[kports]>.
@@ -748,8 +662,6 @@ Allocate and dispatch accept flows for the given (factor-local/parameter)&<#Inte
 	/element/
 		- (control)`property-set`
 		- (source/area)`386 2 387 6`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`xact_exit(self, transport)`
 
 
@@ -762,8 +674,6 @@ Allocate and dispatch accept flows for the given (factor-local/parameter)&<#Inte
 	/element/
 		- (control)`property-set`
 		- (source/area)`389 2 394 10`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 (signature)`xact_void(self, final)`
 
 
@@ -786,8 +696,6 @@ Allocate and dispatch accept flows for the given (factor-local/parameter)&<#Inte
 	/element/
 		- (control)`property-set`
 		- (source/area)`398 2 406 27`
-		- (coverage-zeros)`5`
-		- (coverage-counters)`5`
 (signature)`terminate(self)`
 
 
@@ -798,8 +706,6 @@ Allocate and dispatch accept flows for the given (factor-local/parameter)&<#Inte
 	/element/
 		- (control)`property-set`
 		- (source/area)`408 1 449 27`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`408 19 408 30`
@@ -818,8 +724,6 @@ Application context managing accepted transports.
 	/element/
 		- (control)`property-set`
 		- (source/area)`413 2 415 20`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`__init__(self, dispatch)`
 
 
@@ -830,8 +734,6 @@ Application context managing accepted transports.
 	/element/
 		- (control)`property-set`
 		- (source/area)`417 2 434 34`
-		- (coverage-zeros)`12`
-		- (coverage-counters)`12`
 (signature)`cxn_accept(self, packet)`
 
 Moving to Sockets. Routing will be handled with flows.
@@ -858,8 +760,6 @@ Moving to Sockets. Routing will be handled with flows.
 	/element/
 		- (control)`property-set`
 		- (source/area)`439 2 442 28`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 (signature)`xact_void(self, final)`
 
 
@@ -872,8 +772,6 @@ Moving to Sockets. Routing will be handled with flows.
 	/element/
 		- (control)`property-set`
 		- (source/area)`444 2 449 27`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`3`
 (signature)`terminate(self)`
 
 
@@ -884,8 +782,6 @@ Moving to Sockets. Routing will be handled with flows.
 	/element/
 		- (control)`property-set`
 		- (source/area)`451 1 460 48`
-		- (coverage-zeros)`5`
-		- (coverage-counters)`5`
 (signature)`dispatch(xact, *flows)`
 
 Dispatch a set of a flows within the Transaction as connected Transfers.

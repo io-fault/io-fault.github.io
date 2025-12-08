@@ -358,7 +358,7 @@ However, the module may not be importable.
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`153 2 162 39`
+		- (source/area)`153 2 162 35`
 		- (coverage-zeros)`4`
 		- (coverage-counters)`4`
 (signature)`is_container(self)`

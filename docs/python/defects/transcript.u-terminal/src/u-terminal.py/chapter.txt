@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 7 39`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`6`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 Validate terminal classes and functionality.
 
 

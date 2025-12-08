@@ -3,7 +3,7 @@
 		module
 	/element/
 		- (control)`property-set`
-		- (source/area)`1 1 351 0`
+		- (source/area)`1 1 361 0`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`0`
 Test the coherence of the specified project.
@@ -29,6 +29,16 @@ Test the coherence of the specified project.
 		- (control)`property-set`
 		- (source/area)`5 1 5 10`
 
+[ gc ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 9`
+
 [ contextlib ]
 ! CONTROL:
 	/type/
@@ -37,7 +47,7 @@ Test the coherence of the specified project.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`6 1 6 17`
+		- (source/area)`7 1 7 17`
 
 [ signal ]
 ! CONTROL:
@@ -47,7 +57,7 @@ Test the coherence of the specified project.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`7 1 7 13`
+		- (source/area)`8 1 8 13`
 
 [ functools ]
 ! CONTROL:
@@ -57,7 +67,7 @@ Test the coherence of the specified project.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`8 1 8 16`
+		- (source/area)`9 1 9 16`
 
 [ types ]
 ! CONTROL:
@@ -67,7 +77,7 @@ Test the coherence of the specified project.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`9 1 9 12`
+		- (source/area)`10 1 10 12`
 
 [ importlib ]
 ! CONTROL:
@@ -77,7 +87,7 @@ Test the coherence of the specified project.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`10 1 10 16`
+		- (source/area)`11 1 11 16`
 
 [ resource ]
 ! CONTROL:
@@ -87,7 +97,7 @@ Test the coherence of the specified project.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`11 1 11 15`
+		- (source/area)`12 1 12 15`
 
 [ corefile ]
 ! CONTROL:
@@ -97,7 +107,7 @@ Test the coherence of the specified project.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`13 1 13 29`
+		- (source/area)`14 1 14 29`
 
 [ process ]
 ! CONTROL:
@@ -107,7 +117,7 @@ Test the coherence of the specified project.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`14 1 14 28`
+		- (source/area)`15 1 15 28`
 
 [ files ]
 ! CONTROL:
@@ -117,7 +127,7 @@ Test the coherence of the specified project.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`15 1 15 26`
+		- (source/area)`16 1 16 26`
 
 [ factors ]
 ! CONTROL:
@@ -127,7 +137,7 @@ Test the coherence of the specified project.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`16 1 16 28`
+		- (source/area)`17 1 17 28`
 
 [ python ]
 ! CONTROL:
@@ -137,7 +147,7 @@ Test the coherence of the specified project.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`17 1 17 27`
+		- (source/area)`18 1 18 27`
 
 [ elapsed ]
 ! CONTROL:
@@ -147,7 +157,7 @@ Test the coherence of the specified project.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`18 1 18 33`
+		- (source/area)`19 1 19 33`
 
 [ metrics ]
 ! CONTROL:
@@ -157,7 +167,7 @@ Test the coherence of the specified project.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`19 1 19 32`
+		- (source/area)`20 1 20 32`
 
 [ Log ]
 ! CONTROL:
@@ -167,7 +177,7 @@ Test the coherence of the specified project.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`20 1 20 31`
+		- (source/area)`21 1 21 31`
 
 [ engine ]
 ! CONTROL:
@@ -177,7 +187,7 @@ Test the coherence of the specified project.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`22 1 22 20`
+		- (source/area)`23 1 23 20`
 
 [ types ]
 ! CONTROL:
@@ -187,26 +197,7 @@ Test the coherence of the specified project.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`23 1 23 19`
-
-[ status_identifiers ]
-! CONTROL:
-	/type/
-		data
-	/flags/
-		- `undocumented`
-	/element/
-		- (control)`property-set`
-		- (source/area)`25 1 32 1`
-#!source
-	status_identifiers = {
-		'skip': 'skipped',
-		'return': 'passed',
-		'pass': 'passed',
-		'fail': 'failed',
-		'core': 'failed',
-		'error': 'failed',
-	}
+		- (source/area)`24 1 24 19`
 
 [ Harness ]
 ! CONTROL:
@@ -214,10 +205,10 @@ Test the coherence of the specified project.
 		class
 	/element/
 		- (control)`property-set`
-		- (source/area)`34 1 222 15`
+		- (source/area)`26 1 222 15`
 ! INHERIT:
 	- (control)`property-set`
-	- (source/area)`34 15 34 28`
+	- (source/area)`26 15 26 28`
 	- (type/syntax)`engine.Harness`
 	- (type/project-local/factor-element)&<engine#Harness[fault.test.engine.Harness]>
 	
@@ -232,7 +223,7 @@ The collection and execution of a series of tests.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`38 2 38 50`
+		- (source/area)`30 2 30 50`
 #!source
 	concurrently = staticmethod(process.concurrently)
 
@@ -244,7 +235,7 @@ The collection and execution of a series of tests.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`40 2 52 75`
+		- (source/area)`32 2 44 75`
 (signature)`_handle_core(self, corefile)`
 
 
@@ -256,8 +247,8 @@ The collection and execution of a series of tests.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`54 2 58 22`
-(signature)`_print_tb(self, fate)`
+		- (source/area)`46 2 50 22`
+(signature)`_print_tb(self, test)`
 
 
 [ Harness >> dispatch ]
@@ -268,8 +259,20 @@ The collection and execution of a series of tests.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`60 2 154 15`
+		- (source/area)`52 2 140 15`
 (signature)`dispatch(self, test)`
+
+
+[ Harness >> test ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`142 2 178 47`
+(signature)`test(self, test)`
+
+Execute the test function and configure the identified conclusion.
 
 
 [ Harness >> execute ]
@@ -280,7 +283,7 @@ The collection and execution of a series of tests.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`156 2 222 15`
+		- (source/area)`180 2 222 15`
 (signature)`execute(self, test)`
 
 
@@ -314,7 +317,7 @@ The collection and execution of a series of tests.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`252 1 263 2`
+		- (source/area)`252 1 264 2`
 (signature)`trapped_report(source)`
 
 Reform the report into the common join protocol.
@@ -328,7 +331,7 @@ Reform the report into the common join protocol.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`265 1 347 19`
+		- (source/area)`266 1 357 19`
 		- (type/syntax)`process.Exit`
 		- (type/context-local/factor-element)&<fault.system/process#Exit[fault.system.process.Exit]>
 		

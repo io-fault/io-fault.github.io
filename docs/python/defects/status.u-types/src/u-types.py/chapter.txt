@@ -5,7 +5,7 @@
 		- (control)`property-set`
 		- (source/area)`1 1 83 0`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`40`
+		- (coverage-counters)`0`
 Majority of tests here revolve around parameters. The other classes in (context-local/project-factor)&<fault.status/types[fault.status.types]>
 are mostly simple dataclasses only needing constructor and property sanity checks.
 
@@ -27,8 +27,6 @@ are mostly simple dataclasses only needing constructor and property sanity check
 	/element/
 		- (control)`property-set`
 		- (source/area)`7 1 44 23`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`18`
 (signature)`test_EStruct_constructors_v1(test)`
 
 - (context-local/factor-element)&<fault.status/types#EStruct.from_fields_v1[fault.status.types.EStruct.from_fields_v1]>
@@ -43,8 +41,6 @@ are mostly simple dataclasses only needing constructor and property sanity check
 	/element/
 		- (control)`property-set`
 		- (source/area)`46 1 54 74`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
 (signature)`test_EStruct_immutable(test)`
 
 Warning test; just a notification of unexpected behaviour.
@@ -57,8 +53,6 @@ Warning test; just a notification of unexpected behaviour.
 	/element/
 		- (control)`property-set`
 		- (source/area)`56 1 67 25`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
 (signature)`test_Frame_constructors_v1(test)`
 
 - (context-local/factor-element)&<fault.status/types#Frame.from_event_v1[fault.status.types.Frame.from_event_v1]>
@@ -73,8 +67,6 @@ Warning test; just a notification of unexpected behaviour.
 	/element/
 		- (control)`property-set`
 		- (source/area)`69 1 83 32`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`8`
 (signature)`test_string_constructor(test)`
 
 - (context-local/factor-element)&<fault.status/types#EStruct.from_string_v1[fault.status.types.EStruct.from_string_v1]>

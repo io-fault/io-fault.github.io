@@ -4,7 +4,7 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 867 0`
-		- (coverage-zeros)`90`
+		- (coverage-zeros)`87`
 		- (coverage-counters)`312`
 Process invocation and management interfaces.
 
@@ -511,7 +511,7 @@ Extension of SystemExit for use with interjections.
 	/element/
 		- (control)`property-set`
 		- (source/area)`225 1 340 37`
-		- (coverage-zeros)`2`
+		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
 ! INHERIT:
 	- (control)`property-set`
@@ -1184,7 +1184,7 @@ that rely on a set of threads to perform the actual work.
 	/element/
 		- (control)`property-set`
 		- (source/area)`677 1 721 26`
-		- (coverage-zeros)`12`
+		- (coverage-zeros)`10`
 		- (coverage-counters)`23`
 (signature)`control(main, *args, **kw)`
 
@@ -1217,7 +1217,7 @@ of a (factor-local/classmethod)&<#Fork.trap[Fork.trap]> call. (factor-local/clas
 	/element/
 		- (control)`property-set`
 		- (source/area)`735 1 795 30`
-		- (coverage-zeros)`2`
+		- (coverage-zeros)`3`
 		- (coverage-counters)`27`
 (signature)`concurrently(controller)`
 

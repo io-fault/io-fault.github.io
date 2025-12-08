@@ -3,7 +3,7 @@
 		module
 	/element/
 		- (control)`property-set`
-		- (source/area)`1 1 888 0`
+		- (source/area)`1 1 890 0`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`0`
 Terminal support for status displays.
@@ -1190,7 +1190,7 @@ Used after the completion of the dispatcher.
 		class
 	/element/
 		- (control)`property-set`
-		- (source/area)`630 1 759 80`
+		- (source/area)`630 1 761 80`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`630 15 630 20`
@@ -1223,7 +1223,7 @@ Construct the string representation of the given (invalid/unknown)&<#monitor'> s
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`642 2 647 30`
+		- (source/area)`642 2 648 30`
 (signature)`__init__(self, screen, fileno)`
 
 
@@ -1233,10 +1233,10 @@ Construct the string representation of the given (invalid/unknown)&<#monitor'> s
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`649 2 656 40`
+		- (source/area)`650 2 657 40`
 (signature)`install(self, monitor)`
 
-Erase, reframe, and update the given monitor..
+Erase, reframe, and update the given monitor.
 
 
 [ Monitor >> frame ]
@@ -1245,7 +1245,7 @@ Erase, reframe, and update the given monitor..
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`658 2 679 50`
+		- (source/area)`659 2 680 50`
 (signature)`frame(self, monitor)`
 
 Render and emit the prefix, title, and suffix of the (factor-local/parameter)&<#Monitor.frame.Parameters.monitor[monitor]>.
@@ -1259,7 +1259,7 @@ Operation is buffered and must be flushed to be displayed.
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`681 2 701 35`
+		- (source/area)`682 2 702 35`
 (signature)`update(self, monitor, fields)`
 
 Render and emit the given (factor-local/parameter)&<#Monitor.update.Parameters.fields[fields]>.
@@ -1273,7 +1273,7 @@ Operation is buffered and must be flushed to be displayed.
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`703 2 721 23`
+		- (source/area)`704 2 722 23`
 (signature)`flush(self)`
 
 Write any buffered terminal changes to the device.
@@ -1285,7 +1285,7 @@ Write any buffered terminal changes to the device.
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`723 2 728 42`
+		- (source/area)`724 2 729 42`
 (signature)`clear(self)`
 
 Clear the entire status regions.
@@ -1297,7 +1297,7 @@ Clear the entire status regions.
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`730 2 751 13`
+		- (source/area)`731 2 753 13`
 (signature)`configure(self, lines)`
 
 Configure the scrolling region allocating (factor-local/parameter)&<#Monitor.configure.Parameters.lines[lines]> at
@@ -1316,7 +1316,7 @@ also be reallocated so that their Context positions can be adjusted.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`753 2 756 32`
+		- (source/area)`755 2 758 32`
 (signature)`_save(self)`
 
 
@@ -1328,7 +1328,7 @@ also be reallocated so that their Context positions can be adjusted.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`758 2 759 80`
+		- (source/area)`760 2 761 80`
 (signature)`_restore(self)`
 
 
@@ -1340,7 +1340,7 @@ also be reallocated so that their Context positions can be adjusted.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`761 1 771 1`
+		- (source/area)`763 1 773 1`
 #!source
 	_metric_units = [
 		('', '', 0),
@@ -1362,7 +1362,7 @@ also be reallocated so that their Context positions can be adjusted.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`773 1 779 10`
+		- (source/area)`775 1 781 10`
 (signature)`_precision(count)`
 
 
@@ -1374,7 +1374,7 @@ also be reallocated so that their Context positions can be adjusted.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`781 1 784 31`
+		- (source/area)`783 1 786 31`
 (signature)`_strings(value)`
 
 
@@ -1384,7 +1384,7 @@ also be reallocated so that their Context positions can be adjusted.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`786 1 804 2`
+		- (source/area)`788 1 806 2`
 (signature)`r_count(field, value)`
 
 Render method for counts providing compression using metric units.
@@ -1396,7 +1396,7 @@ Render method for counts providing compression using metric units.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`806 1 815 22`
+		- (source/area)`808 1 817 22`
 (signature)`r_title(value)`
 
 Render method for monitor titles.
@@ -1408,7 +1408,7 @@ Render method for monitor titles.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`817 1 840 42`
+		- (source/area)`819 1 842 42`
 (signature)`form(module)`
 
 Construct a (factor-local/class)&<#Layout[Layout]> and (factor-local/class)&<#Theme[Theme]> from the provided order and formatting structures.
@@ -1420,7 +1420,7 @@ Construct a (factor-local/class)&<#Layout[Layout]> and (factor-local/class)&<#Th
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`842 1 857 12`
+		- (source/area)`844 1 859 12`
 (signature)`identify_device()`
 
 Use the first three file descriptors to determine the
@@ -1436,7 +1436,7 @@ return the given (factor-local/parameter)&<#identify_device.Parameters.path[path
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`859 1 864 9`
+		- (source/area)`861 1 866 9`
 (signature)`setup()`
 
 
@@ -1446,7 +1446,7 @@ return the given (factor-local/parameter)&<#identify_device.Parameters.path[path
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`866 1 888 20`
+		- (source/area)`868 1 890 20`
 (signature)`aggregate(control, module)`
 
 Construct (factor-local/class)&<#Status[Status]> instances allocated using (factor-local/parameter)&<#aggregate.Parameters.control[control]> for

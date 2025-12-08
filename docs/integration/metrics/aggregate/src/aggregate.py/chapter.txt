@@ -82,7 +82,7 @@ Process the content of the work directory in conjunction with telemetry data.
 		- (control)`property-set`
 		- (source/area)`14 1 14 30`
 #!source
-	first = operator.itemgetter(0)
+	from . import coverage
 
 [ integrate_test_reports ]
 ! CONTROL:
