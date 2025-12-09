@@ -3,9 +3,9 @@
 		unit
 	/element/
 		- (control)`property-set`
-		- (source/area)``
-		- (coverage-zeros)`157`
-		- (coverage-counters)`169`
+		- (source/area)`1 1 571 0`
+		- (coverage-zeros)`57`
+		- (coverage-counters)`144`
 
 [ INITIAL_TASKS_ALLOCATED ]
 ! CONTROL:
@@ -112,6 +112,8 @@ ev_type is ignored here as the subevent set is determined by kernelq_identify.
 	/element/
 		- (control)`property-set`
 		- (source/area)`117 1 233 1`
+		- (coverage-zeros)`27`
+		- (coverage-counters)`45`
 		- (type/syntax)`int`
 		
 (signature)`kernelq_identify(kev, evs)`
@@ -126,6 +128,8 @@ Interpret event_t for use with a kqueue filter.
 	/element/
 		- (control)`property-set`
 		- (source/area)`238 1 247 1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 		- (type/syntax)`int`
 		
 (signature)`kernelq_interrupt(kq)`
@@ -140,6 +144,8 @@ Called by (project-local/unknown)&<kernel#Scheduler.interrupt[kernel.Scheduler.i
 	/element/
 		- (control)`property-set`
 		- (source/area)`252 1 256 1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 		- (type/syntax)`int`
 		
 (signature)`kernelq_interrupt_accept(kq)`
@@ -156,6 +162,8 @@ Nothing to do for kqueue.
 	/element/
 		- (control)`property-set`
 		- (source/area)`258 1 267 1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 		- (type/syntax)`int`
 		
 (signature)`kernelq_interrupt_setup(kq)`
@@ -170,6 +178,8 @@ Nothing to do for kqueue.
 	/element/
 		- (control)`property-set`
 		- (source/area)`269 1 322 1`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`5`
 		- (type/syntax)`void`
 		
 (signature)`kevent_set_timer(kev, ns)`
@@ -182,6 +192,8 @@ Nothing to do for kqueue.
 	/element/
 		- (control)`property-set`
 		- (source/area)`327 1 404 1`
+		- (coverage-zeros)`11`
+		- (coverage-counters)`38`
 		- (type/syntax)`int`
 		
 (signature)`kernelq_schedule(kq, cyclic, ln)`
@@ -198,6 +210,8 @@ Establish the link with the kernel event.
 	/element/
 		- (control)`property-set`
 		- (source/area)`410 1 422 1`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`5`
 		- (type/syntax)`int`
 		
 (signature)`kernelq_default_flags(kq)`
@@ -212,6 +226,8 @@ Establish the link with the kernel event.
 	/element/
 		- (control)`property-set`
 		- (source/area)`424 1 465 1`
+		- (coverage-zeros)`7`
+		- (coverage-counters)`20`
 		- (type/syntax)`int`
 		
 (signature)`kernelq_initialize(kq)`
@@ -234,6 +250,8 @@ Establish the link with the kernel event.
 	/element/
 		- (control)`property-set`
 		- (source/area)`474 1 485 1`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`7`
 		- (type/syntax)`int`
 		
 (signature)`kernelq_close(kq)`
@@ -253,6 +271,8 @@ Negative one if `errno` was set.
 	/element/
 		- (control)`property-set`
 		- (source/area)`491 1 532 1`
+		- (coverage-zeros)`6`
+		- (coverage-counters)`16`
 		- (type/syntax)`int`
 		
 (signature)`kernelq_receive(kq, seconds, ns)`

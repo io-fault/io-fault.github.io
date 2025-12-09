@@ -3,9 +3,9 @@
 		unit
 	/element/
 		- (control)`property-set`
-		- (source/area)``
-		- (coverage-zeros)`104`
-		- (coverage-counters)`104`
+		- (source/area)`1 1 257 0`
+		- (coverage-zeros)`107`
+		- (coverage-counters)`118`
 
 [ _SYSTEM_KERNEL_EVENT_H_included_ ]
 ! CONTROL:
@@ -411,6 +411,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`68 1 83 1`
+		- (coverage-zeros)`8`
+		- (coverage-counters)`8`
 		- (type/syntax)`const char *`
 		
 (signature)`ev_type_name(etyp)`
@@ -425,6 +427,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`85 1 170 1`
+		- (coverage-zeros)`58`
+		- (coverage-counters)`58`
 		- (type/syntax)`enum EventType`
 		
 (signature)`ev_type_code(n)`
@@ -449,6 +453,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`172 1 172 41`
+		- (type/syntax)`struct EventSpecification`
+		
 (signature)`event_t()`
 
 
@@ -665,6 +671,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`250 1 250 27`
+		- (type/syntax)`struct Event *`
+		
 (signature)`Event()`
 
 

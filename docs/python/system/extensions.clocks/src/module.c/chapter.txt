@@ -3,9 +3,9 @@
 		unit
 	/element/
 		- (control)`property-set`
-		- (source/area)``
-		- (coverage-zeros)`73`
-		- (coverage-counters)`73`
+		- (source/area)`1 1 260 0`
+		- (coverage-zeros)`65`
+		- (coverage-counters)`65`
 
 [ ClockType ]
 ! CONTROL:
@@ -93,6 +93,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`21 2 34 2`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 		- (type/syntax)`unsigned long long`
 		
 (signature)`clockwork_get_positive_adjustment(cw)`
@@ -117,6 +119,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`37 1 53 1`
+		- (coverage-zeros)`5`
+		- (coverage-counters)`5`
 		- (type/syntax)`PyObj`
 		
 (signature)`clockwork_set(self, args)`
@@ -141,6 +145,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`55 1 62 1`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 		- (type/syntax)`PyObj`
 		
 (signature)`clockwork_get(self)`
@@ -155,6 +161,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`64 1 74 1`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 		- (type/syntax)`PyObj`
 		
 (signature)`clockwork_snapshot(self)`
@@ -179,6 +187,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`76 1 88 1`
+		- (coverage-zeros)`5`
+		- (coverage-counters)`5`
 		- (type/syntax)`PyObj`
 		
 (signature)`clockwork_adjust(self, args)`
@@ -193,6 +203,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`90 1 110 1`
+		- (coverage-zeros)`11`
+		- (coverage-counters)`11`
 		- (type/syntax)`PyObj`
 		
 (signature)`clockwork_new(subtype, args, kw)`
@@ -207,6 +219,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`185 1 204 1`
+		- (coverage-zeros)`12`
+		- (coverage-counters)`12`
 		- (type/syntax)`PyObj`
 		
 (signature)`Real_new(subtype, args, kw)`
@@ -221,6 +235,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`206 1 225 1`
+		- (coverage-zeros)`12`
+		- (coverage-counters)`12`
 		- (type/syntax)`PyObj`
 		
 (signature)`Monotonic_new(subtype, args, kw)`

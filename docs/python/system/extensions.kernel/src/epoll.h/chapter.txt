@@ -3,7 +3,7 @@
 		unit
 	/element/
 		- (control)`property-set`
-		- (source/area)``
+		- (source/area)`1 1 29 0`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`0`
 
@@ -134,5 +134,7 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`28 1 28 35`
+		- (type/syntax)`struct epoll_event`
+		
 (signature)`kevent_t()`
 

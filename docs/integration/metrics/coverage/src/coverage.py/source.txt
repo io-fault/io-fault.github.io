@@ -62,9 +62,11 @@ def integrate_dcounters(index, fsc, dcounters):
 		for line in dcounters:
 			if line[:1] == '@':
 				# Change file.
+				src.write(f"{isolation} {counters} {srcfile}\n")
 				srcfile = line[1:].strip()
 			elif line[:1] == '&':
 				# Change isolation
+				src.write(f"{isolation} {counters} {srcfile}\n")
 				isolation = line[1:].strip()
 			else:
 				ln, co, count = map(int, line.split())
@@ -78,8 +80,8 @@ def integrate_dcounters(index, fsc, dcounters):
 				counts.write(str(count) + '\n')
 				continue
 
-			# When switching the file or isolation, flush the count.
-			src.write(f"{isolation} {counters} {srcfile}\n")
+			# Increments reset when isolation or file is changed.
+			counters = 0
 
 def factor_records(root):
 	"""
@@ -197,6 +199,7 @@ def load_metrics_aggregates(path):
 		for k in areas:
 			areas[k] = list(map(structure_area, areas[k]))
 
+	# Load and restructure the covered areas as an Area of Address pairs.
 	with acounts.fs_open('r') as f:
 		gcounts = json.load(f)
 		for fn in gcounts:
@@ -213,6 +216,9 @@ def descend(mapping, current, elements):
 	for er in elements:
 		typ, sub, d = er
 		eid = d.get('identifier') or None
+
+		if 'area' not in d:
+			continue
 
 		if eid is not None and sub and not typ == 'parameter':
 			area = Area(map(Address, d['area']))

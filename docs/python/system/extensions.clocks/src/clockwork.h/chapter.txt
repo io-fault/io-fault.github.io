@@ -3,9 +3,9 @@
 		unit
 	/element/
 		- (control)`property-set`
-		- (source/area)``
+		- (source/area)`1 1 33 0`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`0`
+		- (coverage-counters)`3`
 
 [ LOCAL_MONOTONIC_CLOCK_ID ]
 ! CONTROL:
@@ -96,6 +96,8 @@ System Clock basetype providing offset control.
 	/element/
 		- (control)`property-set`
 		- (source/area)`31 1 31 35`
+		- (type/syntax)`struct Clockwork *`
+		
 (signature)`Clockwork()`
 
 System Clock basetype providing offset control.

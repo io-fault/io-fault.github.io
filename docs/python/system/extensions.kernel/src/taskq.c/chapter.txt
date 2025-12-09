@@ -3,9 +3,9 @@
 		unit
 	/element/
 		- (control)`property-set`
-		- (source/area)``
-		- (coverage-zeros)`144`
-		- (coverage-counters)`144`
+		- (source/area)`1 1 375 0`
+		- (coverage-zeros)`44`
+		- (coverage-counters)`124`
 
 [ INITIAL_TASK_COUNT ]
 ! CONTROL:
@@ -136,6 +136,8 @@ Append a memory allocation to the task queue.
 	/element/
 		- (control)`property-set`
 		- (source/area)`67 1 77 1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 		- (type/syntax)`int`
 		
 (signature)`taskq_insert(tq, callable)`
@@ -151,6 +153,8 @@ Presume available space.
 	/element/
 		- (control)`property-set`
 		- (source/area)`82 1 98 1`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`5`
 		- (type/syntax)`int`
 		
 (signature)`taskq_enqueue(tq, callable)`
@@ -165,6 +169,8 @@ High-level append.
 	/element/
 		- (control)`property-set`
 		- (source/area)`104 1 160 1`
+		- (coverage-zeros)`26`
+		- (coverage-counters)`26`
 		- (type/syntax)`void`
 		
 (signature)`trap_execution_error(errctl, errctx, task)`
@@ -180,6 +186,8 @@ when it or other critical operations fail.
 	/element/
 		- (control)`property-set`
 		- (source/area)`165 1 189 1`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`7`
 		- (type/syntax)`int`
 		
 (signature)`taskq_continue(tq)`
@@ -196,6 +204,8 @@ Pop segments from (invalid/unknown)&<#TaskQueue.q_executing>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`191 1 202 1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 		- (type/syntax)`int`
 		
 (signature)`taskq_cycle(tq)`
@@ -208,6 +218,8 @@ Pop segments from (invalid/unknown)&<#TaskQueue.q_executing>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`208 1 249 1`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`18`
 		- (type/syntax)`int`
 		
 (signature)`taskq_execute(tq, errctl, errctx)`
@@ -223,6 +235,8 @@ and rotate (invalid/unknown)&<#TaskQueue.q_loading> for the next cycle.
 	/element/
 		- (control)`property-set`
 		- (source/area)`254 1 306 1`
+		- (coverage-zeros)`4`
+		- (coverage-counters)`20`
 		- (type/syntax)`void`
 		
 (signature)`taskq_clear(tq)`
@@ -237,6 +251,8 @@ Release all objects held by the queue.
 	/element/
 		- (control)`property-set`
 		- (source/area)`311 1 343 1`
+		- (coverage-zeros)`6`
+		- (coverage-counters)`23`
 		- (type/syntax)`int`
 		
 (signature)`taskq_traverse(tq, visit, arg)`
@@ -251,6 +267,8 @@ Container traversal for GC support.
 	/element/
 		- (control)`property-set`
 		- (source/area)`348 1 374 1`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`11`
 		- (type/syntax)`int`
 		
 (signature)`taskq_initialize(tq)`

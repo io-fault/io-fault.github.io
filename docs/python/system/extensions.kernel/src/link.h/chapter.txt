@@ -3,9 +3,9 @@
 		unit
 	/element/
 		- (control)`property-set`
-		- (source/area)``
+		- (source/area)`1 1 55 0`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`0`
+		- (coverage-counters)`5`
 
 [ _SYSTEM_KERNEL_LINK_H_included_ ]
 ! CONTROL:
@@ -197,6 +197,8 @@ The set of control flags used to identify the Link's state.
 	/element/
 		- (control)`property-set`
 		- (source/area)`42 1 42 25`
+		- (type/syntax)`struct Link *`
+		
 (signature)`Link()`
 
 

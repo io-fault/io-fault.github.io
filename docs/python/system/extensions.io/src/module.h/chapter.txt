@@ -3,9 +3,9 @@
 		unit
 	/element/
 		- (control)`property-set`
-		- (source/area)``
+		- (source/area)`1 1 32 0`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`0`
+		- (coverage-counters)`8`
 
 [ channeltype ]
 ! CONTROL:
@@ -146,6 +146,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`22 2 22 32`
+		- (type/syntax)`struct Channel *`
+		
 (signature)`Channel()`
 
 
@@ -168,6 +170,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`23 2 23 36`
+		- (type/syntax)`struct Datagrams *`
+		
 (signature)`Datagrams()`
 
 
@@ -190,5 +194,7 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`24 2 24 28`
+		- (type/syntax)`struct Array *`
+		
 (signature)`Array()`
 

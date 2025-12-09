@@ -30,9 +30,10 @@ def main(inv:process.Invocation) -> process.Exit:
 
 		# Build (source) system path to delineated image source directory.
 		# Used to simplify splitting the regions file if any.
-		spm[di.pop('system-path').fs_load().decode('utf-8')] = (target + urpath)
+		syspath = di['system-path'].fs_load()
+		spm[syspath.decode('utf-8')] = (target + urpath)
 
-		for k in ['areas', 'sources']:
+		for k in ['system-path', 'areas', 'sources']:
 			if k in di:
 				f = di.pop(k)
 				(target + f.segment(root)).fs_store(f.fs_load())
@@ -46,7 +47,7 @@ def main(inv:process.Invocation) -> process.Exit:
 			(target + rpath).fs_store(b)
 
 	# Iterate over the coverage tools and extract the coverage region data.
-	fd = os.open(target/'.regions', os.O_WRONLY|os.O_CREAT|os.O_APPEND)
+	fd = os.open(target/'.regions', os.O_WRONLY|os.O_CREAT)
 	for mapper in (cc/'.coverage-tools').fs_iterfiles():
 		exepath = str(mapper)
 		ki = execution.KInvocation(exepath, [exepath, "regions", "arm64", str(executable)])
@@ -54,40 +55,42 @@ def main(inv:process.Invocation) -> process.Exit:
 		status = os.waitpid(pid, 0)
 	os.close(fd)
 
-	if (target/'.regions').fs_type() == 'data':
-		# Split region data into areas and sources.
-		areas = {fp: set() for fp in spm}
-		with open(target/'.regions', 'r') as f:
-			level_str = level = None
-			fn = None
-			fp = None
-			for line in f.readlines():
-				if not line or line[:1] == '@':
-					fn = line[1:]
-				elif ':/' in line:
-					# Switch path.
-					level_str, fp = line.split(':', 1)
-					level = int(level_str)
+	# Split region data into areas and sources.
+	areas = {fp: set() for fp in spm}
+	with open(target/'.regions', 'r') as f:
+		level_str = level = None
+		fn = None
+		fp = None
+		for line in f.readlines():
+			if not line or line[:1] == '@':
+				fn = line[1:]
+			elif line.lstrip('0123456789')[:1] == ':':
+				# Switch path.
+				level_str, fp = line.split(':', 1)
+				level = int(level_str)
+				fp = fp.strip()
+			else:
+				try:
+					ln, co, eln, eco, typ = line.split(maxsplit=5)
+				except ValueError:
+					pass
 				else:
-					try:
-						ln, co, eln, eco, typ, *_ = line.split()
-					except ValueError:
-						pass
-					else:
-						if typ == '+' and fp in areas:
-							areas[fp].add((int(ln), int(co), int(eln), int(eco)))
+					last_area = (int(ln), int(co), int(eln), int(eco))
+					if typ[:1] == '+' and fp in areas:
+						areas[fp].add(last_area)
 
-		# Write areas and sources for all the source files.
-		for fp, area_set in areas.items():
-			rpath = spm[fp]
-			# Ordered.
-			areas = list(area_set)
-			areas.sort()
+	# Write areas and sources for all the source files.
+	for fp, area_set in areas.items():
+		rpath = spm[fp]
+		# Ordered.
+		src_areas = list(area_set)
+		src_areas.sort()
+		area_count = len(src_areas)
 
-			with (rpath/'areas').fs_open('w') as f:
-				f.writelines(" ".join(map(str, x)) + '\n' for x in areas)
-			with (rpath/'sources').fs_open('w') as f:
-				f.write(str(len(areas)) + " " + fp + '\n')
+		with (rpath/'areas').fs_open('w') as f:
+			f.writelines(" ".join(map(str, x)) + '\n' for x in src_areas)
+		with (rpath/'sources').fs_open('w') as f:
+			f.write(str(area_count) + " " + fp + '\n')
 
 	return inv.exit(0)
 

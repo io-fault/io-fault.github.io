@@ -3,9 +3,9 @@
 		unit
 	/element/
 		- (control)`property-set`
-		- (source/area)``
-		- (coverage-zeros)`465`
-		- (coverage-counters)`645`
+		- (source/area)`1 1 1132 0`
+		- (coverage-zeros)`482`
+		- (coverage-counters)`665`
 
 [ errpf ]
 ! CONTROL:
@@ -112,6 +112,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`53 1 60 1`
+		- (coverage-zeros)`11`
+		- (coverage-counters)`11`
 		- (type/syntax)`int`
 		
 (signature)`socket_receive_buffer(kp)`
@@ -126,6 +128,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`62 1 69 1`
+		- (coverage-zeros)`6`
+		- (coverage-counters)`6`
 		- (type/syntax)`int`
 		
 (signature)`socket_send_buffer(kp)`
@@ -140,6 +144,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`71 1 97 1`
+		- (coverage-zeros)`35`
+		- (coverage-counters)`43`
 		- (type/syntax)`ktype_t`
 		
 (signature)`map_st_mode(mode)`
@@ -154,6 +160,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`99 1 131 1`
+		- (coverage-zeros)`24`
+		- (coverage-counters)`27`
 		- (type/syntax)`int`
 		
 (signature)`port_identify_type(p)`
@@ -178,6 +186,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`133 1 164 1`
+		- (coverage-zeros)`31`
+		- (coverage-counters)`31`
 		- (type/syntax)`int`
 		
 (signature)`port_getpeername(p, addr, addrlen)`
@@ -192,6 +202,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`166 1 197 1`
+		- (coverage-zeros)`31`
+		- (coverage-counters)`31`
 		- (type/syntax)`int`
 		
 (signature)`port_getsockname(p, addr, addrlen)`
@@ -206,6 +218,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`199 1 231 1`
+		- (coverage-zeros)`30`
+		- (coverage-counters)`34`
 		- (type/syntax)`int`
 		
 (signature)`port_set_socket_option(p, option, setting)`
@@ -220,6 +234,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`321 1 365 1`
+		- (coverage-zeros)`34`
+		- (coverage-counters)`42`
 		- (type/syntax)`int`
 		
 (signature)`port_kqueue(p)`
@@ -234,6 +250,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`367 1 425 1`
+		- (coverage-zeros)`33`
+		- (coverage-counters)`47`
 		- (type/syntax)`int`
 		
 (signature)`port_kevent(p, retry, out, changes, nchanges, events, nevents, timeout)`
@@ -248,6 +266,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`429 1 454 1`
+		- (coverage-zeros)`22`
+		- (coverage-counters)`22`
 		- (type/syntax)`int`
 		
 (signature)`port_listen(p, backlog)`
@@ -260,6 +280,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`460 1 499 1`
+		- (coverage-zeros)`9`
+		- (coverage-counters)`14`
 		- (type/syntax)`void`
 		
 (signature)`init_socket(kp)`
@@ -277,6 +299,8 @@ XXX: socket option warnings may be useful.
 	/element/
 		- (control)`property-set`
 		- (source/area)`501 1 521 1`
+		- (coverage-zeros)`7`
+		- (coverage-counters)`7`
 		- (type/syntax)`void`
 		
 (signature)`init_listening_socket(kp)`
@@ -291,6 +315,8 @@ XXX: socket option warnings may be useful.
 	/element/
 		- (control)`property-set`
 		- (source/area)`523 1 529 1`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`4`
 		- (type/syntax)`int`
 		
 (signature)`port_init_socket(p)`
@@ -305,6 +331,8 @@ XXX: socket option warnings may be useful.
 	/element/
 		- (control)`property-set`
 		- (source/area)`531 1 537 1`
+		- (coverage-zeros)`4`
+		- (coverage-counters)`4`
 		- (type/syntax)`int`
 		
 (signature)`port_init_listening_socket(p)`
@@ -319,6 +347,8 @@ XXX: socket option warnings may be useful.
 	/element/
 		- (control)`property-set`
 		- (source/area)`570 1 595 1`
+		- (coverage-zeros)`10`
+		- (coverage-counters)`14`
 		- (type/syntax)`int`
 		
 (signature)`port_noblocking(p)`
@@ -331,6 +361,8 @@ XXX: socket option warnings may be useful.
 	/element/
 		- (control)`property-set`
 		- (source/area)`611 1 764 1`
+		- (coverage-zeros)`20`
+		- (coverage-counters)`55`
 		- (type/syntax)`void`
 		
 (signature)`port_unlatch(p, times)`
@@ -348,6 +380,8 @@ Manages the reference counts and the effect of the close.
 	/element/
 		- (control)`property-set`
 		- (source/area)`767 1 843 1`
+		- (coverage-zeros)`16`
+		- (coverage-counters)`35`
 		- (type/syntax)`io_status_t`
 		
 (signature)`port_input_octets(p, consumed, buf, size)`
@@ -362,6 +396,8 @@ Manages the reference counts and the effect of the close.
 	/element/
 		- (control)`property-set`
 		- (source/area)`845 1 916 1`
+		- (coverage-zeros)`16`
+		- (coverage-counters)`32`
 		- (type/syntax)`io_status_t`
 		
 (signature)`port_output_octets(p, consumed, buf, size)`
@@ -376,6 +412,8 @@ Manages the reference counts and the effect of the close.
 	/element/
 		- (control)`property-set`
 		- (source/area)`918 1 983 1`
+		- (coverage-zeros)`10`
+		- (coverage-counters)`25`
 		- (type/syntax)`io_status_t`
 		
 (signature)`port_input_datagrams(p, consumed, dg, quantity)`
@@ -390,6 +428,8 @@ Manages the reference counts and the effect of the close.
 	/element/
 		- (control)`property-set`
 		- (source/area)`985 1 1050 1`
+		- (coverage-zeros)`16`
+		- (coverage-counters)`27`
 		- (type/syntax)`io_status_t`
 		
 (signature)`port_output_datagrams(p, consumed, dg, quantity)`
@@ -404,6 +444,8 @@ Manages the reference counts and the effect of the close.
 	/element/
 		- (control)`property-set`
 		- (source/area)`1061 1 1086 1`
+		- (coverage-zeros)`4`
+		- (coverage-counters)`18`
 		- (type/syntax)`int`
 		
 (signature)`ports_identify_socket(p)`
@@ -418,6 +460,8 @@ Manages the reference counts and the effect of the close.
 	/element/
 		- (control)`property-set`
 		- (source/area)`1088 1 1107 1`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`11`
 		- (type/syntax)`int`
 		
 (signature)`ports_identify_input(p)`
@@ -432,6 +476,8 @@ Manages the reference counts and the effect of the close.
 	/element/
 		- (control)`property-set`
 		- (source/area)`1109 1 1131 1`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`14`
 		- (type/syntax)`int`
 		
 (signature)`ports_identify_output(p)`

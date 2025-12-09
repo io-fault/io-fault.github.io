@@ -3,9 +3,9 @@
 		unit
 	/element/
 		- (control)`property-set`
-		- (source/area)``
-		- (coverage-zeros)`0`
-		- (coverage-counters)`0`
+		- (source/area)`1 1 45 0`
+		- (coverage-zeros)`15`
+		- (coverage-counters)`15`
 
 [ DatagramHeaderSize ]
 ! CONTROL:

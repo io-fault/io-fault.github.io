@@ -3,9 +3,9 @@
 		unit
 	/element/
 		- (control)`property-set`
-		- (source/area)``
+		- (source/area)`1 1 55 0`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`0`
+		- (coverage-counters)`2`
 
 [ CONFIG_STATIC_KEVENTS ]
 ! CONTROL:

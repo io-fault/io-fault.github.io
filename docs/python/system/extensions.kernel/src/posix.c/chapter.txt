@@ -3,9 +3,9 @@
 		unit
 	/element/
 		- (control)`property-set`
-		- (source/area)``
-		- (coverage-zeros)`146`
-		- (coverage-counters)`146`
+		- (source/area)`1 1 350 0`
+		- (coverage-zeros)`124`
+		- (coverage-counters)`145`
 
 [ POSIX_SYSCALL ]
 ! CONTROL:
@@ -198,6 +198,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`46 1 83 1`
+		- (coverage-zeros)`13`
+		- (coverage-counters)`13`
 		- (type/syntax)`struct cmsghdr *`
 		
 (signature)`_init_kp_message(m, buf, bufsize)`
@@ -212,6 +214,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`85 1 109 1`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`10`
 		- (type/syntax)`int`
 		
 (signature)`kp_chfd(kp, op, delta)`
@@ -226,6 +230,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`111 1 135 1`
+		- (coverage-zeros)`10`
+		- (coverage-counters)`10`
 		- (type/syntax)`int`
 		
 (signature)`kp_chfl(kp, op, delta)`
@@ -240,6 +246,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`137 1 177 1`
+		- (coverage-zeros)`20`
+		- (coverage-counters)`20`
 		- (type/syntax)`int`
 		
 (signature)`kp_receive(kp, buf, size)`
@@ -254,6 +262,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`179 1 215 1`
+		- (coverage-zeros)`19`
+		- (coverage-counters)`19`
 		- (type/syntax)`int`
 		
 (signature)`kp_transmit(kp, buf, size)`
@@ -266,6 +276,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`220 1 262 1`
+		- (coverage-zeros)`9`
+		- (coverage-counters)`21`
 		- (type/syntax)`int`
 		
 (signature)`kp_accept(kp, buf, size)`
@@ -280,6 +292,8 @@ Regular socket accept from listening sockets.
 	/element/
 		- (control)`property-set`
 		- (source/area)`267 1 293 1`
+		- (coverage-zeros)`14`
+		- (coverage-counters)`14`
 		- (type/syntax)`int`
 		
 (signature)`kp_alloc_meta(kp, buf, size)`
@@ -296,6 +310,8 @@ Allocate kport_t pairs capable of transmitting and receiving other kernel ports.
 	/element/
 		- (control)`property-set`
 		- (source/area)`295 1 321 1`
+		- (coverage-zeros)`14`
+		- (coverage-counters)`14`
 		- (type/syntax)`int`
 		
 (signature)`kp_alloc_bidirectional(kp, buf, size)`
@@ -310,6 +326,8 @@ Allocate kport_t pairs capable of transmitting and receiving other kernel ports.
 	/element/
 		- (control)`property-set`
 		- (source/area)`323 1 349 1`
+		- (coverage-zeros)`14`
+		- (coverage-counters)`14`
 		- (type/syntax)`int`
 		
 (signature)`kp_alloc_unidirectional(kp, buf, size)`

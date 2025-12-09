@@ -3,9 +3,9 @@
 		unit
 	/element/
 		- (control)`property-set`
-		- (source/area)``
-		- (coverage-zeros)`401`
-		- (coverage-counters)`401`
+		- (source/area)`1 1 1067 0`
+		- (coverage-zeros)`145`
+		- (coverage-counters)`340`
 
 [ interpret_native_integer ]
 ! CONTROL:
@@ -235,6 +235,8 @@ Identify the socket type code that is being referred to by the given string, (fa
 	/element/
 		- (control)`property-set`
 		- (source/area)`137 1 178 1`
+		- (coverage-zeros)`5`
+		- (coverage-counters)`22`
 		- (type/syntax)`int`
 		
 (signature)`interpret_transport(ob, out)`
@@ -259,6 +261,8 @@ Identify the socket type code that is being referred to by the given string, (fa
 	/element/
 		- (control)`property-set`
 		- (source/area)`180 1 210 1`
+		- (coverage-zeros)`4`
+		- (coverage-counters)`18`
 		- (type/syntax)`int`
 		
 (signature)`interpret_type(ob, out)`
@@ -301,6 +305,8 @@ Identify the socket type code that is being referred to by the given string, (fa
 	/element/
 		- (control)`property-set`
 		- (source/area)`262 1 277 1`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`10`
 		- (type/syntax)`aport_kind_t`
 		
 (signature)`get_port(ss, dst, dstlen)`
@@ -313,6 +319,8 @@ Identify the socket type code that is being referred to by the given string, (fa
 	/element/
 		- (control)`property-set`
 		- (source/area)`296 1 309 1`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`8`
 		- (type/syntax)`void`
 		
 (signature)`get_address(ss, dst, dstlen)`
@@ -365,6 +373,8 @@ ParseTuple converter for IPv4 addresses.
 	/element/
 		- (control)`property-set`
 		- (source/area)`371 1 425 1`
+		- (coverage-zeros)`5`
+		- (coverage-counters)`24`
 		- (type/syntax)`int`
 		
 (signature)`ip6_from_object(ob, out)`
@@ -381,6 +391,8 @@ ParseTuple converter for IPv6 addresses.
 	/element/
 		- (control)`property-set`
 		- (source/area)`427 1 436 1`
+		- (coverage-zeros)`6`
+		- (coverage-counters)`6`
 		- (type/syntax)`int`
 		
 (signature)`local_port_index(buf)`
@@ -395,6 +407,8 @@ ParseTuple converter for IPv6 addresses.
 	/element/
 		- (control)`property-set`
 		- (source/area)`438 1 455 1`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`10`
 		- (type/syntax)`void`
 		
 (signature)`local_str(dst, dstsize, addr)`
@@ -409,6 +423,8 @@ ParseTuple converter for IPv6 addresses.
 	/element/
 		- (control)`property-set`
 		- (source/area)`457 1 474 1`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`10`
 		- (type/syntax)`void`
 		
 (signature)`local_port(port, dstsize, addr)`
@@ -421,6 +437,8 @@ ParseTuple converter for IPv6 addresses.
 	/element/
 		- (control)`property-set`
 		- (source/area)`479 1 533 1`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`27`
 		- (type/syntax)`int`
 		
 (signature)`local_from_object(ob, out)`
@@ -437,6 +455,8 @@ ParseTuple converter for local file system sockets.
 	/element/
 		- (control)`property-set`
 		- (source/area)`535 1 556 1`
+		- (coverage-zeros)`7`
+		- (coverage-counters)`7`
 		- (type/syntax)`PyObj`
 		
 (signature)`endpoint_copy(endpoint)`
@@ -451,6 +471,8 @@ ParseTuple converter for local file system sockets.
 	/element/
 		- (control)`property-set`
 		- (source/area)`558 1 686 1`
+		- (coverage-zeros)`70`
+		- (coverage-counters)`70`
 		- (type/syntax)`PyObj`
 		
 (signature)`endpoint_replace(self, args, kw)`
@@ -465,6 +487,8 @@ ParseTuple converter for local file system sockets.
 	/element/
 		- (control)`property-set`
 		- (source/area)`707 1 712 1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 		- (type/syntax)`PyObj`
 		
 (signature)`endpoint_get_protocol_family(self, _)`
@@ -479,6 +503,8 @@ ParseTuple converter for local file system sockets.
 	/element/
 		- (control)`property-set`
 		- (source/area)`714 1 731 1`
+		- (coverage-zeros)`4`
+		- (coverage-counters)`10`
 		- (type/syntax)`PyObj`
 		
 (signature)`endpoint_get_address_type(self, _)`
@@ -493,6 +519,8 @@ ParseTuple converter for local file system sockets.
 	/element/
 		- (control)`property-set`
 		- (source/area)`733 1 741 1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 		- (type/syntax)`PyObj`
 		
 (signature)`endpoint_get_address(self, _)`
@@ -507,6 +535,8 @@ ParseTuple converter for local file system sockets.
 	/element/
 		- (control)`property-set`
 		- (source/area)`743 1 765 1`
+		- (coverage-zeros)`5`
+		- (coverage-counters)`8`
 		- (type/syntax)`PyObj`
 		
 (signature)`endpoint_get_port(self, _)`
@@ -521,6 +551,8 @@ ParseTuple converter for local file system sockets.
 	/element/
 		- (control)`property-set`
 		- (source/area)`767 1 794 1`
+		- (coverage-zeros)`6`
+		- (coverage-counters)`6`
 		- (type/syntax)`PyObj`
 		
 (signature)`endpoint_get_pair(self, _)`
@@ -535,6 +567,8 @@ ParseTuple converter for local file system sockets.
 	/element/
 		- (control)`property-set`
 		- (source/area)`812 1 859 1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`17`
 		- (type/syntax)`PyObj`
 		
 (signature)`endpoint_richcompare(self, x, op)`
@@ -547,6 +581,8 @@ ParseTuple converter for local file system sockets.
 	/element/
 		- (control)`property-set`
 		- (source/area)`864 1 892 1`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`6`
 		- (type/syntax)`PyObj`
 		
 (signature)`endpoint_str(self)`
@@ -563,6 +599,8 @@ String representation suitable for text based displays.
 	/element/
 		- (control)`property-set`
 		- (source/area)`894 1 922 1`
+		- (coverage-zeros)`6`
+		- (coverage-counters)`6`
 		- (type/syntax)`PyObj`
 		
 (signature)`endpoint_repr(self)`
@@ -577,6 +615,8 @@ String representation suitable for text based displays.
 	/element/
 		- (control)`property-set`
 		- (source/area)`984 1 1009 1`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`10`
 		- (type/syntax)`Endpoint`
 		
 (signature)`endpoint_create(type, transport, addr, addrlen)`
@@ -591,6 +631,8 @@ String representation suitable for text based displays.
 	/element/
 		- (control)`property-set`
 		- (source/area)`1011 1 1050 1`
+		- (coverage-zeros)`5`
+		- (coverage-counters)`34`
 		- (type/syntax)`PyObj`
 		
 (signature)`endpoint_new(subtype, args, kw)`

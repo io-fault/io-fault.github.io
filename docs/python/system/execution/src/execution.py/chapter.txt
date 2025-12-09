@@ -4,7 +4,7 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 772 0`
-		- (coverage-zeros)`97`
+		- (coverage-zeros)`92`
 		- (coverage-counters)`336`
 System process execution interfaces and
 process global registry for controlling the composition of (factor-local/data)&<#Specification[Specification]> for system process execution.
@@ -545,7 +545,7 @@ and can only be used with child processes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`208 1 245 35`
-		- (coverage-zeros)`2`
+		- (coverage-zeros)`1`
 		- (coverage-counters)`7`
 		- (type/syntax)`typing.Optional[Delta]`
 		
@@ -926,7 +926,7 @@ settings, executable path, and command arguments.
 	/element/
 		- (control)`property-set`
 		- (source/area)`554 1 634 13`
-		- (coverage-zeros)`4`
+		- (coverage-zeros)`0`
 		- (coverage-counters)`54`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>

@@ -3,9 +3,9 @@
 		unit
 	/element/
 		- (control)`property-set`
-		- (source/area)``
-		- (coverage-zeros)`0`
-		- (coverage-counters)`0`
+		- (source/area)`1 1 286 0`
+		- (coverage-zeros)`6`
+		- (coverage-counters)`101`
 
 [ Type_GetInterface ]
 ! CONTROL:
@@ -1254,6 +1254,8 @@ Attached to object system's type; not individual instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`16 1 16 49`
+		- (type/syntax)`struct ChannelInterface *`
+		
 (signature)`ChannelInterface()`
 
 ChannelInterface methods for a given type
@@ -1303,6 +1305,8 @@ Whereas typ.* are the interfaces used by Python.
 	/element/
 		- (control)`property-set`
 		- (source/area)`23 1 26 21`
+		- (type/syntax)`struct ChannelPyTypeObject`
+		
 (signature)`ChannelPyTypeObject()`
 
 ChannelInterface is used internally by Arrays to perform transfers.
@@ -1401,6 +1405,8 @@ Generalized events used by all channels
 	/element/
 		- (control)`property-set`
 		- (source/area)`42 1 48 17`
+		- (type/syntax)`enum channel_event_t`
+		
 (signature)`channel_event_t()`
 
 Generalized events used by all channels
@@ -1625,6 +1631,8 @@ Pairs of qualifications must occur in order to produce an event.
 	/element/
 		- (control)`property-set`
 		- (source/area)`70 1 70 37`
+		- (type/syntax)`int[2]`
+		
 (signature)`transfer_window_t()`
 
 

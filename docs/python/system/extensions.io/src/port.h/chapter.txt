@@ -3,9 +3,9 @@
 		unit
 	/element/
 		- (control)`property-set`
-		- (source/area)``
+		- (source/area)`1 1 231 0`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`0`
+		- (coverage-counters)`9`
 
 [ _SYSTEM_IO_PORT_H_included_ ]
 ! CONTROL:
@@ -182,6 +182,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`65 2 65 31`
+		- (type/syntax)`struct kevent`
+		
 (signature)`kevent_t()`
 
 
@@ -276,6 +278,8 @@ Freight types conveyed by a Channel.
 	/element/
 		- (control)`property-set`
 		- (source/area)`94 1 101 11`
+		- (type/syntax)`enum freight`
+		
 (signature)`freight_t()`
 
 Freight types conveyed by a Channel.
@@ -493,6 +497,8 @@ Primarily used in cases where the channel supports multiple kinds.
 	/element/
 		- (control)`property-set`
 		- (source/area)`107 1 117 9`
+		- (type/syntax)`enum ktype`
+		
 (signature)`ktype_t()`
 
 local identifiers for the particular types of file descriptors.
@@ -675,6 +681,8 @@ Channel status codes used to signal the reaction to the success or failure of a 
 	/element/
 		- (control)`property-set`
 		- (source/area)`122 1 126 13`
+		- (type/syntax)`enum io_status`
+		
 (signature)`io_status_t()`
 
 Channel status codes used to signal the reaction to the success or failure of a system call.
@@ -822,6 +830,8 @@ but this easier and provides utility beyond that necessity. (port specific intro
 	/element/
 		- (control)`property-set`
 		- (source/area)`148 1 148 26`
+		- (type/syntax)`struct Port *`
+		
 (signature)`Port()`
 
 Kernel Port (file descriptor) structure representation.
@@ -839,6 +849,8 @@ but this easier and provides utility beyond that necessity. (port specific intro
 	/element/
 		- (control)`property-set`
 		- (source/area)`154 1 154 96`
+		- (type/syntax)`io_status_t (*)(Port, int *, void *, int)`
+		
 (signature)`io_op_t()`
 
 I/O operation pointer used by ChannelType class instances to

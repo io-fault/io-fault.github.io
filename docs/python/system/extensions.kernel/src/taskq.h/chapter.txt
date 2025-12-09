@@ -3,9 +3,9 @@
 		unit
 	/element/
 		- (control)`property-set`
-		- (source/area)``
+		- (source/area)`1 1 44 0`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`0`
+		- (coverage-counters)`7`
 
 [ TQ_LQUEUE_HAS_TASKS ]
 ! CONTROL:
@@ -60,6 +60,8 @@ A linked list of vectors used to manage the queue's storage.
 	/element/
 		- (control)`property-set`
 		- (source/area)`4 1 4 27`
+		- (type/syntax)`struct Tasks *`
+		
 (signature)`Tasks()`
 
 A linked list of vectors used to manage the queue's storage.
@@ -130,6 +132,8 @@ A linked list of vectors used to manage the queue's storage.
 	/element/
 		- (control)`property-set`
 		- (source/area)`24 1 24 35`
+		- (type/syntax)`struct TaskQueue *`
+		
 (signature)`TaskQueue()`
 
 

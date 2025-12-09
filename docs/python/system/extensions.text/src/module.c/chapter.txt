@@ -3,9 +3,9 @@
 		unit
 	/element/
 		- (control)`property-set`
-		- (source/area)``
-		- (coverage-zeros)`266`
-		- (coverage-counters)`266`
+		- (source/area)`1 1 277 0`
+		- (coverage-zeros)`281`
+		- (coverage-counters)`281`
 
 [ CELL_STACK_ALLOC ]
 ! CONTROL:
@@ -40,6 +40,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`12 1 25 1`
+		- (coverage-zeros)`20`
+		- (coverage-counters)`20`
 		- (type/syntax)`PyObj`
 		
 (signature)`dsetlocale(self)`
@@ -54,6 +56,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`27 1 35 1`
+		- (coverage-zeros)`15`
+		- (coverage-counters)`15`
 		- (type/syntax)`PyObj`
 		
 (signature)`get_encoding(self)`
@@ -66,6 +70,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`47 1 220 1`
+		- (coverage-zeros)`105`
+		- (coverage-counters)`105`
 		- (type/syntax)`long`
 		
 (signature)`measure(wcv, ws, ctlen, tablen)`
@@ -87,6 +93,8 @@ does recognize the sequence.
 	/element/
 		- (control)`property-set`
 		- (source/area)`225 1 264 1`
+		- (coverage-zeros)`38`
+		- (coverage-counters)`38`
 		- (type/syntax)`PyObj`
 		
 (signature)`cells(self, args)`

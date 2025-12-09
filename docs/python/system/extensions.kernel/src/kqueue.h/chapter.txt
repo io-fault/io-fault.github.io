@@ -3,9 +3,9 @@
 		unit
 	/element/
 		- (control)`property-set`
-		- (source/area)``
-		- (coverage-zeros)`0`
-		- (coverage-counters)`0`
+		- (source/area)`1 1 161 0`
+		- (coverage-zeros)`6`
+		- (coverage-counters)`21`
 
 [ _SYSTEM_KERNEL_KQUEUE_H_included_ ]
 ! CONTROL:
@@ -446,5 +446,7 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`23 1 23 30`
+		- (type/syntax)`struct kevent`
+		
 (signature)`kevent_t()`
 
