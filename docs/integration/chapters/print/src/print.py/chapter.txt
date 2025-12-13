@@ -360,11 +360,10 @@ Returns the directory path that was created.
 		- (control)`property-set`
 		- (source/area)`363 1 367 1`
 #!source
-			if string.startswith(prefix):
-				return string[len(prefix):]
-		return string
-	
-	required = {
+	for x in p.sentences:
+		if not x:
+			continue
+			return ''.join(y[1] for y in x)
 
 [ restricted ]
 ! CONTROL:
@@ -376,10 +375,10 @@ Returns the directory path that was created.
 		- (control)`property-set`
 		- (source/area)`369 1 372 1`
 #!source
-		'--corpus-title': ('field-replace', 'corpus-title'),
-		'-P': ('set-add', 'prefixes'),
-	}
+		# None detected, presume single sentence abstract.
+		return ''.join(y[1] for y in p)
 	
+	def removeprefix(prefixes, string):
 
 [ extract_image_reference ]
 ! CONTROL:

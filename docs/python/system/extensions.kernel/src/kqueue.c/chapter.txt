@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 571 0`
-		- (coverage-zeros)`57`
-		- (coverage-counters)`144`
+		- (coverage-zeros)`97`
+		- (coverage-counters)`226`
 
 [ INITIAL_TASKS_ALLOCATED ]
 ! CONTROL:
@@ -74,6 +74,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`36 1 46 1`
+		- (coverage-zeros)`4`
+		- (coverage-counters)`4`
 		- (type/syntax)`kport_t`
 		
 (signature)`fs_event_open(path, ev_type)`
@@ -90,6 +92,8 @@ ev_type is ignored here as the subevent set is determined by kernelq_identify.
 	/element/
 		- (control)`property-set`
 		- (source/area)`48 1 112 1`
+		- (coverage-zeros)`25`
+		- (coverage-counters)`35`
 		- (type/syntax)`int`
 		
 (signature)`kernelq_delta(kq, ctl, kp, event)`
@@ -104,6 +108,8 @@ ev_type is ignored here as the subevent set is determined by kernelq_identify.
 	/element/
 		- (control)`property-set`
 		- (source/area)`51 2 51 16`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 
 [ kernelq_identify ]
 ! CONTROL:
@@ -112,8 +118,8 @@ ev_type is ignored here as the subevent set is determined by kernelq_identify.
 	/element/
 		- (control)`property-set`
 		- (source/area)`117 1 233 1`
-		- (coverage-zeros)`27`
-		- (coverage-counters)`45`
+		- (coverage-zeros)`33`
+		- (coverage-counters)`72`
 		- (type/syntax)`int`
 		
 (signature)`kernelq_identify(kev, evs)`
@@ -128,8 +134,8 @@ Interpret event_t for use with a kqueue filter.
 	/element/
 		- (control)`property-set`
 		- (source/area)`238 1 247 1`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`4`
 		- (type/syntax)`int`
 		
 (signature)`kernelq_interrupt(kq)`
@@ -162,8 +168,8 @@ Nothing to do for kqueue.
 	/element/
 		- (control)`property-set`
 		- (source/area)`258 1 267 1`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`6`
 		- (type/syntax)`int`
 		
 (signature)`kernelq_interrupt_setup(kq)`
@@ -178,8 +184,8 @@ Nothing to do for kqueue.
 	/element/
 		- (control)`property-set`
 		- (source/area)`269 1 322 1`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`5`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`6`
 		- (type/syntax)`void`
 		
 (signature)`kevent_set_timer(kev, ns)`
@@ -192,8 +198,8 @@ Nothing to do for kqueue.
 	/element/
 		- (control)`property-set`
 		- (source/area)`327 1 404 1`
-		- (coverage-zeros)`11`
-		- (coverage-counters)`38`
+		- (coverage-zeros)`16`
+		- (coverage-counters)`44`
 		- (type/syntax)`int`
 		
 (signature)`kernelq_schedule(kq, cyclic, ln)`
@@ -227,7 +233,7 @@ Establish the link with the kernel event.
 		- (control)`property-set`
 		- (source/area)`424 1 465 1`
 		- (coverage-zeros)`7`
-		- (coverage-counters)`20`
+		- (coverage-counters)`19`
 		- (type/syntax)`int`
 		
 (signature)`kernelq_initialize(kq)`
@@ -242,6 +248,8 @@ Establish the link with the kernel event.
 	/element/
 		- (control)`property-set`
 		- (source/area)`427 8 427 22`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 
 [ kernelq_close ]
 ! CONTROL:
@@ -250,7 +258,7 @@ Establish the link with the kernel event.
 	/element/
 		- (control)`property-set`
 		- (source/area)`474 1 485 1`
-		- (coverage-zeros)`2`
+		- (coverage-zeros)`1`
 		- (coverage-counters)`7`
 		- (type/syntax)`int`
 		
@@ -271,8 +279,8 @@ Negative one if `errno` was set.
 	/element/
 		- (control)`property-set`
 		- (source/area)`491 1 532 1`
-		- (coverage-zeros)`6`
-		- (coverage-counters)`16`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`18`
 		- (type/syntax)`int`
 		
 (signature)`kernelq_receive(kq, seconds, ns)`
@@ -290,6 +298,8 @@ Retry logic is not desired here as the event loop will naturally try again.
 	/element/
 		- (control)`property-set`
 		- (source/area)`494 8 494 22`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 
 [ pkevent ]
 ! CONTROL:
@@ -300,6 +310,8 @@ Retry logic is not desired here as the event loop will naturally try again.
 	/element/
 		- (control)`property-set`
 		- (source/area)`534 1 569 1`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 		- (type/syntax)`void`
 		
 (signature)`pkevent(kev)`

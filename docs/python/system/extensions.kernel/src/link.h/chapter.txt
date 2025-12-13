@@ -5,7 +5,7 @@
 		- (control)`property-set`
 		- (source/area)`1 1 55 0`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
+		- (coverage-counters)`8`
 
 [ _SYSTEM_KERNEL_LINK_H_included_ ]
 ! CONTROL:
@@ -28,6 +28,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`7 9 7 38`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`LinkFlag()`
 
 
@@ -40,6 +42,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`8 9 8 52`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`Link_Get()`
 
 
@@ -52,6 +56,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`9 9 9 53`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`Link_Set()`
 
 
@@ -64,6 +70,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`10 9 10 56`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`Link_Clear()`
 
 

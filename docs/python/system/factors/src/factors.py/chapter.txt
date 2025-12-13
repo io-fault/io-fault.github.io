@@ -18,6 +18,8 @@ Module finder and loader for Factored Projects.
 	/element/
 		- (control)`property-set`
 		- (source/area)`4 1 4 26`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ files ]
 ! CONTROL:
@@ -28,6 +30,8 @@ Module finder and loader for Factored Projects.
 	/element/
 		- (control)`property-set`
 		- (source/area)`6 1 6 19`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ lsf ]
 ! CONTROL:
@@ -38,6 +42,8 @@ Module finder and loader for Factored Projects.
 	/element/
 		- (control)`property-set`
 		- (source/area)`7 1 7 35`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ Segment ]
 ! CONTROL:
@@ -48,6 +54,8 @@ Module finder and loader for Factored Projects.
 	/element/
 		- (control)`property-set`
 		- (source/area)`8 1 8 33`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ IntegralFinder ]
 ! CONTROL:
@@ -57,7 +65,7 @@ Module finder and loader for Factored Projects.
 		- (control)`property-set`
 		- (source/area)`10 1 267 23`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
+		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`10 22 10 27`
@@ -76,6 +84,8 @@ Select an image based on the configured variants querying the connected factor p
 	/element/
 		- (control)`property-set`
 		- (source/area)`15 2 15 19`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	suffixes = ['.py']
 
@@ -88,6 +98,8 @@ Select an image based on the configured variants querying the connected factor p
 	/element/
 		- (control)`property-set`
 		- (source/area)`16 2 16 44`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	ModuleSpec = importlib.machinery.ModuleSpec
 
@@ -100,6 +112,8 @@ Select an image based on the configured variants querying the connected factor p
 	/element/
 		- (control)`property-set`
 		- (source/area)`17 2 17 62`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	ExtensionFileLoader = importlib.machinery.ExtensionFileLoader
 
@@ -111,7 +125,7 @@ Select an image based on the configured variants querying the connected factor p
 		- (control)`property-set`
 		- (source/area)`19 2 66 91`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
+		- (coverage-counters)`2`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`19 15 19 50`
@@ -131,6 +145,8 @@ against the source unlike Python's builtin loader.
 	/element/
 		- (control)`property-set`
 		- (source/area)`24 3 24 74`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	_compile = staticmethod(importlib._bootstrap_external._compile_bytecode)
 

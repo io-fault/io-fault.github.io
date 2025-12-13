@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 161 0`
-		- (coverage-zeros)`6`
-		- (coverage-counters)`21`
+		- (coverage-zeros)`7`
+		- (coverage-counters)`23`
 
 [ _SYSTEM_KERNEL_KQUEUE_H_included_ ]
 ! CONTROL:
@@ -40,6 +40,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`11 9 11 25`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	#define AEV_CREATE EV_ADD
 
@@ -52,6 +54,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`12 9 12 28`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	#define AEV_DELETE EV_DELETE
 
@@ -76,6 +80,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`15 9 15 52`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`AEV_CYCLIC()`
 
 
@@ -88,6 +94,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`16 9 16 60`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`AEV_CYCLIC_ENABLE()`
 
 
@@ -100,6 +108,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`17 9 17 60`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`AEV_CYCLIC_DISABLE()`
 
 
@@ -112,6 +122,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`19 9 19 43`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`AEV_LINK()`
 
 
@@ -148,6 +160,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`26 10 26 24`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	#define NOTE_MSECONDS 0
 
@@ -340,6 +354,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`130 9 130 74`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`4`
 (signature)`KFILTER_ERROR()`
 
 
@@ -400,6 +416,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`157 9 157 63`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 #!source
 	#define EVENT_FS_VOID_FLAGS NOTE_RENAME|NOTE_DELETE|NOTE_REVOKE
 
@@ -412,6 +430,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`158 9 158 51`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 #!source
 	#define EVENT_FS_DELTA_FLAGS NOTE_WRITE|NOTE_EXTEND
 
@@ -424,6 +444,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`159 9 159 72`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`3`
 #!source
 	#define EVENT_FS_STATUS_FLAGS EVENT_FS_VOID_FLAGS | EVENT_FS_DELTA_FLAGS
 

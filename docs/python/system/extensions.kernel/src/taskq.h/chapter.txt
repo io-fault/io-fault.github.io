@@ -5,7 +5,7 @@
 		- (control)`property-set`
 		- (source/area)`1 1 44 0`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`7`
+		- (coverage-counters)`9`
 
 [ TQ_LQUEUE_HAS_TASKS ]
 ! CONTROL:
@@ -16,6 +16,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`33 9 33 81`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`TQ_LQUEUE_HAS_TASKS()`
 
 

@@ -263,7 +263,7 @@ ev_io_reference(Event ev, PyObj args, PyObj kw)
 }
 
 /* Constructors */
-#define EV_TYPE(NAME, CONVERT, CYCLIC) \
+#define EV_CONSTRUCTORS(NAME, CONVERT, CYCLIC) \
 	STATIC(PyObj) \
 	ev_##NAME(PyTypeObject *PYTYPE, PyObj args, PyObj kw) { \
 		PyObj ROB; \
@@ -285,7 +285,8 @@ ev_io_reference(Event ev, PyObj args, PyObj kw)
 		return(ROB); \
 	}
 
-	/* Excludes invalid and filesystem. */
+/* Excludes invalid and filesystem. */
+#define EV_TYPE(...) EV_CONSTRUCTORS(__VA_ARGS__)
 	EVENT_TYPE_LIST()
 #undef EV_TYPE
 

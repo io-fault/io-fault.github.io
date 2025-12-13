@@ -1,1 +1,1 @@
-{"IContext": [1, 0, []], "ISpecifications": [1, 0, []], "if_structure": [37, 2, [[56, 17, 56, 30], [75, 6, 78, 7]]], "if_sequence": [13, 0, []], "if_allocate": [5, 0, []], "/interfaces.py": [8, 0, []]}
+{"TypeAlias": [1, 0, []], "Sequence": [1, 0, []], "files": [1, 0, []], "KPorts": [1, 0, []], "Endpoint": [1, 0, []], "if_select": [1, 0, []], "service": [1, 0, []], "IContext": [1, 0, []], "ISpecifications": [1, 0, []], "if_structure": [37, 2, [[56, 17, 56, 30], [75, 6, 78, 7]]], "if_sequence": [13, 0, []], "if_allocate": [5, 0, []], "/interfaces.py": [1, 0, []]}

@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 469 0`
-		- (coverage-zeros)`161`
-		- (coverage-counters)`162`
+		- (coverage-zeros)`152`
+		- (coverage-counters)`240`
 
 [ _kports_alloc ]
 ! CONTROL:
@@ -16,6 +16,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`18 9 18 60`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`_kports_alloc()`
 
 
@@ -52,6 +54,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`20 1 34 1`
+		- (coverage-zeros)`11`
+		- (coverage-counters)`11`
 		- (type/syntax)`KPorts`
 		
 (signature)`kports_alloc(fill, length)`
@@ -66,8 +70,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`36 1 47 1`
-		- (coverage-zeros)`7`
-		- (coverage-counters)`7`
+		- (coverage-zeros)`9`
+		- (coverage-counters)`9`
 		- (type/syntax)`KPorts`
 		
 (signature)`kports_create(data, length)`
@@ -80,6 +84,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`52 1 66 1`
+		- (coverage-zeros)`8`
+		- (coverage-counters)`8`
 		- (type/syntax)`PyObj`
 		
 (signature)`kp_close(self)`
@@ -96,8 +102,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`73 1 96 1`
-		- (coverage-zeros)`16`
-		- (coverage-counters)`16`
+		- (coverage-zeros)`21`
+		- (coverage-counters)`21`
 		- (type/syntax)`PyObj`
 		
 (signature)`kp_configure(self)`
@@ -110,8 +116,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`101 1 123 1`
-		- (coverage-zeros)`11`
-		- (coverage-counters)`12`
+		- (coverage-zeros)`4`
+		- (coverage-counters)`13`
 		- (type/syntax)`PyObj`
 		
 (signature)`kp_allocate(subtype, length)`
@@ -128,8 +134,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`142 1 189 1`
-		- (coverage-zeros)`17`
-		- (coverage-counters)`17`
+		- (coverage-zeros)`34`
+		- (coverage-counters)`34`
 		- (type/syntax)`PyObj`
 		
 (signature)`kports_richcompare(self, x, op)`
@@ -142,6 +148,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`194 1 198 1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 		- (type/syntax)`Py_ssize_t`
 		
 (signature)`kports_length(self)`
@@ -156,8 +164,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`203 1 219 1`
-		- (coverage-zeros)`10`
-		- (coverage-counters)`10`
+		- (coverage-zeros)`14`
+		- (coverage-counters)`14`
 		- (type/syntax)`PyObj`
 		
 (signature)`kports_concat(self, x)`
@@ -172,8 +180,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`224 1 240 1`
-		- (coverage-zeros)`9`
-		- (coverage-counters)`9`
+		- (coverage-zeros)`12`
+		- (coverage-counters)`12`
 		- (type/syntax)`PyObj`
 		
 (signature)`kports_repeat(self, quantity)`
@@ -188,8 +196,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`245 1 257 1`
-		- (coverage-zeros)`5`
-		- (coverage-counters)`5`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`7`
 		- (type/syntax)`PyObj`
 		
 (signature)`kports_getitem(self, index)`
@@ -204,8 +212,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`262 1 281 1`
-		- (coverage-zeros)`11`
-		- (coverage-counters)`11`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`12`
 		- (type/syntax)`int`
 		
 (signature)`kports_setitem(self, index, val)`
@@ -220,8 +228,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`296 1 344 1`
-		- (coverage-zeros)`29`
-		- (coverage-counters)`29`
+		- (coverage-zeros)`19`
+		- (coverage-counters)`34`
 		- (type/syntax)`PyObj`
 		
 (signature)`kports_subscript(self, item)`
@@ -238,6 +246,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`353 1 358 1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 		- (type/syntax)`int`
 		
 (signature)`kports_getbuffer(self, view, flags)`
@@ -250,8 +260,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`369 1 443 1`
-		- (coverage-zeros)`44`
-		- (coverage-counters)`44`
+		- (coverage-zeros)`17`
+		- (coverage-counters)`57`
 		- (type/syntax)`PyObj`
 		
 (signature)`kports_new(subtype, args, kw)`
@@ -268,8 +278,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`445 1 449 1`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 		- (type/syntax)`void`
 		
 (signature)`kports_dealloc(self)`

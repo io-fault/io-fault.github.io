@@ -5,7 +5,7 @@
 		- (control)`property-set`
 		- (source/area)`1 1 231 0`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`9`
+		- (coverage-counters)`10`
 
 [ _SYSTEM_IO_PORT_H_included_ ]
 ! CONTROL:

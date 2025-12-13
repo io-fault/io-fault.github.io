@@ -26,6 +26,8 @@ available under (project-local/unknown)&<system.factors.context>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`12 1 12 12`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ sys ]
 ! CONTROL:
@@ -36,6 +38,8 @@ available under (project-local/unknown)&<system.factors.context>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`13 1 13 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ join ]
 ! CONTROL:
@@ -46,6 +50,8 @@ available under (project-local/unknown)&<system.factors.context>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`14 1 14 24`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ Load ]
 ! CONTROL:
@@ -56,6 +62,8 @@ available under (project-local/unknown)&<system.factors.context>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`16 1 16 32`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ Execute ]
 ! CONTROL:
@@ -66,6 +74,8 @@ available under (project-local/unknown)&<system.factors.context>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`17 1 17 36`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ Compile ]
 ! CONTROL:
@@ -76,6 +86,8 @@ available under (project-local/unknown)&<system.factors.context>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`18 1 18 39`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ pkglist ]
 ! CONTROL:
@@ -86,6 +98,8 @@ available under (project-local/unknown)&<system.factors.context>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`20 1 20 51`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	pkglist = ['context', 'system', 'route', 'project']
 
@@ -98,6 +112,8 @@ available under (project-local/unknown)&<system.factors.context>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`21 1 36 1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	modlist = [
 		'context.tools',
@@ -199,6 +215,8 @@ Allocate new module instances and assign them into (factor-local/parameter)&<#in
 	/element/
 		- (control)`property-set`
 		- (source/area)`110 1 113 1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	install_operations = [
 		(install_packages, pkglist),

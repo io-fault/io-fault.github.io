@@ -26,6 +26,8 @@ overrides.
 	/element/
 		- (control)`property-set`
 		- (source/area)`13 1 13 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ _python_architecture ]
 ! CONTROL:
@@ -36,6 +38,8 @@ overrides.
 	/element/
 		- (control)`property-set`
 		- (source/area)`14 1 14 88`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 #!source
 	_python_architecture = sys.implementation.name + ''.join(map(str, sys.version_info[:2]))
 
@@ -48,6 +52,8 @@ overrides.
 	/element/
 		- (control)`property-set`
 		- (source/area)`15 1 15 60`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 #!source
 	_python_architecture = _python_architecture.replace('-', '')
 
@@ -60,6 +66,8 @@ overrides.
 	/element/
 		- (control)`property-set`
 		- (source/area)`19 1 19 31`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	fci_system_envid = 'FCI_SYSTEM'
 
@@ -72,6 +80,8 @@ overrides.
 	/element/
 		- (control)`property-set`
 		- (source/area)`20 1 20 43`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	fci_architecture_envid = 'FCI_ARCHITECTURE'
 
@@ -110,6 +120,8 @@ Execute the (system/executable)`uname` returning its output for the given (facto
 	/element/
 		- (control)`property-set`
 		- (source/area)`53 1 60 17`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 (signature)`root_execution_context()`
 
 Return the (operating system, architecture) pair identifying the Root Execution Context.
@@ -122,6 +134,8 @@ Return the (operating system, architecture) pair identifying the Root Execution 
 	/element/
 		- (control)`property-set`
 		- (source/area)`62 1 67 57`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`python_execution_context()`
 
 Return the Python execution Context identification.

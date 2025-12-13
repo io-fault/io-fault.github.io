@@ -76,8 +76,6 @@ a no-op and performs empty functions in order to allow existing code to work.
 	/element/
 		- (control)`property-set`
 		- (source/area)`54 1 62 26`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`4`
 (signature)`location(pid)`
 
 Given a process identifier, return the location of the corefile
@@ -91,8 +89,6 @@ based on the (factor-local/parameter)&<#location.Parameters.pattern[pattern]>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`63 1 109 27`
-		- (coverage-zeros)`9`
-		- (coverage-counters)`9`
 (signature)`constraint(image_size_limit)`
 
 Constrain core dumps during the execution of the context. Useful for managing tests that

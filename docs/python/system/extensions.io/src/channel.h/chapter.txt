@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 286 0`
-		- (coverage-zeros)`6`
-		- (coverage-counters)`101`
+		- (coverage-zeros)`7`
+		- (coverage-counters)`192`
 
 [ Type_GetInterface ]
 ! CONTROL:
@@ -16,6 +16,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`28 9 28 67`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`Type_GetInterface()`
 
 
@@ -40,6 +42,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`73 9 73 21`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	#define TS_INTERNAL 0
 
@@ -268,6 +272,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`103 9 103 77`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`Channel_NulControl()`
 
 
@@ -280,6 +286,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`105 9 105 95`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 (signature)`Channel_Terminated()`
 
 
@@ -292,6 +300,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`106 9 110 1`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`7`
 (signature)`Channel_Terminating()`
 
 
@@ -304,6 +314,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`112 9 112 40`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`Channel_GetWindow()`
 
 
@@ -316,6 +328,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`114 9 114 59`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`Channel_GetWindowStart()`
 
 
@@ -328,6 +342,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`115 9 115 58`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`Channel_GetWindowStop()`
 
 
@@ -340,6 +356,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`116 9 116 68`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`Channel_SetWindowStart()`
 
 
@@ -352,6 +370,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`117 9 117 66`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`Channel_SetWindowStop()`
 
 
@@ -364,6 +384,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`118 9 118 109`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`5`
 (signature)`Channel_SetWindow()`
 
 
@@ -388,6 +410,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`120 9 120 88`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`Channel_WindowIsEmpty()`
 
 
@@ -400,6 +424,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`121 9 121 107`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`5`
 (signature)`Channel_ClearWindow()`
 
 
@@ -412,6 +438,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`122 9 122 75`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`Channel_NarrowWindow()`
 
 
@@ -424,6 +452,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`123 9 123 74`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`Channel_ExpandWindow()`
 
 
@@ -436,6 +466,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`124 9 124 87`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`Channel_CollapseWindow()`
 
 
@@ -448,6 +480,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`126 9 126 56`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`Channel_GetResource()`
 
 
@@ -460,6 +494,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`127 9 127 73`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`Channel_HasResource()`
 
 
@@ -472,6 +508,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`128 9 128 69`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`Channel_SetResource()`
 
 
@@ -484,6 +522,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`129 9 129 55`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`Channel_GetResourceView()`
 
 
@@ -496,6 +536,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`130 9 130 56`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`Channel_GetResourceBuffer()`
 
 
@@ -508,6 +550,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`131 9 131 56`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`Channel_GetResourceSize()`
 
 
@@ -520,6 +564,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`137 9 137 75`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`Channel_ShouldTerminate()`
 
 
@@ -532,6 +578,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`138 9 138 103`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 (signature)`Channel_ShouldTransfer()`
 
 
@@ -544,6 +592,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`139 9 139 87`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`Channel_EventState()`
 
 
@@ -556,6 +606,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`146 9 146 70`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`Channel_ShouldXConnect()`
 
 
@@ -568,6 +620,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`148 9 148 46`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`Channel_GetPort()`
 
 
@@ -580,6 +634,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`149 9 149 61`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`Channel_SetPort()`
 
 
@@ -592,6 +648,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`150 9 150 46`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`Channel_GetLink()`
 
 
@@ -604,6 +662,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`151 9 151 61`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`Channel_SetLink()`
 
 
@@ -616,6 +676,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`153 9 153 102`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`5`
 (signature)`Port_Latch()`
 
 
@@ -628,6 +690,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`154 9 154 69`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`Channel_PortError()`
 
 
@@ -640,6 +704,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`155 9 155 88`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`Channel_PortLatched()`
 
 
@@ -652,6 +718,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`157 9 157 64`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`Channel_GetKPoint()`
 
 
@@ -748,6 +816,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`166 9 166 49`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`Channel_GetArray()`
 
 
@@ -772,6 +842,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`168 9 168 64`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`Channel_SetArray()`
 
 
@@ -784,6 +856,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`169 9 169 59`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`Channel_Attached()`
 
 
@@ -796,6 +870,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`171 9 171 77`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`Channel_HasEvent()`
 
 
@@ -808,6 +884,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`172 9 172 78`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`Channel_NoteEvent()`
 
 
@@ -832,6 +910,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`174 9 174 65`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`2`
 (signature)`Channel_ClearEvents()`
 
 
@@ -844,6 +924,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`176 9 176 52`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`Channel_State()`
 
 
@@ -856,6 +938,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`177 9 177 70`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`Channel_StateMerge()`
 
 
@@ -868,6 +952,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`179 9 179 53`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`Channel_GetEvents()`
 
 
@@ -880,6 +966,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`180 9 180 52`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`Channel_GetDelta()`
 
 
@@ -892,6 +980,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`181 9 181 68`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`Channel_SetEvents()`
 
 
@@ -904,6 +994,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`182 9 182 67`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`Channel_SetDelta()`
 
 
@@ -916,6 +1008,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`184 9 184 65`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`Channel_ClearDelta()`
 
 
@@ -928,6 +1022,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`185 9 185 83`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`Channel_InCycle()`
 
 
@@ -940,6 +1036,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`190 9 190 91`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 (signature)`Channel_Polarity()`
 
 
@@ -952,6 +1050,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`191 9 191 70`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`Channel_Receives()`
 
 
@@ -964,6 +1064,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`192 9 192 55`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`Channel_Sends()`
 
 
@@ -976,6 +1078,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`197 9 197 81`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`Array_HasTransfers()`
 
 
@@ -988,6 +1092,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`198 9 198 69`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 (signature)`Array_ShouldWait()`
 
 
@@ -1000,6 +1106,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`200 9 200 50`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`Array_GetKEvents()`
 
 
@@ -1012,6 +1120,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`201 9 201 63`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`Array_SetKEvents()`
 
 
@@ -1024,6 +1134,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`202 9 202 68`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`Array_GetKEventSlot()`
 
 
@@ -1036,6 +1148,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`208 9 208 75`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 (signature)`Array_ResetWindow()`
 
 
@@ -1048,6 +1162,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`209 9 209 47`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	#define Array_NCollected Channel_GetWindowStart
 
@@ -1060,6 +1176,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`210 9 210 50`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	#define Array_SetNCollected Channel_SetWindowStart
 
@@ -1072,6 +1190,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`211 9 211 51`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`2`
 (signature)`Array_NChanges()`
 
 
@@ -1084,6 +1204,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`212 9 212 54`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`2`
 (signature)`Array_MaxCollected()`
 
 
@@ -1096,6 +1218,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`217 9 217 61`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`2`
 (signature)`Array_ConsumeKEventSlot()`
 
 
@@ -1108,6 +1232,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`220 9 220 49`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`Array_GetTransferCount()`
 
 
@@ -1120,6 +1246,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`221 9 221 70`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`Array_IncrementTransferCount()`
 
 
@@ -1132,6 +1260,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`222 9 222 67`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`Array_ResetTransferCount()`
 
 
@@ -1144,6 +1274,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`223 9 223 45`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`Array_GetWaitLimit()`
 
 
@@ -1156,6 +1288,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`228 10 231 11`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`Array_SetWaitLimit()`
 
 

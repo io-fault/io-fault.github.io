@@ -18,6 +18,8 @@ Tool execution factor for explicitly linked command sets.
 	/element/
 		- (control)`property-set`
 		- (source/area)`4 1 4 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ importlib ]
 ! CONTROL:
@@ -28,6 +30,8 @@ Tool execution factor for explicitly linked command sets.
 	/element/
 		- (control)`property-set`
 		- (source/area)`5 1 5 16`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ process ]
 ! CONTROL:
@@ -38,6 +42,8 @@ Tool execution factor for explicitly linked command sets.
 	/element/
 		- (control)`property-set`
 		- (source/area)`6 1 6 21`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ _select_methods ]
 ! CONTROL:
@@ -48,6 +54,8 @@ Tool execution factor for explicitly linked command sets.
 	/element/
 		- (control)`property-set`
 		- (source/area)`8 1 8 20`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	_select_methods = []
 

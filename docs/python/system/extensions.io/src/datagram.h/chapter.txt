@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 45 0`
-		- (coverage-zeros)`15`
-		- (coverage-counters)`15`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`29`
 
 [ DatagramHeaderSize ]
 ! CONTROL:
@@ -16,6 +16,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`15 9 15 52`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	#define DatagramHeaderSize (sizeof(struct Datagram))
 
@@ -28,6 +30,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`17 9 17 85`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`DatagramGetAddress()`
 
 
@@ -40,6 +44,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`18 9 18 78`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`DatagramGetData()`
 
 
@@ -52,6 +58,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`20 9 20 40`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`DatagramGetSize()`
 
 
@@ -64,6 +72,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`21 9 21 62`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`DatagramSetSize()`
 
 
@@ -76,6 +86,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`22 9 22 42`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`DatagramGetSpace()`
 
 
@@ -100,6 +112,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`24 9 24 48`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`DatagramGetAddressLength()`
 
 
@@ -112,6 +126,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`25 9 25 88`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`DatagramCalculateUnit()`
 
 
@@ -124,6 +140,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`30 9 31 75`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 (signature)`DatagramGetArea()`
 
 
@@ -136,6 +154,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`38 9 41 1`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`10`
 (signature)`DatagramIsValid()`
 
 
@@ -148,6 +168,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`43 9 44 69`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`DatagramNext()`
 
 

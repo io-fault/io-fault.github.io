@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 350 0`
-		- (coverage-zeros)`124`
-		- (coverage-counters)`145`
+		- (coverage-zeros)`140`
+		- (coverage-counters)`165`
 
 [ POSIX_SYSCALL ]
 ! CONTROL:
@@ -16,6 +16,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`22 9 23 41`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`POSIX_SYSCALL()`
 
 
@@ -28,6 +30,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`24 9 24 65`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`RETRY_INIT()`
 
 
@@ -40,6 +44,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`25 9 31 10`
+		- (coverage-zeros)`7`
+		- (coverage-counters)`7`
 (signature)`RETRY()`
 
 
@@ -52,6 +58,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`34 10 34 39`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 #!source
 	#define CONFIG_SOCKET_TRANSFER_LIMIT 1
 
@@ -198,8 +206,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`46 1 83 1`
-		- (coverage-zeros)`13`
-		- (coverage-counters)`13`
+		- (coverage-zeros)`14`
+		- (coverage-counters)`14`
 		- (type/syntax)`struct cmsghdr *`
 		
 (signature)`_init_kp_message(m, buf, bufsize)`
@@ -246,8 +254,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`137 1 177 1`
-		- (coverage-zeros)`20`
-		- (coverage-counters)`20`
+		- (coverage-zeros)`23`
+		- (coverage-counters)`23`
 		- (type/syntax)`int`
 		
 (signature)`kp_receive(kp, buf, size)`
@@ -262,8 +270,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`179 1 215 1`
-		- (coverage-zeros)`19`
-		- (coverage-counters)`19`
+		- (coverage-zeros)`22`
+		- (coverage-counters)`22`
 		- (type/syntax)`int`
 		
 (signature)`kp_transmit(kp, buf, size)`
@@ -277,7 +285,7 @@
 		- (control)`property-set`
 		- (source/area)`220 1 262 1`
 		- (coverage-zeros)`9`
-		- (coverage-counters)`21`
+		- (coverage-counters)`24`
 		- (type/syntax)`int`
 		
 (signature)`kp_accept(kp, buf, size)`
@@ -292,8 +300,8 @@ Regular socket accept from listening sockets.
 	/element/
 		- (control)`property-set`
 		- (source/area)`267 1 293 1`
-		- (coverage-zeros)`14`
-		- (coverage-counters)`14`
+		- (coverage-zeros)`17`
+		- (coverage-counters)`17`
 		- (type/syntax)`int`
 		
 (signature)`kp_alloc_meta(kp, buf, size)`
@@ -310,8 +318,8 @@ Allocate kport_t pairs capable of transmitting and receiving other kernel ports.
 	/element/
 		- (control)`property-set`
 		- (source/area)`295 1 321 1`
-		- (coverage-zeros)`14`
-		- (coverage-counters)`14`
+		- (coverage-zeros)`17`
+		- (coverage-counters)`17`
 		- (type/syntax)`int`
 		
 (signature)`kp_alloc_bidirectional(kp, buf, size)`
@@ -326,8 +334,8 @@ Allocate kport_t pairs capable of transmitting and receiving other kernel ports.
 	/element/
 		- (control)`property-set`
 		- (source/area)`323 1 349 1`
-		- (coverage-zeros)`14`
-		- (coverage-counters)`14`
+		- (coverage-zeros)`17`
+		- (coverage-counters)`17`
 		- (type/syntax)`int`
 		
 (signature)`kp_alloc_unidirectional(kp, buf, size)`

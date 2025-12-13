@@ -18,6 +18,8 @@ Execute a factor or module as a substitution.
 	/element/
 		- (control)`property-set`
 		- (source/area)`4 1 4 16`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ process ]
 ! CONTROL:
@@ -28,6 +30,8 @@ Execute a factor or module as a substitution.
 	/element/
 		- (control)`property-set`
 		- (source/area)`5 1 5 21`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ add_control_factor ]
 ! CONTROL:
@@ -120,6 +124,8 @@ Execute a factor or module as a substitution.
 	/element/
 		- (control)`property-set`
 		- (source/area)`29 1 37 1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	handlers = {
 		'-X': None,

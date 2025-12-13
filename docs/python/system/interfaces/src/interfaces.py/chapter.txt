@@ -20,6 +20,8 @@ Provides parsing, serialization, and allocation functions for application servic
 	/element/
 		- (control)`property-set`
 		- (source/area)`6 1 6 28`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ Iterable ]
 ! CONTROL:
@@ -40,6 +42,8 @@ Provides parsing, serialization, and allocation functions for application servic
 	/element/
 		- (control)`property-set`
 		- (source/area)`7 1 7 46`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ files ]
 ! CONTROL:
@@ -50,6 +54,8 @@ Provides parsing, serialization, and allocation functions for application servic
 	/element/
 		- (control)`property-set`
 		- (source/area)`9 1 9 19`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ KPorts ]
 ! CONTROL:
@@ -60,6 +66,8 @@ Provides parsing, serialization, and allocation functions for application servic
 	/element/
 		- (control)`property-set`
 		- (source/area)`10 1 10 35`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ Endpoint ]
 ! CONTROL:
@@ -70,6 +78,8 @@ Provides parsing, serialization, and allocation functions for application servic
 	/element/
 		- (control)`property-set`
 		- (source/area)`11 1 11 29`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ if_select ]
 ! CONTROL:
@@ -80,6 +90,8 @@ Provides parsing, serialization, and allocation functions for application servic
 	/element/
 		- (control)`property-set`
 		- (source/area)`12 1 12 51`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ service ]
 ! CONTROL:
@@ -90,6 +102,8 @@ Provides parsing, serialization, and allocation functions for application servic
 	/element/
 		- (control)`property-set`
 		- (source/area)`13 1 13 28`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ IContext ]
 ! CONTROL:

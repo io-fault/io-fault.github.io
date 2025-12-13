@@ -62,11 +62,13 @@ def integrate_dcounters(index, fsc, dcounters):
 		for line in dcounters:
 			if line[:1] == '@':
 				# Change file.
-				src.write(f"{isolation} {counters} {srcfile}\n")
+				if isolation and srcfile and counters:
+					src.write(f"{isolation} {counters} {srcfile}\n")
 				srcfile = line[1:].strip()
 			elif line[:1] == '&':
 				# Change isolation
-				src.write(f"{isolation} {counters} {srcfile}\n")
+				if isolation and srcfile and counters:
+					src.write(f"{isolation} {counters} {srcfile}\n")
 				isolation = line[1:].strip()
 			else:
 				ln, co, count = map(int, line.split())
@@ -82,6 +84,9 @@ def integrate_dcounters(index, fsc, dcounters):
 
 			# Increments reset when isolation or file is changed.
 			counters = 0
+
+		if isolation and srcfile and counters:
+			src.write(f"{isolation} {counters} {srcfile}\n")
 
 def factor_records(root):
 	"""
@@ -220,10 +225,11 @@ def descend(mapping, current, elements):
 		if 'area' not in d:
 			continue
 
-		if eid is not None and sub and not typ == 'parameter':
+		if eid is not None and not typ == 'parameter':
 			area = Area(map(Address, d['area']))
 			path = mapping[area] = current + (eid,)
-			descend(mapping, path, sub)
+			if sub:
+				descend(mapping, path, sub)
 
 def index_elements(dsrc):
 	"""

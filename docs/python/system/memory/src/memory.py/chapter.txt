@@ -19,6 +19,8 @@ in parts of processes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`5 1 5 9`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ weakref ]
 ! CONTROL:
@@ -29,6 +31,8 @@ in parts of processes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`6 1 6 14`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ collections ]
 ! CONTROL:
@@ -39,6 +43,8 @@ in parts of processes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`7 1 7 18`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ Memory ]
 ! CONTROL:
@@ -48,7 +54,7 @@ in parts of processes.
 		- (control)`property-set`
 		- (source/area)`9 1 27 17`
 		- (coverage-zeros)`2`
-		- (coverage-counters)`7`
+		- (coverage-counters)`6`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`9 14 9 22`
@@ -68,6 +74,8 @@ identifier hashing for memory-free signalling.
 	/element/
 		- (control)`property-set`
 		- (source/area)`21 2 21 29`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	__slots__ = ('__weakref__',)
 
@@ -92,8 +100,8 @@ Object Identifier based hash for allowing indexing of allocated instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`29 1 102 29`
-		- (coverage-zeros)`4`
-		- (coverage-counters)`7`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`29 21 29 26`
@@ -112,6 +120,8 @@ Memory pool that uses weakref's and context managers to reclaim memory.
 	/element/
 		- (control)`property-set`
 		- (source/area)`33 2 33 16`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	Memory = Memory # bytearray subclass with weakref support
 
@@ -124,6 +134,8 @@ Memory pool that uses weakref's and context managers to reclaim memory.
 	/element/
 		- (control)`property-set`
 		- (source/area)`34 2 36 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	Reference = weakref.ref # for reclaiming memory
 		@classmethod
@@ -163,6 +175,8 @@ Construct a Reservoir from the given number of Mebibytes desired.
 	/element/
 		- (control)`property-set`
 		- (source/area)`61 2 67 10`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 Memory units currently in use.
 
 
@@ -173,6 +187,8 @@ Memory units currently in use.
 	/element/
 		- (control)`property-set`
 		- (source/area)`68 2 72 27`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 Number of memory units available.
 
 
@@ -227,7 +243,7 @@ Explicitly add an object to the available segments.
 		- (control)`property-set`
 		- (source/area)`104 1 205 50`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
+		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`104 16 104 21`
@@ -248,6 +264,8 @@ its appropriate to close the memory map.
 	/element/
 		- (control)`property-set`
 		- (source/area)`111 2 111 35`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ Segments >> ACCESS_MODE ]
 ! CONTROL:
@@ -258,6 +276,8 @@ its appropriate to close the memory map.
 	/element/
 		- (control)`property-set`
 		- (source/area)`112 2 114 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ Segments >> open ]
 ! CONTROL:

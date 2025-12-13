@@ -117,12 +117,12 @@
 		posix_spawn_file_actions_t fa;
 
 		char *lpd_argv[] = {
-			CC_PATH "/.llvm-lpd-tool", "merge",
+			CC_PATH "/.llvm/pd-tool", "merge",
 			"-o", _fault_llvm_imd,
 			_fault_llvm_imr, NULL
 		};
 		char *imq_argv[] = {
-			CC_PATH "/.llvm-imq-tool", "counters",
+			CC_PATH "/.llvm/clang-ipq", "counters",
 			FV_ARCHITECTURE_STR,
 			F_FACTOR_IMAGE,
 			_fault_llvm_imd, NULL

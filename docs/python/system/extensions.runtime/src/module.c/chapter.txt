@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 191 0`
-		- (coverage-zeros)`295`
-		- (coverage-counters)`295`
+		- (coverage-zeros)`276`
+		- (coverage-counters)`292`
 
 [ PYTHON_TYPES ]
 ! CONTROL:
@@ -71,8 +71,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`27 1 104 1`
-		- (coverage-zeros)`97`
-		- (coverage-counters)`97`
+		- (coverage-zeros)`81`
+		- (coverage-counters)`81`
 		- (type/syntax)`PyObj`
 		
 (signature)`trace(self, args)`
@@ -89,8 +89,8 @@ This is intended for debuggers.
 	/element/
 		- (control)`property-set`
 		- (source/area)`109 1 120 1`
-		- (coverage-zeros)`14`
-		- (coverage-counters)`14`
+		- (coverage-zeros)`7`
+		- (coverage-counters)`16`
 		- (type/syntax)`int`
 		
 (signature)`_call(ob)`
@@ -105,8 +105,8 @@ AddPendingCall callback
 	/element/
 		- (control)`property-set`
 		- (source/area)`125 1 139 1`
-		- (coverage-zeros)`7`
-		- (coverage-counters)`7`
+		- (coverage-zeros)`10`
+		- (coverage-counters)`15`
 		- (type/syntax)`PyObj`
 		
 (signature)`interject(self, callable)`
@@ -123,8 +123,8 @@ Expose AddPendingCall C-API to the Python language.
 	/element/
 		- (control)`property-set`
 		- (source/area)`141 1 155 1`
-		- (coverage-zeros)`15`
-		- (coverage-counters)`15`
+		- (coverage-zeros)`17`
+		- (coverage-counters)`17`
 		- (type/syntax)`PyObj`
 		
 (signature)`interrupt(self, args)`

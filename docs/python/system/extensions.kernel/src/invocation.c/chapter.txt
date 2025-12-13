@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 473 0`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`7`
+		- (coverage-zeros)`97`
+		- (coverage-counters)`234`
 
 [ IOPTION_SET_PGROUP ]
 ! CONTROL:
@@ -16,6 +16,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`11 9 11 28`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	#define IOPTION_SET_PGROUP 1
 
@@ -64,6 +66,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`376 9 384 2`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`6`
 (signature)`free_null_terminated_array()`
 
 
@@ -88,6 +92,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`32 1 177 1`
+		- (coverage-zeros)`41`
+		- (coverage-counters)`81`
 		- (type/syntax)`PyObj`
 		
 (signature)`inv_spawn(self, args, kw)`
@@ -102,6 +108,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`179 1 374 1`
+		- (coverage-zeros)`53`
+		- (coverage-counters)`128`
 		- (type/syntax)`PyObj`
 		
 (signature)`inv_new(subtype, args, kw)`
@@ -116,6 +124,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`386 1 418 1`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`18`
 		- (type/syntax)`void`
 		
 (signature)`inv_dealloc(self)`

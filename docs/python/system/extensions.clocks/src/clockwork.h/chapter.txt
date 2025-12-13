@@ -16,6 +16,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`13 10 13 49`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	#define LOCAL_MONOTONIC_CLOCK_ID CLOCK_MONOTONIC
 
@@ -28,6 +30,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`17 10 17 43`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	#define LOCAL_REAL_CLOCK_ID CLOCK_REALTIME
 
@@ -40,6 +44,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`20 9 20 28`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	#define NS_IN_SEC 1000000000
 

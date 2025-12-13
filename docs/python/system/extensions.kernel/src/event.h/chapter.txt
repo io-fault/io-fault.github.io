@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 257 0`
-		- (coverage-zeros)`107`
-		- (coverage-counters)`118`
+		- (coverage-zeros)`151`
+		- (coverage-counters)`179`
 
 [ _SYSTEM_KERNEL_EVENT_H_included_ ]
 ! CONTROL:
@@ -40,6 +40,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`12 9 15 50`
+		- (coverage-zeros)`9`
+		- (coverage-counters)`9`
 (signature)`EVENT_TYPE_META_LIST()`
 
 
@@ -52,6 +54,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`20 9 22 41`
+		- (coverage-zeros)`5`
+		- (coverage-counters)`6`
 (signature)`EVENT_TYPE_TIME_LIST()`
 
 
@@ -64,6 +68,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`27 9 29 52`
+		- (coverage-zeros)`6`
+		- (coverage-counters)`6`
 (signature)`EVENT_TYPE_IP_LIST()`
 
 
@@ -76,6 +82,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`34 9 37 54`
+		- (coverage-zeros)`9`
+		- (coverage-counters)`9`
 (signature)`EVENT_TYPE_FS_LIST()`
 
 
@@ -88,6 +96,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`42 9 45 49`
+		- (coverage-zeros)`9`
+		- (coverage-counters)`9`
 (signature)`EVENT_TYPE_IO_LIST()`
 
 
@@ -100,6 +110,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`50 9 55 21`
+		- (coverage-zeros)`15`
+		- (coverage-counters)`15`
 (signature)`EVENT_TYPE_LIST()`
 
 
@@ -112,6 +124,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`60 9 60 35`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`2`
 (signature)`EV_TYPE_ID()`
 
 
@@ -163,6 +177,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`89 10 90 65`
+		- (coverage-zeros)`5`
+		- (coverage-counters)`5`
 #!source
 	#define STRSHIFT(a) \
 		(_SHIFT(a[0],24)|_SHIFT(a[1],16)|_SHIFT(a[2],8)|_SHIFT(a[3],0))
@@ -176,6 +192,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`91 10 92 53`
+		- (coverage-zeros)`5`
+		- (coverage-counters)`5`
 #!source
 	#define STRCASE(a,b,c,d) \
 		(_SHIFT(a,24)|_SHIFT(b,16)|_SHIFT(c,8)|_SHIFT(d,0))
@@ -411,8 +429,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`68 1 83 1`
-		- (coverage-zeros)`8`
-		- (coverage-counters)`8`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`7`
 		- (type/syntax)`const char *`
 		
 (signature)`ev_type_name(etyp)`
@@ -427,8 +445,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`85 1 170 1`
-		- (coverage-zeros)`58`
-		- (coverage-counters)`58`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 		- (type/syntax)`enum EventType`
 		
 (signature)`ev_type_code(n)`
@@ -633,6 +651,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`190 1 212 1`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 		- (type/syntax)`int`
 		
 (signature)`evs_type_name(evs, typname)`
@@ -647,6 +667,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`214 1 231 1`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 		- (type/syntax)`const char *`
 		
 (signature)`evs_type_identifier(evs)`

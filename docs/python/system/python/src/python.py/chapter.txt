@@ -18,6 +18,8 @@ Python Execution Context support functions and classes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`4 1 4 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ os ]
 ! CONTROL:
@@ -28,6 +30,8 @@ Python Execution Context support functions and classes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`5 1 5 9`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ collections ]
 ! CONTROL:
@@ -38,6 +42,8 @@ Python Execution Context support functions and classes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`6 1 6 18`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ pkgutil ]
 ! CONTROL:
@@ -48,6 +54,8 @@ Python Execution Context support functions and classes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`7 1 7 14`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ importlib ]
 ! CONTROL:
@@ -58,6 +66,8 @@ Python Execution Context support functions and classes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`8 1 8 16`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ Selector ]
 ! CONTROL:
@@ -68,6 +78,8 @@ Python Execution Context support functions and classes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`10 1 10 34`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ files ]
 ! CONTROL:
@@ -78,6 +90,8 @@ Python Execution Context support functions and classes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`12 1 12 19`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ Import ]
 ! CONTROL:
@@ -86,8 +100,8 @@ Python Execution Context support functions and classes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`14 1 309 41`
-		- (coverage-zeros)`6`
-		- (coverage-counters)`14`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`14 14 14 21`
@@ -106,6 +120,8 @@ Route for Python imports.
 	/element/
 		- (control)`property-set`
 		- (source/area)`18 2 20 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	__slots__ = ('context', 'points',)
 		@classmethod
@@ -275,6 +291,8 @@ Whether or not the Path contains the given Pointer.
 	/element/
 		- (control)`property-set`
 		- (source/area)`93 2 100 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 Return the absolute path of the module Route; dot separated module names.
 
 
@@ -285,6 +303,8 @@ Return the absolute path of the module Route; dot separated module names.
 	/element/
 		- (control)`property-set`
 		- (source/area)`101 2 109 10`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 The module's name relative to its package; node identifier used to refer to the module.
 Alias to (invalid/unknown)&<#identifier>.
 
@@ -296,6 +316,8 @@ Alias to (invalid/unknown)&<#identifier>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`110 2 124 10`
+		- (coverage-zeros)`4`
+		- (coverage-counters)`4`
 Return a (invalid/unknown)&<#Route> to the module's package.
 If the (invalid/unknown)&<#Route> is referencing a package, return (invalid/unknown)&<#self>.
 
@@ -312,6 +334,8 @@ If the (invalid/unknown)&<#Route> is referencing a package, return (invalid/unkn
 	/element/
 		- (control)`property-set`
 		- (source/area)`125 2 128 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ Import >> loader ]
 ! CONTROL:
@@ -320,6 +344,8 @@ If the (invalid/unknown)&<#Route> is referencing a package, return (invalid/unkn
 	/element/
 		- (control)`property-set`
 		- (source/area)`129 2 134 27`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 The loader of the module.
 
 
@@ -375,6 +401,8 @@ Interrogate the module's loader as to whether or not it's a "package module".
 	/element/
 		- (control)`property-set`
 		- (source/area)`163 2 163 26`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	is_package = is_container
 
@@ -532,7 +560,7 @@ The (filename)`__pycache__` directory associated with the module's file.
 		- (control)`property-set`
 		- (source/area)`311 1 384 51`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
+		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`311 17 311 22`
@@ -562,6 +590,8 @@ for structural purposes or origin tracking.
 	/element/
 		- (control)`property-set`
 		- (source/area)`326 2 328 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	__slots__ = ('type', 'container_get', 'identifier', 'default')
 		@classmethod

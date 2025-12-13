@@ -20,6 +20,8 @@ All information is retrieved from the system when invoked.
 	/element/
 		- (control)`property-set`
 		- (source/area)`6 1 6 9`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ operator ]
 ! CONTROL:
@@ -30,6 +32,8 @@ All information is retrieved from the system when invoked.
 	/element/
 		- (control)`property-set`
 		- (source/area)`7 1 7 15`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ tools ]
 ! CONTROL:
@@ -40,6 +44,8 @@ All information is retrieved from the system when invoked.
 	/element/
 		- (control)`property-set`
 		- (source/area)`9 1 9 27`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ files ]
 ! CONTROL:
@@ -50,6 +56,8 @@ All information is retrieved from the system when invoked.
 	/element/
 		- (control)`property-set`
 		- (source/area)`10 1 10 19`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ _path ]
 ! CONTROL:
@@ -60,6 +68,8 @@ All information is retrieved from the system when invoked.
 	/element/
 		- (control)`property-set`
 		- (source/area)`13 1 13 104`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	_path = tools.cachedcalls(16)(tools.compose(operator.methodcaller('delimit'), files.Path.from_absolute))
 
@@ -72,6 +82,8 @@ All information is retrieved from the system when invoked.
 	/element/
 		- (control)`property-set`
 		- (source/area)`14 1 14 72`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	_dirs = tools.cachedcalls(2)(operator.methodcaller('split', os.pathsep))
 

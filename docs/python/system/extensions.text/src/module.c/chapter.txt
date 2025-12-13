@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 277 0`
-		- (coverage-zeros)`281`
-		- (coverage-counters)`281`
+		- (coverage-zeros)`266`
+		- (coverage-counters)`332`
 
 [ CELL_STACK_ALLOC ]
 ! CONTROL:
@@ -40,7 +40,7 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`12 1 25 1`
-		- (coverage-zeros)`20`
+		- (coverage-zeros)`14`
 		- (coverage-counters)`20`
 		- (type/syntax)`PyObj`
 		
@@ -56,8 +56,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`27 1 35 1`
-		- (coverage-zeros)`15`
-		- (coverage-counters)`15`
+		- (coverage-zeros)`12`
+		- (coverage-counters)`16`
 		- (type/syntax)`PyObj`
 		
 (signature)`get_encoding(self)`
@@ -70,8 +70,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`47 1 220 1`
-		- (coverage-zeros)`105`
-		- (coverage-counters)`105`
+		- (coverage-zeros)`112`
+		- (coverage-counters)`153`
 		- (type/syntax)`long`
 		
 (signature)`measure(wcv, ws, ctlen, tablen)`
@@ -93,8 +93,8 @@ does recognize the sequence.
 	/element/
 		- (control)`property-set`
 		- (source/area)`225 1 264 1`
-		- (coverage-zeros)`38`
-		- (coverage-counters)`38`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`5`
 		- (type/syntax)`PyObj`
 		
 (signature)`cells(self, args)`

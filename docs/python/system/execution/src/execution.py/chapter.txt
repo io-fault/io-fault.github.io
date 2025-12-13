@@ -4,7 +4,7 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 772 0`
-		- (coverage-zeros)`92`
+		- (coverage-zeros)`98`
 		- (coverage-counters)`336`
 System process execution interfaces and
 process global registry for controlling the composition of (factor-local/data)&<#Specification[Specification]> for system process execution.
@@ -66,6 +66,8 @@ Symbolic names for annotations used by (project-local/unknown)&<execution>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`46 1 46 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ os ]
 ! CONTROL:
@@ -76,6 +78,8 @@ Symbolic names for annotations used by (project-local/unknown)&<execution>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`47 1 47 9`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ typing ]
 ! CONTROL:
@@ -86,6 +90,8 @@ Symbolic names for annotations used by (project-local/unknown)&<execution>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`48 1 48 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ Identifier ]
 ! CONTROL:
@@ -96,6 +102,8 @@ Symbolic names for annotations used by (project-local/unknown)&<execution>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`50 1 50 28`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	Identifier = typing.Hashable
 
@@ -108,6 +116,8 @@ Symbolic names for annotations used by (project-local/unknown)&<execution>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`51 1 51 39`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	Vector = typing.Sequence[typing.AnyStr]
 
@@ -120,6 +130,8 @@ Symbolic names for annotations used by (project-local/unknown)&<execution>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`52 1 52 51`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	Specification = typing.Tuple[typing.AnyStr, Vector]
 
@@ -132,6 +144,8 @@ Symbolic names for annotations used by (project-local/unknown)&<execution>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`53 1 53 64`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	Method = typing.Callable[[typing.AnyStr, Vector], Specification]
 
@@ -144,6 +158,8 @@ Symbolic names for annotations used by (project-local/unknown)&<execution>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`55 1 55 45`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ default_python_script ]
 ! CONTROL:
@@ -196,6 +212,8 @@ Symbolic names for annotations used by (project-local/unknown)&<execution>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`74 1 78 1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	_defaults = (
 		('python-script', default_python_script),
@@ -211,7 +229,7 @@ Symbolic names for annotations used by (project-local/unknown)&<execution>.
 		- (control)`property-set`
 		- (source/area)`83 1 125 61`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
+		- (coverage-counters)`1`
 Execution Method index associating a set of (invalid/unknown)&<#Identifier's> with their
 corresponding (invalid/unknown)&<#Method's>.
 
@@ -225,6 +243,8 @@ corresponding (invalid/unknown)&<#Method's>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`88 2 88 48`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	__slots__ = ('_get', '_storage', '__weakref__')
 
@@ -319,6 +339,8 @@ Construct a pair suitable for creating a (project-local/factor-element)&<kernel#
 	/element/
 		- (control)`property-set`
 		- (source/area)`128 1 128 14`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	root = Index()
 
@@ -331,6 +353,8 @@ Construct a pair suitable for creating a (project-local/factor-element)&<kernel#
 	/element/
 		- (control)`property-set`
 		- (source/area)`129 1 129 20`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	select = root.select
 
@@ -343,6 +367,8 @@ Construct a pair suitable for creating a (project-local/factor-element)&<kernel#
 	/element/
 		- (control)`property-set`
 		- (source/area)`130 1 130 22`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	prepare = root.prepare
 
@@ -355,6 +381,8 @@ Construct a pair suitable for creating a (project-local/factor-element)&<kernel#
 	/element/
 		- (control)`property-set`
 		- (source/area)`132 1 133 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ Delta ]
 ! CONTROL:
@@ -363,8 +391,8 @@ Construct a pair suitable for creating a (project-local/factor-element)&<kernel#
 	/element/
 		- (control)`property-set`
 		- (source/area)`134 1 157 29`
-		- (coverage-zeros)`7`
-		- (coverage-counters)`8`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`134 13 134 18`
@@ -434,6 +462,8 @@ Descriptor of change in a subprocess' state.
 	/element/
 		- (control)`property-set`
 		- (source/area)`143 2 146 10`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 
 [ Delta >> exited ]
 ! CONTROL:
@@ -444,6 +474,8 @@ Descriptor of change in a subprocess' state.
 	/element/
 		- (control)`property-set`
 		- (source/area)`147 2 149 10`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 
 [ Delta >> cored ]
 ! CONTROL:
@@ -454,6 +486,8 @@ Descriptor of change in a subprocess' state.
 	/element/
 		- (control)`property-set`
 		- (source/area)`150 2 152 10`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`3`
 
 [ Delta >> continued ]
 ! CONTROL:
@@ -464,6 +498,8 @@ Descriptor of change in a subprocess' state.
 	/element/
 		- (control)`property-set`
 		- (source/area)`153 2 155 10`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 
 [ Delta >> stopped ]
 ! CONTROL:
@@ -474,6 +510,8 @@ Descriptor of change in a subprocess' state.
 	/element/
 		- (control)`property-set`
 		- (source/area)`156 2 157 29`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 
 [ decode_process_status ]
 ! CONTROL:
@@ -482,7 +520,7 @@ Descriptor of change in a subprocess' state.
 	/element/
 		- (control)`property-set`
 		- (source/area)`159 1 206 33`
-		- (coverage-zeros)`7`
+		- (coverage-zeros)`12`
 		- (coverage-counters)`20`
 		- (type/syntax)`Delta`
 		- (type/factor-local/class)&<#Delta[Delta]>
@@ -545,7 +583,7 @@ and can only be used with child processes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`208 1 245 35`
-		- (coverage-zeros)`1`
+		- (coverage-zeros)`2`
 		- (coverage-counters)`7`
 		- (type/syntax)`typing.Optional[Delta]`
 		
@@ -649,7 +687,7 @@ Returns the status of the subprocess; negative if the process exited due to a si
 		- (control)`property-set`
 		- (source/area)`339 1 398 15`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
+		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`339 16 339 20`
@@ -670,6 +708,8 @@ provide access to the input and output pipes and the standard errors of each pro
 	/element/
 		- (control)`property-set`
 		- (source/area)`345 2 347 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	__slots__ = ()
 		@property
@@ -711,6 +751,8 @@ Pipe file descriptor for the pipeline's output.
 	/element/
 		- (control)`property-set`
 		- (source/area)`362 2 368 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 The sequence of process identifiers of the commands that make up the pipeline.
 
 
@@ -767,7 +809,7 @@ Processes are *not* reaped.
 		- (control)`property-set`
 		- (source/area)`400 1 515 17`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
+		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`400 19 400 23`
@@ -791,6 +833,8 @@ with no standard errors and no process identifiers.
 	/element/
 		- (control)`property-set`
 		- (source/area)`409 2 409 15`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	__slots__ = ()
 
@@ -803,6 +847,8 @@ with no standard errors and no process identifiers.
 	/element/
 		- (control)`property-set`
 		- (source/area)`410 2 412 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	Invocation = KInvocation
 		@classmethod
@@ -899,6 +945,8 @@ the file descriptors used for input, output and the standard error of all the co
 	/element/
 		- (control)`property-set`
 		- (source/area)`515 2 515 17`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	__call__ = spawn
 

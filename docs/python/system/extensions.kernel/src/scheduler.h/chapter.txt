@@ -5,7 +5,7 @@
 		- (control)`property-set`
 		- (source/area)`1 1 29 0`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`7`
+		- (coverage-counters)`11`
 
 [ _SYSTEM_KERNEL_SCHEDULER_H_included_ ]
 ! CONTROL:
@@ -28,6 +28,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`7 9 7 49`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`Scheduler_GetTaskQueue()`
 
 
@@ -40,6 +42,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`8 9 8 51`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`Scheduler_GetKernelQueue()`
 
 
@@ -52,6 +56,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`10 9 10 53`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`Scheduler_GetExceptionTrap()`
 
 
@@ -64,6 +70,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`11 9 11 80`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`Scheduler_SetExceptionTrap()`
 
 
@@ -76,6 +84,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`12 9 16 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`6`
 (signature)`Scheduler_UpdateExceptionTrap()`
 
 

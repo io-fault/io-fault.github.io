@@ -27,6 +27,8 @@ System thread primitives.
 	/element/
 		- (control)`property-set`
 		- (source/area)`11 1 11 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ typing ]
 ! CONTROL:
@@ -37,6 +39,8 @@ System thread primitives.
 	/element/
 		- (control)`property-set`
 		- (source/area)`12 1 12 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ types ]
 ! CONTROL:
@@ -47,6 +51,8 @@ System thread primitives.
 	/element/
 		- (control)`property-set`
 		- (source/area)`13 1 13 12`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ signal ]
 ! CONTROL:
@@ -57,6 +63,8 @@ System thread primitives.
 	/element/
 		- (control)`property-set`
 		- (source/area)`14 1 14 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ _thread ]
 ! CONTROL:
@@ -67,6 +75,8 @@ System thread primitives.
 	/element/
 		- (control)`property-set`
 		- (source/area)`15 1 15 14`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ runtime ]
 ! CONTROL:
@@ -77,6 +87,8 @@ System thread primitives.
 	/element/
 		- (control)`property-set`
 		- (source/area)`17 1 17 21`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ create ]
 ! CONTROL:
@@ -87,6 +99,8 @@ System thread primitives.
 	/element/
 		- (control)`property-set`
 		- (source/area)`19 1 19 33`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	create = _thread.start_new_thread
 
@@ -99,6 +113,8 @@ System thread primitives.
 	/element/
 		- (control)`property-set`
 		- (source/area)`20 1 20 30`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	amutex = _thread.allocate_lock
 
@@ -111,6 +127,8 @@ System thread primitives.
 	/element/
 		- (control)`property-set`
 		- (source/area)`21 1 21 28`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	identify = _thread.get_ident
 
@@ -234,7 +252,7 @@ Select the frame of the thread's identifier.
 		- (control)`property-set`
 		- (source/area)`77 1 113 22`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
+		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`77 18 77 23`
@@ -254,6 +272,8 @@ Alternatively described as a queue with a transfer limit of one item.
 	/element/
 		- (control)`property-set`
 		- (source/area)`82 2 82 33`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	__slots__ = ('mutex', 'message')
 
