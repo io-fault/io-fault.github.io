@@ -18,8 +18,6 @@ Module finder and loader for Factored Projects.
 	/element/
 		- (control)`property-set`
 		- (source/area)`4 1 4 26`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ files ]
 ! CONTROL:
@@ -331,7 +329,7 @@ Construct a standard loader selecting images with the given (factor-local/parame
 		- (control)`property-set`
 		- (source/area)`269 1 301 14`
 		- (coverage-zeros)`4`
-		- (coverage-counters)`16`
+		- (coverage-counters)`17`
 (signature)`setup()`
 
 Create and install a configured (factor-local/class)&<#IntegralFinder[IntegralFinder]>.

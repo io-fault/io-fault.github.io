@@ -16,8 +16,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`40 10 40 37`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 #!source
 	#define CONFIG_DEFAULT_ARRAY_SIZE 16
 

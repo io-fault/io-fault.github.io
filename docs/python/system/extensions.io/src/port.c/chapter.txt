@@ -16,8 +16,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`26 9 26 47`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`3`
 (signature)`errpf()`
 
 

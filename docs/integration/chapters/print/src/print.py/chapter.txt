@@ -360,10 +360,11 @@ Returns the directory path that was created.
 		- (control)`property-set`
 		- (source/area)`363 1 367 1`
 #!source
-	for x in p.sentences:
-		if not x:
-			continue
-			return ''.join(y[1] for y in x)
+	
+	def first_sentence(p):
+		for x in p.sentences:
+			if not x:
+				continue
 
 [ restricted ]
 ! CONTROL:
@@ -375,10 +376,9 @@ Returns the directory path that was created.
 		- (control)`property-set`
 		- (source/area)`369 1 372 1`
 #!source
+		return ''.join(y[1] for y in x)
 		# None detected, presume single sentence abstract.
-		return ''.join(y[1] for y in p)
-	
-	def removeprefix(prefixes, string):
+	return ''.join(y[1] for y in p)
 
 [ extract_image_reference ]
 ! CONTROL:

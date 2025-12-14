@@ -18,8 +18,6 @@ Execute a factor or module as a substitution.
 	/element/
 		- (control)`property-set`
 		- (source/area)`4 1 4 16`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ process ]
 ! CONTROL:

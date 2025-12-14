@@ -81,8 +81,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`17 1 43 1`
-		- (coverage-zeros)`11`
-		- (coverage-counters)`26`
 		- (type/syntax)`PyObj`
 		
 (signature)`fs_device(self)`

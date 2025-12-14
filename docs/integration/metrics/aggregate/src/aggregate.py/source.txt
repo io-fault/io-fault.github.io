@@ -108,17 +108,22 @@ def integrate_coverage_capture(regions, output, cache, telemetry, delineated, pf
 		producer = tuple(segment.container)
 		fsc = leading // segment
 
-		# Split d-counters into standard form using an index built from regions.
-		if (fsc/'d-counters').fs_type() == 'data':
+		# Split l-counters into standard form using an index built from regions.
+		lcounters = (fsc/'l-counters')
+		if lcounters.fs_type() == 'data':
 			idx = coverage.index_regions(regions or {})
-			with (fsc/'d-counters').fs_open('r') as dc:
-				coverage.integrate_dcounters(idx, fsc, dc.readlines())
+			with lcounters.fs_open('r') as dc:
+				coverage.integrate_lcounters(idx, fsc, dc.readlines())
 
-		data = coverage.load_fault_syntax_counters(fsc/'sources', fsc/'areas', fsc/'counts')
-
-		for filepath, counters in data.items():
-			cid = (filepath,) + producer
-			consolidated[cid].update(counters)
+		try:
+			data = coverage.load_fault_syntax_counters(fsc/'sources', fsc/'areas', fsc/'counts')
+		except FileNotFoundError:
+			# Need all three files to contribute coverage data.
+			pass
+		else:
+			for filepath, counters in data.items():
+				cid = (filepath,) + producer
+				consolidated[cid].update(counters)
 
 	# Per-test data.
 	consolidated = regroup_coverage(consolidated)

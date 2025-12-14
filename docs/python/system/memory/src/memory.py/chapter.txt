@@ -19,8 +19,6 @@ in parts of processes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`5 1 5 9`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ weakref ]
 ! CONTROL:
@@ -375,8 +373,8 @@ Constructs an iterator to the parameterized range over the
 	/element/
 		- (control)`property-set`
 		- (source/area)`201 2 205 50`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 (signature)`__iter__(self)`
 
 Return an iterator to the entire region in sixteen kilobyte sizes.

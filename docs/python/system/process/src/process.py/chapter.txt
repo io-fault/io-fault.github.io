@@ -4,7 +4,7 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 867 0`
-		- (coverage-zeros)`89`
+		- (coverage-zeros)`87`
 		- (coverage-counters)`312`
 Process invocation and management interfaces.
 
@@ -18,8 +18,6 @@ Process invocation and management interfaces.
 	/element/
 		- (control)`property-set`
 		- (source/area)`15 1 15 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ os ]
 ! CONTROL:
@@ -1252,7 +1250,7 @@ that rely on a set of threads to perform the actual work.
 	/element/
 		- (control)`property-set`
 		- (source/area)`677 1 721 26`
-		- (coverage-zeros)`12`
+		- (coverage-zeros)`10`
 		- (coverage-counters)`23`
 (signature)`control(main, *args, **kw)`
 
@@ -1402,7 +1400,7 @@ Accessing (project-local/unknown)&<process#scheduler[process.scheduler]> will pe
 	/element/
 		- (control)`property-set`
 		- (source/area)`864 1 867 27`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`3`
 (signature)`__getattr__(name)`
 

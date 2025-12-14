@@ -20,8 +20,6 @@ Provides parsing, serialization, and allocation functions for application servic
 	/element/
 		- (control)`property-set`
 		- (source/area)`6 1 6 28`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ Iterable ]
 ! CONTROL:

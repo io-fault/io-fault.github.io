@@ -26,8 +26,6 @@ available under (project-local/unknown)&<system.factors.context>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`12 1 12 12`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ sys ]
 ! CONTROL:
@@ -260,7 +258,7 @@ bootstrapped modules and to the factors module itself.
 		- (control)`property-set`
 		- (source/area)`137 1 155 15`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`8`
+		- (coverage-counters)`9`
 (signature)`integrate(faultpath, faultname, faultform, images, system, python, arch, form, *products)`
 
 Integrate the factor environment into Python's import system.

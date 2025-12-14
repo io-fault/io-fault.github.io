@@ -20,8 +20,6 @@ All information is retrieved from the system when invoked.
 	/element/
 		- (control)`property-set`
 		- (source/area)`6 1 6 9`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ operator ]
 ! CONTROL:
@@ -245,8 +243,8 @@ the POSIX (system/manual)`sysconf` call with (id)`SC_CLK_TCK`.
 	/element/
 		- (control)`property-set`
 		- (source/area)`106 1 126 43`
-		- (coverage-zeros)`12`
-		- (coverage-counters)`12`
+		- (coverage-zeros)`13`
+		- (coverage-counters)`13`
 (signature)`platform()`
 
 Create an (project-local/unknown)&<execution#Platform[execution.Platform]> instance using the environment.

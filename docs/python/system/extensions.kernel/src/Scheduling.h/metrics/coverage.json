@@ -1,1 +1,1 @@
-{"elements": {"CONFIG_STATIC_KEVENTS": [[25, 32, 25, 34]], "CONFIG_SYSCALL_RETRY": [[29, 31, 29, 33]]}, "zeros": [], "coverage": [[25, 32, 25, 34], [29, 31, 29, 33]], "counts": [486, 328]}
+{"elements": {"": [[25, 32, 25, 34]], "CONFIG_SYSCALL_RETRY": [[29, 31, 29, 33]]}, "zeros": [], "coverage": [[25, 32, 25, 34], [29, 31, 29, 33]], "counts": [5314, 3114]}

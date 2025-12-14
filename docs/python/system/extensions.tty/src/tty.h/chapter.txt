@@ -16,8 +16,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`12 10 12 42`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 #!source
 	#define SYSTEM_TTY_DEVICE_PATH "/dev/tty"
 

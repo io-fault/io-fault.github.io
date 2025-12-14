@@ -18,8 +18,6 @@ Tool execution factor for explicitly linked command sets.
 	/element/
 		- (control)`property-set`
 		- (source/area)`4 1 4 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ importlib ]
 ! CONTROL:
@@ -101,7 +99,7 @@ that no match could be made.
 		- (control)`property-set`
 		- (source/area)`29 1 36 49`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
+		- (coverage-counters)`7`
 		- (type/syntax)`process.Exit`
 		- (type/project-local/factor-element)&<process#Exit[fault.system.process.Exit]>
 		

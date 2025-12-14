@@ -40,8 +40,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`12 1 25 1`
-		- (coverage-zeros)`14`
-		- (coverage-counters)`20`
 		- (type/syntax)`PyObj`
 		
 (signature)`dsetlocale(self)`

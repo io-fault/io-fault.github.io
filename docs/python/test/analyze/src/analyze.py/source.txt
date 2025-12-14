@@ -58,11 +58,10 @@ class Harness(engine.Harness):
 				return harness.execute(test)
 
 		mid = os.environ['METRICS_IDENTITY']
-		try:
-			os.environ['METRICS_IDENTITY'] += '/' + test.identifier
-			pid, execute_test = self.concurrently(manage, waitpid=os.wait4)
-		finally:
-			os.environ['METRICS_IDENTITY'] = mid
+		os.environ['METRICS_IDENTITY'] += '/' + test.identifier
+		pid, execute_test = self.concurrently(manage, waitpid=os.wait4)
+		# Fork is raised here by concurrently, so don't set this in finally.
+		os.environ['METRICS_IDENTITY'] = mid
 
 		xact_metrics = metrics.Procedure(
 			work=metrics.Work(1, 0, 0, 0),

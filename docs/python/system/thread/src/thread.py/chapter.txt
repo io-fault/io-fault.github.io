@@ -27,8 +27,6 @@ System thread primitives.
 	/element/
 		- (control)`property-set`
 		- (source/area)`11 1 11 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ typing ]
 ! CONTROL:
@@ -329,8 +327,8 @@ A RuntimeError will be raised upon multiple invocations of commit.
 	/element/
 		- (control)`property-set`
 		- (source/area)`108 2 113 22`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`3`
 (signature)`transfer(self, message)`
 
 Send (factor-local/parameter)&<#Transition.transfer.Parameters.message[message]> to the receiving thread.

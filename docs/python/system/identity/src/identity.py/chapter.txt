@@ -26,8 +26,6 @@ overrides.
 	/element/
 		- (control)`property-set`
 		- (source/area)`13 1 13 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ _python_architecture ]
 ! CONTROL:
@@ -135,7 +133,7 @@ Return the (operating system, architecture) pair identifying the Root Execution 
 		- (control)`property-set`
 		- (source/area)`62 1 67 57`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
+		- (coverage-counters)`2`
 (signature)`python_execution_context()`
 
 Return the Python execution Context identification.

@@ -110,7 +110,7 @@
 		- (control)`property-set`
 		- (source/area)`26 3 26 17`
 		- (coverage-zeros)`2`
-		- (coverage-counters)`3`
+		- (coverage-counters)`2`
 
 [ clockwork_set ]
 ! CONTROL:
@@ -138,7 +138,7 @@
 		- (control)`property-set`
 		- (source/area)`42 2 42 16`
 		- (coverage-zeros)`2`
-		- (coverage-counters)`3`
+		- (coverage-counters)`2`
 
 [ clockwork_get ]
 ! CONTROL:
@@ -180,7 +180,7 @@
 		- (control)`property-set`
 		- (source/area)`68 2 68 16`
 		- (coverage-zeros)`2`
-		- (coverage-counters)`3`
+		- (coverage-counters)`2`
 
 [ clockwork_adjust ]
 ! CONTROL:

@@ -18,8 +18,6 @@ Python Execution Context support functions and classes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`4 1 4 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ os ]
 ! CONTROL:
@@ -692,8 +690,8 @@ Return (factor-local/method)&<#Reference.item[item]> in plural form; iterator th
 	/element/
 		- (control)`property-set`
 		- (source/area)`379 2 384 51`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 (signature)`value(self)`
 
 Return the value of the container's entry using (invalid/unknown)&<#identifier> as the key.

@@ -33,7 +33,7 @@ def _parse_areas(lines):
 
 def index_regions(regions):
 	"""
-	# Construct an index from source regions for used with &integrate_dcounters.
+	# Construct an index from source regions for used with &integrate_lcounters.
 	"""
 
 	idx = {}
@@ -44,9 +44,9 @@ def index_regions(regions):
 
 	return idx
 
-def integrate_dcounters(index, fsc, dcounters):
+def integrate_lcounters(index, fsc, lcounters):
 	"""
-	# Convert the counters in &dcounters into fault syntax counters, &fsc, using
+	# Convert the counters in &lcounters into fault syntax counters, &fsc, using
 	# the given &index to identify the full region.
 	"""
 
@@ -59,7 +59,7 @@ def integrate_dcounters(index, fsc, dcounters):
 		counts = stack.enter_context((fsc/'counts').fs_open('a'))
 		areas = stack.enter_context((fsc/'areas').fs_open('a'))
 
-		for line in dcounters:
+		for line in lcounters:
 			if line[:1] == '@':
 				# Change file.
 				if isolation and srcfile and counters:
@@ -217,19 +217,31 @@ def load_metrics_aggregates(path):
 
 	return areas, gcounts, types
 
+files_src = False
 def descend(mapping, current, elements):
 	for er in elements:
 		typ, sub, d = er
-		eid = d.get('identifier') or None
-
 		if 'area' not in d:
+			# Nothing to index.
 			continue
 
-		if eid is not None and not typ == 'parameter':
-			area = Area(map(Address, d['area']))
-			path = mapping[area] = current + (eid,)
-			if sub:
-				descend(mapping, path, sub)
+		eid = d.get('identifier') or None
+		if eid is None:
+			# Not identified.
+			continue
+
+		if typ == 'parameter':
+			# Parameters have areas and identities, but it is not
+			# desired to associate coverage with them even if a language
+			# can associate expressions. Prefer to keep it with the function.
+			continue
+
+		area = Area(map(Address, d['area']))
+		path = current + (eid,)
+		mapping[area] = path
+
+		if len(sub) > 0:
+			descend(mapping, path, sub)
 
 def index_elements(dsrc):
 	"""
@@ -243,9 +255,9 @@ def index_elements(dsrc):
 	if 'area' not in d:
 		return sam
 	area = Area(map(Address, d['area']))
-	sam[area] = tuple()
-	descend(sam, (), elements)
 
+	descend(sam, (), elements)
+	sam[area] = tuple()
 	return sam
 
 def total(index, areas, types, counts):
@@ -301,6 +313,10 @@ def factor_source_profile(elements, areas, types, counts):
 	# Group coverage data by element.
 	rmap = index_elements(elements)
 	index = {x: rmap.get(x, ()) for x in areas}
+	if '/files.py' in elements[2].get('identifier', ''):
+		with open("/x/log", 'a') as f:
+			f.write(repr(rmap))
+			f.write(repr(index))
 
 	# Calculate per-element counter index.
 	zeros, totals = total(index, areas, types, counts)

@@ -55,8 +55,6 @@ Interrupt a running (project-local/unknown)&<kernel#Scheduler.wait[kernel.Schedu
 	/element/
 		- (control)`property-set`
 		- (source/area)`32 2 32 16`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ ks_enqueue ]
 ! CONTROL:

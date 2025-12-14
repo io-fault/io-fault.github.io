@@ -91,8 +91,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`19 1 74 1`
-		- (coverage-zeros)`5`
-		- (coverage-counters)`17`
 		- (type/syntax)`int`
 		
 (signature)`ev_time_units(ev, args, kw)`
