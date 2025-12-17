@@ -4,7 +4,7 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 867 0`
-		- (coverage-zeros)`87`
+		- (coverage-zeros)`89`
 		- (coverage-counters)`312`
 Process invocation and management interfaces.
 
@@ -1250,7 +1250,7 @@ that rely on a set of threads to perform the actual work.
 	/element/
 		- (control)`property-set`
 		- (source/area)`677 1 721 26`
-		- (coverage-zeros)`10`
+		- (coverage-zeros)`12`
 		- (coverage-counters)`23`
 (signature)`control(main, *args, **kw)`
 

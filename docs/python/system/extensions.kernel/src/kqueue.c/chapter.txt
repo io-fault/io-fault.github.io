@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 571 0`
-		- (coverage-zeros)`97`
-		- (coverage-counters)`226`
+		- (coverage-zeros)`98`
+		- (coverage-counters)`227`
 
 [ INITIAL_TASKS_ALLOCATED ]
 ! CONTROL:
@@ -92,8 +92,8 @@ ev_type is ignored here as the subevent set is determined by kernelq_identify.
 	/element/
 		- (control)`property-set`
 		- (source/area)`48 1 112 1`
-		- (coverage-zeros)`25`
-		- (coverage-counters)`35`
+		- (coverage-zeros)`26`
+		- (coverage-counters)`36`
 		- (type/syntax)`int`
 		
 (signature)`kernelq_delta(kq, ctl, kp, event)`
