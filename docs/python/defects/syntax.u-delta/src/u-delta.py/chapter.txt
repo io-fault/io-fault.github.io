@@ -1,0 +1,206 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 223 0`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
+Analyze (project-local/unknown)&<delta>
+
+
+[ module ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 37`
+
+[ test_Update ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 13 27`
+(signature)`test_Update(test)`
+
+
+[ test_Lines ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`15 1 20 27`
+(signature)`test_Lines(test)`
+
+
+[ test_Cursor ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`22 1 28 27`
+(signature)`test_Cursor(test)`
+
+
+[ test_Checkpoint ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`30 1 33 27`
+(signature)`test_Checkpoint(test)`
+
+
+[ test_Log_init ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`35 1 40 27`
+(signature)`test_Log_init(test)`
+
+
+[ sample1 ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`42 1 48 13`
+(signature)`sample1()`
+
+
+[ test_Log_insert ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`50 1 52 20`
+(signature)`test_Log_insert(test)`
+
+
+[ test_Log_undo ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`54 1 58 14`
+(signature)`test_Log_undo(test)`
+
+
+[ test_Log_redo ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`60 1 70 41`
+(signature)`test_Log_redo(test)`
+
+
+[ test_Log_truncate ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`72 1 130 28`
+(signature)`test_Log_truncate(test)`
+
+- (context-local/factor-element)&<fault.syntax/delta#Log.truncate[fault.syntax.delta.Log.truncate]>
+
+Validate negative interpretations, uncommitted retention, and full truncation.
+
+
+[ test_Log_checkpoint ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`132 1 142 20`
+(signature)`test_Log_checkpoint(test)`
+
+
+[ test_Log_update ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`144 1 150 31`
+(signature)`test_Log_update(test)`
+
+
+[ test_Log_collapse_inserts ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`152 1 172 27`
+(signature)`test_Log_collapse_inserts(test)`
+
+
+[ test_Log_collapse_deletes ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`174 1 199 23`
+(signature)`test_Log_collapse_deletes(test)`
+
+- (context-local/factor-element)&<fault.syntax/delta#Update.combine[fault.syntax.delta.Update.combine]>
+- (context-local/factor-element)&<fault.syntax/delta#Log.collapse[fault.syntax.delta.Log.collapse]>
+
+Validate that deletes following inserts can be combined.
+
+
+[ test_Log_collapsed_since ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`201 1 223 24`
+(signature)`test_Log_collapsed_since(test)`
+
+- (context-local/factor-element)&<fault.syntax/delta#Log.collapse[fault.syntax.delta.Log.collapse]>
+- (context-local/factor-element)&<fault.syntax/delta#Log.since[fault.syntax.delta.Log.since]>
+

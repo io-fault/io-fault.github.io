@@ -1,0 +1,58 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 14 16`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
+Timer related frames.
+
+
+[ bells ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 16`
+#!source
+	bells="🔔🔕"
+
+[ hourly ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 17`
+#!source
+	hourly="🕐🕛"
+
+[ halfpast ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 19`
+#!source
+	halfpast="🕜🕧"
+
+[ frame_scheduled ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 11 4`
+(signature)`frame_scheduled(record)`
+
+Construct frame input for the given (factor-local/parameter)&<#frame_scheduled.Parameters.record[record]>.
+

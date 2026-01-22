@@ -1,0 +1,11720 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 2072 0`
+
+[ _ast ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1 1 1 11`
+
+[ _typeshed ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`2 1 2 16`
+
+[ sys ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`3 1 3 10`
+
+[ types ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`4 1 4 12`
+
+[ dict_items ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`5 1 5 63`
+
+[ dict_keys ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`5 1 5 63`
+
+[ dict_values ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`5 1 5 63`
+
+[ AnyStr_co ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`6 1 29 1`
+
+[ FileDescriptorOrPath ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`6 1 29 1`
+
+[ OpenBinaryMode ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`6 1 29 1`
+
+[ OpenBinaryModeReading ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`6 1 29 1`
+
+[ OpenBinaryModeUpdating ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`6 1 29 1`
+
+[ OpenBinaryModeWriting ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`6 1 29 1`
+
+[ OpenTextMode ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`6 1 29 1`
+
+[ ReadableBuffer ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`6 1 29 1`
+
+[ SupportsAdd ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`6 1 29 1`
+
+[ SupportsAiter ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`6 1 29 1`
+
+[ SupportsAnext ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`6 1 29 1`
+
+[ SupportsDivMod ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`6 1 29 1`
+
+[ SupportsIter ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`6 1 29 1`
+
+[ SupportsKeysAndGetItem ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`6 1 29 1`
+
+[ SupportsLenAndGetItem ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`6 1 29 1`
+
+[ SupportsNext ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`6 1 29 1`
+
+[ SupportsRAdd ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`6 1 29 1`
+
+[ SupportsRDivMod ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`6 1 29 1`
+
+[ SupportsRichComparison ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`6 1 29 1`
+
+[ SupportsRichComparisonT ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`6 1 29 1`
+
+[ SupportsTrunc ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`6 1 29 1`
+
+[ SupportsWrite ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`6 1 29 1`
+
+[ Awaitable ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`30 1 30 118`
+
+[ Callable ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`30 1 30 118`
+
+[ Iterable ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`30 1 30 118`
+
+[ Iterator ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`30 1 30 118`
+
+[ MutableSet ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`30 1 30 118`
+
+[ Reversible ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`30 1 30 118`
+
+[ AbstractSet ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`30 1 30 118`
+
+[ Sized ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`30 1 30 118`
+
+[ BufferedRandom ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`31 1 31 84`
+
+[ BufferedReader ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`31 1 31 84`
+
+[ BufferedWriter ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`31 1 31 84`
+
+[ FileIO ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`31 1 31 84`
+
+[ TextIOWrapper ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`31 1 31 84`
+
+[ CodeType ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`32 1 32 48`
+
+[ TracebackType ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`32 1 32 48`
+
+[ _Cell ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`32 1 32 48`
+
+[ IO ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`35 1 56 1`
+
+[ Any ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`35 1 56 1`
+
+[ BinaryIO ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`35 1 56 1`
+
+[ ByteString ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`35 1 56 1`
+
+[ ClassVar ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`35 1 56 1`
+
+[ Generic ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`35 1 56 1`
+
+[ Mapping ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`35 1 56 1`
+
+[ MutableMapping ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`35 1 56 1`
+
+[ MutableSequence ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`35 1 56 1`
+
+[ NoReturn ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`35 1 56 1`
+
+[ Protocol ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`35 1 56 1`
+
+[ Sequence ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`35 1 56 1`
+
+[ SupportsAbs ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`35 1 56 1`
+
+[ SupportsBytes ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`35 1 56 1`
+
+[ SupportsComplex ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`35 1 56 1`
+
+[ SupportsFloat ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`35 1 56 1`
+
+[ SupportsInt ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`35 1 56 1`
+
+[ TypeVar ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`35 1 56 1`
+
+[ overload ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`35 1 56 1`
+
+[ type_check_only ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`35 1 56 1`
+
+[ Concatenate ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`57 1 57 126`
+
+[ Literal ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`57 1 57 126`
+
+[ LiteralString ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`57 1 57 126`
+
+[ ParamSpec ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`57 1 57 126`
+
+[ Self ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`57 1 57 126`
+
+[ SupportsIndex ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`57 1 57 126`
+
+[ TypeAlias ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`57 1 57 126`
+
+[ TypeGuard ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`57 1 57 126`
+
+[ final ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`57 1 57 126`
+
+[ _T ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`62 1 62 18`
+#!source
+	_T = TypeVar("_T")
+
+[ _T_co ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`63 1 63 40`
+#!source
+	_T_co = TypeVar("_T_co", covariant=True)
+
+[ _T_contra ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`64 1 64 52`
+#!source
+	_T_contra = TypeVar("_T_contra", contravariant=True)
+
+[ _R_co ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`65 1 65 40`
+#!source
+	_R_co = TypeVar("_R_co", covariant=True)
+
+[ _KT ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`66 1 66 20`
+#!source
+	_KT = TypeVar("_KT")
+
+[ _VT ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`67 1 67 20`
+#!source
+	_VT = TypeVar("_VT")
+
+[ _S ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`68 1 68 18`
+#!source
+	_S = TypeVar("_S")
+
+[ _T1 ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`69 1 69 20`
+#!source
+	_T1 = TypeVar("_T1")
+
+[ _T2 ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`70 1 70 20`
+#!source
+	_T2 = TypeVar("_T2")
+
+[ _T3 ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`71 1 71 20`
+#!source
+	_T3 = TypeVar("_T3")
+
+[ _T4 ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`72 1 72 20`
+#!source
+	_T4 = TypeVar("_T4")
+
+[ _T5 ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`73 1 73 20`
+#!source
+	_T5 = TypeVar("_T5")
+
+[ _SupportsNextT ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`74 1 74 83`
+#!source
+	_SupportsNextT = TypeVar("_SupportsNextT", bound=SupportsNext[Any], covariant=True)
+
+[ _SupportsAnextT ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`75 1 75 86`
+#!source
+	_SupportsAnextT = TypeVar("_SupportsAnextT", bound=SupportsAnext[Any], covariant=True)
+
+[ _AwaitableT ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`76 1 76 58`
+#!source
+	_AwaitableT = TypeVar("_AwaitableT", bound=Awaitable[Any])
+
+[ _AwaitableT_co ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`77 1 77 80`
+#!source
+	_AwaitableT_co = TypeVar("_AwaitableT_co", bound=Awaitable[Any], covariant=True)
+
+[ _P ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`78 1 78 20`
+#!source
+	_P = ParamSpec("_P")
+
+[ object ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`80 1 115 60`
+
+[ object >> __class__ ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`86 5 88 21`
+		- (type/syntax)`type[Self]`
+		
+
+[ object >> __class__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`89 5 89 58`
+		- (type/syntax)`None`
+		
+(signature)`__class__(self, __type)`
+
+
+[ object >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`90 5 90 35`
+		- (type/syntax)`None`
+		
+(signature)`__init__(self)`
+
+
+[ object >> __new__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`91 5 91 33`
+		- (type/syntax)`Self`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing_extensions.Self]>
+		
+(signature)`__new__(cls)`
+
+
+[ object >> __setattr__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`94 5 94 65`
+		- (type/syntax)`None`
+		
+(signature)`__setattr__(self, __name, __value)`
+
+
+[ object >> __delattr__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`95 5 95 51`
+		- (type/syntax)`None`
+		
+(signature)`__delattr__(self, __name)`
+
+
+[ object >> __eq__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`96 5 96 50`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__eq__(self, __value)`
+
+
+[ object >> __ne__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`97 5 97 50`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__ne__(self, __value)`
+
+
+[ object >> __str__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`98 5 98 33`
+		- (type/syntax)`str`
+		- (type/factor-local/class)&<#str[str]>
+		
+(signature)`__str__(self)`
+
+
+[ object >> __repr__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`99 5 99 34`
+		- (type/syntax)`str`
+		- (type/factor-local/class)&<#str[str]>
+		
+(signature)`__repr__(self)`
+
+
+[ object >> __hash__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`100 5 100 34`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`__hash__(self)`
+
+
+[ object >> __format__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`101 5 101 56`
+		- (type/syntax)`str`
+		- (type/factor-local/class)&<#str[str]>
+		
+(signature)`__format__(self, __format_spec)`
+
+
+[ object >> __getattribute__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`102 5 102 55`
+		- (type/syntax)`Any`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing.Any]>
+		
+(signature)`__getattribute__(self, __name)`
+
+
+[ object >> __sizeof__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`103 5 103 36`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`__sizeof__(self)`
+
+
+[ object >> __reduce__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`106 5 106 54`
+		- (type/syntax)`str | tuple[Any, ...]:`
+		
+(signature)`__reduce__(self)`
+
+
+[ object >> __dir__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`112 5 112 43`
+		- (type/syntax)`Iterable[str]`
+		
+(signature)`__dir__(self)`
+
+
+[ object >> __init_subclass__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`113 5 114 16`
+		- (type/syntax)`None`
+		
+(signature)`__init_subclass__(cls)`
+
+
+[ object >> __subclasshook__ ]
+! CONTROL:
+	/type/
+		classmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`115 5 115 60`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__subclasshook__(cls, __subclass)`
+
+
+[ staticmethod ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`117 1 129 77`
+! INHERIT:
+	- (source/area)`117 20 117 37`
+	- (type/syntax)`Generic[_P, _R_co]`
+	
+
+[ staticmethod >> __func__ ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`119 5 120 13`
+		- (type/syntax)`Callable[_P, _R_co]`
+		
+
+[ staticmethod >> __isabstractmethod__ ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`121 5 121 47`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+
+[ staticmethod >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`122 5 122 61`
+		- (type/syntax)`None`
+		
+(signature)`__init__(self, __f)`
+
+
+[ staticmethod >> __get__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`123 5 123 98`
+		- (type/syntax)`Callable[_P, _R_co]`
+		
+(signature)`__get__(self, __instance)`
+
+
+[ classmethod ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`131 1 142 74`
+! INHERIT:
+	- (source/area)`131 19 131 40`
+	- (type/syntax)`Generic[_T, _P, _R_co]`
+	
+
+[ classmethod >> __func__ ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`133 5 134 13`
+		- (type/syntax)`Callable[Concatenate[_T, _P], _R_co]`
+		
+
+[ classmethod >> __isabstractmethod__ ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`135 5 135 47`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+
+[ classmethod >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`136 5 136 78`
+		- (type/syntax)`None`
+		
+(signature)`__init__(self, __f)`
+
+
+[ classmethod >> __get__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`137 5 137 98`
+		- (type/syntax)`Callable[_P, _R_co]`
+		
+(signature)`__get__(self, __instance)`
+
+
+[ type ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`144 1 188 63`
+
+[ type >> __base__ ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`146 5 146 35`
+		- (type/syntax)`type`
+		- (type/factor-local/class)&<#type[type]>
+		
+
+[ type >> __basicsize__ ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`149 5 150 13`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+
+[ type >> __dict__ ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`151 5 152 13`
+		- (type/syntax)`types.MappingProxyType[str, Any]`
+		
+
+[ type >> __dictoffset__ ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`153 5 154 13`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+
+[ type >> __flags__ ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`155 5 156 13`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+
+[ type >> __itemsize__ ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`157 5 157 38`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+
+[ type >> __mro__ ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`160 5 160 46`
+		- (type/syntax)`tuple[type, ...]`
+		
+
+[ type >> __text_signature__ ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`164 5 165 13`
+		- (type/syntax)`str | None:`
+		
+
+[ type >> __weakrefoffset__ ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`166 5 167 13`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+
+[ type >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`168 5 169 13`
+		- (type/syntax)`None`
+		
+(signature)`__init__(self, __o)`
+
+
+[ type >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`170 5 171 13`
+		- (type/syntax)`None`
+		
+(signature)`__init__(self, __name, __bases, __dict, **kwds)`
+
+
+[ type >> __new__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`172 5 173 13`
+		- (type/syntax)`type`
+		- (type/factor-local/class)&<#type[type]>
+		
+(signature)`__new__(cls, __o)`
+
+
+[ type >> __new__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`174 5 176 28`
+		- (type/syntax)`_typeshed.Self`
+		- (type/none/invalid)&<http://fault.io/dev/null[_typeshed.Self]>
+		
+(signature)`__new__(cls, __name, __bases, __namespace, **kwds)`
+
+
+[ type >> __call__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`177 5 177 59`
+		- (type/syntax)`Any`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing.Any]>
+		
+(signature)`__call__(self, *args, **kwds)`
+
+
+[ type >> __subclasses__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`178 5 178 73`
+		- (type/syntax)`list[_typeshed.Self]`
+		
+(signature)`__subclasses__(self)`
+
+
+[ type >> mro ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`181 5 181 36`
+		- (type/syntax)`list[type]`
+		
+(signature)`mro(self)`
+
+
+[ type >> __instancecheck__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`182 5 182 61`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__instancecheck__(self, __instance)`
+
+
+[ type >> __subclasscheck__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`183 5 184 16`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__subclasscheck__(self, __subclass)`
+
+
+[ type >> __prepare__ ]
+! CONTROL:
+	/type/
+		classmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`185 5 185 110`
+		- (type/syntax)`Mapping[str, object]`
+		
+(signature)`__prepare__(metacls, __name, __bases, **kwds)`
+
+
+[ super ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`190 1 196 35`
+
+[ super >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`192 5 193 13`
+		- (type/syntax)`None`
+		
+(signature)`__init__(self, __t, __obj)`
+
+
+[ super >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`194 5 195 13`
+		- (type/syntax)`None`
+		
+(signature)`__init__(self, __t)`
+
+
+[ super >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`196 5 196 35`
+		- (type/syntax)`None`
+		
+(signature)`__init__(self)`
+
+
+[ _PositiveInteger ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`198 1 198 128`
+		- (type/syntax)`TypeAlias`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing_extensions.TypeAlias]>
+		
+#!source
+	_PositiveInteger: TypeAlias = Literal[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25]
+
+[ _NegativeInteger ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`199 1 199 128`
+		- (type/syntax)`TypeAlias`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing_extensions.TypeAlias]>
+		
+#!source
+	_NegativeInteger: TypeAlias = Literal[-1, -2, -3, -4, -5, -6, -7, -8, -9, -10, -11, -12, -13, -14, -15, -16, -17, -18, -19, -20]
+
+[ _LiteralInteger ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`200 1 200 66`
+#!source
+	_LiteralInteger = _PositiveInteger | _NegativeInteger | Literal[0]  # noqa: Y026  # TODO: Use TypeAlias once mypy bugs are fixed
+
+[ int ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`202 1 303 35`
+
+[ int >> __new__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`204 5 205 13`
+		- (type/syntax)`Self`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing_extensions.Self]>
+		
+(signature)`__new__(cls)`
+
+
+[ int >> __new__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`206 5 206 84`
+		- (type/syntax)`Self`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing_extensions.Self]>
+		
+(signature)`__new__(cls, __x, base)`
+
+
+[ int >> real ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`211 5 212 13`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+
+[ int >> imag ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`213 5 214 13`
+		- (type/syntax)`Literal[0]`
+		
+
+[ int >> numerator ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`215 5 216 13`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+
+[ int >> denominator ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`217 5 217 44`
+		- (type/syntax)`Literal[1]`
+		
+
+[ int >> conjugate ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`218 5 218 35`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`conjugate(self)`
+
+
+[ int >> bit_length ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`219 5 219 36`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`bit_length(self)`
+
+
+[ int >> __add__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`246 5 246 47`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`__add__(self, __value)`
+
+
+[ int >> __sub__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`247 5 247 47`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`__sub__(self, __value)`
+
+
+[ int >> __mul__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`248 5 248 47`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`__mul__(self, __value)`
+
+
+[ int >> __floordiv__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`249 5 249 52`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`__floordiv__(self, __value)`
+
+
+[ int >> __truediv__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`250 5 250 53`
+		- (type/syntax)`float`
+		- (type/factor-local/class)&<#float[float]>
+		
+(signature)`__truediv__(self, __value)`
+
+
+[ int >> __mod__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`251 5 251 47`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`__mod__(self, __value)`
+
+
+[ int >> __divmod__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`252 5 252 62`
+		- (type/syntax)`tuple[int, int]`
+		
+(signature)`__divmod__(self, __value)`
+
+
+[ int >> __radd__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`253 5 253 48`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`__radd__(self, __value)`
+
+
+[ int >> __rsub__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`254 5 254 48`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`__rsub__(self, __value)`
+
+
+[ int >> __rmul__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`255 5 255 48`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`__rmul__(self, __value)`
+
+
+[ int >> __rfloordiv__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`256 5 256 53`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`__rfloordiv__(self, __value)`
+
+
+[ int >> __rtruediv__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`257 5 257 54`
+		- (type/syntax)`float`
+		- (type/factor-local/class)&<#float[float]>
+		
+(signature)`__rtruediv__(self, __value)`
+
+
+[ int >> __rmod__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`258 5 258 48`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`__rmod__(self, __value)`
+
+
+[ int >> __rdivmod__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`259 5 260 13`
+		- (type/syntax)`tuple[int, int]`
+		
+(signature)`__rdivmod__(self, __value)`
+
+
+[ int >> __pow__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`261 5 262 13`
+		- (type/syntax)`Literal[1]`
+		
+(signature)`__pow__(self, __x)`
+
+
+[ int >> __pow__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`263 5 264 13`
+		- (type/syntax)`Literal[1]`
+		
+(signature)`__pow__(self, __value, __mod)`
+
+
+[ int >> __pow__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`265 5 266 13`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`__pow__(self, __value)`
+
+
+[ int >> __pow__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`267 5 270 13`
+		- (type/syntax)`float`
+		- (type/factor-local/class)&<#float[float]>
+		
+(signature)`__pow__(self, __value)`
+
+
+[ int >> __pow__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`271 5 272 13`
+		- (type/syntax)`Any`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing.Any]>
+		
+(signature)`__pow__(self, __value)`
+
+
+[ int >> __pow__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`273 5 273 59`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`__pow__(self, __value, __mod)`
+
+
+[ int >> __rpow__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`274 5 274 74`
+		- (type/syntax)`Any`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing.Any]>
+		
+(signature)`__rpow__(self, __value)`
+
+
+[ int >> __and__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`275 5 275 47`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`__and__(self, __value)`
+
+
+[ int >> __or__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`276 5 276 46`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`__or__(self, __value)`
+
+
+[ int >> __xor__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`277 5 277 47`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`__xor__(self, __value)`
+
+
+[ int >> __lshift__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`278 5 278 50`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`__lshift__(self, __value)`
+
+
+[ int >> __rshift__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`279 5 279 50`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`__rshift__(self, __value)`
+
+
+[ int >> __rand__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`280 5 280 48`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`__rand__(self, __value)`
+
+
+[ int >> __ror__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`281 5 281 47`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`__ror__(self, __value)`
+
+
+[ int >> __rxor__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`282 5 282 48`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`__rxor__(self, __value)`
+
+
+[ int >> __rlshift__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`283 5 283 51`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`__rlshift__(self, __value)`
+
+
+[ int >> __rrshift__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`284 5 284 51`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`__rrshift__(self, __value)`
+
+
+[ int >> __neg__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`285 5 285 33`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`__neg__(self)`
+
+
+[ int >> __pos__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`286 5 286 33`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`__pos__(self)`
+
+
+[ int >> __invert__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`287 5 287 36`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`__invert__(self)`
+
+
+[ int >> __trunc__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`288 5 288 35`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`__trunc__(self)`
+
+
+[ int >> __ceil__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`289 5 289 34`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`__ceil__(self)`
+
+
+[ int >> __floor__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`290 5 290 35`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`__floor__(self)`
+
+
+[ int >> __round__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`291 5 291 67`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`__round__(self)`
+
+
+[ int >> __getnewargs__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`292 5 292 47`
+		- (type/syntax)`tuple[int]`
+		
+(signature)`__getnewargs__(self)`
+
+
+[ int >> __eq__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`293 5 293 50`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__eq__(self, __value)`
+
+
+[ int >> __ne__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`294 5 294 50`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__ne__(self, __value)`
+
+
+[ int >> __lt__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`295 5 295 47`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__lt__(self, __value)`
+
+
+[ int >> __le__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`296 5 296 47`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__le__(self, __value)`
+
+
+[ int >> __gt__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`297 5 297 47`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__gt__(self, __value)`
+
+
+[ int >> __ge__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`298 5 298 47`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__ge__(self, __value)`
+
+
+[ int >> __float__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`299 5 299 37`
+		- (type/syntax)`float`
+		- (type/factor-local/class)&<#float[float]>
+		
+(signature)`__float__(self)`
+
+
+[ int >> __int__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`300 5 300 33`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`__int__(self)`
+
+
+[ int >> __abs__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`301 5 301 33`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`__abs__(self)`
+
+
+[ int >> __bool__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`302 5 302 35`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__bool__(self)`
+
+
+[ int >> __index__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`303 5 303 35`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`__index__(self)`
+
+
+[ float ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`305 1 365 35`
+
+[ float >> __new__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`306 5 306 98`
+		- (type/syntax)`Self`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing_extensions.Self]>
+		
+(signature)`__new__(cls)`
+
+
+[ float >> as_integer_ratio ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`307 5 307 54`
+		- (type/syntax)`tuple[int, int]`
+		
+(signature)`as_integer_ratio(self)`
+
+
+[ float >> hex ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`308 5 308 29`
+		- (type/syntax)`str`
+		- (type/factor-local/class)&<#str[str]>
+		
+(signature)`hex(self)`
+
+
+[ float >> is_integer ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`309 5 310 16`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`is_integer(self)`
+
+
+[ float >> fromhex ]
+! CONTROL:
+	/type/
+		classmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`311 5 312 13`
+		- (type/syntax)`Self`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing_extensions.Self]>
+		
+(signature)`fromhex(cls, __string)`
+
+
+[ float >> real ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`313 5 314 13`
+		- (type/syntax)`float`
+		- (type/factor-local/class)&<#float[float]>
+		
+
+[ float >> imag ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`315 5 315 32`
+		- (type/syntax)`float`
+		- (type/factor-local/class)&<#float[float]>
+		
+
+[ float >> conjugate ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`316 5 316 37`
+		- (type/syntax)`float`
+		- (type/factor-local/class)&<#float[float]>
+		
+(signature)`conjugate(self)`
+
+
+[ float >> __add__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`317 5 317 51`
+		- (type/syntax)`float`
+		- (type/factor-local/class)&<#float[float]>
+		
+(signature)`__add__(self, __value)`
+
+
+[ float >> __sub__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`318 5 318 51`
+		- (type/syntax)`float`
+		- (type/factor-local/class)&<#float[float]>
+		
+(signature)`__sub__(self, __value)`
+
+
+[ float >> __mul__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`319 5 319 51`
+		- (type/syntax)`float`
+		- (type/factor-local/class)&<#float[float]>
+		
+(signature)`__mul__(self, __value)`
+
+
+[ float >> __floordiv__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`320 5 320 56`
+		- (type/syntax)`float`
+		- (type/factor-local/class)&<#float[float]>
+		
+(signature)`__floordiv__(self, __value)`
+
+
+[ float >> __truediv__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`321 5 321 55`
+		- (type/syntax)`float`
+		- (type/factor-local/class)&<#float[float]>
+		
+(signature)`__truediv__(self, __value)`
+
+
+[ float >> __mod__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`322 5 322 51`
+		- (type/syntax)`float`
+		- (type/factor-local/class)&<#float[float]>
+		
+(signature)`__mod__(self, __value)`
+
+
+[ float >> __divmod__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`323 5 324 13`
+		- (type/syntax)`tuple[float, float]`
+		
+(signature)`__divmod__(self, __value)`
+
+
+[ float >> __pow__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`325 5 328 13`
+		- (type/syntax)`float`
+		- (type/factor-local/class)&<#float[float]>
+		
+(signature)`__pow__(self, __value)`
+
+
+[ float >> __pow__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`329 5 329 69`
+		- (type/syntax)`Any`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing.Any]>
+		
+(signature)`__pow__(self, __value)`
+
+
+[ float >> __radd__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`330 5 330 52`
+		- (type/syntax)`float`
+		- (type/factor-local/class)&<#float[float]>
+		
+(signature)`__radd__(self, __value)`
+
+
+[ float >> __rsub__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`331 5 331 52`
+		- (type/syntax)`float`
+		- (type/factor-local/class)&<#float[float]>
+		
+(signature)`__rsub__(self, __value)`
+
+
+[ float >> __rmul__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`332 5 332 52`
+		- (type/syntax)`float`
+		- (type/factor-local/class)&<#float[float]>
+		
+(signature)`__rmul__(self, __value)`
+
+
+[ float >> __rfloordiv__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`333 5 333 57`
+		- (type/syntax)`float`
+		- (type/factor-local/class)&<#float[float]>
+		
+(signature)`__rfloordiv__(self, __value)`
+
+
+[ float >> __rtruediv__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`334 5 334 56`
+		- (type/syntax)`float`
+		- (type/factor-local/class)&<#float[float]>
+		
+(signature)`__rtruediv__(self, __value)`
+
+
+[ float >> __rmod__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`335 5 335 52`
+		- (type/syntax)`float`
+		- (type/factor-local/class)&<#float[float]>
+		
+(signature)`__rmod__(self, __value)`
+
+
+[ float >> __rdivmod__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`336 5 337 13`
+		- (type/syntax)`tuple[float, float]`
+		
+(signature)`__rdivmod__(self, __value)`
+
+
+[ float >> __rpow__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`338 5 339 13`
+		- (type/syntax)`float`
+		- (type/factor-local/class)&<#float[float]>
+		
+(signature)`__rpow__(self, __value)`
+
+
+[ float >> __rpow__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`340 5 342 13`
+		- (type/syntax)`complex`
+		- (type/factor-local/class)&<#complex[complex]>
+		
+(signature)`__rpow__(self, __value)`
+
+
+[ float >> __rpow__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`343 5 343 70`
+		- (type/syntax)`Any`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing.Any]>
+		
+(signature)`__rpow__(self, __value)`
+
+
+[ float >> __getnewargs__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`344 5 344 49`
+		- (type/syntax)`tuple[float]`
+		
+(signature)`__getnewargs__(self)`
+
+
+[ float >> __trunc__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`345 5 345 35`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`__trunc__(self)`
+
+
+[ float >> __round__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`351 5 352 13`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`__round__(self)`
+
+
+[ float >> __round__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`353 5 353 63`
+		- (type/syntax)`float`
+		- (type/factor-local/class)&<#float[float]>
+		
+(signature)`__round__(self, __ndigits)`
+
+
+[ float >> __eq__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`354 5 354 50`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__eq__(self, __value)`
+
+
+[ float >> __ne__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`355 5 355 50`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__ne__(self, __value)`
+
+
+[ float >> __lt__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`356 5 356 49`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__lt__(self, __value)`
+
+
+[ float >> __le__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`357 5 357 49`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__le__(self, __value)`
+
+
+[ float >> __gt__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`358 5 358 49`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__gt__(self, __value)`
+
+
+[ float >> __ge__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`359 5 359 49`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__ge__(self, __value)`
+
+
+[ float >> __neg__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`360 5 360 35`
+		- (type/syntax)`float`
+		- (type/factor-local/class)&<#float[float]>
+		
+(signature)`__neg__(self)`
+
+
+[ float >> __pos__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`361 5 361 35`
+		- (type/syntax)`float`
+		- (type/factor-local/class)&<#float[float]>
+		
+(signature)`__pos__(self)`
+
+
+[ float >> __int__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`362 5 362 33`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`__int__(self)`
+
+
+[ float >> __float__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`363 5 363 37`
+		- (type/syntax)`float`
+		- (type/factor-local/class)&<#float[float]>
+		
+(signature)`__float__(self)`
+
+
+[ float >> __abs__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`364 5 364 35`
+		- (type/syntax)`float`
+		- (type/factor-local/class)&<#float[float]>
+		
+(signature)`__abs__(self)`
+
+
+[ float >> __bool__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`365 5 365 35`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__bool__(self)`
+
+
+[ complex ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`367 1 406 45`
+
+[ complex >> real ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`385 5 386 13`
+		- (type/syntax)`float`
+		- (type/factor-local/class)&<#float[float]>
+		
+
+[ complex >> imag ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`387 5 387 32`
+		- (type/syntax)`float`
+		- (type/factor-local/class)&<#float[float]>
+		
+
+[ complex >> conjugate ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`388 5 388 39`
+		- (type/syntax)`complex`
+		- (type/factor-local/class)&<#complex[complex]>
+		
+(signature)`conjugate(self)`
+
+
+[ complex >> __add__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`389 5 389 55`
+		- (type/syntax)`complex`
+		- (type/factor-local/class)&<#complex[complex]>
+		
+(signature)`__add__(self, __value)`
+
+
+[ complex >> __sub__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`390 5 390 55`
+		- (type/syntax)`complex`
+		- (type/factor-local/class)&<#complex[complex]>
+		
+(signature)`__sub__(self, __value)`
+
+
+[ complex >> __mul__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`391 5 391 55`
+		- (type/syntax)`complex`
+		- (type/factor-local/class)&<#complex[complex]>
+		
+(signature)`__mul__(self, __value)`
+
+
+[ complex >> __pow__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`392 5 392 75`
+		- (type/syntax)`complex`
+		- (type/factor-local/class)&<#complex[complex]>
+		
+(signature)`__pow__(self, __value)`
+
+
+[ complex >> __truediv__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`393 5 393 59`
+		- (type/syntax)`complex`
+		- (type/factor-local/class)&<#complex[complex]>
+		
+(signature)`__truediv__(self, __value)`
+
+
+[ complex >> __radd__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`394 5 394 56`
+		- (type/syntax)`complex`
+		- (type/factor-local/class)&<#complex[complex]>
+		
+(signature)`__radd__(self, __value)`
+
+
+[ complex >> __rsub__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`395 5 395 56`
+		- (type/syntax)`complex`
+		- (type/factor-local/class)&<#complex[complex]>
+		
+(signature)`__rsub__(self, __value)`
+
+
+[ complex >> __rmul__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`396 5 396 56`
+		- (type/syntax)`complex`
+		- (type/factor-local/class)&<#complex[complex]>
+		
+(signature)`__rmul__(self, __value)`
+
+
+[ complex >> __rpow__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`397 5 397 76`
+		- (type/syntax)`complex`
+		- (type/factor-local/class)&<#complex[complex]>
+		
+(signature)`__rpow__(self, __value)`
+
+
+[ complex >> __rtruediv__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`398 5 398 60`
+		- (type/syntax)`complex`
+		- (type/factor-local/class)&<#complex[complex]>
+		
+(signature)`__rtruediv__(self, __value)`
+
+
+[ complex >> __eq__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`399 5 399 50`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__eq__(self, __value)`
+
+
+[ complex >> __ne__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`400 5 400 50`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__ne__(self, __value)`
+
+
+[ complex >> __neg__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`401 5 401 37`
+		- (type/syntax)`complex`
+		- (type/factor-local/class)&<#complex[complex]>
+		
+(signature)`__neg__(self)`
+
+
+[ complex >> __pos__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`402 5 402 37`
+		- (type/syntax)`complex`
+		- (type/factor-local/class)&<#complex[complex]>
+		
+(signature)`__pos__(self)`
+
+
+[ complex >> __abs__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`403 5 403 35`
+		- (type/syntax)`float`
+		- (type/factor-local/class)&<#float[float]>
+		
+(signature)`__abs__(self)`
+
+
+[ complex >> __bool__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`404 5 404 35`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__bool__(self)`
+
+
+[ _FormatMapMapping ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`408 1 409 49`
+! INHERIT:
+	- (source/area)`408 25 408 32`
+	- (type/syntax)`Protocol`
+	- (type/none/invalid)&<http://fault.io/dev/null[typing.Protocol]>
+	
+
+[ _FormatMapMapping >> __getitem__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`409 5 409 49`
+		- (type/syntax)`Any`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing.Any]>
+		
+(signature)`__getitem__(self, __key)`
+
+
+[ _TranslateTable ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`411 1 412 62`
+! INHERIT:
+	- (source/area)`411 23 411 30`
+	- (type/syntax)`Protocol`
+	- (type/none/invalid)&<http://fault.io/dev/null[typing.Protocol]>
+	
+
+[ _TranslateTable >> __getitem__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`412 5 412 62`
+		- (type/syntax)`str | int | None:`
+		
+(signature)`__getitem__(self, __key)`
+
+
+[ str ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`414 1 591 47`
+! INHERIT:
+	- (source/area)`414 11 414 23`
+	- (type/syntax)`Sequence[str]`
+	
+
+[ str >> __new__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`416 5 417 13`
+		- (type/syntax)`Self`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing_extensions.Self]>
+		
+(signature)`__new__(cls)`
+
+
+[ str >> __new__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`418 5 419 13`
+		- (type/syntax)`Self`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing_extensions.Self]>
+		
+(signature)`__new__(cls, object)`
+
+
+[ str >> capitalize ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`420 5 421 13`
+		- (type/syntax)`LiteralString`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing_extensions.LiteralString]>
+		
+(signature)`capitalize(self)`
+
+
+[ str >> capitalize ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`422 5 423 13`
+		- (type/syntax)`str`
+		- (type/factor-local/class)&<#str[str]>
+		
+(signature)`capitalize(self)`
+
+
+[ str >> casefold ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`424 5 425 13`
+		- (type/syntax)`LiteralString`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing_extensions.LiteralString]>
+		
+(signature)`casefold(self)`
+
+
+[ str >> casefold ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`426 5 427 13`
+		- (type/syntax)`str`
+		- (type/factor-local/class)&<#str[str]>
+		
+(signature)`casefold(self)`
+
+
+[ str >> center ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`428 5 429 13`
+		- (type/syntax)`LiteralString`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing_extensions.LiteralString]>
+		
+(signature)`center(self, __width)`
+
+
+[ str >> center ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`430 5 430 79`
+		- (type/syntax)`str`
+		- (type/factor-local/class)&<#str[str]>
+		
+(signature)`center(self, __width)`
+
+
+[ str >> count ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`431 5 431 111`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`count(self, x)`
+
+
+[ str >> encode ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`432 5 432 83`
+		- (type/syntax)`bytes`
+		- (type/factor-local/class)&<#bytes[bytes]>
+		
+(signature)`encode(self)`
+
+
+[ str >> endswith ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`433 5 435 18`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`endswith(self, __suffix)`
+
+
+[ str >> find ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`447 5 448 13`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`find(self, __sub)`
+
+
+[ str >> format ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`449 5 450 13`
+		- (type/syntax)`LiteralString`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing_extensions.LiteralString]>
+		
+(signature)`format(self, *args, **kwargs)`
+
+
+[ str >> format ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`451 5 451 65`
+		- (type/syntax)`str`
+		- (type/factor-local/class)&<#str[str]>
+		
+(signature)`format(self, *args, **kwargs)`
+
+
+[ str >> format_map ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`452 5 452 60`
+		- (type/syntax)`str`
+		- (type/factor-local/class)&<#str[str]>
+		
+(signature)`format_map(self, map)`
+
+
+[ str >> index ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`453 5 453 115`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`index(self, __sub)`
+
+
+[ str >> isalnum ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`454 5 454 34`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`isalnum(self)`
+
+
+[ str >> isalpha ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`455 5 455 34`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`isalpha(self)`
+
+
+[ str >> isascii ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`456 5 456 34`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`isascii(self)`
+
+
+[ str >> isdecimal ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`457 5 457 36`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`isdecimal(self)`
+
+
+[ str >> isdigit ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`458 5 458 34`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`isdigit(self)`
+
+
+[ str >> isidentifier ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`459 5 459 39`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`isidentifier(self)`
+
+
+[ str >> islower ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`460 5 460 34`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`islower(self)`
+
+
+[ str >> isnumeric ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`461 5 461 36`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`isnumeric(self)`
+
+
+[ str >> isprintable ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`462 5 462 38`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`isprintable(self)`
+
+
+[ str >> isspace ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`463 5 463 34`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`isspace(self)`
+
+
+[ str >> istitle ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`464 5 464 34`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`istitle(self)`
+
+
+[ str >> isupper ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`465 5 466 13`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`isupper(self)`
+
+
+[ str >> join ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`467 5 468 13`
+		- (type/syntax)`LiteralString`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing_extensions.LiteralString]>
+		
+(signature)`join(self, __iterable)`
+
+
+[ str >> join ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`469 5 470 13`
+		- (type/syntax)`str`
+		- (type/factor-local/class)&<#str[str]>
+		
+(signature)`join(self, __iterable)`
+
+
+[ str >> ljust ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`471 5 472 13`
+		- (type/syntax)`LiteralString`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing_extensions.LiteralString]>
+		
+(signature)`ljust(self, __width)`
+
+
+[ str >> ljust ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`473 5 474 13`
+		- (type/syntax)`str`
+		- (type/factor-local/class)&<#str[str]>
+		
+(signature)`ljust(self, __width)`
+
+
+[ str >> lower ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`475 5 476 13`
+		- (type/syntax)`LiteralString`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing_extensions.LiteralString]>
+		
+(signature)`lower(self)`
+
+
+[ str >> lower ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`477 5 478 13`
+		- (type/syntax)`str`
+		- (type/factor-local/class)&<#str[str]>
+		
+(signature)`lower(self)`
+
+
+[ str >> lstrip ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`479 5 480 13`
+		- (type/syntax)`LiteralString`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing_extensions.LiteralString]>
+		
+(signature)`lstrip(self)`
+
+
+[ str >> lstrip ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`481 5 482 13`
+		- (type/syntax)`str`
+		- (type/factor-local/class)&<#str[str]>
+		
+(signature)`lstrip(self)`
+
+
+[ str >> partition ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`483 5 484 13`
+		- (type/syntax)`tuple[LiteralString, LiteralString, LiteralString]`
+		
+(signature)`partition(self, __sep)`
+
+
+[ str >> partition ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`485 5 486 13`
+		- (type/syntax)`tuple[str, str, str]`
+		
+(signature)`partition(self, __sep)`
+
+
+[ str >> replace ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`487 5 490 13`
+		- (type/syntax)`LiteralString`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing_extensions.LiteralString]>
+		
+(signature)`replace(self, __old, __new)`
+
+
+[ str >> replace ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`491 5 491 86`
+		- (type/syntax)`str`
+		- (type/factor-local/class)&<#str[str]>
+		
+(signature)`replace(self, __old, __new)`
+
+
+[ str >> rfind ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`502 5 502 115`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`rfind(self, __sub)`
+
+
+[ str >> rindex ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`503 5 504 13`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`rindex(self, __sub)`
+
+
+[ str >> rjust ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`505 5 506 13`
+		- (type/syntax)`LiteralString`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing_extensions.LiteralString]>
+		
+(signature)`rjust(self, __width)`
+
+
+[ str >> rjust ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`507 5 508 13`
+		- (type/syntax)`str`
+		- (type/factor-local/class)&<#str[str]>
+		
+(signature)`rjust(self, __width)`
+
+
+[ str >> rpartition ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`509 5 510 13`
+		- (type/syntax)`tuple[LiteralString, LiteralString, LiteralString]`
+		
+(signature)`rpartition(self, __sep)`
+
+
+[ str >> rpartition ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`511 5 512 13`
+		- (type/syntax)`tuple[str, str, str]`
+		
+(signature)`rpartition(self, __sep)`
+
+
+[ str >> rsplit ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`513 5 514 13`
+		- (type/syntax)`list[LiteralString]`
+		
+(signature)`rsplit(self)`
+
+
+[ str >> rsplit ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`515 5 516 13`
+		- (type/syntax)`list[str]`
+		
+(signature)`rsplit(self)`
+
+
+[ str >> rstrip ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`517 5 518 13`
+		- (type/syntax)`LiteralString`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing_extensions.LiteralString]>
+		
+(signature)`rstrip(self)`
+
+
+[ str >> rstrip ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`519 5 520 13`
+		- (type/syntax)`str`
+		- (type/factor-local/class)&<#str[str]>
+		
+(signature)`rstrip(self)`
+
+
+[ str >> split ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`521 5 522 13`
+		- (type/syntax)`list[LiteralString]`
+		
+(signature)`split(self)`
+
+
+[ str >> split ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`523 5 524 13`
+		- (type/syntax)`list[str]`
+		
+(signature)`split(self)`
+
+
+[ str >> splitlines ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`525 5 526 13`
+		- (type/syntax)`list[LiteralString]`
+		
+(signature)`splitlines(self)`
+
+
+[ str >> splitlines ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`527 5 527 66`
+		- (type/syntax)`list[str]`
+		
+(signature)`splitlines(self)`
+
+
+[ str >> startswith ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`528 5 531 13`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`startswith(self, __prefix)`
+
+
+[ str >> strip ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`532 5 533 13`
+		- (type/syntax)`LiteralString`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing_extensions.LiteralString]>
+		
+(signature)`strip(self)`
+
+
+[ str >> strip ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`534 5 535 13`
+		- (type/syntax)`str`
+		- (type/factor-local/class)&<#str[str]>
+		
+(signature)`strip(self)`
+
+
+[ str >> swapcase ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`536 5 537 13`
+		- (type/syntax)`LiteralString`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing_extensions.LiteralString]>
+		
+(signature)`swapcase(self)`
+
+
+[ str >> swapcase ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`538 5 539 13`
+		- (type/syntax)`str`
+		- (type/factor-local/class)&<#str[str]>
+		
+(signature)`swapcase(self)`
+
+
+[ str >> title ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`540 5 541 13`
+		- (type/syntax)`LiteralString`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing_extensions.LiteralString]>
+		
+(signature)`title(self)`
+
+
+[ str >> title ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`542 5 542 31`
+		- (type/syntax)`str`
+		- (type/factor-local/class)&<#str[str]>
+		
+(signature)`title(self)`
+
+
+[ str >> translate ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`543 5 544 13`
+		- (type/syntax)`str`
+		- (type/factor-local/class)&<#str[str]>
+		
+(signature)`translate(self, __table)`
+
+
+[ str >> upper ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`545 5 546 13`
+		- (type/syntax)`LiteralString`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing_extensions.LiteralString]>
+		
+(signature)`upper(self)`
+
+
+[ str >> upper ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`547 5 548 13`
+		- (type/syntax)`str`
+		- (type/factor-local/class)&<#str[str]>
+		
+(signature)`upper(self)`
+
+
+[ str >> zfill ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`549 5 550 13`
+		- (type/syntax)`LiteralString`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing_extensions.LiteralString]>
+		
+(signature)`zfill(self, __width)`
+
+
+[ str >> zfill ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`551 5 553 13`
+		- (type/syntax)`str`
+		- (type/factor-local/class)&<#str[str]>
+		
+(signature)`zfill(self, __width)`
+
+
+[ str >> maketrans ]
+! CONTROL:
+	/type/
+		staticmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`554 5 556 13`
+		- (type/syntax)`dict[int, _T]`
+		
+(signature)`maketrans(__x)`
+
+
+[ str >> maketrans ]
+! CONTROL:
+	/type/
+		staticmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`557 5 559 13`
+		- (type/syntax)`dict[int, int]`
+		
+(signature)`maketrans(__x, __y)`
+
+
+[ str >> maketrans ]
+! CONTROL:
+	/type/
+		staticmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`560 5 561 13`
+		- (type/syntax)`dict[int, int | None]`
+		
+(signature)`maketrans(__x, __y, __z)`
+
+
+[ str >> __add__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`562 5 563 13`
+		- (type/syntax)`LiteralString`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing_extensions.LiteralString]>
+		
+(signature)`__add__(self, __value)`
+
+
+[ str >> __add__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`564 5 564 47`
+		- (type/syntax)`str`
+		- (type/factor-local/class)&<#str[str]>
+		
+(signature)`__add__(self, __value)`
+
+
+[ str >> __contains__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`566 5 566 51`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__contains__(self, __key)`
+
+
+[ str >> __eq__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`567 5 567 50`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__eq__(self, __value)`
+
+
+[ str >> __ge__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`568 5 568 47`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__ge__(self, __value)`
+
+
+[ str >> __getitem__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`569 5 569 67`
+		- (type/syntax)`str`
+		- (type/factor-local/class)&<#str[str]>
+		
+(signature)`__getitem__(self, __key)`
+
+
+[ str >> __gt__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`570 5 571 13`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__gt__(self, __value)`
+
+
+[ str >> __iter__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`572 5 573 13`
+		- (type/syntax)`Iterator[LiteralString]`
+		
+(signature)`__iter__(self)`
+
+
+[ str >> __iter__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`574 5 574 44`
+		- (type/syntax)`Iterator[str]`
+		
+(signature)`__iter__(self)`
+
+
+[ str >> __le__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`575 5 575 47`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__le__(self, __value)`
+
+
+[ str >> __len__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`576 5 576 33`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`__len__(self)`
+
+
+[ str >> __lt__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`577 5 578 13`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__lt__(self, __value)`
+
+
+[ str >> __mod__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`579 5 580 13`
+		- (type/syntax)`LiteralString`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing_extensions.LiteralString]>
+		
+(signature)`__mod__(self, __value)`
+
+
+[ str >> __mod__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`581 5 582 13`
+		- (type/syntax)`str`
+		- (type/factor-local/class)&<#str[str]>
+		
+(signature)`__mod__(self, __value)`
+
+
+[ str >> __mul__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`583 5 584 13`
+		- (type/syntax)`LiteralString`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing_extensions.LiteralString]>
+		
+(signature)`__mul__(self, __value)`
+
+
+[ str >> __mul__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`585 5 585 57`
+		- (type/syntax)`str`
+		- (type/factor-local/class)&<#str[str]>
+		
+(signature)`__mul__(self, __value)`
+
+
+[ str >> __ne__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`586 5 587 13`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__ne__(self, __value)`
+
+
+[ str >> __rmul__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`588 5 589 13`
+		- (type/syntax)`LiteralString`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing_extensions.LiteralString]>
+		
+(signature)`__rmul__(self, __value)`
+
+
+[ str >> __rmul__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`590 5 590 58`
+		- (type/syntax)`str`
+		- (type/factor-local/class)&<#str[str]>
+		
+(signature)`__rmul__(self, __value)`
+
+
+[ str >> __getnewargs__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`591 5 591 47`
+		- (type/syntax)`tuple[str]`
+		
+(signature)`__getnewargs__(self)`
+
+
+[ bytes ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`593 1 694 41`
+! INHERIT:
+	- (source/area)`593 13 593 22`
+	- (type/syntax)`ByteString`
+	- (type/none/invalid)&<http://fault.io/dev/null[typing.ByteString]>
+	
+
+[ bytes >> __new__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`595 5 596 13`
+		- (type/syntax)`Self`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing_extensions.Self]>
+		
+(signature)`__new__(cls, __o)`
+
+
+[ bytes >> __new__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`597 5 598 13`
+		- (type/syntax)`Self`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing_extensions.Self]>
+		
+(signature)`__new__(cls, __string, encoding)`
+
+
+[ bytes >> __new__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`599 5 599 33`
+		- (type/syntax)`Self`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing_extensions.Self]>
+		
+(signature)`__new__(cls)`
+
+
+[ bytes >> capitalize ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`600 5 600 38`
+		- (type/syntax)`bytes`
+		- (type/factor-local/class)&<#bytes[bytes]>
+		
+(signature)`capitalize(self)`
+
+
+[ bytes >> center ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`601 5 601 84`
+		- (type/syntax)`bytes`
+		- (type/factor-local/class)&<#bytes[bytes]>
+		
+(signature)`center(self, __width)`
+
+
+[ bytes >> count ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`602 5 604 17`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`count(self, __sub)`
+
+
+[ bytes >> decode ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`605 5 605 81`
+		- (type/syntax)`str`
+		- (type/factor-local/class)&<#str[str]>
+		
+(signature)`decode(self)`
+
+
+[ bytes >> endswith ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`606 5 611 18`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`endswith(self, __suffix)`
+
+
+[ bytes >> find ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`617 5 619 17`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`find(self, __sub)`
+
+
+[ bytes >> index ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`625 5 627 17`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`index(self, __sub)`
+
+
+[ bytes >> isalnum ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`628 5 628 34`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`isalnum(self)`
+
+
+[ bytes >> isalpha ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`629 5 629 34`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`isalpha(self)`
+
+
+[ bytes >> isascii ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`630 5 630 34`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`isascii(self)`
+
+
+[ bytes >> isdigit ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`631 5 631 34`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`isdigit(self)`
+
+
+[ bytes >> islower ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`632 5 632 34`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`islower(self)`
+
+
+[ bytes >> isspace ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`633 5 633 34`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`isspace(self)`
+
+
+[ bytes >> istitle ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`634 5 634 34`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`istitle(self)`
+
+
+[ bytes >> isupper ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`635 5 635 34`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`isupper(self)`
+
+
+[ bytes >> join ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`636 5 636 79`
+		- (type/syntax)`bytes`
+		- (type/factor-local/class)&<#bytes[bytes]>
+		
+(signature)`join(self, __iterable_of_bytes)`
+
+
+[ bytes >> ljust ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`637 5 637 95`
+		- (type/syntax)`bytes`
+		- (type/factor-local/class)&<#bytes[bytes]>
+		
+(signature)`ljust(self, __width)`
+
+
+[ bytes >> lower ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`638 5 638 33`
+		- (type/syntax)`bytes`
+		- (type/factor-local/class)&<#bytes[bytes]>
+		
+(signature)`lower(self)`
+
+
+[ bytes >> lstrip ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`639 5 639 73`
+		- (type/syntax)`bytes`
+		- (type/factor-local/class)&<#bytes[bytes]>
+		
+(signature)`lstrip(self)`
+
+
+[ bytes >> partition ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`640 5 640 81`
+		- (type/syntax)`tuple[bytes, bytes, bytes]`
+		
+(signature)`partition(self, __sep)`
+
+
+[ bytes >> replace ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`641 5 641 110`
+		- (type/syntax)`bytes`
+		- (type/factor-local/class)&<#bytes[bytes]>
+		
+(signature)`replace(self, __old, __new)`
+
+
+[ bytes >> rfind ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`646 5 648 17`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`rfind(self, __sub)`
+
+
+[ bytes >> rindex ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`649 5 651 17`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`rindex(self, __sub)`
+
+
+[ bytes >> rjust ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`652 5 652 95`
+		- (type/syntax)`bytes`
+		- (type/factor-local/class)&<#bytes[bytes]>
+		
+(signature)`rjust(self, __width)`
+
+
+[ bytes >> rpartition ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`653 5 653 82`
+		- (type/syntax)`tuple[bytes, bytes, bytes]`
+		
+(signature)`rpartition(self, __sep)`
+
+
+[ bytes >> rsplit ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`654 5 654 105`
+		- (type/syntax)`list[bytes]`
+		
+(signature)`rsplit(self)`
+
+
+[ bytes >> rstrip ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`655 5 655 73`
+		- (type/syntax)`bytes`
+		- (type/factor-local/class)&<#bytes[bytes]>
+		
+(signature)`rstrip(self)`
+
+
+[ bytes >> split ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`656 5 656 104`
+		- (type/syntax)`list[bytes]`
+		
+(signature)`split(self)`
+
+
+[ bytes >> splitlines ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`657 5 657 68`
+		- (type/syntax)`list[bytes]`
+		
+(signature)`splitlines(self)`
+
+
+[ bytes >> startswith ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`658 5 663 18`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`startswith(self, __prefix)`
+
+
+[ bytes >> strip ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`664 5 664 72`
+		- (type/syntax)`bytes`
+		- (type/factor-local/class)&<#bytes[bytes]>
+		
+(signature)`strip(self)`
+
+
+[ bytes >> swapcase ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`665 5 665 36`
+		- (type/syntax)`bytes`
+		- (type/factor-local/class)&<#bytes[bytes]>
+		
+(signature)`swapcase(self)`
+
+
+[ bytes >> title ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`666 5 666 33`
+		- (type/syntax)`bytes`
+		- (type/factor-local/class)&<#bytes[bytes]>
+		
+(signature)`title(self)`
+
+
+[ bytes >> translate ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`667 5 667 90`
+		- (type/syntax)`bytes`
+		- (type/factor-local/class)&<#bytes[bytes]>
+		
+(signature)`translate(self, __table)`
+
+
+[ bytes >> upper ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`668 5 668 33`
+		- (type/syntax)`bytes`
+		- (type/factor-local/class)&<#bytes[bytes]>
+		
+(signature)`upper(self)`
+
+
+[ bytes >> zfill ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`669 5 670 16`
+		- (type/syntax)`bytes`
+		- (type/factor-local/class)&<#bytes[bytes]>
+		
+(signature)`zfill(self, __width)`
+
+
+[ bytes >> fromhex ]
+! CONTROL:
+	/type/
+		classmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`671 5 672 17`
+		- (type/syntax)`Self`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing_extensions.Self]>
+		
+(signature)`fromhex(cls, __string)`
+
+
+[ bytes >> maketrans ]
+! CONTROL:
+	/type/
+		staticmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`673 5 673 76`
+		- (type/syntax)`bytes`
+		- (type/factor-local/class)&<#bytes[bytes]>
+		
+(signature)`maketrans(__frm, __to)`
+
+
+[ bytes >> __len__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`674 5 674 33`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`__len__(self)`
+
+
+[ bytes >> __iter__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`675 5 676 13`
+		- (type/syntax)`Iterator[int]`
+		
+(signature)`__iter__(self)`
+
+
+[ bytes >> __getitem__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`677 5 678 13`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`__getitem__(self, __key)`
+
+
+[ bytes >> __getitem__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`679 5 679 53`
+		- (type/syntax)`bytes`
+		- (type/factor-local/class)&<#bytes[bytes]>
+		
+(signature)`__getitem__(self, __key)`
+
+
+[ bytes >> __add__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`680 5 680 60`
+		- (type/syntax)`bytes`
+		- (type/factor-local/class)&<#bytes[bytes]>
+		
+(signature)`__add__(self, __value)`
+
+
+[ bytes >> __mul__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`681 5 681 59`
+		- (type/syntax)`bytes`
+		- (type/factor-local/class)&<#bytes[bytes]>
+		
+(signature)`__mul__(self, __value)`
+
+
+[ bytes >> __rmul__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`682 5 682 60`
+		- (type/syntax)`bytes`
+		- (type/factor-local/class)&<#bytes[bytes]>
+		
+(signature)`__rmul__(self, __value)`
+
+
+[ bytes >> __mod__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`683 5 683 49`
+		- (type/syntax)`bytes`
+		- (type/factor-local/class)&<#bytes[bytes]>
+		
+(signature)`__mod__(self, __value)`
+
+
+[ bytes >> __contains__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`685 5 685 78`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__contains__(self, __key)`
+
+
+[ bytes >> __eq__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`686 5 686 50`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__eq__(self, __value)`
+
+
+[ bytes >> __ne__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`687 5 687 50`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__ne__(self, __value)`
+
+
+[ bytes >> __lt__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`688 5 688 49`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__lt__(self, __value)`
+
+
+[ bytes >> __le__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`689 5 689 49`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__le__(self, __value)`
+
+
+[ bytes >> __gt__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`690 5 690 49`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__gt__(self, __value)`
+
+
+[ bytes >> __ge__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`691 5 691 49`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__ge__(self, __value)`
+
+
+[ bytes >> __getnewargs__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`692 5 692 49`
+		- (type/syntax)`tuple[bytes]`
+		
+(signature)`__getnewargs__(self)`
+
+
+[ bytearray ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`696 1 812 6`
+! INHERIT:
+	- (source/area)`696 39 696 48`
+	- (type/syntax)`ByteString`
+	- (type/none/invalid)&<http://fault.io/dev/null[typing.ByteString]>
+	
+
+[ bytearray >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`698 5 699 13`
+		- (type/syntax)`None`
+		
+(signature)`__init__(self)`
+
+
+[ bytearray >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`700 5 701 13`
+		- (type/syntax)`None`
+		
+(signature)`__init__(self, __ints)`
+
+
+[ bytearray >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`702 5 702 84`
+		- (type/syntax)`None`
+		
+(signature)`__init__(self, __string, encoding)`
+
+
+[ bytearray >> append ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`703 5 703 56`
+		- (type/syntax)`None`
+		
+(signature)`append(self, __item)`
+
+
+[ bytearray >> capitalize ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`704 5 704 42`
+		- (type/syntax)`bytearray`
+		- (type/factor-local/class)&<#bytearray[bytearray]>
+		
+(signature)`capitalize(self)`
+
+
+[ bytearray >> center ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`705 5 705 88`
+		- (type/syntax)`bytearray`
+		- (type/factor-local/class)&<#bytearray[bytearray]>
+		
+(signature)`center(self, __width)`
+
+
+[ bytearray >> count ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`706 5 708 17`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`count(self, __sub)`
+
+
+[ bytearray >> copy ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`709 5 709 36`
+		- (type/syntax)`bytearray`
+		- (type/factor-local/class)&<#bytearray[bytearray]>
+		
+(signature)`copy(self)`
+
+
+[ bytearray >> decode ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`710 5 710 81`
+		- (type/syntax)`str`
+		- (type/factor-local/class)&<#str[str]>
+		
+(signature)`decode(self)`
+
+
+[ bytearray >> endswith ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`711 5 716 18`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`endswith(self, __suffix)`
+
+
+[ bytearray >> extend ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`722 5 722 78`
+		- (type/syntax)`None`
+		
+(signature)`extend(self, __iterable_of_ints)`
+
+
+[ bytearray >> find ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`723 5 725 17`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`find(self, __sub)`
+
+
+[ bytearray >> index ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`731 5 733 17`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`index(self, __sub)`
+
+
+[ bytearray >> insert ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`734 5 734 80`
+		- (type/syntax)`None`
+		
+(signature)`insert(self, __index, __item)`
+
+
+[ bytearray >> isalnum ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`735 5 735 34`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`isalnum(self)`
+
+
+[ bytearray >> isalpha ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`736 5 736 34`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`isalpha(self)`
+
+
+[ bytearray >> isascii ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`737 5 737 34`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`isascii(self)`
+
+
+[ bytearray >> isdigit ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`738 5 738 34`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`isdigit(self)`
+
+
+[ bytearray >> islower ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`739 5 739 34`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`islower(self)`
+
+
+[ bytearray >> isspace ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`740 5 740 34`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`isspace(self)`
+
+
+[ bytearray >> istitle ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`741 5 741 34`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`istitle(self)`
+
+
+[ bytearray >> isupper ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`742 5 742 34`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`isupper(self)`
+
+
+[ bytearray >> join ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`743 5 743 83`
+		- (type/syntax)`bytearray`
+		- (type/factor-local/class)&<#bytearray[bytearray]>
+		
+(signature)`join(self, __iterable_of_bytes)`
+
+
+[ bytearray >> ljust ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`744 5 744 99`
+		- (type/syntax)`bytearray`
+		- (type/factor-local/class)&<#bytearray[bytearray]>
+		
+(signature)`ljust(self, __width)`
+
+
+[ bytearray >> lower ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`745 5 745 37`
+		- (type/syntax)`bytearray`
+		- (type/factor-local/class)&<#bytearray[bytearray]>
+		
+(signature)`lower(self)`
+
+
+[ bytearray >> lstrip ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`746 5 746 77`
+		- (type/syntax)`bytearray`
+		- (type/factor-local/class)&<#bytearray[bytearray]>
+		
+(signature)`lstrip(self)`
+
+
+[ bytearray >> partition ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`747 5 747 93`
+		- (type/syntax)`tuple[bytearray, bytearray, bytearray]`
+		
+(signature)`partition(self, __sep)`
+
+
+[ bytearray >> pop ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`748 5 748 48`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`pop(self)`
+
+
+[ bytearray >> remove ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`749 5 749 47`
+		- (type/syntax)`None`
+		
+(signature)`remove(self, __value)`
+
+
+[ bytearray >> replace ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`754 5 754 114`
+		- (type/syntax)`bytearray`
+		- (type/factor-local/class)&<#bytearray[bytearray]>
+		
+(signature)`replace(self, __old, __new)`
+
+
+[ bytearray >> rfind ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`755 5 757 17`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`rfind(self, __sub)`
+
+
+[ bytearray >> rindex ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`758 5 760 17`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`rindex(self, __sub)`
+
+
+[ bytearray >> rjust ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`761 5 761 99`
+		- (type/syntax)`bytearray`
+		- (type/factor-local/class)&<#bytearray[bytearray]>
+		
+(signature)`rjust(self, __width)`
+
+
+[ bytearray >> rpartition ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`762 5 762 94`
+		- (type/syntax)`tuple[bytearray, bytearray, bytearray]`
+		
+(signature)`rpartition(self, __sep)`
+
+
+[ bytearray >> rsplit ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`763 5 763 109`
+		- (type/syntax)`list[bytearray]`
+		
+(signature)`rsplit(self)`
+
+
+[ bytearray >> rstrip ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`764 5 764 77`
+		- (type/syntax)`bytearray`
+		- (type/factor-local/class)&<#bytearray[bytearray]>
+		
+(signature)`rstrip(self)`
+
+
+[ bytearray >> split ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`765 5 765 108`
+		- (type/syntax)`list[bytearray]`
+		
+(signature)`split(self)`
+
+
+[ bytearray >> splitlines ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`766 5 766 72`
+		- (type/syntax)`list[bytearray]`
+		
+(signature)`splitlines(self)`
+
+
+[ bytearray >> startswith ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`767 5 772 18`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`startswith(self, __prefix)`
+
+
+[ bytearray >> strip ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`773 5 773 76`
+		- (type/syntax)`bytearray`
+		- (type/factor-local/class)&<#bytearray[bytearray]>
+		
+(signature)`strip(self)`
+
+
+[ bytearray >> swapcase ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`774 5 774 40`
+		- (type/syntax)`bytearray`
+		- (type/factor-local/class)&<#bytearray[bytearray]>
+		
+(signature)`swapcase(self)`
+
+
+[ bytearray >> title ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`775 5 775 37`
+		- (type/syntax)`bytearray`
+		- (type/factor-local/class)&<#bytearray[bytearray]>
+		
+(signature)`title(self)`
+
+
+[ bytearray >> translate ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`776 5 776 94`
+		- (type/syntax)`bytearray`
+		- (type/factor-local/class)&<#bytearray[bytearray]>
+		
+(signature)`translate(self, __table)`
+
+
+[ bytearray >> upper ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`777 5 777 37`
+		- (type/syntax)`bytearray`
+		- (type/factor-local/class)&<#bytearray[bytearray]>
+		
+(signature)`upper(self)`
+
+
+[ bytearray >> zfill ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`778 5 779 16`
+		- (type/syntax)`bytearray`
+		- (type/factor-local/class)&<#bytearray[bytearray]>
+		
+(signature)`zfill(self, __width)`
+
+
+[ bytearray >> fromhex ]
+! CONTROL:
+	/type/
+		classmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`780 5 781 17`
+		- (type/syntax)`Self`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing_extensions.Self]>
+		
+(signature)`fromhex(cls, __string)`
+
+
+[ bytearray >> maketrans ]
+! CONTROL:
+	/type/
+		staticmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`782 5 782 76`
+		- (type/syntax)`bytes`
+		- (type/factor-local/class)&<#bytes[bytes]>
+		
+(signature)`maketrans(__frm, __to)`
+
+
+[ bytearray >> __len__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`783 5 783 33`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`__len__(self)`
+
+
+[ bytearray >> __iter__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`784 5 784 44`
+		- (type/syntax)`Iterator[int]`
+		
+(signature)`__iter__(self)`
+
+
+[ bytearray >> __getitem__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`787 5 788 13`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`__getitem__(self, __key)`
+
+
+[ bytearray >> __getitem__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`789 5 790 13`
+		- (type/syntax)`bytearray`
+		- (type/factor-local/class)&<#bytearray[bytearray]>
+		
+(signature)`__getitem__(self, __key)`
+
+
+[ bytearray >> __setitem__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`791 5 792 13`
+		- (type/syntax)`None`
+		
+(signature)`__setitem__(self, __key, __value)`
+
+
+[ bytearray >> __setitem__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`793 5 793 94`
+		- (type/syntax)`None`
+		
+(signature)`__setitem__(self, __key, __value)`
+
+
+[ bytearray >> __delitem__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`794 5 794 68`
+		- (type/syntax)`None`
+		
+(signature)`__delitem__(self, __key)`
+
+
+[ bytearray >> __add__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`795 5 795 64`
+		- (type/syntax)`bytearray`
+		- (type/factor-local/class)&<#bytearray[bytearray]>
+		
+(signature)`__add__(self, __value)`
+
+
+[ bytearray >> __iadd__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`797 5 797 60`
+		- (type/syntax)`Self`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing_extensions.Self]>
+		
+(signature)`__iadd__(self, __value)`
+
+
+[ bytearray >> __mul__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`798 5 798 63`
+		- (type/syntax)`bytearray`
+		- (type/factor-local/class)&<#bytearray[bytearray]>
+		
+(signature)`__mul__(self, __value)`
+
+
+[ bytearray >> __rmul__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`799 5 799 64`
+		- (type/syntax)`bytearray`
+		- (type/factor-local/class)&<#bytearray[bytearray]>
+		
+(signature)`__rmul__(self, __value)`
+
+
+[ bytearray >> __imul__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`800 5 800 59`
+		- (type/syntax)`Self`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing_extensions.Self]>
+		
+(signature)`__imul__(self, __value)`
+
+
+[ bytearray >> __mod__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`801 5 801 49`
+		- (type/syntax)`bytes`
+		- (type/factor-local/class)&<#bytes[bytes]>
+		
+(signature)`__mod__(self, __value)`
+
+
+[ bytearray >> __contains__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`803 5 803 78`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__contains__(self, __key)`
+
+
+[ bytearray >> __eq__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`804 5 804 50`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__eq__(self, __value)`
+
+
+[ bytearray >> __ne__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`805 5 805 50`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__ne__(self, __value)`
+
+
+[ bytearray >> __lt__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`806 5 806 58`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__lt__(self, __value)`
+
+
+[ bytearray >> __le__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`807 5 807 58`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__le__(self, __value)`
+
+
+[ bytearray >> __gt__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`808 5 808 58`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__gt__(self, __value)`
+
+
+[ bytearray >> __ge__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`809 5 809 58`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__ge__(self, __value)`
+
+
+[ bytearray >> __alloc__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`810 5 812 6`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`__alloc__(self)`
+
+
+[ memoryview ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`813 1 872 6`
+! INHERIT:
+	- (source/area)`813 18 813 30`
+	- (type/syntax)`Sequence[int]`
+	
+
+[ memoryview >> format ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`815 5 816 13`
+		- (type/syntax)`str`
+		- (type/factor-local/class)&<#str[str]>
+		
+
+[ memoryview >> itemsize ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`817 5 818 13`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+
+[ memoryview >> shape ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`819 5 820 13`
+		- (type/syntax)`tuple[int, ...] | None:`
+		
+
+[ memoryview >> strides ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`821 5 822 13`
+		- (type/syntax)`tuple[int, ...] | None:`
+		
+
+[ memoryview >> suboffsets ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`823 5 824 13`
+		- (type/syntax)`tuple[int, ...] | None:`
+		
+
+[ memoryview >> readonly ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`825 5 826 13`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+
+[ memoryview >> ndim ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`827 5 828 13`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+
+[ memoryview >> obj ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`829 5 830 13`
+		- (type/syntax)`ReadableBuffer`
+		- (type/none/invalid)&<http://fault.io/dev/null[_typeshed.ReadableBuffer]>
+		
+
+[ memoryview >> c_contiguous ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`831 5 832 13`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+
+[ memoryview >> f_contiguous ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`833 5 834 13`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+
+[ memoryview >> contiguous ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`835 5 836 13`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+
+[ memoryview >> nbytes ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`837 5 837 32`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+
+[ memoryview >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`838 5 838 56`
+		- (type/syntax)`None`
+		
+(signature)`__init__(self, obj)`
+
+
+[ memoryview >> __enter__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`839 5 839 36`
+		- (type/syntax)`Self`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing_extensions.Self]>
+		
+(signature)`__enter__(self)`
+
+
+[ memoryview >> __exit__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`840 5 842 18`
+		- (type/syntax)`None`
+		
+(signature)`__exit__(self, __exc_type, __exc_val, __exc_tb)`
+
+
+[ memoryview >> cast ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`843 5 844 13`
+		- (type/syntax)`memoryview`
+		- (type/factor-local/class)&<#memoryview[memoryview]>
+		
+(signature)`cast(self, format)`
+
+
+[ memoryview >> __getitem__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`845 5 846 13`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`__getitem__(self, __key)`
+
+
+[ memoryview >> __getitem__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`847 5 847 58`
+		- (type/syntax)`memoryview`
+		- (type/factor-local/class)&<#memoryview[memoryview]>
+		
+(signature)`__getitem__(self, __key)`
+
+
+[ memoryview >> __contains__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`848 5 848 52`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__contains__(self, __x)`
+
+
+[ memoryview >> __iter__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`849 5 849 44`
+		- (type/syntax)`Iterator[int]`
+		
+(signature)`__iter__(self)`
+
+
+[ memoryview >> __len__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`850 5 851 13`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`__len__(self)`
+
+
+[ memoryview >> __setitem__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`852 5 853 13`
+		- (type/syntax)`None`
+		
+(signature)`__setitem__(self, __key, __value)`
+
+
+[ memoryview >> __setitem__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`854 5 854 84`
+		- (type/syntax)`None`
+		
+(signature)`__setitem__(self, __key, __value)`
+
+
+[ memoryview >> tolist ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`862 5 862 38`
+		- (type/syntax)`list[int]`
+		
+(signature)`tolist(self)`
+
+
+[ memoryview >> release ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`866 5 866 34`
+		- (type/syntax)`None`
+		
+(signature)`release(self)`
+
+
+[ bool ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`873 1 903 6`
+! INHERIT:
+	- (source/area)`873 12 873 14`
+	- (type/syntax)`int`
+	- (type/factor-local/class)&<#int[int]>
+	
+
+[ bool >> __new__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`874 5 877 13`
+		- (type/syntax)`Self`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing_extensions.Self]>
+		
+(signature)`__new__(cls)`
+
+
+[ bool >> __and__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`878 5 879 13`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__and__(self, __value)`
+
+
+[ bool >> __and__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`880 5 881 13`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`__and__(self, __value)`
+
+
+[ bool >> __or__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`882 5 883 13`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__or__(self, __value)`
+
+
+[ bool >> __or__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`884 5 885 13`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`__or__(self, __value)`
+
+
+[ bool >> __xor__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`886 5 887 13`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__xor__(self, __value)`
+
+
+[ bool >> __xor__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`888 5 889 13`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`__xor__(self, __value)`
+
+
+[ bool >> __rand__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`890 5 891 13`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__rand__(self, __value)`
+
+
+[ bool >> __rand__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`892 5 893 13`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`__rand__(self, __value)`
+
+
+[ bool >> __ror__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`894 5 895 13`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__ror__(self, __value)`
+
+
+[ bool >> __ror__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`896 5 897 13`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`__ror__(self, __value)`
+
+
+[ bool >> __rxor__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`898 5 899 13`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__rxor__(self, __value)`
+
+
+[ bool >> __rxor__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`900 5 900 48`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`__rxor__(self, __value)`
+
+
+[ bool >> __getnewargs__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`901 5 903 6`
+		- (type/syntax)`tuple[int]`
+		
+(signature)`__getnewargs__(self)`
+
+
+[ slice ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`904 1 916 72`
+
+[ slice >> start ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`906 5 907 13`
+		- (type/syntax)`Any`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing.Any]>
+		
+
+[ slice >> step ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`908 5 909 13`
+		- (type/syntax)`Any`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing.Any]>
+		
+
+[ slice >> stop ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`910 5 911 13`
+		- (type/syntax)`Any`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing.Any]>
+		
+
+[ slice >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`912 5 913 13`
+		- (type/syntax)`None`
+		
+(signature)`__init__(self, __stop)`
+
+
+[ slice >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`914 5 914 81`
+		- (type/syntax)`None`
+		
+(signature)`__init__(self, __start, __stop)`
+
+
+[ slice >> indices ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`916 5 916 72`
+		- (type/syntax)`tuple[int, int, int]`
+		
+(signature)`indices(self, __len)`
+
+
+[ tuple ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`918 1 944 16`
+! INHERIT:
+	- (source/area)`918 30 918 43`
+	- (type/syntax)`Generic[_T_co]`
+	
+
+[ tuple >> __new__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`919 5 919 68`
+		- (type/syntax)`Self`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing_extensions.Self]>
+		
+(signature)`__new__(cls)`
+
+
+[ tuple >> __len__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`920 5 920 33`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`__len__(self)`
+
+
+[ tuple >> __contains__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`921 5 922 13`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__contains__(self, __key)`
+
+
+[ tuple >> __getitem__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`923 5 924 13`
+		- (type/syntax)`_T_co`
+		- (type/factor-local/data)&<#_T_co[_T_co]>
+		
+(signature)`__getitem__(self, __key)`
+
+
+[ tuple >> __getitem__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`925 5 925 65`
+		- (type/syntax)`tuple[_T_co, ...]`
+		
+(signature)`__getitem__(self, __key)`
+
+
+[ tuple >> __iter__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`926 5 926 46`
+		- (type/syntax)`Iterator[_T_co]`
+		
+(signature)`__iter__(self)`
+
+
+[ tuple >> __lt__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`927 5 927 61`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__lt__(self, __value)`
+
+
+[ tuple >> __le__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`928 5 928 61`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__le__(self, __value)`
+
+
+[ tuple >> __gt__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`929 5 929 61`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__gt__(self, __value)`
+
+
+[ tuple >> __ge__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`930 5 931 13`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__ge__(self, __value)`
+
+
+[ tuple >> __add__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`932 5 933 13`
+		- (type/syntax)`tuple[_T_co, ...]`
+		
+(signature)`__add__(self, __value)`
+
+
+[ tuple >> __add__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`934 5 934 77`
+		- (type/syntax)`tuple[_T_co | _T, ...]`
+		
+(signature)`__add__(self, __value)`
+
+
+[ tuple >> __mul__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`935 5 935 71`
+		- (type/syntax)`tuple[_T_co, ...]`
+		
+(signature)`__mul__(self, __value)`
+
+
+[ tuple >> __rmul__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`936 5 936 72`
+		- (type/syntax)`tuple[_T_co, ...]`
+		
+(signature)`__rmul__(self, __value)`
+
+
+[ tuple >> count ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`937 5 937 45`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`count(self, __value)`
+
+
+[ tuple >> index ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`938 5 938 110`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`index(self, __value)`
+
+
+[ function ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`945 1 964 82`
+
+[ function >> __closure__ ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`948 5 948 58`
+		- (type/syntax)`tuple[_Cell, ...] | None:`
+		
+
+[ function >> __globals__ ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`953 5 953 48`
+		- (type/syntax)`dict[str, Any]`
+		
+
+[ function >> __get__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`964 5 964 82`
+		- (type/syntax)`Any`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing.Any]>
+		
+(signature)`__get__(self, __instance)`
+
+
+[ list ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`966 1 1018 68`
+! INHERIT:
+	- (source/area)`966 33 966 43`
+	- (type/syntax)`Generic[_T]`
+	
+
+[ list >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`968 5 969 13`
+		- (type/syntax)`None`
+		
+(signature)`__init__(self)`
+
+
+[ list >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`970 5 970 61`
+		- (type/syntax)`None`
+		
+(signature)`__init__(self, __iterable)`
+
+
+[ list >> copy ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`971 5 971 35`
+		- (type/syntax)`list[_T]`
+		
+(signature)`copy(self)`
+
+
+[ list >> append ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`972 5 972 47`
+		- (type/syntax)`None`
+		
+(signature)`append(self, __object)`
+
+
+[ list >> extend ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`973 5 973 59`
+		- (type/syntax)`None`
+		
+(signature)`extend(self, __iterable)`
+
+
+[ list >> pop ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`974 5 974 57`
+		- (type/syntax)`_T`
+		- (type/factor-local/data)&<#_T[_T]>
+		
+(signature)`pop(self)`
+
+
+[ list >> index ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`977 5 977 109`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`index(self, __value)`
+
+
+[ list >> count ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`978 5 978 44`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`count(self, __value)`
+
+
+[ list >> insert ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`979 5 979 71`
+		- (type/syntax)`None`
+		
+(signature)`insert(self, __index, __object)`
+
+
+[ list >> remove ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`980 5 986 13`
+		- (type/syntax)`None`
+		
+(signature)`remove(self, __value)`
+
+
+[ list >> sort ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`987 5 988 13`
+		- (type/syntax)`None`
+		
+(signature)`sort(self)`
+
+
+[ list >> sort ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`989 5 989 102`
+		- (type/syntax)`None`
+		
+(signature)`sort(self)`
+
+
+[ list >> __len__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`990 5 990 33`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`__len__(self)`
+
+
+[ list >> __iter__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`991 5 991 43`
+		- (type/syntax)`Iterator[_T]`
+		
+(signature)`__iter__(self)`
+
+
+[ list >> __getitem__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`994 5 995 13`
+		- (type/syntax)`_T`
+		- (type/factor-local/data)&<#_T[_T]>
+		
+(signature)`__getitem__(self, __i)`
+
+
+[ list >> __getitem__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`996 5 997 13`
+		- (type/syntax)`list[_T]`
+		
+(signature)`__getitem__(self, __s)`
+
+
+[ list >> __setitem__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`998 5 999 13`
+		- (type/syntax)`None`
+		
+(signature)`__setitem__(self, __key, __value)`
+
+
+[ list >> __setitem__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1000 5 1000 75`
+		- (type/syntax)`None`
+		
+(signature)`__setitem__(self, __key, __value)`
+
+
+[ list >> __delitem__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1001 5 1003 13`
+		- (type/syntax)`None`
+		
+(signature)`__delitem__(self, __key)`
+
+
+[ list >> __add__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1004 5 1005 13`
+		- (type/syntax)`list[_T]`
+		
+(signature)`__add__(self, __value)`
+
+
+[ list >> __add__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1006 5 1006 62`
+		- (type/syntax)`list[_S | _T]`
+		
+(signature)`__add__(self, __value)`
+
+
+[ list >> __iadd__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1007 5 1007 58`
+		- (type/syntax)`Self`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing_extensions.Self]>
+		
+(signature)`__iadd__(self, __value)`
+
+
+[ list >> __mul__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1008 5 1008 62`
+		- (type/syntax)`list[_T]`
+		
+(signature)`__mul__(self, __value)`
+
+
+[ list >> __rmul__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1009 5 1009 63`
+		- (type/syntax)`list[_T]`
+		
+(signature)`__rmul__(self, __value)`
+
+
+[ list >> __imul__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1010 5 1010 59`
+		- (type/syntax)`Self`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing_extensions.Self]>
+		
+(signature)`__imul__(self, __value)`
+
+
+[ list >> __contains__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1011 5 1011 54`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__contains__(self, __key)`
+
+
+[ list >> __reversed__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1012 5 1012 47`
+		- (type/syntax)`Iterator[_T]`
+		
+(signature)`__reversed__(self)`
+
+
+[ list >> __gt__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1013 5 1013 52`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__gt__(self, __value)`
+
+
+[ list >> __ge__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1014 5 1014 52`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__ge__(self, __value)`
+
+
+[ list >> __lt__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1015 5 1015 52`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__lt__(self, __value)`
+
+
+[ list >> __le__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1016 5 1016 52`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__le__(self, __value)`
+
+
+[ dict ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1020 1 1078 74`
+! INHERIT:
+	- (source/area)`1020 38 1020 54`
+	- (type/syntax)`Generic[_KT, _VT]`
+	
+
+[ dict >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1024 5 1025 13`
+		- (type/syntax)`None`
+		
+(signature)`__init__(self)`
+
+
+[ dict >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1026 5 1027 13`
+		- (type/syntax)`None`
+		
+(signature)`__init__(self, **kwargs)`
+
+
+[ dict >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1028 5 1029 13`
+		- (type/syntax)`None`
+		
+(signature)`__init__(self, __map)`
+
+
+[ dict >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1030 5 1031 13`
+		- (type/syntax)`None`
+		
+(signature)`__init__(self, __map, **kwargs)`
+
+
+[ dict >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1032 5 1033 13`
+		- (type/syntax)`None`
+		
+(signature)`__init__(self, __iterable)`
+
+
+[ dict >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1034 5 1037 13`
+		- (type/syntax)`None`
+		
+(signature)`__init__(self, __iterable, **kwargs)`
+
+
+[ dict >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1038 5 1038 84`
+		- (type/syntax)`None`
+		
+(signature)`__init__(self, __iterable)`
+
+
+[ dict >> __new__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1039 5 1039 60`
+		- (type/syntax)`Self`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing_extensions.Self]>
+		
+(signature)`__new__(cls, *args, **kwargs)`
+
+
+[ dict >> copy ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1040 5 1040 41`
+		- (type/syntax)`dict[_KT, _VT]`
+		
+(signature)`copy(self)`
+
+
+[ dict >> keys ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1041 5 1041 46`
+		- (type/syntax)`dict_keys[_KT, _VT]`
+		
+(signature)`keys(self)`
+
+
+[ dict >> values ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1042 5 1042 50`
+		- (type/syntax)`dict_values[_KT, _VT]`
+		
+(signature)`values(self)`
+
+
+[ dict >> items ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1043 5 1048 13`
+		- (type/syntax)`dict_items[_KT, _VT]`
+		
+(signature)`items(self)`
+
+
+[ dict >> fromkeys ]
+! CONTROL:
+	/type/
+		classmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1049 5 1051 13`
+		- (type/syntax)`dict[_T, Any | None]`
+		
+(signature)`fromkeys(cls, __iterable)`
+
+
+[ dict >> fromkeys ]
+! CONTROL:
+	/type/
+		classmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1052 5 1054 13`
+		- (type/syntax)`dict[_T, _S]`
+		
+(signature)`fromkeys(cls, __iterable, __value)`
+
+
+[ dict >> get ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1055 5 1056 13`
+		- (type/syntax)`_VT | None:`
+		
+(signature)`get(self, __key)`
+
+
+[ dict >> get ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1057 5 1058 13`
+		- (type/syntax)`_VT | _T:`
+		
+(signature)`get(self, __key, __default)`
+
+
+[ dict >> pop ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1059 5 1060 13`
+		- (type/syntax)`_VT`
+		- (type/factor-local/data)&<#_VT[_VT]>
+		
+(signature)`pop(self, __key)`
+
+
+[ dict >> pop ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1061 5 1061 67`
+		- (type/syntax)`_VT | _T:`
+		
+(signature)`pop(self, __key, __default)`
+
+
+[ dict >> __len__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1062 5 1062 33`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`__len__(self)`
+
+
+[ dict >> __getitem__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1063 5 1063 49`
+		- (type/syntax)`_VT`
+		- (type/factor-local/data)&<#_VT[_VT]>
+		
+(signature)`__getitem__(self, __key)`
+
+
+[ dict >> __setitem__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1064 5 1064 64`
+		- (type/syntax)`None`
+		
+(signature)`__setitem__(self, __key, __value)`
+
+
+[ dict >> __delitem__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1065 5 1065 50`
+		- (type/syntax)`None`
+		
+(signature)`__delitem__(self, __key)`
+
+
+[ dict >> __iter__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1066 5 1066 44`
+		- (type/syntax)`Iterator[_KT]`
+		
+(signature)`__iter__(self)`
+
+
+[ set ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1080 1 1117 68`
+! INHERIT:
+	- (source/area)`1080 27 1080 37`
+	- (type/syntax)`Generic[_T]`
+	
+
+[ set >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1082 5 1083 13`
+		- (type/syntax)`None`
+		
+(signature)`__init__(self)`
+
+
+[ set >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1084 5 1084 61`
+		- (type/syntax)`None`
+		
+(signature)`__init__(self, __iterable)`
+
+
+[ set >> add ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1085 5 1085 45`
+		- (type/syntax)`None`
+		
+(signature)`add(self, __element)`
+
+
+[ set >> copy ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1086 5 1086 34`
+		- (type/syntax)`set[_T]`
+		
+(signature)`copy(self)`
+
+
+[ set >> difference ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1087 5 1087 59`
+		- (type/syntax)`set[_T]`
+		
+(signature)`difference(self, *s)`
+
+
+[ set >> difference_update ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1088 5 1088 63`
+		- (type/syntax)`None`
+		
+(signature)`difference_update(self, *s)`
+
+
+[ set >> discard ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1089 5 1089 49`
+		- (type/syntax)`None`
+		
+(signature)`discard(self, __element)`
+
+
+[ set >> intersection ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1090 5 1090 61`
+		- (type/syntax)`set[_T]`
+		
+(signature)`intersection(self, *s)`
+
+
+[ set >> intersection_update ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1091 5 1091 65`
+		- (type/syntax)`None`
+		
+(signature)`intersection_update(self, *s)`
+
+
+[ set >> isdisjoint ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1092 5 1092 57`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`isdisjoint(self, __s)`
+
+
+[ set >> issubset ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1093 5 1093 55`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`issubset(self, __s)`
+
+
+[ set >> issuperset ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1094 5 1094 57`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`issuperset(self, __s)`
+
+
+[ set >> remove ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1095 5 1095 48`
+		- (type/syntax)`None`
+		
+(signature)`remove(self, __element)`
+
+
+[ set >> symmetric_difference ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1096 5 1096 69`
+		- (type/syntax)`set[_T]`
+		
+(signature)`symmetric_difference(self, __s)`
+
+
+[ set >> symmetric_difference_update ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1097 5 1097 73`
+		- (type/syntax)`None`
+		
+(signature)`symmetric_difference_update(self, __s)`
+
+
+[ set >> union ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1098 5 1098 58`
+		- (type/syntax)`set[_T | _S]`
+		
+(signature)`union(self, *s)`
+
+
+[ set >> update ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1099 5 1099 51`
+		- (type/syntax)`None`
+		
+(signature)`update(self, *s)`
+
+
+[ set >> __len__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1100 5 1100 33`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`__len__(self)`
+
+
+[ set >> __contains__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1101 5 1101 52`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__contains__(self, __o)`
+
+
+[ set >> __iter__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1102 5 1102 43`
+		- (type/syntax)`Iterator[_T]`
+		
+(signature)`__iter__(self)`
+
+
+[ set >> __and__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1103 5 1103 67`
+		- (type/syntax)`set[_T]`
+		
+(signature)`__and__(self, __value)`
+
+
+[ set >> __iand__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1104 5 1104 65`
+		- (type/syntax)`Self`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing_extensions.Self]>
+		
+(signature)`__iand__(self, __value)`
+
+
+[ set >> __or__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1105 5 1105 67`
+		- (type/syntax)`set[_T | _S]`
+		
+(signature)`__or__(self, __value)`
+
+
+[ set >> __ior__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1106 5 1106 60`
+		- (type/syntax)`Self`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing_extensions.Self]>
+		
+(signature)`__ior__(self, __value)`
+
+
+[ set >> __sub__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1107 5 1107 70`
+		- (type/syntax)`set[_T]`
+		
+(signature)`__sub__(self, __value)`
+
+
+[ set >> __isub__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1108 5 1108 65`
+		- (type/syntax)`Self`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing_extensions.Self]>
+		
+(signature)`__isub__(self, __value)`
+
+
+[ set >> __xor__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1109 5 1109 68`
+		- (type/syntax)`set[_T | _S]`
+		
+(signature)`__xor__(self, __value)`
+
+
+[ set >> __ixor__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1110 5 1110 61`
+		- (type/syntax)`Self`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing_extensions.Self]>
+		
+(signature)`__ixor__(self, __value)`
+
+
+[ set >> __le__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1111 5 1111 63`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__le__(self, __value)`
+
+
+[ set >> __lt__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1112 5 1112 63`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__lt__(self, __value)`
+
+
+[ set >> __ge__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1113 5 1113 63`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__ge__(self, __value)`
+
+
+[ set >> __gt__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1114 5 1114 63`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__gt__(self, __value)`
+
+
+[ frozenset ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1119 1 1144 68`
+! INHERIT:
+	- (source/area)`1119 37 1119 50`
+	- (type/syntax)`Generic[_T_co]`
+	
+
+[ frozenset >> __new__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1121 5 1122 13`
+		- (type/syntax)`Self`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing_extensions.Self]>
+		
+(signature)`__new__(cls)`
+
+
+[ frozenset >> __new__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1123 5 1123 62`
+		- (type/syntax)`Self`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing_extensions.Self]>
+		
+(signature)`__new__(cls, __iterable)`
+
+
+[ frozenset >> copy ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1124 5 1124 43`
+		- (type/syntax)`frozenset[_T_co]`
+		
+(signature)`copy(self)`
+
+
+[ frozenset >> difference ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1125 5 1125 71`
+		- (type/syntax)`frozenset[_T_co]`
+		
+(signature)`difference(self, *s)`
+
+
+[ frozenset >> intersection ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1126 5 1126 73`
+		- (type/syntax)`frozenset[_T_co]`
+		
+(signature)`intersection(self, *s)`
+
+
+[ frozenset >> isdisjoint ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1127 5 1127 59`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`isdisjoint(self, __s)`
+
+
+[ frozenset >> issubset ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1128 5 1128 58`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`issubset(self, __s)`
+
+
+[ frozenset >> issuperset ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1129 5 1129 60`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`issuperset(self, __s)`
+
+
+[ frozenset >> symmetric_difference ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1130 5 1130 81`
+		- (type/syntax)`frozenset[_T_co]`
+		
+(signature)`symmetric_difference(self, __s)`
+
+
+[ frozenset >> union ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1131 5 1131 67`
+		- (type/syntax)`frozenset[_T_co | _S]`
+		
+(signature)`union(self, *s)`
+
+
+[ frozenset >> __len__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1132 5 1132 33`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`__len__(self)`
+
+
+[ frozenset >> __contains__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1133 5 1133 52`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__contains__(self, __o)`
+
+
+[ frozenset >> __iter__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1134 5 1134 46`
+		- (type/syntax)`Iterator[_T_co]`
+		
+(signature)`__iter__(self)`
+
+
+[ frozenset >> __and__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1135 5 1135 75`
+		- (type/syntax)`frozenset[_T_co]`
+		
+(signature)`__and__(self, __value)`
+
+
+[ frozenset >> __or__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1136 5 1136 76`
+		- (type/syntax)`frozenset[_T_co | _S]`
+		
+(signature)`__or__(self, __value)`
+
+
+[ frozenset >> __sub__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1137 5 1137 75`
+		- (type/syntax)`frozenset[_T_co]`
+		
+(signature)`__sub__(self, __value)`
+
+
+[ frozenset >> __xor__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1138 5 1138 77`
+		- (type/syntax)`frozenset[_T_co | _S]`
+		
+(signature)`__xor__(self, __value)`
+
+
+[ frozenset >> __le__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1139 5 1139 63`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__le__(self, __value)`
+
+
+[ frozenset >> __lt__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1140 5 1140 63`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__lt__(self, __value)`
+
+
+[ frozenset >> __ge__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1141 5 1141 63`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__ge__(self, __value)`
+
+
+[ frozenset >> __gt__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1142 5 1142 63`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__gt__(self, __value)`
+
+
+[ enumerate ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1146 1 1153 6`
+! INHERIT:
+	- (source/area)`1146 43 1146 53`
+	- (type/syntax)`Generic[_T]`
+	
+
+[ enumerate >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1147 5 1147 77`
+		- (type/syntax)`None`
+		
+(signature)`__init__(self, iterable)`
+
+
+[ enumerate >> __iter__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1148 5 1148 35`
+		- (type/syntax)`Self`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing_extensions.Self]>
+		
+(signature)`__iter__(self)`
+
+
+[ enumerate >> __next__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1149 5 1149 45`
+		- (type/syntax)`tuple[int, _T]`
+		
+(signature)`__next__(self)`
+
+
+[ range ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1154 1 1174 48`
+! INHERIT:
+	- (source/area)`1154 13 1154 25`
+	- (type/syntax)`Sequence[int]`
+	
+
+[ range >> start ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1156 5 1157 13`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+
+[ range >> stop ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1158 5 1159 13`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+
+[ range >> step ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1160 5 1161 13`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+
+[ range >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1162 5 1163 13`
+		- (type/syntax)`None`
+		
+(signature)`__init__(self, __stop)`
+
+
+[ range >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1164 5 1164 111`
+		- (type/syntax)`None`
+		
+(signature)`__init__(self, __start, __stop)`
+
+
+[ range >> count ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1165 5 1165 45`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`count(self, __value)`
+
+
+[ range >> index ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1166 5 1166 45`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`index(self, __value)`
+
+
+[ range >> __len__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1167 5 1167 33`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`__len__(self)`
+
+
+[ range >> __contains__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1168 5 1168 54`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`__contains__(self, __key)`
+
+
+[ range >> __iter__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1169 5 1170 13`
+		- (type/syntax)`Iterator[int]`
+		
+(signature)`__iter__(self)`
+
+
+[ range >> __getitem__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1171 5 1172 13`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`__getitem__(self, __key)`
+
+
+[ range >> __getitem__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1173 5 1173 53`
+		- (type/syntax)`range`
+		- (type/factor-local/class)&<#range[range]>
+		
+(signature)`__getitem__(self, __key)`
+
+
+[ range >> __reversed__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1174 5 1174 48`
+		- (type/syntax)`Iterator[int]`
+		
+(signature)`__reversed__(self)`
+
+
+[ property ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1176 1 1195 6`
+
+[ property >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1181 5 1187 18`
+		- (type/syntax)`None`
+		
+(signature)`__init__(self)`
+
+
+[ property >> getter ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1188 5 1188 67`
+		- (type/syntax)`property`
+		- (type/factor-local/class)&<#property[property]>
+		
+(signature)`getter(self, __fget)`
+
+
+[ property >> setter ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1189 5 1189 73`
+		- (type/syntax)`property`
+		- (type/factor-local/class)&<#property[property]>
+		
+(signature)`setter(self, __fset)`
+
+
+[ property >> deleter ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1190 5 1190 69`
+		- (type/syntax)`property`
+		- (type/factor-local/class)&<#property[property]>
+		
+(signature)`deleter(self, __fdel)`
+
+
+[ property >> __get__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1191 5 1191 79`
+		- (type/syntax)`Any`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing.Any]>
+		
+(signature)`__get__(self, __instance)`
+
+
+[ property >> __set__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1192 5 1192 65`
+		- (type/syntax)`None`
+		
+(signature)`__set__(self, __instance, __value)`
+
+
+[ property >> __delete__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1193 5 1195 6`
+		- (type/syntax)`None`
+		
+(signature)`__delete__(self, __instance)`
+
+
+[ _NotImplementedType ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1196 1 1199 28`
+! INHERIT:
+	- (source/area)`1196 27 1196 29`
+	- (type/syntax)`Any`
+	- (type/none/invalid)&<http://fault.io/dev/null[typing.Any]>
+	
+
+[ abs ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1203 1 1203 40`
+		- (type/syntax)`_T`
+		- (type/factor-local/data)&<#_T[_T]>
+		
+(signature)`abs(__x)`
+
+
+[ all ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1204 1 1204 50`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`all(__iterable)`
+
+
+[ any ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1205 1 1205 50`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`any(__iterable)`
+
+
+[ ascii ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1206 1 1206 36`
+		- (type/syntax)`str`
+		- (type/factor-local/class)&<#str[str]>
+		
+(signature)`ascii(__obj)`
+
+
+[ bin ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1207 1 1207 50`
+		- (type/syntax)`str`
+		- (type/factor-local/class)&<#str[str]>
+		
+(signature)`bin(__number)`
+
+
+[ breakpoint ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1208 1 1208 51`
+		- (type/syntax)`None`
+		
+(signature)`breakpoint(*args, **kws)`
+
+
+[ callable ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1209 1 1209 68`
+		- (type/syntax)`TypeGuard[Callable[..., object]]`
+		
+(signature)`callable(__obj)`
+
+
+[ chr ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1210 1 1210 29`
+		- (type/syntax)`str`
+		- (type/factor-local/class)&<#str[str]>
+		
+(signature)`chr(__i)`
+
+
+[ _PathLike ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1214 1 1215 42`
+! INHERIT:
+	- (source/area)`1214 17 1214 35`
+	- (type/syntax)`Protocol[AnyStr_co]`
+	
+
+[ _PathLike >> __fspath__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1215 5 1215 42`
+		- (type/syntax)`AnyStr_co`
+		- (type/none/invalid)&<http://fault.io/dev/null[_typeshed.AnyStr_co]>
+		
+(signature)`__fspath__(self)`
+
+
+[ copyright ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1317 1 1317 28`
+		- (type/syntax)`None`
+		
+(signature)`copyright()`
+
+
+[ credits ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1318 1 1318 26`
+		- (type/syntax)`None`
+		
+(signature)`credits()`
+
+
+[ delattr ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1319 1 1319 52`
+		- (type/syntax)`None`
+		
+(signature)`delattr(__obj, __name)`
+
+
+[ dir ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1320 1 1321 9`
+		- (type/syntax)`list[str]`
+		
+(signature)`dir()`
+
+
+[ divmod ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1322 1 1323 9`
+		- (type/syntax)`_T_co`
+		- (type/factor-local/data)&<#_T_co[_T_co]>
+		
+(signature)`divmod(__x, __y)`
+
+
+[ divmod ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1324 1 1324 80`
+		- (type/syntax)`_T_co`
+		- (type/factor-local/data)&<#_T_co[_T_co]>
+		
+(signature)`divmod(__x, __y)`
+
+
+[ eval ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1328 1 1332 13`
+		- (type/syntax)`Any`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing.Any]>
+		
+(signature)`eval(__source)`
+
+
+[ exit ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1351 1 1351 53`
+		- (type/syntax)`NoReturn`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing.NoReturn]>
+		
+(signature)`exit()`
+
+
+[ filter ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1353 1 1361 33`
+! INHERIT:
+	- (source/area)`1353 28 1353 38`
+	- (type/syntax)`Generic[_T]`
+	
+
+[ filter >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1355 5 1356 13`
+		- (type/syntax)`None`
+		
+(signature)`__init__(self, __function, __iterable)`
+
+
+[ filter >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1357 5 1358 13`
+		- (type/syntax)`None`
+		
+(signature)`__init__(self, __function, __iterable)`
+
+
+[ filter >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1359 5 1359 94`
+		- (type/syntax)`None`
+		
+(signature)`__init__(self, __function, __iterable)`
+
+
+[ filter >> __iter__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1360 5 1360 35`
+		- (type/syntax)`Self`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing_extensions.Self]>
+		
+(signature)`__iter__(self)`
+
+
+[ filter >> __next__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1361 5 1361 33`
+		- (type/syntax)`_T`
+		- (type/factor-local/data)&<#_T[_T]>
+		
+(signature)`__next__(self)`
+
+
+[ format ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1363 1 1364 9`
+		- (type/syntax)`str`
+		- (type/factor-local/class)&<#str[str]>
+		
+(signature)`format(__value)`
+
+
+[ getattr ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1365 1 1370 9`
+		- (type/syntax)`Any`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing.Any]>
+		
+(signature)`getattr(__o, __name)`
+
+
+[ getattr ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1371 1 1372 9`
+		- (type/syntax)`Any | None:`
+		
+(signature)`getattr(__o, __name, __default)`
+
+
+[ getattr ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1373 1 1374 9`
+		- (type/syntax)`Any | bool:`
+		
+(signature)`getattr(__o, __name, __default)`
+
+
+[ getattr ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1375 1 1376 9`
+		- (type/syntax)`Any | list[Any]:`
+		
+(signature)`getattr(__o, name, __default)`
+
+
+[ getattr ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1377 1 1378 9`
+		- (type/syntax)`Any | dict[Any, Any]:`
+		
+(signature)`getattr(__o, name, __default)`
+
+
+[ getattr ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1379 1 1379 69`
+		- (type/syntax)`Any | _T:`
+		
+(signature)`getattr(__o, __name, __default)`
+
+
+[ globals ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1380 1 1380 36`
+		- (type/syntax)`dict[str, Any]`
+		
+(signature)`globals()`
+
+
+[ hasattr ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1381 1 1381 52`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`hasattr(__obj, __name)`
+
+
+[ hash ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1382 1 1382 35`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`hash(__obj)`
+
+
+[ help ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1383 1 1383 44`
+		- (type/syntax)`None`
+		
+(signature)`help()`
+
+
+[ hex ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1384 1 1384 50`
+		- (type/syntax)`str`
+		- (type/factor-local/class)&<#str[str]>
+		
+(signature)`hex(__number)`
+
+
+[ id ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1385 1 1385 33`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`id(__obj)`
+
+
+[ input ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1386 1 1386 44`
+		- (type/syntax)`str`
+		- (type/factor-local/class)&<#str[str]>
+		
+(signature)`input()`
+
+
+[ _GetItemIterable ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1388 1 1391 9`
+! INHERIT:
+	- (source/area)`1388 24 1388 38`
+	- (type/syntax)`Protocol[_T_co]`
+	
+
+[ _GetItemIterable >> __getitem__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1389 5 1391 9`
+		- (type/syntax)`_T_co`
+		- (type/factor-local/data)&<#_T_co[_T_co]>
+		
+(signature)`__getitem__(self, __i)`
+
+
+[ iter ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1392 1 1393 9`
+		- (type/syntax)`_SupportsNextT`
+		- (type/factor-local/data)&<#_SupportsNextT[_SupportsNextT]>
+		
+(signature)`iter(__iterable)`
+
+
+[ iter ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1394 1 1395 9`
+		- (type/syntax)`Iterator[_T]`
+		
+(signature)`iter(__iterable)`
+
+
+[ iter ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1396 1 1397 9`
+		- (type/syntax)`Iterator[_T]`
+		
+(signature)`iter(__function, __sentinel)`
+
+
+[ iter ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1398 1 1398 79`
+		- (type/syntax)`Iterator[_T]`
+		
+(signature)`iter(__function, __sentinel)`
+
+
+[ isinstance ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1406 1 1406 72`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`isinstance(__obj, __class_or_tuple)`
+
+
+[ issubclass ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1407 1 1407 70`
+		- (type/syntax)`bool`
+		- (type/factor-local/class)&<#bool[bool]>
+		
+(signature)`issubclass(__cls, __class_or_tuple)`
+
+
+[ len ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1408 1 1408 33`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`len(__obj)`
+
+
+[ license ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1409 1 1409 26`
+		- (type/syntax)`None`
+		
+(signature)`license()`
+
+
+[ locals ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1410 1 1410 35`
+		- (type/syntax)`dict[str, Any]`
+		
+(signature)`locals()`
+
+
+[ map ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1412 1 1455 9`
+! INHERIT:
+	- (source/area)`1412 25 1412 35`
+	- (type/syntax)`Generic[_S]`
+	
+
+[ map >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1414 5 1415 13`
+		- (type/syntax)`None`
+		
+(signature)`__init__(self, __func, __iter1)`
+
+
+[ map >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1416 5 1417 13`
+		- (type/syntax)`None`
+		
+(signature)`__init__(self, __func, __iter1, __iter2)`
+
+
+[ map >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1418 5 1421 13`
+		- (type/syntax)`None`
+		
+(signature)`__init__(self, __func, __iter1, __iter2, __iter3)`
+
+
+[ map >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1422 5 1430 13`
+		- (type/syntax)`None`
+		
+(signature)`__init__(self, __func, __iter1, __iter2, __iter3, __iter4)`
+
+
+[ map >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1431 5 1440 13`
+		- (type/syntax)`None`
+		
+(signature)`__init__(self, __func, __iter1, __iter2, __iter3, __iter4, __iter5)`
+
+
+[ map >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1441 5 1451 18`
+		- (type/syntax)`None`
+		
+(signature)`__init__(self, __func, __iter1, __iter2, __iter3, __iter4, __iter5, __iter6, *iterables)`
+
+
+[ map >> __iter__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1452 5 1452 35`
+		- (type/syntax)`Self`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing_extensions.Self]>
+		
+(signature)`__iter__(self)`
+
+
+[ map >> __next__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1453 5 1455 9`
+		- (type/syntax)`_S`
+		- (type/factor-local/data)&<#_S[_S]>
+		
+(signature)`__next__(self)`
+
+
+[ max ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1456 1 1459 9`
+		- (type/syntax)`SupportsRichComparisonT`
+		- (type/none/invalid)&<http://fault.io/dev/null[_typeshed.SupportsRichComparisonT]>
+		
+(signature)`max(__arg1, __arg2, *_args)`
+
+
+[ max ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1460 1 1461 9`
+		- (type/syntax)`_T`
+		- (type/factor-local/data)&<#_T[_T]>
+		
+(signature)`max(__arg1, __arg2, *_args)`
+
+
+[ max ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1462 1 1463 9`
+		- (type/syntax)`SupportsRichComparisonT`
+		- (type/none/invalid)&<http://fault.io/dev/null[_typeshed.SupportsRichComparisonT]>
+		
+(signature)`max(__iterable)`
+
+
+[ max ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1464 1 1465 9`
+		- (type/syntax)`_T`
+		- (type/factor-local/data)&<#_T[_T]>
+		
+(signature)`max(__iterable)`
+
+
+[ max ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1466 1 1467 9`
+		- (type/syntax)`SupportsRichComparisonT | _T:`
+		
+(signature)`max(__iterable)`
+
+
+[ max ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1468 1 1469 9`
+		- (type/syntax)`_T1 | _T2:`
+		
+(signature)`max(__iterable)`
+
+
+[ min ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1470 1 1473 9`
+		- (type/syntax)`SupportsRichComparisonT`
+		- (type/none/invalid)&<http://fault.io/dev/null[_typeshed.SupportsRichComparisonT]>
+		
+(signature)`min(__arg1, __arg2, *_args)`
+
+
+[ min ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1474 1 1475 9`
+		- (type/syntax)`_T`
+		- (type/factor-local/data)&<#_T[_T]>
+		
+(signature)`min(__arg1, __arg2, *_args)`
+
+
+[ min ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1476 1 1477 9`
+		- (type/syntax)`SupportsRichComparisonT`
+		- (type/none/invalid)&<http://fault.io/dev/null[_typeshed.SupportsRichComparisonT]>
+		
+(signature)`min(__iterable)`
+
+
+[ min ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1478 1 1479 9`
+		- (type/syntax)`_T`
+		- (type/factor-local/data)&<#_T[_T]>
+		
+(signature)`min(__iterable)`
+
+
+[ min ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1480 1 1481 9`
+		- (type/syntax)`SupportsRichComparisonT | _T:`
+		
+(signature)`min(__iterable)`
+
+
+[ min ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1482 1 1483 9`
+		- (type/syntax)`_T1 | _T2:`
+		
+(signature)`min(__iterable)`
+
+
+[ next ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1484 1 1485 9`
+		- (type/syntax)`_T`
+		- (type/factor-local/data)&<#_T[_T]>
+		
+(signature)`next(__i)`
+
+
+[ next ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1486 1 1486 64`
+		- (type/syntax)`_T | _VT:`
+		
+(signature)`next(__i, __default)`
+
+
+[ oct ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1487 1 1487 50`
+		- (type/syntax)`str`
+		- (type/factor-local/class)&<#str[str]>
+		
+(signature)`oct(__number)`
+
+
+[ _Opener ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1489 1 1492 9`
+		- (type/syntax)`TypeAlias`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing_extensions.TypeAlias]>
+		
+#!source
+	_Opener: TypeAlias = Callable[[str, int], int]
+	
+	# Text mode: always returns a TextIOWrapper
+	@overload
+
+[ open ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1493 1 1505 9`
+		- (type/syntax)`TextIOWrapper`
+		- (type/none/invalid)&<http://fault.io/dev/null[io.TextIOWrapper]>
+		
+(signature)`open(file)`
+
+
+[ open ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1506 1 1518 9`
+		- (type/syntax)`FileIO`
+		- (type/none/invalid)&<http://fault.io/dev/null[io.FileIO]>
+		
+(signature)`open(file, mode, buffering)`
+
+
+[ open ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1519 1 1529 9`
+		- (type/syntax)`BufferedRandom`
+		- (type/none/invalid)&<http://fault.io/dev/null[io.BufferedRandom]>
+		
+(signature)`open(file, mode)`
+
+
+[ open ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1530 1 1540 9`
+		- (type/syntax)`BufferedWriter`
+		- (type/none/invalid)&<http://fault.io/dev/null[io.BufferedWriter]>
+		
+(signature)`open(file, mode)`
+
+
+[ open ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1541 1 1553 9`
+		- (type/syntax)`BufferedReader`
+		- (type/none/invalid)&<http://fault.io/dev/null[io.BufferedReader]>
+		
+(signature)`open(file, mode)`
+
+
+[ open ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1554 1 1566 9`
+		- (type/syntax)`BinaryIO`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing.BinaryIO]>
+		
+(signature)`open(file, mode)`
+
+
+[ open ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1567 1 1576 17`
+		- (type/syntax)`IO[Any]`
+		
+(signature)`open(file, mode)`
+
+
+[ ord ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1577 1 1577 49`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`ord(__c)`
+
+
+[ _SupportsWriteAndFlush ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1579 1 1582 9`
+! INHERIT:
+	- (source/area)`1579 56 1579 74`
+	- (type/syntax)`Protocol[_T_contra]`
+	
+
+[ _SupportsWriteAndFlush >> flush ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1580 5 1582 9`
+		- (type/syntax)`None`
+		
+(signature)`flush(self)`
+
+
+[ print ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1583 1 1590 9`
+		- (type/syntax)`None`
+		
+(signature)`print(*values)`
+
+
+[ print ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1591 1 1593 14`
+		- (type/syntax)`None`
+		
+(signature)`print(*values)`
+
+
+[ _E ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1595 1 1595 38`
+#!source
+	_E = TypeVar("_E", contravariant=True)
+
+[ _M ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1596 1 1596 38`
+#!source
+	_M = TypeVar("_M", contravariant=True)
+
+[ _SupportsPow2 ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1598 1 1599 48`
+! INHERIT:
+	- (source/area)`1598 21 1598 39`
+	- (type/syntax)`Protocol[_E, _T_co]`
+	
+
+[ _SupportsPow2 >> __pow__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1599 5 1599 48`
+		- (type/syntax)`_T_co`
+		- (type/factor-local/data)&<#_T_co[_T_co]>
+		
+(signature)`__pow__(self, __other)`
+
+
+[ _SupportsPow3NoneOnly ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1601 1 1602 71`
+! INHERIT:
+	- (source/area)`1601 29 1601 47`
+	- (type/syntax)`Protocol[_E, _T_co]`
+	
+
+[ _SupportsPow3NoneOnly >> __pow__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1602 5 1602 71`
+		- (type/syntax)`_T_co`
+		- (type/factor-local/data)&<#_T_co[_T_co]>
+		
+(signature)`__pow__(self, __other)`
+
+
+[ _SupportsPow3 ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1604 1 1605 62`
+! INHERIT:
+	- (source/area)`1604 21 1604 43`
+	- (type/syntax)`Protocol[_E, _M, _T_co]`
+	
+
+[ _SupportsPow3 >> __pow__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1605 5 1605 62`
+		- (type/syntax)`_T_co`
+		- (type/factor-local/data)&<#_T_co[_T_co]>
+		
+(signature)`__pow__(self, __other, __modulo)`
+
+
+[ _SupportsSomeKindOfPow ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1607 1 1609 1`
+#!source
+	_SupportsSomeKindOfPow = (  # noqa: Y026  # TODO: Use TypeAlias once mypy bugs are fixed
+	    _SupportsPow2[Any, Any] | _SupportsPow3NoneOnly[Any, Any] | _SupportsPow3[Any, Any, Any]
+	)
+
+[ quit ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1682 1 1682 53`
+		- (type/syntax)`NoReturn`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing.NoReturn]>
+		
+(signature)`quit()`
+
+
+[ reversed ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1684 1 1691 41`
+! INHERIT:
+	- (source/area)`1684 30 1684 40`
+	- (type/syntax)`Generic[_T]`
+	
+
+[ reversed >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1686 5 1687 13`
+		- (type/syntax)`None`
+		
+(signature)`__init__(self, __sequence)`
+
+
+[ reversed >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1688 5 1688 74`
+		- (type/syntax)`None`
+		
+(signature)`__init__(self, __sequence)`
+
+
+[ reversed >> __iter__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1689 5 1689 35`
+		- (type/syntax)`Self`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing_extensions.Self]>
+		
+(signature)`__iter__(self)`
+
+
+[ reversed >> __next__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1690 5 1690 33`
+		- (type/syntax)`_T`
+		- (type/factor-local/data)&<#_T[_T]>
+		
+(signature)`__next__(self)`
+
+
+[ reversed >> __length_hint__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1691 5 1691 41`
+		- (type/syntax)`int`
+		- (type/factor-local/class)&<#int[int]>
+		
+(signature)`__length_hint__(self)`
+
+
+[ repr ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1693 1 1693 35`
+		- (type/syntax)`str`
+		- (type/factor-local/class)&<#str[str]>
+		
+(signature)`repr(__obj)`
+
+
+[ _SupportsRound1 ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1699 1 1700 37`
+! INHERIT:
+	- (source/area)`1699 23 1699 37`
+	- (type/syntax)`Protocol[_T_co]`
+	
+
+[ _SupportsRound1 >> __round__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1700 5 1700 37`
+		- (type/syntax)`_T_co`
+		- (type/factor-local/data)&<#_T_co[_T_co]>
+		
+(signature)`__round__(self)`
+
+
+[ _SupportsRound2 ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1702 1 1705 9`
+! INHERIT:
+	- (source/area)`1702 23 1702 37`
+	- (type/syntax)`Protocol[_T_co]`
+	
+
+[ _SupportsRound2 >> __round__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1703 5 1705 9`
+		- (type/syntax)`_T_co`
+		- (type/factor-local/data)&<#_T_co[_T_co]>
+		
+(signature)`__round__(self, __ndigits)`
+
+
+[ round ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1706 1 1707 9`
+		- (type/syntax)`_T`
+		- (type/factor-local/data)&<#_T[_T]>
+		
+(signature)`round(number)`
+
+
+[ round ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1708 1 1708 73`
+		- (type/syntax)`_T`
+		- (type/factor-local/data)&<#_T[_T]>
+		
+(signature)`round(number, ndigits)`
+
+
+[ setattr ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1712 1 1713 9`
+		- (type/syntax)`None`
+		
+(signature)`setattr(__obj, __name, __value)`
+
+
+[ sorted ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1714 1 1717 9`
+		- (type/syntax)`list[SupportsRichComparisonT]`
+		
+(signature)`sorted(__iterable)`
+
+
+[ sorted ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1718 1 1718 124`
+		- (type/syntax)`list[_T]`
+		
+(signature)`sorted(__iterable)`
+
+
+[ _AddableT1 ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1720 1 1720 63`
+#!source
+	_AddableT1 = TypeVar("_AddableT1", bound=SupportsAdd[Any, Any])
+
+[ _AddableT2 ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1721 1 1721 63`
+#!source
+	_AddableT2 = TypeVar("_AddableT2", bound=SupportsAdd[Any, Any])
+
+[ _SupportsSumWithNoDefaultGiven ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1723 1 1723 98`
+! INHERIT:
+	- (source/area)`1723 85 1723 92`
+	- (type/syntax)`Protocol`
+	- (type/none/invalid)&<http://fault.io/dev/null[typing.Protocol]>
+	
+
+[ _SupportsSumNoDefaultT ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1725 1 1725 96`
+#!source
+	_SupportsSumNoDefaultT = TypeVar("_SupportsSumNoDefaultT", bound=_SupportsSumWithNoDefaultGiven)
+
+[ sum ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1740 1 1740 97`
+		- (type/syntax)`_SupportsSumNoDefaultT | Literal[0]:`
+		
+(signature)`sum(__iterable)`
+
+
+[ vars ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1754 1 1755 9`
+		- (type/syntax)`types.MappingProxyType[str, Any]`
+		
+(signature)`vars(__object)`
+
+
+[ vars ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1756 1 1756 52`
+		- (type/syntax)`dict[str, Any]`
+		
+(signature)`vars()`
+
+
+[ zip ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1758 1 1834 36`
+! INHERIT:
+	- (source/area)`1758 28 1758 41`
+	- (type/syntax)`Generic[_T_co]`
+	
+
+[ zip >> __iter__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1833 5 1833 35`
+		- (type/syntax)`Self`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing_extensions.Self]>
+		
+(signature)`__iter__(self)`
+
+
+[ zip >> __next__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1834 5 1834 36`
+		- (type/syntax)`_T_co`
+		- (type/factor-local/data)&<#_T_co[_T_co]>
+		
+(signature)`__next__(self)`
+
+
+[ __import__ ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1838 1 1844 26`
+		- (type/syntax)`types.ModuleType`
+		- (type/none/invalid)&<http://fault.io/dev/null[types.ModuleType]>
+		
+(signature)`__import__(name)`
+
+
+[ __build_class__ ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1845 1 1850 16`
+		- (type/syntax)`Any`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing.Any]>
+		
+(signature)`__build_class__(__func, __name, *bases, **kwds)`
+
+
+[ ellipsis ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1851 1 1851 19`
+
+[ BaseException ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1855 1 1867 52`
+
+[ BaseException >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1861 5 1861 50`
+		- (type/syntax)`None`
+		
+(signature)`__init__(self, *args)`
+
+
+[ BaseException >> __setstate__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1862 5 1862 71`
+		- (type/syntax)`None`
+		
+(signature)`__setstate__(self, __state)`
+
+
+[ BaseException >> with_traceback ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1863 5 1863 69`
+		- (type/syntax)`Self`
+		- (type/none/invalid)&<http://fault.io/dev/null[typing_extensions.Self]>
+		
+(signature)`with_traceback(self, __tb)`
+
+
+[ GeneratorExit ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1869 1 1869 39`
+! INHERIT:
+	- (source/area)`1869 21 1869 33`
+	- (type/syntax)`BaseException`
+	- (type/factor-local/class)&<#BaseException[BaseException]>
+	
+
+[ KeyboardInterrupt ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1870 1 1870 43`
+! INHERIT:
+	- (source/area)`1870 25 1870 37`
+	- (type/syntax)`BaseException`
+	- (type/factor-local/class)&<#BaseException[BaseException]>
+	
+
+[ SystemExit ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1872 1 1873 23`
+! INHERIT:
+	- (source/area)`1872 18 1872 30`
+	- (type/syntax)`BaseException`
+	- (type/factor-local/class)&<#BaseException[BaseException]>
+	
+
+[ Exception ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1875 1 1875 35`
+! INHERIT:
+	- (source/area)`1875 17 1875 29`
+	- (type/syntax)`BaseException`
+	- (type/factor-local/class)&<#BaseException[BaseException]>
+	
+
+[ StopIteration ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1877 1 1878 14`
+! INHERIT:
+	- (source/area)`1877 21 1877 29`
+	- (type/syntax)`Exception`
+	- (type/factor-local/class)&<#Exception[Exception]>
+	
+
+[ OSError ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1880 1 1887 21`
+! INHERIT:
+	- (source/area)`1880 15 1880 23`
+	- (type/syntax)`Exception`
+	- (type/factor-local/class)&<#Exception[Exception]>
+	
+
+[ EnvironmentError ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1889 1 1889 26`
+#!source
+	EnvironmentError = OSError
+
+[ IOError ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1890 1 1890 17`
+#!source
+	IOError = OSError
+
+[ ArithmeticError ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1894 1 1894 37`
+! INHERIT:
+	- (source/area)`1894 23 1894 31`
+	- (type/syntax)`Exception`
+	- (type/factor-local/class)&<#Exception[Exception]>
+	
+
+[ AssertionError ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1895 1 1895 36`
+! INHERIT:
+	- (source/area)`1895 22 1895 30`
+	- (type/syntax)`Exception`
+	- (type/factor-local/class)&<#Exception[Exception]>
+	
+
+[ AttributeError ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1897 1 1901 19`
+! INHERIT:
+	- (source/area)`1897 22 1897 30`
+	- (type/syntax)`Exception`
+	- (type/factor-local/class)&<#Exception[Exception]>
+	
+
+[ BufferError ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1903 1 1903 33`
+! INHERIT:
+	- (source/area)`1903 19 1903 27`
+	- (type/syntax)`Exception`
+	- (type/factor-local/class)&<#Exception[Exception]>
+	
+
+[ EOFError ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1904 1 1904 30`
+! INHERIT:
+	- (source/area)`1904 16 1904 24`
+	- (type/syntax)`Exception`
+	- (type/factor-local/class)&<#Exception[Exception]>
+	
+
+[ ImportError ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1906 1 1910 12`
+! INHERIT:
+	- (source/area)`1906 19 1906 27`
+	- (type/syntax)`Exception`
+	- (type/factor-local/class)&<#Exception[Exception]>
+	
+
+[ ImportError >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1907 5 1907 98`
+		- (type/syntax)`None`
+		
+(signature)`__init__(self, *args)`
+
+
+[ LookupError ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1912 1 1912 33`
+! INHERIT:
+	- (source/area)`1912 19 1912 27`
+	- (type/syntax)`Exception`
+	- (type/factor-local/class)&<#Exception[Exception]>
+	
+
+[ MemoryError ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1913 1 1913 33`
+! INHERIT:
+	- (source/area)`1913 19 1913 27`
+	- (type/syntax)`Exception`
+	- (type/factor-local/class)&<#Exception[Exception]>
+	
+
+[ NameError ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1915 1 1917 17`
+! INHERIT:
+	- (source/area)`1915 17 1915 25`
+	- (type/syntax)`Exception`
+	- (type/factor-local/class)&<#Exception[Exception]>
+	
+
+[ ReferenceError ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1919 1 1919 36`
+! INHERIT:
+	- (source/area)`1919 22 1919 30`
+	- (type/syntax)`Exception`
+	- (type/factor-local/class)&<#Exception[Exception]>
+	
+
+[ RuntimeError ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1920 1 1920 34`
+! INHERIT:
+	- (source/area)`1920 20 1920 28`
+	- (type/syntax)`Exception`
+	- (type/factor-local/class)&<#Exception[Exception]>
+	
+
+[ StopAsyncIteration ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1922 1 1923 14`
+! INHERIT:
+	- (source/area)`1922 26 1922 34`
+	- (type/syntax)`Exception`
+	- (type/factor-local/class)&<#Exception[Exception]>
+	
+
+[ SyntaxError ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1925 1 1933 30`
+! INHERIT:
+	- (source/area)`1925 19 1925 27`
+	- (type/syntax)`Exception`
+	- (type/factor-local/class)&<#Exception[Exception]>
+	
+
+[ SystemError ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1935 1 1935 33`
+! INHERIT:
+	- (source/area)`1935 19 1935 27`
+	- (type/syntax)`Exception`
+	- (type/factor-local/class)&<#Exception[Exception]>
+	
+
+[ TypeError ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1936 1 1936 31`
+! INHERIT:
+	- (source/area)`1936 17 1936 25`
+	- (type/syntax)`Exception`
+	- (type/factor-local/class)&<#Exception[Exception]>
+	
+
+[ ValueError ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1937 1 1937 32`
+! INHERIT:
+	- (source/area)`1937 18 1937 26`
+	- (type/syntax)`Exception`
+	- (type/factor-local/class)&<#Exception[Exception]>
+	
+
+[ FloatingPointError ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1938 1 1938 46`
+! INHERIT:
+	- (source/area)`1938 26 1938 40`
+	- (type/syntax)`ArithmeticError`
+	- (type/factor-local/class)&<#ArithmeticError[ArithmeticError]>
+	
+
+[ OverflowError ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1939 1 1939 41`
+! INHERIT:
+	- (source/area)`1939 21 1939 35`
+	- (type/syntax)`ArithmeticError`
+	- (type/factor-local/class)&<#ArithmeticError[ArithmeticError]>
+	
+
+[ ZeroDivisionError ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1940 1 1940 45`
+! INHERIT:
+	- (source/area)`1940 25 1940 39`
+	- (type/syntax)`ArithmeticError`
+	- (type/factor-local/class)&<#ArithmeticError[ArithmeticError]>
+	
+
+[ ModuleNotFoundError ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1941 1 1941 43`
+! INHERIT:
+	- (source/area)`1941 27 1941 37`
+	- (type/syntax)`ImportError`
+	- (type/factor-local/class)&<#ImportError[ImportError]>
+	
+
+[ IndexError ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1942 1 1942 34`
+! INHERIT:
+	- (source/area)`1942 18 1942 28`
+	- (type/syntax)`LookupError`
+	- (type/factor-local/class)&<#LookupError[LookupError]>
+	
+
+[ KeyError ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1943 1 1943 32`
+! INHERIT:
+	- (source/area)`1943 16 1943 26`
+	- (type/syntax)`LookupError`
+	- (type/factor-local/class)&<#LookupError[LookupError]>
+	
+
+[ UnboundLocalError ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1944 1 1944 39`
+! INHERIT:
+	- (source/area)`1944 25 1944 33`
+	- (type/syntax)`NameError`
+	- (type/factor-local/class)&<#NameError[NameError]>
+	
+
+[ BlockingIOError ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1946 1 1947 27`
+! INHERIT:
+	- (source/area)`1946 23 1946 29`
+	- (type/syntax)`OSError`
+	- (type/factor-local/class)&<#OSError[OSError]>
+	
+
+[ ChildProcessError ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1949 1 1949 37`
+! INHERIT:
+	- (source/area)`1949 25 1949 31`
+	- (type/syntax)`OSError`
+	- (type/factor-local/class)&<#OSError[OSError]>
+	
+
+[ ConnectionError ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1950 1 1950 35`
+! INHERIT:
+	- (source/area)`1950 23 1950 29`
+	- (type/syntax)`OSError`
+	- (type/factor-local/class)&<#OSError[OSError]>
+	
+
+[ BrokenPipeError ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1951 1 1951 43`
+! INHERIT:
+	- (source/area)`1951 23 1951 37`
+	- (type/syntax)`ConnectionError`
+	- (type/factor-local/class)&<#ConnectionError[ConnectionError]>
+	
+
+[ ConnectionAbortedError ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1952 1 1952 50`
+! INHERIT:
+	- (source/area)`1952 30 1952 44`
+	- (type/syntax)`ConnectionError`
+	- (type/factor-local/class)&<#ConnectionError[ConnectionError]>
+	
+
+[ ConnectionRefusedError ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1953 1 1953 50`
+! INHERIT:
+	- (source/area)`1953 30 1953 44`
+	- (type/syntax)`ConnectionError`
+	- (type/factor-local/class)&<#ConnectionError[ConnectionError]>
+	
+
+[ ConnectionResetError ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1954 1 1954 48`
+! INHERIT:
+	- (source/area)`1954 28 1954 42`
+	- (type/syntax)`ConnectionError`
+	- (type/factor-local/class)&<#ConnectionError[ConnectionError]>
+	
+
+[ FileExistsError ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1955 1 1955 35`
+! INHERIT:
+	- (source/area)`1955 23 1955 29`
+	- (type/syntax)`OSError`
+	- (type/factor-local/class)&<#OSError[OSError]>
+	
+
+[ FileNotFoundError ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1956 1 1956 37`
+! INHERIT:
+	- (source/area)`1956 25 1956 31`
+	- (type/syntax)`OSError`
+	- (type/factor-local/class)&<#OSError[OSError]>
+	
+
+[ InterruptedError ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1957 1 1957 36`
+! INHERIT:
+	- (source/area)`1957 24 1957 30`
+	- (type/syntax)`OSError`
+	- (type/factor-local/class)&<#OSError[OSError]>
+	
+
+[ IsADirectoryError ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1958 1 1958 37`
+! INHERIT:
+	- (source/area)`1958 25 1958 31`
+	- (type/syntax)`OSError`
+	- (type/factor-local/class)&<#OSError[OSError]>
+	
+
+[ NotADirectoryError ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1959 1 1959 38`
+! INHERIT:
+	- (source/area)`1959 26 1959 32`
+	- (type/syntax)`OSError`
+	- (type/factor-local/class)&<#OSError[OSError]>
+	
+
+[ PermissionError ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1960 1 1960 35`
+! INHERIT:
+	- (source/area)`1960 23 1960 29`
+	- (type/syntax)`OSError`
+	- (type/factor-local/class)&<#OSError[OSError]>
+	
+
+[ ProcessLookupError ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1961 1 1961 38`
+! INHERIT:
+	- (source/area)`1961 26 1961 32`
+	- (type/syntax)`OSError`
+	- (type/factor-local/class)&<#OSError[OSError]>
+	
+
+[ TimeoutError ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1962 1 1962 32`
+! INHERIT:
+	- (source/area)`1962 20 1962 26`
+	- (type/syntax)`OSError`
+	- (type/factor-local/class)&<#OSError[OSError]>
+	
+
+[ NotImplementedError ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1963 1 1963 44`
+! INHERIT:
+	- (source/area)`1963 27 1963 38`
+	- (type/syntax)`RuntimeError`
+	- (type/factor-local/class)&<#RuntimeError[RuntimeError]>
+	
+
+[ RecursionError ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1964 1 1964 39`
+! INHERIT:
+	- (source/area)`1964 22 1964 33`
+	- (type/syntax)`RuntimeError`
+	- (type/factor-local/class)&<#RuntimeError[RuntimeError]>
+	
+
+[ IndentationError ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1965 1 1965 40`
+! INHERIT:
+	- (source/area)`1965 24 1965 34`
+	- (type/syntax)`SyntaxError`
+	- (type/factor-local/class)&<#SyntaxError[SyntaxError]>
+	
+
+[ TabError ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1966 1 1966 37`
+! INHERIT:
+	- (source/area)`1966 16 1966 31`
+	- (type/syntax)`IndentationError`
+	- (type/factor-local/class)&<#IndentationError[IndentationError]>
+	
+
+[ UnicodeError ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1967 1 1967 35`
+! INHERIT:
+	- (source/area)`1967 20 1967 29`
+	- (type/syntax)`ValueError`
+	- (type/factor-local/class)&<#ValueError[ValueError]>
+	
+
+[ UnicodeDecodeError ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1969 1 1975 119`
+! INHERIT:
+	- (source/area)`1969 26 1969 37`
+	- (type/syntax)`UnicodeError`
+	- (type/factor-local/class)&<#UnicodeError[UnicodeError]>
+	
+
+[ UnicodeDecodeError >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1975 5 1975 119`
+		- (type/syntax)`None`
+		
+(signature)`__init__(self, __encoding, __object, __start, __end, __reason)`
+
+
+[ UnicodeEncodeError ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1977 1 1983 108`
+! INHERIT:
+	- (source/area)`1977 26 1977 37`
+	- (type/syntax)`UnicodeError`
+	- (type/factor-local/class)&<#UnicodeError[UnicodeError]>
+	
+
+[ UnicodeEncodeError >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1983 5 1983 108`
+		- (type/syntax)`None`
+		
+(signature)`__init__(self, __encoding, __object, __start, __end, __reason)`
+
+
+[ UnicodeTranslateError ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1985 1 1991 91`
+! INHERIT:
+	- (source/area)`1985 29 1985 40`
+	- (type/syntax)`UnicodeError`
+	- (type/factor-local/class)&<#UnicodeError[UnicodeError]>
+	
+
+[ UnicodeTranslateError >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1991 5 1991 91`
+		- (type/syntax)`None`
+		
+(signature)`__init__(self, __object, __start, __end, __reason)`
+
+
+[ Warning ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1993 1 1993 29`
+! INHERIT:
+	- (source/area)`1993 15 1993 23`
+	- (type/syntax)`Exception`
+	- (type/factor-local/class)&<#Exception[Exception]>
+	
+
+[ UserWarning ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1994 1 1994 31`
+! INHERIT:
+	- (source/area)`1994 19 1994 25`
+	- (type/syntax)`Warning`
+	- (type/factor-local/class)&<#Warning[Warning]>
+	
+
+[ DeprecationWarning ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1995 1 1995 38`
+! INHERIT:
+	- (source/area)`1995 26 1995 32`
+	- (type/syntax)`Warning`
+	- (type/factor-local/class)&<#Warning[Warning]>
+	
+
+[ SyntaxWarning ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1996 1 1996 33`
+! INHERIT:
+	- (source/area)`1996 21 1996 27`
+	- (type/syntax)`Warning`
+	- (type/factor-local/class)&<#Warning[Warning]>
+	
+
+[ RuntimeWarning ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1997 1 1997 34`
+! INHERIT:
+	- (source/area)`1997 22 1997 28`
+	- (type/syntax)`Warning`
+	- (type/factor-local/class)&<#Warning[Warning]>
+	
+
+[ FutureWarning ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1998 1 1998 33`
+! INHERIT:
+	- (source/area)`1998 21 1998 27`
+	- (type/syntax)`Warning`
+	- (type/factor-local/class)&<#Warning[Warning]>
+	
+
+[ PendingDeprecationWarning ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`1999 1 1999 45`
+! INHERIT:
+	- (source/area)`1999 33 1999 39`
+	- (type/syntax)`Warning`
+	- (type/factor-local/class)&<#Warning[Warning]>
+	
+
+[ ImportWarning ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`2000 1 2000 33`
+! INHERIT:
+	- (source/area)`2000 21 2000 27`
+	- (type/syntax)`Warning`
+	- (type/factor-local/class)&<#Warning[Warning]>
+	
+
+[ UnicodeWarning ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`2001 1 2001 34`
+! INHERIT:
+	- (source/area)`2001 22 2001 28`
+	- (type/syntax)`Warning`
+	- (type/factor-local/class)&<#Warning[Warning]>
+	
+
+[ BytesWarning ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`2002 1 2002 32`
+! INHERIT:
+	- (source/area)`2002 20 2002 26`
+	- (type/syntax)`Warning`
+	- (type/factor-local/class)&<#Warning[Warning]>
+	
+
+[ ResourceWarning ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`2003 1 2003 35`
+! INHERIT:
+	- (source/area)`2003 23 2003 29`
+	- (type/syntax)`Warning`
+	- (type/factor-local/class)&<#Warning[Warning]>
+	

@@ -1,0 +1,21 @@
+! CONTROL:
+	/type/
+		factor
+	/element/
+		- (source/area)``
+[ Libraries ]
+
+Not documented.
+
+[ Executables ]
+
+Not documented.
+
+[ Fragments ]
+
+Not documented.
+
+[ Extensions ]
+
+Not documented.
+

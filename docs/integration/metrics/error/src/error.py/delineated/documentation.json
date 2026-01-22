@@ -1,0 +1,1 @@
+[["Unconditional error tool for construction contexts.", "", "Provides command argument based control over exit status code and", "standard error output. Used by command constructors to report unconditional failure."]]

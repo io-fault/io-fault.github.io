@@ -1,0 +1,838 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 625 0`
+Delineate a Python source file.
+
+
+[ sys ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 10`
+
+[ ast ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 10`
+
+[ functools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 16`
+
+[ typing ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 7 13`
+
+[ itertools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 8 16`
+
+[ json ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`9 1 9 11`
+
+[ process ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 1 11 32`
+
+[ files ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`12 1 12 30`
+
+[ syntax ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`14 1 14 40`
+
+[ comethod ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`15 1 15 34`
+
+[ cachedcalls ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`16 1 16 43`
+
+[ source ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`18 1 18 21`
+
+[ comments ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`19 1 19 23`
+
+[ Assignments ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`21 1 21 41`
+#!source
+	Assignments = (ast.Assign, ast.AnnAssign)
+
+[ read_name ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`23 1 34 14`
+(signature)`read_name(node)`
+
+Read the identifiers from an attribute series terminated with a name.
+
+
+[ _read_expression ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`36 1 38 46`
+(signature)`_read_expression(context, i)`
+
+
+[ _read_data_iterable ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`40 1 50 14`
+(signature)`_read_data_iterable(context, i)`
+
+
+[ Constants ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`52 1 63 1`
+#!source
+	Constants = {
+		# ast.Constant is the node used by 3.8;
+		# the others are slated for deprecation.
+		getattr(ast, 'NameConstant', None): (lambda y,x: x.value),
+		getattr(ast, 'Num', None): (lambda y,x: x.n),
+		getattr(ast, 'Str', None): (lambda y,x: x.s),
+		getattr(ast, 'Bytes', None): (lambda y,x: repr(x.s)),
+		getattr(ast, 'Constant', None): (lambda y,x: x.value),
+	
+		ast.Tuple: (lambda y,x: tuple(_read_data_iterable(y,x.elts))),
+		ast.List: (lambda y,x: _read_data_iterable(y,x.elts)),
+	}
+
+[ read_constants ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`65 1 77 60`
+(signature)`read_constants(ctx, v)`
+
+Retrieve the constants from the expression.
+Expressions within (factor-local/parameter)&<#read_constants.Parameters.v[v]> that are not simple containers are
+handled by referring to the source.
+
+[ > Parameters ]
+
+/(parameter)`ctx`/
+	
+	The node fragment containing the expression, (factor-local/parameter)&<#read_constants.Parameters.v[v]>.
+
+/(parameter)`v`/
+	
+	Expression.
+
+
+[ Fragment ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`79 1 284 19`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`79 16 79 21`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+Expression container providing higher-level access to the properties of a node
+with respect to that node's context path.
+
+
+[ Fragment >> _method_types ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`85 2 89 2`
+#!source
+	_method_types = {
+		'property',
+		'abstractproperty', 'abstractmethod',
+		'staticmethod', 'classmethod'
+	}
+
+[ Fragment >> _type_map ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`90 2 101 2`
+#!source
+	_type_map = {
+		ast.Module: 'module',
+		ast.FunctionDef: 'function',
+		ast.ClassDef: 'class',
+		ast.Lambda: 'lambda',
+		ast.Import: 'import',
+		ast.ImportFrom: 'import-from',
+		ast.Assign: 'data',
+		ast.AnnAssign: 'data',
+		getattr(ast, 'AsyncFunctionDef', None): 'function',
+		None: None,
+	}
+
+[ Fragment >> async_def ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`103 2 109 17`
+(signature)`async_def(self)`
+
+
+[ Fragment >> decorator_names ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`110 2 118 3`
+		- (type/syntax)`typing.List[str]`
+		
+(signature)`decorator_names(self)`
+
+Get decorators from the node's (id)`decorator_list` field that
+are simple names.
+
+
+[ Fragment >> qualifiers ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`120 2 131 17`
+(signature)`qualifiers(self)`
+
+
+[ Fragment >> abstract_type ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`132 2 140 10`
+
+[ Fragment >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`142 2 146 14`
+(signature)`__init__(self, context, identifier, node)`
+
+
+[ Fragment >> _init ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`148 2 168 17`
+(signature)`_init(self)`
+
+
+[ Fragment >> source ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`169 2 179 10`
+(signature)`source(self)`
+
+Access the source lines from the root Fragment containing the module.
+
+
+[ Fragment >> ancestor ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`180 2 194 25`
+Retrieve the named ancestor of the fragment.
+
+
+[ Fragment >> path ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`195 2 206 32`
+Construct a fragment path to the node using (factor-local/property)&<#Fragment.ancestor[ancestor]>.
+
+
+[ Fragment >> select ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`208 2 213 40`
+(signature)`select(self)`
+
+Select the node's syntax from the reference's (factor-local/method)&<#Fragment.source[source]>.
+
+
+[ Fragment >> syntax ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`215 2 218 28`
+(signature)`syntax(self)`
+
+
+[ Fragment >> subnode ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`220 2 224 47`
+(signature)`subnode(self, node, identifier)`
+
+Create a fragment using (factor-local/parameter)&<#Fragment.subnode.Parameters.self[self]> as the new fragment's context.
+
+
+[ Fragment >> descend ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`226 2 234 55`
+(signature)`descend(self)`
+
+Iterate over the nodes contained within the body of this fragment
+and yield (factor-local/class)&<#Fragment[Fragment]> instances.
+
+
+[ Fragment >> __repr__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`236 2 239 59`
+(signature)`__repr__(self)`
+
+
+[ Fragment >> read_assign ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`241 2 250 40`
+(signature)`read_assign(self)`
+
+Retrieve the area and value of an assignment expression along with its name.
+
+
+[ Fragment >> read_ann_assign ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`252 2 261 40`
+(signature)`read_ann_assign(self)`
+
+Retrieve the area and value of an assignment expression along with its name.
+
+
+[ Fragment >> read_docstring ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`263 2 284 19`
+(signature)`read_docstring(self)`
+
+Retrieve the normalized string contents of the first expression in (invalid/unknown)&<#node>.
+
+
+[ Switch ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`286 1 554 16`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`286 14 286 28`
+	- (type/syntax)`comethod.object`
+	- (type/remote/factor-element)&<http://fault.io/python/context/comethod#object[fault.context.comethod.object]>
+	
+Extraction selector state.
+
+
+[ Switch >> text ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`291 2 292 17`
+(signature)`text(self, data)`
+
+
+[ Switch >> element ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`294 2 301 37`
+(signature)`element(self, identifier, nodes, *args, **kw)`
+
+
+[ Switch >> attributes ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`303 2 316 3`
+(signature)`attributes(self, fragment)`
+
+
+[ Switch >> parameter_attributes ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`318 2 322 3`
+(signature)`parameter_attributes(self, fragment)`
+
+
+[ Switch >> option_attributes ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`324 2 328 3`
+(signature)`option_attributes(self, fragment, default)`
+
+
+[ Switch >> annotation_type ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`330 2 349 3`
+(signature)`annotation_type(self, fragment, node)`
+
+Construct an element type node from the annotation of the (factor-local/parameter)&<#Switch.annotation_type.Parameters.fragment[fragment]>.
+
+
+[ Switch >> inherited_base ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`351 2 371 18`
+(signature)`inherited_base(self, fragment)`
+
+Construct an element type node from a class' base expression.
+
+
+[ Switch >> extract_assignment ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`372 2 397 30`
+(signature)`extract_assignment(self, fragment)`
+
+
+[ Switch >> extract_property ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`398 2 403 3`
+(signature)`extract_property(self, fragment)`
+
+
+[ Switch >> annotate ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`405 2 408 65`
+(signature)`annotate(self, fragment)`
+
+
+[ Switch >> parameters_v1 ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`410 2 456 4`
+(signature)`parameters_v1(self, fragment)`
+
+
+[ Switch >> effects ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`458 2 463 11`
+(signature)`effects(self, fragment)`
+
+
+[ Switch >> signature ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`465 2 473 26`
+(signature)`signature(self, fragment)`
+
+
+[ Switch >> extract_function ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`474 2 481 20`
+(signature)`extract_function(self, fragment)`
+
+
+[ Switch >> extract_module_content ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`482 2 488 20`
+(signature)`extract_module_content(self, fragment)`
+
+
+[ Switch >> extract_import ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`489 2 515 25`
+(signature)`extract_import(self, fragment)`
+
+
+[ Switch >> extract_import_from ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`516 2 523 73`
+(signature)`extract_import_from(self, fragment)`
+
+
+[ Switch >> inheritance ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`525 2 533 19`
+(signature)`inheritance(self, fragment)`
+
+
+[ Switch >> extract_class ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`534 2 543 16`
+(signature)`extract_class(self, fragment)`
+
+
+[ Switch >> unknown ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`544 2 545 11`
+(signature)`unknown(self, fragment)`
+
+
+[ Switch >> descend ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`547 2 549 47`
+(signature)`descend(self, fragment)`
+
+
+[ Switch >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`551 2 554 16`
+(signature)`__init__(self, factor)`
+
+
+[ load ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`556 1 572 12`
+(signature)`load(source_path)`
+
+
+[ LEncoder ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`574 1 579 28`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`574 16 574 31`
+	- (type/syntax)`json.JSONEncoder`
+	- (type/none/invalid)&<http://fault.io/dev/null[json.JSONEncoder]>
+	
+
+[ LEncoder >> default ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`575 2 579 28`
+(signature)`default(self, o)`
+
+
+[ process_source ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`581 1 616 42`
+(signature)`process_source(output, input, fpath)`
+
+
+[ main ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`618 1 622 19`
+		- (type/syntax)`process.Exit`
+		- (type/remote/factor-element)&<http://fault.io/python/system/process#Exit[fault.system.process.Exit]>
+		
+(signature)`main(inv)`
+

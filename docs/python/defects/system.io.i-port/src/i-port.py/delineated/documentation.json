@@ -1,0 +1,1 @@
+[["This file *should* contain system.io *specific* tests.", "Primarily, invasive tests that rely on implementation specific functionality.", "", "Arguably, there's quite a bit of redundancy in this file.", "However, cases analyzed here that appear similar often have one-off cases", "that make it rather annoying to generalize."]]

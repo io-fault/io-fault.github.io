@@ -1,0 +1,131 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 93 20`
+Instantiate the `fault-llvm` tools project into a target directory.
+
+
+[ files ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 30`
+
+[ process ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 32`
+
+[ lsf ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 8 39`
+
+[ factory ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`9 1 9 33`
+
+[ infra ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 1 38 1`
+#!source
+	infra = {
+		'fault-c-interfaces': [
+			lsf.types.Reference('http://fault.io/integration/machines',
+				lsf.types.factor@'include'),
+			lsf.types.Reference('http://fault.io/integration/python',
+				lsf.types.factor@'include'),
+		],
+		'integration-llvm': [
+			lsf.types.Reference('http://fault.io/integration/machines',
+				lsf.types.factor@'llvm.tools'),
+		],
+		'*.c': [
+			lsf.types.Reference('http://if.fault.io/factors',
+				lsf.types.factor@'system', 'type', 'c.2011'),
+		],
+		'*.cc': [
+			lsf.types.Reference('http://if.fault.io/factors',
+				lsf.types.factor@'system', 'type', 'c++.2011'),
+		],
+		'*.h': [
+			lsf.types.Reference('http://if.fault.io/factors',
+				lsf.types.factor@'system', 'type', 'c.header'),
+		],
+		'*.pyi': [
+			lsf.types.Reference('http://if.fault.io/factors',
+				lsf.types.factor@'python.interface', 'type', 'python.psf-v3'),
+		],
+	}
+
+[ info ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`40 1 45 1`
+#!source
+	info = lsf.types.Information(
+		identifier = 'http://fault.io/integration/machines//llvm',
+		name = 'fault-llvm',
+		authority = 'fault.io',
+		contact = "http://fault.io/critical"
+	)
+
+[ declare ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`47 1 86 78`
+(signature)`declare()`
+
+
+[ main ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`88 1 94 19`
+		- (type/syntax)`process.Exit`
+		- (type/remote/factor-element)&<http://fault.io/python/system/process#Exit[fault.system.process.Exit]>
+		
+(signature)`main(inv)`
+

@@ -1,0 +1,238 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 138 0`
+Testing and static analysis support.
+
+
+[ os ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 9`
+
+[ Iterable ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 46`
+
+[ Sequence ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 46`
+
+[ tools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 7 31`
+
+[ files ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 8 30`
+
+[ time ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 1 10 37`
+
+[ terminal ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`12 1 12 37`
+
+[ fatetheme ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`13 1 13 38`
+
+[ execution ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`14 1 14 38`
+
+[ KInvocation ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`16 1 16 46`
+
+[ lsf ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`17 1 17 39`
+
+[ query ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`19 1 19 24`
+
+[ filters ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`20 1 20 21`
+
+[ test_type_map ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`24 1 30 1`
+#!source
+	test_type_map = {
+		'integration': 'i-',
+		'unit': 'u-',
+		'performance': 'p-',
+		'explicit': 'x-',
+		'static': 's-',
+	}
+
+[ test_type_set_control ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`33 1 51 1`
+#!source
+	test_type_set_control = {
+		'--integration': ('set-add', 'integration', 'test-types'),
+		'--unit': ('set-add', 'unit', 'test-types'),
+		'--performance': ('set-add', 'performance', 'test-types'),
+		'--explicit': ('set-add', 'explicit', 'test-types'),
+		'--static': ('set-add', 'static', 'test-types'),
+	
+		'-i': ('set-add', 'integration', 'test-types'),
+		'-u': ('set-add', 'unit', 'test-types'),
+		'-p': ('set-add', 'performance', 'test-types'),
+		'-x': ('set-add', 'explicit', 'test-types'),
+		'-s': ('set-add', 'static', 'test-types'),
+	
+		'-I': ('set-discard', 'integration', 'test-types'),
+		'-U': ('set-discard', 'unit', 'test-types'),
+		'-P': ('set-discard', 'performance', 'test-types'),
+		'-X': ('set-discard', 'explicit', 'test-types'),
+		'-S': ('set-discard', 'static', 'test-types'),
+	}
+
+[ required ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`53 1 55 1`
+#!source
+	required = {
+		'-f': ('sequence-append', 'test-filters')
+	}
+
+[ options ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`57 1 59 1`
+#!source
+	options = (
+		test_type_set_control, required
+	)
+
+[ plan ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`61 1 98 36`
+(signature)`plan(prefixes, keywords, factors, identifier)`
+
+Create an invocation for processing the project from (factor-local/parameter)&<#plan.Parameters.factors[factors]> selected using (factor-local/parameter)&<#plan.Parameters.identifier[identifier]>.
+
+
+[ test ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`100 1 138 17`
+(signature)`test(exits, meta, log, config, fx, cc, pdr, argv)`
+
+Analyze the software's coherency.
+

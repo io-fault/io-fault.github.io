@@ -1,0 +1,356 @@
+! CONTROL:
+	/type/
+		unit
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 564 0`
+		- (coverage-zeros)`200`
+		- (coverage-counters)`325`
+
+[ EV_CONSTRUCTORS ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`266 9 286 2`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`14`
+(signature)`EV_CONSTRUCTORS()`
+
+
+[ EV_TYPE ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`289 9 289 49`
+#!source
+	#define EV_TYPE(...) EV_CONSTRUCTORS(__VA_ARGS__)
+
+[ EV_TYPE ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`314 11 317 9`
+#!source
+	#define EV_TYPE(NAME, C, CYCLIC) \
+		case EV_TYPE_ID(NAME): \
+			normal = #NAME; \
+		break;
+
+[ PyMethod_Id ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`333 10 333 30`
+#!source
+	#define PyMethod_Id(N) ev_##N
+
+[ PyMethod_TypeControl ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`336 11 336 49`
+#!source
+	#define PyMethod_TypeControl PyMethod_ClassType
+
+[ EV_TYPE ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`340 12 340 60`
+#!source
+	#define EV_TYPE(NAME, C, CYCLIC) PyMethod_Keywords(NAME),
+
+[ ev_time_units ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`19 1 74 1`
+		- (type/syntax)`int`
+		
+(signature)`ev_time_units(ev, args, kw)`
+
+Initialize an event for scheduling a timer.
+
+
+[ ev_pid_reference ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`79 1 112 1`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`14`
+		- (type/syntax)`int`
+		
+(signature)`ev_pid_reference(ev, args, kw)`
+
+Initialize an event with a process identifier and optional port.
+
+
+[ ev_signal_reference ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`117 1 162 1`
+		- (coverage-zeros)`5`
+		- (coverage-counters)`15`
+		- (type/syntax)`int`
+		
+(signature)`ev_signal_reference(ev, args, kw)`
+
+Initialize an event with a signal code and optional port.
+
+
+[ ev_reference ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`167 1 205 1`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`8`
+		- (type/syntax)`int`
+		
+(signature)`ev_reference(ev, args, kw)`
+
+Initialize an event with an arbitrary reference.
+
+
+[ ev_filesystem_reference ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`211 1 241 1`
+		- (coverage-zeros)`20`
+		- (coverage-counters)`20`
+		- (type/syntax)`int`
+		
+(signature)`ev_filesystem_reference(ev, args, kw)`
+
+Initialize an event with a filesystem Path.
+Monitoring events(fs_delta, fs_void, fs_status).
+
+
+[ ev_io_reference ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`246 1 263 1`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`9`
+		- (type/syntax)`int`
+		
+(signature)`ev_io_reference(ev, args, kw)`
+
+Initialize an event with a pair of kport_t.
+
+
+[ ev_constructor ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`293 1 329 1`
+		- (coverage-zeros)`44`
+		- (coverage-counters)`44`
+		- (type/syntax)`PyObj`
+		
+(signature)`ev_constructor(typ, typstring)`
+
+
+[ ev_get_type ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`348 1 353 1`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`4`
+		- (type/syntax)`PyObj`
+		
+(signature)`ev_get_type(ev, closure)`
+
+
+[ ev_get_port ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`355 1 359 1`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`4`
+		- (type/syntax)`PyObj`
+		
+(signature)`ev_get_port(ev, closure)`
+
+
+[ ev_get_source ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`361 1 367 1`
+		- (coverage-zeros)`6`
+		- (coverage-counters)`6`
+		- (type/syntax)`PyObj`
+		
+(signature)`ev_get_source(ev, closure)`
+
+
+[ ev_hash ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`378 1 416 1`
+		- (coverage-zeros)`19`
+		- (coverage-counters)`36`
+		- (type/syntax)`Py_hash_t`
+		
+(signature)`ev_hash(ev)`
+
+
+[ ev_richcompare ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`418 1 465 1`
+		- (coverage-zeros)`44`
+		- (coverage-counters)`71`
+		- (type/syntax)`PyObj`
+		
+(signature)`ev_richcompare(ev, operand, cmpop)`
+
+
+[ ev_new ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`470 1 497 1`
+		- (coverage-zeros)`28`
+		- (coverage-counters)`28`
+		- (type/syntax)`PyObj`
+		
+(signature)`ev_new(typ, args, kw)`
+
+Copy Event. Type specific constructors must be used to create new instances.
+
+
+[ ev_release ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`499 1 517 1`
+		- (coverage-zeros)`11`
+		- (coverage-counters)`18`
+		- (type/syntax)`void`
+		
+(signature)`ev_release(ev)`
+
+
+[ ev_clear ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`519 1 523 1`
+		- (coverage-zeros)`4`
+		- (coverage-counters)`6`
+		- (type/syntax)`void`
+		
+(signature)`ev_clear(ev)`
+
+
+[ ev_traverse ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`525 1 531 1`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`6`
+		- (type/syntax)`int`
+		
+(signature)`ev_traverse(self, visit, arg)`
+
+
+[ ev_dealloc ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`533 1 541 1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
+		- (type/syntax)`void`
+		
+(signature)`ev_dealloc(ev)`
+

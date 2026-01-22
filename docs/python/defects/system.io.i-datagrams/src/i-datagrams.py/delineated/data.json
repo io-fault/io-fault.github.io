@@ -1,0 +1,1 @@
+[[["service_alloc"]], [{"syntax": "network.Endpoint.from_ip4(('127.0.0.1', 0), 'udp', 'datagrams')", "area": [[5, 17], [5, 79]]}]]

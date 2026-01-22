@@ -1,0 +1,1 @@
+[["System process status display using transaction frames."], ["Join a start and stop frame."], ["Execute system commands while displaying their status", "according to the transaction messages they emit to standard out.", "", "&monitors corresponds to the processing lanes of the operation, but", "the configured allocations in &control may limit what is displayed."]]

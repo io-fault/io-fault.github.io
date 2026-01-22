@@ -1,0 +1,35 @@
+<html root="2"><head><title>system.machines.bin.llvm</title><meta charset="utf-8"/><link as="style" rel="preload" href="../../.legacy-web/core.css"></link><link as="style" rel="preload" href="../../.legacy-web/factor.css"></link><link rel="stylesheet" href="../../.legacy-web/core.css"></link><link rel="stylesheet" href="../../.legacy-web/factor.css"></link></head><body><main><h1><span class="prefix"></span><div class="page-subject"><img class="icon" src="../../.factor-type-icon/if.fault.io/python-module.svg"></img><span class="subject-identifier">llvm</span><a href="http://if.fault.io/factors/python.module"><code class="type">python.module</code></a></div><div class="page-context"><a href="../"><img class="icon" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNTYiIGhlaWdodD0iMjU2Ij48dGV4dCB4PSI0IiB5PSIwLjg4ZW0iIGZvbnQtc2l6ZT0iMjQ4Ij7impnvuI88L3RleHQ+PC9zdmc+"></img></a><span class="context-identifier">system.machines</span></div></h1><section class="chapter"><p><span class="text.normal">Instantiate the </span><code class="">fault-llvm</code><span class="text.normal"> tools project into a target directory.</span></p></section><section class="import" documented="false" local-identifier="files" id="files"><h1><span class="prefix"></span><a class="title" href="#files"><span class="text.normal">files</span></a><span class="abstract-type">import</span></h1></section><section class="import" documented="false" local-identifier="process" id="process"><h1><span class="prefix"></span><a class="title" href="#process"><span class="text.normal">process</span></a><span class="abstract-type">import</span></h1></section><section class="import" documented="false" local-identifier="lsf" id="lsf"><h1><span class="prefix"></span><a class="title" href="#lsf"><span class="text.normal">lsf</span></a><span class="abstract-type">import</span></h1></section><section class="import" documented="false" local-identifier="factory" id="factory"><h1><span class="prefix"></span><a class="title" href="#factory"><span class="text.normal">factory</span></a><span class="abstract-type">import</span></h1></section><section class="data" documented="false" local-identifier="infra" id="infra"><h1><span class="prefix"></span><a class="title" href="#infra"><span class="text.normal">infra</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code class="source">infra = {
+	'fault-c-interfaces': [
+		lsf.types.Reference('http://fault.io/integration/machines',
+			lsf.types.factor@'include'),
+		lsf.types.Reference('http://fault.io/integration/python',
+			lsf.types.factor@'include'),
+	],
+	'integration-llvm': [
+		lsf.types.Reference('http://fault.io/integration/machines',
+			lsf.types.factor@'llvm.tools'),
+	],
+	'*.c': [
+		lsf.types.Reference('http://if.fault.io/factors',
+			lsf.types.factor@'system', 'type', 'c.2011'),
+	],
+	'*.cc': [
+		lsf.types.Reference('http://if.fault.io/factors',
+			lsf.types.factor@'system', 'type', 'c++.2011'),
+	],
+	'*.h': [
+		lsf.types.Reference('http://if.fault.io/factors',
+			lsf.types.factor@'system', 'type', 'c.header'),
+	],
+	'*.pyi': [
+		lsf.types.Reference('http://if.fault.io/factors',
+			lsf.types.factor@'python.interface', 'type', 'python.psf-v3'),
+	],
+}
+</code></pre></section><section class="data" documented="false" local-identifier="info" id="info"><h1><span class="prefix"></span><a class="title" href="#info"><span class="text.normal">info</span></a><span class="abstract-type">data</span></h1><pre class="text.syntax"><code class="source">info = lsf.types.Information(
+	identifier = 'http://fault.io/integration/machines//llvm',
+	name = 'fault-llvm',
+	authority = 'fault.io',
+	contact = "http://fault.io/critical"
+)
+</code></pre></section><section class="function" documented="false" local-identifier="declare" id="declare"><h1><span class="prefix"></span><a class="title" href="#declare"><span class="text.normal">declare</span></a><span class="abstract-type">function</span></h1><p><code class="signature">declare()</code></p></section><section class="function" documented="false" local-identifier="main" id="main"><h1><span class="prefix"></span><a class="title" href="#main"><span class="text.normal">main</span></a><span class="abstract-type">function</span><code class="type"><a class="remote" href="http://fault.io/python/system/process#Exit"><span class="factor-element">process.Exit</span></a></code></h1><p><code class="signature">main(inv)</code></p></section><h1 class="footing"></h1></main></body></html>

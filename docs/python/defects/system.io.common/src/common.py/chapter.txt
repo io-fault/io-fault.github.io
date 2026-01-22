@@ -1,0 +1,1060 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 712 0`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
+Common tools and tests employed across fault.defects.system.io tests.
+
+
+[ pickle ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 13`
+
+[ threading ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 16`
+
+[ contextlib ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 17`
+
+[ os ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 7 9`
+
+[ socket ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 8 13`
+
+[ time ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`9 1 9 11`
+
+[ io ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 1 10 25`
+
+[ network ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 1 11 30`
+
+[ kernel ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`12 1 12 29`
+
+[ thread ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`13 1 13 29`
+
+[ allocpipe ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`15 1 20 2`
+(signature)`allocpipe(A)`
+
+
+[ allocsockets ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`22 1 28 15`
+(signature)`allocsockets(A)`
+
+
+[ allocports ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`30 1 36 15`
+(signature)`allocports(A)`
+
+
+[ ralloc_index ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`38 1 40 1`
+#!source
+	ralloc_index = {
+		io.Octets: bytearray,
+	}
+
+[ rallocate ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`42 1 43 49`
+(signature)`rallocate(channel, quantity)`
+
+
+[ Terminated ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`45 1 46 5`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`45 18 45 26`
+	- (type/syntax)`Exception`
+	- (type/invalid/unknown)&<#Exception>
+	
+
+[ Delta ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`48 1 92 70`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`48 13 48 17`
+	- (type/syntax)`tuple`
+	- (type/invalid/unknown)&<#tuple>
+	
+
+[ Delta >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`49 2 51 10`
+#!source
+	__slots__ = ()
+		@property
+
+[ Delta >> channel ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`52 2 55 10`
+
+[ Delta >> demand ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`56 2 59 10`
+
+[ Delta >> termination ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`60 2 65 10`
+
+[ Delta >> terminated ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`66 2 69 10`
+
+[ Delta >> resource ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`70 2 73 10`
+
+[ Delta >> slice ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`74 2 77 10`
+
+[ Delta >> transferred ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`78 2 83 13`
+
+[ Delta >> construct ]
+! CONTROL:
+	/type/
+		classmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`84 2 92 70`
+(signature)`construct(typ, channel)`
+
+
+[ snapshot ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`94 1 97 46`
+(signature)`snapshot(array)`
+
+
+[ cycle ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`99 1 101 24`
+(signature)`cycle(array)`
+
+
+[ loop ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`103 1 114 6`
+(signature)`loop(deliver, array)`
+
+Continuously (factor-local/parameter)&<#loop.Parameters.deliver[deliver]> transfers enqueued into the (factor-local/parameter)&<#loop.Parameters.array[array]>.
+
+
+[ ArrayActionManager ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`116 1 209 14`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`116 26 116 31`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+Manages the Array cycle in a separate thread to avoid inline management
+of event collection.
+
+
+[ ArrayActionManager >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`122 2 127 19`
+(signature)`__init__(self)`
+
+
+[ ArrayActionManager >> view ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`129 2 144 15`
+(signature)`view(self)`
+
+Utility function for displaying the contents of a Array.
+
+
+[ ArrayActionManager >> force ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`146 2 147 20`
+(signature)`force(self)`
+
+
+[ ArrayActionManager >> cycle ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`149 2 156 20`
+(signature)`cycle(self, activity)`
+
+
+[ ArrayActionManager >> loop ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`158 2 161 27`
+(signature)`loop(self)`
+
+
+[ ArrayActionManager >> thread ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`162 2 172 27`
+(signature)`thread(self)`
+
+
+[ ArrayActionManager >> manage ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`173 2 190 9`
+(signature)`manage(self, ct)`
+
+
+[ ArrayActionManager >> delta ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`192 2 209 14`
+(signature)`delta(self)`
+
+Wait for a cycle to occur; use to regulate transfer progress.
+
+
+[ Events ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`211 1 292 22`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`211 14 211 19`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+For cases involving single Channels.
+
+No autoread setup.
+
+
+[ Events >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`217 2 223 39`
+(signature)`__init__(self, *channels)`
+
+
+[ Events >> terminate ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`225 2 227 16`
+(signature)`terminate(self)`
+
+
+[ Events >> _term_check ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`229 2 232 29`
+(signature)`_term_check(self)`
+
+
+[ Events >> raised ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`234 2 236 18`
+(signature)`raised(self)`
+
+
+[ Events >> vacancies ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`238 2 245 10`
+(signature)`vacancies(self)`
+
+
+[ Events >> terminated ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`246 2 250 14`
+
+[ Events >> exhausted ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`252 2 259 10`
+(signature)`exhausted(self)`
+
+
+[ Events >> exhaustions ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`260 2 263 10`
+
+[ Events >> sockets ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`264 2 269 16`
+
+[ Events >> get_data ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`271 2 279 10`
+(signature)`get_data(self)`
+
+
+[ Events >> data ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`280 2 281 24`
+
+[ Events >> clear ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`283 2 284 25`
+(signature)`clear(self)`
+
+
+[ Events >> setup_read ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`286 2 288 36`
+(signature)`setup_read(self, quantity)`
+
+
+[ Events >> setup_write ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`290 2 292 22`
+(signature)`setup_write(self, resource)`
+
+
+[ Endpoint ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`294 1 394 38`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`294 16 294 21`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+For cases involving send and receives.
+
+
+[ Endpoint >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`299 2 311 3`
+(signature)`__init__(self, channels)`
+
+
+[ Endpoint >> _read_event ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`313 2 320 35`
+(signature)`_read_event(self, activity)`
+
+
+[ Endpoint >> terminate ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`322 2 324 16`
+(signature)`terminate(self)`
+
+
+[ Endpoint >> _write_term_check ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`326 2 328 86`
+(signature)`_write_term_check(self)`
+
+
+[ Endpoint >> _read_term_check ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`330 2 334 10`
+(signature)`_read_term_check(self)`
+
+
+[ Endpoint >> read_exhaustions ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`335 2 339 10`
+
+[ Endpoint >> write_exhaustions ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`340 2 344 10`
+
+[ Endpoint >> read_payload_int ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`345 2 353 10`
+
+[ Endpoint >> read_payload ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`354 2 362 10`
+
+[ Endpoint >> units_written ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`363 2 369 10`
+
+[ Endpoint >> units_read ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`370 2 374 4`
+
+[ Endpoint >> clear ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`376 2 379 22`
+(signature)`clear(self)`
+
+
+[ Endpoint >> clear_reads ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`381 2 383 22`
+(signature)`clear_reads(self)`
+
+
+[ Endpoint >> clear_writes ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`385 2 386 26`
+(signature)`clear_writes(self)`
+
+
+[ Endpoint >> setup_read ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`388 2 390 70`
+(signature)`setup_read(self, rallocation)`
+
+
+[ Endpoint >> setup_write ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`392 2 394 38`
+(signature)`setup_write(self, resource)`
+
+
+[ Objects ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`396 1 459 31`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`396 15 396 20`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+Endpoint that transfers objects.
+
+
+[ Objects >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`401 2 415 62`
+(signature)`__init__(self, channels)`
+
+
+[ Objects >> _read_event ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`417 2 430 38`
+(signature)`_read_event(self, activity)`
+
+
+[ Objects >> _write_event ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`432 2 434 26`
+(signature)`_write_event(self, activity)`
+
+
+[ Objects >> terminate ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`436 2 438 16`
+(signature)`terminate(self)`
+
+
+[ Objects >> _write_term_check ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`440 2 442 86`
+(signature)`_write_term_check(self)`
+
+
+[ Objects >> _read_term_check ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`444 2 448 10`
+(signature)`_read_term_check(self)`
+
+
+[ Objects >> done_writing ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`449 2 451 37`
+
+[ Objects >> clear ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`453 2 454 30`
+(signature)`clear(self)`
+
+
+[ Objects >> send ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`456 2 459 31`
+(signature)`send(self, obj)`
+
+
+[ exchange_nothing ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`461 1 462 5`
+(signature)`exchange_nothing(test, am, client, server)`
+
+
+[ exchange_few_bytes ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`464 1 501 54`
+(signature)`exchange_few_bytes(test, am, client, server)`
+
+
+[ exchange_many_bytes ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`503 1 539 41`
+(signature)`exchange_many_bytes(test, am, client, server)`
+
+
+[ exchange_many_bytes_many_times ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`541 1 571 16`
+(signature)`exchange_many_bytes_many_times(test, am, client, server)`
+
+
+[ exchange_kilobytes ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`573 1 586 8`
+(signature)`exchange_kilobytes(test, am, client, server)`
+
+
+[ transfer_cases ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`588 1 594 1`
+#!source
+	transfer_cases = [
+		exchange_nothing,
+		exchange_few_bytes,
+		exchange_many_bytes,
+		exchange_many_bytes_many_times,
+		exchange_kilobytes,
+	]
+
+[ echo_objects ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`596 1 616 16`
+(signature)`echo_objects(test, am, client, server)`
+
+
+[ object_transfer_cases ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`618 1 620 1`
+#!source
+	object_transfer_cases = [
+		echo_objects,
+	]
+
+[ stream_listening_connection ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`622 1 712 33`
+(signature)`stream_listening_connection(test, version, address)`
+

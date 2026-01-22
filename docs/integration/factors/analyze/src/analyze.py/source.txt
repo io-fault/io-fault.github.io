@@ -1,0 +1,101 @@
+"""
+# Factor integration execution for building images using a system context.
+"""
+import os
+import sys
+import contextlib
+from collections.abc import Iterable, Sequence
+
+from fault.context import tools
+from fault.vector import recognition
+from fault.system import files
+from fault.system import process
+
+from fault.system import execution
+from fault.project import system as lsf
+
+from ..root import query
+
+restricted = {
+	'-.': ('ignore', None, None),
+	'-E': ('field-replace', False, 'efficiency'),
+	'-e': ('field-replace', True, 'efficiency'),
+	'-A': ('field-replace', False, 'accuracy'),
+	'-a': ('field-replace', True, 'accuracy'),
+}
+
+required = {
+	'-x': ('field-replace', 'machines-context-name'),
+	'-X': ('field-replace', 'system-context-directory'),
+
+	'-D': ('field-replace', 'product-directory'),
+	'-L': ('field-replace', 'processing-lanes'),
+	'-M': ('field-replace', 'status-monitors'),
+	'-C': ('field-replace', 'persistent-cache'),
+}
+
+def execute(exe, argv, *, quiet=False):
+	xpath = str(exe)
+	args = [xpath] + list(argv)
+
+	if not quiet:
+		print('-> ' + ' '.join(args), file=sys.stderr, flush=True)
+
+	ki = execution.KInvocation(xpath, args)
+	return execution.perform(ki)
+
+def configure(restricted, required, argv):
+	config = {
+		'processing-lanes': '4',
+		'status-monitors': None,
+		'machines-context-name': None,
+		'system-context-directory': None,
+		'persistent-cache': None,
+		'product-directory': None,
+		'cache-directory': None,
+
+		'efficiency': False,
+		'accuracy': True,
+	}
+
+	oeg = recognition.legacy(restricted, required, argv)
+	remainder = recognition.merge(config, oeg)
+
+	return config, remainder
+
+def main(inv:process.Invocation):
+	config, argv = configure(restricted, required, inv.argv)
+	env, exepath, xargv = query.dispatch('fictl')
+	xargv[0] = xargv[1]
+	del xargv[1:]
+	selection, test = argv
+
+	ctx = []
+	for opt, (op, slot) in required.items():
+		if config[slot] is not None:
+			ctx.append(opt)
+			ctx.append(config[slot])
+	#exepath = '/bin/echo'
+	ficmd = (lambda cmd, a: execute(exepath, xargv + [cmd] + ctx + a, quiet=False))
+
+	# Integration tests.
+	#ficmd('integrate', [selection])
+
+	# Coverage
+	if config['accuracy']:
+		ficmd('integrate', ['--coverage', '-Rg', selection])
+		#ficmd('switch', ['--coverage', '-g', selection])
+		ficmd('delineate', [selection])
+		ficmd('test', [test])
+	else:
+		# Still need delineated forms.
+		ficmd('delineate', [selection])
+
+	# Profiling
+	if config['efficiency']:
+		ficmd('integrate', ['--profiling', '-O', selection])
+		ficmd('switch', ['--profiling', '-O', selection])
+		ficmd('test', [test])
+
+	# Aggregate metrics for printing.
+	ficmd('measure', [selection])

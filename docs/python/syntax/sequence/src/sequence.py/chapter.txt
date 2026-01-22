@@ -1,0 +1,525 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 416 7`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
+Segmented sequence implementation for large lists.
+
+
+[ itertools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 16`
+
+[ Sequence ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 46`
+
+[ Iterable ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 46`
+
+[ address ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 55 2`
+(signature)`address(seq, start, stop)`
+
+Find the address of the absolute slice.
+
+
+[ delete ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`57 1 83 11`
+(signature)`delete(seq, start, stop)`
+
+
+[ insert ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`85 1 148 14`
+(signature)`insert(seq, offset, insertion)`
+
+
+[ Segments ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`150 1 359 23`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`150 16 150 21`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+Manage a sequence of sequences as if it were a single sequence.
+Primarily used to control maximum memory moves for each insertion
+when dealing with (relatively) naive sequence implementations.
+
+Segments does not make assumptions about the size of the lists;
+full scans of the list sizes must be used to identify proper placement
+with exception to recently organized Segments instance where
+the size of each segment is already known.
+
+
+[ Segments >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`162 2 162 37`
+#!source
+	__slots__ = ('sequences', '_length')
+
+[ Segments >> Type ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`163 2 163 12`
+#!source
+	Type = list
+
+[ Segments >> segment_size ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`164 2 164 18`
+#!source
+	segment_size = 64
+
+[ Segments >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`166 2 171 19`
+(signature)`__init__(self)`
+
+
+[ Segments >> __getitem__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`173 2 185 51`
+(signature)`__getitem__(self, item)`
+
+
+[ Segments >> __setitem__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`187 2 222 28`
+(signature)`__setitem__(self, item, value)`
+
+
+[ Segments >> __delitem__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`224 2 236 26`
+(signature)`__delitem__(self, item)`
+
+
+[ Segments >> __len__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`238 2 239 21`
+(signature)`__len__(self)`
+
+
+[ Segments >> __iadd__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`241 2 245 26`
+(signature)`__iadd__(self, sequence)`
+
+
+[ Segments >> select ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`247 2 278 4`
+(signature)`select(self, start, stop)`
+
+Return an iterable to the requested slice.
+
+
+[ Segments >> __iter__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`280 2 281 55`
+(signature)`__iter__(self)`
+
+
+[ Segments >> clear ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`283 2 288 18`
+(signature)`clear(self)`
+
+Truncate the entire sequence.
+
+
+[ Segments >> partition ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`290 2 315 26`
+(signature)`partition(self)`
+
+Organize the segments so that they have appropriate sizes.
+
+
+[ Segments >> prepend ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`317 2 321 26`
+(signature)`prepend(self, sequence)`
+
+
+[ Segments >> append ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`323 2 327 26`
+(signature)`append(self, sequence)`
+
+
+[ Segments >> insert ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`329 2 333 26`
+(signature)`insert(self, offset, sequence)`
+
+
+[ Segments >> delete ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`335 2 349 26`
+(signature)`delete(self, start, stop)`
+
+
+[ Segments >> usage ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`351 2 359 23`
+(signature)`usage(self)`
+
+Identify the primary memory using objects.
+
+
+[ Immutable ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`361 1 417 6`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`361 17 361 22`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+Segments compatible sequence that disregards manipulations to provide, cooperative,
+read-only access to an element sequence. Internal storage is a regular list and
+no attempt is made to enforce immutability outside of the interface.
+
+
+[ Immutable >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`367 2 367 27`
+#!source
+	__slots__ = ('_constant',)
+
+[ Immutable >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`369 2 370 30`
+(signature)`__init__(self, items)`
+
+
+[ Immutable >> usage ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`372 2 375 27`
+(signature)`usage(self)`
+
+
+[ Immutable >> select ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`377 2 378 35`
+(signature)`select(self, start, stop)`
+
+
+[ Immutable >> __iter__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`380 2 381 29`
+(signature)`__iter__(self)`
+
+
+[ Immutable >> __getitem__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`383 2 387 12`
+(signature)`__getitem__(self, item)`
+
+
+[ Immutable >> __setitem__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`389 2 390 6`
+(signature)`__setitem__(self, item, value)`
+
+
+[ Immutable >> __delitem__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`392 2 393 6`
+(signature)`__delitem__(self, item)`
+
+
+[ Immutable >> __len__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`395 2 396 28`
+(signature)`__len__(self)`
+
+
+[ Immutable >> __iadd__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`398 2 399 6`
+(signature)`__iadd__(self, sequence)`
+
+
+[ Immutable >> clear ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`401 2 402 6`
+(signature)`clear(self)`
+
+
+[ Immutable >> partition ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`404 2 405 6`
+(signature)`partition(self)`
+
+
+[ Immutable >> prepend ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`407 2 408 6`
+(signature)`prepend(self, sequence)`
+
+
+[ Immutable >> append ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`410 2 411 6`
+(signature)`append(self, sequence)`
+
+
+[ Immutable >> insert ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`413 2 414 6`
+(signature)`insert(self, offset, sequence)`
+
+
+[ Immutable >> delete ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`416 2 417 6`
+(signature)`delete(self, start, stop)`
+

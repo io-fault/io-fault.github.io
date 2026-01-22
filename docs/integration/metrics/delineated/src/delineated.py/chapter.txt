@@ -1,0 +1,82 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 91 0`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
+Copy and correct delineated json files to be free of trailing commas.
+
+The clang delineation tool intentionally leaves trailing commas in order
+to simplify serialization procedures. However, JSON mandates their absence.
+
+In order for this tool to operate safely, commas present in JSON strings must be escaped.
+
+
+[ sys ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 1 10 10`
+
+[ os ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 1 11 9`
+
+[ files ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`12 1 12 30`
+
+[ process ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`13 1 13 32`
+
+[ extract_regions ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`15 1 48 43`
+(signature)`extract_regions(target, cc, executable, spm)`
+
+
+[ main ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`50 1 88 19`
+		- (type/syntax)`process.Exit`
+		- (type/remote/factor-element)&<http://fault.io/python/system/process#Exit[fault.system.process.Exit]>
+		
+(signature)`main(inv)`
+

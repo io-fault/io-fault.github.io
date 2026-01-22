@@ -1,0 +1,17 @@
+extract-debug:
+	: --only-keep-debug
+	: target debugfile
+
+strip-debug:
+	: --strip-debug
+	: --strip-unneeded
+	: target
+
+link-debug:
+	: --add-gnu-debuglink
+	: target
+	: debug
+
+apple-extract-debug:
+	: dsymutil target -o
+	: debug

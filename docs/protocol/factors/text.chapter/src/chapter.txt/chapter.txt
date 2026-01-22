@@ -1,0 +1,14 @@
+! CONTROL:
+	/type/
+		factor
+	/element/
+		- (source/area)``
+! CONTEXT:
+	/protocol/
+		&<http://if.fault.io/project/factor.type>
+
+	/identifier/
+		&<http://if.fault.io/factors/text.chapter>
+
+Factor type declaration for text chapters.
+

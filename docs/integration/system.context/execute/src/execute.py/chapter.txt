@@ -1,0 +1,87 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 24 0`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
+Executable factor index for (invalid/unknown)&<#fault.system.tool> bindings.
+
+
+[ importlib ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 16`
+
+[ context_name ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 39`
+
+[ process ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 32`
+
+[ index ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 16 1`
+#!source
+	index = {
+		'archive-delineated': context_name + '.tools.delineated',
+		'text-cc': context_name + '.chapters.compile',
+		'python-cc': context_name + '.python.compile',
+		'factors-cc': context_name + '.images.render',
+		'fictl': context_name + '.factors.control',
+		'man': context_name + '.context.read',
+		'error': context_name + '.tools.error',
+	}
+
+[ activate ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`18 1 19 69`
+(signature)`activate(factor, element)`
+
+
+[ main ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`21 1 24 36`
+		- (type/syntax)`process.Exit`
+		- (type/remote/factor-element)&<http://fault.io/python/system/process#Exit[fault.system.process.Exit]>
+		
+(signature)`main(inv)`
+

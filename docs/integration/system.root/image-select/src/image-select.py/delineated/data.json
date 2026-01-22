@@ -1,0 +1,1 @@
+[[["sysctx"], ["sysint"], ["fv"]], [{"syntax": "os.environ['SYSTEMCONTEXT']", "area": [[8, 10], [8, 36]]}, {"syntax": "os.environ['SYSTEM_PRODUCT']", "area": [[9, 10], [9, 37]]}, {"syntax": "Variants(*identity.root_execution_context())", "area": [[15, 6], [15, 49]]}]]

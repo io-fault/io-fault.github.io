@@ -1,0 +1,215 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 152 0`
+Support for Python coverage tooling suitable for fault metrics contexts.
+
+
+[ sys ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 10`
+
+[ contextlib ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 17`
+
+[ collections ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 18`
+
+[ pickle ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 7 13`
+
+[ itertools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 8 16`
+
+[ metrics ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 1 10 32`
+
+[ instrumentation ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`12 1 12 29`
+
+[ source ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`13 1 13 20`
+
+[ Probe ]
+! CONTROL:
+	/type/
+		class
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`15 1 152 52`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`15 13 15 25`
+	- (type/syntax)`metrics.Probe`
+	- (type/none/invalid)&<http://fault.io/dev/null[coherence.metrics.Probe]>
+	
+
+[ Probe >> project ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`16 2 42 13`
+(signature)`project(self, telemetry, route, frames)`
+
+Identify counters in the Python factor sources.
+
+
+[ Probe >> override ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`44 2 59 27`
+(signature)`override(self)`
+
+Adjust the system.execution method for Python scripts and modules to inherit the
+path finder for the focus project.
+
+
+[ Probe >> setup ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`60 2 71 7`
+(signature)`setup(self, context, telemetry, data)`
+
+Install the meta path hook for loading instrumented bytecode.
+
+
+[ Probe >> transmit ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`73 2 92 27`
+(signature)`transmit(self, directory)`
+
+
+[ Probe >> connect ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`93 2 103 38`
+(signature)`connect(self, harness, measures)`
+
+Construct a trace and subscribe to interpreter events
+for the duration of the test. Profile and coverage information
+is emitted as a pickle file relative to (factor-local/parameter)&<#Probe.connect.Parameters.measures[measures]>.
+
+
+[ Probe >> reconnect ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`105 2 110 14`
+(signature)`reconnect(self, measures, process_data, finder)`
+
+
+[ Probe >> abstract_call_selector ]
+! CONTROL:
+	/type/
+		staticmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`111 2 121 80`
+(signature)`abstract_call_selector(call)`
+
+
+[ Probe >> profile ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`123 2 139 25`
+(signature)`profile(self, factors, measures)`
+
+
+[ Probe >> counters ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`141 2 152 52`
+(signature)`counters(self, factors, measures)`
+

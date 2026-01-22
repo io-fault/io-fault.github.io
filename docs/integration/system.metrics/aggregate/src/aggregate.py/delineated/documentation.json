@@ -1,0 +1,1 @@
+[["Metrics aggregation command interface.", "", "Target executable for rendering metrics.", "Process the content of the work directory in conjunction with telemetry data."], ["Given consolidated coverage data, regroup the key so", "that all producers (tests) are under a single path key."], ["Structure regrouped, consolidated coverage for JSON serialization."]]

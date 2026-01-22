@@ -1,0 +1,270 @@
+! CONTROL:
+	/type/
+		unit
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 295 0`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
+
+[ sized ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 9 8 33`
+(signature)`sized()`
+
+
+[ bte ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`265 9 265 84`
+(signature)`bte()`
+
+
+[ S ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`278 10 278 88`
+(signature)`S()`
+
+
+[ struct (unnamed at /x/p/integration/system/defects/machines/u-base-64/main.c:10:9) ]
+! CONTROL:
+	/type/
+		structure
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 9 13 1`
+
+[ struct (unnamed at /x/p/integration/system/defects/machines/u-base-64/main.c:10:9) >> str_length ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`int`
+		
+
+[ struct (unnamed at /x/p/integration/system/defects/machines/u-base-64/main.c:10:9) >> str_content ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`const char *`
+		
+
+[ sstr_t ]
+! CONTROL:
+	/type/
+		typedef
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 1 13 8`
+		- (type/syntax)`struct (unnamed struct at /x/p/integration/system/defects/machines/u-base-64/main.c:10:9)`
+		
+(signature)`sstr_t()`
+
+
+[ struct (unnamed at /x/p/integration/system/defects/machines/u-base-64/main.c:10:9) ]
+! CONTROL:
+	/type/
+		structure
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 9 13 1`
+
+[ struct (unnamed at /x/p/integration/system/defects/machines/u-base-64/main.c:10:9) >> str_length ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`int`
+		
+
+[ struct (unnamed at /x/p/integration/system/defects/machines/u-base-64/main.c:10:9) >> str_content ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`const char *`
+		
+
+[ struct (unnamed at /x/p/integration/system/defects/machines/u-base-64/main.c:21:9) ]
+! CONTROL:
+	/type/
+		structure
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`21 9 27 1`
+
+[ struct (unnamed at /x/p/integration/system/defects/machines/u-base-64/main.c:21:9) >> dlength ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`int`
+		
+
+[ struct (unnamed at /x/p/integration/system/defects/machines/u-base-64/main.c:21:9) >> decoded ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`const char *`
+		
+
+[ struct (unnamed at /x/p/integration/system/defects/machines/u-base-64/main.c:21:9) >> elength ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`int`
+		
+
+[ struct (unnamed at /x/p/integration/system/defects/machines/u-base-64/main.c:21:9) >> encoded ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`const char *`
+		
+
+[ sstrpair_t ]
+! CONTROL:
+	/type/
+		typedef
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`21 1 27 12`
+		- (type/syntax)`struct (unnamed struct at /x/p/integration/system/defects/machines/u-base-64/main.c:21:9)`
+		
+(signature)`sstrpair_t()`
+
+
+[ struct (unnamed at /x/p/integration/system/defects/machines/u-base-64/main.c:21:9) ]
+! CONTROL:
+	/type/
+		structure
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`21 9 27 1`
+
+[ struct (unnamed at /x/p/integration/system/defects/machines/u-base-64/main.c:21:9) >> dlength ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`int`
+		
+
+[ struct (unnamed at /x/p/integration/system/defects/machines/u-base-64/main.c:21:9) >> decoded ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`const char *`
+		
+
+[ struct (unnamed at /x/p/integration/system/defects/machines/u-base-64/main.c:21:9) >> elength ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`int`
+		
+
+[ struct (unnamed at /x/p/integration/system/defects/machines/u-base-64/main.c:21:9) >> encoded ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`const char *`
+		
+
+[ _extend_buf ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`258 1 264 1`
+		- (type/syntax)`void`
+		
+(signature)`_extend_buf(context, data, length)`
+

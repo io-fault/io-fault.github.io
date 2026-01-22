@@ -1,0 +1,106 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 49 0`
+Execution Platform initialization tools for the host system.
+
+
+[ files ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 30`
+
+[ identity ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 33`
+
+[ serialize_sx_plan ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 7 52`
+
+[ vector ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`9 1 9 21`
+
+[ query ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 1 10 25`
+
+[ native ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`12 1 17 24`
+(signature)`native(architecture, path)`
+
+Create the default native execution handler.
+
+
+[ python ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`19 1 27 42`
+(signature)`python(architecture, path)`
+
+Assign the host Python to the context.
+
+
+[ priority ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`29 1 37 54`
+(signature)`priority(host, python, path)`
+
+Designate the priority of the architectures and their symbols.
+
+
+[ initialize ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`39 1 49 36`
+(signature)`initialize(target)`
+
+Initialize the (factor-local/parameter)&<#initialize.Parameters.target[target]> with the default host execution platform.
+

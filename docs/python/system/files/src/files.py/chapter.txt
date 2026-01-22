@@ -1,0 +1,1715 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 1108 0`
+		- (coverage-zeros)`94`
+		- (coverage-counters)`533`
+Filesystem interfaces and data structures.
+
+Current working directory related interfaces are provided in (project-local/unknown)&<process>.
+
+
+[ Sequence ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`17 1 17 46`
+
+[ Iterable ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`17 1 17 46`
+
+[ Optional ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`18 1 18 38`
+
+[ TypeAlias ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`18 1 18 38`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
+
+[ os ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`19 1 19 9`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
+
+[ os ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`20 1 20 14`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
+
+[ sys ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`21 1 21 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
+
+[ contextlib ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`22 1 22 17`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
+
+[ collections ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`23 1 23 18`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
+
+[ stat ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`24 1 24 11`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
+
+[ itertools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`25 1 25 16`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
+
+[ functools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`26 1 26 16`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
+
+[ shutil ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`29 1 29 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
+
+[ tempfile ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`30 1 30 15`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
+
+[ cachedcalls ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`32 1 32 39`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
+
+[ Selector ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`33 1 33 43`
+
+[ Segment ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`33 1 33 43`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
+
+[ type_codes ]
+! CONTROL:
+	/type/
+		data
+	/element/
+		- (control)`property-set`
+		- (source/area)`35 1 45 1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
+Single character representations for file types.
+Primarily used by (factor-local/method)&<#Path.fs_require[Path.fs_require]>.
+
+#!source
+	type_codes = {
+		'*': None,
+		'/': 'directory',
+		'.': 'data',
+		'#': 'device',
+		'@': 'socket',
+		'|': 'pipe',
+		'&': 'link',
+		'!': 'void',
+		'?': 'unknown',
+	}
+
+[ RequirementViolation ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`47 1 101 26`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`47 28 47 36`
+	- (type/syntax)`Exception`
+	- (type/invalid/unknown)&<#Exception>
+	
+Exception raised by (factor-local/method)&<#Path.fs_require[Path.fs_require]> when requirements are not met.
+
+[ > Properties ]
+
+/r_violation/
+	The subtype declaring the kind of violation that occurred.
+
+	/`'void'`/
+		File did not exist.
+
+	/`'inaccessible'`/
+		Path traversed through a non-directory file,
+		or had insufficient permissions on the leading path.
+
+	/`'type'`/
+		The (invalid/unknown)&<#r_type> did not match the (invalid/unknown)&<#fs_type>.
+
+	/`'directory'`/
+		The file identified by the path is a directory.
+
+	/`'prohibited'`/
+		The required permissions stated in (invalid/unknown)&<#r_properties>
+		were not available to the process.
+
+/r_type/
+	The required type issued to (factor-local/method)&<#Path.fs_require[Path.fs_require]>.
+
+/r_properties/
+	The required properties issued to (factor-local/method)&<#Path.fs_require[Path.fs_require]>.
+
+/fs_type/
+	The type of the file identified by (invalid/unknown)&<#fs_path>.
+
+/fs_path/
+	The path to the subject file.
+
+
+[ RequirementViolation >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`76 2 82 32`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`5`
+(signature)`__init__(self, subject, type, violation, rtype, properties)`
+
+
+[ RequirementViolation >> __str__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`84 2 101 26`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`14`
+(signature)`__str__(self)`
+
+
+[ Status ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`103 1 273 16`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`103 14 103 18`
+	- (type/syntax)`tuple`
+	- (type/invalid/unknown)&<#tuple>
+	
+File status interface providing symbolic names for the data packed in
+the system's status record, (factor-local/property)&<#Status.system[system]>.
+
+[ > Engineering ]
+
+Experimental. Helps isolate delayed imports.
+Likely undesired noise if a stat-cache is employed by (factor-local/class)&<#Path[Path]>.
+
+
+[ Status >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`112 2 112 15`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
+#!source
+	__slots__ = ()
+
+[ Status >> _fs_type_map ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`114 2 122 2`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
+#!source
+	_fs_type_map = {
+		stat.S_IFIFO: 'pipe',
+		stat.S_IFLNK: 'link',
+		stat.S_IFREG: 'data',
+		stat.S_IFDIR: 'directory',
+		stat.S_IFSOCK: 'socket',
+		stat.S_IFBLK: 'device',
+		stat.S_IFCHR: 'device',
+	}
+
+[ Status >> _fs_subtype_map ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`124 2 129 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
+#!source
+	_fs_subtype_map = {
+		stat.S_IFBLK: 'block',
+		stat.S_IFCHR: 'character',
+	}
+		@property
+
+[ Status >> _interpret_time ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`130 2 135 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
+
+[ Status >> _read_user ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`136 2 141 10`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`3`
+
+[ Status >> _read_group ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`142 2 147 13`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`3`
+
+[ Status >> from_route ]
+! CONTROL:
+	/type/
+		classmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`148 2 151 10`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
+(signature)`from_route(Class, route)`
+
+
+[ Status >> system ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`152 2 158 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
+The status record produced by the system ((none/invalid)&<http://fault.io/dev/null[os.path.stat]>).
+
+
+[ Status >> filename ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`159 2 163 16`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`3`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+The name of the file.
+
+
+[ Status >> __add__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`165 2 170 10`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
+(signature)`__add__(self, operand)`
+
+
+[ Status >> size ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`171 2 177 10`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`3`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+Number of bytes contained by the file.
+
+
+[ Status >> type ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`178 2 197 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+/`'void'`/
+	A broken link or nonexistent file.
+
+/`'directory'`/
+	A file containing other files.
+
+/`'data'`/
+	A regular file containing bytes.
+
+/`'pipe'`/
+	A named pipe; also known as a FIFO.
+
+/`'socket'`/
+	A unix domain socket.
+
+/`'device'`/
+	A character or block device file.
+
+/`'link'`/
+	Status record of a link to a file.
+
+
+[ Status >> subtype ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`198 2 207 10`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`4`
+		- (type/syntax)`Optional[str]`
+		
+For POSIX-type systems, designates the kind of (id)`device`:
+(id)`block` or (id)`character`.
+
+(invalid/unknown)&<#None> for status instances whose (factor-local/property)&<#Status.type[type]> is not (id)`device`.
+
+
+[ Status >> created ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`208 2 214 10`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
+Time of creation; UTC. Not available on all systems.
+
+
+[ Status >> last_modified ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`215 2 221 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
+Time of last modification; UTC.
+
+
+[ Status >> last_accessed ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`222 2 228 10`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
+Time of last access; UTC.
+
+
+[ Status >> meta_last_modified ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`229 2 235 10`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
+Time of last status change; UTC.
+
+
+[ Status >> owner ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`236 2 239 10`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
+
+[ Status >> group ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`240 2 243 10`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
+
+[ Status >> setuid ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`244 2 247 10`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
+
+[ Status >> setgid ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`248 2 251 10`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
+
+[ Status >> sticky ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`252 2 255 10`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
+
+[ Status >> executable ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`256 2 264 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`5`
+		- (type/syntax)`bool`
+		- (type/invalid/unknown)&<#bool>
+		
+Whether the data file is considered executable by anyone.
+
+Extended attributes are not checked.
+
+
+[ Status >> searchable ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`265 2 273 16`
+		- (coverage-zeros)`4`
+		- (coverage-counters)`6`
+		- (type/syntax)`bool`
+		- (type/invalid/unknown)&<#bool>
+		
+Whether the directory file is considered searchable by anyone.
+
+Extended attributes are not checked.
+
+
+[ path_string_cache ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`274 1 280 30`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`5`
+(signature)`path_string_cache(path)`
+
+
+[ Path ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`282 1 1104 14`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`282 12 282 24`
+	- (type/syntax)`Selector[str]`
+	
+- (context-local/factor-element)&<fault.route/abstract#Path[fault.route.abstract.Path]>
+- (context-local/factor-element)&<fault.route/abstract#File[fault.route.abstract.File]>
+
+Path implementation providing file system controls.
+(project-local/unknown)&<files#root[files.root]> is provided for convenience, and (project-local/unknown)&<process#fs_pwd[process.fs_pwd]> is
+available for getting the working directory of the process.
+
+
+[ Path >> __slots__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`291 2 291 35`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
+#!source
+	__slots__ = ('context', 'points',)
+
+[ Path >> Violation ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`293 2 293 33`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
+#!source
+	Violation = RequirementViolation
+
+[ Path >> _root_path ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`295 2 295 43`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
+#!source
+	_root_path = _path_separator = os.path.sep
+
+[ Path >> _fs_access ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`296 2 299 3`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
+#!source
+	_fs_access = staticmethod(functools.partial(
+		os.access,
+		effective_ids=(os.access in os.supports_effective_ids)
+	))
+
+[ Path >> _fs_access_map ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`300 2 306 2`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
+#!source
+	_fs_access_map = {
+		'r': os.R_OK,
+		'w': os.W_OK,
+		'x': os.X_OK,
+		'/': 0,
+		'!': 0,
+	}
+
+[ Path >> fs_require ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`308 2 361 13`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`27`
+(signature)`fs_require(self)`
+
+
+[ Path >> from_path ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`362 2 379 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`5`
+(signature)`from_path(Class, path)`
+
+Construct a (factor-local/class)&<#Path[Path]> instance from the given absolute or relative path
+provided for (invalid/unknown)&<#string>; if a relative path is specified, it will
+be relative to the current working directory as identified by
+(none/invalid)&<http://fault.io/dev/null[os.path.getcwd]>.
+
+This is usually the most appropriate way to instantiate a (factor-local/class)&<#Path[Path]> route
+from user input. The exception being cases where the current working
+directory is *not* the relevant context.
+
+
+[ Path >> from_relative ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`380 2 397 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`5`
+(signature)`from_relative(Class, context, path)`
+
+Return a new Route pointing to the file referenced by (factor-local/parameter)&<#Path.from_relative.Parameters.path[path]>;
+where path is a path relative to the (factor-local/parameter)&<#Path.from_relative.Parameters.context[context]>
+(factor-local/class)&<#Path[Path]> instance.
+
+This function does *not* refer to the current working directory
+returned by (none/invalid)&<http://fault.io/dev/null[os.path.getcwd]>; if this is desired, (factor-local/classmethod)&<#Path.from_path[from_path]> is the
+appropriate constructor to use.
+
+
+[ Path >> from_absolute ]
+! CONTROL:
+	/type/
+		classmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`398 2 401 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
+(signature)`from_absolute(Class, path)`
+
+
+[ Path >> from_absolute_parts ]
+! CONTROL:
+	/type/
+		classmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`402 2 415 14`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`8`
+(signature)`from_absolute_parts(Class, start, *paths)`
+
+
+[ Path >> _partition_string ]
+! CONTROL:
+	/type/
+		staticmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`416 2 419 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
+		- (type/syntax)`Iterable[Sequence[str]]`
+		
+(signature)`_partition_string(path)`
+
+
+[ Path >> from_partitioned_string ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`420 2 425 61`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
+(signature)`from_partitioned_string(Class, path)`
+
+Construct an absolute path while interpreting consecutive separators
+as distinct partitions.
+
+
+[ Path >> __matmul__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`427 2 435 27`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`5`
+(signature)`__matmul__(self, path)`
+
+
+[ Path >> fs_tmpdir ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`436 2 457 15`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`9`
+(signature)`fs_tmpdir(Class)`
+
+Create a temporary directory at a new route using a context manager.
+
+A (factor-local/class)&<#Path[Path]> to the temporary directory is returned on entrance,
+and that same path is destroyed on exit.
+
+[ >> Engineering ]
+
+The use of specific temporary files is avoided as they have inconsistent
+behavior on some platforms.
+
+
+[ Path >> __repr__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`459 2 464 41`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`5`
+(signature)`__repr__(self)`
+
+
+[ Path >> __str__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`466 2 469 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
+(signature)`__str__(self)`
+
+
+[ Path >> fullpath ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`470 2 482 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`9`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+Returns the full filesystem path designated by the route.
+
+
+[ Path >> bytespath ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`483 2 490 58`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
+		- (type/syntax)`bytes`
+		- (type/invalid/unknown)&<#bytes>
+		
+Returns the full filesystem path designated by the route as a (invalid/unknown)&<#bytes> object
+returned by encoding the (factor-local/property)&<#Path.fullpath[fullpath]> in (none/invalid)&<http://fault.io/dev/null[sys.getfilesystemencoding]> with
+`'surrogateescape'` as the error mode.
+
+
+[ Path >> join ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`492 2 511 10`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`11`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+(signature)`join(self, *parts)`
+
+Construct a string path using (factor-local/parameter)&<#Path.join.Parameters.self[self]> as the prefix and appending the path
+fragments from (factor-local/parameter)&<#Path.join.Parameters.parts[parts]>.
+
+Segment instances should be given with an asterisk applied to the argument.
+
+
+[ Path >> filename ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`512 2 518 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
+Filesystem specific alias for (invalid/unknown)&<#identifier>.
+
+
+[ Path >> extension ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`519 2 530 16`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`5`
+Return the last dot-extension of the filename.
+(invalid/unknown)&<#None> if the filename has no `.` characters at all.
+
+
+[ Path >> suffix_filename ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`532 2 539 51`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
+(signature)`suffix_filename(self, appended_suffix)`
+
+Modify the name of the file adding the given suffix.
+
+Returns a new (factor-local/class)&<#Path[Path]> Route.
+
+
+[ Path >> suffix ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`540 2 540 25`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
+#!source
+	suffix = suffix_filename
+
+[ Path >> prefix_filename ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`542 2 549 49`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
+(signature)`prefix_filename(self, prefix_string)`
+
+Modify the name of the file adding the given prefix.
+
+Returns a new (factor-local/class)&<#Path[Path]> Route.
+
+
+[ Path >> prefix ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`550 2 550 25`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
+#!source
+	prefix = prefix_filename
+
+[ Path >> __pos__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`552 2 566 44`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`14`
+(signature)`__pos__(self)`
+
+
+[ Path >> fs_path_string ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`568 2 592 3`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`11`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+(signature)`fs_path_string(self)`
+
+Construct a normalized string representing the path to the file.
+
+Relative resolution must still be explicitly performed, but empty
+path entries delimiting partitions are eliminated.
+
+
+[ Path >> __fspath__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`593 2 593 28`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
+#!source
+	__fspath__ = fs_path_string
+
+[ Path >> fs_status ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`595 2 596 55`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
+		- (type/syntax)`Status`
+		- (type/factor-local/class)&<#Status[Status]>
+		
+(signature)`fs_status(self)`
+
+
+[ Path >> fs_type ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`598 2 619 49`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`11`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+(signature)`fs_type(self)`
+
+The type of file the route points to. Transforms the result of an (none/invalid)&<http://fault.io/dev/null[os.path.stat]>
+call into a string describing the (python/attribute)`st_mode` field.
+
+[ >> Returns ]
+
+- `'directory'`
+- `'data'`
+- `'pipe'`
+- `'socket'`
+- `'device'`
+- `'void'`
+
+If no file is present at the path or a broken link is present, `'void'` will be returned.
+
+
+[ Path >> fs_executable ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`621 2 627 27`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`6`
+		- (type/syntax)`bool`
+		- (type/invalid/unknown)&<#bool>
+		
+(signature)`fs_executable(self)`
+
+Whether the file at the route is considered to be an executable.
+
+
+[ Path >> fs_follow_links ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`629 2 643 9`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`12`
+		- (type/syntax)`Iterable[Selector]`
+		
+(signature)`fs_follow_links(self)`
+
+
+[ Path >> fs_iterfiles ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`645 2 675 13`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`16`
+(signature)`fs_iterfiles()`
+
+Generate (factor-local/class)&<#Path[Path]> instances identifying the files held by the directory, (invalid/unknown)&<#self>.
+By default, all file types are included, but if the (factor-local/parameter)&<#Path.fs_iterfiles.Parameters.type[type]> parameter is given,
+only files of that type are returned.
+
+If (invalid/unknown)&<#self> is not a directory or cannot be searched, an empty iterator is returned.
+
+
+[ Path >> fs_list ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`677 2 705 22`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`16`
+(signature)`fs_list(self)`
+
+Retrieve the list of files contained by the directory referred to by (factor-local/parameter)&<#Path.fs_list.Parameters.self[self]>.
+Returns a pair, the sequence of directories and the sequence of data files.
+
+Sockets, pipes, devices, and other non-data files are not retained in the list.
+
+
+[ Path >> fs_index ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`707 2 728 18`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`11`
+(signature)`fs_index(self)`
+
+Generate pairs of directories associated with their files.
+
+Sockets, pipes, devices, broken links, and other non-data files are not retained in the lists.
+
+
+[ Path >> fs_snapshot ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`730 2 808 17`
+		- (coverage-zeros)`13`
+		- (coverage-counters)`48`
+(signature)`fs_snapshot()`
+
+
+[ Path >> fs_since ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`810 2 845 52`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`15`
+		- (type/syntax)`Iterable[tuple[int, Selector]]`
+		
+(signature)`fs_since(self, since)`
+
+Identify the set of files that have been modified
+since the given point in time.
+
+The resulting iterable does not include directories.
+
+[ >> Parameters ]
+
+/(parameter)`self`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`since`/
+	- (type/syntax)`int`
+	- (type/invalid/unknown)&<#int>
+	
+	The point in time after which files and directories will be identified
+	as being modified and returned inside the result set.
+
+/(parameter)`traversed`/
+	
+	(control/absent)`Undocumented`.
+
+
+[ Path >> fs_real ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`847 2 852 13`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`4`
+(signature)`fs_real(self)`
+
+
+[ Path >> exists ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`854 2 861 30`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`3`
+		- (type/syntax)`bool`
+		- (type/invalid/unknown)&<#bool>
+		
+(signature)`exists(self)`
+
+Query the filesystem and return whether or not the file exists.
+
+A Route to a symbolic link *will* return (invalid/unknown)&<#False> if the target does not exist.
+
+
+[ Path >> fs_modified ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`863 2 867 29`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
+(signature)`fs_modified(self)`
+
+Update the modification time of the file identified by (factor-local/parameter)&<#Path.fs_modified.Parameters.self[self]>.
+
+
+[ Path >> fs_size ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`869 2 873 58`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+(signature)`fs_size(self)`
+
+Return the size of the file as depicted by (none/invalid)&<http://fault.io/dev/null[os.path.stat]>.
+
+
+[ Path >> get_last_modified ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`875 2 880 39`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+(signature)`get_last_modified(self)`
+
+Return the modification time of the file.
+
+
+[ Path >> set_last_modified ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`882 2 887 62`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
+(signature)`set_last_modified(self, time)`
+
+Set the modification time of the file identified by the (invalid/unknown)&<#Route>.
+
+
+[ Path >> get_text_content ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`889 2 894 18`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+(signature)`get_text_content(self)`
+
+Retrieve the entire contents of the file as a (invalid/unknown)&<#str>.
+
+
+[ Path >> set_text_content ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`896 2 901 18`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
+		- (type/syntax)`None`
+		
+(signature)`set_text_content(self, string)`
+
+Modify the regular file identified by (factor-local/parameter)&<#Path.set_text_content.Parameters.self[self]> to contain the given (factor-local/parameter)&<#Path.set_text_content.Parameters.string[string]>.
+
+
+[ Path >> meta ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`903 2 912 51`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`3`
+(signature)`meta(self)`
+
+Return file specific meta data.
+
+! WARNING:
+	Preliminary API.
+
+
+[ Path >> fs_void ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`914 2 931 13`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`10`
+(signature)`fs_void(self)`
+
+
+[ Path >> fs_replace ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`933 2 942 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`9`
+(signature)`fs_replace(self, replacement)`
+
+
+[ Path >> fs_linear ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`944 2 970 20`
+		- (coverage-zeros)`15`
+		- (coverage-counters)`16`
+(signature)`fs_linear(self)`
+
+
+[ Path >> fs_reduce ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`972 2 982 13`
+		- (coverage-zeros)`8`
+		- (coverage-counters)`11`
+(signature)`fs_reduce(self, discarded)`
+
+
+[ Path >> fs_link_relative ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`984 2 997 13`
+		- (coverage-zeros)`5`
+		- (coverage-counters)`11`
+(signature)`fs_link_relative(self, path)`
+
+
+[ Path >> fs_link_absolute ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`999 2 1010 13`
+		- (coverage-zeros)`5`
+		- (coverage-counters)`9`
+(signature)`fs_link_absolute(self, path)`
+
+
+[ Path >> fs_init ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`1012 2 1042 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`20`
+(signature)`fs_init(self)`
+
+Create and initialize a data file at the route using the given (factor-local/parameter)&<#Path.fs_init.Parameters.data[data]>.
+
+If (factor-local/parameter)&<#Path.fs_init.Parameters.data[data]> is (invalid/unknown)&<#None>, no write operation will occur for pre-existing files.
+If (factor-local/parameter)&<#Path.fs_init.Parameters.data[data]> is not (invalid/unknown)&<#None>, the bytes will be written regardless.
+
+Returns the route instance, (factor-local/parameter)&<#Path.fs_init.Parameters.self[self]>.
+Leading directories will be created as needed.
+
+
+[ Path >> fs_alloc ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1044 2 1055 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`9`
+(signature)`fs_alloc(self)`
+
+
+[ Path >> fs_mkdir ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1057 2 1075 27`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`15`
+(signature)`fs_mkdir(self)`
+
+
+[ Path >> fs_open ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`1076 2 1092 31`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`8`
+(signature)`fs_open(self, *args, **kw)`
+
+Open the file pointed to by the route.
+
+If the file doesn't exist, create it; if the directories
+leading up to the file don't exist, create the directories too.
+
+
+[ Path >> fs_load ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1094 2 1099 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`6`
+		- (type/syntax)`bytes`
+		- (type/invalid/unknown)&<#bytes>
+		
+(signature)`fs_load(self)`
+
+
+[ Path >> fs_store ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1101 2 1104 14`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
+(signature)`fs_store(self, data)`
+
+
+[ root ]
+! CONTROL:
+	/type/
+		data
+	/element/
+		- (control)`property-set`
+		- (source/area)`1106 1 1106 21`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
+The (factor-local/class)&<#Path[Path]> to the root directory of the operating system.
+
+#!source
+	root = Path(None, ())
+
+[ null ]
+! CONTROL:
+	/type/
+		data
+	/element/
+		- (control)`property-set`
+		- (source/area)`1107 1 1107 24`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
+The (factor-local/class)&<#Path[Path]> to the file that has no content and will discard writes.
+
+#!source
+	null = root/'dev'/'null'
+
+[ empty ]
+! CONTROL:
+	/type/
+		data
+	/element/
+		- (control)`property-set`
+		- (source/area)`1108 1 1108 38`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
+The (factor-local/class)&<#Path[Path]> to the directory that contains no files.
+
+#!source
+	empty = (root/'var'/'empty').delimit()

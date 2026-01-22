@@ -1,0 +1,298 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 247 20`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
+Manipulate and retrieve product information.
+
+
+[ collections ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 18`
+
+[ sys ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 10`
+
+[ os ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 7 9`
+
+[ importlib ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 8 16`
+
+[ contextlib ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`9 1 9 17`
+
+[ recognition ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 1 11 36`
+
+[ files ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`12 1 12 30`
+
+[ process ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`13 1 13 32`
+
+[ lsf ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`14 1 14 39`
+
+[ Log ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`15 1 15 35`
+
+[ project_package_name ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`17 1 17 46`
+
+[ context ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`18 1 18 21`
+
+[ restricted ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`20 1 30 1`
+#!source
+	restricted = {
+		'-.': ('ignore', None, None),
+	
+		# Defaults to never update.
+		'--void': ('field-replace', True, 'remove-product-index'),
+		'-u': ('field-replace', 'missing', 'update-product-index'),
+		'-U': ('field-replace', 'always', 'update-product-index'),
+		'-x': ('field-replace', 'missing', 'initialize-system-context'),
+	
+		'--summary': ('field-replace', 'summary', 'select-operation'),
+	}
+
+[ required ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`32 1 41 1`
+#!source
+	required = {
+		'-X': ('field-replace', 'system-context-directory'),
+	
+		'-D': ('field-replace', 'product-directory'),
+	
+		'-i': ('sequence-append', 'interpreted-connections'),
+		'-s': ('sequence-append', 'interpreted-disconnections'),
+		'-I': ('sequence-append', 'direct-connections'),
+		'-S': ('sequence-append', 'direct-disconnections'),
+	}
+
+[ sources ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`43 1 46 12`
+(signature)`sources(factor_record)`
+
+
+[ stats ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`48 1 62 12`
+(signature)`stats(projects)`
+
+
+[ report ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`64 1 93 17`
+(signature)`report(exits, meta, log, config, sysctx, pdr, remainder)`
+
+Write human readable information about the product and the identified projects.
+
+
+[ switch ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`95 1 97 1`
+#!source
+	switch = {
+		'summary': report,
+	}
+
+[ index ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`99 1 116 12`
+(signature)`index(pd, statement)`
+
+Update the index according the requested (factor-local/parameter)&<#index.Parameters.statement[statement]>.
+
+
+[ connecting ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`118 1 132 14`
+(signature)`connecting(config)`
+
+Normalize the interpreted connections and disconnections.
+
+
+[ reconnect ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`134 1 151 91`
+(signature)`reconnect(pd, insertions, deletions)`
+
+Update the product's connections.
+
+
+[ io ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`154 1 206 10`
+(signature)`io(exits, meta, log, config, sysctx, pdr, remainder)`
+
+Perform requested changes and select requested information.
+
+
+[ configure ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`208 1 231 25`
+(signature)`configure(restricted, required, argv)`
+
+Root option parser.
+
+
+[ main ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`233 1 248 19`
+		- (type/syntax)`process.Exit`
+		- (type/remote/factor-element)&<http://fault.io/python/system/process#Exit[fault.system.process.Exit]>
+		
+(signature)`main(inv)`
+

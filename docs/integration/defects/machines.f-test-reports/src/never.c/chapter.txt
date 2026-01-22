@@ -1,0 +1,32 @@
+! CONTROL:
+	/type/
+		unit
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 90 0`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
+
+[ TEST_SUITE_EXTENSION ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 9 8 28`
+#!source
+	#define TEST_SUITE_EXTENSION
+
+[ note_failed_exit ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 9 11 102`
+(signature)`note_failed_exit()`
+

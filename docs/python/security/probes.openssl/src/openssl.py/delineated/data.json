@@ -1,0 +1,1 @@
+[[["_extract_nids"]], [[["grep", "define[\t ]*NID"], ["sed", "s/#[\\t ]*define[ \t]*NID_/OPENSSL_NID(/;s/[ \t]*[0-9]*$/) \\\\/"]]]]

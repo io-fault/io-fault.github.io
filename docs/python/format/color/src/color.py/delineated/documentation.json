@@ -1,0 +1,1 @@
+[["Color representations for character matrix displays.", "Uses 24-bit SGR codes for the swatch areas.", "", "Usually, a hex code with a small leading swatch character styled with truecolor SGR codes."], ["Convert the given RGB color into a hex string for display."], ["Construct a phrase for representing an RGB color."]]

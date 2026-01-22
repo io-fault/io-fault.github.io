@@ -1,0 +1,44 @@
+from ..system import files
+
+file_type_codes = {
+	k: ('type', v)
+	for k, v in files.type_codes.items()
+}
+
+type_colors = {
+	'directory': 'blue',
+	None: 'gray',
+	'data': 'gray',
+
+	'link': 'purple',
+	'pipe': 'orange',
+	'device': 'orange',
+	'socket': 'orange',
+	'void': 'red',
+	'unknown': 'red',
+}
+
+requirement_codes = {
+	'r': ('permitted', 'read'),
+	'w': ('permitted', 'write'),
+	'x': ('permitted', 'execute'),
+
+	'/': ('option', 'directory'),
+	'!': ('option', 'void'),
+	'?': ('option', 'unknown'),
+}
+
+def requirement_fields(string):
+	"""
+	# Split the string into typed fields reducing superfluous
+	# entries
+	"""
+	if string[:1] in file_type_codes:
+		yield file_type_codes[string[:1]]
+		props = string[1:]
+	else:
+		yield ('type', None)
+		props = string
+
+	for x in sorted(list(set(props)), key=('rwx/!'.index)):
+		yield requirement_codes[x]

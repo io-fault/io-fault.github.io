@@ -1,0 +1,306 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 391 0`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
+Check io.Octets interfaces.
+
+
+[ os ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 9`
+
+[ os ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 14`
+
+[ errno ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 12`
+
+[ time ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 7 11`
+
+[ tempfile ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 8 15`
+
+[ functools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`9 1 9 16`
+
+[ io ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 1 11 25`
+
+[ common ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`12 1 12 20`
+
+[ test_anonymous_endpoints_socketpair ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`14 1 29 17`
+(signature)`test_anonymous_endpoints_socketpair(test)`
+
+
+[ test_anonymous_endpoints_pipe ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`31 1 43 17`
+(signature)`test_anonymous_endpoints_pipe(test)`
+
+
+[ test_buffer_write_location ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`45 1 69 33`
+(signature)`test_buffer_write_location(test)`
+
+
+[ test_channel_force ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`71 1 95 7`
+(signature)`test_channel_force(test)`
+
+
+[ test_full_buffer_forced_write ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`97 1 125 40`
+(signature)`test_full_buffer_forced_write(test)`
+
+Test the force method on lose-octets with a full write buffer.
+
+
+[ test_multiple_arrays ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`127 1 139 28`
+(signature)`test_multiple_arrays(test)`
+
+
+[ test_objects ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`141 1 167 45`
+(signature)`test_objects(test)`
+
+
+[ test_array_void ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`169 1 203 7`
+(signature)`test_array_void(test)`
+
+
+[ test_octets_acquire_after_terminate ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`205 1 221 37`
+(signature)`test_octets_acquire_after_terminate(test)`
+
+
+[ test_array_flush_release ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`223 1 257 24`
+(signature)`test_array_flush_release(test)`
+
+
+[ test_octets_resource_error ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`259 1 284 6`
+(signature)`test_octets_resource_error(test)`
+
+
+[ test_terminating_exhaust ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`286 1 295 6`
+(signature)`test_terminating_exhaust(test)`
+
+
+[ array_termination ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`297 1 306 16`
+(signature)`array_termination(test, J)`
+
+
+[ test_octets_acquire_badfd_detect ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`308 1 326 10`
+(signature)`test_octets_acquire_badfd_detect(test)`
+
+
+[ test_ip4 ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`328 1 329 66`
+(signature)`test_ip4(test)`
+
+
+[ test_ip6 ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`331 1 332 60`
+(signature)`test_ip6(test)`
+
+
+[ read_write ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`334 1 381 29`
+(signature)`read_write(test, am, path, data, copies)`
+
+
+[ test_file ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`383 1 391 35`
+(signature)`test_file(test)`
+

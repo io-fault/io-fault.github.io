@@ -1,0 +1,2 @@
+/Library/Frameworks/Python.framework/Versions/3.11/lib//library
+python3.11

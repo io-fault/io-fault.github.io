@@ -1,0 +1,1 @@
+[["Tool execution factor for explicitly linked command sets."], ["Add lookup functions for extending the set of executable tools.", "", "When a &select callable is invoked with a tool name, a module path should be", "returned identifying the executable or a &LookupError should be raised designating", "that no match could be made."]]

@@ -1,0 +1,1 @@
+[[["default_headers"], ["allocate_transparent"]], [[["Host", "test.fault.io"], ["Connection", "keep-alive"]], {"syntax": "lambda x: (('line+headers',) + x, b'VERSION')", "area": [[61, 25], [61, 69]]}]]

@@ -1,0 +1,30 @@
+! CONTEXT:
+	/title/
+		`Structured Processing`
+
+Structured Processing is the practice of using explicit data structures to manage the execution
+primitives of a running process. It differs from common practices by managing completion signalling
+through these data structures so that the runtime state may be accurately reflected. The
+introduction of overhead is accepted for the value proposition of high-level introspective
+capabilities.
+
+[ Motivation ]
+
+The runtime status of most processes will be measured by a opaque count of threads and coroutines
+along with stack traces if such details are requested. The count being possibly vague on its own
+and stack traces providing too much information without some aggregation(dtrace).
+
+A Structured Process seeks to trace what is running at a high level so that querying can be
+performed and so that record keeping can be performed without application specific logic
+being present.
+
+[ Goals ]
+
+The exploration of Structured Processing intends to evaluate its viability in practice.
+
+[ Current Works ]
+
+&<http://fault.io/python/kernel[fault.kernel]> is a Python project implementing a Structured
+Processing framework. Currently, &<http://fault.io/python/web[fault.web]> and
+&<http://fault.io/development/syntax[meta.syntax]> are the primary projects leveraging
+the design.

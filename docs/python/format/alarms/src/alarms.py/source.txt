@@ -1,0 +1,15 @@
+"""
+# Timer related frames.
+"""
+bells="🔔🔕"
+hourly="🕐🕛"
+halfpast="🕜🕧"
+
+def frame_scheduled(record):
+	"""
+	# Construct frame input for the given &record.
+	"""
+
+if __name__ == '__main__':
+	for x in range(r[0], r[1]+1):
+		print(chr(x))

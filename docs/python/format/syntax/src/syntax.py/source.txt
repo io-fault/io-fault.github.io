@@ -1,0 +1,134 @@
+"""
+# Highlight
+"""
+import itertools
+import collections
+from ..syntax import keywords as kos
+from ..terminal import palette
+
+theme = {
+	'inclusion-stop-exclusion': 'background-adjacent',
+	'inclusion-stop-literal': 'background-adjacent',
+
+	'exclusion-start': 'background-adjacent',
+	'exclusion-stop': 'background-adjacent',
+	'exclusion-delimit': 'teal',
+	'exclusion-space': 'teal',
+	'exclusion-words': 'teal',
+	'exclusion-fragment': 'teal',
+
+	'literal-start': 'gray',
+	'literal-stop': 'gray',
+	'literal-delimit': 'gray',
+	'literal-space': 'gray',
+	'literal-words': 'gray',
+	'literal-fragment': 'gray',
+
+	'inclusion-projectword': 'pink',
+	'inclusion-highlight': 'yellow',
+	'inclusion-keyword': 'blue',
+	'inclusion-coreword': 'violet',
+	'inclusion-metaword': 'orange',
+	'inclusion-identifier': 'terminal-default',
+	'inclusion-fragment': 'background-adjacent',
+
+	'inclusion-start-enclosure': 'terminal-default',
+	'inclusion-stop-enclosure': 'terminal-default',
+	'inclusion-router': 'terminal-default',
+	'inclusion-terminator': 'terminal-default',
+	'inclusion-operation': 'terminal-default',
+	'inclusion-space': 'terminal-default',
+
+	'cell': 'terminal-default', # (terminal) default cell color
+	'border': 'application-border',
+}
+
+if 0:
+	#'/Index/method->&ParameterSetName/Subindex'
+	#'/.->Execution String/'
+	#'//'
+	#'///'
+	#'/->Exec'
+	#'/.property->Executed String'
+	#'/Index is a Title/..&property->Final Index' * {'ParameterizedName':object}
+	#'/Index/.property[predicate-id -X -r -w]/
+	#'/Idnex/.prop.foo.bar->String Parameter
+	#'/Index/& IndexReference[]/
+	#'/Index/& IndexReference|Conditions|/
+	#'/path/to/prefix-[name|field]-*?-suffix/&*/'
+	# //->Parameter
+	# CCPATHS=/x/cc/pythons:@/x/cc/c++
+	pass
+
+def qualify(tokens, context='inclusion'):
+	"""
+	# Convert a delimited KOS token stream into qualified tokens
+	# noting the context along with the event type.
+	"""
+
+	I = iter(tokens)
+
+	for t in I:
+		typ, qual, chars = t
+		if typ == 'switch':
+			context = qual
+			continue
+
+		if context == 'inclusion':
+			if qual == 'event':
+				yield ("-".join((context, typ)), chars)
+			else:
+				if typ == 'space':
+					yield ("-".join((context, typ)), chars)
+				else:
+					yield ("-".join((context, qual, typ)), chars)
+		else:
+			if typ == 'space':
+				yield ("-".join((context, 'space')), chars)
+			elif qual == 'event' or typ == 'enclosure':
+				yield ("-".join((context, 'words')), chars)
+			else:
+				yield ("-".join((context, qual)), chars)
+
+def normalize(qfields, spaces='  '):
+	"""
+	# Normalize tab characters.
+	"""
+	for f in qfields:
+		if f[0].endswith('-space'):
+			yield (f[0], f[1].replace('\t', spaces))
+		else:
+			yield f
+
+if __name__ == '__main__':
+	import sys, itertools, json
+	from ..terminal import matrix
+	from . import terminal
+	itc = itertools.chain.from_iterable
+	screen = matrix.Screen()
+	lines = sys.stdin.readlines()
+
+	profilepath = sys.argv[1]
+	data = json.load(open(profilepath))
+	words = data.pop('words', {})
+	data.update(words)
+	language = kos.Profile.from_keywords_v1(**data)
+	psp = kos.Parser.from_profile(language)
+
+	rp = screen.terminal_type.normal_render_parameters
+	theme = {k:rp.apply(textcolor=palette.colors[v]) for k,v in theme.items()}
+	P = screen.Phrase.from_words
+
+	if 1:
+		for tokens, line in zip(psp.process_lines(lines), lines):
+			buf = list(normalize(qualify(tokens), spaces='    '))
+			ph = P(itc(theme[ft].form(f) for ft, f in buf))
+			#sys.stdout.buffer.write(str(buf).encode('utf-8')+b'\n')
+			sys.stdout.buffer.write(b''.join(screen.render(ph)))
+			sys.stdout.buffer.write(screen.reset_text())
+	else:
+		for tokens, line in zip(psp.process_document(lines), lines):
+			buf = list(normalize(qualify(tokens)))
+			ph = P(itc(rp.apply(textcolor=theme[ft]).form(f) for ft, f in buf))
+			sys.stdout.buffer.write(b''.join(screen.render(ph)))
+			sys.stdout.buffer.write(screen.reset_text())

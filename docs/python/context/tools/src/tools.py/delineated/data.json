@@ -1,0 +1,1 @@
+[[["cachedcalls"], ["partial"], ["sum_lengths"]], [{"syntax": "functools.lru_cache", "area": [[9, 15], [9, 33]]}, {"syntax": "functools.partial", "area": [[10, 11], [10, 27]]}, {"syntax": "compose(sum, partial(map, len))", "area": [[154, 15], [154, 45]]}]]

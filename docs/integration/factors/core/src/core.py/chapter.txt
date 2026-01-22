@@ -1,0 +1,837 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 374 25`
+Core classes and data structures for building projects with Construction Contexts.
+
+
+[ sys ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 10`
+
+[ typing ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 13`
+
+[ functools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 16`
+
+[ itertools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 7 16`
+
+[ operator ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 8 15`
+
+[ tools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 1 10 31`
+
+[ files ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 1 11 30`
+
+[ lsf ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`12 1 12 39`
+
+[ SystemFactor ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`14 1 118 18`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`14 20 14 25`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+Target representing a system factor.
+
+
+[ SystemFactor >> fields ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`19 2 34 10`
+#!source
+	fields = {
+		'source-paths': {
+			'http://if.fault.io/factors/lambda.sources',
+			'http://if.fault.io/factors/meta.sources',
+		},
+		'factor-image': {
+			'http://if.fault.io/factors/system.library-name',
+			'http://if.fault.io/factors/system.library',
+			'http://if.fault.io/factors/system.directory',
+			'http://if.fault.io/factors/system.framework-name',
+			'http://if.fault.io/factors/system.framework-directory',
+		},
+		'parameters': {'http://if.fault.io/factors/lambda.control'},
+	}
+		@property
+
+[ SystemFactor >> absolute ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`35 2 38 10`
+
+[ SystemFactor >> project ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`39 2 42 10`
+
+[ SystemFactor >> route ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`43 2 46 10`
+
+[ SystemFactor >> requirements ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`47 2 49 14`
+
+[ SystemFactor >> libdir ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`51 2 56 13`
+#!source
+	libdir = lsf.types.Reference(
+		'http://if.fault.io/factors',
+		lsf.types.factor@'system.directory',
+		'type', None
+	)
+	@classmethod
+
+[ SystemFactor >> from_libdir ]
+! CONTROL:
+	/type/
+		classmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`57 2 58 34`
+(signature)`from_libdir(Class, path)`
+
+
+[ SystemFactor >> libname ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`60 2 65 13`
+#!source
+	libname = lsf.types.Reference(
+		'http://if.fault.io/factors',
+		lsf.types.factor@'system.library-name',
+		'type', None
+	)
+	@classmethod
+
+[ SystemFactor >> from_libname ]
+! CONTROL:
+	/type/
+		classmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`66 2 67 35`
+(signature)`from_libname(Class, name)`
+
+
+[ SystemFactor >> include ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`69 2 74 13`
+#!source
+	include = lsf.types.Reference(
+		'http://if.fault.io/factors',
+		lsf.types.factor@'meta.sources',
+		'type', None
+	)
+	@classmethod
+
+[ SystemFactor >> from_include ]
+! CONTROL:
+	/type/
+		classmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`75 2 76 35`
+(signature)`from_include(Class, path)`
+
+
+[ SystemFactor >> fwdir ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`78 2 83 13`
+#!source
+	fwdir = lsf.types.Reference(
+		'http://if.fault.io/factors',
+		lsf.types.factor@'system.framework-directory',
+		'type', None
+	)
+	@classmethod
+
+[ SystemFactor >> from_framework_directory ]
+! CONTROL:
+	/type/
+		classmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`84 2 85 33`
+(signature)`from_framework_directory(Class, path)`
+
+
+[ SystemFactor >> fwname ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`87 2 92 13`
+#!source
+	fwname = lsf.types.Reference(
+		'http://if.fault.io/factors',
+		lsf.types.factor@'system.framework-name',
+		'type', None
+	)
+	@classmethod
+
+[ SystemFactor >> from_framework_name ]
+! CONTROL:
+	/type/
+		classmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`93 2 94 45`
+(signature)`from_framework_name(Class, name)`
+
+
+[ SystemFactor >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`96 2 98 18`
+(signature)`__init__(self, type, data)`
+
+
+[ SystemFactor >> __repr__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`100 2 101 56`
+(signature)`__repr__(self)`
+
+
+[ SystemFactor >> sources ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`103 2 104 18`
+(signature)`sources(self)`
+
+
+[ SystemFactor >> image ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`106 2 109 10`
+(signature)`image(self, variants)`
+
+
+[ SystemFactor >> _factor_id ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`110 2 111 51`
+
+[ SystemFactor >> get ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`113 2 118 18`
+(signature)`get(self, field)`
+
+
+[ Target ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`120 1 280 49`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`120 14 120 19`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+The representation of a Project Factor as a compilation target.
+
+
+[ Target >> fields ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`126 2 148 10`
+#!source
+	fields = {
+		'factor-index': ('route', 'container'),
+		'factor-type': ('type',),
+			'factor-relative-path': ('route',),
+		'factor-path': ('absolute',),
+		'project-path': ('project', 'factor'),
+		'context-path': ('project', 'factor', 'container'),
+		'product-path': ('project', 'product', 'route'),
+			'factor-name': ('route', 'identifier'),
+		'project-name': ('project', 'factor', 'identifier'),
+		'context-name': ('project', 'factor', 'container', 'identifier'),
+			'factor-id': ('_factor_id',),
+		'project-id': ('project', 'identifier'),
+			'corpus': ('_corpus_id',),
+		'source-paths': ('_source_paths',),
+		'sources': ('_source_list',),
+	}
+		@property
+
+[ Target >> references ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`149 2 155 10`
+Whether the Target intends to reprents a set of references.
+
+
+[ Target >> system ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`156 2 162 10`
+Whether the Target intends to reprents a system context.
+
+
+[ Target >> _factor_id ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`163 2 166 10`
+
+[ Target >> _corpus_id ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`167 2 172 10`
+
+[ Target >> _source_list ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`173 2 176 10`
+
+[ Target >> _source_paths ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`177 2 181 24`
+
+[ Target >> get ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`183 2 188 12`
+(signature)`get(self, field)`
+
+
+[ Target >> __repr__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`190 2 191 79`
+(signature)`__repr__(self)`
+
+
+[ Target >> __r_repr__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`193 2 205 3`
+(signature)`__r_repr__(self)`
+
+
+[ Target >> __hash__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`207 2 212 33`
+(signature)`__hash__(self)`
+
+
+[ Target >> __eq__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`214 2 220 10`
+(signature)`__eq__(self, operand)`
+
+
+[ Target >> absolute ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`221 2 224 10`
+
+[ Target >> absolute_path_string ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`225 2 231 13`
+The target's factor path.
+
+
+[ Target >> from_selection ]
+! CONTROL:
+	/type/
+		classmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`232 2 234 72`
+(signature)`from_selection(Class, project, record)`
+
+
+[ Target >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`236 2 255 38`
+(signature)`__init__(self, project, route, type, requirements, sources)`
+
+
+[ Target >> __str__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`257 2 260 10`
+(signature)`__str__(self)`
+
+
+[ Target >> name ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`261 2 266 24`
+
+[ Target >> sources ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`268 2 272 22`
+(signature)`sources(self)`
+
+An iterable producing the source files of the Factor.
+
+
+[ Target >> image ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`274 2 280 49`
+(signature)`image(self, variants)`
+
+Get the appropriate reduction for the Factor based on the
+configured (invalid/unknown)&<#key>. If no key has been configured, the returned
+route will be to the inducted factor.
+
+
+[ Integrand ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`282 1 375 24`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`282 17 282 21`
+	- (type/syntax)`tuple`
+	- (type/invalid/unknown)&<#tuple>
+	
+Container for the set of build parameters used by the configured abstraction functions.
+
+
+[ Integrand >> mechanism ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`287 2 287 45`
+#!source
+	mechanism = property(operator.itemgetter(0))
+
+[ Integrand >> factor ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`288 2 288 42`
+#!source
+	factor = property(operator.itemgetter(1))
+
+[ Integrand >> requirements ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`289 2 289 48`
+#!source
+	requirements = property(operator.itemgetter(2))
+
+[ Integrand >> dependents ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`290 2 290 46`
+#!source
+	dependents = property(operator.itemgetter(3))
+
+[ Integrand >> variants ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`291 2 291 44`
+#!source
+	variants = property(operator.itemgetter(4))
+
+[ Integrand >> locations ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`292 2 292 45`
+#!source
+	locations = property(operator.itemgetter(5))
+
+[ Integrand >> vectors ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`293 2 293 43`
+#!source
+	vectors = property(operator.itemgetter(6))
+
+[ Integrand >> features ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`294 2 296 10`
+#!source
+	features = property(operator.itemgetter(7))
+		@property
+
+[ Integrand >> itype ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`297 2 300 10`
+
+[ Integrand >> system ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`301 2 304 10`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+
+[ Integrand >> architecture ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`305 2 308 10`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+
+[ Integrand >> image ]
+! CONTROL:
+	/type/
+		property
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`309 2 313 22`
+
+[ Integrand >> _qrefs ]
+! CONTROL:
+	/type/
+		staticmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`314 2 326 28`
+(signature)`_qrefs(rfactor, ri)`
+
+
+[ Integrand >> required ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`328 2 332 29`
+(signature)`required(self, variants)`
+
+
+[ Integrand >> select ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`334 2 375 24`
+(signature)`select(self, field)`
+
+Retrieve information from requirements and components.
+

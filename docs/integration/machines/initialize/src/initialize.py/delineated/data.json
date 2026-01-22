@@ -1,0 +1,1 @@
+[[["restricted"], ["required"]], [{"syntax": "{\n\t'-c': ('field-replace', False, 'enable-cc'),\n}", "area": [[12, 14], [14, 1]]}, {"syntax": "{\n\t'-C': ('field-replace', 'cc-dirpath'),\n}", "area": [[16, 12], [18, 1]]}]]

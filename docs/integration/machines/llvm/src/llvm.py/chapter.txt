@@ -1,0 +1,448 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 506 0`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
+Instantiate the `fault-llvm` tools project into a target directory.
+
+
+[ sys ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 10`
+
+[ os ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 14`
+
+[ itertools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 16`
+
+[ recognition ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 8 36`
+
+[ files ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 1 10 30`
+
+[ process ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 1 11 32`
+
+[ execution ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`12 1 12 34`
+
+[ factors ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`13 1 13 51`
+
+[ executables ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`14 1 14 42`
+
+[ lsf ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`16 1 16 39`
+
+[ factory ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`17 1 17 33`
+
+[ restricted ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`19 1 26 1`
+#!source
+	restricted = {
+		'-l': ('field-replace', True, 'link-only'),
+		'-L': ('field-replace', False, 'link-only'),
+		'-i': ('field-replace', True, 'instantiate-only'),
+		'-I': ('field-replace', False, 'instantiate-only'),
+		'-f': ('field-replace', True, 'instantiate-factors'),
+		'-F': ('field-replace', False, 'instantiate-factors'),
+		'-U': ('field-replace', True, 'update-build'),
+
+[ required ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`28 1 34 1`
+#!source
+	}
+	
+	required = {
+		'-x': ('field-replace', 'target-directory'),
+		'-X': ('field-replace', 'construction-context'),
+	
+		'-C': ('field-replace', 'cmake-path'),
+
+[ split_config_output ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`36 1 37 47`
+(signature)`split_config_output(flag, output)`
+
+
+[ profile_library ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`39 1 51 12`
+(signature)`profile_library(prefix, architecture)`
+
+
+[ compiler_libraries ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`53 1 64 15`
+(signature)`compiler_libraries(compiler, prefix, version, executable, target)`
+
+Attempt to select the compiler libraries directory containing compiler support
+libraries for profiling, sanity, and runtime.
+
+
+[ parse_clang_version_1 ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`66 1 97 54`
+(signature)`parse_clang_version_1(string)`
+
+clang --version parser.
+
+
+[ parse_clang_directories_1 ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`99 1 108 3`
+(signature)`parse_clang_directories_1(string)`
+
+Parse -print-search-dirs output.
+
+
+[ parse_clang_standards_1 ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`110 1 122 2`
+(signature)`parse_clang_standards_1(string)`
+
+After retrieving a list from standard error, extract as much information as possible.
+
+
+[ clang ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`124 1 201 13`
+(signature)`clang(executable)`
+
+Extract information from the given clang (factor-local/parameter)&<#clang.Parameters.executable[executable]>.
+
+
+[ instrumentation ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`203 1 274 73`
+(signature)`instrumentation(llvm_config_path)`
+
+Identify instrumentation related commands and libraries for making extraction tools.
+
+
+[ formats ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`276 1 291 2`
+(signature)`formats(ccv)`
+
+
+[ info ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`293 1 298 1`
+#!source
+			],
+		}
+	
+	info = lsf.types.Information(
+		identifier = '://fault.metrics/llvm',
+		name = 'llvm',
+
+[ fr ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`300 1 300 39`
+#!source
+	contact = "http://fault.io/critical"
+
+[ sr ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`301 1 301 41`
+#!source
+	)
+
+[ declare ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`303 1 345 77`
+(signature)`declare(ccv, ipq)`
+
+
+[ cmake_source ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`347 1 373 4`
+#!source
+	
+		return factory.Parameters.define(info, formats(ccv), sets=sets, soles=soles)
+	
+	cmake_source = \
+		"""
+		cmake_minimum_required(VERSION 3.20.0)
+		project(fault-llvm-tools)
+	
+		find_package(LLVM REQUIRED CONFIG)
+		message(STATUS "LLVM ${LLVM_PACKAGE_VERSION}: ${LLVM_DIR}/LLVMConfig.cmake")
+	
+		find_library(CLANG_LIB REQUIRED NAMES clang libclang HINTS ${LIBCLANG_PATH} ${LLVM_LIBRARY_DIRS})
+		message(STATUS "libclang: ${CLANG_LIB}")
+	
+		# set(CMAKE_CXX_STANDARD 17)
+		set(CMAKE_CXX_STANDARD_REQUIRED on)
+		set(CMAKE_CXX_FLAGS "-DFV_INTENTION=optimal ${LLVM_CXX_FLAGS} ${CMAKE_CXX_FLAGS}")
+		set(CMAKE_C_FLAGS "-DFV_INTENTION=optimal ${CMAKE_C_FLAGS}")
+	
+		include_directories(${LLVM_INCLUDE_DIRS} include)
+		separate_arguments(LLVM_DEFINITIONS_LIST NATIVE_COMMAND ${LLVM_DEFINITIONS})
+		add_definitions(${LLVM_DEFINITIONS_LIST})
+	
+		add_executable(clang-ipquery ipquery.cc)
+		llvm_map_components_to_libnames(ipqlibs coverage)
+		target_link_libraries(clang-ipquery ${ipqlibs})
+	
+
+[ mksources ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`375 1 379 45`
+(signature)`mksources(directory)`
+
+
+[ icmake ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`381 1 397 23`
+(signature)`icmake(route, ccv, ccf, include)`
+
+Instantiate as a cmake project.
+
+Currently preferred over (remote/factor-element)&<http://fault.io/python/system/factors#context[fault.system.factors.context]> as integrating with LLVM's
+configuration is slightly easier due to the current limits
+of Construction Contexts.
+
+
+[ ifactors ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`399 1 405 30`
+(signature)`ifactors(route, ccv, ipqd)`
+
+Instantiate as factors.
+
+
+[ link_tools ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`407 1 415 60`
+(signature)`link_tools(ctx, llvm_bindir, itools)`
+
+
+[ system ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`417 1 427 29`
+(signature)`system(exe, *argv)`
+
+
+[ configure ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`429 1 442 25`
+(signature)`configure(restricted, required, argv)`
+
+
+[ main ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`444 1 506 18`
+		- (type/syntax)`process.Exit`
+		- (type/remote/factor-element)&<http://fault.io/python/system/process#Exit[fault.system.process.Exit]>
+		
+(signature)`main(inv)`
+

@@ -1,0 +1,8 @@
+"""
+# Aggregation support for fault LLVM coverage and profile data.
+"""
+
+from fault.system import process
+
+def main(inv:process.Invocation) -> process.Exit:
+	pass

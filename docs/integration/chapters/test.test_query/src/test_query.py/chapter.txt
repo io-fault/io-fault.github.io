@@ -1,0 +1,171 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (source/area)`1 1 78 48`
+Analyze the (project-local/unknown)&<nodes.Cursor> implementation.
+Currently, somewhat redundant with the route tests, but
+check the functionality with respect to the configured (project-local/factor-element)&<query#context[system.chapters.query.context]>.
+
+
+[ module ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`6 1 6 30`
+
+[ structure_chapter_text ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`7 1 7 48`
+
+[ cursor ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`9 1 9 13`
+#!source
+	cursor = None
+
+[ document_text ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`10 1 33 2`
+#!source
+	document_text = "\n".join([
+		"! CONTEXT:",
+		"\t/protocol/",
+		"\t\t&<http://if.fault.io/test>",
+		"[ Section Name ]",
+		"First paragraph.",
+		"",
+		"Second paragraph.",
+		"[ Objects ]",
+		"# Item1",
+		"# Item2",
+		"- SetItem1",
+		"- SetItem2",
+		"",
+		"Second paragraph.",
+		"[ ] Odd Section [ ]",
+		"/key/",
+		"\tvalue",
+		"[ Final Section ]",
+		"Last paragraph.",
+		"#!/text parameter-data",
+		"\tSubtext Paragraph",
+		""
+	])
+
+[ cursor ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`35 1 35 63`
+#!source
+	cursor = module.navigate(structure_chapter_text(document_text))
+
+[ test_invalid_selector_single ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`37 1 39 83`
+(signature)`test_invalid_selector_single(test)`
+
+
+[ test_invalid_selector_all ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`41 1 43 75`
+(signature)`test_invalid_selector_all(test)`
+
+
+[ test_no_filter_error ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`45 1 46 77`
+(signature)`test_no_filter_error(test)`
+
+
+[ test_select_query_sanity ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`48 1 52 76`
+(signature)`test_select_query_sanity(test)`
+
+
+[ test_select_indexing ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`54 1 58 72`
+(signature)`test_select_indexing(test)`
+
+
+[ test_union ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`60 1 67 31`
+(signature)`test_union(test)`
+
+
+[ test_filter ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`69 1 75 27`
+(signature)`test_filter(test)`
+
+
+[ test_identifier_escapes ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (source/area)`77 1 79 47`
+(signature)`test_identifier_escapes(test)`
+

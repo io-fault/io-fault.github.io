@@ -1,0 +1,635 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 522 0`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
+Host construction context initialization.
+
+
+[ itertools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 16`
+
+[ lsf ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 39`
+
+[ factory ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 7 33`
+
+[ files ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`9 1 9 30`
+
+[ factors ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 1 10 32`
+
+[ identity ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 1 11 33`
+
+[ execution ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`12 1 12 34`
+
+[ query ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`14 1 14 25`
+
+[ machines_project ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`15 1 15 52`
+
+[ mkinfo ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`17 1 23 2`
+(signature)`mkinfo(path, name)`
+
+
+[ mktype ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`25 1 29 64`
+(signature)`mktype(semantics, type, language)`
+
+
+[ interfaces ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`31 1 33 1`
+#!source
+	interfaces = [
+		lsf.types.Reference('http://fault.io/integration/machines', lsf.types.factor@'include'),
+	]
+
+[ formats ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`35 1 49 1`
+#!source
+	formats = {
+		'http://if.fault.io/factors/system': [
+			('type', 'c', '2011', 'c'),
+			('type', 'h', '2011', 'c'),
+			('references', 'sr', 'lines', 'text'),
+		],
+		'http://if.fault.io/factors/python': [
+			('module', 'py', 'psf-v3', 'python'),
+			('interface', 'pyi', 'psf-v3', 'python'),
+		],
+		'http://if.fault.io/factors/vector': [
+			('set', 'v', '', 'fault-vc'),
+			('system', 'sys', '', 'fault-vi'),
+		],
+	}
+
+[ vformats ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`51 1 65 1`
+#!source
+	vformats = {
+		'http://if.fault.io/factors/system': [
+			('type', 'c', '2011', 'c'),
+			('type', 'h', '2011', 'c'),
+			('references', 'sr', 'lines', 'text'),
+		],
+	
+		'http://if.fault.io/factors/vector': [
+			('set', 'v', '', 'fault-vc'),
+			('system', 'sys', '', 'fault-vi'),
+		],
+		'http://if.fault.io/factors/meta': [
+			('references', 'fr', 'lines', 'text'),
+		],
+	}
+
+[ vtype ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`67 1 67 20`
+#!source
+	vtype = 'vector.set'
+
+[ metasources ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`68 1 68 55`
+#!source
+	metasources = 'http://if.fault.io/factors/meta.sources'
+
+[ systemexecutable ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`69 1 69 65`
+#!source
+	systemexecutable = 'http://if.fault.io/factors/system.executable'
+
+[ systemreferences ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`70 1 70 38`
+#!source
+	systemreferences = 'system.references'
+
+[ factorreferences ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`71 1 71 36`
+#!source
+	factorreferences = 'meta.references'
+
+[ clang_delineate ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`72 1 72 54`
+#!source
+	clang_delineate = (query.bindir() / 'clang-delineate')
+
+[ system ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`74 1 77 63`
+(signature)`system(path, *args)`
+
+
+[ iproduct ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`79 1 88 10`
+(signature)`iproduct(route, connections)`
+
+Initialize the product index and return the created instance.
+
+
+[ mksole ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`90 1 91 46`
+(signature)`mksole(fpath, type, source)`
+
+
+[ fx ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`93 1 94 76`
+(signature)`fx(fpath, name, *argv, **env)`
+
+
+[ mkset ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`96 1 97 39`
+(signature)`mkset(fpath, type, symbols, sources)`
+
+
+[ getsource ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`99 1 101 34`
+(signature)`getsource(project, name)`
+
+
+[ comment ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`103 1 104 26`
+(signature)`comment(text)`
+
+
+[ constant ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`106 1 110 12`
+(signature)`constant(name, *types)`
+
+
+[ define ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`112 1 117 9`
+(signature)`define(name, *types)`
+
+
+[ form_host_target ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`119 1 151 14`
+(signature)`form_host_target(hlinker)`
+
+
+[ form_variants ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`153 1 161 16`
+(signature)`form_variants(system, architecture)`
+
+
+[ form_host_type ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`163 1 188 14`
+(signature)`form_host_type()`
+
+
+[ host ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`190 1 219 6`
+(signature)`host(route, context, hlinker, hsystem, harch)`
+
+
+[ form_python_type ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`221 1 236 14`
+(signature)`form_python_type()`
+
+
+[ python_bind ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`238 1 254 3`
+(signature)`python_bind(system, architecture, host)`
+
+
+[ python_runtime ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`256 1 265 3`
+(signature)`python_runtime()`
+
+
+[ python_interfaces ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`267 1 277 3`
+(signature)`python_interfaces()`
+
+
+[ python_tool ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`279 1 292 3`
+(signature)`python_tool()`
+
+
+[ execute_python_image ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`295 1 305 3`
+(signature)`execute_python_image()`
+
+
+[ python ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`308 1 336 2`
+(signature)`python(context, psystem, parch, harch)`
+
+
+[ mkctx ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`338 1 340 79`
+(signature)`mkctx(info, formats, product, context)`
+
+
+[ mkproject ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`342 1 344 82`
+(signature)`mkproject(info, product, context, project, soles)`
+
+
+[ system_select_linker ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`346 1 355 25`
+(signature)`system_select_linker(system)`
+
+Select the linker command interface to use based on the system's name.
+
+
+[ form_meter_type ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`357 1 375 14`
+(signature)`form_meter_type()`
+
+
+[ meter ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`377 1 415 2`
+(signature)`meter(context)`
+
+
+[ text ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`417 1 426 2`
+(signature)`text(context)`
+
+
+[ form_meta_type ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`428 1 445 14`
+(signature)`form_meta_type()`
+
+
+[ meta ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`447 1 461 2`
+(signature)`meta(context)`
+
+
+[ execution_project ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`463 1 474 2`
+(signature)`execution_project(context, system, python)`
+
+Construct the execution project containing system.executable factors
+providing system access to the configured machines.
+
+
+[ mkvectors ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`476 1 518 25`
+(signature)`mkvectors(context, route)`
+
+
+[ mkcc ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`520 1 522 69`
+(signature)`mkcc(route)`
+

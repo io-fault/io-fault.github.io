@@ -1,0 +1,22 @@
+<html root="2"><head><title>system.defects.machines.u-utf-8</title><meta charset="utf-8"/><link as="style" rel="preload" href="../../.legacy-web/core.css"></link><link as="style" rel="preload" href="../../.legacy-web/factor.css"></link><link rel="stylesheet" href="../../.legacy-web/core.css"></link><link rel="stylesheet" href="../../.legacy-web/factor.css"></link></head><body><main><h1><span class="prefix"></span><div class="page-subject"><img class="icon" src="../../.factor-type-icon/if.fault.io/system-executable.svg"></img><span class="subject-identifier">u-utf-8</span><span class="element-status"><span class="nothing-missed">0</span></span><a href="http://if.fault.io/factors/system.executable"><code class="type">system.executable</code></a></div><div class="page-context"><a href="../"><img class="icon" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNTYiIGhlaWdodD0iMjU2Ij48dGV4dCB4PSI0IiB5PSIwLjg4ZW0iIGZvbnQtc2l6ZT0iMjQ4Ij7impnvuI88L3RleHQ+PC9zdmc+"></img></a><span class="context-identifier">system.defects</span></div></h1><section class="chapter"></section><section class="define" documented="false" local-identifier="RECODE_TESTS" id="RECODE_TESTS"><h1><span class="prefix"></span><a class="title" href="#RECODE_TESTS"><span class="text.normal">RECODE_TESTS</span></a><span class="element-status"></span><div class="factor-element-meta"><span class="abstract-type">define</span></div></h1><pre class="text.syntax"><code class="source">#define RECODE_TESTS(N) \
+	Test(recode_##N##_byte_samples) \
+	{ \
+		const size_t n_samples = sizeof(samples_##N##_bytes) / sizeof(struct sample_utf_8); \
+		struct sample_utf_8 *samples = samples_##N##_bytes; \
+		\
+		for (int i = 0; i &#60; n_samples; ++i) \
+		{ \
+			uint32_t cp = 0xFFFFFFFF; \
+			struct sample_utf_8 *su = &#38;samples[i]; \
+			uint8_t etxt[5]; \
+			size_t used, ets; \
+			ets = utf8_sequence_codepoint(etxt, su-&#62;codepoint); \
+			etxt[ets] = 0; \
+			used = utf8_identify_codepoint(&#38;cp, etxt, ets); \
+			test-&#62;equality(used, ets); \
+			test-&#62;equality(cp, su-&#62;codepoint); \
+			test-&#62;memcmp(etxt, su-&#62;string, ets); \
+		} \
+	}
+</code></pre></section><section class="structure" documented="false" local-identifier="sample_utf_8" id="sample_utf_8"><h1><span class="prefix"></span><a class="title" href="#sample_utf_8"><span class="text.normal">sample_utf_8</span></a><span class="element-status"></span><div class="factor-element-meta"><span class="abstract-type">structure</span></div></h1><section class="field" documented="false" local-identifier="codepoint" id="sample_utf_8.codepoint"><h1><span class="prefix"></span><a class="section" href="#sample_utf_8">sample_utf_8</a><a class="title" href="#sample_utf_8.codepoint"><span class="text.normal">codepoint</span></a><span class="element-status"></span><div class="factor-element-meta"><span class="abstract-type">field</span></div><code class="type">int</code></h1></section><section class="field" documented="false" local-identifier="string" id="sample_utf_8.string"><h1><span class="prefix"></span><a class="section" href="#sample_utf_8">sample_utf_8</a><a class="title" href="#sample_utf_8.string"><span class="text.normal">string</span></a><span class="element-status"></span><div class="factor-element-meta"><span class="abstract-type">field</span></div><code class="type">const int *</code></h1></section></section><section class="define" documented="false" local-identifier="TEST_SUITE_EXTENSION" id="TEST_SUITE_EXTENSION"><h1><span class="prefix"></span><a class="title" href="#TEST_SUITE_EXTENSION"><span class="text.normal">TEST_SUITE_EXTENSION</span></a><span class="element-status"></span><div class="factor-element-meta"><span class="abstract-type">define</span></div></h1><pre class="text.syntax"><code class="source">#define TEST_SUITE_EXTENSION
+</code></pre></section><h1 class="footing"></h1></main></body></html>

@@ -1,0 +1,71 @@
+! CONTROL:
+	/type/
+		unit
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 241 0`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
+
+[ ET ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`54 10 56 47`
+#!source
+	#define ET(F, L, ...) \
+		test->strcmp(STF_EVENT_TYPE_SYMBOL_STRING(__VA_ARGS__), \
+			stf_type_symbol(STF_EVENT_TYPE_CODE(F, L)));
+
+[ ET ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`69 10 70 68`
+#!source
+	#define ET(F, L, ...) \
+		test->strcmp(F L, stf_type_identifier(STF_EVENT_TYPE_CODE(F, L)));
+
+[ _CMP_FIELDS ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`158 10 164 52`
+#!source
+	#define _CMP_FIELDS(CONTEXT, INDEX, NAME, TYPE) \
+		e1.NAME = ""; \
+		test->equality(INDEX, stf_event_compare(&e1, &e2)); \
+		e1.NAME = e2.NAME; e2.NAME = ""; \
+		test->equality(INDEX, stf_event_compare(&e1, &e2)); \
+		e2.NAME = e0.NAME; \
+		test->equality(INDEX, _ESTRUCT_FIELD_INDEX(NAME));
+
+[ _CMP_FIELDS ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`167 10 173 52`
+#!source
+	#define _CMP_FIELDS(CONTEXT, INDEX, NAME, TYPE) \
+		e1.NAME = 0; \
+		test->equality(INDEX, stf_event_compare(&e1, &e2)); \
+		e1.NAME = e2.NAME; e2.NAME = 0; \
+		test->equality(INDEX, stf_event_compare(&e1, &e2)); \
+		e2.NAME = e0.NAME; \
+		test->equality(INDEX, _ESTRUCT_FIELD_INDEX(NAME));

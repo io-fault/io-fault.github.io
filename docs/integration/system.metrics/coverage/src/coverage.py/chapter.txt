@@ -1,0 +1,328 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 252 45`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
+Counter placement tooling for identifying the parent element.
+
+
+[ contextlib ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 17`
+
+[ json ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 11`
+
+[ islice ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 36`
+
+[ repeat ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 36`
+
+[ Counter ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 7 44`
+
+[ defaultdict ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 7 44`
+
+[ Mapping ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`9 1 9 37`
+
+[ Area ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 1 10 44`
+
+[ Address ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 1 10 44`
+
+[ _parse_sources ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`13 1 18 8`
+(signature)`_parse_sources(lines)`
+
+
+[ _parse_areas ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`20 1 22 47`
+(signature)`_parse_areas(lines)`
+
+
+[ factor_records ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`26 1 39 20`
+(signature)`factor_records(root)`
+
+Scan the tree for data files and select the segment
+from (factor-local/parameter)&<#factor_records.Parameters.root[root]> that can be used to identify the origin of
+the record.
+
+Yields the path and segment identifying the data record.
+
+
+[ identify_source_areas ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`41 1 48 10`
+(signature)`identify_source_areas(path)`
+
+Scan the directory for nodes containing regular files.
+
+
+[ identify_captured_metrics ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`50 1 56 36`
+(signature)`identify_captured_metrics(path)`
+
+Scan each data set for capture records.
+
+
+[ join_fault_syntax_areas ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`58 1 66 14`
+(signature)`join_fault_syntax_areas(sources, areas, types)`
+
+
+[ load_fault_syntax_areas ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`68 1 90 57`
+(signature)`load_fault_syntax_areas(sources, areas, types)`
+
+Load the areas from the triple of (factor-local/parameter)&<#load_fault_syntax_areas.Parameters.sources[sources]>,
+(factor-local/parameter)&<#load_fault_syntax_areas.Parameters.areas[areas]>, and (factor-local/parameter)&<#load_fault_syntax_areas.Parameters.types[types]>.
+
+Used to read source counter maps.
+
+
+[ join_fault_syntax_counters ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`92 1 100 16`
+(signature)`join_fault_syntax_counters(sources, areas, counts)`
+
+
+[ load_fault_syntax_counters ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`102 1 119 58`
+(signature)`load_fault_syntax_counters(sources, areas, counts)`
+
+Load the counters from the triple of (factor-local/parameter)&<#load_fault_syntax_counters.Parameters.sources[sources]>,
+(factor-local/parameter)&<#load_fault_syntax_counters.Parameters.areas[areas]>, and (factor-local/parameter)&<#load_fault_syntax_counters.Parameters.counts[counts]>.
+
+Used to read source coverage counters.
+
+
+[ structure_area ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`121 1 125 3`
+(signature)`structure_area(vector)`
+
+
+[ load_metrics_aggregates ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`127 1 151 29`
+(signature)`load_metrics_aggregates(path)`
+
+Read areas and constituents files from the given metrics image directory.
+
+
+[ descend ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`153 1 161 30`
+(signature)`descend(mapping, current, elements)`
+
+
+[ index_elements ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`163 1 178 11`
+(signature)`index_elements(dsrc)`
+
+Create a range mapping from the given delineated source, (factor-local/parameter)&<#index_elements.Parameters.dsrc[dsrc]>.
+The keys are associated with the element path of the syntax
+areas holding the content of the element.
+
+
+[ total ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`180 1 195 32`
+(signature)`total(index, areas, types, counts)`
+
+Create totals for the profile.
+
+
+[ organize_counters ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`197 1 209 37`
+(signature)`organize_counters(index, areas, types, counts)`
+
+Organize the integrated coverage metrics for reporting and reveal analysis.
+
+
+[ element_area_index ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`211 1 223 13`
+(signature)`element_area_index(index)`
+
+Convert an area-to-element index into a serializable form.
+
+
+[ factor_source_profile ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`225 1 242 2`
+(signature)`factor_source_profile(elements, areas, types, counts)`
+
+Build a serializable representation of the given coverage data.
+
+
+[ annotation ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`244 1 253 44`
+(signature)`annotation(zeros, elements)`
+
+Identify the missed areas in elements for annotation reporting.
+

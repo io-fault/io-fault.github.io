@@ -1,0 +1,122 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 45 0`
+Persistence methods for argument vector execution platforms.
+
+
+[ files ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 30`
+
+[ execution ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 34`
+
+[ E_NAME ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 7 20`
+#!source
+	E_NAME='F_EXECUTION'
+
+[ A_RECORD ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 8 24`
+#!source
+	A_RECORD='architectures'
+
+[ S_RECORD ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`9 1 9 17`
+#!source
+	S_RECORD='system'
+
+[ P_RECORD ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 1 10 16`
+#!source
+	P_RECORD='plans'
+
+[ fs_initialize ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`12 1 19 14`
+(signature)`fs_initialize(target, system)`
+
+Create directories and files for a stored logical platform.
+
+
+[ fs_update ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`21 1 30 61`
+		- (type/syntax)`files.Path`
+		- (type/remote/factor-element)&<http://fault.io/python/system/files#Path[fault.system.files.Path]>
+		
+(signature)`fs_update(target, pf)`
+
+Using the given (factor-local/parameter)&<#fs_update.Parameters.target[target]> filesystem path, store the platform's specification.
+
+The system identifier, execution plans, and architecture priority list will be written
+under the presumption that the leading path already exists. No checks for suitability
+are performed.
+
+
+[ fs_update_sections ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`32 1 45 62`
+		- (type/syntax)`files.Path`
+		- (type/remote/factor-element)&<http://fault.io/python/system/files#Path[fault.system.files.Path]>
+		
+(signature)`fs_update_sections(target, sections)`
+
+Store the given sections in the target path.
+

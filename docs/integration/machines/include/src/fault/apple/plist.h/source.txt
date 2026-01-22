@@ -1,0 +1,16 @@
+/**
+	// plist macros for supporintg bundle.h and entitle.h
+*/
+#ifndef _fault_apple_plist_
+#define _fault_apple_plist_
+	#define PLSTRING(v) \
+		"<string>" v "</string>"
+	#define PLSTR(k, v) \
+		"<key>" #k "</key>" PLSTRING(v)
+	#define PLTRUE(k) "<key>" #k "</key><true/>"
+	#define PLFALSE(k) "<key>" #k "</key><false/>"
+
+	#ifndef PLIST_VERSION
+		#define PLIST_VERSION "1.0"
+	#endif
+#endif

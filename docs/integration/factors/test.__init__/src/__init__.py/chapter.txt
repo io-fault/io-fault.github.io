@@ -1,0 +1,18 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 1 0`
+
+[ __factor_type__ ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 1 25`
+#!source
+	__factor_type__ = 'tests'

@@ -1,0 +1,1 @@
+[[["http_separators"], ["tmap"]], [{"syntax": "b'()<>@,;:\\\\\\\"/[]?={} \\t\\x7f' + bytes(range(32))", "area": [[33, 19], [33, 66]]}, {"syntax": "bytearray(range(256))", "area": [[34, 8], [34, 28]]}]]

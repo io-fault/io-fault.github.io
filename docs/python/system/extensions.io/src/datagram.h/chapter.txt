@@ -1,0 +1,244 @@
+! CONTROL:
+	/type/
+		unit
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 45 0`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`29`
+
+[ DatagramHeaderSize ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`15 9 15 52`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
+#!source
+	#define DatagramHeaderSize (sizeof(struct Datagram))
+
+[ DatagramGetAddress ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`17 9 17 85`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
+(signature)`DatagramGetAddress()`
+
+
+[ DatagramGetData ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`18 9 18 78`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
+(signature)`DatagramGetData()`
+
+
+[ DatagramGetSize ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`20 9 20 40`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
+(signature)`DatagramGetSize()`
+
+
+[ DatagramSetSize ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`21 9 21 62`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
+(signature)`DatagramSetSize()`
+
+
+[ DatagramGetSpace ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`22 9 22 42`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
+(signature)`DatagramGetSpace()`
+
+
+[ DatagramSetSpace ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`23 9 23 64`
+(signature)`DatagramSetSpace()`
+
+
+[ DatagramGetAddressLength ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`24 9 24 48`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
+(signature)`DatagramGetAddressLength()`
+
+
+[ DatagramCalculateUnit ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`25 9 25 88`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
+(signature)`DatagramCalculateUnit()`
+
+
+[ DatagramGetArea ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`30 9 31 75`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
+(signature)`DatagramGetArea()`
+
+
+[ DatagramIsValid ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`38 9 41 1`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`10`
+(signature)`DatagramIsValid()`
+
+
+[ DatagramNext ]
+! CONTROL:
+	/type/
+		macro
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`43 9 44 69`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
+(signature)`DatagramNext()`
+
+
+[ Datagram ]
+! CONTROL:
+	/type/
+		structure
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 13 1`
+A single datagram transmitted by (project-local/unknown)&<kernel#Datagrams[kernel.Datagrams]> channels.
+
+
+[ Datagram >> gramspace ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`int`
+		
+
+[ Datagram >> gramsize ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`int`
+		
+
+[ Datagram >> addrlen ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`int`
+		
+
+[ Datagram >> addr ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`int[0]`
+		
+
+[ Datagram >> gram ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`char[0]`
+		

@@ -1,0 +1,1 @@
+[["Check bootstrapping operations."], ["- &bootstrap.package_import", "- &bootstrap.module_import"], ["- &bootstrap.load_code"], ["- &bootstrap.install_root", "- &bootstrap.install_packages", "- &bootstrap.install_modules", "- &bootstrap.install", "- &bootstrap.finish", "- &bootstrap.integrate", "", "Test presumes the system project exists under a python/fault context."]]

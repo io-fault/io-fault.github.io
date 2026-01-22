@@ -1,0 +1,92 @@
+"""
+# Terminal Context Stack display for scrolling region capable emulators.
+"""
+import os
+import sys
+from ..terminal import matrix
+
+def _close(screen, om=6, sm=1049):
+	"""
+	# Construct a reset string to be used at exit.
+	"""
+
+	ttype = screen.terminal_type
+	# Save screen, reset SR, and restore screen.
+	# Emulators apparently clear the screen after resetting SR.
+	rststr = \
+		ttype.decset((sm,)) + screen.reset_scrolling_region() + \
+		ttype.decrst((sm,))
+
+	return rststr
+
+def setup(screen, lines:int, width=None, atexit=b'', type='prepared',
+		destruct=True, Context=matrix.Context,
+	):
+	"""
+	# Initialize the terminal for use with a scrolling region.
+	# Constructs a device using &control.setup and a &matrix.Context
+	# pointing to the status region.
+	"""
+	from ..terminal import control
+
+	device = control.setup(type,
+		atexit=screen.close_scrolling_region()+atexit,
+		destruct=destruct,
+	)
+
+	hv = device.get_window_dimensions()
+	screen.context_set_dimensions(hv)
+
+	v = hv[1] - lines
+	if width is not None:
+		h = min(hv[0], width)
+	else:
+		h = hv[0]
+
+	init = screen.open_scrolling_region(0, v-1)
+	#init += screen.terminal_type.decset((om,))
+	#init += screen.seek_bottom()
+	#init += screen.store_cursor_position()
+
+	ctx = Context(screen.terminal_type)
+	ctx.context_set_position((0, v))
+	ctx.context_set_dimensions((h, lines))
+
+	os.write(device.fileno(), init)
+	return device, ctx
+
+def _enter(context:matrix.Context, screen:matrix.Screen) -> bytes:
+	"""
+	# Enter scrolling region; normal terminal output.
+	"""
+	return \
+		screen.terminal_type.decset((om,)) + \
+		screen.restore_cursor_position()
+
+def _exit(context:matrix.Context, screen:matrix.Screen) -> bytes:
+	"""
+	# Exit scrolling region; status terminal output.
+	"""
+	return \
+		screen.store_cursor_position() + \
+		screen.terminal_type.decrst((om,)) + \
+		context.seek_first()
+
+if __name__ == '__main__':
+	import time
+	ttyctl = sys.stderr.buffer.write
+	s = matrix.Screen()
+	device, ctx = setup(s, 1)
+	ttyctl(s.exit_scrolling_region() + ctx.seek_first())
+	ttyctl(b'-> STATUS <-----------------------')
+	ttyctl(s.enter_scrolling_region())
+	sys.stderr.buffer.flush()
+	time.sleep(0.4)
+	while True:
+		ttyctl(b"[start]\n")
+		for i in range(40):
+			ttyctl((i*b'-')+b"> TEST <----------\n")
+			sys.stderr.buffer.flush()
+			time.sleep(0.001 * i)
+		ttyctl(b"[end]\n")
+		time.sleep(0.4)

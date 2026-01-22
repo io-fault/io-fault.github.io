@@ -1,0 +1,1 @@
+[["Module compilation tools."], ["Create a constant for injection into a module."], ["Inject the &ast.Module, &tree, with module-level assignments provided by &constants."], ["Compile a module's source injecting a factor identifier and source hash."]]

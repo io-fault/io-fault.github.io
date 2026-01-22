@@ -1,0 +1,141 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 86 0`
+Utility functions and classes for project and factor filtering cases.
+
+
+[ lsf ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 39`
+
+[ graph ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 31`
+
+[ SQueue ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 29 51`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`7 14 7 19`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
+	
+Queue implementation providing completion signalling interfaces consistent
+with (remote/factor-element)&<http://fault.io/python/project/graph#Queue[fault.project.graph.Queue]>.
+
+
+[ SQueue >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`13 2 15 30`
+(signature)`__init__(self, sequence)`
+
+
+[ SQueue >> take ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`17 2 20 10`
+(signature)`take(self, i)`
+
+
+[ SQueue >> finish ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`22 2 23 6`
+(signature)`finish(self, *items)`
+
+
+[ SQueue >> terminal ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`25 2 26 23`
+(signature)`terminal(self)`
+
+
+[ SQueue >> status ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`28 2 29 51`
+(signature)`status(self)`
+
+
+[ check_keywords ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`31 1 60 42`
+(signature)`check_keywords(keywords, name)`
+
+
+[ projectvector ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`62 1 74 3`
+(signature)`projectvector(factors, projectname)`
+
+
+[ projectgraph ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`76 1 86 9`
+(signature)`projectgraph(factors, projects)`
+

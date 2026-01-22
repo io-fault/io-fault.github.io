@@ -1,0 +1,1 @@
+[["Calculate syntax line statistics using the &profile function."], ["Identify the indentation level and the number of visible characters."], ["Emit a statistics profile using &line_metrics", "against the given &source lines.", "", "The yieled values intend to form a JSON document."]]

@@ -1,0 +1,329 @@
+! CONTROL:
+	/type/
+		unit
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 596 0`
+		- (coverage-zeros)`67`
+		- (coverage-counters)`253`
+
+[ PyMethod_Id ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`437 10 437 30`
+#!source
+	#define PyMethod_Id(N) ks_##N
+
+[ interrupt_wait ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`29 1 56 1`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`9`
+		- (type/syntax)`int`
+		
+(signature)`interrupt_wait(ks)`
+
+Interrupt a running (project-local/unknown)&<kernel#Scheduler.wait[kernel.Scheduler.wait]> call.
+
+[ > Returns ]
+
+/`0`/
+	Not Waiting; no interrupt issued.
+
+/`1`/
+	Scheduler was waiting, but interrupt was already issued.
+
+/`2`/
+	Interrupt issued to system.
+
+
+[ timespec ]
+! CONTROL:
+	/type/
+		structure
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`32 2 32 16`
+
+[ ks_enqueue ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`61 1 84 1`
+		- (coverage-zeros)`4`
+		- (coverage-counters)`15`
+		- (type/syntax)`PyObj`
+		
+(signature)`ks_enqueue(ks, callable)`
+
+(project-local/unknown)&<kernel#Scheduler.enqueue[kernel.Scheduler.enqueue]>
+
+
+[ ks_execute ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`89 1 119 1`
+		- (coverage-zeros)`5`
+		- (coverage-counters)`26`
+		- (type/syntax)`PyObj`
+		
+(signature)`ks_execute(self)`
+
+(project-local/unknown)&<kernel#Scheduler.execute[kernel.Scheduler.execute]>
+
+
+[ ks_termination ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`121 1 170 1`
+		- (coverage-zeros)`6`
+		- (coverage-counters)`25`
+		- (type/syntax)`int`
+		
+(signature)`ks_termination(ks, kq, tq)`
+
+
+[ ks_close ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`175 1 207 1`
+		- (coverage-zeros)`9`
+		- (coverage-counters)`19`
+		- (type/syntax)`PyObj`
+		
+(signature)`ks_close(self)`
+
+(project-local/unknown)&<kernel#Scheduler.close[kernel.Scheduler.close]>
+
+
+[ ks_void ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`212 1 221 1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
+		- (type/syntax)`PyObj`
+		
+(signature)`ks_void(self)`
+
+(project-local/unknown)&<kernel#Scheduler.void[kernel.Scheduler.void]>
+
+
+[ ks_interrupt ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`226 1 253 1`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`12`
+		- (type/syntax)`PyObj`
+		
+(signature)`ks_interrupt(self)`
+
+(project-local/unknown)&<kernel#Scheduler.interrupt[kernel.Scheduler.interrupt]>
+
+
+[ ks_dispatch ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`258 1 305 1`
+		- (coverage-zeros)`5`
+		- (coverage-counters)`32`
+		- (type/syntax)`PyObj`
+		
+(signature)`ks_dispatch(self, args, kw)`
+
+(project-local/unknown)&<kernel#Scheduler.dispatch[kernel.Scheduler.dispatch]>
+
+
+[ ks_cancel ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`310 1 365 1`
+		- (coverage-zeros)`13`
+		- (coverage-counters)`25`
+		- (type/syntax)`PyObj`
+		
+(signature)`ks_cancel(self, ref)`
+
+(project-local/unknown)&<kernel#Scheduler.cancel[kernel.Scheduler.cancel]>
+
+
+[ ks_operations ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`370 1 376 1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
+		- (type/syntax)`PyObj`
+		
+(signature)`ks_operations(self)`
+
+(project-local/unknown)&<kernel#Scheduler.operations[kernel.Scheduler.operations]>
+
+
+[ ks__set_waiting ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`378 1 384 1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
+		- (type/syntax)`PyObj`
+		
+(signature)`ks__set_waiting(self)`
+
+
+[ ks_wait ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`389 1 433 1`
+		- (coverage-zeros)`7`
+		- (coverage-counters)`25`
+		- (type/syntax)`PyObj`
+		
+(signature)`ks_wait(self, args)`
+
+(project-local/unknown)&<kernel#Scheduler.wait[kernel.Scheduler.wait]>
+
+
+[ ks_get_closed ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`461 1 470 1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`6`
+		- (type/syntax)`PyObj`
+		
+(signature)`ks_get_closed(self, closure)`
+
+
+[ ks_get_has_tasks ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`472 1 481 1`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`6`
+		- (type/syntax)`PyObj`
+		
+(signature)`ks_get_has_tasks(self, closure)`
+
+
+[ ks_traverse ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`490 1 504 1`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`11`
+		- (type/syntax)`int`
+		
+(signature)`ks_traverse(self, visit, arg)`
+
+
+[ ks_clear ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`506 1 517 1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
+		- (type/syntax)`int`
+		
+(signature)`ks_clear(self)`
+
+
+[ ks_dealloc ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`522 1 534 1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`5`
+		- (type/syntax)`void`
+		
+(signature)`ks_dealloc(self)`
+
+(project-local/unknown)&<kernel#Scheduler.__del__[kernel.Scheduler.__del__]>
+
+
+[ ks_new ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`539 1 570 1`
+		- (coverage-zeros)`10`
+		- (coverage-counters)`25`
+		- (type/syntax)`PyObj`
+		
+(signature)`ks_new(subtype, args, kw)`
+
+(project-local/unknown)&<kernel#Scheduler.__new__[kernel.Scheduler.__new__]>
+

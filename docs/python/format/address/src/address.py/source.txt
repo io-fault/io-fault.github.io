@@ -1,0 +1,14 @@
+"""
+# Address record display.
+"""
+from . import terminal
+
+def us_postal_addressing(data):
+	heading = (terminal.Field('object-type', "Location"), "")
+	return [
+		heading,
+		(None,),
+		("Address:", terminal.Field('address-line', address)),
+		("City:", terminal.Field('city', city)),
+		("State:", terminal.Field('state', state)),
+	]

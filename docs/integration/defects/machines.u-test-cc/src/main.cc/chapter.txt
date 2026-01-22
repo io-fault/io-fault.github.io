@@ -1,0 +1,8 @@
+! CONTROL:
+	/type/
+		unit
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 20 0`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`

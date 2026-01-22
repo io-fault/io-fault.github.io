@@ -1,0 +1,225 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 169 25`
+Product builds and tests for system integration.
+
+
+[ os ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`4 1 4 9`
+
+[ Iterable ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 46`
+
+[ Sequence ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`5 1 5 46`
+
+[ tools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 7 31`
+
+[ files ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 8 30`
+
+[ terminal ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 1 10 37`
+
+[ proctheme ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 1 11 38`
+
+[ execution ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`12 1 12 38`
+
+[ KInvocation ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`14 1 14 46`
+
+[ lsf ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`15 1 15 39`
+
+[ query ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`17 1 17 24`
+
+[ filters ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`18 1 18 21`
+
+[ options ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`20 1 45 1`
+#!source
+	options = (
+		{
+			'-m': ('set-add', 'metrics', 'features'),
+	
+			'-O': ('set-add', 'optimal', 'features'),
+			'-o': ('set-add', 'portable', 'features'),
+			'-g': ('set-add', 'debug', 'features'),
+	
+			'-y': ('set-add', 'auxilary', 'features'),
+			'-Y': ('set-add', 'capture', 'features'),
+	
+			'--profile': ('set-add', 'profile', 'features'),
+			'--coverage': ('set-add', 'coverage', 'features'),
+	
+			# Reprocess levels.
+			'-N': ('field-replace', -1, 'relevel'),
+			'-n': ('field-replace', +0, 'relevel'),
+			'-r': ('field-replace', +1, 'relevel'),
+			'-R': ('field-replace', +2, 'relevel'),
+	
+			# Defaults to update when missing.
+			'-u': ('field-replace', 'never', 'update-product-index'),
+			'-U': ('field-replace', 'always', 'update-product-index'),
+		},
+		{}
+	)
+
+[ plan ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`47 1 79 29`
+(signature)`plan(command, cc, ccmode, factors, features, cachetype, cachepath, identifier)`
+
+Create an invocation for processing (invalid/unknown)&<#pj> with (factor-local/parameter)&<#plan.Parameters.cc[cc]>.
+
+
+[ integrate ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`81 1 152 17`
+(signature)`integrate(exits, meta, log, config, fx, cc, pdr, argv)`
+
+Complete build connecting requirements and updating indexes.
+
+
+[ identify ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`154 1 158 24`
+(signature)`identify(*args)`
+
+
+[ delineate ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`160 1 164 24`
+(signature)`delineate(*args)`
+
+
+[ measure ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`166 1 170 24`
+(signature)`measure(*args)`
+

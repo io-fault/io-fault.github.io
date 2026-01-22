@@ -1,0 +1,200 @@
+! CONTROL:
+	/type/
+		factor
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+! CONTEXT:
+	/protocol/
+		&<http://if.fault.io/chapters/system.manual>
+
+	/date/
+		`2021-05-29`
+
+	/title/
+		`rename`
+
+	/volume/
+		`USD`
+
+	/section/
+		`1`
+
+	/system/
+		`fault.io`
+
+	/names/
+		# re
+		
+[ NAME ]
+
+Rename a resource at the identified location.
+
+[ SYNOPSIS ]
+
+/re/
+	# -n (invalid/unknown)&<#implied-name>
+	# -.: (invalid/unknown)&<#target-field>
+	# -N (invalid/unknown)&<#replacement>
+	# -P (invalid/unknown)&<#prefix>
+	# -S (invalid/unknown)&<#suffix>
+	# -s.: (invalid/unknown)&<#suffix-replacement>
+	# -p-: (invalid/unknown)&<#prefix-replacement>
+	# -r: (invalid/unknown)&<#recursion-depth>
+	# -R (invalid/unknown)&<#recursion-filter>
+	# -dD
+	# -f
+	# (invalid/unknown)&<#target-argument>
+	# (invalid/unknown)&<#format>
+	
+[ DESCRIPTION ]
+
+Update the names of the resources identified by the givens paths.
+
+Rename is non-destructive by default.
+Any updates that would require a resource to be unlinked must be aborted with an error.
+
+[ OPTIONS ]
+
+/implied-name/
+	Identify all non-option arguments as target files or productions.
+
+	Alternatively, (option-argument)`name` can be given as `-`.
+
+/format/
+	# (optional)`name`
+	
+	The identifier that target files will be renamed as.
+	Required if (option-flag)`n` is not provided.
+
+	When name is given as `-`, the original identifier will be used as the new name.
+	When (option-flag)`n` is given, (option-argument)`name` is implied to be `-`.
+
+/target-field/
+	# `target-field`
+	
+	Identify the property of the resource that should be updated.
+	By default, this is the name of the resource.
+
+	/name/
+		Update the primary identifier of the resource.
+
+	/mime-type/
+		For filesystems supporting internet MIME types, the resource should
+		be identified as being of the defined type.
+
+/target-argument/
+	# (optional)`target-path`
+	# (optional)`...`
+	
+	The paths to the resources that should be renamed.
+	Directories are acted upon directly unless (option-flag)`r` is given *and*
+	a trailing slash is designated.
+
+/replacement/
+	# field-replacement
+	
+	Option level field replacement. In cases where (option-argument)`name` is implied,
+	this allows the replacement to be designated.
+
+/prefix/
+	# field-prefix
+	
+	Unconditionally prepend a string to the field.
+
+/suffix/
+	# field-suffix
+	
+	Unconditionally append a string to the field.
+
+/suffix-replacement/
+	# suffix
+	
+	Replace the suffix of the new field. Normally, this is a dot-extension, but
+	any character may be designated as the separator: `-s#fragment`, `-s,comma-suffix`.
+
+	If the field has no suffix, add one.
+	If an empty suffix is given, remove the identified suffix from the field.
+
+/prefix-replacement/
+	# prefix
+	
+	Replace the prefix of the new field. A dash is used as a placeholder, but
+	any character may be designated as the separator: `-p_new-prefix`, `-p:new-prefix`.
+	Where `_` and `:` are the separators used to identify the prefix.
+
+	If the field has no prefix, add one.
+	If an empty prefix is given, remove the identified prefix from the field.
+
+/recursion-depth/
+	# (optional)`depth-limit`
+	
+	Decimal indicating the maximum depth that should be used within the production.
+	Zero causes empty productions. An unspecified limit causes unbounded descent.
+
+	Only `target-path` arguments with trailing slashes will be subject to descent.
+
+/recursion-filter/
+	# `filter-expression`
+	
+	When recursion is enabled, target files identified as productions will be scanned
+	for resources. If filter expressions are provided, the productions will be limited
+	to those resources that match one of the provided expressions.
+
+	This option may be given multiple times.
+
+/-D/
+	Restrict recursive productions to only directories.
+	Default is non-directory resources only.
+
+/-d/
+	Include directories in recursive productions.
+	Default is non-directory resources only.
+
+/-dD/
+	When both are presented in the same field, reset directory inclusion to
+	the default of non-directory resources.
+
+/-f/
+	Force the operation to be performed causing any conflicts to be resolved
+	by removing the conflicting resource.
+
+If no target arguments are supplied, success will be reported and no resources will
+be modified. Essentially, it serves as a usage check.
+
+[ DIAGNOSTICS ]
+
+Returns zero on success and non-zero on failure.
+
+[ ENVIRONMENT ]
+
+/(environ)`FS`/
+	Environment variables identifying the composition of the virtual filesystem.
+
+[ EXAMPLES ]
+
+Simple rename:
+
+#!syntax/shell
+	re path/to/resource new-filename.txt
+	
+Change the suffix of file:
+
+#!syntax/shell
+	re -n -s.o path/to/misqualified-object.i
+	
+Prefix the files directly within a directory:
+
+#!syntax/shell
+	re -n -p-ns -r1 path/to/directory/
+	
+[ AUTHORS ]
+
+- http://fault.io
+
+[ SEE ALSO ]
+
+(invalid/unknown)&<#mv.1>
+
+&<http://fault.io/initiatives/fs-cli[system.files]>
+

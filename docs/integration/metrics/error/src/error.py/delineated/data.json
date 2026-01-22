@@ -1,0 +1,1 @@
+[[["required"], ["restricted"]], [{"syntax": "{\n\t'-C': ('subfield-replace', 'system-exit-codes'),\n\t'-c': ('field-replace', 'default-exit-code'),\n}", "area": [[11, 12], [14, 1]]}, {"syntax": "{}", "area": [[16, 14], [16, 15]]}]]

@@ -1,0 +1,72 @@
+! CONTROL:
+	/type/
+		unit
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 88 0`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
+
+[ TEST_SUITE_EXTENSION ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 9 6 28`
+#!source
+	#define TEST_SUITE_EXTENSION
+
+[ _TEST_HARNESS_FUNCTIONS ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 9 7 31`
+#!source
+	#define _TEST_HARNESS_FUNCTIONS
+
+[ stat ]
+! CONTROL:
+	/type/
+		structure
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`13 2 13 12`
+
+[ stat ]
+! CONTROL:
+	/type/
+		structure
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`28 2 28 12`
+
+[ stat ]
+! CONTROL:
+	/type/
+		structure
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`63 2 63 12`
+
+[ stat ]
+! CONTROL:
+	/type/
+		structure
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`78 2 78 12`

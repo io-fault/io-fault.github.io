@@ -1,0 +1,21 @@
+! CONTEXT:
+	/protocol/
+		&<http://if.fault.io/text/type.factor>
+	/identifier/
+		&<http://if.fault.io/factors/python>
+	/icon/
+		&<data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNTYiIGhlaWdodD0iMjU2Ij48aW1hZ2Ugd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgeD0iMCIgeT0iMCIgaHJlZj0iaHR0cHM6Ly9kb2NzLnB5dGhvbi5vcmcvMy9fc3RhdGljL3B5LnN2ZyI+PC9pbWFnZT48L3N2Zz4=>
+
+Abstract Factor Type for Python factors.
+
+[ Source Formats ]
+
+/psf-v3/
+	The Python syntax for version 3 of the cpython implementation.
+	Dialect extensions imply the minimum minor version.
+/psf-v2/
+	The Python syntax for version 2 of the cpython implementation.
+	Dialect extensions imply the minimum minor version.
+
+/lisp-hy/
+	The lisp syntax employed by the hy programming language.

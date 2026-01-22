@@ -1,0 +1,1 @@
+[["Process delineated json to be free of trailing commas.", "", "The clang delineation tool intentionally leaves trailing commas in order", "to simplify serialization procedures. However, JSON mandates their absence.", "", "In order for this tool to operate safely, commas present in JSON strings must be escaped."]]

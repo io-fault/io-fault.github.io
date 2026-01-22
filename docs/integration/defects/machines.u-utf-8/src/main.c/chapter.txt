@@ -1,0 +1,73 @@
+! CONTROL:
+	/type/
+		unit
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 133 0`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
+
+[ RECODE_TESTS ]
+! CONTROL:
+	/type/
+		define
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`44 9 63 2`
+#!source
+	#define RECODE_TESTS(N) \
+		Test(recode_##N##_byte_samples) \
+		{ \
+			const size_t n_samples = sizeof(samples_##N##_bytes) / sizeof(struct sample_utf_8); \
+			struct sample_utf_8 *samples = samples_##N##_bytes; \
+			\
+			for (int i = 0; i < n_samples; ++i) \
+			{ \
+				uint32_t cp = 0xFFFFFFFF; \
+				struct sample_utf_8 *su = &samples[i]; \
+				uint8_t etxt[5]; \
+				size_t used, ets; \
+				ets = utf8_sequence_codepoint(etxt, su->codepoint); \
+				etxt[ets] = 0; \
+				used = utf8_identify_codepoint(&cp, etxt, ets); \
+				test->equality(used, ets); \
+				test->equality(cp, su->codepoint); \
+				test->memcmp(etxt, su->string, ets); \
+			} \
+		}
+
+[ sample_utf_8 ]
+! CONTROL:
+	/type/
+		structure
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`12 1 15 1`
+
+[ sample_utf_8 >> codepoint ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`int`
+		
+
+[ sample_utf_8 >> string ]
+! CONTROL:
+	/type/
+		field
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)``
+		- (type/syntax)`const int *`
+		

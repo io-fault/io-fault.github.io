@@ -1,0 +1,1 @@
+[["Measure the source presented on standard input using &syntax.profile", "and write the JSON document to standard output.", "", "The first record in the sequence is the aggregate profile and", "each following record describes the indentation level corresponding", "to the index. (IL-0 being the second, IL-1 being the third, etc.)"]]

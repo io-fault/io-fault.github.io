@@ -1,0 +1,149 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 134 0`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
+Compile Python modules into stored bytecode.
+
+Provide high-level functions for compiling Python module into stored bytecode.
+
+
+[ os ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`6 1 6 9`
+
+[ builtins ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 7 15`
+
+[ pickle ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 8 13`
+
+[ process ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 1 10 32`
+
+[ files ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`11 1 11 30`
+
+[ mkbytecode ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`13 1 32 46`
+(signature)`mkbytecode(target, unit, language, dialect, optimize)`
+
+
+[ write_coverage_mapping ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`34 1 45 34`
+(signature)`write_coverage_mapping(path, cmd, areaset)`
+
+
+[ mkast ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`47 1 82 38`
+(signature)`mkast(target, origin, language, dialect, optimize, instrumentation)`
+
+
+[ delineate ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`84 1 87 58`
+(signature)`delineate(output, origin, params)`
+
+
+[ replicate ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`89 1 91 28`
+(signature)`replicate(target, origin)`
+
+
+[ archive ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`93 1 97 26`
+(signature)`archive(output, source)`
+
+Copy the units directory, (factor-local/parameter)&<#archive.Parameters.source[source]>, to the target image location (factor-local/parameter)&<#archive.Parameters.output[output]>.
+
+
+[ main ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`99 1 129 19`
+		- (type/syntax)`process.Exit`
+		- (type/remote/factor-element)&<http://fault.io/python/system/process#Exit[fault.system.process.Exit]>
+		
+(signature)`main(inv)`
+

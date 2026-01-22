@@ -1,0 +1,53 @@
+/**
+	// Common structures and interfaces for supporting binary string
+	// composition and transmission.
+*/
+#ifndef _FAULT_OCTETS_H_
+#define _FAULT_OCTETS_H_
+
+enum DataForm {
+	df_invalid_type = 0,
+	df_iov_type = 1,
+	df_octets_type = 2,
+	df_octets_field_vectors = 3
+};
+
+struct DataComposition;
+struct DataComposition {
+	struct DataComposition *ds_reference;
+	octets_segment_t ds_vector_type;
+
+	union {
+		struct iovec *iov;
+		octets_t *dsv;
+		struct 
+	} ds_contents;
+};
+
+struct DataAllocationControls {
+	void * (*dac_allocate)(size_t);
+	void * (*dac_delta)(void *, size_t);
+	void (*dac_release)(void *);
+};
+
+static void *_fo_salloc(size_t) {return(NULL);}
+static void *_fo_realloc(void *p, size_t s) {return(p);}
+static void _fo_free(void *) {return;}
+struct DataAllocationControls default_dac_index[] = {
+	{_fo_salloc, _fo_realloc, _fo_free},
+	{malloc, realloc, free},
+};
+extern struct DataAllocationControls *process_dac_index;
+
+struct DataSegment {
+	uint8_t *bytes;
+	size_t length : 24;
+	
+};
+
+/**
+	// Single data segment
+*/
+typedef struct DataSegment octets_t;
+#endif
+
