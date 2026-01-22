@@ -10,6 +10,7 @@ from fault.context import tools
 from fault.vector import recognition
 from fault.system import files
 from fault.system import process
+from fault.status import frames
 
 from fault.system import execution
 from fault.project import system as lsf
@@ -22,6 +23,11 @@ restricted = {
 	'-e': ('field-replace', True, 'efficiency'),
 	'-A': ('field-replace', False, 'accuracy'),
 	'-a': ('field-replace', True, 'accuracy'),
+	'--opened-frames': ('field-replace', True, 'opened-frames'),
+	'--closed-frames': ('field-replace', False, 'opened-frames'),
+
+	'-K': ('field-replace', False, 'reset-metrics'),
+	'-k': ('field-replace', True, 'reset-metrics'),
 }
 
 required = {
@@ -34,18 +40,16 @@ required = {
 	'-C': ('field-replace', 'persistent-cache'),
 }
 
-def execute(exe, argv, *, quiet=False):
+def execute(exe, argv):
 	xpath = str(exe)
 	args = [xpath] + list(argv)
-
-	if not quiet:
-		print('-> ' + ' '.join(args), file=sys.stderr, flush=True)
 
 	ki = execution.KInvocation(xpath, args)
 	return execution.perform(ki)
 
 def configure(restricted, required, argv):
 	config = {
+		'opened-frames': False,
 		'processing-lanes': '4',
 		'status-monitors': None,
 		'machines-context-name': None,
@@ -54,6 +58,7 @@ def configure(restricted, required, argv):
 		'product-directory': None,
 		'cache-directory': None,
 
+		'reset-metrics': True,
 		'efficiency': False,
 		'accuracy': True,
 	}
@@ -63,39 +68,60 @@ def configure(restricted, required, argv):
 
 	return config, remainder
 
+def framew(file, typ, title, ext, channel=''):
+	file.write(frames.sequence(frames.compose(typ, title, channel, ext)))
+
 def main(inv:process.Invocation):
+	pwd = process.fs_pwd()
 	config, argv = configure(restricted, required, inv.argv)
 	env, exepath, xargv = query.dispatch('fictl')
-	xargv[0] = xargv[1]
-	del xargv[1:]
+	xargv = xargv[1:]
 	selection, test = argv
 
+	pd = pwd@config['product-directory']
+	if config['opened-frames']:
+		ctx = ['--opened-frames']
+	else:
+		ctx = ['--closed-frames']
 	ctx = []
+
 	for opt, (op, slot) in required.items():
 		if config[slot] is not None:
 			ctx.append(opt)
 			ctx.append(config[slot])
-	#exepath = '/bin/echo'
-	ficmd = (lambda cmd, a: execute(exepath, xargv + [cmd] + ctx + a, quiet=False))
+	ficmd = (lambda cmd, a: execute(exepath, xargv + [cmd] + ctx + a))
+	sf = (lambda t, m, x: framew(sys.stdout, t, m, x))
 
 	# Integration tests.
-	#ficmd('integrate', [selection])
+	sf('->', 'Factor analysis: ' + selection, {})
 
-	# Coverage
-	if config['accuracy']:
-		ficmd('integrate', ['--coverage', '-Rg', selection])
-		#ficmd('switch', ['--coverage', '-g', selection])
-		ficmd('delineate', [selection])
-		ficmd('test', [test])
-	else:
-		# Still need delineated forms.
-		ficmd('delineate', [selection])
+	if config['reset-metrics']:
+		if (pd/'.metrics').fs_type() != 'void':
+			(pd/'.metrics').fs_void()
+			sf('-.', str(pd/'.metrics'), {})
 
-	# Profiling
-	if config['efficiency']:
-		ficmd('integrate', ['--profiling', '-O', selection])
-		ficmd('switch', ['--profiling', '-O', selection])
-		ficmd('test', [test])
+	sys.stdout.flush()
+	try:
+		#ficmd('integrate', [selection])
 
-	# Aggregate metrics for printing.
-	ficmd('measure', [selection])
+		# Coverage
+		if config['accuracy']:
+			ficmd('integrate', ['--coverage', '-Rg', selection])
+			#ficmd('switch', ['--coverage', '-g', selection])
+			ficmd('delineate', [selection])
+			ficmd('test', [test])
+		else:
+			# Still need delineated forms.
+			ficmd('delineate', [selection])
+
+		# Profiling
+		if config['efficiency']:
+			ficmd('integrate', ['--profiling', '-O', selection])
+			ficmd('switch', ['--profiling', '-O', selection])
+			ficmd('test', [test])
+
+		# Aggregate metrics for printing.
+		ficmd('measure', [selection])
+	finally:
+		sf('<-', 'Analysis complete', {})
+		sys.stdout.flush()

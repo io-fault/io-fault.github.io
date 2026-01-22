@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 1108 0`
-		- (coverage-zeros)`94`
-		- (coverage-counters)`533`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 Filesystem interfaces and data structures.
 
 Current working directory related interfaces are provided in (project-local/unknown)&<process>.
@@ -50,8 +50,6 @@ Current working directory related interfaces are provided in (project-local/unkn
 	/element/
 		- (control)`property-set`
 		- (source/area)`18 1 18 38`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ os ]
 ! CONTROL:
@@ -62,8 +60,6 @@ Current working directory related interfaces are provided in (project-local/unkn
 	/element/
 		- (control)`property-set`
 		- (source/area)`19 1 19 9`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 
 [ os ]
 ! CONTROL:
@@ -74,8 +70,6 @@ Current working directory related interfaces are provided in (project-local/unkn
 	/element/
 		- (control)`property-set`
 		- (source/area)`20 1 20 14`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 
 [ sys ]
 ! CONTROL:
@@ -86,8 +80,6 @@ Current working directory related interfaces are provided in (project-local/unkn
 	/element/
 		- (control)`property-set`
 		- (source/area)`21 1 21 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ contextlib ]
 ! CONTROL:
@@ -98,8 +90,6 @@ Current working directory related interfaces are provided in (project-local/unkn
 	/element/
 		- (control)`property-set`
 		- (source/area)`22 1 22 17`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ collections ]
 ! CONTROL:
@@ -110,8 +100,6 @@ Current working directory related interfaces are provided in (project-local/unkn
 	/element/
 		- (control)`property-set`
 		- (source/area)`23 1 23 18`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ stat ]
 ! CONTROL:
@@ -122,8 +110,6 @@ Current working directory related interfaces are provided in (project-local/unkn
 	/element/
 		- (control)`property-set`
 		- (source/area)`24 1 24 11`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ itertools ]
 ! CONTROL:
@@ -134,8 +120,6 @@ Current working directory related interfaces are provided in (project-local/unkn
 	/element/
 		- (control)`property-set`
 		- (source/area)`25 1 25 16`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ functools ]
 ! CONTROL:
@@ -146,8 +130,6 @@ Current working directory related interfaces are provided in (project-local/unkn
 	/element/
 		- (control)`property-set`
 		- (source/area)`26 1 26 16`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ shutil ]
 ! CONTROL:
@@ -158,8 +140,6 @@ Current working directory related interfaces are provided in (project-local/unkn
 	/element/
 		- (control)`property-set`
 		- (source/area)`29 1 29 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ tempfile ]
 ! CONTROL:
@@ -170,8 +150,6 @@ Current working directory related interfaces are provided in (project-local/unkn
 	/element/
 		- (control)`property-set`
 		- (source/area)`30 1 30 15`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ cachedcalls ]
 ! CONTROL:
@@ -182,8 +160,6 @@ Current working directory related interfaces are provided in (project-local/unkn
 	/element/
 		- (control)`property-set`
 		- (source/area)`32 1 32 39`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ Selector ]
 ! CONTROL:
@@ -204,8 +180,6 @@ Current working directory related interfaces are provided in (project-local/unkn
 	/element/
 		- (control)`property-set`
 		- (source/area)`33 1 33 43`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ type_codes ]
 ! CONTROL:
@@ -214,8 +188,6 @@ Current working directory related interfaces are provided in (project-local/unkn
 	/element/
 		- (control)`property-set`
 		- (source/area)`35 1 45 1`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 Single character representations for file types.
 Primarily used by (factor-local/method)&<#Path.fs_require[Path.fs_require]>.
 
@@ -239,8 +211,6 @@ Primarily used by (factor-local/method)&<#Path.fs_require[Path.fs_require]>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`47 1 101 26`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`47 28 47 36`
@@ -293,8 +263,6 @@ Exception raised by (factor-local/method)&<#Path.fs_require[Path.fs_require]> wh
 	/element/
 		- (control)`property-set`
 		- (source/area)`76 2 82 32`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
 (signature)`__init__(self, subject, type, violation, rtype, properties)`
 
 
@@ -307,8 +275,6 @@ Exception raised by (factor-local/method)&<#Path.fs_require[Path.fs_require]> wh
 	/element/
 		- (control)`property-set`
 		- (source/area)`84 2 101 26`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`14`
 (signature)`__str__(self)`
 
 
@@ -319,8 +285,6 @@ Exception raised by (factor-local/method)&<#Path.fs_require[Path.fs_require]> wh
 	/element/
 		- (control)`property-set`
 		- (source/area)`103 1 273 16`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`103 14 103 18`
@@ -345,8 +309,6 @@ Likely undesired noise if a stat-cache is employed by (factor-local/class)&<#Pat
 	/element/
 		- (control)`property-set`
 		- (source/area)`112 2 112 15`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	__slots__ = ()
 
@@ -359,8 +321,6 @@ Likely undesired noise if a stat-cache is employed by (factor-local/class)&<#Pat
 	/element/
 		- (control)`property-set`
 		- (source/area)`114 2 122 2`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	_fs_type_map = {
 		stat.S_IFIFO: 'pipe',
@@ -381,8 +341,6 @@ Likely undesired noise if a stat-cache is employed by (factor-local/class)&<#Pat
 	/element/
 		- (control)`property-set`
 		- (source/area)`124 2 129 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	_fs_subtype_map = {
 		stat.S_IFBLK: 'block',
@@ -399,8 +357,6 @@ Likely undesired noise if a stat-cache is employed by (factor-local/class)&<#Pat
 	/element/
 		- (control)`property-set`
 		- (source/area)`130 2 135 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 
 [ Status >> _read_user ]
 ! CONTROL:
@@ -411,8 +367,6 @@ Likely undesired noise if a stat-cache is employed by (factor-local/class)&<#Pat
 	/element/
 		- (control)`property-set`
 		- (source/area)`136 2 141 10`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`3`
 
 [ Status >> _read_group ]
 ! CONTROL:
@@ -423,8 +377,6 @@ Likely undesired noise if a stat-cache is employed by (factor-local/class)&<#Pat
 	/element/
 		- (control)`property-set`
 		- (source/area)`142 2 147 13`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`3`
 
 [ Status >> from_route ]
 ! CONTROL:
@@ -435,8 +387,6 @@ Likely undesired noise if a stat-cache is employed by (factor-local/class)&<#Pat
 	/element/
 		- (control)`property-set`
 		- (source/area)`148 2 151 10`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`from_route(Class, route)`
 
 
@@ -447,8 +397,6 @@ Likely undesired noise if a stat-cache is employed by (factor-local/class)&<#Pat
 	/element/
 		- (control)`property-set`
 		- (source/area)`152 2 158 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 The status record produced by the system ((none/invalid)&<http://fault.io/dev/null[os.path.stat]>).
 
 
@@ -459,8 +407,6 @@ The status record produced by the system ((none/invalid)&<http://fault.io/dev/nu
 	/element/
 		- (control)`property-set`
 		- (source/area)`159 2 163 16`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`3`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -476,8 +422,6 @@ The name of the file.
 	/element/
 		- (control)`property-set`
 		- (source/area)`165 2 170 10`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`__add__(self, operand)`
 
 
@@ -488,8 +432,6 @@ The name of the file.
 	/element/
 		- (control)`property-set`
 		- (source/area)`171 2 177 10`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`3`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
@@ -503,8 +445,6 @@ Number of bytes contained by the file.
 	/element/
 		- (control)`property-set`
 		- (source/area)`178 2 197 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -537,8 +477,6 @@ Number of bytes contained by the file.
 	/element/
 		- (control)`property-set`
 		- (source/area)`198 2 207 10`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`4`
 		- (type/syntax)`Optional[str]`
 		
 For POSIX-type systems, designates the kind of (id)`device`:
@@ -554,8 +492,6 @@ For POSIX-type systems, designates the kind of (id)`device`:
 	/element/
 		- (control)`property-set`
 		- (source/area)`208 2 214 10`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 Time of creation; UTC. Not available on all systems.
 
 
@@ -566,8 +502,6 @@ Time of creation; UTC. Not available on all systems.
 	/element/
 		- (control)`property-set`
 		- (source/area)`215 2 221 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 Time of last modification; UTC.
 
 
@@ -578,8 +512,6 @@ Time of last modification; UTC.
 	/element/
 		- (control)`property-set`
 		- (source/area)`222 2 228 10`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 Time of last access; UTC.
 
 
@@ -590,8 +522,6 @@ Time of last access; UTC.
 	/element/
 		- (control)`property-set`
 		- (source/area)`229 2 235 10`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 Time of last status change; UTC.
 
 
@@ -604,8 +534,6 @@ Time of last status change; UTC.
 	/element/
 		- (control)`property-set`
 		- (source/area)`236 2 239 10`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 
 [ Status >> group ]
 ! CONTROL:
@@ -616,8 +544,6 @@ Time of last status change; UTC.
 	/element/
 		- (control)`property-set`
 		- (source/area)`240 2 243 10`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 
 [ Status >> setuid ]
 ! CONTROL:
@@ -628,8 +554,6 @@ Time of last status change; UTC.
 	/element/
 		- (control)`property-set`
 		- (source/area)`244 2 247 10`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 
 [ Status >> setgid ]
 ! CONTROL:
@@ -640,8 +564,6 @@ Time of last status change; UTC.
 	/element/
 		- (control)`property-set`
 		- (source/area)`248 2 251 10`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 
 [ Status >> sticky ]
 ! CONTROL:
@@ -652,8 +574,6 @@ Time of last status change; UTC.
 	/element/
 		- (control)`property-set`
 		- (source/area)`252 2 255 10`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 
 [ Status >> executable ]
 ! CONTROL:
@@ -662,8 +582,6 @@ Time of last status change; UTC.
 	/element/
 		- (control)`property-set`
 		- (source/area)`256 2 264 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
 		- (type/syntax)`bool`
 		- (type/invalid/unknown)&<#bool>
 		
@@ -679,8 +597,6 @@ Extended attributes are not checked.
 	/element/
 		- (control)`property-set`
 		- (source/area)`265 2 273 16`
-		- (coverage-zeros)`4`
-		- (coverage-counters)`6`
 		- (type/syntax)`bool`
 		- (type/invalid/unknown)&<#bool>
 		
@@ -698,8 +614,6 @@ Extended attributes are not checked.
 	/element/
 		- (control)`property-set`
 		- (source/area)`274 1 280 30`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
 (signature)`path_string_cache(path)`
 
 
@@ -710,8 +624,6 @@ Extended attributes are not checked.
 	/element/
 		- (control)`property-set`
 		- (source/area)`282 1 1104 14`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`282 12 282 24`
@@ -734,8 +646,6 @@ available for getting the working directory of the process.
 	/element/
 		- (control)`property-set`
 		- (source/area)`291 2 291 35`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	__slots__ = ('context', 'points',)
 
@@ -748,8 +658,6 @@ available for getting the working directory of the process.
 	/element/
 		- (control)`property-set`
 		- (source/area)`293 2 293 33`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	Violation = RequirementViolation
 
@@ -762,8 +670,6 @@ available for getting the working directory of the process.
 	/element/
 		- (control)`property-set`
 		- (source/area)`295 2 295 43`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	_root_path = _path_separator = os.path.sep
 
@@ -776,8 +682,6 @@ available for getting the working directory of the process.
 	/element/
 		- (control)`property-set`
 		- (source/area)`296 2 299 3`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	_fs_access = staticmethod(functools.partial(
 		os.access,
@@ -793,8 +697,6 @@ available for getting the working directory of the process.
 	/element/
 		- (control)`property-set`
 		- (source/area)`300 2 306 2`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	_fs_access_map = {
 		'r': os.R_OK,
@@ -813,8 +715,6 @@ available for getting the working directory of the process.
 	/element/
 		- (control)`property-set`
 		- (source/area)`308 2 361 13`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`27`
 (signature)`fs_require(self)`
 
 
@@ -825,8 +725,6 @@ available for getting the working directory of the process.
 	/element/
 		- (control)`property-set`
 		- (source/area)`362 2 379 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
 (signature)`from_path(Class, path)`
 
 Construct a (factor-local/class)&<#Path[Path]> instance from the given absolute or relative path
@@ -846,8 +744,6 @@ directory is *not* the relevant context.
 	/element/
 		- (control)`property-set`
 		- (source/area)`380 2 397 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
 (signature)`from_relative(Class, context, path)`
 
 Return a new Route pointing to the file referenced by (factor-local/parameter)&<#Path.from_relative.Parameters.path[path]>;
@@ -868,8 +764,6 @@ appropriate constructor to use.
 	/element/
 		- (control)`property-set`
 		- (source/area)`398 2 401 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`from_absolute(Class, path)`
 
 
@@ -882,8 +776,6 @@ appropriate constructor to use.
 	/element/
 		- (control)`property-set`
 		- (source/area)`402 2 415 14`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`8`
 (signature)`from_absolute_parts(Class, start, *paths)`
 
 
@@ -896,8 +788,6 @@ appropriate constructor to use.
 	/element/
 		- (control)`property-set`
 		- (source/area)`416 2 419 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 		- (type/syntax)`Iterable[Sequence[str]]`
 		
 (signature)`_partition_string(path)`
@@ -910,8 +800,6 @@ appropriate constructor to use.
 	/element/
 		- (control)`property-set`
 		- (source/area)`420 2 425 61`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`from_partitioned_string(Class, path)`
 
 Construct an absolute path while interpreting consecutive separators
@@ -927,8 +815,6 @@ as distinct partitions.
 	/element/
 		- (control)`property-set`
 		- (source/area)`427 2 435 27`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
 (signature)`__matmul__(self, path)`
 
 
@@ -939,8 +825,6 @@ as distinct partitions.
 	/element/
 		- (control)`property-set`
 		- (source/area)`436 2 457 15`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`9`
 (signature)`fs_tmpdir(Class)`
 
 Create a temporary directory at a new route using a context manager.
@@ -963,8 +847,6 @@ behavior on some platforms.
 	/element/
 		- (control)`property-set`
 		- (source/area)`459 2 464 41`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`5`
 (signature)`__repr__(self)`
 
 
@@ -977,8 +859,6 @@ behavior on some platforms.
 	/element/
 		- (control)`property-set`
 		- (source/area)`466 2 469 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`__str__(self)`
 
 
@@ -989,8 +869,6 @@ behavior on some platforms.
 	/element/
 		- (control)`property-set`
 		- (source/area)`470 2 482 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`9`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -1004,8 +882,6 @@ Returns the full filesystem path designated by the route.
 	/element/
 		- (control)`property-set`
 		- (source/area)`483 2 490 58`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 		- (type/syntax)`bytes`
 		- (type/invalid/unknown)&<#bytes>
 		
@@ -1021,8 +897,6 @@ returned by encoding the (factor-local/property)&<#Path.fullpath[fullpath]> in (
 	/element/
 		- (control)`property-set`
 		- (source/area)`492 2 511 10`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`11`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -1041,8 +915,6 @@ Segment instances should be given with an asterisk applied to the argument.
 	/element/
 		- (control)`property-set`
 		- (source/area)`512 2 518 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 Filesystem specific alias for (invalid/unknown)&<#identifier>.
 
 
@@ -1053,8 +925,6 @@ Filesystem specific alias for (invalid/unknown)&<#identifier>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`519 2 530 16`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
 Return the last dot-extension of the filename.
 (invalid/unknown)&<#None> if the filename has no `.` characters at all.
 
@@ -1066,8 +936,6 @@ Return the last dot-extension of the filename.
 	/element/
 		- (control)`property-set`
 		- (source/area)`532 2 539 51`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`suffix_filename(self, appended_suffix)`
 
 Modify the name of the file adding the given suffix.
@@ -1084,8 +952,6 @@ Returns a new (factor-local/class)&<#Path[Path]> Route.
 	/element/
 		- (control)`property-set`
 		- (source/area)`540 2 540 25`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	suffix = suffix_filename
 
@@ -1096,8 +962,6 @@ Returns a new (factor-local/class)&<#Path[Path]> Route.
 	/element/
 		- (control)`property-set`
 		- (source/area)`542 2 549 49`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`prefix_filename(self, prefix_string)`
 
 Modify the name of the file adding the given prefix.
@@ -1114,8 +978,6 @@ Returns a new (factor-local/class)&<#Path[Path]> Route.
 	/element/
 		- (control)`property-set`
 		- (source/area)`550 2 550 25`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	prefix = prefix_filename
 
@@ -1128,8 +990,6 @@ Returns a new (factor-local/class)&<#Path[Path]> Route.
 	/element/
 		- (control)`property-set`
 		- (source/area)`552 2 566 44`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`14`
 (signature)`__pos__(self)`
 
 
@@ -1140,8 +1000,6 @@ Returns a new (factor-local/class)&<#Path[Path]> Route.
 	/element/
 		- (control)`property-set`
 		- (source/area)`568 2 592 3`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`11`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -1162,8 +1020,6 @@ path entries delimiting partitions are eliminated.
 	/element/
 		- (control)`property-set`
 		- (source/area)`593 2 593 28`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	__fspath__ = fs_path_string
 
@@ -1176,8 +1032,6 @@ path entries delimiting partitions are eliminated.
 	/element/
 		- (control)`property-set`
 		- (source/area)`595 2 596 55`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 		- (type/syntax)`Status`
 		- (type/factor-local/class)&<#Status[Status]>
 		
@@ -1191,8 +1045,6 @@ path entries delimiting partitions are eliminated.
 	/element/
 		- (control)`property-set`
 		- (source/area)`598 2 619 49`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`11`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -1220,8 +1072,6 @@ If no file is present at the path or a broken link is present, `'void'` will be 
 	/element/
 		- (control)`property-set`
 		- (source/area)`621 2 627 27`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`6`
 		- (type/syntax)`bool`
 		- (type/invalid/unknown)&<#bool>
 		
@@ -1239,8 +1089,6 @@ Whether the file at the route is considered to be an executable.
 	/element/
 		- (control)`property-set`
 		- (source/area)`629 2 643 9`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`12`
 		- (type/syntax)`Iterable[Selector]`
 		
 (signature)`fs_follow_links(self)`
@@ -1253,8 +1101,6 @@ Whether the file at the route is considered to be an executable.
 	/element/
 		- (control)`property-set`
 		- (source/area)`645 2 675 13`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`16`
 (signature)`fs_iterfiles()`
 
 Generate (factor-local/class)&<#Path[Path]> instances identifying the files held by the directory, (invalid/unknown)&<#self>.
@@ -1271,8 +1117,6 @@ If (invalid/unknown)&<#self> is not a directory or cannot be searched, an empty 
 	/element/
 		- (control)`property-set`
 		- (source/area)`677 2 705 22`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`16`
 (signature)`fs_list(self)`
 
 Retrieve the list of files contained by the directory referred to by (factor-local/parameter)&<#Path.fs_list.Parameters.self[self]>.
@@ -1288,8 +1132,6 @@ Sockets, pipes, devices, and other non-data files are not retained in the list.
 	/element/
 		- (control)`property-set`
 		- (source/area)`707 2 728 18`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`11`
 (signature)`fs_index(self)`
 
 Generate pairs of directories associated with their files.
@@ -1306,8 +1148,6 @@ Sockets, pipes, devices, broken links, and other non-data files are not retained
 	/element/
 		- (control)`property-set`
 		- (source/area)`730 2 808 17`
-		- (coverage-zeros)`13`
-		- (coverage-counters)`48`
 (signature)`fs_snapshot()`
 
 
@@ -1318,8 +1158,6 @@ Sockets, pipes, devices, broken links, and other non-data files are not retained
 	/element/
 		- (control)`property-set`
 		- (source/area)`810 2 845 52`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`15`
 		- (type/syntax)`Iterable[tuple[int, Selector]]`
 		
 (signature)`fs_since(self, since)`
@@ -1356,8 +1194,6 @@ The resulting iterable does not include directories.
 	/element/
 		- (control)`property-set`
 		- (source/area)`847 2 852 13`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`4`
 (signature)`fs_real(self)`
 
 
@@ -1368,8 +1204,6 @@ The resulting iterable does not include directories.
 	/element/
 		- (control)`property-set`
 		- (source/area)`854 2 861 30`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`3`
 		- (type/syntax)`bool`
 		- (type/invalid/unknown)&<#bool>
 		
@@ -1387,8 +1221,6 @@ A Route to a symbolic link *will* return (invalid/unknown)&<#False> if the targe
 	/element/
 		- (control)`property-set`
 		- (source/area)`863 2 867 29`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`fs_modified(self)`
 
 Update the modification time of the file identified by (factor-local/parameter)&<#Path.fs_modified.Parameters.self[self]>.
@@ -1401,8 +1233,6 @@ Update the modification time of the file identified by (factor-local/parameter)&
 	/element/
 		- (control)`property-set`
 		- (source/area)`869 2 873 58`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
@@ -1418,8 +1248,6 @@ Return the size of the file as depicted by (none/invalid)&<http://fault.io/dev/n
 	/element/
 		- (control)`property-set`
 		- (source/area)`875 2 880 39`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
@@ -1435,8 +1263,6 @@ Return the modification time of the file.
 	/element/
 		- (control)`property-set`
 		- (source/area)`882 2 887 62`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`set_last_modified(self, time)`
 
 Set the modification time of the file identified by the (invalid/unknown)&<#Route>.
@@ -1449,8 +1275,6 @@ Set the modification time of the file identified by the (invalid/unknown)&<#Rout
 	/element/
 		- (control)`property-set`
 		- (source/area)`889 2 894 18`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -1466,8 +1290,6 @@ Retrieve the entire contents of the file as a (invalid/unknown)&<#str>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`896 2 901 18`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 		- (type/syntax)`None`
 		
 (signature)`set_text_content(self, string)`
@@ -1482,8 +1304,6 @@ Modify the regular file identified by (factor-local/parameter)&<#Path.set_text_c
 	/element/
 		- (control)`property-set`
 		- (source/area)`903 2 912 51`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`3`
 (signature)`meta(self)`
 
 Return file specific meta data.
@@ -1501,8 +1321,6 @@ Return file specific meta data.
 	/element/
 		- (control)`property-set`
 		- (source/area)`914 2 931 13`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`10`
 (signature)`fs_void(self)`
 
 
@@ -1515,8 +1333,6 @@ Return file specific meta data.
 	/element/
 		- (control)`property-set`
 		- (source/area)`933 2 942 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`9`
 (signature)`fs_replace(self, replacement)`
 
 
@@ -1529,8 +1345,6 @@ Return file specific meta data.
 	/element/
 		- (control)`property-set`
 		- (source/area)`944 2 970 20`
-		- (coverage-zeros)`15`
-		- (coverage-counters)`16`
 (signature)`fs_linear(self)`
 
 
@@ -1543,8 +1357,6 @@ Return file specific meta data.
 	/element/
 		- (control)`property-set`
 		- (source/area)`972 2 982 13`
-		- (coverage-zeros)`8`
-		- (coverage-counters)`11`
 (signature)`fs_reduce(self, discarded)`
 
 
@@ -1557,8 +1369,6 @@ Return file specific meta data.
 	/element/
 		- (control)`property-set`
 		- (source/area)`984 2 997 13`
-		- (coverage-zeros)`5`
-		- (coverage-counters)`11`
 (signature)`fs_link_relative(self, path)`
 
 
@@ -1571,8 +1381,6 @@ Return file specific meta data.
 	/element/
 		- (control)`property-set`
 		- (source/area)`999 2 1010 13`
-		- (coverage-zeros)`5`
-		- (coverage-counters)`9`
 (signature)`fs_link_absolute(self, path)`
 
 
@@ -1583,8 +1391,6 @@ Return file specific meta data.
 	/element/
 		- (control)`property-set`
 		- (source/area)`1012 2 1042 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`20`
 (signature)`fs_init(self)`
 
 Create and initialize a data file at the route using the given (factor-local/parameter)&<#Path.fs_init.Parameters.data[data]>.
@@ -1605,8 +1411,6 @@ Leading directories will be created as needed.
 	/element/
 		- (control)`property-set`
 		- (source/area)`1044 2 1055 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`9`
 (signature)`fs_alloc(self)`
 
 
@@ -1619,8 +1423,6 @@ Leading directories will be created as needed.
 	/element/
 		- (control)`property-set`
 		- (source/area)`1057 2 1075 27`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`15`
 (signature)`fs_mkdir(self)`
 
 
@@ -1631,8 +1433,6 @@ Leading directories will be created as needed.
 	/element/
 		- (control)`property-set`
 		- (source/area)`1076 2 1092 31`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`8`
 (signature)`fs_open(self, *args, **kw)`
 
 Open the file pointed to by the route.
@@ -1650,8 +1450,6 @@ leading up to the file don't exist, create the directories too.
 	/element/
 		- (control)`property-set`
 		- (source/area)`1094 2 1099 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
 		- (type/syntax)`bytes`
 		- (type/invalid/unknown)&<#bytes>
 		
@@ -1667,8 +1465,6 @@ leading up to the file don't exist, create the directories too.
 	/element/
 		- (control)`property-set`
 		- (source/area)`1101 2 1104 14`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
 (signature)`fs_store(self, data)`
 
 
@@ -1679,8 +1475,6 @@ leading up to the file don't exist, create the directories too.
 	/element/
 		- (control)`property-set`
 		- (source/area)`1106 1 1106 21`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 The (factor-local/class)&<#Path[Path]> to the root directory of the operating system.
 
 #!source
@@ -1693,8 +1487,6 @@ The (factor-local/class)&<#Path[Path]> to the root directory of the operating sy
 	/element/
 		- (control)`property-set`
 		- (source/area)`1107 1 1107 24`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 The (factor-local/class)&<#Path[Path]> to the file that has no content and will discard writes.
 
 #!source
@@ -1707,8 +1499,6 @@ The (factor-local/class)&<#Path[Path]> to the file that has no content and will 
 	/element/
 		- (control)`property-set`
 		- (source/area)`1108 1 1108 38`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 The (factor-local/class)&<#Path[Path]> to the directory that contains no files.
 
 #!source
