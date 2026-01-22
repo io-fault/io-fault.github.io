@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 416 7`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`0`
+		- (coverage-zeros)`45`
+		- (coverage-counters)`250`
 Segmented sequence implementation for large lists.
 
 
@@ -38,6 +38,8 @@ Segmented sequence implementation for large lists.
 	/element/
 		- (control)`property-set`
 		- (source/area)`5 1 5 46`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ address ]
 ! CONTROL:
@@ -46,6 +48,8 @@ Segmented sequence implementation for large lists.
 	/element/
 		- (control)`property-set`
 		- (source/area)`7 1 55 2`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`27`
 (signature)`address(seq, start, stop)`
 
 Find the address of the absolute slice.
@@ -60,6 +64,8 @@ Find the address of the absolute slice.
 	/element/
 		- (control)`property-set`
 		- (source/area)`57 1 83 11`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`19`
 (signature)`delete(seq, start, stop)`
 
 
@@ -72,6 +78,8 @@ Find the address of the absolute slice.
 	/element/
 		- (control)`property-set`
 		- (source/area)`85 1 148 14`
+		- (coverage-zeros)`5`
+		- (coverage-counters)`32`
 (signature)`insert(seq, offset, insertion)`
 
 
@@ -82,6 +90,8 @@ Find the address of the absolute slice.
 	/element/
 		- (control)`property-set`
 		- (source/area)`150 1 359 23`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`150 16 150 21`
@@ -107,6 +117,8 @@ the size of each segment is already known.
 	/element/
 		- (control)`property-set`
 		- (source/area)`162 2 162 37`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	__slots__ = ('sequences', '_length')
 
@@ -119,6 +131,8 @@ the size of each segment is already known.
 	/element/
 		- (control)`property-set`
 		- (source/area)`163 2 163 12`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	Type = list
 
@@ -143,6 +157,8 @@ the size of each segment is already known.
 	/element/
 		- (control)`property-set`
 		- (source/area)`166 2 171 19`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`__init__(self)`
 
 
@@ -155,6 +171,8 @@ the size of each segment is already known.
 	/element/
 		- (control)`property-set`
 		- (source/area)`173 2 185 51`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`15`
 (signature)`__getitem__(self, item)`
 
 
@@ -167,6 +185,8 @@ the size of each segment is already known.
 	/element/
 		- (control)`property-set`
 		- (source/area)`187 2 222 28`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`28`
 (signature)`__setitem__(self, item, value)`
 
 
@@ -179,6 +199,8 @@ the size of each segment is already known.
 	/element/
 		- (control)`property-set`
 		- (source/area)`224 2 236 26`
+		- (coverage-zeros)`4`
+		- (coverage-counters)`15`
 (signature)`__delitem__(self, item)`
 
 
@@ -191,6 +213,8 @@ the size of each segment is already known.
 	/element/
 		- (control)`property-set`
 		- (source/area)`238 2 239 21`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`__len__(self)`
 
 
@@ -203,6 +227,8 @@ the size of each segment is already known.
 	/element/
 		- (control)`property-set`
 		- (source/area)`241 2 245 26`
+		- (coverage-zeros)`4`
+		- (coverage-counters)`4`
 (signature)`__iadd__(self, sequence)`
 
 
@@ -213,6 +239,8 @@ the size of each segment is already known.
 	/element/
 		- (control)`property-set`
 		- (source/area)`247 2 278 4`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`22`
 (signature)`select(self, start, stop)`
 
 Return an iterable to the requested slice.
@@ -227,6 +255,8 @@ Return an iterable to the requested slice.
 	/element/
 		- (control)`property-set`
 		- (source/area)`280 2 281 55`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`__iter__(self)`
 
 
@@ -237,6 +267,8 @@ Return an iterable to the requested slice.
 	/element/
 		- (control)`property-set`
 		- (source/area)`283 2 288 18`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`clear(self)`
 
 Truncate the entire sequence.
@@ -249,6 +281,8 @@ Truncate the entire sequence.
 	/element/
 		- (control)`property-set`
 		- (source/area)`290 2 315 26`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`18`
 (signature)`partition(self)`
 
 Organize the segments so that they have appropriate sizes.
@@ -263,6 +297,8 @@ Organize the segments so that they have appropriate sizes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`317 2 321 26`
+		- (coverage-zeros)`4`
+		- (coverage-counters)`4`
 (signature)`prepend(self, sequence)`
 
 
@@ -275,6 +311,8 @@ Organize the segments so that they have appropriate sizes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`323 2 327 26`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 (signature)`append(self, sequence)`
 
 
@@ -287,6 +325,8 @@ Organize the segments so that they have appropriate sizes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`329 2 333 26`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`5`
 (signature)`insert(self, offset, sequence)`
 
 
@@ -299,6 +339,8 @@ Organize the segments so that they have appropriate sizes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`335 2 349 26`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`15`
 (signature)`delete(self, start, stop)`
 
 
@@ -309,6 +351,8 @@ Organize the segments so that they have appropriate sizes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`351 2 359 23`
+		- (coverage-zeros)`5`
+		- (coverage-counters)`5`
 (signature)`usage(self)`
 
 Identify the primary memory using objects.
@@ -321,6 +365,8 @@ Identify the primary memory using objects.
 	/element/
 		- (control)`property-set`
 		- (source/area)`361 1 417 6`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`361 17 361 22`
@@ -341,6 +387,8 @@ no attempt is made to enforce immutability outside of the interface.
 	/element/
 		- (control)`property-set`
 		- (source/area)`367 2 367 27`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	__slots__ = ('_constant',)
 
@@ -353,6 +401,8 @@ no attempt is made to enforce immutability outside of the interface.
 	/element/
 		- (control)`property-set`
 		- (source/area)`369 2 370 30`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`__init__(self, items)`
 
 
@@ -365,6 +415,8 @@ no attempt is made to enforce immutability outside of the interface.
 	/element/
 		- (control)`property-set`
 		- (source/area)`372 2 375 27`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`3`
 (signature)`usage(self)`
 
 
@@ -377,6 +429,8 @@ no attempt is made to enforce immutability outside of the interface.
 	/element/
 		- (control)`property-set`
 		- (source/area)`377 2 378 35`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`2`
 (signature)`select(self, start, stop)`
 
 
@@ -389,6 +443,8 @@ no attempt is made to enforce immutability outside of the interface.
 	/element/
 		- (control)`property-set`
 		- (source/area)`380 2 381 29`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`__iter__(self)`
 
 
@@ -401,6 +457,8 @@ no attempt is made to enforce immutability outside of the interface.
 	/element/
 		- (control)`property-set`
 		- (source/area)`383 2 387 12`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`3`
 (signature)`__getitem__(self, item)`
 
 
@@ -413,6 +471,8 @@ no attempt is made to enforce immutability outside of the interface.
 	/element/
 		- (control)`property-set`
 		- (source/area)`389 2 390 6`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`__setitem__(self, item, value)`
 
 
@@ -425,6 +485,8 @@ no attempt is made to enforce immutability outside of the interface.
 	/element/
 		- (control)`property-set`
 		- (source/area)`392 2 393 6`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`__delitem__(self, item)`
 
 
@@ -437,6 +499,8 @@ no attempt is made to enforce immutability outside of the interface.
 	/element/
 		- (control)`property-set`
 		- (source/area)`395 2 396 28`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`__len__(self)`
 
 
@@ -449,6 +513,8 @@ no attempt is made to enforce immutability outside of the interface.
 	/element/
 		- (control)`property-set`
 		- (source/area)`398 2 399 6`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`__iadd__(self, sequence)`
 
 
@@ -461,6 +527,8 @@ no attempt is made to enforce immutability outside of the interface.
 	/element/
 		- (control)`property-set`
 		- (source/area)`401 2 402 6`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`clear(self)`
 
 
@@ -473,6 +541,8 @@ no attempt is made to enforce immutability outside of the interface.
 	/element/
 		- (control)`property-set`
 		- (source/area)`404 2 405 6`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`partition(self)`
 
 
@@ -485,6 +555,8 @@ no attempt is made to enforce immutability outside of the interface.
 	/element/
 		- (control)`property-set`
 		- (source/area)`407 2 408 6`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`prepend(self, sequence)`
 
 
@@ -497,6 +569,8 @@ no attempt is made to enforce immutability outside of the interface.
 	/element/
 		- (control)`property-set`
 		- (source/area)`410 2 411 6`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`append(self, sequence)`
 
 
@@ -509,6 +583,8 @@ no attempt is made to enforce immutability outside of the interface.
 	/element/
 		- (control)`property-set`
 		- (source/area)`413 2 414 6`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`insert(self, offset, sequence)`
 
 
@@ -521,5 +597,7 @@ no attempt is made to enforce immutability outside of the interface.
 	/element/
 		- (control)`property-set`
 		- (source/area)`416 2 417 6`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`delete(self, start, stop)`
 

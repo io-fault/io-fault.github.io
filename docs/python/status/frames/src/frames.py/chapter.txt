@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 363 0`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`0`
+		- (coverage-zeros)`10`
+		- (coverage-counters)`113`
 Formatting and parsing tools for status frame transport envelopes.
 
 This module provides conceptual definitions for Status Frame events ((project-local/factor-element)&<types#EStruct[fault.status.types.EStruct]>) and
@@ -62,6 +62,8 @@ Serialized messages are expected to include the trailing newline:
 	/element/
 		- (control)`property-set`
 		- (source/area)`35 1 35 16`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ base64 ]
 ! CONTROL:
@@ -72,6 +74,8 @@ Serialized messages are expected to include the trailing newline:
 	/element/
 		- (control)`property-set`
 		- (source/area)`36 1 36 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ transport ]
 ! CONTROL:
@@ -82,6 +86,8 @@ Serialized messages are expected to include the trailing newline:
 	/element/
 		- (control)`property-set`
 		- (source/area)`38 1 38 23`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ types ]
 ! CONTROL:
@@ -92,6 +98,8 @@ Serialized messages are expected to include the trailing newline:
 	/element/
 		- (control)`property-set`
 		- (source/area)`39 1 39 19`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ protocol ]
 ! CONTROL:
@@ -102,6 +110,8 @@ Serialized messages are expected to include the trailing newline:
 	/element/
 		- (control)`property-set`
 		- (source/area)`41 1 41 51`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 #!source
 	protocol = 'http://fault.io/protocol/status/frames'
 
@@ -114,6 +124,8 @@ Serialized messages are expected to include the trailing newline:
 	/element/
 		- (control)`property-set`
 		- (source/area)`42 1 42 56`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	ttyn_data_url = b'data:text/plain;charset=utf-8;base64,'
 
@@ -124,6 +136,8 @@ Serialized messages are expected to include the trailing newline:
 	/element/
 		- (control)`property-set`
 		- (source/area)`44 1 53 39`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`5`
 		- (type/syntax)`types.Frame`
 		- (type/project-local/factor-element)&<types#Frame[fault.status.types.Frame]>
 		
@@ -141,6 +155,8 @@ Create a status frame using the envelope's symbol and synopsis.
 	/element/
 		- (control)`property-set`
 		- (source/area)`55 1 59 60`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 		- (type/syntax)`bytes`
 		- (type/invalid/unknown)&<#bytes>
 		
@@ -156,6 +172,8 @@ Create a status frame using the envelope's symbol and synopsis.
 	/element/
 		- (control)`property-set`
 		- (source/area)`61 1 66 44`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 		- (type/syntax)`object`
 		- (type/invalid/unknown)&<#object>
 		
@@ -171,6 +189,8 @@ Create a status frame using the envelope's symbol and synopsis.
 	/element/
 		- (control)`property-set`
 		- (source/area)`69 1 69 51`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 #!source
 	protocol = "http://fault.io/protocol/status/frames"
 
@@ -183,6 +203,8 @@ Create a status frame using the envelope's symbol and synopsis.
 	/element/
 		- (control)`property-set`
 		- (source/area)`72 1 128 24`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 #!source
 	type_codes = {
 		# [!? PROTOCOL: http://fault.io/protocol/status/frames tty-notation-1]
@@ -249,6 +271,8 @@ Create a status frame using the envelope's symbol and synopsis.
 	/element/
 		- (control)`property-set`
 		- (source/area)`129 1 136 25`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
@@ -265,6 +289,8 @@ Currently, only supporting unicode characters in the 16-bit range.
 	/element/
 		- (control)`property-set`
 		- (source/area)`138 1 142 71`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -282,6 +308,8 @@ Convert an integer type code into the two-character string used for serializatio
 	/element/
 		- (control)`property-set`
 		- (source/area)`147 1 147 35`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	_ttyn_signature = "\x1b]\x03\x1b\\"
 
@@ -294,6 +322,8 @@ Convert an integer type code into the two-character string used for serializatio
 	/element/
 		- (control)`property-set`
 		- (source/area)`150 1 150 40`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	_ttyn_open_url = "\x1b[34;2m" "\x1b]8;;"
 
@@ -306,6 +336,8 @@ Convert an integer type code into the two-character string used for serializatio
 	/element/
 		- (control)`property-set`
 		- (source/area)`151 1 151 26`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	_ttyn_close_url = "\x1b\\"
 
@@ -318,6 +350,8 @@ Convert an integer type code into the two-character string used for serializatio
 	/element/
 		- (control)`property-set`
 		- (source/area)`152 1 152 51`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	_ttyn_reset_url = "\x1b]8;;" "\x1b\\" "\x1b[39;22m"
 
@@ -330,6 +364,8 @@ Convert an integer type code into the two-character string used for serializatio
 	/element/
 		- (control)`property-set`
 		- (source/area)`154 1 154 22`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	_frame_open = "[{ts} "
 
@@ -342,6 +378,8 @@ Convert an integer type code into the two-character string used for serializatio
 	/element/
 		- (control)`property-set`
 		- (source/area)`155 1 155 19`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	_frame_exit = "]\n"
 
@@ -354,6 +392,8 @@ Convert an integer type code into the two-character string used for serializatio
 	/element/
 		- (control)`property-set`
 		- (source/area)`156 1 156 45`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	_loaded_frame_start = _frame_open + "{image}"
 
@@ -366,6 +406,8 @@ Convert an integer type code into the two-character string used for serializatio
 	/element/
 		- (control)`property-set`
 		- (source/area)`157 1 157 45`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	_loaded_frame_partition = " ({channel}{open}"
 
@@ -378,6 +420,8 @@ Convert an integer type code into the two-character string used for serializatio
 	/element/
 		- (control)`property-set`
 		- (source/area)`158 1 158 79`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	_loaded_frame_stop = "{finish}{signal}{size}{close}" + _ttyn_signature + ")]\n"
 
@@ -390,6 +434,8 @@ Convert an integer type code into the two-character string used for serializatio
 	/element/
 		- (control)`property-set`
 		- (source/area)`159 1 159 43`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	_empty_frame_stop = _ttyn_signature + "]\n"
 
@@ -400,6 +446,8 @@ Convert an integer type code into the two-character string used for serializatio
 	/element/
 		- (control)`property-set`
 		- (source/area)`161 1 213 26`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`25`
 		- (type/syntax)`typing.Tuple[str, bytes, str]`
 		
 (signature)`_pack(frame)`
@@ -417,6 +465,8 @@ the encoded bytes of data extending the frame and the terminating trailer.
 	/element/
 		- (control)`property-set`
 		- (source/area)`215 1 227 36`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -446,6 +496,8 @@ Constructs a single (invalid/unknown)&<#str> instance.
 	/element/
 		- (control)`property-set`
 		- (source/area)`229 1 312 3`
+		- (coverage-zeros)`9`
+		- (coverage-counters)`34`
 		- (type/syntax)`types.Frame`
 		- (type/project-local/factor-element)&<types#Frame[fault.status.types.Frame]>
 		
@@ -461,6 +513,8 @@ Unpack a serialized status frame.
 	/element/
 		- (control)`property-set`
 		- (source/area)`314 1 323 37`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 		- (type/syntax)`types.Frame`
 		- (type/project-local/factor-element)&<types#Frame[fault.status.types.Frame]>
 		
@@ -484,6 +538,8 @@ Extract a status frame, (project-local/factor-element)&<types#Frame[fault.status
 	/element/
 		- (control)`property-set`
 		- (source/area)`325 1 342 3`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`declaration()`
 
 Construct a custom protocol declaration message.
@@ -498,6 +554,8 @@ Construct a custom protocol declaration message.
 	/element/
 		- (control)`property-set`
 		- (source/area)`345 1 345 38`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	tty_notation_1_message = declaration()
 
@@ -510,6 +568,8 @@ Construct a custom protocol declaration message.
 	/element/
 		- (control)`property-set`
 		- (source/area)`348 1 348 80`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	tty_notation_1_string = "[!? " + tty_notation_1_message.f_event.abstract + "]\n"
 
@@ -520,6 +580,8 @@ Construct a custom protocol declaration message.
 	/element/
 		- (control)`property-set`
 		- (source/area)`350 1 363 12`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`5`
 (signature)`message_directed_areas(fields, start, end)`
 
 Return the slices marking the areas before and after the first item

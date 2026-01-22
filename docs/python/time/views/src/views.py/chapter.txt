@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 240 0`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`0`
+		- (coverage-zeros)`15`
+		- (coverage-counters)`78`
 Access to timezone views for adjusting timestamps in and out of local forms.
 
 Usage:
@@ -23,6 +23,8 @@ Usage:
 	/element/
 		- (control)`property-set`
 		- (source/area)`10 1 10 9`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ os ]
 ! CONTROL:
@@ -33,6 +35,8 @@ Usage:
 	/element/
 		- (control)`property-set`
 		- (source/area)`11 1 11 14`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ functools ]
 ! CONTROL:
@@ -43,6 +47,8 @@ Usage:
 	/element/
 		- (control)`property-set`
 		- (source/area)`12 1 12 16`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ tzif ]
 ! CONTROL:
@@ -53,6 +59,8 @@ Usage:
 	/element/
 		- (control)`property-set`
 		- (source/area)`13 1 13 18`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ abstract ]
 ! CONTROL:
@@ -63,6 +71,8 @@ Usage:
 	/element/
 		- (control)`property-set`
 		- (source/area)`14 1 14 22`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ Zone ]
 ! CONTROL:
@@ -71,6 +81,8 @@ Usage:
 	/element/
 		- (control)`property-set`
 		- (source/area)`16 1 240 39`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`16 12 16 17`
@@ -93,6 +105,8 @@ particular offset.
 	/element/
 		- (control)`property-set`
 		- (source/area)`26 2 105 4`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`26 15 26 19`
@@ -116,6 +130,8 @@ build a sequence of transitions for subsequent searching.
 	/element/
 		- (control)`property-set`
 		- (source/area)`35 3 35 16`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	__slots__ = ()
 
@@ -128,6 +144,8 @@ build a sequence of transitions for subsequent searching.
 	/element/
 		- (control)`property-set`
 		- (source/area)`37 3 37 17`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	unit = 'second'
 
@@ -151,6 +169,8 @@ build a sequence of transitions for subsequent searching.
 	/element/
 		- (control)`property-set`
 		- (source/area)`41 3 47 11`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 The offset in seconds from UTC.
 
 
@@ -161,6 +181,8 @@ The offset in seconds from UTC.
 	/element/
 		- (control)`property-set`
 		- (source/area)`48 3 54 11`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 The Offset's timezone abbreviation; such as UTC, GMT, and EST.
 
 
@@ -171,6 +193,8 @@ The Offset's timezone abbreviation; such as UTC, GMT, and EST.
 	/element/
 		- (control)`property-set`
 		- (source/area)`55 3 61 11`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 Field used to identify if the (factor-local/class)&<#Zone.Offset[Offset]> is daylight savings time.
 
 
@@ -181,6 +205,8 @@ Field used to identify if the (factor-local/class)&<#Zone.Offset[Offset]> is day
 	/element/
 		- (control)`property-set`
 		- (source/area)`62 3 67 28`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 Whether or not the (factor-local/class)&<#Zone.Offset[Offset]> is referring to a daylight savings time
 offset.
 
@@ -194,6 +220,8 @@ offset.
 	/element/
 		- (control)`property-set`
 		- (source/area)`69 3 70 28`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`__hash__(self)`
 
 
@@ -206,6 +234,8 @@ offset.
 	/element/
 		- (control)`property-set`
 		- (source/area)`72 3 77 4`
+		- (coverage-zeros)`4`
+		- (coverage-counters)`4`
 (signature)`__str__(self)`
 
 
@@ -218,6 +248,8 @@ offset.
 	/element/
 		- (control)`property-set`
 		- (source/area)`79 3 80 86`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`__repr__(self)`
 
 
@@ -230,6 +262,8 @@ offset.
 	/element/
 		- (control)`property-set`
 		- (source/area)`82 3 83 34`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`__eq__(self, ob)`
 
 
@@ -242,6 +276,8 @@ offset.
 	/element/
 		- (control)`property-set`
 		- (source/area)`85 3 86 24`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`__int__(self)`
 
 
@@ -252,6 +288,8 @@ offset.
 	/element/
 		- (control)`property-set`
 		- (source/area)`88 3 94 14`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 (signature)`iso(self, pit)`
 
 Return the offset-qualified ISO representation of the given point in time.
@@ -264,6 +302,8 @@ Return the offset-qualified ISO representation of the given point in time.
 	/element/
 		- (control)`property-set`
 		- (source/area)`95 3 105 4`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`5`
 (signature)`from_tzinfo(Class, tzinfo)`
 
 Construct a Zone instance from a (project-local/unknown)&<tzif#tzinfo[tzif.tzinfo]> tuple.
@@ -278,6 +318,8 @@ Construct a Zone instance from a (project-local/unknown)&<tzif#tzinfo[tzif.tzinf
 	/element/
 		- (control)`property-set`
 		- (source/area)`109 2 114 18`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`5`
 (signature)`__init__(self, transitions, offsets, default, leaps, name)`
 
 
@@ -290,6 +332,8 @@ Construct a Zone instance from a (project-local/unknown)&<tzif#tzinfo[tzif.tzinf
 	/element/
 		- (control)`property-set`
 		- (source/area)`116 2 122 3`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`__repr__(self)`
 
 
@@ -302,6 +346,8 @@ Construct a Zone instance from a (project-local/unknown)&<tzif#tzinfo[tzif.tzinf
 	/element/
 		- (control)`property-set`
 		- (source/area)`124 2 124 14`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ Zone >> find ]
 ! CONTROL:
@@ -310,6 +356,8 @@ Construct a Zone instance from a (project-local/unknown)&<tzif#tzinfo[tzif.tzinf
 	/element/
 		- (control)`property-set`
 		- (source/area)`125 2 141 10`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`7`
 (signature)`find(self, pit)`
 
 Get the appropriate offset in the zone for a given Point In Time, (factor-local/parameter)&<#Zone.find.Parameters.pit[pit]>.
@@ -339,6 +387,8 @@ Returns an offset for the timestamp according to the Zone's transition times.
 	/element/
 		- (control)`property-set`
 		- (source/area)`143 2 163 25`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`7`
 (signature)`slice(self, start, stop)`
 
 Get a slice of transition points and time zone offsets
@@ -373,6 +423,8 @@ occurred during the period designated by the slice.
 	/element/
 		- (control)`property-set`
 		- (source/area)`166 2 180 37`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`localize(self, pit)`
 
 Given (factor-local/parameter)&<#Zone.localize.Parameters.pit[pit]>, return the localized version according to the zone's transitions.
@@ -400,6 +452,8 @@ Returns the localized timestamp.
 	/element/
 		- (control)`property-set`
 		- (source/area)`182 2 207 13`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`6`
 (signature)`normalize(self, offset, pit)`
 
 This function should be used in cases where adjustments are being made to
@@ -434,6 +488,8 @@ Returns the re-localized (factor-local/parameter)&<#Zone.normalize.Parameters.pi
 	/element/
 		- (control)`property-set`
 		- (source/area)`208 2 222 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`6`
 (signature)`from_tzif_data(Class, construct, tzd)`
 
 
@@ -446,6 +502,8 @@ Returns the re-localized (factor-local/parameter)&<#Zone.normalize.Parameters.pi
 	/element/
 		- (control)`property-set`
 		- (source/area)`223 2 230 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`from_file(Class, construct, filepath)`
 
 
@@ -458,5 +516,7 @@ Returns the re-localized (factor-local/parameter)&<#Zone.normalize.Parameters.pi
 	/element/
 		- (control)`property-set`
 		- (source/area)`231 2 240 39`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`6`
 (signature)`open(Class, construct)`
 

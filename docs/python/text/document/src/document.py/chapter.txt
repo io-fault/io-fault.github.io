@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 515 3`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`0`
+		- (coverage-zeros)`127`
+		- (coverage-counters)`225`
 Document finalization and query tools for raw text element trees.
 
 
@@ -28,6 +28,8 @@ Document finalization and query tools for raw text element trees.
 	/element/
 		- (control)`property-set`
 		- (source/area)`5 1 5 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ string ]
 ! CONTROL:
@@ -38,6 +40,8 @@ Document finalization and query tools for raw text element trees.
 	/element/
 		- (control)`property-set`
 		- (source/area)`6 1 6 28`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ types ]
 ! CONTROL:
@@ -48,6 +52,8 @@ Document finalization and query tools for raw text element trees.
 	/element/
 		- (control)`property-set`
 		- (source/area)`8 1 8 19`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ export ]
 ! CONTROL:
@@ -56,6 +62,8 @@ Document finalization and query tools for raw text element trees.
 	/element/
 		- (control)`property-set`
 		- (source/area)`10 1 69 26`
+		- (coverage-zeros)`42`
+		- (coverage-counters)`43`
 		- (type/syntax)`types.Paragraph`
 		- (type/project-local/factor-element)&<types#Paragraph[fault.text.types.Paragraph]>
 		
@@ -85,6 +93,8 @@ Convert the given paragraph element into terms defined by (project-local/project
 	/element/
 		- (control)`property-set`
 		- (source/area)`71 1 77 33`
+		- (coverage-zeros)`4`
+		- (coverage-counters)`5`
 		- (type/syntax)`typing.Iterator[typing.Tuple[str, object]]`
 		
 (signature)`sections(root)`
@@ -99,6 +109,8 @@ Iterator producing (section-identifier, section) pairs.
 	/element/
 		- (control)`property-set`
 		- (source/area)`79 1 90 12`
+		- (coverage-zeros)`4`
+		- (coverage-counters)`5`
 		- (type/syntax)`object`
 		- (type/invalid/unknown)&<#object>
 		
@@ -116,6 +128,8 @@ for repeat reads.
 	/element/
 		- (control)`property-set`
 		- (source/area)`92 1 99 13`
+		- (coverage-zeros)`5`
+		- (coverage-counters)`6`
 		- (type/syntax)`typing.Iterator[str]`
 		
 (signature)`concatenate(syntax)`
@@ -130,6 +144,8 @@ Concatenate the lines of the given syntax element.
 	/element/
 		- (control)`property-set`
 		- (source/area)`101 1 106 36`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`3`
 (signature)`context(element)`
 
 Structure a common context admonition.
@@ -144,6 +160,8 @@ Structure a common context admonition.
 	/element/
 		- (control)`property-set`
 		- (source/area)`108 1 115 2`
+		- (coverage-zeros)`7`
+		- (coverage-counters)`7`
 (signature)`paragraph_as_string(element)`
 
 
@@ -154,6 +172,8 @@ Structure a common context admonition.
 	/element/
 		- (control)`property-set`
 		- (source/area)`117 1 127 13`
+		- (coverage-zeros)`5`
+		- (coverage-counters)`5`
 (signature)`paragraph_only(element)`
 
 Select the only paragraph in the given element.
@@ -166,6 +186,8 @@ Select the only paragraph in the given element.
 	/element/
 		- (control)`property-set`
 		- (source/area)`129 1 135 11`
+		- (coverage-zeros)`4`
+		- (coverage-counters)`4`
 (signature)`paragraph_first(element)`
 
 Select the first paragraph in the given element.
@@ -178,6 +200,8 @@ Select the first paragraph in the given element.
 	/element/
 		- (control)`property-set`
 		- (source/area)`137 1 143 11`
+		- (coverage-zeros)`4`
+		- (coverage-counters)`4`
 (signature)`paragraph_last(element)`
 
 Select the last paragraph in the given element.
@@ -192,6 +216,8 @@ Select the last paragraph in the given element.
 	/element/
 		- (control)`property-set`
 		- (source/area)`145 1 156 16`
+		- (coverage-zeros)`8`
+		- (coverage-counters)`8`
 (signature)`paragraph_lines(element)`
 
 
@@ -204,6 +230,8 @@ Select the last paragraph in the given element.
 	/element/
 		- (control)`property-set`
 		- (source/area)`158 1 163 52`
+		- (coverage-zeros)`9`
+		- (coverage-counters)`9`
 (signature)`interpret_reference(element)`
 
 
@@ -216,6 +244,8 @@ Select the last paragraph in the given element.
 	/element/
 		- (control)`property-set`
 		- (source/area)`165 1 173 37`
+		- (coverage-zeros)`7`
+		- (coverage-counters)`7`
 (signature)`interpret_paragraph_single(element)`
 
 
@@ -226,6 +256,8 @@ Select the last paragraph in the given element.
 	/element/
 		- (control)`property-set`
 		- (source/area)`175 1 184 12`
+		- (coverage-zeros)`6`
+		- (coverage-counters)`6`
 (signature)`directory_pairs(items)`
 
 Iterate over the key-value pairs in the directory items.
@@ -238,6 +270,8 @@ Iterate over the key-value pairs in the directory items.
 	/element/
 		- (control)`property-set`
 		- (source/area)`186 1 218 22`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`186 12 186 17`
@@ -254,6 +288,8 @@ Serializer for (text) object trees.
 	/element/
 		- (control)`property-set`
 		- (source/area)`191 2 195 6`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`__init__(self)`
 
 Initialize the tree builder.
@@ -266,6 +302,8 @@ Initialize the tree builder.
 	/element/
 		- (control)`property-set`
 		- (source/area)`197 2 201 46`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 (signature)`empty(self, name, *args, **kw)`
 
 Empty with potential attributes.
@@ -278,6 +316,8 @@ Empty with potential attributes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`203 2 210 91`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 (signature)`element(self, element_name, content, *attributes, **kwattributes)`
 
 Serialize an element with the exact (factor-local/parameter)&<#Tree.element.Parameters.element_name[element_name]> with the contents of
@@ -294,6 +334,8 @@ Serialize an element with the exact (factor-local/parameter)&<#Tree.element.Para
 	/element/
 		- (control)`property-set`
 		- (source/area)`212 2 212 19`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	prefixed = element
 
@@ -306,6 +348,8 @@ Serialize an element with the exact (factor-local/parameter)&<#Tree.element.Para
 	/element/
 		- (control)`property-set`
 		- (source/area)`214 2 215 17`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`escape(self, string)`
 
 
@@ -318,6 +362,8 @@ Serialize an element with the exact (factor-local/parameter)&<#Tree.element.Para
 	/element/
 		- (control)`property-set`
 		- (source/area)`217 2 218 22`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`hyperlink(self, href)`
 
 
@@ -328,6 +374,8 @@ Serialize an element with the exact (factor-local/parameter)&<#Tree.element.Para
 	/element/
 		- (control)`property-set`
 		- (source/area)`220 1 516 2`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`220 17 220 22`
@@ -346,6 +394,8 @@ Transform parse events into a form designated by the given AST constructor.
 	/element/
 		- (control)`property-set`
 		- (source/area)`224 2 224 52`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	chain = staticmethod(itertools.chain.from_iterable)
 
@@ -356,6 +406,8 @@ Transform parse events into a form designated by the given AST constructor.
 	/element/
 		- (control)`property-set`
 		- (source/area)`226 2 242 39`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`5`
 (signature)`__init__(self, serialization, identify)`
 
 Initialize a (factor-local/class)&<#Transform[Transform]> instance designating the AST constructor.
@@ -386,6 +438,8 @@ Initialize a (factor-local/class)&<#Transform[Transform]> instance designating t
 	/element/
 		- (control)`property-set`
 		- (source/area)`244 2 246 69`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`process(self, tree)`
 
 
@@ -398,6 +452,8 @@ Initialize a (factor-local/class)&<#Transform[Transform]> instance designating t
 	/element/
 		- (control)`property-set`
 		- (source/area)`248 2 249 28`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`process_paragraph_text(self, tree, text)`
 
 
@@ -410,6 +466,8 @@ Initialize a (factor-local/class)&<#Transform[Transform]> instance designating t
 	/element/
 		- (control)`property-set`
 		- (source/area)`251 2 255 3`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`process_paragraph_emphasis(self, tree, data)`
 
 
@@ -422,6 +480,8 @@ Initialize a (factor-local/class)&<#Transform[Transform]> instance designating t
 	/element/
 		- (control)`property-set`
 		- (source/area)`257 2 261 3`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`process_paragraph_literal(self, tree, data)`
 
 
@@ -432,6 +492,8 @@ Initialize a (factor-local/class)&<#Transform[Transform]> instance designating t
 	/element/
 		- (control)`property-set`
 		- (source/area)`263 2 309 3`
+		- (coverage-zeros)`5`
+		- (coverage-counters)`15`
 (signature)`process_paragraph_reference(self, tree, source, type, title, action)`
 
 [ >> Parameters ]
@@ -477,6 +539,8 @@ Initialize a (factor-local/class)&<#Transform[Transform]> instance designating t
 	/element/
 		- (control)`property-set`
 		- (source/area)`311 2 312 11`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`process_end_of_line(self, tree, text)`
 
 
@@ -489,6 +553,8 @@ Initialize a (factor-local/class)&<#Transform[Transform]> instance designating t
 	/element/
 		- (control)`property-set`
 		- (source/area)`314 2 315 11`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`process_init(self, tree, data, *params)`
 
 
@@ -501,6 +567,8 @@ Initialize a (factor-local/class)&<#Transform[Transform]> instance designating t
 	/element/
 		- (control)`property-set`
 		- (source/area)`317 2 324 2`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	paragraph_index = {
 		'init': process_init,
@@ -520,6 +588,8 @@ Initialize a (factor-local/class)&<#Transform[Transform]> instance designating t
 	/element/
 		- (control)`property-set`
 		- (source/area)`326 2 345 4`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`7`
 (signature)`process_items(self, tree, element, name)`
 
 
@@ -532,6 +602,8 @@ Initialize a (factor-local/class)&<#Transform[Transform]> instance designating t
 	/element/
 		- (control)`property-set`
 		- (source/area)`347 2 348 49`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`process_set(self, tree, element)`
 
 
@@ -544,6 +616,8 @@ Initialize a (factor-local/class)&<#Transform[Transform]> instance designating t
 	/element/
 		- (control)`property-set`
 		- (source/area)`350 2 351 54`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`process_sequence(self, tree, element)`
 
 
@@ -556,6 +630,8 @@ Initialize a (factor-local/class)&<#Transform[Transform]> instance designating t
 	/element/
 		- (control)`property-set`
 		- (source/area)`353 2 388 14`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`9`
 (signature)`process_directory(self, tree, vl_element)`
 
 
@@ -566,6 +642,8 @@ Initialize a (factor-local/class)&<#Transform[Transform]> instance designating t
 	/element/
 		- (control)`property-set`
 		- (source/area)`389 2 407 14`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`9`
 (signature)`empty_paragraph(sequence)`
 
 Whether the paragraph should be considered to be empty.
@@ -580,6 +658,8 @@ Whether the paragraph should be considered to be empty.
 	/element/
 		- (control)`property-set`
 		- (source/area)`409 2 418 7`
+		- (coverage-zeros)`4`
+		- (coverage-counters)`4`
 (signature)`paragraph_content(self, tree, sequence)`
 
 
@@ -592,6 +672,8 @@ Whether the paragraph should be considered to be empty.
 	/element/
 		- (control)`property-set`
 		- (source/area)`420 2 437 7`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`9`
 (signature)`process_paragraph(self, tree, paragraph)`
 
 
@@ -604,6 +686,8 @@ Whether the paragraph should be considered to be empty.
 	/element/
 		- (control)`property-set`
 		- (source/area)`439 2 453 3`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`8`
 (signature)`process_syntax(self, tree, sequence)`
 
 
@@ -616,6 +700,8 @@ Whether the paragraph should be considered to be empty.
 	/element/
 		- (control)`property-set`
 		- (source/area)`455 2 465 3`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 (signature)`process_admonition(self, tree, content)`
 
 
@@ -628,6 +714,8 @@ Whether the paragraph should be considered to be empty.
 	/element/
 		- (control)`property-set`
 		- (source/area)`467 2 473 59`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`process_section(self, tree, section)`
 
 
@@ -640,6 +728,8 @@ Whether the paragraph should be considered to be empty.
 	/element/
 		- (control)`property-set`
 		- (source/area)`475 2 491 3`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`7`
 (signature)`create_section(self, tree, section)`
 
 
@@ -650,6 +740,8 @@ Whether the paragraph should be considered to be empty.
 	/element/
 		- (control)`property-set`
 		- (source/area)`493 2 505 3`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`3`
 (signature)`process_exception(self, tree, exception)`
 
 Emit an exception element in order to report warnings or failures
@@ -665,6 +757,8 @@ regarding syntax that was not entirely comprehensible.
 	/element/
 		- (control)`property-set`
 		- (source/area)`507 2 516 2`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	section_index = {
 		'paragraph': process_paragraph,

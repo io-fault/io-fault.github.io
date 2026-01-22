@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 128 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`0`
+		- (coverage-zeros)`17`
+		- (coverage-counters)`59`
 Support for running tests without full system/executable contexts.
 
 
@@ -28,6 +28,8 @@ Support for running tests without full system/executable contexts.
 	/element/
 		- (control)`property-set`
 		- (source/area)`5 1 5 26`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ ExitController ]
 ! CONTROL:
@@ -36,6 +38,8 @@ Support for running tests without full system/executable contexts.
 	/element/
 		- (control)`property-set`
 		- (source/area)`7 1 23 28`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`7 22 7 27`
@@ -54,6 +58,8 @@ Root controller for tests.
 	/element/
 		- (control)`property-set`
 		- (source/area)`11 2 14 22`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`__init__(self)`
 
 
@@ -66,6 +72,8 @@ Root controller for tests.
 	/element/
 		- (control)`property-set`
 		- (source/area)`16 2 17 30`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`exited(self, processor)`
 
 
@@ -78,6 +86,8 @@ Root controller for tests.
 	/element/
 		- (control)`property-set`
 		- (source/area)`19 2 20 36`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`exit_event_connect(self, subject, cb)`
 
 
@@ -90,6 +100,8 @@ Root controller for tests.
 	/element/
 		- (control)`property-set`
 		- (source/area)`22 2 23 28`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`interrupt(self)`
 
 
@@ -100,6 +112,8 @@ Root controller for tests.
 	/element/
 		- (control)`property-set`
 		- (source/area)`25 1 74 6`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`25 18 25 23`
@@ -120,6 +134,8 @@ ran in order to perform them.
 	/element/
 		- (control)`property-set`
 		- (source/area)`32 2 34 18`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`__init__(self)`
 
 
@@ -132,6 +148,8 @@ ran in order to perform them.
 	/element/
 		- (control)`property-set`
 		- (source/area)`36 2 37 29`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`associate(self, processor)`
 
 
@@ -144,6 +162,8 @@ ran in order to perform them.
 	/element/
 		- (control)`property-set`
 		- (source/area)`39 2 40 26`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`enqueue(self, *tasks)`
 
 
@@ -156,6 +176,8 @@ ran in order to perform them.
 	/element/
 		- (control)`property-set`
 		- (source/area)`42 2 47 33`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`5`
 (signature)`faulted(self, resource)`
 
 
@@ -168,6 +190,8 @@ ran in order to perform them.
 	/element/
 		- (control)`property-set`
 		- (source/area)`49 2 57 7`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`6`
 (signature)`__call__(self)`
 
 
@@ -180,6 +204,8 @@ ran in order to perform them.
 	/element/
 		- (control)`property-set`
 		- (source/area)`59 2 65 84`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`4`
 (signature)`flush(self)`
 
 
@@ -192,6 +218,8 @@ ran in order to perform them.
 	/element/
 		- (control)`property-set`
 		- (source/area)`67 2 68 6`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`defer(self, mt)`
 
 
@@ -204,6 +232,8 @@ ran in order to perform them.
 	/element/
 		- (control)`property-set`
 		- (source/area)`70 2 71 6`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`cancel(self, task)`
 
 
@@ -216,6 +246,8 @@ ran in order to perform them.
 	/element/
 		- (control)`property-set`
 		- (source/area)`73 2 74 6`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`_io_attach(self, *channel)`
 
 
@@ -268,6 +300,8 @@ ran in order to perform them.
 	/element/
 		- (control)`property-set`
 		- (source/area)`80 2 81 6`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`k_transition(self)`
 
 
@@ -280,6 +314,8 @@ ran in order to perform them.
 	/element/
 		- (control)`property-set`
 		- (source/area)`83 2 84 21`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`acquire(self, obj)`
 
 
@@ -292,6 +328,8 @@ ran in order to perform them.
 	/element/
 		- (control)`property-set`
 		- (source/area)`86 2 87 6`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`process(self, event)`
 
 
@@ -320,6 +358,8 @@ ran in order to perform them.
 	/element/
 		- (control)`property-set`
 		- (source/area)`90 2 90 43`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	_pexe_contexts = ('executable', 'enqueue')
 
@@ -332,6 +372,8 @@ ran in order to perform them.
 	/element/
 		- (control)`property-set`
 		- (source/area)`92 2 93 17`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`__init__(self)`
 
 
@@ -344,6 +386,8 @@ ran in order to perform them.
 	/element/
 		- (control)`property-set`
 		- (source/area)`95 2 96 26`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`exited(self, procs)`
 
 
@@ -368,6 +412,8 @@ ran in order to perform them.
 	/element/
 		- (control)`property-set`
 		- (source/area)`100 2 102 8`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`enqueue(self, task)`
 
 
@@ -380,6 +426,8 @@ ran in order to perform them.
 	/element/
 		- (control)`property-set`
 		- (source/area)`104 2 112 21`
+		- (coverage-zeros)`6`
+		- (coverage-counters)`6`
 (signature)`dispatch(self, processor)`
 
 
@@ -390,6 +438,8 @@ ran in order to perform them.
 	/element/
 		- (control)`property-set`
 		- (source/area)`114 1 129 12`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`13`
 (signature)`sector()`
 
 Construct a root Sector and Context for testing.

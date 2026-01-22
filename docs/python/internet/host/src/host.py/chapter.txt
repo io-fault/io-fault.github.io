@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 246 0`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`0`
+		- (coverage-zeros)`44`
+		- (coverage-counters)`90`
 Endpoint and Service type for referencing internet addresses for
 Internet Protocol version 4 and 6.
 
@@ -29,6 +29,8 @@ Internet Protocol version 4 and 6.
 	/element/
 		- (control)`property-set`
 		- (source/area)`6 1 6 16`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ Service ]
 ! CONTROL:
@@ -37,6 +39,8 @@ Internet Protocol version 4 and 6.
 	/element/
 		- (control)`property-set`
 		- (source/area)`8 1 41 30`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`8 15 8 17`
@@ -55,6 +59,8 @@ Internet port identifier. Empty subclass for identification purposes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`12 2 12 15`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	__slots__ = ()
 
@@ -67,6 +73,8 @@ Internet port identifier. Empty subclass for identification purposes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`14 2 14 26`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	valid_range = (0, 0xFFFF)
 
@@ -79,6 +87,8 @@ Internet port identifier. Empty subclass for identification purposes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`15 2 15 25`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	system_range = (0, 1024)
 
@@ -91,6 +101,8 @@ Internet port identifier. Empty subclass for identification purposes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`16 2 16 34`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	epheremal_range = (49152, 0xFFFF)
 
@@ -101,6 +113,8 @@ Internet port identifier. Empty subclass for identification purposes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`18 2 23 37`
+		- (coverage-zeros)`4`
+		- (coverage-counters)`4`
 (signature)`valid(self)`
 
 Whether or not the Service port is within the standard range.
@@ -113,6 +127,8 @@ Whether or not the Service port is within the standard range.
 	/element/
 		- (control)`property-set`
 		- (source/area)`25 2 30 34`
+		- (coverage-zeros)`4`
+		- (coverage-counters)`4`
 (signature)`system(self)`
 
 Whether or not the Service port is considered a 'well known' port.
@@ -125,6 +141,8 @@ Whether or not the Service port is considered a 'well known' port.
 	/element/
 		- (control)`property-set`
 		- (source/area)`32 2 39 13`
+		- (coverage-zeros)`4`
+		- (coverage-counters)`4`
 (signature)`ephemeral(self)`
 
 Whether or not the Service port is considered an 'ephemeral' port by IANA.
@@ -139,6 +157,8 @@ Whether or not the Service port is considered an 'ephemeral' port by IANA.
 	/element/
 		- (control)`property-set`
 		- (source/area)`40 2 41 30`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`from_name(Class, name)`
 
 
@@ -151,6 +171,8 @@ Whether or not the Service port is considered an 'ephemeral' port by IANA.
 	/element/
 		- (control)`property-set`
 		- (source/area)`44 1 61 1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	common_services = {
 		'domain': Service(53),
@@ -178,6 +200,8 @@ Whether or not the Service port is considered an 'ephemeral' port by IANA.
 	/element/
 		- (control)`property-set`
 		- (source/area)`64 1 141 53`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`64 16 64 20`
@@ -196,6 +220,8 @@ A precise Endpoint for internet addresses and local sockets.
 	/element/
 		- (control)`property-set`
 		- (source/area)`68 2 68 15`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	__slots__ = ()
 
@@ -208,6 +234,8 @@ A precise Endpoint for internet addresses and local sockets.
 	/element/
 		- (control)`property-set`
 		- (source/area)`70 2 72 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	address_types = (ipaddress.IPv4Address, ipaddress.IPv6Address)
 		@classmethod
@@ -219,6 +247,8 @@ A precise Endpoint for internet addresses and local sockets.
 	/element/
 		- (control)`property-set`
 		- (source/area)`73 2 80 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`create_ip4(Class, string, port)`
 
 Create an IPv4 Endpoint Instance
@@ -231,6 +261,8 @@ Create an IPv4 Endpoint Instance
 	/element/
 		- (control)`property-set`
 		- (source/area)`81 2 88 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`create_ip6(Class, string, port)`
 
 Create an IPv6 Endpoint Instance
@@ -243,6 +275,8 @@ Create an IPv6 Endpoint Instance
 	/element/
 		- (control)`property-set`
 		- (source/area)`89 2 96 10`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 Addressing protocol; 4 or 6
 
 
@@ -253,6 +287,8 @@ Addressing protocol; 4 or 6
 	/element/
 		- (control)`property-set`
 		- (source/area)`97 2 101 16`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 The (none/invalid)&<http://fault.io/dev/null[ipaddress]> typed address.
 
 
@@ -265,6 +301,8 @@ The (none/invalid)&<http://fault.io/dev/null[ipaddress]> typed address.
 	/element/
 		- (control)`property-set`
 		- (source/area)`102 2 104 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	address = interface
 		@property
@@ -276,6 +314,8 @@ The (none/invalid)&<http://fault.io/dev/null[ipaddress]> typed address.
 	/element/
 		- (control)`property-set`
 		- (source/area)`105 2 110 16`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 The (factor-local/class)&<#Service[Service]> of the endpoint.
 
 
@@ -286,6 +326,8 @@ The (factor-local/class)&<#Service[Service]> of the endpoint.
 	/element/
 		- (control)`property-set`
 		- (source/area)`112 2 121 52`
+		- (coverage-zeros)`4`
+		- (coverage-counters)`4`
 (signature)`__str__(self)`
 
 "<address>:<port>" representation suitable for interpolation into
@@ -301,6 +343,8 @@ an IRI network location.
 	/element/
 		- (control)`property-set`
 		- (source/area)`123 2 129 59`
+		- (coverage-zeros)`5`
+		- (coverage-counters)`5`
 (signature)`__repr__(self)`
 
 
@@ -313,6 +357,8 @@ an IRI network location.
 	/element/
 		- (control)`property-set`
 		- (source/area)`131 2 134 13`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`__hash__(self)`
 
 
@@ -323,6 +369,8 @@ an IRI network location.
 	/element/
 		- (control)`property-set`
 		- (source/area)`135 2 141 53`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 (signature)`create(Class, interface, port)`
 
 Create an IPv4 or IPv6 endpoint based on the type detected from the string.
@@ -337,6 +385,8 @@ The (none/invalid)&<http://fault.io/dev/null[ipaddress]> type will be selected b
 	/element/
 		- (control)`property-set`
 		- (source/area)`143 1 211 55`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`143 17 143 21`
@@ -361,6 +411,8 @@ Protocol variations can be used to describe more complicated name resolutions.
 	/element/
 		- (control)`property-set`
 		- (source/area)`153 2 153 15`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	__slots__ = ()
 
@@ -373,6 +425,8 @@ Protocol variations can be used to describe more complicated name resolutions.
 	/element/
 		- (control)`property-set`
 		- (source/area)`155 2 162 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	fields = (
 		'protocol',
@@ -389,6 +443,8 @@ Protocol variations can be used to describe more complicated name resolutions.
 	/element/
 		- (control)`property-set`
 		- (source/area)`163 2 169 10`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`3`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -402,6 +458,8 @@ Resolution protocol to use to extract endpoints from (factor-local/property)&<#R
 	/element/
 		- (control)`property-set`
 		- (source/area)`170 2 176 10`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`3`
 		- (type/syntax)`object`
 		- (type/invalid/unknown)&<#object>
 		
@@ -415,6 +473,8 @@ The unencoded domain name.
 	/element/
 		- (control)`property-set`
 		- (source/area)`177 2 185 10`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`3`
 		- (type/syntax)`Service`
 		- (type/factor-local/class)&<#Service[Service]>
 		
@@ -430,6 +490,8 @@ or the resolver will manage a
 	/element/
 		- (control)`property-set`
 		- (source/area)`186 2 191 16`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`3`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -444,6 +506,8 @@ Used by resolvers that support service name resolution.
 	/element/
 		- (control)`property-set`
 		- (source/area)`193 2 198 79`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 (signature)`__str__(self)`
 
 Formatted reference for canonical printing.
@@ -459,6 +523,8 @@ Return "<service>:[<protocol>]<name>:<port>".
 	/element/
 		- (control)`property-set`
 		- (source/area)`200 2 206 13`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`3`
 (signature)`__repr__(self)`
 
 
@@ -471,6 +537,8 @@ Return "<service>:[<protocol>]<name>:<port>".
 	/element/
 		- (control)`property-set`
 		- (source/area)`207 2 211 55`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`from_domain(Class, name, service)`
 
 
@@ -481,6 +549,8 @@ Return "<service>:[<protocol>]<name>:<port>".
 	/element/
 		- (control)`property-set`
 		- (source/area)`213 1 246 16`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`18`
 		- (type/syntax)`typing.Union[Reference, Endpoint]`
 		
 (signature)`realize(struct)`

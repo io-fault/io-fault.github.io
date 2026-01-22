@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 977 0`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`0`
+		- (coverage-zeros)`113`
+		- (coverage-counters)`333`
 Core data types and classes.
 
 
@@ -28,6 +28,8 @@ Core data types and classes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`5 1 5 16`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ builtins ]
 ! CONTROL:
@@ -38,6 +40,8 @@ Core data types and classes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`6 1 6 15`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ operator ]
 ! CONTROL:
@@ -48,6 +52,8 @@ Core data types and classes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`7 1 7 15`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ weakref ]
 ! CONTROL:
@@ -58,6 +64,8 @@ Core data types and classes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`8 1 8 14`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ collections ]
 ! CONTROL:
@@ -68,6 +76,8 @@ Core data types and classes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`9 1 9 18`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ itertools ]
 ! CONTROL:
@@ -78,6 +88,8 @@ Core data types and classes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`10 1 10 16`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ traceback ]
 ! CONTROL:
@@ -88,6 +100,8 @@ Core data types and classes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`11 1 11 16`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ heapq ]
 ! CONTROL:
@@ -98,6 +112,8 @@ Core data types and classes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`12 1 12 12`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ weak ]
 ! CONTROL:
@@ -108,6 +124,8 @@ Core data types and classes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`14 1 14 26`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ set_actuated ]
 ! CONTROL:
@@ -118,6 +136,8 @@ Core data types and classes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`16 1 18 17`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`set_actuated(processor)`
 
 
@@ -130,6 +150,8 @@ Core data types and classes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`20 1 22 17`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 (signature)`set_terminated(processor)`
 
 
@@ -140,6 +162,8 @@ Core data types and classes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`24 1 119 26`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`24 12 24 17`
@@ -177,6 +201,8 @@ failures from unrelated Sectors can be communicated to callback.
 	/element/
 		- (control)`property-set`
 		- (source/area)`48 2 48 52`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	__slots__ = ('dependencies', 'pending', 'callback')
 
@@ -187,6 +213,8 @@ failures from unrelated Sectors can be communicated to callback.
 	/element/
 		- (control)`property-set`
 		- (source/area)`50 2 57 22`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`__init__(self, **processors)`
 
 Initialize the join with the given (invalid/unknown)&<#processor> set.
@@ -199,6 +227,8 @@ Initialize the join with the given (invalid/unknown)&<#processor> set.
 	/element/
 		- (control)`property-set`
 		- (source/area)`59 2 68 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 (signature)`connect(self)`
 
 Connect the (factor-local/class)&<#Processor[Processor.atexit]> calls of the configured
@@ -212,6 +242,8 @@ Connect the (factor-local/class)&<#Processor[Processor.atexit]> calls of the con
 	/element/
 		- (control)`property-set`
 		- (source/area)`70 2 75 41`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`__iter__(self)`
 
 Return an iterator to the configured dependencies.
@@ -224,6 +256,8 @@ Return an iterator to the configured dependencies.
 	/element/
 		- (control)`property-set`
 		- (source/area)`77 2 82 29`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`__getitem__(self, k)`
 
 Get the dependency the given identifier.
@@ -236,6 +270,8 @@ Get the dependency the given identifier.
 	/element/
 		- (control)`property-set`
 		- (source/area)`84 2 98 33`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`5`
 (signature)`exited(self, processor)`
 
 Record the exit of the given (factor-local/parameter)&<#Join.exited.Parameters.processor[processor]> and execute
@@ -250,6 +286,8 @@ in the configured (invalid/unknown)&<#pending> set.
 	/element/
 		- (control)`property-set`
 		- (source/area)`100 2 119 26`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 (signature)`atexit(self, callback)`
 
 Assign the callback of the (factor-local/class)&<#Join[Join]>.
@@ -277,6 +315,8 @@ The (factor-local/parameter)&<#Join.atexit.Parameters.callback[callback]> is exe
 	/element/
 		- (control)`property-set`
 		- (source/area)`121 1 173 44`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`121 17 121 22`
@@ -302,6 +342,8 @@ an obstruction.
 	/element/
 		- (control)`property-set`
 		- (source/area)`133 2 133 43`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	__slots__ = ('focus', 'path', 'parameter')
 
@@ -312,6 +354,8 @@ an obstruction.
 	/element/
 		- (control)`property-set`
 		- (source/area)`135 2 148 28`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 (signature)`__init__(self, focus, path, parameter)`
 
 [ >> Parameters ]
@@ -343,6 +387,8 @@ an obstruction.
 	/element/
 		- (control)`property-set`
 		- (source/area)`150 2 157 19`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 (signature)`__bool__(self)`
 
 
@@ -355,6 +401,8 @@ an obstruction.
 	/element/
 		- (control)`property-set`
 		- (source/area)`159 2 170 3`
+		- (coverage-zeros)`5`
+		- (coverage-counters)`5`
 (signature)`__repr__(self)`
 
 
@@ -367,6 +415,8 @@ an obstruction.
 	/element/
 		- (control)`property-set`
 		- (source/area)`172 2 173 44`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`attribute(self)`
 
 
@@ -379,6 +429,8 @@ an obstruction.
 	/element/
 		- (control)`property-set`
 		- (source/area)`176 1 176 44`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	Inexorable = Condition(builtins, ('False',))
 
@@ -389,6 +441,8 @@ an obstruction.
 	/element/
 		- (control)`property-set`
 		- (source/area)`178 1 204 16`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`178 26 178 31`
@@ -443,6 +497,8 @@ Exception associated with an interface supporting the sequencing of processor tr
 	/element/
 		- (control)`property-set`
 		- (source/area)`186 2 188 28`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 (signature)`__init__(self, identity, exception)`
 
 
@@ -455,6 +511,8 @@ Exception associated with an interface supporting the sequencing of processor tr
 	/element/
 		- (control)`property-set`
 		- (source/area)`190 2 191 33`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`__getitem__(self, k)`
 
 
@@ -467,6 +525,8 @@ Exception associated with an interface supporting the sequencing of processor tr
 	/element/
 		- (control)`property-set`
 		- (source/area)`193 2 204 16`
+		- (coverage-zeros)`5`
+		- (coverage-counters)`5`
 (signature)`structure(self)`
 
 
@@ -477,6 +537,8 @@ Exception associated with an interface supporting the sequencing of processor tr
 	/element/
 		- (control)`property-set`
 		- (source/area)`206 1 447 22`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`206 17 206 22`
@@ -522,6 +584,8 @@ process interrupts (unix.signal)`SIGINT`.
 	/element/
 		- (control)`property-set`
 		- (source/area)`228 2 228 34`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	_sector_reference = _unset_sector
 
@@ -534,6 +598,8 @@ process interrupts (unix.signal)`SIGINT`.
 	/element/
 		- (control)`property-set`
 		- (source/area)`231 2 233 47`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 (signature)`_invert_sector_reference(self)`
 
 
@@ -546,6 +612,8 @@ process interrupts (unix.signal)`SIGINT`.
 	/element/
 		- (control)`property-set`
 		- (source/area)`235 2 236 33`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`_dereference_sector(self)`
 
 
@@ -558,6 +626,8 @@ process interrupts (unix.signal)`SIGINT`.
 	/element/
 		- (control)`property-set`
 		- (source/area)`238 2 239 35`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`_set_sector_reference(self, obj)`
 
 
@@ -570,6 +640,8 @@ process interrupts (unix.signal)`SIGINT`.
 	/element/
 		- (control)`property-set`
 		- (source/area)`241 2 245 2`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	sector = controller = property(
 		fget = _dereference_sector,
@@ -584,6 +656,8 @@ process interrupts (unix.signal)`SIGINT`.
 	/element/
 		- (control)`property-set`
 		- (source/area)`249 2 261 14`
+		- (coverage-zeros)`7`
+		- (coverage-counters)`7`
 (signature)`controllerstack(self)`
 
 Return the full sector stacks of the processor.
@@ -598,6 +672,8 @@ Return the full sector stacks of the processor.
 	/element/
 		- (control)`property-set`
 		- (source/area)`263 2 270 3`
+		- (coverage-zeros)`4`
+		- (coverage-counters)`4`
 (signature)`__repr__(self)`
 
 
@@ -622,6 +698,8 @@ Return the full sector stacks of the processor.
 	/element/
 		- (control)`property-set`
 		- (source/area)`273 2 279 2`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	_pexe_states = (
 		('initialized', 0), # Created.
@@ -640,6 +718,8 @@ Return the full sector stacks of the processor.
 	/element/
 		- (control)`property-set`
 		- (source/area)`280 2 282 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	_pexe_contexts = ()
 		@property
@@ -651,6 +731,8 @@ Return the full sector stacks of the processor.
 	/element/
 		- (control)`property-set`
 		- (source/area)`283 2 289 10`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`3`
 		- (type/syntax)`bool`
 		- (type/invalid/unknown)&<#bool>
 		
@@ -664,6 +746,8 @@ Whether the processor has been actuated, normally within a Sector.
 	/element/
 		- (control)`property-set`
 		- (source/area)`290 2 296 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 		- (type/syntax)`bool`
 		- (type/invalid/unknown)&<#bool>
 		
@@ -677,6 +761,8 @@ Whether the processor has started terminate.
 	/element/
 		- (control)`property-set`
 		- (source/area)`297 2 303 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 		- (type/syntax)`bool`
 		- (type/invalid/unknown)&<#bool>
 		
@@ -692,6 +778,8 @@ Whether the processor has been terminated.
 	/element/
 		- (control)`property-set`
 		- (source/area)`304 2 307 10`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 
 [ Processor >> interrupted ]
 ! CONTROL:
@@ -702,6 +790,8 @@ Whether the processor has been terminated.
 	/element/
 		- (control)`property-set`
 		- (source/area)`308 2 313 14`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 		- (type/syntax)`typing.Union[bool]`
 		
 
@@ -725,6 +815,8 @@ Whether the processor has been terminated.
 	/element/
 		- (control)`property-set`
 		- (source/area)`318 2 330 55`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 Whether or not the Processor is functioning.
 Indicates that the processor was actuated and is neither terminated nor interrupted.
 
@@ -742,6 +834,8 @@ Indicates that the processor was actuated and is neither terminated nor interrup
 	/element/
 		- (control)`property-set`
 		- (source/area)`332 2 340 6`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`actuate(self)`
 
 Initialize the Processor for use within the controlling Sector.
@@ -772,6 +866,8 @@ overridden.
 	/element/
 		- (control)`property-set`
 		- (source/area)`345 2 347 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`finish_termination(self)`
 
 
@@ -782,6 +878,8 @@ overridden.
 	/element/
 		- (control)`property-set`
 		- (source/area)`349 2 359 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 (signature)`terminate(self)`
 
 Terminate the Processor using (factor-local/method)&<#Processor.interrupt[interrupt]> and exit.
@@ -794,6 +892,8 @@ Terminate the Processor using (factor-local/method)&<#Processor.interrupt[interr
 	/element/
 		- (control)`property-set`
 		- (source/area)`361 2 373 6`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`interrupt(self)`
 
 Signal the Processor that the controlling Sector has been interrupted,
@@ -813,6 +913,8 @@ may not have to perform any tasks at all.
 	/element/
 		- (control)`property-set`
 		- (source/area)`375 2 390 31`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`6`
 (signature)`fault(self, exception)`
 
 Note the given exception as an error on the (factor-local/class)&<#Processor[Processor]>.
@@ -832,6 +934,8 @@ faulting Processor identified for subsequent scrutiny.
 	/element/
 		- (control)`property-set`
 		- (source/area)`392 2 396 18`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`trap(self, task)`
 
 
@@ -842,6 +946,8 @@ faulting Processor identified for subsequent scrutiny.
 	/element/
 		- (control)`property-set`
 		- (source/area)`398 2 404 41`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`critical(self, task)`
 
 Enqueue a task associated with the sector so that exceptions cause the sector to
@@ -856,6 +962,8 @@ to sequence processing.
 	/element/
 		- (control)`property-set`
 		- (source/area)`406 2 412 33`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`exit(self)`
 
 Exit the processor by signalling the controlling processor that termination
@@ -869,6 +977,8 @@ has completed.
 	/element/
 		- (control)`property-set`
 		- (source/area)`414 2 426 20`
+		- (coverage-zeros)`7`
+		- (coverage-counters)`7`
 (signature)`structure(self)`
 
 Provides the structure stack with at-exit callbacks.
@@ -881,6 +991,8 @@ Provides the structure stack with at-exit callbacks.
 	/element/
 		- (control)`property-set`
 		- (source/area)`428 2 438 23`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`placement(self)`
 
 Define the set index to use when dispatched by a (factor-local/class)&<#Sector[Sector]>.
@@ -898,6 +1010,8 @@ the groups and allow better runtime introspection.
 	/element/
 		- (control)`property-set`
 		- (source/area)`440 2 447 22`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 (signature)`substitute(self, processor)`
 
 Terminate the processor (factor-local/parameter)&<#Processor.substitute.Parameters.self[self]>, but reassign the exit hooks to be performed
@@ -912,6 +1026,8 @@ sector.
 	/element/
 		- (control)`property-set`
 		- (source/area)`449 1 650 24`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`449 14 449 22`
@@ -982,6 +1098,8 @@ of entities (users) and their authorizing credentials.
 	/element/
 		- (control)`property-set`
 		- (source/area)`474 2 475 33`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ Sector >> iterprocessors ]
 ! CONTROL:
@@ -992,6 +1110,8 @@ of entities (users) and their authorizing credentials.
 	/element/
 		- (control)`property-set`
 		- (source/area)`477 2 478 64`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`iterprocessors(self)`
 
 
@@ -1004,6 +1124,8 @@ of entities (users) and their authorizing credentials.
 	/element/
 		- (control)`property-set`
 		- (source/area)`480 2 483 16`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`3`
 (signature)`structure(self)`
 
 
@@ -1016,6 +1138,8 @@ of entities (users) and their authorizing credentials.
 	/element/
 		- (control)`property-set`
 		- (source/area)`485 2 488 37`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 (signature)`__init__(self, *processors)`
 
 
@@ -1026,6 +1150,8 @@ of entities (users) and their authorizing credentials.
 	/element/
 		- (control)`property-set`
 		- (source/area)`490 2 514 18`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`10`
 (signature)`actuate(self)`
 
 Actuate the Sector by actuating its processors.
@@ -1047,6 +1173,8 @@ the parent to be interrupted, they *must* be dispatched after
 	/element/
 		- (control)`property-set`
 		- (source/area)`516 2 516 36`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	_sector_terminated = Processor.exit
 
@@ -1059,6 +1187,8 @@ the parent to be interrupted, they *must* be dispatched after
 	/element/
 		- (control)`property-set`
 		- (source/area)`518 2 531 13`
+		- (coverage-zeros)`6`
+		- (coverage-counters)`6`
 (signature)`terminate(self)`
 
 
@@ -1069,6 +1199,8 @@ the parent to be interrupted, they *must* be dispatched after
 	/element/
 		- (control)`property-set`
 		- (source/area)`533 2 552 33`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`7`
 (signature)`interrupt(self)`
 
 Interrupt the Sector by interrupting all of the subprocessors.
@@ -1082,6 +1214,8 @@ The order of interruption is random, and *should* be insignificant.
 	/element/
 		- (control)`property-set`
 		- (source/area)`554 2 571 27`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`7`
 (signature)`exited(self, processor)`
 
 Sector structure exit handler.
@@ -1097,6 +1231,8 @@ be contained within the Sector.
 	/element/
 		- (control)`property-set`
 		- (source/area)`573 2 589 18`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`8`
 (signature)`dispatch(self, processor)`
 
 Dispatch the given (factor-local/parameter)&<#Sector.dispatch.Parameters.processor[processor]> inside the Sector.
@@ -1113,6 +1249,8 @@ Returns the given processor.
 	/element/
 		- (control)`property-set`
 		- (source/area)`591 2 597 19`
+		- (coverage-zeros)`6`
+		- (coverage-counters)`6`
 (signature)`_flow(self, series)`
 
 
@@ -1123,6 +1261,8 @@ Returns the given processor.
 	/element/
 		- (control)`property-set`
 		- (source/area)`599 2 623 15`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`14`
 (signature)`reap(self)`
 
 Empty the exit set and check for sector completion.
@@ -1135,6 +1275,8 @@ Empty the exit set and check for sector completion.
 	/element/
 		- (control)`property-set`
 		- (source/area)`625 2 635 28`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`reaped(self)`
 
 Called once the set of exited processors has been reaped
@@ -1149,6 +1291,8 @@ controlling Sector of an exit event..
 	/element/
 		- (control)`property-set`
 		- (source/area)`637 2 650 24`
+		- (coverage-zeros)`4`
+		- (coverage-counters)`4`
 (signature)`placement(self)`
 
 Use (invalid/unknown)&<#Interface.if_sector_placement> if the sector has an Interface.
@@ -1162,6 +1306,8 @@ Otherwise, (factor-local/class)&<#Sector[Sector]>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`652 1 772 33`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`652 15 652 23`
@@ -1192,6 +1338,8 @@ whereas `xact_` refers to operations that primary effect the
 	/element/
 		- (control)`property-set`
 		- (source/area)`668 2 669 16`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`placement(self)`
 
 
@@ -1204,6 +1352,8 @@ whereas `xact_` refers to operations that primary effect the
 	/element/
 		- (control)`property-set`
 		- (source/area)`671 2 672 6`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`require(self, identifier)`
 
 
@@ -1214,6 +1364,8 @@ whereas `xact_` refers to operations that primary effect the
 	/element/
 		- (control)`property-set`
 		- (source/area)`674 2 683 33`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`6`
 (signature)`provide(self, identifier)`
 
 Export (factor-local/parameter)&<#Context.provide.Parameters.self[self]> as a named context inherited by all descending processors.
@@ -1226,6 +1378,8 @@ Export (factor-local/parameter)&<#Context.provide.Parameters.self[self]> as a na
 	/element/
 		- (control)`property-set`
 		- (source/area)`685 2 698 14`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`7`
 		- (type/syntax)`bool`
 		- (type/invalid/unknown)&<#bool>
 		
@@ -1241,6 +1395,8 @@ Whether the Transaction has any processors aside from the Context.
 	/element/
 		- (control)`property-set`
 		- (source/area)`700 2 715 14`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`9`
 (signature)`xact_exit_if_empty(self)`
 
 Check for processors other than (factor-local/parameter)&<#Context.xact_exit_if_empty.Parameters.self[self]>, if there are none, exit the transaction.
@@ -1253,6 +1409,8 @@ Check for processors other than (factor-local/parameter)&<#Context.xact_exit_if_
 	/element/
 		- (control)`property-set`
 		- (source/area)`717 2 731 10`
+		- (coverage-zeros)`7`
+		- (coverage-counters)`8`
 		- (type/syntax)`typing.Iterable[Processor]`
 		
 (signature)`xact_contextstack(self)`
@@ -1270,6 +1428,8 @@ First entry is nearest to (factor-local/parameter)&<#Context.xact_contextstack.P
 	/element/
 		- (control)`property-set`
 		- (source/area)`732 2 733 44`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 
 [ Context >> xact_dispatch ]
 ! CONTROL:
@@ -1278,6 +1438,8 @@ First entry is nearest to (factor-local/parameter)&<#Context.xact_contextstack.P
 	/element/
 		- (control)`property-set`
 		- (source/area)`735 2 741 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 (signature)`xact_dispatch(self, processor)`
 
 Dispatch the given (factor-local/parameter)&<#Context.xact_dispatch.Parameters.processor[processor]> into the (factor-local/class)&<#Transaction[Transaction]>.
@@ -1290,6 +1452,8 @@ Dispatch the given (factor-local/parameter)&<#Context.xact_dispatch.Parameters.p
 	/element/
 		- (control)`property-set`
 		- (source/area)`743 2 748 6`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 (signature)`xact_initialized(self)`
 
 Called when the Transaction Context has been fully initialized with respect to
@@ -1303,6 +1467,8 @@ the proposed event set determined by actuation.
 	/element/
 		- (control)`property-set`
 		- (source/area)`750 2 754 6`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`xact_exit(self, xact)`
 
 Subtransaction (factor-local/parameter)&<#Context.xact_exit.Parameters.xact[xact]> exited.
@@ -1315,6 +1481,8 @@ Subtransaction (factor-local/parameter)&<#Context.xact_exit.Parameters.xact[xact
 	/element/
 		- (control)`property-set`
 		- (source/area)`756 2 761 18`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 (signature)`xact_void(self, xact)`
 
 All subtransactions exited; (factor-local/parameter)&<#Context.xact_void.Parameters.xact[xact]> was final.
@@ -1328,6 +1496,8 @@ Defaults to termination of the context and transaction exit.
 	/element/
 		- (control)`property-set`
 		- (source/area)`763 2 772 33`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`5`
 (signature)`interrupt(self)`
 
 Update Transaction Context callbacks to null operations.
@@ -1342,6 +1512,8 @@ Sets (invalid/unknown)&<#interrupted> to (invalid/unknown)&<#True> and should be
 	/element/
 		- (control)`property-set`
 		- (source/area)`774 1 850 34`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`774 19 774 24`
@@ -1369,6 +1541,8 @@ must be the last to exit.
 	/element/
 		- (control)`property-set`
 		- (source/area)`791 2 802 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 (signature)`create(Class, xc)`
 
 Create a (factor-local/class)&<#Transaction[Transaction]> sector with the given (factor-local/class)&<#Context[Context]> initializaed
@@ -1384,6 +1558,8 @@ This is the appropriate way to instantiate (factor-local/class)&<#Transaction[Tr
 	/element/
 		- (control)`property-set`
 		- (source/area)`804 2 808 52`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 (signature)`isinstance(self, ContextClass)`
 
 Whether the Transaction's context, (invalid/unknown)&<#xact_context>, is an instance of the given (factor-local/parameter)&<#Transaction.isinstance.Parameters.ContextClass[ContextClass]>.
@@ -1396,6 +1572,8 @@ Whether the Transaction's context, (invalid/unknown)&<#xact_context>, is an inst
 	/element/
 		- (control)`property-set`
 		- (source/area)`810 2 816 38`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`terminate(self)`
 
 Invoke the (factor-local/class)&<#Context[Context.terminate]> method of the (invalid/unknown)&<#xact_context> property.
@@ -1409,6 +1587,8 @@ The termination of the Transaction is managed entirely by the Context.
 	/element/
 		- (control)`property-set`
 		- (source/area)`818 2 830 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`placement(self)`
 
 Define the set index to use when dispatched by a (factor-local/class)&<#Sector[Sector]>.
@@ -1426,6 +1606,8 @@ the groups and allow better runtime introspection.
 	/element/
 		- (control)`property-set`
 		- (source/area)`831 2 835 45`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 The set of subtransactions currently running.
 
 
@@ -1438,6 +1620,8 @@ The set of subtransactions currently running.
 	/element/
 		- (control)`property-set`
 		- (source/area)`837 2 839 37`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 (signature)`iterprocesses()`
 
 
@@ -1450,6 +1634,8 @@ The set of subtransactions currently running.
 	/element/
 		- (control)`property-set`
 		- (source/area)`841 2 850 34`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`8`
 (signature)`exited(self, processor)`
 
 
@@ -1460,6 +1646,8 @@ The set of subtransactions currently running.
 	/element/
 		- (control)`property-set`
 		- (source/area)`852 1 939 16`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`852 18 852 24`
@@ -1499,6 +1687,8 @@ Transaction sequence created from an invocation.
 	/element/
 		- (control)`property-set`
 		- (source/area)`874 2 879 26`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`6`
 (signature)`__init__(self, invocation)`
 
 
@@ -1511,6 +1701,8 @@ Transaction sequence created from an invocation.
 	/element/
 		- (control)`property-set`
 		- (source/area)`881 2 882 28`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`actuate(self)`
 
 
@@ -1523,6 +1715,8 @@ Transaction sequence created from an invocation.
 	/element/
 		- (control)`property-set`
 		- (source/area)`884 2 889 16`
+		- (coverage-zeros)`5`
+		- (coverage-counters)`5`
 (signature)`terminate(self)`
 
 
@@ -1533,6 +1727,8 @@ Transaction sequence created from an invocation.
 	/element/
 		- (control)`property-set`
 		- (source/area)`891 2 900 28`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`6`
 (signature)`xact_void(self, final)`
 
 Consume the next transaction in the queue.
@@ -1547,6 +1743,8 @@ Consume the next transaction in the queue.
 	/element/
 		- (control)`property-set`
 		- (source/area)`902 2 903 57`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`exe_enqueue(self, xact_context)`
 
 
@@ -1557,6 +1755,8 @@ Consume the next transaction in the queue.
 	/element/
 		- (control)`property-set`
 		- (source/area)`905 2 909 22`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`exe_initialize(self)`
 
 Execute the enqueued transaction or cause the executable to exit.
@@ -1569,6 +1769,8 @@ Execute the enqueued transaction or cause the executable to exit.
 	/element/
 		- (control)`property-set`
 		- (source/area)`911 2 930 32`
+		- (coverage-zeros)`8`
+		- (coverage-counters)`8`
 		- (type/syntax)`None`
 		
 (signature)`faulted(self, proc)`
@@ -1586,6 +1788,8 @@ as its name.
 	/element/
 		- (control)`property-set`
 		- (source/area)`932 2 939 16`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 (signature)`structure(self)`
 
 
@@ -1596,6 +1800,8 @@ as its name.
 	/element/
 		- (control)`property-set`
 		- (source/area)`941 1 977 42`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`941 17 941 23`
@@ -1616,6 +1822,8 @@ Subtransactions are dispatched in order and *terminated in reverse order*.
 	/element/
 		- (control)`property-set`
 		- (source/area)`948 2 949 30`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`__init__(self, contexts)`
 
 
@@ -1628,6 +1836,8 @@ Subtransactions are dispatched in order and *terminated in reverse order*.
 	/element/
 		- (control)`property-set`
 		- (source/area)`951 2 954 27`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`3`
 (signature)`actuate(self)`
 
 
@@ -1640,6 +1850,8 @@ Subtransactions are dispatched in order and *terminated in reverse order*.
 	/element/
 		- (control)`property-set`
 		- (source/area)`956 2 968 29`
+		- (coverage-zeros)`7`
+		- (coverage-counters)`7`
 (signature)`xact_exit(self, xact)`
 
 
@@ -1652,6 +1864,8 @@ Subtransactions are dispatched in order and *terminated in reverse order*.
 	/element/
 		- (control)`property-set`
 		- (source/area)`970 2 971 27`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`xact_void(self, final)`
 
 
@@ -1664,5 +1878,7 @@ Subtransactions are dispatched in order and *terminated in reverse order*.
 	/element/
 		- (control)`property-set`
 		- (source/area)`973 2 977 42`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`3`
 (signature)`terminate(self)`
 

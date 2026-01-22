@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 344 21`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`0`
+		- (coverage-zeros)`16`
+		- (coverage-counters)`149`
 Hash path implementation for compressing file paths.
 
 
@@ -38,6 +38,8 @@ Hash path implementation for compressing file paths.
 	/element/
 		- (control)`property-set`
 		- (source/area)`5 1 5 16`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ FNV ]
 ! CONTROL:
@@ -64,6 +66,8 @@ Hash path implementation for compressing file paths.
 	/element/
 		- (control)`property-set`
 		- (source/area)`9 2 12 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`compute(Class, data)`
 
 
@@ -76,6 +80,8 @@ Hash path implementation for compressing file paths.
 	/element/
 		- (control)`property-set`
 		- (source/area)`14 2 15 16`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`__init__(self)`
 
 
@@ -88,6 +94,8 @@ Hash path implementation for compressing file paths.
 	/element/
 		- (control)`property-set`
 		- (source/area)`17 2 24 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`6`
 (signature)`update(self, data)`
 
 
@@ -100,6 +108,8 @@ Hash path implementation for compressing file paths.
 	/element/
 		- (control)`property-set`
 		- (source/area)`26 2 27 28`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -115,6 +125,8 @@ Hash path implementation for compressing file paths.
 	/element/
 		- (control)`property-set`
 		- (source/area)`29 2 30 24`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`2`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
@@ -128,6 +140,8 @@ Hash path implementation for compressing file paths.
 	/element/
 		- (control)`property-set`
 		- (source/area)`32 1 98 56`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`32 20 32 25`
@@ -147,6 +161,8 @@ the path segment to be used by a resource's key.
 	/element/
 		- (control)`property-set`
 		- (source/area)`38 2 47 14`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`6`
 (signature)`__init__(self, implementation, algorithm, depth, length)`
 
 
@@ -157,6 +173,8 @@ the path segment to be used by a resource's key.
 	/element/
 		- (control)`property-set`
 		- (source/area)`48 2 58 3`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 		- (type/syntax)`Sequence[str]`
 		
 (signature)`divide(digest, length, edge, step)`
@@ -171,6 +189,8 @@ Split the hex digest into parts for building a Route to the bucket.
 	/element/
 		- (control)`property-set`
 		- (source/area)`60 2 68 63`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`5`
 		- (type/syntax)`Sequence[str]`
 		
 (signature)`__call__(self, key)`
@@ -185,6 +205,8 @@ Hash the given key with the configured algorithm returning the divided digest.
 	/element/
 		- (control)`property-set`
 		- (source/area)`70 2 77 13`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`3`
 		- (type/syntax)`tuple[str, int, int]`
 		
 (signature)`identity(self)`
@@ -200,6 +222,8 @@ of divisions, and the character length of the hex digest.
 	/element/
 		- (control)`property-set`
 		- (source/area)`78 2 98 56`
+		- (coverage-zeros)`6`
+		- (coverage-counters)`12`
 (signature)`from_identity(Class)`
 
 Create an instance using the identity.
@@ -212,6 +236,8 @@ Create an instance using the identity.
 	/element/
 		- (control)`property-set`
 		- (source/area)`100 1 230 14`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`100 13 100 18`
@@ -234,6 +260,8 @@ of each indentation block not being part of the key.
 	/element/
 		- (control)`property-set`
 		- (source/area)`112 2 145 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`11`
 (signature)`structure(seq)`
 
 Structure the indentation blocks into (key, entry) pairs.
@@ -260,6 +288,8 @@ Underscore attributes are representations of stored data.
 	/element/
 		- (control)`property-set`
 		- (source/area)`146 2 151 12`
+		- (coverage-zeros)`4`
+		- (coverage-counters)`4`
 (signature)`from_path(Class, path)`
 
 
@@ -272,6 +302,8 @@ Underscore attributes are representations of stored data.
 	/element/
 		- (control)`property-set`
 		- (source/area)`153 2 156 18`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`__init__(self)`
 
 
@@ -282,6 +314,8 @@ Underscore attributes are representations of stored data.
 	/element/
 		- (control)`property-set`
 		- (source/area)`158 2 173 68`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`7`
 (signature)`load(self, lines)`
 
 Load the index from the given line sequence.
@@ -295,6 +329,8 @@ Load the index from the given line sequence.
 	/element/
 		- (control)`property-set`
 		- (source/area)`175 2 181 88`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`sequence(self)`
 
 Send the serialized index state to the given (invalid/unknown)&<#write> function.
@@ -307,6 +343,8 @@ Send the serialized index state to the given (invalid/unknown)&<#write> function
 	/element/
 		- (control)`property-set`
 		- (source/area)`183 2 187 25`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 (signature)`keys(self)`
 
 Iterator containing the keys loaded from the index.
@@ -321,6 +359,8 @@ Iterator containing the keys loaded from the index.
 	/element/
 		- (control)`property-set`
 		- (source/area)`189 2 190 26`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`items(self)`
 
 
@@ -331,6 +371,8 @@ Iterator containing the keys loaded from the index.
 	/element/
 		- (control)`property-set`
 		- (source/area)`192 2 196 25`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`has_key(self, key)`
 
 Check if a key exists in the index.
@@ -345,6 +387,8 @@ Check if a key exists in the index.
 	/element/
 		- (control)`property-set`
 		- (source/area)`198 2 199 23`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`__getitem__(self, key)`
 
 
@@ -357,6 +401,8 @@ Check if a key exists in the index.
 	/element/
 		- (control)`property-set`
 		- (source/area)`201 2 202 20`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`__delitem__(self, key)`
 
 
@@ -367,6 +413,8 @@ Check if a key exists in the index.
 	/element/
 		- (control)`property-set`
 		- (source/area)`204 2 213 3`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`5`
 (signature)`allocate(self, keys, filename)`
 
 Allocate a sequence of entries for the given keys.
@@ -379,6 +427,8 @@ Allocate a sequence of entries for the given keys.
 	/element/
 		- (control)`property-set`
 		- (source/area)`215 2 222 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 (signature)`insert(self, key, filename)`
 
 Insert the key into the bucket. The key *must* not already be present.
@@ -391,6 +441,8 @@ Insert the key into the bucket. The key *must* not already be present.
 	/element/
 		- (control)`property-set`
 		- (source/area)`224 2 230 14`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`delete(self, key)`
 
 Delete the key from the index returning the entry for removal.
@@ -403,6 +455,8 @@ Delete the key from the index returning the entry for removal.
 	/element/
 		- (control)`property-set`
 		- (source/area)`232 1 345 20`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`232 17 232 22`
@@ -429,6 +483,8 @@ Filesystem based hash tree.
 	/element/
 		- (control)`property-set`
 		- (source/area)`243 2 243 22`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	index_name = '.index'
 
@@ -441,6 +497,8 @@ Filesystem based hash tree.
 	/element/
 		- (control)`property-set`
 		- (source/area)`247 2 249 23`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`__init__(self, addressing, directory)`
 
 
@@ -451,6 +509,8 @@ Filesystem based hash tree.
 	/element/
 		- (control)`property-set`
 		- (source/area)`251 2 272 25`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`12`
 		- (type/syntax)`Iterable[(bytes, object)]`
 		
 (signature)`items(self)`
@@ -467,6 +527,8 @@ Returns an iterator to all the keys and their associated routes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`273 2 279 12`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 (signature)`_index(self, route)`
 
 
@@ -477,6 +539,8 @@ Returns an iterator to all the keys and their associated routes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`281 2 299 31`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`11`
 		- (type/syntax)`object`
 		- (type/invalid/unknown)&<#object>
 		
@@ -494,6 +558,8 @@ If already allocated, return the reference to the resource.
 	/element/
 		- (control)`property-set`
 		- (source/area)`301 2 320 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`10`
 		- (type/syntax)`bool`
 		- (type/invalid/unknown)&<#bool>
 		
@@ -511,6 +577,8 @@ Whether the resource has not been allocated.
 	/element/
 		- (control)`property-set`
 		- (source/area)`322 2 345 20`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`12`
 (signature)`release(self, key)`
 
 Release the allocated resource associated with the (factor-local/parameter)&<#Directory.release.Parameters.key[key]> and delete it from the index.

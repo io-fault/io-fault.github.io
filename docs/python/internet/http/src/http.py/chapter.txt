@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 760 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`0`
+		- (coverage-zeros)`22`
+		- (coverage-counters)`340`
 Low-level Hypertext Transfer Protocol tools.
 
 Provides protocol tokenization, field parsers, and protocol serialization for
@@ -70,6 +70,8 @@ implementing a server or a client.
 	/element/
 		- (control)`property-set`
 		- (source/area)`47 1 47 16`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ functools ]
 ! CONTROL:
@@ -80,6 +82,8 @@ implementing a server or a client.
 	/element/
 		- (control)`property-set`
 		- (source/area)`48 1 48 16`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ dataclass ]
 ! CONTROL:
@@ -90,6 +94,8 @@ implementing a server or a client.
 	/element/
 		- (control)`property-set`
 		- (source/area)`49 1 49 33`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ protocoldata ]
 ! CONTROL:
@@ -100,6 +106,8 @@ implementing a server or a client.
 	/element/
 		- (control)`property-set`
 		- (source/area)`50 1 50 38`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ ev_bypass ]
 ! CONTROL:
@@ -110,6 +118,8 @@ implementing a server or a client.
 	/element/
 		- (control)`property-set`
 		- (source/area)`52 1 52 14`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	ev_bypass = -2
 
@@ -122,6 +132,8 @@ implementing a server or a client.
 	/element/
 		- (control)`property-set`
 		- (source/area)`53 1 53 17`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	ev_violation = -1
 
@@ -218,6 +230,8 @@ implementing a server or a client.
 	/element/
 		- (control)`property-set`
 		- (source/area)`61 1 61 12`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	ev_wire = -3 # Serialization event for signalling raw transfer.
 
@@ -230,6 +244,8 @@ implementing a server or a client.
 	/element/
 		- (control)`property-set`
 		- (source/area)`63 1 73 1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	event_symbols = {
 		ev_bypass: 'bypass',
@@ -252,6 +268,8 @@ implementing a server or a client.
 	/element/
 		- (control)`property-set`
 		- (source/area)`75 1 75 22`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	EOH = (ev_headers, ())
 
@@ -264,6 +282,8 @@ implementing a server or a client.
 	/element/
 		- (control)`property-set`
 		- (source/area)`76 1 78 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	EOM = (ev_message, None)
 	
@@ -276,6 +296,8 @@ implementing a server or a client.
 	/element/
 		- (control)`property-set`
 		- (source/area)`79 1 109 32`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`79 14 79 19`
@@ -318,6 +340,8 @@ protocol elements when interpreting HTTP data as events.
 	/element/
 		- (control)`property-set`
 		- (source/area)`103 2 103 26`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
@@ -333,6 +357,8 @@ protocol elements when interpreting HTTP data as events.
 	/element/
 		- (control)`property-set`
 		- (source/area)`104 2 104 24`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
@@ -348,6 +374,8 @@ protocol elements when interpreting HTTP data as events.
 	/element/
 		- (control)`property-set`
 		- (source/area)`105 2 105 23`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
@@ -363,6 +391,8 @@ protocol elements when interpreting HTTP data as events.
 	/element/
 		- (control)`property-set`
 		- (source/area)`106 2 106 30`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
@@ -378,6 +408,8 @@ protocol elements when interpreting HTTP data as events.
 	/element/
 		- (control)`property-set`
 		- (source/area)`107 2 107 36`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
@@ -393,6 +425,8 @@ protocol elements when interpreting HTTP data as events.
 	/element/
 		- (control)`property-set`
 		- (source/area)`108 2 108 29`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
@@ -408,6 +442,8 @@ protocol elements when interpreting HTTP data as events.
 	/element/
 		- (control)`property-set`
 		- (source/area)`109 2 109 32`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
@@ -421,6 +457,8 @@ protocol elements when interpreting HTTP data as events.
 	/element/
 		- (control)`property-set`
 		- (source/area)`111 1 671 24`
+		- (coverage-zeros)`19`
+		- (coverage-counters)`281`
 (signature)`Tokenization()`
 
 An HTTP 1.0 and 1.1 message parser. Emits HTTP events from the given binary data.
@@ -443,6 +481,8 @@ Primarily, this generator is concernced with:
 	/element/
 		- (control)`property-set`
 		- (source/area)`672 1 672 27`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	Disassembler = Tokenization
 
@@ -453,6 +493,8 @@ Primarily, this generator is concernced with:
 	/element/
 		- (control)`property-set`
 		- (source/area)`674 1 681 9`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`5`
 (signature)`disassembly(**config)`
 
 Returns an already started (factor-local/data)&<#Disassembler[Disassembler]> generator.
@@ -465,6 +507,8 @@ Returns an already started (factor-local/data)&<#Disassembler[Disassembler]> gen
 	/element/
 		- (control)`property-set`
 		- (source/area)`683 1 688 57`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`headers(headers)`
 
 Produce an iterator of (invalid/unknown)&<#bytes> instances making up a segment
@@ -480,6 +524,8 @@ of headers that can be joined into a buffer.
 	/element/
 		- (control)`property-set`
 		- (source/area)`689 1 691 24`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 #!source
 	trailers = headers
 	
@@ -494,6 +540,8 @@ of headers that can be joined into a buffer.
 	/element/
 		- (control)`property-set`
 		- (source/area)`692 1 693 30`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`chunk_size(length)`
 
 
@@ -504,6 +552,8 @@ of headers that can be joined into a buffer.
 	/element/
 		- (control)`property-set`
 		- (source/area)`695 1 710 43`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`chunk(data)`
 
 Returns a tuple of (chunk-size + CRLF, chunk-data, CRLF).
@@ -526,6 +576,8 @@ some of the purpose.
 	/element/
 		- (control)`property-set`
 		- (source/area)`712 1 751 22`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`20`
 (signature)`Serialization()`
 
 Assemble HTTP events back into a sequences of bytes.
@@ -540,6 +592,8 @@ Assemble HTTP events back into a sequences of bytes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`752 1 752 25`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	Assembler = Serialization
 
@@ -550,6 +604,8 @@ Assemble HTTP events back into a sequences of bytes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`754 1 761 9`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`5`
 (signature)`assembly(**config)`
 
 Return a started (factor-local/data)&<#Assembler[Assembler]> generator.

@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 3728 0`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`0`
+		- (coverage-zeros)`1416`
+		- (coverage-counters)`1416`
 
 [ CONFIG_DEFAULT_ARRAY_SIZE ]
 ! CONTROL:
@@ -52,6 +52,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`70 10 70 47`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`MIN()`
 
 
@@ -486,6 +488,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`53 1 67 1`
+		- (coverage-zeros)`5`
+		- (coverage-counters)`5`
 		- (type/syntax)`const char *`
 		
 (signature)`errname(err)`
@@ -502,6 +506,8 @@ Get the name of the errno.
 	/element/
 		- (control)`property-set`
 		- (source/area)`73 1 77 1`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`3`
 (signature)`polarity_t()`
 
 
@@ -550,6 +556,8 @@ Get the name of the errno.
 	/element/
 		- (control)`property-set`
 		- (source/area)`78 1 78 34`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`3`
 		- (type/syntax)`enum polarity_t`
 		
 (signature)`polarity_t()`
@@ -564,6 +572,8 @@ Get the name of the errno.
 	/element/
 		- (control)`property-set`
 		- (source/area)`80 1 99 1`
+		- (coverage-zeros)`18`
+		- (coverage-counters)`18`
 		- (type/syntax)`char`
 		
 (signature)`freight_charcode(f)`
@@ -578,6 +588,8 @@ Get the name of the errno.
 	/element/
 		- (control)`property-set`
 		- (source/area)`101 1 120 1`
+		- (coverage-zeros)`12`
+		- (coverage-counters)`12`
 		- (type/syntax)`const char *`
 		
 (signature)`freight_identifier(f)`
@@ -592,6 +604,8 @@ Get the name of the errno.
 	/element/
 		- (control)`property-set`
 		- (source/area)`122 1 146 1`
+		- (coverage-zeros)`27`
+		- (coverage-counters)`27`
 		- (type/syntax)`char *`
 		
 (signature)`ktype_string(kt)`
@@ -606,6 +620,8 @@ Get the name of the errno.
 	/element/
 		- (control)`property-set`
 		- (source/area)`153 1 165 1`
+		- (coverage-zeros)`7`
+		- (coverage-counters)`7`
 		- (type/syntax)`kcall_t`
 		
 (signature)`kcall_id(str)`
@@ -620,6 +636,8 @@ Get the name of the errno.
 	/element/
 		- (control)`property-set`
 		- (source/area)`167 1 178 1`
+		- (coverage-zeros)`8`
+		- (coverage-counters)`8`
 		- (type/syntax)`const char *`
 		
 (signature)`kcall_identifier(kc)`
@@ -634,6 +652,8 @@ Get the name of the errno.
 	/element/
 		- (control)`property-set`
 		- (source/area)`185 1 192 1`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 		- (type/syntax)`int`
 		
 (signature)`socket_receive_buffer(kp)`
@@ -648,6 +668,8 @@ Get the name of the errno.
 	/element/
 		- (control)`property-set`
 		- (source/area)`194 1 201 1`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 		- (type/syntax)`int`
 		
 (signature)`socket_send_buffer(kp)`
@@ -662,6 +684,8 @@ Get the name of the errno.
 	/element/
 		- (control)`property-set`
 		- (source/area)`203 1 224 1`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 		- (type/syntax)`PyObj`
 		
 (signature)`path(kp)`
@@ -674,6 +698,8 @@ Get the name of the errno.
 	/element/
 		- (control)`property-set`
 		- (source/area)`229 1 244 1`
+		- (coverage-zeros)`8`
+		- (coverage-counters)`8`
 		- (type/syntax)`PyObj`
 		
 (signature)`port_raised(self)`
@@ -688,6 +714,8 @@ Set a Python error from the `errno` associated with the port.
 	/element/
 		- (control)`property-set`
 		- (source/area)`249 1 269 1`
+		- (coverage-zeros)`9`
+		- (coverage-counters)`9`
 		- (type/syntax)`PyObj`
 		
 (signature)`port_exception(self)`
@@ -704,6 +732,8 @@ Return a Python error from the `errno` associated with the port.
 	/element/
 		- (control)`property-set`
 		- (source/area)`271 1 284 1`
+		- (coverage-zeros)`5`
+		- (coverage-counters)`5`
 		- (type/syntax)`PyObj`
 		
 (signature)`port_leak(self)`
@@ -718,6 +748,8 @@ Return a Python error from the `errno` associated with the port.
 	/element/
 		- (control)`property-set`
 		- (source/area)`286 1 299 1`
+		- (coverage-zeros)`5`
+		- (coverage-counters)`5`
 		- (type/syntax)`PyObj`
 		
 (signature)`port_shatter(self)`
@@ -732,6 +764,8 @@ Return a Python error from the `errno` associated with the port.
 	/element/
 		- (control)`property-set`
 		- (source/area)`324 1 329 1`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 		- (type/syntax)`PyObj`
 		
 (signature)`port_get_freight(self, _)`
@@ -746,6 +780,8 @@ Return a Python error from the `errno` associated with the port.
 	/element/
 		- (control)`property-set`
 		- (source/area)`331 1 340 1`
+		- (coverage-zeros)`4`
+		- (coverage-counters)`4`
 		- (type/syntax)`PyObj`
 		
 (signature)`port_get_call(self, _)`
@@ -760,6 +796,8 @@ Return a Python error from the `errno` associated with the port.
 	/element/
 		- (control)`property-set`
 		- (source/area)`342 1 347 1`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 		- (type/syntax)`PyObj`
 		
 (signature)`port_get_error_name(self, _)`
@@ -774,6 +812,8 @@ Return a Python error from the `errno` associated with the port.
 	/element/
 		- (control)`property-set`
 		- (source/area)`349 1 366 1`
+		- (coverage-zeros)`10`
+		- (coverage-counters)`10`
 		- (type/syntax)`PyObj`
 		
 (signature)`port_get_error_description(self, _)`
@@ -788,6 +828,8 @@ Return a Python error from the `errno` associated with the port.
 	/element/
 		- (control)`property-set`
 		- (source/area)`368 1 386 1`
+		- (coverage-zeros)`7`
+		- (coverage-counters)`7`
 		- (type/syntax)`PyObj`
 		
 (signature)`port_get_posix_description(self, _)`
@@ -800,6 +842,8 @@ Return a Python error from the `errno` associated with the port.
 	/element/
 		- (control)`property-set`
 		- (source/area)`400 1 428 1`
+		- (coverage-zeros)`7`
+		- (coverage-counters)`7`
 		- (type/syntax)`PyObj`
 		
 (signature)`port_str(self)`
@@ -816,6 +860,8 @@ String representation suitable for text based displays.
 	/element/
 		- (control)`property-set`
 		- (source/area)`430 1 444 1`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 		- (type/syntax)`PyObj`
 		
 (signature)`port_repr(self)`
@@ -830,6 +876,8 @@ String representation suitable for text based displays.
 	/element/
 		- (control)`property-set`
 		- (source/area)`446 1 474 1`
+		- (coverage-zeros)`12`
+		- (coverage-counters)`12`
 		- (type/syntax)`PyObj`
 		
 (signature)`port_new(subtype, args, kw)`
@@ -844,6 +892,8 @@ String representation suitable for text based displays.
 	/element/
 		- (control)`property-set`
 		- (source/area)`476 1 494 1`
+		- (coverage-zeros)`9`
+		- (coverage-counters)`9`
 		- (type/syntax)`void`
 		
 (signature)`port_dealloc(self)`
@@ -866,6 +916,8 @@ Datagrams (invalid/struct)&<#Channel> Structure.
 	/element/
 		- (control)`property-set`
 		- (source/area)`648 1 661 1`
+		- (coverage-zeros)`8`
+		- (coverage-counters)`8`
 		- (type/syntax)`void`
 		
 (signature)`Channel_ReleaseResource(t)`
@@ -880,6 +932,8 @@ Requires GIL.
 	/element/
 		- (control)`property-set`
 		- (source/area)`666 1 677 1`
+		- (coverage-zeros)`5`
+		- (coverage-counters)`5`
 		- (type/syntax)`void`
 		
 (signature)`Channel_ReleaseLink(t)`
@@ -896,6 +950,8 @@ Requires GIL. Decrements the link reference and sets the field to (invalid/unkno
 	/element/
 		- (control)`property-set`
 		- (source/area)`806 1 817 1`
+		- (coverage-zeros)`8`
+		- (coverage-counters)`8`
 		- (type/syntax)`void`
 		
 (signature)`kfilter_cancel(t, kev)`
@@ -910,6 +966,8 @@ Requires GIL. Decrements the link reference and sets the field to (invalid/unkno
 	/element/
 		- (control)`property-set`
 		- (source/area)`819 1 830 1`
+		- (coverage-zeros)`8`
+		- (coverage-counters)`8`
 		- (type/syntax)`void`
 		
 (signature)`kfilter_attach(t, kev)`
@@ -959,6 +1017,8 @@ Position in transfer linked list.
 	/element/
 		- (control)`property-set`
 		- (source/area)`865 1 899 1`
+		- (coverage-zeros)`30`
+		- (coverage-counters)`30`
 		- (type/syntax)`PyObj`
 		
 (signature)`jxi_next(self)`
@@ -975,6 +1035,8 @@ Iterator protocol next implementation.
 	/element/
 		- (control)`property-set`
 		- (source/area)`901 1 910 1`
+		- (coverage-zeros)`6`
+		- (coverage-counters)`6`
 		- (type/syntax)`void`
 		
 (signature)`jxi_dealloc(self)`
@@ -989,6 +1051,8 @@ Iterator protocol next implementation.
 	/element/
 		- (control)`property-set`
 		- (source/area)`912 1 917 1`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 		- (type/syntax)`PyObj`
 		
 (signature)`jxi_iter(self)`
@@ -1003,6 +1067,8 @@ Iterator protocol next implementation.
 	/element/
 		- (control)`property-set`
 		- (source/area)`929 1 944 1`
+		- (coverage-zeros)`10`
+		- (coverage-counters)`10`
 		- (type/syntax)`PyObj`
 		
 (signature)`new_jxi(J, polarity)`
@@ -1017,6 +1083,8 @@ Iterator protocol next implementation.
 	/element/
 		- (control)`property-set`
 		- (source/area)`946 1 964 1`
+		- (coverage-zeros)`5`
+		- (coverage-counters)`5`
 		- (type/syntax)`char`
 		
 (signature)`channel_can_acquire(t)`
@@ -1029,6 +1097,8 @@ Iterator protocol next implementation.
 	/element/
 		- (control)`property-set`
 		- (source/area)`975 1 1041 1`
+		- (coverage-zeros)`34`
+		- (coverage-counters)`34`
 		- (type/syntax)`PyObj`
 		
 (signature)`channel_acquire(self, resource)`
@@ -1051,6 +1121,8 @@ attempt. Otherwise, the Channel is qualified for transfer allowing the subsequen
 	/element/
 		- (control)`property-set`
 		- (source/area)`1043 1 1058 1`
+		- (coverage-zeros)`9`
+		- (coverage-counters)`9`
 		- (type/syntax)`PyObj`
 		
 (signature)`channel_force(self)`
@@ -1065,6 +1137,8 @@ attempt. Otherwise, the Channel is qualified for transfer allowing the subsequen
 	/element/
 		- (control)`property-set`
 		- (source/area)`1061 1 1070 1`
+		- (coverage-zeros)`8`
+		- (coverage-counters)`8`
 		- (type/syntax)`PyObj`
 		
 (signature)`channel_slice(self)`
@@ -1079,6 +1153,8 @@ attempt. Otherwise, the Channel is qualified for transfer allowing the subsequen
 	/element/
 		- (control)`property-set`
 		- (source/area)`1072 1 1093 1`
+		- (coverage-zeros)`20`
+		- (coverage-counters)`20`
 		- (type/syntax)`PyObj`
 		
 (signature)`channel_transfer(self)`
@@ -1093,6 +1169,8 @@ attempt. Otherwise, the Channel is qualified for transfer allowing the subsequen
 	/element/
 		- (control)`property-set`
 		- (source/area)`1095 1 1107 1`
+		- (coverage-zeros)`11`
+		- (coverage-counters)`11`
 		- (type/syntax)`PyObj`
 		
 (signature)`channel_sizeof_transfer(self)`
@@ -1107,6 +1185,8 @@ attempt. Otherwise, the Channel is qualified for transfer allowing the subsequen
 	/element/
 		- (control)`property-set`
 		- (source/area)`1109 1 1138 1`
+		- (coverage-zeros)`18`
+		- (coverage-counters)`18`
 		- (type/syntax)`PyObj`
 		
 (signature)`channel_terminate(self)`
@@ -1121,6 +1201,8 @@ attempt. Otherwise, the Channel is qualified for transfer allowing the subsequen
 	/element/
 		- (control)`property-set`
 		- (source/area)`1140 1 1144 1`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 		- (type/syntax)`PyObj`
 		
 (signature)`channel_resize_exoresource(self, args)`
@@ -1135,6 +1217,8 @@ attempt. Otherwise, the Channel is qualified for transfer allowing the subsequen
 	/element/
 		- (control)`property-set`
 		- (source/area)`1146 1 1242 1`
+		- (coverage-zeros)`58`
+		- (coverage-counters)`58`
 		- (type/syntax)`PyObj`
 		
 (signature)`channel_endpoint(self)`
@@ -1149,6 +1233,8 @@ attempt. Otherwise, the Channel is qualified for transfer allowing the subsequen
 	/element/
 		- (control)`property-set`
 		- (source/area)`1275 1 1299 1`
+		- (coverage-zeros)`8`
+		- (coverage-counters)`8`
 		- (type/syntax)`void`
 		
 (signature)`channel_dealloc(self)`
@@ -1163,6 +1249,8 @@ attempt. Otherwise, the Channel is qualified for transfer allowing the subsequen
 	/element/
 		- (control)`property-set`
 		- (source/area)`1301 1 1312 1`
+		- (coverage-zeros)`7`
+		- (coverage-counters)`7`
 		- (type/syntax)`PyObj`
 		
 (signature)`channel_get_polarity(self, _)`
@@ -1177,6 +1265,8 @@ attempt. Otherwise, the Channel is qualified for transfer allowing the subsequen
 	/element/
 		- (control)`property-set`
 		- (source/area)`1314 1 1327 1`
+		- (coverage-zeros)`7`
+		- (coverage-counters)`7`
 		- (type/syntax)`PyObj`
 		
 (signature)`channel_get_terminated(self, _)`
@@ -1191,6 +1281,8 @@ attempt. Otherwise, the Channel is qualified for transfer allowing the subsequen
 	/element/
 		- (control)`property-set`
 		- (source/area)`1329 1 1359 1`
+		- (coverage-zeros)`15`
+		- (coverage-counters)`15`
 		- (type/syntax)`PyObj`
 		
 (signature)`channel_get_exhausted(self, _)`
@@ -1205,6 +1297,8 @@ attempt. Otherwise, the Channel is qualified for transfer allowing the subsequen
 	/element/
 		- (control)`property-set`
 		- (source/area)`1361 1 1373 1`
+		- (coverage-zeros)`7`
+		- (coverage-counters)`7`
 		- (type/syntax)`PyObj`
 		
 (signature)`channel_get_resource(self, _)`
@@ -1219,6 +1313,8 @@ attempt. Otherwise, the Channel is qualified for transfer allowing the subsequen
 	/element/
 		- (control)`property-set`
 		- (source/area)`1466 1 1491 1`
+		- (coverage-zeros)`15`
+		- (coverage-counters)`15`
 		- (type/syntax)`PyObj`
 		
 (signature)`octets_resize_exoresource(self, args)`
@@ -1233,6 +1329,8 @@ attempt. Otherwise, the Channel is qualified for transfer allowing the subsequen
 	/element/
 		- (control)`property-set`
 		- (source/area)`1496 1 1512 1`
+		- (coverage-zeros)`6`
+		- (coverage-counters)`6`
 		- (type/syntax)`Port`
 		
 (signature)`alloc_port()`
@@ -1247,6 +1345,8 @@ attempt. Otherwise, the Channel is qualified for transfer allowing the subsequen
 	/element/
 		- (control)`property-set`
 		- (source/area)`1514 1 1550 1`
+		- (coverage-zeros)`24`
+		- (coverage-counters)`24`
 		- (type/syntax)`PyObj`
 		
 (signature)`allockq(isubtype, out)`
@@ -1261,6 +1361,8 @@ attempt. Otherwise, the Channel is qualified for transfer allowing the subsequen
 	/element/
 		- (control)`property-set`
 		- (source/area)`1552 1 1579 1`
+		- (coverage-zeros)`16`
+		- (coverage-counters)`16`
 		- (type/syntax)`PyObj`
 		
 (signature)`alloci(isubtype, out)`
@@ -1275,6 +1377,8 @@ attempt. Otherwise, the Channel is qualified for transfer allowing the subsequen
 	/element/
 		- (control)`property-set`
 		- (source/area)`1581 1 1608 1`
+		- (coverage-zeros)`16`
+		- (coverage-counters)`16`
 		- (type/syntax)`PyObj`
 		
 (signature)`alloco(osubtype, out)`
@@ -1287,6 +1391,8 @@ attempt. Otherwise, the Channel is qualified for transfer allowing the subsequen
 	/element/
 		- (control)`property-set`
 		- (source/area)`1613 1 1658 1`
+		- (coverage-zeros)`35`
+		- (coverage-counters)`35`
 		- (type/syntax)`PyObj`
 		
 (signature)`allocio(isubtype, osubtype, out)`
@@ -1301,6 +1407,8 @@ Create a pair of Objects and put them in a tuple to be returned.
 	/element/
 		- (control)`property-set`
 		- (source/area)`1664 1 1697 1`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 		- (type/syntax)`PyObj`
 		
 (signature)`allociopair(isubtype, osubtype, p)`
@@ -1402,6 +1510,8 @@ the buffer, `data`.
 	/element/
 		- (control)`property-set`
 		- (source/area)`1760 1 1806 1`
+		- (coverage-zeros)`25`
+		- (coverage-counters)`25`
 		- (type/syntax)`PyObj`
 		
 (signature)`datagramarray_get_memory(dga, offset)`
@@ -1416,6 +1526,8 @@ the buffer, `data`.
 	/element/
 		- (control)`property-set`
 		- (source/area)`1808 1 1822 1`
+		- (coverage-zeros)`7`
+		- (coverage-counters)`7`
 		- (type/syntax)`PyObj`
 		
 (signature)`datagramarray_get_endpoint(dga, offset)`
@@ -1430,6 +1542,8 @@ the buffer, `data`.
 	/element/
 		- (control)`property-set`
 		- (source/area)`1824 1 1834 1`
+		- (coverage-zeros)`5`
+		- (coverage-counters)`5`
 		- (type/syntax)`PyObj`
 		
 (signature)`datagramarray_payload(self, args)`
@@ -1444,6 +1558,8 @@ the buffer, `data`.
 	/element/
 		- (control)`property-set`
 		- (source/area)`1836 1 1846 1`
+		- (coverage-zeros)`5`
+		- (coverage-counters)`5`
 		- (type/syntax)`PyObj`
 		
 (signature)`datagramarray_endpoint(self, args)`
@@ -1458,6 +1574,8 @@ the buffer, `data`.
 	/element/
 		- (control)`property-set`
 		- (source/area)`1848 1 1886 1`
+		- (coverage-zeros)`28`
+		- (coverage-counters)`28`
 		- (type/syntax)`PyObj`
 		
 (signature)`datagramarray_set_endpoint(self, args)`
@@ -1472,6 +1590,8 @@ the buffer, `data`.
 	/element/
 		- (control)`property-set`
 		- (source/area)`1896 1 1982 1`
+		- (coverage-zeros)`45`
+		- (coverage-counters)`45`
 		- (type/syntax)`PyObj`
 		
 (signature)`allocdga(subtype, pf, space, ngrams)`
@@ -1486,6 +1606,8 @@ the buffer, `data`.
 	/element/
 		- (control)`property-set`
 		- (source/area)`1984 1 2047 1`
+		- (coverage-zeros)`34`
+		- (coverage-counters)`34`
 		- (type/syntax)`PyObj`
 		
 (signature)`slicedga(src, start, stop)`
@@ -1500,6 +1622,8 @@ the buffer, `data`.
 	/element/
 		- (control)`property-set`
 		- (source/area)`2049 1 2074 1`
+		- (coverage-zeros)`18`
+		- (coverage-counters)`18`
 		- (type/syntax)`PyObj`
 		
 (signature)`datagramarray_new(subtype, args, kw)`
@@ -1514,6 +1638,8 @@ the buffer, `data`.
 	/element/
 		- (control)`property-set`
 		- (source/area)`2076 1 2081 1`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 		- (type/syntax)`Py_ssize_t`
 		
 (signature)`datagramarray_length(self)`
@@ -1528,6 +1654,8 @@ the buffer, `data`.
 	/element/
 		- (control)`property-set`
 		- (source/area)`2083 1 2112 1`
+		- (coverage-zeros)`24`
+		- (coverage-counters)`24`
 		- (type/syntax)`PyObj`
 		
 (signature)`datagramarray_getitem(self, index)`
@@ -1542,6 +1670,8 @@ the buffer, `data`.
 	/element/
 		- (control)`property-set`
 		- (source/area)`2114 1 2158 1`
+		- (coverage-zeros)`27`
+		- (coverage-counters)`27`
 		- (type/syntax)`PyObj`
 		
 (signature)`datagramarray_subscript(self, item)`
@@ -1556,6 +1686,8 @@ the buffer, `data`.
 	/element/
 		- (control)`property-set`
 		- (source/area)`2175 1 2191 1`
+		- (coverage-zeros)`4`
+		- (coverage-counters)`4`
 		- (type/syntax)`int`
 		
 (signature)`datagramarray_getbuffer(self, view, flags)`
@@ -1570,6 +1702,8 @@ the buffer, `data`.
 	/element/
 		- (control)`property-set`
 		- (source/area)`2199 1 2203 1`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 		- (type/syntax)`PyObj`
 		
 (signature)`datagramarray_iter(self)`
@@ -1584,6 +1718,8 @@ the buffer, `data`.
 	/element/
 		- (control)`property-set`
 		- (source/area)`2205 1 2213 1`
+		- (coverage-zeros)`5`
+		- (coverage-counters)`5`
 		- (type/syntax)`void`
 		
 (signature)`datagramarray_dealloc(self)`
@@ -1598,6 +1734,8 @@ the buffer, `data`.
 	/element/
 		- (control)`property-set`
 		- (source/area)`2230 1 2255 1`
+		- (coverage-zeros)`20`
+		- (coverage-counters)`20`
 		- (type/syntax)`PyObj`
 		
 (signature)`datagrams_transfer(self)`
@@ -1612,6 +1750,8 @@ the buffer, `data`.
 	/element/
 		- (control)`property-set`
 		- (source/area)`2285 1 2319 1`
+		- (coverage-zeros)`17`
+		- (coverage-counters)`17`
 		- (type/syntax)`PyObj`
 		
 (signature)`array_resize_exoresource(self, args)`
@@ -1626,6 +1766,8 @@ the buffer, `data`.
 	/element/
 		- (control)`property-set`
 		- (source/area)`2321 1 2385 1`
+		- (coverage-zeros)`35`
+		- (coverage-counters)`35`
 		- (type/syntax)`PyObj`
 		
 (signature)`array_acquire(self, ob)`
@@ -1640,6 +1782,8 @@ the buffer, `data`.
 	/element/
 		- (control)`property-set`
 		- (source/area)`2387 1 2430 1`
+		- (coverage-zeros)`9`
+		- (coverage-counters)`9`
 		- (type/syntax)`void`
 		
 (signature)`array_init(J)`
@@ -1654,6 +1798,8 @@ the buffer, `data`.
 	/element/
 		- (control)`property-set`
 		- (source/area)`2432 1 2436 1`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 		- (type/syntax)`void`
 		
 (signature)`array_start_cycle(J)`
@@ -1668,6 +1814,8 @@ the buffer, `data`.
 	/element/
 		- (control)`property-set`
 		- (source/area)`2438 1 2445 1`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`3`
 		- (type/syntax)`void`
 		
 (signature)`array_finish_cycle(J)`
@@ -1682,6 +1830,8 @@ the buffer, `data`.
 	/element/
 		- (control)`property-set`
 		- (source/area)`2450 1 2473 1`
+		- (coverage-zeros)`7`
+		- (coverage-counters)`7`
 		- (type/syntax)`void`
 		
 (signature)`array_kevent_change(J)`
@@ -1696,6 +1846,8 @@ the buffer, `data`.
 	/element/
 		- (control)`property-set`
 		- (source/area)`2476 1 2530 1`
+		- (coverage-zeros)`9`
+		- (coverage-counters)`9`
 		- (type/syntax)`void`
 		
 (signature)`array_kevent_collect(J, waiting)`
@@ -1708,6 +1860,8 @@ the buffer, `data`.
 	/element/
 		- (control)`property-set`
 		- (source/area)`2538 1 2550 1`
+		- (coverage-zeros)`4`
+		- (coverage-counters)`4`
 		- (type/syntax)`void`
 		
 (signature)`array_reload(J)`
@@ -1725,6 +1879,8 @@ Channel's corresponding kevent filter to be loaded.
 	/element/
 		- (control)`property-set`
 		- (source/area)`2555 1 2583 1`
+		- (coverage-zeros)`11`
+		- (coverage-counters)`11`
 		- (type/syntax)`void`
 		
 (signature)`array_transfer_delta(J)`
@@ -1741,6 +1897,8 @@ Enqueue the delta into the lltransfer list.
 	/element/
 		- (control)`property-set`
 		- (source/area)`2585 1 2596 1`
+		- (coverage-zeros)`4`
+		- (coverage-counters)`4`
 		- (type/syntax)`kevent_t *`
 		
 (signature)`array_current_kevent_slot(J)`
@@ -1753,6 +1911,8 @@ Enqueue the delta into the lltransfer list.
 	/element/
 		- (control)`property-set`
 		- (source/area)`2601 1 2696 1`
+		- (coverage-zeros)`30`
+		- (coverage-counters)`30`
 		- (type/syntax)`void`
 		
 (signature)`array_apply_delta(J)`
@@ -1767,6 +1927,8 @@ Process delta and setup for event processing
 	/element/
 		- (control)`property-set`
 		- (source/area)`2764 1 2820 1`
+		- (coverage-zeros)`26`
+		- (coverage-counters)`26`
 		- (type/syntax)`void`
 		
 (signature)`array_kevent_transform(J)`
@@ -1784,6 +1946,8 @@ Place actionable events onto their respective transfer list.
 	/element/
 		- (control)`property-set`
 		- (source/area)`2823 1 2855 1`
+		- (coverage-zeros)`14`
+		- (coverage-counters)`14`
 		- (type/syntax)`int`
 		
 (signature)`array_fall(J, force)`
@@ -1798,6 +1962,8 @@ Place actionable events onto their respective transfer list.
 	/element/
 		- (control)`property-set`
 		- (source/area)`2857 1 2869 1`
+		- (coverage-zeros)`8`
+		- (coverage-counters)`8`
 		- (type/syntax)`PyObj`
 		
 (signature)`array_force(self)`
@@ -1812,6 +1978,8 @@ Place actionable events onto their respective transfer list.
 	/element/
 		- (control)`property-set`
 		- (source/area)`2871 1 2884 1`
+		- (coverage-zeros)`7`
+		- (coverage-counters)`7`
 		- (type/syntax)`PyObj`
 		
 (signature)`array_wait(self, args)`
@@ -1826,6 +1994,8 @@ Place actionable events onto their respective transfer list.
 	/element/
 		- (control)`property-set`
 		- (source/area)`2886 1 2924 1`
+		- (coverage-zeros)`11`
+		- (coverage-counters)`11`
 		- (type/syntax)`void`
 		
 (signature)`_array_terminate(J)`
@@ -1838,6 +2008,8 @@ Place actionable events onto their respective transfer list.
 	/element/
 		- (control)`property-set`
 		- (source/area)`2929 1 3174 1`
+		- (coverage-zeros)`67`
+		- (coverage-counters)`67`
 		- (type/syntax)`void`
 		
 (signature)`_array_flow(J)`
@@ -1852,6 +2024,8 @@ Collect and process events.
 	/element/
 		- (control)`property-set`
 		- (source/area)`3185 1 3197 1`
+		- (coverage-zeros)`6`
+		- (coverage-counters)`6`
 		- (type/syntax)`PyObj`
 		
 (signature)`array_transfer(self)`
@@ -1868,6 +2042,8 @@ Return an iterable to the collected events. (project-local/unknown)&<kernel#Arra
 	/element/
 		- (control)`property-set`
 		- (source/area)`3199 1 3208 1`
+		- (coverage-zeros)`7`
+		- (coverage-counters)`7`
 		- (type/syntax)`PyObj`
 		
 (signature)`array_sizeof_transfer(self)`
@@ -1882,6 +2058,8 @@ Return an iterable to the collected events. (project-local/unknown)&<kernel#Arra
 	/element/
 		- (control)`property-set`
 		- (source/area)`3210 1 3296 1`
+		- (coverage-zeros)`29`
+		- (coverage-counters)`29`
 		- (type/syntax)`void`
 		
 (signature)`_array_flush(J)`
@@ -1894,6 +2072,8 @@ Return an iterable to the collected events. (project-local/unknown)&<kernel#Arra
 	/element/
 		- (control)`property-set`
 		- (source/area)`3301 1 3343 1`
+		- (coverage-zeros)`20`
+		- (coverage-counters)`20`
 		- (type/syntax)`PyObj`
 		
 (signature)`array_void(self)`
@@ -1910,6 +2090,8 @@ Close file descriptors and release references; destroy entire ring.
 	/element/
 		- (control)`property-set`
 		- (source/area)`3345 1 3360 1`
+		- (coverage-zeros)`8`
+		- (coverage-counters)`8`
 		- (type/syntax)`PyObj`
 		
 (signature)`array_terminate(self)`
@@ -1922,6 +2104,8 @@ Close file descriptors and release references; destroy entire ring.
 	/element/
 		- (control)`property-set`
 		- (source/area)`3365 1 3387 1`
+		- (coverage-zeros)`15`
+		- (coverage-counters)`15`
 		- (type/syntax)`PyObj`
 		
 (signature)`array_enter(self)`
@@ -1936,6 +2120,8 @@ Begin a transfer processing cycle.
 	/element/
 		- (control)`property-set`
 		- (source/area)`3392 1 3401 1`
+		- (coverage-zeros)`5`
+		- (coverage-counters)`5`
 		- (type/syntax)`PyObj`
 		
 (signature)`array_exit(self, args)`
@@ -1952,6 +2138,8 @@ Close a transfer processing cycle.
 	/element/
 		- (control)`property-set`
 		- (source/area)`3423 1 3461 1`
+		- (coverage-zeros)`19`
+		- (coverage-counters)`19`
 		- (type/syntax)`PyObj`
 		
 (signature)`array_get_resource(self, _)`
@@ -1966,6 +2154,8 @@ Close a transfer processing cycle.
 	/element/
 		- (control)`property-set`
 		- (source/area)`3468 1 3474 1`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 		- (type/syntax)`void`
 		
 (signature)`array_dealloc(self)`
@@ -1980,6 +2170,8 @@ Close a transfer processing cycle.
 	/element/
 		- (control)`property-set`
 		- (source/area)`3476 1 3511 1`
+		- (coverage-zeros)`19`
+		- (coverage-counters)`19`
 		- (type/syntax)`PyObj`
 		
 (signature)`array_new(subtype, args, kw)`
@@ -1994,6 +2186,8 @@ Close a transfer processing cycle.
 	/element/
 		- (control)`property-set`
 		- (source/area)`3529 1 3552 1`
+		- (coverage-zeros)`13`
+		- (coverage-counters)`13`
 		- (type/syntax)`PyObj`
 		
 (signature)`_talloc_octets_input(module, param)`
@@ -2008,6 +2202,8 @@ Close a transfer processing cycle.
 	/element/
 		- (control)`property-set`
 		- (source/area)`3554 1 3577 1`
+		- (coverage-zeros)`13`
+		- (coverage-counters)`13`
 		- (type/syntax)`PyObj`
 		
 (signature)`_talloc_octets_output(module, param)`
@@ -2022,6 +2218,8 @@ Close a transfer processing cycle.
 	/element/
 		- (control)`property-set`
 		- (source/area)`3579 1 3602 1`
+		- (coverage-zeros)`13`
+		- (coverage-counters)`13`
 		- (type/syntax)`PyObj`
 		
 (signature)`_talloc_datagrams_socket(module, param)`
@@ -2036,6 +2234,8 @@ Close a transfer processing cycle.
 	/element/
 		- (control)`property-set`
 		- (source/area)`3604 1 3627 1`
+		- (coverage-zeros)`13`
+		- (coverage-counters)`13`
 		- (type/syntax)`PyObj`
 		
 (signature)`_talloc_octets_socket(module, param)`

@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 747 0`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`0`
+		- (coverage-zeros)`100`
+		- (coverage-counters)`274`
 Client and server common IETF HTTP tools for (context-local/project-name)&<fault.kernel> based applications.
 
 [ Properties ]
@@ -33,6 +33,8 @@ Client and server common IETF HTTP tools for (context-local/project-name)&<fault
 	/element/
 		- (control)`property-set`
 		- (source/area)`9 1 9 18`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ itertools ]
 ! CONTROL:
@@ -43,6 +45,8 @@ Client and server common IETF HTTP tools for (context-local/project-name)&<fault
 	/element/
 		- (control)`property-set`
 		- (source/area)`10 1 10 16`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ functools ]
 ! CONTROL:
@@ -53,6 +57,8 @@ Client and server common IETF HTTP tools for (context-local/project-name)&<fault
 	/element/
 		- (control)`property-set`
 		- (source/area)`11 1 11 16`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ tools ]
 ! CONTROL:
@@ -63,6 +69,8 @@ Client and server common IETF HTTP tools for (context-local/project-name)&<fault
 	/element/
 		- (control)`property-set`
 		- (source/area)`13 1 13 27`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ cachedproperty ]
 ! CONTROL:
@@ -83,6 +91,8 @@ Client and server common IETF HTTP tools for (context-local/project-name)&<fault
 	/element/
 		- (control)`property-set`
 		- (source/area)`14 1 14 55`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ timetypes ]
 ! CONTROL:
@@ -93,6 +103,8 @@ Client and server common IETF HTTP tools for (context-local/project-name)&<fault
 	/element/
 		- (control)`property-set`
 		- (source/area)`15 1 15 37`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ memory ]
 ! CONTROL:
@@ -103,6 +115,8 @@ Client and server common IETF HTTP tools for (context-local/project-name)&<fault
 	/element/
 		- (control)`property-set`
 		- (source/area)`16 1 16 27`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ protocol ]
 ! CONTROL:
@@ -113,6 +127,8 @@ Client and server common IETF HTTP tools for (context-local/project-name)&<fault
 	/element/
 		- (control)`property-set`
 		- (source/area)`18 1 18 39`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ media ]
 ! CONTROL:
@@ -123,6 +139,8 @@ Client and server common IETF HTTP tools for (context-local/project-name)&<fault
 	/element/
 		- (control)`property-set`
 		- (source/area)`19 1 19 28`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ ri ]
 ! CONTROL:
@@ -133,6 +151,8 @@ Client and server common IETF HTTP tools for (context-local/project-name)&<fault
 	/element/
 		- (control)`property-set`
 		- (source/area)`20 1 20 25`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ core ]
 ! CONTROL:
@@ -143,6 +163,8 @@ Client and server common IETF HTTP tools for (context-local/project-name)&<fault
 	/element/
 		- (control)`property-set`
 		- (source/area)`22 1 22 25`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ flows ]
 ! CONTROL:
@@ -153,6 +175,8 @@ Client and server common IETF HTTP tools for (context-local/project-name)&<fault
 	/element/
 		- (control)`property-set`
 		- (source/area)`23 1 23 26`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ HeaderSequence ]
 ! CONTROL:
@@ -163,6 +187,8 @@ Client and server common IETF HTTP tools for (context-local/project-name)&<fault
 	/element/
 		- (control)`property-set`
 		- (source/area)`25 1 25 60`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	HeaderSequence = typing.Sequence[typing.Tuple[bytes, bytes]]
 
@@ -173,6 +199,8 @@ Client and server common IETF HTTP tools for (context-local/project-name)&<fault
 	/element/
 		- (control)`property-set`
 		- (source/area)`27 1 65 37`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`18`
 (signature)`ranges(length, range_header)`
 
 Generator producing the integer ranges specified by the given Range header.
@@ -199,6 +227,8 @@ Generator producing the integer ranges specified by the given Range header.
 	/element/
 		- (control)`property-set`
 		- (source/area)`67 1 381 35`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`67 18 67 23`
@@ -291,6 +321,8 @@ Primarily used to extract information from received response (client) or request
 	/element/
 		- (control)`property-set`
 		- (source/area)`82 2 82 19`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 #!source
 	_uri_struct = None
 
@@ -303,6 +335,8 @@ Primarily used to extract information from received response (client) or request
 	/element/
 		- (control)`property-set`
 		- (source/area)`83 2 83 18`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 #!source
 	_uri_parts = None
 
@@ -313,6 +347,8 @@ Primarily used to extract information from received response (client) or request
 	/element/
 		- (control)`property-set`
 		- (source/area)`85 2 98 24`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`5`
 (signature)`__init__(self, headers, *local)`
 
 Create a cache for a sequence of headers directly stored.
@@ -343,6 +379,8 @@ Create a cache for a sequence of headers directly stored.
 	/element/
 		- (control)`property-set`
 		- (source/area)`100 2 112 13`
+		- (coverage-zeros)`8`
+		- (coverage-counters)`8`
 (signature)`set_request(self, method, uri)`
 
 Configure the structure as representing a request received by a server.
@@ -355,6 +393,8 @@ Configure the structure as representing a request received by a server.
 	/element/
 		- (control)`property-set`
 		- (source/area)`114 2 123 10`
+		- (coverage-zeros)`4`
+		- (coverage-counters)`4`
 (signature)`set_status(self, status, phrase)`
 
 Configure the structure as representing a response received by a client.
@@ -367,6 +407,8 @@ Configure the structure as representing a response received by a client.
 	/element/
 		- (control)`property-set`
 		- (source/area)`124 2 130 16`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`3`
 		- (type/syntax)`bool`
 		- (type/invalid/unknown)&<#bool>
 		
@@ -382,6 +424,8 @@ Whether the response is a redirect.
 	/element/
 		- (control)`property-set`
 		- (source/area)`131 2 133 20`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`cache(self)`
 
 
@@ -394,6 +438,8 @@ Whether the response is a redirect.
 	/element/
 		- (control)`property-set`
 		- (source/area)`135 2 139 4`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`__str__(self)`
 
 
@@ -404,6 +450,8 @@ Whether the response is a redirect.
 	/element/
 		- (control)`property-set`
 		- (source/area)`141 2 161 16`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`12`
 (signature)`_init_headers(self, headers)`
 
 Set the headers to be cached and structured for use by an application.
@@ -418,6 +466,8 @@ Set the headers to be cached and structured for use by an application.
 	/element/
 		- (control)`property-set`
 		- (source/area)`162 2 168 16`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`_uri_parts(self)`
 
 
@@ -430,6 +480,8 @@ Set the headers to be cached and structured for use by an application.
 	/element/
 		- (control)`property-set`
 		- (source/area)`169 2 172 10`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`_uri_struct(self)`
 
 
@@ -440,6 +492,8 @@ Set the headers to be cached and structured for use by an application.
 	/element/
 		- (control)`property-set`
 		- (source/area)`173 2 179 10`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`3`
 		- (type/syntax)`typing.Sequence[str]`
 		
 The sequence of path items in pathstring.
@@ -452,6 +506,8 @@ The sequence of path items in pathstring.
 	/element/
 		- (control)`property-set`
 		- (source/area)`180 2 186 10`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`3`
 		- (type/syntax)`typing.Optional[dict]`
 		
 The query parameters of the URI.
@@ -464,6 +520,8 @@ The query parameters of the URI.
 	/element/
 		- (control)`property-set`
 		- (source/area)`187 2 193 10`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`3`
 		- (type/syntax)`bool`
 		- (type/invalid/unknown)&<#bool>
 		
@@ -477,6 +535,8 @@ Whether or not the request looking to perform protocol substitution.
 	/element/
 		- (control)`property-set`
 		- (source/area)`194 2 204 10`
+		- (coverage-zeros)`4`
+		- (coverage-counters)`5`
 		- (type/syntax)`bool`
 		- (type/invalid/unknown)&<#bool>
 		
@@ -490,6 +550,8 @@ Whether the headers indicate an associated body.
 	/element/
 		- (control)`property-set`
 		- (source/area)`205 2 219 13`
+		- (coverage-zeros)`7`
+		- (coverage-counters)`8`
 		- (type/syntax)`typing.Optional[int]`
 		
 The length of the content; positive if exact, (invalid/unknown)&<#None> if no content, and -1 if arbitrary.
@@ -503,6 +565,8 @@ For HTTP, arbitrary triggers chunked transfer encoding.
 	/element/
 		- (control)`property-set`
 		- (source/area)`221 2 229 16`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`3`
 (signature)`byte_ranges(self, length)`
 
 The byte ranges of the request.
@@ -515,6 +579,8 @@ The byte ranges of the request.
 	/element/
 		- (control)`property-set`
 		- (source/area)`230 2 245 58`
+		- (coverage-zeros)`6`
+		- (coverage-counters)`6`
 (signature)`upgrade_insecure(self)`
 
 The (http/header-id)`Upgrade-Insecure-Requests` header as a boolean.
@@ -531,6 +597,8 @@ The (http/header-id)`Upgrade-Insecure-Requests` header as a boolean.
 	/element/
 		- (control)`property-set`
 		- (source/area)`247 2 312 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	cached_headers = set(
 		x.lower() for x in [
@@ -593,6 +661,8 @@ The (http/header-id)`Upgrade-Insecure-Requests` header as a boolean.
 	/element/
 		- (control)`property-set`
 		- (source/area)`313 2 320 17`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`4`
 		- (type/syntax)`bytes`
 		- (type/invalid/unknown)&<#bytes>
 		
@@ -606,6 +676,8 @@ Return the connection header stripped and lowered or `b''` if no header present.
 	/element/
 		- (control)`property-set`
 		- (source/area)`321 2 331 16`
+		- (coverage-zeros)`4`
+		- (coverage-counters)`4`
 (signature)`media_range_cache(range_data)`
 
 Cached access to a media range header.
@@ -618,6 +690,8 @@ Cached access to a media range header.
 	/element/
 		- (control)`property-set`
 		- (source/area)`332 2 340 16`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`3`
 (signature)`media_range(self)`
 
 Structured form of the Accept header.
@@ -630,6 +704,8 @@ Structured form of the Accept header.
 	/element/
 		- (control)`property-set`
 		- (source/area)`341 2 348 16`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`3`
 		- (type/syntax)`media.Type`
 		- (type/context-local/factor-element)&<fault.internet/media#Type[fault.internet.media.Type]>
 		
@@ -645,6 +721,8 @@ The structured media type extracted from the (http/header-id)`Content-Type` head
 	/element/
 		- (control)`property-set`
 		- (source/area)`349 2 360 10`
+		- (coverage-zeros)`4`
+		- (coverage-counters)`5`
 		- (type/syntax)`timetypes.Timestamp`
 		- (type/context-local/factor-element)&<fault.time/types#Timestamp[fault.time.types.Timestamp]>
 		
@@ -660,6 +738,8 @@ Date header timestamp.
 	/element/
 		- (control)`property-set`
 		- (source/area)`361 2 367 10`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`3`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -673,6 +753,8 @@ Decoded host header.
 	/element/
 		- (control)`property-set`
 		- (source/area)`368 2 374 10`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`3`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -686,6 +768,8 @@ Character encoding of entity content. (invalid/unknown)&<#None> if not applicabl
 	/element/
 		- (control)`property-set`
 		- (source/area)`375 2 381 35`
+		- (coverage-zeros)`5`
+		- (coverage-counters)`6`
 		- (type/syntax)`bool`
 		- (type/invalid/unknown)&<#bool>
 		
@@ -701,6 +785,8 @@ Whether this is suppoed to be the last transaction in the connection.
 	/element/
 		- (control)`property-set`
 		- (source/area)`383 1 385 31`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 (signature)`_join_send_wire(event, channel_id, transfer_events)`
 
 
@@ -713,6 +799,8 @@ Whether this is suppoed to be the last transaction in the connection.
 	/element/
 		- (control)`property-set`
 		- (source/area)`387 1 389 41`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`_join_send_content(event, channel_id, transfer_events)`
 
 
@@ -725,6 +813,8 @@ Whether this is suppoed to be the last transaction in the connection.
 	/element/
 		- (control)`property-set`
 		- (source/area)`391 1 393 41`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`_join_send_chunk(event, channel_id, transfer_events)`
 
 
@@ -737,6 +827,8 @@ Whether this is suppoed to be the last transaction in the connection.
 	/element/
 		- (control)`property-set`
 		- (source/area)`395 1 397 14`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`_join_send_eom(event, channel_id, terminal)`
 
 
@@ -749,6 +841,8 @@ Whether this is suppoed to be the last transaction in the connection.
 	/element/
 		- (control)`property-set`
 		- (source/area)`399 1 420 2`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`9`
 (signature)`_join_initiate_response(shared, commands, sequence, event, channel_id, init)`
 
 
@@ -761,6 +855,8 @@ Whether this is suppoed to be the last transaction in the connection.
 	/element/
 		- (control)`property-set`
 		- (source/area)`422 1 446 2`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`10`
 (signature)`_join_initiate_request(shared, commands, sequence, event, channel_id, init)`
 
 
@@ -771,6 +867,8 @@ Whether this is suppoed to be the last transaction in the connection.
 	/element/
 		- (control)`property-set`
 		- (source/area)`448 1 487 18`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`15`
 (signature)`join(shared, sequence)`
 
 Join flow events into a proper HTTP stream.
@@ -783,6 +881,8 @@ Join flow events into a proper HTTP stream.
 	/element/
 		- (control)`property-set`
 		- (source/area)`489 1 495 52`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`_fork_response_sync(state)`
 
 Generator that can be used to communicate whether or not
@@ -796,6 +896,8 @@ the response will have a body. Used with client disposition.
 	/element/
 		- (control)`property-set`
 		- (source/area)`497 1 646 18`
+		- (coverage-zeros)`15`
+		- (coverage-counters)`51`
 (signature)`fork(shared, allocate, close, overflow)`
 
 Split an HTTP stream into flow events for use by (context-local/factor-element)&<fault.kernel/flows#Division[fault.kernel.flows.Division]>.
@@ -808,6 +910,8 @@ Split an HTTP stream into flow events for use by (context-local/factor-element)&
 	/element/
 		- (control)`property-set`
 		- (source/area)`648 1 677 23`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`648 18 648 31`
@@ -826,6 +930,8 @@ Protocol class sending HTTP messages.
 	/element/
 		- (control)`property-set`
 		- (source/area)`654 2 657 14`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 
 [ TXProtocol >> initiate_server_request ]
 ! CONTROL:
@@ -834,6 +940,8 @@ Protocol class sending HTTP messages.
 	/element/
 		- (control)`property-set`
 		- (source/area)`658 2 665 14`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`initiate_server_request(protocol, parameter)`
 
 Used by clients to select the proper initiation to send.
@@ -846,6 +954,8 @@ Used by clients to select the proper initiation to send.
 	/element/
 		- (control)`property-set`
 		- (source/area)`666 2 671 57`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`initiate_client_response(protocol, parameter)`
 
 Used by servers to select the proper initiation to send.
@@ -860,6 +970,8 @@ Used by servers to select the proper initiation to send.
 	/element/
 		- (control)`property-set`
 		- (source/area)`673 2 677 23`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 (signature)`__init__(self, state, initiate)`
 
 
@@ -870,6 +982,8 @@ Used by servers to select the proper initiation to send.
 	/element/
 		- (control)`property-set`
 		- (source/area)`679 1 720 23`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`679 18 679 31`
@@ -888,6 +1002,8 @@ Protocol class receiving HTTP messages.
 	/element/
 		- (control)`property-set`
 		- (source/area)`685 2 688 14`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 
 [ RXProtocol >> allocate_client_request ]
 ! CONTROL:
@@ -896,6 +1012,8 @@ Protocol class receiving HTTP messages.
 	/element/
 		- (control)`property-set`
 		- (source/area)`689 2 696 14`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`allocate_client_request(parameter)`
 
 For use by server receiving the client request.
@@ -908,6 +1026,8 @@ For use by server receiving the client request.
 	/element/
 		- (control)`property-set`
 		- (source/area)`697 2 702 46`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`allocate_server_response(parameter)`
 
 For use by clients receiving the server response.
@@ -922,6 +1042,8 @@ For use by clients receiving the server response.
 	/element/
 		- (control)`property-set`
 		- (source/area)`704 2 705 6`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`p_close(self)`
 
 
@@ -934,6 +1056,8 @@ For use by clients receiving the server response.
 	/element/
 		- (control)`property-set`
 		- (source/area)`707 2 709 36`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 (signature)`p_correlate(self, send)`
 
 
@@ -946,6 +1070,8 @@ For use by clients receiving the server response.
 	/element/
 		- (control)`property-set`
 		- (source/area)`711 2 714 31`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`3`
 (signature)`p_overflowing(self)`
 
 
@@ -958,6 +1084,8 @@ For use by clients receiving the server response.
 	/element/
 		- (control)`property-set`
 		- (source/area)`716 2 720 23`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 (signature)`__init__(self, state, allocate)`
 
 
@@ -970,6 +1098,8 @@ For use by clients receiving the server response.
 	/element/
 		- (control)`property-set`
 		- (source/area)`722 1 730 25`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`5`
 (signature)`allocate_client_protocol()`
 
 
@@ -982,6 +1112,8 @@ For use by clients receiving the server response.
 	/element/
 		- (control)`property-set`
 		- (source/area)`732 1 740 25`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`5`
 (signature)`allocate_server_protocol()`
 
 
@@ -994,6 +1126,8 @@ For use by clients receiving the server response.
 	/element/
 		- (control)`property-set`
 		- (source/area)`742 1 742 54`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	allocate_client_protocol_v1 = allocate_client_protocol
 
@@ -1006,5 +1140,7 @@ For use by clients receiving the server response.
 	/element/
 		- (control)`property-set`
 		- (source/area)`743 1 743 54`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	allocate_server_protocol_v1 = allocate_server_protocol
