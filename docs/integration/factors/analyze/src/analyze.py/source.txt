@@ -107,8 +107,7 @@ def main(inv:process.Invocation):
 		# Coverage
 		if config['accuracy']:
 			ficmd('integrate', ['--coverage', '-Rg', selection])
-			#ficmd('switch', ['--coverage', '-g', selection])
-			ficmd('delineate', [selection])
+			ficmd('delineate', ['--coverage', selection])
 			ficmd('test', [test])
 		else:
 			# Still need delineated forms.
@@ -116,8 +115,7 @@ def main(inv:process.Invocation):
 
 		# Profiling
 		if config['efficiency']:
-			ficmd('integrate', ['--profiling', '-O', selection])
-			ficmd('switch', ['--profiling', '-O', selection])
+			ficmd('integrate', ['--profile', '-RO', selection])
 			ficmd('test', [test])
 
 		# Aggregate metrics for printing.
