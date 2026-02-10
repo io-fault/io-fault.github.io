@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 81 12`
-		- (coverage-zeros)`11`
-		- (coverage-counters)`47`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 Transport protocol implementation for identified data sets.
 
 
@@ -28,8 +28,6 @@ Convert a value into a form suitable for sequencing.
 	/element/
 		- (control)`property-set`
 		- (source/area)`17 1 44 11`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`18`
 (signature)`isolate(lines)`
 
 Separate (factor-local/parameter)&<#isolate.Parameters.lines[lines]> into parts that can be processed by (factor-local/function)&<#identify[identify]>.
@@ -42,8 +40,6 @@ Separate (factor-local/parameter)&<#isolate.Parameters.lines[lines]> into parts 
 	/element/
 		- (control)`property-set`
 		- (source/area)`46 1 64 18`
-		- (coverage-zeros)`5`
-		- (coverage-counters)`11`
 (signature)`identify(iseq)`
 
 Identify the slots and content of a transmission processed by (factor-local/function)&<#isolate[isolate]>.
@@ -58,8 +54,6 @@ Identify the slots and content of a transmission processed by (factor-local/func
 	/element/
 		- (control)`property-set`
 		- (source/area)`66 1 67 43`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`structure(lines)`
 
 
@@ -72,7 +66,5 @@ Identify the slots and content of a transmission processed by (factor-local/func
 	/element/
 		- (control)`property-set`
 		- (source/area)`69 1 82 11`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`10`
 (signature)`sequence(pairs)`
 

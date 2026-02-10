@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 755 0`
-		- (coverage-zeros)`81`
-		- (coverage-counters)`312`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 Range classes for managing associations and sets whose items span ranges.
 
 [ Engineering ]
@@ -35,8 +35,6 @@ Sets join adjacent ranges unconditionally.
 	/element/
 		- (control)`property-set`
 		- (source/area)`12 1 12 16`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ typing ]
 ! CONTROL:
@@ -47,8 +45,6 @@ Sets join adjacent ranges unconditionally.
 	/element/
 		- (control)`property-set`
 		- (source/area)`13 1 13 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ collections ]
 ! CONTROL:
@@ -59,8 +55,6 @@ Sets join adjacent ranges unconditionally.
 	/element/
 		- (control)`property-set`
 		- (source/area)`14 1 14 18`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 
 [ collections ]
 ! CONTROL:
@@ -71,8 +65,6 @@ Sets join adjacent ranges unconditionally.
 	/element/
 		- (control)`property-set`
 		- (source/area)`15 1 15 22`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 
 [ builtins ]
 ! CONTROL:
@@ -83,8 +75,6 @@ Sets join adjacent ranges unconditionally.
 	/element/
 		- (control)`property-set`
 		- (source/area)`16 1 16 15`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ inclusive_range_set ]
 ! CONTROL:
@@ -93,8 +83,6 @@ Sets join adjacent ranges unconditionally.
 	/element/
 		- (control)`property-set`
 		- (source/area)`18 1 48 31`
-		- (coverage-zeros)`11`
-		- (coverage-counters)`11`
 (signature)`inclusive_range_set(numbers)`
 
 Calculate the set of inclusive ranges.
@@ -116,8 +104,6 @@ the contiguous values.
 	/element/
 		- (control)`property-set`
 		- (source/area)`50 1 80 11`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`17`
 (signature)`combine(ranges)`
 
 Combine the ranges into a sequence of ranges reducing them according
@@ -131,8 +117,6 @@ to their overlaps and contiguity. Used by (factor-local/class)&<#Set[Set]> to im
 	/element/
 		- (control)`property-set`
 		- (source/area)`82 1 279 29`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`82 14 82 18`
@@ -151,8 +135,6 @@ Fully Inclusive range used for cases where the range length always is one or mor
 	/element/
 		- (control)`property-set`
 		- (source/area)`86 2 86 15`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	__slots__ = ()
 
@@ -165,8 +147,6 @@ Fully Inclusive range used for cases where the range length always is one or mor
 	/element/
 		- (control)`property-set`
 		- (source/area)`88 2 90 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 		- (type/syntax)`type`
 		- (type/invalid/unknown)&<#type>
 		
@@ -181,8 +161,6 @@ Fully Inclusive range used for cases where the range length always is one or mor
 	/element/
 		- (control)`property-set`
 		- (source/area)`91 2 97 10`
-		- (coverage-zeros)`4`
-		- (coverage-counters)`4`
 Returns `-1` if the stop is less than the start. `1` if equal or greater than.
 
 
@@ -193,8 +171,6 @@ Returns `-1` if the stop is less than the start. `1` if equal or greater than.
 	/element/
 		- (control)`property-set`
 		- (source/area)`98 2 104 10`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 The beginning of the Range, inclusive.
 
 
@@ -205,8 +181,6 @@ The beginning of the Range, inclusive.
 	/element/
 		- (control)`property-set`
 		- (source/area)`105 2 111 13`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 The end of the Range, inclusive.
 
 
@@ -217,8 +191,6 @@ The end of the Range, inclusive.
 	/element/
 		- (control)`property-set`
 		- (source/area)`112 2 120 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`normal(Class, *args)`
 
 Create a normal range using the given boundaries; the minimum given will be the
@@ -232,8 +204,6 @@ start and the maximum will be the stop.
 	/element/
 		- (control)`property-set`
 		- (source/area)`121 2 128 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`single(Class, index)`
 
 Create a range consisting of a single unit.
@@ -248,8 +218,6 @@ Create a range consisting of a single unit.
 	/element/
 		- (control)`property-set`
 		- (source/area)`129 2 133 35`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`from_string(Class, string)`
 
 
@@ -260,8 +228,6 @@ Create a range consisting of a single unit.
 	/element/
 		- (control)`property-set`
 		- (source/area)`135 2 143 33`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
 (signature)`__contains__(self, x)`
 
 Whether or not the range contains the given number.
@@ -276,8 +242,6 @@ Whether or not the range contains the given number.
 	/element/
 		- (control)`property-set`
 		- (source/area)`145 2 149 24`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`__str__(self)`
 
 
@@ -288,8 +252,6 @@ Whether or not the range contains the given number.
 	/element/
 		- (control)`property-set`
 		- (source/area)`151 2 166 10`
-		- (coverage-zeros)`4`
-		- (coverage-counters)`4`
 (signature)`relation(self, r)`
 
 The relation of (factor-local/parameter)&<#IRange.relation.Parameters.r[r]> with respect to the (factor-local/parameter)&<#IRange.relation.Parameters.self[self]>.
@@ -307,8 +269,6 @@ greater than the stop, and `0` if it is contained.
 	/element/
 		- (control)`property-set`
 		- (source/area)`168 2 174 43`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
 (signature)`contiguous(self, r)`
 
 The given range is contiguous with the other, but does *not*
@@ -322,8 +282,6 @@ The given range is contiguous with the other, but does *not*
 	/element/
 		- (control)`property-set`
 		- (source/area)`176 2 182 24`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`overlaps(self, r)`
 
 The ranges overlap onto each other.
@@ -336,8 +294,6 @@ The ranges overlap onto each other.
 	/element/
 		- (control)`property-set`
 		- (source/area)`184 2 190 26`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`continuation(self, r)`
 
 The ranges are continuous: overlaps or contiguous.
@@ -350,8 +306,6 @@ The ranges are continuous: overlaps or contiguous.
 	/element/
 		- (control)`property-set`
 		- (source/area)`192 2 197 60`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`join(self, r)`
 
 Combine the ranges regardless of adjacency.
@@ -364,8 +318,6 @@ Combine the ranges regardless of adjacency.
 	/element/
 		- (control)`property-set`
 		- (source/area)`199 2 238 11`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`13`
 (signature)`filter(self, ranges)`
 
 Modify (filter) the (factor-local/parameter)&<#IRange.filter.Parameters.ranges[ranges]> to be outside of (factor-local/parameter)&<#IRange.filter.Parameters.self[self]>.
@@ -396,8 +348,6 @@ contained ranges entirely from the generated sequence.
 	/element/
 		- (control)`property-set`
 		- (source/area)`240 2 260 32`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`8`
 		- (type/syntax)`typing.Iterable["IRange"]`
 		
 (signature)`intersect(self, ranges)`
@@ -428,8 +378,6 @@ Identify the parts of the (factor-local/parameter)&<#IRange.intersect.Parameters
 	/element/
 		- (control)`property-set`
 		- (source/area)`262 2 267 29`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 (signature)`exclusive(self)`
 
 Return as an exclusive-end range pair.
@@ -442,8 +390,6 @@ Return as an exclusive-end range pair.
 	/element/
 		- (control)`property-set`
 		- (source/area)`269 2 279 29`
-		- (coverage-zeros)`4`
-		- (coverage-counters)`5`
 (signature)`units(self)`
 
 Return an iterator to the units in the range.
@@ -456,8 +402,6 @@ Return an iterator to the units in the range.
 	/element/
 		- (control)`property-set`
 		- (source/area)`280 1 553 73`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`280 11 280 16`
@@ -482,8 +426,6 @@ may need to convert the range set or portions thereof into a regular (invalid/un
 	/element/
 		- (control)`property-set`
 		- (source/area)`290 2 290 37`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ Set >> __slots__ ]
 ! CONTROL:
@@ -494,8 +436,6 @@ may need to convert the range set or portions thereof into a regular (invalid/un
 	/element/
 		- (control)`property-set`
 		- (source/area)`291 2 293 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	__slots__ = ('starts', 'stops')
 		@classmethod
@@ -509,8 +449,6 @@ may need to convert the range set or portions thereof into a regular (invalid/un
 	/element/
 		- (control)`property-set`
 		- (source/area)`294 2 301 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
 (signature)`from_string(Class, string)`
 
 
@@ -523,8 +461,6 @@ may need to convert the range set or portions thereof into a regular (invalid/un
 	/element/
 		- (control)`property-set`
 		- (source/area)`302 2 306 13`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 (signature)`from_set(Class, iterable)`
 
 
@@ -535,8 +471,6 @@ may need to convert the range set or portions thereof into a regular (invalid/un
 	/element/
 		- (control)`property-set`
 		- (source/area)`307 2 312 64`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`from_normal_sequence(Class, ranges)`
 
 Low-level constructor building a Set from an
@@ -552,8 +486,6 @@ Low-level constructor building a Set from an
 	/element/
 		- (control)`property-set`
 		- (source/area)`314 2 317 23`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`__init__(self, pair)`
 
 
@@ -566,8 +498,6 @@ Low-level constructor building a Set from an
 	/element/
 		- (control)`property-set`
 		- (source/area)`319 2 320 84`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`__repr__(self)`
 
 
@@ -580,8 +510,6 @@ Low-level constructor building a Set from an
 	/element/
 		- (control)`property-set`
 		- (source/area)`322 2 323 51`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`__reduce__(self)`
 
 
@@ -594,8 +522,6 @@ Low-level constructor building a Set from an
 	/element/
 		- (control)`property-set`
 		- (source/area)`325 2 326 50`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`__iter__(self)`
 
 
@@ -608,8 +534,6 @@ Low-level constructor building a Set from an
 	/element/
 		- (control)`property-set`
 		- (source/area)`328 2 329 33`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`__str__(self)`
 
 
@@ -622,8 +546,6 @@ Low-level constructor building a Set from an
 	/element/
 		- (control)`property-set`
 		- (source/area)`331 2 332 60`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`__eq__(self, ns)`
 
 
@@ -634,8 +556,6 @@ Low-level constructor building a Set from an
 	/element/
 		- (control)`property-set`
 		- (source/area)`334 2 342 81`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`__len__(self)`
 
 Total number of *individual units* held by the set.
@@ -651,8 +571,6 @@ have a length of `101`.
 	/element/
 		- (control)`property-set`
 		- (source/area)`344 2 367 11`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`14`
 (signature)`intersecting(self, range)`
 
 Get the ranges in the set that have intersections with the given range.
@@ -667,8 +585,6 @@ Get the ranges in the set that have intersections with the given range.
 	/element/
 		- (control)`property-set`
 		- (source/area)`375 2 379 16`
-		- (coverage-zeros)`4`
-		- (coverage-counters)`4`
 (signature)`get(self, item)`
 
 
@@ -681,8 +597,6 @@ Get the ranges in the set that have intersections with the given range.
 	/element/
 		- (control)`property-set`
 		- (source/area)`381 2 385 22`
-		- (coverage-zeros)`4`
-		- (coverage-counters)`4`
 (signature)`__getitem__(self, item)`
 
 
@@ -695,8 +609,6 @@ Get the ranges in the set that have intersections with the given range.
 	/element/
 		- (control)`property-set`
 		- (source/area)`387 2 392 15`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`__contains__(self, item)`
 
 
@@ -707,8 +619,6 @@ Get the ranges in the set that have intersections with the given range.
 	/element/
 		- (control)`property-set`
 		- (source/area)`394 2 416 66`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`11`
 (signature)`add(self, range)`
 
 Add a range to the set combining it with any continuations.
@@ -721,8 +631,6 @@ Add a range to the set combining it with any continuations.
 	/element/
 		- (control)`property-set`
 		- (source/area)`418 2 443 29`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`14`
 (signature)`discard(self, range)`
 
 Remove an arbitrary range from the set.
@@ -735,8 +643,6 @@ Remove an arbitrary range from the set.
 	/element/
 		- (control)`property-set`
 		- (source/area)`445 2 494 9`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`23`
 (signature)`intersection(self, range_set)`
 
 Calculate the intersection between two (factor-local/class)&<#Set[Set]> instances.
@@ -750,8 +656,6 @@ Low-level method. Use (python/operator)`|` for high-level purposes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`496 2 537 15`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`19`
 (signature)`difference(self, range_set)`
 
 Calculate the difference between two (factor-local/class)&<#Set[Set]> instances.
@@ -765,8 +669,6 @@ Low-level method. Use (python/operator)`-` for high-level purposes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`539 2 546 58`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
 (signature)`union(self, range_set)`
 
 Calculate the union between two (factor-local/class)&<#Set[Set]> instances.
@@ -781,8 +683,6 @@ Calculate the union between two (factor-local/class)&<#Set[Set]> instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`547 2 547 16`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	__add__ = union
 
@@ -795,8 +695,6 @@ Calculate the union between two (factor-local/class)&<#Set[Set]> instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`549 2 550 78`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`__sub__(self, range_set)`
 
 
@@ -809,8 +707,6 @@ Calculate the union between two (factor-local/class)&<#Set[Set]> instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`552 2 553 73`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`__or__(self, range_set)`
 
 
@@ -821,8 +717,6 @@ Calculate the union between two (factor-local/class)&<#Set[Set]> instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`555 1 657 33`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`555 14 555 18`
@@ -842,8 +736,6 @@ Provides access to zero-sized ranges that need to maintain position.
 	/element/
 		- (control)`property-set`
 		- (source/area)`561 2 561 15`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	__slots__ = ()
 
@@ -856,8 +748,6 @@ Provides access to zero-sized ranges that need to maintain position.
 	/element/
 		- (control)`property-set`
 		- (source/area)`562 2 564 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 		- (type/syntax)`type`
 		- (type/invalid/unknown)&<#type>
 		
@@ -872,8 +762,6 @@ Provides access to zero-sized ranges that need to maintain position.
 	/element/
 		- (control)`property-set`
 		- (source/area)`565 2 571 10`
-		- (coverage-zeros)`4`
-		- (coverage-counters)`4`
 Returns -1 if the stop is less than the start.
 
 
@@ -884,8 +772,6 @@ Returns -1 if the stop is less than the start.
 	/element/
 		- (control)`property-set`
 		- (source/area)`572 2 578 10`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 The beginning of the Range, inclusive.
 
 
@@ -896,8 +782,6 @@ The beginning of the Range, inclusive.
 	/element/
 		- (control)`property-set`
 		- (source/area)`579 2 585 13`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 The end of the Range, inclusive.
 
 
@@ -908,8 +792,6 @@ The end of the Range, inclusive.
 	/element/
 		- (control)`property-set`
 		- (source/area)`586 2 594 13`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 (signature)`normal(Class, *args)`
 
 Create a normal range using the given boundaries; the minimum given will be the
@@ -923,8 +805,6 @@ start and the maximum will be the stop.
 	/element/
 		- (control)`property-set`
 		- (source/area)`595 2 600 32`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 (signature)`single(Class, index)`
 
 Create a range consisting of a single unit.
@@ -937,8 +817,6 @@ Create a range consisting of a single unit.
 	/element/
 		- (control)`property-set`
 		- (source/area)`602 2 607 31`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 (signature)`__contains__(self, x)`
 
 Whether or not the range contains the given number.
@@ -951,8 +829,6 @@ Whether or not the range contains the given number.
 	/element/
 		- (control)`property-set`
 		- (source/area)`609 2 624 10`
-		- (coverage-zeros)`4`
-		- (coverage-counters)`4`
 (signature)`relation(self, r)`
 
 The relation of (factor-local/parameter)&<#XRange.relation.Parameters.r[r]> with respect to the (factor-local/parameter)&<#XRange.relation.Parameters.self[self]>.
@@ -970,8 +846,6 @@ greater than the stop, and `0` if it is contained.
 	/element/
 		- (control)`property-set`
 		- (source/area)`626 2 631 47`
-		- (coverage-zeros)`4`
-		- (coverage-counters)`4`
 (signature)`contiguous(self, range)`
 
 Whether the given (factor-local/parameter)&<#XRange.contiguous.Parameters.range[range]> is contiguous with (factor-local/parameter)&<#XRange.contiguous.Parameters.self[self]>.
@@ -984,8 +858,6 @@ Whether the given (factor-local/parameter)&<#XRange.contiguous.Parameters.range[
 	/element/
 		- (control)`property-set`
 		- (source/area)`633 2 638 60`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 (signature)`join(self, r)`
 
 Combine the ranges.
@@ -998,8 +870,6 @@ Combine the ranges.
 	/element/
 		- (control)`property-set`
 		- (source/area)`640 2 645 13`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 (signature)`exclusive(self)`
 
 Returns (factor-local/parameter)&<#XRange.exclusive.Parameters.self[self]>.
@@ -1012,8 +882,6 @@ Returns (factor-local/parameter)&<#XRange.exclusive.Parameters.self[self]>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`647 2 657 33`
-		- (coverage-zeros)`4`
-		- (coverage-counters)`5`
 (signature)`units(self)`
 
 Return an iterator to the units in the range.
@@ -1026,8 +894,6 @@ Return an iterator to the units in the range.
 	/element/
 		- (control)`property-set`
 		- (source/area)`658 1 755 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`658 15 658 20`
@@ -1057,8 +923,6 @@ execution (fewer stack frames) and memory (fewer instances) performance.
 	/element/
 		- (control)`property-set`
 		- (source/area)`673 2 676 19`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`__init__(self)`
 
 
@@ -1071,8 +935,6 @@ execution (fewer stack frames) and memory (fewer instances) performance.
 	/element/
 		- (control)`property-set`
 		- (source/area)`678 2 681 22`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`keys(self)`
 
 
@@ -1085,8 +947,6 @@ execution (fewer stack frames) and memory (fewer instances) performance.
 	/element/
 		- (control)`property-set`
 		- (source/area)`683 2 688 24`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
 (signature)`values(self)`
 
 
@@ -1099,8 +959,6 @@ execution (fewer stack frames) and memory (fewer instances) performance.
 	/element/
 		- (control)`property-set`
 		- (source/area)`690 2 691 40`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`items(self)`
 
 
@@ -1113,8 +971,6 @@ execution (fewer stack frames) and memory (fewer instances) performance.
 	/element/
 		- (control)`property-set`
 		- (source/area)`693 2 698 19`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
 (signature)`get(self, key)`
 
 
@@ -1127,8 +983,6 @@ execution (fewer stack frames) and memory (fewer instances) performance.
 	/element/
 		- (control)`property-set`
 		- (source/area)`700 2 705 19`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`4`
 (signature)`__getitem__(self, key)`
 
 
@@ -1141,8 +995,6 @@ execution (fewer stack frames) and memory (fewer instances) performance.
 	/element/
 		- (control)`property-set`
 		- (source/area)`707 2 711 14`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
 (signature)`__setitem__(self, key, value)`
 
 
@@ -1155,8 +1007,6 @@ execution (fewer stack frames) and memory (fewer instances) performance.
 	/element/
 		- (control)`property-set`
 		- (source/area)`713 2 720 14`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
 (signature)`update(self, vs)`
 
 
@@ -1169,8 +1019,6 @@ execution (fewer stack frames) and memory (fewer instances) performance.
 	/element/
 		- (control)`property-set`
 		- (source/area)`722 2 729 12`
-		- (coverage-zeros)`6`
-		- (coverage-counters)`6`
 (signature)`__delitem__(self, key)`
 
 
@@ -1181,8 +1029,6 @@ execution (fewer stack frames) and memory (fewer instances) performance.
 	/element/
 		- (control)`property-set`
 		- (source/area)`732 2 738 26`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`path(self, key)`
 
 For the given key, identify the containing range and its associated value
@@ -1198,8 +1044,6 @@ at each level in the mapping.
 	/element/
 		- (control)`property-set`
 		- (source/area)`740 2 749 14`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`7`
 (signature)`levels(self, key)`
 
 
@@ -1212,7 +1056,5 @@ at each level in the mapping.
 	/element/
 		- (control)`property-set`
 		- (source/area)`751 2 755 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
 (signature)`last(self, key)`
 

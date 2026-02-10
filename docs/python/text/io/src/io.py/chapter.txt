@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 41 42`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`19`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 Primary access to kleptic text parsing and serialization functions.
 
 #!syntax/python
@@ -33,8 +33,6 @@ Primary access to kleptic text parsing and serialization functions.
 	/element/
 		- (control)`property-set`
 		- (source/area)`11 1 11 22`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ render ]
 ! CONTROL:
@@ -45,8 +43,6 @@ Primary access to kleptic text parsing and serialization functions.
 	/element/
 		- (control)`property-set`
 		- (source/area)`12 1 12 20`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ types ]
 ! CONTROL:
@@ -57,8 +53,6 @@ Primary access to kleptic text parsing and serialization functions.
 	/element/
 		- (control)`property-set`
 		- (source/area)`13 1 13 19`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ structure_paragraph_element ]
 ! CONTROL:
@@ -67,8 +61,6 @@ Primary access to kleptic text parsing and serialization functions.
 	/element/
 		- (control)`property-set`
 		- (source/area)`15 1 19 26`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`4`
 		- (type/syntax)`types.Paragraph`
 		- (type/project-local/factor-element)&<types#Paragraph[fault.text.types.Paragraph]>
 		
@@ -86,8 +78,6 @@ Create a (project-local/factor-element)&<types#Paragraph[fault.text.types.Paragr
 	/element/
 		- (control)`property-set`
 		- (source/area)`22 1 22 32`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	TreeOperations = document.Tree()
 
@@ -98,8 +88,6 @@ Create a (project-local/factor-element)&<types#Paragraph[fault.text.types.Paragr
 	/element/
 		- (control)`property-set`
 		- (source/area)`24 1 32 74`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
 (signature)`structure_chapter_lines(lines)`
 
 Parse kleptic text lines into an element tree.
@@ -112,8 +100,6 @@ Parse kleptic text lines into an element tree.
 	/element/
 		- (control)`property-set`
 		- (source/area)`34 1 38 54`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`structure_chapter_text(source)`
 
 Parse kleptic text source into an element tree.
@@ -128,7 +114,5 @@ Parse kleptic text source into an element tree.
 	/element/
 		- (control)`property-set`
 		- (source/area)`42 1 42 41`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	sequence_chapter_element = render.chapter

@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 265 0`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`96`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 Line and character format interpretation and serialization.
 
 
@@ -48,8 +48,6 @@ Line and character format interpretation and serialization.
 	/element/
 		- (control)`property-set`
 		- (source/area)`5 1 5 38`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ partial ]
 ! CONTROL:
@@ -60,8 +58,6 @@ Line and character format interpretation and serialization.
 	/element/
 		- (control)`property-set`
 		- (source/area)`7 1 7 35`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ struct ]
 ! CONTROL:
@@ -72,8 +68,6 @@ Line and character format interpretation and serialization.
 	/element/
 		- (control)`property-set`
 		- (source/area)`8 1 10 9`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 
 [ Fields ]
 ! CONTROL:
@@ -82,8 +76,6 @@ Line and character format interpretation and serialization.
 	/element/
 		- (control)`property-set`
 		- (source/area)`11 1 57 9`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`11 14 11 19`
@@ -107,8 +99,6 @@ performs the desired functionality.
 	/element/
 		- (control)`property-set`
 		- (source/area)`34 2 40 60`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`partial(self, *argv, **kw)`
 
 Construct a direct call to (invalid/unknown)&<#isolate> with (invalid/unknown)&<#separation>
@@ -122,8 +112,6 @@ and the given arguments bound to the call.
 	/element/
 		- (control)`property-set`
 		- (source/area)`42 2 47 46`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 		- (type/syntax)`Iterable[Sequence[tuple[str,str]]]`
 		
 (signature)`structure(self, lines)`
@@ -138,8 +126,6 @@ Perform (invalid/unknown)&<#isolate> against the given (factor-local/parameter)&
 	/element/
 		- (control)`property-set`
 		- (source/area)`49 2 57 9`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
 		- (type/syntax)`Iterable[str]`
 		
 (signature)`sequence(self, fields)`
@@ -154,8 +140,6 @@ Reconstruct the original lines from the given field vectors.
 	/element/
 		- (control)`property-set`
 		- (source/area)`58 1 173 9`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`58 13 58 18`
@@ -174,8 +158,6 @@ Format configuration for reading and writing indented syntax lines.
 	/element/
 		- (control)`property-set`
 		- (source/area)`63 2 63 24`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -191,8 +173,6 @@ Format configuration for reading and writing indented syntax lines.
 	/element/
 		- (control)`property-set`
 		- (source/area)`64 2 66 14`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -207,8 +187,6 @@ Format configuration for reading and writing indented syntax lines.
 	/element/
 		- (control)`property-set`
 		- (source/area)`67 2 91 25`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`7`
 		- (type/syntax)`tuple[str, Sequence[str]]`
 		
 (signature)`_splitpartial(lt, text)`
@@ -235,8 +213,6 @@ split lines with the given (factor-local/parameter)&<#Lines._splitpartial.Parame
 	/element/
 		- (control)`property-set`
 		- (source/area)`93 2 102 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
@@ -253,8 +229,6 @@ intersect with (factor-local/data)&<#Lines.termination[termination]>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`104 2 120 18`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`8`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
@@ -271,8 +245,6 @@ leading (factor-local/data)&<#Lines.indentation[indentation]> characters.
 	/element/
 		- (control)`property-set`
 		- (source/area)`122 2 131 29`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
 		- (type/syntax)`tuple[int, str]`
 		
 (signature)`level(self, line)`
@@ -289,8 +261,6 @@ of the line without the indentation characters.
 	/element/
 		- (control)`property-set`
 		- (source/area)`133 2 160 25`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`15`
 		- (type/syntax)`Iterable[tuple[int, str]]`
 		
 (signature)`structure(self, itext)`
@@ -307,8 +277,6 @@ Excludes a final empty line.
 	/element/
 		- (control)`property-set`
 		- (source/area)`162 2 173 9`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
 		- (type/syntax)`Iterable[str]`
 		
 (signature)`sequence(self, ilines)`
@@ -326,8 +294,6 @@ Includes a final empty line.
 	/element/
 		- (control)`property-set`
 		- (source/area)`174 1 265 16`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`174 18 174 23`
@@ -349,8 +315,6 @@ Primarily, a minor abstraction for Python's codecs providing
 	/element/
 		- (control)`property-set`
 		- (source/area)`206 2 211 14`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`_alloc_coder_pair(coder, method, final)`
 
 
@@ -363,8 +327,6 @@ Primarily, a minor abstraction for Python's codecs providing
 	/element/
 		- (control)`property-set`
 		- (source/area)`212 2 219 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`_alloc_codec_constructors(ci, errors)`
 
 
@@ -375,8 +337,6 @@ Primarily, a minor abstraction for Python's codecs providing
 	/element/
 		- (control)`property-set`
 		- (source/area)`220 2 243 3`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`7`
 (signature)`from_codec(Class, encoding, errors)`
 
 Create an instance using a Python (factor-local/parameter)&<#Characters.from_codec.Parameters.encoding[encoding]> and (factor-local/parameter)&<#Characters.from_codec.Parameters.errors[errors]> handling scheme.
@@ -393,8 +353,6 @@ instance.
 	/element/
 		- (control)`property-set`
 		- (source/area)`245 2 254 16`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
 		- (type/syntax)`Iterable[bytes]`
 		
 (signature)`sequence(self, itext)`
@@ -409,8 +367,6 @@ Encode the strings produced by (factor-local/parameter)&<#Characters.sequence.Pa
 	/element/
 		- (control)`property-set`
 		- (source/area)`256 2 265 16`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
 		- (type/syntax)`Iterable[str]`
 		
 (signature)`structure(self, ibytes)`

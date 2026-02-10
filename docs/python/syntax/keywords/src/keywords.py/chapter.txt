@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 511 38`
-		- (coverage-zeros)`21`
-		- (coverage-counters)`203`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 Programming language profile and parser class for Keyword Oriented Syntax.
 
 Provides a data structure for describing keyword based languages that allows
@@ -54,8 +54,6 @@ and leverage whitespace for isolation of fields.
 	/element/
 		- (control)`property-set`
 		- (source/area)`31 1 31 16`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ functools ]
 ! CONTROL:
@@ -66,8 +64,6 @@ and leverage whitespace for isolation of fields.
 	/element/
 		- (control)`property-set`
 		- (source/area)`32 1 32 16`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ string ]
 ! CONTROL:
@@ -78,8 +74,6 @@ and leverage whitespace for isolation of fields.
 	/element/
 		- (control)`property-set`
 		- (source/area)`34 1 34 28`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ Tokens ]
 ! CONTROL:
@@ -90,8 +84,6 @@ and leverage whitespace for isolation of fields.
 	/element/
 		- (control)`property-set`
 		- (source/area)`36 1 36 51`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	Tokens = typing.Iterable[typing.Tuple[str,str,str]]
 
@@ -102,8 +94,6 @@ and leverage whitespace for isolation of fields.
 	/element/
 		- (control)`property-set`
 		- (source/area)`38 1 170 37`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`38 15 38 19`
@@ -128,8 +118,6 @@ While (factor-local/class)&<#Profile[Profile]> is a tuple subclass, indexes shou
 	/element/
 		- (control)`property-set`
 		- (source/area)`48 2 50 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	__slots__ = ()
 		@classmethod
@@ -143,8 +131,6 @@ While (factor-local/class)&<#Profile[Profile]> is a tuple subclass, indexes shou
 	/element/
 		- (control)`property-set`
 		- (source/area)`51 2 71 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`from_keywords_v1(Class, **wordtypes)`
 
 
@@ -155,8 +141,6 @@ While (factor-local/class)&<#Profile[Profile]> is a tuple subclass, indexes shou
 	/element/
 		- (control)`property-set`
 		- (source/area)`72 2 78 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 		- (type/syntax)`typing.Mapping[str, typing.Set[str]]`
 		
 Dictionary associating sets of identifier strings with a classification identifier.
@@ -169,8 +153,6 @@ Dictionary associating sets of identifier strings with a classification identifi
 	/element/
 		- (control)`property-set`
 		- (source/area)`79 2 87 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 		- (type/syntax)`typing.Set[typing.Tuple[str,str]]`
 		
 Comment start and stop pairs delimiting an excluded area from the source.
@@ -185,8 +167,6 @@ Exclusions are given the second highest priority by (factor-local/class)&<#Parse
 	/element/
 		- (control)`property-set`
 		- (source/area)`88 2 98 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 		- (type/syntax)`typing.Set[typing.Tuple[str,str]]`
 		
 The start and stop pairs delimiting a literal area within the syntax document.
@@ -203,8 +183,6 @@ Literals are given the highest priority by (factor-local/class)&<#Parser[Parser]
 	/element/
 		- (control)`property-set`
 		- (source/area)`99 2 107 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 		- (type/syntax)`typing.Set[typing.Tuple[str,str]]`
 		
 The start and stop pairs delimiting an expression.
@@ -219,8 +197,6 @@ Enclosures have the highest precedence during expression processing.
 	/element/
 		- (control)`property-set`
 		- (source/area)`108 2 114 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 		- (type/syntax)`typing.Set[str]`
 		
 Operators used to designate a resolution path for selecting an object to be used.
@@ -233,8 +209,6 @@ Operators used to designate a resolution path for selecting an object to be used
 	/element/
 		- (control)`property-set`
 		- (source/area)`115 2 122 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 		- (type/syntax)`typing.Set[str]`
 		
 Set of operators that can perform some manipulation to the objects associated
@@ -248,8 +222,6 @@ with the adjacent identifiers.
 	/element/
 		- (control)`property-set`
 		- (source/area)`123 2 129 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 		- (type/syntax)`typing.Set[str]`
 		
 Operators used to designate the end of a statement, expression, or field.
@@ -262,8 +234,6 @@ Operators used to designate the end of a statement, expression, or field.
 	/element/
 		- (control)`property-set`
 		- (source/area)`130 2 170 37`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`20`
 		- (type/syntax)`typing.Iterable[str]`
 		
 Emit all unit operators employed by the language associated with a rank and context effect.
@@ -289,8 +259,6 @@ later classes will overwrite earlier entries in cases of ambiguity.
 	/element/
 		- (control)`property-set`
 		- (source/area)`172 1 512 37`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`172 14 172 19`
@@ -318,8 +286,6 @@ Applications should create and cache an instance for a given language.
 	/element/
 		- (control)`property-set`
 		- (source/area)`189 2 223 13`
-		- (coverage-zeros)`17`
-		- (coverage-counters)`17`
 (signature)`integrate_switches(tokens, context)`
 
 Qualify the syntax fields in (factor-local/parameter)&<#Parser.integrate_switches.Parameters.tokens[tokens]> by interpreting switches.
@@ -343,8 +309,6 @@ Qualify the syntax fields in (factor-local/parameter)&<#Parser.integrate_switche
 	/element/
 		- (control)`property-set`
 		- (source/area)`224 2 289 3`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`29`
 (signature)`from_profile(Class, profile)`
 
 Primary constructor for (factor-local/class)&<#Parser[Parser]>.
@@ -360,8 +324,6 @@ some amount of preparation is performed by (factor-local/classmethod)&<#Parser.f
 	/element/
 		- (control)`property-set`
 		- (source/area)`291 2 315 82`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`11`
 (signature)`__init__(self, profile, opset, opmap, delimiter, optable, exits, classify_id, classify_op)`
 
 ! WARNING: Do not use directly.
@@ -376,8 +338,6 @@ some amount of preparation is performed by (factor-local/classmethod)&<#Parser.f
 	/element/
 		- (control)`property-set`
 		- (source/area)`317 2 322 74`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 		- (type/syntax)`typing.Iterable[Tokens]`
 		
 (signature)`process_line(self, line)`
@@ -392,8 +352,6 @@ Process a single line of syntax into tokens.
 	/element/
 		- (control)`property-set`
 		- (source/area)`324 2 341 59`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
 		- (type/syntax)`typing.Iterable[typing.Iterable[Tokens]]`
 		
 (signature)`process_lines(self, lines)`
@@ -416,8 +374,6 @@ Essentially, `map(Parser.process_line, line_iter)`.
 	/element/
 		- (control)`property-set`
 		- (source/area)`343 2 360 41`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`7`
 		- (type/syntax)`typing.Iterable[typing.Iterable[Tokens]]`
 		
 (signature)`process_document(self, lines)`
@@ -439,8 +395,6 @@ instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`362 2 367 30`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`allocstack(self)`
 
 Allocate context stack for use with (factor-local/method)&<#Parser.delimit[delimit]>.
@@ -453,8 +407,6 @@ Allocate context stack for use with (factor-local/method)&<#Parser.delimit[delim
 	/element/
 		- (control)`property-set`
 		- (source/area)`369 2 444 15`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`41`
 		- (type/syntax)`Tokens`
 		- (type/factor-local/data)&<#Tokens[Tokens]>
 		
@@ -478,8 +430,6 @@ should normally be used.
 	/element/
 		- (control)`property-set`
 		- (source/area)`446 2 512 37`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`34`
 		- (type/syntax)`Tokens`
 		- (type/factor-local/data)&<#Tokens[Tokens]>
 		

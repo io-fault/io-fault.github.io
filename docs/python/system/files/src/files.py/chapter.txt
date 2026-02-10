@@ -4,7 +4,7 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 1108 0`
-		- (coverage-zeros)`97`
+		- (coverage-zeros)`99`
 		- (coverage-counters)`533`
 Filesystem interfaces and data structures.
 
@@ -1387,7 +1387,7 @@ A Route to a symbolic link *will* return (invalid/unknown)&<#False> if the targe
 	/element/
 		- (control)`property-set`
 		- (source/area)`863 2 867 29`
-		- (coverage-zeros)`0`
+		- (coverage-zeros)`2`
 		- (coverage-counters)`3`
 (signature)`fs_modified(self)`
 

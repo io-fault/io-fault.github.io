@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 315 0`
-		- (coverage-zeros)`43`
-		- (coverage-counters)`96`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 Nested generator based HTML/XML serialization module.
 
 Provides primitives for generating XML using nested generators.
@@ -35,8 +35,6 @@ Provides primitives for generating XML using nested generators.
 	/element/
 		- (control)`property-set`
 		- (source/area)`11 1 11 16`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ typing ]
 ! CONTROL:
@@ -47,8 +45,6 @@ Provides primitives for generating XML using nested generators.
 	/element/
 		- (control)`property-set`
 		- (source/area)`12 1 12 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ namespaces ]
 ! CONTROL:
@@ -59,8 +55,6 @@ Provides primitives for generating XML using nested generators.
 	/element/
 		- (control)`property-set`
 		- (source/area)`14 1 29 1`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	namespaces = (
 		('xml', "http://www.w3.org/XML/1998/namespace"),
@@ -86,8 +80,6 @@ Provides primitives for generating XML using nested generators.
 	/element/
 		- (control)`property-set`
 		- (source/area)`31 1 46 15`
-		- (coverage-zeros)`5`
-		- (coverage-counters)`5`
 (signature)`escape_element_bytes(data)`
 
 Escape bytes instances for storage inside an XML element.
@@ -105,8 +97,6 @@ This returns an iterable suitable for use by (factor-local/data)&<#element[eleme
 	/element/
 		- (control)`property-set`
 		- (source/area)`48 1 61 62`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
 (signature)`escape_element_string(string)`
 
 Escape and encode an arbitrary string for storage inside an
@@ -123,8 +113,6 @@ This returns an iterable suitable for use by (factor-local/data)&<#element[eleme
 	/element/
 		- (control)`property-set`
 		- (source/area)`63 1 86 14`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`9`
 (signature)`escape_attribute_string(string)`
 
 Escape the given string for inclusion in an attribute value.
@@ -144,8 +132,6 @@ Does *not* encode the result string.
 	/element/
 		- (control)`property-set`
 		- (source/area)`88 1 108 11`
-		- (coverage-zeros)`5`
-		- (coverage-counters)`6`
 		- (type/syntax)`str`
 		- (type/factor-local/parameter)&<#attribute.Parameters.str[str]>
 		
@@ -166,8 +152,6 @@ Returns a (factor-local/parameter)&<#attribute.Parameters.str[str]> as they are 
 	/element/
 		- (control)`property-set`
 		- (source/area)`110 1 115 89`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 (signature)`empty(element_identifier)`
 
 Return an iterable to an empty element.
@@ -180,8 +164,6 @@ Return an iterable to an empty element.
 	/element/
 		- (control)`property-set`
 		- (source/area)`117 1 142 3`
-		- (coverage-zeros)`7`
-		- (coverage-counters)`17`
 (signature)`encode_element(encoding, element_identifier, content, *attribute_sequence, **attributes)`
 
 Generate an entire element populating the body by yielding from the given content.
@@ -196,8 +178,6 @@ Generate an entire element populating the body by yielding from the given conten
 	/element/
 		- (control)`property-set`
 		- (source/area)`144 1 144 52`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	element = functools.partial(encode_element, 'utf-8')
 
@@ -208,8 +188,6 @@ Generate an entire element populating the body by yielding from the given conten
 	/element/
 		- (control)`property-set`
 		- (source/area)`146 1 315 29`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`146 21 146 26`
@@ -240,8 +218,6 @@ with the binary emission of a document built for nested iterators.
 	/element/
 		- (control)`property-set`
 		- (source/area)`164 2 174 74`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`7`
 (signature)`__init__(self)`
 
 Initialize the serializer to write XML data in the given encoding.
@@ -254,8 +230,6 @@ Initialize the serializer to write XML data in the given encoding.
 	/element/
 		- (control)`property-set`
 		- (source/area)`176 2 188 26`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`declaration(self, standalone)`
 
 Construct and return an ASCII encoded string representing
@@ -279,8 +253,6 @@ the declaration consistent with the Serialization context.
 	/element/
 		- (control)`property-set`
 		- (source/area)`190 2 198 72`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 (signature)`encode(self, string)`
 
 Encode the given string in the configured encoding with `'xmlcharrefreplace'`
@@ -296,8 +268,6 @@ Returns the encoded string in a tuple for placement into (factor-local/method)&<
 	/element/
 		- (control)`property-set`
 		- (source/area)`200 2 205 46`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 (signature)`empty(self, name, *args, **kw)`
 
 Construct an empty XML element with the attributes
@@ -311,8 +281,6 @@ defined by parameters.
 	/element/
 		- (control)`property-set`
 		- (source/area)`207 2 215 12`
-		- (coverage-zeros)`6`
-		- (coverage-counters)`6`
 (signature)`switch(self)`
 
 Create another (factor-local/class)&<#Serialization[Serialization]> instance using a different prefix.
@@ -325,8 +293,6 @@ Create another (factor-local/class)&<#Serialization[Serialization]> instance usi
 	/element/
 		- (control)`property-set`
 		- (source/area)`217 2 225 6`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 (signature)`element(self, element_name, subnode_iterator, *attributes, **kwattributes)`
 
 Serialize an element with the exact (factor-local/parameter)&<#Serialization.element.Parameters.element_name[element_name]> with the contents of
@@ -341,8 +307,6 @@ Serialize an element with the exact (factor-local/parameter)&<#Serialization.ele
 	/element/
 		- (control)`property-set`
 		- (source/area)`227 2 235 66`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 (signature)`prefixed(self, element_name, *args, **kw)`
 
 Serialize an element using (factor-local/method)&<#Serialization.element[element]>, but prefix the element name with
@@ -358,8 +322,6 @@ The configured prefix may or may not be an XML namespace.
 	/element/
 		- (control)`property-set`
 		- (source/area)`237 2 248 8`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`pi(self, target, data)`
 
 Emit an XML Processing Instruction.
@@ -375,8 +337,6 @@ productions as a single string is returned rather than an iterator.
 	/element/
 		- (control)`property-set`
 		- (source/area)`250 2 275 25`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`11`
 (signature)`root(self, name, content, *attributes)`
 
 Construct the root element of a document.
@@ -389,8 +349,6 @@ Construct the root element of a document.
 	/element/
 		- (control)`property-set`
 		- (source/area)`276 2 290 60`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 (signature)`literal(self, ordinal)`
 
 Create a literal element used to represent a disallowed XML character.
@@ -412,8 +370,6 @@ ahead of time.
 	/element/
 		- (control)`property-set`
 		- (source/area)`292 2 300 3`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 (signature)`text(self, *strings)`
 
 Emit a text node without escaping contents.
@@ -427,8 +383,6 @@ Encoding errors will be raised.
 	/element/
 		- (control)`property-set`
 		- (source/area)`302 2 309 3`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 (signature)`escape(self, string)`
 
 Escape the given (factor-local/parameter)&<#Serialization.escape.Parameters.string[string]> and encode it in the configured encoding.
@@ -441,8 +395,6 @@ Escape the given (factor-local/parameter)&<#Serialization.escape.Parameters.stri
 	/element/
 		- (control)`property-set`
 		- (source/area)`311 2 315 29`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 (signature)`hyperlink(self, href)`
 
 Emit the default hyperlink attribute representation.

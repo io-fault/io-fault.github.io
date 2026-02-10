@@ -5,7 +5,7 @@
 		- (control)`property-set`
 		- (source/area)`1 1 87 4`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`14`
+		- (coverage-counters)`0`
 Information about the metric second and its multiples.
 
 
@@ -56,8 +56,6 @@ Information about the metric second and its multiples.
 	/element/
 		- (control)`property-set`
 		- (source/area)`35 1 35 68`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	exponent_to_name = dict([(v,k) for k,v in name_to_exponent.items()])
 
@@ -70,8 +68,6 @@ Information about the metric second and its multiples.
 	/element/
 		- (control)`property-set`
 		- (source/area)`38 1 64 1`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	abbreviations = {
 		-1: 'ds',
@@ -108,8 +104,6 @@ Information about the metric second and its multiples.
 	/element/
 		- (control)`property-set`
 		- (source/area)`66 1 88 3`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`10`
 (signature)`context(context)`
 
 Given a libunit.Context instance, define the metric units starting with the

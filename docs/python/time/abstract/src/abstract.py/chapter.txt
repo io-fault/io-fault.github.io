@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 337 6`
-		- (coverage-zeros)`26`
-		- (coverage-counters)`34`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 Abstract base classes for time measures and points.
 
 Primarily, this module exists to document the interfaces to (factor-local/class)&<#Point[Point]> and (factor-local/class)&<#Measure[Measure]>.
@@ -41,8 +41,6 @@ The redundant method declarations are intentional.
 	/element/
 		- (control)`property-set`
 		- (source/area)`8 1 8 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ Time ]
 ! CONTROL:
@@ -51,8 +49,6 @@ The redundant method declarations are intentional.
 	/element/
 		- (control)`property-set`
 		- (source/area)`10 1 130 5`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`10 12 10 26`
@@ -69,8 +65,6 @@ The abstract base class for *all* Time related types.
 	/element/
 		- (control)`property-set`
 		- (source/area)`17 2 23 16`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 The beginning of the range. Inclusive.
 
 
@@ -81,8 +75,6 @@ The beginning of the range. Inclusive.
 	/element/
 		- (control)`property-set`
 		- (source/area)`24 2 30 16`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 The end of the range. Exclusive.
 
 
@@ -93,8 +85,6 @@ The end of the range. Exclusive.
 	/element/
 		- (control)`property-set`
 		- (source/area)`31 2 36 16`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 The size of the range in terms of the (factor-local/property)&<#Time.start[start]>.
 
 
@@ -105,8 +95,6 @@ The size of the range in terms of the (factor-local/property)&<#Time.start[start
 	/element/
 		- (control)`property-set`
 		- (source/area)`37 2 45 21`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`__contains__(self, pit)`
 
 Whether the given point falls between (factor-local/property)&<#Time.start[start]>, inclusive, and (factor-local/property)&<#Time.stop[stop]>, exclusive.
@@ -121,8 +109,6 @@ Whether the given point falls between (factor-local/property)&<#Time.start[start
 	/element/
 		- (control)`property-set`
 		- (source/area)`46 2 66 16`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`of(Class, *times, **parts)`
 
 Create an instance of the type from the sum of the quantities
@@ -158,8 +144,6 @@ must be pre-existing (factor-local/class)&<#Measure[Measure]> instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`67 2 95 16`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`select(self, part, of, align)`
 
 Extract the number of complete parts designated by `part` after the last
@@ -205,8 +189,6 @@ Common cases:
 	/element/
 		- (control)`property-set`
 		- (source/area)`96 2 121 16`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`update(self, part, replacement, of, align)`
 
 Construct and return a new instance adjusted by the difference between the
@@ -251,8 +233,6 @@ It's existence as an interface is due to its utility.
 	/element/
 		- (control)`property-set`
 		- (source/area)`122 2 130 5`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`truncate(self, unit)`
 
 Truncates the time instance to the specified boundary: remove units smaller
@@ -276,8 +256,6 @@ than the given (factor-local/parameter)&<#Time.truncate.Parameters.unit[unit]>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`132 1 238 5`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`132 15 132 18`
@@ -295,8 +273,6 @@ subclassed.
 	/element/
 		- (control)`property-set`
 		- (source/area)`140 2 150 16`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 Classification for the unit type with respect to measurements.
 
 Currently, only three kinds exist: definite, subjective, and indefinite.
@@ -311,8 +287,6 @@ Measures and Points of the same unit may have different unit kinds.
 	/element/
 		- (control)`property-set`
 		- (source/area)`151 2 159 16`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 Identifier of the unit of time--usually the english name.
 
 This *must* be a `str` where str(unit).isidentifier() is `True`.
@@ -325,8 +299,6 @@ This *must* be a `str` where str(unit).isidentifier() is `True`.
 	/element/
 		- (control)`property-set`
 		- (source/area)`160 2 168 16`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 Name of the unit of time. Normally equal to
 (factor-local/class)&<#Time[Time.unit]>, but potentially different in cases
 where the proper name is not an identifier.
@@ -339,8 +311,6 @@ where the proper name is not an identifier.
 	/element/
 		- (control)`property-set`
 		- (source/area)`169 2 178 16`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 For Measure instances, this property *must* be zero.
 
 #!python
@@ -353,8 +323,6 @@ For Measure instances, this property *must* be zero.
 	/element/
 		- (control)`property-set`
 		- (source/area)`179 2 188 16`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 For Measure instances, this property *must* be the instance, (invalid/unknown)&<#self>:
 
 #!python
@@ -367,8 +335,6 @@ For Measure instances, this property *must* be the instance, (invalid/unknown)&<
 	/element/
 		- (control)`property-set`
 		- (source/area)`189 2 197 16`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 The magnitude of the Time instance. For Measures, this is their integer value:
 
 #!python
@@ -381,8 +347,6 @@ The magnitude of the Time instance. For Measures, this is their integer value:
 	/element/
 		- (control)`property-set`
 		- (source/area)`198 2 217 16`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`increase(self, *units, **parts)`
 
 Increase the measurement, repositioning the (factor-local/property)&<#Measure.stop[stop]>.
@@ -417,8 +381,6 @@ This is equivalent to:
 	/element/
 		- (control)`property-set`
 		- (source/area)`218 2 238 5`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`decrease(self, *units, **parts)`
 
 Decrease the measurement, repositioning the (factor-local/property)&<#Measure.stop[stop]>.
@@ -456,8 +418,6 @@ This is equivalent to:
 	/element/
 		- (control)`property-set`
 		- (source/area)`240 1 338 5`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`240 13 240 16`
@@ -474,8 +434,6 @@ A point in time.
 	/element/
 		- (control)`property-set`
 		- (source/area)`247 2 253 16`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 Classification for the unit type with respect to Points in Time.
 
 
@@ -486,8 +444,6 @@ Classification for the unit type with respect to Points in Time.
 	/element/
 		- (control)`property-set`
 		- (source/area)`254 2 265 16`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`2`
 		- (type/syntax)`typing.Type[Measure]`
 		
 The Point's corresponding scalar class used to measure deltas.
@@ -505,8 +461,6 @@ This provides access to a (project-local/unknown)&<abstract#Measure[abstract.Mea
 	/element/
 		- (control)`property-set`
 		- (source/area)`266 2 276 16`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 Points *must* return the instance, (invalid/unknown)&<#self>:
 
 [ >> Invariants ]
@@ -521,8 +475,6 @@ Points *must* return the instance, (invalid/unknown)&<#self>:
 	/element/
 		- (control)`property-set`
 		- (source/area)`277 2 287 16`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 The next Point according to the unit:
 
 [ >> Invariants ]
@@ -537,8 +489,6 @@ The next Point according to the unit:
 	/element/
 		- (control)`property-set`
 		- (source/area)`288 2 296 16`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 The magnitude of the Point. For Points, this *must* be one:
 
 #!python
@@ -551,8 +501,6 @@ The magnitude of the Point. For Points, this *must* be one:
 	/element/
 		- (control)`property-set`
 		- (source/area)`297 2 303 16`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`measure(self, pit)`
 
 Return the measurement, (factor-local/property)&<#Point.Measure[Measure]> instance, between (factor-local/parameter)&<#Point.measure.Parameters.self[self]> and
@@ -566,8 +514,6 @@ the given point in time, (factor-local/parameter)&<#Point.measure.Parameters.pit
 	/element/
 		- (control)`property-set`
 		- (source/area)`304 2 314 16`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`elapse(self, *units, **parts)`
 
 Returns an adjusted measure in time by the given arguments and keywords.
@@ -585,8 +531,6 @@ This is shorthand for `t.of(t, *units, **parts)`.
 	/element/
 		- (control)`property-set`
 		- (source/area)`315 2 326 16`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`rollback(self, *units, **parts)`
 
 The point in time that occurred the given number of units before this
@@ -605,8 +549,6 @@ the parameters into negative values.
 	/element/
 		- (control)`property-set`
 		- (source/area)`327 2 333 16`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`leads(self, pit)`
 
 Returns whether or not the Point in Time, self,
@@ -620,8 +562,6 @@ comes *before* the given argument, (factor-local/parameter)&<#Point.leads.Parame
 	/element/
 		- (control)`property-set`
 		- (source/area)`334 2 338 5`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`follows(self, pit)`
 
 Returns whether or not the Point in Time, self,

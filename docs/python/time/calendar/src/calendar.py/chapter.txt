@@ -5,7 +5,7 @@
 		- (control)`property-set`
 		- (source/area)`1 1 89 0`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`35`
+		- (coverage-counters)`0`
 Arbitrary Calendar Address Resolution
 
 Used internally by (project-local/unknown)&<gregorian> in order to work with the gregorian calendar pattern.
@@ -30,8 +30,6 @@ Used internally by (project-local/unknown)&<gregorian> in order to work with the
 	/element/
 		- (control)`property-set`
 		- (source/area)`7 1 7 15`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ aggregate ]
 ! CONTROL:
@@ -40,8 +38,6 @@ Used internally by (project-local/unknown)&<gregorian> in order to work with the
 	/element/
 		- (control)`property-set`
 		- (source/area)`11 1 42 2`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`12`
 (signature)`aggregate(node)`
 
 Recursively aggregate the data in the node.
@@ -56,7 +52,5 @@ Recursively aggregate the data in the node.
 	/element/
 		- (control)`property-set`
 		- (source/area)`51 1 89 85`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`20`
 (signature)`resolve(selectors, iaddress, calendar)`
 

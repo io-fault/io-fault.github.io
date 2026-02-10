@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 60 0`
-		- (coverage-zeros)`5`
-		- (coverage-counters)`15`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 Week based measures of time: days of seven.
 
 
@@ -38,8 +38,6 @@ Week based measures of time: days of seven.
 	/element/
 		- (control)`property-set`
 		- (source/area)`16 1 16 33`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	days_in_week = len(weekday_names)
 
@@ -64,8 +62,6 @@ Week based measures of time: days of seven.
 	/element/
 		- (control)`property-set`
 		- (source/area)`22 1 24 1`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	weekday_abbreviations = (
 		'sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat',
@@ -80,8 +76,6 @@ Week based measures of time: days of seven.
 	/element/
 		- (control)`property-set`
 		- (source/area)`27 1 30 1`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	weekday_name_to_number = {
 		weekday_names[i]: i
@@ -95,8 +89,6 @@ Week based measures of time: days of seven.
 	/element/
 		- (control)`property-set`
 		- (source/area)`37 1 41 33`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 (signature)`day_of_week(offset, days)`
 
 Derive the canonical day of week from the given offset and days.
@@ -111,8 +103,6 @@ Derive the canonical day of week from the given offset and days.
 	/element/
 		- (control)`property-set`
 		- (source/area)`43 1 44 28`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`week_from_days(offset, days)`
 
 
@@ -125,8 +115,6 @@ Derive the canonical day of week from the given offset and days.
 	/element/
 		- (control)`property-set`
 		- (source/area)`46 1 47 28`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`days_from_week(offset, weeks)`
 
 
@@ -139,7 +127,5 @@ Derive the canonical day of week from the given offset and days.
 	/element/
 		- (control)`property-set`
 		- (source/area)`49 1 60 51`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`5`
 (signature)`context(context)`
 

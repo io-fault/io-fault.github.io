@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 1597 0`
-		- (coverage-zeros)`383`
-		- (coverage-counters)`645`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 System abstractions and processors for managing a processing tree.
 
 
@@ -28,8 +28,6 @@ System abstractions and processors for managing a processing tree.
 	/element/
 		- (control)`property-set`
 		- (source/area)`6 1 6 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ functools ]
 ! CONTROL:
@@ -40,8 +38,6 @@ System abstractions and processors for managing a processing tree.
 	/element/
 		- (control)`property-set`
 		- (source/area)`7 1 7 16`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ collections ]
 ! CONTROL:
@@ -52,8 +48,6 @@ System abstractions and processors for managing a processing tree.
 	/element/
 		- (control)`property-set`
 		- (source/area)`8 1 8 18`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ contextlib ]
 ! CONTROL:
@@ -64,8 +58,6 @@ System abstractions and processors for managing a processing tree.
 	/element/
 		- (control)`property-set`
 		- (source/area)`9 1 9 17`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ weakref ]
 ! CONTROL:
@@ -76,8 +68,6 @@ System abstractions and processors for managing a processing tree.
 	/element/
 		- (control)`property-set`
 		- (source/area)`10 1 10 14`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ traceback ]
 ! CONTROL:
@@ -88,8 +78,6 @@ System abstractions and processors for managing a processing tree.
 	/element/
 		- (control)`property-set`
 		- (source/area)`11 1 11 16`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ itertools ]
 ! CONTROL:
@@ -100,8 +88,6 @@ System abstractions and processors for managing a processing tree.
 	/element/
 		- (control)`property-set`
 		- (source/area)`12 1 12 16`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ signal ]
 ! CONTROL:
@@ -112,8 +98,6 @@ System abstractions and processors for managing a processing tree.
 	/element/
 		- (control)`property-set`
 		- (source/area)`13 1 13 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ operator ]
 ! CONTROL:
@@ -124,8 +108,6 @@ System abstractions and processors for managing a processing tree.
 	/element/
 		- (control)`property-set`
 		- (source/area)`14 1 14 15`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ heapq ]
 ! CONTROL:
@@ -136,8 +118,6 @@ System abstractions and processors for managing a processing tree.
 	/element/
 		- (control)`property-set`
 		- (source/area)`15 1 15 12`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ sleep ]
 ! CONTROL:
@@ -148,8 +128,6 @@ System abstractions and processors for managing a processing tree.
 	/element/
 		- (control)`property-set`
 		- (source/area)`16 1 16 22`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ tools ]
 ! CONTROL:
@@ -160,8 +138,6 @@ System abstractions and processors for managing a processing tree.
 	/element/
 		- (control)`property-set`
 		- (source/area)`18 1 18 27`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ weak ]
 ! CONTROL:
@@ -172,8 +148,6 @@ System abstractions and processors for managing a processing tree.
 	/element/
 		- (control)`property-set`
 		- (source/area)`19 1 19 26`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ kernel ]
 ! CONTROL:
@@ -184,8 +158,6 @@ System abstractions and processors for managing a processing tree.
 	/element/
 		- (control)`property-set`
 		- (source/area)`21 1 21 27`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ network ]
 ! CONTROL:
@@ -196,8 +168,6 @@ System abstractions and processors for managing a processing tree.
 	/element/
 		- (control)`property-set`
 		- (source/area)`22 1 22 28`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ io ]
 ! CONTROL:
@@ -208,8 +178,6 @@ System abstractions and processors for managing a processing tree.
 	/element/
 		- (control)`property-set`
 		- (source/area)`23 1 23 23`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ process ]
 ! CONTROL:
@@ -220,8 +188,6 @@ System abstractions and processors for managing a processing tree.
 	/element/
 		- (control)`property-set`
 		- (source/area)`24 1 24 28`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ thread ]
 ! CONTROL:
@@ -232,8 +198,6 @@ System abstractions and processors for managing a processing tree.
 	/element/
 		- (control)`property-set`
 		- (source/area)`25 1 25 27`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ memory ]
 ! CONTROL:
@@ -244,8 +208,6 @@ System abstractions and processors for managing a processing tree.
 	/element/
 		- (control)`property-set`
 		- (source/area)`26 1 26 27`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ execution ]
 ! CONTROL:
@@ -256,8 +218,6 @@ System abstractions and processors for managing a processing tree.
 	/element/
 		- (control)`property-set`
 		- (source/area)`27 1 27 30`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ time ]
 ! CONTROL:
@@ -268,8 +228,6 @@ System abstractions and processors for managing a processing tree.
 	/element/
 		- (control)`property-set`
 		- (source/area)`29 1 29 33`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ core ]
 ! CONTROL:
@@ -280,8 +238,6 @@ System abstractions and processors for managing a processing tree.
 	/element/
 		- (control)`property-set`
 		- (source/area)`31 1 31 18`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ flows ]
 ! CONTROL:
@@ -292,8 +248,6 @@ System abstractions and processors for managing a processing tree.
 	/element/
 		- (control)`property-set`
 		- (source/area)`32 1 32 19`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ text ]
 ! CONTROL:
@@ -304,8 +258,6 @@ System abstractions and processors for managing a processing tree.
 	/element/
 		- (control)`property-set`
 		- (source/area)`33 1 33 18`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ __process_index__ ]
 ! CONTROL:
@@ -316,8 +268,6 @@ System abstractions and processors for managing a processing tree.
 	/element/
 		- (control)`property-set`
 		- (source/area)`35 1 35 26`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	__process_index__ = dict()
 
@@ -328,8 +278,6 @@ System abstractions and processors for managing a processing tree.
 	/element/
 		- (control)`property-set`
 		- (source/area)`37 1 406 14`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`37 14 37 19`
@@ -348,8 +296,6 @@ Collection of (context-local/factor-element)&<fault.system/io#Array[fault.system
 	/element/
 		- (control)`property-set`
 		- (source/area)`41 2 41 30`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ Matrix >> channels_per_array ]
 ! CONTROL:
@@ -360,8 +306,6 @@ Collection of (context-local/factor-element)&<fault.system/io#Array[fault.system
 	/element/
 		- (control)`property-set`
 		- (source/area)`42 2 42 31`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	channels_per_array = 1024 * 16
 
@@ -372,8 +316,6 @@ Collection of (context-local/factor-element)&<fault.system/io#Array[fault.system
 	/element/
 		- (control)`property-set`
 		- (source/area)`44 2 119 14`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`44 14 44 18`
@@ -392,8 +334,6 @@ Transfer events snapshot delivered to I/O tasks.
 	/element/
 		- (control)`property-set`
 		- (source/area)`48 3 48 16`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	__slots__ = ()
 
@@ -406,8 +346,6 @@ Transfer events snapshot delivered to I/O tasks.
 	/element/
 		- (control)`property-set`
 		- (source/area)`50 3 63 11`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`10`
 (signature)`__str__(self)`
 
 
@@ -420,8 +358,6 @@ Transfer events snapshot delivered to I/O tasks.
 	/element/
 		- (control)`property-set`
 		- (source/area)`65 3 70 11`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`__repr__(self)`
 
 
@@ -432,8 +368,6 @@ Transfer events snapshot delivered to I/O tasks.
 	/element/
 		- (control)`property-set`
 		- (source/area)`71 3 77 11`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 Units sent.
 
 
@@ -444,8 +378,6 @@ Units sent.
 	/element/
 		- (control)`property-set`
 		- (source/area)`78 3 84 11`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 The acquire method of the channel if exhausted. (invalid/unknown)&<#None> if not exhausted.
 
 
@@ -456,8 +388,6 @@ The acquire method of the channel if exhausted. (invalid/unknown)&<#None> if not
 	/element/
 		- (control)`property-set`
 		- (source/area)`85 3 91 11`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 Whether or not this is the last event from the Channel.
 
 
@@ -470,8 +400,6 @@ Whether or not this is the last event from the Channel.
 	/element/
 		- (control)`property-set`
 		- (source/area)`92 3 97 14`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 
 [ Matrix >> Delta >> construct ]
 ! CONTROL:
@@ -482,8 +410,6 @@ Whether or not this is the last event from the Channel.
 	/element/
 		- (control)`property-set`
 		- (source/area)`98 3 101 14`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`construct(Class)`
 
 
@@ -496,8 +422,6 @@ Whether or not this is the last event from the Channel.
 	/element/
 		- (control)`property-set`
 		- (source/area)`102 3 119 14`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`7`
 (signature)`snapshot(Class, channel)`
 
 
@@ -508,8 +432,6 @@ Whether or not this is the last event from the Channel.
 	/element/
 		- (control)`property-set`
 		- (source/area)`120 2 165 14`
-		- (coverage-zeros)`6`
-		- (coverage-counters)`13`
 (signature)`io_collect(transfers)`
 
 Process the array's transfer and construct a sequence of I/O events.
@@ -526,8 +448,6 @@ for processing in the main task queue.
 	/element/
 		- (control)`property-set`
 		- (source/area)`166 2 219 14`
-		- (coverage-zeros)`15`
-		- (coverage-counters)`23`
 (signature)`io_deliver(error, events)`
 
 Send the individual (factor-local/parameter)&<#Matrix.io_deliver.Parameters.events[events]> originally prepared by
@@ -541,8 +461,6 @@ Send the individual (factor-local/parameter)&<#Matrix.io_deliver.Parameters.even
 	/element/
 		- (control)`property-set`
 		- (source/area)`220 2 229 14`
-		- (coverage-zeros)`4`
-		- (coverage-counters)`4`
 (signature)`io_delta(array)`
 
 Inline I/O handler for schduler based transfers.
@@ -557,8 +475,6 @@ Inline I/O handler for schduler based transfers.
 	/element/
 		- (control)`property-set`
 		- (source/area)`230 2 329 20`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`27`
 (signature)`io_loop()`
 
 
@@ -571,8 +487,6 @@ Inline I/O handler for schduler based transfers.
 	/element/
 		- (control)`property-set`
 		- (source/area)`331 2 335 61`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
 (signature)`__init__(self, errors, synchronize, execute)`
 
 
@@ -585,8 +499,6 @@ Inline I/O handler for schduler based transfers.
 	/element/
 		- (control)`property-set`
 		- (source/area)`337 2 343 17`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
 (signature)`_alloc(self)`
 
 
@@ -599,8 +511,6 @@ Inline I/O handler for schduler based transfers.
 	/element/
 		- (control)`property-set`
 		- (source/area)`345 2 354 18`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
 (signature)`_get(self)`
 
 
@@ -611,8 +521,6 @@ Inline I/O handler for schduler based transfers.
 	/element/
 		- (control)`property-set`
 		- (source/area)`356 2 367 21`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`4`
 (signature)`void(self)`
 
 Violently destroy all channels and Arrays in the Matrix.
@@ -630,8 +538,6 @@ All arrays allocated by the Matrix will be terminated.
 	/element/
 		- (control)`property-set`
 		- (source/area)`369 2 375 12`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`force(self)`
 
 Execute the Array.force method on the set designated
@@ -645,8 +551,6 @@ of Array instances designated by (invalid/unknown)&<#id>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`377 2 382 16`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`terminate(self)`
 
 Terminate all arrays managed by the matrix.
@@ -659,8 +563,6 @@ Terminate all arrays managed by the matrix.
 	/element/
 		- (control)`property-set`
 		- (source/area)`384 2 406 14`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`16`
 (signature)`acquire(self, channels)`
 
 Acquire a set of channels accounting for volume limits.
@@ -673,8 +575,6 @@ Acquire a set of channels accounting for volume limits.
 	/element/
 		- (control)`property-set`
 		- (source/area)`408 1 528 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`408 16 408 28`
@@ -705,8 +605,6 @@ Channel moving data in or out of the operating system's kernel.
 	/element/
 		- (control)`property-set`
 		- (source/area)`414 2 417 21`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`__init__(self)`
 
 
@@ -719,8 +617,6 @@ Channel moving data in or out of the operating system's kernel.
 	/element/
 		- (control)`property-set`
 		- (source/area)`419 2 420 38`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`actuate(self)`
 
 
@@ -733,8 +629,6 @@ Channel moving data in or out of the operating system's kernel.
 	/element/
 		- (control)`property-set`
 		- (source/area)`422 2 426 23`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`3`
 (signature)`k_meta(self)`
 
 
@@ -747,8 +641,6 @@ Channel moving data in or out of the operating system's kernel.
 	/element/
 		- (control)`property-set`
 		- (source/area)`428 2 450 10`
-		- (coverage-zeros)`11`
-		- (coverage-counters)`11`
 (signature)`__repr__(self)`
 
 
@@ -761,8 +653,6 @@ Channel moving data in or out of the operating system's kernel.
 	/element/
 		- (control)`property-set`
 		- (source/area)`452 2 461 16`
-		- (coverage-zeros)`11`
-		- (coverage-counters)`11`
 (signature)`structure(self)`
 
 
@@ -775,8 +665,6 @@ Channel moving data in or out of the operating system's kernel.
 	/element/
 		- (control)`property-set`
 		- (source/area)`463 2 466 69`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`k_transition(self)`
 
 
@@ -787,8 +675,6 @@ Channel moving data in or out of the operating system's kernel.
 	/element/
 		- (control)`property-set`
 		- (source/area)`468 2 480 10`
-		- (coverage-zeros)`5`
-		- (coverage-counters)`5`
 (signature)`k_kill(self)`
 
 Called by the controlling (invalid/unknown)&<#Flow>, acquire status information and
@@ -804,8 +690,6 @@ unlink the channel.
 	/element/
 		- (control)`property-set`
 		- (source/area)`482 2 485 21`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`3`
 (signature)`interrupt(self)`
 
 
@@ -818,8 +702,6 @@ unlink the channel.
 	/element/
 		- (control)`property-set`
 		- (source/area)`487 2 510 22`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`3`
 (signature)`f_terminated(self)`
 
 
@@ -832,8 +714,6 @@ unlink the channel.
 	/element/
 		- (control)`property-set`
 		- (source/area)`512 2 515 10`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`f_transfer(self, event)`
 
 
@@ -844,8 +724,6 @@ unlink the channel.
 	/element/
 		- (control)`property-set`
 		- (source/area)`516 2 528 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
 The length of the buffer being transferred into or out of the kernel.
 
 (invalid/unknown)&<#None> if no transfer is currently taking place.
@@ -858,8 +736,6 @@ The length of the buffer being transferred into or out of the kernel.
 	/element/
 		- (control)`property-set`
 		- (source/area)`530 1 559 22`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`530 17 530 24`
@@ -878,8 +754,6 @@ Flow that continually allocates memory for a channel transferring data into the 
 	/element/
 		- (control)`property-set`
 		- (source/area)`537 2 539 22`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 (signature)`f_clear(self, obstruction)`
 
 
@@ -890,8 +764,6 @@ Flow that continually allocates memory for a channel transferring data into the 
 	/element/
 		- (control)`property-set`
 		- (source/area)`541 2 551 55`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`k_transition(self)`
 
 Transition in the next buffer provided that the Flow was not obstructed.
@@ -904,8 +776,6 @@ Transition in the next buffer provided that the Flow was not obstructed.
 	/element/
 		- (control)`property-set`
 		- (source/area)`553 2 559 22`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`3`
 (signature)`f_transfer(self, event)`
 
 Normally ignored, but will induce a transition if no transfer is occurring.
@@ -918,8 +788,6 @@ Normally ignored, but will induce a transition if no transfer is occurring.
 	/element/
 		- (control)`property-set`
 		- (source/area)`561 1 589 23`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`561 15 561 27`
@@ -939,8 +807,6 @@ read events by accepting and transmitting the socket file descriptors.
 	/element/
 		- (control)`property-set`
 		- (source/area)`567 2 567 33`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	Allocate = kernel.Ports.allocate
 
@@ -953,8 +819,6 @@ read events by accepting and transmitting the socket file descriptors.
 	/element/
 		- (control)`property-set`
 		- (source/area)`569 2 572 25`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`3`
 (signature)`__init__(self, kport)`
 
 
@@ -967,8 +831,6 @@ read events by accepting and transmitting the socket file descriptors.
 	/element/
 		- (control)`property-set`
 		- (source/area)`574 2 575 55`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`actuate(self)`
 
 
@@ -981,8 +843,6 @@ read events by accepting and transmitting the socket file descriptors.
 	/element/
 		- (control)`property-set`
 		- (source/area)`577 2 580 18`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`3`
 (signature)`f_transfer(self, event)`
 
 
@@ -995,8 +855,6 @@ read events by accepting and transmitting the socket file descriptors.
 	/element/
 		- (control)`property-set`
 		- (source/area)`582 2 585 19`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`3`
 (signature)`interrupt(self)`
 
 
@@ -1009,8 +867,6 @@ read events by accepting and transmitting the socket file descriptors.
 	/element/
 		- (control)`property-set`
 		- (source/area)`587 2 589 23`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 (signature)`f_terminate(self)`
 
 
@@ -1021,8 +877,6 @@ read events by accepting and transmitting the socket file descriptors.
 	/element/
 		- (control)`property-set`
 		- (source/area)`591 1 596 54`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`591 14 591 22`
@@ -1039,8 +893,6 @@ Receive octets from the system I/O channel.
 	/element/
 		- (control)`property-set`
 		- (source/area)`598 1 633 27`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`598 14 598 19`
@@ -1072,8 +924,6 @@ Primarily used to read portions of a file.
 	/element/
 		- (control)`property-set`
 		- (source/area)`605 2 617 13`
-		- (coverage-zeros)`8`
-		- (coverage-counters)`8`
 (signature)`k_set_limit(self, limit)`
 
 
@@ -1084,8 +934,6 @@ Primarily used to read portions of a file.
 	/element/
 		- (control)`property-set`
 		- (source/area)`619 2 633 27`
-		- (coverage-zeros)`5`
-		- (coverage-counters)`5`
 (signature)`k_transition(self)`
 
 Transition in the next buffer provided that the Flow was not obstructed.
@@ -1098,8 +946,6 @@ Transition in the next buffer provided that the Flow was not obstructed.
 	/element/
 		- (control)`property-set`
 		- (source/area)`635 1 714 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`635 15 635 22`
@@ -1133,8 +979,6 @@ Flows to dynamically choose the buffer size by adjusting the size of the events.
 	/element/
 		- (control)`property-set`
 		- (source/area)`647 2 653 10`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 Queue entries exceeds limit.
 
 
@@ -1147,8 +991,6 @@ Queue entries exceeds limit.
 	/element/
 		- (control)`property-set`
 		- (source/area)`654 2 659 3`
-		- (coverage-zeros)`4`
-		- (coverage-counters)`4`
 
 [ KOutput >> __init__ ]
 ! CONTROL:
@@ -1159,8 +1001,6 @@ Queue entries exceeds limit.
 	/element/
 		- (control)`property-set`
 		- (source/area)`661 2 664 27`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`__init__(self, channel)`
 
 
@@ -1173,8 +1013,6 @@ Queue entries exceeds limit.
 	/element/
 		- (control)`property-set`
 		- (source/area)`666 2 681 24`
-		- (coverage-zeros)`4`
-		- (coverage-counters)`7`
 (signature)`k_transition(self)`
 
 
@@ -1185,8 +1023,6 @@ Queue entries exceeds limit.
 	/element/
 		- (control)`property-set`
 		- (source/area)`683 2 699 5`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`6`
 (signature)`f_transfer(self, event)`
 
 Enqueue a sequence of transfers to be processed by the Transit.
@@ -1201,8 +1037,6 @@ Enqueue a sequence of transfers to be processed by the Transit.
 	/element/
 		- (control)`property-set`
 		- (source/area)`701 2 714 13`
-		- (coverage-zeros)`5`
-		- (coverage-counters)`5`
 (signature)`f_terminate(self)`
 
 
@@ -1213,8 +1047,6 @@ Enqueue a sequence of transfers to be processed by the Transit.
 	/element/
 		- (control)`property-set`
 		- (source/area)`716 1 1243 65`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`716 15 716 26`
@@ -1234,8 +1066,6 @@ Abstract Processors with access to the local system.
 	/element/
 		- (control)`property-set`
 		- (source/area)`722 2 731 22`
-		- (coverage-zeros)`9`
-		- (coverage-counters)`9`
 (signature)`xact_exit(self, xact)`
 
 
@@ -1246,8 +1076,6 @@ Abstract Processors with access to the local system.
 	/element/
 		- (control)`property-set`
 		- (source/area)`733 2 740 32`
-		- (coverage-zeros)`4`
-		- (coverage-counters)`4`
 (signature)`xact_void(self, final)`
 
 Final (executable) transaction exited; system process context complete.
@@ -1262,8 +1090,6 @@ Final (executable) transaction exited; system process context complete.
 	/element/
 		- (control)`property-set`
 		- (source/area)`742 2 745 32`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`3`
 (signature)`interrupt(self)`
 
 
@@ -1276,8 +1102,6 @@ Final (executable) transaction exited; system process context complete.
 	/element/
 		- (control)`property-set`
 		- (source/area)`747 2 749 18`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 (signature)`sigterm(self, link)`
 
 
@@ -1290,8 +1114,6 @@ Final (executable) transaction exited; system process context complete.
 	/element/
 		- (control)`property-set`
 		- (source/area)`751 2 756 10`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`3`
 (signature)`terminate(self)`
 
 
@@ -1304,8 +1126,6 @@ Final (executable) transaction exited; system process context complete.
 	/element/
 		- (control)`property-set`
 		- (source/area)`757 2 758 28`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ Context >> kdispatch ]
 ! CONTROL:
@@ -1316,8 +1136,6 @@ Final (executable) transaction exited; system process context complete.
 	/element/
 		- (control)`property-set`
 		- (source/area)`760 2 763 11`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`3`
 (signature)`kdispatch(self, event, task)`
 
 
@@ -1330,8 +1148,6 @@ Final (executable) transaction exited; system process context complete.
 	/element/
 		- (control)`property-set`
 		- (source/area)`765 2 766 43`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`kcancel(self, event)`
 
 
@@ -1344,8 +1160,6 @@ Final (executable) transaction exited; system process context complete.
 	/element/
 		- (control)`property-set`
 		- (source/area)`768 2 775 43`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
 (signature)`__init__(self, process)`
 
 
@@ -1358,8 +1172,6 @@ Final (executable) transaction exited; system process context complete.
 	/element/
 		- (control)`property-set`
 		- (source/area)`777 2 777 36`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	uptime = staticmethod(time.elapsed)
 
@@ -1372,8 +1184,6 @@ Final (executable) transaction exited; system process context complete.
 	/element/
 		- (control)`property-set`
 		- (source/area)`778 2 778 30`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	time = staticmethod(time.utc)
 
@@ -1396,8 +1206,6 @@ Final (executable) transaction exited; system process context complete.
 	/element/
 		- (control)`property-set`
 		- (source/area)`782 2 811 9`
-		- (coverage-zeros)`10`
-		- (coverage-counters)`10`
 (signature)`_defer_execute(self)`
 
 Execute all tasks whose wait period has elapsed according to the system's clock.
@@ -1410,8 +1218,6 @@ Execute all tasks whose wait period has elapsed according to the system's clock.
 	/element/
 		- (control)`property-set`
 		- (source/area)`813 2 829 32`
-		- (coverage-zeros)`9`
-		- (coverage-counters)`9`
 (signature)`defer(self, measure, *processors)`
 
 Defer the execution of the (id)`occur` methods on the given (factor-local/parameter)&<#Context.defer.Parameters.processors[processors]>
@@ -1427,8 +1233,6 @@ by the given (factor-local/parameter)&<#Context.defer.Parameters.measure[measure
 	/element/
 		- (control)`property-set`
 		- (source/area)`831 2 833 38`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`cancel(self, processor)`
 
 
@@ -1441,8 +1245,6 @@ by the given (factor-local/parameter)&<#Context.defer.Parameters.measure[measure
 	/element/
 		- (control)`property-set`
 		- (source/area)`835 2 841 90`
-		- (coverage-zeros)`4`
-		- (coverage-counters)`4`
 (signature)`_defer_update(self, snapshot)`
 
 
@@ -1455,8 +1257,6 @@ by the given (factor-local/parameter)&<#Context.defer.Parameters.measure[measure
 	/element/
 		- (control)`property-set`
 		- (source/area)`843 2 849 14`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`3`
 (signature)`_defer_period(self, current)`
 
 
@@ -1469,8 +1269,6 @@ by the given (factor-local/parameter)&<#Context.defer.Parameters.measure[measure
 	/element/
 		- (control)`property-set`
 		- (source/area)`851 2 855 43`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`4`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
@@ -1486,8 +1284,6 @@ by the given (factor-local/parameter)&<#Context.defer.Parameters.measure[measure
 	/element/
 		- (control)`property-set`
 		- (source/area)`857 2 883 15`
-		- (coverage-zeros)`13`
-		- (coverage-counters)`13`
 (signature)`_defer_get(self, current)`
 
 
@@ -1500,8 +1296,6 @@ by the given (factor-local/parameter)&<#Context.defer.Parameters.measure[measure
 	/element/
 		- (control)`property-set`
 		- (source/area)`885 2 897 16`
-		- (coverage-zeros)`4`
-		- (coverage-counters)`4`
 (signature)`structure(self)`
 
 
@@ -1514,8 +1308,6 @@ by the given (factor-local/parameter)&<#Context.defer.Parameters.measure[measure
 	/element/
 		- (control)`property-set`
 		- (source/area)`899 2 902 35`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`actuate(self)`
 
 
@@ -1528,8 +1320,6 @@ by the given (factor-local/parameter)&<#Context.defer.Parameters.measure[measure
 	/element/
 		- (control)`property-set`
 		- (source/area)`904 2 907 41`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`3`
 (signature)`connect_process_signal(self, xact_context, callback, signal)`
 
 
@@ -1542,8 +1332,6 @@ by the given (factor-local/parameter)&<#Context.defer.Parameters.measure[measure
 	/element/
 		- (control)`property-set`
 		- (source/area)`909 2 918 33`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`5`
 (signature)`connect_process_exit(self, xact_context, callback, *processes)`
 
 
@@ -1554,8 +1342,6 @@ by the given (factor-local/parameter)&<#Context.defer.Parameters.measure[measure
 	/element/
 		- (control)`property-set`
 		- (source/area)`920 2 929 28`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`7`
 (signature)`allocate(self, xactctx)`
 
 Launch an Executable for running application processors.
@@ -1568,8 +1354,6 @@ Launch an Executable for running application processors.
 	/element/
 		- (control)`property-set`
 		- (source/area)`931 2 937 14`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`3`
 (signature)`report(self, target)`
 
 Send an overview of the logical process state to the given target.
@@ -1582,8 +1366,6 @@ Send an overview of the logical process state to the given target.
 	/element/
 		- (control)`property-set`
 		- (source/area)`939 2 949 56`
-		- (coverage-zeros)`4`
-		- (coverage-counters)`4`
 (signature)`_recur(self, frequency, task)`
 
 Schedule the task for execution after the period of time (invalid/unknown)&<#measure> elapses.
@@ -1600,8 +1382,6 @@ and decidedly inexact, so resubmission is used with a finer grain.
 	/element/
 		- (control)`property-set`
 		- (source/area)`951 2 956 41`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 (signature)`_cancel(self, task)`
 
 Cancel a scheduled task.
@@ -1614,8 +1394,6 @@ Cancel a scheduled task.
 	/element/
 		- (control)`property-set`
 		- (source/area)`958 2 963 36`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 (signature)`inherit(self, context)`
 
 Inherit the exports from the given (factor-local/parameter)&<#Context.inherit.Parameters.context[context]>.
@@ -1628,8 +1406,6 @@ Inherit the exports from the given (factor-local/parameter)&<#Context.inherit.Pa
 	/element/
 		- (control)`property-set`
 		- (source/area)`965 2 970 31`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 (signature)`_io_cycle(self)`
 
 Signal the (factor-local/class)&<#Process[Process]> that I/O occurred for this context.
@@ -1644,8 +1420,6 @@ Signal the (factor-local/class)&<#Process[Process]> that I/O occurred for this c
 	/element/
 		- (control)`property-set`
 		- (source/area)`973 2 977 35`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`3`
 (signature)`_io_attach(self, *channels)`
 
 
@@ -1658,8 +1432,6 @@ Signal the (factor-local/class)&<#Process[Process]> that I/O occurred for this c
 	/element/
 		- (control)`property-set`
 		- (source/area)`979 2 986 12`
-		- (coverage-zeros)`5`
-		- (coverage-counters)`5`
 (signature)`_io_flush(self)`
 
 
@@ -1670,8 +1442,6 @@ Signal the (factor-local/class)&<#Process[Process]> that I/O occurred for this c
 	/element/
 		- (control)`property-set`
 		- (source/area)`988 2 993 71`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 (signature)`execute(self, controller, function, *parameters)`
 
 Execute the given function in a thread associated with the specified controller.
@@ -1684,8 +1454,6 @@ Execute the given function in a thread associated with the specified controller.
 	/element/
 		- (control)`property-set`
 		- (source/area)`995 2 1004 44`
-		- (coverage-zeros)`4`
-		- (coverage-counters)`4`
 (signature)`environ(self, identifier)`
 
 Access the environment from the perspective of the context.
@@ -1699,8 +1467,6 @@ Context overrides may hide process environment variables.
 	/element/
 		- (control)`property-set`
 		- (source/area)`1006 2 1017 39`
-		- (coverage-zeros)`5`
-		- (coverage-counters)`5`
 (signature)`override(self, identifier, value)`
 
 Override an environment variable for the execution context.
@@ -1715,8 +1481,6 @@ Child processes spawned relative to the context will inherit the overrides.
 	/element/
 		- (control)`property-set`
 		- (source/area)`1019 2 1025 34`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`3`
 (signature)`bindings(self, *allocs)`
 
 Returns a sequence of file descriptors that can later be acquired by a Matrix.
@@ -1729,8 +1493,6 @@ Returns a sequence of file descriptors that can later be acquired by a Matrix.
 	/element/
 		- (control)`property-set`
 		- (source/area)`1027 2 1039 54`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`3`
 (signature)`connect(self, endpoint)`
 
 Given an endpoint and a transport stack, return the series used to
@@ -1754,8 +1516,6 @@ manage the connection's I/O.
 	/element/
 		- (control)`property-set`
 		- (source/area)`1041 2 1052 40`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`3`
 (signature)`allocate_transport(self, fd)`
 
 Given a file descriptor and a transport stack, return the series used to
@@ -1779,8 +1539,6 @@ manage the connection's I/O.
 	/element/
 		- (control)`property-set`
 		- (source/area)`1054 2 1062 35`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`3`
 (signature)`read_file(self, path)`
 
 Construct a channel for reading an entire file from the filesystem.
@@ -1795,8 +1553,6 @@ The returned channel terminates when EOF occurs; often,
 	/element/
 		- (control)`property-set`
 		- (source/area)`1064 2 1070 37`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`4`
 (signature)`write_file(self, path)`
 
 Construct a channel for writing to the file identified by (factor-local/parameter)&<#Context.write_file.Parameters.path[path]>.
@@ -1809,8 +1565,6 @@ Construct a channel for writing to the file identified by (factor-local/paramete
 	/element/
 		- (control)`property-set`
 		- (source/area)`1072 2 1092 8`
-		- (coverage-zeros)`10`
-		- (coverage-counters)`10`
 (signature)`read_file_range(self, path, start, stop)`
 
 Construct a channel to read a specific range of a file.
@@ -1823,8 +1577,6 @@ Construct a channel to read a specific range of a file.
 	/element/
 		- (control)`property-set`
 		- (source/area)`1094 2 1100 37`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`3`
 (signature)`append_file(self, path)`
 
 Open a set of files for appending through a (project-local/unknown)&<library.KernelPort>.
@@ -1837,8 +1589,6 @@ Open a set of files for appending through a (project-local/unknown)&<library.Ker
 	/element/
 		- (control)`property-set`
 		- (source/area)`1102 2 1112 19`
-		- (coverage-zeros)`5`
-		- (coverage-counters)`5`
 (signature)`update_file(self, path, offset, size)`
 
 Allocate a channel for overwriting data at the given offset of
@@ -1852,8 +1602,6 @@ the designated file.
 	/element/
 		- (control)`property-set`
 		- (source/area)`1114 2 1124 24`
-		- (coverage-zeros)`4`
-		- (coverage-counters)`4`
 (signature)`listen(self, interfaces)`
 
 On POSIX systems, this performs (system/manual)`bind`
@@ -1869,8 +1617,6 @@ Returns a generator producing (interface, KAccept) pairs.
 	/element/
 		- (control)`property-set`
 		- (source/area)`1126 2 1130 20`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 (signature)`accept_sockets(self, kp)`
 
 Construct a Channel processor that emite accepted listening sockets.
@@ -1883,8 +1629,6 @@ Construct a Channel processor that emite accepted listening sockets.
 	/element/
 		- (control)`property-set`
 		- (source/area)`1132 2 1138 37`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 (signature)`connect_output(self, fd)`
 
 Allocate channel instances for the given sequence
@@ -1898,8 +1642,6 @@ of file descriptors.
 	/element/
 		- (control)`property-set`
 		- (source/area)`1140 2 1146 35`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 (signature)`connect_input(self, fd)`
 
 Allocate channel instances for the given sequence
@@ -1913,8 +1655,6 @@ of file descriptors.
 	/element/
 		- (control)`property-set`
 		- (source/area)`1148 2 1178 23`
-		- (coverage-zeros)`15`
-		- (coverage-counters)`16`
 		- (type/syntax)`tuple[int, int]`
 		
 (signature)`daemon(self, invocation)`
@@ -1931,8 +1671,6 @@ Returns the process identifier and standard error's file descriptor as a tuple.
 	/element/
 		- (control)`property-set`
 		- (source/area)`1180 2 1208 12`
-		- (coverage-zeros)`11`
-		- (coverage-counters)`11`
 (signature)`daemon_stderr(self, stderr, invocation)`
 
 Execute the (context-local/factor-element)&<fault.system/execution#KInvocation[fault.system.execution.KInvocation]> instance with stdin and stdout closed.
@@ -1951,8 +1689,6 @@ Used to launch a daemon with a specific standard error for monitoring purposes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`1210 2 1218 33`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 (signature)`system_execute(self, invocation)`
 
 Execute the (context-local/factor-element)&<fault.system/execution#KInvocation[fault.system.execution.KInvocation]> inheriting standard input, output, and error.
@@ -1968,8 +1704,6 @@ suspends TTY I/O until the child exits.
 	/element/
 		- (control)`property-set`
 		- (source/area)`1220 2 1237 44`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`4`
 (signature)`stream_shared_segments(self, path, range, *_)`
 
 Construct a new Flow with an initial Iterate Transformer
@@ -2013,8 +1747,6 @@ transferring memory segments.
 	/element/
 		- (control)`property-set`
 		- (source/area)`1239 2 1243 65`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 (signature)`coprocess(self, identifier, exit, invocation, application)`
 
 Dispatch a local parallel process.
@@ -2027,8 +1759,6 @@ Dispatch a local parallel process.
 	/element/
 		- (control)`property-set`
 		- (source/area)`1245 1 1319 30`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`1245 14 1245 19`
@@ -2047,8 +1777,6 @@ Thread manager for processes; thread pool with capacity to manage dedicated thre
 	/element/
 		- (control)`property-set`
 		- (source/area)`1250 2 1252 25`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`__init__(self, process)`
 
 
@@ -2059,8 +1787,6 @@ Thread manager for processes; thread pool with capacity to manage dedicated thre
 	/element/
 		- (control)`property-set`
 		- (source/area)`1254 2 1259 24`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 (signature)`void(self)`
 
 Normally used after a process fork in the child.
@@ -2073,8 +1799,6 @@ Normally used after a process fork in the child.
 	/element/
 		- (control)`property-set`
 		- (source/area)`1261 2 1266 53`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 (signature)`execute(self, controller, callable, *args)`
 
 Create a dedicated thread and execute the given callable within it.
@@ -2087,8 +1811,6 @@ Create a dedicated thread and execute the given callable within it.
 	/element/
 		- (control)`property-set`
 		- (source/area)`1268 2 1277 83`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 (signature)`critical(self, controller, context, callable, *args)`
 
 Create a dedicated thread that is identified as a critical resource where exceptions
@@ -2105,8 +1827,6 @@ often the object whose method is considered critical.
 	/element/
 		- (control)`property-set`
 		- (source/area)`1279 2 1286 12`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`3`
 (signature)`spawn(self, controller, callable, args)`
 
 Add a thread to the fabric.
@@ -2120,8 +1840,6 @@ This expands the "parallel" capacity of a (factor-local/class)&<#Process[Process
 	/element/
 		- (control)`property-set`
 		- (source/area)`1288 2 1312 54`
-		- (coverage-zeros)`11`
-		- (coverage-counters)`12`
 (signature)`thread(self, *parameters)`
 
 Manage the execution of a thread.
@@ -2134,8 +1852,6 @@ Manage the execution of a thread.
 	/element/
 		- (control)`property-set`
 		- (source/area)`1314 2 1319 30`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 (signature)`executing(self, tid)`
 
 Whether or not the given thread [identifier] is executing in this Fabric instance.
@@ -2148,8 +1864,6 @@ Whether or not the given thread [identifier] is executing in this Fabric instanc
 	/element/
 		- (control)`property-set`
 		- (source/area)`1321 1 1461 51`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`1321 15 1321 20`
@@ -2175,8 +1889,6 @@ in order to perform operations that would otherwise expect its own space.
 	/element/
 		- (control)`property-set`
 		- (source/area)`1336 2 1345 12`
-		- (coverage-zeros)`5`
-		- (coverage-counters)`5`
 (signature)`current()`
 
 Resolve the current logical process based on the thread's identifier.
@@ -2190,8 +1902,6 @@ Resolve the current logical process based on the thread's identifier.
 	/element/
 		- (control)`property-set`
 		- (source/area)`1347 2 1354 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 		- (type/syntax)`core.Transaction`
 		- (type/project-local/factor-element)&<core#Transaction[fault.kernel.core.Transaction]>
 		
@@ -2209,8 +1919,6 @@ Return the primary (project-local/unknown)&<library.Unit> instance associated wi
 	/element/
 		- (control)`property-set`
 		- (source/area)`1355 2 1356 26`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ Process >> actuate_root_transaction ]
 ! CONTROL:
@@ -2221,8 +1929,6 @@ Return the primary (project-local/unknown)&<library.Unit> instance associated wi
 	/element/
 		- (control)`property-set`
 		- (source/area)`1358 2 1364 25`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
 (signature)`actuate_root_transaction(self)`
 
 
@@ -2233,8 +1939,6 @@ Return the primary (project-local/unknown)&<library.Unit> instance associated wi
 	/element/
 		- (control)`property-set`
 		- (source/area)`1366 2 1373 23`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`3`
 (signature)`log(self, data)`
 
 Append only access to a *critical* process log. Usually points to (none/invalid)&<http://fault.io/dev/null[sys.stderr]> and
@@ -2248,8 +1952,6 @@ primarily used for process related issues.
 	/element/
 		- (control)`property-set`
 		- (source/area)`1375 2 1385 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
 (signature)`boot(self, *tasks)`
 
 Boot the Process with the given tasks enqueued in the Task queue.
@@ -2265,8 +1967,6 @@ controlling processor.
 	/element/
 		- (control)`property-set`
 		- (source/area)`1387 2 1398 24`
-		- (coverage-zeros)`6`
-		- (coverage-counters)`6`
 (signature)`terminate(self)`
 
 Terminate the process closing the task queue and running the invocation's exit.
@@ -2279,8 +1979,6 @@ Terminate the process closing the task queue and running the invocation's exit.
 	/element/
 		- (control)`property-set`
 		- (source/area)`1400 2 1415 15`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
 (signature)`__init__(self, exit, identifier)`
 
 Initialize the Process instance using the designated (factor-local/parameter)&<#Process.__init__.Parameters.identifier[identifier]>.
@@ -2301,8 +1999,6 @@ Normally, (invalid/unknown)&<#execute> is used to manage the construction of the
 	/element/
 		- (control)`property-set`
 		- (source/area)`1417 2 1426 17`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`_setup(self)`
 
 
@@ -2315,8 +2011,6 @@ Normally, (invalid/unknown)&<#execute> is used to manage the construction of the
 	/element/
 		- (control)`property-set`
 		- (source/area)`1428 2 1430 30`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`_init_exit(self)`
 
 
@@ -2329,8 +2023,6 @@ Normally, (invalid/unknown)&<#execute> is used to manage the construction of the
 	/element/
 		- (control)`property-set`
 		- (source/area)`1432 2 1434 55`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`_init_io(self)`
 
 
@@ -2341,8 +2033,6 @@ Normally, (invalid/unknown)&<#execute> is used to manage the construction of the
 	/element/
 		- (control)`property-set`
 		- (source/area)`1436 2 1444 15`
-		- (coverage-zeros)`4`
-		- (coverage-counters)`4`
 (signature)`void(self)`
 
 Tear down the existing logical process state. Usually used internally after a
@@ -2358,8 +2048,6 @@ physical process fork.
 	/element/
 		- (control)`property-set`
 		- (source/area)`1446 2 1447 83`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`__repr__(self)`
 
 
@@ -2370,8 +2058,6 @@ physical process fork.
 	/element/
 		- (control)`property-set`
 		- (source/area)`1449 2 1458 89`
-		- (coverage-zeros)`5`
-		- (coverage-counters)`5`
 (signature)`error()`
 
 Handler for untrapped exceptions.
@@ -2386,8 +2072,6 @@ Handler for untrapped exceptions.
 	/element/
 		- (control)`property-set`
 		- (source/area)`1460 2 1461 51`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`titled_error(self, title)`
 
 
@@ -2434,8 +2118,6 @@ Handler for untrapped exceptions.
 	/element/
 		- (control)`property-set`
 		- (source/area)`1467 1 1477 30`
-		- (coverage-zeros)`4`
-		- (coverage-counters)`4`
 (signature)`reset()`
 
 Reset the process global state of (project-local/unknown)&<system>.
@@ -2448,8 +2130,6 @@ Reset the process global state of (project-local/unknown)&<system>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`1479 1 1490 61`
-		- (coverage-zeros)`5`
-		- (coverage-counters)`5`
 (signature)`exit()`
 
 Default exit callback used to interrupt main thead task queue.
@@ -2464,8 +2144,6 @@ Sets the module attribute (factor-local/data)&<#main_thread_exit_status[main_thr
 	/element/
 		- (control)`property-set`
 		- (source/area)`1492 1 1508 12`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`11`
 		- (type/syntax)`Process`
 		- (type/factor-local/class)&<#Process[Process]>
 		
@@ -2482,8 +2160,6 @@ The (factor-local/parameter)&<#spawn.Parameters.identifier[identifier]> is usual
 	/element/
 		- (control)`property-set`
 		- (source/area)`1510 1 1524 15`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`8`
 		- (type/syntax)`Process`
 		- (type/factor-local/class)&<#Process[Process]>
 		
@@ -2504,8 +2180,6 @@ The (factor-local/class)&<#Process[Process]> created by the inner (factor-local/
 	/element/
 		- (control)`property-set`
 		- (source/area)`1526 1 1529 42`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`3`
 (signature)`reports(link)`
 
 
@@ -2516,8 +2190,6 @@ The (factor-local/class)&<#Process[Process]> created by the inner (factor-local/
 	/element/
 		- (control)`property-set`
 		- (source/area)`1531 1 1550 25`
-		- (coverage-zeros)`14`
-		- (coverage-counters)`14`
 (signature)`set_root_process(process)`
 
 Connect the system process termination signal to root transaction terminate.
@@ -2532,8 +2204,6 @@ Connect the system process termination signal to root transaction terminate.
 	/element/
 		- (control)`property-set`
 		- (source/area)`1552 1 1563 72`
-		- (coverage-zeros)`6`
-		- (coverage-counters)`6`
 (signature)`default_error_trap(link, call, error)`
 
 
@@ -2544,8 +2214,6 @@ Connect the system process termination signal to root transaction terminate.
 	/element/
 		- (control)`property-set`
 		- (source/area)`1565 1 1574 47`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
 (signature)`control(**kw)`
 
 Control the main thread providing a low precision timer for deferred tasks.
@@ -2562,7 +2230,5 @@ by (factor-local/function)&<#spawn[spawn]>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`1576 1 1597 95`
-		- (coverage-zeros)`7`
-		- (coverage-counters)`15`
 (signature)`protect(error_control)`
 

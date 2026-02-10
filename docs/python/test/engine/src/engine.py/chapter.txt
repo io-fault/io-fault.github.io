@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 148 0`
-		- (coverage-zeros)`36`
-		- (coverage-counters)`72`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 Harness implementation and support functions.
 
 
@@ -28,8 +28,6 @@ Harness implementation and support functions.
 	/element/
 		- (control)`property-set`
 		- (source/area)`5 1 5 19`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ get_test_index ]
 ! CONTROL:
@@ -38,8 +36,6 @@ Harness implementation and support functions.
 	/element/
 		- (control)`property-set`
 		- (source/area)`7 1 32 13`
-		- (coverage-zeros)`7`
-		- (coverage-counters)`13`
 (signature)`get_test_index(tester)`
 
 Returns the first line number of the underlying code object.
@@ -52,8 +48,6 @@ Returns the first line number of the underlying code object.
 	/element/
 		- (control)`property-set`
 		- (source/area)`34 1 39 45`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`test_order(module, name)`
 
 Key function used by (factor-local/function)&<#gather[gather]> that uses (factor-local/function)&<#get_test_index[get_test_index]> in
@@ -67,8 +61,6 @@ order to elevate a test's position given that it was explicitly listed.
 	/element/
 		- (control)`property-set`
 		- (source/area)`41 1 49 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
 (signature)`gather(container)`
 
 Returns an ordered list of attribute names that match the (factor-local/parameter)&<#gather.Parameters.prefix[prefix]>.
@@ -81,8 +73,6 @@ Returns an ordered list of attribute names that match the (factor-local/paramete
 	/element/
 		- (control)`property-set`
 		- (source/area)`51 1 79 9`
-		- (coverage-zeros)`14`
-		- (coverage-counters)`14`
 (signature)`select()`
 
 Slice the tests by comparing their identity to (invalid/unknown)&<#start> and (invalid/unknown)&<#stop>.
@@ -95,8 +85,6 @@ Slice the tests by comparing their identity to (invalid/unknown)&<#start> and (i
 	/element/
 		- (control)`property-set`
 		- (source/area)`81 1 134 28`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`81 15 81 20`
@@ -115,8 +103,6 @@ Execute a collection of tests.
 	/element/
 		- (control)`property-set`
 		- (source/area)`86 2 86 22`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	TestType = types.Test
 
@@ -129,8 +115,6 @@ Execute a collection of tests.
 	/element/
 		- (control)`property-set`
 		- (source/area)`87 2 89 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	collect = staticmethod(gather)
 		@classmethod
@@ -144,8 +128,6 @@ Execute a collection of tests.
 	/element/
 		- (control)`property-set`
 		- (source/area)`90 2 98 10`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`7`
 (signature)`from_module(Class, module)`
 
 
@@ -156,8 +138,6 @@ Execute a collection of tests.
 	/element/
 		- (control)`property-set`
 		- (source/area)`99 2 104 24`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
@@ -171,8 +151,6 @@ Number of tests that have been prepared for execution.
 	/element/
 		- (control)`property-set`
 		- (source/area)`106 2 113 20`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
 (signature)`__init__(self, identity, container, tests)`
 
 Initialize the members of the Harness.
@@ -185,8 +163,6 @@ Initialize the members of the Harness.
 	/element/
 		- (control)`property-set`
 		- (source/area)`115 2 121 23`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`3`
 (signature)`dispatch(self, test)`
 
 Dispatch the given (invalid/unknown)&<#Test> to resolve its fate.
@@ -199,8 +175,6 @@ Dispatch the given (invalid/unknown)&<#Test> to resolve its fate.
 	/element/
 		- (control)`property-set`
 		- (source/area)`123 2 134 28`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`7`
 (signature)`execute_tests(self)`
 
 Perform the collected tests.
@@ -213,8 +187,6 @@ Perform the collected tests.
 	/element/
 		- (control)`property-set`
 		- (source/area)`136 1 148 23`
-		- (coverage-zeros)`8`
-		- (coverage-counters)`8`
 (signature)`execute(module)`
 
 Resolve the fate of the tests contained in (factor-local/parameter)&<#execute.Parameters.module[module]>. No status information

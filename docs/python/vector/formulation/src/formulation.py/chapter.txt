@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 477 0`
-		- (coverage-zeros)`31`
-		- (coverage-counters)`239`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 Parsing and processing tools for Vector Formulations.
 
 
@@ -28,8 +28,6 @@ Parsing and processing tools for Vector Formulations.
 	/element/
 		- (control)`property-set`
 		- (source/area)`5 1 5 16`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ functools ]
 ! CONTROL:
@@ -40,8 +38,6 @@ Parsing and processing tools for Vector Formulations.
 	/element/
 		- (control)`property-set`
 		- (source/area)`6 1 6 16`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ ilevel ]
 ! CONTROL:
@@ -52,8 +48,6 @@ Parsing and processing tools for Vector Formulations.
 	/element/
 		- (control)`property-set`
 		- (source/area)`8 1 8 35`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ Functions ]
 ! CONTROL:
@@ -62,8 +56,6 @@ Parsing and processing tools for Vector Formulations.
 	/element/
 		- (control)`property-set`
 		- (source/area)`10 1 78 69`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`10 17 10 22`
@@ -82,8 +74,6 @@ The default tool set for vector expansion transformations.
 	/element/
 		- (control)`property-set`
 		- (source/area)`14 2 18 21`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
 (signature)`__init__(self, environ)`
 
 
@@ -94,8 +84,6 @@ The default tool set for vector expansion transformations.
 	/element/
 		- (control)`property-set`
 		- (source/area)`20 2 31 11`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`8`
 (signature)`Select(self, fields)`
 
 Compose a vector generator from the expansion fields.
@@ -108,8 +96,6 @@ Compose a vector generator from the expansion fields.
 	/element/
 		- (control)`property-set`
 		- (source/area)`33 2 40 17`
-		- (coverage-zeros)`4`
-		- (coverage-counters)`4`
 (signature)`env(self, name, default)`
 
 Override the fields with the identified environment variable.
@@ -122,8 +108,6 @@ Override the fields with the identified environment variable.
 	/element/
 		- (control)`property-set`
 		- (source/area)`42 2 47 52`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`quoted(self, string)`
 
 Surround the string with quotations and replace any occurrence with two.
@@ -136,8 +120,6 @@ Surround the string with quotations and replace any occurrence with two.
 	/element/
 		- (control)`property-set`
 		- (source/area)`49 2 53 42`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 (signature)`bracketed(self, string)`
 
 Surround the string with brackets.
@@ -150,8 +132,6 @@ Surround the string with brackets.
 	/element/
 		- (control)`property-set`
 		- (source/area)`55 2 66 35`
-		- (coverage-zeros)`6`
-		- (coverage-counters)`6`
 (signature)`resuffix(self, replacement, string)`
 
 Replace the dot-suffix at the end of the string with the designated replacement.
@@ -164,8 +144,6 @@ Replace the dot-suffix at the end of the string with the designated replacement.
 	/element/
 		- (control)`property-set`
 		- (source/area)`68 2 72 38`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 (signature)`suffix(self, extension, string)`
 
 Append a dot-suffix to the string.
@@ -178,8 +156,6 @@ Append a dot-suffix to the string.
 	/element/
 		- (control)`property-set`
 		- (source/area)`74 2 78 69`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`5`
 (signature)`prefix(self, prefix, string)`
 
 Force the string to have the given (factor-local/parameter)&<#Functions.prefix.Parameters.prefix[prefix]>.
@@ -192,8 +168,6 @@ Force the string to have the given (factor-local/parameter)&<#Functions.prefix.P
 	/element/
 		- (control)`property-set`
 		- (source/area)`80 1 322 3`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`80 15 80 20`
@@ -213,8 +187,6 @@ final command constructors.
 	/element/
 		- (control)`property-set`
 		- (source/area)`88 2 94 39`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
 (signature)`__init__(self, conclusions, constants)`
 
 Initialize the context identifying the set of available conditions.
@@ -229,8 +201,6 @@ Initialize the context identifying the set of available conditions.
 	/element/
 		- (control)`property-set`
 		- (source/area)`96 2 139 13`
-		- (coverage-zeros)`6`
-		- (coverage-counters)`20`
 (signature)`constraint(self, cset, matches, vparam)`
 
 
@@ -243,8 +213,6 @@ Initialize the context identifying the set of available conditions.
 	/element/
 		- (control)`property-set`
 		- (source/area)`140 2 201 15`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`33`
 (signature)`resolve(Class, vf, vq, vi, index, slices)`
 
 
@@ -257,8 +225,6 @@ Initialize the context identifying the set of available conditions.
 	/element/
 		- (control)`property-set`
 		- (source/area)`203 2 262 51`
-		- (coverage-zeros)`4`
-		- (coverage-counters)`38`
 (signature)`production(self, index, vf, vq, vp, vs, query)`
 
 
@@ -269,8 +235,6 @@ Initialize the context identifying the set of available conditions.
 	/element/
 		- (control)`property-set`
 		- (source/area)`264 2 314 23`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`25`
 (signature)`compose(self, index, selection, *argv)`
 
 Compose a command constructor with respect to (factor-local/parameter)&<#Context.compose.Parameters.self[self]>.
@@ -283,8 +247,6 @@ Compose a command constructor with respect to (factor-local/parameter)&<#Context
 	/element/
 		- (control)`property-set`
 		- (source/area)`316 2 322 3`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`chain(self, query, index, selection)`
 
 Compose and command constructor and evaluate it with respect to (factor-local/parameter)&<#Context.chain.Parameters.query[query]>.
@@ -297,8 +259,6 @@ Compose and command constructor and evaluate it with respect to (factor-local/pa
 	/element/
 		- (control)`property-set`
 		- (source/area)`324 1 340 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`7`
 (signature)`parameters(string)`
 
 Identify bracketed areas for substitution.
@@ -311,8 +271,6 @@ Identify bracketed areas for substitution.
 	/element/
 		- (control)`property-set`
 		- (source/area)`342 1 367 29`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`14`
 (signature)`quotations(args)`
 
 Isolate quotations within a vector expression.
@@ -326,8 +284,6 @@ Quotations have the highest precedence and must be isolated first.
 	/element/
 		- (control)`property-set`
 		- (source/area)`369 1 414 62`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`27`
 (signature)`instruction(lineno, line)`
 
 Recognize the vector instruction present on a given line.
@@ -340,8 +296,6 @@ Recognize the vector instruction present on a given line.
 	/element/
 		- (control)`property-set`
 		- (source/area)`416 1 453 25`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`21`
 (signature)`segments(lines)`
 
 Isolate the given (factor-local/parameter)&<#segments.Parameters.lines[lines]> into segments identified by the unindented line
@@ -356,8 +310,6 @@ in the order presented by the iterator.
 	/element/
 		- (control)`property-set`
 		- (source/area)`455 1 469 3`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`structure(origin, iterlines)`
 
 Structure the formatted vector expressions into a mapping
@@ -371,8 +323,6 @@ identifying the distinct sequences.
 	/element/
 		- (control)`property-set`
 		- (source/area)`471 1 477 33`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`parse(text)`
 
 Split the (factor-local/parameter)&<#parse.Parameters.text[text]> into lines and return the (factor-local/function)&<#structure[structure]> form.

@@ -1,1 +1,1 @@
-{"functools": [1, 0, []], "static_table": [1, 0, []], "huffman_code": [1, 0, []], "huffman_reverse_index": [1, 0, []], "h_start": [1, 0, []], "h_stop": [1, 0, []], "huffman_decode": [13, 0, []], "huffman_encode": [8, 0, []], "encoder": [3, 3, [[401, 1, 403, 4], [404, 10, 404, 12], [405, 1, 405, 11]]], "decoder": [3, 3, [[408, 1, 410, 4], [411, 10, 411, 12], [412, 1, 412, 11]]], "/hpack.py": [2, 0, []]}
+{"/hpack.py": []}

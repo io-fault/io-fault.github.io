@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 458 0`
-		- (coverage-zeros)`15`
-		- (coverage-counters)`157`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 Test framework primitives.
 
 
@@ -28,8 +28,6 @@ Test framework primitives.
 	/element/
 		- (control)`property-set`
 		- (source/area)`5 1 5 15`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ functools ]
 ! CONTROL:
@@ -40,8 +38,6 @@ Test framework primitives.
 	/element/
 		- (control)`property-set`
 		- (source/area)`6 1 6 16`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ contextlib ]
 ! CONTROL:
@@ -52,8 +48,6 @@ Test framework primitives.
 	/element/
 		- (control)`property-set`
 		- (source/area)`7 1 7 17`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ enum ]
 ! CONTROL:
@@ -64,8 +58,6 @@ Test framework primitives.
 	/element/
 		- (control)`property-set`
 		- (source/area)`8 1 8 11`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ FailureType ]
 ! CONTROL:
@@ -74,8 +66,6 @@ Test framework primitives.
 	/element/
 		- (control)`property-set`
 		- (source/area)`27 1 66 2`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`27 19 27 27`
@@ -92,8 +82,6 @@ The type of test failure that occurred.
 	/element/
 		- (control)`property-set`
 		- (source/area)`50 2 50 15`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 Test was not ran or the conclusion could not be integrated.
 
 #!source
@@ -106,8 +94,6 @@ Test was not ran or the conclusion could not be integrated.
 	/element/
 		- (control)`property-set`
 		- (source/area)`51 2 51 15`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 Resource limit exceeded.
 
 #!source
@@ -120,8 +106,6 @@ Resource limit exceeded.
 	/element/
 		- (control)`property-set`
 		- (source/area)`52 2 52 15`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 Test was interrupted by administrator.
 
 #!source
@@ -134,8 +118,6 @@ Test was interrupted by administrator.
 	/element/
 		- (control)`property-set`
 		- (source/area)`53 2 53 15`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 Test failure was directly concluded by the function.
 
 #!source
@@ -160,8 +142,6 @@ Test did not fail. The failure of passed or skipped tests.
 	/element/
 		- (control)`property-set`
 		- (source/area)`55 2 55 15`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 Test contended absurdity.
 
 #!source
@@ -174,8 +154,6 @@ Test contended absurdity.
 	/element/
 		- (control)`property-set`
 		- (source/area)`56 2 56 15`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 Fault detected or trapped during testing.
 Critical process signal(SIGSEGV), language exception,
 or even promoted application errors.
@@ -192,8 +170,6 @@ or even promoted application errors.
 	/element/
 		- (control)`property-set`
 		- (source/area)`58 2 66 2`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	descriptions = (
 		"The test did not fail.", # none
@@ -212,8 +188,6 @@ or even promoted application errors.
 	/element/
 		- (control)`property-set`
 		- (source/area)`68 1 93 38`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`68 22 68 30`
@@ -230,8 +204,6 @@ The possible results of a test.
 	/element/
 		- (control)`property-set`
 		- (source/area)`82 2 82 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 The test did not pass.
 An associated (invalid/unknown)&<#Failure> should be non-zero describing what happened.
 
@@ -257,8 +229,6 @@ The test was identified as not being applicable to the execution context.
 	/element/
 		- (control)`property-set`
 		- (source/area)`84 2 84 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 The test executed without failure.
 
 #!source
@@ -273,8 +243,6 @@ The test executed without failure.
 	/element/
 		- (control)`property-set`
 		- (source/area)`86 2 90 2`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	descriptions = (
 		"The test was skipped.",
@@ -291,8 +259,6 @@ The test executed without failure.
 	/element/
 		- (control)`property-set`
 		- (source/area)`92 2 93 38`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`not_failure(self)`
 
 
@@ -321,8 +287,6 @@ The test executed without failure.
 	/element/
 		- (control)`property-set`
 		- (source/area)`96 2 97 24`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`__init__(self, message)`
 
 
@@ -333,8 +297,6 @@ The test executed without failure.
 	/element/
 		- (control)`property-set`
 		- (source/area)`99 1 107 24`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`99 16 99 26`
@@ -353,8 +315,6 @@ Control exception for concluding a test.
 	/element/
 		- (control)`property-set`
 		- (source/area)`104 2 107 24`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`__init__(self, conclusion, failure, message)`
 
 
@@ -365,8 +325,6 @@ Control exception for concluding a test.
 	/element/
 		- (control)`property-set`
 		- (source/area)`109 1 140 3`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`109 17 109 27`
@@ -385,8 +343,6 @@ Exception raised by (factor-local/class)&<#Contention[Contention]> instances des
 	/element/
 		- (control)`property-set`
 		- (source/area)`115 2 123 2`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	operator_names_mapping = {
 		'__eq__': '==',
@@ -406,8 +362,6 @@ Exception raised by (factor-local/class)&<#Contention[Contention]> instances des
 	/element/
 		- (control)`property-set`
 		- (source/area)`125 2 130 29`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
 (signature)`__init__(self, operator, former, latter)`
 
 
@@ -420,8 +374,6 @@ Exception raised by (factor-local/class)&<#Contention[Contention]> instances des
 	/element/
 		- (control)`property-set`
 		- (source/area)`132 2 135 75`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
 (signature)`__str__(self)`
 
 
@@ -434,8 +386,6 @@ Exception raised by (factor-local/class)&<#Contention[Contention]> instances des
 	/element/
 		- (control)`property-set`
 		- (source/area)`137 2 140 3`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`__repr__(self)`
 
 
@@ -446,8 +396,6 @@ Exception raised by (factor-local/class)&<#Contention[Contention]> instances des
 	/element/
 		- (control)`property-set`
 		- (source/area)`143 1 238 14`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`19`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`143 18 143 23`
@@ -482,8 +430,6 @@ operands being examined.
 	/element/
 		- (control)`property-set`
 		- (source/area)`164 2 164 49`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	__slots__ = ('_operand', '_inverse', '_storage')
 
@@ -496,8 +442,6 @@ operands being examined.
 	/element/
 		- (control)`property-set`
 		- (source/area)`169 2 171 25`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`__init__(self, object)`
 
 
@@ -510,8 +454,6 @@ operands being examined.
 	/element/
 		- (control)`property-set`
 		- (source/area)`174 2 176 2`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	_override = {
 		'__mod__' : ('is', lambda x,y: x is y)
@@ -526,8 +468,6 @@ operands being examined.
 	/element/
 		- (control)`property-set`
 		- (source/area)`198 2 199 49`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`__enter__(self)`
 
 
@@ -540,8 +480,6 @@ operands being examined.
 	/element/
 		- (control)`property-set`
 		- (source/area)`201 2 209 13`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`7`
 (signature)`__exit__(self, typ, val, tb)`
 
 
@@ -552,8 +490,6 @@ operands being examined.
 	/element/
 		- (control)`property-set`
 		- (source/area)`211 2 221 14`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
 (signature)`__xor__(self, operand)`
 
 Contend that the (factor-local/parameter)&<#Contention.__xor__.Parameters.operand[operand]> raises the given exception when it is called.
@@ -568,8 +504,6 @@ Contend that the (factor-local/parameter)&<#Contention.__xor__.Parameters.operan
 	/element/
 		- (control)`property-set`
 		- (source/area)`223 2 238 14`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`7`
 (signature)`__lshift__(self, operand)`
 
 Contend that the (factor-local/parameter)&<#Contention.__lshift__.Parameters.operand[operand]> is contained by the object.
@@ -584,8 +518,6 @@ Contend that the (factor-local/parameter)&<#Contention.__lshift__.Parameters.ope
 	/element/
 		- (control)`property-set`
 		- (source/area)`240 1 458 7`
-		- (coverage-zeros)`4`
-		- (coverage-counters)`14`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`240 12 240 17`
@@ -606,8 +538,6 @@ a simple syntax.
 	/element/
 		- (control)`property-set`
 		- (source/area)`264 2 269 2`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	__slots__ = (
 		'function', 'identifier', 'exits',
@@ -625,8 +555,6 @@ a simple syntax.
 	/element/
 		- (control)`property-set`
 		- (source/area)`273 2 273 26`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	Clock = system_time_clock
 
@@ -639,8 +567,6 @@ a simple syntax.
 	/element/
 		- (control)`property-set`
 		- (source/area)`274 2 274 22`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	Absurdity = Absurdity
 
@@ -653,8 +579,6 @@ a simple syntax.
 	/element/
 		- (control)`property-set`
 		- (source/area)`275 2 275 24`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	Contention = Contention
 
@@ -667,8 +591,6 @@ a simple syntax.
 	/element/
 		- (control)`property-set`
 		- (source/area)`282 2 283 33`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 
 [ Test >> __init__ ]
 ! CONTROL:
@@ -679,8 +601,6 @@ a simple syntax.
 	/element/
 		- (control)`property-set`
 		- (source/area)`285 2 297 29`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
 (signature)`__init__(self, identifier, function, *constraints)`
 
 
@@ -693,8 +613,6 @@ a simple syntax.
 	/element/
 		- (control)`property-set`
 		- (source/area)`299 2 306 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`_inverse(self)`
 
 
@@ -707,8 +625,6 @@ a simple syntax.
 	/element/
 		- (control)`property-set`
 		- (source/area)`308 2 315 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`_absurd(self, inverse, truth)`
 
 
@@ -719,8 +635,6 @@ a simple syntax.
 	/element/
 		- (control)`property-set`
 		- (source/area)`316 2 322 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 Invert the next contention; absurdity is coherent and coherence is absurd.
 
 
@@ -733,8 +647,6 @@ Invert the next contention; absurdity is coherent and coherence is absurd.
 	/element/
 		- (control)`property-set`
 		- (source/area)`324 2 326 58`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`__truediv__(self, operand)`
 
 
@@ -747,8 +659,6 @@ Invert the next contention; absurdity is coherent and coherence is absurd.
 	/element/
 		- (control)`property-set`
 		- (source/area)`328 2 330 58`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`__rtruediv__(self, operand)`
 
 
@@ -761,8 +671,6 @@ Invert the next contention; absurdity is coherent and coherence is absurd.
 	/element/
 		- (control)`property-set`
 		- (source/area)`332 2 336 50`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`isinstance(self, *args)`
 
 
@@ -775,8 +683,6 @@ Invert the next contention; absurdity is coherent and coherence is absurd.
 	/element/
 		- (control)`property-set`
 		- (source/area)`338 2 342 55`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`issubclass(self, *args)`
 
 
@@ -787,8 +693,6 @@ Invert the next contention; absurdity is coherent and coherence is absurd.
 	/element/
 		- (control)`property-set`
 		- (source/area)`344 2 402 48`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`19`
 (signature)`itertimer(count, time, scale, cycle, identity, min, range)`
 
 Measure the relative performance of a loop's iterations.
@@ -836,8 +740,6 @@ Measure the relative performance of a loop's iterations.
 	/element/
 		- (control)`property-set`
 		- (source/area)`404 2 410 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`time(self, callable, **kw)`
 
 Measure the relative performance of the given callable.
@@ -850,8 +752,6 @@ Measure the relative performance of the given callable.
 	/element/
 		- (control)`property-set`
 		- (source/area)`412 2 417 83`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`skip(self, condition)`
 
 Explicitly conclude that the test skipped when (factor-local/parameter)&<#Test.skip.Parameters.condition[condition]> is (invalid/unknown)&<#True>.
@@ -864,8 +764,6 @@ Explicitly conclude that the test skipped when (factor-local/parameter)&<#Test.s
 	/element/
 		- (control)`property-set`
 		- (source/area)`419 2 424 70`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`fail(self)`
 
 Explicitly conclude that the test failed.
@@ -880,7 +778,5 @@ Explicitly conclude that the test failed.
 	/element/
 		- (control)`property-set`
 		- (source/area)`426 2 431 3`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`_timeout(self, *args)`
 

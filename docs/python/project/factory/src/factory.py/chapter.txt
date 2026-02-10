@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 282 4`
-		- (coverage-zeros)`10`
-		- (coverage-counters)`99`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 Project materialization tools for instantiating polynomial-1 organized factor sets.
 
 
@@ -28,8 +28,6 @@ Project materialization tools for instantiating polynomial-1 organized factor se
 	/element/
 		- (control)`property-set`
 		- (source/area)`5 1 5 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ ModuleType ]
 ! CONTROL:
@@ -40,8 +38,6 @@ Project materialization tools for instantiating polynomial-1 organized factor se
 	/element/
 		- (control)`property-set`
 		- (source/area)`7 1 7 28`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ dataclass ]
 ! CONTROL:
@@ -52,8 +48,6 @@ Project materialization tools for instantiating polynomial-1 organized factor se
 	/element/
 		- (control)`property-set`
 		- (source/area)`8 1 8 33`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ Cell ]
 ! CONTROL:
@@ -64,8 +58,6 @@ Project materialization tools for instantiating polynomial-1 organized factor se
 	/element/
 		- (control)`property-set`
 		- (source/area)`10 1 10 32`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ Segment ]
 ! CONTROL:
@@ -76,8 +68,6 @@ Project materialization tools for instantiating polynomial-1 organized factor se
 	/element/
 		- (control)`property-set`
 		- (source/area)`11 1 11 33`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ Paragraph ]
 ! CONTROL:
@@ -88,8 +78,6 @@ Project materialization tools for instantiating polynomial-1 organized factor se
 	/element/
 		- (control)`property-set`
 		- (source/area)`12 1 12 34`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ render ]
 ! CONTROL:
@@ -100,8 +88,6 @@ Project materialization tools for instantiating polynomial-1 organized factor se
 	/element/
 		- (control)`property-set`
 		- (source/area)`13 1 13 25`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ files ]
 ! CONTROL:
@@ -112,8 +98,6 @@ Project materialization tools for instantiating polynomial-1 organized factor se
 	/element/
 		- (control)`property-set`
 		- (source/area)`14 1 14 26`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ sequence_project_declaration ]
 ! CONTROL:
@@ -124,8 +108,6 @@ Project materialization tools for instantiating polynomial-1 organized factor se
 	/element/
 		- (control)`property-set`
 		- (source/area)`16 1 16 48`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ types ]
 ! CONTROL:
@@ -136,8 +118,6 @@ Project materialization tools for instantiating polynomial-1 organized factor se
 	/element/
 		- (control)`property-set`
 		- (source/area)`17 1 17 19`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ _ktprotocol ]
 ! CONTROL:
@@ -148,8 +128,6 @@ Project materialization tools for instantiating polynomial-1 organized factor se
 	/element/
 		- (control)`property-set`
 		- (source/area)`19 1 24 2`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`_ktprotocol(iri)`
 
 
@@ -162,8 +140,6 @@ Project materialization tools for instantiating polynomial-1 organized factor se
 	/element/
 		- (control)`property-set`
 		- (source/area)`27 1 27 70`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	_poly_factor_header = _ktprotocol("http://if.fault.io/project/factor")
 
@@ -176,8 +152,6 @@ Project materialization tools for instantiating polynomial-1 organized factor se
 	/element/
 		- (control)`property-set`
 		- (source/area)`29 1 30 43`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`_literal(text)`
 
 
@@ -190,8 +164,6 @@ Project materialization tools for instantiating polynomial-1 organized factor se
 	/element/
 		- (control)`property-set`
 		- (source/area)`32 1 33 86`
-		- (coverage-zeros)`4`
-		- (coverage-counters)`4`
 (signature)`_ref(format_id, *text)`
 
 
@@ -202,8 +174,6 @@ Project materialization tools for instantiating polynomial-1 organized factor se
 	/element/
 		- (control)`property-set`
 		- (source/area)`35 1 49 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`7`
 (signature)`sequence_format_declarations(formats)`
 
 factors/polynomial-1 .format serialization
@@ -216,8 +186,6 @@ factors/polynomial-1 .format serialization
 	/element/
 		- (control)`property-set`
 		- (source/area)`50 1 103 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`50 19 50 24`
@@ -250,8 +218,6 @@ The core data for composing a factor.
 	/element/
 		- (control)`property-set`
 		- (source/area)`65 2 65 17`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -267,8 +233,6 @@ The core data for composing a factor.
 	/element/
 		- (control)`property-set`
 		- (source/area)`66 2 66 25`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 		- (type/syntax)`[str]`
 		
 #!source
@@ -283,8 +247,6 @@ The core data for composing a factor.
 	/element/
 		- (control)`property-set`
 		- (source/area)`67 2 69 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 		- (type/syntax)`typing.Sequence[typing.Tuple[str, typing.Union[str, bytes, files.Path, ModuleType]]]`
 		
 #!source
@@ -298,8 +260,6 @@ The core data for composing a factor.
 	/element/
 		- (control)`property-set`
 		- (source/area)`70 2 85 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`indirect(Class, extension, source, type)`
 
 Define an indirectly typed factor's composition.
@@ -331,8 +291,6 @@ Define an indirectly typed factor's composition.
 	/element/
 		- (control)`property-set`
 		- (source/area)`86 2 103 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`explicit(Class, type, requirements, sources)`
 
 Define an explicitly typed factor's composition.
@@ -366,8 +324,6 @@ and (factor-local/parameter)&<#Composition.explicit.Parameters.sources[sources]>
 	/element/
 		- (control)`property-set`
 		- (source/area)`104 1 174 79`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`104 18 104 23`
@@ -400,8 +356,6 @@ The necessary data for instantiating a project on the local system.
 	/element/
 		- (control)`property-set`
 		- (source/area)`118 2 118 40`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 		- (type/syntax)`types.Information`
 		- (type/project-local/factor-element)&<types#Information[fault.project.types.Information]>
 		
@@ -417,8 +371,6 @@ The necessary data for instantiating a project on the local system.
 	/element/
 		- (control)`property-set`
 		- (source/area)`119 2 119 25`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 		- (type/syntax)`object`
 		- (type/invalid/unknown)&<#object>
 		
@@ -434,8 +386,6 @@ The necessary data for instantiating a project on the local system.
 	/element/
 		- (control)`property-set`
 		- (source/area)`120 2 120 77`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 		- (type/syntax)`typing.Sequence[typing.Tuple[types.FactorPath, Composition]]`
 		
 #!source
@@ -450,8 +400,6 @@ The necessary data for instantiating a project on the local system.
 	/element/
 		- (control)`property-set`
 		- (source/area)`121 2 123 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 		- (type/syntax)`types.Extensions`
 		- (type/project-local/factor-element)&<types#Extensions[fault.project.types.Extensions]>
 		
@@ -466,8 +414,6 @@ The necessary data for instantiating a project on the local system.
 	/element/
 		- (control)`property-set`
 		- (source/area)`124 2 174 79`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`14`
 (signature)`define(Class, information, formats, soles, sets, icon, synopsis)`
 
 Create a parameter set for project instantiation applying the proper types
@@ -518,8 +464,6 @@ to factor entries, and translating factor types to file extensions for defining
 	/element/
 		- (control)`property-set`
 		- (source/area)`176 1 222 39`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`28`
 (signature)`plan(info, formats, factors)`
 
 Generate the filesystem paths paired with the data that should be placed
@@ -533,8 +477,6 @@ into that file relative to the project directory being materialized.
 	/element/
 		- (control)`property-set`
 		- (source/area)`224 1 262 29`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`16`
 (signature)`materialize(route, plans)`
 
 Create a Project instance using the filesystem API's provided by (factor-local/parameter)&<#materialize.Parameters.route[route]>
@@ -574,8 +516,6 @@ from the instructions produced by the given (factor-local/parameter)&<#materiali
 	/element/
 		- (control)`property-set`
 		- (source/area)`264 1 283 3`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`instantiate(project, route, *dimensions)`
 
 Materialize the plan of the given (factor-local/parameter)&<#instantiate.Parameters.project[project]> using the (factor-local/parameter)&<#instantiate.Parameters.route[route]> as the root directory of the project.

@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 688 23`
-		- (coverage-zeros)`79`
-		- (coverage-counters)`323`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 Product and Project directory protocol support.
 
 Provides three classes of interest: (factor-local/class)&<#Project[Project]>, (factor-local/class)&<#Product[Product]>, and (factor-local/class)&<#Context[Context]>.
@@ -38,8 +38,6 @@ involves multiple directories, an abstraction provided by (factor-local/class)&<
 	/element/
 		- (control)`property-set`
 		- (source/area)`15 1 15 18`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ operator ]
 ! CONTROL:
@@ -50,8 +48,6 @@ involves multiple directories, an abstraction provided by (factor-local/class)&<
 	/element/
 		- (control)`property-set`
 		- (source/area)`16 1 16 15`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ itertools ]
 ! CONTROL:
@@ -62,8 +58,6 @@ involves multiple directories, an abstraction provided by (factor-local/class)&<
 	/element/
 		- (control)`property-set`
 		- (source/area)`17 1 17 16`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ tools ]
 ! CONTROL:
@@ -74,8 +68,6 @@ involves multiple directories, an abstraction provided by (factor-local/class)&<
 	/element/
 		- (control)`property-set`
 		- (source/area)`19 1 19 27`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ Selector ]
 ! CONTROL:
@@ -96,8 +88,6 @@ involves multiple directories, an abstraction provided by (factor-local/class)&<
 	/element/
 		- (control)`property-set`
 		- (source/area)`20 1 20 43`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ types ]
 ! CONTROL:
@@ -108,8 +98,6 @@ involves multiple directories, an abstraction provided by (factor-local/class)&<
 	/element/
 		- (control)`property-set`
 		- (source/area)`21 1 21 19`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ parse_project_index ]
 ! CONTROL:
@@ -118,8 +106,6 @@ involves multiple directories, an abstraction provided by (factor-local/class)&<
 	/element/
 		- (control)`property-set`
 		- (source/area)`23 1 32 51`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
 (signature)`parse_project_index(lines)`
 
 Generate tuples from the given space separated fields, (factor-local/parameter)&<#parse_project_index.Parameters.lines[lines]>.
@@ -135,8 +121,6 @@ local name and project protocol identifier.
 	/element/
 		- (control)`property-set`
 		- (source/area)`34 1 38 27`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 (signature)`parse_protocol_declaration(text)`
 
 Split the text and return the fields as a tuple.
@@ -149,8 +133,6 @@ Split the text and return the fields as a tuple.
 	/element/
 		- (control)`property-set`
 		- (source/area)`40 1 74 2`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`14`
 (signature)`structure_project_declaration(text)`
 
 Parse the contents of a `.project` file.
@@ -167,8 +149,6 @@ A pair, the project protocol and a (project-local/factor-element)&<types#Informa
 	/element/
 		- (control)`property-set`
 		- (source/area)`76 1 86 29`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`7`
 (signature)`sequence_project_declaration()`
 
 Format the contents of a `.project` file from the given protocol and
@@ -182,8 +162,6 @@ Format the contents of a `.project` file from the given protocol and
 	/element/
 		- (control)`property-set`
 		- (source/area)`88 1 112 19`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`14`
 (signature)`scan_product_directory(read_protocol, route)`
 
 Identify the projects within the given route.
@@ -199,8 +177,6 @@ Usually only used through (factor-local/method)&<#Product.update[Product.update]
 	/element/
 		- (control)`property-set`
 		- (source/area)`115 1 117 1`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	protocols = {
 		'factors/polynomial-1': (__package__ + '.polynomial', 'V1'),
@@ -213,8 +189,6 @@ Usually only used through (factor-local/method)&<#Product.update[Product.update]
 	/element/
 		- (control)`property-set`
 		- (source/area)`119 1 358 49`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`119 15 119 20`
@@ -236,8 +210,6 @@ supported by the selector.
 	/element/
 		- (control)`property-set`
 		- (source/area)`127 2 127 77`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	project_identity_segment = Segment.from_sequence(['.project', 'f-identity'])
 
@@ -250,8 +222,6 @@ supported by the selector.
 	/element/
 		- (control)`property-set`
 		- (source/area)`128 2 128 61`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	default_meta_directory = Segment.from_sequence(['.product'])
 
@@ -264,8 +234,6 @@ supported by the selector.
 	/element/
 		- (control)`property-set`
 		- (source/area)`129 2 131 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	default_images_directory = Segment.from_sequence(['.images'])
 		@classmethod
@@ -277,8 +245,6 @@ supported by the selector.
 	/element/
 		- (control)`property-set`
 		- (source/area)`132 2 141 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
 		- (type/syntax)`types.FactorIsolationProtocol`
 		- (type/project-local/factor-element)&<types#FactorIsolationProtocol[fault.project.types.FactorIsolationProtocol]>
 		
@@ -294,8 +260,6 @@ Retrieve the protocol class using the (factor-local/parameter)&<#Product.import_
 	/element/
 		- (control)`property-set`
 		- (source/area)`142 2 148 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 		- (type/syntax)`Selector`
 		- (type/context-local/factor-element)&<fault.route/types#Selector[fault.route.types.Selector]>
 		
@@ -309,8 +273,6 @@ Materialized project index file path.
 	/element/
 		- (control)`property-set`
 		- (source/area)`149 2 155 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 		- (type/syntax)`Selector`
 		- (type/context-local/factor-element)&<fault.route/types#Selector[fault.route.types.Selector]>
 		
@@ -324,8 +286,6 @@ Connection list fulfilling requirements.
 	/element/
 		- (control)`property-set`
 		- (source/area)`156 2 169 55`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`6`
 The requirements of the product as a sequence of product directory routes.
 
 This sequence is not cached and constructed at access time by opening the
@@ -339,8 +299,6 @@ file (factor-local/property)&<#Product.connections_index_route[connections_index
 	/element/
 		- (control)`property-set`
 		- (source/area)`171 2 177 20`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
 (signature)`clear(self)`
 
 Remove the instance local cache.
@@ -353,8 +311,6 @@ Remove the instance local cache.
 	/element/
 		- (control)`property-set`
 		- (source/area)`179 2 191 57`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
 (signature)`__init__(self, route)`
 
 Initialize a (factor-local/class)&<#Product[Product]> using (factor-local/parameter)&<#Product.__init__.Parameters.route[route]> with an empty local instance cache.
@@ -372,8 +328,6 @@ directory location, but should normally not be used.
 	/element/
 		- (control)`property-set`
 		- (source/area)`193 2 194 25`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`__hash__(self)`
 
 
@@ -386,8 +340,6 @@ directory location, but should normally not be used.
 	/element/
 		- (control)`property-set`
 		- (source/area)`196 2 197 36`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`__eq__(self, operand)`
 
 
@@ -398,8 +350,6 @@ directory location, but should normally not be used.
 	/element/
 		- (control)`property-set`
 		- (source/area)`199 2 214 28`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`9`
 (signature)`image(self, variants, project, factor)`
 
 Identify the location of the factor's image for the given (factor-local/parameter)&<#Product.image.Parameters.variants[variants]>.
@@ -412,8 +362,6 @@ Identify the location of the factor's image for the given (factor-local/paramete
 	/element/
 		- (control)`property-set`
 		- (source/area)`216 2 222 41`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
 		- (type/syntax)`typing.Tuple[str, types.FactorIsolationProtocol]`
 		
 (signature)`identifier_by_factor(self, factor)`
@@ -429,8 +377,6 @@ Uses the instance local cache populated by (factor-local/method)&<#Product.load[
 	/element/
 		- (control)`property-set`
 		- (source/area)`224 2 230 41`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
 		- (type/syntax)`typing.Tuple[types.FactorPath, types.FactorIsolationProtocol]`
 		
 (signature)`factor_by_identifier(self, identifier)`
@@ -446,8 +392,6 @@ Uses the instance local cache populated by (factor-local/method)&<#Product.load[
 	/element/
 		- (control)`property-set`
 		- (source/area)`232 2 249 12`
-		- (coverage-zeros)`7`
-		- (coverage-counters)`11`
 		- (type/syntax)`typing.Iterable[types.FactorPath]`
 		
 (signature)`select(self, constraint)`
@@ -465,8 +409,6 @@ If the argument is a nil (project-local/factor-element)&<types#FactorPath[fault.
 	/element/
 		- (control)`property-set`
 		- (source/area)`251 2 264 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
 (signature)`read_protocol(self, route)`
 
 Retrieve the protocol data from the configured (invalid/unknown)&<#project_declaration_filesnames>.
@@ -481,8 +423,6 @@ Retrieve the protocol data from the configured (invalid/unknown)&<#project_decla
 	/element/
 		- (control)`property-set`
 		- (source/area)`265 2 266 41`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ Product >> load ]
 ! CONTROL:
@@ -491,8 +431,6 @@ Retrieve the protocol data from the configured (invalid/unknown)&<#project_decla
 	/element/
 		- (control)`property-set`
 		- (source/area)`268 2 282 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`8`
 (signature)`load(self)`
 
 Load the snapshot of the projects from the product's route.
@@ -505,8 +443,6 @@ Load the snapshot of the projects from the product's route.
 	/element/
 		- (control)`property-set`
 		- (source/area)`284 2 297 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`8`
 (signature)`store(self)`
 
 Store the snapshot of the projects to the product's route.
@@ -519,8 +455,6 @@ Store the snapshot of the projects to the product's route.
 	/element/
 		- (control)`property-set`
 		- (source/area)`299 2 315 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`7`
 (signature)`update(self)`
 
 Update the snapshot of the projects by querying the filesystem.
@@ -534,8 +468,6 @@ The effects of this should be recorded with a subsequent call to (factor-local/m
 	/element/
 		- (control)`property-set`
 		- (source/area)`317 2 344 19`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`16`
 (signature)`iterprojects(self)`
 
 Query the route and retrieve all projects within the product.
@@ -550,8 +482,6 @@ Results may be inconsistent with the instance cache.
 	/element/
 		- (control)`property-set`
 		- (source/area)`346 2 358 49`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`8`
 (signature)`split(self, fpath)`
 
 Separate the project portion from (factor-local/parameter)&<#Product.split.Parameters.fpath[fpath]>.
@@ -565,8 +495,6 @@ Returns a pair of (project-local/factor-element)&<types#FactorPath[fault.project
 	/element/
 		- (control)`property-set`
 		- (source/area)`360 1 544 57`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`360 15 360 20`
@@ -585,8 +513,6 @@ Project Interface joining relavant routes and protocol instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`364 2 366 22`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 #!source
 	meta_directory_path = Segment.from_sequence(['.project'])
 		@tools.cachedproperty
@@ -598,8 +524,6 @@ Project Interface joining relavant routes and protocol instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`367 2 371 47`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`meta(self)`
 
 The directory containing project metadata.
@@ -614,8 +538,6 @@ The directory containing project metadata.
 	/element/
 		- (control)`property-set`
 		- (source/area)`373 2 384 22`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
 (signature)`__init__(self, pd, pi, pf, proto)`
 
 
@@ -628,8 +550,6 @@ The directory containing project metadata.
 	/element/
 		- (control)`property-set`
 		- (source/area)`385 2 392 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
 (signature)`_iid_corpus_name_pair(self)`
 
 
@@ -640,8 +560,6 @@ The directory containing project metadata.
 	/element/
 		- (control)`property-set`
 		- (source/area)`393 2 399 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -655,8 +573,6 @@ The leading portion of the independent identifier.
 	/element/
 		- (control)`property-set`
 		- (source/area)`400 2 404 38`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -670,8 +586,6 @@ The name of the project as defined by the independent identifier.
 	/element/
 		- (control)`property-set`
 		- (source/area)`406 2 440 22`
-		- (coverage-zeros)`21`
-		- (coverage-counters)`22`
 (signature)`requirements(self, context)`
 
 Identify the unique set of projects required by this project.
@@ -684,8 +598,6 @@ Identify the unique set of projects required by this project.
 	/element/
 		- (control)`property-set`
 		- (source/area)`441 2 447 22`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`4`
 		- (type/syntax)`types.Information`
 		- (type/project-local/factor-element)&<types#Information[fault.project.types.Information]>
 		
@@ -701,8 +613,6 @@ The identifying information of the project.
 	/element/
 		- (control)`property-set`
 		- (source/area)`448 2 455 3`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
 		- (type/syntax)`types.Extensions`
 		- (type/project-local/factor-element)&<types#Extensions[fault.project.types.Extensions]>
 		
@@ -718,8 +628,6 @@ Additional identifying information of the project.
 	/element/
 		- (control)`property-set`
 		- (source/area)`457 2 474 13`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`5`
 		- (type/syntax)`bytes`
 		- (type/invalid/unknown)&<#bytes>
 		
@@ -747,8 +655,6 @@ Read the icon reference contained in (system/file)`.project/icon`.
 	/element/
 		- (control)`property-set`
 		- (source/area)`476 2 493 13`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`5`
 		- (type/syntax)`bytes`
 		- (type/invalid/unknown)&<#bytes>
 		
@@ -778,8 +684,6 @@ Read the synopsis data contained in (system/file)`.project/synopsis`.
 	/element/
 		- (control)`property-set`
 		- (source/area)`495 2 496 69`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`image(self, variants, fp)`
 
 
@@ -790,8 +694,6 @@ Read the synopsis data contained in (system/file)`.project/synopsis`.
 	/element/
 		- (control)`property-set`
 		- (source/area)`498 2 503 31`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`select(self, factor)`
 
 Retrieve factors within the given path.
@@ -804,8 +706,6 @@ Retrieve factors within the given path.
 	/element/
 		- (control)`property-set`
 		- (source/area)`505 2 520 13`
-		- (coverage-zeros)`8`
-		- (coverage-counters)`8`
 (signature)`split(self, fp)`
 
 Separate the factor path from the element path.
@@ -819,8 +719,6 @@ Returns a pair, (project-local/factor-element)&<types#FactorPath[fault.project.t
 	/element/
 		- (control)`property-set`
 		- (source/area)`522 2 529 21`
-		- (coverage-zeros)`4`
-		- (coverage-counters)`4`
 (signature)`fullsplit(self, qpath)`
 
 Separate the project path, factor path, and fragment path
@@ -834,8 +732,6 @@ from the given fully qualified factor path.
 	/element/
 		- (control)`property-set`
 		- (source/area)`531 2 544 57`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`8`
 		- (type/syntax)`types.Reference`
 		- (type/project-local/factor-element)&<types#Reference[fault.project.types.Reference]>
 		
@@ -851,8 +747,6 @@ Construct a (project-local/factor-element)&<types#Reference[fault.project.types.
 	/element/
 		- (control)`property-set`
 		- (source/area)`546 1 676 47`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`546 15 546 20`
@@ -869,8 +763,6 @@ Construct a (project-local/factor-element)&<types#Reference[fault.project.types.
 	/element/
 		- (control)`property-set`
 		- (source/area)`552 2 561 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
 		- (type/syntax)`typing.Type[types.FactorIsolationProtocol]`
 		
 (signature)`import_protocol(Class, identifier)`
@@ -885,8 +777,6 @@ Retrieve the protocol class using the (factor-local/parameter)&<#Context.import_
 	/element/
 		- (control)`property-set`
 		- (source/area)`562 2 569 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
 (signature)`from_product_connections(Class, pd)`
 
 Create a (factor-local/class)&<#Context[Context]> initializing it with the immediate connections identified by (factor-local/parameter)&<#Context.from_product_connections.Parameters.pd[pd]>.
@@ -901,8 +791,6 @@ Create a (factor-local/class)&<#Context[Context]> initializing it with the immed
 	/element/
 		- (control)`property-set`
 		- (source/area)`571 2 573 26`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`__init__(self)`
 
 
@@ -913,8 +801,6 @@ Create a (factor-local/class)&<#Context[Context]> initializing it with the immed
 	/element/
 		- (control)`property-set`
 		- (source/area)`575 2 591 11`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`10`
 		- (type/syntax)`Product`
 		- (type/factor-local/class)&<#Product[Product]>
 		
@@ -933,8 +819,6 @@ creates a new instance and places it in the cache.
 	/element/
 		- (control)`property-set`
 		- (source/area)`593 2 601 45`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 		- (type/syntax)`Project`
 		- (type/factor-local/class)&<#Project[Project]>
 		
@@ -955,8 +839,6 @@ Retrieve a (factor-local/class)&<#Project[Project]> instance from the context's 
 	/element/
 		- (control)`property-set`
 		- (source/area)`603 2 611 12`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
 		- (type/syntax)`typing.Iterable[Project]`
 		
 (signature)`iterprojects(self)`
@@ -973,8 +855,6 @@ This includes any Context Projects.
 	/element/
 		- (control)`property-set`
 		- (source/area)`613 2 622 61`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
 (signature)`load(self)`
 
 Fully populate the instance cache with all of the projects from
@@ -988,8 +868,6 @@ all of the connected products.
 	/element/
 		- (control)`property-set`
 		- (source/area)`624 2 631 34`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`configure(self)`
 
 Traverse the cached projects and apply protocol inheritance.
@@ -1002,8 +880,6 @@ Traverse the cached projects and apply protocol inheritance.
 	/element/
 		- (control)`property-set`
 		- (source/area)`633 2 639 12`
-		- (coverage-zeros)`4`
-		- (coverage-counters)`4`
 (signature)`index(self, product)`
 
 Find the index of the (factor-local/class)&<#Product[Product]> whose route is equal to (factor-local/parameter)&<#Context.index.Parameters.product[product]>.
@@ -1016,8 +892,6 @@ Find the index of the (factor-local/class)&<#Product[Product]> whose route is eq
 	/element/
 		- (control)`property-set`
 		- (source/area)`641 2 662 21`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`9`
 (signature)`split(self, qpath)`
 
 Identify the product, project, and factor path of the given (factor-local/parameter)&<#Context.split.Parameters.qpath[qpath]>.
@@ -1045,8 +919,6 @@ Returns a triple identifying the (factor-local/class)&<#Product[Product]>, (fact
 	/element/
 		- (control)`property-set`
 		- (source/area)`664 2 666 58`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 (signature)`image(self, variants, fp)`
 
 
@@ -1057,8 +929,6 @@ Returns a triple identifying the (factor-local/class)&<#Product[Product]>, (fact
 	/element/
 		- (control)`property-set`
 		- (source/area)`668 2 676 47`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`4`
 (signature)`refer(self, factorpath)`
 
 Construct a (project-local/factor-element)&<types#Reference[fault.project.types.Reference]> from the given (factor-local/parameter)&<#Context.refer.Parameters.factorpath[factorpath]> string.

@@ -207,14 +207,13 @@ Testing and static analysis support.
 		- (control)`property-set`
 		- (source/area)`52 1 59 1`
 #!source
-		'-U': ('set-discard', 'unit', 'test-types'),
-		'-P': ('set-discard', 'performance', 'test-types'),
-		'-X': ('set-discard', 'explicit', 'test-types'),
-		'-S': ('set-discard', 'static', 'test-types'),
-		'-F': ('set-discard', 'failure', 'test-types'),
-	}
-	
-	required = {
+	'-U': ('set-discard', 'unit', 'test-types'),
+	'-P': ('set-discard', 'performance', 'test-types'),
+	'-X': ('set-discard', 'explicit', 'test-types'),
+	'-S': ('set-discard', 'static', 'test-types'),
+	'-F': ('set-discard', 'failure', 'test-types'),
+		'--closed-frames': ('field-replace', False, 'opened-frames'),
+	'--opened-frames': ('field-replace', True, 'opened-frames'),
 
 [ plan ]
 ! CONTROL:

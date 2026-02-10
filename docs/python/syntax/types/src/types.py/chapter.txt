@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 211 0`
-		- (coverage-zeros)`34`
-		- (coverage-counters)`81`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 Collection of data structures and functions for working with exact addresses in (syntax) text files.
 
 
@@ -28,8 +28,6 @@ Collection of data structures and functions for working with exact addresses in 
 	/element/
 		- (control)`property-set`
 		- (source/area)`5 1 5 39`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ Address ]
 ! CONTROL:
@@ -38,8 +36,6 @@ Collection of data structures and functions for working with exact addresses in 
 	/element/
 		- (control)`property-set`
 		- (source/area)`7 1 98 21`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`7 15 7 19`
@@ -66,8 +62,6 @@ This special case is used to allow inclusive ranges to properly detect continuit
 	/element/
 		- (control)`property-set`
 		- (source/area)`19 2 21 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	__slots__ = ()
 		@classmethod
@@ -81,8 +75,6 @@ This special case is used to allow inclusive ranges to properly detect continuit
 	/element/
 		- (control)`property-set`
 		- (source/area)`22 2 24 46`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`from_string(Class, source)`
 
 
@@ -95,8 +87,6 @@ This special case is used to allow inclusive ranges to properly detect continuit
 	/element/
 		- (control)`property-set`
 		- (source/area)`26 2 27 35`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`__str__(self)`
 
 
@@ -109,8 +99,6 @@ This special case is used to allow inclusive ranges to properly detect continuit
 	/element/
 		- (control)`property-set`
 		- (source/area)`29 2 30 45`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`__add__(self, x)`
 
 
@@ -123,8 +111,6 @@ This special case is used to allow inclusive ranges to properly detect continuit
 	/element/
 		- (control)`property-set`
 		- (source/area)`32 2 33 45`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`__sub__(self, x)`
 
 
@@ -137,8 +123,6 @@ This special case is used to allow inclusive ranges to properly detect continuit
 	/element/
 		- (control)`property-set`
 		- (source/area)`35 2 36 45`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`__mul__(self, x)`
 
 
@@ -151,8 +135,6 @@ This special case is used to allow inclusive ranges to properly detect continuit
 	/element/
 		- (control)`property-set`
 		- (source/area)`38 2 39 45`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`__div__(self, x)`
 
 
@@ -165,8 +147,6 @@ This special case is used to allow inclusive ranges to properly detect continuit
 	/element/
 		- (control)`property-set`
 		- (source/area)`41 2 42 53`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`__rshift__(self, x)`
 
 
@@ -179,8 +159,6 @@ This special case is used to allow inclusive ranges to properly detect continuit
 	/element/
 		- (control)`property-set`
 		- (source/area)`44 2 47 10`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`__lshift__(self, x)`
 
 
@@ -191,8 +169,6 @@ This special case is used to allow inclusive ranges to properly detect continuit
 	/element/
 		- (control)`property-set`
 		- (source/area)`48 2 60 10`
-		- (coverage-zeros)`4`
-		- (coverage-counters)`4`
 The line number identified by the address.
 
 When the column number is zero, the internal value is adjusted under the
@@ -206,8 +182,6 @@ presumption that the address was referring to the end of the previos line.
 	/element/
 		- (control)`property-set`
 		- (source/area)`61 2 71 14`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`3`
 The column number identified by the address. (invalid/unknown)&<#None> if the address
 is referring to the end of the (factor-local/property)&<#Address.line[line]>.
 
@@ -219,8 +193,6 @@ is referring to the end of the (factor-local/property)&<#Address.line[line]>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`72 2 86 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
 (signature)`normalize_stop(line_length, line_number, column_number)`
 
 Adjust a stop (invalid/unknown)&<#Address'> pointers for use in an (factor-local/class)&<#Area[Area]> so that it can
@@ -238,8 +210,6 @@ number will be incremented and its column set to zero. This allows
 	/element/
 		- (control)`property-set`
 		- (source/area)`87 2 98 21`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`3`
 		- (type/syntax)`bool`
 		- (type/invalid/unknown)&<#bool>
 		
@@ -259,8 +229,6 @@ should be used to refer to meta data about the injection.
 	/element/
 		- (control)`property-set`
 		- (source/area)`100 1 211 31`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`100 12 100 28`
@@ -280,8 +248,6 @@ Inclsuive Range of (factor-local/class)&<#Address[Address]> instances. Usable wi
 	/element/
 		- (control)`property-set`
 		- (source/area)`105 2 105 15`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	__slots__ = ()
 
@@ -294,8 +260,6 @@ Inclsuive Range of (factor-local/class)&<#Address[Address]> instances. Usable wi
 	/element/
 		- (control)`property-set`
 		- (source/area)`106 2 108 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	Type = Address
 		@property
@@ -307,8 +271,6 @@ Inclsuive Range of (factor-local/class)&<#Address[Address]> instances. Usable wi
 	/element/
 		- (control)`property-set`
 		- (source/area)`109 2 118 10`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`4`
 Whether the Area refers to a purely vertically area of the syntax without
 constraints on the columns.
 
@@ -322,8 +284,6 @@ Zero-column references *must* be used to identify an Area as purely vertical.
 	/element/
 		- (control)`property-set`
 		- (source/area)`119 2 129 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
 Whether the area refers a purely horizontal area of the syntax within a single line.
 
 Zero-column references to the end of the line are not permitted to be used for
@@ -338,8 +298,6 @@ requires additional contextual knowledge (line length).
 	/element/
 		- (control)`property-set`
 		- (source/area)`130 2 136 65`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`delineate(Class, lstart, cstart, lstop, cstop, stop_line_length)`
 
 Construct an (factor-local/class)&<#Area[Area]> from the given indexes normalizing the stop address.
@@ -354,8 +312,6 @@ Construct an (factor-local/class)&<#Area[Area]> from the given indexes normalizi
 	/element/
 		- (control)`property-set`
 		- (source/area)`138 2 147 13`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`5`
 (signature)`__str__(self)`
 
 
@@ -366,8 +322,6 @@ Construct an (factor-local/class)&<#Area[Area]> from the given indexes normalizi
 	/element/
 		- (control)`property-set`
 		- (source/area)`148 2 175 13`
-		- (coverage-zeros)`15`
-		- (coverage-counters)`15`
 (signature)`from_string(Class, string)`
 
 Construct an (factor-local/class)&<#Area[Area]> from the given string.
@@ -380,8 +334,6 @@ Construct an (factor-local/class)&<#Area[Area]> from the given string.
 	/element/
 		- (control)`property-set`
 		- (source/area)`176 2 184 4`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 (signature)`from_line_range(Class, pair)`
 
 Construct an (factor-local/class)&<#Area[Area]> from the inclusive line indexes in (factor-local/parameter)&<#Area.from_line_range.Parameters.pair[pair]>.
@@ -397,8 +349,6 @@ The returned instance guarantees (factor-local/property)&<#Area.vertical[vertica
 	/element/
 		- (control)`property-set`
 		- (source/area)`186 2 186 77`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	Slice = typing.Tuple[typing.Text, typing.Text, typing.Sequence[typing.Text]]
 
@@ -409,8 +359,6 @@ The returned instance guarantees (factor-local/property)&<#Area.vertical[vertica
 	/element/
 		- (control)`property-set`
 		- (source/area)`187 2 211 31`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`14`
 		- (type/syntax)`Slice`
 		- (type/factor-local/data)&<#Area.Slice[Slice]>
 		

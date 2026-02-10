@@ -24,12 +24,11 @@ restricted = {
 	'-s': ('set-add', 'static', 'test-types'),
 	'-f': ('set-add', 'failure', 'test-types'),
 
-</code></pre></section><section class="data" documented="false" local-identifier="required" id="required"><h1><span class="prefix"></span><a class="title" href="#required"><span class="text.normal">required</span></a><span class="element-status"></span><div class="factor-element-meta"><span class="abstract-type">data</span></div></h1><pre class="text.syntax"><code class="source">	'-U': ('set-discard', 'unit', 'test-types'),
-	'-P': ('set-discard', 'performance', 'test-types'),
-	'-X': ('set-discard', 'explicit', 'test-types'),
-	'-S': ('set-discard', 'static', 'test-types'),
-	'-F': ('set-discard', 'failure', 'test-types'),
-}
-
-required = {
+</code></pre></section><section class="data" documented="false" local-identifier="required" id="required"><h1><span class="prefix"></span><a class="title" href="#required"><span class="text.normal">required</span></a><span class="element-status"></span><div class="factor-element-meta"><span class="abstract-type">data</span></div></h1><pre class="text.syntax"><code class="source">'-U': ('set-discard', 'unit', 'test-types'),
+'-P': ('set-discard', 'performance', 'test-types'),
+'-X': ('set-discard', 'explicit', 'test-types'),
+'-S': ('set-discard', 'static', 'test-types'),
+'-F': ('set-discard', 'failure', 'test-types'),
+	'--closed-frames': ('field-replace', False, 'opened-frames'),
+'--opened-frames': ('field-replace', True, 'opened-frames'),
 </code></pre></section><section class="function" documented="true" local-identifier="plan" id="plan"><h1><span class="prefix"></span><a class="title" href="#plan"><span class="text.normal">plan</span></a><span class="element-status"></span><div class="factor-element-meta"><span class="abstract-type">function</span></div></h1><p><code class="signature">plan(prefixes, keywords, factors, ctl, identifier)</code></p><p><span class="text.normal">Create an invocation for processing the project from </span><a class="factor-local" href="#plan.Parameters.factors"><span class="parameter">factors</span></a><span class="text.normal"> selected using </span><a class="factor-local" href="#plan.Parameters.identifier"><span class="parameter">identifier</span></a><span class="text.normal">.</span></p></section><section class="function" documented="true" local-identifier="test" id="test"><h1><span class="prefix"></span><a class="title" href="#test"><span class="text.normal">test</span></a><span class="element-status"></span><div class="factor-element-meta"><span class="abstract-type">function</span></div></h1><p><code class="signature">test(exits, meta, log, config, cc, pdr, argv)</code></p><p><span class="text.normal">Perform runtime analysis using the selected factors.</span></p></section><section class="function" documented="true" local-identifier="configure" id="configure"><h1><span class="prefix"></span><a class="title" href="#configure"><span class="text.normal">configure</span></a><span class="element-status"></span><div class="factor-element-meta"><span class="abstract-type">function</span></div></h1><p><code class="signature">configure(restricted, required, argv)</code></p><p><span class="text.normal">Root option parser.</span></p></section><section class="function" documented="false" local-identifier="main" id="main"><h1><span class="prefix"></span><a class="title" href="#main"><span class="text.normal">main</span></a><span class="element-status"></span><div class="factor-element-meta"><span class="abstract-type">function</span></div><code class="type"><a class="remote" href="http://fault.io/python/system/process#Exit"><span class="factor-element">process.Exit</span></a></code></h1><p><code class="signature">main(inv)</code></p></section><h1 class="footing"></h1></main></body></html>

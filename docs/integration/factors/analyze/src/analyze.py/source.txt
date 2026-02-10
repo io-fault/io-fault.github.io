@@ -1,5 +1,8 @@
 """
-# Factor integration execution for building images using a system context.
+# Analyze the accuracy and efficiency of a set of projects.
+
+# Procedure performing the necessary tasks for collecting project metrics
+# using the specified tests and preparing the data for report publication.
 """
 import os
 import sys
@@ -23,11 +26,12 @@ restricted = {
 	'-e': ('field-replace', True, 'efficiency'),
 	'-A': ('field-replace', False, 'accuracy'),
 	'-a': ('field-replace', True, 'accuracy'),
-	'--opened-frames': ('field-replace', True, 'opened-frames'),
-	'--closed-frames': ('field-replace', False, 'opened-frames'),
 
 	'-K': ('field-replace', False, 'reset-metrics'),
 	'-k': ('field-replace', True, 'reset-metrics'),
+
+	'--opened-frames': ('field-replace', True, 'opened-frames'),
+	'--closed-frames': ('field-replace', False, 'opened-frames'),
 }
 
 required = {
@@ -49,7 +53,6 @@ def execute(exe, argv):
 
 def configure(restricted, required, argv):
 	config = {
-		'opened-frames': False,
 		'processing-lanes': '4',
 		'status-monitors': None,
 		'machines-context-name': None,
@@ -61,6 +64,8 @@ def configure(restricted, required, argv):
 		'reset-metrics': True,
 		'efficiency': False,
 		'accuracy': True,
+
+		'opened-frames': False,
 	}
 
 	oeg = recognition.legacy(restricted, required, argv)
@@ -69,22 +74,28 @@ def configure(restricted, required, argv):
 	return config, remainder
 
 def framew(file, typ, title, ext, channel=''):
-	file.write(frames.sequence(frames.compose(typ, title, channel, ext)))
+	f = frames.compose(typ, title, channel, ext)
+	file.write(frames.sequence(f))
+	return f
 
 def main(inv:process.Invocation):
 	pwd = process.fs_pwd()
 	config, argv = configure(restricted, required, inv.argv)
 	env, exepath, xargv = query.dispatch('fictl')
 	xargv = xargv[1:]
-	selection, test = argv
+	selection, *tests = argv
 
 	pd = pwd@config['product-directory']
 	if config['opened-frames']:
 		ctx = ['--opened-frames']
 	else:
 		ctx = ['--closed-frames']
-	ctx = []
 
+	# For analyze, presume persistence.
+	if config['cache-directory'] is None:
+		(pd/'.cache').fs_mkdir() # Signal integrate to use a cache.
+
+	# Prepare to forward some options to integrate.
 	for opt, (op, slot) in required.items():
 		if config[slot] is not None:
 			ctx.append(opt)
@@ -92,9 +103,9 @@ def main(inv:process.Invocation):
 	ficmd = (lambda cmd, a: execute(exepath, xargv + [cmd] + ctx + a))
 	sf = (lambda t, m, x: framew(sys.stdout, t, m, x))
 
-	# Integration tests.
 	sf('->', 'Factor analysis: ' + selection, {})
 
+	# Reset metrics images.
 	if config['reset-metrics']:
 		if (pd/'.metrics').fs_type() != 'void':
 			(pd/'.metrics').fs_void()
@@ -102,24 +113,25 @@ def main(inv:process.Invocation):
 
 	sys.stdout.flush()
 	try:
-		#ficmd('integrate', [selection])
-
 		# Coverage
 		if config['accuracy']:
-			ficmd('integrate', ['--coverage', '-Rgm', selection])
-			ficmd('delineate', [selection])
-			ficmd('test', [test])
+			ficmd('integrate', ['-mcoverage', '-g', selection])
+			ficmd('delineate', ['-mcoverage', selection])
+			for test in tests:
+				ficmd('test', [test])
 		else:
-			# Still need delineated forms.
+			# Still need the delineated images.
 			ficmd('delineate', [selection])
 
 		# Profiling
 		if config['efficiency']:
-			ficmd('integrate', ['--profile', '-ROm', selection])
-			ficmd('test', [test])
+			ficmd('integrate', ['-mprofile', '-O', selection])
+			for test in tests:
+				ficmd('test', [test])
 
 		# Aggregate metrics for printing.
+		# Reprocessing is necessary here in order to ignore the cache.
 		ficmd('measure', ['-R', selection])
 	finally:
-		sf('<-', 'Analysis complete', {})
+		sf('<-', 'Analyzed: ' + selection, {})
 		sys.stdout.flush()

@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 890 0`
-		- (coverage-zeros)`60`
-		- (coverage-counters)`407`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 Terminal support for status displays.
 
 
@@ -28,8 +28,6 @@ Terminal support for status displays.
 	/element/
 		- (control)`property-set`
 		- (source/area)`5 1 5 9`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ typing ]
 ! CONTROL:
@@ -40,8 +38,6 @@ Terminal support for status displays.
 	/element/
 		- (control)`property-set`
 		- (source/area)`6 1 6 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ itertools ]
 ! CONTROL:
@@ -52,8 +48,6 @@ Terminal support for status displays.
 	/element/
 		- (control)`property-set`
 		- (source/area)`7 1 7 16`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ collections ]
 ! CONTROL:
@@ -64,8 +58,6 @@ Terminal support for status displays.
 	/element/
 		- (control)`property-set`
 		- (source/area)`8 1 8 18`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ tools ]
 ! CONTROL:
@@ -76,8 +68,6 @@ Terminal support for status displays.
 	/element/
 		- (control)`property-set`
 		- (source/area)`10 1 10 27`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ frames ]
 ! CONTROL:
@@ -88,8 +78,6 @@ Terminal support for status displays.
 	/element/
 		- (control)`property-set`
 		- (source/area)`11 1 11 27`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ duration_repr ]
 ! CONTROL:
@@ -100,8 +88,6 @@ Terminal support for status displays.
 	/element/
 		- (control)`property-set`
 		- (source/area)`13 1 28 19`
-		- (coverage-zeros)`8`
-		- (coverage-counters)`11`
 		- (type/syntax)`typing.Tuple[float, str]`
 		
 (signature)`duration_repr(seconds)`
@@ -132,8 +118,6 @@ Terminal support for status displays.
 	/element/
 		- (control)`property-set`
 		- (source/area)`31 2 31 15`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	__slots__ = ()
 
@@ -146,8 +130,6 @@ Terminal support for status displays.
 	/element/
 		- (control)`property-set`
 		- (source/area)`33 2 34 37`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`cellcount(self)`
 
 
@@ -158,8 +140,6 @@ Terminal support for status displays.
 	/element/
 		- (control)`property-set`
 		- (source/area)`36 1 207 26`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`36 14 36 19`
@@ -178,8 +158,6 @@ Abstraction for legacy ANSI/DEC escapes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`41 2 41 18`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	_escape = b'\x1b'
 
@@ -192,8 +170,6 @@ Abstraction for legacy ANSI/DEC escapes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`42 2 42 27`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	_csi_open = _escape + b'['
 
@@ -206,8 +182,6 @@ Abstraction for legacy ANSI/DEC escapes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`43 2 43 28`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	_pm_open = _csi_open + b'?'
 
@@ -220,8 +194,6 @@ Abstraction for legacy ANSI/DEC escapes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`44 2 44 33`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	_pm_save = _pm_open + b'6;1049s'
 
@@ -234,8 +206,6 @@ Abstraction for legacy ANSI/DEC escapes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`45 2 45 36`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	_pm_restore = _pm_open + b'6;1049r'
 
@@ -248,8 +218,6 @@ Abstraction for legacy ANSI/DEC escapes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`46 2 46 34`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	_pm_origin_set = _pm_open + b'6h'
 
@@ -262,8 +230,6 @@ Abstraction for legacy ANSI/DEC escapes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`47 2 47 36`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	_pm_origin_reset = _pm_open + b'6l'
 
@@ -276,8 +242,6 @@ Abstraction for legacy ANSI/DEC escapes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`48 2 48 37`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	_pm_screen_set = _pm_open + b'1049h'
 
@@ -290,8 +254,6 @@ Abstraction for legacy ANSI/DEC escapes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`49 2 49 39`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	_pm_screen_reset = _pm_open + b'1049l'
 
@@ -304,8 +266,6 @@ Abstraction for legacy ANSI/DEC escapes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`50 2 50 36`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	_pm_show_cursor = _pm_open + b'25h'
 
@@ -318,8 +278,6 @@ Abstraction for legacy ANSI/DEC escapes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`51 2 51 36`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	_pm_hide_cursor = _pm_open + b'25l'
 
@@ -332,8 +290,6 @@ Abstraction for legacy ANSI/DEC escapes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`52 2 52 33`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	_restore_cursor = _escape + b'8'
 
@@ -346,8 +302,6 @@ Abstraction for legacy ANSI/DEC escapes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`53 2 53 31`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	_store_cursor = _escape + b'7'
 
@@ -360,8 +314,6 @@ Abstraction for legacy ANSI/DEC escapes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`54 2 54 24`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	_nl = _csi_open + b'1B'
 
@@ -374,8 +326,6 @@ Abstraction for legacy ANSI/DEC escapes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`55 2 55 40`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	_reset_sgr = _csi_open + b'0;39;49;59m'
 
@@ -388,8 +338,6 @@ Abstraction for legacy ANSI/DEC escapes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`57 2 74 2`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	_styles = {
 		'default': b'39',
@@ -418,8 +366,6 @@ Abstraction for legacy ANSI/DEC escapes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`75 2 77 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	_reset_text = _csi_open + _styles['default'] + b'm'
 		@classmethod
@@ -433,8 +379,6 @@ Abstraction for legacy ANSI/DEC escapes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`78 2 79 47`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`_join(Class, *i)`
 
 
@@ -447,8 +391,6 @@ Abstraction for legacy ANSI/DEC escapes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`81 2 88 18`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
 (signature)`__init__(self)`
 
 
@@ -459,8 +401,6 @@ Abstraction for legacy ANSI/DEC escapes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`90 2 98 30`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
 (signature)`set_cursor_visible(self, visible)`
 
 Adjust cursor visibility.
@@ -473,8 +413,6 @@ Adjust cursor visibility.
 	/element/
 		- (control)`property-set`
 		- (source/area)`100 2 105 60`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`set_scrolling_region(self, top, bottom)`
 
 Confine the scrolling region to the given rows.
@@ -487,8 +425,6 @@ Confine the scrolling region to the given rows.
 	/element/
 		- (control)`property-set`
 		- (source/area)`107 2 112 30`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`reset_scrolling_region(self)`
 
 Release confinements on scrolling region.
@@ -501,8 +437,6 @@ Release confinements on scrolling region.
 	/element/
 		- (control)`property-set`
 		- (source/area)`114 2 122 77`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`open_scrolling_region(self, top, bottom)`
 
 Set the scrolling region, enter it, and seek the bottom.
@@ -517,8 +451,6 @@ should be use to maintain the SR's state.
 	/element/
 		- (control)`property-set`
 		- (source/area)`124 2 132 56`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`close_scrolling_region(self)`
 
 Save the screen buffer, reset the scrolling region, and restore the buffer.
@@ -532,8 +464,6 @@ This preserves the screen's state after the transition.
 	/element/
 		- (control)`property-set`
 		- (source/area)`134 2 141 23`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`enter_scrolling_region(self)`
 
 Enter scrolling region; normal terminal output; restores cursor location.
@@ -546,8 +476,6 @@ Enter scrolling region; normal terminal output; restores cursor location.
 	/element/
 		- (control)`property-set`
 		- (source/area)`143 2 150 24`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`exit_scrolling_region(self)`
 
 Exit scrolling region; allow out of region printing; saves cursor location.
@@ -560,8 +488,6 @@ Exit scrolling region; allow out of region printing; saves cursor location.
 	/element/
 		- (control)`property-set`
 		- (source/area)`152 2 158 61`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`clear(self)`
 
 Clear the staionary area according to its configured width and default text properties.
@@ -574,8 +500,6 @@ Clear the staionary area according to its configured width and default text prop
 	/element/
 		- (control)`property-set`
 		- (source/area)`160 2 166 42`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`erase(self, area)`
 
 Erase the given area.
@@ -588,8 +512,6 @@ Erase the given area.
 	/element/
 		- (control)`property-set`
 		- (source/area)`168 2 175 89`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
 		- (type/syntax)`bytes`
 		- (type/invalid/unknown)&<#bytes>
 		
@@ -605,8 +527,6 @@ Primitive relative seek; Context cursor position is *not* updated.
 	/element/
 		- (control)`property-set`
 		- (source/area)`177 2 184 99`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`style(self, name, text)`
 
 Style the given (factor-local/parameter)&<#Legacy.style.Parameters.text[text]> as (factor-local/parameter)&<#Legacy.style.Parameters.name[name]>.
@@ -621,8 +541,6 @@ Text color will be reset to the default.
 	/element/
 		- (control)`property-set`
 		- (source/area)`186 2 192 32`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`render(self, phrase)`
 
 Translate the color names to SGR codes.
@@ -635,8 +553,6 @@ Translate the color names to SGR codes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`194 2 205 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
 (signature)`configure(self, height, width, lines)`
 
 Update the dimensions of the screen.
@@ -651,8 +567,6 @@ Update the dimensions of the screen.
 	/element/
 		- (control)`property-set`
 		- (source/area)`206 2 207 26`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ Layout ]
 ! CONTROL:
@@ -661,8 +575,6 @@ Update the dimensions of the screen.
 	/element/
 		- (control)`property-set`
 		- (source/area)`209 1 260 32`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`209 14 209 19`
@@ -681,8 +593,6 @@ The set, sizes, and ordering of fields present in a monitor.
 	/element/
 		- (control)`property-set`
 		- (source/area)`215 2 215 36`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	Definition = typing.Tuple[str, int]
 
@@ -695,8 +605,6 @@ The set, sizes, and ordering of fields present in a monitor.
 	/element/
 		- (control)`property-set`
 		- (source/area)`216 2 218 14`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	Fields = typing.Sequence[Definition]
 		@staticmethod
@@ -708,8 +616,6 @@ The set, sizes, and ordering of fields present in a monitor.
 	/element/
 		- (control)`property-set`
 		- (source/area)`219 2 229 19`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
 (signature)`separators(fields)`
 
 Generate a series of separators finished with a terminator.
@@ -724,8 +630,6 @@ is reached.
 	/element/
 		- (control)`property-set`
 		- (source/area)`231 2 235 27`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`label(self, field, text)`
 
 The display text for the field's label.
@@ -740,8 +644,6 @@ The display text for the field's label.
 	/element/
 		- (control)`property-set`
 		- (source/area)`237 2 242 36`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
 (signature)`__init__(self, fields, **updates)`
 
 
@@ -752,8 +654,6 @@ The display text for the field's label.
 	/element/
 		- (control)`property-set`
 		- (source/area)`244 2 249 70`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`fields(self)`
 
 Iterate over the fields in their designated order along with separators
@@ -767,8 +667,6 @@ that can be used to follow the rendered field.
 	/element/
 		- (control)`property-set`
 		- (source/area)`251 2 260 32`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
 (signature)`positions(self)`
 
 Join the field identifier, cell allocation, and field label in
@@ -782,8 +680,6 @@ the order designated by (invalid/unknown)&<#order>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`262 1 345 44`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`262 13 262 18`
@@ -802,8 +698,6 @@ The rendering methods and parameters used by a (factor-local/class)&<#Status[Sta
 	/element/
 		- (control)`property-set`
 		- (source/area)`267 2 267 28`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	Formatter = tuple[str, str]
 
@@ -814,8 +708,6 @@ The rendering methods and parameters used by a (factor-local/class)&<#Status[Sta
 	/element/
 		- (control)`property-set`
 		- (source/area)`269 2 278 14`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
 (signature)`default_render_method(self, key, field)`
 
 Renders the string form of (factor-local/parameter)&<#Theme.default_render_method.Parameters.field[field]> with the style set identified
@@ -829,8 +721,6 @@ by (factor-local/parameter)&<#Theme.default_render_method.Parameters.key[key]>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`279 2 288 14`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 (signature)`r_transparent(value)`
 
 Render method expecting and returning a sequence of formatting pairs.
@@ -846,8 +736,6 @@ formatting directly.
 	/element/
 		- (control)`property-set`
 		- (source/area)`289 2 299 3`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
 (signature)`r_duration(value)`
 
 Render method for common duration fields.
@@ -860,8 +748,6 @@ Render method for common duration fields.
 	/element/
 		- (control)`property-set`
 		- (source/area)`301 2 305 30`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`define(self, name, style)`
 
 Define the (factor-local/parameter)&<#Theme.define.Parameters.style[style]> to use with the given (factor-local/parameter)&<#Theme.define.Parameters.name[name]>.
@@ -874,8 +760,6 @@ Define the (factor-local/parameter)&<#Theme.define.Parameters.style[style]> to u
 	/element/
 		- (control)`property-set`
 		- (source/area)`307 2 311 34`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`implement(self, type, render)`
 
 Assign a render method, (invalid/unknown)&<#call>, for the (invalid/unknown)&<#field>.
@@ -890,8 +774,6 @@ Assign a render method, (invalid/unknown)&<#call>, for the (invalid/unknown)&<#f
 	/element/
 		- (control)`property-set`
 		- (source/area)`313 2 315 24`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`__init__(self)`
 
 
@@ -904,8 +786,6 @@ Assign a render method, (invalid/unknown)&<#call>, for the (invalid/unknown)&<#f
 	/element/
 		- (control)`property-set`
 		- (source/area)`317 2 328 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`configure(self)`
 
 
@@ -916,8 +796,6 @@ Assign a render method, (invalid/unknown)&<#call>, for the (invalid/unknown)&<#f
 	/element/
 		- (control)`property-set`
 		- (source/area)`330 2 337 31`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
 (signature)`style(self, celltexts)`
 
 Emit words formatted according to their associated style set.
@@ -930,8 +808,6 @@ Emit words formatted according to their associated style set.
 	/element/
 		- (control)`property-set`
 		- (source/area)`339 2 345 44`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
 (signature)`render(self, type, field)`
 
 Render the given (factor-local/parameter)&<#Theme.render.Parameters.field[field]> according to the configured (invalid/unknown)&<#type'> render method.
@@ -944,8 +820,6 @@ Render the given (factor-local/parameter)&<#Theme.render.Parameters.field[field]
 	/element/
 		- (control)`property-set`
 		- (source/area)`347 1 628 48`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`347 14 347 19`
@@ -964,8 +838,6 @@ Allocated area for status display of a set of changing fields.
 	/element/
 		- (control)`property-set`
 		- (source/area)`352 2 356 2`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	view_state_loop = {
 		'total': 'rate_window',
@@ -982,8 +854,6 @@ Allocated area for status display of a set of changing fields.
 	/element/
 		- (control)`property-set`
 		- (source/area)`358 2 362 2`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	unit_type_separators = {
 		'total': '+',
@@ -1000,8 +870,6 @@ Allocated area for status display of a set of changing fields.
 	/element/
 		- (control)`property-set`
 		- (source/area)`364 2 375 28`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
 (signature)`__init__(self, theme, layout, position)`
 
 
@@ -1014,8 +882,6 @@ Allocated area for status display of a set of changing fields.
 	/element/
 		- (control)`property-set`
 		- (source/area)`377 2 392 24`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`11`
 (signature)`_calculate_fields(self)`
 
 
@@ -1028,8 +894,6 @@ Allocated area for status display of a set of changing fields.
 	/element/
 		- (control)`property-set`
 		- (source/area)`394 2 399 3`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`_update_field_cache(self)`
 
 
@@ -1040,8 +904,6 @@ Allocated area for status display of a set of changing fields.
 	/element/
 		- (control)`property-set`
 		- (source/area)`401 2 407 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`reset(self, time, metrics)`
 
 Reset the metrics records using the given entry as the only one.
@@ -1056,8 +918,6 @@ Reset the metrics records using the given entry as the only one.
 	/element/
 		- (control)`property-set`
 		- (source/area)`408 2 409 28`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ Status >> elapse ]
 ! CONTROL:
@@ -1066,8 +926,6 @@ Reset the metrics records using the given entry as the only one.
 	/element/
 		- (control)`property-set`
 		- (source/area)`411 2 418 48`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
 (signature)`elapse(self, time)`
 
 Update the time field on the last metrics record.
@@ -1080,8 +938,6 @@ Update the time field on the last metrics record.
 	/element/
 		- (control)`property-set`
 		- (source/area)`420 2 430 9`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`7`
 (signature)`update(self, time, metrics)`
 
 Update the metrics record for the given point in time.
@@ -1096,8 +952,6 @@ Update the metrics record for the given point in time.
 	/element/
 		- (control)`property-set`
 		- (source/area)`432 2 433 51`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`duration(self)`
 
 
@@ -1108,8 +962,6 @@ Update the metrics record for the given point in time.
 	/element/
 		- (control)`property-set`
 		- (source/area)`435 2 442 25`
-		- (coverage-zeros)`4`
-		- (coverage-counters)`4`
 (signature)`cycle(self, field)`
 
 Select the next read type for the given field using the (factor-local/data)&<#Status.view_state_loop[view_state_loop]>.
@@ -1124,8 +976,6 @@ Select the next read type for the given field using the (factor-local/data)&<#St
 	/element/
 		- (control)`property-set`
 		- (source/area)`444 2 447 26`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`3`
 (signature)`set_field_read_type(self, field, units)`
 
 
@@ -1136,8 +986,6 @@ Select the next read type for the given field using the (factor-local/data)&<#St
 	/element/
 		- (control)`property-set`
 		- (source/area)`449 2 454 30`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 (signature)`prefix(self, *words)`
 
 Attach a constant phrase to the beginning of the monitor.
@@ -1150,8 +998,6 @@ Attach a constant phrase to the beginning of the monitor.
 	/element/
 		- (control)`property-set`
 		- (source/area)`456 2 461 30`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 (signature)`suffix(self, *words)`
 
 Attach a constant phrase to the end of the monitor.
@@ -1164,8 +1010,6 @@ Attach a constant phrase to the end of the monitor.
 	/element/
 		- (control)`property-set`
 		- (source/area)`463 2 468 35`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`title(self, title, *dimensions)`
 
 Assign the monitor's title and dimension identifiers.
@@ -1178,8 +1022,6 @@ Assign the monitor's title and dimension identifiers.
 	/element/
 		- (control)`property-set`
 		- (source/area)`470 2 479 36`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
 (signature)`window_period(self)`
 
 Calculate the current metrics window size.
@@ -1194,8 +1036,6 @@ Calculate the current metrics window size.
 	/element/
 		- (control)`property-set`
 		- (source/area)`481 2 482 34`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`origin(self, field)`
 
 
@@ -1208,8 +1048,6 @@ Calculate the current metrics window size.
 	/element/
 		- (control)`property-set`
 		- (source/area)`484 2 490 21`
-		- (coverage-zeros)`4`
-		- (coverage-counters)`4`
 (signature)`window_delta(self, field)`
 
 
@@ -1222,8 +1060,6 @@ Calculate the current metrics window size.
 	/element/
 		- (control)`property-set`
 		- (source/area)`492 2 495 34`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`edge(self, field)`
 
 
@@ -1236,8 +1072,6 @@ Calculate the current metrics window size.
 	/element/
 		- (control)`property-set`
 		- (source/area)`497 2 498 35`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`total(self, field)`
 
 
@@ -1250,8 +1084,6 @@ Calculate the current metrics window size.
 	/element/
 		- (control)`property-set`
 		- (source/area)`500 2 502 37`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`rate_window(self, field)`
 
 
@@ -1264,8 +1096,6 @@ Calculate the current metrics window size.
 	/element/
 		- (control)`property-set`
 		- (source/area)`504 2 506 32`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`rate_overall(self, field)`
 
 
@@ -1278,8 +1108,6 @@ Calculate the current metrics window size.
 	/element/
 		- (control)`property-set`
 		- (source/area)`508 2 534 65`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`20`
 (signature)`render(self)`
 
 
@@ -1292,8 +1120,6 @@ Calculate the current metrics window size.
 	/element/
 		- (control)`property-set`
 		- (source/area)`536 2 560 65`
-		- (coverage-zeros)`19`
-		- (coverage-counters)`19`
 (signature)`delta(self, fields)`
 
 
@@ -1304,8 +1130,6 @@ Calculate the current metrics window size.
 	/element/
 		- (control)`property-set`
 		- (source/area)`562 2 575 54`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`9`
 (signature)`phrase(self)`
 
 The monitor's image as a single phrase instance.
@@ -1318,8 +1142,6 @@ The monitor's image as a single phrase instance.
 	/element/
 		- (control)`property-set`
 		- (source/area)`577 2 582 64`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`snapshot(self)`
 
 A bytes form of the (factor-local/method)&<#Status.phrase[Status.phrase]>. (The image without cursor movement)
@@ -1332,8 +1154,6 @@ A bytes form of the (factor-local/method)&<#Status.phrase[Status.phrase]>. (The 
 	/element/
 		- (control)`property-set`
 		- (source/area)`584 2 589 71`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`profile(self)`
 
 Construct a triple containing the start and stop time and the final metrics.
@@ -1346,8 +1166,6 @@ Construct a triple containing the start and stop time and the final metrics.
 	/element/
 		- (control)`property-set`
 		- (source/area)`591 2 611 17`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`12`
 (signature)`synopsis(self)`
 
 Construct a status frame synopsis using the monitor's configuration and metrics.
@@ -1360,8 +1178,6 @@ Construct a status frame synopsis using the monitor's configuration and metrics.
 	/element/
 		- (control)`property-set`
 		- (source/area)`613 2 628 48`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`7`
 (signature)`frame(self, control, type, identifier)`
 
 Construct a transaction frame for reporting the status.
@@ -1375,8 +1191,6 @@ Used after the completion of the dispatcher.
 	/element/
 		- (control)`property-set`
 		- (source/area)`630 1 761 80`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`630 15 630 20`
@@ -1393,8 +1207,6 @@ Terminal display management for monitoring changes in (factor-local/class)&<#Sta
 	/element/
 		- (control)`property-set`
 		- (source/area)`635 2 640 96`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -1412,8 +1224,6 @@ Construct the string representation of the given (invalid/unknown)&<#monitor'> s
 	/element/
 		- (control)`property-set`
 		- (source/area)`642 2 648 30`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
 (signature)`__init__(self, screen, fileno)`
 
 
@@ -1424,8 +1234,6 @@ Construct the string representation of the given (invalid/unknown)&<#monitor'> s
 	/element/
 		- (control)`property-set`
 		- (source/area)`650 2 657 40`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
 (signature)`install(self, monitor)`
 
 Erase, reframe, and update the given monitor.
@@ -1438,8 +1246,6 @@ Erase, reframe, and update the given monitor.
 	/element/
 		- (control)`property-set`
 		- (source/area)`659 2 680 50`
-		- (coverage-zeros)`4`
-		- (coverage-counters)`13`
 (signature)`frame(self, monitor)`
 
 Render and emit the prefix, title, and suffix of the (factor-local/parameter)&<#Monitor.frame.Parameters.monitor[monitor]>.
@@ -1454,8 +1260,6 @@ Operation is buffered and must be flushed to be displayed.
 	/element/
 		- (control)`property-set`
 		- (source/area)`682 2 702 35`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`12`
 (signature)`update(self, monitor, fields)`
 
 Render and emit the given (factor-local/parameter)&<#Monitor.update.Parameters.fields[fields]>.
@@ -1470,8 +1274,6 @@ Operation is buffered and must be flushed to be displayed.
 	/element/
 		- (control)`property-set`
 		- (source/area)`704 2 722 23`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`12`
 (signature)`flush(self)`
 
 Write any buffered terminal changes to the device.
@@ -1484,8 +1286,6 @@ Write any buffered terminal changes to the device.
 	/element/
 		- (control)`property-set`
 		- (source/area)`724 2 729 42`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`clear(self)`
 
 Clear the entire status regions.
@@ -1498,8 +1298,6 @@ Clear the entire status regions.
 	/element/
 		- (control)`property-set`
 		- (source/area)`731 2 753 13`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`12`
 (signature)`configure(self, lines)`
 
 Configure the scrolling region allocating (factor-local/parameter)&<#Monitor.configure.Parameters.lines[lines]> at
@@ -1519,8 +1317,6 @@ also be reallocated so that their Context positions can be adjusted.
 	/element/
 		- (control)`property-set`
 		- (source/area)`755 2 758 32`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`_save(self)`
 
 
@@ -1533,8 +1329,6 @@ also be reallocated so that their Context positions can be adjusted.
 	/element/
 		- (control)`property-set`
 		- (source/area)`760 2 761 80`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`_restore(self)`
 
 
@@ -1547,8 +1341,6 @@ also be reallocated so that their Context positions can be adjusted.
 	/element/
 		- (control)`property-set`
 		- (source/area)`763 1 773 1`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	_metric_units = [
 		('', '', 0),
@@ -1571,8 +1363,6 @@ also be reallocated so that their Context positions can be adjusted.
 	/element/
 		- (control)`property-set`
 		- (source/area)`775 1 781 10`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`5`
 (signature)`_precision(count)`
 
 
@@ -1585,8 +1375,6 @@ also be reallocated so that their Context positions can be adjusted.
 	/element/
 		- (control)`property-set`
 		- (source/area)`783 1 786 31`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`_strings(value)`
 
 
@@ -1597,8 +1385,6 @@ also be reallocated so that their Context positions can be adjusted.
 	/element/
 		- (control)`property-set`
 		- (source/area)`788 1 806 2`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`10`
 (signature)`r_count(field, value)`
 
 Render method for counts providing compression using metric units.
@@ -1611,8 +1397,6 @@ Render method for counts providing compression using metric units.
 	/element/
 		- (control)`property-set`
 		- (source/area)`808 1 817 22`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
 (signature)`r_title(value)`
 
 Render method for monitor titles.
@@ -1625,8 +1409,6 @@ Render method for monitor titles.
 	/element/
 		- (control)`property-set`
 		- (source/area)`819 1 842 42`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`18`
 (signature)`form(module)`
 
 Construct a (factor-local/class)&<#Layout[Layout]> and (factor-local/class)&<#Theme[Theme]> from the provided order and formatting structures.
@@ -1639,8 +1421,6 @@ Construct a (factor-local/class)&<#Layout[Layout]> and (factor-local/class)&<#Th
 	/element/
 		- (control)`property-set`
 		- (source/area)`844 1 859 12`
-		- (coverage-zeros)`6`
-		- (coverage-counters)`6`
 (signature)`identify_device()`
 
 Use the first three file descriptors to determine the
@@ -1657,8 +1437,6 @@ return the given (factor-local/parameter)&<#identify_device.Parameters.path[path
 	/element/
 		- (control)`property-set`
 		- (source/area)`861 1 866 9`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
 (signature)`setup()`
 
 
@@ -1669,8 +1447,6 @@ return the given (factor-local/parameter)&<#identify_device.Parameters.path[path
 	/element/
 		- (control)`property-set`
 		- (source/area)`868 1 890 20`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`10`
 (signature)`aggregate(control, module)`
 
 Construct (factor-local/class)&<#Status[Status]> instances allocated using (factor-local/parameter)&<#aggregate.Parameters.control[control]> for

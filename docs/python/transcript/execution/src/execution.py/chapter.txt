@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 334 0`
-		- (coverage-zeros)`18`
-		- (coverage-counters)`210`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 System process status display using transaction frames.
 
 
@@ -28,8 +28,6 @@ System process status display using transaction frames.
 	/element/
 		- (control)`property-set`
 		- (source/area)`5 1 5 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ collections ]
 ! CONTROL:
@@ -40,8 +38,6 @@ System process status display using transaction frames.
 	/element/
 		- (control)`property-set`
 		- (source/area)`6 1 6 18`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ typing ]
 ! CONTROL:
@@ -52,8 +48,6 @@ System process status display using transaction frames.
 	/element/
 		- (control)`property-set`
 		- (source/area)`7 1 7 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ signal ]
 ! CONTROL:
@@ -64,8 +58,6 @@ System process status display using transaction frames.
 	/element/
 		- (control)`property-set`
 		- (source/area)`8 1 8 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ dataclass ]
 ! CONTROL:
@@ -76,8 +68,6 @@ System process status display using transaction frames.
 	/element/
 		- (control)`property-set`
 		- (source/area)`9 1 9 33`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ tools ]
 ! CONTROL:
@@ -88,8 +78,6 @@ System process status display using transaction frames.
 	/element/
 		- (control)`property-set`
 		- (source/area)`11 1 11 27`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ time ]
 ! CONTROL:
@@ -100,8 +88,6 @@ System process status display using transaction frames.
 	/element/
 		- (control)`property-set`
 		- (source/area)`12 1 12 33`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ execution ]
 ! CONTROL:
@@ -112,8 +98,6 @@ System process status display using transaction frames.
 	/element/
 		- (control)`property-set`
 		- (source/area)`13 1 13 30`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ frames ]
 ! CONTROL:
@@ -124,8 +108,6 @@ System process status display using transaction frames.
 	/element/
 		- (control)`property-set`
 		- (source/area)`14 1 14 27`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ io ]
 ! CONTROL:
@@ -136,8 +118,6 @@ System process status display using transaction frames.
 	/element/
 		- (control)`property-set`
 		- (source/area)`16 1 16 16`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ _launch ]
 ! CONTROL:
@@ -148,8 +128,6 @@ System process status display using transaction frames.
 	/element/
 		- (control)`property-set`
 		- (source/area)`18 1 36 35`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`10`
 (signature)`_launch(status)`
 
 
@@ -162,8 +140,6 @@ System process status display using transaction frames.
 	/element/
 		- (control)`property-set`
 		- (source/area)`38 1 43 16`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`5`
 (signature)`_field(key, ext)`
 
 
@@ -174,8 +150,6 @@ System process status display using transaction frames.
 	/element/
 		- (control)`property-set`
 		- (source/area)`45 1 78 62`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`18`
 (signature)`_closed()`
 
 Join a start and stop frame.
@@ -190,8 +164,6 @@ Join a start and stop frame.
 	/element/
 		- (control)`property-set`
 		- (source/area)`80 1 91 50`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`7`
 (signature)`_open_frame(status)`
 
 
@@ -202,8 +174,6 @@ Join a start and stop frame.
 	/element/
 		- (control)`property-set`
 		- (source/area)`93 1 334 58`
-		- (coverage-zeros)`14`
-		- (coverage-counters)`158`
 (signature)`dispatch(meta, log, plan, control, monitors, summary, title, queue)`
 
 Execute system commands while displaying their status

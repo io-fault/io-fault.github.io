@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 365 0`
-		- (coverage-zeros)`54`
-		- (coverage-counters)`207`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 Test the coherence of the specified project.
 
 
@@ -28,8 +28,6 @@ Test the coherence of the specified project.
 	/element/
 		- (control)`property-set`
 		- (source/area)`5 1 5 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ gc ]
 ! CONTROL:
@@ -40,8 +38,6 @@ Test the coherence of the specified project.
 	/element/
 		- (control)`property-set`
 		- (source/area)`6 1 6 9`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ contextlib ]
 ! CONTROL:
@@ -52,8 +48,6 @@ Test the coherence of the specified project.
 	/element/
 		- (control)`property-set`
 		- (source/area)`7 1 7 17`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ signal ]
 ! CONTROL:
@@ -64,8 +58,6 @@ Test the coherence of the specified project.
 	/element/
 		- (control)`property-set`
 		- (source/area)`8 1 8 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ functools ]
 ! CONTROL:
@@ -76,8 +68,6 @@ Test the coherence of the specified project.
 	/element/
 		- (control)`property-set`
 		- (source/area)`9 1 9 16`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ types ]
 ! CONTROL:
@@ -88,8 +78,6 @@ Test the coherence of the specified project.
 	/element/
 		- (control)`property-set`
 		- (source/area)`10 1 10 12`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 
 [ importlib ]
 ! CONTROL:
@@ -100,8 +88,6 @@ Test the coherence of the specified project.
 	/element/
 		- (control)`property-set`
 		- (source/area)`11 1 11 16`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ resource ]
 ! CONTROL:
@@ -112,8 +98,6 @@ Test the coherence of the specified project.
 	/element/
 		- (control)`property-set`
 		- (source/area)`12 1 12 15`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ corefile ]
 ! CONTROL:
@@ -124,8 +108,6 @@ Test the coherence of the specified project.
 	/element/
 		- (control)`property-set`
 		- (source/area)`14 1 14 29`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ process ]
 ! CONTROL:
@@ -136,8 +118,6 @@ Test the coherence of the specified project.
 	/element/
 		- (control)`property-set`
 		- (source/area)`15 1 15 28`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ files ]
 ! CONTROL:
@@ -148,8 +128,6 @@ Test the coherence of the specified project.
 	/element/
 		- (control)`property-set`
 		- (source/area)`16 1 16 26`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ factors ]
 ! CONTROL:
@@ -160,8 +138,6 @@ Test the coherence of the specified project.
 	/element/
 		- (control)`property-set`
 		- (source/area)`17 1 17 28`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ python ]
 ! CONTROL:
@@ -172,8 +148,6 @@ Test the coherence of the specified project.
 	/element/
 		- (control)`property-set`
 		- (source/area)`18 1 18 27`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ elapsed ]
 ! CONTROL:
@@ -184,8 +158,6 @@ Test the coherence of the specified project.
 	/element/
 		- (control)`property-set`
 		- (source/area)`19 1 19 33`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ metrics ]
 ! CONTROL:
@@ -196,8 +168,6 @@ Test the coherence of the specified project.
 	/element/
 		- (control)`property-set`
 		- (source/area)`20 1 20 32`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ Log ]
 ! CONTROL:
@@ -208,8 +178,6 @@ Test the coherence of the specified project.
 	/element/
 		- (control)`property-set`
 		- (source/area)`21 1 21 31`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ engine ]
 ! CONTROL:
@@ -220,8 +188,6 @@ Test the coherence of the specified project.
 	/element/
 		- (control)`property-set`
 		- (source/area)`23 1 23 20`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ types ]
 ! CONTROL:
@@ -232,8 +198,6 @@ Test the coherence of the specified project.
 	/element/
 		- (control)`property-set`
 		- (source/area)`24 1 24 19`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 
 [ Harness ]
 ! CONTROL:
@@ -242,8 +206,6 @@ Test the coherence of the specified project.
 	/element/
 		- (control)`property-set`
 		- (source/area)`26 1 226 15`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`26 15 26 28`
@@ -262,8 +224,6 @@ The collection and execution of a series of tests.
 	/element/
 		- (control)`property-set`
 		- (source/area)`30 2 30 50`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	concurrently = staticmethod(process.concurrently)
 
@@ -276,8 +236,6 @@ The collection and execution of a series of tests.
 	/element/
 		- (control)`property-set`
 		- (source/area)`32 2 44 75`
-		- (coverage-zeros)`9`
-		- (coverage-counters)`9`
 (signature)`_handle_core(self, corefile)`
 
 
@@ -290,8 +248,6 @@ The collection and execution of a series of tests.
 	/element/
 		- (control)`property-set`
 		- (source/area)`46 2 50 22`
-		- (coverage-zeros)`4`
-		- (coverage-counters)`4`
 (signature)`_print_tb(self, test)`
 
 
@@ -304,8 +260,6 @@ The collection and execution of a series of tests.
 	/element/
 		- (control)`property-set`
 		- (source/area)`52 2 145 15`
-		- (coverage-zeros)`10`
-		- (coverage-counters)`48`
 (signature)`dispatch(self, test)`
 
 
@@ -316,8 +270,6 @@ The collection and execution of a series of tests.
 	/element/
 		- (control)`property-set`
 		- (source/area)`147 2 183 47`
-		- (coverage-zeros)`12`
-		- (coverage-counters)`23`
 (signature)`test(self, test)`
 
 Execute the test function and configure the identified conclusion.
@@ -332,8 +284,6 @@ Execute the test function and configure the identified conclusion.
 	/element/
 		- (control)`property-set`
 		- (source/area)`185 2 226 15`
-		- (coverage-zeros)`4`
-		- (coverage-counters)`23`
 (signature)`execute(self, test)`
 
 
@@ -346,8 +296,6 @@ Execute the test function and configure the identified conclusion.
 	/element/
 		- (control)`property-set`
 		- (source/area)`228 1 238 30`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
 (signature)`intercept(product, project)`
 
 
@@ -360,8 +308,6 @@ Execute the test function and configure the identified conclusion.
 	/element/
 		- (control)`property-set`
 		- (source/area)`240 1 254 44`
-		- (coverage-zeros)`9`
-		- (coverage-counters)`9`
 (signature)`slicing(spec)`
 
 
@@ -372,8 +318,6 @@ Execute the test function and configure the identified conclusion.
 	/element/
 		- (control)`property-set`
 		- (source/area)`256 1 268 2`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
 (signature)`trapped_report(source)`
 
 Reform the report into the common join protocol.
@@ -388,8 +332,6 @@ Reform the report into the common join protocol.
 	/element/
 		- (control)`property-set`
 		- (source/area)`270 1 361 19`
-		- (coverage-zeros)`4`
-		- (coverage-counters)`56`
 		- (type/syntax)`process.Exit`
 		- (type/context-local/factor-element)&<fault.system/process#Exit[fault.system.process.Exit]>
 		

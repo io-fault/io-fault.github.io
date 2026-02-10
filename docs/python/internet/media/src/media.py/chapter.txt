@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 400 0`
-		- (coverage-zeros)`14`
-		- (coverage-counters)`117`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 Mime Type structures and parsers for content types and media ranges.
 
 Interfaces here work exclusively with character-strings; wire data must be decoded.
@@ -63,8 +63,6 @@ Interfaces here work exclusively with character-strings; wire data must be decod
 	/element/
 		- (control)`property-set`
 		- (source/area)`36 1 36 16`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ typing ]
 ! CONTROL:
@@ -75,8 +73,6 @@ Interfaces here work exclusively with character-strings; wire data must be decod
 	/element/
 		- (control)`property-set`
 		- (source/area)`37 1 37 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ tools ]
 ! CONTROL:
@@ -87,8 +83,6 @@ Interfaces here work exclusively with character-strings; wire data must be decod
 	/element/
 		- (control)`property-set`
 		- (source/area)`38 1 38 19`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ iana_registered_types ]
 ! CONTROL:
@@ -99,8 +93,6 @@ Interfaces here work exclusively with character-strings; wire data must be decod
 	/element/
 		- (control)`property-set`
 		- (source/area)`40 1 40 86`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	iana_registered_types = 'https://www.iana.org/assignments/media-types/media-types.xml'
 
@@ -113,8 +105,6 @@ Interfaces here work exclusively with character-strings; wire data must be decod
 	/element/
 		- (control)`property-set`
 		- (source/area)`42 1 135 24`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 #!source
 	types = {
 		'data': 'application/octet-stream', # browsers interpret this as a file download
@@ -218,8 +208,6 @@ Interfaces here work exclusively with character-strings; wire data must be decod
 	/element/
 		- (control)`property-set`
 		- (source/area)`136 1 149 41`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`6`
 (signature)`file_type(filename)`
 
 Identify the MIME type from a filename using common file extensions.
@@ -234,8 +222,6 @@ Unidentified extensions will likely return application/octets-stream.
 	/element/
 		- (control)`property-set`
 		- (source/area)`151 1 275 14`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`151 12 151 16`
@@ -265,8 +251,6 @@ The (factor-local/classmethod)&<#Type.from_string[from_string]> classmethod is t
 	/element/
 		- (control)`property-set`
 		- (source/area)`166 2 166 15`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	__slots__ = ()
 
@@ -279,8 +263,6 @@ The (factor-local/classmethod)&<#Type.from_string[from_string]> classmethod is t
 	/element/
 		- (control)`property-set`
 		- (source/area)`168 2 169 60`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`__str__(self)`
 
 
@@ -293,8 +275,6 @@ The (factor-local/classmethod)&<#Type.from_string[from_string]> classmethod is t
 	/element/
 		- (control)`property-set`
 		- (source/area)`171 2 183 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`7`
 (signature)`__bytes__(self)`
 
 
@@ -305,8 +285,6 @@ The (factor-local/classmethod)&<#Type.from_string[from_string]> classmethod is t
 	/element/
 		- (control)`property-set`
 		- (source/area)`184 2 198 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 Content Type; usually one of:
 
 - `application`
@@ -325,8 +303,6 @@ The initial part of a MIME (media) type.
 	/element/
 		- (control)`property-set`
 		- (source/area)`199 2 205 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 Subtype; the specific form of the (factor-local/property)&<#Type.cotype[cotype]>.
 
 
@@ -337,8 +313,6 @@ Subtype; the specific form of the (factor-local/property)&<#Type.cotype[cotype]>
 	/element/
 		- (control)`property-set`
 		- (source/area)`206 2 212 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 Parameters such as charset for encoding designation.
 
 
@@ -349,8 +323,6 @@ Parameters such as charset for encoding designation.
 	/element/
 		- (control)`property-set`
 		- (source/area)`213 2 217 24`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 		- (type/syntax)`bool`
 		- (type/invalid/unknown)&<#bool>
 		
@@ -364,8 +336,6 @@ Whether the (factor-local/class)&<#Type[Type]> is a pattern and can match multip
 	/element/
 		- (control)`property-set`
 		- (source/area)`219 2 226 72`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`3`
 (signature)`push(self, subtype)`
 
 Return a new (factor-local/class)&<#Type[Type]> with the given (factor-local/parameter)&<#Type.push.Parameters.subtype[subtype]> appended to the instance's (project-local/unknown)&<subtype>.
@@ -378,8 +348,6 @@ Return a new (factor-local/class)&<#Type[Type]> with the given (factor-local/par
 	/element/
 		- (control)`property-set`
 		- (source/area)`228 2 242 13`
-		- (coverage-zeros)`6`
-		- (coverage-counters)`6`
 (signature)`pop(self)`
 
 Return a new (factor-local/class)&<#Type[Type]> with the last '+'-delimited subtype removed. (inverse of push).
@@ -392,8 +360,6 @@ Return a new (factor-local/class)&<#Type[Type]> with the last '+'-delimited subt
 	/element/
 		- (control)`property-set`
 		- (source/area)`243 2 258 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`9`
 (signature)`from_bytes(Class, string, **parameters)`
 
 Split on the ';' and '/' separators and build an instance.
@@ -408,8 +374,6 @@ Additional parameters or overrides may be given using keywords.
 	/element/
 		- (control)`property-set`
 		- (source/area)`259 2 265 82`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`from_string(Class, string, **parameters)`
 
 Split on the ';' and '/' separators and build an instance.
@@ -426,8 +390,6 @@ Additional parameters or overrides may be given using keywords.
 	/element/
 		- (control)`property-set`
 		- (source/area)`267 2 275 14`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
 (signature)`__contains__(self, mtype)`
 
 
@@ -438,8 +400,6 @@ Additional parameters or overrides may be given using keywords.
 	/element/
 		- (control)`property-set`
 		- (source/area)`277 1 392 37`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`277 13 277 17`
@@ -466,8 +426,6 @@ highest precedence for each content type.
 	/element/
 		- (control)`property-set`
 		- (source/area)`289 2 291 14`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	__slots__ = ()
 		@staticmethod
@@ -479,8 +437,6 @@ highest precedence for each content type.
 	/element/
 		- (control)`property-set`
 		- (source/area)`292 2 322 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`17`
 (signature)`split(media_range)`
 
 Construct triples describing the (factor-local/parameter)&<#Range.split.Parameters.media_range[media_range]>.
@@ -493,8 +449,6 @@ Construct triples describing the (factor-local/parameter)&<#Range.split.Paramete
 	/element/
 		- (control)`property-set`
 		- (source/area)`323 2 330 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`from_string(Class, string)`
 
 Instantiate the Range from a string.
@@ -507,8 +461,6 @@ Instantiate the Range from a string.
 	/element/
 		- (control)`property-set`
 		- (source/area)`331 2 345 17`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`13`
 (signature)`from_bytes(Class, data)`
 
 Instantiate the Range from a bytes object; decoded and passed to (factor-local/classmethod)&<#Range.from_string[from_string]>.
@@ -521,8 +473,6 @@ Instantiate the Range from a bytes object; decoded and passed to (factor-local/c
 	/element/
 		- (control)`property-set`
 		- (source/area)`347 2 359 15`
-		- (coverage-zeros)`4`
-		- (coverage-counters)`4`
 (signature)`quality(self, mimetype)`
 
 Search for a single MIME type in the range.
@@ -541,8 +491,6 @@ the server may want to send XML anyways.
 	/element/
 		- (control)`property-set`
 		- (source/area)`361 2 392 37`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`16`
 (signature)`query(self, *available)`
 
 Given a sequence of mime types, return the best match
@@ -558,8 +506,6 @@ according to the qualities recorded in the range.
 	/element/
 		- (control)`property-set`
 		- (source/area)`394 1 394 40`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	any_type = Type(('*', '*', frozenset()))
 
@@ -572,8 +518,6 @@ according to the qualities recorded in the range.
 	/element/
 		- (control)`property-set`
 		- (source/area)`395 1 395 36`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	any_range = Range([(100, any_type)])
 
@@ -586,8 +530,6 @@ according to the qualities recorded in the range.
 	/element/
 		- (control)`property-set`
 		- (source/area)`398 1 398 58`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	type_from_bytes = functools.lru_cache(32)(Type.from_bytes)
 
@@ -600,8 +542,6 @@ according to the qualities recorded in the range.
 	/element/
 		- (control)`property-set`
 		- (source/area)`399 1 399 60`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	type_from_string = functools.lru_cache(32)(Type.from_string)
 
@@ -614,7 +554,5 @@ according to the qualities recorded in the range.
 	/element/
 		- (control)`property-set`
 		- (source/area)`400 1 400 62`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	range_from_string = functools.lru_cache(32)(Range.from_string)

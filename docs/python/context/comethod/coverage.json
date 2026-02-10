@@ -1,1 +1,1 @@
-{"Callable": [1, 0, []], "MethodType": [1, 0, []], "MethodNotFound": [1, 0, []], "Type.__slots__": [1, 0, []], "Type.__prepare__": [9, 0, []], "Type.__new__": [3, 0, []], "object": [2, 0, []], "object.__slots__": [1, 0, []], "object.__colookup__": [5, 3, [[57, 9, 57, 17], [58, 3, 58, 7], [60, 2, 60, 27]]], "object.__cobind__": [3, 0, []], "object.comethod": [3, 2, [[66, 2, 68, 5], [69, 2, 69, 59]]], "/comethod.py": [1, 0, []]}
+{"/comethod.py": []}

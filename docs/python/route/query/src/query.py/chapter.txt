@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 338 0`
-		- (coverage-zeros)`12`
-		- (coverage-counters)`184`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 Tools for navigating element trees.
 
 Provides the (factor-local/class)&<#Cursor[Cursor]> class for navigating and retrieving nodes identified
@@ -41,8 +41,6 @@ using a limited path language.
 	/element/
 		- (control)`property-set`
 		- (source/area)`8 1 8 16`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ functools ]
 ! CONTROL:
@@ -53,8 +51,6 @@ using a limited path language.
 	/element/
 		- (control)`property-set`
 		- (source/area)`9 1 9 16`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ comethod ]
 ! CONTROL:
@@ -65,8 +61,6 @@ using a limited path language.
 	/element/
 		- (control)`property-set`
 		- (source/area)`11 1 11 30`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ keywords ]
 ! CONTROL:
@@ -77,8 +71,6 @@ using a limited path language.
 	/element/
 		- (control)`property-set`
 		- (source/area)`12 1 12 29`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ InvalidPath ]
 ! CONTROL:
@@ -87,8 +79,6 @@ using a limited path language.
 	/element/
 		- (control)`property-set`
 		- (source/area)`14 1 17 4`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`14 19 14 27`
@@ -105,8 +95,6 @@ Path string given to (factor-local/method)&<#Context.prepare[Context.prepare]> w
 	/element/
 		- (control)`property-set`
 		- (source/area)`19 1 42 12`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`11`
 (signature)`iselement(subject)`
 
 Determines whether the given object has the properties of an element.
@@ -119,8 +107,6 @@ Determines whether the given object has the properties of an element.
 	/element/
 		- (control)`property-set`
 		- (source/area)`44 1 298 14`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`44 15 44 29`
@@ -137,8 +123,6 @@ Query expression context for parsing and interpreting paths.
 	/element/
 		- (control)`property-set`
 		- (source/area)`49 2 54 37`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`prepare(self, path)`
 
 Parse the path string into a selection plan.
@@ -153,8 +137,6 @@ Parse the path string into a selection plan.
 	/element/
 		- (control)`property-set`
 		- (source/area)`57 2 73 2`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	_paths_profile = keywords.Profile.from_keywords_v1(
 		routers = ["/"],
@@ -182,8 +164,6 @@ Parse the path string into a selection plan.
 	/element/
 		- (control)`property-set`
 		- (source/area)`74 2 74 72`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	_parser = keywords.Parser.from_profile(_paths_profile).process_document
 
@@ -196,8 +176,6 @@ Parse the path string into a selection plan.
 	/element/
 		- (control)`property-set`
 		- (source/area)`76 2 84 14`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`10`
 (signature)`__init__(self, selectors, aliases)`
 
 
@@ -210,8 +188,6 @@ Parse the path string into a selection plan.
 	/element/
 		- (control)`property-set`
 		- (source/area)`85 2 90 14`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`_identify_node(predicate, node)`
 
 
@@ -224,8 +200,6 @@ Parse the path string into a selection plan.
 	/element/
 		- (control)`property-set`
 		- (source/area)`91 2 103 14`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
 (signature)`_parse_slice(string)`
 
 
@@ -238,8 +212,6 @@ Parse the path string into a selection plan.
 	/element/
 		- (control)`property-set`
 		- (source/area)`104 2 117 15`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`10`
 (signature)`_read_string(itokens)`
 
 
@@ -250,8 +222,6 @@ Parse the path string into a selection plan.
 	/element/
 		- (control)`property-set`
 		- (source/area)`119 2 229 20`
-		- (coverage-zeros)`8`
-		- (coverage-counters)`72`
 (signature)`structure(self, tokens)`
 
 Process tokens into selector sequences.
@@ -267,8 +237,6 @@ Usually used indirectly by (factor-local/method)&<#Context.prepare[prepare]>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`230 2 235 19`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
 (signature)`_select(self, nodes, ident)`
 
 
@@ -281,8 +249,6 @@ Usually used indirectly by (factor-local/method)&<#Context.prepare[prepare]>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`236 2 239 23`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`_index(self, nodes, eslice)`
 
 
@@ -295,8 +261,6 @@ Usually used indirectly by (factor-local/method)&<#Context.prepare[prepare]>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`240 2 245 17`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
 (signature)`_predicate(self, nodes, title)`
 
 
@@ -309,8 +273,6 @@ Usually used indirectly by (factor-local/method)&<#Context.prepare[prepare]>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`246 2 250 20`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`_all(self, nodes, type)`
 
 
@@ -323,8 +285,6 @@ Usually used indirectly by (factor-local/method)&<#Context.prepare[prepare]>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`251 2 262 19`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`8`
 (signature)`_filter(self, nodes, *spec)`
 
 
@@ -337,8 +297,6 @@ Usually used indirectly by (factor-local/method)&<#Context.prepare[prepare]>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`263 2 270 19`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
 (signature)`_union(self, origin_nodes, exprnodes)`
 
 
@@ -351,8 +309,6 @@ Usually used indirectly by (factor-local/method)&<#Context.prepare[prepare]>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`272 2 273 59`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`switch(self, operation, nodes)`
 
 
@@ -365,8 +321,6 @@ Usually used indirectly by (factor-local/method)&<#Context.prepare[prepare]>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`275 2 298 14`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`13`
 (signature)`interpret(self, plan, root, context)`
 
 
@@ -377,8 +331,6 @@ Usually used indirectly by (factor-local/method)&<#Context.prepare[prepare]>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`300 1 338 76`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`300 14 300 19`
@@ -397,8 +349,6 @@ Navigation state class providing a query interface to an element tree.
 	/element/
 		- (control)`property-set`
 		- (source/area)`305 2 310 37`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
 (signature)`__init__(self, context, root)`
 
 
@@ -409,8 +359,6 @@ Navigation state class providing a query interface to an element tree.
 	/element/
 		- (control)`property-set`
 		- (source/area)`312 2 317 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`seek(self, path)`
 
 Adjust the cursor position to the nodes identified by (factor-local/parameter)&<#Cursor.seek.Parameters.path[path]>.
@@ -423,8 +371,6 @@ Adjust the cursor position to the nodes identified by (factor-local/parameter)&<
 	/element/
 		- (control)`property-set`
 		- (source/area)`319 2 324 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`reset(self)`
 
 Select the root as the current working node.
@@ -437,8 +383,6 @@ Select the root as the current working node.
 	/element/
 		- (control)`property-set`
 		- (source/area)`326 2 332 44`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`fork(self, path)`
 
 Create a new instance using the given (factor-local/parameter)&<#Cursor.fork.Parameters.path[path]> to the select the nodes
@@ -452,8 +396,6 @@ used as the root content of the new (factor-local/class)&<#Cursor[Cursor]>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`334 2 338 76`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`select(self, path)`
 
 Retrieve nodes relative to the context node using (factor-local/parameter)&<#Cursor.select.Parameters.path[path]>.

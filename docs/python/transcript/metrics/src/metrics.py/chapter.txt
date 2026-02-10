@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 295 0`
-		- (coverage-zeros)`14`
-		- (coverage-counters)`114`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 Data structures for storing and combining status metrics for progress notifications.
 
 
@@ -26,8 +26,6 @@ Data structures for storing and combining status metrics for progress notificati
 	/element/
 		- (control)`property-set`
 		- (source/area)`7 1 90 9`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 Work unit progress metrics.
 
 [ > Properties ]
@@ -55,8 +53,6 @@ Work unit progress metrics.
 	/element/
 		- (control)`property-set`
 		- (source/area)`22 2 22 15`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	m_symbol = '%'
 
@@ -69,8 +65,6 @@ Work unit progress metrics.
 	/element/
 		- (control)`property-set`
 		- (source/area)`24 2 24 20`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
@@ -86,8 +80,6 @@ Work unit progress metrics.
 	/element/
 		- (control)`property-set`
 		- (source/area)`25 2 25 20`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
@@ -103,8 +95,6 @@ Work unit progress metrics.
 	/element/
 		- (control)`property-set`
 		- (source/area)`26 2 26 19`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
@@ -120,8 +110,6 @@ Work unit progress metrics.
 	/element/
 		- (control)`property-set`
 		- (source/area)`27 2 29 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
@@ -136,8 +124,6 @@ Work unit progress metrics.
 	/element/
 		- (control)`property-set`
 		- (source/area)`30 2 36 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
@@ -151,8 +137,6 @@ Number of failed, executed, or granted Works Units.
 	/element/
 		- (control)`property-set`
 		- (source/area)`37 2 42 39`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
@@ -169,8 +153,6 @@ have not completed or failed.
 	/element/
 		- (control)`property-set`
 		- (source/area)`44 2 52 3`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`__str__(self)`
 
 
@@ -183,8 +165,6 @@ have not completed or failed.
 	/element/
 		- (control)`property-set`
 		- (source/area)`54 2 58 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 		- (type/syntax)`bool`
 		- (type/invalid/unknown)&<#bool>
 		
@@ -200,8 +180,6 @@ have not completed or failed.
 	/element/
 		- (control)`property-set`
 		- (source/area)`60 2 68 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`__add__(self, op)`
 
 
@@ -214,8 +192,6 @@ have not completed or failed.
 	/element/
 		- (control)`property-set`
 		- (source/area)`69 2 90 9`
-		- (coverage-zeros)`4`
-		- (coverage-counters)`12`
 (signature)`split(Class, text)`
 
 
@@ -226,8 +202,6 @@ have not completed or failed.
 	/element/
 		- (control)`property-set`
 		- (source/area)`91 1 151 9`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 Advisory messaging metrics.
 
 [ > Properties ]
@@ -251,8 +225,6 @@ Advisory messaging metrics.
 	/element/
 		- (control)`property-set`
 		- (source/area)`103 2 103 15`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	m_symbol = '@'
 
@@ -265,8 +237,6 @@ Advisory messaging metrics.
 	/element/
 		- (control)`property-set`
 		- (source/area)`105 2 105 19`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
@@ -282,8 +252,6 @@ Advisory messaging metrics.
 	/element/
 		- (control)`property-set`
 		- (source/area)`106 2 106 20`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
@@ -299,8 +267,6 @@ Advisory messaging metrics.
 	/element/
 		- (control)`property-set`
 		- (source/area)`107 2 109 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
@@ -315,8 +281,6 @@ Advisory messaging metrics.
 	/element/
 		- (control)`property-set`
 		- (source/area)`110 2 114 57`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
@@ -332,8 +296,6 @@ Total number of errors, warnings, and notices.
 	/element/
 		- (control)`property-set`
 		- (source/area)`116 2 121 5`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`__str__(self)`
 
 
@@ -346,8 +308,6 @@ Total number of errors, warnings, and notices.
 	/element/
 		- (control)`property-set`
 		- (source/area)`123 2 124 70`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 		- (type/syntax)`bool`
 		- (type/invalid/unknown)&<#bool>
 		
@@ -363,8 +323,6 @@ Total number of errors, warnings, and notices.
 	/element/
 		- (control)`property-set`
 		- (source/area)`126 2 133 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`__add__(self, op)`
 
 
@@ -377,8 +335,6 @@ Total number of errors, warnings, and notices.
 	/element/
 		- (control)`property-set`
 		- (source/area)`134 2 151 9`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`9`
 (signature)`split(Class, text)`
 
 
@@ -389,8 +345,6 @@ Total number of errors, warnings, and notices.
 	/element/
 		- (control)`property-set`
 		- (source/area)`152 1 211 9`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 Resource usage metrics.
 
 [ > Properties ]
@@ -417,8 +371,6 @@ Resource usage metrics.
 	/element/
 		- (control)`property-set`
 		- (source/area)`166 2 166 15`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	m_symbol = '$'
 
@@ -431,8 +383,6 @@ Resource usage metrics.
 	/element/
 		- (control)`property-set`
 		- (source/area)`168 2 168 21`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
@@ -448,8 +398,6 @@ Resource usage metrics.
 	/element/
 		- (control)`property-set`
 		- (source/area)`169 2 169 18`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
@@ -465,8 +413,6 @@ Resource usage metrics.
 	/element/
 		- (control)`property-set`
 		- (source/area)`170 2 170 19`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
@@ -482,8 +428,6 @@ Resource usage metrics.
 	/element/
 		- (control)`property-set`
 		- (source/area)`171 2 171 16`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
@@ -499,8 +443,6 @@ Resource usage metrics.
 	/element/
 		- (control)`property-set`
 		- (source/area)`173 2 179 4`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -516,8 +458,6 @@ Resource usage metrics.
 	/element/
 		- (control)`property-set`
 		- (source/area)`181 2 182 87`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 		- (type/syntax)`bool`
 		- (type/invalid/unknown)&<#bool>
 		
@@ -533,8 +473,6 @@ Resource usage metrics.
 	/element/
 		- (control)`property-set`
 		- (source/area)`184 2 192 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`__add__(self, op)`
 
 
@@ -547,8 +485,6 @@ Resource usage metrics.
 	/element/
 		- (control)`property-set`
 		- (source/area)`193 2 211 9`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`9`
 (signature)`split(Class, text)`
 
 
@@ -559,8 +495,6 @@ Resource usage metrics.
 	/element/
 		- (control)`property-set`
 		- (source/area)`212 1 295 20`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
 Collection of metrics regarding the status of an Abstract Procedure.
 
 [ > Properties ]
@@ -584,8 +518,6 @@ Collection of metrics regarding the status of an Abstract Procedure.
 	/element/
 		- (control)`property-set`
 		- (source/area)`229 2 238 13`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`3`
 (signature)`__iter__(self)`
 
 
@@ -596,8 +528,6 @@ Collection of metrics regarding the status of an Abstract Procedure.
 	/element/
 		- (control)`property-set`
 		- (source/area)`239 2 243 46`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`create(Class)`
 
 Create an empty Procedure.
@@ -612,8 +542,6 @@ Create an empty Procedure.
 	/element/
 		- (control)`property-set`
 		- (source/area)`245 2 254 19`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`6`
 (signature)`__getitem__(self, path)`
 
 
@@ -626,8 +554,6 @@ Create an empty Procedure.
 	/element/
 		- (control)`property-set`
 		- (source/area)`256 2 261 3`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`10`
 (signature)`__add__(self, operand)`
 
 
@@ -640,8 +566,6 @@ Create an empty Procedure.
 	/element/
 		- (control)`property-set`
 		- (source/area)`263 2 269 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	_metrics_symbols = {
 		'%': ('work', Work),
@@ -657,8 +581,6 @@ Create an empty Procedure.
 	/element/
 		- (control)`property-set`
 		- (source/area)`270 2 281 24`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`7`
 (signature)`structure(Class, text)`
 
 Structure progress text into a (invalid/unknown)&<#Metrics> instance.
@@ -671,8 +593,6 @@ Structure progress text into a (invalid/unknown)&<#Metrics> instance.
 	/element/
 		- (control)`property-set`
 		- (source/area)`283 2 295 20`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`9`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		

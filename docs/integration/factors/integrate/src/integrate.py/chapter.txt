@@ -160,15 +160,15 @@ Factor integration execution for building images using a system context.
 		- (source/area)`22 1 31 1`
 #!source
 	executable_features = {
-		'-m': ('set-add', 'metrics', 'features'),
-	
 		'-o': ('set-add', 'portable', 'features'),
 		'-O': ('set-add', 'optimal', 'features'),
 		'-g': ('set-add', 'debug', 'features'),
-	
-		'--profile': ('set-add', 'profile', 'features'),
-		'--coverage': ('set-add', 'coverage', 'features'),
 	}
+	
+	metrics_instrumentation = {
+		'-m': ('set-add', 'metrics'),
+	}
+	
 
 [ restricted ]
 ! CONTROL:
@@ -180,21 +180,18 @@ Factor integration execution for building images using a system context.
 		- (control)`property-set`
 		- (source/area)`33 1 46 1`
 #!source
-	restricted = {
-		# Reprocess levels.
-		'-N': ('field-replace', -1, 'relevel'),
-		'-n': ('field-replace', +0, 'relevel'),
-		'-r': ('field-replace', +1, 'relevel'),
-		'-R': ('field-replace', +2, 'relevel'),
-	
+	# Reprocess levels.
+	'-N': ('field-replace', -1, 'relevel'),
+	'-n': ('field-replace', +0, 'relevel'),
+	'-r': ('field-replace', +1, 'relevel'),
+	'-R': ('field-replace', +2, 'relevel'),
+		# Switch control; only relevant with caching.
+	'-s': ('field-replace', 'never', 'switch-image'),
+	'-S': ('field-replace', 'always', 'switch-image'),
 		# Defaults to update when missing.
-		'-u': ('field-replace', 'never', 'update-product-index'),
-		'-U': ('field-replace', 'always', 'update-product-index'),
+	'-u': ('field-replace', 'never', 'update-product-index'),
+	'-U': ('field-replace', 'always', 'update-product-index'),
 	
-		'-c': ('field-replace', 'transient', 'cache-type'),
-		'-.': ('ignore', None, None),
-	}
-
 [ required ]
 ! CONTROL:
 	/type/
@@ -205,14 +202,14 @@ Factor integration execution for building images using a system context.
 		- (control)`property-set`
 		- (source/area)`48 1 55 1`
 #!source
+		'-.': ('ignore', None, None),
+	
+		'--closed-frames': ('field-replace', False, 'opened-frames'),
+		'--opened-frames': ('field-replace', True, 'opened-frames'),
+	}
+	
 	required = {
 		'-x': ('field-replace', 'machines-context-name'),
-		'-X': ('field-replace', 'system-context-directory'),
-	
-		'-D': ('field-replace', 'product-directory'),
-		'-L': ('field-replace', 'processing-lanes'),
-		'-M': ('field-replace', 'status-monitors'),
-		'-C': ('field-replace', 'persistent-cache'),
 
 [ plan ]
 ! CONTROL:

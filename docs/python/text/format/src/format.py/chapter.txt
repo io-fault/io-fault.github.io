@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 826 0`
-		- (coverage-zeros)`63`
-		- (coverage-counters)`384`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 Parser implementation and supporting tools for the fault-text format.
 
 The parser is hand rolled in order to easily accommodate for grammar
@@ -54,8 +54,6 @@ implementation coherency should result in a rewrite.
 	/element/
 		- (control)`property-set`
 		- (source/area)`21 1 21 15`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ itertools ]
 ! CONTROL:
@@ -66,8 +64,6 @@ implementation coherency should result in a rewrite.
 	/element/
 		- (control)`property-set`
 		- (source/area)`22 1 22 16`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ string ]
 ! CONTROL:
@@ -78,8 +74,6 @@ implementation coherency should result in a rewrite.
 	/element/
 		- (control)`property-set`
 		- (source/area)`24 1 24 28`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ tools ]
 ! CONTROL:
@@ -90,8 +84,6 @@ implementation coherency should result in a rewrite.
 	/element/
 		- (control)`property-set`
 		- (source/area)`25 1 25 27`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ Tree ]
 ! CONTROL:
@@ -102,8 +94,6 @@ implementation coherency should result in a rewrite.
 	/element/
 		- (control)`property-set`
 		- (source/area)`28 1 28 44`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	Tree = tuple[str, Sequence['Tree'], Mapping]
 
@@ -114,8 +104,6 @@ implementation coherency should result in a rewrite.
 	/element/
 		- (control)`property-set`
 		- (source/area)`30 1 54 40`
-		- (coverage-zeros)`7`
-		- (coverage-counters)`13`
 		- (type/syntax)`tuple[int, Sequence[str]]`
 		
 (signature)`parse_section_selector(string)`
@@ -132,8 +120,6 @@ given (factor-local/parameter)&<#parse_section_selector.Parameters.string[string
 	/element/
 		- (control)`property-set`
 		- (source/area)`58 1 82 22`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`58 14 58 19`
@@ -153,8 +139,6 @@ to be processed by the appropriate context.
 	/element/
 		- (control)`property-set`
 		- (source/area)`63 2 63 27`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	__slots__ = ('iterators',)
 
@@ -167,8 +151,6 @@ to be processed by the appropriate context.
 	/element/
 		- (control)`property-set`
 		- (source/area)`65 2 66 35`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`__init__(self, iterator)`
 
 
@@ -181,8 +163,6 @@ to be processed by the appropriate context.
 	/element/
 		- (control)`property-set`
 		- (source/area)`68 2 69 40`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`replay(self, *events)`
 
 
@@ -195,8 +175,6 @@ to be processed by the appropriate context.
 	/element/
 		- (control)`property-set`
 		- (source/area)`71 2 72 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`__iter__(self)`
 
 
@@ -209,8 +187,6 @@ to be processed by the appropriate context.
 	/element/
 		- (control)`property-set`
 		- (source/area)`74 2 82 22`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
 (signature)`__next__(self)`
 
 
@@ -221,8 +197,6 @@ to be processed by the appropriate context.
 	/element/
 		- (control)`property-set`
 		- (source/area)`84 1 826 46`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`84 14 84 19`
@@ -258,8 +232,6 @@ Configuration and state class for parsing kleptic text.
 	/element/
 		- (control)`property-set`
 		- (source/area)`103 2 113 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`__init__(self)`
 
 Create a new parser instance initializing the (invalid/unknown)&<#stack> with the (factor-local/data)&<#Parser.default_commands[default_commands]>,
@@ -273,8 +245,6 @@ and (factor-local/method)&<#Parser.process_paragraph_line[process_paragraph_line
 	/element/
 		- (control)`property-set`
 		- (source/area)`114 2 118 27`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 Return the set of commands for the current working processor.
 
 
@@ -285,8 +255,6 @@ Return the set of commands for the current working processor.
 	/element/
 		- (control)`property-set`
 		- (source/area)`120 2 165 10`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`16`
 (signature)`reference(self, string)`
 
 Split the string at the reference's boundary.
@@ -305,8 +273,6 @@ the indicator removed.
 	/element/
 		- (control)`property-set`
 		- (source/area)`166 2 171 23`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 The current processing method, command set, and indentation level.
 Top of the (invalid/unknown)&<#stack>.
 
@@ -320,8 +286,6 @@ Top of the (invalid/unknown)&<#stack>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`173 2 174 44`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`push(self, proc, il, command_set)`
 
 
@@ -334,8 +298,6 @@ Top of the (invalid/unknown)&<#stack>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`176 2 177 20`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`pop(self)`
 
 
@@ -346,8 +308,6 @@ Top of the (invalid/unknown)&<#stack>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`179 2 192 14`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
 (signature)`is_decoration(self, stripped)`
 
 Determine if the line is a decoration.
@@ -360,8 +320,6 @@ Determine if the line is a decoration.
 	/element/
 		- (control)`property-set`
 		- (source/area)`193 2 227 30`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`25`
 (signature)`emphasis(text)`
 
 Return a sequence of paragraph events noting the emphasis areas versus
@@ -375,8 +333,6 @@ regular text.
 	/element/
 		- (control)`property-set`
 		- (source/area)`229 2 256 24`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`12`
 (signature)`styles(self, string, edge)`
 
 Identify the styles and references for the given string.
@@ -415,8 +371,6 @@ Identify the styles and references for the given string.
 	/element/
 		- (control)`property-set`
 		- (source/area)`258 2 307 18`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`23`
 (signature)`structure_paragraph_line(self, line)`
 
 Structure the paragraph line revealing emphasis,
@@ -430,8 +384,6 @@ references, and inline literals.
 	/element/
 		- (control)`property-set`
 		- (source/area)`309 2 326 46`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`10`
 (signature)`process_paragraph_line(self, lineno, code, il, line)`
 
 Process a paragraph line identifying inline literals, references and emphasis.
@@ -446,8 +398,6 @@ Process a paragraph line identifying inline literals, references and emphasis.
 	/element/
 		- (control)`property-set`
 		- (source/area)`328 2 331 74`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`process_literal_line(self, lineno, code, il, line)`
 
 
@@ -460,8 +410,6 @@ Process a paragraph line identifying inline literals, references and emphasis.
 	/element/
 		- (control)`property-set`
 		- (source/area)`333 2 353 66`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`12`
 (signature)`select_section(self, lineno, code, il, line)`
 
 
@@ -472,8 +420,6 @@ Process a paragraph line identifying inline literals, references and emphasis.
 	/element/
 		- (control)`property-set`
 		- (source/area)`355 2 370 61`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`9`
 (signature)`create_admonition(self, lineno, code, il, line)`
 
 Lines that begin with "!":
@@ -489,8 +435,6 @@ Lines that begin with "!":
 	/element/
 		- (control)`property-set`
 		- (source/area)`372 2 381 61`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
 (signature)`create_block(self, lineno, code, il, line)`
 
 Code block of literal lines.
@@ -505,8 +449,6 @@ Code block of literal lines.
 	/element/
 		- (control)`property-set`
 		- (source/area)`383 2 413 63`
-		- (coverage-zeros)`8`
-		- (coverage-counters)`16`
 (signature)`create_variable_item(self, lineno, code, il, line)`
 
 
@@ -519,8 +461,6 @@ Code block of literal lines.
 	/element/
 		- (control)`property-set`
 		- (source/area)`415 2 420 49`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`4`
 (signature)`create_enumerated_item(self, lineno, code, il, line)`
 
 
@@ -533,8 +473,6 @@ Code block of literal lines.
 	/element/
 		- (control)`property-set`
 		- (source/area)`422 2 427 48`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`4`
 (signature)`create_unordered_item(self, lineno, code, il, line)`
 
 
@@ -547,8 +485,6 @@ Code block of literal lines.
 	/element/
 		- (control)`property-set`
 		- (source/area)`429 2 430 56`
-		- (coverage-zeros)`32`
-		- (coverage-counters)`163`
 (signature)`process(self, lineno, code, il, line)`
 
 
@@ -561,8 +497,6 @@ Code block of literal lines.
 	/element/
 		- (control)`property-set`
 		- (source/area)`432 2 446 2`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	default_commands = {
 		'[': select_section,
@@ -585,8 +519,6 @@ Code block of literal lines.
 	/element/
 		- (control)`property-set`
 		- (source/area)`448 2 497 62`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`28`
 (signature)`tokenize(self, lines)`
 
 Tokenize the given source returning an iterator producing text events.
@@ -602,8 +534,6 @@ Tokenize the given source returning an iterator producing text events.
 	/element/
 		- (control)`property-set`
 		- (source/area)`499 2 806 7`
-		- (coverage-zeros)`32`
-		- (coverage-counters)`163`
 (signature)`process(self, sections, root, element, indentation, iterator)`
 
 
@@ -614,8 +544,6 @@ Tokenize the given source returning an iterator producing text events.
 	/element/
 		- (control)`property-set`
 		- (source/area)`808 2 820 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`7`
 		- (type/syntax)`Tree`
 		- (type/factor-local/data)&<#Tree[Tree]>
 		
@@ -631,8 +559,6 @@ Structure the given (factor-local/parameter)&<#Parser.structure.Parameters.lines
 	/element/
 		- (control)`property-set`
 		- (source/area)`822 2 826 46`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`3`
 		- (type/syntax)`Tree`
 		- (type/factor-local/data)&<#Tree[Tree]>
 		

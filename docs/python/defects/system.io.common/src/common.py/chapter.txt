@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 712 0`
-		- (coverage-zeros)`41`
-		- (coverage-counters)`393`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 Common tools and tests employed across fault.defects.system.io tests.
 
 
@@ -28,8 +28,6 @@ Common tools and tests employed across fault.defects.system.io tests.
 	/element/
 		- (control)`property-set`
 		- (source/area)`5 1 5 16`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ contextlib ]
 ! CONTROL:
@@ -40,8 +38,6 @@ Common tools and tests employed across fault.defects.system.io tests.
 	/element/
 		- (control)`property-set`
 		- (source/area)`6 1 6 17`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ os ]
 ! CONTROL:
@@ -52,8 +48,6 @@ Common tools and tests employed across fault.defects.system.io tests.
 	/element/
 		- (control)`property-set`
 		- (source/area)`7 1 7 9`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ socket ]
 ! CONTROL:
@@ -64,8 +58,6 @@ Common tools and tests employed across fault.defects.system.io tests.
 	/element/
 		- (control)`property-set`
 		- (source/area)`8 1 8 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ time ]
 ! CONTROL:
@@ -76,8 +68,6 @@ Common tools and tests employed across fault.defects.system.io tests.
 	/element/
 		- (control)`property-set`
 		- (source/area)`9 1 9 11`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ io ]
 ! CONTROL:
@@ -88,8 +78,6 @@ Common tools and tests employed across fault.defects.system.io tests.
 	/element/
 		- (control)`property-set`
 		- (source/area)`10 1 10 25`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ network ]
 ! CONTROL:
@@ -100,8 +88,6 @@ Common tools and tests employed across fault.defects.system.io tests.
 	/element/
 		- (control)`property-set`
 		- (source/area)`11 1 11 30`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ kernel ]
 ! CONTROL:
@@ -112,8 +98,6 @@ Common tools and tests employed across fault.defects.system.io tests.
 	/element/
 		- (control)`property-set`
 		- (source/area)`12 1 12 29`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ thread ]
 ! CONTROL:
@@ -124,8 +108,6 @@ Common tools and tests employed across fault.defects.system.io tests.
 	/element/
 		- (control)`property-set`
 		- (source/area)`13 1 13 29`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ allocpipe ]
 ! CONTROL:
@@ -136,8 +118,6 @@ Common tools and tests employed across fault.defects.system.io tests.
 	/element/
 		- (control)`property-set`
 		- (source/area)`15 1 20 2`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`allocpipe(A)`
 
 
@@ -150,8 +130,6 @@ Common tools and tests employed across fault.defects.system.io tests.
 	/element/
 		- (control)`property-set`
 		- (source/area)`22 1 28 15`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
 (signature)`allocsockets(A)`
 
 
@@ -164,8 +142,6 @@ Common tools and tests employed across fault.defects.system.io tests.
 	/element/
 		- (control)`property-set`
 		- (source/area)`30 1 36 15`
-		- (coverage-zeros)`6`
-		- (coverage-counters)`6`
 (signature)`allocports(A)`
 
 
@@ -178,8 +154,6 @@ Common tools and tests employed across fault.defects.system.io tests.
 	/element/
 		- (control)`property-set`
 		- (source/area)`38 1 40 1`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	ralloc_index = {
 		io.Octets: bytearray,
@@ -194,8 +168,6 @@ Common tools and tests employed across fault.defects.system.io tests.
 	/element/
 		- (control)`property-set`
 		- (source/area)`42 1 43 49`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`rallocate(channel, quantity)`
 
 
@@ -208,8 +180,6 @@ Common tools and tests employed across fault.defects.system.io tests.
 	/element/
 		- (control)`property-set`
 		- (source/area)`45 1 46 5`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`45 18 45 26`
@@ -242,8 +212,6 @@ Common tools and tests employed across fault.defects.system.io tests.
 	/element/
 		- (control)`property-set`
 		- (source/area)`49 2 51 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	__slots__ = ()
 		@property
@@ -257,8 +225,6 @@ Common tools and tests employed across fault.defects.system.io tests.
 	/element/
 		- (control)`property-set`
 		- (source/area)`52 2 55 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ Delta >> demand ]
 ! CONTROL:
@@ -269,8 +235,6 @@ Common tools and tests employed across fault.defects.system.io tests.
 	/element/
 		- (control)`property-set`
 		- (source/area)`56 2 59 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ Delta >> termination ]
 ! CONTROL:
@@ -281,8 +245,6 @@ Common tools and tests employed across fault.defects.system.io tests.
 	/element/
 		- (control)`property-set`
 		- (source/area)`60 2 65 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 
 [ Delta >> terminated ]
 ! CONTROL:
@@ -293,8 +255,6 @@ Common tools and tests employed across fault.defects.system.io tests.
 	/element/
 		- (control)`property-set`
 		- (source/area)`66 2 69 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ Delta >> resource ]
 ! CONTROL:
@@ -305,8 +265,6 @@ Common tools and tests employed across fault.defects.system.io tests.
 	/element/
 		- (control)`property-set`
 		- (source/area)`70 2 73 10`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 
 [ Delta >> slice ]
 ! CONTROL:
@@ -317,8 +275,6 @@ Common tools and tests employed across fault.defects.system.io tests.
 	/element/
 		- (control)`property-set`
 		- (source/area)`74 2 77 10`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 
 [ Delta >> transferred ]
 ! CONTROL:
@@ -329,8 +285,6 @@ Common tools and tests employed across fault.defects.system.io tests.
 	/element/
 		- (control)`property-set`
 		- (source/area)`78 2 83 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 
 [ Delta >> construct ]
 ! CONTROL:
@@ -341,8 +295,6 @@ Common tools and tests employed across fault.defects.system.io tests.
 	/element/
 		- (control)`property-set`
 		- (source/area)`84 2 92 70`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`7`
 (signature)`construct(typ, channel)`
 
 
@@ -355,8 +307,6 @@ Common tools and tests employed across fault.defects.system.io tests.
 	/element/
 		- (control)`property-set`
 		- (source/area)`94 1 97 46`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`snapshot(array)`
 
 
@@ -369,8 +319,6 @@ Common tools and tests employed across fault.defects.system.io tests.
 	/element/
 		- (control)`property-set`
 		- (source/area)`99 1 101 24`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`cycle(array)`
 
 
@@ -381,8 +329,6 @@ Common tools and tests employed across fault.defects.system.io tests.
 	/element/
 		- (control)`property-set`
 		- (source/area)`103 1 114 6`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`7`
 (signature)`loop(deliver, array)`
 
 Continuously (factor-local/parameter)&<#loop.Parameters.deliver[deliver]> transfers enqueued into the (factor-local/parameter)&<#loop.Parameters.array[array]>.
@@ -395,8 +341,6 @@ Continuously (factor-local/parameter)&<#loop.Parameters.deliver[deliver]> transf
 	/element/
 		- (control)`property-set`
 		- (source/area)`116 1 209 14`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`116 26 116 31`
@@ -416,8 +360,6 @@ of event collection.
 	/element/
 		- (control)`property-set`
 		- (source/area)`122 2 127 19`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
 (signature)`__init__(self)`
 
 
@@ -428,8 +370,6 @@ of event collection.
 	/element/
 		- (control)`property-set`
 		- (source/area)`129 2 144 15`
-		- (coverage-zeros)`7`
-		- (coverage-counters)`7`
 (signature)`view(self)`
 
 Utility function for displaying the contents of a Array.
@@ -444,8 +384,6 @@ Utility function for displaying the contents of a Array.
 	/element/
 		- (control)`property-set`
 		- (source/area)`146 2 147 20`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`force(self)`
 
 
@@ -458,8 +396,6 @@ Utility function for displaying the contents of a Array.
 	/element/
 		- (control)`property-set`
 		- (source/area)`149 2 156 20`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`cycle(self, activity)`
 
 
@@ -472,8 +408,6 @@ Utility function for displaying the contents of a Array.
 	/element/
 		- (control)`property-set`
 		- (source/area)`158 2 161 27`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`loop(self)`
 
 
@@ -486,8 +420,6 @@ Utility function for displaying the contents of a Array.
 	/element/
 		- (control)`property-set`
 		- (source/area)`162 2 172 27`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`7`
 (signature)`thread(self)`
 
 
@@ -500,8 +432,6 @@ Utility function for displaying the contents of a Array.
 	/element/
 		- (control)`property-set`
 		- (source/area)`173 2 190 9`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`14`
 (signature)`manage(self, ct)`
 
 
@@ -512,8 +442,6 @@ Utility function for displaying the contents of a Array.
 	/element/
 		- (control)`property-set`
 		- (source/area)`192 2 209 14`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`8`
 (signature)`delta(self)`
 
 Wait for a cycle to occur; use to regulate transfer progress.
@@ -526,8 +454,6 @@ Wait for a cycle to occur; use to regulate transfer progress.
 	/element/
 		- (control)`property-set`
 		- (source/area)`211 1 292 22`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`211 14 211 19`
@@ -548,8 +474,6 @@ No autoread setup.
 	/element/
 		- (control)`property-set`
 		- (source/area)`217 2 223 39`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
 (signature)`__init__(self, *channels)`
 
 
@@ -562,8 +486,6 @@ No autoread setup.
 	/element/
 		- (control)`property-set`
 		- (source/area)`225 2 227 16`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`terminate(self)`
 
 
@@ -576,8 +498,6 @@ No autoread setup.
 	/element/
 		- (control)`property-set`
 		- (source/area)`229 2 232 29`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`3`
 (signature)`_term_check(self)`
 
 
@@ -590,8 +510,6 @@ No autoread setup.
 	/element/
 		- (control)`property-set`
 		- (source/area)`234 2 236 18`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`raised(self)`
 
 
@@ -604,8 +522,6 @@ No autoread setup.
 	/element/
 		- (control)`property-set`
 		- (source/area)`238 2 245 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`vacancies(self)`
 
 
@@ -618,8 +534,6 @@ No autoread setup.
 	/element/
 		- (control)`property-set`
 		- (source/area)`246 2 250 14`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 
 [ Events >> exhausted ]
 ! CONTROL:
@@ -630,8 +544,6 @@ No autoread setup.
 	/element/
 		- (control)`property-set`
 		- (source/area)`252 2 259 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`exhausted(self)`
 
 
@@ -644,8 +556,6 @@ No autoread setup.
 	/element/
 		- (control)`property-set`
 		- (source/area)`260 2 263 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ Events >> sockets ]
 ! CONTROL:
@@ -656,8 +566,6 @@ No autoread setup.
 	/element/
 		- (control)`property-set`
 		- (source/area)`264 2 269 16`
-		- (coverage-zeros)`5`
-		- (coverage-counters)`5`
 
 [ Events >> get_data ]
 ! CONTROL:
@@ -668,8 +576,6 @@ No autoread setup.
 	/element/
 		- (control)`property-set`
 		- (source/area)`271 2 279 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
 (signature)`get_data(self)`
 
 
@@ -682,8 +588,6 @@ No autoread setup.
 	/element/
 		- (control)`property-set`
 		- (source/area)`280 2 281 24`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ Events >> clear ]
 ! CONTROL:
@@ -694,8 +598,6 @@ No autoread setup.
 	/element/
 		- (control)`property-set`
 		- (source/area)`283 2 284 25`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`clear(self)`
 
 
@@ -708,8 +610,6 @@ No autoread setup.
 	/element/
 		- (control)`property-set`
 		- (source/area)`286 2 288 36`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`setup_read(self, quantity)`
 
 
@@ -722,8 +622,6 @@ No autoread setup.
 	/element/
 		- (control)`property-set`
 		- (source/area)`290 2 292 22`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`setup_write(self, resource)`
 
 
@@ -734,8 +632,6 @@ No autoread setup.
 	/element/
 		- (control)`property-set`
 		- (source/area)`294 1 394 38`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`294 16 294 21`
@@ -754,8 +650,6 @@ For cases involving send and receives.
 	/element/
 		- (control)`property-set`
 		- (source/area)`299 2 311 3`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
 (signature)`__init__(self, channels)`
 
 
@@ -768,8 +662,6 @@ For cases involving send and receives.
 	/element/
 		- (control)`property-set`
 		- (source/area)`313 2 320 35`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
 (signature)`_read_event(self, activity)`
 
 
@@ -782,8 +674,6 @@ For cases involving send and receives.
 	/element/
 		- (control)`property-set`
 		- (source/area)`322 2 324 16`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`terminate(self)`
 
 
@@ -796,8 +686,6 @@ For cases involving send and receives.
 	/element/
 		- (control)`property-set`
 		- (source/area)`326 2 328 86`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`2`
 (signature)`_write_term_check(self)`
 
 
@@ -810,8 +698,6 @@ For cases involving send and receives.
 	/element/
 		- (control)`property-set`
 		- (source/area)`330 2 334 10`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`2`
 (signature)`_read_term_check(self)`
 
 
@@ -824,8 +710,6 @@ For cases involving send and receives.
 	/element/
 		- (control)`property-set`
 		- (source/area)`335 2 339 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 
 [ Endpoint >> write_exhaustions ]
 ! CONTROL:
@@ -836,8 +720,6 @@ For cases involving send and receives.
 	/element/
 		- (control)`property-set`
 		- (source/area)`340 2 344 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 
 [ Endpoint >> read_payload_int ]
 ! CONTROL:
@@ -848,8 +730,6 @@ For cases involving send and receives.
 	/element/
 		- (control)`property-set`
 		- (source/area)`345 2 353 10`
-		- (coverage-zeros)`6`
-		- (coverage-counters)`6`
 
 [ Endpoint >> read_payload ]
 ! CONTROL:
@@ -860,8 +740,6 @@ For cases involving send and receives.
 	/element/
 		- (control)`property-set`
 		- (source/area)`354 2 362 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
 
 [ Endpoint >> units_written ]
 ! CONTROL:
@@ -872,8 +750,6 @@ For cases involving send and receives.
 	/element/
 		- (control)`property-set`
 		- (source/area)`363 2 369 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 
 [ Endpoint >> units_read ]
 ! CONTROL:
@@ -884,8 +760,6 @@ For cases involving send and receives.
 	/element/
 		- (control)`property-set`
 		- (source/area)`370 2 374 4`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 
 [ Endpoint >> clear ]
 ! CONTROL:
@@ -896,8 +770,6 @@ For cases involving send and receives.
 	/element/
 		- (control)`property-set`
 		- (source/area)`376 2 379 22`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`clear(self)`
 
 
@@ -910,8 +782,6 @@ For cases involving send and receives.
 	/element/
 		- (control)`property-set`
 		- (source/area)`381 2 383 22`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`clear_reads(self)`
 
 
@@ -924,8 +794,6 @@ For cases involving send and receives.
 	/element/
 		- (control)`property-set`
 		- (source/area)`385 2 386 26`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`clear_writes(self)`
 
 
@@ -938,8 +806,6 @@ For cases involving send and receives.
 	/element/
 		- (control)`property-set`
 		- (source/area)`388 2 390 70`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`setup_read(self, rallocation)`
 
 
@@ -952,8 +818,6 @@ For cases involving send and receives.
 	/element/
 		- (control)`property-set`
 		- (source/area)`392 2 394 38`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`setup_write(self, resource)`
 
 
@@ -964,8 +828,6 @@ For cases involving send and receives.
 	/element/
 		- (control)`property-set`
 		- (source/area)`396 1 459 31`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`396 15 396 20`
@@ -984,8 +846,6 @@ Endpoint that transfers objects.
 	/element/
 		- (control)`property-set`
 		- (source/area)`401 2 415 62`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
 (signature)`__init__(self, channels)`
 
 
@@ -998,8 +858,6 @@ Endpoint that transfers objects.
 	/element/
 		- (control)`property-set`
 		- (source/area)`417 2 430 38`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`10`
 (signature)`_read_event(self, activity)`
 
 
@@ -1012,8 +870,6 @@ Endpoint that transfers objects.
 	/element/
 		- (control)`property-set`
 		- (source/area)`432 2 434 26`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`_write_event(self, activity)`
 
 
@@ -1026,8 +882,6 @@ Endpoint that transfers objects.
 	/element/
 		- (control)`property-set`
 		- (source/area)`436 2 438 16`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`terminate(self)`
 
 
@@ -1040,8 +894,6 @@ Endpoint that transfers objects.
 	/element/
 		- (control)`property-set`
 		- (source/area)`440 2 442 86`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`2`
 (signature)`_write_term_check(self)`
 
 
@@ -1054,8 +906,6 @@ Endpoint that transfers objects.
 	/element/
 		- (control)`property-set`
 		- (source/area)`444 2 448 10`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 (signature)`_read_term_check(self)`
 
 
@@ -1068,8 +918,6 @@ Endpoint that transfers objects.
 	/element/
 		- (control)`property-set`
 		- (source/area)`449 2 451 37`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 
 [ Objects >> clear ]
 ! CONTROL:
@@ -1080,8 +928,6 @@ Endpoint that transfers objects.
 	/element/
 		- (control)`property-set`
 		- (source/area)`453 2 454 30`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`clear(self)`
 
 
@@ -1094,8 +940,6 @@ Endpoint that transfers objects.
 	/element/
 		- (control)`property-set`
 		- (source/area)`456 2 459 31`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`send(self, obj)`
 
 
@@ -1108,8 +952,6 @@ Endpoint that transfers objects.
 	/element/
 		- (control)`property-set`
 		- (source/area)`461 1 462 5`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`exchange_nothing(test, am, client, server)`
 
 
@@ -1122,8 +964,6 @@ Endpoint that transfers objects.
 	/element/
 		- (control)`property-set`
 		- (source/area)`464 1 501 54`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`29`
 (signature)`exchange_few_bytes(test, am, client, server)`
 
 
@@ -1136,8 +976,6 @@ Endpoint that transfers objects.
 	/element/
 		- (control)`property-set`
 		- (source/area)`503 1 539 41`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`27`
 (signature)`exchange_many_bytes(test, am, client, server)`
 
 
@@ -1150,8 +988,6 @@ Endpoint that transfers objects.
 	/element/
 		- (control)`property-set`
 		- (source/area)`541 1 571 16`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`23`
 (signature)`exchange_many_bytes_many_times(test, am, client, server)`
 
 
@@ -1164,8 +1000,6 @@ Endpoint that transfers objects.
 	/element/
 		- (control)`property-set`
 		- (source/area)`573 1 586 8`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`12`
 (signature)`exchange_kilobytes(test, am, client, server)`
 
 
@@ -1178,8 +1012,6 @@ Endpoint that transfers objects.
 	/element/
 		- (control)`property-set`
 		- (source/area)`588 1 594 1`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	transfer_cases = [
 		exchange_nothing,
@@ -1198,8 +1030,6 @@ Endpoint that transfers objects.
 	/element/
 		- (control)`property-set`
 		- (source/area)`596 1 616 16`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`13`
 (signature)`echo_objects(test, am, client, server)`
 
 
@@ -1212,8 +1042,6 @@ Endpoint that transfers objects.
 	/element/
 		- (control)`property-set`
 		- (source/area)`618 1 620 1`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	object_transfer_cases = [
 		echo_objects,
@@ -1228,7 +1056,5 @@ Endpoint that transfers objects.
 	/element/
 		- (control)`property-set`
 		- (source/area)`622 1 712 33`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`66`
 (signature)`stream_listening_connection(test, version, address)`
 

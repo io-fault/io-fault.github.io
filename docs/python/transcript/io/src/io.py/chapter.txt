@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 320 11`
-		- (coverage-zeros)`64`
-		- (coverage-counters)`164`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 Status frame I/O support.
 
 
@@ -28,8 +28,6 @@ Status frame I/O support.
 	/element/
 		- (control)`property-set`
 		- (source/area)`5 1 5 9`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ io ]
 ! CONTROL:
@@ -40,8 +38,6 @@ Status frame I/O support.
 	/element/
 		- (control)`property-set`
 		- (source/area)`6 1 6 9`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ itertools ]
 ! CONTROL:
@@ -52,8 +48,6 @@ Status frame I/O support.
 	/element/
 		- (control)`property-set`
 		- (source/area)`7 1 7 16`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ signal ]
 ! CONTROL:
@@ -64,8 +58,6 @@ Status frame I/O support.
 	/element/
 		- (control)`property-set`
 		- (source/area)`8 1 8 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ tools ]
 ! CONTROL:
@@ -76,8 +68,6 @@ Status frame I/O support.
 	/element/
 		- (control)`property-set`
 		- (source/area)`10 1 10 27`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ execution ]
 ! CONTROL:
@@ -88,8 +78,6 @@ Status frame I/O support.
 	/element/
 		- (control)`property-set`
 		- (source/area)`11 1 11 30`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ frames ]
 ! CONTROL:
@@ -100,8 +88,6 @@ Status frame I/O support.
 	/element/
 		- (control)`property-set`
 		- (source/area)`12 1 12 27`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ allocate_line_buffer ]
 ! CONTROL:
@@ -112,8 +98,6 @@ Status frame I/O support.
 	/element/
 		- (control)`property-set`
 		- (source/area)`14 1 15 84`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`allocate_line_buffer(fd)`
 
 
@@ -124,8 +108,6 @@ Status frame I/O support.
 	/element/
 		- (control)`property-set`
 		- (source/area)`17 1 63 86`
-		- (coverage-zeros)`23`
-		- (coverage-counters)`23`
 (signature)`spawnframes(invocation)`
 
 Generator emitting frames produced by the given invocation's standard out.
@@ -140,8 +122,6 @@ the process a (none/invalid)&<http://fault.io/dev/null[signal.SIGKILL]>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`65 1 160 25`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`65 18 65 23`
@@ -160,8 +140,6 @@ IO array manager for frame sources.
 	/element/
 		- (control)`property-set`
 		- (source/area)`71 2 73 35`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`io(self)`
 
 
@@ -174,8 +152,6 @@ IO array manager for frame sources.
 	/element/
 		- (control)`property-set`
 		- (source/area)`75 2 84 24`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
 (signature)`__init__(self)`
 
 
@@ -188,8 +164,6 @@ IO array manager for frame sources.
 	/element/
 		- (control)`property-set`
 		- (source/area)`86 2 88 27`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`__enter__(self)`
 
 
@@ -202,8 +176,6 @@ IO array manager for frame sources.
 	/element/
 		- (control)`property-set`
 		- (source/area)`90 2 91 18`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`__exit__(self, exc, val, tb)`
 
 
@@ -216,8 +188,6 @@ IO array manager for frame sources.
 	/element/
 		- (control)`property-set`
 		- (source/area)`93 2 98 37`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
 (signature)`connect(self, id, fd)`
 
 
@@ -230,8 +200,6 @@ IO array manager for frame sources.
 	/element/
 		- (control)`property-set`
 		- (source/area)`100 2 101 19`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`force(self)`
 
 
@@ -242,8 +210,6 @@ IO array manager for frame sources.
 	/element/
 		- (control)`property-set`
 		- (source/area)`103 2 111 67`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`5`
 (signature)`frame(self, line)`
 
 Decode and unpack the binary status frame using Array's configuration.
@@ -258,8 +224,6 @@ Decode and unpack the binary status frame using Array's configuration.
 	/element/
 		- (control)`property-set`
 		- (source/area)`113 2 118 4`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`collect(self)`
 
 
@@ -272,8 +236,6 @@ Decode and unpack the binary status frame using Array's configuration.
 	/element/
 		- (control)`property-set`
 		- (source/area)`120 2 160 25`
-		- (coverage-zeros)`4`
-		- (coverage-counters)`26`
 (signature)`__iter__(self)`
 
 
@@ -284,8 +246,6 @@ Decode and unpack the binary status frame using Array's configuration.
 	/element/
 		- (control)`property-set`
 		- (source/area)`162 1 321 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`162 11 162 16`
@@ -304,8 +264,6 @@ Status frame serialization interface and write buffer.
 	/element/
 		- (control)`property-set`
 		- (source/area)`168 2 176 14`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	highlights = {
 		'reset': '\x1b[0m',
@@ -325,8 +283,6 @@ Status frame serialization interface and write buffer.
 	/element/
 		- (control)`property-set`
 		- (source/area)`177 2 185 13`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`5`
 (signature)`_xid(extension, xid)`
 
 
@@ -337,8 +293,6 @@ Status frame serialization interface and write buffer.
 	/element/
 		- (control)`property-set`
 		- (source/area)`186 2 193 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
 (signature)`stdout(Class)`
 
 Construct a (factor-local/class)&<#Log[Log]> instance for serializing frames to (none/invalid)&<http://fault.io/dev/null[sys.stdout]>.
@@ -351,8 +305,6 @@ Construct a (factor-local/class)&<#Log[Log]> instance for serializing frames to 
 	/element/
 		- (control)`property-set`
 		- (source/area)`194 2 199 92`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
 (signature)`stderr(Class)`
 
 Construct a (factor-local/class)&<#Log[Log]> instance for serializing frames to (none/invalid)&<http://fault.io/dev/null[sys.stderr]>.
@@ -367,8 +319,6 @@ Construct a (factor-local/class)&<#Log[Log]> instance for serializing frames to 
 	/element/
 		- (control)`property-set`
 		- (source/area)`201 2 209 17`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`7`
 (signature)`__init__(self, pack, stream, encoding)`
 
 
@@ -379,8 +329,6 @@ Construct a (factor-local/class)&<#Log[Log]> instance for serializing frames to 
 	/element/
 		- (control)`property-set`
 		- (source/area)`211 2 223 14`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`4`
 		- (type/syntax)`bool`
 		- (type/invalid/unknown)&<#bool>
 		
@@ -400,8 +348,6 @@ Return (invalid/unknown)&<#True> when a (factor-local/method)&<#Log.flush[flush]
 	/element/
 		- (control)`property-set`
 		- (source/area)`225 2 230 15`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`flush(self)`
 
 Write any emitted messages to the configured stream and reset the operation count.
@@ -414,8 +360,6 @@ Write any emitted messages to the configured stream and reset the operation coun
 	/element/
 		- (control)`property-set`
 		- (source/area)`232 2 236 82`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`emit(self, frame)`
 
 Send a (invalid/unknown)&<#message> using the given (invalid/unknown)&<#channel> identifier.
@@ -428,8 +372,6 @@ Send a (invalid/unknown)&<#message> using the given (invalid/unknown)&<#channel>
 	/element/
 		- (control)`property-set`
 		- (source/area)`238 2 243 18`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 (signature)`inject(self, data)`
 
 Write bytes directly to the log's stream.
@@ -442,8 +384,6 @@ Write bytes directly to the log's stream.
 	/element/
 		- (control)`property-set`
 		- (source/area)`245 2 250 18`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`write(self, text)`
 
 Write text to the log's stream incrementing the transmit count.
@@ -456,8 +396,6 @@ Write text to the log's stream incrementing the transmit count.
 	/element/
 		- (control)`property-set`
 		- (source/area)`252 2 260 33`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`declare(self)`
 
 Emit a protocol declaration.
@@ -472,8 +410,6 @@ Emit a protocol declaration.
 	/element/
 		- (control)`property-set`
 		- (source/area)`262 2 285 54`
-		- (coverage-zeros)`14`
-		- (coverage-counters)`14`
 (signature)`compose(self, type, severity, qualifier, text, extension)`
 
 
@@ -486,8 +422,6 @@ Emit a protocol declaration.
 	/element/
 		- (control)`property-set`
 		- (source/area)`287 2 291 12`
-		- (coverage-zeros)`4`
-		- (coverage-counters)`5`
 (signature)`notice(self, *text)`
 
 
@@ -500,8 +434,6 @@ Emit a protocol declaration.
 	/element/
 		- (control)`property-set`
 		- (source/area)`293 2 297 12`
-		- (coverage-zeros)`4`
-		- (coverage-counters)`5`
 (signature)`warning(self, *text)`
 
 
@@ -514,8 +446,6 @@ Emit a protocol declaration.
 	/element/
 		- (control)`property-set`
 		- (source/area)`299 2 303 12`
-		- (coverage-zeros)`4`
-		- (coverage-counters)`5`
 (signature)`error(self, *text)`
 
 
@@ -528,8 +458,6 @@ Emit a protocol declaration.
 	/element/
 		- (control)`property-set`
 		- (source/area)`305 2 309 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
 (signature)`xact_open(self, xid, synopsis, extension)`
 
 
@@ -542,8 +470,6 @@ Emit a protocol declaration.
 	/element/
 		- (control)`property-set`
 		- (source/area)`311 2 315 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
 (signature)`xact_status(self, xid, synopsis, extension)`
 
 
@@ -556,7 +482,5 @@ Emit a protocol declaration.
 	/element/
 		- (control)`property-set`
 		- (source/area)`317 2 321 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
 (signature)`xact_close(self, xid, synopsis, extension)`
 

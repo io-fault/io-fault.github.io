@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 97 0`
-		- (coverage-zeros)`11`
-		- (coverage-counters)`45`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 Typed system clock access.
 
 Construct instances of both the real and monotonic clocks and provide access
@@ -31,8 +31,6 @@ via (factor-local/function)&<#elapsed[elapsed]>, (factor-local/function)&<#utc[u
 	/element/
 		- (control)`property-set`
 		- (source/area)`8 1 8 23`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ types ]
 ! CONTROL:
@@ -43,8 +41,6 @@ via (factor-local/function)&<#elapsed[elapsed]>, (factor-local/function)&<#utc[u
 	/element/
 		- (control)`property-set`
 		- (source/area)`9 1 9 19`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ _fault_clocks ]
 ! CONTROL:
@@ -55,8 +51,6 @@ via (factor-local/function)&<#elapsed[elapsed]>, (factor-local/function)&<#utc[u
 	/element/
 		- (control)`property-set`
 		- (source/area)`11 1 15 2`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`_fault_clocks(module, delta)`
 
 
@@ -69,8 +63,6 @@ via (factor-local/function)&<#elapsed[elapsed]>, (factor-local/function)&<#utc[u
 	/element/
 		- (control)`property-set`
 		- (source/area)`17 1 31 14`
-		- (coverage-zeros)`8`
-		- (coverage-counters)`8`
 (signature)`_stdlib_clocks(module, delta)`
 
 
@@ -83,8 +75,6 @@ via (factor-local/function)&<#elapsed[elapsed]>, (factor-local/function)&<#utc[u
 	/element/
 		- (control)`property-set`
 		- (source/area)`33 1 42 51`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`6`
 (signature)`setup()`
 
 
@@ -97,8 +87,6 @@ via (factor-local/function)&<#elapsed[elapsed]>, (factor-local/function)&<#utc[u
 	/element/
 		- (control)`property-set`
 		- (source/area)`46 1 49 22`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`_unix(ut)`
 
 
@@ -109,8 +97,6 @@ via (factor-local/function)&<#elapsed[elapsed]>, (factor-local/function)&<#utc[u
 	/element/
 		- (control)`property-set`
 		- (source/area)`50 1 61 64`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
 (signature)`zone(selector)`
 
 Using the zone definitions provided by the system,
@@ -131,8 +117,6 @@ construct a view for the time zone identified by (factor-local/parameter)&<#zone
 	/element/
 		- (control)`property-set`
 		- (source/area)`63 1 67 32`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
 		- (type/syntax)`types.Timestamp`
 		- (type/project-local/factor-element)&<types#Timestamp[fault.time.types.Timestamp]>
 		
@@ -148,8 +132,6 @@ Get the current time according to the system's real clock.
 	/element/
 		- (control)`property-set`
 		- (source/area)`69 1 80 52`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
 		- (type/syntax)`types.Timestamp`
 		- (type/project-local/factor-element)&<types#Timestamp[fault.time.types.Timestamp]>
 		
@@ -172,8 +154,6 @@ The default zone can be changed by overriding the (factor-local/function)&<#zone
 	/element/
 		- (control)`property-set`
 		- (source/area)`82 1 91 42`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
 		- (type/syntax)`types.Date`
 		- (type/project-local/factor-element)&<types#Date[fault.time.types.Date]>
 		
@@ -200,8 +180,6 @@ Using (factor-local/function)&<#local[local]>, identify the current date.
 	/element/
 		- (control)`property-set`
 		- (source/area)`93 1 97 37`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
 		- (type/syntax)`types.Measure`
 		- (type/project-local/factor-element)&<types#Measure[fault.time.types.Measure]>
 		

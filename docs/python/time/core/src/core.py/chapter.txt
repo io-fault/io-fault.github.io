@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 693 0`
-		- (coverage-zeros)`46`
-		- (coverage-counters)`311`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 Defines the time Context that constructs unit types and manages their
 relationships to other unit types.
 
@@ -29,8 +29,6 @@ relationships to other unit types.
 	/element/
 		- (control)`property-set`
 		- (source/area)`6 1 6 16`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ functools ]
 ! CONTROL:
@@ -41,8 +39,6 @@ relationships to other unit types.
 	/element/
 		- (control)`property-set`
 		- (source/area)`7 1 7 16`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ operator ]
 ! CONTROL:
@@ -53,8 +49,6 @@ relationships to other unit types.
 	/element/
 		- (control)`property-set`
 		- (source/area)`8 1 8 15`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ builtins ]
 ! CONTROL:
@@ -65,8 +59,6 @@ relationships to other unit types.
 	/element/
 		- (control)`property-set`
 		- (source/area)`9 1 9 15`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ Type ]
 ! CONTROL:
@@ -87,8 +79,6 @@ relationships to other unit types.
 	/element/
 		- (control)`property-set`
 		- (source/area)`11 1 11 33`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ abstract ]
 ! CONTROL:
@@ -99,8 +89,6 @@ relationships to other unit types.
 	/element/
 		- (control)`property-set`
 		- (source/area)`12 1 12 22`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ kinds ]
 ! CONTROL:
@@ -111,8 +99,6 @@ relationships to other unit types.
 	/element/
 		- (control)`property-set`
 		- (source/area)`17 1 21 1`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	kinds = (
 		'definite',
@@ -129,8 +115,6 @@ relationships to other unit types.
 	/element/
 		- (control)`property-set`
 		- (source/area)`24 1 24 74`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	unix_epoch_delta = (((((2000-1970) * 365) + 7) * (24*60*60)) + (24*60*60))
 
@@ -141,8 +125,6 @@ relationships to other unit types.
 	/element/
 		- (control)`property-set`
 		- (source/area)`26 1 29 4`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`26 17 26 34`
@@ -159,8 +141,6 @@ Generic time exception.
 	/element/
 		- (control)`property-set`
 		- (source/area)`31 1 42 24`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`31 26 31 34`
@@ -215,8 +195,6 @@ An attempt to transform units failed.
 	/element/
 		- (control)`property-set`
 		- (source/area)`39 2 42 24`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`__init__(self, *args)`
 
 
@@ -227,8 +205,6 @@ An attempt to transform units failed.
 	/element/
 		- (control)`property-set`
 		- (source/area)`44 1 51 4`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`44 21 44 38`
@@ -251,8 +227,6 @@ ambiguous term.
 	/element/
 		- (control)`property-set`
 		- (source/area)`53 1 54 5`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`53 19 53 27`
@@ -267,8 +241,6 @@ ambiguous term.
 	/element/
 		- (control)`property-set`
 		- (source/area)`56 1 65 53`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`56 18 56 28`
@@ -287,8 +259,6 @@ The exception raised when a string representation of the datetime could not be p
 	/element/
 		- (control)`property-set`
 		- (source/area)`60 2 62 22`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`__init__(self, source)`
 
 
@@ -301,8 +271,6 @@ The exception raised when a string representation of the datetime could not be p
 	/element/
 		- (control)`property-set`
 		- (source/area)`64 2 65 53`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`__str__(self)`
 
 
@@ -313,8 +281,6 @@ The exception raised when a string representation of the datetime could not be p
 	/element/
 		- (control)`property-set`
 		- (source/area)`67 1 79 29`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`67 22 67 32`
@@ -334,8 +300,6 @@ transformed.
 	/element/
 		- (control)`property-set`
 		- (source/area)`72 2 75 22`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`__init__(self, source, struct)`
 
 
@@ -348,8 +312,6 @@ transformed.
 	/element/
 		- (control)`property-set`
 		- (source/area)`77 2 79 29`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`__str__(self)`
 
 
@@ -360,8 +322,6 @@ transformed.
 	/element/
 		- (control)`property-set`
 		- (source/area)`81 1 97 54`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`81 22 81 32`
@@ -383,8 +343,6 @@ parts of a timestamp. (The day of week field is arguably superfluous.)
 	/element/
 		- (control)`property-set`
 		- (source/area)`88 2 92 22`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
 (signature)`__init__(self, source, struct, tuple)`
 
 
@@ -397,8 +355,6 @@ parts of a timestamp. (The day of week field is arguably superfluous.)
 	/element/
 		- (control)`property-set`
 		- (source/area)`94 2 97 54`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`__str__(self)`
 
 
@@ -409,8 +365,6 @@ parts of a timestamp. (The day of week field is arguably superfluous.)
 	/element/
 		- (control)`property-set`
 		- (source/area)`99 1 247 63`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`99 12 99 14`
@@ -431,8 +385,6 @@ subclasses across all (factor-local/class)&<#Context[Context]> instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`104 2 106 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	__slots__ = ()
 		@classmethod
@@ -446,8 +398,6 @@ subclasses across all (factor-local/class)&<#Context[Context]> instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`107 2 184 13`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`37`
 (signature)`construct(Class, units, parts)`
 
 
@@ -460,8 +410,6 @@ subclasses across all (factor-local/class)&<#Context[Context]> instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`185 2 186 38`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`of(Class, *units, **parts)`
 
 
@@ -474,8 +422,6 @@ subclasses across all (factor-local/class)&<#Context[Context]> instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`188 2 192 4`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`update(self)`
 
 
@@ -488,8 +434,6 @@ subclasses across all (factor-local/class)&<#Context[Context]> instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`194 2 203 65`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
 (signature)`truncate(self, unit)`
 
 
@@ -502,8 +446,6 @@ subclasses across all (factor-local/class)&<#Context[Context]> instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`205 2 247 63`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`28`
 (signature)`select(self, part)`
 
 
@@ -532,8 +474,6 @@ subclasses across all (factor-local/class)&<#Context[Context]> instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`250 2 252 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	__slots__ = ()
 		@property
@@ -547,8 +487,6 @@ subclasses across all (factor-local/class)&<#Context[Context]> instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`253 2 256 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ Measure >> stop ]
 ! CONTROL:
@@ -559,8 +497,6 @@ subclasses across all (factor-local/class)&<#Context[Context]> instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`257 2 258 13`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 
 [ Measure >> __neg__ ]
 ! CONTROL:
@@ -571,8 +507,6 @@ subclasses across all (factor-local/class)&<#Context[Context]> instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`260 2 261 42`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`__neg__(self)`
 
 
@@ -585,8 +519,6 @@ subclasses across all (factor-local/class)&<#Context[Context]> instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`263 2 264 42`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`__abs__(self)`
 
 
@@ -599,8 +531,6 @@ subclasses across all (factor-local/class)&<#Context[Context]> instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`266 2 267 36`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`__str__(self)`
 
 
@@ -613,8 +543,6 @@ subclasses across all (factor-local/class)&<#Context[Context]> instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`269 2 290 3`
-		- (coverage-zeros)`14`
-		- (coverage-counters)`14`
 (signature)`__repr__(self)`
 
 
@@ -627,8 +555,6 @@ subclasses across all (factor-local/class)&<#Context[Context]> instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`292 2 293 22`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`__contains__(self, t)`
 
 
@@ -641,8 +567,6 @@ subclasses across all (factor-local/class)&<#Context[Context]> instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`295 2 296 38`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`elapse(self, *args, **parts)`
 
 
@@ -655,8 +579,6 @@ subclasses across all (factor-local/class)&<#Context[Context]> instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`297 2 297 16`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	adjust = elapse
 
@@ -669,8 +591,6 @@ subclasses across all (factor-local/class)&<#Context[Context]> instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`299 2 300 51`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`increase(self, *units, **parts)`
 
 
@@ -683,8 +603,6 @@ subclasses across all (factor-local/class)&<#Context[Context]> instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`302 2 303 70`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`decrease(self, *units, **parts)`
 
 
@@ -713,8 +631,6 @@ subclasses across all (factor-local/class)&<#Context[Context]> instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`306 2 308 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	__slots__ = ()
 		@property
@@ -728,8 +644,6 @@ subclasses across all (factor-local/class)&<#Context[Context]> instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`309 2 312 10`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 
 [ Point >> stop ]
 ! CONTROL:
@@ -740,8 +654,6 @@ subclasses across all (factor-local/class)&<#Context[Context]> instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`313 2 314 46`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 
 [ Point >> __contains__ ]
 ! CONTROL:
@@ -752,8 +664,6 @@ subclasses across all (factor-local/class)&<#Context[Context]> instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`316 2 318 79`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`__contains__(self, t)`
 
 
@@ -766,8 +676,6 @@ subclasses across all (factor-local/class)&<#Context[Context]> instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`320 2 323 31`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`__str__(self)`
 
 
@@ -780,8 +688,6 @@ subclasses across all (factor-local/class)&<#Context[Context]> instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`325 2 326 56`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`__repr__(self)`
 
 
@@ -794,8 +700,6 @@ subclasses across all (factor-local/class)&<#Context[Context]> instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`328 2 329 83`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`rollback(self, *units, **parts)`
 
 
@@ -808,8 +712,6 @@ subclasses across all (factor-local/class)&<#Context[Context]> instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`331 2 332 64`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`elapse(self, *units, **parts)`
 
 
@@ -822,8 +724,6 @@ subclasses across all (factor-local/class)&<#Context[Context]> instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`334 2 335 33`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`measure(self, pit)`
 
 
@@ -836,8 +736,6 @@ subclasses across all (factor-local/class)&<#Context[Context]> instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`337 2 349 20`
-		- (coverage-zeros)`4`
-		- (coverage-counters)`12`
 (signature)`leads(self, pit)`
 
 
@@ -850,8 +748,6 @@ subclasses across all (factor-local/class)&<#Context[Context]> instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`350 2 350 17`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	precedes = leads
 
@@ -864,8 +760,6 @@ subclasses across all (factor-local/class)&<#Context[Context]> instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`352 2 364 20`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`12`
 (signature)`follows(self, pit)`
 
 
@@ -878,8 +772,6 @@ subclasses across all (factor-local/class)&<#Context[Context]> instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`365 2 365 19`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	proceeds = follows
 
@@ -890,8 +782,6 @@ subclasses across all (factor-local/class)&<#Context[Context]> instances.
 	/element/
 		- (control)`property-set`
 		- (source/area)`367 1 584 16`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`367 15 367 20`
@@ -910,8 +800,6 @@ A container for time units and transformations.
 	/element/
 		- (control)`property-set`
 		- (source/area)`371 2 386 17`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`14`
 (signature)`__init__(self)`
 
 
@@ -922,8 +810,6 @@ A container for time units and transformations.
 	/element/
 		- (control)`property-set`
 		- (source/area)`388 2 402 23`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`9`
 (signature)`declare(self, id, datum)`
 
 Declare a fundamental unit for use in a context.
@@ -938,8 +824,6 @@ All defined, (factor-local/method)&<#Context.define[Context.define]>, units are 
 	/element/
 		- (control)`property-set`
 		- (source/area)`404 2 413 72`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`6`
 (signature)`define(self, id, term, exponent)`
 
 Defines a Unit in terms of another unit.
@@ -952,8 +836,6 @@ Defines a Unit in terms of another unit.
 	/element/
 		- (control)`property-set`
 		- (source/area)`415 2 422 49`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`bridge(self, from_unit, to_unit, transformer)`
 
 Assign a "bridge" between two units.
@@ -971,8 +853,6 @@ bridges can be used to perform the conversion.
 	/element/
 		- (control)`property-set`
 		- (source/area)`424 2 427 38`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`3`
 (signature)`container(self, id, pack, unpack)`
 
 
@@ -985,8 +865,6 @@ bridges can be used to perform the conversion.
 	/element/
 		- (control)`property-set`
 		- (source/area)`429 2 432 23`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`constant(self, id, value)`
 
 
@@ -997,8 +875,6 @@ bridges can be used to perform the conversion.
 	/element/
 		- (control)`property-set`
 		- (source/area)`433 2 448 11`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`7`
 (signature)`compose(self, from_unit, to_unit)`
 
 Compose two ratios into another so that the (factor-local/parameter)&<#Context.compose.Parameters.from_unit[from_unit]> can be converted
@@ -1014,8 +890,6 @@ Ratio compositions are LRU cached.
 	/element/
 		- (control)`property-set`
 		- (source/area)`450 2 478 50`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`13`
 (signature)`convert(self, from_unit, to_unit, value)`
 
 Convert the (factor-local/parameter)&<#Context.convert.Parameters.value[value]> into (factor-local/parameter)&<#Context.convert.Parameters.to_unit[to_unit]> from the (factor-local/parameter)&<#Context.convert.Parameters.from_unit[from_unit]>.
@@ -1030,8 +904,6 @@ Convert the (factor-local/parameter)&<#Context.convert.Parameters.value[value]> 
 	/element/
 		- (control)`property-set`
 		- (source/area)`480 2 484 44`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`register_point_class(self, Point)`
 
 
@@ -1044,8 +916,6 @@ Convert the (factor-local/parameter)&<#Context.convert.Parameters.value[value]> 
 	/element/
 		- (control)`property-set`
 		- (source/area)`486 2 490 50`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`register_measure_class(self, Measure)`
 
 
@@ -1058,8 +928,6 @@ Convert the (factor-local/parameter)&<#Context.convert.Parameters.value[value]> 
 	/element/
 		- (control)`property-set`
 		- (source/area)`492 2 495 16`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`new_measure_class(self, id)`
 
 
@@ -1072,8 +940,6 @@ Convert the (factor-local/parameter)&<#Context.convert.Parameters.value[value]> 
 	/element/
 		- (control)`property-set`
 		- (source/area)`497 2 500 14`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`new_point_class(self, Measure)`
 
 
@@ -1086,8 +952,6 @@ Convert the (factor-local/parameter)&<#Context.convert.Parameters.value[value]> 
 	/element/
 		- (control)`property-set`
 		- (source/area)`502 2 510 10`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`5`
 (signature)`datum_for_point(self, to_unit)`
 
 
@@ -1100,8 +964,6 @@ Convert the (factor-local/parameter)&<#Context.convert.Parameters.value[value]> 
 	/element/
 		- (control)`property-set`
 		- (source/area)`512 2 516 16`
-		- (coverage-zeros)`4`
-		- (coverage-counters)`4`
 (signature)`point_from_unit(self, unit)`
 
 
@@ -1114,8 +976,6 @@ Convert the (factor-local/parameter)&<#Context.convert.Parameters.value[value]> 
 	/element/
 		- (control)`property-set`
 		- (source/area)`518 2 522 16`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
 (signature)`measure_from_unit(self, unit)`
 
 
@@ -1128,8 +988,6 @@ Convert the (factor-local/parameter)&<#Context.convert.Parameters.value[value]> 
 	/element/
 		- (control)`property-set`
 		- (source/area)`524 2 525 35`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`represent(self, term, unitseq)`
 
 
@@ -1140,8 +998,6 @@ Convert the (factor-local/parameter)&<#Context.convert.Parameters.value[value]> 
 	/element/
 		- (control)`property-set`
 		- (source/area)`527 2 555 14`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`11`
 		- (type/syntax)`Type[abstract.Point]`
 		
 (signature)`point_factory(self, Measure, qname)`
@@ -1156,8 +1012,6 @@ Construct a Point class from the given scalar.
 	/element/
 		- (control)`property-set`
 		- (source/area)`557 2 584 16`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`14`
 		- (type/syntax)`Type[abstract.Measure]`
 		
 (signature)`measure_factory(self, id, qname)`
@@ -1172,8 +1026,6 @@ Construct a measure with the designated unit identifier and class.
 	/element/
 		- (control)`property-set`
 		- (source/area)`586 1 693 35`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`34`
 		- (type/syntax)`tuple[Context, Sequence[abstract.Measure], Sequence[abstract.Point]]`
 		
 (signature)`standard_context(qname)`
