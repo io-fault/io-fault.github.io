@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 177 0`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`0`
+		- (coverage-zeros)`59`
+		- (coverage-counters)`59`
 
 [ LF ]
 ! CONTROL:
@@ -48,6 +48,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`45 1 54 1`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`3`
 		- (type/syntax)`Py_hash_t`
 		
 (signature)`ln_hash(ln)`
@@ -62,6 +64,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`56 1 69 1`
+		- (coverage-zeros)`9`
+		- (coverage-counters)`9`
 		- (type/syntax)`PyObj`
 		
 (signature)`ln_richcompare(ln, operand, cmpop)`
@@ -76,6 +80,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`71 1 86 1`
+		- (coverage-zeros)`8`
+		- (coverage-counters)`8`
 		- (type/syntax)`PyObj`
 		
 (signature)`ln_call(ln, args, kw)`
@@ -90,6 +96,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`88 1 94 1`
+		- (coverage-zeros)`7`
+		- (coverage-counters)`7`
 		- (type/syntax)`void`
 		
 (signature)`ln_clear(ln)`
@@ -104,6 +112,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`96 1 105 1`
+		- (coverage-zeros)`7`
+		- (coverage-counters)`7`
 		- (type/syntax)`int`
 		
 (signature)`ln_traverse(self, visit, arg)`
@@ -118,6 +128,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`107 1 119 1`
+		- (coverage-zeros)`9`
+		- (coverage-counters)`9`
 		- (type/syntax)`PyObj`
 		
 (signature)`ln_new(typ, args, kw)`
@@ -132,6 +144,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`121 1 127 1`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 		- (type/syntax)`void`
 		
 (signature)`ln_dealloc(ln)`
@@ -146,6 +160,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`157 1 176 1`
+		- (coverage-zeros)`9`
+		- (coverage-counters)`9`
 		- (type/syntax)`PyObj`
 		
 (signature)`Link_Create(typ, ctx, ev, task)`

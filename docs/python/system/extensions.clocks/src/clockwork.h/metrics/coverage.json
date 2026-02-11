@@ -1,1 +1,1 @@
-{"elements": {}, "zeros": [], "coverage": [], "counts": []}
+{"elements": {"": [[14, 36, 14, 55]], "LOCAL_REAL_CLOCK_ID": [[21, 30, 21, 44]], "NS_IN_SEC": [[24, 19, 24, 29]]}, "zeros": [[14, 36, 14, 55], [21, 30, 21, 44], [24, 19, 24, 29]], "coverage": [], "counts": []}
