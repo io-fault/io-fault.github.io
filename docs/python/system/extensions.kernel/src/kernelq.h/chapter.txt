@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 57 0`
-		- (coverage-zeros)`10`
-		- (coverage-counters)`10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 
 [ _SYSTEM_KERNEL_KERNELQ_H_included_ ]
 ! CONTROL:
@@ -28,8 +28,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`13 9 13 35`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 #!source
 	#define _RETRY_STATE _avail_retries
 
@@ -42,8 +40,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`14 9 14 64`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 #!source
 	#define RETRY_STATE_INIT int _RETRY_STATE = CONFIG_SYSCALL_RETRY
 
@@ -56,8 +52,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`15 9 21 11`
-		- (coverage-zeros)`7`
-		- (coverage-counters)`7`
 (signature)`LIMITED_RETRY()`
 
 

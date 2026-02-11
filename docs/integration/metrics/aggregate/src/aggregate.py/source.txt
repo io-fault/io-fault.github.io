@@ -141,7 +141,7 @@ def main(inv:process.Invocation) -> process.Exit:
 	od.fs_alloc().fs_mkdir()
 
 	integrate_syntax_profiles(od/'syntax-profiles', src, rpath=inv.fs_pwd)
-	#integrate_test_reports(od, cd, td, dd)
+	integrate_test_reports(od, cd, td, dd)
 	regions = integrate_coverage_maps(od, cd, td, dd, project, factor)
 	integrate_coverage_capture(regions, od, cd, td, dd, project, factor)
 

@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 677 0`
-		- (coverage-zeros)`371`
-		- (coverage-counters)`371`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 
 [ Endpoint_Check ]
 ! CONTROL:
@@ -28,8 +28,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`39 9 39 35`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 #!source
 	#define _RETRY_STATE _avail_retries
 
@@ -42,8 +40,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`40 9 40 64`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 #!source
 	#define RETRY_STATE_INIT int _RETRY_STATE = CONFIG_SYSCALL_RETRY
 
@@ -56,8 +52,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`41 9 48 12`
-		- (coverage-zeros)`7`
-		- (coverage-counters)`7`
 (signature)`LIMITED_RETRY()`
 
 
@@ -82,8 +76,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`54 9 64 20`
-		- (coverage-zeros)`30`
-		- (coverage-counters)`30`
 (signature)`X_EAI_ERRORS()`
 
 
@@ -111,8 +103,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`628 9 629 13`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 (signature)`PYTHON_TYPES()`
 
 
@@ -188,8 +178,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`76 1 117 1`
-		- (coverage-zeros)`6`
-		- (coverage-counters)`6`
 		- (type/syntax)`const char *`
 		
 (signature)`error_name_gai(code)`
@@ -217,8 +205,6 @@ Constant string pointer.
 	/element/
 		- (control)`property-set`
 		- (source/area)`119 1 141 1`
-		- (coverage-zeros)`18`
-		- (coverage-counters)`18`
 		- (type/syntax)`PyObj`
 		
 (signature)`construct_error(code)`
@@ -233,8 +219,6 @@ Constant string pointer.
 	/element/
 		- (control)`property-set`
 		- (source/area)`143 1 232 1`
-		- (coverage-zeros)`56`
-		- (coverage-counters)`56`
 		- (type/syntax)`PyObj`
 		
 (signature)`nw_getaddrinfo(stream_type, namestr, servicestr, socktype, flags)`
@@ -249,8 +233,6 @@ Constant string pointer.
 	/element/
 		- (control)`property-set`
 		- (source/area)`149 2 149 16`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 
 [ nw_select_endpoints_gai ]
 ! CONTROL:
@@ -259,8 +241,6 @@ Constant string pointer.
 	/element/
 		- (control)`property-set`
 		- (source/area)`237 1 261 1`
-		- (coverage-zeros)`18`
-		- (coverage-counters)`18`
 		- (type/syntax)`PyObj`
 		
 (signature)`nw_select_endpoints_gai(mod, args)`
@@ -275,8 +255,6 @@ Resolve transport selectors for the given host and service.
 	/element/
 		- (control)`property-set`
 		- (source/area)`266 1 290 1`
-		- (coverage-zeros)`20`
-		- (coverage-counters)`20`
 		- (type/syntax)`PyObj`
 		
 (signature)`nw_select_interfaces_gai(mod, args)`
@@ -293,8 +271,6 @@ Find service interfaces using GAI.
 	/element/
 		- (control)`property-set`
 		- (source/area)`292 1 322 1`
-		- (coverage-zeros)`16`
-		- (coverage-counters)`16`
 		- (type/syntax)`kport_t`
 		
 (signature)`bind_sequence(ep)`
@@ -309,8 +285,6 @@ Find service interfaces using GAI.
 	/element/
 		- (control)`property-set`
 		- (source/area)`324 1 347 1`
-		- (coverage-zeros)`10`
-		- (coverage-counters)`10`
 		- (type/syntax)`PyObj`
 		
 (signature)`nw_bind_endpoint(ep)`
@@ -325,8 +299,6 @@ Find service interfaces using GAI.
 	/element/
 		- (control)`property-set`
 		- (source/area)`349 1 385 1`
-		- (coverage-zeros)`20`
-		- (coverage-counters)`20`
 		- (type/syntax)`kport_t`
 		
 (signature)`service_sequence(ep, backlog)`
@@ -341,8 +313,6 @@ Find service interfaces using GAI.
 	/element/
 		- (control)`property-set`
 		- (source/area)`387 1 410 1`
-		- (coverage-zeros)`10`
-		- (coverage-counters)`10`
 		- (type/syntax)`PyObj`
 		
 (signature)`nw_service_endpoint(ep, backlog)`
@@ -357,8 +327,6 @@ Find service interfaces using GAI.
 	/element/
 		- (control)`property-set`
 		- (source/area)`412 1 440 1`
-		- (coverage-zeros)`21`
-		- (coverage-counters)`21`
 		- (type/syntax)`int`
 		
 (signature)`i_connect(fd, addr, addrlen)`
@@ -373,8 +341,6 @@ Find service interfaces using GAI.
 	/element/
 		- (control)`property-set`
 		- (source/area)`442 1 473 1`
-		- (coverage-zeros)`16`
-		- (coverage-counters)`16`
 		- (type/syntax)`kport_t`
 		
 (signature)`connect_sequence(ep)`
@@ -389,8 +355,6 @@ Find service interfaces using GAI.
 	/element/
 		- (control)`property-set`
 		- (source/area)`475 1 498 1`
-		- (coverage-zeros)`10`
-		- (coverage-counters)`10`
 		- (type/syntax)`PyObj`
 		
 (signature)`nw_connect_endpoint(ep)`
@@ -403,8 +367,6 @@ Find service interfaces using GAI.
 	/element/
 		- (control)`property-set`
 		- (source/area)`503 1 516 1`
-		- (coverage-zeros)`11`
-		- (coverage-counters)`11`
 		- (type/syntax)`PyObj`
 		
 (signature)`nw_connect(module, args, kw)`
@@ -419,8 +381,6 @@ Python interface to POSIX connect.
 	/element/
 		- (control)`property-set`
 		- (source/area)`521 1 535 1`
-		- (coverage-zeros)`11`
-		- (coverage-counters)`11`
 		- (type/syntax)`PyObj`
 		
 (signature)`nw_service(module, args, kw)`
@@ -435,8 +395,6 @@ Python interface to POSIX bind and listen.
 	/element/
 		- (control)`property-set`
 		- (source/area)`540 1 553 1`
-		- (coverage-zeros)`11`
-		- (coverage-counters)`11`
 		- (type/syntax)`PyObj`
 		
 (signature)`nw_bind(module, args, kw)`
@@ -453,8 +411,6 @@ Python interface to POSIX bind.
 	/element/
 		- (control)`property-set`
 		- (source/area)`555 1 578 1`
-		- (coverage-zeros)`13`
-		- (coverage-counters)`13`
 		- (type/syntax)`PyObj`
 		
 (signature)`nw_transmit_endpoint(module, fileno)`
@@ -469,8 +425,6 @@ Python interface to POSIX bind.
 	/element/
 		- (control)`property-set`
 		- (source/area)`580 1 614 1`
-		- (coverage-zeros)`19`
-		- (coverage-counters)`19`
 		- (type/syntax)`PyObj`
 		
 (signature)`nw_receive_endpoint(module, fileno)`

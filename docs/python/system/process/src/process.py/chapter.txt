@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 867 0`
-		- (coverage-zeros)`89`
-		- (coverage-counters)`312`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 Process invocation and management interfaces.
 
 
@@ -28,8 +28,6 @@ Process invocation and management interfaces.
 	/element/
 		- (control)`property-set`
 		- (source/area)`16 1 16 9`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ signal ]
 ! CONTROL:
@@ -40,8 +38,6 @@ Process invocation and management interfaces.
 	/element/
 		- (control)`property-set`
 		- (source/area)`17 1 17 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ functools ]
 ! CONTROL:
@@ -52,8 +48,6 @@ Process invocation and management interfaces.
 	/element/
 		- (control)`property-set`
 		- (source/area)`18 1 18 16`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ contextlib ]
 ! CONTROL:
@@ -64,8 +58,6 @@ Process invocation and management interfaces.
 	/element/
 		- (control)`property-set`
 		- (source/area)`19 1 19 17`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ typing ]
 ! CONTROL:
@@ -76,8 +68,6 @@ Process invocation and management interfaces.
 	/element/
 		- (control)`property-set`
 		- (source/area)`20 1 20 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ types ]
 ! CONTROL:
@@ -88,8 +78,6 @@ Process invocation and management interfaces.
 	/element/
 		- (control)`property-set`
 		- (source/area)`21 1 21 12`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ builtins ]
 ! CONTROL:
@@ -100,8 +88,6 @@ Process invocation and management interfaces.
 	/element/
 		- (control)`property-set`
 		- (source/area)`22 1 22 15`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ kernel ]
 ! CONTROL:
@@ -112,8 +98,6 @@ Process invocation and management interfaces.
 	/element/
 		- (control)`property-set`
 		- (source/area)`24 1 24 20`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ runtime ]
 ! CONTROL:
@@ -124,8 +108,6 @@ Process invocation and management interfaces.
 	/element/
 		- (control)`property-set`
 		- (source/area)`25 1 25 21`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ thread ]
 ! CONTROL:
@@ -136,8 +118,6 @@ Process invocation and management interfaces.
 	/element/
 		- (control)`property-set`
 		- (source/area)`26 1 26 20`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ files ]
 ! CONTROL:
@@ -148,8 +128,6 @@ Process invocation and management interfaces.
 	/element/
 		- (control)`property-set`
 		- (source/area)`27 1 27 19`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ __control_lock__ ]
 ! CONTROL:
@@ -160,8 +138,6 @@ Process invocation and management interfaces.
 	/element/
 		- (control)`property-set`
 		- (source/area)`30 1 30 34`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	__control_lock__ = thread.amutex()
 
@@ -174,8 +150,6 @@ Process invocation and management interfaces.
 	/element/
 		- (control)`property-set`
 		- (source/area)`33 1 33 36`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	__interject_lock__ = thread.amutex()
 
@@ -188,8 +162,6 @@ Process invocation and management interfaces.
 	/element/
 		- (control)`property-set`
 		- (source/area)`37 1 37 36`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	controlled = __control_lock__.locked
 
@@ -202,8 +174,6 @@ Process invocation and management interfaces.
 	/element/
 		- (control)`property-set`
 		- (source/area)`40 1 40 32`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	current_process_id = os.getpid()
 
@@ -216,8 +186,6 @@ Process invocation and management interfaces.
 	/element/
 		- (control)`property-set`
 		- (source/area)`43 1 43 32`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	parent_process_id = os.getppid()
 
@@ -230,8 +198,6 @@ Process invocation and management interfaces.
 	/element/
 		- (control)`property-set`
 		- (source/area)`46 1 46 34`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	main_thread_id = thread.identify()
 
@@ -244,8 +210,6 @@ Process invocation and management interfaces.
 	/element/
 		- (control)`property-set`
 		- (source/area)`47 1 49 1`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	index = {
 		'root': ('thread', thread.identify(), None),
@@ -260,8 +224,6 @@ Process invocation and management interfaces.
 	/element/
 		- (control)`property-set`
 		- (source/area)`52 1 52 31`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	__fork_lock__ = thread.amutex()
 
@@ -274,8 +236,6 @@ Process invocation and management interfaces.
 	/element/
 		- (control)`property-set`
 		- (source/area)`56 1 56 28`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	fork_prepare_callset = set()
 
@@ -288,8 +248,6 @@ Process invocation and management interfaces.
 	/element/
 		- (control)`property-set`
 		- (source/area)`60 1 60 27`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	fork_parent_callset = set()
 
@@ -302,8 +260,6 @@ Process invocation and management interfaces.
 	/element/
 		- (control)`property-set`
 		- (source/area)`65 1 65 26`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	fork_child_callset = set()
 
@@ -316,8 +272,6 @@ Process invocation and management interfaces.
 	/element/
 		- (control)`property-set`
 		- (source/area)`69 1 69 26`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	fork_child_cleanup = set()
 
@@ -330,8 +284,6 @@ Process invocation and management interfaces.
 	/element/
 		- (control)`property-set`
 		- (source/area)`71 1 71 15`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	getattr=getattr
 
@@ -342,8 +294,6 @@ Process invocation and management interfaces.
 	/element/
 		- (control)`property-set`
 		- (source/area)`73 1 104 1`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`3`
 Mapping of categorized signal names to signal (integer) codes.
 
 #!source
@@ -389,8 +339,6 @@ Mapping of categorized signal names to signal (integer) codes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`105 1 105 22`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	signals = signal_codes
 
@@ -401,8 +349,6 @@ Mapping of categorized signal names to signal (integer) codes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`108 1 108 62`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 Mapping of signal (integer) codes to categorized names.
 
 #!source
@@ -415,8 +361,6 @@ Mapping of signal (integer) codes to categorized names.
 	/element/
 		- (control)`property-set`
 		- (source/area)`112 1 121 1`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 Set of signals that would cause an immediate exit if `SIG_DFL` were set.
 
 #!source
@@ -438,8 +382,6 @@ Set of signals that would cause an immediate exit if `SIG_DFL` were set.
 	/element/
 		- (control)`property-set`
 		- (source/area)`124 1 128 1`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
 Mapping of signal codes to identifiers used in POSIX header files.
 
 #!source
@@ -456,8 +398,6 @@ Mapping of signal codes to identifiers used in POSIX header files.
 	/element/
 		- (control)`property-set`
 		- (source/area)`131 1 144 43`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
 (signature)`interject(main_thread_exec)`
 
 Trip the main thread by sending the process a SIGUSR2 signal in order to cause any
@@ -472,8 +412,6 @@ running system call to exit early. Used in conjunction with
 	/element/
 		- (control)`property-set`
 		- (source/area)`146 1 162 7`
-		- (coverage-zeros)`5`
-		- (coverage-counters)`5`
 (signature)`clear_atexit_callbacks()`
 
 In cases where there may be process dependent callbacks, add this to the
@@ -489,8 +427,6 @@ In cases where there may be process dependent callbacks, add this to the
 	/element/
 		- (control)`property-set`
 		- (source/area)`166 1 177 25`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`5`
 (signature)`_after_fork_parent(child_pid)`
 
 
@@ -503,8 +439,6 @@ In cases where there may be process dependent callbacks, add this to the
 	/element/
 		- (control)`property-set`
 		- (source/area)`179 1 208 26`
-		- (coverage-zeros)`11`
-		- (coverage-counters)`17`
 (signature)`_after_fork_child()`
 
 
@@ -515,8 +449,6 @@ In cases where there may be process dependent callbacks, add this to the
 	/element/
 		- (control)`property-set`
 		- (source/area)`210 1 223 12`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`210 12 210 21`
@@ -559,8 +491,6 @@ Extension of SystemExit for use with interjections.
 	/element/
 		- (control)`property-set`
 		- (source/area)`222 2 223 12`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`raised(self)`
 
 
@@ -571,8 +501,6 @@ Extension of SystemExit for use with interjections.
 	/element/
 		- (control)`property-set`
 		- (source/area)`225 1 340 37`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`225 18 225 23`
@@ -622,8 +550,6 @@ and `'structured'` keys are present.
 	/element/
 		- (control)`property-set`
 		- (source/area)`245 2 248 24`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`__init__(self, exit_method)`
 
 
@@ -634,8 +560,6 @@ and `'structured'` keys are present.
 	/element/
 		- (control)`property-set`
 		- (source/area)`250 2 256 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`exit(self, result)`
 
 Perform the exit method designated during the initialization of the invocation.
@@ -648,8 +572,6 @@ Perform the exit method designated during the initialization of the invocation.
 	/element/
 		- (control)`property-set`
 		- (source/area)`257 2 263 10`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 The working directory of the process when the (factor-local/class)&<#Invocation[Invocation]> was created.
 
 
@@ -660,8 +582,6 @@ The working directory of the process when the (factor-local/class)&<#Invocation[
 	/element/
 		- (control)`property-set`
 		- (source/area)`264 2 268 47`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 Arguments provided by the system without the leading command name.
 
 
@@ -674,8 +594,6 @@ Arguments provided by the system without the leading command name.
 	/element/
 		- (control)`property-set`
 		- (source/area)`269 2 271 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	args = argv
 		@property
@@ -687,8 +605,6 @@ Arguments provided by the system without the leading command name.
 	/element/
 		- (control)`property-set`
 		- (source/area)`272 2 276 49`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 		- (type/syntax)`dict`
 		- (type/invalid/unknown)&<#dict>
 		
@@ -702,8 +618,6 @@ The environment variables collected from the system during the creation of the i
 	/element/
 		- (control)`property-set`
 		- (source/area)`278 2 297 13`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`7`
 (signature)`imports(self, envvars)`
 
 Copy the given (factor-local/parameter)&<#Invocation.imports.Parameters.envvars[envvars]> from (none/invalid)&<http://fault.io/dev/null[os.environ]> into the invocation's (factor-local/data)&<#Invocation.parameters[parameters]>.
@@ -728,8 +642,6 @@ The snapshot of imported environment variables may be accessed using (factor-loc
 	/element/
 		- (control)`property-set`
 		- (source/area)`298 2 332 13`
-		- (coverage-zeros)`6`
-		- (coverage-counters)`17`
 (signature)`system(Class, context, environ)`
 
 Create an instance representing that of the invocation from the operating
@@ -765,8 +677,6 @@ system. Primarily, information is retrieved from the (none/invalid)&<http://faul
 	/element/
 		- (control)`property-set`
 		- (source/area)`333 2 340 37`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`system_exit_method(Class, exit_status)`
 
 A means of exit used with a (factor-local/classmethod)&<#Fork.trap[Fork.trap]> managed process.
@@ -782,8 +692,6 @@ be used within regular Python processes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`342 1 354 12`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`342 24 342 36`
@@ -818,8 +726,6 @@ exceptions that are not necessarily indicative of a failure.
 	/element/
 		- (control)`property-set`
 		- (source/area)`353 2 354 12`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 (signature)`raised(self)`
 
 
@@ -830,8 +736,6 @@ exceptions that are not necessarily indicative of a failure.
 	/element/
 		- (control)`property-set`
 		- (source/area)`356 1 361 16`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`356 16 356 31`
@@ -860,8 +764,6 @@ An exception used to communicate that a fatal condition was identified.
 	/element/
 		- (control)`property-set`
 		- (source/area)`363 1 376 32`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`7`
 (signature)`panic()`
 
 Raise a (factor-local/class)&<#Critical[Critical]> exception in the main thread forcing the process to exit.
@@ -874,8 +776,6 @@ Raise a (factor-local/class)&<#Critical[Critical]> exception in the main thread 
 	/element/
 		- (control)`property-set`
 		- (source/area)`378 1 476 16`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`378 20 378 35`
@@ -910,8 +810,6 @@ Primarily used to cause signal exit codes that are usually masked with
 	/element/
 		- (control)`property-set`
 		- (source/area)`389 2 391 20`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
 (signature)`__init__(self, type)`
 
 
@@ -924,8 +822,6 @@ Primarily used to cause signal exit codes that are usually masked with
 	/element/
 		- (control)`property-set`
 		- (source/area)`393 2 402 24`
-		- (coverage-zeros)`7`
-		- (coverage-counters)`7`
 (signature)`__str__(self)`
 
 
@@ -936,8 +832,6 @@ Primarily used to cause signal exit codes that are usually masked with
 	/element/
 		- (control)`property-set`
 		- (source/area)`404 2 417 13`
-		- (coverage-zeros)`4`
-		- (coverage-counters)`4`
 (signature)`raised(self)`
 
 Register a system-level atexit handler that will cause the process to exit with
@@ -951,8 +845,6 @@ the configured signal.
 	/element/
 		- (control)`property-set`
 		- (source/area)`418 2 428 14`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`3`
 (signature)`interrupt(Class, signo, frame)`
 
 Signal handler that interjects an Interruption instance into the main thread.
@@ -967,8 +859,6 @@ Default signal handler for SIGINT.
 	/element/
 		- (control)`property-set`
 		- (source/area)`429 2 435 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`void(signo, frame)`
 
 Python-level signal handler that does nothing.
@@ -981,8 +871,6 @@ Python-level signal handler that does nothing.
 	/element/
 		- (control)`property-set`
 		- (source/area)`436 2 443 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
 (signature)`filter(Class, *sigs)`
 
 Assign the void signal handler to the all of the given signal numbers.
@@ -995,8 +883,6 @@ Assign the void signal handler to the all of the given signal numbers.
 	/element/
 		- (control)`property-set`
 		- (source/area)`444 2 452 27`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
 (signature)`catch(Class, *sigs)`
 
 Assign the interrupt signal handler to the all of the given signal numbers.
@@ -1009,8 +895,6 @@ Assign the interrupt signal handler to the all of the given signal numbers.
 	/element/
 		- (control)`property-set`
 		- (source/area)`453 2 476 16`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`9`
 (signature)`trap(Class)`
 
 Signal handler for a root process.
@@ -1023,8 +907,6 @@ Signal handler for a root process.
 	/element/
 		- (control)`property-set`
 		- (source/area)`478 1 607 21`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`478 12 478 27`
@@ -1065,8 +947,6 @@ by (factor-local/classmethod)&<#Fork.trap[Fork.trap]>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`495 2 498 20`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
 (signature)`__init__(self, controller, *args, **kw)`
 
 
@@ -1079,8 +959,6 @@ by (factor-local/classmethod)&<#Fork.trap[Fork.trap]>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`500 2 501 58`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`__str__(self)`
 
 
@@ -1093,8 +971,6 @@ by (factor-local/classmethod)&<#Fork.trap[Fork.trap]>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`503 2 512 13`
-		- (coverage-zeros)`4`
-		- (coverage-counters)`4`
 (signature)`pivot(self, T)`
 
 
@@ -1105,8 +981,6 @@ by (factor-local/classmethod)&<#Fork.trap[Fork.trap]>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`513 2 525 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 (signature)`substitute(Class, callable, *args, **kw)`
 
 Substitute the existing control call with the given one.
@@ -1125,8 +999,6 @@ being managed by (factor-local/classmethod)&<#Fork.trap[trap]>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`526 2 575 13`
-		- (coverage-zeros)`6`
-		- (coverage-counters)`14`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
@@ -1173,8 +1045,6 @@ execute the replacement.
 	/element/
 		- (control)`property-set`
 		- (source/area)`576 2 607 21`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`11`
 (signature)`trap(Class, controller, *args, **kw)`
 
 Establish a point for substituting the process. Trap provides an
@@ -1194,8 +1064,6 @@ in a well defined manner.
 	/element/
 		- (control)`property-set`
 		- (source/area)`609 1 642 11`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`10`
 (signature)`critical(context, callable, *args, **kw)`
 
 A callable used to trap exceptions and interject a (factor-local/class)&<#Critical[Critical]> instance caused by the
@@ -1224,8 +1092,6 @@ For example:
 	/element/
 		- (control)`property-set`
 		- (source/area)`644 1 675 39`
-		- (coverage-zeros)`10`
-		- (coverage-counters)`10`
 (signature)`protect(*init)`
 
 Perpetually protect the main thread using a sleep loop that can only exit
@@ -1250,8 +1116,6 @@ that rely on a set of threads to perform the actual work.
 	/element/
 		- (control)`property-set`
 		- (source/area)`677 1 721 26`
-		- (coverage-zeros)`10`
-		- (coverage-counters)`23`
 (signature)`control(main, *args, **kw)`
 
 A program that calls this is making an explicit declaration that signals should be
@@ -1269,8 +1133,6 @@ of a (factor-local/classmethod)&<#Fork.trap[Fork.trap]> call. (factor-local/clas
 	/element/
 		- (control)`property-set`
 		- (source/area)`722 1 733 29`
-		- (coverage-zeros)`6`
-		- (coverage-counters)`6`
 (signature)`timeout()`
 
 (system/signal)`SIGALRM` based context manager for maximum time interruptions.
@@ -1283,8 +1145,6 @@ of a (factor-local/classmethod)&<#Fork.trap[Fork.trap]> call. (factor-local/clas
 	/element/
 		- (control)`property-set`
 		- (source/area)`735 1 795 30`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`27`
 (signature)`concurrently(controller)`
 
 Dispatch the given controller in a child process of a (factor-local/function)&<#control[control]> controlled process.
@@ -1318,8 +1178,6 @@ the parent. This expects the calling process to have been launched with (factor-
 	/element/
 		- (control)`property-set`
 		- (source/area)`797 1 806 70`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
 		- (type/syntax)`files.Path`
 		- (type/project-local/factor-element)&<files#Path[fault.system.files.Path]>
 		
@@ -1340,8 +1198,6 @@ will create a new instance.
 	/element/
 		- (control)`property-set`
 		- (source/area)`808 1 822 68`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`9`
 		- (type/syntax)`files.Path`
 		- (type/project-local/factor-element)&<files#Path[fault.system.files.Path]>
 		
@@ -1367,8 +1223,6 @@ Otherwise, the result of (factor-local/function)&<#fs_pwd[fs_pwd]> is returned.
 	/element/
 		- (control)`property-set`
 		- (source/area)`824 1 841 35`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`10`
 (signature)`_scheduler_loop(ks, proxy, limit, final)`
 
 
@@ -1379,8 +1233,6 @@ Otherwise, the result of (factor-local/function)&<#fs_pwd[fs_pwd]> is returned.
 	/element/
 		- (control)`property-set`
 		- (source/area)`843 1 861 9`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`11`
 		- (type/syntax)`kernel.Scheduler`
 		- (type/project-local/factor-element)&<kernel#Scheduler[fault.system.kernel.Scheduler]>
 		
@@ -1400,7 +1252,5 @@ Accessing (project-local/unknown)&<process#scheduler[process.scheduler]> will pe
 	/element/
 		- (control)`property-set`
 		- (source/area)`864 1 867 27`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`3`
 (signature)`__getattr__(name)`
 
