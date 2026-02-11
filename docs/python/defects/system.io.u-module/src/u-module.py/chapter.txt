@@ -5,7 +5,7 @@
 		- (control)`property-set`
 		- (source/area)`1 1 30 9`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`0`
+		- (coverage-counters)`13`
 Check various expectations.
 
 
@@ -30,5 +30,7 @@ Check various expectations.
 	/element/
 		- (control)`property-set`
 		- (source/area)`17 1 31 8`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`5`
 (signature)`test_no_subtyping(test)`
 

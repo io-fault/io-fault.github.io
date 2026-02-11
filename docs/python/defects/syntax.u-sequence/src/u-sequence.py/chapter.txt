@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 111 0`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`0`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`68`
 
 [ module ]
 ! CONTROL:
@@ -24,6 +24,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`3 1 33 15`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`17`
 (signature)`test_Segments(test)`
 
 - (context-local/factor-element)&<fault.syntax/sequence#Segments[fault.syntax.sequence.Segments]>
@@ -36,6 +38,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`35 1 55 46`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`13`
 (signature)`test_Segments_Sequence_Interface(test)`
 
 - (context-local/factor-element)&<fault.syntax/sequence#Segments[fault.syntax.sequence.Segments]>
@@ -50,6 +54,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`57 1 60 57`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`test_Segments_select(test)`
 
 
@@ -62,6 +68,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`62 1 64 59`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`test_Segments_select_reverse(test)`
 
 
@@ -74,6 +82,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`66 1 69 65`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`test_Segments_select_all(test)`
 
 
@@ -86,6 +96,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`71 1 74 76`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`test_Segments_select_all_reverse(test)`
 
 
@@ -98,6 +110,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`76 1 84 20`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`7`
 (signature)`test_Segments_deletion(test)`
 
 
@@ -110,5 +124,7 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`86 1 107 19`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`16`
 (signature)`test_Segments_getsetitem(test)`
 

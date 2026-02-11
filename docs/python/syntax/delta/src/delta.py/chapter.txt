@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 723 0`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`0`
+		- (coverage-zeros)`107`
+		- (coverage-counters)`283`
 Element change logs for managing deltas, undo, and redo.
 
 
@@ -28,6 +28,8 @@ Element change logs for managing deltas, undo, and redo.
 	/element/
 		- (control)`property-set`
 		- (source/area)`5 1 5 27`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ struct ]
 ! CONTROL:
@@ -38,6 +40,8 @@ Element change logs for managing deltas, undo, and redo.
 	/element/
 		- (control)`property-set`
 		- (source/area)`6 1 6 38`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ Summary ]
 ! CONTROL:
@@ -46,6 +50,8 @@ Element change logs for managing deltas, undo, and redo.
 	/element/
 		- (control)`property-set`
 		- (source/area)`8 1 36 5`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`8 15 8 22`
@@ -77,6 +83,8 @@ commit reporting given the need.
 	/element/
 		- (control)`property-set`
 		- (source/area)`27 2 30 5`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`line_delta(self, ln_offset, deleted, inserted)`
 
 Report that lines were (factor-local/parameter)&<#Summary.line_delta.Parameters.deleted[deleted]> and (factor-local/parameter)&<#Summary.line_delta.Parameters.inserted[inserted]> at (factor-local/parameter)&<#Summary.line_delta.Parameters.ln_offset[ln_offset]>.
@@ -89,6 +97,8 @@ Report that lines were (factor-local/parameter)&<#Summary.line_delta.Parameters.
 	/element/
 		- (control)`property-set`
 		- (source/area)`32 2 36 5`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`codepoint_delta(self, ln_offset, cp_offset, deleted, inserted)`
 
 Report that codepoints were (factor-local/parameter)&<#Summary.codepoint_delta.Parameters.deleted[deleted]> and (factor-local/parameter)&<#Summary.codepoint_delta.Parameters.inserted[inserted]>
@@ -102,6 +112,8 @@ at (factor-local/parameter)&<#Summary.codepoint_delta.Parameters.cp_offset[cp_of
 	/element/
 		- (control)`property-set`
 		- (source/area)`38 1 96 9`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`38 14 38 21`
@@ -118,6 +130,8 @@ An indvidial record of change.
 	/element/
 		- (control)`property-set`
 		- (source/area)`44 2 49 10`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 The element offset and count of elements that were changed.
 
 
@@ -128,6 +142,8 @@ The element offset and count of elements that were changed.
 	/element/
 		- (control)`property-set`
 		- (source/area)`50 2 54 5`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 The change in the elements' length that occurred.
 Length of insertions minus length of deletions.
 
@@ -139,6 +155,8 @@ Length of insertions minus length of deletions.
 	/element/
 		- (control)`property-set`
 		- (source/area)`56 2 61 11`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 (signature)`usage(self)`
 
 Memory usage of the record. The given (invalid/unknown)&<#count> will
@@ -152,6 +170,8 @@ measure an object's size if it hasn't already been seen.
 	/element/
 		- (control)`property-set`
 		- (source/area)`63 2 67 10`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`size(self, encoding)`
 
 Change in bytes of the target resource after the record is applied.
@@ -164,6 +184,8 @@ Change in bytes of the target resource after the record is applied.
 	/element/
 		- (control)`property-set`
 		- (source/area)`69 2 73 5`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`invert(self)`
 
 Construct the version of the record that reverses the effect
@@ -177,6 +199,8 @@ of the change.
 	/element/
 		- (control)`property-set`
 		- (source/area)`75 2 78 5`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`revert(self)`
 
 Reconstruct (factor-local/parameter)&<#Record.revert.Parameters.self[self]> to perform an ineffective operation.
@@ -189,6 +213,8 @@ Reconstruct (factor-local/parameter)&<#Record.revert.Parameters.self[self]> to p
 	/element/
 		- (control)`property-set`
 		- (source/area)`80 2 83 5`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`track(self, target)`
 
 Communicate the change to (factor-local/parameter)&<#Record.track.Parameters.target[target]>.
@@ -201,6 +227,8 @@ Communicate the change to (factor-local/parameter)&<#Record.track.Parameters.tar
 	/element/
 		- (control)`property-set`
 		- (source/area)`85 2 88 5`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`apply(self, target)`
 
 Perform the change to the given (factor-local/parameter)&<#Record.apply.Parameters.target[target]>.
@@ -213,6 +241,8 @@ Perform the change to the given (factor-local/parameter)&<#Record.apply.Paramete
 	/element/
 		- (control)`property-set`
 		- (source/area)`90 2 96 9`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`2`
 (signature)`retract(self, target)`
 
 Perform the inverse, restoring the (factor-local/parameter)&<#Record.retract.Parameters.target[target]> to the state that it was
@@ -226,6 +256,8 @@ in prior to (factor-local/method)&<#Record.apply[apply]> being performed.
 	/element/
 		- (control)`property-set`
 		- (source/area)`97 1 143 9`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`97 18 97 23`
@@ -256,6 +288,8 @@ Used to delimit (factor-local/class)&<#Record[Record]> groups for (factor-local/
 	/element/
 		- (control)`property-set`
 		- (source/area)`111 2 112 18`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 
 [ Checkpoint >> element ]
 ! CONTROL:
@@ -302,6 +336,8 @@ Used to delimit (factor-local/class)&<#Record[Record]> groups for (factor-local/
 	/element/
 		- (control)`property-set`
 		- (source/area)`119 2 120 26`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`usage(self)`
 
 
@@ -314,6 +350,8 @@ Used to delimit (factor-local/class)&<#Record[Record]> groups for (factor-local/
 	/element/
 		- (control)`property-set`
 		- (source/area)`122 2 123 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`invert(self)`
 
 
@@ -326,6 +364,8 @@ Used to delimit (factor-local/class)&<#Record[Record]> groups for (factor-local/
 	/element/
 		- (control)`property-set`
 		- (source/area)`125 2 126 6`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`track(self, target)`
 
 
@@ -338,6 +378,8 @@ Used to delimit (factor-local/class)&<#Record[Record]> groups for (factor-local/
 	/element/
 		- (control)`property-set`
 		- (source/area)`128 2 129 19`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`apply(self, target)`
 
 
@@ -350,6 +392,8 @@ Used to delimit (factor-local/class)&<#Record[Record]> groups for (factor-local/
 	/element/
 		- (control)`property-set`
 		- (source/area)`131 2 132 19`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`retract(self, target)`
 
 
@@ -362,6 +406,8 @@ Used to delimit (factor-local/class)&<#Record[Record]> groups for (factor-local/
 	/element/
 		- (control)`property-set`
 		- (source/area)`134 2 135 13`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`revert(self)`
 
 
@@ -374,6 +420,8 @@ Used to delimit (factor-local/class)&<#Record[Record]> groups for (factor-local/
 	/element/
 		- (control)`property-set`
 		- (source/area)`137 2 143 9`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`3`
 (signature)`combine(self, following)`
 
 
@@ -384,6 +432,8 @@ Used to delimit (factor-local/class)&<#Record[Record]> groups for (factor-local/
 	/element/
 		- (control)`property-set`
 		- (source/area)`144 1 298 9`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`5`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`144 14 144 19`
@@ -400,6 +450,8 @@ Individual record update.
 	/element/
 		- (control)`property-set`
 		- (source/area)`165 2 171 10`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 Change in *elements*. Always zero for (factor-local/class)&<#Update[Update]>.
 
 
@@ -412,6 +464,8 @@ Change in *elements*. Always zero for (factor-local/class)&<#Update[Update]>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`172 2 173 26`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 
 [ Update >> usage ]
 ! CONTROL:
@@ -422,6 +476,8 @@ Change in *elements*. Always zero for (factor-local/class)&<#Update[Update]>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`175 2 176 75`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`usage(self)`
 
 
@@ -434,6 +490,8 @@ Change in *elements*. Always zero for (factor-local/class)&<#Update[Update]>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`178 2 182 3`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`size(self, encoding)`
 
 
@@ -444,6 +502,8 @@ Change in *elements*. Always zero for (factor-local/class)&<#Update[Update]>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`184 2 194 3`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`invert(self)`
 
 Recreate the record where insertion and deletion are swapped.
@@ -458,6 +518,8 @@ Recreate the record where insertion and deletion are swapped.
 	/element/
 		- (control)`property-set`
 		- (source/area)`196 2 199 63`
+		- (coverage-zeros)`7`
+		- (coverage-counters)`7`
 (signature)`track(self, target)`
 
 
@@ -470,6 +532,8 @@ Recreate the record where insertion and deletion are swapped.
 	/element/
 		- (control)`property-set`
 		- (source/area)`201 2 205 24`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 (signature)`apply(self, target)`
 
 
@@ -482,6 +546,8 @@ Recreate the record where insertion and deletion are swapped.
 	/element/
 		- (control)`property-set`
 		- (source/area)`207 2 211 24`
+		- (coverage-zeros)`4`
+		- (coverage-counters)`4`
 (signature)`retract(self, target)`
 
 
@@ -494,6 +560,8 @@ Recreate the record where insertion and deletion are swapped.
 	/element/
 		- (control)`property-set`
 		- (source/area)`213 2 222 58`
+		- (coverage-zeros)`6`
+		- (coverage-counters)`6`
 (signature)`revert(self)`
 
 
@@ -504,6 +572,8 @@ Recreate the record where insertion and deletion are swapped.
 	/element/
 		- (control)`property-set`
 		- (source/area)`224 2 298 9`
+		- (coverage-zeros)`7`
+		- (coverage-counters)`24`
 (signature)`combine(self, following)`
 
 Construct a new (factor-local/class)&<#Update[Update]> instance by combining (factor-local/parameter)&<#Update.combine.Parameters.self[self]> with (factor-local/parameter)&<#Update.combine.Parameters.following[following]>.
@@ -517,6 +587,8 @@ Construct a new (factor-local/class)&<#Update[Update]> instance by combining (fa
 	/element/
 		- (control)`property-set`
 		- (source/area)`299 1 381 9`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`299 13 299 18`
@@ -535,6 +607,8 @@ Insertion and/or deletion of zero or more elements.
 	/element/
 		- (control)`property-set`
 		- (source/area)`317 2 320 10`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 
 [ Lines >> span ]
 ! CONTROL:
@@ -545,6 +619,8 @@ Insertion and/or deletion of zero or more elements.
 	/element/
 		- (control)`property-set`
 		- (source/area)`321 2 322 69`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`3`
 
 [ Lines >> usage ]
 ! CONTROL:
@@ -555,6 +631,8 @@ Insertion and/or deletion of zero or more elements.
 	/element/
 		- (control)`property-set`
 		- (source/area)`324 2 331 26`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`5`
 (signature)`usage(self)`
 
 
@@ -567,6 +645,8 @@ Insertion and/or deletion of zero or more elements.
 	/element/
 		- (control)`property-set`
 		- (source/area)`333 2 337 3`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`4`
 (signature)`size(self, encoding)`
 
 
@@ -577,6 +657,8 @@ Insertion and/or deletion of zero or more elements.
 	/element/
 		- (control)`property-set`
 		- (source/area)`339 2 348 3`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`invert(self)`
 
 Recreate the record where insertion and deletion are swapped.
@@ -591,6 +673,8 @@ Recreate the record where insertion and deletion are swapped.
 	/element/
 		- (control)`property-set`
 		- (source/area)`350 2 353 43`
+		- (coverage-zeros)`7`
+		- (coverage-counters)`7`
 (signature)`track(self, target)`
 
 
@@ -603,6 +687,8 @@ Recreate the record where insertion and deletion are swapped.
 	/element/
 		- (control)`property-set`
 		- (source/area)`355 2 359 49`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`5`
 (signature)`apply(self, target)`
 
 
@@ -615,6 +701,8 @@ Recreate the record where insertion and deletion are swapped.
 	/element/
 		- (control)`property-set`
 		- (source/area)`361 2 365 49`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`5`
 (signature)`retract(self, target)`
 
 
@@ -627,6 +715,8 @@ Recreate the record where insertion and deletion are swapped.
 	/element/
 		- (control)`property-set`
 		- (source/area)`367 2 376 43`
+		- (coverage-zeros)`6`
+		- (coverage-counters)`6`
 (signature)`revert(self)`
 
 
@@ -639,6 +729,8 @@ Recreate the record where insertion and deletion are swapped.
 	/element/
 		- (control)`property-set`
 		- (source/area)`378 2 381 9`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`combine(self, following)`
 
 
@@ -649,6 +741,8 @@ Recreate the record where insertion and deletion are swapped.
 	/element/
 		- (control)`property-set`
 		- (source/area)`382 1 444 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`5`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`382 14 382 19`
@@ -667,6 +761,8 @@ Change
 	/element/
 		- (control)`property-set`
 		- (source/area)`401 2 404 10`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 
 [ Cursor >> span ]
 ! CONTROL:
@@ -677,6 +773,8 @@ Change
 	/element/
 		- (control)`property-set`
 		- (source/area)`405 2 406 69`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`3`
 
 [ Cursor >> usage ]
 ! CONTROL:
@@ -687,6 +785,8 @@ Change
 	/element/
 		- (control)`property-set`
 		- (source/area)`408 2 409 81`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`usage(self)`
 
 
@@ -699,6 +799,8 @@ Change
 	/element/
 		- (control)`property-set`
 		- (source/area)`411 2 412 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`size(self, encoding)`
 
 
@@ -709,6 +811,8 @@ Change
 	/element/
 		- (control)`property-set`
 		- (source/area)`414 2 424 3`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 (signature)`invert(self)`
 
 Recreate the record where insertion and deletion are swapped.
@@ -723,6 +827,8 @@ Recreate the record where insertion and deletion are swapped.
 	/element/
 		- (control)`property-set`
 		- (source/area)`426 2 435 50`
+		- (coverage-zeros)`8`
+		- (coverage-counters)`8`
 (signature)`track(self, target)`
 
 
@@ -735,6 +841,8 @@ Recreate the record where insertion and deletion are swapped.
 	/element/
 		- (control)`property-set`
 		- (source/area)`437 2 438 6`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`3`
 (signature)`apply(self, target)`
 
 
@@ -747,6 +855,8 @@ Recreate the record where insertion and deletion are swapped.
 	/element/
 		- (control)`property-set`
 		- (source/area)`440 2 441 6`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`3`
 (signature)`retract(self, target)`
 
 
@@ -769,6 +879,8 @@ Recreate the record where insertion and deletion are swapped.
 	/element/
 		- (control)`property-set`
 		- (source/area)`446 1 723 17`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`446 11 446 16`
@@ -787,6 +899,8 @@ The (factor-local/class)&<#Record[Record]> vector tracking the changes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`461 2 466 18`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`__init__(self)`
 
 
@@ -797,6 +911,8 @@ The (factor-local/class)&<#Record[Record]> vector tracking the changes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`468 2 474 20`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`3`
 (signature)`revert(self, target)`
 
 Retract all committed changes on (factor-local/parameter)&<#Log.revert.Parameters.target[target]>.
@@ -811,6 +927,8 @@ Retract all committed changes on (factor-local/parameter)&<#Log.revert.Parameter
 	/element/
 		- (control)`property-set`
 		- (source/area)`476 2 494 20`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`12`
 (signature)`truncate(self)`
 
 
@@ -821,6 +939,8 @@ Retract all committed changes on (factor-local/parameter)&<#Log.revert.Parameter
 	/element/
 		- (control)`property-set`
 		- (source/area)`496 2 501 52`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 (signature)`size(self, encoding)`
 
 Total size of the logged changes.
@@ -835,6 +955,8 @@ Total size of the logged changes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`503 2 512 23`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`7`
 (signature)`usage(self)`
 
 
@@ -845,6 +967,8 @@ Total size of the logged changes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`514 2 519 68`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`snapshot(self)`
 
 Construct a reference to the current version.
@@ -857,6 +981,8 @@ Construct a reference to the current version.
 	/element/
 		- (control)`property-set`
 		- (source/area)`521 2 542 51`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`14`
 (signature)`since(self, snapshot)`
 
 Generate a sequence of changes since (invalid/unknown)&<#version>.
@@ -869,6 +995,8 @@ Generate a sequence of changes since (invalid/unknown)&<#version>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`544 2 551 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`write(self, record)`
 
 Append a delta to the log.
@@ -881,6 +1009,8 @@ Append a delta to the log.
 	/element/
 		- (control)`property-set`
 		- (source/area)`553 2 558 48`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 (signature)`pending(self)`
 
 Return the uncommitted deltas.
@@ -893,6 +1023,8 @@ Return the uncommitted deltas.
 	/element/
 		- (control)`property-set`
 		- (source/area)`560 2 567 13`
+		- (coverage-zeros)`4`
+		- (coverage-counters)`4`
 (signature)`track(self, target)`
 
 Update (factor-local/parameter)&<#Log.track.Parameters.target[target]> by reporting the change summaries.
@@ -905,6 +1037,8 @@ Update (factor-local/parameter)&<#Log.track.Parameters.target[target]> by report
 	/element/
 		- (control)`property-set`
 		- (source/area)`569 2 576 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 (signature)`apply(self, target)`
 
 Update (factor-local/parameter)&<#Log.apply.Parameters.target[target]> by applying the current transaction.
@@ -917,6 +1051,8 @@ Update (factor-local/parameter)&<#Log.apply.Parameters.target[target]> by applyi
 	/element/
 		- (control)`property-set`
 		- (source/area)`578 2 585 13`
+		- (coverage-zeros)`4`
+		- (coverage-counters)`4`
 (signature)`retract(self, target)`
 
 Update (factor-local/parameter)&<#Log.retract.Parameters.target[target]> by previously applied retracting records.
@@ -929,6 +1065,8 @@ Update (factor-local/parameter)&<#Log.retract.Parameters.target[target]> by prev
 	/element/
 		- (control)`property-set`
 		- (source/area)`587 2 616 13`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`15`
 (signature)`collapse(self)`
 
 Commit the leading deltas of the current transaction
@@ -945,6 +1083,8 @@ and deletions when typing in insert mode.
 	/element/
 		- (control)`property-set`
 		- (source/area)`618 2 628 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 (signature)`commit(self)`
 
 Update the commit position.
@@ -958,6 +1098,8 @@ Normally called directly after (factor-local/method)&<#Log.apply[apply]>.
 	/element/
 		- (control)`property-set`
 		- (source/area)`630 2 642 13`
+		- (coverage-zeros)`4`
+		- (coverage-counters)`4`
 (signature)`abort(self)`
 
 Remove any records written since (invalid/unknown)&<#committed> and update (invalid/unknown)&<#count>
@@ -974,6 +1116,8 @@ In most cases, (factor-local/method)&<#Log.undo[undo]> should be used.
 	/element/
 		- (control)`property-set`
 		- (source/area)`644 2 660 13`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`9`
 (signature)`checkpoint(self)`
 
 Write a checkpoint clearing any uncommitted writes.
@@ -986,6 +1130,8 @@ Write a checkpoint clearing any uncommitted writes.
 	/element/
 		- (control)`property-set`
 		- (source/area)`662 2 692 39`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`15`
 (signature)`undo(self)`
 
 Retract delta records effecting (invalid/unknown)&<#target> until the given (factor-local/parameter)&<#Log.undo.Parameters.quantity[quantity]>
@@ -1000,6 +1146,8 @@ reached.
 	/element/
 		- (control)`property-set`
 		- (source/area)`694 2 723 17`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`16`
 (signature)`redo(self, target)`
 
 Replay delta records effecting (factor-local/parameter)&<#Log.redo.Parameters.target[target]> until the given (factor-local/parameter)&<#Log.redo.Parameters.quantity[quantity]>

@@ -5,7 +5,7 @@
 		- (control)`property-set`
 		- (source/area)`1 1 180 0`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`0`
+		- (coverage-counters)`50`
 Gregorian calendar functions and data.
 
 
@@ -28,6 +28,8 @@ Gregorian calendar functions and data.
 	/element/
 		- (control)`property-set`
 		- (source/area)`5 1 5 32`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ centuries_in_cycle ]
 ! CONTROL:
@@ -86,6 +88,8 @@ Gregorian calendar functions and data.
 	/element/
 		- (control)`property-set`
 		- (source/area)`20 1 33 1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	month_names = (
 		"january",
@@ -111,6 +115,8 @@ Gregorian calendar functions and data.
 	/element/
 		- (control)`property-set`
 		- (source/area)`36 1 36 33`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	months_in_year = len(month_names)
 
@@ -123,6 +129,8 @@ Gregorian calendar functions and data.
 	/element/
 		- (control)`property-set`
 		- (source/area)`39 1 44 1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	month_abbreviations = (
 		"jan", "feb", "mar",
@@ -140,6 +148,8 @@ Gregorian calendar functions and data.
 	/element/
 		- (control)`property-set`
 		- (source/area)`47 1 49 1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	month_name_to_number = {
 		month_names[i] : i for i in range(len(month_names))
@@ -154,6 +164,8 @@ Gregorian calendar functions and data.
 	/element/
 		- (control)`property-set`
 		- (source/area)`55 1 59 1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	calendar_year = (
 		31, 28, 31, 30,
@@ -170,6 +182,8 @@ Gregorian calendar functions and data.
 	/element/
 		- (control)`property-set`
 		- (source/area)`62 1 62 76`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	calendar_leap = (calendar_year[0], calendar_year[1] + 1) + calendar_year[2:] # Feb29
 
@@ -182,6 +196,8 @@ Gregorian calendar functions and data.
 	/element/
 		- (control)`property-set`
 		- (source/area)`67 1 70 1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	leap_cycle = (
 		('leap', 1, calendar_leap),
@@ -197,6 +213,8 @@ Gregorian calendar functions and data.
 	/element/
 		- (control)`property-set`
 		- (source/area)`72 1 84 1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	cycle = (
 		'gregorian-cycle', 1, (
@@ -221,6 +239,8 @@ Gregorian calendar functions and data.
 	/element/
 		- (control)`property-set`
 		- (source/area)`86 1 86 34`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	calendar = callib.aggregate(cycle)
 
@@ -233,6 +253,8 @@ Gregorian calendar functions and data.
 	/element/
 		- (control)`property-set`
 		- (source/area)`88 1 93 73`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`resolve_by_months(months)`
 
 
@@ -245,6 +267,8 @@ Gregorian calendar functions and data.
 	/element/
 		- (control)`property-set`
 		- (source/area)`95 1 100 71`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`resolve_by_days(days)`
 
 
@@ -257,6 +281,8 @@ Gregorian calendar functions and data.
 	/element/
 		- (control)`property-set`
 		- (source/area)`103 1 103 72`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	months_in_cycle = months_in_year * years_in_century * centuries_in_cycle
 
@@ -269,6 +295,8 @@ Gregorian calendar functions and data.
 	/element/
 		- (control)`property-set`
 		- (source/area)`106 1 106 40`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	r = resolve_by_months(months_in_cycle-1)
 
@@ -281,6 +309,8 @@ Gregorian calendar functions and data.
 	/element/
 		- (control)`property-set`
 		- (source/area)`107 1 107 28`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	days_in_cycle = r[1] + r[-1]
 
@@ -291,6 +321,8 @@ Gregorian calendar functions and data.
 	/element/
 		- (control)`property-set`
 		- (source/area)`109 1 115 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 (signature)`year_is_leap(y)`
 
 Given a gregorian calendar year, determine whether it is a leap year.
@@ -303,6 +335,8 @@ Given a gregorian calendar year, determine whether it is a leap year.
 	/element/
 		- (control)`property-set`
 		- (source/area)`117 1 125 38`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`month_from_days(days)`
 
 Convert the given number Earth-days to a month in the Gregorian cycle.
@@ -318,6 +352,8 @@ Convert the given number Earth-days to a month in the Gregorian cycle.
 	/element/
 		- (control)`property-set`
 		- (source/area)`127 1 133 47`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`days_from_month(months)`
 
 Convert the given months to the number of Earth-days leading up to the
@@ -331,6 +367,8 @@ Gregorian month.
 	/element/
 		- (control)`property-set`
 		- (source/area)`135 1 142 58`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 (signature)`date_from_days(days)`
 
 Convert the given Earth-days into a Gregorian date in the common form:
@@ -344,6 +382,8 @@ Convert the given Earth-days into a Gregorian date in the common form:
 	/element/
 		- (control)`property-set`
 		- (source/area)`144 1 153 53`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 (signature)`days_from_date(date)`
 
 Convert a Gregorian date in the common form, (year, month, day), to the number
@@ -359,5 +399,7 @@ of days leading up to the date.
 	/element/
 		- (control)`property-set`
 		- (source/area)`155 1 180 74`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`14`
 (signature)`context(context)`
 

@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 97 0`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`0`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`30`
 Time domain classes for points in time and measures of time.
 
 #!python
@@ -39,6 +39,8 @@ Time domain classes for points in time and measures of time.
 	/element/
 		- (control)`property-set`
 		- (source/area)`38 1 38 22`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ core ]
 ! CONTROL:
@@ -49,6 +51,8 @@ Time domain classes for points in time and measures of time.
 	/element/
 		- (control)`property-set`
 		- (source/area)`39 1 39 18`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ MeasureTypes ]
 ! CONTROL:
@@ -59,6 +63,8 @@ Time domain classes for points in time and measures of time.
 	/element/
 		- (control)`property-set`
 		- (source/area)`44 1 44 27`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	MeasureTypes = MeasureTypes
 
@@ -69,6 +75,8 @@ Time domain classes for points in time and measures of time.
 	/element/
 		- (control)`property-set`
 		- (source/area)`47 1 47 25`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 The nanosecond precision point in time type.
 
 #!source
@@ -81,6 +89,8 @@ The nanosecond precision point in time type.
 	/element/
 		- (control)`property-set`
 		- (source/area)`50 1 50 20`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 The earth-day precision point in time type.
 
 #!source
@@ -93,6 +103,8 @@ The earth-day precision point in time type.
 	/element/
 		- (control)`property-set`
 		- (source/area)`54 1 54 25`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 The nanosecond precision time delta type.
 
 #!source
@@ -105,6 +117,8 @@ The nanosecond precision time delta type.
 	/element/
 		- (control)`property-set`
 		- (source/area)`57 1 57 24`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 The gregorian month precision time delta type.
 Necessary for representing months in certain cases as (factor-local/data)&<#Measure[Measure]>
 is in exact nanoseconds.
@@ -121,6 +135,8 @@ is in exact nanoseconds.
 	/element/
 		- (control)`property-set`
 		- (source/area)`60 1 60 23`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	PointTypes = PointTypes
 
@@ -131,6 +147,8 @@ is in exact nanoseconds.
 	/element/
 		- (control)`property-set`
 		- (source/area)`62 1 62 34`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 Retrieve the most appropriate (project-local/factor-element)&<abstract#Measure[fault.time.abstract.Measure]> class available in (invalid/unknown)&<#Context> for use
 with the identified unit.
 

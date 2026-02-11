@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 259 0`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`0`
+		- (coverage-zeros)`15`
+		- (coverage-counters)`81`
 System argument vector interpretation methods.
 
 (factor-local/function)&<#legacy[legacy]> is the only implemented method and should cover most use cases.
@@ -50,6 +50,8 @@ System argument vector interpretation methods.
 	/element/
 		- (control)`property-set`
 		- (source/area)`31 1 64 42`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`31 22 31 30`
@@ -101,6 +103,8 @@ Exception signalling that options were not properly expressed.
 	/element/
 		- (control)`property-set`
 		- (source/area)`56 2 64 42`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`3`
 (signature)`__str__(self)`
 
 
@@ -111,6 +115,8 @@ Exception signalling that options were not properly expressed.
 	/element/
 		- (control)`property-set`
 		- (source/area)`66 1 197 49`
+		- (coverage-zeros)`11`
+		- (coverage-counters)`54`
 (signature)`legacy(restricted, required, options, trap, offset, signal, assignment)`
 
 Interpret an argument vector, (factor-local/parameter)&<#legacy.Parameters.options[options]>, according to the (factor-local/parameter)&<#legacy.Parameters.restricted[restricted]>
@@ -169,6 +175,8 @@ to match an index entry.
 	/element/
 		- (control)`property-set`
 		- (source/area)`199 1 201 36`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`_sfr(t, k, i, v)`
 
 
@@ -181,6 +189,8 @@ to match an index entry.
 	/element/
 		- (control)`property-set`
 		- (source/area)`203 1 205 44`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`_seq(t, k, i, v)`
 
 
@@ -193,6 +203,8 @@ to match an index entry.
 	/element/
 		- (control)`property-set`
 		- (source/area)`208 1 216 1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	operations = {
 		'field-replace': (lambda t, k, i, v: t.__setitem__(k, i(k, v))),
@@ -211,6 +223,8 @@ to match an index entry.
 	/element/
 		- (control)`property-set`
 		- (source/area)`219 1 259 9`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`12`
 (signature)`merge(target, events, Interpreter, Operations)`
 
 Apply the values provided by (factor-local/parameter)&<#merge.Parameters.events[events]> into (factor-local/parameter)&<#merge.Parameters.target[target]> using

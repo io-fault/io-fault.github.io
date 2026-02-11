@@ -5,7 +5,7 @@
 		- (control)`property-set`
 		- (source/area)`1 1 28 0`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`0`
+		- (coverage-counters)`14`
 Relative path resolution.
 
 
@@ -26,6 +26,8 @@ Relative path resolution.
 	/element/
 		- (control)`property-set`
 		- (source/area)`6 1 28 9`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`12`
 		- (type/syntax)`Sequence[str]`
 		
 (signature)`relative(points)`

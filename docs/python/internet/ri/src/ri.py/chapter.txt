@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 713 0`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`0`
+		- (coverage-zeros)`129`
+		- (coverage-counters)`363`
 Parse, Serialize, and Tokenize Resource Indicators
 
 (project-local/unknown)&<ri> provides tools for working with standard IRIs or URIs. However,
@@ -63,6 +63,8 @@ is inspired by the URI and IRI standards:
 	/element/
 		- (control)`property-set`
 		- (source/area)`38 1 38 30`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	scheme_chars = '-.+0123456789'
 
@@ -75,6 +77,8 @@ is inspired by the URI and IRI standards:
 	/element/
 		- (control)`property-set`
 		- (source/area)`39 1 39 38`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	reserved_chars = "%!*'();:@&=+$,/?#[]"
 
@@ -87,6 +91,8 @@ is inspired by the URI and IRI standards:
 	/element/
 		- (control)`property-set`
 		- (source/area)`41 1 41 31`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	_pct_encode = '%%%0.2X'.__mod__
 
@@ -99,6 +105,8 @@ is inspired by the URI and IRI standards:
 	/element/
 		- (control)`property-set`
 		- (source/area)`43 1 48 18`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`5`
 (signature)`_decode_parts(string)`
 
 
@@ -111,6 +119,8 @@ is inspired by the URI and IRI standards:
 	/element/
 		- (control)`property-set`
 		- (source/area)`50 1 51 30`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`decode_percent_escapes(string)`
 
 
@@ -121,6 +131,8 @@ is inspired by the URI and IRI standards:
 	/element/
 		- (control)`property-set`
 		- (source/area)`53 1 84 112`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`12`
 (signature)`strict()`
 
 Enable strict serializations.
@@ -139,6 +151,8 @@ be created from the loader and (factor-local/function)&<#strict[strict]> should 
 	/element/
 		- (control)`property-set`
 		- (source/area)`86 1 86 70`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	_uri_escape = (lambda x: ''.join(map(_pct_encode, x.encode('utf-8'))))
 
@@ -151,6 +165,8 @@ be created from the loader and (factor-local/function)&<#strict[strict]> should 
 	/element/
 		- (control)`property-set`
 		- (source/area)`87 1 87 105`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	_mktrans = (lambda z: str.maketrans({x:_pct_encode(x) for x in [ord(y) for y in z] + list(range(0,33))}))
 
@@ -163,6 +179,8 @@ be created from the loader and (factor-local/function)&<#strict[strict]> should 
 	/element/
 		- (control)`property-set`
 		- (source/area)`88 1 88 37`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	_percent_translations = _mktrans("%")
 
@@ -175,6 +193,8 @@ be created from the loader and (factor-local/function)&<#strict[strict]> should 
 	/element/
 		- (control)`property-set`
 		- (source/area)`89 1 89 47`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	_user_percent_translations = _mktrans("%@:/?#")
 
@@ -187,6 +207,8 @@ be created from the loader and (factor-local/function)&<#strict[strict]> should 
 	/element/
 		- (control)`property-set`
 		- (source/area)`90 1 90 50`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	_password_percent_translations = _mktrans("%@/?#")
 
@@ -199,6 +221,8 @@ be created from the loader and (factor-local/function)&<#strict[strict]> should 
 	/element/
 		- (control)`property-set`
 		- (source/area)`91 1 94 48`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	_host_percent_translations = \
 	_address_percent_translations = \
@@ -214,6 +238,8 @@ be created from the loader and (factor-local/function)&<#strict[strict]> should 
 	/element/
 		- (control)`property-set`
 		- (source/area)`95 1 95 48`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	_fragment_percent_translations = _mktrans("%?#")
 
@@ -226,6 +252,8 @@ be created from the loader and (factor-local/function)&<#strict[strict]> should 
 	/element/
 		- (control)`property-set`
 		- (source/area)`96 1 96 50`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	_query_key_percent_translations = _mktrans("%&#=")
 
@@ -238,6 +266,8 @@ be created from the loader and (factor-local/function)&<#strict[strict]> should 
 	/element/
 		- (control)`property-set`
 		- (source/area)`97 1 97 51`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	_query_value_percent_translations = _mktrans("%&#")
 
@@ -250,6 +280,8 @@ be created from the loader and (factor-local/function)&<#strict[strict]> should 
 	/element/
 		- (control)`property-set`
 		- (source/area)`138 1 140 1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	Parts = collections.namedtuple("Parts",
 		('type', 'scheme', 'netloc', 'path', 'query', 'fragment')
@@ -262,6 +294,8 @@ be created from the loader and (factor-local/function)&<#strict[strict]> should 
 	/element/
 		- (control)`property-set`
 		- (source/area)`142 1 244 58`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`50`
 (signature)`split(iri)`
 
 Split an IRI into its base components based on the markers:
@@ -288,6 +322,8 @@ Returns the top-level parts of the IRI as a namedtuple.
 	/element/
 		- (control)`property-set`
 		- (source/area)`246 1 253 73`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`join_path(p)`
 
 Join a list of paths(strings) on "/" *after* escaping them.
@@ -302,6 +338,8 @@ Join a list of paths(strings) on "/" *after* escaping them.
 	/element/
 		- (control)`property-set`
 		- (source/area)`255 1 255 24`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	unsplit_path = join_path
 
@@ -312,6 +350,8 @@ Join a list of paths(strings) on "/" *after* escaping them.
 	/element/
 		- (control)`property-set`
 		- (source/area)`257 1 267 44`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 (signature)`split_path(p)`
 
 Return a list of unescaped strings split on "/".
@@ -327,6 +367,8 @@ decoded.
 	/element/
 		- (control)`property-set`
 		- (source/area)`269 1 295 9`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`26`
 (signature)`join(t)`
 
 Make an RI from a split RI(5-tuple)
@@ -341,6 +383,8 @@ Make an RI from a split RI(5-tuple)
 	/element/
 		- (control)`property-set`
 		- (source/area)`297 1 297 14`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	unsplit = join
 
@@ -351,6 +395,8 @@ Make an RI from a split RI(5-tuple)
 	/element/
 		- (control)`property-set`
 		- (source/area)`299 1 319 22`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`10`
 (signature)`remap_ipv4_address(string)`
 
 Recognize IPv4 hosts as addresses.
@@ -363,6 +409,8 @@ Recognize IPv4 hosts as addresses.
 	/element/
 		- (control)`property-set`
 		- (source/area)`321 1 407 45`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`44`
 (signature)`split_netloc(netloc)`
 
 Split a network location into a 4-tuple, (user, password, host, port).
@@ -378,6 +426,8 @@ decoded.
 	/element/
 		- (control)`property-set`
 		- (source/area)`409 1 437 9`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`19`
 (signature)`join_netloc(t)`
 
 Create a netloc fragment from the given tuple(user, password, host, address, port).
@@ -392,6 +442,8 @@ Create a netloc fragment from the given tuple(user, password, host, address, por
 	/element/
 		- (control)`property-set`
 		- (source/area)`439 1 439 28`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	unsplit_netloc = join_netloc
 
@@ -404,6 +456,8 @@ Create a netloc fragment from the given tuple(user, password, host, address, por
 	/element/
 		- (control)`property-set`
 		- (source/area)`441 1 445 2`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`parse_query(query)`
 
 
@@ -414,6 +468,8 @@ Create a netloc fragment from the given tuple(user, password, host, address, por
 	/element/
 		- (control)`property-set`
 		- (source/area)`447 1 489 9`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`27`
 (signature)`structure(t)`
 
 Create a dictionary from a split RI(5-tuple).
@@ -429,6 +485,8 @@ decoded.
 	/element/
 		- (control)`property-set`
 		- (source/area)`491 1 504 3`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`6`
 (signature)`construct_query(x)`
 
 Given a sequence of (key, value) pairs, construct.
@@ -441,6 +499,8 @@ Given a sequence of (key, value) pairs, construct.
 	/element/
 		- (control)`property-set`
 		- (source/area)`506 1 536 2`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`11`
 (signature)`construct(x)`
 
 Construct a RI tuple(5-tuple) from a dictionary object.
@@ -453,6 +513,8 @@ Construct a RI tuple(5-tuple) from a dictionary object.
 	/element/
 		- (control)`property-set`
 		- (source/area)`538 1 546 52`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`parse(iri)`
 
 Parse an RI into a dictionary object. Synonym for `structure(split(x))`.
@@ -468,6 +530,8 @@ decoded.
 	/element/
 		- (control)`property-set`
 		- (source/area)`548 1 553 26`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`serialize(x)`
 
 Return an RI from a dictionary object. Synonym for `join(construct(x))`.
@@ -480,6 +544,8 @@ Return an RI from a dictionary object. Synonym for `join(construct(x))`.
 	/element/
 		- (control)`property-set`
 		- (source/area)`555 1 569 9`
+		- (coverage-zeros)`10`
+		- (coverage-counters)`10`
 (signature)`http(struct)`
 
 Return the HTTP Request-URI suitable for submission with an HTTP request.
@@ -492,6 +558,8 @@ Return the HTTP Request-URI suitable for submission with an HTTP request.
 	/element/
 		- (control)`property-set`
 		- (source/area)`571 1 611 60`
+		- (coverage-zeros)`20`
+		- (coverage-counters)`20`
 (signature)`context_tokens(scheme, type, user, password, host, address, port)`
 
 Format the authority fields of a Resource Indicator.
@@ -506,6 +574,8 @@ Format the authority fields of a Resource Indicator.
 	/element/
 		- (control)`property-set`
 		- (source/area)`613 1 636 80`
+		- (coverage-zeros)`22`
+		- (coverage-counters)`22`
 (signature)`query_tokens(query)`
 
 
@@ -518,6 +588,8 @@ Format the authority fields of a Resource Indicator.
 	/element/
 		- (control)`property-set`
 		- (source/area)`638 1 642 71`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`3`
 (signature)`fragment_tokens(fragment)`
 
 
@@ -530,6 +602,8 @@ Format the authority fields of a Resource Indicator.
 	/element/
 		- (control)`property-set`
 		- (source/area)`644 1 688 67`
+		- (coverage-zeros)`28`
+		- (coverage-counters)`28`
 (signature)`path_tokens(root, path)`
 
 
@@ -540,6 +614,8 @@ Format the authority fields of a Resource Indicator.
 	/element/
 		- (control)`property-set`
 		- (source/area)`690 1 704 53`
+		- (coverage-zeros)`5`
+		- (coverage-counters)`5`
 (signature)`tokens(struct)`
 
 Construct an iterator producing Resource Indicator Tokens.

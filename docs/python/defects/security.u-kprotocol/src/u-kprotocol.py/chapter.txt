@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 105 28`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`0`
+		- (coverage-zeros)`9`
+		- (coverage-counters)`53`
 Validate protocol implementations.
 
 
@@ -62,6 +62,8 @@ Validate protocol implementations.
 	/element/
 		- (control)`property-set`
 		- (source/area)`10 2 11 25`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`encipher(self, data)`
 
 
@@ -74,6 +76,8 @@ Validate protocol implementations.
 	/element/
 		- (control)`property-set`
 		- (source/area)`13 2 14 25`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`decipher(self, data)`
 
 
@@ -110,6 +114,8 @@ Validate protocol implementations.
 	/element/
 		- (control)`property-set`
 		- (source/area)`22 2 23 14`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`connect_transmit_ready(self, cb)`
 
 
@@ -122,6 +128,8 @@ Validate protocol implementations.
 	/element/
 		- (control)`property-set`
 		- (source/area)`25 2 26 14`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`connect_receive_closed(self, cb)`
 
 
@@ -134,6 +142,8 @@ Validate protocol implementations.
 	/element/
 		- (control)`property-set`
 		- (source/area)`28 1 33 38`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`test_allocate(test)`
 
 
@@ -144,6 +154,8 @@ Validate protocol implementations.
 	/element/
 		- (control)`property-set`
 		- (source/area)`35 1 44 52`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`6`
 (signature)`test_transfers(test)`
 
 Validate encrypt and decrypt methods.
@@ -156,6 +168,8 @@ Validate encrypt and decrypt methods.
 	/element/
 		- (control)`property-set`
 		- (source/area)`46 1 62 23`
+		- (coverage-zeros)`9`
+		- (coverage-counters)`11`
 (signature)`test_channel_interrupt(test)`
 
 - (context-local/factor-element)&<fault.security/kprotocol#SecuredTransmit.stx_receive_interrupt[fault.security.kprotocol.SecuredTransmit.stx_receive_interrupt]>
@@ -168,6 +182,8 @@ Validate encrypt and decrypt methods.
 	/element/
 		- (control)`property-set`
 		- (source/area)`64 1 79 37`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`10`
 (signature)`test_channel_terminate_callback(test)`
 
 - (context-local/factor-element)&<fault.security/kprotocol#SecuredTransmit.stx_receive_closed[fault.security.kprotocol.SecuredTransmit.stx_receive_closed]>
@@ -180,6 +196,8 @@ Validate encrypt and decrypt methods.
 	/element/
 		- (control)`property-set`
 		- (source/area)`81 1 106 27`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`17`
 (signature)`test_channel_terminate_full(test)`
 
 - (context-local/factor-element)&<fault.security/kprotocol#SecuredTransmit.stx_receive_closed[fault.security.kprotocol.SecuredTransmit.stx_receive_closed]>

@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 92 42`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`0`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`64`
 Miscellaneous flow tests.
 
 
@@ -28,6 +28,8 @@ Miscellaneous flow tests.
 	/element/
 		- (control)`property-set`
 		- (source/area)`5 1 5 16`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ typing ]
 ! CONTROL:
@@ -38,6 +40,8 @@ Miscellaneous flow tests.
 	/element/
 		- (control)`property-set`
 		- (source/area)`6 1 6 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ itertools ]
 ! CONTROL:
@@ -48,6 +52,8 @@ Miscellaneous flow tests.
 	/element/
 		- (control)`property-set`
 		- (source/area)`7 1 7 16`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ flows ]
 ! CONTROL:
@@ -58,6 +64,8 @@ Miscellaneous flow tests.
 	/element/
 		- (control)`property-set`
 		- (source/area)`9 1 9 28`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ testlib ]
 ! CONTROL:
@@ -68,6 +76,8 @@ Miscellaneous flow tests.
 	/element/
 		- (control)`property-set`
 		- (source/area)`10 1 10 33`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ test_Transformation ]
 ! CONTROL:
@@ -78,6 +88,8 @@ Miscellaneous flow tests.
 	/element/
 		- (control)`property-set`
 		- (source/area)`12 1 40 26`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`24`
 (signature)`test_Transformation(test)`
 
 
@@ -90,6 +102,8 @@ Miscellaneous flow tests.
 	/element/
 		- (control)`property-set`
 		- (source/area)`42 1 50 46`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`6`
 (signature)`setup_connected_flows()`
 
 
@@ -100,6 +114,8 @@ Miscellaneous flow tests.
 	/element/
 		- (control)`property-set`
 		- (source/area)`52 1 89 33`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`23`
 (signature)`test_Flow_connect_events(test)`
 
 Validate events of connected Flows across Sector boundaries.

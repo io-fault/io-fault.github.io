@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 84 0`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`0`
+		- (coverage-zeros)`12`
+		- (coverage-counters)`36`
 Segment and Selector implementation access.
 
 
@@ -28,6 +28,8 @@ Segment and Selector implementation access.
 	/element/
 		- (control)`property-set`
 		- (source/area)`5 1 5 18`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ rewrite ]
 ! CONTROL:
@@ -38,6 +40,8 @@ Segment and Selector implementation access.
 	/element/
 		- (control)`property-set`
 		- (source/area)`6 1 6 21`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ consistency ]
 ! CONTROL:
@@ -48,6 +52,8 @@ Segment and Selector implementation access.
 	/element/
 		- (control)`property-set`
 		- (source/area)`8 1 8 30`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	consistency = core.consistency # Ultimately from fault.context.tools
 
@@ -58,6 +64,8 @@ Segment and Selector implementation access.
 	/element/
 		- (control)`property-set`
 		- (source/area)`10 1 45 39`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`10 15 10 55`
@@ -75,6 +83,8 @@ Sequence of identifiers that may be incorporated into a selector subclass.
 	/element/
 		- (control)`property-set`
 		- (source/area)`15 2 15 35`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	__slots__ = ('context', 'points',)
 
@@ -87,6 +97,8 @@ Sequence of identifiers that may be incorporated into a selector subclass.
 	/element/
 		- (control)`property-set`
 		- (source/area)`17 2 19 46`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 (signature)`__str__(self)`
 
 
@@ -97,6 +109,8 @@ Sequence of identifiers that may be incorporated into a selector subclass.
 	/element/
 		- (control)`property-set`
 		- (source/area)`21 2 29 14`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`__bool__(self)`
 
 True is the segment has any points; False if zero.
@@ -111,6 +125,8 @@ True is the segment has any points; False if zero.
 	/element/
 		- (control)`property-set`
 		- (source/area)`31 2 45 39`
+		- (coverage-zeros)`8`
+		- (coverage-counters)`8`
 (signature)`segment(self)`
 
 
@@ -121,6 +137,8 @@ True is the segment has any points; False if zero.
 	/element/
 		- (control)`property-set`
 		- (source/area)`47 1 84 54`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`47 16 47 56`
@@ -139,6 +157,8 @@ by the sequence of identifiers contained within the selector instance.
 	/element/
 		- (control)`property-set`
 		- (source/area)`55 2 74 32`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`10`
 		- (type/syntax)`Segment`
 		- (type/factor-local/parameter)&<#Selector.segment.Parameters.Segment[Segment]>
 		
@@ -157,6 +177,8 @@ If stem is not given, the entire selector will be converted.
 	/element/
 		- (control)`property-set`
 		- (source/area)`76 2 78 46`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 (signature)`__str__(self)`
 
 
@@ -181,5 +203,7 @@ If stem is not given, the entire selector will be converted.
 	/element/
 		- (control)`property-set`
 		- (source/area)`84 2 84 54`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	_relative_resolution = staticmethod(rewrite.relative)

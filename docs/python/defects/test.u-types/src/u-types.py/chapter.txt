@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 318 0`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`0`
+		- (coverage-zeros)`11`
+		- (coverage-counters)`179`
 
 [ functools ]
 ! CONTROL:
@@ -26,6 +26,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`2 1 2 35`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ test_Test_fail ]
 ! CONTROL:
@@ -36,6 +38,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`4 1 17 46`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`9`
 (signature)`test_Test_fail(test)`
 
 
@@ -48,6 +52,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`19 1 31 42`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`8`
 (signature)`test_Test_skip(test)`
 
 
@@ -60,6 +66,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`33 1 43 37`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`6`
 (signature)`test_Test_absurdity(test)`
 
 
@@ -72,6 +80,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`45 1 52 24`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`5`
 (signature)`test_Contention_protocol(test)`
 
 
@@ -84,6 +94,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`54 1 81 17`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`17`
 (signature)`test_Contention_absurdity(test)`
 
 
@@ -96,6 +108,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`83 1 100 42`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`13`
 (signature)`test_Contention_invert_absurdity(test)`
 
 
@@ -108,6 +122,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`102 1 139 35`
+		- (coverage-zeros)`5`
+		- (coverage-counters)`19`
 (signature)`test_Contention_contextmanager(test)`
 
 
@@ -120,6 +136,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`141 1 168 9`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`23`
 (signature)`test_Contention_comparisons(test)`
 
 
@@ -132,6 +150,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`170 1 181 60`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`8`
 (signature)`test_Contention_containment(test)`
 
 
@@ -144,6 +164,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`183 1 197 53`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`8`
 (signature)`test_Controls_issubclass(test)`
 
 
@@ -156,6 +178,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`199 1 215 55`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`9`
 (signature)`test_Controls_isinstance(test)`
 
 
@@ -166,6 +190,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`217 1 224 37`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 (signature)`test_itertimer_values(test)`
 
 - (context-local/factor-element)&<fault.test/types#Test.itertimer[fault.test.types.Test.itertimer]>
@@ -178,6 +204,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`226 1 234 35`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`5`
 (signature)`test_itertimer_count_limit(test)`
 
 - (context-local/factor-element)&<fault.test/types#Test.itertimer[fault.test.types.Test.itertimer]>
@@ -190,6 +218,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`236 1 244 34`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`5`
 (signature)`test_itertimer_time_limit(test)`
 
 - (context-local/factor-element)&<fault.test/types#Test.itertimer[fault.test.types.Test.itertimer]>
@@ -202,6 +232,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`246 1 262 35`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`7`
 (signature)`test_function_timer(test)`
 
 - (context-local/factor-element)&<fault.test/types#Test.time[fault.test.types.Test.time]>
@@ -216,6 +248,8 @@ Validate function timer variant.
 	/element/
 		- (control)`property-set`
 		- (source/area)`264 1 313 29`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`27`
 (signature)`test_itertimer_Clock(test)`
 
 - (context-local/factor-element)&<fault.test/types#Test.itertimer[fault.test.types.Test.itertimer]>

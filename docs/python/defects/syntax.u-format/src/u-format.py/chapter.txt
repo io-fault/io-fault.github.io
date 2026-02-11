@@ -5,7 +5,7 @@
 		- (control)`property-set`
 		- (source/area)`1 1 227 0`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`0`
+		- (coverage-counters)`110`
 Validate the format module's functionality.
 
 
@@ -26,6 +26,8 @@ Validate the format module's functionality.
 	/element/
 		- (control)`property-set`
 		- (source/area)`6 1 18 64`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`8`
 (signature)`test_Fields_operations(test)`
 
 - (context-local/factor-element)&<fault.syntax/format#Fields[fault.syntax.format.Fields]>
@@ -38,6 +40,8 @@ Validate the format module's functionality.
 	/element/
 		- (control)`property-set`
 		- (source/area)`20 1 35 66`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`9`
 (signature)`test_Fields_partial(test)`
 
 - (context-local/factor-element)&<fault.syntax/format#Fields.partial[fault.syntax.format.Fields.partial]>
@@ -50,6 +54,8 @@ Validate the format module's functionality.
 	/element/
 		- (control)`property-set`
 		- (source/area)`37 1 44 27`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 (signature)`test_Lines_defaults(test)`
 
 - (context-local/factor-element)&<fault.syntax/format#Lines[fault.syntax.format.Lines]>
@@ -62,6 +68,8 @@ Validate the format module's functionality.
 	/element/
 		- (control)`property-set`
 		- (source/area)`46 1 62 55`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`9`
 (signature)`test_partial_termination(test)`
 
 - (context-local/factor-element)&<fault.syntax/format#Lines.measure_partial_termination[fault.syntax.format.Lines.measure_partial_termination]>
@@ -74,6 +82,8 @@ Validate the format module's functionality.
 	/element/
 		- (control)`property-set`
 		- (source/area)`64 1 74 45`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`5`
 (signature)`test_Lines_splitpartial(test)`
 
 - (context-local/factor-element)&<fault.syntax/format#Lines._splitpartial[fault.syntax.format.Lines._splitpartial]>
@@ -86,6 +96,8 @@ Validate the format module's functionality.
 	/element/
 		- (control)`property-set`
 		- (source/area)`76 1 87 47`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`6`
 (signature)`test_Lines_splitpartial_plural(test)`
 
 - (context-local/factor-element)&<fault.syntax/format#Lines._splitpartial[fault.syntax.format.Lines._splitpartial]>
@@ -98,6 +110,8 @@ Validate the format module's functionality.
 	/element/
 		- (control)`property-set`
 		- (source/area)`89 1 101 67`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`7`
 (signature)`test_Lines_measure_indentation(test)`
 
 - (context-local/factor-element)&<fault.syntax/format#Lines.measure_indentation[fault.syntax.format.Lines.measure_indentation]>
@@ -110,6 +124,8 @@ Validate the format module's functionality.
 	/element/
 		- (control)`property-set`
 		- (source/area)`103 1 115 66`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`7`
 (signature)`test_Lines_level(test)`
 
 - (context-local/factor-element)&<fault.syntax/format#Lines.level[fault.syntax.format.Lines.level]>
@@ -122,6 +138,8 @@ Validate the format module's functionality.
 	/element/
 		- (control)`property-set`
 		- (source/area)`117 1 144 2`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`14`
 (signature)`test_Lines_structure(test)`
 
 - (context-local/factor-element)&<fault.syntax/format#Lines.structure[fault.syntax.format.Lines.structure]>
@@ -136,6 +154,8 @@ Validate the format module's functionality.
 	/element/
 		- (control)`property-set`
 		- (source/area)`146 1 157 46`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`8`
 (signature)`progression(test, ft, limit)`
 
 
@@ -146,6 +166,8 @@ Validate the format module's functionality.
 	/element/
 		- (control)`property-set`
 		- (source/area)`159 1 166 26`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 (signature)`test_Lines_progression_spaces(test)`
 
 - (context-local/factor-element)&<fault.syntax/format#Lines.structure[fault.syntax.format.Lines.structure]>
@@ -158,6 +180,8 @@ Validate the format module's functionality.
 	/element/
 		- (control)`property-set`
 		- (source/area)`168 1 174 38`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`test_Lines_progression_tabs(test)`
 
 - (context-local/factor-element)&<fault.syntax/format#Lines.structure[fault.syntax.format.Lines.structure]>
@@ -170,6 +194,8 @@ Validate the format module's functionality.
 	/element/
 		- (control)`property-set`
 		- (source/area)`176 1 182 64`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`test_Lines_sequence(test)`
 
 - (context-local/factor-element)&<fault.syntax/format#Lines.sequence[fault.syntax.format.Lines.sequence]>
@@ -182,6 +208,8 @@ Validate the format module's functionality.
 	/element/
 		- (control)`property-set`
 		- (source/area)`184 1 200 69`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`11`
 (signature)`test_Characters_from_codec(test)`
 
 - (context-local/factor-element)&<fault.syntax/format#Characters.from_codec[fault.syntax.format.Characters.from_codec]>
@@ -194,6 +222,8 @@ Validate the format module's functionality.
 	/element/
 		- (control)`property-set`
 		- (source/area)`202 1 208 63`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`test_Characters_structure(test)`
 
 - (context-local/factor-element)&<fault.syntax/format#Characters.structure[fault.syntax.format.Characters.structure]>
@@ -208,6 +238,8 @@ Validate the format module's functionality.
 	/element/
 		- (control)`property-set`
 		- (source/area)`210 1 215 1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	text_samples = [
 		"test",
@@ -223,6 +255,8 @@ Validate the format module's functionality.
 	/element/
 		- (control)`property-set`
 		- (source/area)`217 1 227 59`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`6`
 (signature)`test_Characters_io_fragments(test)`
 
 - (context-local/factor-element)&<fault.syntax/format#Characters.structure[fault.syntax.format.Characters.structure]>

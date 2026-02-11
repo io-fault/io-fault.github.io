@@ -5,7 +5,7 @@
 		- (control)`property-set`
 		- (source/area)`1 1 37 0`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`0`
+		- (coverage-counters)`13`
 Various constants.
 
 
@@ -28,6 +28,8 @@ Various constants.
 	/element/
 		- (control)`property-set`
 		- (source/area)`23 1 23 55`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	annum = types.Measure.of(second=(86400*365)+(86400//4)) # Julian Year, 525960 minutes.
 
@@ -38,6 +40,8 @@ Various constants.
 	/element/
 		- (control)`property-set`
 		- (source/area)`24 1 24 42`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (project-local/factor-element)&<types#Timestamp[fault.time.types.Timestamp]> instance referring to 1970.
 
 #!source
@@ -50,6 +54,8 @@ Various constants.
 	/element/
 		- (control)`property-set`
 		- (source/area)`25 1 25 32`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (project-local/factor-element)&<types#Timestamp[fault.time.types.Timestamp]> instance refrerring to the datum used by the project.
 
 #!source

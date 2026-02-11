@@ -5,7 +5,7 @@
 		- (control)`property-set`
 		- (source/area)`1 1 24 2`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`0`
+		- (coverage-counters)`6`
 Source data for display layout for processing metrics.
 
 
@@ -28,6 +28,8 @@ Source data for display layout for processing metrics.
 	/element/
 		- (control)`property-set`
 		- (source/area)`5 1 5 27`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ order ]
 ! CONTROL:
@@ -38,6 +40,8 @@ Source data for display layout for processing metrics.
 	/element/
 		- (control)`property-set`
 		- (source/area)`7 1 13 1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	order = [
 		('executing', 'work.w_executing', 8),
@@ -56,6 +60,8 @@ Source data for display layout for processing metrics.
 	/element/
 		- (control)`property-set`
 		- (source/area)`15 1 21 1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	formats = [
 		('x', "executing", 'orange', tools.partial(terminal.r_count, 'executing')),
@@ -74,6 +80,8 @@ Source data for display layout for processing metrics.
 	/element/
 		- (control)`property-set`
 		- (source/area)`23 1 25 1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	types = {
 		'usage': 'rate_window',

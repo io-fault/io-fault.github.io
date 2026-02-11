@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 308 0`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`0`
+		- (coverage-zeros)`9`
+		- (coverage-counters)`132`
 Format and parse datetime strings.
 
 Primarily this module exposes two functions: (factor-local/function)&<#parser[parser]>,
@@ -39,6 +39,8 @@ libformat can raise subclasses of (project-local/unknown)&<core#FormatError[core
 	/element/
 		- (control)`property-set`
 		- (source/area)`16 1 16 16`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ fractions ]
 ! CONTROL:
@@ -49,6 +51,8 @@ libformat can raise subclasses of (project-local/unknown)&<core#FormatError[core
 	/element/
 		- (control)`property-set`
 		- (source/area)`17 1 17 16`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ math ]
 ! CONTROL:
@@ -59,6 +63,8 @@ libformat can raise subclasses of (project-local/unknown)&<core#FormatError[core
 	/element/
 		- (control)`property-set`
 		- (source/area)`18 1 18 11`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ core ]
 ! CONTROL:
@@ -69,6 +75,8 @@ libformat can raise subclasses of (project-local/unknown)&<core#FormatError[core
 	/element/
 		- (control)`property-set`
 		- (source/area)`20 1 20 18`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ gregorian ]
 ! CONTROL:
@@ -79,6 +87,8 @@ libformat can raise subclasses of (project-local/unknown)&<core#FormatError[core
 	/element/
 		- (control)`property-set`
 		- (source/area)`21 1 21 23`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ week ]
 ! CONTROL:
@@ -89,6 +99,8 @@ libformat can raise subclasses of (project-local/unknown)&<core#FormatError[core
 	/element/
 		- (control)`property-set`
 		- (source/area)`22 1 22 18`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ rfc1123 ]
 ! CONTROL:
@@ -99,6 +111,8 @@ libformat can raise subclasses of (project-local/unknown)&<core#FormatError[core
 	/element/
 		- (control)`property-set`
 		- (source/area)`24 1 24 84`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	rfc1123 = "{day_of_week}, {day:02} {month} {year} {hour:02}:{minute:02}:{second:02}"
 
@@ -111,6 +125,8 @@ libformat can raise subclasses of (project-local/unknown)&<core#FormatError[core
 	/element/
 		- (control)`property-set`
 		- (source/area)`25 1 25 54`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	iso8601 = "{0}-{1:02}-{2:02}T{3:02}:{4:02}:{5:02}.{6}"
 
@@ -123,6 +139,8 @@ libformat can raise subclasses of (project-local/unknown)&<core#FormatError[core
 	/element/
 		- (control)`property-set`
 		- (source/area)`26 1 26 34`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	iso8601_date = "{0}-{1:02}-{2:02}"
 
@@ -135,6 +153,8 @@ libformat can raise subclasses of (project-local/unknown)&<core#FormatError[core
 	/element/
 		- (control)`property-set`
 		- (source/area)`28 1 31 1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	models = {
 		'rfc1123' : rfc1123,
@@ -150,6 +170,8 @@ libformat can raise subclasses of (project-local/unknown)&<core#FormatError[core
 	/element/
 		- (control)`property-set`
 		- (source/area)`33 1 40 28`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`5`
 (signature)`split_clock_time(s)`
 
 
@@ -162,6 +184,8 @@ libformat can raise subclasses of (project-local/unknown)&<core#FormatError[core
 	/element/
 		- (control)`property-set`
 		- (source/area)`42 1 72 2`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`13`
 (signature)`parse_rfc1123(s)`
 
 
@@ -174,6 +198,8 @@ libformat can raise subclasses of (project-local/unknown)&<core#FormatError[core
 	/element/
 		- (control)`property-set`
 		- (source/area)`74 1 127 2`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`32`
 (signature)`parse_iso8601(s)`
 
 
@@ -186,6 +212,8 @@ libformat can raise subclasses of (project-local/unknown)&<core#FormatError[core
 	/element/
 		- (control)`property-set`
 		- (source/area)`129 1 132 1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	parsers = {
 		'rfc1123': parse_rfc1123,
@@ -201,6 +229,8 @@ libformat can raise subclasses of (project-local/unknown)&<core#FormatError[core
 	/element/
 		- (control)`property-set`
 		- (source/area)`134 1 153 2`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`transform_iso8601(args)`
 
 
@@ -213,6 +243,8 @@ libformat can raise subclasses of (project-local/unknown)&<core#FormatError[core
 	/element/
 		- (control)`property-set`
 		- (source/area)`155 1 171 2`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`transform_rfc1123(args)`
 
 
@@ -225,6 +257,8 @@ libformat can raise subclasses of (project-local/unknown)&<core#FormatError[core
 	/element/
 		- (control)`property-set`
 		- (source/area)`173 1 176 1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	transformers = {
 		'iso8601' : transform_iso8601,
@@ -240,6 +274,8 @@ libformat can raise subclasses of (project-local/unknown)&<core#FormatError[core
 	/element/
 		- (control)`property-set`
 		- (source/area)`178 1 190 11`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`8`
 (signature)`validate_rfc1123(args)`
 
 
@@ -252,6 +288,8 @@ libformat can raise subclasses of (project-local/unknown)&<core#FormatError[core
 	/element/
 		- (control)`property-set`
 		- (source/area)`192 1 194 1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	validators = {
 		'rfc1123': validate_rfc1123,
@@ -266,6 +304,8 @@ libformat can raise subclasses of (project-local/unknown)&<core#FormatError[core
 	/element/
 		- (control)`property-set`
 		- (source/area)`196 1 196 30`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	aliases = {'http' : 'rfc1123'}
 
@@ -278,6 +318,8 @@ libformat can raise subclasses of (project-local/unknown)&<core#FormatError[core
 	/element/
 		- (control)`property-set`
 		- (source/area)`198 1 209 17`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`9`
 (signature)`_parse(fun, format)`
 
 
@@ -290,6 +332,8 @@ libformat can raise subclasses of (project-local/unknown)&<core#FormatError[core
 	/element/
 		- (control)`property-set`
 		- (source/area)`211 1 222 17`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`9`
 (signature)`_structure(fun, format)`
 
 
@@ -302,6 +346,8 @@ libformat can raise subclasses of (project-local/unknown)&<core#FormatError[core
 	/element/
 		- (control)`property-set`
 		- (source/area)`224 1 235 17`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`9`
 (signature)`_integrity(fun, format)`
 
 
@@ -312,6 +358,8 @@ libformat can raise subclasses of (project-local/unknown)&<core#FormatError[core
 	/element/
 		- (control)`property-set`
 		- (source/area)`237 1 250 26`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 (signature)`parser(fmt)`
 
 Given a format idenifier, return the function that can be used to parse
@@ -327,6 +375,8 @@ the formatted string into a Point instance.
 	/element/
 		- (control)`property-set`
 		- (source/area)`252 1 263 2`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 (signature)`format_rfc1123(pitt, subsec, dow)`
 
 
@@ -339,6 +389,8 @@ the formatted string into a Point instance.
 	/element/
 		- (control)`property-set`
 		- (source/area)`265 1 274 37`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`6`
 (signature)`format_iso8601(pitt, subsec, dow)`
 
 
@@ -351,6 +403,8 @@ the formatted string into a Point instance.
 	/element/
 		- (control)`property-set`
 		- (source/area)`276 1 277 23`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`format_iso8601_date(pitt, subsec, dow)`
 
 
@@ -363,6 +417,8 @@ the formatted string into a Point instance.
 	/element/
 		- (control)`property-set`
 		- (source/area)`279 1 282 1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	formatters = {
 		'rfc1123' : format_rfc1123,
@@ -376,6 +432,8 @@ the formatted string into a Point instance.
 	/element/
 		- (control)`property-set`
 		- (source/area)`284 1 289 36`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`formatter(fmt)`
 
 Given a format idenifier, return the function that can be used to format
@@ -391,6 +449,8 @@ the Point in time.
 	/element/
 		- (control)`property-set`
 		- (source/area)`291 1 294 1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	formats = {
 		'iso' : 'iso8601',
@@ -406,5 +466,7 @@ the Point in time.
 	/element/
 		- (control)`property-set`
 		- (source/area)`296 1 308 59`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`8`
 (signature)`context(context)`
 

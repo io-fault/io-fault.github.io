@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 234 0`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`0`
+		- (coverage-zeros)`6`
+		- (coverage-counters)`60`
 Data structures for holding failure, notification, and trace information.
 
 [ Constructor Versioning ]
@@ -35,6 +35,8 @@ such a case, deprecation warnings will be used prior to their removal.
 	/element/
 		- (control)`property-set`
 		- (source/area)`12 1 12 35`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ EStruct ]
 ! CONTROL:
@@ -43,6 +45,8 @@ such a case, deprecation warnings will be used prior to their removal.
 	/element/
 		- (control)`property-set`
 		- (source/area)`14 1 176 56`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`14 15 14 19`
@@ -68,6 +72,8 @@ have access to more advanced formatting routines.
 	/element/
 		- (control)`property-set`
 		- (source/area)`25 2 25 15`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	__slots__ = ()
 
@@ -80,6 +86,8 @@ have access to more advanced formatting routines.
 	/element/
 		- (control)`property-set`
 		- (source/area)`27 2 30 10`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`2`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -93,6 +101,8 @@ have access to more advanced formatting routines.
 	/element/
 		- (control)`property-set`
 		- (source/area)`31 2 47 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -116,6 +126,8 @@ This field *must not* be localized.
 	/element/
 		- (control)`property-set`
 		- (source/area)`48 2 66 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -141,6 +153,8 @@ This field *must not* be localized.
 	/element/
 		- (control)`property-set`
 		- (source/area)`67 2 86 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
@@ -167,6 +181,8 @@ resolving additional metadata regarding the event.
 	/element/
 		- (control)`property-set`
 		- (source/area)`87 2 102 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -189,6 +205,8 @@ This field *must not* be localized.
 	/element/
 		- (control)`property-set`
 		- (source/area)`103 2 121 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -216,6 +234,8 @@ should be used to create friendlier, human-readable abstracts.
 	/element/
 		- (control)`property-set`
 		- (source/area)`122 2 131 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`from_fields_v1(Class, protocol)`
 
 
@@ -226,6 +246,8 @@ should be used to create friendlier, human-readable abstracts.
 	/element/
 		- (control)`property-set`
 		- (source/area)`132 2 144 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`from_tuple_v1(Class, fields)`
 
 Create an instance using (factor-local/parameter)&<#EStruct.from_tuple_v1.Parameters.fields[fields]>; expects five objects in this order:
@@ -244,6 +266,8 @@ Create an instance using (factor-local/parameter)&<#EStruct.from_tuple_v1.Parame
 	/element/
 		- (control)`property-set`
 		- (source/area)`145 2 152 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`from_arguments_v1(Class, protocol, identifier, code, symbol, abstract)`
 
 Create an instance using the given arguments whose positioning is consistent
@@ -257,6 +281,8 @@ with where the fields are stored in the tuple.
 	/element/
 		- (control)`property-set`
 		- (source/area)`153 2 176 56`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`12`
 (signature)`from_string_v1(Class, erstring)`
 
 Create an EStruct using a string following the format:
@@ -272,6 +298,8 @@ The protocol keyword can be used to designate the (factor-local/parameter)&<#ESt
 	/element/
 		- (control)`property-set`
 		- (source/area)`178 1 234 43`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`178 13 178 17`
@@ -290,6 +318,8 @@ A status frame designating a serializable event and associated context.
 	/element/
 		- (control)`property-set`
 		- (source/area)`182 2 184 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	__slots__ = ()
 		@property
@@ -301,6 +331,8 @@ A status frame designating a serializable event and associated context.
 	/element/
 		- (control)`property-set`
 		- (source/area)`185 2 191 10`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`3`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -314,6 +346,8 @@ The event's protocol.
 	/element/
 		- (control)`property-set`
 		- (source/area)`192 2 198 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -327,6 +361,8 @@ The channel designated by the frame.
 	/element/
 		- (control)`property-set`
 		- (source/area)`199 2 205 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 		- (type/syntax)`EStruct`
 		- (type/factor-local/class)&<#EStruct[EStruct]>
 		
@@ -340,6 +376,8 @@ The qualified identification of the frame event.
 	/element/
 		- (control)`property-set`
 		- (source/area)`206 2 212 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 		- (type/syntax)`Mapping[str, str]`
 		
 The data extension associated with the frame.
@@ -352,6 +390,8 @@ The data extension associated with the frame.
 	/element/
 		- (control)`property-set`
 		- (source/area)`213 2 219 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -365,6 +405,8 @@ The visible message of the status frame.
 	/element/
 		- (control)`property-set`
 		- (source/area)`220 2 229 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`from_string_v1()`
 
 Create using an (factor-local/class)&<#EStruct[EStruct]> string and optional context.
@@ -377,6 +419,8 @@ Create using an (factor-local/class)&<#EStruct[EStruct]> string and optional con
 	/element/
 		- (control)`property-set`
 		- (source/area)`230 2 234 43`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`from_event_v1(Class, event)`
 
 Create using an (factor-local/class)&<#EStruct[EStruct]> instance and optional context.

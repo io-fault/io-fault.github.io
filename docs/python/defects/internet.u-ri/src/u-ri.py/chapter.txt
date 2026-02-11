@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 590 0`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`0`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`103`
 
 [ module ]
 ! CONTROL:
@@ -24,6 +24,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`3 1 11 2`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`7`
 (signature)`cmbx(t)`
 
 Yield a list of combinations using a mask
@@ -38,6 +40,8 @@ Yield a list of combinations using a mask
 	/element/
 		- (control)`property-set`
 		- (source/area)`13 1 337 1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	expectation_samples = (
 		(
@@ -374,6 +378,8 @@ Yield a list of combinations using a mask
 	/element/
 		- (control)`property-set`
 		- (source/area)`339 1 362 1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	sample_join_netlocs = (
 		'sample.com',
@@ -409,6 +415,8 @@ Yield a list of combinations using a mask
 	/element/
 		- (control)`property-set`
 		- (source/area)`364 1 376 1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	sample_split_netlocs = (
 		('user', 'pass', 'host', None, 'port'),
@@ -433,6 +441,8 @@ Yield a list of combinations using a mask
 	/element/
 		- (control)`property-set`
 		- (source/area)`378 1 391 1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	sample_join_paths = (
 		None,
@@ -458,6 +468,8 @@ Yield a list of combinations using a mask
 	/element/
 		- (control)`property-set`
 		- (source/area)`393 1 397 1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	sample_schemes = (
 		('authority', 'http'),
@@ -474,6 +486,8 @@ Yield a list of combinations using a mask
 	/element/
 		- (control)`property-set`
 		- (source/area)`399 1 406 1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	sample_users = (
 		'',
@@ -493,6 +507,8 @@ Yield a list of combinations using a mask
 	/element/
 		- (control)`property-set`
 		- (source/area)`408 1 413 1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	sample_passwords = [
 		'',
@@ -510,6 +526,8 @@ Yield a list of combinations using a mask
 	/element/
 		- (control)`property-set`
 		- (source/area)`415 1 421 1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	sample_hosts = [
 		'',
@@ -528,6 +546,8 @@ Yield a list of combinations using a mask
 	/element/
 		- (control)`property-set`
 		- (source/area)`423 1 427 1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	sample_addresses = [
 		None,
@@ -544,6 +564,8 @@ Yield a list of combinations using a mask
 	/element/
 		- (control)`property-set`
 		- (source/area)`429 1 434 1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	sample_ports = [
 		'',
@@ -561,6 +583,8 @@ Yield a list of combinations using a mask
 	/element/
 		- (control)`property-set`
 		- (source/area)`436 1 443 1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	sample_paths = (
 		[],
@@ -580,6 +604,8 @@ Yield a list of combinations using a mask
 	/element/
 		- (control)`property-set`
 		- (source/area)`445 1 451 1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	sample_queries = (
 		[],
@@ -598,6 +624,8 @@ Yield a list of combinations using a mask
 	/element/
 		- (control)`property-set`
 		- (source/area)`453 1 458 1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	sample_fragments = (
 		'',
@@ -615,6 +643,8 @@ Yield a list of combinations using a mask
 	/element/
 		- (control)`property-set`
 		- (source/area)`460 1 486 17`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`15`
 (signature)`samples()`
 
 
@@ -627,6 +657,8 @@ Yield a list of combinations using a mask
 	/element/
 		- (control)`property-set`
 		- (source/area)`488 1 506 26`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`14`
 (signature)`test_expectations(test)`
 
 
@@ -639,6 +671,8 @@ Yield a list of combinations using a mask
 	/element/
 		- (control)`property-set`
 		- (source/area)`508 1 512 15`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 (signature)`test_split_join_netloc(test)`
 
 
@@ -651,6 +685,8 @@ Yield a list of combinations using a mask
 	/element/
 		- (control)`property-set`
 		- (source/area)`514 1 520 15`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`6`
 (signature)`test_join_split_netloc(test)`
 
 
@@ -663,6 +699,8 @@ Yield a list of combinations using a mask
 	/element/
 		- (control)`property-set`
 		- (source/area)`522 1 526 14`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 (signature)`test_split_join_path(test)`
 
 
@@ -675,6 +713,8 @@ Yield a list of combinations using a mask
 	/element/
 		- (control)`property-set`
 		- (source/area)`528 1 532 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 (signature)`test_join_split_path(test)`
 
 
@@ -687,6 +727,8 @@ Yield a list of combinations using a mask
 	/element/
 		- (control)`property-set`
 		- (source/area)`534 1 538 41`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`5`
 (signature)`test_combinations(test)`
 
 
@@ -697,6 +739,8 @@ Yield a list of combinations using a mask
 	/element/
 		- (control)`property-set`
 		- (source/area)`540 1 552 48`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`9`
 (signature)`test_strict(test)`
 
 - (context-local/factor-element)&<fault.internet/ri#strict[fault.internet.ri.strict]>
@@ -709,6 +753,8 @@ Yield a list of combinations using a mask
 	/element/
 		- (control)`property-set`
 		- (source/area)`554 1 590 56`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`21`
 (signature)`test_address_extension(test)`
 
 - (context-local/factor-element)&<fault.internet/ri#split_netloc[fault.internet.ri.split_netloc]>

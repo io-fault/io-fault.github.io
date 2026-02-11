@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 131 0`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`0`
+		- (coverage-zeros)`16`
+		- (coverage-counters)`50`
 Text data structures for working with paragraph content.
 
 (factor-local/class)&<#Fragment[Fragment]> and (factor-local/class)&<#Paragraph[Paragraph]> are designed to be easily transformed and serialized
@@ -59,6 +59,8 @@ by a Processing Context for such a purpose.
 	/element/
 		- (control)`property-set`
 		- (source/area)`16 1 16 58`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	ElementTree = tuple[str, Sequence['ElementTree'], Mapping]
 
@@ -69,6 +71,8 @@ by a Processing Context for such a purpose.
 	/element/
 		- (control)`property-set`
 		- (source/area)`18 1 74 28`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`18 16 18 20`
@@ -87,6 +91,8 @@ An explicitly typed portion of text used as part of a (factor-local/class)&<#Par
 	/element/
 		- (control)`property-set`
 		- (source/area)`22 2 24 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	__slots__ = ()
 		@property
@@ -100,6 +106,8 @@ An explicitly typed portion of text used as part of a (factor-local/class)&<#Par
 	/element/
 		- (control)`property-set`
 		- (source/area)`25 2 28 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 		- (type/syntax)`Sequence[str]`
 		
 
@@ -112,6 +120,8 @@ An explicitly typed portion of text used as part of a (factor-local/class)&<#Par
 	/element/
 		- (control)`property-set`
 		- (source/area)`29 2 32 10`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`2`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -123,6 +133,8 @@ An explicitly typed portion of text used as part of a (factor-local/class)&<#Par
 	/element/
 		- (control)`property-set`
 		- (source/area)`33 2 44 10`
+		- (coverage-zeros)`4`
+		- (coverage-counters)`5`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
@@ -137,6 +149,8 @@ Return the integer weight of the emphasized text.
 	/element/
 		- (control)`property-set`
 		- (source/area)`45 2 62 10`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`3`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -161,6 +175,8 @@ are supposed to exist unconditionally. Common prefixes:
 	/element/
 		- (control)`property-set`
 		- (source/area)`63 2 69 13`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`3`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -174,6 +190,8 @@ Initial path entry. Usually `reference`, `literal`, or `text`.
 	/element/
 		- (control)`property-set`
 		- (source/area)`70 2 74 28`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 (signature)`new(Class, type, data)`
 
 Create a new instance with an explicitly declared type.
@@ -186,6 +204,8 @@ Create a new instance with an explicitly declared type.
 	/element/
 		- (control)`property-set`
 		- (source/area)`76 1 131 16`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`76 17 76 20`
@@ -204,6 +224,8 @@ A sequence of (factor-local/class)&<#Fragment[Fragment]> instances forming a par
 	/element/
 		- (control)`property-set`
 		- (source/area)`80 2 80 15`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	__slots__ = ()
 
@@ -216,6 +238,8 @@ A sequence of (factor-local/class)&<#Fragment[Fragment]> instances forming a par
 	/element/
 		- (control)`property-set`
 		- (source/area)`82 2 85 13`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`2`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -229,6 +253,8 @@ A sequence of (factor-local/class)&<#Fragment[Fragment]> instances forming a par
 	/element/
 		- (control)`property-set`
 		- (source/area)`86 2 92 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`of(Class, *sequence)`
 
 Variable argument based (factor-local/class)&<#Paragraph[Paragraph]> constructor.
@@ -241,6 +267,8 @@ Variable argument based (factor-local/class)&<#Paragraph[Paragraph]> constructor
 	/element/
 		- (control)`property-set`
 		- (source/area)`93 2 101 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 		- (type/syntax)`Fragment`
 		- (type/factor-local/class)&<#Fragment[Fragment]>
 		
@@ -255,6 +283,8 @@ If multiple fragments exist, a (invalid/unknown)&<#ValueError> is raised.
 	/element/
 		- (control)`property-set`
 		- (source/area)`102 2 131 16`
+		- (coverage-zeros)`4`
+		- (coverage-counters)`18`
 		- (type/syntax)`Iterable[Sequence[Fragment]]`
 		
 Iterator producing lists that contain the sentence contents.

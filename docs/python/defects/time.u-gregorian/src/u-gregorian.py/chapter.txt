@@ -5,7 +5,7 @@
 		- (control)`property-set`
 		- (source/area)`1 1 104 0`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`0`
+		- (coverage-counters)`45`
 
 [ itertools ]
 ! CONTROL:
@@ -26,6 +26,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`2 1 2 29`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ test_year_is_leap ]
 ! CONTROL:
@@ -36,6 +38,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`4 1 19 37`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`14`
 (signature)`test_year_is_leap(test)`
 
 
@@ -48,6 +52,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`21 1 39 1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	mfd_io_samples = [
 		(0, 0), # first day of jan
@@ -78,6 +84,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`41 1 44 44`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`test_month_from_days(test)`
 
 
@@ -90,6 +98,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`46 1 55 19`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`7`
 (signature)`test_mfd_alignment(test)`
 
 
@@ -100,6 +110,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`57 1 66 14`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`7`
 (signature)`test_scan_months(test)`
 
 Shows month_from_days aligning at the start of the month.
@@ -114,6 +126,8 @@ Shows month_from_days aligning at the start of the month.
 	/element/
 		- (control)`property-set`
 		- (source/area)`70 1 74 1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	dfm_io_samples = [
 		(0, 0),
@@ -130,6 +144,8 @@ Shows month_from_days aligning at the start of the month.
 	/element/
 		- (control)`property-set`
 		- (source/area)`76 1 79 47`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`test_days_from_month(test)`
 
 
@@ -142,6 +158,8 @@ Shows month_from_days aligning at the start of the month.
 	/element/
 		- (control)`property-set`
 		- (source/area)`81 1 94 1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	date_io_samples = [
 		# whole cycle checks
@@ -167,6 +185,8 @@ Shows month_from_days aligning at the start of the month.
 	/element/
 		- (control)`property-set`
 		- (source/area)`96 1 99 45`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`test_date_from_days(test)`
 
 
@@ -179,5 +199,7 @@ Shows month_from_days aligning at the start of the month.
 	/element/
 		- (control)`property-set`
 		- (source/area)`101 1 104 45`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`test_days_from_date(test)`
 

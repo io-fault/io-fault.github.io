@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 411 12`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`0`
+		- (coverage-zeros)`6`
+		- (coverage-counters)`35`
 HTTP/2 header compression tools.
 
 Provides state machines for managing the dynamic tables needed for connections.
@@ -31,6 +31,8 @@ http://tools.ietf.org/html/rfc7541
 	/element/
 		- (control)`property-set`
 		- (source/area)`8 1 8 16`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ static_table ]
 ! CONTROL:
@@ -41,6 +43,8 @@ http://tools.ietf.org/html/rfc7541
 	/element/
 		- (control)`property-set`
 		- (source/area)`10 1 73 1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	static_table = [
 		None,
@@ -116,6 +120,8 @@ http://tools.ietf.org/html/rfc7541
 	/element/
 		- (control)`property-set`
 		- (source/area)`77 1 335 1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	huffman_code = [
 		'11111111' '11000',
@@ -386,6 +392,8 @@ http://tools.ietf.org/html/rfc7541
 	/element/
 		- (control)`property-set`
 		- (source/area)`337 1 339 1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	huffman_reverse_index = {
 		huffman_code[i]: i for i in range(len(huffman_code))
@@ -400,6 +408,8 @@ http://tools.ietf.org/html/rfc7541
 	/element/
 		- (control)`property-set`
 		- (source/area)`341 1 341 37`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	h_start = min(map(len, huffman_code))
 
@@ -412,6 +422,8 @@ http://tools.ietf.org/html/rfc7541
 	/element/
 		- (control)`property-set`
 		- (source/area)`342 1 342 40`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	h_stop = max(map(len, huffman_code)) + 1
 
@@ -422,6 +434,8 @@ http://tools.ietf.org/html/rfc7541
 	/element/
 		- (control)`property-set`
 		- (source/area)`344 1 377 20`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`13`
 (signature)`huffman_decode(field)`
 
 Decode the byte string using the HPACK huffman code table.
@@ -438,6 +452,8 @@ Decode the byte string using the HPACK huffman code table.
 	/element/
 		- (control)`property-set`
 		- (source/area)`379 1 398 47`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`8`
 (signature)`huffman_encode(field)`
 
 Encode the byte string as using the HPACK huffman code table.
@@ -454,6 +470,8 @@ Encode the byte string as using the HPACK huffman code table.
 	/element/
 		- (control)`property-set`
 		- (source/area)`400 1 405 11`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`3`
 (signature)`encoder()`
 
 Encoding state for serializing headers.
@@ -466,6 +484,8 @@ Encoding state for serializing headers.
 	/element/
 		- (control)`property-set`
 		- (source/area)`407 1 412 11`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`3`
 (signature)`decoder()`
 
 Decoding state for loading headers.
