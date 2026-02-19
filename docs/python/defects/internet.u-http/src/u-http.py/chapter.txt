@@ -6,6 +6,11 @@
 		- (source/area)`1 1 647 22`
 		- (coverage-zeros)`6`
 		- (coverage-counters)`242`
+		- (metrics/profile-duration)`3868000`
+		- (metrics/profile-count)`32`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`3868000`
+		- (metrics/profile-maximum)`3868000`
 
 [ module ]
 ! CONTROL:
@@ -28,6 +33,11 @@
 		- (source/area)`4 1 8 31`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`148000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`148000`
+		- (metrics/profile-maximum)`148000`
 (signature)`test_module_protocol(test)`
 
 
@@ -42,6 +52,11 @@
 		- (source/area)`10 1 20 17`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`158000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`158000`
+		- (metrics/profile-maximum)`158000`
 (signature)`test_Disassembler_split_limit(test)`
 
 
@@ -56,6 +71,11 @@
 		- (source/area)`22 1 32 17`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`173000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`173000`
+		- (metrics/profile-maximum)`173000`
 (signature)`test_Disassembler_complete_request(test)`
 
 
@@ -70,6 +90,11 @@
 		- (source/area)`34 1 44 17`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`160000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`160000`
+		- (metrics/profile-maximum)`160000`
 (signature)`test_Disassembler_complete_response(test)`
 
 
@@ -84,6 +109,11 @@
 		- (source/area)`46 1 56 17`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`154000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`154000`
+		- (metrics/profile-maximum)`154000`
 (signature)`test_Disassembler_response_nobody(test)`
 
 
@@ -96,6 +126,11 @@
 		- (source/area)`58 1 74 58`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
+		- (metrics/profile-duration)`163000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`163000`
+		- (metrics/profile-maximum)`163000`
 (signature)`test_Disassembler_bypass(test)`
 
 Check that data received after a connection close message
@@ -111,6 +146,11 @@ is forwarded inside a bypass event.
 		- (source/area)`76 1 103 17`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`192000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`192000`
+		- (metrics/profile-maximum)`192000`
 (signature)`test_Disassembler_chunked_1(test)`
 
 Test one chunk.
@@ -125,6 +165,11 @@ Test one chunk.
 		- (source/area)`105 1 145 21`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`14`
+		- (metrics/profile-duration)`181000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`181000`
+		- (metrics/profile-maximum)`181000`
 (signature)`test_Disassembler_chunked_2(test)`
 
 Test one chunk with fragmented data.
@@ -139,6 +184,11 @@ Test one chunk with fragmented data.
 		- (source/area)`147 1 176 21`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`180000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`180000`
+		- (metrics/profile-maximum)`180000`
 (signature)`test_Disassembler_chunked_trailers_1(test)`
 
 Test one chunk.
@@ -153,6 +203,11 @@ Test one chunk.
 		- (source/area)`178 1 218 21`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`10`
+		- (metrics/profile-duration)`227000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`227000`
+		- (metrics/profile-maximum)`227000`
 (signature)`test_Disassembler_chunked_trailers_2(test)`
 
 Test one chunk.
@@ -167,6 +222,11 @@ Test one chunk.
 		- (source/area)`220 1 266 62`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`15`
+		- (metrics/profile-duration)`474000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`474000`
+		- (metrics/profile-maximum)`474000`
 (signature)`test_Disassembler_trailers_limit_bypass(test)`
 
 Test the trailer size limit and the subsequent bypass.
@@ -181,6 +241,11 @@ Test the trailer size limit and the subsequent bypass.
 		- (source/area)`268 1 293 62`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`8`
+		- (metrics/profile-duration)`202000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`202000`
+		- (metrics/profile-maximum)`202000`
 (signature)`test_Disassembler_max_trailers(test)`
 
 Test the trailer size limit and the subsequent bypass.
@@ -195,6 +260,11 @@ Test the trailer size limit and the subsequent bypass.
 		- (source/area)`295 1 337 26`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`27`
+		- (metrics/profile-duration)`262000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`262000`
+		- (metrics/profile-maximum)`262000`
 (signature)`test_Disassembler_chunked_separated_size(test)`
 
 Test one chunk with fragmented data.
@@ -211,6 +281,11 @@ Test one chunk with fragmented data.
 		- (source/area)`339 1 346 21`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`161000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`161000`
+		- (metrics/profile-maximum)`161000`
 (signature)`test_Disassembler_crlf_prefix_strip(test)`
 
 
@@ -225,6 +300,11 @@ Test one chunk with fragmented data.
 		- (source/area)`348 1 385 21`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`167000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`167000`
+		- (metrics/profile-maximum)`167000`
 (signature)`test_Disassembler_pipelined(test)`
 
 
@@ -239,6 +319,11 @@ Test one chunk with fragmented data.
 		- (source/area)`387 1 390 39`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`128000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`128000`
+		- (metrics/profile-maximum)`128000`
 (signature)`test_Disassembler_type_error(test)`
 
 
@@ -253,6 +338,11 @@ Test one chunk with fragmented data.
 		- (source/area)`392 1 400 62`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`129000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`129000`
+		- (metrics/profile-maximum)`129000`
 (signature)`test_Disassembler_limit_line_too_large(test)`
 
 
@@ -267,6 +357,11 @@ Test one chunk with fragmented data.
 		- (source/area)`402 1 410 62`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`136000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`136000`
+		- (metrics/profile-maximum)`136000`
 (signature)`test_Disassembler_limit_line_too_large_with_eof(test)`
 
 
@@ -279,6 +374,11 @@ Test one chunk with fragmented data.
 		- (source/area)`412 1 433 58`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
+		- (metrics/profile-duration)`194000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`194000`
+		- (metrics/profile-maximum)`194000`
 (signature)`test_Disassembler_invalid_content_length(test)`
 
 Check that the value error is properly reported.
@@ -295,6 +395,11 @@ Check that the value error is properly reported.
 		- (source/area)`435 1 456 62`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`174000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`174000`
+		- (metrics/profile-maximum)`174000`
 (signature)`test_Disassembler_invalid_chunk_field(test)`
 
 
@@ -309,6 +414,11 @@ Check that the value error is properly reported.
 		- (source/area)`458 1 480 62`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`165000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`165000`
+		- (metrics/profile-maximum)`165000`
 (signature)`test_Disassembler_chunk_no_terminator(test)`
 
 
@@ -323,6 +433,11 @@ Check that the value error is properly reported.
 		- (source/area)`482 1 502 62`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`308000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`308000`
+		- (metrics/profile-maximum)`308000`
 (signature)`test_Disassembler_limit_max_chunksize(test)`
 
 
@@ -337,6 +452,11 @@ Check that the value error is properly reported.
 		- (source/area)`504 1 517 62`
 		- (coverage-zeros)`6`
 		- (coverage-counters)`12`
+		- (metrics/profile-duration)`182000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`182000`
+		- (metrics/profile-maximum)`182000`
 (signature)`test_Disassembler_limit_max_chunksize_split(test)`
 
 
@@ -351,6 +471,11 @@ Check that the value error is properly reported.
 		- (source/area)`519 1 537 62`
 		- (coverage-zeros)`6`
 		- (coverage-counters)`12`
+		- (metrics/profile-duration)`182000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`182000`
+		- (metrics/profile-maximum)`182000`
 (signature)`test_Disassembler_limit_max_chunksize_split(test)`
 
 
@@ -365,6 +490,11 @@ Check that the value error is properly reported.
 		- (source/area)`539 1 553 62`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`13`
+		- (metrics/profile-duration)`245000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`245000`
+		- (metrics/profile-maximum)`245000`
 (signature)`test_Disassembler_limit_header_too_large(test)`
 
 
@@ -379,6 +509,11 @@ Check that the value error is properly reported.
 		- (source/area)`555 1 569 62`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`13`
+		- (metrics/profile-duration)`218000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`218000`
+		- (metrics/profile-maximum)`218000`
 (signature)`test_Disassembler_limit_header_too_large_with_eof(test)`
 
 
@@ -393,6 +528,11 @@ Check that the value error is properly reported.
 		- (source/area)`571 1 586 62`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`14`
+		- (metrics/profile-duration)`211000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`211000`
+		- (metrics/profile-maximum)`211000`
 (signature)`test_Disassembler_limit_header_too_many(test)`
 
 
@@ -407,6 +547,11 @@ Check that the value error is properly reported.
 		- (source/area)`588 1 599 2`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`8`
+		- (metrics/profile-duration)`185000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`185000`
+		- (metrics/profile-maximum)`185000`
 (signature)`test_Disassembler_zero_writes(test)`
 
 
@@ -421,6 +566,11 @@ Check that the value error is properly reported.
 		- (source/area)`601 1 608 50`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`100000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`100000`
+		- (metrics/profile-maximum)`100000`
 (signature)`test_headers(test)`
 
 
@@ -435,6 +585,11 @@ Check that the value error is properly reported.
 		- (source/area)`610 1 617 47`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`125000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`125000`
+		- (metrics/profile-maximum)`125000`
 (signature)`test_chunk(test)`
 
 
@@ -449,6 +604,11 @@ Check that the value error is properly reported.
 		- (source/area)`619 1 638 24`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
+		- (metrics/profile-duration)`293000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`293000`
+		- (metrics/profile-maximum)`293000`
 (signature)`test_assemble(test)`
 
 
@@ -461,6 +621,11 @@ Check that the value error is properly reported.
 		- (source/area)`640 1 648 21`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`99000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`99000`
+		- (metrics/profile-maximum)`99000`
 (signature)`test_assemble_ooo(test)`
 
 Validate that we don't validate output state.

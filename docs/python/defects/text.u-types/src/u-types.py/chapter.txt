@@ -6,6 +6,11 @@
 		- (source/area)`1 1 34 0`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`17`
+		- (metrics/profile-duration)`632000`
+		- (metrics/profile-count)`6`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`632000`
+		- (metrics/profile-maximum)`632000`
 Validate the text document primitives (invalid/unknown)&<#Paragraph> and (invalid/unknown)&<#Fragment>.
 
 
@@ -42,6 +47,11 @@ Validate the text document primitives (invalid/unknown)&<#Paragraph> and (invali
 		- (source/area)`7 1 9 53`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`68000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`68000`
+		- (metrics/profile-maximum)`68000`
 (signature)`test_Fragment(test)`
 
 
@@ -56,6 +66,11 @@ Validate the text document primitives (invalid/unknown)&<#Paragraph> and (invali
 		- (source/area)`11 1 12 5`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`8000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`8000`
+		- (metrics/profile-maximum)`8000`
 (signature)`test_Paragraph(test)`
 
 
@@ -68,6 +83,11 @@ Validate the text document primitives (invalid/unknown)&<#Paragraph> and (invali
 		- (source/area)`14 1 22 57`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`108000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`108000`
+		- (metrics/profile-maximum)`108000`
 (signature)`test_Paragraph_of(test)`
 
 - (context-local/factor-element)&<fault.text/types#Paragraph.of[fault.text.types.Paragraph.of]>
@@ -84,6 +104,11 @@ Validate the text document primitives (invalid/unknown)&<#Paragraph> and (invali
 		- (source/area)`24 1 28 49`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`105000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`105000`
+		- (metrics/profile-maximum)`105000`
 (signature)`test_Paragraph_sole(test)`
 
 
@@ -98,5 +123,10 @@ Validate the text document primitives (invalid/unknown)&<#Paragraph> and (invali
 		- (source/area)`30 1 34 24`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`125000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`125000`
+		- (metrics/profile-maximum)`125000`
 (signature)`test_Paragraph_sentences(test)`
 

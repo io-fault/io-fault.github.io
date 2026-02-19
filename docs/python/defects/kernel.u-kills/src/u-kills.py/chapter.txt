@@ -6,6 +6,11 @@
 		- (source/area)`1 1 17 0`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`13`
+		- (metrics/profile-duration)`6479000`
+		- (metrics/profile-count)`2`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`6479000`
+		- (metrics/profile-maximum)`6479000`
 
 [ kills ]
 ! CONTROL:
@@ -50,6 +55,11 @@
 		- (source/area)`5 1 17 32`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`10`
+		- (metrics/profile-duration)`447000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`447000`
+		- (metrics/profile-maximum)`447000`
 (signature)`test_fault(test)`
 
 Check interrupt effect of faulting.

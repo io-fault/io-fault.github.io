@@ -6,6 +6,11 @@
 		- (source/area)`1 1 96 42`
 		- (coverage-zeros)`3`
 		- (coverage-counters)`62`
+		- (metrics/profile-duration)`5492000`
+		- (metrics/profile-count)`3`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`5492000`
+		- (metrics/profile-maximum)`5492000`
 
 [ collections ]
 ! CONTROL:
@@ -98,6 +103,11 @@
 		- (source/area)`10 1 45 14`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`21`
+		- (metrics/profile-duration)`299000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`299000`
+		- (metrics/profile-maximum)`299000`
 (signature)`test_Terminal(test)`
 
 Check that terminals don't stop events (trailing processors).
@@ -115,5 +125,10 @@ Check that f_terminate performs the designated callback.
 		- (source/area)`47 1 93 33`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`30`
+		- (metrics/profile-duration)`355000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`355000`
+		- (metrics/profile-maximum)`355000`
 (signature)`test_Collection(test)`
 

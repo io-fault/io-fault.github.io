@@ -6,6 +6,11 @@
 		- (source/area)`1 1 112 0`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`53`
+		- (metrics/profile-duration)`487000`
+		- (metrics/profile-count)`7`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`487000`
+		- (metrics/profile-maximum)`487000`
 
 [ module ]
 ! CONTROL:
@@ -40,6 +45,11 @@
 		- (source/area)`4 1 24 49`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`119000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`119000`
+		- (metrics/profile-maximum)`119000`
 (signature)`test_Index_structure(test)`
 
 
@@ -54,6 +64,11 @@
 		- (source/area)`26 1 49 28`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`13`
+		- (metrics/profile-duration)`232000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`232000`
+		- (metrics/profile-maximum)`232000`
 (signature)`test_Index(test)`
 
 
@@ -68,6 +83,11 @@
 		- (source/area)`51 1 56 26`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`186000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`186000`
+		- (metrics/profile-maximum)`186000`
 (signature)`test_Segmentation(test)`
 
 
@@ -80,6 +100,11 @@
 		- (source/area)`58 1 83 32`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`12`
+		- (metrics/profile-duration)`2378000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`2378000`
+		- (metrics/profile-maximum)`2378000`
 (signature)`test_Directory_operations(test)`
 
 - (context-local/factor-element)&<fault.route/hash#Directory.__init__[fault.route.hash.Directory.__init__]>
@@ -97,6 +122,11 @@
 		- (source/area)`85 1 99 14`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`9`
+		- (metrics/profile-duration)`1848000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1848000`
+		- (metrics/profile-maximum)`1848000`
 (signature)`test_Directory_updates(test)`
 
 - (context-local/factor-element)&<fault.route/hash#Index.load[fault.route.hash.Index.load]>
@@ -112,6 +142,11 @@
 		- (source/area)`101 1 112 58`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`8`
+		- (metrics/profile-duration)`2576000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`2576000`
+		- (metrics/profile-maximum)`2576000`
 (signature)`test_Directory_items(test)`
 
 - (context-local/factor-element)&<fault.route/hash#Directory.items[fault.route.hash.Directory.items]>

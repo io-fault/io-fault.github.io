@@ -6,6 +6,11 @@
 		- (source/area)`1 1 262 0`
 		- (coverage-zeros)`11`
 		- (coverage-counters)`165`
+		- (metrics/profile-duration)`8426000`
+		- (metrics/profile-count)`6`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`8426000`
+		- (metrics/profile-maximum)`8426000`
 
 [ collections ]
 ! CONTROL:
@@ -112,6 +117,11 @@
 		- (source/area)`11 1 35 26`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`18`
+		- (metrics/profile-duration)`399000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`399000`
+		- (metrics/profile-maximum)`399000`
 (signature)`test_Call(test)`
 
 
@@ -124,6 +134,11 @@
 		- (source/area)`37 1 59 24`
 		- (coverage-zeros)`10`
 		- (coverage-counters)`13`
+		- (metrics/profile-duration)`164000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`164000`
+		- (metrics/profile-maximum)`164000`
 (signature)`test_Coroutine(test)`
 
 Evaluate the functions of a (context-local/factor-element)&<fault.kernel/dispatch#Coroutine[fault.kernel.dispatch.Coroutine]> process;
@@ -157,6 +172,11 @@ notably the continuations and callback registration.
 		- (source/area)`62 2 63 6`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`1600`
+		- (metrics/profile-count)`5`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`4000`
 (signature)`connect_process_exit(self, proc, cb, *procs)`
 
 
@@ -189,6 +209,11 @@ notably the continuations and callback registration.
 		- (source/area)`66 2 71 19`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`10200`
+		- (metrics/profile-count)`5`
+		- (metrics/profile-residency)`84.31372549019608`
+		- (metrics/profile-minimum)`4000`
+		- (metrics/profile-maximum)`20000`
 (signature)`actuate(self)`
 
 
@@ -215,6 +240,11 @@ notably the continuations and callback registration.
 		- (source/area)`76 1 150 29`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`50`
+		- (metrics/profile-duration)`1033000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`97.48305905130688`
+		- (metrics/profile-minimum)`1033000`
+		- (metrics/profile-maximum)`1033000`
 (signature)`test_Subprocess_termination(test)`
 
 - (context-local/factor-element)&<fault.kernel/dispatch#Subprocess[fault.kernel.dispatch.Subprocess]>
@@ -232,6 +262,11 @@ The subclasses are used for injections to avoid real system processes.
 		- (source/area)`152 1 184 24`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`21`
+		- (metrics/profile-duration)`756000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`96.6931216931217`
+		- (metrics/profile-minimum)`756000`
+		- (metrics/profile-maximum)`756000`
 (signature)`test_Subprocess_only_status(test)`
 
 - (context-local/factor-element)&<fault.kernel/dispatch#Subprocess.sp_only[fault.kernel.dispatch.Subprocess.sp_only]>
@@ -248,5 +283,10 @@ The subclasses are used for injections to avoid real system processes.
 		- (source/area)`186 1 262 30`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`48`
+		- (metrics/profile-duration)`1370000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1370000`
+		- (metrics/profile-maximum)`1370000`
 (signature)`test_Scheduler_operations(test)`
 

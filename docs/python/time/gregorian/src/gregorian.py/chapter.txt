@@ -6,6 +6,11 @@
 		- (source/area)`1 1 180 0`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`50`
+		- (metrics/profile-duration)`2167445`
+		- (metrics/profile-count)`822`
+		- (metrics/profile-residency)`99.56837520486742`
+		- (metrics/profile-minimum)`295000`
+		- (metrics/profile-maximum)`4031000`
 Gregorian calendar functions and data.
 
 
@@ -255,6 +260,11 @@ Gregorian calendar functions and data.
 		- (source/area)`88 1 93 73`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`7511`
+		- (metrics/profile-count)`9118`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`3000`
+		- (metrics/profile-maximum)`3964000`
 (signature)`resolve_by_months(months)`
 
 
@@ -269,6 +279,11 @@ Gregorian calendar functions and data.
 		- (source/area)`95 1 100 71`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`7660`
+		- (metrics/profile-count)`5766`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`3000`
+		- (metrics/profile-maximum)`2635000`
 (signature)`resolve_by_days(days)`
 
 
@@ -323,6 +338,11 @@ Gregorian calendar functions and data.
 		- (source/area)`109 1 115 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`491`
+		- (metrics/profile-count)`112`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`10000`
 (signature)`year_is_leap(y)`
 
 Given a gregorian calendar year, determine whether it is a leap year.
@@ -337,6 +357,11 @@ Given a gregorian calendar year, determine whether it is a leap year.
 		- (source/area)`117 1 125 38`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`9763`
+		- (metrics/profile-count)`5736`
+		- (metrics/profile-residency)`21.4299744647417`
+		- (metrics/profile-minimum)`5000`
+		- (metrics/profile-maximum)`2638000`
 (signature)`month_from_days(days)`
 
 Convert the given number Earth-days to a month in the Gregorian cycle.
@@ -354,6 +379,11 @@ Convert the given number Earth-days to a month in the Gregorian cycle.
 		- (source/area)`127 1 133 47`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`9519`
+		- (metrics/profile-count)`6582`
+		- (metrics/profile-residency)`21.74822049857959`
+		- (metrics/profile-minimum)`5000`
+		- (metrics/profile-maximum)`3967000`
 (signature)`days_from_month(months)`
 
 Convert the given months to the number of Earth-days leading up to the
@@ -369,6 +399,11 @@ Gregorian month.
 		- (source/area)`135 1 142 58`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`8666`
+		- (metrics/profile-count)`30`
+		- (metrics/profile-residency)`34.61538461538462`
+		- (metrics/profile-minimum)`5000`
+		- (metrics/profile-maximum)`57000`
 (signature)`date_from_days(days)`
 
 Convert the given Earth-days into a Gregorian date in the common form:
@@ -384,6 +419,11 @@ Convert the given Earth-days into a Gregorian date in the common form:
 		- (source/area)`144 1 153 53`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`9970`
+		- (metrics/profile-count)`1714`
+		- (metrics/profile-residency)`31.11761263897016`
+		- (metrics/profile-minimum)`5000`
+		- (metrics/profile-maximum)`91000`
 (signature)`days_from_date(date)`
 
 Convert a Gregorian date in the common form, (year, month, day), to the number
@@ -401,5 +441,10 @@ of days leading up to the date.
 		- (source/area)`155 1 180 74`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`14`
+		- (metrics/profile-duration)`37100`
+		- (metrics/profile-count)`822`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`26000`
+		- (metrics/profile-maximum)`171000`
 (signature)`context(context)`
 

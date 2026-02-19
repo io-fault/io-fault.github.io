@@ -6,6 +6,11 @@
 		- (source/area)`1 1 47 17`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`22`
+		- (metrics/profile-duration)`492000`
+		- (metrics/profile-count)`7`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`492000`
+		- (metrics/profile-maximum)`492000`
 Limited tests as the information retrieved is expected to vary.
 
 
@@ -28,6 +33,11 @@ Limited tests as the information retrieved is expected to vary.
 		- (source/area)`6 1 11 12`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`314000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`314000`
+		- (metrics/profile-maximum)`314000`
 (signature)`test_paths(test)`
 
 - (context-local/factor-element)&<fault.system/query#paths[fault.system.query.paths]>
@@ -42,6 +52,11 @@ Limited tests as the information retrieved is expected to vary.
 		- (source/area)`13 1 19 17`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`747000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`747000`
+		- (metrics/profile-maximum)`747000`
 (signature)`test_executables_cat(test)`
 
 - (context-local/factor-element)&<fault.system/query#executables[fault.system.query.executables]>
@@ -56,6 +71,11 @@ Limited tests as the information retrieved is expected to vary.
 		- (source/area)`21 1 27 17`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`1303000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1303000`
+		- (metrics/profile-maximum)`1303000`
 (signature)`test_executables_rm(test)`
 
 - (context-local/factor-element)&<fault.system/query#executables[fault.system.query.executables]>
@@ -70,6 +90,11 @@ Limited tests as the information retrieved is expected to vary.
 		- (source/area)`29 1 34 18`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`1555000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1555000`
+		- (metrics/profile-maximum)`1555000`
 (signature)`test_username(test)`
 
 - (context-local/factor-element)&<fault.system/query#username[fault.system.query.username]>
@@ -84,6 +109,11 @@ Limited tests as the information retrieved is expected to vary.
 		- (source/area)`36 1 41 19`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`1469000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1469000`
+		- (metrics/profile-maximum)`1469000`
 (signature)`test_usertitle(test)`
 
 - (context-local/factor-element)&<fault.system/query#usertitle[fault.system.query.usertitle]>
@@ -98,6 +128,11 @@ Limited tests as the information retrieved is expected to vary.
 		- (source/area)`43 1 48 16`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`1516000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1516000`
+		- (metrics/profile-maximum)`1516000`
 (signature)`test_shell(test)`
 
 - (context-local/factor-element)&<fault.system/query#shell[fault.system.query.shell]>

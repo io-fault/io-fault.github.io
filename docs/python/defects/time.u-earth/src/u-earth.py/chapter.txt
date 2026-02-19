@@ -6,6 +6,11 @@
 		- (source/area)`1 1 46 4`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`14`
+		- (metrics/profile-duration)`7000`
+		- (metrics/profile-count)`3`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`7000`
+		- (metrics/profile-maximum)`7000`
 Check earth based units (days).
 
 
@@ -76,6 +81,11 @@ Check earth based units (days).
 		- (source/area)`18 1 21 14`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`125500`
+		- (metrics/profile-count)`2`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`121000`
+		- (metrics/profile-maximum)`130000`
 (signature)`check_from_units(test, samples)`
 
 
@@ -90,6 +100,11 @@ Check earth based units (days).
 		- (source/area)`23 1 34 3`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`189000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`35.978835978835974`
+		- (metrics/profile-minimum)`189000`
+		- (metrics/profile-maximum)`189000`
 (signature)`test_from_units_decimal(test)`
 
 
@@ -104,5 +119,10 @@ Check earth based units (days).
 		- (source/area)`36 1 47 3`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`206000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`36.89320388349515`
+		- (metrics/profile-minimum)`206000`
+		- (metrics/profile-maximum)`206000`
 (signature)`test_from_units_fraction(test)`
 

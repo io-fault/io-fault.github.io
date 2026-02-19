@@ -6,6 +6,11 @@
 		- (source/area)`1 1 30 9`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`13`
+		- (metrics/profile-duration)`1000`
+		- (metrics/profile-count)`3`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`1000`
 Check various expectations.
 
 
@@ -18,6 +23,11 @@ Check various expectations.
 	/element/
 		- (control)`property-set`
 		- (source/area)`5 1 15 38`
+		- (metrics/profile-duration)`6082000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`6082000`
+		- (metrics/profile-maximum)`6082000`
 (signature)`test_module_protocol(test)`
 
 
@@ -32,5 +42,10 @@ Check various expectations.
 		- (source/area)`17 1 31 8`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`2574000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`2574000`
+		- (metrics/profile-maximum)`2574000`
 (signature)`test_no_subtyping(test)`
 

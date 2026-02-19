@@ -6,6 +6,11 @@
 		- (source/area)`1 1 89 0`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`35`
+		- (metrics/profile-duration)`2619`
+		- (metrics/profile-count)`822`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`10000`
 Arbitrary Calendar Address Resolution
 
 Used internally by (project-local/unknown)&<gregorian> in order to work with the gregorian calendar pattern.
@@ -42,6 +47,11 @@ Used internally by (project-local/unknown)&<gregorian> in order to work with the
 		- (source/area)`11 1 42 2`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`12`
+		- (metrics/profile-duration)`10440`
+		- (metrics/profile-count)`7398`
+		- (metrics/profile-residency)`42.448958454706705`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`2499000`
 (signature)`aggregate(node)`
 
 Recursively aggregate the data in the node.
@@ -58,5 +68,10 @@ Recursively aggregate the data in the node.
 		- (source/area)`51 1 89 85`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`20`
+		- (metrics/profile-duration)`4699`
+		- (metrics/profile-count)`14884`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`3960000`
 (signature)`resolve(selectors, iaddress, calendar)`
 

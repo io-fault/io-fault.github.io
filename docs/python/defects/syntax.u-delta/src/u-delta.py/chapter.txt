@@ -6,6 +6,11 @@
 		- (source/area)`1 1 223 0`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`153`
+		- (metrics/profile-duration)`3711000`
+		- (metrics/profile-count)`15`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`3711000`
+		- (metrics/profile-maximum)`3711000`
 Analyze (project-local/unknown)&<delta>
 
 
@@ -30,6 +35,11 @@ Analyze (project-local/unknown)&<delta>
 		- (source/area)`7 1 13 27`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`155000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`155000`
+		- (metrics/profile-maximum)`155000`
 (signature)`test_Update(test)`
 
 
@@ -44,6 +54,11 @@ Analyze (project-local/unknown)&<delta>
 		- (source/area)`15 1 20 27`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`154000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`154000`
+		- (metrics/profile-maximum)`154000`
 (signature)`test_Lines(test)`
 
 
@@ -58,6 +73,11 @@ Analyze (project-local/unknown)&<delta>
 		- (source/area)`22 1 28 27`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`136000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`136000`
+		- (metrics/profile-maximum)`136000`
 (signature)`test_Cursor(test)`
 
 
@@ -72,6 +92,11 @@ Analyze (project-local/unknown)&<delta>
 		- (source/area)`30 1 33 27`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`111000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`111000`
+		- (metrics/profile-maximum)`111000`
 (signature)`test_Checkpoint(test)`
 
 
@@ -86,6 +111,11 @@ Analyze (project-local/unknown)&<delta>
 		- (source/area)`35 1 40 27`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`144000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`144000`
+		- (metrics/profile-maximum)`144000`
 (signature)`test_Log_init(test)`
 
 
@@ -100,6 +130,11 @@ Analyze (project-local/unknown)&<delta>
 		- (source/area)`42 1 48 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`97333`
+		- (metrics/profile-count)`9`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`80000`
+		- (metrics/profile-maximum)`128000`
 (signature)`sample1()`
 
 
@@ -114,6 +149,11 @@ Analyze (project-local/unknown)&<delta>
 		- (source/area)`50 1 52 20`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`137000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`38.68613138686132`
+		- (metrics/profile-minimum)`137000`
+		- (metrics/profile-maximum)`137000`
 (signature)`test_Log_insert(test)`
 
 
@@ -128,6 +168,11 @@ Analyze (project-local/unknown)&<delta>
 		- (source/area)`54 1 58 14`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`247000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`63.96761133603239`
+		- (metrics/profile-minimum)`247000`
+		- (metrics/profile-maximum)`247000`
 (signature)`test_Log_undo(test)`
 
 
@@ -142,6 +187,11 @@ Analyze (project-local/unknown)&<delta>
 		- (source/area)`60 1 70 41`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`10`
+		- (metrics/profile-duration)`308000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`64.6103896103896`
+		- (metrics/profile-minimum)`308000`
+		- (metrics/profile-maximum)`308000`
 (signature)`test_Log_redo(test)`
 
 
@@ -154,6 +204,11 @@ Analyze (project-local/unknown)&<delta>
 		- (source/area)`72 1 130 28`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`43`
+		- (metrics/profile-duration)`508000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`82.08661417322834`
+		- (metrics/profile-minimum)`508000`
+		- (metrics/profile-maximum)`508000`
 (signature)`test_Log_truncate(test)`
 
 - (context-local/factor-element)&<fault.syntax/delta#Log.truncate[fault.syntax.delta.Log.truncate]>
@@ -172,6 +227,11 @@ Validate negative interpretations, uncommitted retention, and full truncation.
 		- (source/area)`132 1 142 20`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`10`
+		- (metrics/profile-duration)`339000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`65.19174041297934`
+		- (metrics/profile-minimum)`339000`
+		- (metrics/profile-maximum)`339000`
 (signature)`test_Log_checkpoint(test)`
 
 
@@ -186,6 +246,11 @@ Validate negative interpretations, uncommitted retention, and full truncation.
 		- (source/area)`144 1 150 31`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`172000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`50.0`
+		- (metrics/profile-minimum)`172000`
+		- (metrics/profile-maximum)`172000`
 (signature)`test_Log_update(test)`
 
 
@@ -200,6 +265,11 @@ Validate negative interpretations, uncommitted retention, and full truncation.
 		- (source/area)`152 1 172 27`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`16`
+		- (metrics/profile-duration)`323000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`71.8266253869969`
+		- (metrics/profile-minimum)`323000`
+		- (metrics/profile-maximum)`323000`
 (signature)`test_Log_collapse_inserts(test)`
 
 
@@ -212,6 +282,11 @@ Validate negative interpretations, uncommitted retention, and full truncation.
 		- (source/area)`174 1 199 23`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`15`
+		- (metrics/profile-duration)`437000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`70.70938215102976`
+		- (metrics/profile-minimum)`437000`
+		- (metrics/profile-maximum)`437000`
 (signature)`test_Log_collapse_deletes(test)`
 
 - (context-local/factor-element)&<fault.syntax/delta#Update.combine[fault.syntax.delta.Update.combine]>
@@ -229,6 +304,11 @@ Validate that deletes following inserts can be combined.
 		- (source/area)`201 1 223 24`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`14`
+		- (metrics/profile-duration)`293000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`72.6962457337884`
+		- (metrics/profile-minimum)`293000`
+		- (metrics/profile-maximum)`293000`
 (signature)`test_Log_collapsed_since(test)`
 
 - (context-local/factor-element)&<fault.syntax/delta#Log.collapse[fault.syntax.delta.Log.collapse]>

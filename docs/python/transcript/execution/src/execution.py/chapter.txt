@@ -6,6 +6,11 @@
 		- (source/area)`1 1 334 0`
 		- (coverage-zeros)`39`
 		- (coverage-counters)`210`
+		- (metrics/profile-duration)`10460125`
+		- (metrics/profile-count)`8`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`7879000`
+		- (metrics/profile-maximum)`13177000`
 System process status display using transaction frames.
 
 
@@ -150,6 +155,11 @@ System process status display using transaction frames.
 		- (source/area)`18 1 36 35`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`10`
+		- (metrics/profile-duration)`84349`
+		- (metrics/profile-count)`1621`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`20908000`
 (signature)`_launch(status)`
 
 
@@ -164,6 +174,11 @@ System process status display using transaction frames.
 		- (source/area)`38 1 43 16`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`671`
+		- (metrics/profile-count)`5024`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`19000`
 (signature)`_field(key, ext)`
 
 
@@ -176,6 +191,11 @@ System process status display using transaction frames.
 		- (source/area)`45 1 78 62`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`18`
+		- (metrics/profile-duration)`56167`
+		- (metrics/profile-count)`2512`
+		- (metrics/profile-residency)`97.6072689129233`
+		- (metrics/profile-minimum)`22000`
+		- (metrics/profile-maximum)`12557000`
 (signature)`_closed()`
 
 Join a start and stop frame.
@@ -204,6 +224,11 @@ Join a start and stop frame.
 		- (source/area)`93 1 334 58`
 		- (coverage-zeros)`27`
 		- (coverage-counters)`158`
+		- (metrics/profile-duration)`23805138125`
+		- (metrics/profile-count)`8`
+		- (metrics/profile-residency)`99.85411500316594`
+		- (metrics/profile-minimum)`396714000`
+		- (metrics/profile-maximum)`113920661000`
 (signature)`dispatch(meta, log, plan, control, monitors, summary, title, queue)`
 
 Execute system commands while displaying their status

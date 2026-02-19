@@ -6,6 +6,11 @@
 		- (source/area)`1 1 41 42`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`19`
+		- (metrics/profile-duration)`1712714`
+		- (metrics/profile-count)`7`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1335000`
+		- (metrics/profile-maximum)`2198000`
 Primary access to kleptic text parsing and serialization functions.
 
 #!syntax/python
@@ -69,6 +74,11 @@ Primary access to kleptic text parsing and serialization functions.
 		- (source/area)`15 1 19 26`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`3236`
+		- (metrics/profile-count)`59683`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`2000`
+		- (metrics/profile-maximum)`27263000`
 		- (type/syntax)`types.Paragraph`
 		- (type/project-local/factor-element)&<types#Paragraph[fault.text.types.Paragraph]>
 		
@@ -100,6 +110,11 @@ Create a (project-local/factor-element)&<types#Paragraph[fault.text.types.Paragr
 		- (source/area)`24 1 32 74`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`2736957`
+		- (metrics/profile-count)`2848`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`53000`
+		- (metrics/profile-maximum)`454790000`
 (signature)`structure_chapter_lines(lines)`
 
 Parse kleptic text lines into an element tree.
@@ -114,6 +129,11 @@ Parse kleptic text lines into an element tree.
 		- (source/area)`34 1 38 54`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`17166927`
+		- (metrics/profile-count)`427`
+		- (metrics/profile-residency)`0.2949410649909867`
+		- (metrics/profile-minimum)`420000`
+		- (metrics/profile-maximum)`455032000`
 (signature)`structure_chapter_text(source)`
 
 Parse kleptic text source into an element tree.

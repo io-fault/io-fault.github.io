@@ -6,6 +6,11 @@
 		- (source/area)`1 1 91 0`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`72`
+		- (metrics/profile-duration)`817000`
+		- (metrics/profile-count)`2`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`817000`
+		- (metrics/profile-maximum)`817000`
 
 [ library ]
 ! CONTROL:
@@ -28,5 +33,10 @@
 		- (source/area)`3 1 91 21`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`71`
+		- (metrics/profile-duration)`15489000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`15489000`
+		- (metrics/profile-maximum)`15489000`
 (signature)`test_Segments(test)`
 

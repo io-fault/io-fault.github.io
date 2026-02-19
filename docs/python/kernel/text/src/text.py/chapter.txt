@@ -6,6 +6,11 @@
 		- (source/area)`1 1 127 5`
 		- (coverage-zeros)`74`
 		- (coverage-counters)`81`
+		- (metrics/profile-duration)`4446`
+		- (metrics/profile-count)`94`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`2000`
+		- (metrics/profile-maximum)`12000`
 Formatting routines for representing processor hierarchies.
 
 

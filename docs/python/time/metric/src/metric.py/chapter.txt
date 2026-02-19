@@ -6,6 +6,11 @@
 		- (source/area)`1 1 87 4`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`14`
+		- (metrics/profile-duration)`10187`
+		- (metrics/profile-count)`822`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`7000`
+		- (metrics/profile-maximum)`27000`
 Information about the metric second and its multiples.
 
 
@@ -110,6 +115,11 @@ Information about the metric second and its multiples.
 		- (source/area)`66 1 88 3`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`10`
+		- (metrics/profile-duration)`138489`
+		- (metrics/profile-count)`822`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`99000`
+		- (metrics/profile-maximum)`972000`
 (signature)`context(context)`
 
 Given a libunit.Context instance, define the metric units starting with the

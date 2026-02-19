@@ -6,6 +6,11 @@
 		- (source/area)`1 1 234 0`
 		- (coverage-zeros)`6`
 		- (coverage-counters)`60`
+		- (metrics/profile-duration)`37572`
+		- (metrics/profile-count)`817`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`25000`
+		- (metrics/profile-maximum)`317000`
 Data structures for holding failure, notification, and trace information.
 
 [ Constructor Versioning ]
@@ -103,6 +108,11 @@ have access to more advanced formatting routines.
 		- (source/area)`31 2 47 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`333`
+		- (metrics/profile-count)`3`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`1000`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -128,6 +138,11 @@ This field *must not* be localized.
 		- (source/area)`48 2 66 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`520`
+		- (metrics/profile-count)`19011`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`30000`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -155,6 +170,11 @@ This field *must not* be localized.
 		- (source/area)`67 2 86 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`1000`
+		- (metrics/profile-count)`3`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`1000`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
@@ -183,6 +203,11 @@ resolving additional metadata regarding the event.
 		- (source/area)`87 2 102 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`549`
+		- (metrics/profile-count)`6020`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`60000`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -207,6 +232,11 @@ This field *must not* be localized.
 		- (source/area)`103 2 121 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`582`
+		- (metrics/profile-count)`22344`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`261000`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -236,6 +266,11 @@ should be used to create friendlier, human-readable abstracts.
 		- (source/area)`122 2 131 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`3989`
+		- (metrics/profile-count)`28147`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`12519000`
 (signature)`from_fields_v1(Class, protocol)`
 
 
@@ -248,6 +283,11 @@ should be used to create friendlier, human-readable abstracts.
 		- (source/area)`132 2 144 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`2000`
+		- (metrics/profile-count)`2`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`4000`
 (signature)`from_tuple_v1(Class, fields)`
 
 Create an instance using (factor-local/parameter)&<#EStruct.from_tuple_v1.Parameters.fields[fields]>; expects five objects in this order:
@@ -268,6 +308,11 @@ Create an instance using (factor-local/parameter)&<#EStruct.from_tuple_v1.Parame
 		- (source/area)`145 2 152 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`0`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`0.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`0`
 (signature)`from_arguments_v1(Class, protocol, identifier, code, symbol, abstract)`
 
 Create an instance using the given arguments whose positioning is consistent
@@ -283,6 +328,11 @@ with where the fields are stored in the tuple.
 		- (source/area)`153 2 176 56`
 		- (coverage-zeros)`3`
 		- (coverage-counters)`12`
+		- (metrics/profile-duration)`18000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`18000`
+		- (metrics/profile-maximum)`18000`
 (signature)`from_string_v1(Class, erstring)`
 
 Create an EStruct using a string following the format:
@@ -348,6 +398,11 @@ The event's protocol.
 		- (source/area)`192 2 198 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`1064`
+		- (metrics/profile-count)`27543`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`5639000`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -363,6 +418,11 @@ The channel designated by the frame.
 		- (source/area)`199 2 205 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`635`
+		- (metrics/profile-count)`47371`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`3912000`
 		- (type/syntax)`EStruct`
 		- (type/factor-local/class)&<#EStruct[EStruct]>
 		
@@ -378,6 +438,11 @@ The qualified identification of the frame event.
 		- (source/area)`206 2 212 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`579`
+		- (metrics/profile-count)`40545`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`209000`
 		- (type/syntax)`Mapping[str, str]`
 		
 The data extension associated with the frame.
@@ -392,6 +457,11 @@ The data extension associated with the frame.
 		- (source/area)`213 2 219 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`9818`
+		- (metrics/profile-count)`21524`
+		- (metrics/profile-residency)`86.45842698755956`
+		- (metrics/profile-minimum)`3000`
+		- (metrics/profile-maximum)`8459000`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -407,6 +477,11 @@ The visible message of the status frame.
 		- (source/area)`220 2 229 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`35000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`48.57142857142857`
+		- (metrics/profile-minimum)`35000`
+		- (metrics/profile-maximum)`35000`
 (signature)`from_string_v1()`
 
 Create using an (factor-local/class)&<#EStruct[EStruct]> string and optional context.
@@ -421,6 +496,11 @@ Create using an (factor-local/class)&<#EStruct[EStruct]> string and optional con
 		- (source/area)`230 2 234 43`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`0`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`0.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`0`
 (signature)`from_event_v1(Class, event)`
 
 Create using an (factor-local/class)&<#EStruct[EStruct]> instance and optional context.

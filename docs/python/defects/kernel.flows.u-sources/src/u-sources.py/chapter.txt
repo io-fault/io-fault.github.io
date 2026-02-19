@@ -6,6 +6,11 @@
 		- (source/area)`1 1 19 42`
 		- (coverage-zeros)`3`
 		- (coverage-counters)`16`
+		- (metrics/profile-duration)`5790000`
+		- (metrics/profile-count)`2`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`5790000`
+		- (metrics/profile-maximum)`5790000`
 
 [ flows ]
 ! CONTROL:
@@ -40,5 +45,10 @@
 		- (source/area)`4 1 16 26`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`10`
+		- (metrics/profile-duration)`834000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`834000`
+		- (metrics/profile-maximum)`834000`
 (signature)`test_Iteration(test)`
 

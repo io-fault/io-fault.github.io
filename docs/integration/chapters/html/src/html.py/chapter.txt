@@ -283,7 +283,7 @@ Rendering context for constructing an HTML document.
 		- (type/invalid/unknown)&<#object>
 		
 #!source
-	output: object = None
+	# The position of the document relative to the root of the collection.
 
 [ Render >> prefix ]
 ! CONTROL:
@@ -298,7 +298,7 @@ Rendering context for constructing an HTML document.
 		- (type/invalid/unknown)&<#str>
 		
 #!source
-	prefix: str = None
+	# /context/
 
 [ Render >> depth ]
 ! CONTROL:
@@ -313,7 +313,7 @@ Rendering context for constructing an HTML document.
 		- (type/invalid/unknown)&<#int>
 		
 #!source
-	depth: int = 0
+	# The chapter's context information.
 
 [ Render >> slug ]
 ! CONTROL:
@@ -705,24 +705,23 @@ Perform the transformation for the given element.
 		- (control)`property-set`
 		- (source/area)`887 2 905 37`
 #!source
-	semantic_literals = {
-		# (self, default-class-attribute, quals, literal-text)
-		'date': (
-			(lambda s, c, q, x: s.element(
-				'time', s.text(x),
-				('class', 'gregorian-calendar-date'),
-				('datetime', x),
-			))
-		),
-		'timestamp': (
-			(lambda s, c, q, x: s.element(
-				'time', s.text(x),
-				('class', 'point'),
-				('datetime', x),
-			))
-		),
-	}
-		@comethod('literal', 'grave-accent')
+	@comethod('reference', 'section')
+	def dereference_section(self, resolver, context, text, *quals):
+		yield from self.link(
+			'section-reference',
+			self.text(text),
+			"#" + self.slug(text),
+		)
+		@comethod('reference', 'ambiguous')
+	def dereference_ambiguous(self, resolver, context, text, *quals):
+		# Most references are expected to be rewritten as hyperlinks.
+		# However, this case should be handled.
+		yield from self.link(
+			(quals and quals[0] or None),
+			self.text(text),
+			href = text,
+		)
+		@comethod('reference', 'hyperlink')
 
 [ Render >> inline_literal ]
 ! CONTROL:

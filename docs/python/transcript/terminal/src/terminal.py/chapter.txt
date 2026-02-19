@@ -6,6 +6,11 @@
 		- (source/area)`1 1 890 0`
 		- (coverage-zeros)`60`
 		- (coverage-counters)`407`
+		- (metrics/profile-duration)`4080444`
+		- (metrics/profile-count)`9`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`157000`
+		- (metrics/profile-maximum)`10934000`
 Terminal support for status displays.
 
 
@@ -102,6 +107,11 @@ Terminal support for status displays.
 		- (source/area)`13 1 28 19`
 		- (coverage-zeros)`8`
 		- (coverage-counters)`11`
+		- (metrics/profile-duration)`908`
+		- (metrics/profile-count)`20965`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`31000`
 		- (type/syntax)`typing.Tuple[float, str]`
 		
 (signature)`duration_repr(seconds)`
@@ -148,6 +158,11 @@ Terminal support for status displays.
 		- (source/area)`33 2 34 37`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`1177`
+		- (metrics/profile-count)`125546`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`371000`
 (signature)`cellcount(self)`
 
 
@@ -435,6 +450,11 @@ Abstraction for legacy ANSI/DEC escapes.
 		- (source/area)`78 2 79 47`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`1485`
+		- (metrics/profile-count)`125575`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`480000`
 (signature)`_join(Class, *i)`
 
 
@@ -449,6 +469,11 @@ Abstraction for legacy ANSI/DEC escapes.
 		- (source/area)`81 2 88 18`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`1375`
+		- (metrics/profile-count)`8`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`2000`
 (signature)`__init__(self)`
 
 
@@ -461,6 +486,11 @@ Abstraction for legacy ANSI/DEC escapes.
 		- (source/area)`90 2 98 30`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`712`
+		- (metrics/profile-count)`8272`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`79000`
 (signature)`set_cursor_visible(self, visible)`
 
 Adjust cursor visibility.
@@ -475,6 +505,11 @@ Adjust cursor visibility.
 		- (source/area)`100 2 105 60`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`3125`
+		- (metrics/profile-count)`8`
+		- (metrics/profile-residency)`68.0`
+		- (metrics/profile-minimum)`3000`
+		- (metrics/profile-maximum)`4000`
 (signature)`set_scrolling_region(self, top, bottom)`
 
 Confine the scrolling region to the given rows.
@@ -489,6 +524,11 @@ Confine the scrolling region to the given rows.
 		- (source/area)`107 2 112 30`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`1125`
+		- (metrics/profile-count)`8`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`4000`
 (signature)`reset_scrolling_region(self)`
 
 Release confinements on scrolling region.
@@ -503,6 +543,11 @@ Release confinements on scrolling region.
 		- (source/area)`114 2 122 77`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`5750`
+		- (metrics/profile-count)`8`
+		- (metrics/profile-residency)`45.65217391304348`
+		- (metrics/profile-minimum)`5000`
+		- (metrics/profile-maximum)`7000`
 (signature)`open_scrolling_region(self, top, bottom)`
 
 Set the scrolling region, enter it, and seek the bottom.
@@ -519,6 +564,11 @@ should be use to maintain the SR's state.
 		- (source/area)`124 2 132 56`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`9875`
+		- (metrics/profile-count)`8`
+		- (metrics/profile-residency)`83.54430379746836`
+		- (metrics/profile-minimum)`6000`
+		- (metrics/profile-maximum)`18000`
 (signature)`close_scrolling_region(self)`
 
 Save the screen buffer, reset the scrolling region, and restore the buffer.
@@ -534,6 +584,11 @@ This preserves the screen's state after the transition.
 		- (source/area)`134 2 141 23`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`842`
+		- (metrics/profile-count)`4144`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`26000`
 (signature)`enter_scrolling_region(self)`
 
 Enter scrolling region; normal terminal output; restores cursor location.
@@ -548,6 +603,11 @@ Enter scrolling region; normal terminal output; restores cursor location.
 		- (source/area)`143 2 150 24`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`890`
+		- (metrics/profile-count)`4136`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`29000`
 (signature)`exit_scrolling_region(self)`
 
 Exit scrolling region; allow out of region printing; saves cursor location.
@@ -562,6 +622,11 @@ Exit scrolling region; allow out of region printing; saves cursor location.
 		- (source/area)`152 2 158 61`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`4250`
+		- (metrics/profile-count)`16`
+		- (metrics/profile-residency)`82.35294117647058`
+		- (metrics/profile-minimum)`3000`
+		- (metrics/profile-maximum)`7000`
 (signature)`clear(self)`
 
 Clear the staionary area according to its configured width and default text properties.
@@ -576,6 +641,11 @@ Clear the staionary area according to its configured width and default text prop
 		- (source/area)`160 2 166 42`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`14469`
+		- (metrics/profile-count)`215`
+		- (metrics/profile-residency)`52.169720347155256`
+		- (metrics/profile-minimum)`7000`
+		- (metrics/profile-maximum)`111000`
 (signature)`erase(self, area)`
 
 Erase the given area.
@@ -590,6 +660,11 @@ Erase the given area.
 		- (source/area)`168 2 175 89`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`4654`
+		- (metrics/profile-count)`125320`
+		- (metrics/profile-residency)`68.11059797235906`
+		- (metrics/profile-minimum)`2000`
+		- (metrics/profile-maximum)`2158000`
 		- (type/syntax)`bytes`
 		- (type/invalid/unknown)&<#bytes>
 		
@@ -607,6 +682,11 @@ Primitive relative seek; Context cursor position is *not* updated.
 		- (source/area)`177 2 184 99`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`1693`
+		- (metrics/profile-count)`502205`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`71582000`
 (signature)`style(self, name, text)`
 
 Style the given (factor-local/parameter)&<#Legacy.style.Parameters.text[text]> as (factor-local/parameter)&<#Legacy.style.Parameters.name[name]>.
@@ -623,6 +703,11 @@ Text color will be reset to the default.
 		- (source/area)`186 2 192 32`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`16975`
+		- (metrics/profile-count)`375035`
+		- (metrics/profile-residency)`79.08137724299763`
+		- (metrics/profile-minimum)`2000`
+		- (metrics/profile-maximum)`71652000`
 (signature)`render(self, phrase)`
 
 Translate the color names to SGR codes.
@@ -637,6 +722,11 @@ Translate the color names to SGR codes.
 		- (source/area)`194 2 205 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`5875`
+		- (metrics/profile-count)`8`
+		- (metrics/profile-residency)`68.08510638297872`
+		- (metrics/profile-minimum)`5000`
+		- (metrics/profile-maximum)`7000`
 (signature)`configure(self, height, width, lines)`
 
 Update the dimensions of the screen.
@@ -653,6 +743,11 @@ Update the dimensions of the screen.
 		- (source/area)`206 2 207 26`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`625`
+		- (metrics/profile-count)`8`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`1000`
 
 [ Layout ]
 ! CONTROL:
@@ -710,6 +805,11 @@ The set, sizes, and ordering of fields present in a monitor.
 		- (source/area)`219 2 229 19`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`774873`
+		- (metrics/profile-count)`21155`
+		- (metrics/profile-residency)`16.318596768206326`
+		- (metrics/profile-minimum)`4000`
+		- (metrics/profile-maximum)`72600000`
 (signature)`separators(fields)`
 
 Generate a series of separators finished with a terminator.
@@ -726,6 +826,11 @@ is reached.
 		- (source/area)`231 2 235 27`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`325`
+		- (metrics/profile-count)`40`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`1000`
 (signature)`label(self, field, text)`
 
 The display text for the field's label.
@@ -742,6 +847,11 @@ The display text for the field's label.
 		- (source/area)`237 2 242 36`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`3375`
+		- (metrics/profile-count)`8`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`3000`
+		- (metrics/profile-maximum)`4000`
 (signature)`__init__(self, fields, **updates)`
 
 
@@ -754,6 +864,11 @@ The display text for the field's label.
 		- (source/area)`244 2 249 70`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`1472`
+		- (metrics/profile-count)`21005`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`109000`
 (signature)`fields(self)`
 
 Iterate over the fields in their designated order along with separators
@@ -769,6 +884,11 @@ that can be used to follow the rendered field.
 		- (source/area)`251 2 260 32`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`56125`
+		- (metrics/profile-count)`40`
+		- (metrics/profile-residency)`3.5189309576837413`
+		- (metrics/profile-minimum)`48000`
+		- (metrics/profile-maximum)`82000`
 (signature)`positions(self)`
 
 Join the field identifier, cell allocation, and field label in
@@ -816,6 +936,11 @@ The rendering methods and parameters used by a (factor-local/class)&<#Status[Sta
 		- (source/area)`269 2 278 14`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`725`
+		- (metrics/profile-count)`251348`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`287000`
 (signature)`default_render_method(self, key, field)`
 
 Renders the string form of (factor-local/parameter)&<#Theme.default_render_method.Parameters.field[field]> with the style set identified
@@ -848,6 +973,11 @@ formatting directly.
 		- (source/area)`289 2 299 3`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`7883`
+		- (metrics/profile-count)`20965`
+		- (metrics/profile-residency)`88.47938814901765`
+		- (metrics/profile-minimum)`2000`
+		- (metrics/profile-maximum)`26402000`
 (signature)`r_duration(value)`
 
 Render method for common duration fields.
@@ -862,6 +992,11 @@ Render method for common duration fields.
 		- (source/area)`301 2 305 30`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`420`
+		- (metrics/profile-count)`88`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`1000`
 (signature)`define(self, name, style)`
 
 Define the (factor-local/parameter)&<#Theme.define.Parameters.style[style]> to use with the given (factor-local/parameter)&<#Theme.define.Parameters.name[name]>.
@@ -876,6 +1011,11 @@ Define the (factor-local/parameter)&<#Theme.define.Parameters.style[style]> to u
 		- (source/area)`307 2 311 34`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`446`
+		- (metrics/profile-count)`56`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`1000`
 (signature)`implement(self, type, render)`
 
 Assign a render method, (invalid/unknown)&<#call>, for the (invalid/unknown)&<#field>.
@@ -892,6 +1032,11 @@ Assign a render method, (invalid/unknown)&<#call>, for the (invalid/unknown)&<#f
 		- (source/area)`313 2 315 24`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`625`
+		- (metrics/profile-count)`8`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`1000`
 (signature)`__init__(self)`
 
 
@@ -906,6 +1051,11 @@ Assign a render method, (invalid/unknown)&<#call>, for the (invalid/unknown)&<#f
 		- (source/area)`317 2 328 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`1375`
+		- (metrics/profile-count)`8`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`2000`
 (signature)`configure(self)`
 
 
@@ -918,6 +1068,11 @@ Assign a render method, (invalid/unknown)&<#call>, for the (invalid/unknown)&<#f
 		- (source/area)`330 2 337 31`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`4719`
+		- (metrics/profile-count)`376909`
+		- (metrics/profile-residency)`64.06735624598431`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`46140000`
 (signature)`style(self, celltexts)`
 
 Emit words formatted according to their associated style set.
@@ -932,6 +1087,11 @@ Emit words formatted according to their associated style set.
 		- (source/area)`339 2 345 44`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`15076`
+		- (metrics/profile-count)`376909`
+		- (metrics/profile-residency)`49.51961006363022`
+		- (metrics/profile-minimum)`4000`
+		- (metrics/profile-maximum)`52615000`
 (signature)`render(self, type, field)`
 
 Render the given (factor-local/parameter)&<#Theme.render.Parameters.field[field]> according to the configured (invalid/unknown)&<#type'> render method.
@@ -1002,6 +1162,11 @@ Allocated area for status display of a set of changing fields.
 		- (source/area)`364 2 375 28`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`73575`
+		- (metrics/profile-count)`40`
+		- (metrics/profile-residency)`3.0241250424736665`
+		- (metrics/profile-minimum)`62000`
+		- (metrics/profile-maximum)`109000`
 (signature)`__init__(self, theme, layout, position)`
 
 
@@ -1016,6 +1181,11 @@ Allocated area for status display of a set of changing fields.
 		- (source/area)`377 2 392 24`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`11`
+		- (metrics/profile-duration)`58950`
+		- (metrics/profile-count)`40`
+		- (metrics/profile-residency)`-54.41051738761662`
+		- (metrics/profile-minimum)`50000`
+		- (metrics/profile-maximum)`87000`
 (signature)`_calculate_fields(self)`
 
 
@@ -1030,6 +1200,11 @@ Allocated area for status display of a set of changing fields.
 		- (source/area)`394 2 399 3`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`71350`
+		- (metrics/profile-count)`40`
+		- (metrics/profile-residency)`8.61948142957253`
+		- (metrics/profile-minimum)`60000`
+		- (metrics/profile-maximum)`106000`
 (signature)`_update_field_cache(self)`
 
 
@@ -1042,6 +1217,11 @@ Allocated area for status display of a set of changing fields.
 		- (source/area)`401 2 407 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`5623`
+		- (metrics/profile-count)`247`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`49000`
 (signature)`reset(self, time, metrics)`
 
 Reset the metrics records using the given entry as the only one.
@@ -1058,6 +1238,11 @@ Reset the metrics records using the given entry as the only one.
 		- (source/area)`408 2 409 28`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`1311`
+		- (metrics/profile-count)`2002`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`12000`
 
 [ Status >> elapse ]
 ! CONTROL:
@@ -1068,6 +1253,11 @@ Reset the metrics records using the given entry as the only one.
 		- (source/area)`411 2 418 48`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`1571`
+		- (metrics/profile-count)`16480`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`350000`
 (signature)`elapse(self, time)`
 
 Update the time field on the last metrics record.
@@ -1082,6 +1272,11 @@ Update the time field on the last metrics record.
 		- (source/area)`420 2 430 9`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
+		- (metrics/profile-duration)`2771`
+		- (metrics/profile-count)`6122`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`177000`
 (signature)`update(self, time, metrics)`
 
 Update the metrics record for the given point in time.
@@ -1098,6 +1293,11 @@ Update the metrics record for the given point in time.
 		- (source/area)`432 2 433 51`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`885`
+		- (metrics/profile-count)`21115`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`133000`
 (signature)`duration(self)`
 
 
@@ -1126,6 +1326,11 @@ Select the next read type for the given field using the (factor-local/data)&<#St
 		- (source/area)`444 2 447 26`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`425`
+		- (metrics/profile-count)`40`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`1000`
 (signature)`set_field_read_type(self, field, units)`
 
 
@@ -1166,6 +1371,11 @@ Attach a constant phrase to the end of the monitor.
 		- (source/area)`463 2 468 35`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`1116`
+		- (metrics/profile-count)`4335`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`29000`
 (signature)`title(self, title, *dimensions)`
 
 Assign the monitor's title and dimension identifiers.
@@ -1180,6 +1390,11 @@ Assign the monitor's title and dimension identifiers.
 		- (source/area)`470 2 479 36`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`946`
+		- (metrics/profile-count)`20815`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`121000`
 (signature)`window_period(self)`
 
 Calculate the current metrics window size.
@@ -1224,6 +1439,11 @@ Calculate the current metrics window size.
 		- (source/area)`492 2 495 34`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`7050`
+		- (metrics/profile-count)`20965`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`2000`
+		- (metrics/profile-maximum)`30466000`
 (signature)`edge(self, field)`
 
 
@@ -1238,6 +1458,11 @@ Calculate the current metrics window size.
 		- (source/area)`497 2 498 35`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`21324`
+		- (metrics/profile-count)`111541`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`2000`
+		- (metrics/profile-maximum)`46970000`
 (signature)`total(self, field)`
 
 
@@ -1252,6 +1477,11 @@ Calculate the current metrics window size.
 		- (source/area)`500 2 502 37`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`19699`
+		- (metrics/profile-count)`20815`
+		- (metrics/profile-residency)`38.839490396152605`
+		- (metrics/profile-minimum)`9000`
+		- (metrics/profile-maximum)`30493000`
 (signature)`rate_window(self, field)`
 
 
@@ -1266,6 +1496,11 @@ Calculate the current metrics window size.
 		- (source/area)`504 2 506 32`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`13340`
+		- (metrics/profile-count)`150`
+		- (metrics/profile-residency)`50.07496251874063`
+		- (metrics/profile-minimum)`9000`
+		- (metrics/profile-maximum)`40000`
 (signature)`rate_overall(self, field)`
 
 
@@ -1280,6 +1515,11 @@ Calculate the current metrics window size.
 		- (source/area)`508 2 534 65`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`20`
+		- (metrics/profile-duration)`897563`
+		- (metrics/profile-count)`20965`
+		- (metrics/profile-residency)`-78.52074907628125`
+		- (metrics/profile-minimum)`83000`
+		- (metrics/profile-maximum)`72768000`
 (signature)`render(self)`
 
 
@@ -1306,6 +1546,11 @@ Calculate the current metrics window size.
 		- (source/area)`562 2 575 54`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`9`
+		- (metrics/profile-duration)`224420`
+		- (metrics/profile-count)`150`
+		- (metrics/profile-residency)`5.822416302765648`
+		- (metrics/profile-minimum)`93000`
+		- (metrics/profile-maximum)`9211000`
 (signature)`phrase(self)`
 
 The monitor's image as a single phrase instance.
@@ -1320,6 +1565,11 @@ The monitor's image as a single phrase instance.
 		- (source/area)`577 2 582 64`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`228100`
+		- (metrics/profile-count)`150`
+		- (metrics/profile-residency)`1.6133274879438844`
+		- (metrics/profile-minimum)`96000`
+		- (metrics/profile-maximum)`9215000`
 (signature)`snapshot(self)`
 
 A bytes form of the (factor-local/method)&<#Status.phrase[Status.phrase]>. (The image without cursor movement)
@@ -1334,6 +1584,11 @@ A bytes form of the (factor-local/method)&<#Status.phrase[Status.phrase]>. (The 
 		- (source/area)`584 2 589 71`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`732`
+		- (metrics/profile-count)`142`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`2000`
 (signature)`profile(self)`
 
 Construct a triple containing the start and stop time and the final metrics.
@@ -1348,6 +1603,11 @@ Construct a triple containing the start and stop time and the final metrics.
 		- (source/area)`591 2 611 17`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`12`
+		- (metrics/profile-duration)`296573`
+		- (metrics/profile-count)`150`
+		- (metrics/profile-residency)`-5.9771613541338855`
+		- (metrics/profile-minimum)`123000`
+		- (metrics/profile-maximum)`9280000`
 (signature)`synopsis(self)`
 
 Construct a status frame synopsis using the monitor's configuration and metrics.
@@ -1362,6 +1622,11 @@ Construct a status frame synopsis using the monitor's configuration and metrics.
 		- (source/area)`613 2 628 48`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
+		- (metrics/profile-duration)`433302`
+		- (metrics/profile-count)`142`
+		- (metrics/profile-residency)`14.08279022899771`
+		- (metrics/profile-minimum)`193000`
+		- (metrics/profile-maximum)`9406000`
 (signature)`frame(self, control, type, identifier)`
 
 Construct a transaction frame for reporting the status.
@@ -1395,6 +1660,11 @@ Terminal display management for monitoring changes in (factor-local/class)&<#Sta
 		- (source/area)`635 2 640 96`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`364880`
+		- (metrics/profile-count)`150`
+		- (metrics/profile-residency)`2.40992472411021`
+		- (metrics/profile-minimum)`150000`
+		- (metrics/profile-maximum)`9339000`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -1414,6 +1684,11 @@ Construct the string representation of the given (invalid/unknown)&<#monitor'> s
 		- (source/area)`642 2 648 30`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`3000`
+		- (metrics/profile-count)`8`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`2000`
+		- (metrics/profile-maximum)`4000`
 (signature)`__init__(self, screen, fileno)`
 
 
@@ -1426,6 +1701,11 @@ Construct the string representation of the given (invalid/unknown)&<#monitor'> s
 		- (source/area)`650 2 657 40`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`666809`
+		- (metrics/profile-count)`215`
+		- (metrics/profile-residency)`1.501771713958874`
+		- (metrics/profile-minimum)`356000`
+		- (metrics/profile-maximum)`24926000`
 (signature)`install(self, monitor)`
 
 Erase, reframe, and update the given monitor.
@@ -1440,6 +1720,11 @@ Erase, reframe, and update the given monitor.
 		- (source/area)`659 2 680 50`
 		- (coverage-zeros)`4`
 		- (coverage-counters)`13`
+		- (metrics/profile-duration)`29200`
+		- (metrics/profile-count)`215`
+		- (metrics/profile-residency)`29.993628544122338`
+		- (metrics/profile-minimum)`17000`
+		- (metrics/profile-maximum)`158000`
 (signature)`frame(self, monitor)`
 
 Render and emit the prefix, title, and suffix of the (factor-local/parameter)&<#Monitor.frame.Parameters.monitor[monitor]>.
@@ -1456,6 +1741,11 @@ Operation is buffered and must be flushed to be displayed.
 		- (source/area)`682 2 702 35`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`12`
+		- (metrics/profile-duration)`906955`
+		- (metrics/profile-count)`20815`
+		- (metrics/profile-residency)`-41.714433669739535`
+		- (metrics/profile-minimum)`288000`
+		- (metrics/profile-maximum)`72778000`
 (signature)`update(self, monitor, fields)`
 
 Render and emit the given (factor-local/parameter)&<#Monitor.update.Parameters.fields[fields]>.
@@ -1472,6 +1762,11 @@ Operation is buffered and must be flushed to be displayed.
 		- (source/area)`704 2 722 23`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`12`
+		- (metrics/profile-duration)`378312`
+		- (metrics/profile-count)`4136`
+		- (metrics/profile-residency)`99.16508063516248`
+		- (metrics/profile-minimum)`12000`
+		- (metrics/profile-maximum)`110679000`
 (signature)`flush(self)`
 
 Write any buffered terminal changes to the device.
@@ -1486,6 +1781,11 @@ Write any buffered terminal changes to the device.
 		- (source/area)`724 2 729 42`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`7625`
+		- (metrics/profile-count)`8`
+		- (metrics/profile-residency)`34.42622950819672`
+		- (metrics/profile-minimum)`6000`
+		- (metrics/profile-maximum)`11000`
 (signature)`clear(self)`
 
 Clear the entire status regions.
@@ -1500,6 +1800,11 @@ Clear the entire status regions.
 		- (source/area)`731 2 753 13`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`12`
+		- (metrics/profile-duration)`1673625`
+		- (metrics/profile-count)`8`
+		- (metrics/profile-residency)`99.03652251848533`
+		- (metrics/profile-minimum)`436000`
+		- (metrics/profile-maximum)`5730000`
 (signature)`configure(self, lines)`
 
 Configure the scrolling region allocating (factor-local/parameter)&<#Monitor.configure.Parameters.lines[lines]> at
@@ -1521,6 +1826,11 @@ also be reallocated so that their Context positions can be adjusted.
 		- (source/area)`755 2 758 32`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`8750`
+		- (metrics/profile-count)`8`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`6000`
+		- (metrics/profile-maximum)`11000`
 (signature)`_save(self)`
 
 
@@ -1535,6 +1845,11 @@ also be reallocated so that their Context positions can be adjusted.
 		- (source/area)`760 2 761 80`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`18875`
+		- (metrics/profile-count)`8`
+		- (metrics/profile-residency)`47.682119205298015`
+		- (metrics/profile-minimum)`12000`
+		- (metrics/profile-maximum)`40000`
 (signature)`_restore(self)`
 
 
@@ -1573,6 +1888,11 @@ also be reallocated so that their Context positions can be adjusted.
 		- (source/area)`775 1 781 10`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`6801`
+		- (metrics/profile-count)`14698`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`26406000`
 (signature)`_precision(count)`
 
 
@@ -1587,6 +1907,11 @@ also be reallocated so that their Context positions can be adjusted.
 		- (source/area)`783 1 786 31`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`39177`
+		- (metrics/profile-count)`14698`
+		- (metrics/profile-residency)`82.63812790344288`
+		- (metrics/profile-minimum)`2000`
+		- (metrics/profile-maximum)`52583000`
 (signature)`_strings(value)`
 
 
@@ -1599,6 +1924,11 @@ also be reallocated so that their Context positions can be adjusted.
 		- (source/area)`788 1 806 2`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`10`
+		- (metrics/profile-duration)`7105`
+		- (metrics/profile-count)`104381`
+		- (metrics/profile-residency)`22.36217457370487`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`52591000`
 (signature)`r_count(field, value)`
 
 Render method for counts providing compression using metric units.
@@ -1613,6 +1943,11 @@ Render method for counts providing compression using metric units.
 		- (source/area)`808 1 817 22`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`1334`
+		- (metrics/profile-count)`215`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`7000`
 (signature)`r_title(value)`
 
 Render method for monitor titles.
@@ -1627,6 +1962,11 @@ Render method for monitor titles.
 		- (source/area)`819 1 842 42`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`18`
+		- (metrics/profile-duration)`57750`
+		- (metrics/profile-count)`8`
+		- (metrics/profile-residency)`74.45887445887446`
+		- (metrics/profile-minimum)`52000`
+		- (metrics/profile-maximum)`69000`
 (signature)`form(module)`
 
 Construct a (factor-local/class)&<#Layout[Layout]> and (factor-local/class)&<#Theme[Theme]> from the provided order and formatting structures.
@@ -1659,6 +1999,11 @@ return the given (factor-local/parameter)&<#identify_device.Parameters.path[path
 		- (source/area)`861 1 866 9`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`50375`
+		- (metrics/profile-count)`8`
+		- (metrics/profile-residency)`73.94540942928039`
+		- (metrics/profile-minimum)`45000`
+		- (metrics/profile-maximum)`64000`
 (signature)`setup()`
 
 
@@ -1671,6 +2016,11 @@ return the given (factor-local/parameter)&<#identify_device.Parameters.path[path
 		- (source/area)`868 1 890 20`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`10`
+		- (metrics/profile-duration)`452250`
+		- (metrics/profile-count)`8`
+		- (metrics/profile-residency)`5.279159756771698`
+		- (metrics/profile-minimum)`407000`
+		- (metrics/profile-maximum)`574000`
 (signature)`aggregate(control, module)`
 
 Construct (factor-local/class)&<#Status[Status]> instances allocated using (factor-local/parameter)&<#aggregate.Parameters.control[control]> for

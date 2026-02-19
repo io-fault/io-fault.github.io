@@ -6,6 +6,11 @@
 		- (source/area)`1 1 42 0`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`25`
+		- (metrics/profile-duration)`1000`
+		- (metrics/profile-count)`27`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`1000`
 
 [ io ]
 ! CONTROL:
@@ -40,5 +45,10 @@
 		- (source/area)`4 1 42 20`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`23`
+		- (metrics/profile-duration)`1580235`
+		- (metrics/profile-count)`17`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`121000`
+		- (metrics/profile-maximum)`6840000`
 (signature)`perform_cat(pids, input, output, data, *errors)`
 

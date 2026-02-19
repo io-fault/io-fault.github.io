@@ -6,6 +6,11 @@
 		- (source/area)`1 1 38 0`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`22`
+		- (metrics/profile-duration)`18578`
+		- (metrics/profile-count)`152`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`11000`
+		- (metrics/profile-maximum)`62000`
 Weak references tools and subclasses.
 
 
@@ -63,6 +68,11 @@ covering a few signatures.
 		- (source/area)`13 2 14 78`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`750`
+		- (metrics/profile-count)`4`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`1000`
 (signature)`_unlinked(self, *args, **kw)`
 
 
@@ -75,6 +85,11 @@ covering a few signatures.
 		- (source/area)`16 2 20 37`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`14500`
+		- (metrics/profile-count)`6`
+		- (metrics/profile-residency)`97.70114942528735`
+		- (metrics/profile-minimum)`3000`
+		- (metrics/profile-maximum)`22000`
 (signature)`zero(self)`
 
 Execute with no arguments.
@@ -89,6 +104,11 @@ Execute with no arguments.
 		- (source/area)`22 2 26 40`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`10500`
+		- (metrics/profile-count)`2`
+		- (metrics/profile-residency)`95.23809523809523`
+		- (metrics/profile-minimum)`3000`
+		- (metrics/profile-maximum)`18000`
 (signature)`one(self, arg)`
 
 Execute with one argument.
@@ -103,6 +123,11 @@ Execute with one argument.
 		- (source/area)`28 2 32 42`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`11000`
+		- (metrics/profile-count)`2`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`4000`
+		- (metrics/profile-maximum)`18000`
 (signature)`any(self, *args)`
 
 Execute with all arguments.
@@ -117,6 +142,11 @@ Execute with all arguments.
 		- (source/area)`34 2 38 48`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`19000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`19000`
+		- (metrics/profile-maximum)`19000`
 (signature)`keywords(self, *args, **kw)`
 
 Execute with all arguments and keywords.

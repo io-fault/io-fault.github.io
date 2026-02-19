@@ -6,6 +6,11 @@
 		- (source/area)`1 1 384 0`
 		- (coverage-zeros)`63`
 		- (coverage-counters)`156`
+		- (metrics/profile-duration)`1397000`
+		- (metrics/profile-count)`6`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1397000`
+		- (metrics/profile-maximum)`1397000`
 Python Execution Context support functions and classes.
 
 
@@ -133,6 +138,11 @@ Route for Python imports.
 		- (source/area)`21 2 33 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`21000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`71.42857142857143`
+		- (metrics/profile-minimum)`21000`
+		- (metrics/profile-maximum)`21000`
 (signature)`from_context(Class)`
 
 Return a new (factor-local/class)&<#Import[Import]> to the package containing the module that is executing
@@ -148,6 +158,11 @@ Return a new (factor-local/class)&<#Import[Import]> to the package containing th
 		- (source/area)`34 2 40 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`8237`
+		- (metrics/profile-count)`118`
+		- (metrics/profile-residency)`36.41975308641975`
+		- (metrics/profile-minimum)`4000`
+		- (metrics/profile-maximum)`86000`
 (signature)`from_fullname(Class, module_path_string)`
 
 Given a valid `__name__`, return an (factor-local/class)&<#Import[Import]> instance to that path.
@@ -179,6 +194,11 @@ instance to that path.
 		- (source/area)`49 2 54 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`5237`
+		- (metrics/profile-count)`118`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`2000`
+		- (metrics/profile-maximum)`67000`
 (signature)`from_points(Class, context, *points)`
 
 
@@ -191,6 +211,11 @@ instance to that path.
 		- (source/area)`55 2 66 13`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`8`
+		- (metrics/profile-duration)`138000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`15.217391304347828`
+		- (metrics/profile-minimum)`138000`
+		- (metrics/profile-maximum)`138000`
 (signature)`from_attributes(Class, path)`
 
 Create a (invalid/unknown)&<#Route> and an attributes sequence based on the given (factor-local/parameter)&<#Import.from_attributes.Parameters.path[path]> such that
@@ -237,6 +262,11 @@ path is the sequence of attributes.
 		- (source/area)`77 2 78 22`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`5000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`40.0`
+		- (metrics/profile-minimum)`5000`
+		- (metrics/profile-maximum)`5000`
 (signature)`__str__(self)`
 
 
@@ -291,6 +321,11 @@ Whether or not the Path contains the given Pointer.
 		- (source/area)`93 2 100 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`2891`
+		- (metrics/profile-count)`295`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`2000`
+		- (metrics/profile-maximum)`20000`
 Return the absolute path of the module Route; dot separated module names.
 
 
@@ -334,6 +369,11 @@ If the (invalid/unknown)&<#Route> is referencing a package, return (invalid/unkn
 		- (source/area)`125 2 128 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`3000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`3000`
+		- (metrics/profile-maximum)`3000`
 
 [ Import >> loader ]
 ! CONTROL:
@@ -344,6 +384,11 @@ If the (invalid/unknown)&<#Route> is referencing a package, return (invalid/unkn
 		- (source/area)`129 2 134 27`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`328220`
+		- (metrics/profile-count)`109`
+		- (metrics/profile-residency)`0.6736359570661896`
+		- (metrics/profile-minimum)`6000`
+		- (metrics/profile-maximum)`3699000`
 The loader of the module.
 
 
@@ -356,6 +401,11 @@ The loader of the module.
 		- (source/area)`136 2 143 14`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`322582`
+		- (metrics/profile-count)`237`
+		- (metrics/profile-residency)`99.12494113953854`
+		- (metrics/profile-minimum)`4000`
+		- (metrics/profile-maximum)`3696000`
 (signature)`spec(self)`
 
 The spec for loading the module.
@@ -413,6 +463,11 @@ Interrogate the module's loader as to whether or not it's a "package module".
 		- (source/area)`165 2 178 18`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`213500`
+		- (metrics/profile-count)`2`
+		- (metrics/profile-residency)`8.430913348946136`
+		- (metrics/profile-minimum)`56000`
+		- (metrics/profile-maximum)`371000`
 (signature)`real(self)`
 
 The "real" portion of the Import.
@@ -430,6 +485,11 @@ Greatest Absolute Route that *actually exists* on the file system.
 		- (source/area)`180 2 184 40`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`67000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`71.64179104477611`
+		- (metrics/profile-minimum)`67000`
+		- (metrics/profile-maximum)`67000`
 (signature)`get_last_modified(self)`
 
 Return the modification time of the module's file as a chronometry Timestamp.
@@ -444,6 +504,11 @@ Return the modification time of the module's file as a chronometry Timestamp.
 		- (source/area)`186 2 202 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`9`
+		- (metrics/profile-duration)`44000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`52.27272727272727`
+		- (metrics/profile-minimum)`44000`
+		- (metrics/profile-maximum)`44000`
 (signature)`stack(self)`
 
 Return a list of module objects. The first being the outermost package module, the
@@ -475,6 +540,11 @@ containing the module and the object accessed with the (factor-local/parameter)&
 		- (source/area)`215 2 226 9`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`310828`
+		- (metrics/profile-count)`35`
+		- (metrics/profile-residency)`99.08079786745105`
+		- (metrics/profile-minimum)`5000`
+		- (metrics/profile-maximum)`3103000`
 (signature)`module(self)`
 
 Return the module that is being referred to by the path.
@@ -489,6 +559,11 @@ Return the module that is being referred to by the path.
 		- (source/area)`228 2 261 26`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`20`
+		- (metrics/profile-duration)`4428047`
+		- (metrics/profile-count)`21`
+		- (metrics/profile-residency)`5.924356644334275`
+		- (metrics/profile-minimum)`579000`
+		- (metrics/profile-maximum)`9549000`
 (signature)`subnodes(self)`
 
 Return a pairs of sequences containing routes to the subnodes of the route.
@@ -503,6 +578,11 @@ Return a pairs of sequences containing routes to the subnodes of the route.
 		- (source/area)`263 2 282 19`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`11`
+		- (metrics/profile-duration)`93097000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`0.11600803463054662`
+		- (metrics/profile-minimum)`93097000`
+		- (metrics/profile-maximum)`93097000`
 (signature)`tree(self)`
 
 Return a package's full tree as a pair of lists.
@@ -517,6 +597,11 @@ Return a package's full tree as a pair of lists.
 		- (source/area)`284 2 294 24`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`338642`
+		- (metrics/profile-count)`109`
+		- (metrics/profile-residency)`3.077589943649761`
+		- (metrics/profile-minimum)`15000`
+		- (metrics/profile-maximum)`3711000`
 (signature)`file(self)`
 
 Get the (project-local/factor-element)&<files#Path[fault.system.files.Path]> instance pointing to the module's file.

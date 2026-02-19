@@ -6,6 +6,11 @@
 		- (source/area)`1 1 411 12`
 		- (coverage-zeros)`6`
 		- (coverage-counters)`35`
+		- (metrics/profile-duration)`41000`
+		- (metrics/profile-count)`3`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`41000`
+		- (metrics/profile-maximum)`41000`
 HTTP/2 header compression tools.
 
 Provides state machines for managing the dynamic tables needed for connections.
@@ -436,6 +441,11 @@ http://tools.ietf.org/html/rfc7541
 		- (source/area)`344 1 377 20`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`13`
+		- (metrics/profile-duration)`72454`
+		- (metrics/profile-count)`11`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`6000`
+		- (metrics/profile-maximum)`621000`
 (signature)`huffman_decode(field)`
 
 Decode the byte string using the HPACK huffman code table.
@@ -454,6 +464,11 @@ Decode the byte string using the HPACK huffman code table.
 		- (source/area)`379 1 398 47`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`8`
+		- (metrics/profile-duration)`22181`
+		- (metrics/profile-count)`11`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`2000`
+		- (metrics/profile-maximum)`170000`
 (signature)`huffman_encode(field)`
 
 Encode the byte string as using the HPACK huffman code table.

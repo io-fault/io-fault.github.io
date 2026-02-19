@@ -6,6 +6,11 @@
 		- (source/area)`1 1 346 0`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`178`
+		- (metrics/profile-duration)`7000`
+		- (metrics/profile-count)`29`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`7000`
+		- (metrics/profile-maximum)`7000`
 
 [ fractions ]
 ! CONTROL:
@@ -40,6 +45,11 @@
 		- (source/area)`4 1 14 24`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
+		- (metrics/profile-duration)`372000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`372000`
+		- (metrics/profile-maximum)`372000`
 (signature)`test_classes(test)`
 
 
@@ -52,6 +62,11 @@
 		- (source/area)`16 1 27 59`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
+		- (metrics/profile-duration)`160000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`160000`
+		- (metrics/profile-maximum)`160000`
 (signature)`test_select(test)`
 
 - (context-local/factor-element)&<fault.time/types#select[fault.time.types.select]>
@@ -68,6 +83,11 @@
 		- (source/area)`29 1 33 16`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`84000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`84000`
+		- (metrics/profile-maximum)`84000`
 (signature)`test_instants(test)`
 
 
@@ -82,6 +102,11 @@
 		- (source/area)`35 1 37 86`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`273000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`273000`
+		- (metrics/profile-maximum)`273000`
 (signature)`test_ratios(test)`
 
 
@@ -96,6 +121,11 @@
 		- (source/area)`39 1 103 71`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`17`
+		- (metrics/profile-duration)`508000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`508000`
+		- (metrics/profile-maximum)`508000`
 (signature)`test_of_Measure(test)`
 
 
@@ -110,6 +140,11 @@
 		- (source/area)`105 1 109 17`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`448000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`448000`
+		- (metrics/profile-maximum)`448000`
 (signature)`test_of_months(test)`
 
 
@@ -124,6 +159,11 @@
 		- (source/area)`111 1 121 40`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
+		- (metrics/profile-duration)`1113000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1113000`
+		- (metrics/profile-maximum)`1113000`
 (signature)`test_of_iso(test)`
 
 
@@ -138,6 +178,11 @@
 		- (source/area)`123 1 128 15`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`514000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`514000`
+		- (metrics/profile-maximum)`514000`
 (signature)`test_of_iso_date(test)`
 
 
@@ -174,6 +219,11 @@
 		- (source/area)`140 1 146 31`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`1258000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1258000`
+		- (metrics/profile-maximum)`1258000`
 (signature)`test_of_leaps(test)`
 
 
@@ -188,6 +238,11 @@
 		- (source/area)`148 1 154 51`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`696000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`696000`
+		- (metrics/profile-maximum)`696000`
 (signature)`test_of_relative(test)`
 
 
@@ -202,6 +257,11 @@
 		- (source/area)`156 1 166 19`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
+		- (metrics/profile-duration)`522000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`522000`
+		- (metrics/profile-maximum)`522000`
 (signature)`test_date_contains(test)`
 
 
@@ -216,6 +276,11 @@
 		- (source/area)`168 1 176 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`418000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`418000`
+		- (metrics/profile-maximum)`418000`
 (signature)`test_part_datetime(test)`
 
 
@@ -230,6 +295,11 @@
 		- (source/area)`178 1 193 35`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`419000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`419000`
+		- (metrics/profile-maximum)`419000`
 (signature)`test_relative_times(test)`
 
 
@@ -244,6 +314,11 @@
 		- (source/area)`195 1 205 40`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`9`
+		- (metrics/profile-duration)`757000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`757000`
+		- (metrics/profile-maximum)`757000`
 (signature)`test_Timestamp_select(test)`
 
 
@@ -258,6 +333,11 @@
 		- (source/area)`207 1 211 91`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`998000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`998000`
+		- (metrics/profile-maximum)`998000`
 (signature)`test_Timestamp_update(test)`
 
 
@@ -272,6 +352,11 @@
 		- (source/area)`213 1 216 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`413000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`413000`
+		- (metrics/profile-maximum)`413000`
 (signature)`test_date(test)`
 
 
@@ -286,6 +371,11 @@
 		- (source/area)`218 1 240 24`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`1543000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1543000`
+		- (metrics/profile-maximum)`1543000`
 (signature)`test_truncate(test)`
 
 
@@ -300,6 +390,11 @@
 		- (source/area)`242 1 246 52`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`484000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`484000`
+		- (metrics/profile-maximum)`484000`
 (signature)`test_measure_method(test)`
 
 
@@ -314,6 +409,11 @@
 		- (source/area)`248 1 250 67`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`469000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`469000`
+		- (metrics/profile-maximum)`469000`
 (signature)`test_rollback(test)`
 
 
@@ -328,6 +428,11 @@
 		- (source/area)`252 1 262 17`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`9`
+		- (metrics/profile-duration)`501000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`501000`
+		- (metrics/profile-maximum)`501000`
 (signature)`test_timeofday_select(test)`
 
 
@@ -340,6 +445,11 @@
 		- (source/area)`264 1 281 59`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`13`
+		- (metrics/profile-duration)`1210000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1210000`
+		- (metrics/profile-maximum)`1210000`
 (signature)`test_align(test)`
 
 The most important use of alignment is for finding the n-th
@@ -357,6 +467,11 @@ since the first or last of a month.
 		- (source/area)`283 1 287 28`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`504000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`504000`
+		- (metrics/profile-maximum)`504000`
 (signature)`test_unix(test)`
 
 
@@ -371,6 +486,11 @@ since the first or last of a month.
 		- (source/area)`289 1 301 17`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`12`
+		- (metrics/profile-duration)`80000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`80000`
+		- (metrics/profile-maximum)`80000`
 (signature)`test_hashing(test)`
 
 
@@ -385,6 +505,11 @@ since the first or last of a month.
 		- (source/area)`303 1 306 43`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`266000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`266000`
+		- (metrics/profile-maximum)`266000`
 (signature)`test_subseconds(test)`
 
 
@@ -399,6 +524,11 @@ since the first or last of a month.
 		- (source/area)`308 1 312 60`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`561000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`561000`
+		- (metrics/profile-maximum)`561000`
 (signature)`test_Months_elapse(test)`
 
 
@@ -413,6 +543,11 @@ since the first or last of a month.
 		- (source/area)`314 1 324 38`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
+		- (metrics/profile-duration)`151000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`151000`
+		- (metrics/profile-maximum)`151000`
 (signature)`test_indefinite_comparisons(test)`
 
 
@@ -427,6 +562,11 @@ since the first or last of a month.
 		- (source/area)`326 1 334 32`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`872000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`872000`
+		- (metrics/profile-maximum)`872000`
 (signature)`test_indefinite_definite_comparisons(test)`
 
 
@@ -441,5 +581,10 @@ since the first or last of a month.
 		- (source/area)`336 1 346 84`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`8`
+		- (metrics/profile-duration)`1005000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1005000`
+		- (metrics/profile-maximum)`1005000`
 (signature)`test_representations(test)`
 

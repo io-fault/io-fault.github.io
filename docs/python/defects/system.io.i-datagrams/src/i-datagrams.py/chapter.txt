@@ -6,6 +6,11 @@
 		- (source/area)`1 1 254 0`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`175`
+		- (metrics/profile-duration)`10646000`
+		- (metrics/profile-count)`7`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`10646000`
+		- (metrics/profile-maximum)`10646000`
 
 [ common ]
 ! CONTROL:
@@ -66,6 +71,11 @@
 		- (source/area)`6 1 7 55`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`49750`
+		- (metrics/profile-count)`4`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`47000`
+		- (metrics/profile-maximum)`53000`
 (signature)`mksrv()`
 
 
@@ -80,6 +90,11 @@
 		- (source/area)`9 1 20 17`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`8`
+		- (metrics/profile-duration)`80500`
+		- (metrics/profile-count)`2`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`52000`
+		- (metrics/profile-maximum)`109000`
 (signature)`error_cases(test, dg, idx)`
 
 
@@ -94,6 +109,11 @@
 		- (source/area)`22 1 50 33`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`20`
+		- (metrics/profile-duration)`284000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`43.309859154929576`
+		- (metrics/profile-minimum)`284000`
+		- (metrics/profile-maximum)`284000`
 (signature)`test_DatagramArray_errors(test)`
 
 
@@ -108,6 +128,11 @@
 		- (source/area)`52 1 129 28`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`57`
+		- (metrics/profile-duration)`507000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`507000`
+		- (metrics/profile-maximum)`507000`
 (signature)`test_DatagramArray(test)`
 
 
@@ -122,6 +147,11 @@
 		- (source/area)`131 1 132 39`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`3875`
+		- (metrics/profile-count)`8`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`7000`
 (signature)`alloc(q)`
 
 
@@ -136,6 +166,11 @@
 		- (source/area)`134 1 156 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`17`
+		- (metrics/profile-duration)`290000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`80.6896551724138`
+		- (metrics/profile-minimum)`290000`
+		- (metrics/profile-maximum)`290000`
 (signature)`test_Datagrams_transfer_one(test)`
 
 
@@ -150,6 +185,11 @@
 		- (source/area)`158 1 183 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`17`
+		- (metrics/profile-duration)`292000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`79.1095890410959`
+		- (metrics/profile-minimum)`292000`
+		- (metrics/profile-maximum)`292000`
 (signature)`test_Datagrams_transfer_one_of_two(test)`
 
 
@@ -164,6 +204,11 @@
 		- (source/area)`185 1 229 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`31`
+		- (metrics/profile-duration)`367000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`84.46866485013625`
+		- (metrics/profile-minimum)`367000`
+		- (metrics/profile-maximum)`367000`
 (signature)`test_Datagrams_transfer_two_of_one(test)`
 
 
@@ -178,5 +223,10 @@
 		- (source/area)`231 1 254 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`19`
+		- (metrics/profile-duration)`374000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`85.02673796791443`
+		- (metrics/profile-minimum)`374000`
+		- (metrics/profile-maximum)`374000`
 (signature)`test_Datagrams_invalid(test)`
 

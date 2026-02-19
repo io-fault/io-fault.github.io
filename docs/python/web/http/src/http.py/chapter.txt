@@ -6,6 +6,11 @@
 		- (source/area)`1 1 747 0`
 		- (coverage-zeros)`100`
 		- (coverage-counters)`274`
+		- (metrics/profile-duration)`12575000`
+		- (metrics/profile-count)`10`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`12575000`
+		- (metrics/profile-maximum)`12575000`
 Client and server common IETF HTTP tools for (context-local/project-name)&<fault.kernel> based applications.
 
 [ Properties ]
@@ -201,6 +206,11 @@ Client and server common IETF HTTP tools for (context-local/project-name)&<fault
 		- (source/area)`27 1 65 37`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`18`
+		- (metrics/profile-duration)`6666`
+		- (metrics/profile-count)`6`
+		- (metrics/profile-residency)`85.0`
+		- (metrics/profile-minimum)`2000`
+		- (metrics/profile-maximum)`17000`
 (signature)`ranges(length, range_header)`
 
 Generator producing the integer ranges specified by the given Range header.
@@ -349,6 +359,11 @@ Primarily used to extract information from received response (client) or request
 		- (source/area)`85 2 98 24`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`19000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`19000`
+		- (metrics/profile-maximum)`19000`
 (signature)`__init__(self, headers, *local)`
 
 Create a cache for a sequence of headers directly stored.
@@ -426,6 +441,11 @@ Whether the response is a redirect.
 		- (source/area)`131 2 133 20`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`15000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`46.666666666666664`
+		- (metrics/profile-minimum)`15000`
+		- (metrics/profile-maximum)`15000`
 (signature)`cache(self)`
 
 
@@ -452,6 +472,11 @@ Whether the response is a redirect.
 		- (source/area)`141 2 161 16`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`12`
+		- (metrics/profile-duration)`8000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`8000`
+		- (metrics/profile-maximum)`8000`
 (signature)`_init_headers(self, headers)`
 
 Set the headers to be cached and structured for use by an application.
@@ -801,6 +826,11 @@ Whether this is suppoed to be the last transaction in the connection.
 		- (source/area)`387 1 389 41`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`333`
+		- (metrics/profile-count)`3`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`1000`
 (signature)`_join_send_content(event, channel_id, transfer_events)`
 
 
@@ -815,6 +845,11 @@ Whether this is suppoed to be the last transaction in the connection.
 		- (source/area)`391 1 393 41`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`666`
+		- (metrics/profile-count)`3`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`1000`
 (signature)`_join_send_chunk(event, channel_id, transfer_events)`
 
 
@@ -829,6 +864,11 @@ Whether this is suppoed to be the last transaction in the connection.
 		- (source/area)`395 1 397 14`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`333`
+		- (metrics/profile-count)`6`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`1000`
 (signature)`_join_send_eom(event, channel_id, terminal)`
 
 
@@ -843,6 +883,11 @@ Whether this is suppoed to be the last transaction in the connection.
 		- (source/area)`399 1 420 2`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`9`
+		- (metrics/profile-duration)`3000`
+		- (metrics/profile-count)`4`
+		- (metrics/profile-residency)`91.66666666666666`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`6000`
 (signature)`_join_initiate_response(shared, commands, sequence, event, channel_id, init)`
 
 
@@ -857,6 +902,11 @@ Whether this is suppoed to be the last transaction in the connection.
 		- (source/area)`422 1 446 2`
 		- (coverage-zeros)`3`
 		- (coverage-counters)`10`
+		- (metrics/profile-duration)`10000`
+		- (metrics/profile-count)`2`
+		- (metrics/profile-residency)`90.0`
+		- (metrics/profile-minimum)`10000`
+		- (metrics/profile-maximum)`10000`
 (signature)`_join_initiate_request(shared, commands, sequence, event, channel_id, init)`
 
 
@@ -869,6 +919,11 @@ Whether this is suppoed to be the last transaction in the connection.
 		- (source/area)`448 1 487 18`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`15`
+		- (metrics/profile-duration)`3596000`
+		- (metrics/profile-count)`4`
+		- (metrics/profile-residency)`88.49416017797553`
+		- (metrics/profile-minimum)`308000`
+		- (metrics/profile-maximum)`5069000`
 (signature)`join(shared, sequence)`
 
 Join flow events into a proper HTTP stream.
@@ -883,6 +938,11 @@ Join flow events into a proper HTTP stream.
 		- (source/area)`489 1 495 52`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`4214000`
+		- (metrics/profile-count)`2`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`3799000`
+		- (metrics/profile-maximum)`4629000`
 (signature)`_fork_response_sync(state)`
 
 Generator that can be used to communicate whether or not
@@ -898,6 +958,11 @@ the response will have a body. Used with client disposition.
 		- (source/area)`497 1 646 18`
 		- (coverage-zeros)`15`
 		- (coverage-counters)`51`
+		- (metrics/profile-duration)`2991200`
+		- (metrics/profile-count)`5`
+		- (metrics/profile-residency)`97.94062583578497`
+		- (metrics/profile-minimum)`382000`
+		- (metrics/profile-maximum)`5130000`
 (signature)`fork(shared, allocate, close, overflow)`
 
 Split an HTTP stream into flow events for use by (context-local/factor-element)&<fault.kernel/flows#Division[fault.kernel.flows.Division]>.
@@ -942,6 +1007,11 @@ Protocol class sending HTTP messages.
 		- (source/area)`658 2 665 14`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`1000`
+		- (metrics/profile-count)`2`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`1000`
 (signature)`initiate_server_request(protocol, parameter)`
 
 Used by clients to select the proper initiation to send.
@@ -956,6 +1026,11 @@ Used by clients to select the proper initiation to send.
 		- (source/area)`666 2 671 57`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`1000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`1000`
 (signature)`initiate_client_response(protocol, parameter)`
 
 Used by servers to select the proper initiation to send.
@@ -972,6 +1047,11 @@ Used by servers to select the proper initiation to send.
 		- (source/area)`673 2 677 23`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`31000`
+		- (metrics/profile-count)`3`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`19000`
+		- (metrics/profile-maximum)`53000`
 (signature)`__init__(self, state, initiate)`
 
 
@@ -1014,6 +1094,11 @@ Protocol class receiving HTTP messages.
 		- (source/area)`689 2 696 14`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`500`
+		- (metrics/profile-count)`2`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`1000`
 (signature)`allocate_client_request(parameter)`
 
 For use by server receiving the client request.
@@ -1028,6 +1113,11 @@ For use by server receiving the client request.
 		- (source/area)`697 2 702 46`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`1000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`1000`
 (signature)`allocate_server_response(parameter)`
 
 For use by clients receiving the server response.
@@ -1086,6 +1176,11 @@ For use by clients receiving the server response.
 		- (source/area)`716 2 720 23`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`73333`
+		- (metrics/profile-count)`3`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`71000`
+		- (metrics/profile-maximum)`75000`
 (signature)`__init__(self, state, allocate)`
 
 
@@ -1100,6 +1195,11 @@ For use by clients receiving the server response.
 		- (source/area)`722 1 730 25`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`102000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`9.803921568627452`
+		- (metrics/profile-minimum)`102000`
+		- (metrics/profile-maximum)`102000`
 (signature)`allocate_client_protocol()`
 
 
@@ -1114,6 +1214,11 @@ For use by clients receiving the server response.
 		- (source/area)`732 1 740 25`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`108000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`13.88888888888889`
+		- (metrics/profile-minimum)`108000`
+		- (metrics/profile-maximum)`108000`
 (signature)`allocate_server_protocol()`
 
 

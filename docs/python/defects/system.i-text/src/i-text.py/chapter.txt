@@ -6,6 +6,11 @@
 		- (source/area)`1 1 127 0`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`57`
+		- (metrics/profile-duration)`175486000`
+		- (metrics/profile-count)`10`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`175486000`
+		- (metrics/profile-maximum)`175486000`
 
 [ sys ]
 ! CONTROL:
@@ -38,6 +43,11 @@
 		- (source/area)`6 1 12 63`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`1766000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1766000`
+		- (metrics/profile-maximum)`1766000`
 (signature)`test_setlocale(test)`
 
 - (project-local/unknown)&<extensions.text/module.c#dsetlocale>
@@ -55,6 +65,11 @@
 		- (source/area)`14 1 16 33`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`62000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`62000`
+		- (metrics/profile-maximum)`62000`
 (signature)`test_encoding(test)`
 
 
@@ -67,6 +82,11 @@
 		- (source/area)`18 1 27 36`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`79000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`79000`
+		- (metrics/profile-maximum)`79000`
 (signature)`test_cells(test)`
 
 - (project-local/unknown)&<extensions.tty/module.c#cells>
@@ -82,6 +102,11 @@
 		- (source/area)`30 1 46 30`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`10`
+		- (metrics/profile-duration)`122000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`122000`
+		- (metrics/profile-maximum)`122000`
 (signature)`test_cells_chinese_sample(test)`
 
 - (project-local/unknown)&<extensions.tty/module.c#cells>
@@ -97,6 +122,11 @@
 		- (source/area)`48 1 59 39`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
+		- (metrics/profile-duration)`105000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`105000`
+		- (metrics/profile-maximum)`105000`
 (signature)`test_cells_ctlchars(test)`
 
 - (project-local/unknown)&<extensions.tty/module.c#cells>
@@ -112,6 +142,11 @@
 		- (source/area)`61 1 72 35`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`89000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`89000`
+		- (metrics/profile-maximum)`89000`
 (signature)`test_cells_combining(test)`
 
 - (project-local/unknown)&<extensions.tty/module.c#cells>
@@ -127,6 +162,11 @@
 		- (source/area)`74 1 90 29`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
+		- (metrics/profile-duration)`96000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`96000`
+		- (metrics/profile-maximum)`96000`
 (signature)`test_cells_vs(test)`
 
 - (project-local/unknown)&<extensions.tty/module.c#cells>
@@ -144,6 +184,11 @@ Variant Selectors.
 		- (source/area)`92 1 107 35`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
+		- (metrics/profile-duration)`98000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`98000`
+		- (metrics/profile-maximum)`98000`
 (signature)`test_cells_sequences(test)`
 
 - (project-local/unknown)&<extensions.tty/module.c#cells>
@@ -161,6 +206,11 @@ ZWJ sequences.
 		- (source/area)`109 1 127 24`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`8`
+		- (metrics/profile-duration)`149000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`149000`
+		- (metrics/profile-maximum)`149000`
 (signature)`test_cells_zerowidths(test)`
 
 - (project-local/unknown)&<extensions.tty/module.c#cells>

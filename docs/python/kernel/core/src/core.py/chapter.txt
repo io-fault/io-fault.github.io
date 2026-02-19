@@ -6,6 +6,11 @@
 		- (source/area)`1 1 977 0`
 		- (coverage-zeros)`113`
 		- (coverage-counters)`333`
+		- (metrics/profile-duration)`4221129`
+		- (metrics/profile-count)`147`
+		- (metrics/profile-residency)`99.96261115927967`
+		- (metrics/profile-minimum)`133000`
+		- (metrics/profile-maximum)`16448000`
 Core data types and classes.
 
 
@@ -138,6 +143,11 @@ Core data types and classes.
 		- (source/area)`16 1 18 17`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`762`
+		- (metrics/profile-count)`80`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`2000`
 (signature)`set_actuated(processor)`
 
 
@@ -215,6 +225,11 @@ failures from unrelated Sectors can be communicated to callback.
 		- (source/area)`50 2 57 22`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`11000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`11000`
+		- (metrics/profile-maximum)`11000`
 (signature)`__init__(self, **processors)`
 
 Initialize the join with the given (invalid/unknown)&<#processor> set.
@@ -229,6 +244,11 @@ Initialize the join with the given (invalid/unknown)&<#processor> set.
 		- (source/area)`59 2 68 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`4000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`4000`
+		- (metrics/profile-maximum)`4000`
 (signature)`connect(self)`
 
 Connect the (factor-local/class)&<#Processor[Processor.atexit]> calls of the configured
@@ -244,6 +264,11 @@ Connect the (factor-local/class)&<#Processor[Processor.atexit]> calls of the con
 		- (source/area)`70 2 75 41`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`0`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`0.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`0`
 (signature)`__iter__(self)`
 
 Return an iterator to the configured dependencies.
@@ -258,6 +283,11 @@ Return an iterator to the configured dependencies.
 		- (source/area)`77 2 82 29`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`500`
+		- (metrics/profile-count)`2`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`1000`
 (signature)`__getitem__(self, k)`
 
 Get the dependency the given identifier.
@@ -272,6 +302,11 @@ Get the dependency the given identifier.
 		- (source/area)`84 2 98 33`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`1000`
+		- (metrics/profile-count)`2`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`1000`
 (signature)`exited(self, processor)`
 
 Record the exit of the given (factor-local/parameter)&<#Join.exited.Parameters.processor[processor]> and execute
@@ -288,6 +323,11 @@ in the configured (invalid/unknown)&<#pending> set.
 		- (source/area)`100 2 119 26`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`0`
+		- (metrics/profile-count)`2`
+		- (metrics/profile-residency)`0.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`0`
 (signature)`atexit(self, callback)`
 
 Assign the callback of the (factor-local/class)&<#Join[Join]>.
@@ -356,6 +396,11 @@ an obstruction.
 		- (source/area)`135 2 148 28`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`1629`
+		- (metrics/profile-count)`151`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`11000`
 (signature)`__init__(self, focus, path, parameter)`
 
 [ >> Parameters ]
@@ -389,6 +434,11 @@ an obstruction.
 		- (source/area)`150 2 157 19`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`15200`
+		- (metrics/profile-count)`5`
+		- (metrics/profile-residency)`48.68421052631579`
+		- (metrics/profile-minimum)`8000`
+		- (metrics/profile-maximum)`31000`
 (signature)`__bool__(self)`
 
 
@@ -417,6 +467,11 @@ an obstruction.
 		- (source/area)`172 2 173 44`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`7800`
+		- (metrics/profile-count)`5`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`15000`
 (signature)`attribute(self)`
 
 
@@ -572,6 +627,11 @@ process interrupts (unix.signal)`SIGINT`.
 	/element/
 		- (control)`property-set`
 		- (source/area)`226 2 227 13`
+		- (metrics/profile-duration)`3000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`3000`
+		- (metrics/profile-maximum)`3000`
 (signature)`_unset_sector(self)`
 
 
@@ -614,6 +674,11 @@ process interrupts (unix.signal)`SIGINT`.
 		- (source/area)`235 2 236 33`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`1234`
+		- (metrics/profile-count)`16827`
+		- (metrics/profile-residency)`99.98555539505995`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`5872000`
 (signature)`_dereference_sector(self)`
 
 
@@ -628,6 +693,11 @@ process interrupts (unix.signal)`SIGINT`.
 		- (source/area)`238 2 239 35`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`1603`
+		- (metrics/profile-count)`63`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`11000`
 (signature)`_set_sector_reference(self, obj)`
 
 
@@ -748,6 +818,11 @@ Whether the processor has been actuated, normally within a Sector.
 		- (source/area)`290 2 296 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`351`
+		- (metrics/profile-count)`37`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`1000`
 		- (type/syntax)`bool`
 		- (type/invalid/unknown)&<#bool>
 		
@@ -763,6 +838,11 @@ Whether the processor has started terminate.
 		- (source/area)`297 2 303 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`833`
+		- (metrics/profile-count)`2426`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`75000`
 		- (type/syntax)`bool`
 		- (type/invalid/unknown)&<#bool>
 		
@@ -792,6 +872,11 @@ Whether the processor has been terminated.
 		- (source/area)`308 2 313 14`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`14491`
+		- (metrics/profile-count)`2295`
+		- (metrics/profile-residency)`79.48702528790932`
+		- (metrics/profile-minimum)`5000`
+		- (metrics/profile-maximum)`230000`
 		- (type/syntax)`typing.Union[bool]`
 		
 
@@ -817,6 +902,11 @@ Whether the processor has been terminated.
 		- (source/area)`318 2 330 55`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`11777`
+		- (metrics/profile-count)`9`
+		- (metrics/profile-residency)`29.245283018867923`
+		- (metrics/profile-minimum)`8000`
+		- (metrics/profile-maximum)`18000`
 Whether or not the Processor is functioning.
 Indicates that the processor was actuated and is neither terminated nor interrupted.
 
@@ -836,6 +926,11 @@ Indicates that the processor was actuated and is neither terminated nor interrup
 		- (source/area)`332 2 340 6`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`614`
+		- (metrics/profile-count)`161`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`7000`
 (signature)`actuate(self)`
 
 Initialize the Processor for use within the controlling Sector.
@@ -854,6 +949,11 @@ overridden.
 	/element/
 		- (control)`property-set`
 		- (source/area)`342 2 343 22`
+		- (metrics/profile-duration)`625`
+		- (metrics/profile-count)`16`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`1000`
 (signature)`start_termination(self)`
 
 
@@ -868,6 +968,11 @@ overridden.
 		- (source/area)`345 2 347 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`33990`
+		- (metrics/profile-count)`2415`
+		- (metrics/profile-residency)`11.253776435045317`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`11670000`
 (signature)`finish_termination(self)`
 
 
@@ -880,6 +985,11 @@ overridden.
 		- (source/area)`349 2 359 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`53289`
+		- (metrics/profile-count)`2365`
+		- (metrics/profile-residency)`33.63590919550262`
+		- (metrics/profile-minimum)`16000`
+		- (metrics/profile-maximum)`11681000`
 (signature)`terminate(self)`
 
 Terminate the Processor using (factor-local/method)&<#Processor.interrupt[interrupt]> and exit.
@@ -894,6 +1004,11 @@ Terminate the Processor using (factor-local/method)&<#Processor.interrupt[interr
 		- (source/area)`361 2 373 6`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`0`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`0.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`0`
 (signature)`interrupt(self)`
 
 Signal the Processor that the controlling Sector has been interrupted,
@@ -915,6 +1030,11 @@ may not have to perform any tasks at all.
 		- (source/area)`375 2 390 31`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`2157000`
+		- (metrics/profile-count)`2`
+		- (metrics/profile-residency)`98.95688456189151`
+		- (metrics/profile-minimum)`60000`
+		- (metrics/profile-maximum)`4254000`
 (signature)`fault(self, exception)`
 
 Note the given exception as an error on the (factor-local/class)&<#Processor[Processor]>.
@@ -936,6 +1056,11 @@ faulting Processor identified for subsequent scrutiny.
 		- (source/area)`392 2 396 18`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`21238`
+		- (metrics/profile-count)`21`
+		- (metrics/profile-residency)`56.278026905829606`
+		- (metrics/profile-minimum)`2000`
+		- (metrics/profile-maximum)`71000`
 (signature)`trap(self, task)`
 
 
@@ -948,6 +1073,11 @@ faulting Processor identified for subsequent scrutiny.
 		- (source/area)`398 2 404 41`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`3714`
+		- (metrics/profile-count)`21`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`2000`
+		- (metrics/profile-maximum)`6000`
 (signature)`critical(self, task)`
 
 Enqueue a task associated with the sector so that exceptions cause the sector to
@@ -964,6 +1094,11 @@ to sequence processing.
 		- (source/area)`406 2 412 33`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`50360747`
+		- (metrics/profile-count)`7149`
+		- (metrics/profile-residency)`0.015599299681936995`
+		- (metrics/profile-minimum)`4000`
+		- (metrics/profile-maximum)`17069949000`
 (signature)`exit(self)`
 
 Exit the processor by signalling the controlling processor that termination
@@ -993,6 +1128,11 @@ Provides the structure stack with at-exit callbacks.
 		- (source/area)`428 2 438 23`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`550`
+		- (metrics/profile-count)`129`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`2000`
 (signature)`placement(self)`
 
 Define the set index to use when dispatched by a (factor-local/class)&<#Sector[Sector]>.
@@ -1100,6 +1240,11 @@ of entities (users) and their authorizing credentials.
 		- (source/area)`474 2 475 33`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`761`
+		- (metrics/profile-count)`4672`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`197000`
 
 [ Sector >> iterprocessors ]
 ! CONTROL:
@@ -1112,6 +1257,11 @@ of entities (users) and their authorizing credentials.
 		- (source/area)`477 2 478 64`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`2563`
+		- (metrics/profile-count)`5016`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`119000`
 (signature)`iterprocessors(self)`
 
 
@@ -1140,6 +1290,11 @@ of entities (users) and their authorizing credentials.
 		- (source/area)`485 2 488 37`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`18397`
+		- (metrics/profile-count)`2651`
+		- (metrics/profile-residency)`81.5594693785496`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`6709000`
 (signature)`__init__(self, *processors)`
 
 
@@ -1152,6 +1307,11 @@ of entities (users) and their authorizing credentials.
 		- (source/area)`490 2 514 18`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`10`
+		- (metrics/profile-duration)`26653820`
+		- (metrics/profile-count)`2651`
+		- (metrics/profile-residency)`53.93538062949611`
+		- (metrics/profile-minimum)`3000`
+		- (metrics/profile-maximum)`3425188000`
 (signature)`actuate(self)`
 
 Actuate the Sector by actuating its processors.
@@ -1201,6 +1361,11 @@ the parent to be interrupted, they *must* be dispatched after
 		- (source/area)`533 2 552 33`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`7`
+		- (metrics/profile-duration)`20500`
+		- (metrics/profile-count)`2`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`10000`
+		- (metrics/profile-maximum)`31000`
 (signature)`interrupt(self)`
 
 Interrupt the Sector by interrupting all of the subprocessors.
@@ -1216,6 +1381,11 @@ The order of interruption is random, and *should* be insignificant.
 		- (source/area)`554 2 571 27`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`7`
+		- (metrics/profile-duration)`3057`
+		- (metrics/profile-count)`7138`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`3246000`
 (signature)`exited(self, processor)`
 
 Sector structure exit handler.
@@ -1233,6 +1403,11 @@ be contained within the Sector.
 		- (source/area)`573 2 589 18`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`8`
+		- (metrics/profile-duration)`26900209`
+		- (metrics/profile-count)`2628`
+		- (metrics/profile-residency)`0.050731499591809746`
+		- (metrics/profile-minimum)`4000`
+		- (metrics/profile-maximum)`3425194000`
 (signature)`dispatch(self, processor)`
 
 Dispatch the given (factor-local/parameter)&<#Sector.dispatch.Parameters.processor[processor]> inside the Sector.
@@ -1263,6 +1438,11 @@ Returns the given processor.
 		- (source/area)`599 2 623 15`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`14`
+		- (metrics/profile-duration)`52737785`
+		- (metrics/profile-count)`6826`
+		- (metrics/profile-residency)`0.01137815313040716`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`17069978000`
 (signature)`reap(self)`
 
 Empty the exit set and check for sector completion.
@@ -1277,6 +1457,11 @@ Empty the exit set and check for sector completion.
 		- (source/area)`625 2 635 28`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`80632667`
+		- (metrics/profile-count)`4464`
+		- (metrics/profile-residency)`0.004757403707436041`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`17069961000`
 (signature)`reaped(self)`
 
 Called once the set of exited processors has been reaped
@@ -1340,6 +1525,11 @@ whereas `xact_` refers to operations that primary effect the
 		- (source/area)`668 2 669 16`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`1380`
+		- (metrics/profile-count)`9722`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`6631000`
 (signature)`placement(self)`
 
 
@@ -1366,6 +1556,11 @@ whereas `xact_` refers to operations that primary effect the
 		- (source/area)`674 2 683 33`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`4894`
+		- (metrics/profile-count)`171`
+		- (metrics/profile-residency)`87.33572281959378`
+		- (metrics/profile-minimum)`2000`
+		- (metrics/profile-maximum)`50000`
 (signature)`provide(self, identifier)`
 
 Export (factor-local/parameter)&<#Context.provide.Parameters.self[self]> as a named context inherited by all descending processors.
@@ -1380,6 +1575,11 @@ Export (factor-local/parameter)&<#Context.provide.Parameters.self[self]> as a na
 		- (source/area)`685 2 698 14`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
+		- (metrics/profile-duration)`10666`
+		- (metrics/profile-count)`3`
+		- (metrics/profile-residency)`78.12500000000001`
+		- (metrics/profile-minimum)`5000`
+		- (metrics/profile-maximum)`16000`
 		- (type/syntax)`bool`
 		- (type/invalid/unknown)&<#bool>
 		
@@ -1397,6 +1597,11 @@ Whether the Transaction has any processors aside from the Context.
 		- (source/area)`700 2 715 14`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`9`
+		- (metrics/profile-duration)`90162`
+		- (metrics/profile-count)`2362`
+		- (metrics/profile-residency)`21.96343965853223`
+		- (metrics/profile-minimum)`6000`
+		- (metrics/profile-maximum)`11705000`
 (signature)`xact_exit_if_empty(self)`
 
 Check for processors other than (factor-local/parameter)&<#Context.xact_exit_if_empty.Parameters.self[self]>, if there are none, exit the transaction.
@@ -1440,6 +1645,11 @@ First entry is nearest to (factor-local/parameter)&<#Context.xact_contextstack.P
 		- (source/area)`735 2 741 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`28814919`
+		- (metrics/profile-count)`2454`
+		- (metrics/profile-residency)`0.030835018058934766`
+		- (metrics/profile-minimum)`11000`
+		- (metrics/profile-maximum)`3425198000`
 (signature)`xact_dispatch(self, processor)`
 
 Dispatch the given (factor-local/parameter)&<#Context.xact_dispatch.Parameters.processor[processor]> into the (factor-local/class)&<#Transaction[Transaction]>.
@@ -1469,6 +1679,11 @@ the proposed event set determined by actuation.
 		- (source/area)`750 2 754 6`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`574`
+		- (metrics/profile-count)`87`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`1000`
 (signature)`xact_exit(self, xact)`
 
 Subtransaction (factor-local/parameter)&<#Context.xact_exit.Parameters.xact[xact]> exited.
@@ -1498,6 +1713,11 @@ Defaults to termination of the context and transaction exit.
 		- (source/area)`763 2 772 33`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`1511`
+		- (metrics/profile-count)`86`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`5000`
 (signature)`interrupt(self)`
 
 Update Transaction Context callbacks to null operations.
@@ -1543,6 +1763,11 @@ must be the last to exit.
 		- (source/area)`791 2 802 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`25478`
+		- (metrics/profile-count)`2623`
+		- (metrics/profile-residency)`27.496633248541073`
+		- (metrics/profile-minimum)`4000`
+		- (metrics/profile-maximum)`6737000`
 (signature)`create(Class, xc)`
 
 Create a (factor-local/class)&<#Transaction[Transaction]> sector with the given (factor-local/class)&<#Context[Context]> initializaed
@@ -1574,6 +1799,11 @@ Whether the Transaction's context, (invalid/unknown)&<#xact_context>, is an inst
 		- (source/area)`810 2 816 38`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`37833`
+		- (metrics/profile-count)`6`
+		- (metrics/profile-residency)`15.41850220264317`
+		- (metrics/profile-minimum)`18000`
+		- (metrics/profile-maximum)`115000`
 (signature)`terminate(self)`
 
 Invoke the (factor-local/class)&<#Context[Context.terminate]> method of the (invalid/unknown)&<#xact_context> property.
@@ -1589,6 +1819,11 @@ The termination of the Transaction is managed entirely by the Context.
 		- (source/area)`818 2 830 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`687`
+		- (metrics/profile-count)`7269`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`100000`
 (signature)`placement(self)`
 
 Define the set index to use when dispatched by a (factor-local/class)&<#Sector[Sector]>.
@@ -1608,6 +1843,11 @@ the groups and allow better runtime introspection.
 		- (source/area)`831 2 835 45`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`1000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`1000`
 The set of subtransactions currently running.
 
 
@@ -1636,6 +1876,11 @@ The set of subtransactions currently running.
 		- (source/area)`841 2 850 34`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`8`
+		- (metrics/profile-duration)`50663194`
+		- (metrics/profile-count)`7105`
+		- (metrics/profile-residency)`99.99270256294696`
+		- (metrics/profile-minimum)`4000`
+		- (metrics/profile-maximum)`17069934000`
 (signature)`exited(self, processor)`
 
 
@@ -1689,6 +1934,11 @@ Transaction sequence created from an invocation.
 		- (source/area)`874 2 879 26`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`3362`
+		- (metrics/profile-count)`80`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`22000`
 (signature)`__init__(self, invocation)`
 
 
@@ -1703,6 +1953,11 @@ Transaction sequence created from an invocation.
 		- (source/area)`881 2 882 28`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`6812`
+		- (metrics/profile-count)`80`
+		- (metrics/profile-residency)`43.11926605504588`
+		- (metrics/profile-minimum)`5000`
+		- (metrics/profile-maximum)`16000`
 (signature)`actuate(self)`
 
 
@@ -1729,6 +1984,11 @@ Transaction sequence created from an invocation.
 		- (source/area)`891 2 900 28`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`475059825`
+		- (metrics/profile-count)`80`
+		- (metrics/profile-residency)`0.001023555296430297`
+		- (metrics/profile-minimum)`18987000`
+		- (metrics/profile-maximum)`3425202000`
 (signature)`xact_void(self, final)`
 
 Consume the next transaction in the queue.
@@ -1745,6 +2005,11 @@ Consume the next transaction in the queue.
 		- (source/area)`902 2 903 57`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`18037`
+		- (metrics/profile-count)`80`
+		- (metrics/profile-residency)`37.14483714483715`
+		- (metrics/profile-minimum)`8000`
+		- (metrics/profile-maximum)`164000`
 (signature)`exe_enqueue(self, xact_context)`
 
 
@@ -1757,6 +2022,11 @@ Consume the next transaction in the queue.
 		- (source/area)`905 2 909 22`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`475064287`
+		- (metrics/profile-count)`80`
+		- (metrics/profile-residency)`0.0009393465510707327`
+		- (metrics/profile-minimum)`18990000`
+		- (metrics/profile-maximum)`3425204000`
 (signature)`exe_initialize(self)`
 
 Execute the enqueued transaction or cause the executable to exit.

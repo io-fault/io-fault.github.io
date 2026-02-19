@@ -6,6 +6,11 @@
 		- (source/area)`1 1 135 0`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`89`
+		- (metrics/profile-duration)`6695000`
+		- (metrics/profile-count)`6`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`6695000`
+		- (metrics/profile-maximum)`6695000`
 Validate Transfer and Transport sanity.
 
 
@@ -114,6 +119,11 @@ Validate Transfer and Transport sanity.
 		- (source/area)`14 1 30 42`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`14`
+		- (metrics/profile-duration)`5563000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`5563000`
+		- (metrics/profile-maximum)`5563000`
 (signature)`test_Transfer_io_flow(test)`
 
 
@@ -126,6 +136,11 @@ Validate Transfer and Transport sanity.
 		- (source/area)`32 1 42 12`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`3564000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`3564000`
+		- (metrics/profile-maximum)`3564000`
 (signature)`test_Invocations_actuate(test)`
 
 - (context-local/factor-element)&<fault.kernel/io#Invocations.actuate[fault.kernel.io.Invocations.actuate]>
@@ -140,6 +155,11 @@ Validate Transfer and Transport sanity.
 		- (source/area)`44 1 53 39`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`166000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`166000`
+		- (metrics/profile-maximum)`166000`
 (signature)`test_Invocations_allocate(test)`
 
 - (context-local/factor-element)&<fault.kernel/io#Invocations.i_allocate[fault.kernel.io.Invocations.i_allocate]>
@@ -154,6 +174,11 @@ Validate Transfer and Transport sanity.
 		- (source/area)`55 1 71 43`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`12`
+		- (metrics/profile-duration)`436000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`436000`
+		- (metrics/profile-maximum)`436000`
 (signature)`test_Invocations_accept(test)`
 
 - (context-local/factor-element)&<fault.kernel/io#Invocations[fault.kernel.io.Invocations]>
@@ -170,5 +195,10 @@ Validate Transfer and Transport sanity.
 		- (source/area)`73 1 135 29`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`42`
+		- (metrics/profile-duration)`1359000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1359000`
+		- (metrics/profile-maximum)`1359000`
 (signature)`test_Transport_tp_connect(test)`
 

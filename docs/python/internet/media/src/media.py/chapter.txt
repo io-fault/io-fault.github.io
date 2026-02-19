@@ -6,6 +6,11 @@
 		- (source/area)`1 1 400 0`
 		- (coverage-zeros)`14`
 		- (coverage-counters)`117`
+		- (metrics/profile-duration)`523000`
+		- (metrics/profile-count)`15`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`472000`
+		- (metrics/profile-maximum)`625000`
 Mime Type structures and parsers for content types and media ranges.
 
 Interfaces here work exclusively with character-strings; wire data must be decoded.
@@ -220,6 +225,11 @@ Interfaces here work exclusively with character-strings; wire data must be decod
 		- (source/area)`136 1 149 41`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`32750`
+		- (metrics/profile-count)`4`
+		- (metrics/profile-residency)`22.900763358778626`
+		- (metrics/profile-minimum)`13000`
+		- (metrics/profile-maximum)`84000`
 (signature)`file_type(filename)`
 
 Identify the MIME type from a filename using common file extensions.
@@ -281,6 +291,11 @@ The (factor-local/classmethod)&<#Type.from_string[from_string]> classmethod is t
 		- (source/area)`168 2 169 60`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`11000`
+		- (metrics/profile-count)`5`
+		- (metrics/profile-residency)`25.454545454545453`
+		- (metrics/profile-minimum)`3000`
+		- (metrics/profile-maximum)`37000`
 (signature)`__str__(self)`
 
 
@@ -295,6 +310,11 @@ The (factor-local/classmethod)&<#Type.from_string[from_string]> classmethod is t
 		- (source/area)`171 2 183 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
+		- (metrics/profile-duration)`7000`
+		- (metrics/profile-count)`6`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`32000`
 (signature)`__bytes__(self)`
 
 
@@ -307,6 +327,11 @@ The (factor-local/classmethod)&<#Type.from_string[from_string]> classmethod is t
 		- (source/area)`184 2 198 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`366`
+		- (metrics/profile-count)`71`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`1000`
 Content Type; usually one of:
 
 - `application`
@@ -327,6 +352,11 @@ The initial part of a MIME (media) type.
 		- (source/area)`199 2 205 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`297`
+		- (metrics/profile-count)`47`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`1000`
 Subtype; the specific form of the (factor-local/property)&<#Type.cotype[cotype]>.
 
 
@@ -339,6 +369,11 @@ Subtype; the specific form of the (factor-local/property)&<#Type.cotype[cotype]>
 		- (source/area)`206 2 212 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`400`
+		- (metrics/profile-count)`40`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`1000`
 Parameters such as charset for encoding designation.
 
 
@@ -351,6 +386,11 @@ Parameters such as charset for encoding designation.
 		- (source/area)`213 2 217 24`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`666`
+		- (metrics/profile-count)`3`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`1000`
 		- (type/syntax)`bool`
 		- (type/invalid/unknown)&<#bool>
 		
@@ -394,6 +434,11 @@ Return a new (factor-local/class)&<#Type[Type]> with the last '+'-delimited subt
 		- (source/area)`243 2 258 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`9`
+		- (metrics/profile-duration)`16066`
+		- (metrics/profile-count)`15`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`8000`
+		- (metrics/profile-maximum)`55000`
 (signature)`from_bytes(Class, string, **parameters)`
 
 Split on the ';' and '/' separators and build an instance.
@@ -410,6 +455,11 @@ Additional parameters or overrides may be given using keywords.
 		- (source/area)`259 2 265 82`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`19733`
+		- (metrics/profile-count)`15`
+		- (metrics/profile-residency)`18.581081081081084`
+		- (metrics/profile-minimum)`10000`
+		- (metrics/profile-maximum)`71000`
 (signature)`from_string(Class, string, **parameters)`
 
 Split on the ';' and '/' separators and build an instance.
@@ -428,6 +478,11 @@ Additional parameters or overrides may be given using keywords.
 		- (source/area)`267 2 275 14`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`5070`
+		- (metrics/profile-count)`71`
+		- (metrics/profile-residency)`84.44444444444443`
+		- (metrics/profile-minimum)`2000`
+		- (metrics/profile-maximum)`14000`
 (signature)`__contains__(self, mtype)`
 
 
@@ -481,6 +536,11 @@ highest precedence for each content type.
 		- (source/area)`292 2 322 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`17`
+		- (metrics/profile-duration)`42000`
+		- (metrics/profile-count)`6`
+		- (metrics/profile-residency)`62.301587301587304`
+		- (metrics/profile-minimum)`25000`
+		- (metrics/profile-maximum)`104000`
 (signature)`split(media_range)`
 
 Construct triples describing the (factor-local/parameter)&<#Range.split.Parameters.media_range[media_range]>.
@@ -495,6 +555,11 @@ Construct triples describing the (factor-local/parameter)&<#Range.split.Paramete
 		- (source/area)`323 2 330 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`53000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`16.9811320754717`
+		- (metrics/profile-minimum)`53000`
+		- (metrics/profile-maximum)`53000`
 (signature)`from_string(Class, string)`
 
 Instantiate the Range from a string.
@@ -509,6 +574,11 @@ Instantiate the Range from a string.
 		- (source/area)`331 2 345 17`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`13`
+		- (metrics/profile-duration)`47166`
+		- (metrics/profile-count)`6`
+		- (metrics/profile-residency)`10.954063604240284`
+		- (metrics/profile-minimum)`28000`
+		- (metrics/profile-maximum)`122000`
 (signature)`from_bytes(Class, data)`
 
 Instantiate the Range from a bytes object; decoded and passed to (factor-local/classmethod)&<#Range.from_string[from_string]>.
@@ -543,6 +613,11 @@ the server may want to send XML anyways.
 		- (source/area)`361 2 392 37`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`16`
+		- (metrics/profile-duration)`40200`
+		- (metrics/profile-count)`10`
+		- (metrics/profile-residency)`25.621890547263682`
+		- (metrics/profile-minimum)`27000`
+		- (metrics/profile-maximum)`67000`
 (signature)`query(self, *available)`
 
 Given a sequence of mime types, return the best match

@@ -6,6 +6,11 @@
 		- (source/area)`1 1 590 0`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`103`
+		- (metrics/profile-duration)`899000`
+		- (metrics/profile-count)`9`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`899000`
+		- (metrics/profile-maximum)`899000`
 
 [ module ]
 ! CONTROL:
@@ -26,6 +31,11 @@
 		- (source/area)`3 1 11 2`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
+		- (metrics/profile-duration)`15272`
+		- (metrics/profile-count)`11`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`13000`
+		- (metrics/profile-maximum)`31000`
 (signature)`cmbx(t)`
 
 Yield a list of combinations using a mask
@@ -645,6 +655,11 @@ Yield a list of combinations using a mask
 		- (source/area)`460 1 486 17`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`15`
+		- (metrics/profile-duration)`276735000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`0.7303015520263068`
+		- (metrics/profile-minimum)`276735000`
+		- (metrics/profile-maximum)`276735000`
 (signature)`samples()`
 
 
@@ -659,6 +674,11 @@ Yield a list of combinations using a mask
 		- (source/area)`488 1 506 26`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`14`
+		- (metrics/profile-duration)`3942000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`3942000`
+		- (metrics/profile-maximum)`3942000`
 (signature)`test_expectations(test)`
 
 
@@ -673,6 +693,11 @@ Yield a list of combinations using a mask
 		- (source/area)`508 1 512 15`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`793000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`793000`
+		- (metrics/profile-maximum)`793000`
 (signature)`test_split_join_netloc(test)`
 
 
@@ -687,6 +712,11 @@ Yield a list of combinations using a mask
 		- (source/area)`514 1 520 15`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`16360000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`98.97310513447432`
+		- (metrics/profile-minimum)`16360000`
+		- (metrics/profile-maximum)`16360000`
 (signature)`test_join_split_netloc(test)`
 
 
@@ -701,6 +731,11 @@ Yield a list of combinations using a mask
 		- (source/area)`522 1 526 14`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`466000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`466000`
+		- (metrics/profile-maximum)`466000`
 (signature)`test_split_join_path(test)`
 
 
@@ -715,6 +750,11 @@ Yield a list of combinations using a mask
 		- (source/area)`528 1 532 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`237000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`237000`
+		- (metrics/profile-maximum)`237000`
 (signature)`test_join_split_path(test)`
 
 
@@ -729,6 +769,11 @@ Yield a list of combinations using a mask
 		- (source/area)`534 1 538 41`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`276744000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`0.0032521030266238833`
+		- (metrics/profile-minimum)`276744000`
+		- (metrics/profile-maximum)`276744000`
 (signature)`test_combinations(test)`
 
 
@@ -741,6 +786,11 @@ Yield a list of combinations using a mask
 		- (source/area)`540 1 552 48`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`9`
+		- (metrics/profile-duration)`316000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`316000`
+		- (metrics/profile-maximum)`316000`
 (signature)`test_strict(test)`
 
 - (context-local/factor-element)&<fault.internet/ri#strict[fault.internet.ri.strict]>
@@ -755,6 +805,11 @@ Yield a list of combinations using a mask
 		- (source/area)`554 1 590 56`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`21`
+		- (metrics/profile-duration)`336000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`336000`
+		- (metrics/profile-maximum)`336000`
 (signature)`test_address_extension(test)`
 
 - (context-local/factor-element)&<fault.internet/ri#split_netloc[fault.internet.ri.split_netloc]>

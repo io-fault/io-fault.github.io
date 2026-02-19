@@ -6,6 +6,11 @@
 		- (source/area)`1 1 511 38`
 		- (coverage-zeros)`21`
 		- (coverage-counters)`203`
+		- (metrics/profile-duration)`126978`
+		- (metrics/profile-count)`47`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`83000`
+		- (metrics/profile-maximum)`142000`
 Programming language profile and parser class for Keyword Oriented Syntax.
 
 Provides a data structure for describing keyword based languages that allows
@@ -145,6 +150,11 @@ While (factor-local/class)&<#Profile[Profile]> is a tuple subclass, indexes shou
 		- (source/area)`51 2 71 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`9914`
+		- (metrics/profile-count)`47`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`3000`
+		- (metrics/profile-maximum)`21000`
 (signature)`from_keywords_v1(Class, **wordtypes)`
 
 
@@ -157,6 +167,11 @@ While (factor-local/class)&<#Profile[Profile]> is a tuple subclass, indexes shou
 		- (source/area)`72 2 78 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`765`
+		- (metrics/profile-count)`47`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`5000`
 		- (type/syntax)`typing.Mapping[str, typing.Set[str]]`
 		
 Dictionary associating sets of identifier strings with a classification identifier.
@@ -171,6 +186,11 @@ Dictionary associating sets of identifier strings with a classification identifi
 		- (source/area)`79 2 87 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`616`
+		- (metrics/profile-count)`99`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`1000`
 		- (type/syntax)`typing.Set[typing.Tuple[str,str]]`
 		
 Comment start and stop pairs delimiting an excluded area from the source.
@@ -187,6 +207,11 @@ Exclusions are given the second highest priority by (factor-local/class)&<#Parse
 		- (source/area)`88 2 98 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`470`
+		- (metrics/profile-count)`100`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`1000`
 		- (type/syntax)`typing.Set[typing.Tuple[str,str]]`
 		
 The start and stop pairs delimiting a literal area within the syntax document.
@@ -205,6 +230,11 @@ Literals are given the highest priority by (factor-local/class)&<#Parser[Parser]
 		- (source/area)`99 2 107 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`287`
+		- (metrics/profile-count)`94`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`1000`
 		- (type/syntax)`typing.Set[typing.Tuple[str,str]]`
 		
 The start and stop pairs delimiting an expression.
@@ -221,6 +251,11 @@ Enclosures have the highest precedence during expression processing.
 		- (source/area)`108 2 114 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`836`
+		- (metrics/profile-count)`49`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`5000`
 		- (type/syntax)`typing.Set[str]`
 		
 Operators used to designate a resolution path for selecting an object to be used.
@@ -235,6 +270,11 @@ Operators used to designate a resolution path for selecting an object to be used
 		- (source/area)`115 2 122 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`708`
+		- (metrics/profile-count)`48`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`1000`
 		- (type/syntax)`typing.Set[str]`
 		
 Set of operators that can perform some manipulation to the objects associated
@@ -250,6 +290,11 @@ with the adjacent identifiers.
 		- (source/area)`123 2 129 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`312`
+		- (metrics/profile-count)`48`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`1000`
 		- (type/syntax)`typing.Set[str]`
 		
 Operators used to designate the end of a statement, expression, or field.
@@ -264,6 +309,11 @@ Operators used to designate the end of a statement, expression, or field.
 		- (source/area)`130 2 170 37`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`20`
+		- (metrics/profile-duration)`41021`
+		- (metrics/profile-count)`46`
+		- (metrics/profile-residency)`63.910969793322735`
+		- (metrics/profile-minimum)`19000`
+		- (metrics/profile-maximum)`118000`
 		- (type/syntax)`typing.Iterable[str]`
 		
 Emit all unit operators employed by the language associated with a rank and context effect.
@@ -345,6 +395,11 @@ Qualify the syntax fields in (factor-local/parameter)&<#Parser.integrate_switche
 		- (source/area)`224 2 289 3`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`29`
+		- (metrics/profile-duration)`130377`
+		- (metrics/profile-count)`45`
+		- (metrics/profile-residency)`37.87284813362877`
+		- (metrics/profile-minimum)`43000`
+		- (metrics/profile-maximum)`275000`
 (signature)`from_profile(Class, profile)`
 
 Primary constructor for (factor-local/class)&<#Parser[Parser]>.
@@ -362,6 +417,11 @@ some amount of preparation is performed by (factor-local/classmethod)&<#Parser.f
 		- (source/area)`291 2 315 82`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`11`
+		- (metrics/profile-duration)`37511`
+		- (metrics/profile-count)`45`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`5000`
+		- (metrics/profile-maximum)`93000`
 (signature)`__init__(self, profile, opset, opmap, delimiter, optable, exits, classify_id, classify_op)`
 
 ! WARNING: Do not use directly.
@@ -378,6 +438,11 @@ some amount of preparation is performed by (factor-local/classmethod)&<#Parser.f
 		- (source/area)`317 2 322 74`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`6500`
+		- (metrics/profile-count)`2`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`12000`
 		- (type/syntax)`typing.Iterable[Tokens]`
 		
 (signature)`process_line(self, line)`
@@ -394,6 +459,11 @@ Process a single line of syntax into tokens.
 		- (source/area)`324 2 341 59`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`138000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`10.144927536231885`
+		- (metrics/profile-minimum)`138000`
+		- (metrics/profile-maximum)`138000`
 		- (type/syntax)`typing.Iterable[typing.Iterable[Tokens]]`
 		
 (signature)`process_lines(self, lines)`
@@ -418,6 +488,11 @@ Essentially, `map(Parser.process_line, line_iter)`.
 		- (source/area)`343 2 360 41`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
+		- (metrics/profile-duration)`36151`
+		- (metrics/profile-count)`5410`
+		- (metrics/profile-residency)`7.048814034226579`
+		- (metrics/profile-minimum)`14000`
+		- (metrics/profile-maximum)`13532000`
 		- (type/syntax)`typing.Iterable[typing.Iterable[Tokens]]`
 		
 (signature)`process_document(self, lines)`
@@ -441,6 +516,11 @@ instances.
 		- (source/area)`362 2 367 30`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`350`
+		- (metrics/profile-count)`5420`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`3000`
 (signature)`allocstack(self)`
 
 Allocate context stack for use with (factor-local/method)&<#Parser.delimit[delimit]>.
@@ -455,6 +535,11 @@ Allocate context stack for use with (factor-local/method)&<#Parser.delimit[delim
 		- (source/area)`369 2 444 15`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`41`
+		- (metrics/profile-duration)`31089`
+		- (metrics/profile-count)`5425`
+		- (metrics/profile-residency)`-3.6262517861483823`
+		- (metrics/profile-minimum)`5000`
+		- (metrics/profile-maximum)`13526000`
 		- (type/syntax)`Tokens`
 		- (type/factor-local/data)&<#Tokens[Tokens]>
 		
@@ -480,6 +565,11 @@ should normally be used.
 		- (source/area)`446 2 512 37`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`34`
+		- (metrics/profile-duration)`28269`
+		- (metrics/profile-count)`5435`
+		- (metrics/profile-residency)`67.82671517739175`
+		- (metrics/profile-minimum)`7000`
+		- (metrics/profile-maximum)`13523000`
 		- (type/syntax)`Tokens`
 		- (type/factor-local/data)&<#Tokens[Tokens]>
 		

@@ -6,6 +6,11 @@
 		- (source/area)`1 1 458 0`
 		- (coverage-zeros)`15`
 		- (coverage-counters)`157`
+		- (metrics/profile-duration)`392081`
+		- (metrics/profile-count)`724`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`282000`
+		- (metrics/profile-maximum)`730000`
 Test framework primitives.
 
 
@@ -323,6 +328,11 @@ The test executed without failure.
 		- (source/area)`96 2 97 24`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`2462`
+		- (metrics/profile-count)`54`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`21000`
 (signature)`__init__(self, message)`
 
 
@@ -355,6 +365,11 @@ Control exception for concluding a test.
 		- (source/area)`104 2 107 24`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`14478`
+		- (metrics/profile-count)`23`
+		- (metrics/profile-residency)`72.37237237237237`
+		- (metrics/profile-minimum)`7000`
+		- (metrics/profile-maximum)`27000`
 (signature)`__init__(self, conclusion, failure, message)`
 
 
@@ -408,6 +423,11 @@ Exception raised by (factor-local/class)&<#Contention[Contention]> instances des
 		- (source/area)`125 2 130 29`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`13290`
+		- (metrics/profile-count)`31`
+		- (metrics/profile-residency)`57.76699029126213`
+		- (metrics/profile-minimum)`5000`
+		- (metrics/profile-maximum)`67000`
 (signature)`__init__(self, operator, former, latter)`
 
 
@@ -422,6 +442,11 @@ Exception raised by (factor-local/class)&<#Contention[Contention]> instances des
 		- (source/area)`132 2 135 75`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`4290`
+		- (metrics/profile-count)`31`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`21000`
 (signature)`__str__(self)`
 
 
@@ -498,6 +523,11 @@ operands being examined.
 		- (source/area)`169 2 171 25`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`532`
+		- (metrics/profile-count)`11351`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`13000`
 (signature)`__init__(self, object)`
 
 
@@ -528,6 +558,11 @@ operands being examined.
 		- (source/area)`198 2 199 49`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`1316`
+		- (metrics/profile-count)`158`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`6000`
 (signature)`__enter__(self)`
 
 
@@ -542,6 +577,11 @@ operands being examined.
 		- (source/area)`201 2 209 13`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`7`
+		- (metrics/profile-duration)`1063`
+		- (metrics/profile-count)`158`
+		- (metrics/profile-residency)`74.40476190476191`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`34000`
 (signature)`__exit__(self, typ, val, tb)`
 
 
@@ -554,6 +594,11 @@ operands being examined.
 		- (source/area)`211 2 221 14`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`27392`
+		- (metrics/profile-count)`84`
+		- (metrics/profile-residency)`77.14037375054325`
+		- (metrics/profile-minimum)`4000`
+		- (metrics/profile-maximum)`243000`
 (signature)`__xor__(self, operand)`
 
 Contend that the (factor-local/parameter)&<#Contention.__xor__.Parameters.operand[operand]> raises the given exception when it is called.
@@ -570,6 +615,11 @@ Contend that the (factor-local/parameter)&<#Contention.__xor__.Parameters.operan
 		- (source/area)`223 2 238 14`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
+		- (metrics/profile-duration)`4240`
+		- (metrics/profile-count)`25`
+		- (metrics/profile-residency)`64.15094339622641`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`27000`
 (signature)`__lshift__(self, operand)`
 
 Contend that the (factor-local/parameter)&<#Contention.__lshift__.Parameters.operand[operand]> is contained by the object.
@@ -681,6 +731,11 @@ a simple syntax.
 		- (source/area)`285 2 297 29`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`1482`
+		- (metrics/profile-count)`10862`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`32000`
 (signature)`__init__(self, identifier, function, *constraints)`
 
 
@@ -695,6 +750,11 @@ a simple syntax.
 		- (source/area)`299 2 306 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`591`
+		- (metrics/profile-count)`11485`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`17000`
 (signature)`_inverse(self)`
 
 
@@ -709,6 +769,11 @@ a simple syntax.
 		- (source/area)`308 2 315 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`402`
+		- (metrics/profile-count)`134`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`3000`
 (signature)`_absurd(self, inverse, truth)`
 
 
@@ -721,6 +786,11 @@ a simple syntax.
 		- (source/area)`316 2 322 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`800`
+		- (metrics/profile-count)`15`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`7000`
 Invert the next contention; absurdity is coherent and coherence is absurd.
 
 
@@ -735,6 +805,11 @@ Invert the next contention; absurdity is coherent and coherence is absurd.
 		- (source/area)`324 2 326 58`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`7022`
+		- (metrics/profile-count)`11337`
+		- (metrics/profile-residency)`84.00934567699632`
+		- (metrics/profile-minimum)`3000`
+		- (metrics/profile-maximum)`3949000`
 (signature)`__truediv__(self, operand)`
 
 
@@ -749,6 +824,11 @@ Invert the next contention; absurdity is coherent and coherence is absurd.
 		- (source/area)`328 2 330 58`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`4500`
+		- (metrics/profile-count)`14`
+		- (metrics/profile-residency)`76.19047619047619`
+		- (metrics/profile-minimum)`4000`
+		- (metrics/profile-maximum)`5000`
 (signature)`__rtruediv__(self, operand)`
 
 
@@ -763,6 +843,11 @@ Invert the next contention; absurdity is coherent and coherence is absurd.
 		- (source/area)`332 2 336 50`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`48477`
+		- (metrics/profile-count)`113`
+		- (metrics/profile-residency)`96.93318729463307`
+		- (metrics/profile-minimum)`3000`
+		- (metrics/profile-maximum)`4464000`
 (signature)`isinstance(self, *args)`
 
 
@@ -777,6 +862,11 @@ Invert the next contention; absurdity is coherent and coherence is absurd.
 		- (source/area)`338 2 342 55`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`18666`
+		- (metrics/profile-count)`21`
+		- (metrics/profile-residency)`57.397959183673464`
+		- (metrics/profile-minimum)`4000`
+		- (metrics/profile-maximum)`93000`
 (signature)`issubclass(self, *args)`
 
 
@@ -789,6 +879,11 @@ Invert the next contention; absurdity is coherent and coherence is absurd.
 		- (source/area)`344 2 402 48`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`19`
+		- (metrics/profile-duration)`12375`
+		- (metrics/profile-count)`8`
+		- (metrics/profile-residency)`57.57575757575758`
+		- (metrics/profile-minimum)`3000`
+		- (metrics/profile-maximum)`43000`
 (signature)`itertimer(count, time, scale, cycle, identity, min, range)`
 
 Measure the relative performance of a loop's iterations.
@@ -838,6 +933,11 @@ Measure the relative performance of a loop's iterations.
 		- (source/area)`404 2 410 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`15000`
+		- (metrics/profile-count)`2`
+		- (metrics/profile-residency)`43.333333333333336`
+		- (metrics/profile-minimum)`14000`
+		- (metrics/profile-maximum)`16000`
 (signature)`time(self, callable, **kw)`
 
 Measure the relative performance of the given callable.
@@ -852,6 +952,11 @@ Measure the relative performance of the given callable.
 		- (source/area)`412 2 417 83`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`31695`
+		- (metrics/profile-count)`23`
+		- (metrics/profile-residency)`55.82990397805213`
+		- (metrics/profile-minimum)`7000`
+		- (metrics/profile-maximum)`46000`
 (signature)`skip(self, condition)`
 
 Explicitly conclude that the test skipped when (factor-local/parameter)&<#Test.skip.Parameters.condition[condition]> is (invalid/unknown)&<#True>.
@@ -866,6 +971,11 @@ Explicitly conclude that the test skipped when (factor-local/parameter)&<#Test.s
 		- (source/area)`419 2 424 70`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`29000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`62.06896551724138`
+		- (metrics/profile-minimum)`29000`
+		- (metrics/profile-maximum)`29000`
 (signature)`fail(self)`
 
 Explicitly conclude that the test failed.

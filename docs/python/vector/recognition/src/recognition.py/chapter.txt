@@ -6,6 +6,11 @@
 		- (source/area)`1 1 259 0`
 		- (coverage-zeros)`15`
 		- (coverage-counters)`81`
+		- (metrics/profile-duration)`16136`
+		- (metrics/profile-count)`22`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`11000`
+		- (metrics/profile-maximum)`40000`
 System argument vector interpretation methods.
 
 (factor-local/function)&<#legacy[legacy]> is the only implemented method and should cover most use cases.
@@ -91,6 +96,11 @@ Exception signalling that options were not properly expressed.
 	/element/
 		- (control)`property-set`
 		- (source/area)`50 2 54 26`
+		- (metrics/profile-duration)`2250`
+		- (metrics/profile-count)`4`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`5000`
 (signature)`__init__(self, mismatch, origin, option)`
 
 
@@ -117,6 +127,11 @@ Exception signalling that options were not properly expressed.
 		- (source/area)`66 1 197 49`
 		- (coverage-zeros)`11`
 		- (coverage-counters)`54`
+		- (metrics/profile-duration)`10080`
+		- (metrics/profile-count)`25`
+		- (metrics/profile-residency)`66.66666666666666`
+		- (metrics/profile-minimum)`3000`
+		- (metrics/profile-maximum)`19000`
 (signature)`legacy(restricted, required, options, trap, offset, signal, assignment)`
 
 Interpret an argument vector, (factor-local/parameter)&<#legacy.Parameters.options[options]>, according to the (factor-local/parameter)&<#legacy.Parameters.restricted[restricted]>
@@ -177,6 +192,11 @@ to match an index entry.
 		- (source/area)`199 1 201 36`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`5000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`5000`
+		- (metrics/profile-maximum)`5000`
 (signature)`_sfr(t, k, i, v)`
 
 
@@ -191,6 +211,11 @@ to match an index entry.
 		- (source/area)`203 1 205 44`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`1000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`1000`
 (signature)`_seq(t, k, i, v)`
 
 
@@ -225,6 +250,11 @@ to match an index entry.
 		- (source/area)`219 1 259 9`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`12`
+		- (metrics/profile-duration)`10600`
+		- (metrics/profile-count)`25`
+		- (metrics/profile-residency)`36.9811320754717`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`22000`
 (signature)`merge(target, events, Interpreter, Operations)`
 
 Apply the values provided by (factor-local/parameter)&<#merge.Parameters.events[events]> into (factor-local/parameter)&<#merge.Parameters.target[target]> using

@@ -360,11 +360,10 @@ Returns the directory path that was created.
 		- (control)`property-set`
 		- (source/area)`363 1 367 1`
 #!source
-	
-	def first_sentence(p):
-		for x in p.sentences:
-			if not x:
-				continue
+		if f.identifier.startswith('.'):
+			continue
+		yield [web_resources, 'default', f.identifier], (f.fs_load(),)
+		yield [web_resources, 'core.css'], (''.join([
 
 [ restricted ]
 ! CONTROL:
@@ -376,9 +375,10 @@ Returns the directory path that was created.
 		- (control)`property-set`
 		- (source/area)`369 1 372 1`
 #!source
-		return ''.join(y[1] for y in x)
-		# None detected, presume single sentence abstract.
-	return ''.join(y[1] for y in p)
+	"@import 'default/sheet.css';\n",
+	"@import 'default/if.css';\n",
+	"@import 'default/select.css';\n",
+	"@import 'default/icon.css';\n",
 
 [ extract_image_reference ]
 ! CONTROL:

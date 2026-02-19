@@ -6,6 +6,11 @@
 		- (source/area)`1 1 338 0`
 		- (coverage-zeros)`12`
 		- (coverage-counters)`184`
+		- (metrics/profile-duration)`1143952`
+		- (metrics/profile-count)`21`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`471000`
+		- (metrics/profile-maximum)`1330000`
 Tools for navigating element trees.
 
 Provides the (factor-local/class)&<#Cursor[Cursor]> class for navigating and retrieving nodes identified
@@ -107,6 +112,11 @@ Path string given to (factor-local/method)&<#Context.prepare[Context.prepare]> w
 		- (source/area)`19 1 42 12`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`11`
+		- (metrics/profile-duration)`10300`
+		- (metrics/profile-count)`10`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`86000`
 (signature)`iselement(subject)`
 
 Determines whether the given object has the properties of an element.
@@ -139,6 +149,11 @@ Query expression context for parsing and interpreting paths.
 		- (source/area)`49 2 54 37`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`47476`
+		- (metrics/profile-count)`5409`
+		- (metrics/profile-residency)`84.2060583876231`
+		- (metrics/profile-minimum)`20000`
+		- (metrics/profile-maximum)`13553000`
 (signature)`prepare(self, path)`
 
 Parse the path string into a selection plan.
@@ -198,6 +213,11 @@ Parse the path string into a selection plan.
 		- (source/area)`76 2 84 14`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`10`
+		- (metrics/profile-duration)`9421`
+		- (metrics/profile-count)`19`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`26000`
 (signature)`__init__(self, selectors, aliases)`
 
 
@@ -212,6 +232,11 @@ Parse the path string into a selection plan.
 		- (source/area)`85 2 90 14`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`1095`
+		- (metrics/profile-count)`21`
+		- (metrics/profile-residency)`65.21739130434784`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`7000`
 (signature)`_identify_node(predicate, node)`
 
 
@@ -226,6 +251,11 @@ Parse the path string into a selection plan.
 		- (source/area)`91 2 103 14`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`933`
+		- (metrics/profile-count)`2459`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`12000`
 (signature)`_parse_slice(string)`
 
 
@@ -240,6 +270,11 @@ Parse the path string into a selection plan.
 		- (source/area)`104 2 117 15`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`10`
+		- (metrics/profile-duration)`616`
+		- (metrics/profile-count)`2937`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`4000`
 (signature)`_read_string(itokens)`
 
 
@@ -252,6 +287,11 @@ Parse the path string into a selection plan.
 		- (source/area)`119 2 229 20`
 		- (coverage-zeros)`8`
 		- (coverage-counters)`72`
+		- (metrics/profile-duration)`7498`
+		- (metrics/profile-count)`5409`
+		- (metrics/profile-residency)`65.84728420325945`
+		- (metrics/profile-minimum)`2000`
+		- (metrics/profile-maximum)`20000`
 (signature)`structure(self, tokens)`
 
 Process tokens into selector sequences.
@@ -269,6 +309,11 @@ Usually used indirectly by (factor-local/method)&<#Context.prepare[prepare]>.
 		- (source/area)`230 2 235 19`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`601`
+		- (metrics/profile-count)`8814`
+		- (metrics/profile-residency)`90.00188643652142`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`46000`
 (signature)`_select(self, nodes, ident)`
 
 
@@ -283,6 +328,11 @@ Usually used indirectly by (factor-local/method)&<#Context.prepare[prepare]>.
 		- (source/area)`236 2 239 23`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`358`
+		- (metrics/profile-count)`2453`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`2000`
 (signature)`_index(self, nodes, eslice)`
 
 
@@ -297,6 +347,11 @@ Usually used indirectly by (factor-local/method)&<#Context.prepare[prepare]>.
 		- (source/area)`240 2 245 17`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`565`
+		- (metrics/profile-count)`2935`
+		- (metrics/profile-residency)`78.541289933695`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`11000`
 (signature)`_predicate(self, nodes, title)`
 
 
@@ -311,6 +366,11 @@ Usually used indirectly by (factor-local/method)&<#Context.prepare[prepare]>.
 		- (source/area)`246 2 250 20`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`625`
+		- (metrics/profile-count)`8`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`1000`
 (signature)`_all(self, nodes, type)`
 
 
@@ -325,6 +385,11 @@ Usually used indirectly by (factor-local/method)&<#Context.prepare[prepare]>.
 		- (source/area)`251 2 262 19`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`8`
+		- (metrics/profile-duration)`1166`
+		- (metrics/profile-count)`6`
+		- (metrics/profile-residency)`71.42857142857143`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`2000`
 (signature)`_filter(self, nodes, *spec)`
 
 
@@ -339,6 +404,11 @@ Usually used indirectly by (factor-local/method)&<#Context.prepare[prepare]>.
 		- (source/area)`263 2 270 19`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`40600`
+		- (metrics/profile-count)`5`
+		- (metrics/profile-residency)`23.645320197044335`
+		- (metrics/profile-minimum)`27000`
+		- (metrics/profile-maximum)`49000`
 (signature)`_union(self, origin_nodes, exprnodes)`
 
 
@@ -353,6 +423,11 @@ Usually used indirectly by (factor-local/method)&<#Context.prepare[prepare]>.
 		- (source/area)`272 2 273 59`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`8648`
+		- (metrics/profile-count)`14221`
+		- (metrics/profile-residency)`99.28044100429295`
+		- (metrics/profile-minimum)`3000`
+		- (metrics/profile-maximum)`59449000`
 (signature)`switch(self, operation, nodes)`
 
 
@@ -367,6 +442,11 @@ Usually used indirectly by (factor-local/method)&<#Context.prepare[prepare]>.
 		- (source/area)`275 2 298 14`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`13`
+		- (metrics/profile-duration)`32243`
+		- (metrics/profile-count)`5398`
+		- (metrics/profile-residency)`25.291728191486307`
+		- (metrics/profile-minimum)`7000`
+		- (metrics/profile-maximum)`59484000`
 (signature)`interpret(self, plan, root, context)`
 
 
@@ -399,6 +479,11 @@ Navigation state class providing a query interface to an element tree.
 		- (source/area)`305 2 310 37`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`757`
+		- (metrics/profile-count)`5352`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`6000`
 (signature)`__init__(self, context, root)`
 
 
@@ -411,6 +496,11 @@ Navigation state class providing a query interface to an element tree.
 		- (source/area)`312 2 317 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`151333`
+		- (metrics/profile-count)`3`
+		- (metrics/profile-residency)`4.845814977973568`
+		- (metrics/profile-minimum)`68000`
+		- (metrics/profile-maximum)`204000`
 (signature)`seek(self, path)`
 
 Adjust the cursor position to the nodes identified by (factor-local/parameter)&<#Cursor.seek.Parameters.path[path]>.
@@ -425,6 +515,11 @@ Adjust the cursor position to the nodes identified by (factor-local/parameter)&<
 		- (source/area)`319 2 324 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`0`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`0.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`0`
 (signature)`reset(self)`
 
 Select the root as the current working node.
@@ -439,6 +534,11 @@ Select the root as the current working node.
 		- (source/area)`326 2 332 44`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`133644`
+		- (metrics/profile-count)`2436`
+		- (metrics/profile-residency)`2.510766130766253`
+		- (metrics/profile-minimum)`85000`
+		- (metrics/profile-maximum)`59551000`
 (signature)`fork(self, path)`
 
 Create a new instance using the given (factor-local/parameter)&<#Cursor.fork.Parameters.path[path]> to the select the nodes
@@ -454,6 +554,11 @@ used as the root content of the new (factor-local/class)&<#Cursor[Cursor]>.
 		- (source/area)`334 2 338 76`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`83245`
+		- (metrics/profile-count)`5395`
+		- (metrics/profile-residency)`4.295171105455468`
+		- (metrics/profile-minimum)`31000`
+		- (metrics/profile-maximum)`59545000`
 (signature)`select(self, path)`
 
 Retrieve nodes relative to the context node using (factor-local/parameter)&<#Cursor.select.Parameters.path[path]>.

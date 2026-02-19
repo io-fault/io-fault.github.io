@@ -6,6 +6,11 @@
 		- (source/area)`1 1 154 0`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`80`
+		- (metrics/profile-duration)`5000`
+		- (metrics/profile-count)`10`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`5000`
+		- (metrics/profile-maximum)`5000`
 Analyze implementation specific features of (project-local/unknown)&<core.PartitionedSequence> and other (project-local/unknown)&<core> functions.
 
 
@@ -30,6 +35,11 @@ Analyze implementation specific features of (project-local/unknown)&<core.Partit
 		- (source/area)`6 1 19 58`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`8`
+		- (metrics/profile-duration)`188000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`188000`
+		- (metrics/profile-maximum)`188000`
 (signature)`test_Route_iterpoints(test)`
 
 
@@ -44,6 +54,11 @@ Analyze implementation specific features of (project-local/unknown)&<core.Partit
 		- (source/area)`21 1 34 75`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`8`
+		- (metrics/profile-duration)`301000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`301000`
+		- (metrics/profile-maximum)`301000`
 (signature)`test_Route_iterinverse(test)`
 
 
@@ -58,6 +73,11 @@ Analyze implementation specific features of (project-local/unknown)&<core.Partit
 		- (source/area)`36 1 55 48`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`12`
+		- (metrics/profile-duration)`222000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`222000`
+		- (metrics/profile-maximum)`222000`
 (signature)`test_Route_sorting(test)`
 
 
@@ -72,6 +92,11 @@ Analyze implementation specific features of (project-local/unknown)&<core.Partit
 		- (source/area)`57 1 66 37`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`8`
+		- (metrics/profile-duration)`164000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`164000`
+		- (metrics/profile-maximum)`164000`
 (signature)`test_Route_delimit(test)`
 
 
@@ -86,6 +111,11 @@ Analyze implementation specific features of (project-local/unknown)&<core.Partit
 		- (source/area)`68 1 75 56`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`143000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`143000`
+		- (metrics/profile-maximum)`143000`
 (signature)`test_Route_iterpartitions(test)`
 
 
@@ -100,6 +130,11 @@ Analyze implementation specific features of (project-local/unknown)&<core.Partit
 		- (source/area)`77 1 94 14`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`8`
+		- (metrics/profile-duration)`242000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`242000`
+		- (metrics/profile-maximum)`242000`
 (signature)`test_Route_from_partitions(test)`
 
 
@@ -112,6 +147,11 @@ Analyze implementation specific features of (project-local/unknown)&<core.Partit
 		- (source/area)`96 1 118 29`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`10`
+		- (metrics/profile-duration)`296000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`296000`
+		- (metrics/profile-maximum)`296000`
 (signature)`test_Router_container_skip(test)`
 
 Make sure empty contexts are skipped when accessing a route's container.
@@ -126,6 +166,11 @@ Make sure empty contexts are skipped when accessing a route's container.
 		- (source/area)`120 1 139 41`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`11`
+		- (metrics/profile-duration)`502000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`502000`
+		- (metrics/profile-maximum)`502000`
 (signature)`test_Route_pickling(test)`
 
 Check python.org/.../pickle support.
@@ -140,6 +185,11 @@ Check python.org/.../pickle support.
 		- (source/area)`141 1 154 34`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`8`
+		- (metrics/profile-duration)`389000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`389000`
+		- (metrics/profile-maximum)`389000`
 (signature)`test_Route_switch(test)`
 
 - (context-local/factor-element)&<fault.route/core#PartitionedSequence.__mul__[fault.route.core.PartitionedSequence.__mul__]>

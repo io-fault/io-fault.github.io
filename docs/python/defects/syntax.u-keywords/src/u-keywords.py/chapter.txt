@@ -6,6 +6,11 @@
 		- (source/area)`1 1 631 0`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`233`
+		- (metrics/profile-duration)`1134000`
+		- (metrics/profile-count)`26`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1134000`
+		- (metrics/profile-maximum)`1134000`
 Keyword Language Class Parser and Profile tests.
 
 
@@ -30,6 +35,11 @@ Keyword Language Class Parser and Profile tests.
 		- (source/area)`6 1 20 2`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`39440`
+		- (metrics/profile-count)`25`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`15000`
+		- (metrics/profile-maximum)`62000`
 (signature)`mkcsubset(Type)`
 
 
@@ -42,6 +52,11 @@ Keyword Language Class Parser and Profile tests.
 		- (source/area)`22 1 61 93`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`27`
+		- (metrics/profile-duration)`464000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`96.76724137931035`
+		- (metrics/profile-minimum)`464000`
+		- (metrics/profile-maximum)`464000`
 (signature)`test_Profile_constructors_v1(test)`
 
 - (context-local/factor-element)&<fault.syntax/keywords#Profile[fault.syntax.keywords.Profile]>
@@ -56,6 +71,11 @@ Keyword Language Class Parser and Profile tests.
 		- (source/area)`63 1 69 42`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`280000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`85.71428571428571`
+		- (metrics/profile-minimum)`280000`
+		- (metrics/profile-maximum)`280000`
 (signature)`test_Parser_constructors(test)`
 
 - (context-local/factor-element)&<fault.syntax/keywords#Parser.__init__[fault.syntax.keywords.Parser.__init__]>
@@ -71,6 +91,11 @@ Keyword Language Class Parser and Profile tests.
 		- (source/area)`71 1 94 35`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`15`
+		- (metrics/profile-duration)`566000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`93.28621908127208`
+		- (metrics/profile-minimum)`566000`
+		- (metrics/profile-maximum)`566000`
 (signature)`test_Parser_words(test)`
 
 - (context-local/factor-element)&<fault.syntax/keywords#Parser[fault.syntax.keywords.Parser]>
@@ -86,6 +111,11 @@ Keyword Language Class Parser and Profile tests.
 		- (source/area)`96 1 125 49`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`15`
+		- (metrics/profile-duration)`616000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`92.04545454545455`
+		- (metrics/profile-minimum)`616000`
+		- (metrics/profile-maximum)`616000`
 (signature)`test_Parser_spaces(test)`
 
 - (context-local/factor-element)&<fault.syntax/keywords#Parser[fault.syntax.keywords.Parser]>
@@ -101,6 +131,11 @@ Keyword Language Class Parser and Profile tests.
 		- (source/area)`127 1 142 52`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`9`
+		- (metrics/profile-duration)`617000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`89.9513776337115`
+		- (metrics/profile-minimum)`617000`
+		- (metrics/profile-maximum)`617000`
 (signature)`test_Parser_exclusion_classification(test)`
 
 - (context-local/factor-element)&<fault.syntax/keywords#Parser[fault.syntax.keywords.Parser]>
@@ -116,6 +151,11 @@ Keyword Language Class Parser and Profile tests.
 		- (source/area)`144 1 157 54`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`8`
+		- (metrics/profile-duration)`563000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`92.71758436944938`
+		- (metrics/profile-minimum)`563000`
+		- (metrics/profile-maximum)`563000`
 (signature)`test_Parser_literal_classification(test)`
 
 - (context-local/factor-element)&<fault.syntax/keywords#Parser[fault.syntax.keywords.Parser]>
@@ -131,6 +171,11 @@ Keyword Language Class Parser and Profile tests.
 		- (source/area)`159 1 169 55`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`476000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`92.64705882352942`
+		- (metrics/profile-minimum)`476000`
+		- (metrics/profile-maximum)`476000`
 (signature)`test_Parser_enclosure_classification(test)`
 
 - (context-local/factor-element)&<fault.syntax/keywords#Parser[fault.syntax.keywords.Parser]>
@@ -146,6 +191,11 @@ Keyword Language Class Parser and Profile tests.
 		- (source/area)`171 1 184 50`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`9`
+		- (metrics/profile-duration)`504000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`91.07142857142857`
+		- (metrics/profile-minimum)`504000`
+		- (metrics/profile-maximum)`504000`
 (signature)`test_Parser_operation_classification(test)`
 
 - (context-local/factor-element)&<fault.syntax/keywords#Parser[fault.syntax.keywords.Parser]>
@@ -161,6 +211,11 @@ Keyword Language Class Parser and Profile tests.
 		- (source/area)`186 1 197 44`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
+		- (metrics/profile-duration)`401000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`91.52119700748129`
+		- (metrics/profile-minimum)`401000`
+		- (metrics/profile-maximum)`401000`
 (signature)`test_Parser_router_classification(test)`
 
 - (context-local/factor-element)&<fault.syntax/keywords#Parser[fault.syntax.keywords.Parser]>
@@ -176,6 +231,11 @@ Keyword Language Class Parser and Profile tests.
 		- (source/area)`199 1 211 52`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`8`
+		- (metrics/profile-duration)`443000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`90.74492099322799`
+		- (metrics/profile-minimum)`443000`
+		- (metrics/profile-maximum)`443000`
 (signature)`test_Parser_terminator_classification(test)`
 
 - (context-local/factor-element)&<fault.syntax/keywords#Parser[fault.syntax.keywords.Parser]>
@@ -191,6 +251,11 @@ Keyword Language Class Parser and Profile tests.
 		- (source/area)`213 1 222 46`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`386000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`90.15544041450777`
+		- (metrics/profile-minimum)`386000`
+		- (metrics/profile-maximum)`386000`
 (signature)`test_Parser_compound_operators(test)`
 
 - (context-local/factor-element)&<fault.syntax/keywords#Parser[fault.syntax.keywords.Parser]>
@@ -206,6 +271,11 @@ Keyword Language Class Parser and Profile tests.
 		- (source/area)`224 1 245 51`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`11`
+		- (metrics/profile-duration)`523000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`92.54302103250478`
+		- (metrics/profile-minimum)`523000`
+		- (metrics/profile-maximum)`523000`
 (signature)`test_Parser_fragments(test)`
 
 - (context-local/factor-element)&<fault.syntax/keywords#Parser[fault.syntax.keywords.Parser]>
@@ -221,6 +291,11 @@ Keyword Language Class Parser and Profile tests.
 		- (source/area)`247 1 255 33`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`283000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`86.92579505300353`
+		- (metrics/profile-minimum)`283000`
+		- (metrics/profile-maximum)`283000`
 (signature)`test_Parser_allocstack(test)`
 
 - (context-local/factor-element)&<fault.syntax/keywords#Parser.allocstack[fault.syntax.keywords.Parser.allocstack]>
@@ -237,6 +312,11 @@ Sanity.
 		- (source/area)`257 1 280 22`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`11`
+		- (metrics/profile-duration)`411000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`89.78102189781022`
+		- (metrics/profile-minimum)`411000`
+		- (metrics/profile-maximum)`411000`
 (signature)`test_Parser_delimit_note_nothing(test)`
 
 - (context-local/factor-element)&<fault.syntax/keywords#Parser.delimit[fault.syntax.keywords.Parser.delimit]>
@@ -253,6 +333,11 @@ Checks that the initial switch is injected in the stream.
 		- (source/area)`282 1 309 36`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`10`
+		- (metrics/profile-duration)`354000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`88.70056497175142`
+		- (metrics/profile-minimum)`354000`
+		- (metrics/profile-maximum)`354000`
 (signature)`test_Parser_delimit_note_exclusion(test)`
 
 - (context-local/factor-element)&<fault.syntax/keywords#Parser.delimit[fault.syntax.keywords.Parser.delimit]>
@@ -267,6 +352,11 @@ Checks that the initial switch is injected in the stream.
 		- (source/area)`311 1 345 36`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`11`
+		- (metrics/profile-duration)`361000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`89.75069252077562`
+		- (metrics/profile-minimum)`361000`
+		- (metrics/profile-maximum)`361000`
 (signature)`test_Parser_delimit_note_capture(test)`
 
 - (context-local/factor-element)&<fault.syntax/keywords#Parser.delimit[fault.syntax.keywords.Parser.delimit]>
@@ -285,6 +375,11 @@ Checks that 'delimit' is transitioned to start and stop.
 		- (source/area)`349 1 388 18`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`76500`
+		- (metrics/profile-count)`2`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`74000`
+		- (metrics/profile-maximum)`79000`
 (signature)`delimit_nested(test, parser, t_type)`
 
 
@@ -299,6 +394,11 @@ Checks that 'delimit' is transitioned to start and stop.
 		- (source/area)`390 1 422 36`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`93000`
+		- (metrics/profile-count)`2`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`88000`
+		- (metrics/profile-maximum)`98000`
 (signature)`delimit_nested_inconsistent(test, parser, t_type)`
 
 
@@ -313,6 +413,11 @@ Checks that 'delimit' is transitioned to start and stop.
 		- (source/area)`424 1 455 18`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`76500`
+		- (metrics/profile-count)`2`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`74000`
+		- (metrics/profile-maximum)`79000`
 (signature)`delimit_nested_inconsistent_alteration(test, parser, t_type)`
 
 
@@ -325,6 +430,11 @@ Checks that 'delimit' is transitioned to start and stop.
 		- (source/area)`457 1 465 42`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`330000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`65.45454545454545`
+		- (metrics/profile-minimum)`330000`
+		- (metrics/profile-maximum)`330000`
 (signature)`test_Parser_delimit_exclusion_nested(test)`
 
 - (context-local/factor-element)&<fault.syntax/keywords#Parser.delimit[fault.syntax.keywords.Parser.delimit]>
@@ -341,6 +451,11 @@ Checks that 'delimit' recognizes nested exclusions with redundant switches.
 		- (source/area)`467 1 477 55`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`389000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`64.01028277634961`
+		- (metrics/profile-minimum)`389000`
+		- (metrics/profile-maximum)`389000`
 (signature)`test_Parser_delimit_exclusion_unnested(test)`
 
 - (context-local/factor-element)&<fault.syntax/keywords#Parser.delimit[fault.syntax.keywords.Parser.delimit]>
@@ -359,6 +474,11 @@ when an inconsistent nested comment is found.
 		- (source/area)`479 1 489 66`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`356000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`66.85393258426966`
+		- (metrics/profile-minimum)`356000`
+		- (metrics/profile-maximum)`356000`
 (signature)`test_Parser_delimit_exclusion_unnested_alternate(test)`
 
 - (context-local/factor-element)&<fault.syntax/keywords#Parser.delimit[fault.syntax.keywords.Parser.delimit]>
@@ -377,6 +497,11 @@ when an inconsistent nested comment is found.
 		- (source/area)`493 1 505 40`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
+		- (metrics/profile-duration)`339000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`66.3716814159292`
+		- (metrics/profile-minimum)`339000`
+		- (metrics/profile-maximum)`339000`
 (signature)`test_Parser_delimit_literal_nested(test)`
 
 - (context-local/factor-element)&<fault.syntax/keywords#Parser.delimit[fault.syntax.keywords.Parser.delimit]>
@@ -393,6 +518,11 @@ Checks that 'delimit' recognizes nested exclusions with redundant switches.
 		- (source/area)`507 1 521 53`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
+		- (metrics/profile-duration)`378000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`64.02116402116403`
+		- (metrics/profile-minimum)`378000`
+		- (metrics/profile-maximum)`378000`
 (signature)`test_Parser_delimit_literal_unnested(test)`
 
 - (context-local/factor-element)&<fault.syntax/keywords#Parser.delimit[fault.syntax.keywords.Parser.delimit]>
@@ -411,6 +541,11 @@ when an inconsistent nested comment is found.
 		- (source/area)`523 1 537 64`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
+		- (metrics/profile-duration)`327000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`65.74923547400611`
+		- (metrics/profile-minimum)`327000`
+		- (metrics/profile-maximum)`327000`
 (signature)`test_Parser_delimit_literal_unnested_alternate(test)`
 
 - (context-local/factor-element)&<fault.syntax/keywords#Parser.delimit[fault.syntax.keywords.Parser.delimit]>
@@ -429,6 +564,11 @@ when an inconsistent nested comment is found.
 		- (source/area)`539 1 570 18`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`8`
+		- (metrics/profile-duration)`422000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`92.18009478672985`
+		- (metrics/profile-minimum)`422000`
+		- (metrics/profile-maximum)`422000`
 (signature)`test_Parser_process_line(test)`
 
 - (context-local/factor-element)&<fault.syntax/keywords#Parser.process_line[fault.syntax.keywords.Parser.process_line]>
@@ -445,6 +585,11 @@ Sanity check. Essentially, duplicate of (factor-local/function)&<#test_Parser_pr
 		- (source/area)`572 1 601 18`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
+		- (metrics/profile-duration)`461000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`91.3232104121475`
+		- (metrics/profile-minimum)`461000`
+		- (metrics/profile-maximum)`461000`
 (signature)`test_Parser_process_lines(test)`
 
 - (context-local/factor-element)&<fault.syntax/keywords#Parser.process_lines[fault.syntax.keywords.Parser.process_lines]>
@@ -461,6 +606,11 @@ Sanity check and validation of context breaks.
 		- (source/area)`603 1 631 18`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
+		- (metrics/profile-duration)`421000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`90.97387173396675`
+		- (metrics/profile-minimum)`421000`
+		- (metrics/profile-maximum)`421000`
 (signature)`test_Parser_process_document(test)`
 
 - (context-local/factor-element)&<fault.syntax/keywords#Parser.process_document[fault.syntax.keywords.Parser.process_document]>

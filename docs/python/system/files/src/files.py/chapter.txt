@@ -6,6 +6,11 @@
 		- (source/area)`1 1 1108 0`
 		- (coverage-zeros)`96`
 		- (coverage-counters)`533`
+		- (metrics/profile-duration)`15054628`
+		- (metrics/profile-count)`3636`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`3059000`
+		- (metrics/profile-maximum)`99437000`
 Filesystem interfaces and data structures.
 
 Current working directory related interfaces are provided in (project-local/unknown)&<process>.
@@ -295,6 +300,11 @@ Exception raised by (factor-local/method)&<#Path.fs_require[Path.fs_require]> wh
 		- (source/area)`76 2 82 32`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`3285`
+		- (metrics/profile-count)`7`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`5000`
 (signature)`__init__(self, subject, type, violation, rtype, properties)`
 
 
@@ -309,6 +319,11 @@ Exception raised by (factor-local/method)&<#Path.fs_require[Path.fs_require]> wh
 		- (source/area)`84 2 101 26`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`14`
+		- (metrics/profile-duration)`20857`
+		- (metrics/profile-count)`7`
+		- (metrics/profile-residency)`65.75342465753424`
+		- (metrics/profile-minimum)`8000`
+		- (metrics/profile-maximum)`28000`
 (signature)`__str__(self)`
 
 
@@ -401,6 +416,11 @@ Likely undesired noise if a stat-cache is employed by (factor-local/class)&<#Pat
 		- (source/area)`130 2 135 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`42800`
+		- (metrics/profile-count)`5`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`35000`
+		- (metrics/profile-maximum)`60000`
 
 [ Status >> _read_user ]
 ! CONTROL:
@@ -449,6 +469,11 @@ Likely undesired noise if a stat-cache is employed by (factor-local/class)&<#Pat
 		- (source/area)`152 2 158 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`473`
+		- (metrics/profile-count)`19`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`1000`
 The status record produced by the system ((none/invalid)&<http://fault.io/dev/null[os.path.stat]>).
 
 
@@ -505,6 +530,11 @@ Number of bytes contained by the file.
 		- (source/area)`178 2 197 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`6000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`83.33333333333334`
+		- (metrics/profile-minimum)`6000`
+		- (metrics/profile-maximum)`6000`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -568,6 +598,11 @@ Time of creation; UTC. Not available on all systems.
 		- (source/area)`215 2 221 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`57812`
+		- (metrics/profile-count)`16`
+		- (metrics/profile-residency)`76.10810810810811`
+		- (metrics/profile-minimum)`11000`
+		- (metrics/profile-maximum)`223000`
 Time of last modification; UTC.
 
 
@@ -664,6 +699,11 @@ Time of last status change; UTC.
 		- (source/area)`256 2 264 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`13000`
+		- (metrics/profile-count)`2`
+		- (metrics/profile-residency)`73.07692307692307`
+		- (metrics/profile-minimum)`3000`
+		- (metrics/profile-maximum)`23000`
 		- (type/syntax)`bool`
 		- (type/invalid/unknown)&<#bool>
 		
@@ -700,6 +740,11 @@ Extended attributes are not checked.
 		- (source/area)`274 1 280 30`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`37953`
+		- (metrics/profile-count)`343548`
+		- (metrics/profile-residency)`96.85444897138396`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`18300000`
 (signature)`path_string_cache(path)`
 
 
@@ -815,6 +860,11 @@ available for getting the working directory of the process.
 		- (source/area)`308 2 361 13`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`27`
+		- (metrics/profile-duration)`26391`
+		- (metrics/profile-count)`23`
+		- (metrics/profile-residency)`32.28995057660626`
+		- (metrics/profile-minimum)`10000`
+		- (metrics/profile-maximum)`91000`
 (signature)`fs_require(self)`
 
 
@@ -827,6 +877,11 @@ available for getting the working directory of the process.
 		- (source/area)`362 2 379 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`7921`
+		- (metrics/profile-count)`1474`
+		- (metrics/profile-residency)`37.93251113394999`
+		- (metrics/profile-minimum)`3000`
+		- (metrics/profile-maximum)`234000`
 (signature)`from_path(Class, path)`
 
 Construct a (factor-local/class)&<#Path[Path]> instance from the given absolute or relative path
@@ -848,6 +903,11 @@ directory is *not* the relevant context.
 		- (source/area)`380 2 397 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`16047`
+		- (metrics/profile-count)`21`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`7000`
+		- (metrics/profile-maximum)`53000`
 (signature)`from_relative(Class, context, path)`
 
 Return a new Route pointing to the file referenced by (factor-local/parameter)&<#Path.from_relative.Parameters.path[path]>;
@@ -870,6 +930,11 @@ appropriate constructor to use.
 		- (source/area)`398 2 401 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`6804`
+		- (metrics/profile-count)`17723`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`906000`
 (signature)`from_absolute(Class, path)`
 
 
@@ -884,6 +949,11 @@ appropriate constructor to use.
 		- (source/area)`402 2 415 14`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`8`
+		- (metrics/profile-duration)`22000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`22000`
+		- (metrics/profile-maximum)`22000`
 (signature)`from_absolute_parts(Class, start, *paths)`
 
 
@@ -898,6 +968,11 @@ appropriate constructor to use.
 		- (source/area)`416 2 419 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`1333`
+		- (metrics/profile-count)`8459`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`37000`
 		- (type/syntax)`Iterable[Sequence[str]]`
 		
 (signature)`_partition_string(path)`
@@ -912,6 +987,11 @@ appropriate constructor to use.
 		- (source/area)`420 2 425 61`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`186000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`90.86021505376344`
+		- (metrics/profile-minimum)`186000`
+		- (metrics/profile-maximum)`186000`
 (signature)`from_partitioned_string(Class, path)`
 
 Construct an absolute path while interpreting consecutive separators
@@ -929,6 +1009,11 @@ as distinct partitions.
 		- (source/area)`427 2 435 27`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`20825`
+		- (metrics/profile-count)`8458`
+		- (metrics/profile-residency)`93.60689894006575`
+		- (metrics/profile-minimum)`5000`
+		- (metrics/profile-maximum)`2003000`
 (signature)`__matmul__(self, path)`
 
 
@@ -941,6 +1026,11 @@ as distinct partitions.
 		- (source/area)`436 2 457 15`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`9`
+		- (metrics/profile-duration)`28113985`
+		- (metrics/profile-count)`71`
+		- (metrics/profile-residency)`1.9358817449888353`
+		- (metrics/profile-minimum)`779000`
+		- (metrics/profile-maximum)`1105704000`
 (signature)`fs_tmpdir(Class)`
 
 Create a temporary directory at a new route using a context manager.
@@ -965,6 +1055,11 @@ behavior on some platforms.
 		- (source/area)`459 2 464 41`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`23500`
+		- (metrics/profile-count)`2`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`19000`
+		- (metrics/profile-maximum)`28000`
 (signature)`__repr__(self)`
 
 
@@ -979,6 +1074,11 @@ behavior on some platforms.
 		- (source/area)`466 2 469 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`13790`
+		- (metrics/profile-count)`989879`
+		- (metrics/profile-residency)`18.729310110038664`
+		- (metrics/profile-minimum)`2000`
+		- (metrics/profile-maximum)`19490000`
 (signature)`__str__(self)`
 
 
@@ -991,6 +1091,11 @@ behavior on some platforms.
 		- (source/area)`470 2 482 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`9`
+		- (metrics/profile-duration)`19956`
+		- (metrics/profile-count)`6508325`
+		- (metrics/profile-residency)`90.27697466181102`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`477010000`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -1006,6 +1111,11 @@ Returns the full filesystem path designated by the route.
 		- (source/area)`483 2 490 58`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`10000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`80.0`
+		- (metrics/profile-minimum)`10000`
+		- (metrics/profile-maximum)`10000`
 		- (type/syntax)`bytes`
 		- (type/invalid/unknown)&<#bytes>
 		
@@ -1023,6 +1133,11 @@ returned by encoding the (factor-local/property)&<#Path.fullpath[fullpath]> in (
 		- (source/area)`492 2 511 10`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`11`
+		- (metrics/profile-duration)`3166`
+		- (metrics/profile-count)`6`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`15000`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -1043,6 +1158,11 @@ Segment instances should be given with an asterisk applied to the argument.
 		- (source/area)`512 2 518 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`17500`
+		- (metrics/profile-count)`2`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`3000`
+		- (metrics/profile-maximum)`32000`
 Filesystem specific alias for (invalid/unknown)&<#identifier>.
 
 
@@ -1055,6 +1175,11 @@ Filesystem specific alias for (invalid/unknown)&<#identifier>.
 		- (source/area)`519 2 530 16`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`2605`
+		- (metrics/profile-count)`352`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`12000`
 Return the last dot-extension of the filename.
 (invalid/unknown)&<#None> if the filename has no `.` characters at all.
 
@@ -1068,6 +1193,11 @@ Return the last dot-extension of the filename.
 		- (source/area)`532 2 539 51`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`33617`
+		- (metrics/profile-count)`242382`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`2000`
+		- (metrics/profile-maximum)`10398000`
 (signature)`suffix_filename(self, appended_suffix)`
 
 Modify the name of the file adding the given suffix.
@@ -1098,6 +1228,11 @@ Returns a new (factor-local/class)&<#Path[Path]> Route.
 		- (source/area)`542 2 549 49`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`16000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`16000`
+		- (metrics/profile-maximum)`16000`
 (signature)`prefix_filename(self, prefix_string)`
 
 Modify the name of the file adding the given prefix.
@@ -1130,6 +1265,11 @@ Returns a new (factor-local/class)&<#Path[Path]> Route.
 		- (source/area)`552 2 566 44`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`14`
+		- (metrics/profile-duration)`21000`
+		- (metrics/profile-count)`4`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`9000`
+		- (metrics/profile-maximum)`42000`
 (signature)`__pos__(self)`
 
 
@@ -1142,6 +1282,11 @@ Returns a new (factor-local/class)&<#Path[Path]> Route.
 		- (source/area)`568 2 592 3`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`11`
+		- (metrics/profile-duration)`3272`
+		- (metrics/profile-count)`22999`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`3385000`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -1178,6 +1323,11 @@ path entries delimiting partitions are eliminated.
 		- (source/area)`595 2 596 55`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`23666`
+		- (metrics/profile-count)`18`
+		- (metrics/profile-residency)`78.87323943661973`
+		- (metrics/profile-minimum)`10000`
+		- (metrics/profile-maximum)`75000`
 		- (type/syntax)`Status`
 		- (type/factor-local/class)&<#Status[Status]>
 		
@@ -1193,6 +1343,11 @@ path entries delimiting partitions are eliminated.
 		- (source/area)`598 2 619 49`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`11`
+		- (metrics/profile-duration)`51581`
+		- (metrics/profile-count)`3098076`
+		- (metrics/profile-residency)`64.62365842646275`
+		- (metrics/profile-minimum)`4000`
+		- (metrics/profile-maximum)`477054000`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -1241,6 +1396,11 @@ Whether the file at the route is considered to be an executable.
 		- (source/area)`629 2 643 9`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`12`
+		- (metrics/profile-duration)`55471`
+		- (metrics/profile-count)`6728`
+		- (metrics/profile-residency)`29.42268737339635`
+		- (metrics/profile-minimum)`11000`
+		- (metrics/profile-maximum)`19526000`
 		- (type/syntax)`Iterable[Selector]`
 		
 (signature)`fs_follow_links(self)`
@@ -1255,6 +1415,11 @@ Whether the file at the route is considered to be an executable.
 		- (source/area)`645 2 675 13`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`16`
+		- (metrics/profile-duration)`4354642`
+		- (metrics/profile-count)`1027`
+		- (metrics/profile-residency)`3.376982070194253`
+		- (metrics/profile-minimum)`76000`
+		- (metrics/profile-maximum)`70729000`
 (signature)`fs_iterfiles()`
 
 Generate (factor-local/class)&<#Path[Path]> instances identifying the files held by the directory, (invalid/unknown)&<#self>.
@@ -1273,6 +1438,11 @@ If (invalid/unknown)&<#self> is not a directory or cannot be searched, an empty 
 		- (source/area)`677 2 705 22`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`16`
+		- (metrics/profile-duration)`256926`
+		- (metrics/profile-count)`1402607`
+		- (metrics/profile-residency)`59.229763663040146`
+		- (metrics/profile-minimum)`8000`
+		- (metrics/profile-maximum)`448102000`
 (signature)`fs_list(self)`
 
 Retrieve the list of files contained by the directory referred to by (factor-local/parameter)&<#Path.fs_list.Parameters.self[self]>.
@@ -1290,6 +1460,11 @@ Sockets, pipes, devices, and other non-data files are not retained in the list.
 		- (source/area)`707 2 728 18`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`11`
+		- (metrics/profile-duration)`5372560`
+		- (metrics/profile-count)`301420`
+		- (metrics/profile-residency)`0.7351536968373124`
+		- (metrics/profile-minimum)`45000`
+		- (metrics/profile-maximum)`1205860000`
 (signature)`fs_index(self)`
 
 Generate pairs of directories associated with their files.
@@ -1308,6 +1483,11 @@ Sockets, pipes, devices, broken links, and other non-data files are not retained
 		- (source/area)`730 2 808 17`
 		- (coverage-zeros)`13`
 		- (coverage-counters)`48`
+		- (metrics/profile-duration)`97272`
+		- (metrics/profile-count)`11`
+		- (metrics/profile-residency)`89.34579439252336`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`188000`
 (signature)`fs_snapshot()`
 
 
@@ -1320,6 +1500,11 @@ Sockets, pipes, devices, broken links, and other non-data files are not retained
 		- (source/area)`810 2 845 52`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`15`
+		- (metrics/profile-duration)`295000`
+		- (metrics/profile-count)`6`
+		- (metrics/profile-residency)`16.89265536723164`
+		- (metrics/profile-minimum)`41000`
+		- (metrics/profile-maximum)`503000`
 		- (type/syntax)`Iterable[tuple[int, Selector]]`
 		
 (signature)`fs_since(self, since)`
@@ -1358,6 +1543,11 @@ The resulting iterable does not include directories.
 		- (source/area)`847 2 852 13`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`115500`
+		- (metrics/profile-count)`4`
+		- (metrics/profile-residency)`74.02597402597402`
+		- (metrics/profile-minimum)`21000`
+		- (metrics/profile-maximum)`202000`
 (signature)`fs_real(self)`
 
 
@@ -1389,6 +1579,11 @@ A Route to a symbolic link *will* return (invalid/unknown)&<#False> if the targe
 		- (source/area)`863 2 867 29`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`203398`
+		- (metrics/profile-count)`632`
+		- (metrics/profile-residency)`72.66935308211718`
+		- (metrics/profile-minimum)`30000`
+		- (metrics/profile-maximum)`18691000`
 (signature)`fs_modified(self)`
 
 Update the modification time of the file identified by (factor-local/parameter)&<#Path.fs_modified.Parameters.self[self]>.
@@ -1403,6 +1598,11 @@ Update the modification time of the file identified by (factor-local/parameter)&
 		- (source/area)`869 2 873 58`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`25250`
+		- (metrics/profile-count)`4`
+		- (metrics/profile-residency)`96.03960396039604`
+		- (metrics/profile-minimum)`14000`
+		- (metrics/profile-maximum)`50000`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
@@ -1420,6 +1620,11 @@ Return the size of the file as depicted by (none/invalid)&<http://fault.io/dev/n
 		- (source/area)`875 2 880 39`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`119555`
+		- (metrics/profile-count)`9`
+		- (metrics/profile-residency)`7.063197026022305`
+		- (metrics/profile-minimum)`27000`
+		- (metrics/profile-maximum)`273000`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
@@ -1437,6 +1642,11 @@ Return the modification time of the file.
 		- (source/area)`882 2 887 62`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`31666`
+		- (metrics/profile-count)`6`
+		- (metrics/profile-residency)`76.31578947368422`
+		- (metrics/profile-minimum)`26000`
+		- (metrics/profile-maximum)`44000`
 (signature)`set_last_modified(self, time)`
 
 Set the modification time of the file identified by the (invalid/unknown)&<#Route>.
@@ -1451,6 +1661,11 @@ Set the modification time of the file identified by the (invalid/unknown)&<#Rout
 		- (source/area)`889 2 894 18`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`473783`
+		- (metrics/profile-count)`4955`
+		- (metrics/profile-residency)`2.5588282150521517`
+		- (metrics/profile-minimum)`16000`
+		- (metrics/profile-maximum)`9926000`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -1468,6 +1683,11 @@ Retrieve the entire contents of the file as a (invalid/unknown)&<#str>.
 		- (source/area)`896 2 901 18`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`191000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`6.806282722513089`
+		- (metrics/profile-minimum)`191000`
+		- (metrics/profile-maximum)`191000`
 		- (type/syntax)`None`
 		
 (signature)`set_text_content(self, string)`
@@ -1503,6 +1723,11 @@ Return file specific meta data.
 		- (source/area)`914 2 931 13`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`10`
+		- (metrics/profile-duration)`109253447`
+		- (metrics/profile-count)`796`
+		- (metrics/profile-residency)`99.6168870814237`
+		- (metrics/profile-minimum)`19000`
+		- (metrics/profile-maximum)`60872241000`
 (signature)`fs_void(self)`
 
 
@@ -1517,6 +1742,11 @@ Return file specific meta data.
 		- (source/area)`933 2 942 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`9`
+		- (metrics/profile-duration)`609100275`
+		- (metrics/profile-count)`715`
+		- (metrics/profile-residency)`93.92958978998203`
+		- (metrics/profile-minimum)`235000`
+		- (metrics/profile-maximum)`17069075000`
 (signature)`fs_replace(self, replacement)`
 
 
@@ -1559,6 +1789,11 @@ Return file specific meta data.
 		- (source/area)`984 2 997 13`
 		- (coverage-zeros)`5`
 		- (coverage-counters)`11`
+		- (metrics/profile-duration)`98875`
+		- (metrics/profile-count)`8`
+		- (metrics/profile-residency)`93.55246523388116`
+		- (metrics/profile-minimum)`60000`
+		- (metrics/profile-maximum)`147000`
 (signature)`fs_link_relative(self, path)`
 
 
@@ -1573,6 +1808,11 @@ Return file specific meta data.
 		- (source/area)`999 2 1010 13`
 		- (coverage-zeros)`5`
 		- (coverage-counters)`9`
+		- (metrics/profile-duration)`79000`
+		- (metrics/profile-count)`2`
+		- (metrics/profile-residency)`84.81012658227847`
+		- (metrics/profile-minimum)`70000`
+		- (metrics/profile-maximum)`88000`
 (signature)`fs_link_absolute(self, path)`
 
 
@@ -1585,6 +1825,11 @@ Return file specific meta data.
 		- (source/area)`1012 2 1042 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`20`
+		- (metrics/profile-duration)`633802`
+		- (metrics/profile-count)`1403`
+		- (metrics/profile-residency)`50.1485000984003`
+		- (metrics/profile-minimum)`6000`
+		- (metrics/profile-maximum)`24864000`
 (signature)`fs_init(self)`
 
 Create and initialize a data file at the route using the given (factor-local/parameter)&<#Path.fs_init.Parameters.data[data]>.
@@ -1607,6 +1852,11 @@ Leading directories will be created as needed.
 		- (source/area)`1044 2 1055 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`9`
+		- (metrics/profile-duration)`88127`
+		- (metrics/profile-count)`10104`
+		- (metrics/profile-residency)`31.988944816169944`
+		- (metrics/profile-minimum)`18000`
+		- (metrics/profile-maximum)`10234000`
 (signature)`fs_alloc(self)`
 
 
@@ -1621,6 +1871,11 @@ Leading directories will be created as needed.
 		- (source/area)`1057 2 1075 27`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`15`
+		- (metrics/profile-duration)`266625`
+		- (metrics/profile-count)`4908`
+		- (metrics/profile-residency)`46.741357346837866`
+		- (metrics/profile-minimum)`6000`
+		- (metrics/profile-maximum)`20500000`
 (signature)`fs_mkdir(self)`
 
 
@@ -1633,6 +1888,11 @@ Leading directories will be created as needed.
 		- (source/area)`1076 2 1092 31`
 		- (coverage-zeros)`3`
 		- (coverage-counters)`8`
+		- (metrics/profile-duration)`2130208`
+		- (metrics/profile-count)`1006793`
+		- (metrics/profile-residency)`37.923301128334124`
+		- (metrics/profile-minimum)`11000`
+		- (metrics/profile-maximum)`1204955000`
 (signature)`fs_open(self, *args, **kw)`
 
 Open the file pointed to by the route.
@@ -1652,6 +1912,11 @@ leading up to the file don't exist, create the directories too.
 		- (source/area)`1094 2 1099 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`323109`
+		- (metrics/profile-count)`8022`
+		- (metrics/profile-residency)`3.0641802296466563`
+		- (metrics/profile-minimum)`15000`
+		- (metrics/profile-maximum)`15344000`
 		- (type/syntax)`bytes`
 		- (type/invalid/unknown)&<#bytes>
 		
@@ -1669,6 +1934,11 @@ leading up to the file don't exist, create the directories too.
 		- (source/area)`1101 2 1104 14`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`109633`
+		- (metrics/profile-count)`30`
+		- (metrics/profile-residency)`6.324110671936759`
+		- (metrics/profile-minimum)`63000`
+		- (metrics/profile-maximum)`202000`
 (signature)`fs_store(self, data)`
 
 

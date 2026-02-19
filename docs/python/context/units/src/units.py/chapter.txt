@@ -6,6 +6,11 @@
 		- (source/area)`1 1 60 0`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`24`
+		- (metrics/profile-duration)`6000`
+		- (metrics/profile-count)`8`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`6000`
+		- (metrics/profile-maximum)`6000`
 Information units for human readable sizes.
 
 
@@ -100,6 +105,11 @@ Information units for human readable sizes.
 		- (source/area)`28 1 30 46`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`6900`
+		- (metrics/profile-count)`10`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`12000`
 (signature)`identify(boundary, size)`
 
 
@@ -114,6 +124,11 @@ Information units for human readable sizes.
 		- (source/area)`32 1 34 40`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`11428`
+		- (metrics/profile-count)`7`
+		- (metrics/profile-residency)`36.25`
+		- (metrics/profile-minimum)`2000`
+		- (metrics/profile-maximum)`18000`
 (signature)`metric(size)`
 
 
@@ -128,6 +143,11 @@ Information units for human readable sizes.
 		- (source/area)`36 1 38 40`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`10333`
+		- (metrics/profile-count)`3`
+		- (metrics/profile-residency)`41.93548387096774`
+		- (metrics/profile-minimum)`3000`
+		- (metrics/profile-maximum)`15000`
 (signature)`iec(size)`
 
 
@@ -142,6 +162,11 @@ Information units for human readable sizes.
 		- (source/area)`40 1 49 35`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`24500`
+		- (metrics/profile-count)`4`
+		- (metrics/profile-residency)`67.3469387755102`
+		- (metrics/profile-minimum)`6000`
+		- (metrics/profile-maximum)`44000`
 (signature)`format_metric(size)`
 
 
@@ -156,5 +181,10 @@ Information units for human readable sizes.
 		- (source/area)`51 1 60 35`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`26000`
+		- (metrics/profile-count)`2`
+		- (metrics/profile-residency)`69.23076923076923`
+		- (metrics/profile-minimum)`6000`
+		- (metrics/profile-maximum)`46000`
 (signature)`format_iec(size)`
 

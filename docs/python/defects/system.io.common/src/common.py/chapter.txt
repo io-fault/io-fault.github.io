@@ -6,6 +6,11 @@
 		- (source/area)`1 1 712 0`
 		- (coverage-zeros)`41`
 		- (coverage-counters)`393`
+		- (metrics/profile-duration)`7222023`
+		- (metrics/profile-count)`43`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`4678000`
+		- (metrics/profile-maximum)`19166000`
 Common tools and tests employed across fault.defects.system.io tests.
 
 
@@ -138,6 +143,11 @@ Common tools and tests employed across fault.defects.system.io tests.
 		- (source/area)`15 1 20 2`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`20521`
+		- (metrics/profile-count)`23`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`4000`
+		- (metrics/profile-maximum)`40000`
 (signature)`allocpipe(A)`
 
 
@@ -152,6 +162,11 @@ Common tools and tests employed across fault.defects.system.io tests.
 		- (source/area)`22 1 28 15`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`81500`
+		- (metrics/profile-count)`16`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`15000`
+		- (metrics/profile-maximum)`349000`
 (signature)`allocsockets(A)`
 
 
@@ -196,6 +211,11 @@ Common tools and tests employed across fault.defects.system.io tests.
 		- (source/area)`42 1 43 49`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`634`
+		- (metrics/profile-count)`3659`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`25000`
 (signature)`rallocate(channel, quantity)`
 
 
@@ -259,6 +279,11 @@ Common tools and tests employed across fault.defects.system.io tests.
 		- (source/area)`52 2 55 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`1399`
+		- (metrics/profile-count)`7692`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`4868000`
 
 [ Delta >> demand ]
 ! CONTROL:
@@ -271,6 +296,11 @@ Common tools and tests employed across fault.defects.system.io tests.
 		- (source/area)`56 2 59 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`434`
+		- (metrics/profile-count)`7009`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`19000`
 
 [ Delta >> termination ]
 ! CONTROL:
@@ -283,6 +313,11 @@ Common tools and tests employed across fault.defects.system.io tests.
 		- (source/area)`60 2 65 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`500`
+		- (metrics/profile-count)`2`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`1000`
 
 [ Delta >> terminated ]
 ! CONTROL:
@@ -295,6 +330,11 @@ Common tools and tests employed across fault.defects.system.io tests.
 		- (source/area)`66 2 69 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`582`
+		- (metrics/profile-count)`700`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`17000`
 
 [ Delta >> resource ]
 ! CONTROL:
@@ -331,6 +371,11 @@ Common tools and tests employed across fault.defects.system.io tests.
 		- (source/area)`78 2 83 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`525`
+		- (metrics/profile-count)`8403`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`13000`
 
 [ Delta >> construct ]
 ! CONTROL:
@@ -343,6 +388,11 @@ Common tools and tests employed across fault.defects.system.io tests.
 		- (source/area)`84 2 92 70`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
+		- (metrics/profile-duration)`1152`
+		- (metrics/profile-count)`4412`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`20000`
 (signature)`construct(typ, channel)`
 
 
@@ -357,6 +407,11 @@ Common tools and tests employed across fault.defects.system.io tests.
 		- (source/area)`94 1 97 46`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`4587`
+		- (metrics/profile-count)`5203`
+		- (metrics/profile-residency)`78.68694486341545`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`2973000`
 (signature)`snapshot(array)`
 
 
@@ -371,6 +426,11 @@ Common tools and tests employed across fault.defects.system.io tests.
 		- (source/area)`99 1 101 24`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`18333`
+		- (metrics/profile-count)`15`
+		- (metrics/profile-residency)`75.27272727272728`
+		- (metrics/profile-minimum)`11000`
+		- (metrics/profile-maximum)`54000`
 (signature)`cycle(array)`
 
 
@@ -383,6 +443,11 @@ Common tools and tests employed across fault.defects.system.io tests.
 		- (source/area)`103 1 114 6`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`7`
+		- (metrics/profile-duration)`27657300`
+		- (metrics/profile-count)`10`
+		- (metrics/profile-residency)`49.97704041970836`
+		- (metrics/profile-minimum)`378000`
+		- (metrics/profile-maximum)`74751000`
 (signature)`loop(deliver, array)`
 
 Continuously (factor-local/parameter)&<#loop.Parameters.deliver[deliver]> transfers enqueued into the (factor-local/parameter)&<#loop.Parameters.array[array]>.
@@ -418,6 +483,11 @@ of event collection.
 		- (source/area)`122 2 127 19`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`41200`
+		- (metrics/profile-count)`10`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`24000`
+		- (metrics/profile-maximum)`141000`
 (signature)`__init__(self)`
 
 
@@ -446,6 +516,11 @@ Utility function for displaying the contents of a Array.
 		- (source/area)`146 2 147 20`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`1245`
+		- (metrics/profile-count)`53`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`3000`
 (signature)`force(self)`
 
 
@@ -460,6 +535,11 @@ Utility function for displaying the contents of a Array.
 		- (source/area)`149 2 156 20`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`22006`
+		- (metrics/profile-count)`5198`
+		- (metrics/profile-residency)`31.82652633051262`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`4890000`
 (signature)`cycle(self, activity)`
 
 
@@ -474,6 +554,11 @@ Utility function for displaying the contents of a Array.
 		- (source/area)`158 2 161 27`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`27666700`
+		- (metrics/profile-count)`10`
+		- (metrics/profile-residency)`0.03397586267968352`
+		- (metrics/profile-minimum)`385000`
+		- (metrics/profile-maximum)`74767000`
 (signature)`loop(self)`
 
 
@@ -488,6 +573,11 @@ Utility function for displaying the contents of a Array.
 		- (source/area)`162 2 172 27`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
+		- (metrics/profile-duration)`29266700`
+		- (metrics/profile-count)`10`
+		- (metrics/profile-residency)`5.761155169527142`
+		- (metrics/profile-minimum)`1819000`
+		- (metrics/profile-maximum)`76263000`
 (signature)`thread(self)`
 
 
@@ -502,6 +592,11 @@ Utility function for displaying the contents of a Array.
 		- (source/area)`173 2 190 9`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`14`
+		- (metrics/profile-duration)`8460351`
+		- (metrics/profile-count)`54`
+		- (metrics/profile-residency)`0.1197305952164672`
+		- (metrics/profile-minimum)`148000`
+		- (metrics/profile-maximum)`47771000`
 (signature)`manage(self, ct)`
 
 
@@ -514,6 +609,11 @@ Utility function for displaying the contents of a Array.
 		- (source/area)`192 2 209 14`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`8`
+		- (metrics/profile-duration)`366557`
+		- (metrics/profile-count)`694`
+		- (metrics/profile-residency)`85.87489337280013`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`47734000`
 (signature)`delta(self)`
 
 Wait for a cycle to occur; use to regulate transfer progress.
@@ -550,6 +650,11 @@ No autoread setup.
 		- (source/area)`217 2 223 39`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`1600`
+		- (metrics/profile-count)`10`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`4000`
 (signature)`__init__(self, *channels)`
 
 
@@ -564,6 +669,11 @@ No autoread setup.
 		- (source/area)`225 2 227 16`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`3384`
+		- (metrics/profile-count)`13`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`15000`
 (signature)`terminate(self)`
 
 
@@ -592,6 +702,11 @@ No autoread setup.
 		- (source/area)`234 2 236 18`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`1000`
+		- (metrics/profile-count)`3`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`1000`
 (signature)`raised(self)`
 
 
@@ -606,6 +721,11 @@ No autoread setup.
 		- (source/area)`238 2 245 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`869`
+		- (metrics/profile-count)`703`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`7000`
 (signature)`vacancies(self)`
 
 
@@ -620,6 +740,11 @@ No autoread setup.
 		- (source/area)`246 2 250 14`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`936`
+		- (metrics/profile-count)`111`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`3000`
 
 [ Events >> exhausted ]
 ! CONTROL:
@@ -632,6 +757,11 @@ No autoread setup.
 		- (source/area)`252 2 259 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`25848`
+		- (metrics/profile-count)`112`
+		- (metrics/profile-residency)`98.06563039723662`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`2572000`
 (signature)`exhausted(self)`
 
 
@@ -646,6 +776,11 @@ No autoread setup.
 		- (source/area)`260 2 263 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`29375`
+		- (metrics/profile-count)`112`
+		- (metrics/profile-residency)`12.006079027355623`
+		- (metrics/profile-minimum)`2000`
+		- (metrics/profile-maximum)`2575000`
 
 [ Events >> sockets ]
 ! CONTROL:
@@ -670,6 +805,11 @@ No autoread setup.
 		- (source/area)`271 2 279 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`190750`
+		- (metrics/profile-count)`4`
+		- (metrics/profile-residency)`74.83617300131061`
+		- (metrics/profile-minimum)`8000`
+		- (metrics/profile-maximum)`524000`
 (signature)`get_data(self)`
 
 
@@ -684,6 +824,11 @@ No autoread setup.
 		- (source/area)`280 2 281 24`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`193500`
+		- (metrics/profile-count)`4`
+		- (metrics/profile-residency)`1.421188630490956`
+		- (metrics/profile-minimum)`10000`
+		- (metrics/profile-maximum)`527000`
 
 [ Events >> clear ]
 ! CONTROL:
@@ -696,6 +841,11 @@ No autoread setup.
 		- (source/area)`283 2 284 25`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`1105`
+		- (metrics/profile-count)`57`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`7000`
 (signature)`clear(self)`
 
 
@@ -710,6 +860,11 @@ No autoread setup.
 		- (source/area)`286 2 288 36`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`6094`
+		- (metrics/profile-count)`339`
+		- (metrics/profile-residency)`84.80154888673765`
+		- (metrics/profile-minimum)`2000`
+		- (metrics/profile-maximum)`29000`
 (signature)`setup_read(self, quantity)`
 
 
@@ -724,6 +879,11 @@ No autoread setup.
 		- (source/area)`290 2 292 22`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`2793`
+		- (metrics/profile-count)`58`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`6000`
 (signature)`setup_write(self, resource)`
 
 
@@ -756,6 +916,11 @@ For cases involving send and receives.
 		- (source/area)`299 2 311 3`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`1950`
+		- (metrics/profile-count)`40`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`12000`
 (signature)`__init__(self, channels)`
 
 
@@ -770,6 +935,11 @@ For cases involving send and receives.
 		- (source/area)`313 2 320 35`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`19047`
+		- (metrics/profile-count)`3569`
+		- (metrics/profile-residency)`87.65942423395461`
+		- (metrics/profile-minimum)`4000`
+		- (metrics/profile-maximum)`3053000`
 (signature)`_read_event(self, activity)`
 
 
@@ -784,6 +954,11 @@ For cases involving send and receives.
 		- (source/area)`322 2 324 16`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`2875`
+		- (metrics/profile-count)`40`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`21000`
 (signature)`terminate(self)`
 
 
@@ -798,6 +973,11 @@ For cases involving send and receives.
 		- (source/area)`326 2 328 86`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`553`
+		- (metrics/profile-count)`998`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`13000`
 (signature)`_write_term_check(self)`
 
 
@@ -812,6 +992,11 @@ For cases involving send and receives.
 		- (source/area)`330 2 334 10`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`539`
+		- (metrics/profile-count)`326`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`10000`
 (signature)`_read_term_check(self)`
 
 
@@ -826,6 +1011,11 @@ For cases involving send and receives.
 		- (source/area)`335 2 339 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`9266`
+		- (metrics/profile-count)`30`
+		- (metrics/profile-residency)`83.09352517985612`
+		- (metrics/profile-minimum)`3000`
+		- (metrics/profile-maximum)`44000`
 
 [ Endpoint >> write_exhaustions ]
 ! CONTROL:
@@ -838,6 +1028,11 @@ For cases involving send and receives.
 		- (source/area)`340 2 344 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`20826`
+		- (metrics/profile-count)`714`
+		- (metrics/profile-residency)`87.82784129119032`
+		- (metrics/profile-minimum)`2000`
+		- (metrics/profile-maximum)`3571000`
 
 [ Endpoint >> read_payload_int ]
 ! CONTROL:
@@ -862,6 +1057,11 @@ For cases involving send and receives.
 		- (source/area)`354 2 362 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`12310`
+		- (metrics/profile-count)`264`
+		- (metrics/profile-residency)`78.46153846153847`
+		- (metrics/profile-minimum)`6000`
+		- (metrics/profile-maximum)`70000`
 
 [ Endpoint >> units_written ]
 ! CONTROL:
@@ -874,6 +1074,11 @@ For cases involving send and receives.
 		- (source/area)`363 2 369 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`15250`
+		- (metrics/profile-count)`4`
+		- (metrics/profile-residency)`81.9672131147541`
+		- (metrics/profile-minimum)`9000`
+		- (metrics/profile-maximum)`24000`
 
 [ Endpoint >> units_read ]
 ! CONTROL:
@@ -886,6 +1091,11 @@ For cases involving send and receives.
 		- (source/area)`370 2 374 4`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`14000`
+		- (metrics/profile-count)`4`
+		- (metrics/profile-residency)`82.14285714285714`
+		- (metrics/profile-minimum)`9000`
+		- (metrics/profile-maximum)`19000`
 
 [ Endpoint >> clear ]
 ! CONTROL:
@@ -898,6 +1108,11 @@ For cases involving send and receives.
 		- (source/area)`376 2 379 22`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`884`
+		- (metrics/profile-count)`268`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`4000`
 (signature)`clear(self)`
 
 
@@ -940,6 +1155,11 @@ For cases involving send and receives.
 		- (source/area)`388 2 390 70`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`7343`
+		- (metrics/profile-count)`32`
+		- (metrics/profile-residency)`71.91489361702128`
+		- (metrics/profile-minimum)`4000`
+		- (metrics/profile-maximum)`26000`
 (signature)`setup_read(self, rallocation)`
 
 
@@ -954,6 +1174,11 @@ For cases involving send and receives.
 		- (source/area)`392 2 394 38`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`3333`
+		- (metrics/profile-count)`276`
+		- (metrics/profile-residency)`85.65217391304347`
+		- (metrics/profile-minimum)`2000`
+		- (metrics/profile-maximum)`20000`
 (signature)`setup_write(self, resource)`
 
 
@@ -986,6 +1211,11 @@ Endpoint that transfers objects.
 		- (source/area)`401 2 415 62`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`46750`
+		- (metrics/profile-count)`4`
+		- (metrics/profile-residency)`78.6096256684492`
+		- (metrics/profile-minimum)`5000`
+		- (metrics/profile-maximum)`108000`
 (signature)`__init__(self, channels)`
 
 
@@ -1000,6 +1230,11 @@ Endpoint that transfers objects.
 		- (source/area)`417 2 430 38`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`10`
+		- (metrics/profile-duration)`16800`
+		- (metrics/profile-count)`30`
+		- (metrics/profile-residency)`87.5`
+		- (metrics/profile-minimum)`5000`
+		- (metrics/profile-maximum)`50000`
 (signature)`_read_event(self, activity)`
 
 
@@ -1014,6 +1249,11 @@ Endpoint that transfers objects.
 		- (source/area)`432 2 434 26`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`3875`
+		- (metrics/profile-count)`24`
+		- (metrics/profile-residency)`81.72043010752688`
+		- (metrics/profile-minimum)`2000`
+		- (metrics/profile-maximum)`6000`
 (signature)`_write_event(self, activity)`
 
 
@@ -1028,6 +1268,11 @@ Endpoint that transfers objects.
 		- (source/area)`436 2 438 16`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`14750`
+		- (metrics/profile-count)`4`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`30000`
 (signature)`terminate(self)`
 
 
@@ -1042,6 +1287,11 @@ Endpoint that transfers objects.
 		- (source/area)`440 2 442 86`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`1045`
+		- (metrics/profile-count)`22`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`5000`
 (signature)`_write_term_check(self)`
 
 
@@ -1082,6 +1332,11 @@ Endpoint that transfers objects.
 		- (source/area)`453 2 454 30`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`1950`
+		- (metrics/profile-count)`20`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`9000`
 (signature)`clear(self)`
 
 
@@ -1096,6 +1351,11 @@ Endpoint that transfers objects.
 		- (source/area)`456 2 459 31`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`30454`
+		- (metrics/profile-count)`22`
+		- (metrics/profile-residency)`96.56716417910447`
+		- (metrics/profile-minimum)`4000`
+		- (metrics/profile-maximum)`299000`
 (signature)`send(self, obj)`
 
 
@@ -1110,6 +1370,11 @@ Endpoint that transfers objects.
 		- (source/area)`461 1 462 5`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`250`
+		- (metrics/profile-count)`4`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`1000`
 (signature)`exchange_nothing(test, am, client, server)`
 
 
@@ -1124,6 +1389,11 @@ Endpoint that transfers objects.
 		- (source/area)`464 1 501 54`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`29`
+		- (metrics/profile-duration)`636000`
+		- (metrics/profile-count)`4`
+		- (metrics/profile-residency)`13.63993710691824`
+		- (metrics/profile-minimum)`520000`
+		- (metrics/profile-maximum)`890000`
 (signature)`exchange_few_bytes(test, am, client, server)`
 
 
@@ -1138,6 +1408,11 @@ Endpoint that transfers objects.
 		- (source/area)`503 1 539 41`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`27`
+		- (metrics/profile-duration)`661000`
+		- (metrics/profile-count)`4`
+		- (metrics/profile-residency)`1.7776096822995462`
+		- (metrics/profile-minimum)`385000`
+		- (metrics/profile-maximum)`1395000`
 (signature)`exchange_many_bytes(test, am, client, server)`
 
 
@@ -1152,6 +1427,11 @@ Endpoint that transfers objects.
 		- (source/area)`541 1 571 16`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`23`
+		- (metrics/profile-duration)`9692250`
+		- (metrics/profile-count)`4`
+		- (metrics/profile-residency)`7.624648559416028`
+		- (metrics/profile-minimum)`8959000`
+		- (metrics/profile-maximum)`10647000`
 (signature)`exchange_many_bytes_many_times(test, am, client, server)`
 
 
@@ -1166,6 +1446,11 @@ Endpoint that transfers objects.
 		- (source/area)`573 1 586 8`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`12`
+		- (metrics/profile-duration)`35166000`
+		- (metrics/profile-count)`4`
+		- (metrics/profile-residency)`-8.990928737985554`
+		- (metrics/profile-minimum)`25401000`
+		- (metrics/profile-maximum)`42742000`
 (signature)`exchange_kilobytes(test, am, client, server)`
 
 
@@ -1200,6 +1485,11 @@ Endpoint that transfers objects.
 		- (source/area)`596 1 616 16`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`13`
+		- (metrics/profile-duration)`1205000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`10.53941908713693`
+		- (metrics/profile-minimum)`1205000`
+		- (metrics/profile-maximum)`1205000`
 (signature)`echo_objects(test, am, client, server)`
 
 
@@ -1230,5 +1520,10 @@ Endpoint that transfers objects.
 		- (source/area)`622 1 712 33`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`66`
+		- (metrics/profile-duration)`52392500`
+		- (metrics/profile-count)`2`
+		- (metrics/profile-residency)`-282.37056830653245`
+		- (metrics/profile-minimum)`46533000`
+		- (metrics/profile-maximum)`58252000`
 (signature)`stream_listening_connection(test, version, address)`
 

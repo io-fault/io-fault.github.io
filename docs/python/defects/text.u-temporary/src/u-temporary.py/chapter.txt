@@ -6,6 +6,11 @@
 		- (source/area)`1 1 70 0`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`2933000`
+		- (metrics/profile-count)`2`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`2933000`
+		- (metrics/profile-maximum)`2933000`
 
 [ sys ]
 ! CONTROL:
@@ -112,6 +117,11 @@
 		- (source/area)`66 1 70 35`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`2648000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`2648000`
+		- (metrics/profile-maximum)`2648000`
 (signature)`test_parsing(test)`
 
 Validate parsing of features.

@@ -6,6 +6,11 @@
 		- (source/area)`1 1 265 0`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`96`
+		- (metrics/profile-duration)`1156000`
+		- (metrics/profile-count)`16`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1156000`
+		- (metrics/profile-maximum)`1156000`
 Line and character format interpretation and serialization.
 
 
@@ -109,6 +114,11 @@ performs the desired functionality.
 		- (source/area)`34 2 40 60`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`7500`
+		- (metrics/profile-count)`4`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`14000`
 (signature)`partial(self, *argv, **kw)`
 
 Construct a direct call to (invalid/unknown)&<#isolate> with (invalid/unknown)&<#separation>
@@ -124,6 +134,11 @@ and the given arguments bound to the call.
 		- (source/area)`42 2 47 46`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`12000`
+		- (metrics/profile-count)`2`
+		- (metrics/profile-residency)`37.5`
+		- (metrics/profile-minimum)`6000`
+		- (metrics/profile-maximum)`18000`
 		- (type/syntax)`Iterable[Sequence[tuple[str,str]]]`
 		
 (signature)`structure(self, lines)`
@@ -140,6 +155,11 @@ Perform (invalid/unknown)&<#isolate> against the given (factor-local/parameter)&
 		- (source/area)`49 2 57 9`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`5000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`5000`
+		- (metrics/profile-maximum)`5000`
 		- (type/syntax)`Iterable[str]`
 		
 (signature)`sequence(self, fields)`
@@ -209,6 +229,11 @@ Format configuration for reading and writing indented syntax lines.
 		- (source/area)`67 2 91 25`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
+		- (metrics/profile-duration)`609`
+		- (metrics/profile-count)`46070`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`33000`
 		- (type/syntax)`tuple[str, Sequence[str]]`
 		
 (signature)`_splitpartial(lt, text)`
@@ -237,6 +262,11 @@ split lines with the given (factor-local/parameter)&<#Lines._splitpartial.Parame
 		- (source/area)`93 2 102 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`3333`
+		- (metrics/profile-count)`6`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`12000`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
@@ -255,6 +285,11 @@ intersect with (factor-local/data)&<#Lines.termination[termination]>.
 		- (source/area)`104 2 120 18`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`8`
+		- (metrics/profile-duration)`2321`
+		- (metrics/profile-count)`2276`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`19000`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
@@ -273,6 +308,11 @@ leading (factor-local/data)&<#Lines.indentation[indentation]> characters.
 		- (source/area)`122 2 131 29`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`9709`
+		- (metrics/profile-count)`2246`
+		- (metrics/profile-residency)`76.0443894162425`
+		- (metrics/profile-minimum)`2000`
+		- (metrics/profile-maximum)`3647000`
 		- (type/syntax)`tuple[int, str]`
 		
 (signature)`level(self, line)`
@@ -291,6 +331,11 @@ of the line without the indentation characters.
 		- (source/area)`133 2 160 25`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`15`
+		- (metrics/profile-duration)`3080033`
+		- (metrics/profile-count)`60`
+		- (metrics/profile-residency)`53.93177563013387`
+		- (metrics/profile-minimum)`8000`
+		- (metrics/profile-maximum)`18707000`
 		- (type/syntax)`Iterable[tuple[int, str]]`
 		
 (signature)`structure(self, itext)`
@@ -309,6 +354,11 @@ Excludes a final empty line.
 		- (source/area)`162 2 173 9`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`16000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`87.5`
+		- (metrics/profile-minimum)`16000`
+		- (metrics/profile-maximum)`16000`
 		- (type/syntax)`Iterable[str]`
 		
 (signature)`sequence(self, ilines)`
@@ -351,6 +401,11 @@ Primarily, a minor abstraction for Python's codecs providing
 		- (source/area)`206 2 211 14`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`7909`
+		- (metrics/profile-count)`11`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`21000`
 (signature)`_alloc_coder_pair(coder, method, final)`
 
 
@@ -365,6 +420,11 @@ Primarily, a minor abstraction for Python's codecs providing
 		- (source/area)`212 2 219 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`18500`
+		- (metrics/profile-count)`4`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`33000`
 (signature)`_alloc_codec_constructors(ci, errors)`
 
 
@@ -377,6 +437,11 @@ Primarily, a minor abstraction for Python's codecs providing
 		- (source/area)`220 2 243 3`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
+		- (metrics/profile-duration)`63000`
+		- (metrics/profile-count)`4`
+		- (metrics/profile-residency)`70.63492063492063`
+		- (metrics/profile-minimum)`6000`
+		- (metrics/profile-maximum)`95000`
 (signature)`from_codec(Class, encoding, errors)`
 
 Create an instance using a Python (factor-local/parameter)&<#Characters.from_codec.Parameters.encoding[encoding]> and (factor-local/parameter)&<#Characters.from_codec.Parameters.errors[errors]> handling scheme.
@@ -395,6 +460,11 @@ instance.
 		- (source/area)`245 2 254 16`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`29200`
+		- (metrics/profile-count)`5`
+		- (metrics/profile-residency)`12.32876712328767`
+		- (metrics/profile-minimum)`10000`
+		- (metrics/profile-maximum)`69000`
 		- (type/syntax)`Iterable[bytes]`
 		
 (signature)`sequence(self, itext)`
@@ -411,6 +481,11 @@ Encode the strings produced by (factor-local/parameter)&<#Characters.sequence.Pa
 		- (source/area)`256 2 265 16`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`24166`
+		- (metrics/profile-count)`6`
+		- (metrics/profile-residency)`35.172413793103445`
+		- (metrics/profile-minimum)`5000`
+		- (metrics/profile-maximum)`41000`
 		- (type/syntax)`Iterable[str]`
 		
 (signature)`structure(self, ibytes)`

@@ -6,6 +6,11 @@
 		- (source/area)`1 1 235 0`
 		- (coverage-zeros)`99`
 		- (coverage-counters)`108`
+		- (metrics/profile-duration)`28125`
+		- (metrics/profile-count)`8`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`21000`
+		- (metrics/profile-maximum)`56000`
 Project Graph processing tools.
 
 Provides (factor-local/class)&<#Queue[Queue]> for managing the processing of projects in dependency order.

@@ -6,6 +6,11 @@
 		- (source/area)`1 1 31 0`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`15`
+		- (metrics/profile-duration)`5000`
+		- (metrics/profile-count)`5`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`5000`
+		- (metrics/profile-maximum)`5000`
 
 [ module ]
 ! CONTROL:
@@ -38,6 +43,11 @@
 		- (source/area)`4 1 8 47`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`87000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`87000`
+		- (metrics/profile-maximum)`87000`
 (signature)`test_utc(test)`
 
 - (context-local/factor-element)&<fault.time/system#utc[fault.time.system.utc]>
@@ -52,6 +62,11 @@
 		- (source/area)`10 1 14 49`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`78000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`78000`
+		- (metrics/profile-maximum)`78000`
 (signature)`test_elapsed(test)`
 
 - (context-local/factor-element)&<fault.time/system#elapsed[fault.time.system.elapsed]>
@@ -66,6 +81,11 @@
 		- (source/area)`16 1 23 34`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`2690000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`2690000`
+		- (metrics/profile-maximum)`2690000`
 (signature)`test_zone_local(test)`
 
 - (context-local/factor-element)&<fault.time/system#local[fault.time.system.local]>
@@ -80,6 +100,11 @@
 		- (source/area)`25 1 31 52`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`2875000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`2875000`
+		- (metrics/profile-maximum)`2875000`
 (signature)`test_date(test)`
 
 - (context-local/factor-element)&<fault.time/system#date[fault.time.system.date]>

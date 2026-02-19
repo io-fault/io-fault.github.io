@@ -6,6 +6,11 @@
 		- (source/area)`1 1 1042 55`
 		- (coverage-zeros)`10`
 		- (coverage-counters)`590`
+		- (metrics/profile-duration)`60000`
+		- (metrics/profile-count)`50`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`60000`
+		- (metrics/profile-maximum)`60000`
 Check the implementation of filesystem routes.
 
 
@@ -78,6 +83,11 @@ Check the implementation of filesystem routes.
 		- (source/area)`12 1 15 17`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`210230`
+		- (metrics/profile-count)`13`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`120000`
+		- (metrics/profile-maximum)`400000`
 (signature)`d_setup(x, path)`
 
 
@@ -92,6 +102,11 @@ Check the implementation of filesystem routes.
 		- (source/area)`16 1 18 20`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`648555`
+		- (metrics/profile-count)`9`
+		- (metrics/profile-residency)`4.608531780023985`
+		- (metrics/profile-minimum)`365000`
+		- (metrics/profile-maximum)`1201000`
 (signature)`_(x, path)`
 
 
@@ -104,6 +119,11 @@ Check the implementation of filesystem routes.
 		- (source/area)`20 1 38 59`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`12`
+		- (metrics/profile-duration)`654000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`654000`
+		- (metrics/profile-maximum)`654000`
 (signature)`test_constants(test)`
 
 Check for (project-local/unknown)&<files.root> presence and sanity.
@@ -120,6 +140,11 @@ Check for (project-local/unknown)&<files.root> presence and sanity.
 		- (source/area)`40 1 49 68`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
+		- (metrics/profile-duration)`454000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`454000`
+		- (metrics/profile-maximum)`454000`
 (signature)`test_Path(test)`
 
 
@@ -134,6 +159,11 @@ Check for (project-local/unknown)&<files.root> presence and sanity.
 		- (source/area)`51 1 57 25`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`429000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`429000`
+		- (metrics/profile-maximum)`429000`
 (signature)`test_Path_filename(test)`
 
 
@@ -148,6 +178,11 @@ Check for (project-local/unknown)&<files.root> presence and sanity.
 		- (source/area)`59 1 66 40`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`321000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`321000`
+		- (metrics/profile-maximum)`321000`
 (signature)`test_Path_repr(test)`
 
 
@@ -162,6 +197,11 @@ Check for (project-local/unknown)&<files.root> presence and sanity.
 		- (source/area)`68 1 78 45`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`8`
+		- (metrics/profile-duration)`538000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`538000`
+		- (metrics/profile-maximum)`538000`
 (signature)`test_Path_string_cache(test)`
 
 
@@ -176,6 +216,11 @@ Check for (project-local/unknown)&<files.root> presence and sanity.
 		- (source/area)`80 1 87 2`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`295000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`295000`
+		- (metrics/profile-maximum)`295000`
 (signature)`test_Path_from_partitioned_string(test)`
 
 
@@ -190,6 +235,11 @@ Check for (project-local/unknown)&<files.root> presence and sanity.
 		- (source/area)`89 1 91 34`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`138000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`138000`
+		- (metrics/profile-maximum)`138000`
 (signature)`test_Path_bytespath(test)`
 
 
@@ -204,6 +254,11 @@ Check for (project-local/unknown)&<files.root> presence and sanity.
 		- (source/area)`93 1 101 35`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`872000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`872000`
+		- (metrics/profile-maximum)`872000`
 (signature)`test_Path_temporary(test)`
 
 
@@ -216,6 +271,11 @@ Check for (project-local/unknown)&<files.root> presence and sanity.
 		- (source/area)`103 1 128 18`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`17`
+		- (metrics/profile-duration)`4696000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`4696000`
+		- (metrics/profile-maximum)`4696000`
 (signature)`test_Path_list(test)`
 
 - (context-local/factor-element)&<fault.system/files#Path.fs_list[fault.system.files.Path.fs_list]>
@@ -230,6 +290,11 @@ Check for (project-local/unknown)&<files.root> presence and sanity.
 		- (source/area)`130 1 170 40`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`29`
+		- (metrics/profile-duration)`6014000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`6014000`
+		- (metrics/profile-maximum)`6014000`
 (signature)`test_Path_iterfiles(test)`
 
 - (context-local/factor-element)&<fault.system/files#Path.fs_iterfiles[fault.system.files.Path.fs_iterfiles]>
@@ -244,6 +309,11 @@ Check for (project-local/unknown)&<files.root> presence and sanity.
 		- (source/area)`172 1 196 23`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`13`
+		- (metrics/profile-duration)`1464000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1464000`
+		- (metrics/profile-maximum)`1464000`
 (signature)`test_Path_index(test)`
 
 - (context-local/factor-element)&<fault.system/files#Path.fs_index[fault.system.files.Path.fs_index]>
@@ -259,6 +329,11 @@ Check for (project-local/unknown)&<files.root> presence and sanity.
 		- (source/area)`198 1 220 22`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`13`
+		- (metrics/profile-duration)`1262000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1262000`
+		- (metrics/profile-maximum)`1262000`
 (signature)`test_Path_snapshot(test)`
 
 - (context-local/factor-element)&<fault.system/files#Path.fs_snapshot[fault.system.files.Path.fs_snapshot]>
@@ -273,6 +348,11 @@ Check for (project-local/unknown)&<files.root> presence and sanity.
 		- (source/area)`222 1 237 22`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`10`
+		- (metrics/profile-duration)`1422000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1422000`
+		- (metrics/profile-maximum)`1422000`
 (signature)`test_Path_real(test)`
 
 - (context-local/factor-element)&<fault.system/files#Path.fs_real[fault.system.files.Path.fs_real]>
@@ -289,6 +369,11 @@ Check for (project-local/unknown)&<files.root> presence and sanity.
 		- (source/area)`239 1 267 36`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`23`
+		- (metrics/profile-duration)`2435000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`2435000`
+		- (metrics/profile-maximum)`2435000`
 (signature)`test_Path_replace(test)`
 
 
@@ -301,6 +386,11 @@ Check for (project-local/unknown)&<files.root> presence and sanity.
 		- (source/area)`269 1 285 43`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`10`
+		- (metrics/profile-duration)`1323000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1323000`
+		- (metrics/profile-maximum)`1323000`
 (signature)`test_Path_init(test)`
 
 Test (context-local/factor-element)&<fault.system/files#Path.fs_init[fault.system.files.Path.fs_init]> checking that the parent directories are
@@ -316,6 +406,11 @@ properly created regardless of the selected type.
 		- (source/area)`287 1 303 30`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`10`
+		- (metrics/profile-duration)`1106000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1106000`
+		- (metrics/profile-maximum)`1106000`
 (signature)`test_Path_mkdir(test)`
 
 Test (context-local/factor-element)&<fault.system/files#Path.fs_mkdir[fault.system.files.Path.fs_mkdir]> checking that the parent directories are
@@ -331,6 +426,11 @@ properly created regardless of the selected type.
 		- (source/area)`305 1 327 28`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`16`
+		- (metrics/profile-duration)`1492000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1492000`
+		- (metrics/profile-maximum)`1492000`
 (signature)`test_Path_type_void(test)`
 
 - (context-local/factor-element)&<fault.system/files#Path.fs_type[fault.system.files.Path.fs_type]>
@@ -347,6 +447,11 @@ properly created regardless of the selected type.
 		- (source/area)`329 1 334 26`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`301000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`301000`
+		- (metrics/profile-maximum)`301000`
 (signature)`test_Path_extension(test)`
 
 
@@ -361,6 +466,11 @@ properly created regardless of the selected type.
 		- (source/area)`336 1 348 23`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`10`
+		- (metrics/profile-duration)`378000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`378000`
+		- (metrics/profile-maximum)`378000`
 (signature)`test_Path_size(test)`
 
 
@@ -373,6 +483,11 @@ properly created regardless of the selected type.
 		- (source/area)`350 1 375 33`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`15`
+		- (metrics/profile-duration)`1102410000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1102410000`
+		- (metrics/profile-maximum)`1102410000`
 (signature)`test_Path_get_last_modified(test)`
 
 System check.
@@ -387,6 +502,11 @@ System check.
 		- (source/area)`377 1 396 61`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`12`
+		- (metrics/profile-duration)`1328000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1328000`
+		- (metrics/profile-maximum)`1328000`
 (signature)`test_Path_set_last_modified(test)`
 
 System check.
@@ -401,6 +521,11 @@ System check.
 		- (source/area)`398 1 408 38`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
+		- (metrics/profile-duration)`999000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`999000`
+		- (metrics/profile-maximum)`999000`
 (signature)`test_Path_get_text_content(test)`
 
 Validate (context-local/factor-element)&<fault.system/files#Path.get_text_content[fault.system.files.Path.get_text_content]>.
@@ -415,6 +540,11 @@ Validate (context-local/factor-element)&<fault.system/files#Path.get_text_conten
 		- (source/area)`410 1 419 27`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`847000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`847000`
+		- (metrics/profile-maximum)`847000`
 (signature)`test_Path_set_text_content(test)`
 
 Validate (context-local/factor-element)&<fault.system/files#Path.set_text_content[fault.system.files.Path.set_text_content]>.
@@ -429,6 +559,11 @@ Validate (context-local/factor-element)&<fault.system/files#Path.set_text_conten
 		- (source/area)`421 1 442 40`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`14`
+		- (metrics/profile-duration)`3285000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`3285000`
+		- (metrics/profile-maximum)`3285000`
 (signature)`test_Path_since(test)`
 
 (context-local/factor-element)&<fault.system/files#Path.fs_since[fault.system.files.Path.fs_since]>
@@ -443,6 +578,11 @@ Validate (context-local/factor-element)&<fault.system/files#Path.set_text_conten
 		- (source/area)`444 1 469 52`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`13`
+		- (metrics/profile-duration)`729000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`729000`
+		- (metrics/profile-maximum)`729000`
 (signature)`test_Path_construct(test)`
 
 Test the various classmethods that construct file instances.
@@ -457,6 +597,11 @@ Test the various classmethods that construct file instances.
 		- (source/area)`471 1 489 37`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`10`
+		- (metrics/profile-duration)`562000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`562000`
+		- (metrics/profile-maximum)`562000`
 (signature)`test_Path_relative_resolution(test)`
 
 - (context-local/factor-element)&<fault.system/files#Path.__pos__[fault.system.files.Path.__pos__]>
@@ -471,6 +616,11 @@ Test the various classmethods that construct file instances.
 		- (source/area)`491 1 501 59`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
+		- (metrics/profile-duration)`1100000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1100000`
+		- (metrics/profile-maximum)`1100000`
 (signature)`test_Path_basename_manipulations(test)`
 
 - (context-local/factor-element)&<fault.system/files#Path.prefix_filename[fault.system.files.Path.prefix_filename]>
@@ -486,6 +636,11 @@ Test the various classmethods that construct file instances.
 		- (source/area)`503 1 516 78`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`8`
+		- (metrics/profile-duration)`212000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`212000`
+		- (metrics/profile-maximum)`212000`
 (signature)`test_Path_join(test)`
 
 - (context-local/factor-element)&<fault.system/files#Path.join[fault.system.files.Path.join]>
@@ -502,6 +657,11 @@ Test the various classmethods that construct file instances.
 		- (source/area)`518 1 529 37`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`8`
+		- (metrics/profile-duration)`452000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`452000`
+		- (metrics/profile-maximum)`452000`
 (signature)`test_Path_properties(test)`
 
 
@@ -514,6 +674,11 @@ Test the various classmethods that construct file instances.
 		- (source/area)`531 1 553 41`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`14`
+		- (metrics/profile-duration)`1175000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1175000`
+		- (metrics/profile-maximum)`1175000`
 (signature)`test_Path_open(test)`
 
 - (context-local/factor-element)&<fault.system/files#File.fs_open[fault.system.files.File.fs_open]>
@@ -528,6 +693,11 @@ Test the various classmethods that construct file instances.
 		- (source/area)`555 1 568 59`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`8`
+		- (metrics/profile-duration)`707000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`707000`
+		- (metrics/profile-maximum)`707000`
 (signature)`test_Path_open_exception(test)`
 
 - (context-local/factor-element)&<fault.system/files#File.fs_open[fault.system.files.File.fs_open]>
@@ -542,6 +712,11 @@ Test the various classmethods that construct file instances.
 		- (source/area)`570 1 592 28`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`16`
+		- (metrics/profile-duration)`2731000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`2731000`
+		- (metrics/profile-maximum)`2731000`
 (signature)`test_Path_void(test)`
 
 - (context-local/factor-element)&<fault.system/files#Path.fs_void[fault.system.files.Path.fs_void]>
@@ -558,6 +733,11 @@ Test the various classmethods that construct file instances.
 		- (source/area)`594 1 625 37`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`24`
+		- (metrics/profile-duration)`3023500`
+		- (metrics/profile-count)`2`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`2997000`
+		- (metrics/profile-maximum)`3050000`
 (signature)`link_checks(test, create_link)`
 
 
@@ -570,6 +750,11 @@ Test the various classmethods that construct file instances.
 		- (source/area)`627 1 631 48`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`3080000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`0.974025974025974`
+		- (metrics/profile-minimum)`3080000`
+		- (metrics/profile-maximum)`3080000`
 (signature)`test_Path_relative_links(test)`
 
 (context-local/factor-element)&<fault.system/files#Path.fs_link_relative[fault.system.files.Path.fs_link_relative]>
@@ -584,6 +769,11 @@ Test the various classmethods that construct file instances.
 		- (source/area)`633 1 637 48`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`3023000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`0.8600727753886867`
+		- (metrics/profile-minimum)`3023000`
+		- (metrics/profile-maximum)`3023000`
 (signature)`test_Path_absolute_links(test)`
 
 (context-local/factor-element)&<fault.system/files#Path.fs_link_absolute[fault.system.files.Path.fs_link_absolute]>
@@ -598,6 +788,11 @@ Test the various classmethods that construct file instances.
 		- (source/area)`639 1 662 64`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`16`
+		- (metrics/profile-duration)`2157000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`2157000`
+		- (metrics/profile-maximum)`2157000`
 (signature)`test_Path_recursive_since(test)`
 
 (context-local/factor-element)&<fault.system/files#Path.fs_since[fault.system.files.Path.fs_since]> with recursive directories.
@@ -612,6 +807,11 @@ Test the various classmethods that construct file instances.
 		- (source/area)`664 1 685 64`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`14`
+		- (metrics/profile-duration)`1697000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1697000`
+		- (metrics/profile-maximum)`1697000`
 (signature)`test_Path_follow_links(test)`
 
 - (context-local/factor-element)&<fault.system/files#Path.fs_follow_links[fault.system.files.Path.fs_follow_links]>
@@ -626,6 +826,11 @@ Test the various classmethods that construct file instances.
 		- (source/area)`687 1 706 33`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`13`
+		- (metrics/profile-duration)`1581000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1581000`
+		- (metrics/profile-maximum)`1581000`
 (signature)`test_Path_io(test)`
 
 - (context-local/factor-element)&<fault.system/files#Path.fs_load[fault.system.files.Path.fs_load]>
@@ -641,6 +846,11 @@ Test the various classmethods that construct file instances.
 		- (source/area)`708 1 715 34`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`998000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`998000`
+		- (metrics/profile-maximum)`998000`
 (signature)`test_Path_python_protocol(test)`
 
 - (context-local/factor-element)&<fault.system/files#Path.__fspath__[fault.system.files.Path.__fspath__]>
@@ -655,6 +865,11 @@ Test the various classmethods that construct file instances.
 		- (source/area)`717 1 739 53`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`9`
+		- (metrics/profile-duration)`1731000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`49.79780473714616`
+		- (metrics/profile-minimum)`1731000`
+		- (metrics/profile-maximum)`1731000`
 (signature)`test_Path_snapshot_sanity(test)`
 
 - (context-local/factor-element)&<fault.system/files#Path.fs_snapshot[fault.system.files.Path.fs_snapshot]>
@@ -669,6 +884,11 @@ Test the various classmethods that construct file instances.
 		- (source/area)`741 1 765 19`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`11`
+		- (metrics/profile-duration)`1898000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`50.89567966280295`
+		- (metrics/profile-minimum)`1898000`
+		- (metrics/profile-maximum)`1898000`
 (signature)`test_Path_snapshot_limit(test)`
 
 - (context-local/factor-element)&<fault.system/files#Path.fs_snapshot[fault.system.files.Path.fs_snapshot]>
@@ -683,6 +903,11 @@ Test the various classmethods that construct file instances.
 		- (source/area)`767 1 820 37`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`25`
+		- (metrics/profile-duration)`2583000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`53.5036778939218`
+		- (metrics/profile-minimum)`2583000`
+		- (metrics/profile-maximum)`2583000`
 (signature)`test_Path_snapshot_depth(test)`
 
 - (context-local/factor-element)&<fault.system/files#Path.fs_snapshot[fault.system.files.Path.fs_snapshot]>
@@ -697,6 +922,11 @@ Test the various classmethods that construct file instances.
 		- (source/area)`822 1 846 32`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`15`
+		- (metrics/profile-duration)`2106000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`2106000`
+		- (metrics/profile-maximum)`2106000`
 (signature)`test_Path_fs_alloc(test)`
 
 - (context-local/factor-element)&<fault.system/files#Path.fs_alloc[fault.system.files.Path.fs_alloc]>
@@ -711,6 +941,11 @@ Test the various classmethods that construct file instances.
 		- (source/area)`848 1 890 50`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`25`
+		- (metrics/profile-duration)`1074000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1074000`
+		- (metrics/profile-maximum)`1074000`
 (signature)`test_Path_fs_require_void(test)`
 
 - (context-local/factor-element)&<fault.system/files#Path.fs_require[fault.system.files.Path.fs_require]>
@@ -728,6 +963,11 @@ Validate that missing file cases are handled.
 		- (source/area)`892 1 922 44`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`17`
+		- (metrics/profile-duration)`1195000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1195000`
+		- (metrics/profile-maximum)`1195000`
 (signature)`test_Path_fs_require_type(test)`
 
 - (context-local/factor-element)&<fault.system/files#Path.fs_require[fault.system.files.Path.fs_require]>
@@ -745,6 +985,11 @@ Validate that fs_require checks the type.
 		- (source/area)`924 1 949 44`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`14`
+		- (metrics/profile-duration)`1090000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1090000`
+		- (metrics/profile-maximum)`1090000`
 (signature)`test_Path_fs_require_permissions(test)`
 
 - (context-local/factor-element)&<fault.system/files#Path.fs_require[fault.system.files.Path.fs_require]>
@@ -762,6 +1007,11 @@ Validate that fs_require checks the properties.
 		- (source/area)`951 1 990 44`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`22`
+		- (metrics/profile-duration)`1290000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1290000`
+		- (metrics/profile-maximum)`1290000`
 (signature)`test_Path_fs_require_directory_control(test)`
 
 - (context-local/factor-element)&<fault.system/files#Path.fs_require[fault.system.files.Path.fs_require]>
@@ -779,6 +1029,11 @@ Validate that fs_require allows for optional directory.
 		- (source/area)`992 1 1018 55`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`12`
+		- (metrics/profile-duration)`1237000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1237000`
+		- (metrics/profile-maximum)`1237000`
 (signature)`test_Path_fs_require_accessibility(test)`
 
 - (context-local/factor-element)&<fault.system/files#Path.fs_require[fault.system.files.Path.fs_require]>
@@ -800,6 +1055,11 @@ directories without the necessary permissions.
 		- (source/area)`1020 1 1023 47`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`244000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`244000`
+		- (metrics/profile-maximum)`244000`
 (signature)`test_root_instance(test)`
 
 
@@ -812,6 +1072,11 @@ directories without the necessary permissions.
 		- (source/area)`1025 1 1043 54`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`10`
+		- (metrics/profile-duration)`460000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`460000`
+		- (metrics/profile-maximum)`460000`
 (signature)`test_Path_fs_path_string(test)`
 
 - (context-local/factor-element)&<fault.system/files#Path.fs_path_string[fault.system.files.Path.fs_path_string]>

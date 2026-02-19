@@ -6,6 +6,11 @@
 		- (source/area)`1 1 359 40`
 		- (coverage-zeros)`4`
 		- (coverage-counters)`231`
+		- (metrics/profile-duration)`15340000`
+		- (metrics/profile-count)`10`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`15340000`
+		- (metrics/profile-maximum)`15340000`
 Check integrations of internet.http and kernel.http
 
 
@@ -107,6 +112,11 @@ Check integrations of internet.http and kernel.http
 		- (source/area)`17 1 44 50`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`20`
+		- (metrics/profile-duration)`13571`
+		- (metrics/profile-count)`7`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`3000`
+		- (metrics/profile-maximum)`21000`
 (signature)`req(*headers)`
 
 
@@ -119,6 +129,11 @@ Check integrations of internet.http and kernel.http
 		- (source/area)`46 1 59 60`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
+		- (metrics/profile-duration)`171000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`171000`
+		- (metrics/profile-maximum)`171000`
 (signature)`test_ranges(test)`
 
 Check Range header parsing.
@@ -147,6 +162,11 @@ Check Range header parsing.
 		- (source/area)`63 1 132 41`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`50`
+		- (metrics/profile-duration)`550000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`92.0`
+		- (metrics/profile-minimum)`550000`
+		- (metrics/profile-maximum)`550000`
 (signature)`test_fork_headers_no_content(test)`
 
 - (context-local/factor-element)&<fault.web/http#fork[fault.web.http.fork]>
@@ -163,6 +183,11 @@ Check Range header parsing.
 		- (source/area)`134 1 169 44`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`23`
+		- (metrics/profile-duration)`433000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`92.14780600461894`
+		- (metrics/profile-minimum)`433000`
+		- (metrics/profile-maximum)`433000`
 (signature)`test_join(test)`
 
 
@@ -175,6 +200,11 @@ Check Range header parsing.
 		- (source/area)`171 1 185 35`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`187000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`187000`
+		- (metrics/profile-maximum)`187000`
 (signature)`test_Structures_local(test)`
 
 - (context-local/factor-element)&<fault.web/http#Structures[fault.web.http.Structures]>
@@ -191,6 +221,11 @@ Check caching of local headers.
 		- (source/area)`187 1 191 5`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`10000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`10000`
+		- (metrics/profile-maximum)`10000`
 (signature)`test_Structures_cookies(test)`
 
 - (context-local/factor-element)&<fault.web/http#Structures[fault.web.http.Structures]>
@@ -205,6 +240,11 @@ Check caching of local headers.
 		- (source/area)`193 1 223 64`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`18`
+		- (metrics/profile-duration)`782000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`782000`
+		- (metrics/profile-maximum)`782000`
 (signature)`test_TXProtocol_initiate_request(test)`
 
 - (context-local/factor-element)&<fault.web/http#TXProtocol[fault.web.http.TXProtocol]>
@@ -219,6 +259,11 @@ Check caching of local headers.
 		- (source/area)`225 1 252 62`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`16`
+		- (metrics/profile-duration)`970000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`98.24742268041237`
+		- (metrics/profile-minimum)`970000`
+		- (metrics/profile-maximum)`970000`
 (signature)`test_RXProtocol_allocate_request(test)`
 
 - (context-local/factor-element)&<fault.web/http#RXProtocol[fault.web.http.RXProtocol]>
@@ -233,6 +278,11 @@ Check caching of local headers.
 		- (source/area)`254 1 297 26`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`34`
+		- (metrics/profile-duration)`1146000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1146000`
+		- (metrics/profile-maximum)`1146000`
 (signature)`test_client_transport(test)`
 
 - (context-local/factor-element)&<fault.web/http#RXProtocol[fault.web.http.RXProtocol]>
@@ -248,6 +298,11 @@ Check caching of local headers.
 		- (source/area)`299 1 356 26`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`43`
+		- (metrics/profile-duration)`1207000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1207000`
+		- (metrics/profile-maximum)`1207000`
 (signature)`test_server_transport(test)`
 
 - (context-local/factor-element)&<fault.web/http#RXProtocol[fault.web.http.RXProtocol]>

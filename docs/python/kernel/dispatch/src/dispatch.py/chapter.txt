@@ -6,6 +6,11 @@
 		- (source/area)`1 1 572 0`
 		- (coverage-zeros)`99`
 		- (coverage-counters)`209`
+		- (metrics/profile-duration)`499229`
+		- (metrics/profile-count)`87`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`81000`
+		- (metrics/profile-maximum)`5231000`
 Executive processors containing a primitive execution unit.
 
 
@@ -171,6 +176,11 @@ This should be rarely used in practice.
 		- (source/area)`25 2 29 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`26000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`26000`
+		- (metrics/profile-maximum)`26000`
 (signature)`c_execution(self)`
 
 
@@ -183,6 +193,11 @@ This should be rarely used in practice.
 		- (source/area)`30 2 36 52`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`18000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`72.22222222222221`
+		- (metrics/profile-minimum)`18000`
+		- (metrics/profile-maximum)`18000`
 (signature)`partial(Class, call, *args, **kw)`
 
 Create a call applying the arguments to the callable upon actuation.
@@ -199,6 +214,11 @@ the first argument.
 		- (source/area)`38 2 50 22`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`5000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`5000`
+		- (metrics/profile-maximum)`5000`
 (signature)`__init__(self, call)`
 
 The partial application to the callable to perform.
@@ -230,6 +250,11 @@ direct initialization is better.
 		- (source/area)`52 2 53 33`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`7000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`7000`
+		- (metrics/profile-maximum)`7000`
 (signature)`actuate(self)`
 
 
@@ -493,6 +518,11 @@ accessed through the system context.
 		- (source/area)`177 2 180 26`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`2189`
+		- (metrics/profile-count)`2285`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`79000`
 (signature)`__init__(self, reap, invocations)`
 
 
@@ -505,6 +535,11 @@ accessed through the system context.
 		- (source/area)`182 2 189 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`157831634`
+		- (metrics/profile-count)`2280`
+		- (metrics/profile-residency)`0.0020719391558393562`
+		- (metrics/profile-minimum)`148000`
+		- (metrics/profile-maximum)`17069892000`
 (signature)`sp_report(self)`
 
 Join the System process identifier, invocation object, and exit status.
@@ -560,6 +595,11 @@ Process will be reaped with (context-local/factor-element)&<fault.system/executi
 		- (source/area)`219 2 221 28`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`17000`
+		- (metrics/profile-count)`2`
+		- (metrics/profile-residency)`97.05882352941177`
+		- (metrics/profile-minimum)`15000`
+		- (metrics/profile-maximum)`19000`
 (signature)`xact_void(self, last)`
 
 
@@ -574,6 +614,11 @@ Process will be reaped with (context-local/factor-element)&<fault.system/executi
 		- (source/area)`223 2 239 28`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`157651`
+		- (metrics/profile-count)`2287`
+		- (metrics/profile-residency)`95.19399582303653`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`11731000`
 (signature)`sp_exit(self, pid)`
 
 
@@ -615,6 +660,11 @@ to all of the currently running processes.
 		- (source/area)`260 2 265 74`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`49420`
+		- (metrics/profile-count)`2285`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`3000`
+		- (metrics/profile-maximum)`10792000`
 (signature)`actuate(self)`
 
 Initialize the system event callbacks for receiving process exit events.
@@ -629,6 +679,11 @@ Initialize the system event callbacks for receiving process exit events.
 		- (source/area)`267 2 279 10`
 		- (coverage-zeros)`3`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`7590`
+		- (metrics/profile-count)`2283`
+		- (metrics/profile-residency)`56.14612188365652`
+		- (metrics/profile-minimum)`2000`
+		- (metrics/profile-maximum)`602000`
 (signature)`interrupt(self)`
 
 Interrupt the running processes by issuing a SIGKILL signal to all active processes.
@@ -644,6 +699,11 @@ Exit status will be reaped, but not reported to (factor-local/parameter)&<#Subpr
 		- (source/area)`280 2 294 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`400`
+		- (metrics/profile-count)`5`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`1000`
 The exit event of the only process in the set.
 (invalid/unknown)&<#None> if no exit has occurred or the number of processes exceeds one.
 
@@ -657,6 +717,11 @@ The exit event of the only process in the set.
 		- (source/area)`295 2 303 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`3322`
+		- (metrics/profile-count)`2288`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`584000`
 		- (type/syntax)`typing.Set[int]`
 		
 Return the set of process identifiers that have yet to exit.
@@ -671,6 +736,11 @@ Return the set of process identifiers that have yet to exit.
 		- (source/area)`304 2 308 59`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`500`
+		- (metrics/profile-count)`6`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`1000`
 		- (type/syntax)`bool`
 		- (type/invalid/unknown)&<#bool>
 		
@@ -961,6 +1031,11 @@ Timestamp based transaction scheduling using the system's Real Time clock.
 		- (source/area)`444 2 447 38`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`6000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`6000`
+		- (metrics/profile-maximum)`6000`
 (signature)`__init__(self)`
 
 
@@ -975,6 +1050,11 @@ Timestamp based transaction scheduling using the system's Real Time clock.
 		- (source/area)`449 2 451 39`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`0`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`0.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`0`
 (signature)`actuate(self)`
 
 
@@ -1017,6 +1097,11 @@ Timestamp based transaction scheduling using the system's Real Time clock.
 		- (source/area)`464 2 473 28`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`112000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`112000`
+		- (metrics/profile-maximum)`112000`
 (signature)`terminate(self)`
 
 
@@ -1031,6 +1116,11 @@ Timestamp based transaction scheduling using the system's Real Time clock.
 		- (source/area)`475 2 478 28`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`20000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`85.0`
+		- (metrics/profile-minimum)`20000`
+		- (metrics/profile-maximum)`20000`
 (signature)`xact_void(self, final)`
 
 
@@ -1045,6 +1135,11 @@ Timestamp based transaction scheduling using the system's Real Time clock.
 		- (source/area)`480 2 483 26`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`3000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`3000`
+		- (metrics/profile-maximum)`3000`
 (signature)`interrupt(self)`
 
 
@@ -1057,6 +1152,11 @@ Timestamp based transaction scheduling using the system's Real Time clock.
 		- (source/area)`485 2 501 30`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`15833`
+		- (metrics/profile-count)`6`
+		- (metrics/profile-residency)`78.94736842105263`
+		- (metrics/profile-minimum)`6000`
+		- (metrics/profile-maximum)`34000`
 (signature)`occur(self)`
 
 Execute the next task given that the period has elapsed.
@@ -1091,6 +1191,11 @@ independently or a subclass must be created.
 		- (source/area)`514 2 523 67`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`16000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`43.75`
+		- (metrics/profile-minimum)`16000`
+		- (metrics/profile-maximum)`16000`
 (signature)`sched_insert(self, pit, *xacts)`
 
 Schedule the (factor-local/parameter)&<#Scheduler.sched_insert.Parameters.xacts[xacts]> to be executed at the specified Point In Time, (factor-local/parameter)&<#Scheduler.sched_insert.Parameters.pit[pit]>.
@@ -1107,6 +1212,11 @@ Schedule the (factor-local/parameter)&<#Scheduler.sched_insert.Parameters.xacts[
 		- (source/area)`525 2 536 67`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`8`
+		- (metrics/profile-duration)`11000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`63.63636363636363`
+		- (metrics/profile-minimum)`11000`
+		- (metrics/profile-maximum)`11000`
 (signature)`sched_update(self, items)`
 
 
@@ -1121,6 +1231,11 @@ Schedule the (factor-local/parameter)&<#Scheduler.sched_insert.Parameters.xacts[
 		- (source/area)`538 2 543 14`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`1875`
+		- (metrics/profile-count)`8`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`3000`
 (signature)`_sched_period(self, current)`
 
 
@@ -1135,6 +1250,11 @@ Schedule the (factor-local/parameter)&<#Scheduler.sched_insert.Parameters.xacts[
 		- (source/area)`545 2 548 38`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`2666`
+		- (metrics/profile-count)`3`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`6000`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
@@ -1152,5 +1272,10 @@ Schedule the (factor-local/parameter)&<#Scheduler.sched_insert.Parameters.xacts[
 		- (source/area)`550 2 572 15`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`11`
+		- (metrics/profile-duration)`1666`
+		- (metrics/profile-count)`6`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`6000`
 (signature)`_sched_get(self, current)`
 

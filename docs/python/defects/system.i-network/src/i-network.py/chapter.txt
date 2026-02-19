@@ -6,6 +6,11 @@
 		- (source/area)`1 1 180 0`
 		- (coverage-zeros)`10`
 		- (coverage-counters)`122`
+		- (metrics/profile-duration)`1082000`
+		- (metrics/profile-count)`16`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1082000`
+		- (metrics/profile-maximum)`1082000`
 
 [ module ]
 ! CONTROL:
@@ -28,6 +33,11 @@
 		- (source/area)`3 1 18 25`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`14`
+		- (metrics/profile-duration)`154000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`154000`
+		- (metrics/profile-maximum)`154000`
 (signature)`test_endpoint_new(test)`
 
 
@@ -42,6 +52,11 @@
 		- (source/area)`20 1 35 23`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`12`
+		- (metrics/profile-duration)`144000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`144000`
+		- (metrics/profile-maximum)`144000`
 (signature)`test_endpoint_local_new(test)`
 
 
@@ -56,6 +71,11 @@
 		- (source/area)`37 1 48 33`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`9`
+		- (metrics/profile-duration)`92000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`92000`
+		- (metrics/profile-maximum)`92000`
 (signature)`test_endpoint_inconsistent_pf(test)`
 
 
@@ -70,6 +90,11 @@
 		- (source/area)`50 1 58 38`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`87000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`87000`
+		- (metrics/profile-maximum)`87000`
 (signature)`test_endpoint_consistent_pf(test)`
 
 
@@ -84,6 +109,11 @@
 		- (source/area)`60 1 68 44`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`85000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`85000`
+		- (metrics/profile-maximum)`85000`
 (signature)`test_endpoint_inequality(test)`
 
 
@@ -98,6 +128,11 @@
 		- (source/area)`70 1 72 23`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`61000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`61000`
+		- (metrics/profile-maximum)`61000`
 (signature)`test_endpoint_nicmp(test)`
 
 
@@ -112,6 +147,11 @@
 		- (source/area)`74 1 87 14`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`9`
+		- (metrics/profile-duration)`94000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`94000`
+		- (metrics/profile-maximum)`94000`
 (signature)`test_endpoint_equality_type(test)`
 
 
@@ -126,6 +166,11 @@
 		- (source/area)`89 1 99 8`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`9`
+		- (metrics/profile-duration)`149000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`149000`
+		- (metrics/profile-maximum)`149000`
 (signature)`test_endpoint_only_equals(test)`
 
 
@@ -140,6 +185,11 @@
 		- (source/area)`101 1 108 29`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`93000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`93000`
+		- (metrics/profile-maximum)`93000`
 (signature)`test_endpoint_ip4_new(test)`
 
 
@@ -154,6 +204,11 @@
 		- (source/area)`110 1 122 29`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`11`
+		- (metrics/profile-duration)`124000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`124000`
+		- (metrics/profile-maximum)`124000`
 (signature)`test_endpoint_ip4_invalid(test)`
 
 
@@ -168,6 +223,11 @@
 		- (source/area)`124 1 132 22`
 		- (coverage-zeros)`5`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`57000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`57000`
+		- (metrics/profile-maximum)`57000`
 (signature)`test_endpoint_ip4_pton_error(test)`
 
 
@@ -182,6 +242,11 @@
 		- (source/area)`134 1 146 29`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`11`
+		- (metrics/profile-duration)`126000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`126000`
+		- (metrics/profile-maximum)`126000`
 (signature)`test_endpoint_ip6_invalid_address(test)`
 
 
@@ -196,6 +261,11 @@
 		- (source/area)`148 1 158 22`
 		- (coverage-zeros)`5`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`49000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`49000`
+		- (metrics/profile-maximum)`49000`
 (signature)`test_endpoint_ip6_pton_error(test)`
 
 
@@ -210,6 +280,11 @@
 		- (source/area)`160 1 167 24`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`88000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`88000`
+		- (metrics/profile-maximum)`88000`
 (signature)`test_endpoint_ip6_new(test)`
 
 
@@ -222,6 +297,11 @@
 		- (source/area)`169 1 180 33`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`8`
+		- (metrics/profile-duration)`92000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`92000`
+		- (metrics/profile-maximum)`92000`
 (signature)`test_Endpoint_posix_codes(test)`
 
 Validate presence of integer codes identifying the protocol family,

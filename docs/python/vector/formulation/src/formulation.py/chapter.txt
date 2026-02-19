@@ -6,6 +6,11 @@
 		- (source/area)`1 1 477 0`
 		- (coverage-zeros)`33`
 		- (coverage-counters)`239`
+		- (metrics/profile-duration)`36565`
+		- (metrics/profile-count)`92`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`17000`
+		- (metrics/profile-maximum)`147000`
 Parsing and processing tools for Vector Formulations.
 
 
@@ -84,6 +89,11 @@ The default tool set for vector expansion transformations.
 		- (source/area)`14 2 18 21`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`2577`
+		- (metrics/profile-count)`2861`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`3354000`
 (signature)`__init__(self, environ)`
 
 
@@ -96,6 +106,11 @@ The default tool set for vector expansion transformations.
 		- (source/area)`20 2 31 11`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`8`
+		- (metrics/profile-duration)`707`
+		- (metrics/profile-count)`37892`
+		- (metrics/profile-residency)`99.3696617060162`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`1968000`
 (signature)`Select(self, fields)`
 
 Compose a vector generator from the expansion fields.
@@ -124,6 +139,11 @@ Override the fields with the identified environment variable.
 		- (source/area)`42 2 47 52`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`1057`
+		- (metrics/profile-count)`140`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`3000`
 (signature)`quoted(self, string)`
 
 Surround the string with quotations and replace any occurrence with two.
@@ -180,6 +200,11 @@ Append a dot-suffix to the string.
 		- (source/area)`74 2 78 69`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`842`
+		- (metrics/profile-count)`19`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`2000`
 (signature)`prefix(self, prefix, string)`
 
 Force the string to have the given (factor-local/parameter)&<#Functions.prefix.Parameters.prefix[prefix]>.
@@ -215,6 +240,11 @@ final command constructors.
 		- (source/area)`88 2 94 39`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`11509`
+		- (metrics/profile-count)`2861`
+		- (metrics/profile-residency)`77.60400850288491`
+		- (metrics/profile-minimum)`2000`
+		- (metrics/profile-maximum)`3369000`
 (signature)`__init__(self, conclusions, constants)`
 
 Initialize the context identifying the set of available conditions.
@@ -231,6 +261,11 @@ Initialize the context identifying the set of available conditions.
 		- (source/area)`96 2 139 13`
 		- (coverage-zeros)`6`
 		- (coverage-counters)`20`
+		- (metrics/profile-duration)`1139`
+		- (metrics/profile-count)`15493`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`485000`
 (signature)`constraint(self, cset, matches, vparam)`
 
 
@@ -245,6 +280,11 @@ Initialize the context identifying the set of available conditions.
 		- (source/area)`140 2 201 15`
 		- (coverage-zeros)`5`
 		- (coverage-counters)`33`
+		- (metrics/profile-duration)`12325`
+		- (metrics/profile-count)`25806`
+		- (metrics/profile-residency)`40.972885960058356`
+		- (metrics/profile-minimum)`2000`
+		- (metrics/profile-maximum)`5219000`
 (signature)`resolve(Class, vf, vq, vi, index, slices)`
 
 
@@ -259,6 +299,11 @@ Initialize the context identifying the set of available conditions.
 		- (source/area)`203 2 262 51`
 		- (coverage-zeros)`4`
 		- (coverage-counters)`38`
+		- (metrics/profile-duration)`333197`
+		- (metrics/profile-count)`25060`
+		- (metrics/profile-residency)`3.9948972008976837`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`262223000`
 (signature)`production(self, index, vf, vq, vp, vs, query)`
 
 
@@ -271,6 +316,11 @@ Initialize the context identifying the set of available conditions.
 		- (source/area)`264 2 314 23`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`25`
+		- (metrics/profile-duration)`373992`
+		- (metrics/profile-count)`11210`
+		- (metrics/profile-residency)`2.105998062232764`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`262100000`
 (signature)`compose(self, index, selection, *argv)`
 
 Compose a command constructor with respect to (factor-local/parameter)&<#Context.compose.Parameters.self[self]>.
@@ -285,6 +335,11 @@ Compose a command constructor with respect to (factor-local/parameter)&<#Context
 		- (source/area)`316 2 322 3`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`4353`
+		- (metrics/profile-count)`8913`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`5205000`
 (signature)`chain(self, query, index, selection)`
 
 Compose and command constructor and evaluate it with respect to (factor-local/parameter)&<#Context.chain.Parameters.query[query]>.
@@ -299,6 +354,11 @@ Compose and command constructor and evaluate it with respect to (factor-local/pa
 		- (source/area)`324 1 340 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
+		- (metrics/profile-duration)`1085`
+		- (metrics/profile-count)`15088`
+		- (metrics/profile-residency)`83.648681640625`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`183000`
 (signature)`parameters(string)`
 
 Identify bracketed areas for substitution.
@@ -313,6 +373,11 @@ Identify bracketed areas for substitution.
 		- (source/area)`342 1 367 29`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`14`
+		- (metrics/profile-duration)`3394`
+		- (metrics/profile-count)`14772`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`4375000`
 (signature)`quotations(args)`
 
 Isolate quotations within a vector expression.
@@ -328,6 +393,11 @@ Quotations have the highest precedence and must be isolated first.
 		- (source/area)`369 1 414 62`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`27`
+		- (metrics/profile-duration)`14279`
+		- (metrics/profile-count)`15055`
+		- (metrics/profile-residency)`69.05662308182508`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`4389000`
 (signature)`instruction(lineno, line)`
 
 Recognize the vector instruction present on a given line.
@@ -342,6 +412,11 @@ Recognize the vector instruction present on a given line.
 		- (source/area)`416 1 453 25`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`21`
+		- (metrics/profile-duration)`157771`
+		- (metrics/profile-count)`3144`
+		- (metrics/profile-residency)`39.05203887644572`
+		- (metrics/profile-minimum)`4000`
+		- (metrics/profile-maximum)`6731000`
 (signature)`segments(lines)`
 
 Isolate the given (factor-local/parameter)&<#segments.Parameters.lines[lines]> into segments identified by the unindented line
@@ -358,6 +433,11 @@ in the order presented by the iterator.
 		- (source/area)`455 1 469 3`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`163404`
+		- (metrics/profile-count)`3144`
+		- (metrics/profile-residency)`-38.39916066982907`
+		- (metrics/profile-minimum)`7000`
+		- (metrics/profile-maximum)`6740000`
 (signature)`structure(origin, iterlines)`
 
 Structure the formatted vector expressions into a mapping
@@ -373,6 +453,11 @@ identifying the distinct sequences.
 		- (source/area)`471 1 477 33`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`168990`
+		- (metrics/profile-count)`3144`
+		- (metrics/profile-residency)`3.305628018505343`
+		- (metrics/profile-minimum)`9000`
+		- (metrics/profile-maximum)`6765000`
 (signature)`parse(text)`
 
 Split the (factor-local/parameter)&<#parse.Parameters.text[text]> into lines and return the (factor-local/function)&<#structure[structure]> form.

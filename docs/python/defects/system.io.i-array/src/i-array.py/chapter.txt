@@ -6,6 +6,11 @@
 		- (source/area)`1 1 219 8`
 		- (coverage-zeros)`15`
 		- (coverage-counters)`154`
+		- (metrics/profile-duration)`8558000`
+		- (metrics/profile-count)`13`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`8558000`
+		- (metrics/profile-maximum)`8558000`
 Array qualities
 
 
@@ -78,6 +83,11 @@ Array qualities
 		- (source/area)`11 1 21 11`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`8`
+		- (metrics/profile-duration)`163000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`163000`
+		- (metrics/profile-maximum)`163000`
 (signature)`test_array_already_acquired(test)`
 
 
@@ -90,6 +100,11 @@ Array qualities
 		- (source/area)`23 1 38 28`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`11`
+		- (metrics/profile-duration)`11495000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`11495000`
+		- (metrics/profile-maximum)`11495000`
 (signature)`test_array_set(test)`
 
 Sanity/smoke test validating the capacity to create some number of arrays.
@@ -106,6 +121,11 @@ Sanity/smoke test validating the capacity to create some number of arrays.
 		- (source/area)`40 1 54 26`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`10`
+		- (metrics/profile-duration)`193000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`193000`
+		- (metrics/profile-maximum)`193000`
 (signature)`test_array_termination(test)`
 
 
@@ -120,6 +140,11 @@ Sanity/smoke test validating the capacity to create some number of arrays.
 		- (source/area)`56 1 64 27`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`8`
+		- (metrics/profile-duration)`1001178000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1001178000`
+		- (metrics/profile-maximum)`1001178000`
 (signature)`test_array_wait(test)`
 
 
@@ -134,6 +159,11 @@ Sanity/smoke test validating the capacity to create some number of arrays.
 		- (source/area)`66 1 86 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`17`
+		- (metrics/profile-duration)`226000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`226000`
+		- (metrics/profile-maximum)`226000`
 (signature)`test_array_exceptions(test)`
 
 
@@ -148,6 +178,11 @@ Sanity/smoke test validating the capacity to create some number of arrays.
 		- (source/area)`88 1 104 10`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`12`
+		- (metrics/profile-duration)`185000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`185000`
+		- (metrics/profile-maximum)`185000`
 (signature)`test_array_terminated(test)`
 
 
@@ -162,6 +197,11 @@ Sanity/smoke test validating the capacity to create some number of arrays.
 		- (source/area)`106 1 119 6`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`10`
+		- (metrics/profile-duration)`133000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`133000`
+		- (metrics/profile-maximum)`133000`
 (signature)`test_array_force(test)`
 
 
@@ -176,6 +216,11 @@ Sanity/smoke test validating the capacity to create some number of arrays.
 		- (source/area)`121 1 132 10`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`10`
+		- (metrics/profile-duration)`145000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`145000`
+		- (metrics/profile-maximum)`145000`
 (signature)`test_array_in_cycle(test)`
 
 
@@ -188,6 +233,11 @@ Sanity/smoke test validating the capacity to create some number of arrays.
 		- (source/area)`134 1 156 7`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`17`
+		- (metrics/profile-duration)`236000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`236000`
+		- (metrics/profile-maximum)`236000`
 (signature)`test_array_out_of_cycle(test)`
 
 context manager to terminate on exit
@@ -204,6 +254,11 @@ context manager to terminate on exit
 		- (source/area)`158 1 167 7`
 		- (coverage-zeros)`8`
 		- (coverage-counters)`14`
+		- (metrics/profile-duration)`38000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`38000`
+		- (metrics/profile-maximum)`38000`
 (signature)`test_array_resize_exoresource(test)`
 
 
@@ -218,6 +273,11 @@ context manager to terminate on exit
 		- (source/area)`169 1 178 22`
 		- (coverage-zeros)`5`
 		- (coverage-counters)`7`
+		- (metrics/profile-duration)`82000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`82000`
+		- (metrics/profile-maximum)`82000`
 (signature)`test_array_new_failure(test)`
 
 
@@ -232,6 +292,11 @@ context manager to terminate on exit
 		- (source/area)`180 1 188 10`
 		- (coverage-zeros)`8`
 		- (coverage-counters)`14`
+		- (metrics/profile-duration)`38000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`38000`
+		- (metrics/profile-maximum)`38000`
 (signature)`test_array_resize_exoresource(test)`
 
 
@@ -246,5 +311,10 @@ context manager to terminate on exit
 		- (source/area)`190 1 220 7`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`24`
+		- (metrics/profile-duration)`531000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`531000`
+		- (metrics/profile-maximum)`531000`
 (signature)`test_array_collection_countdown(test)`
 

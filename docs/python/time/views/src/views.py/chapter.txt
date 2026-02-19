@@ -6,6 +6,11 @@
 		- (source/area)`1 1 240 0`
 		- (coverage-zeros)`15`
 		- (coverage-counters)`78`
+		- (metrics/profile-duration)`907250`
+		- (metrics/profile-count)`8`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`860000`
+		- (metrics/profile-maximum)`1065000`
 Access to timezone views for adjusting timestamps in and out of local forms.
 
 Usage:
@@ -171,6 +176,11 @@ build a sequence of transitions for subsequent searching.
 		- (source/area)`41 3 47 11`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`357`
+		- (metrics/profile-count)`14`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`1000`
 The offset in seconds from UTC.
 
 
@@ -195,6 +205,11 @@ The Offset's timezone abbreviation; such as UTC, GMT, and EST.
 		- (source/area)`55 3 61 11`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`250`
+		- (metrics/profile-count)`4`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`1000`
 Field used to identify if the (factor-local/class)&<#Zone.Offset[Offset]> is daylight savings time.
 
 
@@ -207,6 +222,11 @@ Field used to identify if the (factor-local/class)&<#Zone.Offset[Offset]> is day
 		- (source/area)`62 3 67 28`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`2500`
+		- (metrics/profile-count)`4`
+		- (metrics/profile-residency)`90.0`
+		- (metrics/profile-minimum)`2000`
+		- (metrics/profile-maximum)`3000`
 Whether or not the (factor-local/class)&<#Zone.Offset[Offset]> is referring to a daylight savings time
 offset.
 
@@ -222,6 +242,11 @@ offset.
 		- (source/area)`69 3 70 28`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`500`
+		- (metrics/profile-count)`36`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`2000`
 (signature)`__hash__(self)`
 
 
@@ -264,6 +289,11 @@ offset.
 		- (source/area)`82 3 83 34`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`1200`
+		- (metrics/profile-count)`5`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`2000`
 (signature)`__eq__(self, ob)`
 
 
@@ -278,6 +308,11 @@ offset.
 		- (source/area)`85 3 86 24`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`3357`
+		- (metrics/profile-count)`14`
+		- (metrics/profile-residency)`89.36170212765957`
+		- (metrics/profile-minimum)`2000`
+		- (metrics/profile-maximum)`7000`
 (signature)`__int__(self)`
 
 
@@ -304,6 +339,11 @@ Return the offset-qualified ISO representation of the given point in time.
 		- (source/area)`95 3 105 4`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`1326`
+		- (metrics/profile-count)`46`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`6000`
 (signature)`from_tzinfo(Class, tzinfo)`
 
 Construct a Zone instance from a (project-local/unknown)&<tzif#tzinfo[tzif.tzinfo]> tuple.
@@ -320,6 +360,11 @@ Construct a Zone instance from a (project-local/unknown)&<tzif#tzinfo[tzif.tzinf
 		- (source/area)`109 2 114 18`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`2750`
+		- (metrics/profile-count)`8`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`4000`
 (signature)`__init__(self, transitions, offsets, default, leaps, name)`
 
 
@@ -358,6 +403,11 @@ Construct a Zone instance from a (project-local/unknown)&<tzif#tzinfo[tzif.tzinf
 		- (source/area)`125 2 141 10`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`7`
+		- (metrics/profile-duration)`1425`
+		- (metrics/profile-count)`47`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`13000`
 (signature)`find(self, pit)`
 
 Get the appropriate offset in the zone for a given Point In Time, (factor-local/parameter)&<#Zone.find.Parameters.pit[pit]>.
@@ -389,6 +439,11 @@ Returns an offset for the timestamp according to the Zone's transition times.
 		- (source/area)`143 2 163 25`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
+		- (metrics/profile-duration)`8000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`8000`
+		- (metrics/profile-maximum)`8000`
 (signature)`slice(self, start, stop)`
 
 Get a slice of transition points and time zone offsets
@@ -425,6 +480,11 @@ occurred during the period designated by the slice.
 		- (source/area)`166 2 180 37`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`26700`
+		- (metrics/profile-count)`10`
+		- (metrics/profile-residency)`71.53558052434457`
+		- (metrics/profile-minimum)`13000`
+		- (metrics/profile-maximum)`76000`
 (signature)`localize(self, pit)`
 
 Given (factor-local/parameter)&<#Zone.localize.Parameters.pit[pit]>, return the localized version according to the zone's transitions.
@@ -454,6 +514,11 @@ Returns the localized timestamp.
 		- (source/area)`182 2 207 13`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`28000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`78.57142857142857`
+		- (metrics/profile-minimum)`28000`
+		- (metrics/profile-maximum)`28000`
 (signature)`normalize(self, offset, pit)`
 
 This function should be used in cases where adjustments are being made to
@@ -490,6 +555,11 @@ Returns the re-localized (factor-local/parameter)&<#Zone.normalize.Parameters.pi
 		- (source/area)`208 2 222 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`1032000`
+		- (metrics/profile-count)`8`
+		- (metrics/profile-residency)`98.99467054263566`
+		- (metrics/profile-minimum)`178000`
+		- (metrics/profile-maximum)`2089000`
 (signature)`from_tzif_data(Class, construct, tzd)`
 
 
@@ -504,6 +574,11 @@ Returns the re-localized (factor-local/parameter)&<#Zone.normalize.Parameters.pi
 		- (source/area)`223 2 230 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`1648625`
+		- (metrics/profile-count)`8`
+		- (metrics/profile-residency)`37.402380771855334`
+		- (metrics/profile-minimum)`334000`
+		- (metrics/profile-maximum)`4140000`
 (signature)`from_file(Class, construct, filepath)`
 
 
@@ -518,5 +593,10 @@ Returns the re-localized (factor-local/parameter)&<#Zone.normalize.Parameters.pi
 		- (source/area)`231 2 240 39`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`1670500`
+		- (metrics/profile-count)`8`
+		- (metrics/profile-residency)`1.3094881771924574`
+		- (metrics/profile-minimum)`347000`
+		- (metrics/profile-maximum)`4171000`
 (signature)`open(Class, construct)`
 

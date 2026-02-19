@@ -6,6 +6,11 @@
 		- (source/area)`1 1 755 0`
 		- (coverage-zeros)`81`
 		- (coverage-counters)`312`
+		- (metrics/profile-duration)`205312`
+		- (metrics/profile-count)`976`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`80000`
+		- (metrics/profile-maximum)`1646000`
 Range classes for managing associations and sets whose items span ranges.
 
 [ Engineering ]
@@ -118,6 +123,11 @@ the contiguous values.
 		- (source/area)`50 1 80 11`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`17`
+		- (metrics/profile-duration)`24613`
+		- (metrics/profile-count)`7344`
+		- (metrics/profile-residency)`23.57337670600081`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`22654000`
 (signature)`combine(ranges)`
 
 Combine the ranges into a sequence of ranges reducing them according
@@ -219,6 +229,11 @@ The end of the Range, inclusive.
 		- (source/area)`112 2 120 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`4056`
+		- (metrics/profile-count)`6382`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`22632000`
 (signature)`normal(Class, *args)`
 
 Create a normal range using the given boundaries; the minimum given will be the
@@ -234,6 +249,11 @@ start and the maximum will be the stop.
 		- (source/area)`121 2 128 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`520`
+		- (metrics/profile-count)`50`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`2000`
 (signature)`single(Class, index)`
 
 Create a range consisting of a single unit.
@@ -250,6 +270,11 @@ Create a range consisting of a single unit.
 		- (source/area)`129 2 133 35`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`6136`
+		- (metrics/profile-count)`66`
+		- (metrics/profile-residency)`87.65432098765433`
+		- (metrics/profile-minimum)`2000`
+		- (metrics/profile-maximum)`20000`
 (signature)`from_string(Class, string)`
 
 
@@ -262,6 +287,11 @@ Create a range consisting of a single unit.
 		- (source/area)`135 2 143 33`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`449`
+		- (metrics/profile-count)`75917`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`13000`
 (signature)`__contains__(self, x)`
 
 Whether or not the range contains the given number.
@@ -278,6 +308,11 @@ Whether or not the range contains the given number.
 		- (source/area)`145 2 149 24`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`5555`
+		- (metrics/profile-count)`9`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`28000`
 (signature)`__str__(self)`
 
 
@@ -309,6 +344,11 @@ greater than the stop, and `0` if it is contained.
 		- (source/area)`168 2 174 43`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`750`
+		- (metrics/profile-count)`4`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`1000`
 (signature)`contiguous(self, r)`
 
 The given range is contiguous with the other, but does *not*
@@ -324,6 +364,11 @@ The given range is contiguous with the other, but does *not*
 		- (source/area)`176 2 182 24`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`578`
+		- (metrics/profile-count)`19`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`1000`
 (signature)`overlaps(self, r)`
 
 The ranges overlap onto each other.
@@ -338,6 +383,11 @@ The ranges overlap onto each other.
 		- (source/area)`184 2 190 26`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`5168`
+		- (metrics/profile-count)`19542`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`19304000`
 (signature)`continuation(self, r)`
 
 The ranges are continuous: overlaps or contiguous.
@@ -352,6 +402,11 @@ The ranges are continuous: overlaps or contiguous.
 		- (source/area)`192 2 197 60`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`5866`
+		- (metrics/profile-count)`6332`
+		- (metrics/profile-residency)`30.420502880525497`
+		- (metrics/profile-minimum)`2000`
+		- (metrics/profile-maximum)`22638000`
 (signature)`join(self, r)`
 
 Combine the ranges regardless of adjacency.
@@ -366,6 +421,11 @@ Combine the ranges regardless of adjacency.
 		- (source/area)`199 2 238 11`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`13`
+		- (metrics/profile-duration)`9875`
+		- (metrics/profile-count)`16`
+		- (metrics/profile-residency)`71.51898734177216`
+		- (metrics/profile-minimum)`3000`
+		- (metrics/profile-maximum)`21000`
 (signature)`filter(self, ranges)`
 
 Modify (filter) the (factor-local/parameter)&<#IRange.filter.Parameters.ranges[ranges]> to be outside of (factor-local/parameter)&<#IRange.filter.Parameters.self[self]>.
@@ -398,6 +458,11 @@ contained ranges entirely from the generated sequence.
 		- (source/area)`240 2 260 32`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`8`
+		- (metrics/profile-duration)`3444`
+		- (metrics/profile-count)`9`
+		- (metrics/profile-residency)`74.19354838709677`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`11000`
 		- (type/syntax)`typing.Iterable["IRange"]`
 		
 (signature)`intersect(self, ranges)`
@@ -511,6 +576,11 @@ may need to convert the range set or portions thereof into a regular (invalid/un
 		- (source/area)`294 2 301 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`63000`
+		- (metrics/profile-count)`12`
+		- (metrics/profile-residency)`40.34391534391535`
+		- (metrics/profile-minimum)`9000`
+		- (metrics/profile-maximum)`148000`
 (signature)`from_string(Class, string)`
 
 
@@ -537,6 +607,11 @@ may need to convert the range set or portions thereof into a regular (invalid/un
 		- (source/area)`307 2 312 64`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`6800`
+		- (metrics/profile-count)`5`
+		- (metrics/profile-residency)`70.58823529411765`
+		- (metrics/profile-minimum)`3000`
+		- (metrics/profile-maximum)`15000`
 (signature)`from_normal_sequence(Class, ranges)`
 
 Low-level constructor building a Set from an
@@ -554,6 +629,11 @@ Low-level constructor building a Set from an
 		- (source/area)`314 2 317 23`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`545`
+		- (metrics/profile-count)`7800`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`7000`
 (signature)`__init__(self, pair)`
 
 
@@ -582,6 +662,11 @@ Low-level constructor building a Set from an
 		- (source/area)`322 2 323 51`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`12000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`75.0`
+		- (metrics/profile-minimum)`12000`
+		- (metrics/profile-maximum)`12000`
 (signature)`__reduce__(self)`
 
 
@@ -596,6 +681,11 @@ Low-level constructor building a Set from an
 		- (source/area)`325 2 326 50`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`1000`
+		- (metrics/profile-count)`29`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`4000`
 (signature)`__iter__(self)`
 
 
@@ -610,6 +700,11 @@ Low-level constructor building a Set from an
 		- (source/area)`328 2 329 33`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`24500`
+		- (metrics/profile-count)`2`
+		- (metrics/profile-residency)`51.02040816326531`
+		- (metrics/profile-minimum)`24000`
+		- (metrics/profile-maximum)`25000`
 (signature)`__str__(self)`
 
 
@@ -624,6 +719,11 @@ Low-level constructor building a Set from an
 		- (source/area)`331 2 332 60`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`1000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`1000`
 (signature)`__eq__(self, ns)`
 
 
@@ -636,6 +736,11 @@ Low-level constructor building a Set from an
 		- (source/area)`334 2 342 81`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`2125`
+		- (metrics/profile-count)`8`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`4000`
 (signature)`__len__(self)`
 
 Total number of *individual units* held by the set.
@@ -653,6 +758,11 @@ have a length of `101`.
 		- (source/area)`344 2 367 11`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`14`
+		- (metrics/profile-duration)`6132`
+		- (metrics/profile-count)`67987`
+		- (metrics/profile-residency)`91.84668036905308`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`30240000`
 (signature)`intersecting(self, range)`
 
 Get the ranges in the set that have intersections with the given range.
@@ -697,6 +807,11 @@ Get the ranges in the set that have intersections with the given range.
 		- (source/area)`387 2 392 15`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`11785`
+		- (metrics/profile-count)`28`
+		- (metrics/profile-residency)`31.818181818181817`
+		- (metrics/profile-minimum)`7000`
+		- (metrics/profile-maximum)`38000`
 (signature)`__contains__(self, item)`
 
 
@@ -709,6 +824,11 @@ Get the ranges in the set that have intersections with the given range.
 		- (source/area)`394 2 416 66`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`11`
+		- (metrics/profile-duration)`28250`
+		- (metrics/profile-count)`7325`
+		- (metrics/profile-residency)`12.780886659514628`
+		- (metrics/profile-minimum)`3000`
+		- (metrics/profile-maximum)`22661000`
 (signature)`add(self, range)`
 
 Add a range to the set combining it with any continuations.
@@ -723,6 +843,11 @@ Add a range to the set combining it with any continuations.
 		- (source/area)`418 2 443 29`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`14`
+		- (metrics/profile-duration)`26666`
+		- (metrics/profile-count)`3`
+		- (metrics/profile-residency)`31.25`
+		- (metrics/profile-minimum)`19000`
+		- (metrics/profile-maximum)`32000`
 (signature)`discard(self, range)`
 
 Remove an arbitrary range from the set.
@@ -737,6 +862,11 @@ Remove an arbitrary range from the set.
 		- (source/area)`445 2 494 9`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`23`
+		- (metrics/profile-duration)`93000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`51.61290322580645`
+		- (metrics/profile-minimum)`93000`
+		- (metrics/profile-maximum)`93000`
 (signature)`intersection(self, range_set)`
 
 Calculate the intersection between two (factor-local/class)&<#Set[Set]> instances.
@@ -752,6 +882,11 @@ Low-level method. Use (python/operator)`|` for high-level purposes.
 		- (source/area)`496 2 537 15`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`19`
+		- (metrics/profile-duration)`77000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`38.961038961038966`
+		- (metrics/profile-minimum)`77000`
+		- (metrics/profile-maximum)`77000`
 (signature)`difference(self, range_set)`
 
 Calculate the difference between two (factor-local/class)&<#Set[Set]> instances.
@@ -767,6 +902,11 @@ Low-level method. Use (python/operator)`-` for high-level purposes.
 		- (source/area)`539 2 546 58`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`77000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`28.57142857142857`
+		- (metrics/profile-minimum)`77000`
+		- (metrics/profile-maximum)`77000`
 (signature)`union(self, range_set)`
 
 Calculate the union between two (factor-local/class)&<#Set[Set]> instances.
@@ -797,6 +937,11 @@ Calculate the union between two (factor-local/class)&<#Set[Set]> instances.
 		- (source/area)`549 2 550 78`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`92000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`11.956521739130435`
+		- (metrics/profile-minimum)`92000`
+		- (metrics/profile-maximum)`92000`
 (signature)`__sub__(self, range_set)`
 
 
@@ -1059,6 +1204,11 @@ execution (fewer stack frames) and memory (fewer instances) performance.
 		- (source/area)`673 2 676 19`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`2394`
+		- (metrics/profile-count)`7783`
+		- (metrics/profile-residency)`77.4307791371539`
+		- (metrics/profile-minimum)`2000`
+		- (metrics/profile-maximum)`34000`
 (signature)`__init__(self)`
 
 
@@ -1073,6 +1223,11 @@ execution (fewer stack frames) and memory (fewer instances) performance.
 		- (source/area)`678 2 681 22`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`14210`
+		- (metrics/profile-count)`19`
+		- (metrics/profile-residency)`7.4074074074074066`
+		- (metrics/profile-minimum)`3000`
+		- (metrics/profile-maximum)`44000`
 (signature)`keys(self)`
 
 
@@ -1087,6 +1242,11 @@ execution (fewer stack frames) and memory (fewer instances) performance.
 		- (source/area)`683 2 688 24`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`13000`
+		- (metrics/profile-count)`15`
+		- (metrics/profile-residency)`74.35897435897435`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`42000`
 (signature)`values(self)`
 
 
@@ -1101,6 +1261,11 @@ execution (fewer stack frames) and memory (fewer instances) performance.
 		- (source/area)`690 2 691 40`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`2500`
+		- (metrics/profile-count)`4`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`7000`
 (signature)`items(self)`
 
 
@@ -1115,6 +1280,11 @@ execution (fewer stack frames) and memory (fewer instances) performance.
 		- (source/area)`693 2 698 19`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`18933`
+		- (metrics/profile-count)`25361`
+		- (metrics/profile-residency)`9.067015988120849`
+		- (metrics/profile-minimum)`8000`
+		- (metrics/profile-maximum)`24125000`
 (signature)`get(self, key)`
 
 
@@ -1129,6 +1299,11 @@ execution (fewer stack frames) and memory (fewer instances) performance.
 		- (source/area)`700 2 705 19`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`20000`
+		- (metrics/profile-count)`14`
+		- (metrics/profile-residency)`9.285714285714286`
+		- (metrics/profile-minimum)`13000`
+		- (metrics/profile-maximum)`24000`
 (signature)`__getitem__(self, key)`
 
 
@@ -1143,6 +1318,11 @@ execution (fewer stack frames) and memory (fewer instances) performance.
 		- (source/area)`707 2 711 14`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`57287`
+		- (metrics/profile-count)`7324`
+		- (metrics/profile-residency)`8.800592982405965`
+		- (metrics/profile-minimum)`17000`
+		- (metrics/profile-maximum)`30293000`
 (signature)`__setitem__(self, key, value)`
 
 
@@ -1157,6 +1337,11 @@ execution (fewer stack frames) and memory (fewer instances) performance.
 		- (source/area)`713 2 720 14`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`52333`
+		- (metrics/profile-count)`3`
+		- (metrics/profile-residency)`-14.64968152866242`
+		- (metrics/profile-minimum)`28000`
+		- (metrics/profile-maximum)`80000`
 (signature)`update(self, vs)`
 
 
@@ -1183,6 +1368,11 @@ execution (fewer stack frames) and memory (fewer instances) performance.
 		- (source/area)`732 2 738 26`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`32000`
+		- (metrics/profile-count)`7`
+		- (metrics/profile-residency)`1.7857142857142856`
+		- (metrics/profile-minimum)`22000`
+		- (metrics/profile-maximum)`41000`
 (signature)`path(self, key)`
 
 For the given key, identify the containing range and its associated value
@@ -1200,6 +1390,11 @@ at each level in the mapping.
 		- (source/area)`740 2 749 14`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
+		- (metrics/profile-duration)`16291`
+		- (metrics/profile-count)`32706`
+		- (metrics/profile-residency)`17.71511899600813`
+		- (metrics/profile-minimum)`3000`
+		- (metrics/profile-maximum)`30249000`
 (signature)`levels(self, key)`
 
 
@@ -1214,5 +1409,10 @@ at each level in the mapping.
 		- (source/area)`751 2 755 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`18216`
+		- (metrics/profile-count)`32699`
+		- (metrics/profile-residency)`10.583862568431233`
+		- (metrics/profile-minimum)`5000`
+		- (metrics/profile-maximum)`30252000`
 (signature)`last(self, key)`
 

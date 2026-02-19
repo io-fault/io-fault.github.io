@@ -6,6 +6,11 @@
 		- (source/area)`1 1 182 42`
 		- (coverage-zeros)`3`
 		- (coverage-counters)`127`
+		- (metrics/profile-duration)`5639000`
+		- (metrics/profile-count)`4`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`5639000`
+		- (metrics/profile-maximum)`5639000`
 Primarily interested in (project-local/unknown)&<flows.Catenation> and (project-local/unknown)&<flows.Division>;
 tunneling and expansion of flow events.
 
@@ -101,6 +106,11 @@ tunneling and expansion of flow events.
 		- (source/area)`14 1 28 35`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`9`
+		- (metrics/profile-duration)`219000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`219000`
+		- (metrics/profile-maximum)`219000`
 (signature)`test_event_identifiers(test)`
 
 Validate primitives.
@@ -115,6 +125,11 @@ Validate primitives.
 		- (source/area)`30 1 136 26`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`76`
+		- (metrics/profile-duration)`5870000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`5870000`
+		- (metrics/profile-maximum)`5870000`
 (signature)`test_Catenation(test)`
 
 Subflow sequencing tests.
@@ -129,6 +144,11 @@ Subflow sequencing tests.
 		- (source/area)`138 1 179 26`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`30`
+		- (metrics/profile-duration)`5020000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`5020000`
+		- (metrics/profile-maximum)`5020000`
 (signature)`test_Division(test)`
 
 - (invalid/unknown)&<#library.Division>

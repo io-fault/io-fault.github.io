@@ -6,6 +6,11 @@
 		- (source/area)`1 1 398 0`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`218`
+		- (metrics/profile-duration)`11000`
+		- (metrics/profile-count)`23`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`11000`
+		- (metrics/profile-maximum)`11000`
 Product directory interface checks.
 
 
@@ -98,6 +103,11 @@ Product directory interface checks.
 		- (source/area)`10 1 16 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`620014`
+		- (metrics/profile-count)`67`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`314000`
+		- (metrics/profile-maximum)`9454000`
 (signature)`setup(pd)`
 
 
@@ -112,6 +122,11 @@ Product directory interface checks.
 		- (source/area)`18 1 31 31`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`11`
+		- (metrics/profile-duration)`4545000`
+		- (metrics/profile-count)`13`
+		- (metrics/profile-residency)`31.715325378691716`
+		- (metrics/profile-minimum)`2925000`
+		- (metrics/profile-maximum)`17183000`
 (signature)`product_a(test)`
 
 
@@ -124,6 +139,11 @@ Product directory interface checks.
 		- (source/area)`33 1 39 47`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`362000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`362000`
+		- (metrics/profile-maximum)`362000`
 (signature)`test_Product_attributes(test)`
 
 - (context-local/factor-element)&<fault.project/system#Product.project_index_route[fault.project.system.Product.project_index_route]>
@@ -138,6 +158,11 @@ Product directory interface checks.
 		- (source/area)`41 1 47 46`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`126000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`126000`
+		- (metrics/profile-maximum)`126000`
 (signature)`test_Product_import(test)`
 
 - (context-local/factor-element)&<fault.project/system#Product.import_protocol[fault.project.system.Product.import_protocol]>
@@ -152,6 +177,11 @@ Product directory interface checks.
 		- (source/area)`49 1 63 28`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`10`
+		- (metrics/profile-duration)`2493000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`76.05294825511432`
+		- (metrics/profile-minimum)`2493000`
+		- (metrics/profile-maximum)`2493000`
 (signature)`test_iterprojects_root_no_context(test)`
 
 - (context-local/factor-element)&<fault.project/system#Product.iterprojects[fault.project.system.Product.iterprojects]>
@@ -166,6 +196,11 @@ Product directory interface checks.
 		- (source/area)`65 1 80 25`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`11`
+		- (metrics/profile-duration)`2524000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`76.30744849445324`
+		- (metrics/profile-minimum)`2524000`
+		- (metrics/profile-maximum)`2524000`
 (signature)`test_update(test)`
 
 - (context-local/factor-element)&<fault.project/system#Product.update[fault.project.system.Product.update]>
@@ -180,6 +215,11 @@ Product directory interface checks.
 		- (source/area)`82 1 102 40`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`10`
+		- (metrics/profile-duration)`7057000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`46.69122856737991`
+		- (metrics/profile-minimum)`7057000`
+		- (metrics/profile-maximum)`7057000`
 (signature)`test_update_nested(test)`
 
 - (context-local/factor-element)&<fault.project/system#Product.update[fault.project.system.Product.update]>
@@ -194,6 +234,11 @@ Product directory interface checks.
 		- (source/area)`104 1 126 41`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`10`
+		- (metrics/profile-duration)`4677000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`37.459910198845414`
+		- (metrics/profile-minimum)`4677000`
+		- (metrics/profile-maximum)`4677000`
 (signature)`test_cache_io(test)`
 
 - (context-local/factor-element)&<fault.project/system#Product.store[fault.project.system.Product.store]>
@@ -209,6 +254,11 @@ Product directory interface checks.
 		- (source/area)`128 1 143 35`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`10`
+		- (metrics/profile-duration)`5426000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`44.61850350165868`
+		- (metrics/profile-minimum)`5426000`
+		- (metrics/profile-maximum)`5426000`
 (signature)`test_Product_select(test)`
 
 - (context-local/factor-element)&<fault.project/system#Product.identifier_by_factor[fault.project.system.Product.identifier_by_factor]>
@@ -224,6 +274,11 @@ Product directory interface checks.
 		- (source/area)`145 1 159 47`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`8`
+		- (metrics/profile-duration)`3657000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`8.887065901011757`
+		- (metrics/profile-minimum)`3657000`
+		- (metrics/profile-maximum)`3657000`
 (signature)`test_Product_image_default(test)`
 
 - (context-local/factor-element)&<fault.project/system#Product.image[fault.project.system.Product.image]>
@@ -240,6 +295,11 @@ Validate the expected default image location.
 		- (source/area)`161 1 175 47`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`8`
+		- (metrics/profile-duration)`4697000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`6.174153715137322`
+		- (metrics/profile-minimum)`4697000`
+		- (metrics/profile-maximum)`4697000`
 (signature)`test_Product_image_form(test)`
 
 - (context-local/factor-element)&<fault.project/system#Product.image[fault.project.system.Product.image]>
@@ -256,6 +316,11 @@ Validate the expected form adjusted location.
 		- (source/area)`177 1 187 32`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`161000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`161000`
+		- (metrics/profile-maximum)`161000`
 (signature)`test_Project_no_corpus_part(test)`
 
 - (context-local/factor-element)&<fault.project/system#Project._iid_corpus_name_pair[fault.project.system.Project._iid_corpus_name_pair]>
@@ -272,6 +337,11 @@ Validate the expected form adjusted location.
 		- (source/area)`189 1 199 29`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`172000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`172000`
+		- (metrics/profile-maximum)`172000`
 (signature)`test_Project_corpus_name(test)`
 
 - (context-local/factor-element)&<fault.project/system#Project._iid_corpus_name_pair[fault.project.system.Project._iid_corpus_name_pair]>
@@ -288,6 +358,11 @@ Validate the expected form adjusted location.
 		- (source/area)`201 1 214 51`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`9`
+		- (metrics/profile-duration)`6777000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`35.84181791353106`
+		- (metrics/profile-minimum)`6777000`
+		- (metrics/profile-maximum)`6777000`
 (signature)`test_Project_select_none(test)`
 
 - (context-local/factor-element)&<fault.project/system#Project.select[fault.project.system.Project.select]>
@@ -302,6 +377,11 @@ Validate the expected form adjusted location.
 		- (source/area)`216 1 232 69`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`12`
+		- (metrics/profile-duration)`6464000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`51.76361386138614`
+		- (metrics/profile-minimum)`6464000`
+		- (metrics/profile-maximum)`6464000`
 (signature)`test_Project_refer_absolute(test)`
 
 - (context-local/factor-element)&<fault.project/system#Project.refer[fault.project.system.Project.refer]>
@@ -316,6 +396,11 @@ Validate the expected form adjusted location.
 		- (source/area)`234 1 252 77`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`13`
+		- (metrics/profile-duration)`5249000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`37.778624499904744`
+		- (metrics/profile-minimum)`5249000`
+		- (metrics/profile-maximum)`5249000`
 (signature)`test_Project_refer_relative(test)`
 
 - (context-local/factor-element)&<fault.project/system#Project.refer[fault.project.system.Project.refer]>
@@ -330,6 +415,11 @@ Validate the expected form adjusted location.
 		- (source/area)`254 1 270 76`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`9`
+		- (metrics/profile-duration)`5442000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`37.72510106578464`
+		- (metrics/profile-minimum)`5442000`
+		- (metrics/profile-maximum)`5442000`
 (signature)`test_Project_extensions(test)`
 
 - (context-local/factor-element)&<fault.project/system#Project.extensions[fault.project.system.Project.extensions]>
@@ -348,6 +438,11 @@ Validate successful extensions.
 		- (source/area)`272 1 298 64`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`16`
+		- (metrics/profile-duration)`5702000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`38.79340582251841`
+		- (metrics/profile-minimum)`5702000`
+		- (metrics/profile-maximum)`5702000`
 (signature)`test_Project_extensions_vacancies(test)`
 
 - (context-local/factor-element)&<fault.project/system#Project.extensions[fault.project.system.Project.extensions]>
@@ -366,6 +461,11 @@ Validate that exceptions aren't raised by icon and synopsis.
 		- (source/area)`300 1 305 86`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`131000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`131000`
+		- (metrics/profile-maximum)`131000`
 (signature)`test_Context_import_protocol(test)`
 
 - (context-local/factor-element)&<fault.project/system#Context.import_protocol[fault.project.system.Context.import_protocol]>
@@ -380,6 +480,11 @@ Validate that exceptions aren't raised by icon and synopsis.
 		- (source/area)`307 1 320 45`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`8`
+		- (metrics/profile-duration)`5815000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`37.31728288907997`
+		- (metrics/profile-minimum)`5815000`
+		- (metrics/profile-maximum)`5815000`
 (signature)`test_Context_connect(test)`
 
 - (context-local/factor-element)&<fault.project/system#Context.connect[fault.project.system.Context.connect]>
@@ -394,6 +499,11 @@ Validate that exceptions aren't raised by icon and synopsis.
 		- (source/area)`322 1 334 70`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`9`
+		- (metrics/profile-duration)`5176000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`37.88639876352396`
+		- (metrics/profile-minimum)`5176000`
+		- (metrics/profile-maximum)`5176000`
 (signature)`test_Context_project(test)`
 
 - (context-local/factor-element)&<fault.project/system#Context.project[fault.project.system.Context.project]>
@@ -408,6 +518,11 @@ Validate that exceptions aren't raised by icon and synopsis.
 		- (source/area)`336 1 352 53`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`11`
+		- (metrics/profile-duration)`22968000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`25.187216997561823`
+		- (metrics/profile-minimum)`22968000`
+		- (metrics/profile-maximum)`22968000`
 (signature)`test_Context_load(test)`
 
 - (context-local/factor-element)&<fault.project/system#Context.load[fault.project.system.Context.load]>
@@ -422,6 +537,11 @@ Validate that exceptions aren't raised by icon and synopsis.
 		- (source/area)`354 1 377 35`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`12`
+		- (metrics/profile-duration)`199000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`199000`
+		- (metrics/profile-maximum)`199000`
 (signature)`test_project_declaration(test)`
 
 - (context-local/factor-element)&<fault.project/system#structure_project_declaration[fault.project.system.structure_project_declaration]>
@@ -437,6 +557,11 @@ Validate that exceptions aren't raised by icon and synopsis.
 		- (source/area)`379 1 398 23`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`9`
+		- (metrics/profile-duration)`174000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`174000`
+		- (metrics/profile-maximum)`174000`
 (signature)`test_project_declaration_exceptions(test)`
 
 - (context-local/factor-element)&<fault.project/system#structure_project_declaration[fault.project.system.structure_project_declaration]>

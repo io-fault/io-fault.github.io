@@ -6,6 +6,11 @@
 		- (source/area)`1 1 315 0`
 		- (coverage-zeros)`43`
 		- (coverage-counters)`96`
+		- (metrics/profile-duration)`43333`
+		- (metrics/profile-count)`9`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`25000`
+		- (metrics/profile-maximum)`66000`
 Nested generator based HTML/XML serialization module.
 
 Provides primitives for generating XML using nested generators.
@@ -107,6 +112,11 @@ This returns an iterable suitable for use by (factor-local/data)&<#element[eleme
 		- (source/area)`48 1 61 62`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`570`
+		- (metrics/profile-count)`58550`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`17000`
 (signature)`escape_element_string(string)`
 
 Escape and encode an arbitrary string for storage inside an
@@ -125,6 +135,11 @@ This returns an iterable suitable for use by (factor-local/data)&<#element[eleme
 		- (source/area)`63 1 86 14`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`9`
+		- (metrics/profile-duration)`572`
+		- (metrics/profile-count)`152379`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`10324000`
 (signature)`escape_attribute_string(string)`
 
 Escape the given string for inclusion in an attribute value.
@@ -146,6 +161,11 @@ Does *not* encode the result string.
 		- (source/area)`88 1 108 11`
 		- (coverage-zeros)`5`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`2424`
+		- (metrics/profile-count)`152371`
+		- (metrics/profile-residency)`76.38043119360408`
+		- (metrics/profile-minimum)`2000`
+		- (metrics/profile-maximum)`10331000`
 		- (type/syntax)`str`
 		- (type/factor-local/parameter)&<#attribute.Parameters.str[str]>
 		
@@ -182,6 +202,11 @@ Return an iterable to an empty element.
 		- (source/area)`117 1 142 3`
 		- (coverage-zeros)`7`
 		- (coverage-counters)`17`
+		- (metrics/profile-duration)`80954`
+		- (metrics/profile-count)`132504`
+		- (metrics/profile-residency)`5.123789367662781`
+		- (metrics/profile-minimum)`3000`
+		- (metrics/profile-maximum)`62473000`
 (signature)`encode_element(encoding, element_identifier, content, *attribute_sequence, **attributes)`
 
 Generate an entire element populating the body by yielding from the given content.
@@ -242,6 +267,11 @@ with the binary emission of a document built for nested iterators.
 		- (source/area)`164 2 174 74`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
+		- (metrics/profile-duration)`4666`
+		- (metrics/profile-count)`6`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`2000`
+		- (metrics/profile-maximum)`17000`
 (signature)`__init__(self)`
 
 Initialize the serializer to write XML data in the given encoding.
@@ -256,6 +286,11 @@ Initialize the serializer to write XML data in the given encoding.
 		- (source/area)`176 2 188 26`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`4000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`4000`
+		- (metrics/profile-maximum)`4000`
 (signature)`declaration(self, standalone)`
 
 Construct and return an ASCII encoded string representing
@@ -360,6 +395,11 @@ The configured prefix may or may not be an XML namespace.
 		- (source/area)`237 2 248 8`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`3000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`3000`
+		- (metrics/profile-maximum)`3000`
 (signature)`pi(self, target, data)`
 
 Emit an XML Processing Instruction.
@@ -377,6 +417,11 @@ productions as a single string is returned rather than an iterator.
 		- (source/area)`250 2 275 25`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`11`
+		- (metrics/profile-duration)`36000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`41.66666666666667`
+		- (metrics/profile-minimum)`36000`
+		- (metrics/profile-maximum)`36000`
 (signature)`root(self, name, content, *attributes)`
 
 Construct the root element of a document.

@@ -6,6 +6,11 @@
 		- (source/area)`1 1 36 0`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`19`
+		- (metrics/profile-duration)`6675`
+		- (metrics/profile-count)`3622`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`2000`
+		- (metrics/profile-maximum)`1913000`
 Tool execution factor for explicitly linked command sets.
 
 
@@ -66,6 +71,11 @@ Tool execution factor for explicitly linked command sets.
 		- (source/area)`10 1 18 31`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`1281`
+		- (metrics/profile-count)`7244`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`535000`
 (signature)`extend(*select)`
 
 Add lookup functions for extending the set of executable tools.
@@ -86,6 +96,11 @@ that no match could be made.
 		- (source/area)`20 1 27 74`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`1971`
+		- (metrics/profile-count)`3622`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`369000`
 (signature)`query(name)`
 
 
@@ -100,6 +115,11 @@ that no match could be made.
 		- (source/area)`29 1 36 49`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
+		- (metrics/profile-duration)`3595099`
+		- (metrics/profile-count)`3622`
+		- (metrics/profile-residency)`99.94516739266115`
+		- (metrics/profile-minimum)`307000`
+		- (metrics/profile-maximum)`166181000`
 		- (type/syntax)`process.Exit`
 		- (type/project-local/factor-element)&<process#Exit[fault.system.process.Exit]>
 		

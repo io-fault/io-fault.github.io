@@ -6,6 +6,11 @@
 		- (source/area)`1 1 693 0`
 		- (coverage-zeros)`46`
 		- (coverage-counters)`311`
+		- (metrics/profile-duration)`3368679`
+		- (metrics/profile-count)`823`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`2192000`
+		- (metrics/profile-maximum)`19138000`
 Defines the time Context that constructs unit types and manages their
 relationships to other unit types.
 
@@ -217,6 +222,11 @@ An attempt to transform units failed.
 		- (source/area)`39 2 42 24`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`3500`
+		- (metrics/profile-count)`2`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`6000`
 (signature)`__init__(self, *args)`
 
 
@@ -289,6 +299,11 @@ The exception raised when a string representation of the datetime could not be p
 		- (source/area)`60 2 62 22`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`2200`
+		- (metrics/profile-count)`5`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`7000`
 (signature)`__init__(self, source)`
 
 
@@ -336,6 +351,11 @@ transformed.
 		- (source/area)`72 2 75 22`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`1500`
+		- (metrics/profile-count)`2`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`3000`
 (signature)`__init__(self, source, struct)`
 
 
@@ -385,6 +405,11 @@ parts of a timestamp. (The day of week field is arguably superfluous.)
 		- (source/area)`88 2 92 22`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`5000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`5000`
+		- (metrics/profile-maximum)`5000`
 (signature)`__init__(self, source, struct, tuple)`
 
 
@@ -448,6 +473,11 @@ subclasses across all (factor-local/class)&<#Context[Context]> instances.
 		- (source/area)`107 2 184 13`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`37`
+		- (metrics/profile-duration)`27514`
+		- (metrics/profile-count)`9545`
+		- (metrics/profile-residency)`69.19805196041474`
+		- (metrics/profile-minimum)`3000`
+		- (metrics/profile-maximum)`6341000`
 (signature)`construct(Class, units, parts)`
 
 
@@ -462,6 +492,11 @@ subclasses across all (factor-local/class)&<#Context[Context]> instances.
 		- (source/area)`185 2 186 38`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`34929`
+		- (metrics/profile-count)`3395`
+		- (metrics/profile-residency)`7.748872117046844`
+		- (metrics/profile-minimum)`5000`
+		- (metrics/profile-maximum)`865000`
 (signature)`of(Class, *units, **parts)`
 
 
@@ -476,6 +511,11 @@ subclasses across all (factor-local/class)&<#Context[Context]> instances.
 		- (source/area)`188 2 192 4`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`70153`
+		- (metrics/profile-count)`13`
+		- (metrics/profile-residency)`7.456140350877193`
+		- (metrics/profile-minimum)`17000`
+		- (metrics/profile-maximum)`182000`
 (signature)`update(self)`
 
 
@@ -490,6 +530,11 @@ subclasses across all (factor-local/class)&<#Context[Context]> instances.
 		- (source/area)`194 2 203 65`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`29181`
+		- (metrics/profile-count)`11`
+		- (metrics/profile-residency)`18.38006230529595`
+		- (metrics/profile-minimum)`6000`
+		- (metrics/profile-maximum)`109000`
 (signature)`truncate(self, unit)`
 
 
@@ -504,6 +549,11 @@ subclasses across all (factor-local/class)&<#Context[Context]> instances.
 		- (source/area)`205 2 247 63`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`28`
+		- (metrics/profile-duration)`23973`
+		- (metrics/profile-count)`12832`
+		- (metrics/profile-residency)`59.00464844130936`
+		- (metrics/profile-minimum)`3000`
+		- (metrics/profile-maximum)`582000`
 (signature)`select(self, part)`
 
 
@@ -549,6 +599,11 @@ subclasses across all (factor-local/class)&<#Context[Context]> instances.
 		- (source/area)`253 2 256 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`1000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`1000`
 
 [ Measure >> stop ]
 ! CONTROL:
@@ -601,6 +656,11 @@ subclasses across all (factor-local/class)&<#Context[Context]> instances.
 		- (source/area)`266 2 267 36`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`37657`
+		- (metrics/profile-count)`11793`
+		- (metrics/profile-residency)`33.42265255573069`
+		- (metrics/profile-minimum)`6000`
+		- (metrics/profile-maximum)`606000`
 (signature)`__str__(self)`
 
 
@@ -685,6 +745,11 @@ subclasses across all (factor-local/class)&<#Context[Context]> instances.
 		- (source/area)`302 2 303 70`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`37501`
+		- (metrics/profile-count)`5300`
+		- (metrics/profile-residency)`25.964368550541618`
+		- (metrics/profile-minimum)`5000`
+		- (metrics/profile-maximum)`11740000`
 (signature)`decrease(self, *units, **parts)`
 
 
@@ -754,6 +819,11 @@ subclasses across all (factor-local/class)&<#Context[Context]> instances.
 		- (source/area)`316 2 318 79`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`9600`
+		- (metrics/profile-count)`5`
+		- (metrics/profile-residency)`43.75`
+		- (metrics/profile-minimum)`2000`
+		- (metrics/profile-maximum)`19000`
 (signature)`__contains__(self, t)`
 
 
@@ -796,6 +866,11 @@ subclasses across all (factor-local/class)&<#Context[Context]> instances.
 		- (source/area)`328 2 329 83`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`29777`
+		- (metrics/profile-count)`9`
+		- (metrics/profile-residency)`20.895522388059703`
+		- (metrics/profile-minimum)`8000`
+		- (metrics/profile-maximum)`113000`
 (signature)`rollback(self, *units, **parts)`
 
 
@@ -810,6 +885,11 @@ subclasses across all (factor-local/class)&<#Context[Context]> instances.
 		- (source/area)`331 2 332 64`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`8987`
+		- (metrics/profile-count)`824`
+		- (metrics/profile-residency)`26.88360788549824`
+		- (metrics/profile-minimum)`4000`
+		- (metrics/profile-maximum)`182000`
 (signature)`elapse(self, *units, **parts)`
 
 
@@ -824,6 +904,11 @@ subclasses across all (factor-local/class)&<#Context[Context]> instances.
 		- (source/area)`334 2 335 33`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`724`
+		- (metrics/profile-count)`832`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`2000`
 (signature)`measure(self, pit)`
 
 
@@ -838,6 +923,11 @@ subclasses across all (factor-local/class)&<#Context[Context]> instances.
 		- (source/area)`337 2 349 20`
 		- (coverage-zeros)`4`
 		- (coverage-counters)`12`
+		- (metrics/profile-duration)`45000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`22.22222222222222`
+		- (metrics/profile-minimum)`45000`
+		- (metrics/profile-maximum)`45000`
 (signature)`leads(self, pit)`
 
 
@@ -866,6 +956,11 @@ subclasses across all (factor-local/class)&<#Context[Context]> instances.
 		- (source/area)`352 2 364 20`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`12`
+		- (metrics/profile-duration)`15125`
+		- (metrics/profile-count)`8`
+		- (metrics/profile-residency)`19.00826446280992`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`115000`
 (signature)`follows(self, pit)`
 
 
@@ -912,6 +1007,11 @@ A container for time units and transformations.
 		- (source/area)`371 2 386 17`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`14`
+		- (metrics/profile-duration)`3574`
+		- (metrics/profile-count)`823`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`15000`
 (signature)`__init__(self)`
 
 
@@ -924,6 +1024,11 @@ A container for time units and transformations.
 		- (source/area)`388 2 402 23`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`9`
+		- (metrics/profile-duration)`3310`
+		- (metrics/profile-count)`2469`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`18000`
 (signature)`declare(self, id, datum)`
 
 Declare a fundamental unit for use in a context.
@@ -940,6 +1045,11 @@ All defined, (factor-local/method)&<#Context.define[Context.define]>, units are 
 		- (source/area)`404 2 413 72`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`3082`
+		- (metrics/profile-count)`29628`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`573000`
 (signature)`define(self, id, term, exponent)`
 
 Defines a Unit in terms of another unit.
@@ -954,6 +1064,11 @@ Defines a Unit in terms of another unit.
 		- (source/area)`415 2 422 49`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`560`
+		- (metrics/profile-count)`2469`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`5000`
 (signature)`bridge(self, from_unit, to_unit, transformer)`
 
 Assign a "bridge" between two units.
@@ -973,6 +1088,11 @@ bridges can be used to perform the conversion.
 		- (source/area)`424 2 427 38`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`587`
+		- (metrics/profile-count)`7407`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`10000`
 (signature)`container(self, id, pack, unpack)`
 
 
@@ -987,6 +1107,11 @@ bridges can be used to perform the conversion.
 		- (source/area)`429 2 432 23`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`577`
+		- (metrics/profile-count)`823`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`1000`
 (signature)`constant(self, id, value)`
 
 
@@ -999,6 +1124,11 @@ bridges can be used to perform the conversion.
 		- (source/area)`433 2 448 11`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
+		- (metrics/profile-duration)`3114`
+		- (metrics/profile-count)`5878`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`74000`
 (signature)`compose(self, from_unit, to_unit)`
 
 Compose two ratios into another so that the (factor-local/parameter)&<#Context.compose.Parameters.from_unit[from_unit]> can be converted
@@ -1016,6 +1146,11 @@ Ratio compositions are LRU cached.
 		- (source/area)`450 2 478 50`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`13`
+		- (metrics/profile-duration)`8086`
+		- (metrics/profile-count)`26953`
+		- (metrics/profile-residency)`91.70287444656007`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`824000`
 (signature)`convert(self, from_unit, to_unit, value)`
 
 Convert the (factor-local/parameter)&<#Context.convert.Parameters.value[value]> into (factor-local/parameter)&<#Context.convert.Parameters.to_unit[to_unit]> from the (factor-local/parameter)&<#Context.convert.Parameters.from_unit[from_unit]>.
@@ -1032,6 +1167,11 @@ Convert the (factor-local/parameter)&<#Context.convert.Parameters.value[value]> 
 		- (source/area)`480 2 484 44`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`801`
+		- (metrics/profile-count)`2469`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`13000`
 (signature)`register_point_class(self, Point)`
 
 
@@ -1046,6 +1186,11 @@ Convert the (factor-local/parameter)&<#Context.convert.Parameters.value[value]> 
 		- (source/area)`486 2 490 50`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`1162`
+		- (metrics/profile-count)`3292`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`18000`
 (signature)`register_measure_class(self, Measure)`
 
 
@@ -1060,6 +1205,11 @@ Convert the (factor-local/parameter)&<#Context.convert.Parameters.value[value]> 
 		- (source/area)`492 2 495 16`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`25100`
+		- (metrics/profile-count)`2469`
+		- (metrics/profile-residency)`25.575241230193306`
+		- (metrics/profile-minimum)`13000`
+		- (metrics/profile-maximum)`2374000`
 (signature)`new_measure_class(self, id)`
 
 
@@ -1074,6 +1224,11 @@ Convert the (factor-local/parameter)&<#Context.convert.Parameters.value[value]> 
 		- (source/area)`497 2 500 14`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`131150`
+		- (metrics/profile-count)`1646`
+		- (metrics/profile-residency)`3.5335590833499326`
+		- (metrics/profile-minimum)`20000`
+		- (metrics/profile-maximum)`5535000`
 (signature)`new_point_class(self, Measure)`
 
 
@@ -1088,6 +1243,11 @@ Convert the (factor-local/parameter)&<#Context.convert.Parameters.value[value]> 
 		- (source/area)`502 2 510 10`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`10583`
+		- (metrics/profile-count)`1646`
+		- (metrics/profile-residency)`27.63905631134837`
+		- (metrics/profile-minimum)`6000`
+		- (metrics/profile-maximum)`62000`
 (signature)`datum_for_point(self, to_unit)`
 
 
@@ -1116,6 +1276,11 @@ Convert the (factor-local/parameter)&<#Context.convert.Parameters.value[value]> 
 		- (source/area)`518 2 522 16`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`3833`
+		- (metrics/profile-count)`6`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`16000`
 (signature)`measure_from_unit(self, unit)`
 
 
@@ -1130,6 +1295,11 @@ Convert the (factor-local/parameter)&<#Context.convert.Parameters.value[value]> 
 		- (source/area)`524 2 525 35`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`551`
+		- (metrics/profile-count)`1646`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`3000`
 (signature)`represent(self, term, unitseq)`
 
 
@@ -1142,6 +1312,11 @@ Convert the (factor-local/parameter)&<#Context.convert.Parameters.value[value]> 
 		- (source/area)`527 2 555 14`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`11`
+		- (metrics/profile-duration)`125747`
+		- (metrics/profile-count)`1646`
+		- (metrics/profile-residency)`91.58324475794763`
+		- (metrics/profile-minimum)`17000`
+		- (metrics/profile-maximum)`5522000`
 		- (type/syntax)`Type[abstract.Point]`
 		
 (signature)`point_factory(self, Measure, qname)`
@@ -1158,6 +1333,11 @@ Construct a Point class from the given scalar.
 		- (source/area)`557 2 584 16`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`14`
+		- (metrics/profile-duration)`17710`
+		- (metrics/profile-count)`2469`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`9000`
+		- (metrics/profile-maximum)`207000`
 		- (type/syntax)`Type[abstract.Measure]`
 		
 (signature)`measure_factory(self, id, qname)`
@@ -1174,6 +1354,11 @@ Construct a measure with the designated unit identifier and class.
 		- (source/area)`586 1 693 35`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`34`
+		- (metrics/profile-duration)`5830482`
+		- (metrics/profile-count)`823`
+		- (metrics/profile-residency)`90.98171986294847`
+		- (metrics/profile-minimum)`2528000`
+		- (metrics/profile-maximum)`20444000`
 		- (type/syntax)`tuple[Context, Sequence[abstract.Measure], Sequence[abstract.Point]]`
 		
 (signature)`standard_context(qname)`

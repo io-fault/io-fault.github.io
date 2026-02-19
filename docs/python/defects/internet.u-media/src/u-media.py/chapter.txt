@@ -6,6 +6,11 @@
 		- (source/area)`1 1 163 75`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`73`
+		- (metrics/profile-duration)`1552000`
+		- (metrics/profile-count)`5`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1552000`
+		- (metrics/profile-maximum)`1552000`
 
 [ library ]
 ! CONTROL:
@@ -28,6 +33,11 @@
 		- (source/area)`3 1 5 29`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`89000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`89000`
+		- (metrics/profile-maximum)`89000`
 (signature)`test_module_protocol(test)`
 
 
@@ -42,6 +52,11 @@
 		- (source/area)`7 1 51 38`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`35`
+		- (metrics/profile-duration)`651000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`651000`
+		- (metrics/profile-maximum)`651000`
 (signature)`test_Type(test)`
 
 
@@ -54,6 +69,11 @@
 		- (source/area)`53 1 158 50`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`31`
+		- (metrics/profile-duration)`1002000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1002000`
+		- (metrics/profile-maximum)`1002000`
 (signature)`test_Range(test)`
 
 Media range queries for managing Accept headers.
@@ -70,5 +90,10 @@ Media range queries for managing Accept headers.
 		- (source/area)`160 1 164 74`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`304000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`304000`
+		- (metrics/profile-maximum)`304000`
 (signature)`test_file_type(test)`
 

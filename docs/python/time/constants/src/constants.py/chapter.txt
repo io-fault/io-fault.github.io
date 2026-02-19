@@ -6,6 +6,11 @@
 		- (source/area)`1 1 37 0`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`13`
+		- (metrics/profile-duration)`11288111`
+		- (metrics/profile-count)`827`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`6518000`
+		- (metrics/profile-maximum)`57350000`
 Various constants.
 
 

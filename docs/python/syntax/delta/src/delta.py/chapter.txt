@@ -6,6 +6,11 @@
 		- (source/area)`1 1 723 0`
 		- (coverage-zeros)`107`
 		- (coverage-counters)`283`
+		- (metrics/profile-duration)`2406000`
+		- (metrics/profile-count)`15`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`2406000`
+		- (metrics/profile-maximum)`2406000`
 Element change logs for managing deltas, undo, and redo.
 
 
@@ -338,6 +343,11 @@ Used to delimit (factor-local/class)&<#Record[Record]> groups for (factor-local/
 		- (source/area)`119 2 120 26`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`1000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`1000`
 (signature)`usage(self)`
 
 
@@ -352,6 +362,11 @@ Used to delimit (factor-local/class)&<#Record[Record]> groups for (factor-local/
 		- (source/area)`122 2 123 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`333`
+		- (metrics/profile-count)`6`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`1000`
 (signature)`invert(self)`
 
 
@@ -380,6 +395,11 @@ Used to delimit (factor-local/class)&<#Record[Record]> groups for (factor-local/
 		- (source/area)`128 2 129 19`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`222`
+		- (metrics/profile-count)`9`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`1000`
 (signature)`apply(self, target)`
 
 
@@ -478,6 +498,11 @@ Change in *elements*. Always zero for (factor-local/class)&<#Update[Update]>.
 		- (source/area)`175 2 176 75`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`1000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`1000`
 (signature)`usage(self)`
 
 
@@ -504,6 +529,11 @@ Change in *elements*. Always zero for (factor-local/class)&<#Update[Update]>.
 		- (source/area)`184 2 194 3`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`1000`
+		- (metrics/profile-count)`2`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`1000`
 (signature)`invert(self)`
 
 Recreate the record where insertion and deletion are swapped.
@@ -534,6 +564,11 @@ Recreate the record where insertion and deletion are swapped.
 		- (source/area)`201 2 205 24`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`2818`
+		- (metrics/profile-count)`11`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`12000`
 (signature)`apply(self, target)`
 
 
@@ -574,6 +609,11 @@ Recreate the record where insertion and deletion are swapped.
 		- (source/area)`224 2 298 9`
 		- (coverage-zeros)`7`
 		- (coverage-counters)`24`
+		- (metrics/profile-duration)`8000`
+		- (metrics/profile-count)`3`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`7000`
+		- (metrics/profile-maximum)`9000`
 (signature)`combine(self, following)`
 
 Construct a new (factor-local/class)&<#Update[Update]> instance by combining (factor-local/parameter)&<#Update.combine.Parameters.self[self]> with (factor-local/parameter)&<#Update.combine.Parameters.following[following]>.
@@ -633,6 +673,11 @@ Insertion and/or deletion of zero or more elements.
 		- (source/area)`324 2 331 26`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`10000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`60.0`
+		- (metrics/profile-minimum)`10000`
+		- (metrics/profile-maximum)`10000`
 (signature)`usage(self)`
 
 
@@ -659,6 +704,11 @@ Insertion and/or deletion of zero or more elements.
 		- (source/area)`339 2 348 3`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`1000`
+		- (metrics/profile-count)`7`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`2000`
 (signature)`invert(self)`
 
 Recreate the record where insertion and deletion are swapped.
@@ -689,6 +739,11 @@ Recreate the record where insertion and deletion are swapped.
 		- (source/area)`355 2 359 49`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`959`
+		- (metrics/profile-count)`49`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`3000`
 (signature)`apply(self, target)`
 
 
@@ -787,6 +842,11 @@ Change
 		- (source/area)`408 2 409 81`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`4000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`4000`
+		- (metrics/profile-maximum)`4000`
 (signature)`usage(self)`
 
 
@@ -901,6 +961,11 @@ The (factor-local/class)&<#Record[Record]> vector tracking the changes.
 		- (source/area)`461 2 466 18`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`10200`
+		- (metrics/profile-count)`10`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`6000`
+		- (metrics/profile-maximum)`22000`
 (signature)`__init__(self)`
 
 
@@ -929,6 +994,11 @@ Retract all committed changes on (factor-local/parameter)&<#Log.revert.Parameter
 		- (source/area)`476 2 494 20`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`12`
+		- (metrics/profile-duration)`1700`
+		- (metrics/profile-count)`10`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`5000`
 (signature)`truncate(self)`
 
 
@@ -957,6 +1027,11 @@ Total size of the logged changes.
 		- (source/area)`503 2 512 23`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`7`
+		- (metrics/profile-duration)`5000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`40.0`
+		- (metrics/profile-minimum)`5000`
+		- (metrics/profile-maximum)`5000`
 (signature)`usage(self)`
 
 
@@ -969,6 +1044,11 @@ Total size of the logged changes.
 		- (source/area)`514 2 519 68`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`0`
+		- (metrics/profile-count)`2`
+		- (metrics/profile-residency)`0.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`0`
 (signature)`snapshot(self)`
 
 Construct a reference to the current version.
@@ -983,6 +1063,11 @@ Construct a reference to the current version.
 		- (source/area)`521 2 542 51`
 		- (coverage-zeros)`3`
 		- (coverage-counters)`14`
+		- (metrics/profile-duration)`28000`
+		- (metrics/profile-count)`2`
+		- (metrics/profile-residency)`91.07142857142857`
+		- (metrics/profile-minimum)`7000`
+		- (metrics/profile-maximum)`49000`
 (signature)`since(self, snapshot)`
 
 Generate a sequence of changes since (invalid/unknown)&<#version>.
@@ -997,6 +1082,11 @@ Generate a sequence of changes since (invalid/unknown)&<#version>.
 		- (source/area)`544 2 551 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`545`
+		- (metrics/profile-count)`44`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`1000`
 (signature)`write(self, record)`
 
 Append a delta to the log.
@@ -1039,6 +1129,11 @@ Update (factor-local/parameter)&<#Log.track.Parameters.target[target]> by report
 		- (source/area)`569 2 576 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`12150`
+		- (metrics/profile-count)`20`
+		- (metrics/profile-residency)`74.48559670781893`
+		- (metrics/profile-minimum)`4000`
+		- (metrics/profile-maximum)`52000`
 (signature)`apply(self, target)`
 
 Update (factor-local/parameter)&<#Log.apply.Parameters.target[target]> by applying the current transaction.
@@ -1067,6 +1162,11 @@ Update (factor-local/parameter)&<#Log.retract.Parameters.target[target]> by prev
 		- (source/area)`587 2 616 13`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`15`
+		- (metrics/profile-duration)`19000`
+		- (metrics/profile-count)`3`
+		- (metrics/profile-residency)`57.89473684210527`
+		- (metrics/profile-minimum)`15000`
+		- (metrics/profile-maximum)`24000`
 (signature)`collapse(self)`
 
 Commit the leading deltas of the current transaction
@@ -1085,6 +1185,11 @@ and deletions when typing in insert mode.
 		- (source/area)`618 2 628 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`526`
+		- (metrics/profile-count)`19`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`2000`
 (signature)`commit(self)`
 
 Update the commit position.
@@ -1118,6 +1223,11 @@ In most cases, (factor-local/method)&<#Log.undo[undo]> should be used.
 		- (source/area)`644 2 660 13`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`9`
+		- (metrics/profile-duration)`49333`
+		- (metrics/profile-count)`6`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`3000`
+		- (metrics/profile-maximum)`70000`
 (signature)`checkpoint(self)`
 
 Write a checkpoint clearing any uncommitted writes.
@@ -1132,6 +1242,11 @@ Write a checkpoint clearing any uncommitted writes.
 		- (source/area)`662 2 692 39`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`15`
+		- (metrics/profile-duration)`67600`
+		- (metrics/profile-count)`5`
+		- (metrics/profile-residency)`29.88165680473373`
+		- (metrics/profile-minimum)`28000`
+		- (metrics/profile-maximum)`87000`
 (signature)`undo(self)`
 
 Retract delta records effecting (invalid/unknown)&<#target> until the given (factor-local/parameter)&<#Log.undo.Parameters.quantity[quantity]>
@@ -1148,6 +1263,11 @@ reached.
 		- (source/area)`694 2 723 17`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`16`
+		- (metrics/profile-duration)`5333`
+		- (metrics/profile-count)`3`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`5000`
+		- (metrics/profile-maximum)`6000`
 (signature)`redo(self, target)`
 
 Replay delta records effecting (factor-local/parameter)&<#Log.redo.Parameters.target[target]> until the given (factor-local/parameter)&<#Log.redo.Parameters.quantity[quantity]>

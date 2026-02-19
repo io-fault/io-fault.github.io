@@ -6,6 +6,11 @@
 		- (source/area)`1 1 515 3`
 		- (coverage-zeros)`126`
 		- (coverage-counters)`225`
+		- (metrics/profile-duration)`198347`
+		- (metrics/profile-count)`23`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`94000`
+		- (metrics/profile-maximum)`561000`
 Document finalization and query tools for raw text element trees.
 
 
@@ -64,6 +69,11 @@ Document finalization and query tools for raw text element trees.
 		- (source/area)`10 1 69 26`
 		- (coverage-zeros)`42`
 		- (coverage-counters)`43`
+		- (metrics/profile-duration)`1550`
+		- (metrics/profile-count)`59683`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`27257000`
 		- (type/syntax)`types.Paragraph`
 		- (type/project-local/factor-element)&<types#Paragraph[fault.text.types.Paragraph]>
 		
@@ -258,6 +268,11 @@ Select the last paragraph in the given element.
 		- (source/area)`175 1 184 12`
 		- (coverage-zeros)`6`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`24042`
+		- (metrics/profile-count)`7311`
+		- (metrics/profile-residency)`5.542944593310691`
+		- (metrics/profile-minimum)`14000`
+		- (metrics/profile-maximum)`72000`
 (signature)`directory_pairs(items)`
 
 Iterate over the key-value pairs in the directory items.
@@ -290,6 +305,11 @@ Serializer for (text) object trees.
 		- (source/area)`191 2 195 6`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`714`
+		- (metrics/profile-count)`7`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`1000`
 (signature)`__init__(self)`
 
 Initialize the tree builder.
@@ -318,6 +338,11 @@ Empty with potential attributes.
 		- (source/area)`203 2 210 91`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`55176`
+		- (metrics/profile-count)`239029`
+		- (metrics/profile-residency)`-62.81839127207747`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`58059000`
 (signature)`element(self, element_name, content, *attributes, **kwattributes)`
 
 Serialize an element with the exact (factor-local/parameter)&<#Tree.element.Parameters.element_name[element_name]> with the contents of
@@ -350,6 +375,11 @@ Serialize an element with the exact (factor-local/parameter)&<#Tree.element.Para
 		- (source/area)`214 2 215 17`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`616`
+		- (metrics/profile-count)`200777`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`24748000`
 (signature)`escape(self, string)`
 
 
@@ -364,6 +394,11 @@ Serialize an element with the exact (factor-local/parameter)&<#Tree.element.Para
 		- (source/area)`217 2 218 22`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`312`
+		- (metrics/profile-count)`4968`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`2000`
 (signature)`hyperlink(self, href)`
 
 
@@ -408,6 +443,11 @@ Transform parse events into a form designated by the given AST constructor.
 		- (source/area)`226 2 242 39`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`727`
+		- (metrics/profile-count)`2848`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`15000`
 (signature)`__init__(self, serialization, identify)`
 
 Initialize a (factor-local/class)&<#Transform[Transform]> instance designating the AST constructor.
@@ -440,6 +480,11 @@ Initialize a (factor-local/class)&<#Transform[Transform]> instance designating t
 		- (source/area)`244 2 246 69`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`1210381`
+		- (metrics/profile-count)`2848`
+		- (metrics/profile-residency)`-98.92822103722304`
+		- (metrics/profile-minimum)`13000`
+		- (metrics/profile-maximum)`258015000`
 (signature)`process(self, tree)`
 
 
@@ -454,6 +499,11 @@ Initialize a (factor-local/class)&<#Transform[Transform]> instance designating t
 		- (source/area)`248 2 249 28`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`7076`
+		- (metrics/profile-count)`155365`
+		- (metrics/profile-residency)`80.57445798385821`
+		- (metrics/profile-minimum)`2000`
+		- (metrics/profile-maximum)`56578000`
 (signature)`process_paragraph_text(self, tree, text)`
 
 
@@ -468,6 +518,11 @@ Initialize a (factor-local/class)&<#Transform[Transform]> instance designating t
 		- (source/area)`251 2 255 3`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`5103`
+		- (metrics/profile-count)`194`
+		- (metrics/profile-residency)`69.4949494949495`
+		- (metrics/profile-minimum)`4000`
+		- (metrics/profile-maximum)`7000`
 (signature)`process_paragraph_emphasis(self, tree, data)`
 
 
@@ -482,6 +537,11 @@ Initialize a (factor-local/class)&<#Transform[Transform]> instance designating t
 		- (source/area)`257 2 261 3`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`4970`
+		- (metrics/profile-count)`37322`
+		- (metrics/profile-residency)`69.9452874430639`
+		- (metrics/profile-minimum)`4000`
+		- (metrics/profile-maximum)`6907000`
 (signature)`process_paragraph_literal(self, tree, data)`
 
 
@@ -494,6 +554,11 @@ Initialize a (factor-local/class)&<#Transform[Transform]> instance designating t
 		- (source/area)`263 2 309 3`
 		- (coverage-zeros)`5`
 		- (coverage-counters)`15`
+		- (metrics/profile-duration)`5979`
+		- (metrics/profile-count)`4968`
+		- (metrics/profile-residency)`70.61338540263937`
+		- (metrics/profile-minimum)`4000`
+		- (metrics/profile-maximum)`15000`
 (signature)`process_paragraph_reference(self, tree, source, type, title, action)`
 
 [ >> Parameters ]
@@ -541,6 +606,11 @@ Initialize a (factor-local/class)&<#Transform[Transform]> instance designating t
 		- (source/area)`311 2 312 11`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`3938`
+		- (metrics/profile-count)`22682`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`56520000`
 (signature)`process_end_of_line(self, tree, text)`
 
 
@@ -555,6 +625,11 @@ Initialize a (factor-local/class)&<#Transform[Transform]> instance designating t
 		- (source/area)`314 2 315 11`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`317`
+		- (metrics/profile-count)`2826`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`2000`
 (signature)`process_init(self, tree, data, *params)`
 
 
@@ -590,6 +665,11 @@ Initialize a (factor-local/class)&<#Transform[Transform]> instance designating t
 		- (source/area)`326 2 345 4`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`7`
+		- (metrics/profile-duration)`139298`
+		- (metrics/profile-count)`13664`
+		- (metrics/profile-residency)`4.402660121090359`
+		- (metrics/profile-minimum)`17000`
+		- (metrics/profile-maximum)`56738000`
 (signature)`process_items(self, tree, element, name)`
 
 
@@ -604,6 +684,11 @@ Initialize a (factor-local/class)&<#Transform[Transform]> instance designating t
 		- (source/area)`347 2 348 49`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`440`
+		- (metrics/profile-count)`13651`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`5000`
 (signature)`process_set(self, tree, element)`
 
 
@@ -618,6 +703,11 @@ Initialize a (factor-local/class)&<#Transform[Transform]> instance designating t
 		- (source/area)`350 2 351 54`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`384`
+		- (metrics/profile-count)`13`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`1000`
 (signature)`process_sequence(self, tree, element)`
 
 
@@ -632,6 +722,11 @@ Initialize a (factor-local/class)&<#Transform[Transform]> instance designating t
 		- (source/area)`353 2 388 14`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`9`
+		- (metrics/profile-duration)`338620`
+		- (metrics/profile-count)`8343`
+		- (metrics/profile-residency)`5.4077463776683`
+		- (metrics/profile-minimum)`33000`
+		- (metrics/profile-maximum)`56791000`
 (signature)`process_directory(self, tree, vl_element)`
 
 
@@ -644,6 +739,11 @@ Initialize a (factor-local/class)&<#Transform[Transform]> instance designating t
 		- (source/area)`389 2 407 14`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`9`
+		- (metrics/profile-duration)`481`
+		- (metrics/profile-count)`63603`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`11000`
 (signature)`empty_paragraph(sequence)`
 
 Whether the paragraph should be considered to be empty.
@@ -674,6 +774,11 @@ Whether the paragraph should be considered to be empty.
 		- (source/area)`420 2 437 7`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`9`
+		- (metrics/profile-duration)`36653`
+		- (metrics/profile-count)`64318`
+		- (metrics/profile-residency)`25.944164154805847`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`56605000`
 (signature)`process_paragraph(self, tree, paragraph)`
 
 
@@ -688,6 +793,11 @@ Whether the paragraph should be considered to be empty.
 		- (source/area)`439 2 453 3`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`8`
+		- (metrics/profile-duration)`86867`
+		- (metrics/profile-count)`1135`
+		- (metrics/profile-residency)`18.01105532734926`
+		- (metrics/profile-minimum)`7000`
+		- (metrics/profile-maximum)`54374000`
 (signature)`process_syntax(self, tree, sequence)`
 
 
@@ -702,6 +812,11 @@ Whether the paragraph should be considered to be empty.
 		- (source/area)`455 2 465 3`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`338479`
+		- (metrics/profile-count)`8257`
+		- (metrics/profile-residency)`0.6546384836259873`
+		- (metrics/profile-minimum)`5000`
+		- (metrics/profile-maximum)`56800000`
 (signature)`process_admonition(self, tree, content)`
 
 
@@ -716,6 +831,11 @@ Whether the paragraph should be considered to be empty.
 		- (source/area)`467 2 473 59`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`315549`
+		- (metrics/profile-count)`40441`
+		- (metrics/profile-residency)`0.44923864988301215`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`258012000`
 (signature)`process_section(self, tree, section)`
 
 
@@ -730,6 +850,11 @@ Whether the paragraph should be considered to be empty.
 		- (source/area)`475 2 491 3`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`7`
+		- (metrics/profile-duration)`575602`
+		- (metrics/profile-count)`7427`
+		- (metrics/profile-residency)`0.3996259179536458`
+		- (metrics/profile-minimum)`15000`
+		- (metrics/profile-maximum)`58063000`
 (signature)`create_section(self, tree, section)`
 
 

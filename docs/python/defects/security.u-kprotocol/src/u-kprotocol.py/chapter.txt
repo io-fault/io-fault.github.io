@@ -6,6 +6,11 @@
 		- (source/area)`1 1 105 28`
 		- (coverage-zeros)`9`
 		- (coverage-counters)`53`
+		- (metrics/profile-duration)`6086000`
+		- (metrics/profile-count)`6`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`6086000`
+		- (metrics/profile-maximum)`6086000`
 Validate protocol implementations.
 
 
@@ -64,6 +69,11 @@ Validate protocol implementations.
 		- (source/area)`10 2 11 25`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`1000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`1000`
 (signature)`encipher(self, data)`
 
 
@@ -78,6 +88,11 @@ Validate protocol implementations.
 		- (source/area)`13 2 14 25`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`500`
+		- (metrics/profile-count)`2`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`1000`
 (signature)`decipher(self, data)`
 
 
@@ -90,6 +105,11 @@ Validate protocol implementations.
 	/element/
 		- (control)`property-set`
 		- (source/area)`16 2 17 20`
+		- (metrics/profile-duration)`1000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`1000`
 (signature)`close(self)`
 
 
@@ -116,6 +136,11 @@ Validate protocol implementations.
 		- (source/area)`22 2 23 14`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`2750`
+		- (metrics/profile-count)`4`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`2000`
+		- (metrics/profile-maximum)`4000`
 (signature)`connect_transmit_ready(self, cb)`
 
 
@@ -130,6 +155,11 @@ Validate protocol implementations.
 		- (source/area)`25 2 26 14`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`1000`
+		- (metrics/profile-count)`4`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`1000`
 (signature)`connect_receive_closed(self, cb)`
 
 
@@ -144,6 +174,11 @@ Validate protocol implementations.
 		- (source/area)`28 1 33 38`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`233000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`98.71244635193133`
+		- (metrics/profile-minimum)`233000`
+		- (metrics/profile-maximum)`233000`
 (signature)`test_allocate(test)`
 
 
@@ -156,6 +191,11 @@ Validate protocol implementations.
 		- (source/area)`35 1 44 52`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`319000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`97.80564263322884`
+		- (metrics/profile-minimum)`319000`
+		- (metrics/profile-maximum)`319000`
 (signature)`test_transfers(test)`
 
 Validate encrypt and decrypt methods.
@@ -170,6 +210,11 @@ Validate encrypt and decrypt methods.
 		- (source/area)`46 1 62 23`
 		- (coverage-zeros)`9`
 		- (coverage-counters)`11`
+		- (metrics/profile-duration)`57000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`57000`
+		- (metrics/profile-maximum)`57000`
 (signature)`test_channel_interrupt(test)`
 
 - (context-local/factor-element)&<fault.security/kprotocol#SecuredTransmit.stx_receive_interrupt[fault.security.kprotocol.SecuredTransmit.stx_receive_interrupt]>
@@ -184,6 +229,11 @@ Validate encrypt and decrypt methods.
 		- (source/area)`64 1 79 37`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`10`
+		- (metrics/profile-duration)`3599000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`99.88885801611559`
+		- (metrics/profile-minimum)`3599000`
+		- (metrics/profile-maximum)`3599000`
 (signature)`test_channel_terminate_callback(test)`
 
 - (context-local/factor-element)&<fault.security/kprotocol#SecuredTransmit.stx_receive_closed[fault.security.kprotocol.SecuredTransmit.stx_receive_closed]>
@@ -198,6 +248,11 @@ Validate encrypt and decrypt methods.
 		- (source/area)`81 1 106 27`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`17`
+		- (metrics/profile-duration)`339000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`98.82005899705014`
+		- (metrics/profile-minimum)`339000`
+		- (metrics/profile-maximum)`339000`
 (signature)`test_channel_terminate_full(test)`
 
 - (context-local/factor-element)&<fault.security/kprotocol#SecuredTransmit.stx_receive_closed[fault.security.kprotocol.SecuredTransmit.stx_receive_closed]>

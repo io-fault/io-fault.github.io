@@ -6,6 +6,11 @@
 		- (source/area)`1 1 467 0`
 		- (coverage-zeros)`9`
 		- (coverage-counters)`262`
+		- (metrics/profile-duration)`43000`
+		- (metrics/profile-count)`19`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`43000`
+		- (metrics/profile-maximum)`43000`
 
 [ os ]
 ! CONTROL:
@@ -68,6 +73,11 @@
 		- (source/area)`8 1 28 22`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`10`
+		- (metrics/profile-duration)`128000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`128000`
+		- (metrics/profile-maximum)`128000`
 (signature)`test_Scheduler_close(test)`
 
 - (context-local/factor-element)&<fault.system/kernel#Scheduler.close[fault.system.kernel.Scheduler.close]>
@@ -85,6 +95,11 @@ Validate the effect of closing a scheduler instance.
 		- (source/area)`30 1 51 23`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`11`
+		- (metrics/profile-duration)`114000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`114000`
+		- (metrics/profile-maximum)`114000`
 (signature)`test_Scheduler_execute(test)`
 
 - (context-local/factor-element)&<fault.system/kernel#Scheduler.execute[fault.system.kernel.Scheduler.execute]>
@@ -101,6 +116,11 @@ Validate the execution of enqueued tasks.
 		- (source/area)`53 1 79 11`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`15`
+		- (metrics/profile-duration)`133000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`133000`
+		- (metrics/profile-maximum)`133000`
 (signature)`test_Scheduler_exceptions(test)`
 
 - (context-local/factor-element)&<fault.system/kernel#Scheduler[fault.system.kernel.Scheduler]>
@@ -118,6 +138,11 @@ Validate exception signalling.
 		- (source/area)`81 1 89 23`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`11242000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`11242000`
+		- (metrics/profile-maximum)`11242000`
 (signature)`test_execute_nothing(test)`
 
 - (context-local/factor-element)&<fault.system/kernel#Scheduler.execute[fault.system.kernel.Scheduler.execute]>
@@ -132,6 +157,11 @@ Validate exception signalling.
 		- (source/area)`91 1 106 20`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`153000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`153000`
+		- (metrics/profile-maximum)`153000`
 (signature)`test_enqueue_interrupt(test)`
 
 - (context-local/factor-element)&<fault.system/kernel#Scheduler.execute[fault.system.kernel.Scheduler.execute]>
@@ -150,6 +180,11 @@ user event was received.
 		- (source/area)`108 1 134 35`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`14`
+		- (metrics/profile-duration)`237000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`237000`
+		- (metrics/profile-maximum)`237000`
 (signature)`test_dispatch_actuate(test)`
 
 - (context-local/factor-element)&<fault.system/kernel#Event.meta_actuate[fault.system.kernel.Event.meta_actuate]>
@@ -166,6 +201,11 @@ Check that actuate is dispatched.
 		- (source/area)`136 1 165 35`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`16`
+		- (metrics/profile-duration)`323000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`323000`
+		- (metrics/profile-maximum)`323000`
 (signature)`test_dispatch_terminate(test)`
 
 - (context-local/factor-element)&<fault.system/kernel#Event.meta_terminate[fault.system.kernel.Event.meta_terminate]>
@@ -182,6 +222,11 @@ Check that terminate is dispatched.
 		- (source/area)`167 1 192 22`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`15`
+		- (metrics/profile-duration)`242000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`242000`
+		- (metrics/profile-maximum)`242000`
 (signature)`test_Link_never_states(test)`
 
 - (context-local/factor-element)&<fault.system/kernel#Event.never[fault.system.kernel.Event.never]>
@@ -198,6 +243,11 @@ Check that never is available and has no immediate effect.
 		- (source/area)`194 1 223 22`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`18`
+		- (metrics/profile-duration)`377000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`377000`
+		- (metrics/profile-maximum)`377000`
 (signature)`test_Link_scheduler_states(test)`
 
 - (context-local/factor-element)&<fault.system/kernel#Event.time[fault.system.kernel.Event.time]>
@@ -212,6 +262,11 @@ Check that never is available and has no immediate effect.
 		- (source/area)`225 1 250 16`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`17`
+		- (metrics/profile-duration)`3763000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`3763000`
+		- (metrics/profile-maximum)`3763000`
 (signature)`test_interrupt(test)`
 
 - (context-local/factor-element)&<fault.system/kernel#Scheduler.interrupt[fault.system.kernel.Scheduler.interrupt]>
@@ -226,6 +281,11 @@ Check that never is available and has no immediate effect.
 		- (source/area)`252 1 265 23`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`8`
+		- (metrics/profile-duration)`123000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`123000`
+		- (metrics/profile-maximum)`123000`
 (signature)`test_Event_time_units(test)`
 
 - (context-local/factor-element)&<fault.system/kernel#Event[fault.system.kernel.Event]>
@@ -242,6 +302,11 @@ Time events are distinct regardless of their timing.
 		- (source/area)`267 1 292 35`
 		- (coverage-zeros)`6`
 		- (coverage-counters)`16`
+		- (metrics/profile-duration)`149000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`149000`
+		- (metrics/profile-maximum)`149000`
 (signature)`test_Event_process_pid(test)`
 
 - (context-local/factor-element)&<fault.system/kernel#Event.process_exit[fault.system.kernel.Event.process_exit]>
@@ -258,6 +323,11 @@ Time events are distinct regardless of their timing.
 		- (source/area)`294 1 305 16`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`9`
+		- (metrics/profile-duration)`3731000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`3731000`
+		- (metrics/profile-maximum)`3731000`
 (signature)`test_Event_time(test)`
 
 
@@ -270,6 +340,11 @@ Time events are distinct regardless of their timing.
 		- (source/area)`307 1 324 16`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`13`
+		- (metrics/profile-duration)`1204121000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1204121000`
+		- (metrics/profile-maximum)`1204121000`
 (signature)`test_interrupt_ignored(test)`
 
 Check that interrupt outside of wait has no effect.
@@ -286,6 +361,11 @@ Check that interrupt outside of wait has no effect.
 		- (source/area)`326 1 349 16`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`16`
+		- (metrics/profile-duration)`503925000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`503925000`
+		- (metrics/profile-maximum)`503925000`
 (signature)`test_time_event_periodic(test)`
 
 
@@ -298,6 +378,11 @@ Check that interrupt outside of wait has no effect.
 		- (source/area)`351 1 376 20`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`15`
+		- (metrics/profile-duration)`4186000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`4186000`
+		- (metrics/profile-maximum)`4186000`
 (signature)`test_signal_trap(test)`
 
 - (context-local/factor-element)&<fault.system/kernel#Event.process_signal[fault.system.kernel.Event.process_signal]>
@@ -314,6 +399,11 @@ Validate the execution of system process exit events.
 		- (source/area)`378 1 414 16`
 		- (coverage-zeros)`3`
 		- (coverage-counters)`20`
+		- (metrics/profile-duration)`5042000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`5042000`
+		- (metrics/profile-maximum)`5042000`
 (signature)`test_process_exit(test)`
 
 - (context-local/factor-element)&<fault.system/kernel#Event.process_exit[fault.system.kernel.Event.process_exit]>
@@ -330,6 +420,11 @@ Validate the execution of system process exit events.
 		- (source/area)`416 1 467 40`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`34`
+		- (metrics/profile-duration)`6968000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`6968000`
+		- (metrics/profile-maximum)`6968000`
 (signature)`test_Scheduler_io_pipe(test)`
 
 - (context-local/factor-element)&<fault.system/kernel#Event.io_transmit[fault.system.kernel.Event.io_transmit]>

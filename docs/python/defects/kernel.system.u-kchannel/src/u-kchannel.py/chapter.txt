@@ -6,6 +6,11 @@
 		- (source/area)`1 1 44 42`
 		- (coverage-zeros)`3`
 		- (coverage-counters)`34`
+		- (metrics/profile-duration)`12200000`
+		- (metrics/profile-count)`3`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`12200000`
+		- (metrics/profile-maximum)`12200000`
 
 [ collections ]
 ! CONTROL:
@@ -100,6 +105,11 @@
 		- (source/area)`10 1 25 30`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`12`
+		- (metrics/profile-duration)`216000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`216000`
+		- (metrics/profile-maximum)`216000`
 (signature)`test_KInput(test)`
 
 
@@ -114,5 +124,10 @@
 		- (source/area)`27 1 41 27`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`11`
+		- (metrics/profile-duration)`253000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`253000`
+		- (metrics/profile-maximum)`253000`
 (signature)`test_KOutput(test)`
 

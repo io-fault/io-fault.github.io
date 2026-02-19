@@ -6,6 +6,11 @@
 		- (source/area)`1 1 20 0`
 		- (coverage-zeros)`3`
 		- (coverage-counters)`10`
+		- (metrics/profile-duration)`9515492`
+		- (metrics/profile-count)`3410`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`2752000`
+		- (metrics/profile-maximum)`356615000`
 Executable factor index for (invalid/unknown)&<#fault.system.tool> bindings.
 
 
@@ -72,6 +77,11 @@ Executable factor index for (invalid/unknown)&<#fault.system.tool> bindings.
 		- (source/area)`14 1 15 69`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`1042687`
+		- (metrics/profile-count)`3410`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`244000`
+		- (metrics/profile-maximum)`11117000`
 (signature)`activate(factor, element)`
 
 

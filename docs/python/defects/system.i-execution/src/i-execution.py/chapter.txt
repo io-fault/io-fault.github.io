@@ -6,6 +6,11 @@
 		- (source/area)`1 1 321 34`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`112`
+		- (metrics/profile-duration)`422000`
+		- (metrics/profile-count)`20`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`422000`
+		- (metrics/profile-maximum)`422000`
 
 [ files ]
 ! CONTROL:
@@ -52,6 +57,11 @@
 		- (source/area)`5 1 14 27`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
+		- (metrics/profile-duration)`49101000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`49101000`
+		- (metrics/profile-maximum)`49101000`
 (signature)`test_PInvocation(test)`
 
 
@@ -64,6 +74,11 @@
 		- (source/area)`16 1 21 47`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`118000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`118000`
+		- (metrics/profile-maximum)`118000`
 (signature)`test_parse_sx_plan_empty(test)`
 
 - (context-local/factor-element)&<fault.system/execution#parse_sx_plan[fault.system.execution.parse_sx_plan]>
@@ -78,6 +93,11 @@
 		- (source/area)`23 1 33 90`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`117000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`117000`
+		- (metrics/profile-maximum)`117000`
 (signature)`test_parse_sx_plan_env(test)`
 
 - (context-local/factor-element)&<fault.system/execution#parse_sx_plan[fault.system.execution.parse_sx_plan]>
@@ -92,6 +112,11 @@
 		- (source/area)`35 1 46 110`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`137000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`137000`
+		- (metrics/profile-maximum)`137000`
 (signature)`test_parse_sx_plan_multiple_env(test)`
 
 - (context-local/factor-element)&<fault.system/execution#parse_sx_plan[fault.system.execution.parse_sx_plan]>
@@ -106,6 +131,11 @@
 		- (source/area)`48 1 57 72`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`108000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`108000`
+		- (metrics/profile-maximum)`108000`
 (signature)`test_parse_sx_plan_no_env(test)`
 
 - (context-local/factor-element)&<fault.system/execution#parse_sx_plan[fault.system.execution.parse_sx_plan]>
@@ -120,6 +150,11 @@
 		- (source/area)`59 1 69 85`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`113000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`113000`
+		- (metrics/profile-maximum)`113000`
 (signature)`test_parse_sx_plan_env_unset(test)`
 
 - (context-local/factor-element)&<fault.system/execution#parse_sx_plan[fault.system.execution.parse_sx_plan]>
@@ -134,6 +169,11 @@
 		- (source/area)`71 1 81 74`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`138000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`138000`
+		- (metrics/profile-maximum)`138000`
 (signature)`test_parse_sx_plan_newlines(test)`
 
 - (context-local/factor-element)&<fault.system/execution#parse_sx_plan[fault.system.execution.parse_sx_plan]>
@@ -148,6 +188,11 @@
 		- (source/area)`83 1 93 80`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`124000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`124000`
+		- (metrics/profile-maximum)`124000`
 (signature)`test_parse_sx_plan_newlines_suffix(test)`
 
 - (context-local/factor-element)&<fault.system/execution#parse_sx_plan[fault.system.execution.parse_sx_plan]>
@@ -162,6 +207,11 @@
 		- (source/area)`95 1 105 78`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`111000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`111000`
+		- (metrics/profile-maximum)`111000`
 (signature)`test_parse_sx_plan_zero_newlines(test)`
 
 - (context-local/factor-element)&<fault.system/execution#parse_sx_plan[fault.system.execution.parse_sx_plan]>
@@ -176,6 +226,11 @@
 		- (source/area)`107 1 117 84`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`130000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`130000`
+		- (metrics/profile-maximum)`130000`
 (signature)`test_parse_sx_plan_plural_newlines(test)`
 
 - (context-local/factor-element)&<fault.system/execution#parse_sx_plan[fault.system.execution.parse_sx_plan]>
@@ -190,6 +245,11 @@
 		- (source/area)`119 1 130 72`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`105000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`105000`
+		- (metrics/profile-maximum)`105000`
 (signature)`test_parse_sx_plan_no_op(test)`
 
 - (context-local/factor-element)&<fault.system/execution#parse_sx_plan[fault.system.execution.parse_sx_plan]>
@@ -204,6 +264,11 @@
 		- (source/area)`132 1 141 57`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`136000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`136000`
+		- (metrics/profile-maximum)`136000`
 (signature)`test_parse_sx_plan_unknown_qual(test)`
 
 - (context-local/factor-element)&<fault.system/execution#parse_sx_plan[fault.system.execution.parse_sx_plan]>
@@ -218,6 +283,11 @@
 		- (source/area)`143 1 166 2`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`228000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`228000`
+		- (metrics/profile-maximum)`228000`
 (signature)`test_serialize_sx_plan_escapes(test)`
 
 - (context-local/factor-element)&<fault.system/execution#parse_sx_plan[fault.system.execution.parse_sx_plan]>
@@ -232,6 +302,11 @@
 		- (source/area)`168 1 192 2`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`197000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`197000`
+		- (metrics/profile-maximum)`197000`
 (signature)`test_serialize_sx_plan_none(test)`
 
 - (context-local/factor-element)&<fault.system/execution#parse_sx_plan[fault.system.execution.parse_sx_plan]>
@@ -246,6 +321,11 @@
 		- (source/area)`194 1 222 44`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`124000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`124000`
+		- (metrics/profile-maximum)`124000`
 (signature)`test_sx_plan_space_separated_fields(test)`
 
 - (context-local/factor-element)&<fault.system/execution#parse_sx_plan[fault.system.execution.parse_sx_plan]>
@@ -260,6 +340,11 @@
 		- (source/area)`224 1 232 23`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`108000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`108000`
+		- (metrics/profile-maximum)`108000`
 (signature)`test_Platform_init(test)`
 
 - (context-local/factor-element)&<fault.system/execution#Platform.__init__[fault.system.execution.Platform.__init__]>
@@ -274,6 +359,11 @@
 		- (source/area)`234 1 255 25`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`14`
+		- (metrics/profile-duration)`173000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`173000`
+		- (metrics/profile-maximum)`173000`
 (signature)`test_Platform_features(test)`
 
 - (context-local/factor-element)&<fault.system/execution#Platform.prepare[fault.system.execution.Platform.prepare]>
@@ -293,6 +383,11 @@
 		- (source/area)`257 1 266 50`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
+		- (metrics/profile-duration)`349500`
+		- (metrics/profile-count)`2`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`346000`
+		- (metrics/profile-maximum)`353000`
 (signature)`pfi(path, pairs)`
 
 
@@ -305,6 +400,11 @@
 		- (source/area)`268 1 290 43`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`13`
+		- (metrics/profile-duration)`1602000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1602000`
+		- (metrics/profile-maximum)`1602000`
 (signature)`test_Platform_from_directory(test)`
 
 - (context-local/factor-element)&<fault.system/execution#Platform.from_directory[fault.system.execution.Platform.from_directory]>
@@ -319,6 +419,11 @@
 		- (source/area)`292 1 322 33`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`17`
+		- (metrics/profile-duration)`2419000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`71.10376188507648`
+		- (metrics/profile-minimum)`2419000`
+		- (metrics/profile-maximum)`2419000`
 (signature)`test_Platform_from_system(test)`
 
 - (context-local/factor-element)&<fault.system/execution#Platform.from_system[fault.system.execution.Platform.from_system]>

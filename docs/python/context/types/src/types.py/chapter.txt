@@ -6,6 +6,11 @@
 		- (source/area)`1 1 85 0`
 		- (coverage-zeros)`3`
 		- (coverage-counters)`34`
+		- (metrics/profile-duration)`20431`
+		- (metrics/profile-count)`3406`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`9000`
+		- (metrics/profile-maximum)`288000`
 Supplemental types.
 
 
@@ -63,6 +68,11 @@ to be propagated without concern by the nodes along the call graph.
 		- (source/area)`23 2 26 42`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`94000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`94000`
+		- (metrics/profile-maximum)`94000`
 (signature)`__setup__(Class)`
 
 
@@ -75,6 +85,11 @@ to be propagated without concern by the nodes along the call graph.
 		- (source/area)`28 2 36 21`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`1250`
+		- (metrics/profile-count)`4`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`4000`
 (signature)`coalesce(self, default)`
 
 Return the given (factor-local/parameter)&<#Cell.coalesce.Parameters.default[default]> if the element is (factor-local/parameter)&<#Cell.coalesce.Parameters.abscence[abscence]>.
@@ -93,6 +108,11 @@ By default, if the element is (invalid/unknown)&<#None>, return (factor-local/pa
 		- (source/area)`38 2 39 24`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`667`
+		- (metrics/profile-count)`21254`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`101000`
 (signature)`__init__(self, element)`
 
 
@@ -107,6 +127,11 @@ By default, if the element is (invalid/unknown)&<#None>, return (factor-local/pa
 		- (source/area)`41 2 45 21`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`394`
+		- (metrics/profile-count)`421`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`1000`
 		- (type/syntax)`object`
 		- (type/invalid/unknown)&<#object>
 		
@@ -124,6 +149,11 @@ By default, if the element is (invalid/unknown)&<#None>, return (factor-local/pa
 		- (source/area)`47 2 48 20`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`1332552`
+		- (metrics/profile-count)`4547`
+		- (metrics/profile-residency)`0.17953108026613776`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`211603000`
 (signature)`__iter__(self)`
 
 
@@ -138,6 +168,11 @@ By default, if the element is (invalid/unknown)&<#None>, return (factor-local/pa
 		- (source/area)`50 2 51 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`333`
+		- (metrics/profile-count)`6`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`1000`
 (signature)`__reversed__(self)`
 
 
@@ -152,6 +187,11 @@ By default, if the element is (invalid/unknown)&<#None>, return (factor-local/pa
 		- (source/area)`53 2 54 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`495`
+		- (metrics/profile-count)`1219`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`2000`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
@@ -169,6 +209,11 @@ By default, if the element is (invalid/unknown)&<#None>, return (factor-local/pa
 		- (source/area)`56 2 59 35`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`6111`
+		- (metrics/profile-count)`9`
+		- (metrics/profile-residency)`85.45454545454547`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`16000`
 		- (type/syntax)`bool`
 		- (type/invalid/unknown)&<#bool>
 		
@@ -186,6 +231,11 @@ By default, if the element is (invalid/unknown)&<#None>, return (factor-local/pa
 		- (source/area)`61 2 64 14`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`0`
+		- (metrics/profile-count)`6`
+		- (metrics/profile-residency)`0.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`0`
 		- (type/syntax)`bool`
 		- (type/invalid/unknown)&<#bool>
 		
@@ -203,6 +253,11 @@ By default, if the element is (invalid/unknown)&<#None>, return (factor-local/pa
 		- (source/area)`66 2 73 65`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
+		- (metrics/profile-duration)`916`
+		- (metrics/profile-count)`12`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`4000`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
@@ -220,6 +275,11 @@ By default, if the element is (invalid/unknown)&<#None>, return (factor-local/pa
 		- (source/area)`75 2 79 11`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`333`
+		- (metrics/profile-count)`6`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`1000`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		

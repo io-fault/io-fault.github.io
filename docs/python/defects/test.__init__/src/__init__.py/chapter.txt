@@ -6,3 +6,8 @@
 		- (source/area)`1 1 0 0`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`0`
+		- (metrics/profile-duration)`1000`
+		- (metrics/profile-count)`18`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`1000`

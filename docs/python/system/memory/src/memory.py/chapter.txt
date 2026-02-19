@@ -6,6 +6,11 @@
 		- (source/area)`1 1 205 0`
 		- (coverage-zeros)`34`
 		- (coverage-counters)`82`
+		- (metrics/profile-duration)`1362642`
+		- (metrics/profile-count)`112`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`472000`
+		- (metrics/profile-maximum)`5404000`
 Memory management classes for implementing usage constraints
 in parts of processes.
 
@@ -286,6 +291,11 @@ its appropriate to close the memory map.
 		- (source/area)`115 2 128 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`21500`
+		- (metrics/profile-count)`2`
+		- (metrics/profile-residency)`95.34883720930233`
+		- (metrics/profile-minimum)`19000`
+		- (metrics/profile-maximum)`24000`
 (signature)`open(Class, path)`
 
 Open the file at the given path in read-only mode and
@@ -302,6 +312,11 @@ to the contents.
 		- (source/area)`130 2 140 32`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`4000`
+		- (metrics/profile-count)`6`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`19000`
 (signature)`__init__(self, memory)`
 
 Initialize an instance using the given (factor-local/parameter)&<#Segments.__init__.Parameters.memory[memory]>. An instance
@@ -329,6 +344,11 @@ created by (none/invalid)&<http://fault.io/dev/null[mmap.mmap]>.
 		- (source/area)`142 2 164 22`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`9`
+		- (metrics/profile-duration)`15500`
+		- (metrics/profile-count)`6`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`3000`
+		- (metrics/profile-maximum)`39000`
 (signature)`__del__(self)`
 
 If no weak references are open, close the memory map. Otherwise,
@@ -345,6 +365,11 @@ reference is released.
 		- (source/area)`166 2 174 22`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`862`
+		- (metrics/profile-count)`29`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`6000`
 (signature)`_decrement(self)`
 
 Used internally by (factor-local/method)&<#Segments.__del__[__del__]> to manage the deallocation process
@@ -360,6 +385,11 @@ when there are outstanding references to the memory mapped region.
 		- (source/area)`176 2 199 15`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`14`
+		- (metrics/profile-duration)`37200`
+		- (metrics/profile-count)`5`
+		- (metrics/profile-residency)`67.20430107526882`
+		- (metrics/profile-minimum)`4000`
+		- (metrics/profile-maximum)`74000`
 (signature)`select(self, start, stop, size)`
 
 Constructs an iterator to the parameterized range over the

@@ -6,6 +6,11 @@
 		- (source/area)`1 1 84 0`
 		- (coverage-zeros)`12`
 		- (coverage-counters)`36`
+		- (metrics/profile-duration)`97640`
+		- (metrics/profile-count)`3490`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`39000`
+		- (metrics/profile-maximum)`1929000`
 Segment and Selector implementation access.
 
 
@@ -99,6 +104,11 @@ Sequence of identifiers that may be incorporated into a selector subclass.
 		- (source/area)`17 2 19 46`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`5000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`5000`
+		- (metrics/profile-maximum)`5000`
 (signature)`__str__(self)`
 
 
@@ -111,6 +121,11 @@ Sequence of identifiers that may be incorporated into a selector subclass.
 		- (source/area)`21 2 29 14`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`3156`
+		- (metrics/profile-count)`689`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`2000`
+		- (metrics/profile-maximum)`13000`
 (signature)`__bool__(self)`
 
 True is the segment has any points; False if zero.
@@ -159,6 +174,11 @@ by the sequence of identifiers contained within the selector instance.
 		- (source/area)`55 2 74 32`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`10`
+		- (metrics/profile-duration)`14397`
+		- (metrics/profile-count)`1349312`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`342350000`
 		- (type/syntax)`Segment`
 		- (type/factor-local/parameter)&<#Selector.segment.Parameters.Segment[Segment]>
 		
@@ -191,6 +211,11 @@ If stem is not given, the entire selector will be converted.
 	/element/
 		- (control)`property-set`
 		- (source/area)`80 2 82 13`
+		- (metrics/profile-duration)`333`
+		- (metrics/profile-count)`3`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`1000`
 (signature)`__bool__(self)`
 
 

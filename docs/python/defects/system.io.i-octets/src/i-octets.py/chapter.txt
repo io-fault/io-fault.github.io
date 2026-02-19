@@ -6,6 +6,11 @@
 		- (source/area)`1 1 391 0`
 		- (coverage-zeros)`13`
 		- (coverage-counters)`272`
+		- (metrics/profile-duration)`7560000`
+		- (metrics/profile-count)`17`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`7560000`
+		- (metrics/profile-maximum)`7560000`
 Check io.Octets interfaces.
 
 
@@ -116,6 +121,11 @@ Check io.Octets interfaces.
 		- (source/area)`14 1 29 17`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`11`
+		- (metrics/profile-duration)`294000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`294000`
+		- (metrics/profile-maximum)`294000`
 (signature)`test_anonymous_endpoints_socketpair(test)`
 
 
@@ -130,6 +140,11 @@ Check io.Octets interfaces.
 		- (source/area)`31 1 43 17`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`8`
+		- (metrics/profile-duration)`152000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`152000`
+		- (metrics/profile-maximum)`152000`
 (signature)`test_anonymous_endpoints_pipe(test)`
 
 
@@ -144,6 +159,11 @@ Check io.Octets interfaces.
 		- (source/area)`45 1 69 33`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`19`
+		- (metrics/profile-duration)`1994000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1994000`
+		- (metrics/profile-maximum)`1994000`
 (signature)`test_buffer_write_location(test)`
 
 
@@ -158,6 +178,11 @@ Check io.Octets interfaces.
 		- (source/area)`71 1 95 7`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`16`
+		- (metrics/profile-duration)`326000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`326000`
+		- (metrics/profile-maximum)`326000`
 (signature)`test_channel_force(test)`
 
 
@@ -170,6 +195,11 @@ Check io.Octets interfaces.
 		- (source/area)`97 1 125 40`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`22`
+		- (metrics/profile-duration)`2387000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`2387000`
+		- (metrics/profile-maximum)`2387000`
 (signature)`test_full_buffer_forced_write(test)`
 
 Test the force method on lose-octets with a full write buffer.
@@ -186,6 +216,11 @@ Test the force method on lose-octets with a full write buffer.
 		- (source/area)`127 1 139 28`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`10`
+		- (metrics/profile-duration)`10115000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`10115000`
+		- (metrics/profile-maximum)`10115000`
 (signature)`test_multiple_arrays(test)`
 
 
@@ -200,6 +235,11 @@ Test the force method on lose-octets with a full write buffer.
 		- (source/area)`141 1 167 45`
 		- (coverage-zeros)`4`
 		- (coverage-counters)`21`
+		- (metrics/profile-duration)`3080000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`3080000`
+		- (metrics/profile-maximum)`3080000`
 (signature)`test_objects(test)`
 
 
@@ -214,6 +254,11 @@ Test the force method on lose-octets with a full write buffer.
 		- (source/area)`169 1 203 7`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`28`
+		- (metrics/profile-duration)`397000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`397000`
+		- (metrics/profile-maximum)`397000`
 (signature)`test_array_void(test)`
 
 
@@ -228,6 +273,11 @@ Test the force method on lose-octets with a full write buffer.
 		- (source/area)`205 1 221 37`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`11`
+		- (metrics/profile-duration)`166000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`166000`
+		- (metrics/profile-maximum)`166000`
 (signature)`test_octets_acquire_after_terminate(test)`
 
 
@@ -242,6 +292,11 @@ Test the force method on lose-octets with a full write buffer.
 		- (source/area)`223 1 257 24`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`23`
+		- (metrics/profile-duration)`326000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`326000`
+		- (metrics/profile-maximum)`326000`
 (signature)`test_array_flush_release(test)`
 
 
@@ -256,6 +311,11 @@ Test the force method on lose-octets with a full write buffer.
 		- (source/area)`259 1 284 6`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`17`
+		- (metrics/profile-duration)`227000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`227000`
+		- (metrics/profile-maximum)`227000`
 (signature)`test_octets_resource_error(test)`
 
 
@@ -270,6 +330,11 @@ Test the force method on lose-octets with a full write buffer.
 		- (source/area)`286 1 295 6`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`9`
+		- (metrics/profile-duration)`168000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`168000`
+		- (metrics/profile-maximum)`168000`
 (signature)`test_terminating_exhaust(test)`
 
 
@@ -298,6 +363,11 @@ Test the force method on lose-octets with a full write buffer.
 		- (source/area)`308 1 326 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`14`
+		- (metrics/profile-duration)`190000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`190000`
+		- (metrics/profile-maximum)`190000`
 (signature)`test_octets_acquire_badfd_detect(test)`
 
 
@@ -312,6 +382,11 @@ Test the force method on lose-octets with a full write buffer.
 		- (source/area)`328 1 329 66`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`46554000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`46554000`
+		- (metrics/profile-maximum)`46554000`
 (signature)`test_ip4(test)`
 
 
@@ -326,6 +401,11 @@ Test the force method on lose-octets with a full write buffer.
 		- (source/area)`331 1 332 60`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
+		- (metrics/profile-duration)`58275000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`58275000`
+		- (metrics/profile-maximum)`58275000`
 (signature)`test_ip6(test)`
 
 
@@ -340,6 +420,11 @@ Test the force method on lose-octets with a full write buffer.
 		- (source/area)`334 1 381 29`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`36`
+		- (metrics/profile-duration)`24616333`
+		- (metrics/profile-count)`3`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`4161000`
+		- (metrics/profile-maximum)`55092000`
 (signature)`read_write(test, am, path, data, copies)`
 
 
@@ -354,5 +439,10 @@ Test the force method on lose-octets with a full write buffer.
 		- (source/area)`383 1 391 35`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`8`
+		- (metrics/profile-duration)`76374000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`3.3060989341922644`
+		- (metrics/profile-minimum)`76374000`
+		- (metrics/profile-maximum)`76374000`
 (signature)`test_file(test)`
 

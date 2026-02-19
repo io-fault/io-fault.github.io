@@ -6,6 +6,11 @@
 		- (source/area)`1 1 158 0`
 		- (coverage-zeros)`35`
 		- (coverage-counters)`68`
+		- (metrics/profile-duration)`5397000`
+		- (metrics/profile-count)`6`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`5397000`
+		- (metrics/profile-maximum)`5397000`
 (context-local/project-name)&<fault.kernel> protocol adapters for transport security contexts.
 
 
@@ -250,6 +255,11 @@ using (invalid/unknown)&<#stx_receive_channel>.
 		- (source/area)`87 2 97 23`
 		- (coverage-zeros)`3`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`3000`
+		- (metrics/profile-count)`2`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`2000`
+		- (metrics/profile-maximum)`4000`
 (signature)`stx_receive_closed(self)`
 
 Signal endpoint recognizing when the corresponding receive
@@ -281,6 +291,11 @@ Wire closed without protocol shutdown.
 		- (source/area)`110 2 117 17`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`58000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`58000`
+		- (metrics/profile-maximum)`58000`
 (signature)`f_terminate(self)`
 
 
@@ -329,6 +344,11 @@ using (invalid/unknown)&<#srx_transmit_channel>.
 		- (source/area)`130 2 132 48`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`9000`
+		- (metrics/profile-count)`2`
+		- (metrics/profile-residency)`66.66666666666666`
+		- (metrics/profile-minimum)`7000`
+		- (metrics/profile-maximum)`11000`
 (signature)`p_terminated(self)`
 
 
@@ -343,6 +363,11 @@ using (invalid/unknown)&<#srx_transmit_channel>.
 		- (source/area)`134 2 139 22`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`14000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`14000`
+		- (metrics/profile-maximum)`14000`
 (signature)`f_terminate(self)`
 
 
@@ -355,6 +380,11 @@ using (invalid/unknown)&<#srx_transmit_channel>.
 		- (source/area)`141 1 158 18`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`10`
+		- (metrics/profile-duration)`982750`
+		- (metrics/profile-count)`4`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`107000`
+		- (metrics/profile-maximum)`3520000`
 (signature)`allocate(tls)`
 
 Construct a protocol stack pair using the given (factor-local/parameter)&<#allocate.Parameters.tls[tls]> instance.

@@ -6,6 +6,11 @@
 		- (source/area)`1 1 81 0`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`54`
+		- (metrics/profile-duration)`10000`
+		- (metrics/profile-count)`9`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`10000`
+		- (metrics/profile-maximum)`10000`
 Validate the field sets and functionality of the metrics module.
 
 
@@ -42,6 +47,11 @@ Validate the field sets and functionality of the metrics module.
 		- (source/area)`7 1 14 20`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
+		- (metrics/profile-duration)`174000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`174000`
+		- (metrics/profile-maximum)`174000`
 (signature)`test_Work(test)`
 
 
@@ -56,6 +66,11 @@ Validate the field sets and functionality of the metrics module.
 		- (source/area)`16 1 18 45`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`134000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`134000`
+		- (metrics/profile-maximum)`134000`
 (signature)`test_Work_add(test)`
 
 
@@ -70,6 +85,11 @@ Validate the field sets and functionality of the metrics module.
 		- (source/area)`20 1 26 20`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`252000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`252000`
+		- (metrics/profile-maximum)`252000`
 (signature)`test_Adivsory(test)`
 
 
@@ -84,6 +104,11 @@ Validate the field sets and functionality of the metrics module.
 		- (source/area)`28 1 30 43`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`151000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`151000`
+		- (metrics/profile-maximum)`151000`
 (signature)`test_Adivsory_add(test)`
 
 
@@ -98,6 +123,11 @@ Validate the field sets and functionality of the metrics module.
 		- (source/area)`32 1 38 23`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`147000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`147000`
+		- (metrics/profile-maximum)`147000`
 (signature)`test_Resource(test)`
 
 
@@ -112,6 +142,11 @@ Validate the field sets and functionality of the metrics module.
 		- (source/area)`40 1 45 49`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`155000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`155000`
+		- (metrics/profile-maximum)`155000`
 (signature)`test_Resource_add(test)`
 
 
@@ -124,6 +159,11 @@ Validate the field sets and functionality of the metrics module.
 		- (source/area)`47 1 72 53`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`18`
+		- (metrics/profile-duration)`648000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`648000`
+		- (metrics/profile-maximum)`648000`
 (signature)`test_Procedure_io(test)`
 
 - (context-local/factor-element)&<fault.transcript/metrics#Procedure.sequence[fault.transcript.metrics.Procedure.sequence]>
@@ -139,6 +179,11 @@ Validate the field sets and functionality of the metrics module.
 		- (source/area)`74 1 81 39`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`195000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`195000`
+		- (metrics/profile-maximum)`195000`
 (signature)`test_Procedure_indexing(test)`
 
 - (context-local/factor-element)&<fault.transcript/metrics#Procedure.__getitem__[fault.transcript.metrics.Procedure.__getitem__]>

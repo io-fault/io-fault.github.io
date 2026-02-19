@@ -6,6 +6,11 @@
 		- (source/area)`1 1 85 3`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`43`
+		- (metrics/profile-duration)`1604000`
+		- (metrics/profile-count)`6`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1604000`
+		- (metrics/profile-maximum)`1604000`
 
 [ types ]
 ! CONTROL:
@@ -64,6 +69,11 @@
 		- (source/area)`7 1 27 38`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`12`
+		- (metrics/profile-duration)`5966000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`5966000`
+		- (metrics/profile-maximum)`5966000`
 (signature)`test_zone_data(test)`
 
 Presumes that Alaska is ~-10 and Japan is ~+10.
@@ -80,6 +90,11 @@ Presumes that Alaska is ~-10 and Japan is ~+10.
 		- (source/area)`29 1 43 34`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`10`
+		- (metrics/profile-duration)`3010000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`3010000`
+		- (metrics/profile-maximum)`3010000`
 (signature)`test_zone_dst_offset(test)`
 
 
@@ -94,6 +109,11 @@ Presumes that Alaska is ~-10 and Japan is ~+10.
 		- (source/area)`45 1 53 17`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
+		- (metrics/profile-duration)`2720000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`2720000`
+		- (metrics/profile-maximum)`2720000`
 (signature)`test_zone_default_only(test)`
 
 
@@ -108,6 +128,11 @@ Presumes that Alaska is ~-10 and Japan is ~+10.
 		- (source/area)`55 1 68 19`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
+		- (metrics/profile-duration)`2604000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`2604000`
+		- (metrics/profile-maximum)`2604000`
 (signature)`test_zone_normalize(test)`
 
 
@@ -122,5 +147,10 @@ Presumes that Alaska is ~-10 and Japan is ~+10.
 		- (source/area)`70 1 86 2`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`3263000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`3263000`
+		- (metrics/profile-maximum)`3263000`
 (signature)`test_zone_slice(test)`
 

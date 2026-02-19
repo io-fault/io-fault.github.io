@@ -6,6 +6,11 @@
 		- (source/area)`1 1 18 0`
 		- (coverage-zeros)`3`
 		- (coverage-counters)`9`
+		- (metrics/profile-duration)`190360000`
+		- (metrics/profile-count)`2`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`190360000`
+		- (metrics/profile-maximum)`190360000`
 
 [ sys ]
 ! CONTROL:
@@ -38,6 +43,11 @@
 		- (source/area)`4 1 18 43`
 		- (coverage-zeros)`3`
 		- (coverage-counters)`7`
+		- (metrics/profile-duration)`26000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`26000`
+		- (metrics/profile-maximum)`26000`
 (signature)`test_fs_device(test)`
 
 - (project-local/unknown)&<extensions.tty/module.c#fs_device>

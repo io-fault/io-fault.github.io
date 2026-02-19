@@ -6,6 +6,11 @@
 		- (source/area)`1 1 73 0`
 		- (coverage-zeros)`8`
 		- (coverage-counters)`55`
+		- (metrics/profile-duration)`9550000`
+		- (metrics/profile-count)`3`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`9550000`
+		- (metrics/profile-maximum)`9550000`
 
 [ os ]
 ! CONTROL:
@@ -52,6 +57,11 @@
 		- (source/area)`6 1 39 33`
 		- (coverage-zeros)`4`
 		- (coverage-counters)`27`
+		- (metrics/profile-duration)`41092000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`41092000`
+		- (metrics/profile-maximum)`41092000`
 (signature)`test_unidirectional(test)`
 
 
@@ -66,5 +76,10 @@
 		- (source/area)`42 1 73 44`
 		- (coverage-zeros)`4`
 		- (coverage-counters)`25`
+		- (metrics/profile-duration)`52173000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`52173000`
+		- (metrics/profile-maximum)`52173000`
 (signature)`test_bidirectional(test)`
 

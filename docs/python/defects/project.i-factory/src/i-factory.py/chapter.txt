@@ -6,6 +6,11 @@
 		- (source/area)`1 1 244 0`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`102`
+		- (metrics/profile-duration)`4914000`
+		- (metrics/profile-count)`16`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`4914000`
+		- (metrics/profile-maximum)`4914000`
 - (project-local/unknown)&<factory>
 
 polynomial-1 materialization checks.
@@ -121,6 +126,11 @@ polynomial-1 materialization checks.
 		- (source/area)`32 1 40 33`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`157000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`157000`
+		- (metrics/profile-maximum)`157000`
 (signature)`test_Composition_indirect(test)`
 
 - (context-local/factor-element)&<fault.project/factory#Composition.indirect[fault.project.factory.Composition.indirect]>
@@ -135,6 +145,11 @@ polynomial-1 materialization checks.
 		- (source/area)`42 1 58 49`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`11`
+		- (metrics/profile-duration)`148000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`148000`
+		- (metrics/profile-maximum)`148000`
 (signature)`test_Composition_explicit(test)`
 
 - (context-local/factor-element)&<fault.project/factory#Composition.explicit[fault.project.factory.Composition.explicit]>
@@ -151,6 +166,11 @@ polynomial-1 materialization checks.
 		- (source/area)`60 1 62 19`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`52500`
+		- (metrics/profile-count)`2`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`34000`
+		- (metrics/profile-maximum)`71000`
 (signature)`check_information(test, original, serialized)`
 
 
@@ -163,6 +183,11 @@ polynomial-1 materialization checks.
 		- (source/area)`64 1 71 54`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`214000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`66.82242990654206`
+		- (metrics/profile-minimum)`214000`
+		- (metrics/profile-maximum)`214000`
 (signature)`test_plan_information(test)`
 
 - (context-local/factor-element)&<fault.project/factory#plan[fault.project.factory.plan]>
@@ -179,6 +204,11 @@ Check that serialized project information is consistent.
 		- (source/area)`73 1 84 36`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`406000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`406000`
+		- (metrics/profile-maximum)`406000`
 (signature)`test_plan_cell_factors(test)`
 
 - (context-local/factor-element)&<fault.project/factory#plan[fault.project.factory.plan]>
@@ -196,6 +226,11 @@ when given a Cell as the source list.
 		- (source/area)`86 1 97 42`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
+		- (metrics/profile-duration)`484000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`484000`
+		- (metrics/profile-maximum)`484000`
 (signature)`test_plan_explicitly_typed_factors(test)`
 
 - (context-local/factor-element)&<fault.project/factory#plan[fault.project.factory.plan]>
@@ -210,6 +245,11 @@ when given a Cell as the source list.
 		- (source/area)`99 1 118 74`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
+		- (metrics/profile-duration)`451000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`451000`
+		- (metrics/profile-maximum)`451000`
 (signature)`test_plan_explicitly_typed_symbols(test)`
 
 - (context-local/factor-element)&<fault.project/factory#plan[fault.project.factory.plan]>
@@ -240,6 +280,11 @@ Check that symbols are stored and are retrievable.
 		- (source/area)`122 1 128 47`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`1161000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1161000`
+		- (metrics/profile-maximum)`1161000`
 (signature)`test_materialize_mkdir(test)`
 
 - (context-local/factor-element)&<fault.project/factory#materialize[fault.project.factory.materialize]>
@@ -254,6 +299,11 @@ Check that symbols are stored and are retrievable.
 		- (source/area)`130 1 139 61`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
+		- (metrics/profile-duration)`1582000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1582000`
+		- (metrics/profile-maximum)`1582000`
 (signature)`test_materialize_link(test)`
 
 - (context-local/factor-element)&<fault.project/factory#materialize[fault.project.factory.materialize]>
@@ -268,6 +318,11 @@ Check that symbols are stored and are retrievable.
 		- (source/area)`141 1 152 51`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
+		- (metrics/profile-duration)`1931000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1931000`
+		- (metrics/profile-maximum)`1931000`
 (signature)`test_materialize_module(test)`
 
 - (context-local/factor-element)&<fault.project/factory#materialize[fault.project.factory.materialize]>
@@ -282,6 +337,11 @@ Check that symbols are stored and are retrievable.
 		- (source/area)`154 1 160 58`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`1117000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1117000`
+		- (metrics/profile-maximum)`1117000`
 (signature)`test_materialize_bytes(test)`
 
 - (context-local/factor-element)&<fault.project/factory#materialize[fault.project.factory.materialize]>
@@ -296,6 +356,11 @@ Check that symbols are stored and are retrievable.
 		- (source/area)`162 1 168 52`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`1314000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1314000`
+		- (metrics/profile-maximum)`1314000`
 (signature)`test_materialize_strings(test)`
 
 - (context-local/factor-element)&<fault.project/factory#materialize[fault.project.factory.materialize]>
@@ -310,6 +375,11 @@ Check that symbols are stored and are retrievable.
 		- (source/area)`170 1 183 85`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`8`
+		- (metrics/profile-duration)`1833000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`98.14511729405346`
+		- (metrics/profile-minimum)`1833000`
+		- (metrics/profile-maximum)`1833000`
 (signature)`test_Parameters_instantiate(test)`
 
 - (context-local/factor-element)&<fault.project/factory#Parameters.instantiate[fault.project.factory.Parameters.instantiate]>
@@ -324,6 +394,11 @@ Check that symbols are stored and are retrievable.
 		- (source/area)`185 1 201 33`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`9`
+		- (metrics/profile-duration)`3038000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`3038000`
+		- (metrics/profile-maximum)`3038000`
 (signature)`test_Parameters_instantiate_dimensions(test)`
 
 - (context-local/factor-element)&<fault.project/factory#Parameters.instantiate[fault.project.factory.Parameters.instantiate]>
@@ -340,6 +415,11 @@ Validate that dimensions is forwarded by instantiate.
 		- (source/area)`203 1 231 2`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
+		- (metrics/profile-duration)`1395000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1395000`
+		- (metrics/profile-maximum)`1395000`
 (signature)`test_Parameters_define(test)`
 
 - (context-local/factor-element)&<fault.project/factory#Parameters.define[fault.project.factory.Parameters.define]>
@@ -354,6 +434,11 @@ Validate that dimensions is forwarded by instantiate.
 		- (source/area)`233 1 244 30`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`295000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`295000`
+		- (metrics/profile-maximum)`295000`
 (signature)`test_Parameters_define_index_error(test)`
 
 - (context-local/factor-element)&<fault.project/factory#Parameters.define[fault.project.factory.Parameters.define]>

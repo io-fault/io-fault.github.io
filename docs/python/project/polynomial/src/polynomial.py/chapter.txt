@@ -6,6 +6,11 @@
 		- (source/area)`1 1 314 0`
 		- (coverage-zeros)`36`
 		- (coverage-counters)`161`
+		- (metrics/profile-duration)`387828`
+		- (metrics/profile-count)`3443`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`90000`
+		- (metrics/profile-maximum)`4521000`
 Extensible project protocol for filesystem directories.
 
 
@@ -206,6 +211,11 @@ Extensible project protocol for filesystem directories.
 		- (source/area)`34 1 60 26`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`21`
+		- (metrics/profile-duration)`1325007`
+		- (metrics/profile-count)`3546`
+		- (metrics/profile-residency)`99.27167857655941`
+		- (metrics/profile-minimum)`118000`
+		- (metrics/profile-maximum)`16042000`
 (signature)`load_formats(file)`
 
 
@@ -248,6 +258,11 @@ Create a variant path (list of strings) according to the given (factor-local/par
 		- (source/area)`94 1 100 59`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`5387`
+		- (metrics/profile-count)`240`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`80000`
 (signature)`structure_factor_declaration(text)`
 
 Split a `.factor` file into a type and symbol set pair.
@@ -355,6 +370,11 @@ polynomial-1 protocol implementation.
 		- (source/area)`138 2 164 56`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`15`
+		- (metrics/profile-duration)`1380441`
+		- (metrics/profile-count)`3546`
+		- (metrics/profile-residency)`4.015713029050187`
+		- (metrics/profile-minimum)`140000`
+		- (metrics/profile-maximum)`16136000`
 (signature)`configure(self, route)`
 
 Inherit information and configuration from a context project.
@@ -386,6 +406,11 @@ Retrieve the location of the factor's image for the given variants.
 		- (source/area)`178 2 193 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`7537`
+		- (metrics/profile-count)`48339`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`23234000`
 (signature)`isource(self, route)`
 
 Determine if the route is a possible source file for a factor.
@@ -400,6 +425,11 @@ Determine if the route is a possible source file for a factor.
 		- (source/area)`195 2 206 80`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`7832`
+		- (metrics/profile-count)`5285`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`301000`
 (signature)`source_format_resolution(self)`
 
 Construct a resolution (type) cache for the source extension map.
@@ -428,6 +458,11 @@ Construct a resolution (type requirement) cache for the type requirements.
 		- (source/area)`221 2 235 67`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`8`
+		- (metrics/profile-duration)`5023668`
+		- (metrics/profile-count)`6209`
+		- (metrics/profile-residency)`5.901970177760889`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`2463134000`
 (signature)`indirect_factor_records(self, typcache, paths)`
 
 Given an iterable of paths identifying Indirectly Typed Factors, resolve their
@@ -443,6 +478,11 @@ type reference, factor type, and symbols using the given (factor-local/parameter
 		- (source/area)`237 2 252 36`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`11837610`
+		- (metrics/profile-count)`154`
+		- (metrics/profile-residency)`71.37003343953238`
+		- (metrics/profile-minimum)`151000`
+		- (metrics/profile-maximum)`202170000`
 (signature)`collect_explicit_sources(self, typcache, route)`
 
 Collect source files paired with their type reference for an
@@ -458,6 +498,11 @@ Explicitly Typed Factor record.
 		- (source/area)`254 2 314 18`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`39`
+		- (metrics/profile-duration)`11302078`
+		- (metrics/profile-count)`5284`
+		- (metrics/profile-residency)`-1.082545278956874`
+		- (metrics/profile-minimum)`72000`
+		- (metrics/profile-maximum)`10030784000`
 		- (type/syntax)`typing.Iterable[types.FactorType]`
 		
 (signature)`iterfactors(self, refer, route, rpath)`

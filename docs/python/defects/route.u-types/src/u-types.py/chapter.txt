@@ -6,6 +6,11 @@
 		- (source/area)`1 1 196 25`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`116`
+		- (metrics/profile-duration)`6000`
+		- (metrics/profile-count)`10`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`6000`
+		- (metrics/profile-maximum)`6000`
 Check the sequence manipulations provided by the base classes.
 
 
@@ -30,6 +35,11 @@ Check the sequence manipulations provided by the base classes.
 		- (source/area)`6 1 23 14`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`10`
+		- (metrics/profile-duration)`211000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`211000`
+		- (metrics/profile-maximum)`211000`
 (signature)`test_inconsistent_type_equality(test)`
 
 
@@ -42,6 +52,11 @@ Check the sequence manipulations provided by the base classes.
 		- (source/area)`25 1 65 29`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`29`
+		- (metrics/profile-duration)`568000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`568000`
+		- (metrics/profile-maximum)`568000`
 (signature)`test_Route_operations(test)`
 
 Check route specific operators
@@ -58,6 +73,11 @@ Check route specific operators
 		- (source/area)`67 1 92 60`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`14`
+		- (metrics/profile-duration)`487000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`487000`
+		- (metrics/profile-maximum)`487000`
 (signature)`test_Route_sequence(test)`
 
 
@@ -70,6 +90,11 @@ Check route specific operators
 		- (source/area)`94 1 108 37`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`10`
+		- (metrics/profile-duration)`484000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`484000`
+		- (metrics/profile-maximum)`484000`
 (signature)`test_Route_addition(test)`
 
 - (context-local/factor-element)&<fault.route/types#Selector[fault.route.types.Selector]>
@@ -84,6 +109,11 @@ Check route specific operators
 		- (source/area)`110 1 133 37`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`17`
+		- (metrics/profile-duration)`376000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`376000`
+		- (metrics/profile-maximum)`376000`
 (signature)`test_Route_plural_division(test)`
 
 Validate `r//segment` operations.
@@ -100,6 +130,11 @@ Validate `r//segment` operations.
 		- (source/area)`135 1 143 23`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
+		- (metrics/profile-duration)`262000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`262000`
+		- (metrics/profile-maximum)`262000`
 (signature)`test_Route_index_keys(test)`
 
 
@@ -114,6 +149,11 @@ Validate `r//segment` operations.
 		- (source/area)`145 1 158 77`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`9`
+		- (metrics/profile-duration)`315000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`315000`
+		- (metrics/profile-maximum)`315000`
 (signature)`test_Route_segment(test)`
 
 
@@ -128,6 +168,11 @@ Validate `r//segment` operations.
 		- (source/area)`160 1 185 31`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`13`
+		- (metrics/profile-duration)`783000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`783000`
+		- (metrics/profile-maximum)`783000`
 (signature)`test_Route_stepwise_shift(test)`
 
 
@@ -142,5 +187,10 @@ Validate `r//segment` operations.
 		- (source/area)`187 1 197 24`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
+		- (metrics/profile-duration)`463000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`463000`
+		- (metrics/profile-maximum)`463000`
 (signature)`test_Route_stepwise_ascent(test)`
 

@@ -6,6 +6,11 @@
 		- (source/area)`1 1 337 6`
 		- (coverage-zeros)`26`
 		- (coverage-counters)`34`
+		- (metrics/profile-duration)`306788`
+		- (metrics/profile-count)`827`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`106000`
+		- (metrics/profile-maximum)`9858000`
 Abstract base classes for time measures and points.
 
 Primarily, this module exists to document the interfaces to (factor-local/class)&<#Point[Point]> and (factor-local/class)&<#Measure[Measure]>.

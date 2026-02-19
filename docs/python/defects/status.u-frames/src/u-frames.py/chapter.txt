@@ -6,6 +6,11 @@
 		- (source/area)`1 1 171 0`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`69`
+		- (metrics/profile-duration)`7000`
+		- (metrics/profile-count)`10`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`7000`
+		- (metrics/profile-maximum)`7000`
 Check serialization and parsing of frames.
 
 
@@ -45,6 +50,11 @@ Check serialization and parsing of frames.
 		- (source/area)`9 1 13 69`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`104000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`104000`
+		- (metrics/profile-maximum)`104000`
 (signature)`test_identifier_set_limits(test)`
 
 - (context-local/factor-element)&<fault.status/frames#type_codes[fault.status.frames.type_codes]>
@@ -59,6 +69,11 @@ Check serialization and parsing of frames.
 		- (source/area)`15 1 25 60`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
+		- (metrics/profile-duration)`955000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`955000`
+		- (metrics/profile-maximum)`955000`
 (signature)`test_code_conversion(test)`
 
 - (context-local/factor-element)&<fault.status/frames#type_integer_code[fault.status.frames.type_integer_code]>
@@ -74,6 +89,11 @@ Check serialization and parsing of frames.
 		- (source/area)`27 1 39 43`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
+		- (metrics/profile-duration)`216000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`216000`
+		- (metrics/profile-maximum)`216000`
 (signature)`test_unpack_unstructured(test)`
 
 - (context-local/factor-element)&<fault.status/frames#structure[fault.status.frames.structure]>
@@ -88,6 +108,11 @@ Check serialization and parsing of frames.
 		- (source/area)`41 1 48 50`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
+		- (metrics/profile-duration)`230000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`230000`
+		- (metrics/profile-maximum)`230000`
 (signature)`test_unpack_unstructured_channel_escape(test)`
 
 - (context-local/factor-element)&<fault.status/frames#unpack[fault.status.frames.unpack]>
@@ -102,6 +127,11 @@ Check serialization and parsing of frames.
 		- (source/area)`50 1 74 68`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`9`
+		- (metrics/profile-duration)`288000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`288000`
+		- (metrics/profile-maximum)`288000`
 (signature)`test_frame_structured(test)`
 
 - (context-local/project-factor)&<fault.status/frames[fault.status.frames]>
@@ -116,6 +146,11 @@ Check serialization and parsing of frames.
 		- (source/area)`76 1 105 54`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`10`
+		- (metrics/profile-duration)`419000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`419000`
+		- (metrics/profile-maximum)`419000`
 (signature)`test_frame_data_extension(test)`
 
 - (context-local/project-factor)&<fault.status/frames[fault.status.frames]>
@@ -130,6 +165,11 @@ Check serialization and parsing of frames.
 		- (source/area)`107 1 144 63`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`11`
+		- (metrics/profile-duration)`316000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`316000`
+		- (metrics/profile-maximum)`316000`
 (signature)`test_frame_channel_only(test)`
 
 - (context-local/factor-element)&<fault.status/frames#_pack[fault.status.frames._pack]>
@@ -147,6 +187,11 @@ Check serialization and parsing of frames.
 		- (source/area)`146 1 164 41`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`12`
+		- (metrics/profile-duration)`218000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`218000`
+		- (metrics/profile-maximum)`218000`
 (signature)`test_message_directed_areas(test)`
 
 - (context-local/factor-element)&<fault.status/frames#message_directed_areas[fault.status.frames.message_directed_areas]>
@@ -161,6 +206,11 @@ Check serialization and parsing of frames.
 		- (source/area)`166 1 171 42`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`205000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`205000`
+		- (metrics/profile-maximum)`205000`
 (signature)`test_declaration_constructor(test)`
 
 - (context-local/factor-element)&<fault.status/frames#declaration[fault.status.frames.declaration]>

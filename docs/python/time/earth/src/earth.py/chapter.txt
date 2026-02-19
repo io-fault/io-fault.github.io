@@ -6,6 +6,11 @@
 		- (source/area)`1 1 60 0`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`14`
+		- (metrics/profile-duration)`861`
+		- (metrics/profile-count)`822`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`3000`
 Earth-day related unit information.
 
 [ Properties ]
@@ -97,5 +102,10 @@ Earth-day related unit information.
 		- (source/area)`24 1 60 77`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`13`
+		- (metrics/profile-duration)`41935`
+		- (metrics/profile-count)`822`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`26000`
+		- (metrics/profile-maximum)`641000`
 (signature)`context(context)`
 

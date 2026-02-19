@@ -6,6 +6,11 @@
 		- (source/area)`1 1 111 0`
 		- (coverage-zeros)`3`
 		- (coverage-counters)`68`
+		- (metrics/profile-duration)`1121000`
+		- (metrics/profile-count)`9`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1121000`
+		- (metrics/profile-maximum)`1121000`
 
 [ module ]
 ! CONTROL:
@@ -26,6 +31,11 @@
 		- (source/area)`3 1 33 15`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`17`
+		- (metrics/profile-duration)`357000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`357000`
+		- (metrics/profile-maximum)`357000`
 (signature)`test_Segments(test)`
 
 - (context-local/factor-element)&<fault.syntax/sequence#Segments[fault.syntax.sequence.Segments]>
@@ -40,6 +50,11 @@
 		- (source/area)`35 1 55 46`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`13`
+		- (metrics/profile-duration)`458000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`458000`
+		- (metrics/profile-maximum)`458000`
 (signature)`test_Segments_Sequence_Interface(test)`
 
 - (context-local/factor-element)&<fault.syntax/sequence#Segments[fault.syntax.sequence.Segments]>
@@ -56,6 +71,11 @@
 		- (source/area)`57 1 60 57`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`140000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`140000`
+		- (metrics/profile-maximum)`140000`
 (signature)`test_Segments_select(test)`
 
 
@@ -70,6 +90,11 @@
 		- (source/area)`62 1 64 59`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
+		- (metrics/profile-duration)`178000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`178000`
+		- (metrics/profile-maximum)`178000`
 (signature)`test_Segments_select_reverse(test)`
 
 
@@ -84,6 +109,11 @@
 		- (source/area)`66 1 69 65`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`369000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`369000`
+		- (metrics/profile-maximum)`369000`
 (signature)`test_Segments_select_all(test)`
 
 
@@ -98,6 +128,11 @@
 		- (source/area)`71 1 74 76`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
+		- (metrics/profile-duration)`259000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`259000`
+		- (metrics/profile-maximum)`259000`
 (signature)`test_Segments_select_all_reverse(test)`
 
 
@@ -112,6 +147,11 @@
 		- (source/area)`76 1 84 20`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
+		- (metrics/profile-duration)`47015000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`47015000`
+		- (metrics/profile-maximum)`47015000`
 (signature)`test_Segments_deletion(test)`
 
 
@@ -126,5 +166,10 @@
 		- (source/area)`86 1 107 19`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`16`
+		- (metrics/profile-duration)`410000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`410000`
+		- (metrics/profile-maximum)`410000`
 (signature)`test_Segments_getsetitem(test)`
 
