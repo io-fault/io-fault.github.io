@@ -705,23 +705,22 @@ Perform the transformation for the given element.
 		- (control)`property-set`
 		- (source/area)`887 2 905 37`
 #!source
-	@comethod('reference', 'section')
-	def dereference_section(self, resolver, context, text, *quals):
-		yield from self.link(
-			'section-reference',
-			self.text(text),
-			"#" + self.slug(text),
+			yield from self.element(
+			'div',
+			self.admonition_table(resolver, (), attr['type'], content),
+			('class', severity)
 		)
-		@comethod('reference', 'ambiguous')
-	def dereference_ambiguous(self, resolver, context, text, *quals):
-		# Most references are expected to be rewritten as hyperlinks.
-		# However, this case should be handled.
-		yield from self.link(
-			(quals and quals[0] or None),
-			self.text(text),
-			href = text,
+		def link(self, eclass, content, href, tag='a'):
+		return self.element(
+			tag,
+			itertools.chain(
+				content,
+				self.element('span', self.text(""), ('class', 'ern')),
+			),
+			('class', eclass),
+			href = href
 		)
-		@comethod('reference', 'hyperlink')
+		@comethod('reference', 'section')
 
 [ Render >> inline_literal ]
 ! CONTROL:

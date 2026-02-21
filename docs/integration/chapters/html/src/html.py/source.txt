@@ -360,21 +360,27 @@ class Render(comethod.object):
 		return ffmt(s), 's'
 
 	@staticmethod
-	def format_count(quantity, *, ffmt="{0:0.1f}".format) -> tuple[str, str]:
+	def format_count(quantity, *, precision=8, ffmt="{0:0.1f}".format) -> tuple[str, str]:
 		"""
 		# Construct a *compact* string representation of &quantity suitable for display.
 		"""
 
-		q = int(quantity)
-		if q < 1000:
-			return str(quantity), ''
+		if isinstance(quantity, str):
+			q = int(quantity)
+		else:
+			q = quantity
 
-		q /= 1000
 		if q < 1000:
-			return ffmt(q), 'K'
+			return str(quantity)[:precision], ''
 
-		q /= 1000
-		return ffmt(q), 'M'
+		# limited logarithm
+		for p in 'KMG':
+			q /= 1000
+			if q < 1000:
+				return ffmt(q), p
+		else:
+			q /= 1000
+			return ffmt(q), 'T'
 
 	def element_profile(self, attr):
 		"""
@@ -382,6 +388,7 @@ class Render(comethod.object):
 		"""
 
 		pcount = attr.get('profile-count')
+		pduration = attr.get('profile-duration')
 		if pcount is not None:
 			yield from self.element('data',
 				self.text(''.join(self.format_count(pcount))),
@@ -390,6 +397,18 @@ class Render(comethod.object):
 				('title', 'Number of times the element was executed during capture.'),
 			)
 			yield from self.text(' calls')
+			if pduration:
+				t = float(pduration)
+				if t > 0:
+					rate = (10 ** 9) / t
+					yield from self.text(' (')
+					yield from self.element('data',
+						self.text(''.join(self.format_count(rate, precision=5))),
+						('value', rate),
+						('class', 'profile-call-rate'),
+						('title', 'Calls per second achieved on average.'),
+					)
+					yield from self.text('/s)')
 
 		presidency = attr.get('profile-residency')
 		if presidency is not None:
@@ -402,7 +421,6 @@ class Render(comethod.object):
 			)
 			yield from self.text(' residency ')
 
-		pduration = attr.get('profile-duration')
 		if pduration is not None:
 			yield from self.text(' of ')
 			yield from self.element('data',
