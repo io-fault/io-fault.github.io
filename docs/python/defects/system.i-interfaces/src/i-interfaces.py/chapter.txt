@@ -4,13 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 86 0`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`49`
-		- (metrics/profile-duration)`2143000`
-		- (metrics/profile-count)`8`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`2143000`
-		- (metrics/profile-maximum)`2143000`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 Validate interface configuration and service allocations.
 
 
@@ -33,8 +28,6 @@ Validate interface configuration and service allocations.
 	/element/
 		- (control)`property-set`
 		- (source/area)`5 1 5 42`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ Endpoint ]
 ! CONTROL:
@@ -45,8 +38,6 @@ Validate interface configuration and service allocations.
 	/element/
 		- (control)`property-set`
 		- (source/area)`6 1 6 26`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	Endpoint = module.Endpoint
 
@@ -59,8 +50,6 @@ Validate interface configuration and service allocations.
 	/element/
 		- (control)`property-set`
 		- (source/area)`7 1 7 23`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	F = module.if_structure
 
@@ -73,8 +62,6 @@ Validate interface configuration and service allocations.
 	/element/
 		- (control)`property-set`
 		- (source/area)`8 1 8 22`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	f = module.if_sequence
 
@@ -85,13 +72,6 @@ Validate interface configuration and service allocations.
 	/element/
 		- (control)`property-set`
 		- (source/area)`10 1 15 93`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
-		- (metrics/profile-duration)`120000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`120000`
-		- (metrics/profile-maximum)`120000`
 (signature)`test_if_structure_comments(test)`
 
 - (context-local/factor-element)&<fault.system/interfaces#if_structure[fault.system.interfaces.if_structure]>
@@ -104,13 +84,6 @@ Validate interface configuration and service allocations.
 	/element/
 		- (control)`property-set`
 		- (source/area)`17 1 22 77`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
-		- (metrics/profile-duration)`134000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`134000`
-		- (metrics/profile-maximum)`134000`
 (signature)`test_if_structure_ip4(test)`
 
 - (context-local/factor-element)&<fault.system/interfaces#if_structure[fault.system.interfaces.if_structure]>
@@ -123,13 +96,6 @@ Validate interface configuration and service allocations.
 	/element/
 		- (control)`property-set`
 		- (source/area)`24 1 29 75`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
-		- (metrics/profile-duration)`144000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`144000`
-		- (metrics/profile-maximum)`144000`
 (signature)`test_if_structure_ip6(test)`
 
 - (context-local/factor-element)&<fault.system/interfaces#if_structure[fault.system.interfaces.if_structure]>
@@ -142,13 +108,6 @@ Validate interface configuration and service allocations.
 	/element/
 		- (control)`property-set`
 		- (source/area)`31 1 36 81`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
-		- (metrics/profile-duration)`145000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`145000`
-		- (metrics/profile-maximum)`145000`
 (signature)`test_if_structure_local(test)`
 
 - (context-local/factor-element)&<fault.system/interfaces#if_structure[fault.system.interfaces.if_structure]>
@@ -161,13 +120,6 @@ Validate interface configuration and service allocations.
 	/element/
 		- (control)`property-set`
 		- (source/area)`38 1 57 51`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`11`
-		- (metrics/profile-duration)`156000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`156000`
-		- (metrics/profile-maximum)`156000`
 (signature)`test_multiple_sections(test)`
 
 - (context-local/factor-element)&<fault.system/interfaces#if_structure[fault.system.interfaces.if_structure]>
@@ -181,13 +133,6 @@ Validate interface configuration and service allocations.
 	/element/
 		- (control)`property-set`
 		- (source/area)`59 1 71 28`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`11`
-		- (metrics/profile-duration)`2376000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`2376000`
-		- (metrics/profile-maximum)`2376000`
 (signature)`test_if_structure_localhost(test)`
 
 - (context-local/factor-element)&<fault.system/interfaces#if_structure[fault.system.interfaces.if_structure]>
@@ -200,13 +145,6 @@ Validate interface configuration and service allocations.
 	/element/
 		- (control)`property-set`
 		- (source/area)`73 1 86 21`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`9`
-		- (metrics/profile-duration)`1166000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`1166000`
-		- (metrics/profile-maximum)`1166000`
 (signature)`test_if_allocate(test)`
 
 - (context-local/factor-element)&<fault.system/interfaces#if_allocate[fault.system.interfaces.if_allocate]>

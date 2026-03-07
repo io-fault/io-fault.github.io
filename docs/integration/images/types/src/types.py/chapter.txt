@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 373 25`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`0`
+		- (coverage-zeros)`48`
+		- (coverage-counters)`130`
 Core classes and data structures for building projects with Construction Contexts.
 
 
@@ -28,6 +28,8 @@ Core classes and data structures for building projects with Construction Context
 	/element/
 		- (control)`property-set`
 		- (source/area)`5 1 5 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ functools ]
 ! CONTROL:
@@ -38,6 +40,8 @@ Core classes and data structures for building projects with Construction Context
 	/element/
 		- (control)`property-set`
 		- (source/area)`6 1 6 16`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ itertools ]
 ! CONTROL:
@@ -48,6 +52,8 @@ Core classes and data structures for building projects with Construction Context
 	/element/
 		- (control)`property-set`
 		- (source/area)`7 1 7 16`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ operator ]
 ! CONTROL:
@@ -58,6 +64,8 @@ Core classes and data structures for building projects with Construction Context
 	/element/
 		- (control)`property-set`
 		- (source/area)`8 1 8 15`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ tools ]
 ! CONTROL:
@@ -68,6 +76,8 @@ Core classes and data structures for building projects with Construction Context
 	/element/
 		- (control)`property-set`
 		- (source/area)`10 1 10 31`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ files ]
 ! CONTROL:
@@ -78,6 +88,8 @@ Core classes and data structures for building projects with Construction Context
 	/element/
 		- (control)`property-set`
 		- (source/area)`11 1 11 30`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ lsf ]
 ! CONTROL:
@@ -88,6 +100,8 @@ Core classes and data structures for building projects with Construction Context
 	/element/
 		- (control)`property-set`
 		- (source/area)`12 1 12 39`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ SystemFactor ]
 ! CONTROL:
@@ -96,6 +110,8 @@ Core classes and data structures for building projects with Construction Context
 	/element/
 		- (control)`property-set`
 		- (source/area)`14 1 117 18`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`14 20 14 25`
@@ -114,6 +130,8 @@ Target representing a system factor.
 	/element/
 		- (control)`property-set`
 		- (source/area)`19 2 33 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	fields = {
 		'source-paths': {
@@ -139,6 +157,8 @@ Target representing a system factor.
 	/element/
 		- (control)`property-set`
 		- (source/area)`34 2 37 10`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 
 [ SystemFactor >> project ]
 ! CONTROL:
@@ -169,6 +189,8 @@ Target representing a system factor.
 	/element/
 		- (control)`property-set`
 		- (source/area)`46 2 48 14`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ SystemFactor >> libdir ]
 ! CONTROL:
@@ -179,6 +201,8 @@ Target representing a system factor.
 	/element/
 		- (control)`property-set`
 		- (source/area)`50 2 55 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	libdir = lsf.types.Reference(
 		'http://if.fault.io/factors',
@@ -196,6 +220,8 @@ Target representing a system factor.
 	/element/
 		- (control)`property-set`
 		- (source/area)`56 2 57 34`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`from_libdir(Class, path)`
 
 
@@ -208,6 +234,8 @@ Target representing a system factor.
 	/element/
 		- (control)`property-set`
 		- (source/area)`59 2 64 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	libname = lsf.types.Reference(
 		'http://if.fault.io/factors',
@@ -225,6 +253,8 @@ Target representing a system factor.
 	/element/
 		- (control)`property-set`
 		- (source/area)`65 2 66 35`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`from_libname(Class, name)`
 
 
@@ -237,6 +267,8 @@ Target representing a system factor.
 	/element/
 		- (control)`property-set`
 		- (source/area)`68 2 73 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	include = lsf.types.Reference(
 		'http://if.fault.io/factors',
@@ -254,6 +286,8 @@ Target representing a system factor.
 	/element/
 		- (control)`property-set`
 		- (source/area)`74 2 75 35`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`from_include(Class, path)`
 
 
@@ -266,6 +300,8 @@ Target representing a system factor.
 	/element/
 		- (control)`property-set`
 		- (source/area)`77 2 82 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	fwdir = lsf.types.Reference(
 		'http://if.fault.io/factors',
@@ -283,6 +319,8 @@ Target representing a system factor.
 	/element/
 		- (control)`property-set`
 		- (source/area)`83 2 84 33`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`from_framework_directory(Class, path)`
 
 
@@ -295,6 +333,8 @@ Target representing a system factor.
 	/element/
 		- (control)`property-set`
 		- (source/area)`86 2 91 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	fwname = lsf.types.Reference(
 		'http://if.fault.io/factors',
@@ -312,6 +352,8 @@ Target representing a system factor.
 	/element/
 		- (control)`property-set`
 		- (source/area)`92 2 93 45`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`from_framework_name(Class, name)`
 
 
@@ -324,6 +366,8 @@ Target representing a system factor.
 	/element/
 		- (control)`property-set`
 		- (source/area)`95 2 97 18`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`__init__(self, type, data)`
 
 
@@ -336,6 +380,8 @@ Target representing a system factor.
 	/element/
 		- (control)`property-set`
 		- (source/area)`99 2 100 56`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`__repr__(self)`
 
 
@@ -348,6 +394,8 @@ Target representing a system factor.
 	/element/
 		- (control)`property-set`
 		- (source/area)`102 2 103 18`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`sources(self)`
 
 
@@ -360,6 +408,8 @@ Target representing a system factor.
 	/element/
 		- (control)`property-set`
 		- (source/area)`105 2 108 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`image(self, variants)`
 
 
@@ -372,6 +422,8 @@ Target representing a system factor.
 	/element/
 		- (control)`property-set`
 		- (source/area)`109 2 110 51`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 
 [ SystemFactor >> get ]
 ! CONTROL:
@@ -382,6 +434,8 @@ Target representing a system factor.
 	/element/
 		- (control)`property-set`
 		- (source/area)`112 2 117 18`
+		- (coverage-zeros)`4`
+		- (coverage-counters)`4`
 (signature)`get(self, field)`
 
 
@@ -392,6 +446,8 @@ Target representing a system factor.
 	/element/
 		- (control)`property-set`
 		- (source/area)`119 1 279 49`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`119 14 119 19`
@@ -410,6 +466,8 @@ The representation of a Project Factor as a compilation target.
 	/element/
 		- (control)`property-set`
 		- (source/area)`125 2 147 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	fields = {
 		'factor-index': ('route', 'container'),
@@ -437,6 +495,8 @@ The representation of a Project Factor as a compilation target.
 	/element/
 		- (control)`property-set`
 		- (source/area)`148 2 154 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 Whether the Target intends to reprents a set of references.
 
 
@@ -447,6 +507,8 @@ Whether the Target intends to reprents a set of references.
 	/element/
 		- (control)`property-set`
 		- (source/area)`155 2 161 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 Whether the Target intends to reprents a system context.
 
 
@@ -459,6 +521,8 @@ Whether the Target intends to reprents a system context.
 	/element/
 		- (control)`property-set`
 		- (source/area)`162 2 165 10`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 
 [ Target >> _corpus_id ]
 ! CONTROL:
@@ -469,6 +533,8 @@ Whether the Target intends to reprents a system context.
 	/element/
 		- (control)`property-set`
 		- (source/area)`166 2 171 10`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`3`
 
 [ Target >> _source_list ]
 ! CONTROL:
@@ -479,6 +545,8 @@ Whether the Target intends to reprents a system context.
 	/element/
 		- (control)`property-set`
 		- (source/area)`172 2 175 10`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 
 [ Target >> _source_paths ]
 ! CONTROL:
@@ -489,6 +557,8 @@ Whether the Target intends to reprents a system context.
 	/element/
 		- (control)`property-set`
 		- (source/area)`176 2 180 24`
+		- (coverage-zeros)`4`
+		- (coverage-counters)`4`
 
 [ Target >> get ]
 ! CONTROL:
@@ -499,6 +569,8 @@ Whether the Target intends to reprents a system context.
 	/element/
 		- (control)`property-set`
 		- (source/area)`182 2 187 12`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 (signature)`get(self, field)`
 
 
@@ -511,6 +583,8 @@ Whether the Target intends to reprents a system context.
 	/element/
 		- (control)`property-set`
 		- (source/area)`189 2 190 79`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`__repr__(self)`
 
 
@@ -523,6 +597,8 @@ Whether the Target intends to reprents a system context.
 	/element/
 		- (control)`property-set`
 		- (source/area)`192 2 204 3`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`__r_repr__(self)`
 
 
@@ -535,6 +611,8 @@ Whether the Target intends to reprents a system context.
 	/element/
 		- (control)`property-set`
 		- (source/area)`206 2 211 33`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`__hash__(self)`
 
 
@@ -547,6 +625,8 @@ Whether the Target intends to reprents a system context.
 	/element/
 		- (control)`property-set`
 		- (source/area)`213 2 219 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`__eq__(self, operand)`
 
 
@@ -559,6 +639,8 @@ Whether the Target intends to reprents a system context.
 	/element/
 		- (control)`property-set`
 		- (source/area)`220 2 223 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ Target >> absolute_path_string ]
 ! CONTROL:
@@ -567,6 +649,8 @@ Whether the Target intends to reprents a system context.
 	/element/
 		- (control)`property-set`
 		- (source/area)`224 2 230 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 The target's factor path.
 
 
@@ -579,6 +663,8 @@ The target's factor path.
 	/element/
 		- (control)`property-set`
 		- (source/area)`231 2 233 72`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`from_selection(Class, project, record)`
 
 
@@ -591,6 +677,8 @@ The target's factor path.
 	/element/
 		- (control)`property-set`
 		- (source/area)`235 2 254 38`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`10`
 (signature)`__init__(self, project, route, type, requirements, sources)`
 
 
@@ -603,6 +691,8 @@ The target's factor path.
 	/element/
 		- (control)`property-set`
 		- (source/area)`256 2 259 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`__str__(self)`
 
 
@@ -615,6 +705,8 @@ The target's factor path.
 	/element/
 		- (control)`property-set`
 		- (source/area)`260 2 265 24`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`2`
 
 [ Target >> sources ]
 ! CONTROL:
@@ -623,6 +715,8 @@ The target's factor path.
 	/element/
 		- (control)`property-set`
 		- (source/area)`267 2 271 22`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`sources(self)`
 
 An iterable producing the source files of the Factor.
@@ -635,6 +729,8 @@ An iterable producing the source files of the Factor.
 	/element/
 		- (control)`property-set`
 		- (source/area)`273 2 279 49`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`image(self, variants)`
 
 Get the appropriate reduction for the Factor based on the
@@ -649,6 +745,8 @@ route will be to the inducted factor.
 	/element/
 		- (control)`property-set`
 		- (source/area)`281 1 374 24`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`281 17 281 21`
@@ -667,6 +765,8 @@ Container for the set of build parameters used by the configured abstraction fun
 	/element/
 		- (control)`property-set`
 		- (source/area)`286 2 286 45`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	mechanism = property(operator.itemgetter(0))
 
@@ -679,6 +779,8 @@ Container for the set of build parameters used by the configured abstraction fun
 	/element/
 		- (control)`property-set`
 		- (source/area)`287 2 287 42`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	factor = property(operator.itemgetter(1))
 
@@ -691,6 +793,8 @@ Container for the set of build parameters used by the configured abstraction fun
 	/element/
 		- (control)`property-set`
 		- (source/area)`288 2 288 48`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	requirements = property(operator.itemgetter(2))
 
@@ -703,6 +807,8 @@ Container for the set of build parameters used by the configured abstraction fun
 	/element/
 		- (control)`property-set`
 		- (source/area)`289 2 289 46`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	dependents = property(operator.itemgetter(3))
 
@@ -715,6 +821,8 @@ Container for the set of build parameters used by the configured abstraction fun
 	/element/
 		- (control)`property-set`
 		- (source/area)`290 2 290 44`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	variants = property(operator.itemgetter(4))
 
@@ -727,6 +835,8 @@ Container for the set of build parameters used by the configured abstraction fun
 	/element/
 		- (control)`property-set`
 		- (source/area)`291 2 291 45`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	locations = property(operator.itemgetter(5))
 
@@ -739,6 +849,8 @@ Container for the set of build parameters used by the configured abstraction fun
 	/element/
 		- (control)`property-set`
 		- (source/area)`292 2 292 43`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	vectors = property(operator.itemgetter(6))
 
@@ -751,6 +863,8 @@ Container for the set of build parameters used by the configured abstraction fun
 	/element/
 		- (control)`property-set`
 		- (source/area)`293 2 295 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	features = property(operator.itemgetter(7))
 		@property
@@ -764,6 +878,8 @@ Container for the set of build parameters used by the configured abstraction fun
 	/element/
 		- (control)`property-set`
 		- (source/area)`296 2 299 10`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 
 [ Integrand >> system ]
 ! CONTROL:
@@ -774,6 +890,8 @@ Container for the set of build parameters used by the configured abstraction fun
 	/element/
 		- (control)`property-set`
 		- (source/area)`300 2 303 10`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`2`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -787,6 +905,8 @@ Container for the set of build parameters used by the configured abstraction fun
 	/element/
 		- (control)`property-set`
 		- (source/area)`304 2 307 10`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`2`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -800,6 +920,8 @@ Container for the set of build parameters used by the configured abstraction fun
 	/element/
 		- (control)`property-set`
 		- (source/area)`308 2 312 22`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`2`
 
 [ Integrand >> _qrefs ]
 ! CONTROL:
@@ -810,6 +932,8 @@ Container for the set of build parameters used by the configured abstraction fun
 	/element/
 		- (control)`property-set`
 		- (source/area)`313 2 325 28`
+		- (coverage-zeros)`5`
+		- (coverage-counters)`5`
 (signature)`_qrefs(rfactor, ri)`
 
 
@@ -822,6 +946,8 @@ Container for the set of build parameters used by the configured abstraction fun
 	/element/
 		- (control)`property-set`
 		- (source/area)`327 2 331 29`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 (signature)`required(self, variants)`
 
 
@@ -832,6 +958,8 @@ Container for the set of build parameters used by the configured abstraction fun
 	/element/
 		- (control)`property-set`
 		- (source/area)`333 2 374 24`
+		- (coverage-zeros)`16`
+		- (coverage-counters)`23`
 (signature)`select(self, field)`
 
 Retrieve information from requirements and components.

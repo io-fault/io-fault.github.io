@@ -3,7 +3,7 @@
 		module
 	/element/
 		- (control)`property-set`
-		- (source/area)`1 1 1087 0`
+		- (source/area)`1 1 1210 0`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`0`
 
@@ -183,7 +183,7 @@ Construct HTML elements for representing a type given proper annotations.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`79 1 143 15`
+		- (source/area)`79 1 152 15`
 (signature)`integrate(index, types, element)`
 
 Traverse the sections of the (factor-local/parameter)&<#integrate.Parameters.element[element]> converting CONTEXT and CONTROL
@@ -198,7 +198,7 @@ admonition elements into (factor-local/parameter)&<#integrate.Parameters.element
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`145 1 163 13`
+		- (source/area)`154 1 172 13`
 (signature)`prepare(chapter)`
 
 
@@ -208,7 +208,7 @@ admonition elements into (factor-local/parameter)&<#integrate.Parameters.element
 		class
 	/element/
 		- (control)`property-set`
-		- (source/area)`164 1 173 13`
+		- (source/area)`173 1 182 13`
 Page subject fields.
 
 
@@ -218,7 +218,7 @@ Page subject fields.
 		class
 	/element/
 		- (control)`property-set`
-		- (source/area)`174 1 180 18`
+		- (source/area)`183 1 189 18`
 Page context fields.
 
 
@@ -228,7 +228,7 @@ Page context fields.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`182 1 220 2`
+		- (source/area)`191 1 228 2`
 (signature)`page_heading(tree, depth, subject, context)`
 
 Construct the elements of a page's initial heading.
@@ -240,10 +240,10 @@ Construct the elements of a page's initial heading.
 		class
 	/element/
 		- (control)`property-set`
-		- (source/area)`222 1 935 22`
+		- (source/area)`230 1 1058 22`
 ! INHERIT:
 	- (control)`property-set`
-	- (source/area)`222 14 222 28`
+	- (source/area)`230 14 230 28`
 	- (type/syntax)`comethod.object`
 	- (type/remote/factor-element)&<http://fault.io/python/context/comethod#object[fault.context.comethod.object]>
 	
@@ -278,12 +278,12 @@ Rendering context for constructing an HTML document.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`240 2 240 22`
+		- (source/area)`248 2 248 22`
 		- (type/syntax)`object`
 		- (type/invalid/unknown)&<#object>
 		
 #!source
-	# The position of the document relative to the root of the collection.
+	output: object = None
 
 [ Render >> prefix ]
 ! CONTROL:
@@ -293,12 +293,12 @@ Rendering context for constructing an HTML document.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`241 2 241 19`
+		- (source/area)`249 2 249 19`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
 #!source
-	# /context/
+	prefix: str = None
 
 [ Render >> depth ]
 ! CONTROL:
@@ -308,12 +308,12 @@ Rendering context for constructing an HTML document.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`242 2 242 15`
+		- (source/area)`250 2 250 15`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
 #!source
-	# The chapter's context information.
+	depth: int = 0
 
 [ Render >> slug ]
 ! CONTROL:
@@ -323,7 +323,7 @@ Rendering context for constructing an HTML document.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`249 2 255 23`
+		- (source/area)`257 2 263 23`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -338,7 +338,7 @@ Rendering context for constructing an HTML document.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`256 2 264 17`
+		- (source/area)`264 2 272 17`
 (signature)`steps(Class, path)`
 
 
@@ -350,7 +350,7 @@ Rendering context for constructing an HTML document.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`266 2 276 41`
+		- (source/area)`274 2 284 41`
 (signature)`__init__(self, output, prefix, depth, context, index, input)`
 
 
@@ -362,7 +362,7 @@ Rendering context for constructing an HTML document.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`278 2 279 51`
+		- (source/area)`286 2 287 51`
 (signature)`default_resolver(self)`
 
 
@@ -374,25 +374,72 @@ Rendering context for constructing an HTML document.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`281 2 289 3`
+		- (source/area)`289 2 297 3`
 (signature)`title(self, resolver, content, integrate)`
 
 
-[ Render >> element_progress ]
+[ Render >> element_coverage ]
 ! CONTROL:
 	/type/
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`291 2 335 40`
-(signature)`element_progress(self, attr)`
+		- (source/area)`299 2 337 14`
+(signature)`element_coverage(self, attr)`
 
-Render misses and completion elements normally used to represent coverage.
+Format the coverage metrics for display in the element's status.
 
-[ >> Returns ]
 
-A triple containing the misses, isolation, and completion elements
-to be inserted directly after an element's title.
+[ Render >> format_duration ]
+! CONTROL:
+	/type/
+		staticmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`338 2 362 14`
+		- (type/syntax)`tuple[str, str]`
+		
+(signature)`format_duration(nanoseconds)`
+
+Construct a string representation of (factor-local/parameter)&<#Render.format_duration.Parameters.nanoseconds[nanoseconds]> suitable for display.
+
+
+[ Render >> format_count ]
+! CONTROL:
+	/type/
+		staticmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`363 2 383 22`
+		- (type/syntax)`tuple[str, str]`
+		
+(signature)`format_count(quantity)`
+
+Construct a *compact* string representation of (factor-local/parameter)&<#Render.format_count.Parameters.quantity[quantity]> suitable for display.
+
+
+[ Render >> element_profile ]
+! CONTROL:
+	/type/
+		method
+	/element/
+		- (control)`property-set`
+		- (source/area)`385 2 455 4`
+(signature)`element_profile(self, attr)`
+
+Format the profile metrics for display in the element's status.
+
+
+[ Render >> element_status ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`457 2 465 3`
+(signature)`element_status(self, attr)`
 
 
 [ Render >> document ]
@@ -401,7 +448,7 @@ to be inserted directly after an element's title.
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`337 2 370 3`
+		- (source/area)`467 2 496 3`
 (signature)`document(self, subject, context)`
 
 Render the HTML document from the given chapter.
@@ -413,7 +460,7 @@ Render the HTML document from the given chapter.
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`372 2 380 3`
+		- (source/area)`498 2 506 3`
 (signature)`abstract(self, resolver, elements, attr)`
 
 Extract the non-section content from the chapter.
@@ -427,7 +474,7 @@ Extract the non-section content from the chapter.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`382 2 387 21`
+		- (source/area)`508 2 514 21`
 (signature)`root(self, resolver, elements, attr)`
 
 
@@ -439,7 +486,7 @@ Extract the non-section content from the chapter.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`388 2 478 3`
+		- (source/area)`515 2 601 3`
 (signature)`semantic_section(self, resolver, elements, attr)`
 
 
@@ -449,7 +496,7 @@ Extract the non-section content from the chapter.
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`480 2 494 3`
+		- (source/area)`603 2 617 3`
 (signature)`reference_target(self, resolver, ref)`
 
 Display the target of the concept's reference.
@@ -461,7 +508,7 @@ Display the target of the concept's reference.
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`496 2 504 23`
+		- (source/area)`619 2 627 23`
 (signature)`switch(self, resolver, elements, attr)`
 
 Perform the transformation for the given element.
@@ -475,7 +522,7 @@ Perform the transformation for the given element.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`505 2 508 20`
+		- (source/area)`628 2 631 20`
 (signature)`error(self, resolver, elements, attr)`
 
 
@@ -487,7 +534,7 @@ Perform the transformation for the given element.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`509 2 524 23`
+		- (source/area)`632 2 647 23`
 (signature)`code_block(self, resolver, elements, attr)`
 
 
@@ -499,7 +546,7 @@ Perform the transformation for the given element.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`525 2 528 3`
+		- (source/area)`648 2 651 3`
 (signature)`normal_paragraph(self, resolver, nodes, attr)`
 
 
@@ -511,7 +558,7 @@ Perform the transformation for the given element.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`530 2 533 17`
+		- (source/area)`653 2 656 17`
 (signature)`list_item(self, resolver, item, attr)`
 
 
@@ -523,7 +570,7 @@ Perform the transformation for the given element.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`534 2 544 22`
+		- (source/area)`657 2 667 22`
 (signature)`ul_set(self, resolver, items, attr)`
 
 
@@ -535,7 +582,7 @@ Perform the transformation for the given element.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`545 2 553 3`
+		- (source/area)`668 2 676 3`
 (signature)`ol_seq(self, resolver, items, attr)`
 
 
@@ -547,7 +594,7 @@ Perform the transformation for the given element.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`555 2 566 4`
+		- (source/area)`678 2 689 4`
 (signature)`dl_item_anchor(self, path)`
 
 
@@ -559,7 +606,7 @@ Perform the transformation for the given element.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`568 2 580 14`
+		- (source/area)`691 2 703 14`
 (signature)`dl_key_identifier(self, kpg)`
 
 
@@ -571,7 +618,7 @@ Perform the transformation for the given element.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`582 2 705 23`
+		- (source/area)`705 2 828 23`
 (signature)`dl_item(self, resolver, item, attr, sattr, prefix)`
 
 
@@ -583,7 +630,7 @@ Perform the transformation for the given element.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`706 2 725 3`
+		- (source/area)`829 2 848 3`
 (signature)`dl_dict(self, resolver, items, attr)`
 
 
@@ -595,7 +642,7 @@ Perform the transformation for the given element.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`727 2 744 24`
+		- (source/area)`850 2 867 24`
 (signature)`admonition_table(self, resolver, icon, severity, content)`
 
 
@@ -607,7 +654,7 @@ Perform the transformation for the given element.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`745 2 769 3`
+		- (source/area)`868 2 892 3`
 (signature)`block_admonition(self, resolver, content, attr)`
 
 
@@ -619,7 +666,7 @@ Perform the transformation for the given element.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`771 2 782 34`
+		- (source/area)`894 2 905 34`
 (signature)`link(self, eclass, content, href)`
 
 
@@ -631,7 +678,7 @@ Perform the transformation for the given element.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`783 2 790 36`
+		- (source/area)`906 2 913 36`
 (signature)`dereference_section(self, resolver, context, text, *quals)`
 
 
@@ -643,7 +690,7 @@ Perform the transformation for the given element.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`791 2 800 36`
+		- (source/area)`914 2 923 36`
 (signature)`dereference_ambiguous(self, resolver, context, text, *quals)`
 
 
@@ -655,7 +702,7 @@ Perform the transformation for the given element.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`801 2 853 28`
+		- (source/area)`924 2 976 28`
 (signature)`hyperlink(self, resolver, context, text, *quals)`
 
 
@@ -667,7 +714,7 @@ Perform the transformation for the given element.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`854 2 861 32`
+		- (source/area)`977 2 984 32`
 (signature)`normal_text(self, resolver, context, text, *quals)`
 
 
@@ -679,7 +726,7 @@ Perform the transformation for the given element.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`862 2 869 30`
+		- (source/area)`985 2 992 30`
 (signature)`line_break(self, resolver, context, text, *quals)`
 
 
@@ -691,7 +738,7 @@ Perform the transformation for the given element.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`870 2 884 3`
+		- (source/area)`993 2 1007 3`
 (signature)`emphasized_text(self, resolver, context, text, level)`
 
 
@@ -703,24 +750,26 @@ Perform the transformation for the given element.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`887 2 905 37`
+		- (source/area)`1010 2 1028 37`
 #!source
-			yield from self.element(
-			'div',
-			self.admonition_table(resolver, (), attr['type'], content),
-			('class', severity)
-		)
-		def link(self, eclass, content, href, tag='a'):
-		return self.element(
-			tag,
-			itertools.chain(
-				content,
-				self.element('span', self.text(""), ('class', 'ern')),
-			),
-			('class', eclass),
-			href = href
-		)
-		@comethod('reference', 'section')
+	semantic_literals = {
+		# (self, default-class-attribute, quals, literal-text)
+		'date': (
+			(lambda s, c, q, x: s.element(
+				'time', s.text(x),
+				('class', 'gregorian-calendar-date'),
+				('datetime', x),
+			))
+		),
+		'timestamp': (
+			(lambda s, c, q, x: s.element(
+				'time', s.text(x),
+				('class', 'point'),
+				('datetime', x),
+			))
+		),
+	}
+		@comethod('literal', 'grave-accent')
 
 [ Render >> inline_literal ]
 ! CONTROL:
@@ -730,7 +779,7 @@ Perform the transformation for the given element.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`906 2 919 4`
+		- (source/area)`1029 2 1042 4`
 (signature)`inline_literal(self, resolver, context, text, *quals)`
 
 
@@ -742,7 +791,7 @@ Perform the transformation for the given element.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`921 2 922 67`
+		- (source/area)`1044 2 1045 67`
 (signature)`paragraph_content(self, resolver, content, attr)`
 
 
@@ -754,7 +803,7 @@ Perform the transformation for the given element.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`924 2 935 22`
+		- (source/area)`1047 2 1058 22`
 (signature)`paragraph(self, resolver, para, attr)`
 
 
@@ -764,7 +813,7 @@ Perform the transformation for the given element.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`936 1 941 63`
+		- (source/area)`1059 1 1064 63`
 (signature)`icon_identity(ftype)`
 
 Construct the `.icon` identifier from a factor type identifier.
@@ -776,7 +825,7 @@ Construct the `.icon` identifier from a factor type identifier.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`943 1 958 28`
+		- (source/area)`1066 1 1081 28`
 (signature)`factor_type_icon(depth, reference)`
 
 Construct a hyperlink to a printed icon for the given factor type.
@@ -790,7 +839,7 @@ Construct a hyperlink to a printed icon for the given factor type.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`960 1 968 2`
+		- (source/area)`1083 1 1091 2`
 (signature)`r_icon(sx, href)`
 
 
@@ -802,7 +851,7 @@ Construct a hyperlink to a printed icon for the given factor type.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`970 1 999 2`
+		- (source/area)`1093 1 1122 2`
 (signature)`r_index(sx, pathclass, abstractclass, listclass, index)`
 
 
@@ -814,7 +863,7 @@ Construct a hyperlink to a printed icon for the given factor type.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`1001 1 1006 72`
+		- (source/area)`1124 1 1129 72`
 (signature)`r_projects(sx, index)`
 
 
@@ -826,7 +875,7 @@ Construct a hyperlink to a printed icon for the given factor type.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`1008 1 1013 71`
+		- (source/area)`1131 1 1136 71`
 (signature)`r_factors(sx, index)`
 
 
@@ -838,7 +887,7 @@ Construct a hyperlink to a printed icon for the given factor type.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`1015 1 1021 71`
+		- (source/area)`1138 1 1144 71`
 (signature)`r_sources(sx, index)`
 
 
@@ -850,7 +899,7 @@ Construct a hyperlink to a printed icon for the given factor type.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`1023 1 1037 2`
+		- (source/area)`1146 1 1160 2`
 (signature)`r_head(sx, encoding, styles)`
 
 
@@ -862,7 +911,7 @@ Construct a hyperlink to a printed icon for the given factor type.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`1039 1 1055 2`
+		- (source/area)`1162 1 1178 2`
 (signature)`indexframe()`
 
 
@@ -872,7 +921,7 @@ Construct a hyperlink to a printed icon for the given factor type.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`1057 1 1064 51`
+		- (source/area)`1180 1 1187 51`
 (signature)`r_factor_page(sx, prefix, depth, subject, context, chapter)`
 
 Structure the given chapter text and prepare the context, index, and element query
@@ -885,7 +934,7 @@ context for a new (factor-local/class)&<#Render[Render]> instance.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`1066 1 1087 58`
+		- (source/area)`1189 1 1210 58`
 (signature)`r_page(chapter, styles)`
 
 Transform the given (factor-local/parameter)&<#r_page.Parameters.chapter[chapter]> file into HTML.

@@ -6,11 +6,11 @@
 		- (source/area)`1 1 324 20`
 		- (coverage-zeros)`138`
 		- (coverage-counters)`158`
-		- (metrics/profile-duration)`497173`
-		- (metrics/profile-count)`23`
+		- (metrics/profile-duration)`517777`
+		- (metrics/profile-count)`18`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`8000`
-		- (metrics/profile-maximum)`709000`
+		- (metrics/profile-minimum)`12000`
+		- (metrics/profile-maximum)`581000`
 Format text elements into text images.
 
 Paragraph level formatting functions usually return (factor-local/data)&<#Fragment[Fragment]> while section-level
@@ -164,11 +164,6 @@ Generator producing sequences of line text for a syntax element.
 		- (source/area)`51 1 63 62`
 		- (coverage-zeros)`11`
 		- (coverage-counters)`12`
-		- (metrics/profile-duration)`555`
-		- (metrics/profile-count)`7328`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`2000`
 		- (type/syntax)`Line`
 		- (type/factor-local/data)&<#Line[Line]>
 		
@@ -203,11 +198,6 @@ Prefix the given string with an ampersand.
 		- (source/area)`71 1 75 37`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`500`
-		- (metrics/profile-count)`2`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`1000`
 		- (type/syntax)`Fragment`
 		- (type/factor-local/data)&<#Fragment[Fragment]>
 		
@@ -225,11 +215,6 @@ Prefix the given string with an ampersand after enclosing it with brackets.
 		- (source/area)`77 1 81 24`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`455`
-		- (metrics/profile-count)`2879`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`1000`
 		- (type/syntax)`Fragment`
 		- (type/factor-local/data)&<#Fragment[Fragment]>
 		
@@ -247,11 +232,6 @@ Prefix the given string with an ampersand after enclosing it with angle brackets
 		- (source/area)`83 1 87 45`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`509`
-		- (metrics/profile-count)`1755`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`1000`
 		- (type/syntax)`Fragment`
 		- (type/factor-local/data)&<#Fragment[Fragment]>
 		
@@ -291,11 +271,6 @@ Surround the string with grave-accents and replace any grave-accent within with 
 		- (source/area)`99 1 130 12`
 		- (coverage-zeros)`19`
 		- (coverage-counters)`20`
-		- (metrics/profile-duration)`10111`
-		- (metrics/profile-count)`6745`
-		- (metrics/profile-residency)`69.58434132394984`
-		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`27561000`
 		- (type/syntax)`Image`
 		- (type/factor-local/data)&<#Image[Image]>
 		
@@ -332,11 +307,6 @@ Generator producing an (factor-local/data)&<#Image[Image]> representing the give
 		- (source/area)`135 1 138 43`
 		- (coverage-zeros)`3`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`41015`
-		- (metrics/profile-count)`2497`
-		- (metrics/profile-residency)`2.8892252111507104`
-		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`27568000`
 (signature)`_chapter(depth, element)`
 
 
@@ -351,11 +321,6 @@ Generator producing an (factor-local/data)&<#Image[Image]> representing the give
 		- (source/area)`140 1 145 36`
 		- (coverage-zeros)`8`
 		- (coverage-counters)`8`
-		- (metrics/profile-duration)`90574`
-		- (metrics/profile-count)`287`
-		- (metrics/profile-residency)`3.392960184650894`
-		- (metrics/profile-minimum)`15000`
-		- (metrics/profile-maximum)`486000`
 (signature)`_section(depth, element)`
 
 
@@ -370,11 +335,6 @@ Generator producing an (factor-local/data)&<#Image[Image]> representing the give
 		- (source/area)`147 1 157 20`
 		- (coverage-zeros)`8`
 		- (coverage-counters)`8`
-		- (metrics/profile-duration)`8787`
-		- (metrics/profile-count)`94`
-		- (metrics/profile-residency)`21.06537530266344`
-		- (metrics/profile-minimum)`4000`
-		- (metrics/profile-maximum)`41000`
 (signature)`_syn(depth, syntax)`
 
 
@@ -389,11 +349,6 @@ Generator producing an (factor-local/data)&<#Image[Image]> representing the give
 		- (source/area)`159 1 169 16`
 		- (coverage-zeros)`8`
 		- (coverage-counters)`8`
-		- (metrics/profile-duration)`14535`
-		- (metrics/profile-count)`6017`
-		- (metrics/profile-residency)`2.2203674696728903`
-		- (metrics/profile-minimum)`4000`
-		- (metrics/profile-maximum)`27565000`
 (signature)`_para(depth, element)`
 
 
@@ -408,11 +363,6 @@ Generator producing an (factor-local/data)&<#Image[Image]> representing the give
 		- (source/area)`171 1 196 20`
 		- (coverage-zeros)`16`
 		- (coverage-counters)`16`
-		- (metrics/profile-duration)`18866`
-		- (metrics/profile-count)`1807`
-		- (metrics/profile-residency)`20.603678390190964`
-		- (metrics/profile-minimum)`2000`
-		- (metrics/profile-maximum)`95000`
 (signature)`_list(depth, element, list_type)`
 
 
@@ -427,11 +377,6 @@ Generator producing an (factor-local/data)&<#Image[Image]> representing the give
 		- (source/area)`198 1 199 35`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`1`
-		- (metrics/profile-duration)`800`
-		- (metrics/profile-count)`5`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`1000`
 (signature)`_sequence(depth, element)`
 
 
@@ -446,11 +391,6 @@ Generator producing an (factor-local/data)&<#Image[Image]> representing the give
 		- (source/area)`201 1 202 35`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`1`
-		- (metrics/profile-duration)`460`
-		- (metrics/profile-count)`1802`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`2000`
 (signature)`_set(depth, element)`
 
 
@@ -465,11 +405,6 @@ Generator producing an (factor-local/data)&<#Image[Image]> representing the give
 		- (source/area)`204 1 235 34`
 		- (coverage-zeros)`22`
 		- (coverage-counters)`22`
-		- (metrics/profile-duration)`85419`
-		- (metrics/profile-count)`224`
-		- (metrics/profile-residency)`10.269677014738164`
-		- (metrics/profile-minimum)`18000`
-		- (metrics/profile-maximum)`349000`
 (signature)`_directory(depth, element)`
 
 
@@ -484,11 +419,6 @@ Generator producing an (factor-local/data)&<#Image[Image]> representing the give
 		- (source/area)`237 1 244 38`
 		- (coverage-zeros)`6`
 		- (coverage-counters)`6`
-		- (metrics/profile-duration)`36303`
-		- (metrics/profile-count)`56`
-		- (metrics/profile-residency)`3.2464338416133796`
-		- (metrics/profile-minimum)`5000`
-		- (metrics/profile-maximum)`69000`
 (signature)`_admonition(depth, element)`
 
 
@@ -531,11 +461,6 @@ Generator producing an (factor-local/data)&<#Image[Image]> representing the give
 		- (source/area)`262 1 265 40`
 		- (coverage-zeros)`3`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`30974`
-		- (metrics/profile-count)`2237`
-		- (metrics/profile-residency)`5.8984831647159`
-		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`477000`
 (signature)`_tree(depth, elements)`
 
 
@@ -590,11 +515,6 @@ Produce the image representing the given element including newline characters.
 		- (source/area)`287 1 305 19`
 		- (coverage-zeros)`5`
 		- (coverage-counters)`6`
-		- (metrics/profile-duration)`28084`
-		- (metrics/profile-count)`1166`
-		- (metrics/profile-residency)`-75.01755886035363`
-		- (metrics/profile-minimum)`19000`
-		- (metrics/profile-maximum)`42000`
 		- (type/syntax)`Image`
 		- (type/factor-local/data)&<#Image[Image]>
 		
@@ -637,11 +557,6 @@ Produce the image representing the given (factor-local/parameter)&<#elements.Par
 		- (source/area)`307 1 325 19`
 		- (coverage-zeros)`5`
 		- (coverage-counters)`6`
-		- (metrics/profile-duration)`42901`
-		- (metrics/profile-count)`2497`
-		- (metrics/profile-residency)`-156.5520975300114`
-		- (metrics/profile-minimum)`2000`
-		- (metrics/profile-maximum)`27570000`
 		- (type/syntax)`Image`
 		- (type/factor-local/data)&<#Image[Image]>
 		

@@ -1,0 +1,235 @@
+! CONTROL:
+	/type/
+		module
+	/element/
+		- (control)`property-set`
+		- (source/area)`1 1 136 21`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
+Analyze the accuracy and efficiency of a set of projects.
+
+Procedure performing the necessary tasks for collecting project metrics
+using the specified tests and preparing the data for report publication.
+
+
+[ os ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`7 1 7 9`
+
+[ sys ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 8 10`
+
+[ contextlib ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`9 1 9 17`
+
+[ Iterable ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 1 10 46`
+
+[ Sequence ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`10 1 10 46`
+
+[ tools ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`12 1 12 31`
+
+[ recognition ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`13 1 13 36`
+
+[ files ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`14 1 14 30`
+
+[ process ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`15 1 15 32`
+
+[ frames ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`16 1 16 31`
+
+[ execution ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`18 1 18 34`
+
+[ lsf ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`19 1 19 39`
+
+[ query ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`21 1 21 24`
+
+[ restricted ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`23 1 35 1`
+#!source
+	restricted = {
+		'-.': ('ignore', None, None),
+		'-E': ('field-replace', False, 'efficiency'),
+		'-e': ('field-replace', True, 'efficiency'),
+		'-A': ('field-replace', False, 'accuracy'),
+		'-a': ('field-replace', True, 'accuracy'),
+	
+		'-K': ('field-replace', False, 'reset-metrics'),
+		'-k': ('field-replace', True, 'reset-metrics'),
+	
+		'--opened-frames': ('field-replace', True, 'opened-frames'),
+		'--closed-frames': ('field-replace', False, 'opened-frames'),
+	}
+
+[ required ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`37 1 45 1`
+#!source
+	required = {
+		'-x': ('field-replace', 'machines-context-name'),
+		'-X': ('field-replace', 'system-context-directory'),
+	
+		'-D': ('field-replace', 'product-directory'),
+		'-L': ('field-replace', 'processing-lanes'),
+		'-M': ('field-replace', 'status-monitors'),
+		'-C': ('field-replace', 'persistent-cache'),
+	}
+
+[ execute ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`47 1 52 29`
+(signature)`execute(exe, argv)`
+
+
+[ configure ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`54 1 74 25`
+(signature)`configure(restricted, required, argv)`
+
+
+[ framew ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`76 1 79 9`
+(signature)`framew(file, typ, title, ext)`
+
+
+[ main ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`81 1 137 20`
+(signature)`main(inv)`
+

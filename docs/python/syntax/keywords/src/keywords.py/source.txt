@@ -185,41 +185,6 @@ class Parser(object):
 	# Applications should create and cache an instance for a given language.
 	"""
 
-	@staticmethod
-	def integrate_switches(tokens, context='inclusion'):
-		"""
-		# Qualify the syntax fields in &tokens by interpreting switches.
-
-		# [ Parameters ]
-		# /tokens/
-			# Iteraable of triples produced by &process_document or &process_lines.
-		# /context/
-			# The presumed switch state, `'inclusion'`, `'exclusion'`, or `'literal'`.
-			# Defaults to `'inclusion'`.
-		"""
-
-		for t in tokens:
-			typ, qual, chars = t
-			if typ == 'switch':
-				context = qual
-				continue
-
-			if context == 'inclusion':
-				if qual == 'event':
-					yield ("-".join((context, typ)), chars)
-				else:
-					if typ == 'space':
-						yield ("-".join((context, typ)), chars)
-					else:
-						yield ("-".join((context, qual, typ)), chars)
-			else:
-				if typ == 'space':
-					yield ("-".join((context, 'space')), chars)
-				elif qual == 'event' or typ == 'enclosure':
-					yield ("-".join((context, 'words')), chars)
-				else:
-					yield ("-".join((context, qual)), chars)
-
 	@classmethod
 	def from_profile(Class, profile:Profile):
 		"""

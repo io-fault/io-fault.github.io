@@ -5,12 +5,7 @@
 		- (control)`property-set`
 		- (source/area)`1 1 47 0`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`16`
-		- (metrics/profile-duration)`1038000`
-		- (metrics/profile-count)`3`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`1038000`
-		- (metrics/profile-maximum)`1038000`
+		- (coverage-counters)`0`
 
 [ module ]
 ! CONTROL:
@@ -31,8 +26,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`3 1 12 1`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	samples = [
 	    b'www.example.com',
@@ -54,13 +47,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`14 1 17 46`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
-		- (metrics/profile-duration)`1110000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`1110000`
-		- (metrics/profile-maximum)`1110000`
 (signature)`test_huffman_coding(test)`
 
 
@@ -71,13 +57,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`19 1 47 37`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`11`
-		- (metrics/profile-duration)`226000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`226000`
-		- (metrics/profile-maximum)`226000`
 (signature)`test_huffman_samples(test)`
 
 Tests comprised of data from examples in

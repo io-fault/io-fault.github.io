@@ -3,7 +3,7 @@
 		module
 	/element/
 		- (control)`property-set`
-		- (source/area)`1 1 166 0`
+		- (source/area)`1 1 172 0`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`0`
 Construct the targets of a package hierarchy for the selected context and role.
@@ -157,7 +157,7 @@ Construct the targets of a package hierarchy for the selected context and role.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`23 1 147 22`
+		- (source/area)`23 1 152 22`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`23 19 23 31`
@@ -183,7 +183,7 @@ Construct the targets of a package hierarchy for the selected context and role.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`28 2 45 13`
+		- (source/area)`28 2 47 13`
 (signature)`__init__(self, executor, context, mode, cache, features, product, projects)`
 
 
@@ -195,8 +195,8 @@ Construct the targets of a package hierarchy for the selected context and role.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`46 2 79 3`
-(signature)`from_command(Class, environ, arguments)`
+		- (source/area)`48 2 83 3`
+(signature)`from_command(Class, pwd, environ, arguments)`
 
 
 [ Application >> xact_void ]
@@ -205,7 +205,7 @@ Construct the targets of a package hierarchy for the selected context and role.
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`81 2 92 41`
+		- (source/area)`85 2 96 41`
 (signature)`xact_void(self, final)`
 
 Called atexit in order to dispatch the next.
@@ -217,7 +217,7 @@ Called atexit in order to dispatch the next.
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`94 2 147 22`
+		- (source/area)`98 2 152 22`
 (signature)`actuate(self)`
 
 Prepare the entire package building factor targets and writing bytecode.
@@ -231,7 +231,7 @@ Prepare the entire package building factor targets and writing bytecode.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`149 1 162 18`
+		- (source/area)`154 1 168 18`
 		- (type/syntax)`process.Exit`
 		- (type/remote/factor-element)&<http://fault.io/python/system/process#Exit[fault.system.process.Exit]>
 		

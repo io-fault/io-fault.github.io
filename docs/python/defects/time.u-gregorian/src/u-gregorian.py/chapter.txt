@@ -5,12 +5,7 @@
 		- (control)`property-set`
 		- (source/area)`1 1 104 0`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`45`
-		- (metrics/profile-duration)`8000`
-		- (metrics/profile-count)`8`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`8000`
-		- (metrics/profile-maximum)`8000`
+		- (coverage-counters)`0`
 
 [ itertools ]
 ! CONTROL:
@@ -31,8 +26,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`2 1 2 29`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ test_year_is_leap ]
 ! CONTROL:
@@ -43,13 +36,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`4 1 19 37`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`14`
-		- (metrics/profile-duration)`1257000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`1257000`
-		- (metrics/profile-maximum)`1257000`
 (signature)`test_year_is_leap(test)`
 
 
@@ -62,8 +48,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`21 1 39 1`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	mfd_io_samples = [
 		(0, 0), # first day of jan
@@ -94,13 +78,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`41 1 44 44`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
-		- (metrics/profile-duration)`476000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`476000`
-		- (metrics/profile-maximum)`476000`
 (signature)`test_month_from_days(test)`
 
 
@@ -113,13 +90,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`46 1 55 19`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`7`
-		- (metrics/profile-duration)`663000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`663000`
-		- (metrics/profile-maximum)`663000`
 (signature)`test_mfd_alignment(test)`
 
 
@@ -130,13 +100,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`57 1 66 14`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`7`
-		- (metrics/profile-duration)`138125000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`138125000`
-		- (metrics/profile-maximum)`138125000`
 (signature)`test_scan_months(test)`
 
 Shows month_from_days aligning at the start of the month.
@@ -151,8 +114,6 @@ Shows month_from_days aligning at the start of the month.
 	/element/
 		- (control)`property-set`
 		- (source/area)`70 1 74 1`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	dfm_io_samples = [
 		(0, 0),
@@ -169,13 +130,6 @@ Shows month_from_days aligning at the start of the month.
 	/element/
 		- (control)`property-set`
 		- (source/area)`76 1 79 47`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
-		- (metrics/profile-duration)`162000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`162000`
-		- (metrics/profile-maximum)`162000`
 (signature)`test_days_from_month(test)`
 
 
@@ -188,8 +142,6 @@ Shows month_from_days aligning at the start of the month.
 	/element/
 		- (control)`property-set`
 		- (source/area)`81 1 94 1`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	date_io_samples = [
 		# whole cycle checks
@@ -215,13 +167,6 @@ Shows month_from_days aligning at the start of the month.
 	/element/
 		- (control)`property-set`
 		- (source/area)`96 1 99 45`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
-		- (metrics/profile-duration)`287000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`287000`
-		- (metrics/profile-maximum)`287000`
 (signature)`test_date_from_days(test)`
 
 
@@ -234,12 +179,5 @@ Shows month_from_days aligning at the start of the month.
 	/element/
 		- (control)`property-set`
 		- (source/area)`101 1 104 45`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
-		- (metrics/profile-duration)`544000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`544000`
-		- (metrics/profile-maximum)`544000`
 (signature)`test_days_from_date(test)`
 

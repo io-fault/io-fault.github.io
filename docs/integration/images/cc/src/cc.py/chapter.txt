@@ -3,9 +3,14 @@
 		module
 	/element/
 		- (control)`property-set`
-		- (source/area)`1 1 810 0`
+		- (source/area)`1 1 857 0`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`0`
+		- (metrics/profile-duration)`20847270`
+		- (metrics/profile-count)`37`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`9465000`
+		- (metrics/profile-maximum)`25360000`
 Software Construction Context implementation in Python.
 
 
@@ -239,9 +244,9 @@ Software Construction Context implementation in Python.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`29 1 29 46`
+		- (source/area)`29 1 29 20`
 #!source
-	devnull = files.Path.from_absolute(os.devnull)
+	devnull = files.null
 
 [ job_priority ]
 ! CONTROL:
@@ -264,6 +269,11 @@ Software Construction Context implementation in Python.
 	/element/
 		- (control)`property-set`
 		- (source/area)`43 1 49 47`
+		- (metrics/profile-duration)`16547`
+		- (metrics/profile-count)`157`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`170000`
 (signature)`local_query(integrand, local, query)`
 
 
@@ -273,8 +283,13 @@ Software Construction Context implementation in Python.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`51 1 99 22`
-(signature)`prepare(command, args, log, output, input)`
+		- (source/area)`51 1 101 22`
+		- (metrics/profile-duration)`220955`
+		- (metrics/profile-count)`45`
+		- (metrics/profile-residency)`73.10670823695062`
+		- (metrics/profile-minimum)`61000`
+		- (metrics/profile-maximum)`768000`
+(signature)`prepare(command, args, log, output, input, retained)`
 
 Given a command and its constructed arguments, interpret the
 standard I/O fields in (factor-local/parameter)&<#prepare.Parameters.args[args]>, formulate a (remote/factor-element)&<http://fault.io/python/system/execution#KInvocation[fault.system.execution.KInvocation]>
@@ -303,6 +318,10 @@ assignments.
 	
 	The (remote/factor-element)&<http://fault.io/python/system/files#Path[fault.system.files.Path]> identifying the source file being translated or the sole unit.
 
+/(parameter)`retained`/
+	
+	The location, in the cache, that should be hard linked to the output.
+
 /(parameter)`executor`/
 	
 	(control/absent)`Undocumented`.
@@ -316,7 +335,12 @@ assignments.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`100 1 103 21`
+		- (source/area)`102 1 105 21`
+		- (metrics/profile-duration)`15426`
+		- (metrics/profile-count)`61`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`10000`
+		- (metrics/profile-maximum)`32000`
 (signature)`_ftype(itype)`
 
 
@@ -328,7 +352,12 @@ assignments.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`104 1 112 11`
+		- (source/area)`106 1 114 11`
+		- (metrics/profile-duration)`1083`
+		- (metrics/profile-count)`36`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`3000`
 (signature)`work_key_cache(prefix, features, variants)`
 
 
@@ -340,7 +369,12 @@ assignments.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`114 1 116 28`
+		- (source/area)`116 1 118 28`
+		- (metrics/profile-duration)`2816`
+		- (metrics/profile-count)`316`
+		- (metrics/profile-residency)`94.26966292134831`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`62000`
 (signature)`work()`
 
 
@@ -352,7 +386,7 @@ assignments.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`118 1 121 28`
+		- (source/area)`120 1 123 28`
 (signature)`telemetry()`
 
 
@@ -362,7 +396,7 @@ assignments.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`123 1 133 13`
+		- (source/area)`125 1 135 13`
 (signature)`rebuild(outputs, inputs)`
 
 Unconditionally report the (factor-local/parameter)&<#rebuild.Parameters.outputs[outputs]> as outdated.
@@ -374,7 +408,12 @@ Unconditionally report the (factor-local/parameter)&<#rebuild.Parameters.outputs
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`135 1 183 12`
+		- (source/area)`137 1 185 12`
+		- (metrics/profile-duration)`159504`
+		- (metrics/profile-count)`686`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`3453000`
 (signature)`updated(outputs, inputs)`
 
 Return whether or not the (factor-local/parameter)&<#updated.Parameters.outputs[outputs]> are up-to-date.
@@ -391,7 +430,12 @@ and (invalid/unknown)&<#True> means that the file is up-to-date and needs no pro
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`185 1 194 54`
+		- (source/area)`187 1 196 54`
+		- (metrics/profile-duration)`12870`
+		- (metrics/profile-count)`54`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`7000`
+		- (metrics/profile-maximum)`24000`
 (signature)`construct_reference_target(pj, reqs, rsrc, method, record)`
 
 
@@ -401,7 +445,12 @@ and (invalid/unknown)&<#True> means that the file is up-to-date and needs no pro
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`196 1 232 82`
+		- (source/area)`198 1 234 82`
+		- (metrics/profile-duration)`2047777`
+		- (metrics/profile-count)`54`
+		- (metrics/profile-residency)`56.72183034906855`
+		- (metrics/profile-minimum)`669000`
+		- (metrics/profile-maximum)`5063000`
 (signature)`interpret_reference(cc, ctxpath, _factor, reference)`
 
 Extract the project identifier from the (invalid/unknown)&<#url> and find a corresponding project.
@@ -418,7 +467,12 @@ that should be connected in order to use the (invalid/unknown)&<#symbol>.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`234 1 246 75`
+		- (source/area)`236 1 248 75`
+		- (metrics/profile-duration)`14666`
+		- (metrics/profile-count)`6`
+		- (metrics/profile-residency)`31.818181818181824`
+		- (metrics/profile-minimum)`7000`
+		- (metrics/profile-maximum)`22000`
 (signature)`structure_system_references(source)`
 
 
@@ -428,7 +482,12 @@ that should be connected in order to use the (invalid/unknown)&<#symbol>.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`248 1 285 10`
+		- (source/area)`250 1 287 10`
+		- (metrics/profile-duration)`2050314`
+		- (metrics/profile-count)`54`
+		- (metrics/profile-residency)`-39.743670800328765`
+		- (metrics/profile-minimum)`672000`
+		- (metrics/profile-maximum)`5066000`
 (signature)`resolve_meta_references(ir, targets)`
 
 Construct (project-local/factor-element)&<types#SystemFactor[system.images.types.SystemFactor]> instances from the reference factors.
@@ -440,7 +499,12 @@ Construct (project-local/factor-element)&<types#SystemFactor[system.images.types
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`287 1 299 50`
+		- (source/area)`289 1 301 50`
+		- (metrics/profile-duration)`171443`
+		- (metrics/profile-count)`392`
+		- (metrics/profile-residency)`0.08927774305865546`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`5750000`
 (signature)`requirements(cc, ctxpath, factor)`
 
 Return the set of factors that is required to build this Target, (factor-local/parameter)&<#requirements.Parameters.factor[factor]>.
@@ -452,10 +516,10 @@ Return the set of factors that is required to build this Target, (factor-local/p
 		class
 	/element/
 		- (control)`property-set`
-		- (source/area)`301 1 810 35`
+		- (source/area)`303 1 857 35`
 ! INHERIT:
 	- (control)`property-set`
-	- (source/area)`301 20 301 32`
+	- (source/area)`303 20 303 32`
 	- (type/syntax)`kcore.Context`
 	- (type/remote/factor-element)&<http://fault.io/python/kernel/core#Context[fault.kernel.core.Context]>
 	
@@ -471,7 +535,12 @@ dispatches the work to be performed for completion in the appropriate order.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`307 2 353 23`
+		- (source/area)`309 2 357 23`
+		- (metrics/profile-duration)`8151`
+		- (metrics/profile-count)`33`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`6000`
+		- (metrics/profile-maximum)`17000`
 (signature)`__init__(self, executor, time, log, features, cache, context, mode, pcontext, ctxpath, project, factors)`
 
 
@@ -483,7 +552,12 @@ dispatches the work to be performed for completion in the appropriate order.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`355 2 356 45`
+		- (source/area)`359 2 360 45`
+		- (metrics/profile-duration)`58033`
+		- (metrics/profile-count)`90`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`12000`
+		- (metrics/profile-maximum)`2245000`
 (signature)`time(self)`
 
 
@@ -495,7 +569,12 @@ dispatches the work to be performed for completion in the appropriate order.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`358 2 378 26`
+		- (source/area)`362 2 382 26`
+		- (metrics/profile-duration)`74994969`
+		- (metrics/profile-count)`33`
+		- (metrics/profile-residency)`-4.185816099180793`
+		- (metrics/profile-minimum)`20265000`
+		- (metrics/profile-maximum)`201063000`
 (signature)`actuate(self)`
 
 
@@ -507,7 +586,12 @@ dispatches the work to be performed for completion in the appropriate order.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`380 2 385 10`
+		- (source/area)`384 2 389 10`
+		- (metrics/profile-duration)`662`
+		- (metrics/profile-count)`362`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`12000`
 (signature)`select(self, ftype)`
 
 
@@ -517,7 +601,12 @@ dispatches the work to be performed for completion in the appropriate order.
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`387 2 414 28`
+		- (source/area)`391 2 418 28`
+		- (metrics/profile-duration)`24431448`
+		- (metrics/profile-count)`107`
+		- (metrics/profile-residency)`1.4595865218913113`
+		- (metrics/profile-minimum)`11000`
+		- (metrics/profile-maximum)`178184000`
 (signature)`finish(self, factors)`
 
 Called when a set of factors have been completed.
@@ -531,7 +620,12 @@ Called when a set of factors have been completed.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`416 2 418 28`
+		- (source/area)`420 2 422 28`
+		- (metrics/profile-duration)`500`
+		- (metrics/profile-count)`4`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`1000`
 (signature)`xact_void(self, final)`
 
 
@@ -541,7 +635,12 @@ Called when a set of factors have been completed.
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`420 2 450 21`
+		- (source/area)`424 2 454 21`
+		- (metrics/profile-duration)`221382`
+		- (metrics/profile-count)`316`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`129000`
+		- (metrics/profile-maximum)`2501000`
 (signature)`_prepare_work_directory(self, locations, sources)`
 
 Initialize the work directory for the factor processing cache.
@@ -553,7 +652,12 @@ Initialize the work directory for the factor processing cache.
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`457 2 609 35`
+		- (source/area)`461 2 635 35`
+		- (metrics/profile-duration)`7111116`
+		- (metrics/profile-count)`362`
+		- (metrics/profile-residency)`68.8446693061676`
+		- (metrics/profile-minimum)`28000`
+		- (metrics/profile-maximum)`31315000`
 (signature)`collect(self, features, mechanism, factor, requirements, dependents)`
 
 Collect the parameters and work to be done for processing the (factor-local/parameter)&<#Construction.collect.Parameters.factor[factor]>.
@@ -595,7 +699,12 @@ Collect the parameters and work to be done for processing the (factor-local/para
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`611 2 614 42`
+		- (source/area)`637 2 640 42`
+		- (metrics/profile-duration)`3200`
+		- (metrics/profile-count)`45`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`11000`
 (signature)`_reapusage(self, pid)`
 
 
@@ -607,7 +716,12 @@ Collect the parameters and work to be done for processing the (factor-local/para
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`616 2 655 13`
+		- (source/area)`642 2 681 13`
+		- (metrics/profile-duration)`3588333`
+		- (metrics/profile-count)`45`
+		- (metrics/profile-residency)`98.93853537699334`
+		- (metrics/profile-minimum)`530000`
+		- (metrics/profile-maximum)`12771000`
 (signature)`process_execute(self, instruction)`
 
 
@@ -619,8 +733,30 @@ Collect the parameters and work to be done for processing the (factor-local/para
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`657 2 661 48`
+		- (source/area)`683 2 689 14`
+		- (metrics/profile-duration)`16311911`
+		- (metrics/profile-count)`45`
+		- (metrics/profile-residency)`0.11361840563678074`
+		- (metrics/profile-minimum)`271000`
+		- (metrics/profile-maximum)`332048000`
 (signature)`xact_exit(self, xact)`
+
+
+[ Construction >> retain_image ]
+! CONTROL:
+	/type/
+		staticmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`690 2 702 21`
+		- (metrics/profile-duration)`3997159`
+		- (metrics/profile-count)`313`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`281000`
+		- (metrics/profile-maximum)`331548000`
+(signature)`retain_image(dst, src)`
+
+Hard link or copy (factor-local/parameter)&<#Construction.retain_image.Parameters.src[src]> to (factor-local/parameter)&<#Construction.retain_image.Parameters.dst[dst]>.
 
 
 [ Construction >> process_exit ]
@@ -631,8 +767,13 @@ Collect the parameters and work to be done for processing the (factor-local/para
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`663 2 718 34`
-(signature)`process_exit(self, pid, delta, rusage, start_time, factor, log, cmd, tfile)`
+		- (source/area)`704 2 765 34`
+		- (metrics/profile-duration)`16292866`
+		- (metrics/profile-count)`45`
+		- (metrics/profile-residency)`10.131086678696471`
+		- (metrics/profile-minimum)`261000`
+		- (metrics/profile-maximum)`332026000`
+(signature)`process_exit(self, pid, delta, rusage, start_time, factor, log, cmd, tfile, rimg)`
 
 
 [ Construction >> drain_process_queue ]
@@ -641,7 +782,12 @@ Collect the parameters and work to be done for processing the (factor-local/para
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`720 2 744 28`
+		- (source/area)`767 2 791 28`
+		- (metrics/profile-duration)`1174072`
+		- (metrics/profile-count)`138`
+		- (metrics/profile-residency)`0.32464727012381034`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`24757000`
 (signature)`drain_process_queue(self)`
 
 After process slots have been cleared by (factor-local/method)&<#Construction.process_exit[process_exit]>,
@@ -655,7 +801,12 @@ system processes enqueued in (invalid/unknown)&<#command_queue>.
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`746 2 792 28`
+		- (source/area)`793 2 839 28`
+		- (metrics/profile-duration)`3955961`
+		- (metrics/profile-count)`105`
+		- (metrics/profile-residency)`5.689784677015523`
+		- (metrics/profile-minimum)`77000`
+		- (metrics/profile-maximum)`128225000`
 (signature)`continuation(self)`
 
 Process exits occurred that may trigger an addition to the working set of tasks.
@@ -669,7 +820,12 @@ of further work identified by the sequenced dependency tree managed by (invalid/
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`794 2 810 35`
+		- (source/area)`841 2 857 35`
+		- (metrics/profile-duration)`48588`
+		- (metrics/profile-count)`632`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`31000`
+		- (metrics/profile-maximum)`1979000`
 (signature)`dispatch(self, factor)`
 
 Process the collected work for the factor.

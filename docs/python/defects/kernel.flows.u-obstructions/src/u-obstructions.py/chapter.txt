@@ -4,13 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 105 42`
-		- (coverage-zeros)`22`
-		- (coverage-counters)`61`
-		- (metrics/profile-duration)`5355000`
-		- (metrics/profile-count)`4`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`5355000`
-		- (metrics/profile-maximum)`5355000`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 Validate the operation of obstructing flows.
 
 
@@ -33,13 +28,6 @@ Validate the operation of obstructing flows.
 	/element/
 		- (control)`property-set`
 		- (source/area)`6 1 20 37`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`10`
-		- (metrics/profile-duration)`179000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`179000`
-		- (metrics/profile-maximum)`179000`
 (signature)`test_Flow_operation(test)`
 
 
@@ -50,13 +38,6 @@ Validate the operation of obstructing flows.
 	/element/
 		- (control)`property-set`
 		- (source/area)`22 1 52 29`
-		- (coverage-zeros)`18`
-		- (coverage-counters)`35`
-		- (metrics/profile-duration)`159000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`159000`
-		- (metrics/profile-maximum)`159000`
 (signature)`test_Flow_obstructions(test)`
 
 Validate that joins receive obstruction notifications.
@@ -69,13 +50,6 @@ Validate that joins receive obstruction notifications.
 	/element/
 		- (control)`property-set`
 		- (source/area)`54 1 73 22`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`10`
-		- (metrics/profile-duration)`157000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`157000`
-		- (metrics/profile-maximum)`157000`
 (signature)`test_Flow_obstructions_initial(test)`
 
 Validate obstruction signaling when obstruction is presented before the watch.
@@ -88,13 +62,6 @@ Validate obstruction signaling when obstruction is presented before the watch.
 	/element/
 		- (control)`property-set`
 		- (source/area)`75 1 102 44`
-		- (coverage-zeros)`18`
-		- (coverage-counters)`35`
-		- (metrics/profile-duration)`159000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`159000`
-		- (metrics/profile-maximum)`159000`
 (signature)`test_Flow_obstructions(test)`
 
 Validate that joins receive obstruction notifications.

@@ -6,11 +6,11 @@
 		- (source/area)`1 1 713 0`
 		- (coverage-zeros)`129`
 		- (coverage-counters)`363`
-		- (metrics/profile-duration)`197276`
-		- (metrics/profile-count)`105`
+		- (metrics/profile-duration)`152485`
+		- (metrics/profile-count)`35`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`114000`
-		- (metrics/profile-maximum)`506000`
+		- (metrics/profile-minimum)`127000`
+		- (metrics/profile-maximum)`319000`
 Parse, Serialize, and Tokenize Resource Indicators
 
 (project-local/unknown)&<ri> provides tools for working with standard IRIs or URIs. However,
@@ -112,11 +112,11 @@ is inspired by the URI and IRI standards:
 		- (source/area)`43 1 48 18`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
-		- (metrics/profile-duration)`2552`
-		- (metrics/profile-count)`27375`
-		- (metrics/profile-residency)`59.096829599942744`
+		- (metrics/profile-duration)`2377`
+		- (metrics/profile-count)`27099`
+		- (metrics/profile-residency)`47.496507837963684`
 		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`4887000`
+		- (metrics/profile-maximum)`3847000`
 (signature)`_decode_parts(string)`
 
 
@@ -131,11 +131,11 @@ is inspired by the URI and IRI standards:
 		- (source/area)`50 1 51 30`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
-		- (metrics/profile-duration)`6176`
-		- (metrics/profile-count)`27375`
-		- (metrics/profile-residency)`58.676879399065484`
+		- (metrics/profile-duration)`5445`
+		- (metrics/profile-count)`27099`
+		- (metrics/profile-residency)`40.271612802667335`
 		- (metrics/profile-minimum)`2000`
-		- (metrics/profile-maximum)`5919000`
+		- (metrics/profile-maximum)`4680000`
 (signature)`decode_percent_escapes(string)`
 
 
@@ -148,11 +148,11 @@ is inspired by the URI and IRI standards:
 		- (source/area)`53 1 84 112`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`12`
-		- (metrics/profile-duration)`100000`
+		- (metrics/profile-duration)`76000`
 		- (metrics/profile-count)`1`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`100000`
-		- (metrics/profile-maximum)`100000`
+		- (metrics/profile-minimum)`76000`
+		- (metrics/profile-maximum)`76000`
 (signature)`strict()`
 
 Enable strict serializations.
@@ -316,8 +316,8 @@ be created from the loader and (factor-local/function)&<#strict[strict]> should 
 		- (source/area)`142 1 244 58`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`50`
-		- (metrics/profile-duration)`2242`
-		- (metrics/profile-count)`2778`
+		- (metrics/profile-duration)`1613`
+		- (metrics/profile-count)`2686`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`1000`
 		- (metrics/profile-maximum)`29000`
@@ -349,11 +349,11 @@ Returns the top-level parts of the IRI as a namedtuple.
 		- (source/area)`246 1 253 73`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`3352`
+		- (metrics/profile-duration)`2176`
 		- (metrics/profile-count)`17`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`8000`
+		- (metrics/profile-maximum)`7000`
 (signature)`join_path(p)`
 
 Join a list of paths(strings) on "/" *after* escaping them.
@@ -382,11 +382,11 @@ Join a list of paths(strings) on "/" *after* escaping them.
 		- (source/area)`257 1 267 44`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
-		- (metrics/profile-duration)`15647`
+		- (metrics/profile-duration)`13647`
 		- (metrics/profile-count)`17`
-		- (metrics/profile-residency)`36.84210526315789`
-		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`25000`
+		- (metrics/profile-residency)`32.758620689655174`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`22000`
 (signature)`split_path(p)`
 
 Return a list of unescaped strings split on "/".
@@ -404,11 +404,11 @@ decoded.
 		- (source/area)`269 1 295 9`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`26`
-		- (metrics/profile-duration)`956`
-		- (metrics/profile-count)`2752`
+		- (metrics/profile-duration)`140`
+		- (metrics/profile-count)`2682`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`5000`
+		- (metrics/profile-maximum)`10000`
 (signature)`join(t)`
 
 Make an RI from a split RI(5-tuple)
@@ -437,11 +437,11 @@ Make an RI from a split RI(5-tuple)
 		- (source/area)`299 1 319 22`
 		- (coverage-zeros)`3`
 		- (coverage-counters)`10`
-		- (metrics/profile-duration)`614`
-		- (metrics/profile-count)`1052`
+		- (metrics/profile-duration)`39`
+		- (metrics/profile-count)`960`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`6000`
+		- (metrics/profile-maximum)`5000`
 (signature)`remap_ipv4_address(string)`
 
 Recognize IPv4 hosts as addresses.
@@ -456,11 +456,11 @@ Recognize IPv4 hosts as addresses.
 		- (source/area)`321 1 407 45`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`44`
-		- (metrics/profile-duration)`31463`
-		- (metrics/profile-count)`3156`
-		- (metrics/profile-residency)`25.182783137626135`
+		- (metrics/profile-duration)`34853`
+		- (metrics/profile-count)`3064`
+		- (metrics/profile-residency)`20.170050191025545`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`5947000`
+		- (metrics/profile-maximum)`4724000`
 (signature)`split_netloc(netloc)`
 
 Split a network location into a 4-tuple, (user, password, host, port).
@@ -478,11 +478,11 @@ decoded.
 		- (source/area)`409 1 437 9`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`19`
-		- (metrics/profile-duration)`2157`
-		- (metrics/profile-count)`3126`
+		- (metrics/profile-duration)`1559`
+		- (metrics/profile-count)`3056`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`16000`
+		- (metrics/profile-maximum)`31000`
 (signature)`join_netloc(t)`
 
 Create a netloc fragment from the given tuple(user, password, host, address, port).
@@ -513,11 +513,11 @@ Create a netloc fragment from the given tuple(user, password, host, address, por
 		- (source/area)`441 1 445 2`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
-		- (metrics/profile-duration)`32691`
+		- (metrics/profile-duration)`23318`
 		- (metrics/profile-count)`2613`
-		- (metrics/profile-residency)`20.982639336010205`
-		- (metrics/profile-minimum)`10000`
-		- (metrics/profile-maximum)`4706000`
+		- (metrics/profile-residency)`25.457081897259147`
+		- (metrics/profile-minimum)`9000`
+		- (metrics/profile-maximum)`3168000`
 (signature)`parse_query(query)`
 
 
@@ -530,11 +530,11 @@ Create a netloc fragment from the given tuple(user, password, host, address, por
 		- (source/area)`447 1 489 9`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`27`
-		- (metrics/profile-duration)`79733`
-		- (metrics/profile-count)`2778`
-		- (metrics/profile-residency)`9.522756104938578`
-		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`5994000`
+		- (metrics/profile-duration)`74959`
+		- (metrics/profile-count)`2686`
+		- (metrics/profile-residency)`8.766675606679183`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`4770000`
 (signature)`structure(t)`
 
 Create a dictionary from a split RI(5-tuple).
@@ -552,11 +552,11 @@ decoded.
 		- (source/area)`491 1 504 3`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
-		- (metrics/profile-duration)`1587`
+		- (metrics/profile-duration)`798`
 		- (metrics/profile-count)`2617`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`11000`
+		- (metrics/profile-maximum)`16000`
 (signature)`construct_query(x)`
 
 Given a sequence of (key, value) pairs, construct.
@@ -571,11 +571,11 @@ Given a sequence of (key, value) pairs, construct.
 		- (source/area)`506 1 536 2`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`11`
-		- (metrics/profile-duration)`8331`
-		- (metrics/profile-count)`2752`
-		- (metrics/profile-residency)`55.1814375436148`
+		- (metrics/profile-duration)`7423`
+		- (metrics/profile-count)`2682`
+		- (metrics/profile-residency)`52.418504194083084`
 		- (metrics/profile-minimum)`2000`
-		- (metrics/profile-maximum)`41000`
+		- (metrics/profile-maximum)`92000`
 (signature)`construct(x)`
 
 Construct a RI tuple(5-tuple) from a dictionary object.
@@ -590,11 +590,11 @@ Construct a RI tuple(5-tuple) from a dictionary object.
 		- (source/area)`538 1 546 52`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`86359`
-		- (metrics/profile-count)`2751`
-		- (metrics/profile-residency)`4.494140822305283`
+		- (metrics/profile-duration)`80922`
+		- (metrics/profile-count)`2659`
+		- (metrics/profile-residency)`3.888480950300687`
 		- (metrics/profile-minimum)`5000`
-		- (metrics/profile-maximum)`6000000`
+		- (metrics/profile-maximum)`4776000`
 (signature)`parse(iri)`
 
 Parse an RI into a dictionary object. Synonym for `structure(split(x))`.
@@ -612,11 +612,11 @@ decoded.
 		- (source/area)`548 1 553 26`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`12921`
-		- (metrics/profile-count)`2725`
-		- (metrics/profile-residency)`28.007497444053165`
+		- (metrics/profile-duration)`11727`
+		- (metrics/profile-count)`2655`
+		- (metrics/profile-residency)`26.77843080579375`
 		- (metrics/profile-minimum)`6000`
-		- (metrics/profile-maximum)`51000`
+		- (metrics/profile-maximum)`107000`
 (signature)`serialize(x)`
 
 Return an RI from a dictionary object. Synonym for `join(construct(x))`.

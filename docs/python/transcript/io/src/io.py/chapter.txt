@@ -6,11 +6,11 @@
 		- (source/area)`1 1 320 11`
 		- (coverage-zeros)`50`
 		- (coverage-counters)`164`
-		- (metrics/profile-duration)`4061365`
-		- (metrics/profile-count)`823`
+		- (metrics/profile-duration)`3519926`
+		- (metrics/profile-count)`739`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`28000`
-		- (metrics/profile-maximum)`18056000`
+		- (metrics/profile-minimum)`30000`
+		- (metrics/profile-maximum)`9983000`
 Status frame I/O support.
 
 
@@ -167,11 +167,11 @@ IO array manager for frame sources.
 		- (source/area)`71 2 73 35`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`47752250`
-		- (metrics/profile-count)`8`
+		- (metrics/profile-duration)`1653000`
+		- (metrics/profile-count)`1`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`1686000`
-		- (metrics/profile-maximum)`319280000`
+		- (metrics/profile-minimum)`1653000`
+		- (metrics/profile-maximum)`1653000`
 (signature)`io(self)`
 
 
@@ -186,11 +186,11 @@ IO array manager for frame sources.
 		- (source/area)`75 2 84 24`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
-		- (metrics/profile-duration)`1125`
-		- (metrics/profile-count)`8`
+		- (metrics/profile-duration)`1000`
+		- (metrics/profile-count)`1`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`2000`
+		- (metrics/profile-maximum)`1000`
 (signature)`__init__(self)`
 
 
@@ -205,11 +205,11 @@ IO array manager for frame sources.
 		- (source/area)`86 2 88 27`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`47771875`
-		- (metrics/profile-count)`8`
-		- (metrics/profile-residency)`0.041080656767187806`
-		- (metrics/profile-minimum)`1696000`
-		- (metrics/profile-maximum)`319331000`
+		- (metrics/profile-duration)`1663000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`0.6013229104028863`
+		- (metrics/profile-minimum)`1663000`
+		- (metrics/profile-maximum)`1663000`
 (signature)`__enter__(self)`
 
 
@@ -224,11 +224,11 @@ IO array manager for frame sources.
 		- (source/area)`90 2 91 18`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
-		- (metrics/profile-duration)`4125`
-		- (metrics/profile-count)`8`
+		- (metrics/profile-duration)`3000`
+		- (metrics/profile-count)`1`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`3000`
-		- (metrics/profile-maximum)`6000`
+		- (metrics/profile-maximum)`3000`
 (signature)`__exit__(self, exc, val, tb)`
 
 
@@ -243,11 +243,11 @@ IO array manager for frame sources.
 		- (source/area)`93 2 98 37`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
-		- (metrics/profile-duration)`12788`
-		- (metrics/profile-count)`142`
+		- (metrics/profile-duration)`9641`
+		- (metrics/profile-count)`81`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`3000`
-		- (metrics/profile-maximum)`89000`
+		- (metrics/profile-maximum)`27000`
 (signature)`connect(self, id, fd)`
 
 
@@ -274,11 +274,11 @@ IO array manager for frame sources.
 		- (source/area)`103 2 111 67`
 		- (coverage-zeros)`3`
 		- (coverage-counters)`5`
-		- (metrics/profile-duration)`78781`
-		- (metrics/profile-count)`6018`
+		- (metrics/profile-duration)`74526`
+		- (metrics/profile-count)`1527`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`8000`
-		- (metrics/profile-maximum)`41614000`
+		- (metrics/profile-maximum)`9601000`
 (signature)`frame(self, line)`
 
 Decode and unpack the binary status frame using Array's configuration.
@@ -295,11 +295,11 @@ Decode and unpack the binary status frame using Array's configuration.
 		- (source/area)`113 2 118 4`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`40710022`
-		- (metrics/profile-count)`4120`
+		- (metrics/profile-duration)`4489434`
+		- (metrics/profile-count)`1198`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`4000`
-		- (metrics/profile-maximum)`68504000`
+		- (metrics/profile-minimum)`3000`
+		- (metrics/profile-maximum)`64314000`
 (signature)`collect(self)`
 
 
@@ -314,11 +314,11 @@ Decode and unpack the binary status frame using Array's configuration.
 		- (source/area)`120 2 160 25`
 		- (coverage-zeros)`4`
 		- (coverage-counters)`26`
-		- (metrics/profile-duration)`41092096`
-		- (metrics/profile-count)`4120`
-		- (metrics/profile-residency)`0.055531785049398694`
-		- (metrics/profile-minimum)`41000`
-		- (metrics/profile-maximum)`68528000`
+		- (metrics/profile-duration)`4922469`
+		- (metrics/profile-count)`1198`
+		- (metrics/profile-residency)`0.541010032358179`
+		- (metrics/profile-minimum)`48000`
+		- (metrics/profile-maximum)`64346000`
 (signature)`__iter__(self)`
 
 
@@ -372,11 +372,11 @@ Status frame serialization interface and write buffer.
 		- (source/area)`177 2 185 13`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`5`
-		- (metrics/profile-duration)`3148`
-		- (metrics/profile-count)`18255`
+		- (metrics/profile-duration)`3032`
+		- (metrics/profile-count)`12638`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`984000`
+		- (metrics/profile-maximum)`162000`
 (signature)`_xid(extension, xid)`
 
 
@@ -389,11 +389,11 @@ Status frame serialization interface and write buffer.
 		- (source/area)`186 2 193 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
-		- (metrics/profile-duration)`11427`
-		- (metrics/profile-count)`823`
-		- (metrics/profile-residency)`73.52472089314195`
+		- (metrics/profile-duration)`9231`
+		- (metrics/profile-count)`739`
+		- (metrics/profile-residency)`70.56581647610672`
 		- (metrics/profile-minimum)`3000`
-		- (metrics/profile-maximum)`43000`
+		- (metrics/profile-maximum)`30000`
 (signature)`stdout(Class)`
 
 Construct a (factor-local/class)&<#Log[Log]> instance for serializing frames to (none/invalid)&<http://fault.io/dev/null[sys.stdout]>.
@@ -408,11 +408,11 @@ Construct a (factor-local/class)&<#Log[Log]> instance for serializing frames to 
 		- (source/area)`194 2 199 92`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
-		- (metrics/profile-duration)`5250`
-		- (metrics/profile-count)`8`
-		- (metrics/profile-residency)`66.66666666666666`
-		- (metrics/profile-minimum)`4000`
-		- (metrics/profile-maximum)`7000`
+		- (metrics/profile-duration)`5000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`60.0`
+		- (metrics/profile-minimum)`5000`
+		- (metrics/profile-maximum)`5000`
 (signature)`stderr(Class)`
 
 Construct a (factor-local/class)&<#Log[Log]> instance for serializing frames to (none/invalid)&<http://fault.io/dev/null[sys.stderr]>.
@@ -429,11 +429,11 @@ Construct a (factor-local/class)&<#Log[Log]> instance for serializing frames to 
 		- (source/area)`201 2 209 17`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
-		- (metrics/profile-duration)`3013`
-		- (metrics/profile-count)`831`
+		- (metrics/profile-duration)`2252`
+		- (metrics/profile-count)`740`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`19000`
+		- (metrics/profile-maximum)`7000`
 (signature)`__init__(self, pack, stream, encoding)`
 
 
@@ -467,11 +467,11 @@ Return (invalid/unknown)&<#True> when a (factor-local/method)&<#Log.flush[flush]
 		- (source/area)`225 2 230 15`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`8486`
-		- (metrics/profile-count)`12126`
+		- (metrics/profile-duration)`7837`
+		- (metrics/profile-count)`11586`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`70000`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`79000`
 (signature)`flush(self)`
 
 Write any emitted messages to the configured stream and reset the operation count.
@@ -486,11 +486,11 @@ Write any emitted messages to the configured stream and reset the operation coun
 		- (source/area)`232 2 236 82`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`85437`
-		- (metrics/profile-count)`19433`
+		- (metrics/profile-duration)`79435`
+		- (metrics/profile-count)`13457`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`13000`
-		- (metrics/profile-maximum)`10793000`
+		- (metrics/profile-minimum)`20000`
+		- (metrics/profile-maximum)`9306000`
 (signature)`emit(self, frame)`
 
 Send a (invalid/unknown)&<#message> using the given (invalid/unknown)&<#channel> identifier.
@@ -519,11 +519,6 @@ Write bytes directly to the log's stream.
 		- (source/area)`245 2 250 18`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`1026`
-		- (metrics/profile-count)`884`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`16000`
 (signature)`write(self, text)`
 
 Write text to the log's stream incrementing the transmit count.
@@ -538,11 +533,11 @@ Write text to the log's stream incrementing the transmit count.
 		- (source/area)`252 2 260 33`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`47134`
-		- (metrics/profile-count)`815`
-		- (metrics/profile-residency)`32.94806716126513`
-		- (metrics/profile-minimum)`29000`
-		- (metrics/profile-maximum)`407000`
+		- (metrics/profile-duration)`38101`
+		- (metrics/profile-count)`738`
+		- (metrics/profile-residency)`30.808350225825954`
+		- (metrics/profile-minimum)`28000`
+		- (metrics/profile-maximum)`143000`
 (signature)`declare(self)`
 
 Emit a protocol declaration.
@@ -559,11 +554,11 @@ Emit a protocol declaration.
 		- (source/area)`262 2 285 54`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`14`
-		- (metrics/profile-duration)`58800`
-		- (metrics/profile-count)`5`
+		- (metrics/profile-duration)`25404`
+		- (metrics/profile-count)`47`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`38000`
-		- (metrics/profile-maximum)`77000`
+		- (metrics/profile-minimum)`13000`
+		- (metrics/profile-maximum)`47000`
 (signature)`compose(self, type, severity, qualifier, text, extension)`
 
 
@@ -592,11 +587,11 @@ Emit a protocol declaration.
 		- (source/area)`293 2 297 12`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
-		- (metrics/profile-duration)`174800`
-		- (metrics/profile-count)`5`
-		- (metrics/profile-residency)`24.485125858123567`
-		- (metrics/profile-minimum)`134000`
-		- (metrics/profile-maximum)`219000`
+		- (metrics/profile-duration)`120617`
+		- (metrics/profile-count)`47`
+		- (metrics/profile-residency)`12.171458811077791`
+		- (metrics/profile-minimum)`49000`
+		- (metrics/profile-maximum)`1573000`
 (signature)`warning(self, *text)`
 
 
@@ -625,11 +620,11 @@ Emit a protocol declaration.
 		- (source/area)`305 2 309 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
-		- (metrics/profile-duration)`177873`
-		- (metrics/profile-count)`8805`
-		- (metrics/profile-residency)`36.34642594446601`
-		- (metrics/profile-minimum)`26000`
-		- (metrics/profile-maximum)`9870000`
+		- (metrics/profile-duration)`196079`
+		- (metrics/profile-count)`6508`
+		- (metrics/profile-residency)`39.07427796737677`
+		- (metrics/profile-minimum)`37000`
+		- (metrics/profile-maximum)`9324000`
 (signature)`xact_open(self, xid, synopsis, extension)`
 
 
@@ -644,11 +639,11 @@ Emit a protocol declaration.
 		- (source/area)`311 2 315 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
-		- (metrics/profile-duration)`117126`
-		- (metrics/profile-count)`1283`
-		- (metrics/profile-residency)`38.9677453700931`
-		- (metrics/profile-minimum)`30000`
-		- (metrics/profile-maximum)`8160000`
+		- (metrics/profile-duration)`89576`
+		- (metrics/profile-count)`217`
+		- (metrics/profile-residency)`32.34386253729808`
+		- (metrics/profile-minimum)`37000`
+		- (metrics/profile-maximum)`2341000`
 (signature)`xact_status(self, xid, synopsis, extension)`
 
 
@@ -663,10 +658,10 @@ Emit a protocol declaration.
 		- (source/area)`317 2 321 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
-		- (metrics/profile-duration)`93169`
-		- (metrics/profile-count)`8162`
-		- (metrics/profile-residency)`24.283189471524828`
-		- (metrics/profile-minimum)`19000`
-		- (metrics/profile-maximum)`10813000`
+		- (metrics/profile-duration)`69970`
+		- (metrics/profile-count)`5866`
+		- (metrics/profile-residency)`26.256611661862983`
+		- (metrics/profile-minimum)`34000`
+		- (metrics/profile-maximum)`7151000`
 (signature)`xact_close(self, xid, synopsis, extension)`
 

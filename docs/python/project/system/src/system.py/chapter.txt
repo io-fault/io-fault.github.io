@@ -6,11 +6,11 @@
 		- (source/area)`1 1 688 23`
 		- (coverage-zeros)`79`
 		- (coverage-counters)`323`
-		- (metrics/profile-duration)`233975`
-		- (metrics/profile-count)`3446`
+		- (metrics/profile-duration)`177242`
+		- (metrics/profile-count)`1061`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`105000`
-		- (metrics/profile-maximum)`5448000`
+		- (metrics/profile-minimum)`111000`
+		- (metrics/profile-maximum)`1304000`
 Product and Project directory protocol support.
 
 Provides three classes of interest: (factor-local/class)&<#Project[Project]>, (factor-local/class)&<#Product[Product]>, and (factor-local/class)&<#Context[Context]>.
@@ -125,11 +125,11 @@ involves multiple directories, an abstraction provided by (factor-local/class)&<
 		- (source/area)`23 1 32 51`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
-		- (metrics/profile-duration)`186681`
-		- (metrics/profile-count)`11496`
-		- (metrics/profile-residency)`92.68890706143019`
-		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`4531000`
+		- (metrics/profile-duration)`138765`
+		- (metrics/profile-count)`3984`
+		- (metrics/profile-residency)`92.07279462704601`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`1283000`
 (signature)`parse_project_index(lines)`
 
 Generate tuples from the given space separated fields, (factor-local/parameter)&<#parse_project_index.Parameters.lines[lines]>.
@@ -161,11 +161,11 @@ Split the text and return the fields as a tuple.
 		- (source/area)`40 1 74 2`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`14`
-		- (metrics/profile-duration)`9132`
+		- (metrics/profile-duration)`6367`
 		- (metrics/profile-count)`68`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`42000`
+		- (metrics/profile-maximum)`27000`
 (signature)`structure_project_declaration(text)`
 
 Parse the contents of a `.project` file.
@@ -184,11 +184,11 @@ A pair, the project protocol and a (project-local/factor-element)&<types#Informa
 		- (source/area)`76 1 86 29`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
-		- (metrics/profile-duration)`9000`
+		- (metrics/profile-duration)`8857`
 		- (metrics/profile-count)`7`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`2000`
-		- (metrics/profile-maximum)`17000`
+		- (metrics/profile-minimum)`5000`
+		- (metrics/profile-maximum)`14000`
 (signature)`sequence_project_declaration()`
 
 Format the contents of a `.project` file from the given protocol and
@@ -204,11 +204,11 @@ Format the contents of a `.project` file from the given protocol and
 		- (source/area)`88 1 112 19`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`14`
-		- (metrics/profile-duration)`1506642`
+		- (metrics/profile-duration)`1344571`
 		- (metrics/profile-count)`14`
-		- (metrics/profile-residency)`40.07964727634761`
-		- (metrics/profile-minimum)`272000`
-		- (metrics/profile-maximum)`3819000`
+		- (metrics/profile-residency)`33.11198470038249`
+		- (metrics/profile-minimum)`217000`
+		- (metrics/profile-maximum)`4289000`
 (signature)`scan_product_directory(read_protocol, route)`
 
 Identify the projects within the given route.
@@ -304,11 +304,11 @@ supported by the selector.
 		- (source/area)`132 2 141 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
-		- (metrics/profile-duration)`8293`
-		- (metrics/profile-count)`3822`
+		- (metrics/profile-duration)`6839`
+		- (metrics/profile-count)`412`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`699000`
+		- (metrics/profile-maximum)`214000`
 		- (type/syntax)`types.FactorIsolationProtocol`
 		- (type/project-local/factor-element)&<types#FactorIsolationProtocol[fault.project.types.FactorIsolationProtocol]>
 		
@@ -326,11 +326,11 @@ Retrieve the protocol class using the (factor-local/parameter)&<#Product.import_
 		- (source/area)`142 2 148 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`7682`
-		- (metrics/profile-count)`11501`
+		- (metrics/profile-duration)`4814`
+		- (metrics/profile-count)`3989`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`512000`
+		- (metrics/profile-minimum)`3000`
+		- (metrics/profile-maximum)`1261000`
 		- (type/syntax)`Selector`
 		- (type/context-local/factor-element)&<fault.route/types#Selector[fault.route.types.Selector]>
 		
@@ -346,11 +346,11 @@ Materialized project index file path.
 		- (source/area)`149 2 155 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`5547`
-		- (metrics/profile-count)`811`
+		- (metrics/profile-duration)`4333`
+		- (metrics/profile-count)`737`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`2000`
-		- (metrics/profile-maximum)`16000`
+		- (metrics/profile-minimum)`3000`
+		- (metrics/profile-maximum)`11000`
 		- (type/syntax)`Selector`
 		- (type/context-local/factor-element)&<fault.route/types#Selector[fault.route.types.Selector]>
 		
@@ -366,11 +366,11 @@ Connection list fulfilling requirements.
 		- (source/area)`156 2 169 55`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`6`
-		- (metrics/profile-duration)`233813`
-		- (metrics/profile-count)`811`
-		- (metrics/profile-residency)`97.62739752034301`
-		- (metrics/profile-minimum)`35000`
-		- (metrics/profile-maximum)`8805000`
+		- (metrics/profile-duration)`149389`
+		- (metrics/profile-count)`737`
+		- (metrics/profile-residency)`96.76930063578564`
+		- (metrics/profile-minimum)`87000`
+		- (metrics/profile-maximum)`3395000`
 The requirements of the product as a sequence of product directory routes.
 
 This sequence is not cached and constructed at access time by opening the
@@ -386,11 +386,11 @@ file (factor-local/property)&<#Product.connections_index_route[connections_index
 		- (source/area)`171 2 177 20`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
-		- (metrics/profile-duration)`1246`
-		- (metrics/profile-count)`11518`
+		- (metrics/profile-duration)`469`
+		- (metrics/profile-count)`3999`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`314000`
+		- (metrics/profile-maximum)`11000`
 (signature)`clear(self)`
 
 Remove the instance local cache.
@@ -405,11 +405,11 @@ Remove the instance local cache.
 		- (source/area)`179 2 191 57`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
-		- (metrics/profile-duration)`47533`
-		- (metrics/profile-count)`11518`
-		- (metrics/profile-residency)`97.37673657408591`
-		- (metrics/profile-minimum)`13000`
-		- (metrics/profile-maximum)`2966000`
+		- (metrics/profile-duration)`31817`
+		- (metrics/profile-count)`3999`
+		- (metrics/profile-residency)`96.74785246661793`
+		- (metrics/profile-minimum)`17000`
+		- (metrics/profile-maximum)`280000`
 (signature)`__init__(self, route)`
 
 Initialize a (factor-local/class)&<#Product[Product]> using (factor-local/parameter)&<#Product.__init__.Parameters.route[route]> with an empty local instance cache.
@@ -455,11 +455,11 @@ directory location, but should normally not be used.
 		- (source/area)`199 2 214 28`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`9`
-		- (metrics/profile-duration)`121821`
-		- (metrics/profile-count)`5900`
+		- (metrics/profile-duration)`116211`
+		- (metrics/profile-count)`644`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`30000`
-		- (metrics/profile-maximum)`18827000`
+		- (metrics/profile-minimum)`54000`
+		- (metrics/profile-maximum)`5341000`
 (signature)`image(self, variants, project, factor)`
 
 Identify the location of the factor's image for the given (factor-local/parameter)&<#Product.image.Parameters.variants[variants]>.
@@ -474,11 +474,11 @@ Identify the location of the factor's image for the given (factor-local/paramete
 		- (source/area)`216 2 222 41`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
-		- (metrics/profile-duration)`17677`
-		- (metrics/profile-count)`3815`
-		- (metrics/profile-residency)`53.38740528758471`
-		- (metrics/profile-minimum)`6000`
-		- (metrics/profile-maximum)`717000`
+		- (metrics/profile-duration)`14516`
+		- (metrics/profile-count)`405`
+		- (metrics/profile-residency)`53.61456029937064`
+		- (metrics/profile-minimum)`7000`
+		- (metrics/profile-maximum)`230000`
 		- (type/syntax)`typing.Tuple[str, types.FactorIsolationProtocol]`
 		
 (signature)`identifier_by_factor(self, factor)`
@@ -496,11 +496,11 @@ Uses the instance local cache populated by (factor-local/method)&<#Product.load[
 		- (source/area)`224 2 230 41`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
-		- (metrics/profile-duration)`45166`
+		- (metrics/profile-duration)`42833`
 		- (metrics/profile-count)`6`
-		- (metrics/profile-residency)`23.247232472324725`
+		- (metrics/profile-residency)`7.782101167315175`
 		- (metrics/profile-minimum)`32000`
-		- (metrics/profile-maximum)`60000`
+		- (metrics/profile-maximum)`70000`
 		- (type/syntax)`typing.Tuple[types.FactorPath, types.FactorIsolationProtocol]`
 		
 (signature)`factor_by_identifier(self, identifier)`
@@ -518,11 +518,11 @@ Uses the instance local cache populated by (factor-local/method)&<#Product.load[
 		- (source/area)`232 2 249 12`
 		- (coverage-zeros)`7`
 		- (coverage-counters)`11`
-		- (metrics/profile-duration)`10463`
-		- (metrics/profile-count)`82`
-		- (metrics/profile-residency)`90.55944055944056`
-		- (metrics/profile-minimum)`4000`
-		- (metrics/profile-maximum)`25000`
+		- (metrics/profile-duration)`8500`
+		- (metrics/profile-count)`14`
+		- (metrics/profile-residency)`89.07563025210085`
+		- (metrics/profile-minimum)`6000`
+		- (metrics/profile-maximum)`16000`
 		- (type/syntax)`typing.Iterable[types.FactorPath]`
 		
 (signature)`select(self, constraint)`
@@ -542,11 +542,11 @@ If the argument is a nil (project-local/factor-element)&<types#FactorPath[fault.
 		- (source/area)`251 2 264 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
-		- (metrics/profile-duration)`126549`
+		- (metrics/profile-duration)`125901`
 		- (metrics/profile-count)`102`
-		- (metrics/profile-residency)`96.07220328478464`
-		- (metrics/profile-minimum)`33000`
-		- (metrics/profile-maximum)`765000`
+		- (metrics/profile-residency)`97.14218969007943`
+		- (metrics/profile-minimum)`32000`
+		- (metrics/profile-maximum)`1118000`
 (signature)`read_protocol(self, route)`
 
 Retrieve the protocol data from the configured (invalid/unknown)&<#project_declaration_filesnames>.
@@ -563,7 +563,7 @@ Retrieve the protocol data from the configured (invalid/unknown)&<#project_decla
 		- (source/area)`265 2 266 41`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
-		- (metrics/profile-duration)`714`
+		- (metrics/profile-duration)`142`
 		- (metrics/profile-count)`14`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
@@ -578,11 +578,11 @@ Retrieve the protocol data from the configured (invalid/unknown)&<#project_decla
 		- (source/area)`268 2 282 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`8`
-		- (metrics/profile-duration)`2393794`
-		- (metrics/profile-count)`11496`
-		- (metrics/profile-residency)`91.88051059015174`
-		- (metrics/profile-minimum)`74000`
-		- (metrics/profile-maximum)`41014000`
+		- (metrics/profile-duration)`1296479`
+		- (metrics/profile-count)`3984`
+		- (metrics/profile-residency)`88.85448970354145`
+		- (metrics/profile-minimum)`84000`
+		- (metrics/profile-maximum)`12479000`
 (signature)`load(self)`
 
 Load the snapshot of the projects from the product's route.
@@ -597,11 +597,11 @@ Load the snapshot of the projects from the product's route.
 		- (source/area)`284 2 297 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`8`
-		- (metrics/profile-duration)`495250`
+		- (metrics/profile-duration)`348750`
 		- (metrics/profile-count)`4`
-		- (metrics/profile-residency)`98.63705199394245`
-		- (metrics/profile-minimum)`303000`
-		- (metrics/profile-maximum)`1003000`
+		- (metrics/profile-residency)`98.78136200716845`
+		- (metrics/profile-minimum)`324000`
+		- (metrics/profile-maximum)`378000`
 (signature)`store(self)`
 
 Store the snapshot of the projects to the product's route.
@@ -616,11 +616,11 @@ Store the snapshot of the projects to the product's route.
 		- (source/area)`299 2 315 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
-		- (metrics/profile-duration)`1620428`
+		- (metrics/profile-duration)`1432857`
 		- (metrics/profile-count)`14`
-		- (metrics/profile-residency)`6.9778718152164325`
-		- (metrics/profile-minimum)`297000`
-		- (metrics/profile-maximum)`4019000`
+		- (metrics/profile-residency)`6.086739780658025`
+		- (metrics/profile-minimum)`239000`
+		- (metrics/profile-maximum)`4385000`
 (signature)`update(self)`
 
 Update the snapshot of the projects by querying the filesystem.
@@ -636,11 +636,11 @@ The effects of this should be recorded with a subsequent call to (factor-local/m
 		- (source/area)`317 2 344 19`
 		- (coverage-zeros)`3`
 		- (coverage-counters)`16`
-		- (metrics/profile-duration)`480000`
+		- (metrics/profile-duration)`481000`
 		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`25.624999999999996`
-		- (metrics/profile-minimum)`480000`
-		- (metrics/profile-maximum)`480000`
+		- (metrics/profile-residency)`23.90852390852391`
+		- (metrics/profile-minimum)`481000`
+		- (metrics/profile-maximum)`481000`
 (signature)`iterprojects(self)`
 
 Query the route and retrieve all projects within the product.
@@ -657,11 +657,11 @@ Results may be inconsistent with the instance cache.
 		- (source/area)`346 2 358 49`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`8`
-		- (metrics/profile-duration)`78446`
-		- (metrics/profile-count)`4103`
+		- (metrics/profile-duration)`49427`
+		- (metrics/profile-count)`409`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`5000`
-		- (metrics/profile-maximum)`15455000`
+		- (metrics/profile-minimum)`6000`
+		- (metrics/profile-maximum)`182000`
 (signature)`split(self, fpath)`
 
 Separate the project portion from (factor-local/parameter)&<#Product.split.Parameters.fpath[fpath]>.
@@ -710,11 +710,11 @@ Project Interface joining relavant routes and protocol instances.
 		- (source/area)`367 2 371 47`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`56611`
-		- (metrics/profile-count)`36`
+		- (metrics/profile-duration)`19500`
+		- (metrics/profile-count)`2`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`18000`
-		- (metrics/profile-maximum)`1053000`
+		- (metrics/profile-minimum)`19000`
+		- (metrics/profile-maximum)`20000`
 (signature)`meta(self)`
 
 The directory containing project metadata.
@@ -731,11 +731,11 @@ The directory containing project metadata.
 		- (source/area)`373 2 384 22`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
-		- (metrics/profile-duration)`75727`
-		- (metrics/profile-count)`28959`
+		- (metrics/profile-duration)`76818`
+		- (metrics/profile-count)`25913`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`8000`
-		- (metrics/profile-maximum)`3895000`
+		- (metrics/profile-minimum)`14000`
+		- (metrics/profile-maximum)`3504000`
 (signature)`__init__(self, pd, pi, pf, proto)`
 
 
@@ -750,11 +750,11 @@ The directory containing project metadata.
 		- (source/area)`385 2 392 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
-		- (metrics/profile-duration)`10000`
+		- (metrics/profile-duration)`13000`
 		- (metrics/profile-count)`2`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`10000`
-		- (metrics/profile-maximum)`10000`
+		- (metrics/profile-minimum)`9000`
+		- (metrics/profile-maximum)`17000`
 (signature)`_iid_corpus_name_pair(self)`
 
 
@@ -767,11 +767,11 @@ The directory containing project metadata.
 		- (source/area)`393 2 399 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`73000`
+		- (metrics/profile-duration)`93500`
 		- (metrics/profile-count)`2`
-		- (metrics/profile-residency)`86.3013698630137`
-		- (metrics/profile-minimum)`71000`
-		- (metrics/profile-maximum)`75000`
+		- (metrics/profile-residency)`86.09625668449198`
+		- (metrics/profile-minimum)`73000`
+		- (metrics/profile-maximum)`114000`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -787,11 +787,11 @@ The leading portion of the independent identifier.
 		- (source/area)`400 2 404 38`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`500`
+		- (metrics/profile-duration)`0`
 		- (metrics/profile-count)`2`
-		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-residency)`0.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`1000`
+		- (metrics/profile-maximum)`0`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -838,11 +838,11 @@ The identifying information of the project.
 		- (source/area)`448 2 455 3`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
-		- (metrics/profile-duration)`489842`
-		- (metrics/profile-count)`38`
-		- (metrics/profile-residency)`1.1765337917696357`
-		- (metrics/profile-minimum)`80000`
-		- (metrics/profile-maximum)`3217000`
+		- (metrics/profile-duration)`110500`
+		- (metrics/profile-count)`4`
+		- (metrics/profile-residency)`4.751131221719457`
+		- (metrics/profile-minimum)`90000`
+		- (metrics/profile-maximum)`146000`
 		- (type/syntax)`types.Extensions`
 		- (type/project-local/factor-element)&<types#Extensions[fault.project.types.Extensions]>
 		
@@ -860,11 +860,11 @@ Additional identifying information of the project.
 		- (source/area)`457 2 474 13`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`5`
-		- (metrics/profile-duration)`282871`
-		- (metrics/profile-count)`39`
-		- (metrics/profile-residency)`81.52646845540247`
-		- (metrics/profile-minimum)`31000`
-		- (metrics/profile-maximum)`1897000`
+		- (metrics/profile-duration)`56200`
+		- (metrics/profile-count)`5`
+		- (metrics/profile-residency)`85.40925266903915`
+		- (metrics/profile-minimum)`27000`
+		- (metrics/profile-maximum)`90000`
 		- (type/syntax)`bytes`
 		- (type/invalid/unknown)&<#bytes>
 		
@@ -894,11 +894,11 @@ Read the icon reference contained in (system/file)`.project/icon`.
 		- (source/area)`476 2 493 13`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`5`
-		- (metrics/profile-duration)`190256`
-		- (metrics/profile-count)`39`
+		- (metrics/profile-duration)`37800`
+		- (metrics/profile-count)`5`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`21000`
-		- (metrics/profile-maximum)`1314000`
+		- (metrics/profile-minimum)`24000`
+		- (metrics/profile-maximum)`58000`
 		- (type/syntax)`bytes`
 		- (type/invalid/unknown)&<#bytes>
 		
@@ -930,11 +930,11 @@ Read the synopsis data contained in (system/file)`.project/synopsis`.
 		- (source/area)`495 2 496 69`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
-		- (metrics/profile-duration)`122152`
-		- (metrics/profile-count)`5817`
-		- (metrics/profile-residency)`2.633264045552611`
-		- (metrics/profile-minimum)`32000`
-		- (metrics/profile-maximum)`7287000`
+		- (metrics/profile-duration)`123721`
+		- (metrics/profile-count)`561`
+		- (metrics/profile-residency)`1.9003573075149838`
+		- (metrics/profile-minimum)`56000`
+		- (metrics/profile-maximum)`5347000`
 (signature)`image(self, variants, fp)`
 
 
@@ -947,11 +947,11 @@ Read the synopsis data contained in (system/file)`.project/synopsis`.
 		- (source/area)`498 2 503 31`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`11315715`
-		- (metrics/profile-count)`5282`
-		- (metrics/profile-residency)`49.66746059857945`
-		- (metrics/profile-minimum)`74000`
-		- (metrics/profile-maximum)`10030801000`
+		- (metrics/profile-duration)`26315879`
+		- (metrics/profile-count)`441`
+		- (metrics/profile-residency)`14.117606408036048`
+		- (metrics/profile-minimum)`197000`
+		- (metrics/profile-maximum)`9988653000`
 (signature)`select(self, factor)`
 
 Retrieve factors within the given path.
@@ -966,11 +966,6 @@ Retrieve factors within the given path.
 		- (source/area)`505 2 520 13`
 		- (coverage-zeros)`8`
 		- (coverage-counters)`8`
-		- (metrics/profile-duration)`2102688`
-		- (metrics/profile-count)`835`
-		- (metrics/profile-residency)`1.7742895466027242`
-		- (metrics/profile-minimum)`252000`
-		- (metrics/profile-maximum)`35885000`
 (signature)`split(self, fp)`
 
 Separate the factor path from the element path.
@@ -1001,11 +996,11 @@ from the given fully qualified factor path.
 		- (source/area)`531 2 544 57`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`8`
-		- (metrics/profile-duration)`130155`
-		- (metrics/profile-count)`109`
-		- (metrics/profile-residency)`47.37435680552618`
-		- (metrics/profile-minimum)`63000`
-		- (metrics/profile-maximum)`301000`
+		- (metrics/profile-duration)`105315`
+		- (metrics/profile-count)`19`
+		- (metrics/profile-residency)`47.676161919040474`
+		- (metrics/profile-minimum)`60000`
+		- (metrics/profile-maximum)`141000`
 		- (type/syntax)`types.Reference`
 		- (type/project-local/factor-element)&<types#Reference[fault.project.types.Reference]>
 		
@@ -1041,11 +1036,11 @@ Construct a (project-local/factor-element)&<types#Reference[fault.project.types.
 		- (source/area)`552 2 561 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
-		- (metrics/profile-duration)`12296`
-		- (metrics/profile-count)`28955`
+		- (metrics/profile-duration)`2321`
+		- (metrics/profile-count)`25909`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`6750000`
+		- (metrics/profile-maximum)`3514000`
 		- (type/syntax)`typing.Type[types.FactorIsolationProtocol]`
 		
 (signature)`import_protocol(Class, identifier)`
@@ -1062,11 +1057,11 @@ Retrieve the protocol class using the (factor-local/parameter)&<#Context.import_
 		- (source/area)`562 2 569 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
-		- (metrics/profile-duration)`1893229`
-		- (metrics/profile-count)`87`
-		- (metrics/profile-residency)`0.6963712198942391`
-		- (metrics/profile-minimum)`39000`
-		- (metrics/profile-maximum)`9546000`
+		- (metrics/profile-duration)`1154928`
+		- (metrics/profile-count)`14`
+		- (metrics/profile-residency)`0.8163770177500156`
+		- (metrics/profile-minimum)`496000`
+		- (metrics/profile-maximum)`3897000`
 (signature)`from_product_connections(Class, pd)`
 
 Create a (factor-local/class)&<#Context[Context]> initializing it with the immediate connections identified by (factor-local/parameter)&<#Context.from_product_connections.Parameters.pd[pd]>.
@@ -1083,11 +1078,11 @@ Create a (factor-local/class)&<#Context[Context]> initializing it with the immed
 		- (source/area)`571 2 573 26`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`1759`
-		- (metrics/profile-count)`4439`
+		- (metrics/profile-duration)`498`
+		- (metrics/profile-count)`1832`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`167000`
+		- (metrics/profile-maximum)`20000`
 (signature)`__init__(self)`
 
 
@@ -1100,11 +1095,11 @@ Create a (factor-local/class)&<#Context[Context]> initializing it with the immed
 		- (source/area)`575 2 591 11`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`10`
-		- (metrics/profile-duration)`1976256`
-		- (metrics/profile-count)`14310`
-		- (metrics/profile-residency)`1.0920633313140191`
-		- (metrics/profile-minimum)`10000`
-		- (metrics/profile-maximum)`41139000`
+		- (metrics/profile-duration)`784694`
+		- (metrics/profile-count)`6862`
+		- (metrics/profile-residency)`1.90358499841306`
+		- (metrics/profile-minimum)`6000`
+		- (metrics/profile-maximum)`12576000`
 		- (type/syntax)`Product`
 		- (type/factor-local/class)&<#Product[Product]>
 		
@@ -1125,11 +1120,11 @@ creates a new instance and places it in the cache.
 		- (source/area)`593 2 601 45`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`1178`
-		- (metrics/profile-count)`4045`
+		- (metrics/profile-duration)`385`
+		- (metrics/profile-count)`462`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`58000`
+		- (metrics/profile-maximum)`51000`
 		- (type/syntax)`Project`
 		- (type/factor-local/class)&<#Project[Project]>
 		
@@ -1152,11 +1147,6 @@ Retrieve a (factor-local/class)&<#Project[Project]> instance from the context's 
 		- (source/area)`603 2 611 12`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
-		- (metrics/profile-duration)`2495289625`
-		- (metrics/profile-count)`8`
-		- (metrics/profile-residency)`0.05228350997532`
-		- (metrics/profile-minimum)`77000`
-		- (metrics/profile-maximum)`16817762000`
 		- (type/syntax)`typing.Iterable[Project]`
 		
 (signature)`iterprojects(self)`
@@ -1175,11 +1165,11 @@ This includes any Context Projects.
 		- (source/area)`613 2 622 61`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
-		- (metrics/profile-duration)`2760058`
-		- (metrics/profile-count)`990`
-		- (metrics/profile-residency)`6.718785796524596`
-		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`32123000`
+		- (metrics/profile-duration)`2894953`
+		- (metrics/profile-count)`768`
+		- (metrics/profile-residency)`6.875561096808203`
+		- (metrics/profile-minimum)`138000`
+		- (metrics/profile-maximum)`11335000`
 (signature)`load(self)`
 
 Fully populate the instance cache with all of the projects from
@@ -1195,11 +1185,11 @@ all of the connected products.
 		- (source/area)`624 2 631 34`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`18959393`
-		- (metrics/profile-count)`259`
+		- (metrics/profile-duration)`11754534`
+		- (metrics/profile-count)`43`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`826000`
-		- (metrics/profile-maximum)`117886000`
+		- (metrics/profile-minimum)`1156000`
+		- (metrics/profile-maximum)`72753000`
 (signature)`configure(self)`
 
 Traverse the cached projects and apply protocol inheritance.
@@ -1228,11 +1218,11 @@ Find the index of the (factor-local/class)&<#Product[Product]> whose route is eq
 		- (source/area)`641 2 662 21`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`9`
-		- (metrics/profile-duration)`105158`
-		- (metrics/profile-count)`3994`
-		- (metrics/profile-residency)`8.570374162212353`
-		- (metrics/profile-minimum)`18000`
-		- (metrics/profile-maximum)`15473000`
+		- (metrics/profile-duration)`73541`
+		- (metrics/profile-count)`390`
+		- (metrics/profile-residency)`11.087479516055925`
+		- (metrics/profile-minimum)`22000`
+		- (metrics/profile-maximum)`347000`
 (signature)`split(self, qpath)`
 
 Identify the product, project, and factor path of the given (factor-local/parameter)&<#Context.split.Parameters.qpath[qpath]>.

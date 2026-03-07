@@ -6,11 +6,11 @@
 		- (source/area)`1 1 81 12`
 		- (coverage-zeros)`11`
 		- (coverage-counters)`47`
-		- (metrics/profile-duration)`10011`
-		- (metrics/profile-count)`1518`
+		- (metrics/profile-duration)`1081`
+		- (metrics/profile-count)`838`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`7126000`
+		- (metrics/profile-maximum)`4000`
 Transport protocol implementation for identified data sets.
 
 
@@ -35,11 +35,11 @@ Convert a value into a form suitable for sequencing.
 		- (source/area)`17 1 44 11`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`18`
-		- (metrics/profile-duration)`534319`
-		- (metrics/profile-count)`264837`
-		- (metrics/profile-residency)`35.659600472548384`
-		- (metrics/profile-minimum)`3000`
-		- (metrics/profile-maximum)`1194846000`
+		- (metrics/profile-duration)`92989`
+		- (metrics/profile-count)`16280`
+		- (metrics/profile-residency)`21.9468292338149`
+		- (metrics/profile-minimum)`5000`
+		- (metrics/profile-maximum)`136024000`
 (signature)`isolate(lines)`
 
 Separate (factor-local/parameter)&<#isolate.Parameters.lines[lines]> into parts that can be processed by (factor-local/function)&<#identify[identify]>.
@@ -54,11 +54,11 @@ Separate (factor-local/parameter)&<#isolate.Parameters.lines[lines]> into parts 
 		- (source/area)`46 1 64 18`
 		- (coverage-zeros)`5`
 		- (coverage-counters)`11`
-		- (metrics/profile-duration)`538278`
-		- (metrics/profile-count)`264834`
-		- (metrics/profile-residency)`-61.003091597870196`
-		- (metrics/profile-minimum)`5000`
-		- (metrics/profile-maximum)`1194860000`
+		- (metrics/profile-duration)`97386`
+		- (metrics/profile-count)`16277`
+		- (metrics/profile-residency)`-64.22982513359908`
+		- (metrics/profile-minimum)`7000`
+		- (metrics/profile-maximum)`136032000`
 (signature)`identify(iseq)`
 
 Identify the slots and content of a transmission processed by (factor-local/function)&<#isolate[isolate]>.
@@ -75,11 +75,11 @@ Identify the slots and content of a transmission processed by (factor-local/func
 		- (source/area)`66 1 67 43`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
-		- (metrics/profile-duration)`2617`
-		- (metrics/profile-count)`266744`
+		- (metrics/profile-duration)`2746`
+		- (metrics/profile-count)`16277`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`41459000`
+		- (metrics/profile-maximum)`9544000`
 (signature)`structure(lines)`
 
 
@@ -94,10 +94,10 @@ Identify the slots and content of a transmission processed by (factor-local/func
 		- (source/area)`69 1 82 11`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`10`
-		- (metrics/profile-duration)`9752`
-		- (metrics/profile-count)`18194`
+		- (metrics/profile-duration)`11870`
+		- (metrics/profile-count)`12545`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`7556000`
+		- (metrics/profile-maximum)`4508000`
 (signature)`sequence(pairs)`
 

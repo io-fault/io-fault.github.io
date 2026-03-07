@@ -6,11 +6,11 @@
 		- (source/area)`1 1 60 0`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`24`
-		- (metrics/profile-duration)`6000`
+		- (metrics/profile-duration)`5000`
 		- (metrics/profile-count)`8`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`6000`
-		- (metrics/profile-maximum)`6000`
+		- (metrics/profile-minimum)`5000`
+		- (metrics/profile-maximum)`5000`
 Information units for human readable sizes.
 
 
@@ -105,11 +105,11 @@ Information units for human readable sizes.
 		- (source/area)`28 1 30 46`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`6900`
+		- (metrics/profile-duration)`8700`
 		- (metrics/profile-count)`10`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`12000`
+		- (metrics/profile-maximum)`17000`
 (signature)`identify(boundary, size)`
 
 
@@ -124,11 +124,11 @@ Information units for human readable sizes.
 		- (source/area)`32 1 34 40`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`11428`
+		- (metrics/profile-duration)`15714`
 		- (metrics/profile-count)`7`
-		- (metrics/profile-residency)`36.25`
+		- (metrics/profile-residency)`37.27272727272727`
 		- (metrics/profile-minimum)`2000`
-		- (metrics/profile-maximum)`18000`
+		- (metrics/profile-maximum)`29000`
 (signature)`metric(size)`
 
 
@@ -143,11 +143,11 @@ Information units for human readable sizes.
 		- (source/area)`36 1 38 40`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`10333`
+		- (metrics/profile-duration)`11666`
 		- (metrics/profile-count)`3`
-		- (metrics/profile-residency)`41.93548387096774`
+		- (metrics/profile-residency)`31.428571428571427`
 		- (metrics/profile-minimum)`3000`
-		- (metrics/profile-maximum)`15000`
+		- (metrics/profile-maximum)`17000`
 (signature)`iec(size)`
 
 
@@ -162,11 +162,11 @@ Information units for human readable sizes.
 		- (source/area)`40 1 49 35`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`6`
-		- (metrics/profile-duration)`24500`
+		- (metrics/profile-duration)`28250`
 		- (metrics/profile-count)`4`
-		- (metrics/profile-residency)`67.3469387755102`
-		- (metrics/profile-minimum)`6000`
-		- (metrics/profile-maximum)`44000`
+		- (metrics/profile-residency)`61.94690265486725`
+		- (metrics/profile-minimum)`5000`
+		- (metrics/profile-maximum)`51000`
 (signature)`format_metric(size)`
 
 
@@ -181,10 +181,10 @@ Information units for human readable sizes.
 		- (source/area)`51 1 60 35`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`6`
-		- (metrics/profile-duration)`26000`
+		- (metrics/profile-duration)`28000`
 		- (metrics/profile-count)`2`
-		- (metrics/profile-residency)`69.23076923076923`
-		- (metrics/profile-minimum)`6000`
-		- (metrics/profile-maximum)`46000`
+		- (metrics/profile-residency)`64.28571428571429`
+		- (metrics/profile-minimum)`7000`
+		- (metrics/profile-maximum)`49000`
 (signature)`format_iec(size)`
 

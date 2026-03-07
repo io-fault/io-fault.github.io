@@ -4,13 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 227 25`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`115`
-		- (metrics/profile-duration)`17000`
-		- (metrics/profile-count)`11`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`17000`
-		- (metrics/profile-maximum)`17000`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 
 [ os ]
 ! CONTROL:
@@ -31,8 +26,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`2 1 2 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ module ]
 ! CONTROL:
@@ -43,8 +36,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`4 1 4 39`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ thread ]
 ! CONTROL:
@@ -55,8 +46,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`5 1 5 28`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ Trapped ]
 ! CONTROL:
@@ -65,8 +54,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`7 1 11 5`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`7 15 7 23`
@@ -83,13 +70,6 @@ Exception Fixture for test_critical.
 	/element/
 		- (control)`property-set`
 		- (source/area)`13 1 58 27`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`24`
-		- (metrics/profile-duration)`134000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`134000`
-		- (metrics/profile-maximum)`134000`
 (signature)`test_critical(test)`
 
 - (context-local/factor-element)&<fault.system/process#critical[fault.system.process.critical]>
@@ -102,13 +82,6 @@ Exception Fixture for test_critical.
 	/element/
 		- (control)`property-set`
 		- (source/area)`60 1 82 14`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`11`
-		- (metrics/profile-duration)`1037000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`1037000`
-		- (metrics/profile-maximum)`1037000`
 (signature)`test_panic(test)`
 
 - (context-local/factor-element)&<fault.system/process#panic[fault.system.process.panic]>
@@ -124,13 +97,6 @@ on the main threaad.
 	/element/
 		- (control)`property-set`
 		- (source/area)`84 1 103 22`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`9`
-		- (metrics/profile-duration)`91000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`91000`
-		- (metrics/profile-maximum)`91000`
 (signature)`test_interject(test)`
 
 Validate that interject manages to run a callable in a reasonable number of cycles.
@@ -143,13 +109,6 @@ Validate that interject manages to run a callable in a reasonable number of cycl
 	/element/
 		- (control)`property-set`
 		- (source/area)`105 1 110 24`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
-		- (metrics/profile-duration)`241000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`241000`
-		- (metrics/profile-maximum)`241000`
 (signature)`test_Invocation_argument_vector(test)`
 
 Check for argument property existence.
@@ -162,13 +121,6 @@ Check for argument property existence.
 	/element/
 		- (control)`property-set`
 		- (source/area)`112 1 132 44`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`14`
-		- (metrics/profile-duration)`281000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`281000`
-		- (metrics/profile-maximum)`281000`
 (signature)`test_Invocation_imports(test)`
 
 Check for a functioning imports method.
@@ -181,13 +133,6 @@ Check for a functioning imports method.
 	/element/
 		- (control)`property-set`
 		- (source/area)`134 1 148 21`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`8`
-		- (metrics/profile-duration)`272000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`272000`
-		- (metrics/profile-maximum)`272000`
 (signature)`test_fs_pwd_no_environ(test)`
 
 - (context-local/factor-element)&<fault.system/process#fs_pwd[fault.system.process.fs_pwd]>
@@ -202,13 +147,6 @@ Path instantiation should be successful in the case that PWD is not present.
 	/element/
 		- (control)`property-set`
 		- (source/area)`150 1 158 29`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
-		- (metrics/profile-duration)`242000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`242000`
-		- (metrics/profile-maximum)`242000`
 (signature)`test_fs_pwd_environ_priority(test)`
 
 - (context-local/factor-element)&<fault.system/process#fs_pwd[fault.system.process.fs_pwd]>
@@ -223,13 +161,6 @@ Environment variable is given priority over os.getcwd.
 	/element/
 		- (control)`property-set`
 		- (source/area)`160 1 172 69`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
-		- (metrics/profile-duration)`257000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`257000`
-		- (metrics/profile-maximum)`257000`
 (signature)`test_fs_chdir(test)`
 
 - (context-local/factor-element)&<fault.system/process#fs_chdir[fault.system.process.fs_chdir]>
@@ -244,13 +175,6 @@ Validate fs_chdir's side effects.
 	/element/
 		- (control)`property-set`
 		- (source/area)`174 1 201 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`15`
-		- (metrics/profile-duration)`17506000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`17506000`
-		- (metrics/profile-maximum)`17506000`
 (signature)`test_scheduler_parallel_execute(test)`
 
 - (context-local/factor-element)&<fault.system/process#Scheduling[fault.system.process.Scheduling]>
@@ -266,13 +190,6 @@ Validate (context-local/factor-element)&<fault.system/process#scheduler[fault.sy
 	/element/
 		- (control)`property-set`
 		- (source/area)`203 1 228 24`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`15`
-		- (metrics/profile-duration)`17459000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`17459000`
-		- (metrics/profile-maximum)`17459000`
 (signature)`test_scheduler_parallel_close(test)`
 
 - (context-local/factor-element)&<fault.system/process#Scheduling[fault.system.process.Scheduling]>

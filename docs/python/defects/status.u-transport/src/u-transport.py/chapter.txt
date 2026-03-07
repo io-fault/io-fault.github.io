@@ -5,12 +5,7 @@
 		- (control)`property-set`
 		- (source/area)`1 1 21 0`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`7`
-		- (metrics/profile-duration)`4000`
-		- (metrics/profile-count)`5`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`4000`
-		- (metrics/profile-maximum)`4000`
+		- (coverage-counters)`0`
 
 [ module ]
 ! CONTROL:
@@ -31,13 +26,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`3 1 4 36`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
-		- (metrics/profile-duration)`136000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`136000`
-		- (metrics/profile-maximum)`136000`
 (signature)`test_isolate_empty(test)`
 
 
@@ -50,13 +38,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`6 1 7 66`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
-		- (metrics/profile-duration)`214000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`214000`
-		- (metrics/profile-maximum)`214000`
 (signature)`test_isolate_one(test)`
 
 
@@ -69,13 +50,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`9 1 15 77`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
-		- (metrics/profile-duration)`100000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`100000`
-		- (metrics/profile-maximum)`100000`
 (signature)`test_isolate_pair(test)`
 
 
@@ -88,12 +62,5 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`17 1 21 41`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
-		- (metrics/profile-duration)`87000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`87000`
-		- (metrics/profile-maximum)`87000`
 (signature)`test_sequence(test)`
 

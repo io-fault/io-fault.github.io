@@ -5,12 +5,7 @@
 		- (control)`property-set`
 		- (source/area)`1 1 61 0`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`46`
-		- (metrics/profile-duration)`7608000`
-		- (metrics/profile-count)`4`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`7608000`
-		- (metrics/profile-maximum)`7608000`
+		- (coverage-counters)`0`
 Check the (context-local/factor-element)&<fault.kernel/flows#Relay[fault.kernel.flows.Relay]>, (context-local/factor-element)&<fault.kernel/flows#Receiver[fault.kernel.flows.Receiver]>, and (context-local/factor-element)&<fault.kernel/flows#Inlet[fault.kernel.flows.Inlet]> types.
 
 
@@ -33,8 +28,6 @@ Check the (context-local/factor-element)&<fault.kernel/flows#Relay[fault.kernel.
 	/element/
 		- (control)`property-set`
 		- (source/area)`5 1 5 39`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ io ]
 ! CONTROL:
@@ -45,8 +38,6 @@ Check the (context-local/factor-element)&<fault.kernel/flows#Relay[fault.kernel.
 	/element/
 		- (control)`property-set`
 		- (source/area)`6 1 6 25`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ test_Receiver ]
 ! CONTROL:
@@ -57,13 +48,6 @@ Check the (context-local/factor-element)&<fault.kernel/flows#Relay[fault.kernel.
 	/element/
 		- (control)`property-set`
 		- (source/area)`8 1 21 26`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`12`
-		- (metrics/profile-duration)`503000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`503000`
-		- (metrics/profile-maximum)`503000`
 (signature)`test_Receiver(test)`
 
 
@@ -76,13 +60,6 @@ Check the (context-local/factor-element)&<fault.kernel/flows#Relay[fault.kernel.
 	/element/
 		- (control)`property-set`
 		- (source/area)`23 1 42 26`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`16`
-		- (metrics/profile-duration)`611000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`611000`
-		- (metrics/profile-maximum)`611000`
 (signature)`test_Relay(test)`
 
 
@@ -95,12 +72,5 @@ Check the (context-local/factor-element)&<fault.kernel/flows#Relay[fault.kernel.
 	/element/
 		- (control)`property-set`
 		- (source/area)`44 1 61 28`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`14`
-		- (metrics/profile-duration)`585000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`585000`
-		- (metrics/profile-maximum)`585000`
 (signature)`test_Relay_interrupt(test)`
 

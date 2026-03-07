@@ -5,12 +5,7 @@
 		- (control)`property-set`
 		- (source/area)`1 1 44 0`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`24`
-		- (metrics/profile-duration)`3028000`
-		- (metrics/profile-count)`2`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`3028000`
-		- (metrics/profile-maximum)`3028000`
+		- (coverage-counters)`0`
 This file *should* contain system.io *specific* tests.
 Primarily, invasive tests that rely on implementation specific functionality.
 
@@ -38,12 +33,5 @@ that make it rather annoying to generalize.
 	/element/
 		- (control)`property-set`
 		- (source/area)`11 1 44 12`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`22`
-		- (metrics/profile-duration)`257000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`257000`
-		- (metrics/profile-maximum)`257000`
 (signature)`test_port(test)`
 

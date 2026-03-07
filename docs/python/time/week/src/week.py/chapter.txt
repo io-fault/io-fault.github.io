@@ -6,11 +6,11 @@
 		- (source/area)`1 1 60 0`
 		- (coverage-zeros)`5`
 		- (coverage-counters)`15`
-		- (metrics/profile-duration)`17801`
-		- (metrics/profile-count)`822`
+		- (metrics/profile-duration)`5048`
+		- (metrics/profile-count)`739`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`4000`
-		- (metrics/profile-maximum)`2362000`
+		- (metrics/profile-maximum)`26000`
 Week based measures of time: days of seven.
 
 
@@ -146,10 +146,10 @@ Derive the canonical day of week from the given offset and days.
 		- (source/area)`49 1 60 51`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`5`
-		- (metrics/profile-duration)`13751`
-		- (metrics/profile-count)`822`
+		- (metrics/profile-duration)`12110`
+		- (metrics/profile-count)`739`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`10000`
-		- (metrics/profile-maximum)`125000`
+		- (metrics/profile-maximum)`48000`
 (signature)`context(context)`
 

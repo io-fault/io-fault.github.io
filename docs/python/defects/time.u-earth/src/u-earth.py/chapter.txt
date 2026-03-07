@@ -5,12 +5,7 @@
 		- (control)`property-set`
 		- (source/area)`1 1 46 4`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`14`
-		- (metrics/profile-duration)`7000`
-		- (metrics/profile-count)`3`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`7000`
-		- (metrics/profile-maximum)`7000`
+		- (coverage-counters)`0`
 Check earth based units (days).
 
 
@@ -33,8 +28,6 @@ Check earth based units (days).
 	/element/
 		- (control)`property-set`
 		- (source/area)`5 1 5 25`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ types ]
 ! CONTROL:
@@ -45,8 +38,6 @@ Check earth based units (days).
 	/element/
 		- (control)`property-set`
 		- (source/area)`6 1 6 25`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ from_units_data ]
 ! CONTROL:
@@ -57,8 +48,6 @@ Check earth based units (days).
 	/element/
 		- (control)`property-set`
 		- (source/area)`8 1 16 1`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	from_units_data = [
 		types.Date.Measure(-1),
@@ -79,13 +68,6 @@ Check earth based units (days).
 	/element/
 		- (control)`property-set`
 		- (source/area)`18 1 21 14`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
-		- (metrics/profile-duration)`125500`
-		- (metrics/profile-count)`2`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`121000`
-		- (metrics/profile-maximum)`130000`
 (signature)`check_from_units(test, samples)`
 
 
@@ -98,13 +80,6 @@ Check earth based units (days).
 	/element/
 		- (control)`property-set`
 		- (source/area)`23 1 34 3`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
-		- (metrics/profile-duration)`189000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`35.978835978835974`
-		- (metrics/profile-minimum)`189000`
-		- (metrics/profile-maximum)`189000`
 (signature)`test_from_units_decimal(test)`
 
 
@@ -117,12 +92,5 @@ Check earth based units (days).
 	/element/
 		- (control)`property-set`
 		- (source/area)`36 1 47 3`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
-		- (metrics/profile-duration)`206000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`36.89320388349515`
-		- (metrics/profile-minimum)`206000`
-		- (metrics/profile-maximum)`206000`
 (signature)`test_from_units_fraction(test)`
 

@@ -5,12 +5,7 @@
 		- (control)`property-set`
 		- (source/area)`1 1 62 0`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`33`
-		- (metrics/profile-duration)`9000`
-		- (metrics/profile-count)`3`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`9000`
-		- (metrics/profile-maximum)`9000`
+		- (coverage-counters)`0`
 
 [ sys ]
 ! CONTROL:
@@ -31,8 +26,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`2 1 2 28`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ types ]
 ! CONTROL:
@@ -43,8 +36,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`3 1 3 27`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ stack_1 ]
 ! CONTROL:
@@ -55,13 +46,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`5 1 9 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
-		- (metrics/profile-duration)`28000`
-		- (metrics/profile-count)`5`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`62000`
 (signature)`stack_1()`
 
 
@@ -74,13 +58,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`11 1 12 27`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
-		- (metrics/profile-duration)`15500`
-		- (metrics/profile-count)`2`
-		- (metrics/profile-residency)`22.58064516129032`
-		- (metrics/profile-minimum)`7000`
-		- (metrics/profile-maximum)`24000`
 (signature)`stack_2(error)`
 
 
@@ -93,13 +70,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`14 1 15 27`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
-		- (metrics/profile-duration)`23500`
-		- (metrics/profile-count)`2`
-		- (metrics/profile-residency)`34.04255319148936`
-		- (metrics/profile-minimum)`17000`
-		- (metrics/profile-maximum)`30000`
 (signature)`stack_3(error)`
 
 
@@ -112,13 +82,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`17 1 18 27`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
-		- (metrics/profile-duration)`28000`
-		- (metrics/profile-count)`2`
-		- (metrics/profile-residency)`16.071428571428573`
-		- (metrics/profile-minimum)`22000`
-		- (metrics/profile-maximum)`34000`
 (signature)`stack_4(error)`
 
 
@@ -131,13 +94,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`20 1 21 27`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
-		- (metrics/profile-duration)`36000`
-		- (metrics/profile-count)`2`
-		- (metrics/profile-residency)`22.22222222222222`
-		- (metrics/profile-minimum)`31000`
-		- (metrics/profile-maximum)`41000`
 (signature)`stack_5(error)`
 
 
@@ -148,13 +104,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`23 1 36 39`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
-		- (metrics/profile-duration)`166000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`43.373493975903614`
-		- (metrics/profile-minimum)`166000`
-		- (metrics/profile-maximum)`166000`
 (signature)`test_iterstack(test)`
 
 - (context-local/factor-element)&<fault.status/python#iterstack[fault.status.python.iterstack]>
@@ -169,13 +118,6 @@ Additionally checks coherency of the Python runtime.
 	/element/
 		- (control)`property-set`
 		- (source/area)`38 1 62 39`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`13`
-		- (metrics/profile-duration)`290000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`67.58620689655173`
-		- (metrics/profile-minimum)`290000`
-		- (metrics/profile-maximum)`290000`
 (signature)`test_itertraceback(test)`
 
 - (context-local/factor-element)&<fault.status/python#itertraceback[fault.status.python.itertraceback]>

@@ -3,7 +3,7 @@
 		module
 	/element/
 		- (control)`property-set`
-		- (source/area)`1 1 247 20`
+		- (source/area)`1 1 249 20`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`0`
 Manipulate and retrieve product information.
@@ -240,7 +240,7 @@ Update the index according the requested (factor-local/parameter)&<#index.Parame
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`118 1 132 14`
+		- (source/area)`118 1 133 14`
 (signature)`connecting(config)`
 
 Normalize the interpreted connections and disconnections.
@@ -252,7 +252,7 @@ Normalize the interpreted connections and disconnections.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`134 1 151 91`
+		- (source/area)`135 1 152 91`
 (signature)`reconnect(pd, insertions, deletions)`
 
 Update the product's connections.
@@ -264,7 +264,7 @@ Update the product's connections.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`154 1 206 10`
+		- (source/area)`155 1 207 10`
 (signature)`io(exits, meta, log, config, sysctx, pdr, remainder)`
 
 Perform requested changes and select requested information.
@@ -276,7 +276,7 @@ Perform requested changes and select requested information.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`208 1 231 25`
+		- (source/area)`209 1 232 25`
 (signature)`configure(restricted, required, argv)`
 
 Root option parser.
@@ -290,7 +290,7 @@ Root option parser.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`233 1 248 19`
+		- (source/area)`234 1 250 19`
 		- (type/syntax)`process.Exit`
 		- (type/remote/factor-element)&<http://fault.io/python/system/process#Exit[fault.system.process.Exit]>
 		

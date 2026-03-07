@@ -4,13 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 213 40`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`50`
-		- (metrics/profile-duration)`576000`
-		- (metrics/profile-count)`15`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`576000`
-		- (metrics/profile-maximum)`576000`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 
 [ module ]
 ! CONTROL:
@@ -29,13 +24,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`3 1 8 39`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
-		- (metrics/profile-duration)`90000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`90000`
-		- (metrics/profile-maximum)`90000`
 (signature)`test_parse_empty(test)`
 
 - (context-local/factor-element)&<fault.vector/snapshot#parse[fault.vector.snapshot.parse]>
@@ -48,13 +36,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`10 1 20 82`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
-		- (metrics/profile-duration)`88000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`88000`
-		- (metrics/profile-maximum)`88000`
 (signature)`test_parse_env(test)`
 
 - (context-local/factor-element)&<fault.vector/snapshot#parse[fault.vector.snapshot.parse]>
@@ -67,13 +48,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`22 1 36 2`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
-		- (metrics/profile-duration)`111000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`111000`
-		- (metrics/profile-maximum)`111000`
 (signature)`test_parse_multiple_env(test)`
 
 - (context-local/factor-element)&<fault.vector/snapshot#parse[fault.vector.snapshot.parse]>
@@ -86,13 +60,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`38 1 47 64`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
-		- (metrics/profile-duration)`89000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`89000`
-		- (metrics/profile-maximum)`89000`
 (signature)`test_parse_no_env(test)`
 
 - (context-local/factor-element)&<fault.vector/snapshot#parse[fault.vector.snapshot.parse]>
@@ -105,13 +72,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`49 1 59 77`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
-		- (metrics/profile-duration)`85000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`85000`
-		- (metrics/profile-maximum)`85000`
 (signature)`test_parse_env_unset(test)`
 
 - (context-local/factor-element)&<fault.vector/snapshot#parse[fault.vector.snapshot.parse]>
@@ -124,13 +84,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`61 1 71 66`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
-		- (metrics/profile-duration)`106000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`106000`
-		- (metrics/profile-maximum)`106000`
 (signature)`test_parse_newlines(test)`
 
 - (context-local/factor-element)&<fault.vector/snapshot#parse[fault.vector.snapshot.parse]>
@@ -143,13 +96,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`73 1 83 72`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
-		- (metrics/profile-duration)`86000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`86000`
-		- (metrics/profile-maximum)`86000`
 (signature)`test_parse_newlines_suffix(test)`
 
 - (context-local/factor-element)&<fault.vector/snapshot#parse[fault.vector.snapshot.parse]>
@@ -162,13 +108,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`85 1 95 70`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
-		- (metrics/profile-duration)`95000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`95000`
-		- (metrics/profile-maximum)`95000`
 (signature)`test_parse_zero_newlines(test)`
 
 - (context-local/factor-element)&<fault.vector/snapshot#parse[fault.vector.snapshot.parse]>
@@ -181,13 +120,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`97 1 107 76`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
-		- (metrics/profile-duration)`104000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`104000`
-		- (metrics/profile-maximum)`104000`
 (signature)`test_parse_plural_newlines(test)`
 
 - (context-local/factor-element)&<fault.vector/snapshot#parse[fault.vector.snapshot.parse]>
@@ -200,13 +132,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`109 1 120 64`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
-		- (metrics/profile-duration)`108000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`108000`
-		- (metrics/profile-maximum)`108000`
 (signature)`test_parse_no_op(test)`
 
 - (context-local/factor-element)&<fault.vector/snapshot#parse[fault.vector.snapshot.parse]>
@@ -219,13 +144,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`122 1 131 49`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
-		- (metrics/profile-duration)`106000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`106000`
-		- (metrics/profile-maximum)`106000`
 (signature)`test_parse_unknown_qual(test)`
 
 - (context-local/factor-element)&<fault.vector/snapshot#parse[fault.vector.snapshot.parse]>
@@ -238,13 +156,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`133 1 157 2`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
-		- (metrics/profile-duration)`169000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`169000`
-		- (metrics/profile-maximum)`169000`
 (signature)`test_serialize_escapes(test)`
 
 - (context-local/factor-element)&<fault.vector/snapshot#parse[fault.vector.snapshot.parse]>
@@ -257,13 +168,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`159 1 182 2`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
-		- (metrics/profile-duration)`157000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`157000`
-		- (metrics/profile-maximum)`157000`
 (signature)`test_serialize_none(test)`
 
 - (context-local/factor-element)&<fault.vector/snapshot#parse[fault.vector.snapshot.parse]>
@@ -276,13 +180,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`184 1 210 36`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
-		- (metrics/profile-duration)`121000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`121000`
-		- (metrics/profile-maximum)`121000`
 (signature)`test_parse_space_separated_fields(test)`
 
 - (context-local/factor-element)&<fault.vector/snapshot#parse[fault.vector.snapshot.parse]>

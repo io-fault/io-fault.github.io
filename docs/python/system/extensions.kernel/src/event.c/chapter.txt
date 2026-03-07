@@ -3,14 +3,14 @@
 		unit
 	/element/
 		- (control)`property-set`
-		- (source/area)`1 1 564 0`
+		- (source/area)`1 1 563 0`
 		- (coverage-zeros)`213`
 		- (coverage-counters)`213`
 
-[ EV_CONSTRUCTORS ]
+[ EV_TYPE ]
 ! CONTROL:
 	/type/
-		macro
+		define
 	/flags/
 		- `undocumented`
 	/element/
@@ -18,20 +18,28 @@
 		- (source/area)`266 9 286 2`
 		- (coverage-zeros)`14`
 		- (coverage-counters)`14`
-(signature)`EV_CONSTRUCTORS()`
-
-
-[ EV_TYPE ]
-! CONTROL:
-	/type/
-		define
-	/flags/
-		- `undocumented`
-	/element/
-		- (control)`property-set`
-		- (source/area)`289 9 289 49`
 #!source
-	#define EV_TYPE(...) EV_CONSTRUCTORS(__VA_ARGS__)
+	#define EV_TYPE(NAME, CONVERT, CYCLIC) \
+		STATIC(PyObj) \
+		ev_##NAME(PyTypeObject *PYTYPE, PyObj args, PyObj kw) { \
+			PyObj ROB; \
+			Event ev; \
+			ROB = PYTYPE->tp_alloc(PYTYPE, 0); \
+			if (ROB == NULL) \
+				return(NULL); \
+			ev = (Event) ROB; \
+			Event_Type(ev) = EV_TYPE_ID(NAME); \
+			Event_SetTime(ev, 0); \
+			Event_SetSource(ev, NULL); \
+			Event_SetKPort(ev, -1); \
+			if (CONVERT(ev, args, kw) < 0) \
+			{ \
+				Py_DECREF(ROB); \
+				return(NULL); \
+			} \
+			Py_INCREF(Event_GetSource(ev)); \
+			return(ROB); \
+		}
 
 [ EV_TYPE ]
 ! CONTROL:
@@ -41,7 +49,9 @@
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`314 11 317 9`
+		- (source/area)`313 11 316 9`
+		- (coverage-zeros)`14`
+		- (coverage-counters)`14`
 #!source
 	#define EV_TYPE(NAME, C, CYCLIC) \
 		case EV_TYPE_ID(NAME): \
@@ -56,7 +66,7 @@
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`333 10 333 30`
+		- (source/area)`332 10 332 30`
 #!source
 	#define PyMethod_Id(N) ev_##N
 
@@ -68,7 +78,7 @@
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`336 11 336 49`
+		- (source/area)`335 11 335 49`
 #!source
 	#define PyMethod_TypeControl PyMethod_ClassType
 
@@ -80,7 +90,9 @@
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`340 12 340 60`
+		- (source/area)`339 12 339 60`
+		- (coverage-zeros)`14`
+		- (coverage-counters)`14`
 #!source
 	#define EV_TYPE(NAME, C, CYCLIC) PyMethod_Keywords(NAME),
 
@@ -187,7 +199,7 @@ Initialize an event with a pair of kport_t.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`293 1 329 1`
+		- (source/area)`292 1 328 1`
 		- (coverage-zeros)`22`
 		- (coverage-counters)`22`
 		- (type/syntax)`PyObj`
@@ -203,7 +215,7 @@ Initialize an event with a pair of kport_t.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`348 1 353 1`
+		- (source/area)`347 1 352 1`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`2`
 		- (type/syntax)`PyObj`
@@ -219,7 +231,7 @@ Initialize an event with a pair of kport_t.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`355 1 359 1`
+		- (source/area)`354 1 358 1`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`2`
 		- (type/syntax)`PyObj`
@@ -235,7 +247,7 @@ Initialize an event with a pair of kport_t.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`361 1 367 1`
+		- (source/area)`360 1 366 1`
 		- (coverage-zeros)`3`
 		- (coverage-counters)`3`
 		- (type/syntax)`PyObj`
@@ -251,7 +263,7 @@ Initialize an event with a pair of kport_t.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`378 1 416 1`
+		- (source/area)`377 1 415 1`
 		- (coverage-zeros)`18`
 		- (coverage-counters)`18`
 		- (type/syntax)`Py_hash_t`
@@ -267,7 +279,7 @@ Initialize an event with a pair of kport_t.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`418 1 465 1`
+		- (source/area)`417 1 464 1`
 		- (coverage-zeros)`36`
 		- (coverage-counters)`36`
 		- (type/syntax)`PyObj`
@@ -281,7 +293,7 @@ Initialize an event with a pair of kport_t.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`470 1 497 1`
+		- (source/area)`469 1 496 1`
 		- (coverage-zeros)`14`
 		- (coverage-counters)`14`
 		- (type/syntax)`PyObj`
@@ -299,7 +311,7 @@ Copy Event. Type specific constructors must be used to create new instances.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`499 1 517 1`
+		- (source/area)`498 1 516 1`
 		- (coverage-zeros)`9`
 		- (coverage-counters)`9`
 		- (type/syntax)`void`
@@ -315,7 +327,7 @@ Copy Event. Type specific constructors must be used to create new instances.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`519 1 523 1`
+		- (source/area)`518 1 522 1`
 		- (coverage-zeros)`3`
 		- (coverage-counters)`3`
 		- (type/syntax)`void`
@@ -331,7 +343,7 @@ Copy Event. Type specific constructors must be used to create new instances.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`525 1 531 1`
+		- (source/area)`524 1 530 1`
 		- (coverage-zeros)`3`
 		- (coverage-counters)`3`
 		- (type/syntax)`int`
@@ -347,7 +359,7 @@ Copy Event. Type specific constructors must be used to create new instances.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`533 1 541 1`
+		- (source/area)`532 1 540 1`
 		- (coverage-zeros)`3`
 		- (coverage-counters)`3`
 		- (type/syntax)`void`

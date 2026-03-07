@@ -6,11 +6,11 @@
 		- (source/area)`1 1 224 3`
 		- (coverage-zeros)`23`
 		- (coverage-counters)`90`
-		- (metrics/profile-duration)`52770953`
-		- (metrics/profile-count)`3414`
-		- (metrics/profile-residency)`99.85762713768553`
-		- (metrics/profile-minimum)`8758000`
-		- (metrics/profile-maximum)`216979000`
+		- (metrics/profile-duration)`22088881`
+		- (metrics/profile-count)`937`
+		- (metrics/profile-residency)`99.7408886828715`
+		- (metrics/profile-minimum)`9333000`
+		- (metrics/profile-maximum)`126202000`
 Function and iterator tools used by local projects.
 
 
@@ -113,11 +113,11 @@ Callable that returns (invalid/unknown)&<#None> regardless of the arguments and 
 		- (source/area)`18 1 22 11`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`1553`
-		- (metrics/profile-count)`3414`
+		- (metrics/profile-duration)`745`
+		- (metrics/profile-count)`937`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`70000`
+		- (metrics/profile-maximum)`6000`
 (signature)`reflect(obj)`
 
 Callable that returns the single argument that it was given.
@@ -147,11 +147,11 @@ the given parameters.
 		- (source/area)`45 1 73 9`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`10`
-		- (metrics/profile-duration)`4837`
-		- (metrics/profile-count)`86`
-		- (metrics/profile-residency)`62.019230769230774`
-		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`27000`
+		- (metrics/profile-duration)`4454`
+		- (metrics/profile-count)`22`
+		- (metrics/profile-residency)`51.020408163265294`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`14000`
 (signature)`unique(iterable, *existing)`
 
 Iterate through the contents of the (factor-local/parameter)&<#unique.Parameters.iterable[iterable]>,
@@ -188,11 +188,11 @@ but only allow an item to be emitted once.
 		- (source/area)`75 1 93 50`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
-		- (metrics/profile-duration)`4089`
-		- (metrics/profile-count)`77737`
+		- (metrics/profile-duration)`1115`
+		- (metrics/profile-count)`113`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`27922000`
+		- (metrics/profile-maximum)`9000`
 (signature)`interlace(*iters)`
 
 An iterator constructor that takes a sequence of
@@ -219,11 +219,11 @@ Interlace produces an iterator following the pattern:
 		- (source/area)`95 1 133 19`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`22`
-		- (metrics/profile-duration)`73598`
-		- (metrics/profile-count)`3427`
+		- (metrics/profile-duration)`55723`
+		- (metrics/profile-count)`950`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`26000`
-		- (metrics/profile-maximum)`1359000`
+		- (metrics/profile-minimum)`28000`
+		- (metrics/profile-maximum)`941000`
 (signature)`compose(*callables)`
 
 Return a composition of the given callable arguments.
@@ -262,11 +262,11 @@ Create a function that pluralizes the return of the given callable, (factor-loca
 		- (source/area)`142 1 152 42`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`125500`
+		- (metrics/profile-duration)`137000`
 		- (metrics/profile-count)`2`
-		- (metrics/profile-residency)`10.358565737051793`
-		- (metrics/profile-minimum)`39000`
-		- (metrics/profile-maximum)`212000`
+		- (metrics/profile-residency)`9.854014598540147`
+		- (metrics/profile-minimum)`48000`
+		- (metrics/profile-maximum)`226000`
 (signature)`unroll(f)`
 
 Given a callable taking a single parameter, create another
@@ -361,11 +361,11 @@ Presumes the wrapped method name is consistent with the property name.
 		- (source/area)`198 2 201 38`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
-		- (metrics/profile-duration)`1245`
-		- (metrics/profile-count)`14795`
+		- (metrics/profile-duration)`491`
+		- (metrics/profile-count)`4618`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`170000`
+		- (metrics/profile-maximum)`15000`
 (signature)`__init__(self, method)`
 
 
@@ -380,11 +380,11 @@ Presumes the wrapped method name is consistent with the property name.
 		- (source/area)`203 2 207 15`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`4`
-		- (metrics/profile-duration)`1402746`
-		- (metrics/profile-count)`383`
-		- (metrics/profile-residency)`99.58418023571808`
-		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`319305000`
+		- (metrics/profile-duration)`700555`
+		- (metrics/profile-count)`27`
+		- (metrics/profile-residency)`99.67221781654771`
+		- (metrics/profile-minimum)`27000`
+		- (metrics/profile-maximum)`3141000`
 (signature)`__get__(self, instance, Class)`
 
 
@@ -397,11 +397,11 @@ Presumes the wrapped method name is consistent with the property name.
 		- (source/area)`209 1 225 2`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`8`
-		- (metrics/profile-duration)`28188`
-		- (metrics/profile-count)`278511`
+		- (metrics/profile-duration)`3485`
+		- (metrics/profile-count)`12079`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`342299000`
+		- (metrics/profile-maximum)`3147000`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		

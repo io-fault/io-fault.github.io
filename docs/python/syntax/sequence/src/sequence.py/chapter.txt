@@ -6,11 +6,11 @@
 		- (source/area)`1 1 416 7`
 		- (coverage-zeros)`45`
 		- (coverage-counters)`250`
-		- (metrics/profile-duration)`36000`
+		- (metrics/profile-duration)`31000`
 		- (metrics/profile-count)`9`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`36000`
-		- (metrics/profile-maximum)`36000`
+		- (metrics/profile-minimum)`31000`
+		- (metrics/profile-maximum)`31000`
 Segmented sequence implementation for large lists.
 
 
@@ -55,11 +55,11 @@ Segmented sequence implementation for large lists.
 		- (source/area)`7 1 55 2`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`27`
-		- (metrics/profile-duration)`27033`
+		- (metrics/profile-duration)`22533`
 		- (metrics/profile-count)`30`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`693000`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`593000`
 (signature)`address(seq, start, stop)`
 
 Find the address of the absolute slice.
@@ -76,11 +76,11 @@ Find the address of the absolute slice.
 		- (source/area)`57 1 83 11`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`19`
-		- (metrics/profile-duration)`561250`
+		- (metrics/profile-duration)`509125`
 		- (metrics/profile-count)`8`
-		- (metrics/profile-residency)`82.73942093541203`
-		- (metrics/profile-minimum)`4000`
-		- (metrics/profile-maximum)`4029000`
+		- (metrics/profile-residency)`83.79572796464522`
+		- (metrics/profile-minimum)`3000`
+		- (metrics/profile-maximum)`3673000`
 (signature)`delete(seq, start, stop)`
 
 
@@ -95,11 +95,11 @@ Find the address of the absolute slice.
 		- (source/area)`85 1 148 14`
 		- (coverage-zeros)`5`
 		- (coverage-counters)`32`
-		- (metrics/profile-duration)`2222`
+		- (metrics/profile-duration)`2111`
 		- (metrics/profile-count)`9`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`4000`
+		- (metrics/profile-maximum)`5000`
 (signature)`insert(seq, offset, insertion)`
 
 
@@ -179,11 +179,11 @@ the size of each segment is already known.
 		- (source/area)`166 2 171 19`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`1665000`
+		- (metrics/profile-duration)`1513666`
 		- (metrics/profile-count)`12`
-		- (metrics/profile-residency)`0.47047047047047047`
-		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`19112000`
+		- (metrics/profile-residency)`0.7487337590839022`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`17294000`
 (signature)`__init__(self)`
 
 
@@ -198,11 +198,11 @@ the size of each segment is already known.
 		- (source/area)`173 2 185 51`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`15`
-		- (metrics/profile-duration)`24357`
+		- (metrics/profile-duration)`20000`
 		- (metrics/profile-count)`14`
-		- (metrics/profile-residency)`63.049853372434015`
-		- (metrics/profile-minimum)`6000`
-		- (metrics/profile-maximum)`123000`
+		- (metrics/profile-residency)`63.57142857142857`
+		- (metrics/profile-minimum)`5000`
+		- (metrics/profile-maximum)`117000`
 (signature)`__getitem__(self, item)`
 
 
@@ -217,11 +217,11 @@ the size of each segment is already known.
 		- (source/area)`187 2 222 28`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`28`
-		- (metrics/profile-duration)`61600`
+		- (metrics/profile-duration)`55300`
 		- (metrics/profile-count)`10`
-		- (metrics/profile-residency)`11.2012987012987`
+		- (metrics/profile-residency)`12.47739602169982`
 		- (metrics/profile-minimum)`5000`
-		- (metrics/profile-maximum)`437000`
+		- (metrics/profile-maximum)`391000`
 (signature)`__setitem__(self, item, value)`
 
 
@@ -236,11 +236,11 @@ the size of each segment is already known.
 		- (source/area)`224 2 236 26`
 		- (coverage-zeros)`4`
 		- (coverage-counters)`15`
-		- (metrics/profile-duration)`4049000`
+		- (metrics/profile-duration)`3692000`
 		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`0.19757964929612248`
-		- (metrics/profile-minimum)`4049000`
-		- (metrics/profile-maximum)`4049000`
+		- (metrics/profile-residency)`0.21668472372697722`
+		- (metrics/profile-minimum)`3692000`
+		- (metrics/profile-maximum)`3692000`
 (signature)`__delitem__(self, item)`
 
 
@@ -255,11 +255,11 @@ the size of each segment is already known.
 		- (source/area)`238 2 239 21`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
-		- (metrics/profile-duration)`388`
+		- (metrics/profile-duration)`0`
 		- (metrics/profile-count)`36`
-		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-residency)`0.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`1000`
+		- (metrics/profile-maximum)`0`
 (signature)`__len__(self)`
 
 
@@ -286,11 +286,11 @@ the size of each segment is already known.
 		- (source/area)`247 2 278 4`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`22`
-		- (metrics/profile-duration)`11200`
+		- (metrics/profile-duration)`9150`
 		- (metrics/profile-count)`20`
-		- (metrics/profile-residency)`84.82142857142857`
-		- (metrics/profile-minimum)`3000`
-		- (metrics/profile-maximum)`29000`
+		- (metrics/profile-residency)`82.5136612021858`
+		- (metrics/profile-minimum)`2000`
+		- (metrics/profile-maximum)`23000`
 (signature)`select(self, start, stop)`
 
 Return an iterable to the requested slice.
@@ -307,10 +307,10 @@ Return an iterable to the requested slice.
 		- (source/area)`280 2 281 55`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`2428`
+		- (metrics/profile-duration)`1714`
 		- (metrics/profile-count)`7`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-minimum)`0`
 		- (metrics/profile-maximum)`7000`
 (signature)`__iter__(self)`
 
@@ -343,11 +343,11 @@ Truncate the entire sequence.
 		- (source/area)`290 2 315 26`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`18`
-		- (metrics/profile-duration)`3207545`
+		- (metrics/profile-duration)`3212545`
 		- (metrics/profile-count)`11`
-		- (metrics/profile-residency)`99.98582886942721`
+		- (metrics/profile-residency)`99.98302111041937`
 		- (metrics/profile-minimum)`10000`
-		- (metrics/profile-maximum)`19094000`
+		- (metrics/profile-maximum)`17302000`
 (signature)`partition(self)`
 
 Organize the segments so that they have appropriate sizes.
@@ -378,11 +378,11 @@ Organize the segments so that they have appropriate sizes.
 		- (source/area)`323 2 327 26`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
-		- (metrics/profile-duration)`1000`
+		- (metrics/profile-duration)`0`
 		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`1000`
+		- (metrics/profile-residency)`0.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`0`
 (signature)`append(self, sequence)`
 
 
@@ -397,9 +397,9 @@ Organize the segments so that they have appropriate sizes.
 		- (source/area)`329 2 333 26`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
-		- (metrics/profile-duration)`6666`
+		- (metrics/profile-duration)`6000`
 		- (metrics/profile-count)`9`
-		- (metrics/profile-residency)`66.66666666666666`
+		- (metrics/profile-residency)`61.11111111111111`
 		- (metrics/profile-minimum)`2000`
 		- (metrics/profile-maximum)`11000`
 (signature)`insert(self, offset, sequence)`
@@ -416,11 +416,11 @@ Organize the segments so that they have appropriate sizes.
 		- (source/area)`335 2 349 26`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`15`
-		- (metrics/profile-duration)`568000`
+		- (metrics/profile-duration)`514500`
 		- (metrics/profile-count)`8`
-		- (metrics/profile-residency)`1.1223591549295775`
-		- (metrics/profile-minimum)`8000`
-		- (metrics/profile-maximum)`4041000`
+		- (metrics/profile-residency)`0.8989310009718173`
+		- (metrics/profile-minimum)`6000`
+		- (metrics/profile-maximum)`3683000`
 (signature)`delete(self, start, stop)`
 
 

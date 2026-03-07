@@ -6,11 +6,11 @@
 		- (source/area)`1 1 126 0`
 		- (coverage-zeros)`24`
 		- (coverage-counters)`56`
-		- (metrics/profile-duration)`100000`
+		- (metrics/profile-duration)`78000`
 		- (metrics/profile-count)`7`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`100000`
-		- (metrics/profile-maximum)`100000`
+		- (metrics/profile-minimum)`78000`
+		- (metrics/profile-maximum)`78000`
 High-level system inquiries for user information and environment derived paths.
 
 All information is retrieved from the system when invoked.
@@ -70,11 +70,11 @@ All information is retrieved from the system when invoked.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`13 1 13 104`
+		- (source/area)`13 1 13 101`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
 #!source
-	_path = tools.cachedcalls(16)(tools.compose(operator.methodcaller('delimit'), files.Path.from_absolute))
+	_path = tools.cachedcalls(16)(tools.compose(operator.methodcaller('delimit'), files.root.__matmul__))
 
 [ _dirs ]
 ! CONTROL:
@@ -99,11 +99,11 @@ All information is retrieved from the system when invoked.
 		- (source/area)`16 1 20 50`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`66333`
+		- (metrics/profile-duration)`69000`
 		- (metrics/profile-count)`3`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`63000`
-		- (metrics/profile-maximum)`72000`
+		- (metrics/profile-minimum)`64000`
+		- (metrics/profile-maximum)`73000`
 		- (type/syntax)`files.Path`
 		- (type/project-local/factor-element)&<files#Path[fault.system.files.Path]>
 		
@@ -121,11 +121,11 @@ Select paths present in the (system/environ)`PATH` variable.
 		- (source/area)`22 1 38 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
-		- (metrics/profile-duration)`959000`
+		- (metrics/profile-duration)`2780500`
 		- (metrics/profile-count)`2`
-		- (metrics/profile-residency)`93.2221063607925`
-		- (metrics/profile-minimum)`689000`
-		- (metrics/profile-maximum)`1229000`
+		- (metrics/profile-residency)`97.33860816399928`
+		- (metrics/profile-minimum)`1487000`
+		- (metrics/profile-maximum)`4074000`
 		- (type/syntax)`files.Path`
 		- (type/project-local/factor-element)&<files#Path[fault.system.files.Path]>
 		
@@ -169,11 +169,11 @@ using (invalid/unknown)&<#pwd>.
 		- (source/area)`56 1 64 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
-		- (metrics/profile-duration)`1482000`
+		- (metrics/profile-duration)`1466000`
 		- (metrics/profile-count)`1`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`1482000`
-		- (metrics/profile-maximum)`1482000`
+		- (metrics/profile-minimum)`1466000`
+		- (metrics/profile-maximum)`1466000`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -191,11 +191,11 @@ Retrieve the user's name.
 		- (source/area)`66 1 77 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
-		- (metrics/profile-duration)`1380000`
+		- (metrics/profile-duration)`1382000`
 		- (metrics/profile-count)`1`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`1380000`
-		- (metrics/profile-maximum)`1380000`
+		- (metrics/profile-minimum)`1382000`
+		- (metrics/profile-maximum)`1382000`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -216,11 +216,11 @@ If the system has no such concept or it cannot be resolved, (invalid/unknown)&<#
 		- (source/area)`79 1 89 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
-		- (metrics/profile-duration)`1440000`
+		- (metrics/profile-duration)`1552000`
 		- (metrics/profile-count)`1`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`1440000`
-		- (metrics/profile-maximum)`1440000`
+		- (metrics/profile-minimum)`1552000`
+		- (metrics/profile-maximum)`1552000`
 		- (type/syntax)`files.Path`
 		- (type/project-local/factor-element)&<files#Path[fault.system.files.Path]>
 		

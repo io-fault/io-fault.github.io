@@ -1,1 +1,1 @@
-[[], ["visit_expression"], ["visit"], ["construct_initialization_nodes"], ["instrument"], ["compile"]]
+[[], ["visit_expression"], ["visit"], ["construct_initialization_nodes"], ["instrument"], ["find_suspend_expressions"], ["qualify_node_paths"], ["walk_within"], ["inject_profiling_nodes"], ["compile"]]

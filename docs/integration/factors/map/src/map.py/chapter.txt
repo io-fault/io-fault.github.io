@@ -3,9 +3,9 @@
 		module
 	/element/
 		- (control)`property-set`
-		- (source/area)`1 1 230 0`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`0`
+		- (source/area)`1 1 266 0`
+		- (coverage-zeros)`66`
+		- (coverage-counters)`129`
 Factor mapping tool for performing processing of factors with executable factors.
 
 
@@ -28,6 +28,8 @@ Factor mapping tool for performing processing of factors with executable factors
 	/element/
 		- (control)`property-set`
 		- (source/area)`5 1 5 17`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ Sequence ]
 ! CONTROL:
@@ -38,6 +40,8 @@ Factor mapping tool for performing processing of factors with executable factors
 	/element/
 		- (control)`property-set`
 		- (source/area)`6 1 6 36`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ Callable ]
 ! CONTROL:
@@ -48,6 +52,8 @@ Factor mapping tool for performing processing of factors with executable factors
 	/element/
 		- (control)`property-set`
 		- (source/area)`7 1 7 27`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ tools ]
 ! CONTROL:
@@ -58,6 +64,8 @@ Factor mapping tool for performing processing of factors with executable factors
 	/element/
 		- (control)`property-set`
 		- (source/area)`9 1 9 31`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ process ]
 ! CONTROL:
@@ -68,6 +76,8 @@ Factor mapping tool for performing processing of factors with executable factors
 	/element/
 		- (control)`property-set`
 		- (source/area)`10 1 10 32`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ files ]
 ! CONTROL:
@@ -78,6 +88,8 @@ Factor mapping tool for performing processing of factors with executable factors
 	/element/
 		- (control)`property-set`
 		- (source/area)`11 1 11 30`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ recognition ]
 ! CONTROL:
@@ -88,6 +100,8 @@ Factor mapping tool for performing processing of factors with executable factors
 	/element/
 		- (control)`property-set`
 		- (source/area)`12 1 12 36`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ terminal ]
 ! CONTROL:
@@ -98,6 +112,8 @@ Factor mapping tool for performing processing of factors with executable factors
 	/element/
 		- (control)`property-set`
 		- (source/area)`14 1 14 37`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ execution ]
 ! CONTROL:
@@ -108,6 +124,8 @@ Factor mapping tool for performing processing of factors with executable factors
 	/element/
 		- (control)`property-set`
 		- (source/area)`15 1 15 38`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ Log ]
 ! CONTROL:
@@ -118,6 +136,8 @@ Factor mapping tool for performing processing of factors with executable factors
 	/element/
 		- (control)`property-set`
 		- (source/area)`16 1 16 35`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ KInvocation ]
 ! CONTROL:
@@ -128,6 +148,8 @@ Factor mapping tool for performing processing of factors with executable factors
 	/element/
 		- (control)`property-set`
 		- (source/area)`18 1 18 46`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ lsf ]
 ! CONTROL:
@@ -138,6 +160,8 @@ Factor mapping tool for performing processing of factors with executable factors
 	/element/
 		- (control)`property-set`
 		- (source/area)`19 1 19 39`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ query ]
 ! CONTROL:
@@ -148,6 +172,8 @@ Factor mapping tool for performing processing of factors with executable factors
 	/element/
 		- (control)`property-set`
 		- (source/area)`21 1 21 24`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ resolve ]
 ! CONTROL:
@@ -158,6 +184,8 @@ Factor mapping tool for performing processing of factors with executable factors
 	/element/
 		- (control)`property-set`
 		- (source/area)`22 1 22 28`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ filters ]
 ! CONTROL:
@@ -168,6 +196,8 @@ Factor mapping tool for performing processing of factors with executable factors
 	/element/
 		- (control)`property-set`
 		- (source/area)`23 1 23 21`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ frame_type ]
 ! CONTROL:
@@ -178,6 +208,8 @@ Factor mapping tool for performing processing of factors with executable factors
 	/element/
 		- (control)`property-set`
 		- (source/area)`25 1 32 13`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`6`
 (signature)`frame_type(sft)`
 
 
@@ -190,6 +222,8 @@ Factor mapping tool for performing processing of factors with executable factors
 	/element/
 		- (control)`property-set`
 		- (source/area)`34 1 37 1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	restricted = {
 		'--opened-frames': ('field-replace', True, 'opened-frames'),
@@ -204,7 +238,9 @@ Factor mapping tool for performing processing of factors with executable factors
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`39 1 48 1`
+		- (source/area)`39 1 49 1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	required = {
 		'--status-type': ('field-replace', 'status-frame-type'),
@@ -216,6 +252,7 @@ Factor mapping tool for performing processing of factors with executable factors
 	
 		'-X': ('field-replace', 'execution-directory'),
 		'-D': ('field-replace', 'product-directory'),
+	}
 
 [ FilterType ]
 ! CONTROL:
@@ -225,7 +262,9 @@ Factor mapping tool for performing processing of factors with executable factors
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`50 1 53 15`
+		- (source/area)`51 1 54 15`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 		- (type/syntax)`bool`
 		- (type/invalid/unknown)&<#bool>
 		
@@ -238,10 +277,12 @@ Factor mapping tool for performing processing of factors with executable factors
 		class
 	/element/
 		- (control)`property-set`
-		- (source/area)`54 1 75 34`
+		- (source/area)`55 1 94 24`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`6`
 ! INHERIT:
 	- (control)`property-set`
-	- (source/area)`54 16 54 21`
+	- (source/area)`55 16 55 21`
 	- (type/syntax)`object`
 	- (type/invalid/unknown)&<#object>
 	
@@ -256,11 +297,13 @@ Parameters required for performing and customizing the map operation.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`65 2 65 25`
+		- (source/area)`66 2 66 25`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 		- (type/syntax)`list[str]`
 		
 #!source
-	ctl_plan: Callable[[object, object], object]
+	ctl_argv: list[str] = ()
 
 [ Controls >> ctl_filter ]
 ! CONTROL:
@@ -270,11 +313,13 @@ Parameters required for performing and customizing the map operation.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`66 2 66 98`
+		- (source/area)`67 2 67 98`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 		- (type/syntax)`Callable[[lsf.Project, lsf.types.FactorPath, lsf.types.Reference], bool]`
 		
 #!source
-	ctl_argv: list[str] = ()
+	ctl_filter: Callable[[lsf.Project, lsf.types.FactorPath, lsf.types.Reference], bool] = FilterType
 
 [ Controls >> ctl_operation_identifier ]
 ! CONTROL:
@@ -284,12 +329,14 @@ Parameters required for performing and customizing the map operation.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`67 2 67 48`
+		- (source/area)`68 2 68 48`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
 #!source
-	ctl_filter: Callable[[lsf.Project, lsf.types.FactorPath, lsf.types.Reference], bool] = FilterType
+	ctl_operation_identifier: str = 'map-operation'
 
 [ Controls >> ctl_open_title ]
 ! CONTROL:
@@ -299,12 +346,14 @@ Parameters required for performing and customizing the map operation.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`68 2 68 44`
+		- (source/area)`69 2 69 44`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
 #!source
-	ctl_operation_identifier: str = 'map-operation'
+	ctl_open_title: str = 'Operation Aggregate'
 
 [ Controls >> ctl_operating_title ]
 ! CONTROL:
@@ -314,12 +363,14 @@ Parameters required for performing and customizing the map operation.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`69 2 69 49`
+		- (source/area)`70 2 70 49`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
 #!source
-	ctl_open_title: str = 'Operation Aggregate'
+	ctl_operating_title: str = 'Operation Aggregate'
 
 [ Controls >> ctl_close_title ]
 ! CONTROL:
@@ -329,12 +380,14 @@ Parameters required for performing and customizing the map operation.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`70 2 70 45`
+		- (source/area)`71 2 71 45`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
 #!source
-	ctl_operating_title: str = 'Operation Aggregate'
+	ctl_close_title: str = 'Operation Aggregate'
 
 [ Controls >> ctl_transcript_type ]
 ! CONTROL:
@@ -344,12 +397,14 @@ Parameters required for performing and customizing the map operation.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`71 2 71 46`
+		- (source/area)`72 2 72 46`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
 #!source
-	ctl_close_title: str = 'Operation Aggregate'
+	ctl_transcript_type: str = 'processing-units'
 
 [ Controls >> ctl_lanes ]
 ! CONTROL:
@@ -359,14 +414,16 @@ Parameters required for performing and customizing the map operation.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`72 2 72 19`
+		- (source/area)`73 2 73 19`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
 #!source
-	ctl_transcript_type: str = 'processing-units'
+	ctl_lanes: int = 4
 
-[ Controls >> ctl_display_limit ]
+[ Controls >> ctl_monitors ]
 ! CONTROL:
 	/type/
 		data
@@ -374,12 +431,14 @@ Parameters required for performing and customizing the map operation.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`73 2 73 27`
+		- (source/area)`74 2 74 22`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
 #!source
-	ctl_lanes: int = 4
+	ctl_monitors: int = 4
 
 [ Controls >> ctl_opened_frames ]
 ! CONTROL:
@@ -389,12 +448,14 @@ Parameters required for performing and customizing the map operation.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`74 2 74 31`
+		- (source/area)`75 2 75 31`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 		- (type/syntax)`bool`
 		- (type/invalid/unknown)&<#bool>
 		
 #!source
-	ctl_monitors: int = 4
+	ctl_opened_frames: bool = True
 
 [ Controls >> ctl_factor_types ]
 ! CONTROL:
@@ -404,11 +465,28 @@ Parameters required for performing and customizing the map operation.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`75 2 75 34`
+		- (source/area)`76 2 78 14`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 		- (type/syntax)`set[str]`
 		
 #!source
-	ctl_opened_frames: bool = True
+	ctl_factor_types: set[str] = None
+		@staticmethod
+
+[ Controls >> identify_lanes ]
+! CONTROL:
+	/type/
+		staticmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`79 2 94 24`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`9`
+(signature)`identify_lanes(config)`
+
+Interpret lanes and monitors from configuration text fields.
+
 
 [ plan_select ]
 ! CONTROL:
@@ -416,7 +494,9 @@ Parameters required for performing and customizing the map operation.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`77 1 117 34`
+		- (source/area)`96 1 136 34`
+		- (coverage-zeros)`27`
+		- (coverage-counters)`27`
 (signature)`plan_select(factors, ctl, selection)`
 
 Create an invocation for processing the project from (factor-local/parameter)&<#plan_select.Parameters.factors[factors]> selected using (factor-local/parameter)&<#plan_select.Parameters.selection[selection]>.
@@ -428,7 +508,9 @@ Create an invocation for processing the project from (factor-local/parameter)&<#
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`119 1 132 29`
+		- (source/area)`138 1 151 29`
+		- (coverage-zeros)`8`
+		- (coverage-counters)`8`
 (signature)`plan_project(factors, ctl, selection)`
 
 Create an invocation for processing (invalid/unknown)&<#pj> with (invalid/unknown)&<#cc>.
@@ -442,7 +524,9 @@ Create an invocation for processing (invalid/unknown)&<#pj> with (invalid/unknow
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`134 1 147 2`
+		- (source/area)`153 1 166 2`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`construct_arguments(cc, ccmode, factors, features, cachetype, cachepath, identifier)`
 
 
@@ -452,7 +536,9 @@ Create an invocation for processing (invalid/unknown)&<#pj> with (invalid/unknow
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`149 1 174 17`
+		- (source/area)`168 1 206 17`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`16`
 (signature)`execute(exits, op, queue)`
 
 Execute the configured map operation described in (factor-local/parameter)&<#execute.Parameters.op[op]>
@@ -466,7 +552,9 @@ Execute the configured map operation described in (factor-local/parameter)&<#exe
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`176 1 191 25`
+		- (source/area)`208 1 225 25`
+		- (coverage-zeros)`4`
+		- (coverage-counters)`4`
 (signature)`configure(restricted, required, argv)`
 
 
@@ -478,7 +566,9 @@ Execute the configured map operation described in (factor-local/parameter)&<#exe
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`193 1 230 19`
+		- (source/area)`227 1 266 19`
+		- (coverage-zeros)`19`
+		- (coverage-counters)`20`
 		- (type/syntax)`process.Exit`
 		- (type/remote/factor-element)&<http://fault.io/python/system/process#Exit[fault.system.process.Exit]>
 		

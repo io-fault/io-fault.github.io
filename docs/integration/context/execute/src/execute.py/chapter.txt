@@ -3,7 +3,7 @@
 		module
 	/element/
 		- (control)`property-set`
-		- (source/area)`1 1 24 0`
+		- (source/area)`1 1 22 0`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`0`
 Executable factor index for (invalid/unknown)&<#fault.system.tool> bindings.
@@ -47,7 +47,7 @@ Executable factor index for (invalid/unknown)&<#fault.system.tool> bindings.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`8 1 16 1`
+		- (source/area)`8 1 14 1`
 #!source
 	index = {
 		'text-cc': context_name + '.chapters.compile',
@@ -56,8 +56,6 @@ Executable factor index for (invalid/unknown)&<#fault.system.tool> bindings.
 		'fictl': context_name + '.factors.control',
 		'man': context_name + '.context.read',
 	}
-	
-	def activate(factor, element, interface=None):
 
 [ activate ]
 ! CONTROL:
@@ -67,7 +65,7 @@ Executable factor index for (invalid/unknown)&<#fault.system.tool> bindings.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`18 1 19 69`
+		- (source/area)`16 1 17 69`
 (signature)`activate(factor, element)`
 
 
@@ -79,7 +77,7 @@ Executable factor index for (invalid/unknown)&<#fault.system.tool> bindings.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`21 1 24 36`
+		- (source/area)`19 1 22 36`
 		- (type/syntax)`process.Exit`
 		- (type/remote/factor-element)&<http://fault.io/python/system/process#Exit[fault.system.process.Exit]>
 		

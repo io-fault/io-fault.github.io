@@ -6,11 +6,11 @@
 		- (source/area)`1 1 439 20`
 		- (coverage-zeros)`209`
 		- (coverage-counters)`229`
-		- (metrics/profile-duration)`80320`
-		- (metrics/profile-count)`724`
+		- (metrics/profile-duration)`74867`
+		- (metrics/profile-count)`723`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`39000`
-		- (metrics/profile-maximum)`173000`
+		- (metrics/profile-minimum)`40000`
+		- (metrics/profile-maximum)`250000`
 Tools for building status data from Python exceptions, tracebacks, and frames.
 
 
@@ -114,11 +114,11 @@ Prioritizes `traceframes` method.
 		- (source/area)`77 1 84 14`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
-		- (metrics/profile-duration)`25333`
+		- (metrics/profile-duration)`28000`
 		- (metrics/profile-count)`3`
-		- (metrics/profile-residency)`71.05263157894737`
-		- (metrics/profile-minimum)`18000`
-		- (metrics/profile-maximum)`32000`
+		- (metrics/profile-residency)`76.19047619047619`
+		- (metrics/profile-minimum)`15000`
+		- (metrics/profile-maximum)`38000`
 (signature)`iterstack(frame)`
 
 Construct a generator producing frame-lineno pairs from a stack of frames.
@@ -133,11 +133,11 @@ Construct a generator producing frame-lineno pairs from a stack of frames.
 		- (source/area)`86 1 93 17`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
-		- (metrics/profile-duration)`13000`
+		- (metrics/profile-duration)`7000`
 		- (metrics/profile-count)`2`
-		- (metrics/profile-residency)`65.38461538461539`
-		- (metrics/profile-minimum)`4000`
-		- (metrics/profile-maximum)`22000`
+		- (metrics/profile-residency)`64.28571428571429`
+		- (metrics/profile-minimum)`6000`
+		- (metrics/profile-maximum)`8000`
 (signature)`itertraceback(traceback)`
 
 Construct a generator producing frame-lineno pairs from a traceback.

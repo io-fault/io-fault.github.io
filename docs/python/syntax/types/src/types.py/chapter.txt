@@ -6,11 +6,11 @@
 		- (source/area)`1 1 211 0`
 		- (coverage-zeros)`34`
 		- (coverage-counters)`81`
-		- (metrics/profile-duration)`127920`
-		- (metrics/profile-count)`1088`
+		- (metrics/profile-duration)`138646`
+		- (metrics/profile-count)`201`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`42000`
-		- (metrics/profile-maximum)`2692000`
+		- (metrics/profile-minimum)`52000`
+		- (metrics/profile-maximum)`873000`
 Collection of data structures and functions for working with exact addresses in (syntax) text files.
 
 
@@ -88,11 +88,11 @@ This special case is used to allow inclusive ranges to properly detect continuit
 		- (source/area)`22 2 24 46`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`8000`
+		- (metrics/profile-duration)`6500`
 		- (metrics/profile-count)`2`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`2000`
-		- (metrics/profile-maximum)`14000`
+		- (metrics/profile-minimum)`4000`
+		- (metrics/profile-maximum)`9000`
 (signature)`from_string(Class, source)`
 
 
@@ -107,11 +107,11 @@ This special case is used to allow inclusive ranges to properly detect continuit
 		- (source/area)`26 2 27 35`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
-		- (metrics/profile-duration)`3333`
+		- (metrics/profile-duration)`2000`
 		- (metrics/profile-count)`3`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`8000`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`5000`
 (signature)`__str__(self)`
 
 
@@ -126,11 +126,11 @@ This special case is used to allow inclusive ranges to properly detect continuit
 		- (source/area)`29 2 30 45`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
-		- (metrics/profile-duration)`1414`
-		- (metrics/profile-count)`19447`
+		- (metrics/profile-duration)`4000`
+		- (metrics/profile-count)`1`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`18484000`
+		- (metrics/profile-minimum)`4000`
+		- (metrics/profile-maximum)`4000`
 (signature)`__add__(self, x)`
 
 
@@ -145,11 +145,11 @@ This special case is used to allow inclusive ranges to properly detect continuit
 		- (source/area)`32 2 33 45`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
-		- (metrics/profile-duration)`1000`
+		- (metrics/profile-duration)`0`
 		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`1000`
+		- (metrics/profile-residency)`0.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`0`
 (signature)`__sub__(self, x)`
 
 
@@ -246,11 +246,11 @@ is referring to the end of the (factor-local/property)&<#Address.line[line]>.
 		- (source/area)`72 2 86 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
-		- (metrics/profile-duration)`2350`
+		- (metrics/profile-duration)`750`
 		- (metrics/profile-count)`20`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`18000`
+		- (metrics/profile-maximum)`5000`
 (signature)`normalize_stop(line_length, line_number, column_number)`
 
 Adjust a stop (invalid/unknown)&<#Address'> pointers for use in an (factor-local/class)&<#Area[Area]> so that it can
@@ -339,11 +339,11 @@ Inclsuive Range of (factor-local/class)&<#Address[Address]> instances. Usable wi
 		- (source/area)`109 2 118 10`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`4`
-		- (metrics/profile-duration)`6000`
+		- (metrics/profile-duration)`3000`
 		- (metrics/profile-count)`1`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`6000`
-		- (metrics/profile-maximum)`6000`
+		- (metrics/profile-minimum)`3000`
+		- (metrics/profile-maximum)`3000`
 Whether the Area refers to a purely vertically area of the syntax without
 constraints on the columns.
 
@@ -359,11 +359,11 @@ Zero-column references *must* be used to identify an Area as purely vertical.
 		- (source/area)`119 2 129 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
-		- (metrics/profile-duration)`333`
+		- (metrics/profile-duration)`0`
 		- (metrics/profile-count)`3`
-		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-residency)`0.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`1000`
+		- (metrics/profile-maximum)`0`
 Whether the area refers a purely horizontal area of the syntax within a single line.
 
 Zero-column references to the end of the line are not permitted to be used for
@@ -380,11 +380,11 @@ requires additional contextual knowledge (line length).
 		- (source/area)`130 2 136 65`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`6153`
+		- (metrics/profile-duration)`4461`
 		- (metrics/profile-count)`13`
-		- (metrics/profile-residency)`66.25`
-		- (metrics/profile-minimum)`3000`
-		- (metrics/profile-maximum)`18000`
+		- (metrics/profile-residency)`72.41379310344827`
+		- (metrics/profile-minimum)`2000`
+		- (metrics/profile-maximum)`14000`
 (signature)`delineate(Class, lstart, cstart, lstop, cstop, stop_line_length)`
 
 Construct an (factor-local/class)&<#Area[Area]> from the given indexes normalizing the stop address.
@@ -401,11 +401,11 @@ Construct an (factor-local/class)&<#Area[Area]> from the given indexes normalizi
 		- (source/area)`138 2 147 13`
 		- (coverage-zeros)`3`
 		- (coverage-counters)`5`
-		- (metrics/profile-duration)`62000`
+		- (metrics/profile-duration)`47000`
 		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`87.09677419354838`
-		- (metrics/profile-minimum)`62000`
-		- (metrics/profile-maximum)`62000`
+		- (metrics/profile-residency)`89.36170212765957`
+		- (metrics/profile-minimum)`47000`
+		- (metrics/profile-maximum)`47000`
 (signature)`__str__(self)`
 
 
@@ -461,8 +461,8 @@ The returned instance guarantees (factor-local/property)&<#Area.vertical[vertica
 		- (source/area)`187 2 211 31`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`14`
-		- (metrics/profile-duration)`1046`
-		- (metrics/profile-count)`999`
+		- (metrics/profile-duration)`1000`
+		- (metrics/profile-count)`8`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
 		- (metrics/profile-maximum)`6000`

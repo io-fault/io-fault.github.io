@@ -3,16 +3,21 @@
 		module
 	/element/
 		- (control)`property-set`
-		- (source/area)`1 1 424 0`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`0`
+		- (source/area)`1 1 681 0`
+		- (coverage-zeros)`118`
+		- (coverage-counters)`177`
+		- (metrics/profile-duration)`287000`
+		- (metrics/profile-count)`10`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`287000`
+		- (metrics/profile-maximum)`287000`
 Route interface descriptions for (factor-local/class)&<#Path[Path]> manipulations and (factor-local/class)&<#File[File]> system controls.
 
 [ File System Property Codes ]
 
 (factor-local/class)&<#File[File]> operations that analyze status properties use character codes to
-perform filtering. The codes listed here are primarily for POSIX filesystems
-and may have extensions or different meanings when used with emulated filesystems.
+perform filtering. The codes listed here are primarily for POSIX file systems
+and may have extensions or different meanings when used with emulated file systems.
 
 [ > Permissions ]
 
@@ -109,6 +114,8 @@ Character codes identifying a type of file.
 	/element/
 		- (control)`property-set`
 		- (source/area)`44 1 44 65`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ Protocol ]
 ! CONTROL:
@@ -118,7 +125,7 @@ Character codes identifying a type of file.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`45 1 45 44`
+		- (source/area)`45 1 45 48`
 
 [ TypeAlias ]
 ! CONTROL:
@@ -128,7 +135,7 @@ Character codes identifying a type of file.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`45 1 45 44`
+		- (source/area)`45 1 45 48`
 
 [ Type ]
 ! CONTROL:
@@ -138,7 +145,31 @@ Character codes identifying a type of file.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`45 1 45 44`
+		- (source/area)`45 1 45 48`
+
+[ IO ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`45 1 45 48`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
+
+[ AbstractContextManager ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`46 1 46 45`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ Element ]
 ! CONTROL:
@@ -148,14 +179,26 @@ Character codes identifying a type of file.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`47 1 49 18`
+		- (source/area)`48 1 48 61`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 		- (type/syntax)`TypeAlias`
 		- (type/none/invalid)&<http://fault.io/dev/null[typing.TypeAlias]>
 		
 #!source
 	Element: TypeAlias = tuple[str, Sequence['Element'], Mapping]
-	
-	@Hashable.register
+
+[ sys ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`51 1 51 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ Path ]
 ! CONTROL:
@@ -163,10 +206,12 @@ Character codes identifying a type of file.
 		class
 	/element/
 		- (control)`property-set`
-		- (source/area)`50 1 186 27`
+		- (source/area)`59 1 211 27`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
-	- (source/area)`50 12 50 19`
+	- (source/area)`59 12 59 19`
 	- (type/syntax)`Protocol`
 	- (type/none/invalid)&<http://fault.io/dev/null[typing.Protocol]>
 	
@@ -179,11 +224,15 @@ Primitive operations for manipulating a sequence of identifiers.
 		property
 	/element/
 		- (control)`property-set`
-		- (source/area)`57 2 64 16`
+		- (source/area)`66 2 75 16`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`3`
 		- (type/syntax)`Path`
 		- (type/factor-local/class)&<#Path[Path]>
 		
-The route containing the final identifier in (invalid/unknown)&<#self>.
+The route containing the resource identified by (invalid/unknown)&<#self>.
+
+For file systems, this is the parent directory.
 
 
 [ Path >> absolute ]
@@ -192,10 +241,12 @@ The route containing the final identifier in (invalid/unknown)&<#self>.
 		property
 	/element/
 		- (control)`property-set`
-		- (source/area)`65 2 72 16`
+		- (source/area)`76 2 83 16`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`3`
 		- (type/syntax)`list[Hashable]`
 		
-The absolute sequence of identifiers.
+The absolute sequence of identifiers that make up the path.
 
 
 [ Path >> identifier ]
@@ -204,12 +255,42 @@ The absolute sequence of identifiers.
 		property
 	/element/
 		- (control)`property-set`
-		- (source/area)`73 2 80 16`
+		- (source/area)`84 2 91 16`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`3`
 		- (type/syntax)`Hashable`
 		- (type/none/invalid)&<http://fault.io/dev/null[collections.abc.Hashable]>
 		
-The object identifying the resource relative to its immediate container.
+The identification of the resource relative to its immediate (factor-local/property)&<#Path.container[container]>.
 The last point in the route.
+
+
+[ Path >> prefix ]
+! CONTROL:
+	/type/
+		abstractmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`92 2 98 16`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
+(signature)`prefix(self, string)`
+
+Construct a new route with the given (factor-local/abstractmethod)&<#Path.prefix[prefix]> added to the beginning of the identifier.
+
+
+[ Path >> suffix ]
+! CONTROL:
+	/type/
+		abstractmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`99 2 105 16`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
+(signature)`suffix(self, string)`
+
+Construct a new route with the given (factor-local/abstractmethod)&<#Path.suffix[suffix]> added to the end of the identifier.
 
 
 [ Path >> truncate ]
@@ -218,7 +299,9 @@ The last point in the route.
 		abstractmethod
 	/element/
 		- (control)`property-set`
-		- (source/area)`81 2 89 16`
+		- (source/area)`106 2 114 16`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`3`
 		- (type/syntax)`Path`
 		- (type/factor-local/class)&<#Path[Path]>
 		
@@ -235,7 +318,9 @@ reverse index search.
 		abstractmethod
 	/element/
 		- (control)`property-set`
-		- (source/area)`90 2 99 16`
+		- (source/area)`115 2 124 16`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`3`
 		- (type/syntax)`Iterable[Path]`
 		
 (signature)`__invert__(self)`
@@ -251,7 +336,9 @@ Stepwise root ascension.
 		abstractmethod
 	/element/
 		- (control)`property-set`
-		- (source/area)`100 2 106 16`
+		- (source/area)`125 2 131 16`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`3`
 		- (type/syntax)`Iterable[Path]`
 		
 (signature)`__lshift__(self, route)`
@@ -265,7 +352,9 @@ Stepwise ascension path.
 		abstractmethod
 	/element/
 		- (control)`property-set`
-		- (source/area)`107 2 113 16`
+		- (source/area)`132 2 138 16`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`3`
 		- (type/syntax)`Iterable[Path]`
 		
 (signature)`__rshift__(self, route)`
@@ -279,7 +368,9 @@ Stepwise descension path.
 		abstractmethod
 	/element/
 		- (control)`property-set`
-		- (source/area)`114 2 120 16`
+		- (source/area)`139 2 145 16`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`3`
 		- (type/syntax)`Iterable[Path]`
 		
 (signature)`__xor__(self, route)`
@@ -293,14 +384,16 @@ Stepwise traverse path.
 		abstractmethod
 	/element/
 		- (control)`property-set`
-		- (source/area)`121 2 132 16`
+		- (source/area)`146 2 157 16`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`3`
 		- (type/syntax)`Path`
 		- (type/factor-local/class)&<#Path[Path]>
 		
 (signature)`__matmul__(self, path_expression)`
 
 Composite extension.
-Construct a new route by extending (factor-local/parameter)&<#Path.__matmul__.Parameters.self[self]> with the points expressed in (invalid/unknown)&<#path>.
+Construct a new route by extending (factor-local/parameter)&<#Path.__matmul__.Parameters.self[self]> with the points expressed in (factor-local/parameter)&<#Path.__matmul__.Parameters.path_expression[path_expression]>.
 
 [ >> Parameters ]
 
@@ -321,7 +414,9 @@ Construct a new route by extending (factor-local/parameter)&<#Path.__matmul__.Pa
 		abstractmethod
 	/element/
 		- (control)`property-set`
-		- (source/area)`133 2 143 16`
+		- (source/area)`158 2 168 16`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`3`
 		- (type/syntax)`Path`
 		- (type/factor-local/class)&<#Path[Path]>
 		
@@ -339,7 +434,9 @@ Construct a new route by extending (factor-local/parameter)&<#Path.__add__.Param
 		abstractmethod
 	/element/
 		- (control)`property-set`
-		- (source/area)`144 2 154 16`
+		- (source/area)`169 2 179 16`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`3`
 		- (type/syntax)`Path`
 		- (type/factor-local/class)&<#Path[Path]>
 		
@@ -357,14 +454,16 @@ Construct a new route by extending (factor-local/parameter)&<#Path.__floordiv__.
 		abstractmethod
 	/element/
 		- (control)`property-set`
-		- (source/area)`155 2 165 16`
+		- (source/area)`180 2 190 16`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`3`
 		- (type/syntax)`Path`
 		- (type/factor-local/class)&<#Path[Path]>
 		
 (signature)`__truediv__(self, point)`
 
 Single extension.
-Construct a new route by extending (factor-local/parameter)&<#Path.__truediv__.Parameters.self[self]> with the sole (factor-local/parameter)&<#Path.__truediv__.Parameters.point[point]>.
+Construct a new route by extending (factor-local/parameter)&<#Path.__truediv__.Parameters.self[self]> with a single (factor-local/parameter)&<#Path.__truediv__.Parameters.point[point]>.
 
 #!python
 	assert (route / identifier) == (route + [identifier])
@@ -375,7 +474,9 @@ Construct a new route by extending (factor-local/parameter)&<#Path.__truediv__.P
 		abstractmethod
 	/element/
 		- (control)`property-set`
-		- (source/area)`166 2 176 16`
+		- (source/area)`191 2 201 16`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`3`
 		- (type/syntax)`Path`
 		- (type/factor-local/class)&<#Path[Path]>
 		
@@ -393,7 +494,9 @@ Construct a new route by extending (factor-local/parameter)&<#Path.__mul__.Param
 		abstractmethod
 	/element/
 		- (control)`property-set`
-		- (source/area)`177 2 186 27`
+		- (source/area)`202 2 211 27`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`3`
 		- (type/syntax)`Path`
 		- (type/factor-local/class)&<#Path[Path]>
 		
@@ -406,20 +509,236 @@ Construct a new route representing the (factor-local/parameter)&<#Path.__pow__.P
 	assert (route ** 1) == (route.container)
 	assert (route ** 2) == (route.container.container)
 
+[ Status ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`213 1 329 27`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`213 14 213 21`
+	- (type/syntax)`Protocol`
+	- (type/none/invalid)&<http://fault.io/dev/null[typing.Protocol]>
+	
+Data class holding common file status fields.
+
+
+[ Status >> unit ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`220 2 230 16`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`3`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+The unit that (factor-local/property)&<#Status.size[size]> is measured with.
+
+Presumed to be `'bytes'` for file systems, but may not be a concrete
+measure of information storage for some systems.
+
+
+[ Status >> system ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`231 2 239 16`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`3`
+		- (type/syntax)`object`
+		- (type/invalid/unknown)&<#object>
+		
+System specific data structure holding the status data.
+Usually (invalid/unknown)&<#os.stat_result>.
+
+
+[ Status >> size ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`240 2 250 16`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`3`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+Count of (factor-local/property)&<#Status.unit[unit]> contained by the file.
+
+#!syntax/python
+	assert (route.fs_size() == route.fs_status().size)
+
+[ Status >> type ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`251 2 273 16`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`3`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+String symbol identifying the type of file.
+
+/`'void'`/
+	A broken link or nonexistent file.
+
+/`'directory'`/
+	A file containing other files.
+
+/`'data'`/
+	A regular file containing bytes.
+
+/`'link'`/
+	Status record of a link to a file.
+
+/`'pipe'`/
+	A named pipe; also known as a FIFO. (POSIX)
+
+/`'socket'`/
+	A unix domain socket. (POSIX)
+
+/`'device'`/
+	A character or block device file. (POSIX)
+
+
+[ Status >> subtype ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`274 2 284 16`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`3`
+		- (type/syntax)`str|None:`
+		
+For POSIX-type systems, designates the kind of (id)`device`:
+(id)`block` or (id)`character`.
+
+(invalid/unknown)&<#None> for status instances whose (factor-local/property)&<#Status.type[type]> is not (id)`device`.
+
+
+[ Status >> executable ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`285 2 292 16`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`3`
+		- (type/syntax)`bool`
+		- (type/invalid/unknown)&<#bool>
+		
+Whether the data file is considered executable by anyone.
+
+
+[ Status >> searchable ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`293 2 300 16`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`3`
+		- (type/syntax)`bool`
+		- (type/invalid/unknown)&<#bool>
+		
+Whether the directory file is considered searchable by anyone.
+
+
+[ Status >> created ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`301 2 308 16`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
+Time of creation; UTC. Not available on all systems.
+
+
+[ Status >> last_modified ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`309 2 316 16`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
+Time of last modification; UTC.
+
+
+[ Status >> last_accessed ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`317 2 324 16`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
+Time of last access; UTC.
+
+
+[ Status >> meta_last_modified ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`325 2 329 27`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
+Time of last status change; UTC.
+
+
 [ File ]
 ! CONTROL:
 	/type/
 		class
 	/element/
 		- (control)`property-set`
-		- (source/area)`188 1 424 27`
+		- (source/area)`331 1 681 27`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
-	- (source/area)`188 12 188 15`
+	- (source/area)`331 12 331 15`
 	- (type/syntax)`Path`
 	- (type/factor-local/class)&<#Path[Path]>
 	
 File system APIs for supporting common access functions.
+
+
+[ File >> Status ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`338 2 345 16`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`3`
+		- (type/syntax)`Type[FileStatus]`
+		
+The status data structure used by the Path.
 
 
 [ File >> Violation ]
@@ -428,11 +747,122 @@ File system APIs for supporting common access functions.
 		property
 	/element/
 		- (control)`property-set`
-		- (source/area)`195 2 202 16`
+		- (source/area)`346 2 354 16`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`3`
 		- (type/syntax)`Type[Exception]`
 		
 Exception describing the property violations found
 by a call to (factor-local/abstractmethod)&<#File.fs_require[fs_require]>.
+
+
+[ File >> filename ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`355 2 362 16`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`3`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+File system specific alias for (invalid/unknown)&<#identifier>.
+
+
+[ File >> extension ]
+! CONTROL:
+	/type/
+		property
+	/element/
+		- (control)`property-set`
+		- (source/area)`363 2 371 16`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`3`
+		- (type/syntax)`str|None:`
+		
+The last dot-extension of the filename.
+
+(invalid/unknown)&<#None> if the filename has no `.` characters at all.
+
+
+[ File >> __pos__ ]
+! CONTROL:
+	/type/
+		abstractmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`372 2 378 16`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`3`
+		- (type/syntax)`File`
+		- (type/factor-local/class)&<#File[File]>
+		
+(signature)`__pos__(self)`
+
+Resolve any relative path components, `.` and `..`, in (factor-local/parameter)&<#File.__pos__.Parameters.self[self]>.
+
+
+[ File >> fs_path_string ]
+! CONTROL:
+	/type/
+		abstractmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`379 2 391 16`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`3`
+		- (type/syntax)`str`
+		- (type/invalid/unknown)&<#str>
+		
+(signature)`fs_path_string(self)`
+
+Construct a normalized string representing the path to the file.
+
+Relative resolution must still be explicitly performed, but empty
+path entries delimiting partitions are eliminated.
+
+(factor-local/class)&<#File[File]> protocol name suitable for use as `__fspath__` implementation.
+
+
+[ File >> fs_tmpdir ]
+! CONTROL:
+	/type/
+		classmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`392 2 400 16`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`3`
+		- (type/syntax)`AbstractContextManager[File]`
+		
+(signature)`fs_tmpdir(Class)`
+
+Constuct a context manager that creates a temporary directory when entered.
+
+On exit, the directory and its contents are destroyed.
+
+
+[ File >> fs_open ]
+! CONTROL:
+	/type/
+		abstractmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`401 2 412 16`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`3`
+		- (type/syntax)`AbstractContextManager[IO]`
+		
+(signature)`fs_open(self, mode)`
+
+Open the file identified by the path, (factor-local/parameter)&<#File.fs_open.Parameters.self[self]>.
+
+The file is opened when the returned context manager is entered and closed on exit.
+
+The parameters match Python's (invalid/unknown)&<#open> builtin without `opener` and `closefd` where
+the behavior is always the default.
 
 
 [ File >> fs_require ]
@@ -441,7 +871,9 @@ by a call to (factor-local/abstractmethod)&<#File.fs_require[fs_require]>.
 		abstractmethod
 	/element/
 		- (control)`property-set`
-		- (source/area)`203 2 224 16`
+		- (source/area)`413 2 434 16`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 (signature)`fs_require(self, properties, type)`
 
 Check the file for the expressed requirements.
@@ -479,7 +911,9 @@ The (factor-local/parameter)&<#File.fs_require.Parameters.properties[properties]
 		abstractmethod
 	/element/
 		- (control)`property-set`
-		- (source/area)`225 2 237 16`
+		- (source/area)`435 2 447 16`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 (signature)`fs_replace(self, replacement)`
 
 Destroy the existing file or directory, (factor-local/parameter)&<#File.fs_replace.Parameters.self[self]>, and replace it with the
@@ -503,7 +937,9 @@ file or directory at the given route, (factor-local/parameter)&<#File.fs_replace
 		abstractmethod
 	/element/
 		- (control)`property-set`
-		- (source/area)`238 2 245 16`
+		- (source/area)`448 2 455 16`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 (signature)`fs_void(self)`
 
 Destroy the file or directory at the location identified by (factor-local/parameter)&<#File.fs_void.Parameters.self[self]>.
@@ -516,15 +952,13 @@ For directories, this recursively removes content as well.
 		abstractmethod
 	/element/
 		- (control)`property-set`
-		- (source/area)`246 2 256 16`
+		- (source/area)`456 2 463 16`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 (signature)`fs_reduce(self, discarded)`
 
 Relocate the directory contents in (factor-local/parameter)&<#File.fs_reduce.Parameters.discarded[discarded]> into (factor-local/parameter)&<#File.fs_reduce.Parameters.self[self]>, and
 destroy the segment of directories between (factor-local/parameter)&<#File.fs_reduce.Parameters.self[self]> and (factor-local/parameter)&<#File.fs_reduce.Parameters.discarded[discarded]>.
-
-[ >> Returns ]
-
-(factor-local/parameter)&<#File.fs_reduce.Parameters.self[self]>
 
 
 [ File >> fs_alloc ]
@@ -533,12 +967,33 @@ destroy the segment of directories between (factor-local/parameter)&<#File.fs_re
 		abstractmethod
 	/element/
 		- (control)`property-set`
-		- (source/area)`257 2 265 16`
+		- (source/area)`464 2 472 16`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 (signature)`fs_alloc(self)`
 
 Allocate the necessary resources to create the target path as a file or directory.
 
 Normally, this means creating the *leading* path to the identified resource.
+
+
+[ File >> fs_follow_links ]
+! CONTROL:
+	/type/
+		abstractmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`473 2 482 16`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`3`
+		- (type/syntax)`Iterable[File]`
+		
+(signature)`fs_follow_links(self)`
+
+Follow the symbolic links back to the final non-link file.
+
+The followed paths are not further resolved. Any links leading
+to links or the final file will remain in the yielded paths.
 
 
 [ File >> fs_link_relative ]
@@ -547,7 +1002,9 @@ Normally, this means creating the *leading* path to the identified resource.
 		abstractmethod
 	/element/
 		- (control)`property-set`
-		- (source/area)`266 2 277 16`
+		- (source/area)`483 2 494 16`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 (signature)`fs_link_relative(self, path)`
 
 Create or update a *symbolic* link at (factor-local/parameter)&<#File.fs_link_relative.Parameters.self[self]> pointing to (factor-local/parameter)&<#File.fs_link_relative.Parameters.path[path]>, the target file.
@@ -570,7 +1027,9 @@ The linked target path will be relative to (invalid/unknown)&<#self'> route.
 		abstractmethod
 	/element/
 		- (control)`property-set`
-		- (source/area)`278 2 289 16`
+		- (source/area)`495 2 506 16`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 (signature)`fs_link_absolute(self, path)`
 
 Create or update a *symbolic* link at (factor-local/parameter)&<#File.fs_link_absolute.Parameters.self[self]> pointing to (factor-local/parameter)&<#File.fs_link_absolute.Parameters.path[path]>, the target file.
@@ -593,28 +1052,12 @@ The linked target path will be absolute.
 		abstractmethod
 	/element/
 		- (control)`property-set`
-		- (source/area)`290 2 296 16`
+		- (source/area)`507 2 513 16`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 (signature)`fs_mkdir(self)`
 
 Create a directory at the location referenced by (factor-local/parameter)&<#File.fs_mkdir.Parameters.self[self]>.
-
-
-[ File >> fs_select ]
-! CONTROL:
-	/type/
-		abstractmethod
-	/element/
-		- (control)`property-set`
-		- (source/area)`297 2 307 16`
-		- (type/syntax)`Iterable[File]`
-		
-(signature)`fs_select(self)`
-
-Select the set of files contained within the directory identified by (factor-local/parameter)&<#File.fs_select.Parameters.self[self]>
-that match the required (factor-local/parameter)&<#File.fs_select.Parameters.properties[properties]>.
-
-The (factor-local/parameter)&<#File.fs_select.Parameters.properties[properties]> string consists of characters described by
-&[File System Property Codes].
 
 
 [ File >> fs_real ]
@@ -623,13 +1066,15 @@ The (factor-local/parameter)&<#File.fs_select.Parameters.properties[properties]>
 		abstractmethod
 	/element/
 		- (control)`property-set`
-		- (source/area)`308 2 314 16`
+		- (source/area)`514 2 520 16`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`3`
 		- (type/syntax)`File`
 		- (type/factor-local/class)&<#File[File]>
 		
 (signature)`fs_real(self)`
 
-Identify the portion of the route that actually exists on the filesystem.
+Identify the portion of the route that actually exists on the file system.
 
 
 [ File >> fs_linear ]
@@ -638,7 +1083,9 @@ Identify the portion of the route that actually exists on the filesystem.
 		abstractmethod
 	/element/
 		- (control)`property-set`
-		- (source/area)`315 2 327 16`
+		- (source/area)`521 2 533 16`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`3`
 		- (type/syntax)`File`
 		- (type/factor-local/class)&<#File[File]>
 		
@@ -646,7 +1093,7 @@ Identify the portion of the route that actually exists on the filesystem.
 
 Identify the next non-linear directory.
 
-Recursively scan the filesystem until a directory is found containing
+Recursively scan the file system until a directory is found containing
 zero files, more than one file, or a sole non-directory file is found.
 
 [ >> Returns ]
@@ -660,46 +1107,15 @@ The path to the next non-linear directory as a (factor-local/class)&<#File[File]
 		abstractmethod
 	/element/
 		- (control)`property-set`
-		- (source/area)`328 2 334 16`
+		- (source/area)`534 2 540 16`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`3`
+		- (type/syntax)`Status`
+		- (type/factor-local/property)&<#File.Status[Status]>
+		
 (signature)`fs_status(self)`
 
 Construct a data structure representing the latest status of the file.
-
-
-[ File >> fs_update ]
-! CONTROL:
-	/type/
-		abstractmethod
-	/element/
-		- (control)`property-set`
-		- (source/area)`335 2 356 16`
-(signature)`fs_update(self, name, size, created, modified)`
-
-Update the status properties of the file identified by (factor-local/parameter)&<#File.fs_update.Parameters.self[self]>.
-If no arguments are supplied, not changes will be performed.
-
-[ >> Parameters ]
-
-/(parameter)`self`/
-	
-	(control/absent)`Undocumented`.
-
-/(parameter)`name`/
-	
-	Change the identifier used to select the file relative to
-	its parent directory.
-
-/(parameter)`size`/
-	
-	Adjust the size of the file, truncating or zero-padding as needed.
-
-/(parameter)`created`/
-	
-	The time that the file was said to be created.
-
-/(parameter)`modified`/
-	
-	The time that the file was said to be modified.
 
 
 [ File >> fs_load ]
@@ -708,7 +1124,9 @@ If no arguments are supplied, not changes will be performed.
 		abstractmethod
 	/element/
 		- (control)`property-set`
-		- (source/area)`357 2 363 16`
+		- (source/area)`541 2 547 16`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`3`
 		- (type/syntax)`bytes`
 		- (type/invalid/unknown)&<#bytes>
 		
@@ -723,7 +1141,9 @@ Retrieve the binary data stored at the location identified by (factor-local/para
 		abstractmethod
 	/element/
 		- (control)`property-set`
-		- (source/area)`364 2 370 16`
+		- (source/area)`548 2 554 16`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 (signature)`fs_store(self, data)`
 
 Store the given (factor-local/parameter)&<#File.fs_store.Parameters.data[data]> at the location referenced by (factor-local/parameter)&<#File.fs_store.Parameters.self[self]>.
@@ -735,7 +1155,9 @@ Store the given (factor-local/parameter)&<#File.fs_store.Parameters.data[data]> 
 		abstractmethod
 	/element/
 		- (control)`property-set`
-		- (source/area)`371 2 379 16`
+		- (source/area)`555 2 573 16`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`3`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -745,6 +1167,36 @@ A string identifying the type of file selected by the (invalid/unknown)&<#Route>
 Often a shorthand for accessing the type from the structure
 returned by (factor-local/abstractmethod)&<#File.fs_status[fs_status]>.
 
+[ >> Returns ]
+
+- `'directory'`
+- `'data'`
+- `'pipe'`
+- `'socket'`
+- `'device'`
+- `'void'`
+
+If no file is present at the path or a broken link is present, `'void'` will be returned.
+
+
+[ File >> fs_size ]
+! CONTROL:
+	/type/
+		abstractmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`574 2 582 16`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`3`
+		- (type/syntax)`int`
+		- (type/invalid/unknown)&<#int>
+		
+(signature)`fs_size(self)`
+
+Return the size, count of bytes, of the file's content.
+
+- `file.fs_size() == file.fs_status().size`
+
 
 [ File >> fs_executable ]
 ! CONTROL:
@@ -752,7 +1204,9 @@ returned by (factor-local/abstractmethod)&<#File.fs_status[fs_status]>.
 		abstractmethod
 	/element/
 		- (control)`property-set`
-		- (source/area)`380 2 388 16`
+		- (source/area)`583 2 591 16`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`3`
 		- (type/syntax)`bool`
 		- (type/invalid/unknown)&<#bool>
 		
@@ -769,7 +1223,9 @@ Directories marked as executable are not considered executables.
 		abstractmethod
 	/element/
 		- (control)`property-set`
-		- (source/area)`389 2 397 16`
+		- (source/area)`592 2 600 16`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`3`
 		- (type/syntax)`bool`
 		- (type/invalid/unknown)&<#bool>
 		
@@ -780,13 +1236,66 @@ Whether or not the directory's listing can be retrieved.
 Regular files marked as executable are not considered searchable.
 
 
+[ File >> fs_since ]
+! CONTROL:
+	/type/
+		abstractmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`601 2 614 16`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`3`
+		- (type/syntax)`Iterable[File]`
+		
+(signature)`fs_since(self, time, inverse)`
+
+Select data files within the path, (factor-local/parameter)&<#File.fs_since.Parameters.self[self]>, whose modification time exceeds (factor-local/parameter)&<#File.fs_since.Parameters.time[time]>.
+
+[ >> Parameters ]
+
+/(parameter)`self`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`time`/
+	- (type/syntax)`object|None=`
+	
+	The referennce time. When unspecified as (invalid/unknown)&<#None>, the modification time
+	of the directory identified by (factor-local/parameter)&<#File.fs_since.Parameters.self[self]> is used.
+
+/(parameter)`inverse`/
+	- (type/syntax)`bool`
+	- (type/invalid/unknown)&<#bool>
+	
+	Select files modified before (factor-local/parameter)&<#File.fs_since.Parameters.time[time]> when (invalid/unknown)&<#True>.
+
+
+[ File >> fs_modified ]
+! CONTROL:
+	/type/
+		abstractmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`615 2 624 16`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
+(signature)`fs_modified(self)`
+
+Update the modification time of the file identified by (factor-local/parameter)&<#File.fs_modified.Parameters.self[self]>.
+
+The new modification time should reflect the real clock's status on the system
+managing the file.
+
+
 [ File >> fs_snapshot ]
 ! CONTROL:
 	/type/
 		abstractmethod
 	/element/
 		- (control)`property-set`
-		- (source/area)`398 2 424 27`
+		- (source/area)`625 2 653 16`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`3`
 		- (type/syntax)`Sequence[Element]`
 		
 (signature)`fs_snapshot(self)`
@@ -806,4 +1315,61 @@ as `'exception'` elements that are filtered by (invalid/unknown)&<#process> by d
 
 The sequence of elements that represent the directory's listing
 according to the given arguments.
+
+
+[ File >> fs_iterfiles ]
+! CONTROL:
+	/type/
+		abstractmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`654 2 664 16`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`3`
+		- (type/syntax)`Iterable[File]`
+		
+(signature)`fs_iterfiles()`
+
+Generate (factor-local/class)&<#File[File]> instances identifying the files held by the directory, (invalid/unknown)&<#self>.
+By default, all file types are included, but if the (factor-local/parameter)&<#File.fs_iterfiles.Parameters.type[type]> parameter is given,
+only files of that type are returned.
+
+If (invalid/unknown)&<#self> is not a directory or cannot be searched, an empty iterator is returned.
+
+
+[ File >> fs_list ]
+! CONTROL:
+	/type/
+		abstractmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`665 2 674 16`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`3`
+		- (type/syntax)`tuple[list[File], list[File]]`
+		
+(signature)`fs_list(self)`
+
+Retrieve the list of files contained by the directory referred to by (factor-local/parameter)&<#File.fs_list.Parameters.self[self]>.
+Returns a pair, the sequence of directories and the sequence of data files.
+
+Sockets, pipes, devices, and other non-data files are not retained in the list.
+
+
+[ File >> fs_index ]
+! CONTROL:
+	/type/
+		abstractmethod
+	/element/
+		- (control)`property-set`
+		- (source/area)`675 2 681 27`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`3`
+		- (type/syntax)`Iterable[tuple[File, list[File]]]`
+		
+(signature)`fs_index(self)`
+
+Generate pairs of directories associated with their files.
+
+Sockets, pipes, devices, broken links, and other non-data files are not retained in the lists.
 

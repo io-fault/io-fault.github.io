@@ -5,12 +5,7 @@
 		- (control)`property-set`
 		- (source/area)`1 1 32 0`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`21`
-		- (metrics/profile-duration)`2385000`
-		- (metrics/profile-count)`4`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`2385000`
-		- (metrics/profile-maximum)`2385000`
+		- (coverage-counters)`0`
 Validate Serialization
 
 
@@ -33,13 +28,6 @@ Validate Serialization
 	/element/
 		- (control)`property-set`
 		- (source/area)`7 1 12 53`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
-		- (metrics/profile-duration)`141000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`141000`
-		- (metrics/profile-maximum)`141000`
 (signature)`test_escapes(test)`
 
 
@@ -52,13 +40,6 @@ Validate Serialization
 	/element/
 		- (control)`property-set`
 		- (source/area)`14 1 23 39`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`9`
-		- (metrics/profile-duration)`164000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`164000`
-		- (metrics/profile-maximum)`164000`
 (signature)`test_attribute(test)`
 
 
@@ -71,12 +52,5 @@ Validate Serialization
 	/element/
 		- (control)`property-set`
 		- (source/area)`25 1 32 78`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
-		- (metrics/profile-duration)`159000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`159000`
-		- (metrics/profile-maximum)`159000`
 (signature)`test_root_pi(test)`
 

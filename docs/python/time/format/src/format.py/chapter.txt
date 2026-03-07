@@ -6,11 +6,11 @@
 		- (source/area)`1 1 308 0`
 		- (coverage-zeros)`9`
 		- (coverage-counters)`132`
-		- (metrics/profile-duration)`12937`
-		- (metrics/profile-count)`822`
+		- (metrics/profile-duration)`10811`
+		- (metrics/profile-count)`744`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`7000`
-		- (metrics/profile-maximum)`34000`
+		- (metrics/profile-minimum)`8000`
+		- (metrics/profile-maximum)`61000`
 Format and parse datetime strings.
 
 Primarily this module exposes two functions: (factor-local/function)&<#parser[parser]>,
@@ -177,7 +177,7 @@ libformat can raise subclasses of (project-local/unknown)&<core#FormatError[core
 		- (source/area)`33 1 40 28`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
-		- (metrics/profile-duration)`1876`
+		- (metrics/profile-duration)`1082`
 		- (metrics/profile-count)`73`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
@@ -196,11 +196,11 @@ libformat can raise subclasses of (project-local/unknown)&<core#FormatError[core
 		- (source/area)`42 1 72 2`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`13`
-		- (metrics/profile-duration)`6777`
+		- (metrics/profile-duration)`5666`
 		- (metrics/profile-count)`9`
-		- (metrics/profile-residency)`91.8032786885246`
-		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`20000`
+		- (metrics/profile-residency)`80.3921568627451`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`18000`
 (signature)`parse_rfc1123(s)`
 
 
@@ -215,11 +215,11 @@ libformat can raise subclasses of (project-local/unknown)&<core#FormatError[core
 		- (source/area)`74 1 127 2`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`32`
-		- (metrics/profile-duration)`17859`
+		- (metrics/profile-duration)`17577`
 		- (metrics/profile-count)`71`
-		- (metrics/profile-residency)`89.58990536277604`
-		- (metrics/profile-minimum)`2000`
-		- (metrics/profile-maximum)`66000`
+		- (metrics/profile-residency)`90.7051282051282`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`74000`
 (signature)`parse_iso8601(s)`
 
 
@@ -251,11 +251,11 @@ libformat can raise subclasses of (project-local/unknown)&<core#FormatError[core
 		- (source/area)`134 1 153 2`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`14279`
+		- (metrics/profile-duration)`13955`
 		- (metrics/profile-count)`68`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`2000`
-		- (metrics/profile-maximum)`52000`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`61000`
 (signature)`transform_iso8601(args)`
 
 
@@ -270,11 +270,11 @@ libformat can raise subclasses of (project-local/unknown)&<core#FormatError[core
 		- (source/area)`155 1 171 2`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`2714`
+		- (metrics/profile-duration)`2428`
 		- (metrics/profile-count)`7`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`8000`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`10000`
 (signature)`transform_rfc1123(args)`
 
 
@@ -306,11 +306,11 @@ libformat can raise subclasses of (project-local/unknown)&<core#FormatError[core
 		- (source/area)`178 1 190 11`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`8`
-		- (metrics/profile-duration)`1166`
+		- (metrics/profile-duration)`666`
 		- (metrics/profile-count)`6`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`2000`
+		- (metrics/profile-maximum)`3000`
 (signature)`validate_rfc1123(args)`
 
 
@@ -355,11 +355,11 @@ libformat can raise subclasses of (project-local/unknown)&<core#FormatError[core
 		- (source/area)`198 1 209 17`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`9`
-		- (metrics/profile-duration)`1832`
-		- (metrics/profile-count)`1666`
+		- (metrics/profile-duration)`1006`
+		- (metrics/profile-count)`1510`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`8000`
+		- (metrics/profile-maximum)`4000`
 (signature)`_parse(fun, format)`
 
 
@@ -374,11 +374,11 @@ libformat can raise subclasses of (project-local/unknown)&<core#FormatError[core
 		- (source/area)`211 1 222 17`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`9`
-		- (metrics/profile-duration)`5188`
-		- (metrics/profile-count)`1666`
+		- (metrics/profile-duration)`1542`
+		- (metrics/profile-count)`1510`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`1534000`
+		- (metrics/profile-maximum)`24000`
 (signature)`_structure(fun, format)`
 
 
@@ -393,11 +393,11 @@ libformat can raise subclasses of (project-local/unknown)&<core#FormatError[core
 		- (source/area)`224 1 235 17`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`9`
-		- (metrics/profile-duration)`5375`
-		- (metrics/profile-count)`1666`
+		- (metrics/profile-duration)`3409`
+		- (metrics/profile-count)`1510`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`43000`
+		- (metrics/profile-maximum)`50000`
 (signature)`_integrity(fun, format)`
 
 
@@ -410,11 +410,11 @@ libformat can raise subclasses of (project-local/unknown)&<core#FormatError[core
 		- (source/area)`237 1 250 26`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
-		- (metrics/profile-duration)`19008`
-		- (metrics/profile-count)`1666`
-		- (metrics/profile-residency)`34.78590375142099`
+		- (metrics/profile-duration)`12601`
+		- (metrics/profile-count)`1510`
+		- (metrics/profile-residency)`40.25960376267802`
 		- (metrics/profile-minimum)`8000`
-		- (metrics/profile-maximum)`1553000`
+		- (metrics/profile-maximum)`92000`
 (signature)`parser(fmt)`
 
 Given a format idenifier, return the function that can be used to parse
@@ -446,11 +446,11 @@ the formatted string into a Point instance.
 		- (source/area)`265 1 274 37`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
-		- (metrics/profile-duration)`6000`
+		- (metrics/profile-duration)`4583`
 		- (metrics/profile-count)`12`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`2000`
-		- (metrics/profile-maximum)`20000`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`14000`
 (signature)`format_iso8601(pitt, subsec, dow)`
 
 
@@ -465,11 +465,11 @@ the formatted string into a Point instance.
 		- (source/area)`276 1 277 23`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
-		- (metrics/profile-duration)`19000`
+		- (metrics/profile-duration)`19500`
 		- (metrics/profile-count)`2`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`2000`
-		- (metrics/profile-maximum)`36000`
+		- (metrics/profile-maximum)`37000`
 (signature)`format_iso8601_date(pitt, subsec, dow)`
 
 
@@ -499,11 +499,11 @@ the formatted string into a Point instance.
 		- (source/area)`284 1 289 36`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`830`
-		- (metrics/profile-count)`1644`
+		- (metrics/profile-duration)`0`
+		- (metrics/profile-count)`1488`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`57000`
+		- (metrics/profile-maximum)`1000`
 (signature)`formatter(fmt)`
 
 Given a format idenifier, return the function that can be used to format
@@ -538,10 +538,10 @@ the Point in time.
 		- (source/area)`296 1 308 59`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`8`
-		- (metrics/profile-duration)`54188`
-		- (metrics/profile-count)`822`
-		- (metrics/profile-residency)`26.81229373863458`
-		- (metrics/profile-minimum)`33000`
-		- (metrics/profile-maximum)`1621000`
+		- (metrics/profile-duration)`38174`
+		- (metrics/profile-count)`744`
+		- (metrics/profile-residency)`29.72677980423914`
+		- (metrics/profile-minimum)`34000`
+		- (metrics/profile-maximum)`114000`
 (signature)`context(context)`
 

@@ -6,11 +6,11 @@
 		- (source/area)`1 1 116 0`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`36`
-		- (metrics/profile-duration)`42000`
+		- (metrics/profile-duration)`49000`
 		- (metrics/profile-count)`4`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`42000`
-		- (metrics/profile-maximum)`42000`
+		- (metrics/profile-minimum)`49000`
+		- (metrics/profile-maximum)`49000`
 Naive prefix searching implementations.
 
 
@@ -77,11 +77,11 @@ it may be a reasonable implmentation selection.
 		- (source/area)`33 2 56 20`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
-		- (metrics/profile-duration)`7666`
+		- (metrics/profile-duration)`13666`
 		- (metrics/profile-count)`3`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`7000`
-		- (metrics/profile-maximum)`9000`
+		- (metrics/profile-minimum)`11000`
+		- (metrics/profile-maximum)`19000`
 (signature)`__init__(self, sequences, offset, order)`
 
 Create a SubsequenceScan from the given set of sequences.
@@ -162,11 +162,11 @@ Remove values from the set of sequences.
 		- (source/area)`80 2 92 11`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
-		- (metrics/profile-duration)`2294`
+		- (metrics/profile-duration)`2941`
 		- (metrics/profile-count)`17`
-		- (metrics/profile-residency)`94.87179487179488`
+		- (metrics/profile-residency)`96.00000000000001`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`7000`
+		- (metrics/profile-maximum)`17000`
 (signature)`matches(self, key)`
 
 Identify all strings in the set that match the given key based
@@ -184,11 +184,11 @@ on the configured offset.
 		- (source/area)`94 2 97 16`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`3000`
+		- (metrics/profile-duration)`3500`
 		- (metrics/profile-count)`2`
-		- (metrics/profile-residency)`83.33333333333334`
-		- (metrics/profile-minimum)`3000`
-		- (metrics/profile-maximum)`3000`
+		- (metrics/profile-residency)`85.71428571428571`
+		- (metrics/profile-minimum)`2000`
+		- (metrics/profile-maximum)`5000`
 (signature)`get(self, key)`
 
 
@@ -203,11 +203,11 @@ on the configured offset.
 		- (source/area)`99 2 102 14`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
-		- (metrics/profile-duration)`3000`
+		- (metrics/profile-duration)`3500`
 		- (metrics/profile-count)`2`
-		- (metrics/profile-residency)`66.66666666666666`
-		- (metrics/profile-minimum)`3000`
-		- (metrics/profile-maximum)`3000`
+		- (metrics/profile-residency)`57.14285714285714`
+		- (metrics/profile-minimum)`2000`
+		- (metrics/profile-maximum)`5000`
 (signature)`__contains__(self, key)`
 
 
@@ -220,11 +220,11 @@ on the configured offset.
 		- (source/area)`104 2 110 21`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
-		- (metrics/profile-duration)`5900`
+		- (metrics/profile-duration)`8200`
 		- (metrics/profile-count)`10`
-		- (metrics/profile-residency)`49.152542372881356`
+		- (metrics/profile-residency)`41.46341463414634`
 		- (metrics/profile-minimum)`3000`
-		- (metrics/profile-maximum)`11000`
+		- (metrics/profile-maximum)`24000`
 (signature)`__getitem__(self, key)`
 
 Get the first match in the set of strings.
@@ -241,10 +241,10 @@ Get the first match in the set of strings.
 		- (source/area)`112 2 113 29`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
-		- (metrics/profile-duration)`1000`
+		- (metrics/profile-duration)`500`
 		- (metrics/profile-count)`2`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-minimum)`0`
 		- (metrics/profile-maximum)`1000`
 (signature)`values(self)`
 

@@ -3,9 +3,9 @@
 		module
 	/element/
 		- (control)`property-set`
-		- (source/area)`1 1 135 0`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`0`
+		- (source/area)`1 1 198 0`
+		- (coverage-zeros)`11`
+		- (coverage-counters)`127`
 Metrics aggregation command interface.
 
 Target executable for rendering metrics.
@@ -31,6 +31,8 @@ Process the content of the work directory in conjunction with telemetry data.
 	/element/
 		- (control)`property-set`
 		- (source/area)`8 1 8 11`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ collections ]
 ! CONTROL:
@@ -41,6 +43,8 @@ Process the content of the work directory in conjunction with telemetry data.
 	/element/
 		- (control)`property-set`
 		- (source/area)`9 1 9 18`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ process ]
 ! CONTROL:
@@ -51,6 +55,8 @@ Process the content of the work directory in conjunction with telemetry data.
 	/element/
 		- (control)`property-set`
 		- (source/area)`10 1 10 32`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ files ]
 ! CONTROL:
@@ -61,6 +67,8 @@ Process the content of the work directory in conjunction with telemetry data.
 	/element/
 		- (control)`property-set`
 		- (source/area)`11 1 11 30`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ calculations ]
 ! CONTROL:
@@ -71,6 +79,32 @@ Process the content of the work directory in conjunction with telemetry data.
 	/element/
 		- (control)`property-set`
 		- (source/area)`13 1 13 26`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
+
+[ coverage ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`14 1 14 22`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
+
+[ capture ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`15 1 15 21`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ first ]
 ! CONTROL:
@@ -80,9 +114,11 @@ Process the content of the work directory in conjunction with telemetry data.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`14 1 14 30`
+		- (source/area)`17 1 17 30`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
-	from . import coverage
+	first = operator.itemgetter(0)
 
 [ integrate_test_reports ]
 ! CONTROL:
@@ -92,8 +128,10 @@ Process the content of the work directory in conjunction with telemetry data.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`16 1 30 46`
-(signature)`integrate_test_reports(output, cache, telemetry)`
+		- (source/area)`19 1 33 48`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`8`
+(signature)`integrate_test_reports(output, cache, telemetry, delineated)`
 
 
 [ integrate_syntax_profiles ]
@@ -104,7 +142,9 @@ Process the content of the work directory in conjunction with telemetry data.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`32 1 35 19`
+		- (source/area)`35 1 38 19`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`integrate_syntax_profiles(path, sources)`
 
 
@@ -114,7 +154,9 @@ Process the content of the work directory in conjunction with telemetry data.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`37 1 48 10`
+		- (source/area)`40 1 51 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`7`
 (signature)`regroup_coverage(consolidated)`
 
 Given consolidated coverage data, regroup the key so
@@ -127,13 +169,15 @@ that all producers (tests) are under a single path key.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`50 1 67 10`
+		- (source/area)`53 1 70 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`11`
 (signature)`structure_coverage(consolidated)`
 
 Structure regrouped, consolidated coverage for JSON serialization.
 
 
-[ integrate_coverage_areas ]
+[ integrate_coverage_maps ]
 ! CONTROL:
 	/type/
 		function
@@ -141,8 +185,10 @@ Structure regrouped, consolidated coverage for JSON serialization.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`69 1 87 21`
-(signature)`integrate_coverage_areas(output, cache, telemetry, pfp, sfp)`
+		- (source/area)`72 1 90 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`13`
+(signature)`integrate_coverage_maps(output, cache, telemetry, delineated, pfp, sfp)`
 
 
 [ integrate_coverage_capture ]
@@ -153,8 +199,24 @@ Structure regrouped, consolidated coverage for JSON serialization.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`89 1 119 48`
-(signature)`integrate_coverage_capture(output, cache, telemetry, pfp, sfp)`
+		- (source/area)`92 1 132 48`
+		- (coverage-zeros)`8`
+		- (coverage-counters)`25`
+(signature)`integrate_coverage_capture(regions, output, cache, telemetry, delineated, pfp, sfp)`
+
+
+[ integrate_captured_ru ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`134 1 180 24`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`37`
+(signature)`integrate_captured_ru(output, telemetry)`
 
 
 [ main ]
@@ -165,7 +227,9 @@ Structure regrouped, consolidated coverage for JSON serialization.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`121 1 135 19`
+		- (source/area)`182 1 198 19`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`13`
 		- (type/syntax)`process.Exit`
 		- (type/remote/factor-element)&<http://fault.io/python/system/process#Exit[fault.system.process.Exit]>
 		

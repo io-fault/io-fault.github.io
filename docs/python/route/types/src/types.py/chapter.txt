@@ -3,14 +3,14 @@
 		module
 	/element/
 		- (control)`property-set`
-		- (source/area)`1 1 84 0`
-		- (coverage-zeros)`12`
-		- (coverage-counters)`36`
-		- (metrics/profile-duration)`97640`
-		- (metrics/profile-count)`3490`
+		- (source/area)`1 1 161 0`
+		- (coverage-zeros)`17`
+		- (coverage-counters)`59`
+		- (metrics/profile-duration)`87297`
+		- (metrics/profile-count)`1093`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`39000`
-		- (metrics/profile-maximum)`1929000`
+		- (metrics/profile-minimum)`51000`
+		- (metrics/profile-maximum)`449000`
 Segment and Selector implementation access.
 
 
@@ -104,11 +104,6 @@ Sequence of identifiers that may be incorporated into a selector subclass.
 		- (source/area)`17 2 19 46`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`5000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`5000`
-		- (metrics/profile-maximum)`5000`
 (signature)`__str__(self)`
 
 
@@ -119,13 +114,8 @@ Sequence of identifiers that may be incorporated into a selector subclass.
 	/element/
 		- (control)`property-set`
 		- (source/area)`21 2 29 14`
-		- (coverage-zeros)`0`
+		- (coverage-zeros)`3`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`3156`
-		- (metrics/profile-count)`689`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`2000`
-		- (metrics/profile-maximum)`13000`
 (signature)`__bool__(self)`
 
 True is the segment has any points; False if zero.
@@ -151,7 +141,7 @@ True is the segment has any points; False if zero.
 		class
 	/element/
 		- (control)`property-set`
-		- (source/area)`47 1 84 54`
+		- (source/area)`47 1 90 41`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
 ! INHERIT:
@@ -172,13 +162,13 @@ by the sequence of identifiers contained within the selector instance.
 	/element/
 		- (control)`property-set`
 		- (source/area)`55 2 74 32`
-		- (coverage-zeros)`0`
+		- (coverage-zeros)`1`
 		- (coverage-counters)`10`
-		- (metrics/profile-duration)`14397`
-		- (metrics/profile-count)`1349312`
+		- (metrics/profile-duration)`10415`
+		- (metrics/profile-count)`64440`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`342350000`
+		- (metrics/profile-maximum)`9346000`
 		- (type/syntax)`Segment`
 		- (type/factor-local/parameter)&<#Selector.segment.Parameters.Segment[Segment]>
 		
@@ -211,11 +201,11 @@ If stem is not given, the entire selector will be converted.
 	/element/
 		- (control)`property-set`
 		- (source/area)`80 2 82 13`
-		- (metrics/profile-duration)`333`
-		- (metrics/profile-count)`3`
+		- (metrics/profile-duration)`96`
+		- (metrics/profile-count)`31`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`1000`
+		- (metrics/profile-maximum)`2000`
 (signature)`__bool__(self)`
 
 
@@ -232,3 +222,159 @@ If stem is not given, the entire selector will be converted.
 		- (coverage-counters)`1`
 #!source
 	_relative_resolution = staticmethod(rewrite.relative)
+
+[ Selector >> suffix ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`86 2 87 41`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
+		- (metrics/profile-duration)`21243`
+		- (metrics/profile-count)`94016`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`5000`
+		- (metrics/profile-maximum)`3060000`
+(signature)`suffix(self, delta)`
+
+
+[ Selector >> prefix ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`89 2 90 41`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
+		- (metrics/profile-duration)`8000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`8000`
+		- (metrics/profile-maximum)`8000`
+(signature)`prefix(self, delta)`
+
+
+[ RequirementViolation ]
+! CONTROL:
+	/type/
+		class
+	/element/
+		- (control)`property-set`
+		- (source/area)`92 1 161 26`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
+! INHERIT:
+	- (control)`property-set`
+	- (source/area)`92 28 92 36`
+	- (type/syntax)`Exception`
+	- (type/invalid/unknown)&<#Exception>
+	
+Exception raised by (project-local/unknown)&<abstract#Path.fs_require[abstract.Path.fs_require]> when requirements are not met.
+
+[ > Properties ]
+
+/r_violation/
+	The subtype declaring the kind of violation that occurred.
+
+	/`'void'`/
+		File did not exist.
+
+	/`'inaccessible'`/
+		Path traversed through a non-directory file,
+		or had insufficient permissions on the leading path.
+
+	/`'type'`/
+		The (invalid/unknown)&<#r_type> did not match the (invalid/unknown)&<#fs_type>.
+
+	/`'directory'`/
+		The file identified by the path is a directory.
+
+	/`'prohibited'`/
+		The required permissions stated in (invalid/unknown)&<#r_properties>
+		were not available to the process.
+
+/r_type/
+	The required type issued to (project-local/unknown)&<abstract#Path.fs_require[abstract.Path.fs_require]>.
+
+/r_properties/
+	The required properties issued to (project-local/unknown)&<abstract#Path.fs_require[abstract.Path.fs_require]>.
+
+/fs_type/
+	The type of the file identified by (project-local/unknown)&<abstract#Path.fs_type[abstract.Path.fs_type]>.
+
+/fs_path/
+	The path to the subject file.
+
+/type_codes/
+	The character codes used by (project-local/unknown)&<abstract#Path.fs_require[abstract.Path.fs_require]>;
+	also defined by (project-local/unknown)&<abstract#Types[abstract.Types]>
+
+
+[ RequirementViolation >> type_codes ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`124 2 134 2`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
+#!source
+	type_codes = {
+		'*': None,
+		'/': 'directory',
+		'.': 'data',
+		'#': 'device',
+		'@': 'socket',
+		'|': 'pipe',
+		'&': 'link',
+		'!': 'void',
+		'?': 'unknown',
+	}
+
+[ RequirementViolation >> __init__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`136 2 142 32`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`5`
+		- (metrics/profile-duration)`3428`
+		- (metrics/profile-count)`7`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`6000`
+(signature)`__init__(self, subject, type, violation, rtype, properties)`
+
+
+[ RequirementViolation >> __str__ ]
+! CONTROL:
+	/type/
+		method
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`144 2 161 26`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`14`
+		- (metrics/profile-duration)`16285`
+		- (metrics/profile-count)`7`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`8000`
+		- (metrics/profile-maximum)`23000`
+(signature)`__str__(self)`
+

@@ -3,7 +3,7 @@
 		module
 	/element/
 		- (control)`property-set`
-		- (source/area)`1 1 292 0`
+		- (source/area)`1 1 293 0`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`0`
 Service configuration interfaces.
@@ -51,7 +51,7 @@ Manages the service state stored on disk.
 		- (control)`property-set`
 		- (source/area)`18 1 18 16`
 
-[ Path ]
+[ files ]
 ! CONTROL:
 	/type/
 		import
@@ -59,7 +59,17 @@ Manages the service state stored on disk.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`20 1 20 35`
+		- (source/area)`20 1 20 30`
+
+[ process ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`21 1 21 32`
 
 [ query ]
 ! CONTROL:
@@ -69,7 +79,7 @@ Manages the service state stored on disk.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`21 1 21 30`
+		- (source/area)`22 1 22 30`
 
 [ libexec ]
 ! CONTROL:
@@ -79,7 +89,7 @@ Manages the service state stored on disk.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`22 1 22 45`
+		- (source/area)`23 1 23 45`
 
 [ environment ]
 ! CONTROL:
@@ -89,7 +99,7 @@ Manages the service state stored on disk.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`24 1 24 23`
+		- (source/area)`25 1 25 23`
 #!source
 	environment = 'DAEMONS'
 
@@ -101,7 +111,7 @@ Manages the service state stored on disk.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`25 1 25 39`
+		- (source/area)`26 1 26 39`
 #!source
 	default_route = query.home() / '.rootd'
 
@@ -113,7 +123,7 @@ Manages the service state stored on disk.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`26 1 26 44`
+		- (source/area)`27 1 27 44`
 #!source
 	default_daemons = default_route * '.daemons'
 
@@ -123,7 +133,7 @@ Manages the service state stored on disk.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`28 1 41 31`
+		- (source/area)`29 1 42 25`
 (signature)`identify_route()`
 
 Return the service directory route.
@@ -135,7 +145,7 @@ Return the service directory route.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`43 1 52 13`
+		- (source/area)`44 1 53 13`
 (signature)`service_routes(route)`
 
 Collect the routes to the set of services in the directory.
@@ -150,7 +160,7 @@ Regular files existing in (factor-local/parameter)&<#service_routes.Parameters.r
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`54 1 54 85`
+		- (source/area)`55 1 55 85`
 #!source
 	_actuation_map = {'enabled':True, 'disabled':False, True:'enabled', False:'disabled'}
 
@@ -160,10 +170,10 @@ Regular files existing in (factor-local/parameter)&<#service_routes.Parameters.r
 		class
 	/element/
 		- (control)`property-set`
-		- (source/area)`56 1 292 53`
+		- (source/area)`57 1 293 53`
 ! INHERIT:
 	- (control)`property-set`
-	- (source/area)`56 21 56 26`
+	- (source/area)`57 21 57 26`
 	- (type/syntax)`object`
 	- (type/invalid/unknown)&<#object>
 	
@@ -176,7 +186,7 @@ Service configuration storage interface.
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`61 2 65 44`
+		- (source/area)`62 2 66 44`
 (signature)`initialized(self)`
 
 Whether the service's configuration directory exists.
@@ -188,7 +198,7 @@ Whether the service's configuration directory exists.
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`67 2 77 19`
+		- (source/area)`68 2 78 19`
 (signature)`prepare(self)`
 
 Create the service directory.
@@ -200,7 +210,7 @@ Create the service directory.
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`79 2 84 22`
+		- (source/area)`80 2 85 22`
 (signature)`void(self)`
 
 Destroy the service directory.
@@ -214,7 +224,7 @@ Destroy the service directory.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`86 2 94 3`
+		- (source/area)`87 2 95 3`
 (signature)`snapshot(self)`
 
 
@@ -226,7 +236,7 @@ Destroy the service directory.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`96 2 96 78`
+		- (source/area)`97 2 97 78`
 #!source
 	fields = ('executable', 'parameters', 'environment', 'abstract', 'actuation')
 
@@ -236,7 +246,7 @@ Destroy the service directory.
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`98 2 105 27`
+		- (source/area)`99 2 106 27`
 (signature)`update(self, fm)`
 
 Overwrite configuration fields present in the given mapping, (factor-local/parameter)&<#Configuration.update.Parameters.fm[fm]>.
@@ -249,7 +259,7 @@ No merge logic is applied; the value in the mapping will replace the attribute v
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`107 2 123 29`
+		- (source/area)`108 2 124 29`
 (signature)`__init__(self, route, identifier)`
 
 Initialize the Service structure selecting the (factor-local/parameter)&<#Configuration.__init__.Parameters.route[route]> as its
@@ -265,7 +275,7 @@ a service at all.
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`125 2 133 6`
+		- (source/area)`126 2 134 6`
 (signature)`trim(self)`
 
 Trim the critical log in the service's directory.
@@ -280,7 +290,7 @@ Trim the critical log in the service's directory.
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`135 2 140 49`
+		- (source/area)`136 2 141 49`
 (signature)`execution(self)`
 
 Return a tuple consisting of the executable and the parameters.
@@ -292,7 +302,7 @@ Return a tuple consisting of the executable and the parameters.
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`142 2 166 14`
+		- (source/area)`143 2 167 14`
 (signature)`execute(self)`
 
 Execute the service replacing the process image. (factor-local/method)&<#Configuration.execute[execute]> does not return.
@@ -311,7 +321,7 @@ A call to (factor-local/method)&<#Configuration.load[load]> prior to running thi
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`168 2 179 68`
+		- (source/area)`169 2 180 68`
 (signature)`create(self)`
 
 Create the service directory and initialize many of the configuration files.
@@ -323,7 +333,7 @@ Create the service directory and initialize many of the configuration files.
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`181 2 186 39`
+		- (source/area)`182 2 187 39`
 (signature)`exists(self)`
 
 Whether or not the service directory exists.
@@ -335,7 +345,7 @@ Whether or not the service directory exists.
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`188 2 208 13`
+		- (source/area)`189 2 209 13`
 (signature)`isconsistent(self)`
 
 Whether the stored configuration has the necessary
@@ -348,7 +358,7 @@ on-disk structure for supporting a rootd Service.
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`210 2 217 22`
+		- (source/area)`211 2 218 22`
 (signature)`load(self)`
 
 Load the service definition from the filesystem.
@@ -360,7 +370,7 @@ Load the service definition from the filesystem.
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`219 2 227 24`
+		- (source/area)`220 2 228 24`
 (signature)`store(self)`
 
 Store the service definition to the filesystem.
@@ -374,7 +384,7 @@ Store the service definition to the filesystem.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`229 2 231 62`
+		- (source/area)`230 2 232 62`
 (signature)`load_abstract(self)`
 
 
@@ -386,7 +396,7 @@ Store the service definition to the filesystem.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`233 2 235 44`
+		- (source/area)`234 2 236 44`
 (signature)`store_abstract(self)`
 
 
@@ -398,7 +408,7 @@ Store the service definition to the filesystem.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`237 2 244 25`
+		- (source/area)`238 2 245 25`
 (signature)`load_invocation(self)`
 
 
@@ -410,7 +420,7 @@ Store the service definition to the filesystem.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`246 2 253 38`
+		- (source/area)`247 2 254 38`
 (signature)`store_invocation(self)`
 
 
@@ -422,7 +432,7 @@ Store the service definition to the filesystem.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`255 2 258 39`
+		- (source/area)`256 2 259 39`
 (signature)`load_actuation(self)`
 
 
@@ -434,7 +444,7 @@ Store the service definition to the filesystem.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`260 2 265 10`
+		- (source/area)`261 2 266 10`
 (signature)`store_actuation(self)`
 
 
@@ -446,7 +456,7 @@ Store the service definition to the filesystem.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`266 2 276 17`
+		- (source/area)`267 2 277 17`
 		- (type/syntax)`bool`
 		- (type/invalid/unknown)&<#bool>
 		
@@ -459,7 +469,7 @@ Store the service definition to the filesystem.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`277 2 284 25`
+		- (source/area)`278 2 285 25`
 (signature)`actuates(self, val)`
 
 
@@ -471,7 +481,7 @@ Store the service definition to the filesystem.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`286 2 288 41`
+		- (source/area)`287 2 289 41`
 (signature)`load_pid(self)`
 
 
@@ -483,6 +493,6 @@ Store the service definition to the filesystem.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`290 2 292 53`
+		- (source/area)`291 2 293 53`
 (signature)`store_pid(self)`
 

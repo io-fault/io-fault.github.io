@@ -4,13 +4,13 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 826 0`
-		- (coverage-zeros)`52`
+		- (coverage-zeros)`63`
 		- (coverage-counters)`384`
-		- (metrics/profile-duration)`38444`
-		- (metrics/profile-count)`9`
+		- (metrics/profile-duration)`51500`
+		- (metrics/profile-count)`4`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`26000`
-		- (metrics/profile-maximum)`52000`
+		- (metrics/profile-minimum)`45000`
+		- (metrics/profile-maximum)`58000`
 Parser implementation and supporting tools for the fault-text format.
 
 The parser is hand rolled in order to easily accommodate for grammar
@@ -119,13 +119,13 @@ implementation coherency should result in a rewrite.
 	/element/
 		- (control)`property-set`
 		- (source/area)`30 1 54 40`
-		- (coverage-zeros)`2`
+		- (coverage-zeros)`7`
 		- (coverage-counters)`13`
-		- (metrics/profile-duration)`1128`
-		- (metrics/profile-count)`7583`
+		- (metrics/profile-duration)`4333`
+		- (metrics/profile-count)`3`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`9000`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`10000`
 		- (type/syntax)`tuple[int, Sequence[str]]`
 		
 (signature)`parse_section_selector(string)`
@@ -179,11 +179,11 @@ to be processed by the appropriate context.
 		- (source/area)`65 2 66 35`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
-		- (metrics/profile-duration)`439`
-		- (metrics/profile-count)`2848`
-		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-duration)`0`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`0.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`2000`
+		- (metrics/profile-maximum)`0`
 (signature)`__init__(self, iterator)`
 
 
@@ -198,11 +198,11 @@ to be processed by the appropriate context.
 		- (source/area)`68 2 69 40`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
-		- (metrics/profile-duration)`1000`
+		- (metrics/profile-duration)`0`
 		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`1000`
+		- (metrics/profile-residency)`0.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`0`
 (signature)`replay(self, *events)`
 
 
@@ -217,11 +217,11 @@ to be processed by the appropriate context.
 		- (source/area)`71 2 72 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
-		- (metrics/profile-duration)`304`
-		- (metrics/profile-count)`47830`
-		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-duration)`0`
+		- (metrics/profile-count)`18`
+		- (metrics/profile-residency)`0.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`22000`
+		- (metrics/profile-maximum)`0`
 (signature)`__iter__(self)`
 
 
@@ -236,11 +236,11 @@ to be processed by the appropriate context.
 		- (source/area)`74 2 82 22`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
-		- (metrics/profile-duration)`20115`
-		- (metrics/profile-count)`186411`
-		- (metrics/profile-residency)`-104.73883156379975`
+		- (metrics/profile-duration)`14643`
+		- (metrics/profile-count)`87`
+		- (metrics/profile-residency)`-108.6342229199372`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`66650000`
+		- (metrics/profile-maximum)`84000`
 (signature)`__next__(self)`
 
 
@@ -290,11 +290,11 @@ Configuration and state class for parsing kleptic text.
 		- (source/area)`103 2 113 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`751`
-		- (metrics/profile-count)`2848`
+		- (metrics/profile-duration)`3000`
+		- (metrics/profile-count)`1`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`8000`
+		- (metrics/profile-minimum)`3000`
+		- (metrics/profile-maximum)`3000`
 (signature)`__init__(self)`
 
 Create a new parser instance initializing the (invalid/unknown)&<#stack> with the (factor-local/data)&<#Parser.default_commands[default_commands]>,
@@ -310,11 +310,11 @@ and (factor-local/method)&<#Parser.process_paragraph_line[process_paragraph_line
 		- (source/area)`114 2 118 27`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`357`
-		- (metrics/profile-count)`119511`
-		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-duration)`0`
+		- (metrics/profile-count)`61`
+		- (metrics/profile-residency)`0.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`4000`
+		- (metrics/profile-maximum)`0`
 Return the set of commands for the current working processor.
 
 
@@ -327,11 +327,11 @@ Return the set of commands for the current working processor.
 		- (source/area)`120 2 165 10`
 		- (coverage-zeros)`3`
 		- (coverage-counters)`16`
-		- (metrics/profile-duration)`1418`
-		- (metrics/profile-count)`4968`
+		- (metrics/profile-duration)`2142`
+		- (metrics/profile-count)`7`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`8000`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`5000`
 (signature)`reference(self, string)`
 
 Split the string at the reference's boundary.
@@ -367,11 +367,11 @@ Top of the (invalid/unknown)&<#stack>.
 		- (source/area)`173 2 174 44`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
-		- (metrics/profile-duration)`389`
-		- (metrics/profile-count)`31301`
-		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-duration)`0`
+		- (metrics/profile-count)`8`
+		- (metrics/profile-residency)`0.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`3000`
+		- (metrics/profile-maximum)`0`
 (signature)`push(self, proc, il, command_set)`
 
 
@@ -386,11 +386,11 @@ Top of the (invalid/unknown)&<#stack>.
 		- (source/area)`176 2 177 20`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
-		- (metrics/profile-duration)`360`
-		- (metrics/profile-count)`30884`
-		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-duration)`0`
+		- (metrics/profile-count)`8`
+		- (metrics/profile-residency)`0.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`3000`
+		- (metrics/profile-maximum)`0`
 (signature)`pop(self)`
 
 
@@ -403,11 +403,11 @@ Top of the (invalid/unknown)&<#stack>.
 		- (source/area)`179 2 192 14`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
-		- (metrics/profile-duration)`1167`
-		- (metrics/profile-count)`133108`
+		- (metrics/profile-duration)`229`
+		- (metrics/profile-count)`48`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`26760000`
+		- (metrics/profile-maximum)`5000`
 (signature)`is_decoration(self, stripped)`
 
 Determine if the line is a decoration.
@@ -422,11 +422,11 @@ Determine if the line is a decoration.
 		- (source/area)`193 2 227 30`
 		- (coverage-zeros)`3`
 		- (coverage-counters)`25`
-		- (metrics/profile-duration)`153894`
-		- (metrics/profile-count)`189`
-		- (metrics/profile-residency)`98.83449082032593`
-		- (metrics/profile-minimum)`9000`
-		- (metrics/profile-maximum)`26810000`
+		- (metrics/profile-duration)`19600`
+		- (metrics/profile-count)`10`
+		- (metrics/profile-residency)`89.28571428571429`
+		- (metrics/profile-minimum)`10000`
+		- (metrics/profile-maximum)`50000`
 (signature)`emphasis(text)`
 
 Return a sequence of paragraph events noting the emphasis areas versus
@@ -442,11 +442,11 @@ regular text.
 		- (source/area)`229 2 256 24`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`12`
-		- (metrics/profile-duration)`5026`
-		- (metrics/profile-count)`114909`
-		- (metrics/profile-residency)`66.10519572707284`
+		- (metrics/profile-duration)`3205`
+		- (metrics/profile-count)`34`
+		- (metrics/profile-residency)`33.94495412844037`
 		- (metrics/profile-minimum)`2000`
-		- (metrics/profile-maximum)`66609000`
+		- (metrics/profile-maximum)`12000`
 (signature)`styles(self, string, edge)`
 
 Identify the styles and references for the given string.
@@ -487,11 +487,11 @@ Identify the styles and references for the given string.
 		- (source/area)`258 2 307 18`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`23`
-		- (metrics/profile-duration)`24528`
-		- (metrics/profile-count)`77587`
-		- (metrics/profile-residency)`67.75856705676621`
-		- (metrics/profile-minimum)`6000`
-		- (metrics/profile-maximum)`66633000`
+		- (metrics/profile-duration)`13548`
+		- (metrics/profile-count)`31`
+		- (metrics/profile-residency)`52.142857142857146`
+		- (metrics/profile-minimum)`7000`
+		- (metrics/profile-maximum)`61000`
 (signature)`structure_paragraph_line(self, line)`
 
 Structure the paragraph line revealing emphasis,
@@ -505,13 +505,13 @@ references, and inline literals.
 	/element/
 		- (control)`property-set`
 		- (source/area)`309 2 326 46`
-		- (coverage-zeros)`0`
+		- (coverage-zeros)`1`
 		- (coverage-counters)`10`
-		- (metrics/profile-duration)`26695`
-		- (metrics/profile-count)`95847`
-		- (metrics/profile-residency)`16.13864412158523`
+		- (metrics/profile-duration)`15063`
+		- (metrics/profile-count)`47`
+		- (metrics/profile-residency)`17.655367231638415`
 		- (metrics/profile-minimum)`3000`
-		- (metrics/profile-maximum)`66640000`
+		- (metrics/profile-maximum)`80000`
 (signature)`process_paragraph_line(self, lineno, code, il, line)`
 
 Process a paragraph line identifying inline literals, references and emphasis.
@@ -528,11 +528,11 @@ Process a paragraph line identifying inline literals, references and emphasis.
 		- (source/area)`328 2 331 74`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
-		- (metrics/profile-duration)`3319`
-		- (metrics/profile-count)`5812`
-		- (metrics/profile-residency)`19.87043275459964`
-		- (metrics/profile-minimum)`2000`
-		- (metrics/profile-maximum)`52000`
+		- (metrics/profile-duration)`4333`
+		- (metrics/profile-count)`6`
+		- (metrics/profile-residency)`3.8461538461538463`
+		- (metrics/profile-minimum)`3000`
+		- (metrics/profile-maximum)`7000`
 (signature)`process_literal_line(self, lineno, code, il, line)`
 
 
@@ -547,11 +547,11 @@ Process a paragraph line identifying inline literals, references and emphasis.
 		- (source/area)`333 2 353 66`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`12`
-		- (metrics/profile-duration)`6984`
-		- (metrics/profile-count)`8460`
-		- (metrics/profile-residency)`34.24887038635325`
-		- (metrics/profile-minimum)`4000`
-		- (metrics/profile-maximum)`46000`
+		- (metrics/profile-duration)`14333`
+		- (metrics/profile-count)`3`
+		- (metrics/profile-residency)`32.55813953488372`
+		- (metrics/profile-minimum)`7000`
+		- (metrics/profile-maximum)`26000`
 (signature)`select_section(self, lineno, code, il, line)`
 
 
@@ -564,11 +564,11 @@ Process a paragraph line identifying inline literals, references and emphasis.
 		- (source/area)`355 2 370 61`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`9`
-		- (metrics/profile-duration)`11384`
-		- (metrics/profile-count)`8257`
-		- (metrics/profile-residency)`24.987499867019864`
-		- (metrics/profile-minimum)`10000`
-		- (metrics/profile-maximum)`88000`
+		- (metrics/profile-duration)`16000`
+		- (metrics/profile-count)`2`
+		- (metrics/profile-residency)`18.75`
+		- (metrics/profile-minimum)`11000`
+		- (metrics/profile-maximum)`21000`
 (signature)`create_admonition(self, lineno, code, il, line)`
 
 Lines that begin with "!":
@@ -586,11 +586,11 @@ Lines that begin with "!":
 		- (source/area)`372 2 381 61`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
-		- (metrics/profile-duration)`10915`
-		- (metrics/profile-count)`1135`
-		- (metrics/profile-residency)`22.988134635563807`
+		- (metrics/profile-duration)`10666`
+		- (metrics/profile-count)`3`
+		- (metrics/profile-residency)`21.875000000000004`
 		- (metrics/profile-minimum)`10000`
-		- (metrics/profile-maximum)`18000`
+		- (metrics/profile-maximum)`12000`
 (signature)`create_block(self, lineno, code, il, line)`
 
 Code block of literal lines.
@@ -605,13 +605,13 @@ Code block of literal lines.
 	/element/
 		- (control)`property-set`
 		- (source/area)`383 2 413 63`
-		- (coverage-zeros)`5`
+		- (coverage-zeros)`8`
 		- (coverage-counters)`16`
-		- (metrics/profile-duration)`39663`
-		- (metrics/profile-count)`21909`
-		- (metrics/profile-residency)`13.969711615917516`
-		- (metrics/profile-minimum)`24000`
-		- (metrics/profile-maximum)`27934000`
+		- (metrics/profile-duration)`35666`
+		- (metrics/profile-count)`3`
+		- (metrics/profile-residency)`26.16822429906542`
+		- (metrics/profile-minimum)`32000`
+		- (metrics/profile-maximum)`38000`
 (signature)`create_variable_item(self, lineno, code, il, line)`
 
 
@@ -626,11 +626,11 @@ Code block of literal lines.
 		- (source/area)`415 2 420 49`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`4`
-		- (metrics/profile-duration)`22660`
-		- (metrics/profile-count)`53`
-		- (metrics/profile-residency)`16.7360532889259`
-		- (metrics/profile-minimum)`18000`
-		- (metrics/profile-maximum)`59000`
+		- (metrics/profile-duration)`28818`
+		- (metrics/profile-count)`11`
+		- (metrics/profile-residency)`11.671924290220819`
+		- (metrics/profile-minimum)`19000`
+		- (metrics/profile-maximum)`62000`
 (signature)`create_enumerated_item(self, lineno, code, il, line)`
 
 
@@ -643,13 +643,13 @@ Code block of literal lines.
 	/element/
 		- (control)`property-set`
 		- (source/area)`422 2 427 48`
-		- (coverage-zeros)`0`
+		- (coverage-zeros)`1`
 		- (coverage-counters)`4`
-		- (metrics/profile-duration)`51425`
-		- (metrics/profile-count)`33559`
-		- (metrics/profile-residency)`6.921525793984204`
-		- (metrics/profile-minimum)`18000`
-		- (metrics/profile-maximum)`66652000`
+		- (metrics/profile-duration)`31000`
+		- (metrics/profile-count)`3`
+		- (metrics/profile-residency)`11.82795698924731`
+		- (metrics/profile-minimum)`30000`
+		- (metrics/profile-maximum)`32000`
 (signature)`create_unordered_item(self, lineno, code, il, line)`
 
 
@@ -662,13 +662,13 @@ Code block of literal lines.
 	/element/
 		- (control)`property-set`
 		- (source/area)`429 2 430 56`
-		- (coverage-zeros)`31`
+		- (coverage-zeros)`32`
 		- (coverage-counters)`163`
-		- (metrics/profile-duration)`127406`
-		- (metrics/profile-count)`88156`
-		- (metrics/profile-residency)`4.994156233998868`
+		- (metrics/profile-duration)`61625`
+		- (metrics/profile-count)`48`
+		- (metrics/profile-residency)`9.060175794455713`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`195792000`
+		- (metrics/profile-maximum)`1585000`
 (signature)`process(self, lineno, code, il, line)`
 
 
@@ -707,11 +707,11 @@ Code block of literal lines.
 		- (source/area)`448 2 497 62`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`28`
-		- (metrics/profile-duration)`1507372`
-		- (metrics/profile-count)`2848`
-		- (metrics/profile-residency)`9.771423140658346`
-		- (metrics/profile-minimum)`28000`
-		- (metrics/profile-maximum)`195792000`
+		- (metrics/profile-duration)`1591000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`15.273412947831552`
+		- (metrics/profile-minimum)`1591000`
+		- (metrics/profile-maximum)`1591000`
 (signature)`tokenize(self, lines)`
 
 Tokenize the given source returning an iterator producing text events.
@@ -727,13 +727,13 @@ Tokenize the given source returning an iterator producing text events.
 	/element/
 		- (control)`property-set`
 		- (source/area)`499 2 806 7`
-		- (coverage-zeros)`31`
+		- (coverage-zeros)`32`
 		- (coverage-counters)`163`
-		- (metrics/profile-duration)`127406`
-		- (metrics/profile-count)`88156`
-		- (metrics/profile-residency)`4.994156233998868`
+		- (metrics/profile-duration)`61625`
+		- (metrics/profile-count)`48`
+		- (metrics/profile-residency)`9.060175794455713`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`195792000`
+		- (metrics/profile-maximum)`1585000`
 (signature)`process(self, sections, root, element, indentation, iterator)`
 
 
@@ -746,11 +746,11 @@ Tokenize the given source returning an iterator producing text events.
 		- (source/area)`808 2 820 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
-		- (metrics/profile-duration)`1512502`
-		- (metrics/profile-count)`2848`
-		- (metrics/profile-residency)`0.3620572540756978`
-		- (metrics/profile-minimum)`32000`
-		- (metrics/profile-maximum)`195802000`
+		- (metrics/profile-duration)`1609000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`1.4294592914853945`
+		- (metrics/profile-minimum)`1609000`
+		- (metrics/profile-maximum)`1609000`
 		- (type/syntax)`Tree`
 		- (type/factor-local/data)&<#Tree[Tree]>
 		

@@ -6,11 +6,11 @@
 		- (source/area)`1 1 365 0`
 		- (coverage-zeros)`54`
 		- (coverage-counters)`207`
-		- (metrics/profile-duration)`21035317`
-		- (metrics/profile-count)`724`
+		- (metrics/profile-duration)`19896641`
+		- (metrics/profile-count)`723`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`15478000`
-		- (metrics/profile-maximum)`28235000`
+		- (metrics/profile-minimum)`14386000`
+		- (metrics/profile-maximum)`25461000`
 Test the coherence of the specified project.
 
 
@@ -311,11 +311,11 @@ The collection and execution of a series of tests.
 		- (source/area)`52 2 145 15`
 		- (coverage-zeros)`10`
 		- (coverage-counters)`48`
-		- (metrics/profile-duration)`43467717`
-		- (metrics/profile-count)`6066`
+		- (metrics/profile-duration)`44745026`
+		- (metrics/profile-count)`6016`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`1293000`
-		- (metrics/profile-maximum)`1229243000`
+		- (metrics/profile-minimum)`1331000`
+		- (metrics/profile-maximum)`1229007000`
 (signature)`dispatch(self, test)`
 
 
@@ -328,11 +328,11 @@ The collection and execution of a series of tests.
 		- (source/area)`147 2 183 47`
 		- (coverage-zeros)`12`
 		- (coverage-counters)`23`
-		- (metrics/profile-duration)`11882381`
-		- (metrics/profile-count)`643`
+		- (metrics/profile-duration)`11839682`
+		- (metrics/profile-count)`642`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`62000`
-		- (metrics/profile-maximum)`1205493000`
+		- (metrics/profile-minimum)`57000`
+		- (metrics/profile-maximum)`1204571000`
 (signature)`test(self, test)`
 
 Execute the test function and configure the identified conclusion.
@@ -349,11 +349,11 @@ Execute the test function and configure the identified conclusion.
 		- (source/area)`185 2 226 15`
 		- (coverage-zeros)`4`
 		- (coverage-counters)`23`
-		- (metrics/profile-duration)`11999869`
-		- (metrics/profile-count)`643`
-		- (metrics/profile-residency)`0.9790801247706689`
-		- (metrics/profile-minimum)`157000`
-		- (metrics/profile-maximum)`1205604000`
+		- (metrics/profile-duration)`11961255`
+		- (metrics/profile-count)`642`
+		- (metrics/profile-residency)`1.0122766575258693`
+		- (metrics/profile-minimum)`140000`
+		- (metrics/profile-maximum)`1204678000`
 (signature)`execute(self, test)`
 
 
@@ -368,11 +368,11 @@ Execute the test function and configure the identified conclusion.
 		- (source/area)`228 1 238 30`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
-		- (metrics/profile-duration)`714779`
-		- (metrics/profile-count)`724`
+		- (metrics/profile-duration)`663637`
+		- (metrics/profile-count)`723`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`551000`
-		- (metrics/profile-maximum)`1578000`
+		- (metrics/profile-minimum)`549000`
+		- (metrics/profile-maximum)`1494000`
 (signature)`intercept(product, project)`
 
 
@@ -399,11 +399,11 @@ Execute the test function and configure the identified conclusion.
 		- (source/area)`256 1 268 2`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
-		- (metrics/profile-duration)`2567`
-		- (metrics/profile-count)`5423`
+		- (metrics/profile-duration)`1932`
+		- (metrics/profile-count)`5374`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`5000`
+		- (metrics/profile-maximum)`20000`
 (signature)`trapped_report(source)`
 
 Reform the report into the common join protocol.
@@ -420,11 +420,11 @@ Reform the report into the common join protocol.
 		- (source/area)`270 1 361 19`
 		- (coverage-zeros)`4`
 		- (coverage-counters)`56`
-		- (metrics/profile-duration)`376059819`
-		- (metrics/profile-count)`724`
-		- (metrics/profile-residency)`2.9605882651155886`
-		- (metrics/profile-minimum)`6732000`
-		- (metrics/profile-maximum)`2987554000`
+		- (metrics/profile-duration)`383252309`
+		- (metrics/profile-count)`723`
+		- (metrics/profile-residency)`2.673886474001974`
+		- (metrics/profile-minimum)`7015000`
+		- (metrics/profile-maximum)`2961061000`
 		- (type/syntax)`process.Exit`
 		- (type/context-local/factor-element)&<fault.system/process#Exit[fault.system.process.Exit]>
 		

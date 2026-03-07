@@ -6,11 +6,11 @@
 		- (source/area)`1 1 131 0`
 		- (coverage-zeros)`16`
 		- (coverage-counters)`50`
-		- (metrics/profile-duration)`92172`
-		- (metrics/profile-count)`29`
+		- (metrics/profile-duration)`33833`
+		- (metrics/profile-count)`24`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`23000`
-		- (metrics/profile-maximum)`141000`
+		- (metrics/profile-minimum)`24000`
+		- (metrics/profile-maximum)`38000`
 Text data structures for working with paragraph content.
 
 (factor-local/class)&<#Fragment[Fragment]> and (factor-local/class)&<#Paragraph[Paragraph]> are designed to be easily transformed and serialized
@@ -113,10 +113,10 @@ An explicitly typed portion of text used as part of a (factor-local/class)&<#Par
 		- (source/area)`25 2 28 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`428`
-		- (metrics/profile-count)`16556`
+		- (metrics/profile-duration)`4000`
+		- (metrics/profile-count)`1`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`0`
+		- (metrics/profile-minimum)`4000`
 		- (metrics/profile-maximum)`4000`
 		- (type/syntax)`Sequence[str]`
 		
@@ -132,11 +132,6 @@ An explicitly typed portion of text used as part of a (factor-local/class)&<#Par
 		- (source/area)`29 2 32 10`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`329`
-		- (metrics/profile-count)`29298`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`5000`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -166,11 +161,6 @@ Return the integer weight of the emphasized text.
 		- (source/area)`45 2 62 10`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`330`
-		- (metrics/profile-count)`27125`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`1000`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -275,11 +265,11 @@ A sequence of (factor-local/class)&<#Fragment[Fragment]> instances forming a par
 		- (source/area)`86 2 92 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`433`
-		- (metrics/profile-count)`6266`
+		- (metrics/profile-duration)`500`
+		- (metrics/profile-count)`2`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`6000`
+		- (metrics/profile-maximum)`1000`
 (signature)`of(Class, *sequence)`
 
 Variable argument based (factor-local/class)&<#Paragraph[Paragraph]> constructor.
@@ -294,11 +284,11 @@ Variable argument based (factor-local/class)&<#Paragraph[Paragraph]> constructor
 		- (source/area)`93 2 101 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
-		- (metrics/profile-duration)`360`
-		- (metrics/profile-count)`32921`
+		- (metrics/profile-duration)`2000`
+		- (metrics/profile-count)`1`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`3000`
+		- (metrics/profile-minimum)`2000`
+		- (metrics/profile-maximum)`2000`
 		- (type/syntax)`Fragment`
 		- (type/factor-local/class)&<#Fragment[Fragment]>
 		
@@ -315,11 +305,11 @@ If multiple fragments exist, a (invalid/unknown)&<#ValueError> is raised.
 		- (source/area)`102 2 131 16`
 		- (coverage-zeros)`4`
 		- (coverage-counters)`18`
-		- (metrics/profile-duration)`18000`
+		- (metrics/profile-duration)`21000`
 		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`88.88888888888889`
-		- (metrics/profile-minimum)`18000`
-		- (metrics/profile-maximum)`18000`
+		- (metrics/profile-residency)`85.71428571428571`
+		- (metrics/profile-minimum)`21000`
+		- (metrics/profile-maximum)`21000`
 		- (type/syntax)`Iterable[Sequence[Fragment]]`
 		
 Iterator producing lists that contain the sentence contents.

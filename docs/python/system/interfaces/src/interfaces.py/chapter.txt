@@ -6,11 +6,11 @@
 		- (source/area)`1 1 124 3`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`65`
-		- (metrics/profile-duration)`1697000`
+		- (metrics/profile-duration)`1133000`
 		- (metrics/profile-count)`8`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`1697000`
-		- (metrics/profile-maximum)`1697000`
+		- (metrics/profile-minimum)`1133000`
+		- (metrics/profile-maximum)`1133000`
 Interface configuration format for binding application network services.
 
 Provides parsing, serialization, and allocation functions for application service interfaces.
@@ -151,11 +151,11 @@ Provides parsing, serialization, and allocation functions for application servic
 		- (source/area)`18 1 83 35`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`37`
-		- (metrics/profile-duration)`318500`
+		- (metrics/profile-duration)`670250`
 		- (metrics/profile-count)`8`
-		- (metrics/profile-residency)`97.68445839874411`
-		- (metrics/profile-minimum)`13000`
-		- (metrics/profile-maximum)`2281000`
+		- (metrics/profile-residency)`98.93696381947035`
+		- (metrics/profile-minimum)`20000`
+		- (metrics/profile-maximum)`5118000`
 		- (type/syntax)`ISpecifications`
 		- (type/factor-local/data)&<#ISpecifications[ISpecifications]>
 		
@@ -194,11 +194,11 @@ with the endpoints listed in the following indented area.
 		- (source/area)`85 1 104 33`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`13`
-		- (metrics/profile-duration)`15000`
+		- (metrics/profile-duration)`13000`
 		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`73.33333333333333`
-		- (metrics/profile-minimum)`15000`
-		- (metrics/profile-maximum)`15000`
+		- (metrics/profile-residency)`69.23076923076923`
+		- (metrics/profile-minimum)`13000`
+		- (metrics/profile-maximum)`13000`
 		- (type/syntax)`Iterable[str]`
 		
 (signature)`if_sequence(if_spec)`
@@ -224,11 +224,11 @@ Serialize the endpoints relative to their protocol and option set.
 		- (source/area)`106 1 125 2`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
-		- (metrics/profile-duration)`157000`
+		- (metrics/profile-duration)`145000`
 		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`50.318471337579616`
-		- (metrics/profile-minimum)`157000`
-		- (metrics/profile-maximum)`157000`
+		- (metrics/profile-residency)`60.689655172413794`
+		- (metrics/profile-minimum)`145000`
+		- (metrics/profile-maximum)`145000`
 		- (type/syntax)`Sequence[tuple[IContext, KPorts]]`
 		
 (signature)`if_allocate(if_spec)`

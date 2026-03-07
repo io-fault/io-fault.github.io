@@ -6,6 +6,11 @@
 		- (source/area)`1 1 3 0`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`0`
+		- (metrics/profile-duration)`16131000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`16131000`
+		- (metrics/profile-maximum)`16131000`
 
 [ integrate ]
 ! CONTROL:
@@ -25,6 +30,11 @@
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`2 1 3 54`
+		- (source/area)`2 1 3 38`
+		- (metrics/profile-duration)`688379000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`688379000`
+		- (metrics/profile-maximum)`688379000`
 (signature)`main(i)`
 

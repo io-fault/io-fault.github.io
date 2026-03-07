@@ -45,7 +45,7 @@ do
 
 		if test x"$FACTORS" = x"update"
 		then
-			x fault fictl analyze -D"$SOURCE/$ldir" $fcontext $fcontext.defects
+			x fault fictl analyze -e -D"$SOURCE/$ldir" $fcontext $fcontext.defects
 		fi
 
 		x \

@@ -6,11 +6,11 @@
 		- (source/area)`1 1 148 0`
 		- (coverage-zeros)`36`
 		- (coverage-counters)`72`
-		- (metrics/profile-duration)`881714`
-		- (metrics/profile-count)`724`
+		- (metrics/profile-duration)`842138`
+		- (metrics/profile-count)`723`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`626000`
-		- (metrics/profile-maximum)`1688000`
+		- (metrics/profile-minimum)`610000`
+		- (metrics/profile-maximum)`1828000`
 Harness implementation and support functions.
 
 
@@ -45,11 +45,11 @@ Harness implementation and support functions.
 		- (source/area)`7 1 32 13`
 		- (coverage-zeros)`7`
 		- (coverage-counters)`13`
-		- (metrics/profile-duration)`1226`
-		- (metrics/profile-count)`10846`
+		- (metrics/profile-duration)`410`
+		- (metrics/profile-count)`10748`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`26000`
+		- (metrics/profile-maximum)`15000`
 (signature)`get_test_index(tester)`
 
 Returns the first line number of the underlying code object.
@@ -64,9 +64,9 @@ Returns the first line number of the underlying code object.
 		- (source/area)`34 1 39 45`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`3552`
-		- (metrics/profile-count)`10846`
-		- (metrics/profile-residency)`65.4597835396714`
+		- (metrics/profile-duration)`2641`
+		- (metrics/profile-count)`10748`
+		- (metrics/profile-residency)`56.682401014513175`
 		- (metrics/profile-minimum)`2000`
 		- (metrics/profile-maximum)`36000`
 (signature)`test_order(module, name)`
@@ -84,11 +84,11 @@ order to elevate a test's position given that it was explicitly listed.
 		- (source/area)`41 1 49 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
-		- (metrics/profile-duration)`87531`
-		- (metrics/profile-count)`724`
-		- (metrics/profile-residency)`39.20281507897685`
-		- (metrics/profile-minimum)`6000`
-		- (metrics/profile-maximum)`248000`
+		- (metrics/profile-duration)`79355`
+		- (metrics/profile-count)`723`
+		- (metrics/profile-residency)`38.77714644263952`
+		- (metrics/profile-minimum)`5000`
+		- (metrics/profile-maximum)`263000`
 (signature)`gather(container)`
 
 Returns an ordered list of attribute names that match the (factor-local/parameter)&<#gather.Parameters.prefix[prefix]>.
@@ -166,11 +166,11 @@ Execute a collection of tests.
 		- (source/area)`90 2 98 10`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`7`
-		- (metrics/profile-duration)`146520`
-		- (metrics/profile-count)`724`
-		- (metrics/profile-residency)`39.521686258613705`
-		- (metrics/profile-minimum)`12000`
-		- (metrics/profile-maximum)`403000`
+		- (metrics/profile-duration)`133207`
+		- (metrics/profile-count)`723`
+		- (metrics/profile-residency)`39.183253901504536`
+		- (metrics/profile-minimum)`11000`
+		- (metrics/profile-maximum)`398000`
 (signature)`from_module(Class, module)`
 
 
@@ -183,11 +183,11 @@ Execute a collection of tests.
 		- (source/area)`99 2 104 24`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`468`
-		- (metrics/profile-count)`1448`
+		- (metrics/profile-duration)`15`
+		- (metrics/profile-count)`1446`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`2000`
+		- (metrics/profile-maximum)`1000`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
@@ -203,11 +203,11 @@ Number of tests that have been prepared for execution.
 		- (source/area)`106 2 113 20`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
-		- (metrics/profile-duration)`1081`
-		- (metrics/profile-count)`724`
+		- (metrics/profile-duration)`539`
+		- (metrics/profile-count)`723`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`3000`
+		- (metrics/profile-maximum)`2000`
 (signature)`__init__(self, identity, container, tests)`
 
 Initialize the members of the Harness.
@@ -236,11 +236,11 @@ Dispatch the given (invalid/unknown)&<#Test> to resolve its fate.
 		- (source/area)`123 2 134 28`
 		- (coverage-zeros)`3`
 		- (coverage-counters)`7`
-		- (metrics/profile-duration)`364395052`
-		- (metrics/profile-count)`724`
-		- (metrics/profile-residency)`99.9810140941307`
+		- (metrics/profile-duration)`372516557`
+		- (metrics/profile-count)`723`
+		- (metrics/profile-residency)`99.98242747077613`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`2971180000`
+		- (metrics/profile-maximum)`2949291000`
 (signature)`execute_tests(self)`
 
 Perform the collected tests.

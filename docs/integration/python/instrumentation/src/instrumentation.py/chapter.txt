@@ -3,7 +3,7 @@
 		module
 	/element/
 		- (control)`property-set`
-		- (source/area)`1 1 334 0`
+		- (source/area)`1 1 541 0`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`0`
 AST manipulations for injecting coverage counters and profile timers into Python modules.
@@ -59,6 +59,30 @@ AST manipulations for injecting coverage counters and profile timers into Python
 		- (control)`property-set`
 		- (source/area)`9 1 9 20`
 
+[ ContainerTypes ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`16 1 16 43`
+#!source
+	ContainerTypes = (ast.Module, ast.ClassDef)
+
+[ SuspendClasses ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`19 1 19 54`
+#!source
+	SuspendClasses = (ast.Yield, ast.YieldFrom, ast.Await)
+
 [ BranchNodes ]
 ! CONTROL:
 	/type/
@@ -67,12 +91,12 @@ AST manipulations for injecting coverage counters and profile timers into Python
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`11 1 14 1`
+		- (source/area)`21 1 24 1`
 #!source
-	try:
-		FunctionTypes = (ast.FunctionDef, ast.AsyncFunctionDef)
-	except AttributeError:
-		FunctionTypes = (ast.FunctionDef,)
+	BranchNodes = (
+		ast.BoolOp,
+		ast.IfExp,
+	)
 
 [ expression_mapping ]
 ! CONTROL:
@@ -82,12 +106,12 @@ AST manipulations for injecting coverage counters and profile timers into Python
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`16 1 19 1`
+		- (source/area)`26 1 29 1`
 #!source
-	ContainerTypes = (ast.Module, ast.ClassDef)
-	
-	# Profile suspend/resume nodes.
-	SuspendClasses = (ast.Yield, ast.YieldFrom, ast.Await)
+	expression_mapping = {
+		ast.withitem: 'context_expr',
+		ast.comprehension: 'value',
+	}
 
 [ visit_expression ]
 ! CONTROL:
@@ -95,7 +119,7 @@ AST manipulations for injecting coverage counters and profile timers into Python
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`21 1 54 7`
+		- (source/area)`31 1 64 7`
 (signature)`visit_expression(node, parent, field, index)`
 
 Visit the node in a statement. Keyword defaults, expressions, statements.
@@ -109,7 +133,7 @@ Visit the node in a statement. Keyword defaults, expressions, statements.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`56 1 75 58`
+		- (source/area)`66 1 85 58`
 (signature)`visit_container(nodes, parent, field)`
 
 
@@ -119,13 +143,13 @@ Visit the node in a statement. Keyword defaults, expressions, statements.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`77 1 87 7`
+		- (source/area)`87 1 97 7`
 (signature)`visit(node)`
 
 Identify nodes that should be instrumented for coverage and profiling.
 
 
-[ coverage_module_context ]
+[ module_context ]
 ! CONTROL:
 	/type/
 		data
@@ -133,18 +157,8 @@ Identify nodes that should be instrumented for coverage and profiling.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`89 1 178 18`
+		- (source/area)`99 1 240 18`
 #!source
-		# Identify nodes that should be instrumented for coverage and profiling.
-		"""
-		for subfield, subnode in ast.iter_fields(node):
-			if isinstance(subnode, ast.AST):
-				yield from visit_expression(subnode, node, subfield, None)
-			elif isinstance(subnode, list):
-				yield from visit_container(sequencing(subnode), node, subfield)
-			else:
-				pass
-	
 	module_context = """
 	if True:
 		import collections as _fi_cl
@@ -225,6 +239,68 @@ Identify nodes that should be instrumented for coverage and profiling.
 				sources.sort()
 	
 				# Index designating sources and the number of counters.
+				# For Python, this will normally (always) be a single line.
+				# Append as PROCESS_IDENTITY may be intentionally redundant.
+				with open(path + '/sources', 'a') as f:
+					f.writelines(['%s %d %s\\n' %(mid, len(events[x]), x) for x in sources])
+	
+				with open(path + '/areas', 'a') as f:
+					for x in sources:
+						f.writelines(['%d %d %d %d\\n' % k for k in events[x]])
+	
+				with open(path + '/counts', 'a') as f:
+					for x in sources:
+						f.writelines(['%d\\n' %(c,) for c in occurrences[x]])
+	
+			_fi_ae.register(_fi_record_coverage)
+	
+			try:
+				_FI_INCREMENT__ = _fi_ft.partial(_fi_cl._count_elements, _fi_counters__)
+			except:
+				_FI_INCREMENT__ = _fi_counters__.update
+	
+			def _FI_COUNT__(area, rob, F=__file__, C=_FI_INCREMENT__):
+				C(((F, area),))
+				return rob
+			del _fi_record_coverage
+	
+		if 'profile' in __metrics__:
+			_fi_timings__ = _fi_cl.defaultdict(list)
+			def _fi_record_profile(timings=_fi_timings__, adir=_fi_alloc_dir):
+				def name(module, object_path):
+					if module == __name__:
+						return object_path or '-'
+					else:
+						return '/'.join((module or '-', object_path or '-'))
+				path = adir('profile', '.fault-timing-deltas')
+				with open(path + '/timings', 'a') as f:
+					for src, times in timings.items():
+						cfactor, celement, element = src
+						f.write("%s: %s\\n" %(element, name(cfactor, celement)))
+						f.writelines("\t%d-%d\\n" %(time, delta) for time, delta in times)
+	
+			try:
+				from fault.system.clocks import Monotonic as _fi_mclock
+			except ImportError:
+				from time import perf_counter_ns as _FI_CLOCK_SNAPSHOT__
+			else:
+				_FI_CLOCK_SNAPSHOT__ = _fi_mclock().get
+				del _fi_mclock
+			_fi_ae.register(_fi_record_profile)
+	
+			from threading import local as _fi_thread_local
+			_FI_PROFILE_LOCALS____ = _fi_thread_local()
+			del _fi_thread_local
+			_FI_PROFILE_COUNTER____ = _fi_cl.Counter
+	
+			def _FI_NOTE_TIMING__(CID, ELEMENT, TIME, CD, LD, TS=_FI_CLOCK_SNAPSHOT__, sum=sum, TR=_fi_timings__):
+				d = TS() - TIME
+				CD[ELEMENT] += d
+				TR[(CID[0], CID[1], ELEMENT)].append((d, sum(LD.values())))
+	
+		# Limit names left in the module globals.
+		del _fi_bn, _fi_os, _fi_ft, _fi_cl, _fi_ae, _fi_alloc_dir
+	""".strip() + '\n'
 
 [ count_boolop_expression ]
 ! CONTROL:
@@ -234,9 +310,9 @@ Identify nodes that should be instrumented for coverage and profiling.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`180 1 180 89`
+		- (source/area)`242 1 242 89`
 #!source
-	# Append as PROCESS_IDENTITY may be intentionally redundant.
+	count_boolop_expression = "(_FI_INCREMENT__(((__file__, %r),)) or INSTRUMENTATION_ERROR)"
 
 [ count_call_expression ]
 ! CONTROL:
@@ -246,9 +322,55 @@ Identify nodes that should be instrumented for coverage and profiling.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`181 1 181 46`
+		- (source/area)`243 1 243 46`
 #!source
-	with open(path + '/sources', 'a') as f:
+	count_call_expression = "_FI_COUNT__(%r,None)"
+
+[ profile_suspension_signals ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`247 1 281 3`
+#!source
+	profile_suspension_signals = """
+	if True:
+		def _fi_suspend____(V):
+			nonlocal _fi_suspend_time____
+			nonlocal _fi_caller_residency____
+			nonlocal _fi_caller_identity____
+			nonlocal _fi_resident_deltas____
+			# Forward timings to caller for tracking residency and hold timestamp for resume.
+			_fi_suspend_time____ = _FI_CLOCK_SNAPSHOT__()
+	
+			_FI_PROFILE_LOCALS____.fi_profile_residency = _fi_caller_residency____
+			_FI_PROFILE_LOCALS____.fi_caller_identity = _fi_caller_identity____
+			return V
+	
+		def _fi_resume____(V):
+			nonlocal _fi_suspend_time____
+			nonlocal _fi_caller_residency____
+			nonlocal _fi_caller_identity____
+			nonlocal _fi_resident_deltas____
+	
+			if 'fi_profile_residency' in _FI_PROFILE_LOCALS____.__dict__:
+				_fi_caller_residency____ = _FI_PROFILE_LOCALS____.fi_profile_residency
+			else:
+				_fi_caller_residency____ = _FI_PROFILE_COUNTER____()
+			_FI_PROFILE_LOCALS____.fi_profile_residency = _fi_resident_deltas____
+	
+			# Push caller identity.
+			_fi_caller_identity____ = getattr(_FI_PROFILE_LOCALS____, 'fi_caller_identity', (None, None))
+			_FI_PROFILE_LOCALS____.fi_caller_identity = (__name__, _fi_identity____)
+	
+			# Update start to exclude the suspended time.
+			_fi_resident_deltas____[None] += _FI_CLOCK_SNAPSHOT__() - _fi_suspend_time____
+			_fi_suspend_time____ = None
+			return V
+	"""
 
 [ profile_transaction ]
 ! CONTROL:
@@ -258,16 +380,46 @@ Identify nodes that should be instrumented for coverage and profiling.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`184 1 191 3`
+		- (source/area)`284 1 319 3`
 #!source
-	with open(path + '/areas', 'a') as f:
-		for x in sources:
-			f.writelines(['%d %d %d %d\\n' % k for k in events[x]])
-		with open(path + '/counts', 'a') as f:
-		for x in sources:
-			f.writelines(['%d\\n' %(c,) for c in occurrences[x]])
+	profile_transaction = """
+	if True:
+		try:
+			_fi_suspend____ = None
+			_fi_resume____ = None
+			_fi_start_time____ = None
+			_fi_suspend_time____ = None
+			_fi_caller_residency____ = None
+			_fi_resident_deltas____ = _FI_PROFILE_COUNTER____()
+			_fi_identity____ = %r
 	
-[ profile_pause ]
+			# Push caller identity.
+			_fi_caller_identity____ = getattr(_FI_PROFILE_LOCALS____, 'fi_caller_identity', (None, None))
+			_FI_PROFILE_LOCALS____.fi_caller_identity = (__name__, _fi_identity____)
+	
+			if 'fi_profile_residency' in _FI_PROFILE_LOCALS____.__dict__:
+				_fi_caller_residency____ = _FI_PROFILE_LOCALS____.fi_profile_residency
+			else:
+				_fi_caller_residency____ = _FI_PROFILE_COUNTER____()
+			_FI_PROFILE_LOCALS____.fi_profile_residency = _fi_resident_deltas____
+			_fi_start_time____ = _FI_CLOCK_SNAPSHOT__()
+	
+			# Insertion point.
+			pass
+		finally:
+			# Restore
+			_FI_PROFILE_LOCALS____.fi_profile_residency = _fi_caller_residency____
+			_FI_PROFILE_LOCALS____.fi_caller_identity = _fi_caller_identity____
+	
+			_FI_NOTE_TIMING__(_fi_caller_identity____, _fi_identity____, _fi_start_time____, _fi_caller_residency____, _fi_resident_deltas____)
+	
+			# Class and modules bodies are instrumented, so always clean up the names.
+			del _fi_start_time____, _fi_suspend_time____
+			del _fi_caller_identity____, _fi_caller_residency____, _fi_resident_deltas____
+			del _fi_suspend____, _fi_resume____
+	"""
+
+[ profile_suspend_expression ]
 ! CONTROL:
 	/type/
 		data
@@ -275,14 +427,21 @@ Identify nodes that should be instrumented for coverage and profiling.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`193 1 200 3`
+		- (source/area)`322 1 322 52`
 #!source
-		try:
-		_FI_INCREMENT__ = _fi_ft.partial(_fi_cl._count_elements, _fi_counters__)
-	except:
-		_FI_INCREMENT__ = _fi_counters__.update
-		def _FI_COUNT__(area, rob, F=__file__, C=_FI_INCREMENT__):
-		C(((F, area),))
+	profile_suspend_expression = "_fi_suspend____(None)"
+
+[ profile_resume_expression ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`323 1 323 50`
+#!source
+	profile_resume_expression = "_fi_resume____(None)"
 
 [ construct_call_increment ]
 ! CONTROL:
@@ -292,7 +451,7 @@ Identify nodes that should be instrumented for coverage and profiling.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`202 1 210 17`
+		- (source/area)`325 1 332 17`
 (signature)`construct_call_increment(node, area)`
 
 
@@ -304,7 +463,7 @@ Identify nodes that should be instrumented for coverage and profiling.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`212 1 220 20`
+		- (source/area)`334 1 341 20`
 (signature)`construct_boolop_increment(node, area)`
 
 
@@ -316,8 +475,20 @@ Identify nodes that should be instrumented for coverage and profiling.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`222 1 231 12`
+		- (source/area)`343 1 352 12`
 (signature)`construct_profile_trap(identifier, container, nodes)`
+
+
+[ construct_profile_trap_suspend ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`354 1 357 102`
+(signature)`construct_profile_trap_suspend(identifier, container, nodes)`
 
 
 [ construct_initialization_nodes ]
@@ -326,8 +497,8 @@ Identify nodes that should be instrumented for coverage and profiling.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`233 1 241 13`
-(signature)`construct_initialization_nodes()`
+		- (source/area)`359 1 366 13`
+(signature)`construct_initialization_nodes(ln_offset)`
 
 Construct instrumentation initialization nodes for injection into an (none/invalid)&<http://fault.io/dev/null[ast.Module]> body.
 
@@ -338,7 +509,7 @@ Construct instrumentation initialization nodes for injection into an (none/inval
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`243 1 275 12`
+		- (source/area)`368 1 400 12`
 (signature)`instrument(record, path, noded, address)`
 
 Adjust the AST so that (invalid/unknown)&<#node> will record its execution.
@@ -352,7 +523,7 @@ Adjust the AST so that (invalid/unknown)&<#node> will record its execution.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`277 1 284 12`
+		- (source/area)`402 1 409 12`
 (signature)`delineate(noded)`
 
 
@@ -364,8 +535,71 @@ Adjust the AST so that (invalid/unknown)&<#node> will record its execution.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`286 1 293 45`
+		- (source/area)`411 1 418 38`
 (signature)`apply(record, path, noded)`
+
+
+[ find_suspend_expressions ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`420 1 430 42`
+(signature)`find_suspend_expressions(node)`
+
+Visit the descending nodes in (factor-local/parameter)&<#find_suspend_expressions.Parameters.node[node]> looking for yields and awaits.
+
+
+[ qualify_node_paths ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`432 1 446 66`
+(signature)`qualify_node_paths(path, fields)`
+
+Qualify definitions nodes with their qualified path and
+yield them for profile instrumentation.
+
+
+[ inject_suspend_expressions ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`448 1 459 19`
+(signature)`inject_suspend_expressions(node)`
+
+
+[ walk_within ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`461 1 472 39`
+(signature)`walk_within(tree, exceptions)`
+
+Walk the nodes of (factor-local/parameter)&<#walk_within.Parameters.tree[tree]> without descending into any (factor-local/parameter)&<#walk_within.Parameters.exceptions[exceptions]> types.
+
+Primarily used by profiling to avoid instrumenting nested functions.
+
+
+[ inject_profiling_nodes ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`474 1 493 28`
+(signature)`inject_profiling_nodes(tree)`
+
+Modify the definitions in (factor-local/parameter)&<#inject_profiling_nodes.Parameters.tree[tree]> to record the execution times.
 
 
 [ compile ]
@@ -374,8 +608,9 @@ Adjust the AST so that (invalid/unknown)&<#node> will record its execution.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`295 1 322 38`
+		- (source/area)`495 1 541 38`
 (signature)`compile(factor, source, path, constants)`
 
-Compile Python source of a module into an instrumented (invalid/unknown)&<#types.CodeObject>
+Compile the Python source of a module, (factor-local/parameter)&<#compile.Parameters.source[source]>, into an AST with the requested
+(factor-local/parameter)&<#compile.Parameters.instrumentation[instrumentation]>.
 

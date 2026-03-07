@@ -6,11 +6,11 @@
 		- (source/area)`1 1 204 0`
 		- (coverage-zeros)`73`
 		- (coverage-counters)`113`
-		- (metrics/profile-duration)`8584`
-		- (metrics/profile-count)`2994`
+		- (metrics/profile-duration)`6190`
+		- (metrics/profile-count)`1215`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`3000`
-		- (metrics/profile-maximum)`567000`
+		- (metrics/profile-maximum)`150000`
 Execute a factor or module as a substitution.
 
 
@@ -75,11 +75,11 @@ Execute a factor or module as a substitution.
 		- (source/area)`13 1 17 19`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
-		- (metrics/profile-duration)`1750`
-		- (metrics/profile-count)`724`
+		- (metrics/profile-duration)`1120`
+		- (metrics/profile-count)`723`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`4000`
+		- (metrics/profile-maximum)`3000`
 (signature)`connect_product_environ(root, param)`
 
 
@@ -154,11 +154,11 @@ Execute a factor or module as a substitution.
 		- (source/area)`39 1 62 17`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`10`
-		- (metrics/profile-duration)`4688`
-		- (metrics/profile-count)`2994`
-		- (metrics/profile-residency)`90.97321174123681`
-		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`369000`
+		- (metrics/profile-duration)`4918`
+		- (metrics/profile-count)`1215`
+		- (metrics/profile-residency)`81.07429718875503`
+		- (metrics/profile-minimum)`2000`
+		- (metrics/profile-maximum)`20000`
 (signature)`parse(arguments)`
 
 Extract command line parameter options.
@@ -175,11 +175,11 @@ Extract command line parameter options.
 		- (source/area)`64 1 83 17`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`12`
-		- (metrics/profile-duration)`20349685`
-		- (metrics/profile-count)`2994`
+		- (metrics/profile-duration)`19835885`
+		- (metrics/profile-count)`1215`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`6000`
-		- (metrics/profile-maximum)`71962000`
+		- (metrics/profile-minimum)`5720000`
+		- (metrics/profile-maximum)`36273000`
 (signature)`apply(config, target, symbol)`
 
 
@@ -250,11 +250,6 @@ Execute a system image using the system-architecture configured by (none/invalid
 		- (source/area)`144 1 151 19`
 		- (coverage-zeros)`5`
 		- (coverage-counters)`5`
-		- (metrics/profile-duration)`2433382111`
-		- (metrics/profile-count)`45`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`1758000`
-		- (metrics/profile-maximum)`5195948000`
 (signature)`module(inv)`
 
 
@@ -283,11 +278,11 @@ Execute a system image using the system-architecture configured by (none/invalid
 		- (source/area)`179 1 201 65`
 		- (coverage-zeros)`4`
 		- (coverage-counters)`15`
-		- (metrics/profile-duration)`20413351`
-		- (metrics/profile-count)`2994`
-		- (metrics/profile-residency)`0.28891854066260125`
-		- (metrics/profile-minimum)`32000`
-		- (metrics/profile-maximum)`72051000`
+		- (metrics/profile-duration)`19888162`
+		- (metrics/profile-count)`1215`
+		- (metrics/profile-residency)`0.23287835293636625`
+		- (metrics/profile-minimum)`5760000`
+		- (metrics/profile-maximum)`36322000`
 		- (type/syntax)`process.Exit`
 		- (type/project-local/factor-element)&<process#Exit[fault.system.process.Exit]>
 		

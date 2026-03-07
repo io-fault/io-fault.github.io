@@ -6,6 +6,11 @@
 		- (source/area)`1 1 80 0`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`0`
+		- (metrics/profile-duration)`400`
+		- (metrics/profile-count)`10`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`1000`
 Factor graph primitives.
 
 Used by (project-local/unknown)&<cc> to order the target factors according to their dependencies.
@@ -28,6 +33,11 @@ Used by (project-local/unknown)&<cc> to order the target factors according to th
 	/element/
 		- (control)`property-set`
 		- (source/area)`8 1 30 48`
+		- (metrics/profile-duration)`14363`
+		- (metrics/profile-count)`55`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`12000`
+		- (metrics/profile-maximum)`36000`
 (signature)`traverse(directory, working, tree, inverse, node)`
 
 Invert the directed graph of dependencies from the node.
@@ -40,6 +50,11 @@ Invert the directed graph of dependencies from the node.
 	/element/
 		- (control)`property-set`
 		- (source/area)`32 1 80 22`
+		- (metrics/profile-duration)`607972833`
+		- (metrics/profile-count)`6`
+		- (metrics/profile-residency)`0.05844559392319337`
+		- (metrics/profile-minimum)`30718000`
+		- (metrics/profile-maximum)`1209253000`
 (signature)`sequence(directory, nodes)`
 
 Generator maintaining the state of the sequencing of a traversed dependency

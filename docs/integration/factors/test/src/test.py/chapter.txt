@@ -3,9 +3,9 @@
 		module
 	/element/
 		- (control)`property-set`
-		- (source/area)`1 1 170 20`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`0`
+		- (source/area)`1 1 205 20`
+		- (coverage-zeros)`6`
+		- (coverage-counters)`86`
 Testing and static analysis support.
 
 
@@ -28,6 +28,8 @@ Testing and static analysis support.
 	/element/
 		- (control)`property-set`
 		- (source/area)`5 1 5 17`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ Iterable ]
 ! CONTROL:
@@ -48,6 +50,8 @@ Testing and static analysis support.
 	/element/
 		- (control)`property-set`
 		- (source/area)`6 1 6 46`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ tools ]
 ! CONTROL:
@@ -58,6 +62,8 @@ Testing and static analysis support.
 	/element/
 		- (control)`property-set`
 		- (source/area)`8 1 8 31`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ recognition ]
 ! CONTROL:
@@ -68,6 +74,8 @@ Testing and static analysis support.
 	/element/
 		- (control)`property-set`
 		- (source/area)`9 1 9 36`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ files ]
 ! CONTROL:
@@ -78,6 +86,8 @@ Testing and static analysis support.
 	/element/
 		- (control)`property-set`
 		- (source/area)`10 1 10 30`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ process ]
 ! CONTROL:
@@ -88,6 +98,8 @@ Testing and static analysis support.
 	/element/
 		- (control)`property-set`
 		- (source/area)`11 1 11 32`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ KInvocation ]
 ! CONTROL:
@@ -98,6 +110,8 @@ Testing and static analysis support.
 	/element/
 		- (control)`property-set`
 		- (source/area)`13 1 13 46`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ lsf ]
 ! CONTROL:
@@ -108,6 +122,8 @@ Testing and static analysis support.
 	/element/
 		- (control)`property-set`
 		- (source/area)`14 1 14 39`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ query ]
 ! CONTROL:
@@ -118,6 +134,8 @@ Testing and static analysis support.
 	/element/
 		- (control)`property-set`
 		- (source/area)`16 1 16 24`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ filters ]
 ! CONTROL:
@@ -128,6 +146,8 @@ Testing and static analysis support.
 	/element/
 		- (control)`property-set`
 		- (source/area)`17 1 17 21`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ context ]
 ! CONTROL:
@@ -138,6 +158,8 @@ Testing and static analysis support.
 	/element/
 		- (control)`property-set`
 		- (source/area)`18 1 18 21`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ map ]
 ! CONTROL:
@@ -148,6 +170,34 @@ Testing and static analysis support.
 	/element/
 		- (control)`property-set`
 		- (source/area)`19 1 19 17`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
+
+[ root_execution_context ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`21 1 21 56`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
+
+[ host_execution_v ]
+! CONTROL:
+	/type/
+		data
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`22 1 22 64`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
+#!source
+	host_execution_v = lsf.types.Variants(*root_execution_context())
 
 [ test_type_map ]
 ! CONTROL:
@@ -157,15 +207,18 @@ Testing and static analysis support.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`23 1 29 1`
+		- (source/area)`26 1 33 1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
-	
-	##
-	# Test types associated with their identifying prefix.
 	test_type_map = {
 		'integration': 'i-',
 		'unit': 'u-',
 		'performance': 'p-',
+		'explicit': 'x-',
+		'static': 's-',
+		'failure': 'f-',
+	}
 
 [ restricted ]
 ! CONTROL:
@@ -175,12 +228,10 @@ Testing and static analysis support.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`32 1 50 1`
+		- (source/area)`36 1 60 1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
-		'failure': 'f-',
-	}
-	
-	# fault.vector restricted parameters dictionary.
 	restricted = {
 		'--integration': ('set-add', 'integration', 'test-types'),
 		'--unit': ('set-add', 'unit', 'test-types'),
@@ -196,6 +247,16 @@ Testing and static analysis support.
 		'-s': ('set-add', 'static', 'test-types'),
 		'-f': ('set-add', 'failure', 'test-types'),
 	
+		'-I': ('set-discard', 'integration', 'test-types'),
+		'-U': ('set-discard', 'unit', 'test-types'),
+		'-P': ('set-discard', 'performance', 'test-types'),
+		'-X': ('set-discard', 'explicit', 'test-types'),
+		'-S': ('set-discard', 'static', 'test-types'),
+		'-F': ('set-discard', 'failure', 'test-types'),
+	
+		'--closed-frames': ('field-replace', False, 'opened-frames'),
+		'--opened-frames': ('field-replace', True, 'opened-frames'),
+	}
 
 [ required ]
 ! CONTROL:
@@ -205,15 +266,19 @@ Testing and static analysis support.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`52 1 59 1`
+		- (source/area)`62 1 70 1`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
-	'-U': ('set-discard', 'unit', 'test-types'),
-	'-P': ('set-discard', 'performance', 'test-types'),
-	'-X': ('set-discard', 'explicit', 'test-types'),
-	'-S': ('set-discard', 'static', 'test-types'),
-	'-F': ('set-discard', 'failure', 'test-types'),
-		'--closed-frames': ('field-replace', False, 'opened-frames'),
-	'--opened-frames': ('field-replace', True, 'opened-frames'),
+	required = {
+		'-q': ('sequence-append', 'test-filters'),
+		'-x': ('field-replace', 'machines-context-name'),
+		'-X': ('field-replace', 'system-context-directory'),
+	
+		'-D': ('field-replace', 'product-directory'),
+		'-L': ('field-replace', 'processing-lanes'),
+		'-M': ('field-replace', 'status-monitors'),
+	}
 
 [ plan ]
 ! CONTROL:
@@ -221,7 +286,9 @@ Testing and static analysis support.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`61 1 99 36`
+		- (source/area)`72 1 114 36`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`27`
 (signature)`plan(prefixes, keywords, factors, ctl, identifier)`
 
 Create an invocation for processing the project from (factor-local/parameter)&<#plan.Parameters.factors[factors]> selected using (factor-local/parameter)&<#plan.Parameters.identifier[identifier]>.
@@ -233,7 +300,9 @@ Create an invocation for processing the project from (factor-local/parameter)&<#
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`101 1 135 61`
+		- (source/area)`116 1 167 46`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`25`
 (signature)`test(exits, meta, log, config, cc, pdr, argv)`
 
 Perform runtime analysis using the selected factors.
@@ -245,7 +314,9 @@ Perform runtime analysis using the selected factors.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`137 1 154 25`
+		- (source/area)`169 1 189 25`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`5`
 (signature)`configure(restricted, required, argv)`
 
 Root option parser.
@@ -259,7 +330,9 @@ Root option parser.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`156 1 171 19`
+		- (source/area)`191 1 206 19`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`10`
 		- (type/syntax)`process.Exit`
 		- (type/remote/factor-element)&<http://fault.io/python/system/process#Exit[fault.system.process.Exit]>
 		

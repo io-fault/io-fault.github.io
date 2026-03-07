@@ -6,11 +6,11 @@
 		- (source/area)`1 1 69 0`
 		- (coverage-zeros)`5`
 		- (coverage-counters)`31`
-		- (metrics/profile-duration)`58000`
-		- (metrics/profile-count)`21`
-		- (metrics/profile-residency)`64.77832512315271`
-		- (metrics/profile-minimum)`44000`
-		- (metrics/profile-maximum)`61000`
+		- (metrics/profile-duration)`73000`
+		- (metrics/profile-count)`16`
+		- (metrics/profile-residency)`52.054794520547944`
+		- (metrics/profile-minimum)`73000`
+		- (metrics/profile-maximum)`73000`
 
 [ Hashable ]
 ! CONTROL:
@@ -106,11 +106,11 @@ Raised by (factor-local/classmethod)&<#object.__colookup__[object.__colookup__]>
 		- (source/area)`14 2 28 3`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`9`
-		- (metrics/profile-duration)`982`
-		- (metrics/profile-count)`57`
+		- (metrics/profile-duration)`500`
+		- (metrics/profile-count)`32`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`2000`
+		- (metrics/profile-maximum)`1000`
 (signature)`__prepare__(Class, name, bases, **kw)`
 
 
@@ -125,11 +125,11 @@ Raised by (factor-local/classmethod)&<#object.__colookup__[object.__colookup__]>
 		- (source/area)`30 2 35 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`16719`
-		- (metrics/profile-count)`57`
+		- (metrics/profile-duration)`26000`
+		- (metrics/profile-count)`32`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`11000`
-		- (metrics/profile-maximum)`22000`
+		- (metrics/profile-minimum)`18000`
+		- (metrics/profile-maximum)`34000`
 (signature)`__new__(*args, **kw)`
 
 
@@ -191,11 +191,11 @@ their aliases.
 		- (source/area)`54 2 60 27`
 		- (coverage-zeros)`3`
 		- (coverage-counters)`5`
-		- (metrics/profile-duration)`865`
-		- (metrics/profile-count)`54849`
+		- (metrics/profile-duration)`317`
+		- (metrics/profile-count)`82`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`21186000`
+		- (metrics/profile-maximum)`4000`
 		- (type/syntax)`Callable`
 		- (type/none/invalid)&<http://fault.io/dev/null[typing.Callable]>
 		
@@ -213,11 +213,11 @@ their aliases.
 		- (source/area)`62 2 63 46`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`4018`
-		- (metrics/profile-count)`54849`
-		- (metrics/profile-residency)`78.44885476786816`
-		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`59443000`
+		- (metrics/profile-duration)`2695`
+		- (metrics/profile-count)`82`
+		- (metrics/profile-residency)`57.01357466063348`
+		- (metrics/profile-minimum)`2000`
+		- (metrics/profile-maximum)`12000`
 		- (type/syntax)`MethodType`
 		- (type/none/invalid)&<http://fault.io/dev/null[types.MethodType]>
 		

@@ -4,13 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 506 0`
-		- (coverage-zeros)`315`
-		- (coverage-counters)`340`
-		- (metrics/profile-duration)`2347000`
-		- (metrics/profile-count)`18`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`2347000`
-		- (metrics/profile-maximum)`2347000`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 
 [ sys ]
 ! CONTROL:
@@ -31,8 +26,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`2 1 2 9`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ errno ]
 ! CONTROL:
@@ -43,8 +36,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`3 1 3 12`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ io ]
 ! CONTROL:
@@ -55,8 +46,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`4 1 4 25`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ nomem ]
 ! CONTROL:
@@ -67,8 +56,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`6 1 7 21`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`nomem(x)`
 
 
@@ -81,8 +68,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`9 1 15 13`
-		- (coverage-zeros)`4`
-		- (coverage-counters)`4`
 (signature)`_error(n)`
 
 
@@ -95,8 +80,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`17 1 20 14`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`3`
 (signature)`error(*args, **kw)`
 
 
@@ -109,8 +92,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`22 1 23 22`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
 (signature)`errno_retry_callback(ctx)`
 
 
@@ -123,13 +104,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`28 1 36 33`
-		- (coverage-zeros)`5`
-		- (coverage-counters)`6`
-		- (metrics/profile-duration)`61000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`61000`
-		- (metrics/profile-maximum)`61000`
 (signature)`test_cannot_allocate_array(test)`
 
 
@@ -142,13 +116,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`38 1 54 7`
-		- (coverage-zeros)`11`
-		- (coverage-counters)`12`
-		- (metrics/profile-duration)`61000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`61000`
-		- (metrics/profile-maximum)`61000`
 (signature)`test_array_force_eintr(test)`
 
 
@@ -161,13 +128,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`56 1 107 7`
-		- (coverage-zeros)`33`
-		- (coverage-counters)`34`
-		- (metrics/profile-duration)`71000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`71000`
-		- (metrics/profile-maximum)`71000`
 (signature)`test_array_retry_fail(test)`
 
 
@@ -180,13 +140,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`109 1 131 7`
-		- (coverage-zeros)`16`
-		- (coverage-counters)`17`
-		- (metrics/profile-duration)`69000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`69000`
-		- (metrics/profile-maximum)`69000`
 (signature)`test_acquire_retry_fail(test)`
 
 
@@ -199,13 +152,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`133 1 178 7`
-		- (coverage-zeros)`33`
-		- (coverage-counters)`34`
-		- (metrics/profile-duration)`65000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`65000`
-		- (metrics/profile-maximum)`65000`
 (signature)`test_datagrams_io_retry(test)`
 
 
@@ -218,13 +164,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`180 1 225 7`
-		- (coverage-zeros)`32`
-		- (coverage-counters)`34`
-		- (metrics/profile-duration)`106000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`106000`
-		- (metrics/profile-maximum)`106000`
 (signature)`test_datagrams_io_nomem_retry(test)`
 
 
@@ -235,13 +174,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`227 1 272 7`
-		- (coverage-zeros)`30`
-		- (coverage-counters)`33`
-		- (metrics/profile-duration)`98000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`98000`
-		- (metrics/profile-maximum)`98000`
 (signature)`test_datagrams_io_again(test)`
 
 Trigger EAGAIN on datagrams output.
@@ -256,13 +188,6 @@ Trigger EAGAIN on datagrams output.
 	/element/
 		- (control)`property-set`
 		- (source/area)`274 1 304 10`
-		- (coverage-zeros)`22`
-		- (coverage-counters)`24`
-		- (metrics/profile-duration)`5103000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`5103000`
-		- (metrics/profile-maximum)`5103000`
 (signature)`test_octets_resize_error(test)`
 
 
@@ -275,13 +200,6 @@ Trigger EAGAIN on datagrams output.
 	/element/
 		- (control)`property-set`
 		- (source/area)`306 1 320 34`
-		- (coverage-zeros)`8`
-		- (coverage-counters)`9`
-		- (metrics/profile-duration)`61000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`61000`
-		- (metrics/profile-maximum)`61000`
 (signature)`test_array_alloc_port_memory_errors(test)`
 
 
@@ -294,13 +212,6 @@ Trigger EAGAIN on datagrams output.
 	/element/
 		- (control)`property-set`
 		- (source/area)`322 1 334 34`
-		- (coverage-zeros)`7`
-		- (coverage-counters)`8`
-		- (metrics/profile-duration)`63000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`63000`
-		- (metrics/profile-maximum)`63000`
 (signature)`test_array_alloc_i_o_memory_errors(test)`
 
 
@@ -313,13 +224,6 @@ Trigger EAGAIN on datagrams output.
 	/element/
 		- (control)`property-set`
 		- (source/area)`336 1 346 34`
-		- (coverage-zeros)`6`
-		- (coverage-counters)`7`
-		- (metrics/profile-duration)`73000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`73000`
-		- (metrics/profile-maximum)`73000`
 (signature)`test_array_allocio_memory_errors(test)`
 
 
@@ -332,13 +236,6 @@ Trigger EAGAIN on datagrams output.
 	/element/
 		- (control)`property-set`
 		- (source/area)`348 1 364 10`
-		- (coverage-zeros)`11`
-		- (coverage-counters)`12`
-		- (metrics/profile-duration)`53000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`53000`
-		- (metrics/profile-maximum)`53000`
 (signature)`test_nosigpipe(test)`
 
 
@@ -351,13 +248,6 @@ Trigger EAGAIN on datagrams output.
 	/element/
 		- (control)`property-set`
 		- (source/area)`366 1 392 10`
-		- (coverage-zeros)`18`
-		- (coverage-counters)`19`
-		- (metrics/profile-duration)`55000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`55000`
-		- (metrics/profile-maximum)`55000`
 (signature)`test_close_retry(test)`
 
 
@@ -370,13 +260,6 @@ Trigger EAGAIN on datagrams output.
 	/element/
 		- (control)`property-set`
 		- (source/area)`394 1 425 7`
-		- (coverage-zeros)`22`
-		- (coverage-counters)`23`
-		- (metrics/profile-duration)`51000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`51000`
-		- (metrics/profile-maximum)`51000`
 (signature)`test_octets_acquire_retry(test)`
 
 
@@ -389,13 +272,6 @@ Trigger EAGAIN on datagrams output.
 	/element/
 		- (control)`property-set`
 		- (source/area)`427 1 458 7`
-		- (coverage-zeros)`23`
-		- (coverage-counters)`24`
-		- (metrics/profile-duration)`67000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`67000`
-		- (metrics/profile-maximum)`67000`
 (signature)`test_octets_acquire_mustblock(test)`
 
 
@@ -408,13 +284,6 @@ Trigger EAGAIN on datagrams output.
 	/element/
 		- (control)`property-set`
 		- (source/area)`460 1 480 34`
-		- (coverage-zeros)`13`
-		- (coverage-counters)`14`
-		- (metrics/profile-duration)`59000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`59000`
-		- (metrics/profile-maximum)`59000`
 (signature)`test_datagramarray_nomem(test)`
 
 
@@ -427,12 +296,5 @@ Trigger EAGAIN on datagrams output.
 	/element/
 		- (control)`property-set`
 		- (source/area)`482 1 506 34`
-		- (coverage-zeros)`16`
-		- (coverage-counters)`17`
-		- (metrics/profile-duration)`58000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`58000`
-		- (metrics/profile-maximum)`58000`
 (signature)`test_datagramarray_index_nomem(test)`
 

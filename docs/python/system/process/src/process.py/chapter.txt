@@ -4,13 +4,13 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 867 0`
-		- (coverage-zeros)`91`
+		- (coverage-zeros)`89`
 		- (coverage-counters)`312`
-		- (metrics/profile-duration)`8517668`
-		- (metrics/profile-count)`3648`
+		- (metrics/profile-duration)`5643569`
+		- (metrics/profile-count)`1233`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`2394000`
-		- (metrics/profile-maximum)`356200000`
+		- (metrics/profile-minimum)`2370000`
+		- (metrics/profile-maximum)`24537000`
 Process invocation and management interfaces.
 
 
@@ -463,11 +463,11 @@ Mapping of signal codes to identifiers used in POSIX header files.
 		- (source/area)`131 1 144 43`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
-		- (metrics/profile-duration)`13706`
-		- (metrics/profile-count)`2634`
-		- (metrics/profile-residency)`89.76234003656307`
-		- (metrics/profile-minimum)`4000`
-		- (metrics/profile-maximum)`4192000`
+		- (metrics/profile-duration)`10025`
+		- (metrics/profile-count)`511`
+		- (metrics/profile-residency)`86.8826859262151`
+		- (metrics/profile-minimum)`5000`
+		- (metrics/profile-maximum)`56000`
 (signature)`interject(main_thread_exec)`
 
 Trip the main thread by sending the process a SIGUSR2 signal in order to cause any
@@ -501,11 +501,11 @@ In cases where there may be process dependent callbacks, add this to the
 		- (source/area)`166 1 177 25`
 		- (coverage-zeros)`3`
 		- (coverage-counters)`5`
-		- (metrics/profile-duration)`32903`
-		- (metrics/profile-count)`5426`
+		- (metrics/profile-duration)`34518`
+		- (metrics/profile-count)`5377`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`14000`
-		- (metrics/profile-maximum)`1159000`
+		- (metrics/profile-maximum)`1721000`
 (signature)`_after_fork_parent(child_pid)`
 
 
@@ -520,11 +520,11 @@ In cases where there may be process dependent callbacks, add this to the
 		- (source/area)`179 1 208 26`
 		- (coverage-zeros)`11`
 		- (coverage-counters)`17`
-		- (metrics/profile-duration)`69590`
-		- (metrics/profile-count)`643`
+		- (metrics/profile-duration)`68285`
+		- (metrics/profile-count)`642`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`43000`
-		- (metrics/profile-maximum)`640000`
+		- (metrics/profile-minimum)`44000`
+		- (metrics/profile-maximum)`266000`
 (signature)`_after_fork_child()`
 
 
@@ -581,11 +581,11 @@ Extension of SystemExit for use with interjections.
 		- (source/area)`222 2 223 12`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
-		- (metrics/profile-duration)`1486`
-		- (metrics/profile-count)`2633`
+		- (metrics/profile-duration)`923`
+		- (metrics/profile-count)`510`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`25000`
+		- (metrics/profile-maximum)`21000`
 (signature)`raised(self)`
 
 
@@ -649,11 +649,11 @@ and `'structured'` keys are present.
 		- (source/area)`245 2 248 24`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`2051`
-		- (metrics/profile-count)`3650`
+		- (metrics/profile-duration)`1035`
+		- (metrics/profile-count)`1235`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`599000`
+		- (metrics/profile-maximum)`44000`
 (signature)`__init__(self, exit_method)`
 
 
@@ -666,11 +666,11 @@ and `'structured'` keys are present.
 		- (source/area)`250 2 256 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`25414`
-		- (metrics/profile-count)`2633`
-		- (metrics/profile-residency)`19.08633082774183`
-		- (metrics/profile-minimum)`9000`
-		- (metrics/profile-maximum)`4222000`
+		- (metrics/profile-duration)`20429`
+		- (metrics/profile-count)`510`
+		- (metrics/profile-residency)`20.56819272482964`
+		- (metrics/profile-minimum)`11000`
+		- (metrics/profile-maximum)`360000`
 (signature)`exit(self, result)`
 
 Perform the exit method designated during the initialization of the invocation.
@@ -683,13 +683,13 @@ Perform the exit method designated during the initialization of the invocation.
 	/element/
 		- (control)`property-set`
 		- (source/area)`257 2 263 10`
-		- (coverage-zeros)`2`
+		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`787`
-		- (metrics/profile-count)`5215`
+		- (metrics/profile-duration)`93`
+		- (metrics/profile-count)`1086`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`91000`
+		- (metrics/profile-maximum)`4000`
 The working directory of the process when the (factor-local/class)&<#Invocation[Invocation]> was created.
 
 
@@ -702,11 +702,11 @@ The working directory of the process when the (factor-local/class)&<#Invocation[
 		- (source/area)`264 2 268 47`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`1109`
-		- (metrics/profile-count)`18821`
+		- (metrics/profile-duration)`355`
+		- (metrics/profile-count)`7076`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`1117000`
+		- (metrics/profile-maximum)`37000`
 Arguments provided by the system without the leading command name.
 
 
@@ -734,11 +734,11 @@ Arguments provided by the system without the leading command name.
 		- (source/area)`272 2 276 49`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`582`
-		- (metrics/profile-count)`5984`
+		- (metrics/profile-duration)`13`
+		- (metrics/profile-count)`4128`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`237000`
+		- (metrics/profile-maximum)`2000`
 		- (type/syntax)`dict`
 		- (type/invalid/unknown)&<#dict>
 		
@@ -754,11 +754,11 @@ The environment variables collected from the system during the creation of the i
 		- (source/area)`278 2 297 13`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`7`
-		- (metrics/profile-duration)`12744`
-		- (metrics/profile-count)`3808`
+		- (metrics/profile-duration)`10688`
+		- (metrics/profile-count)`1955`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`422000`
+		- (metrics/profile-maximum)`58000`
 (signature)`imports(self, envvars)`
 
 Copy the given (factor-local/parameter)&<#Invocation.imports.Parameters.envvars[envvars]> from (none/invalid)&<http://fault.io/dev/null[os.environ]> into the invocation's (factor-local/data)&<#Invocation.parameters[parameters]>.
@@ -785,11 +785,11 @@ The snapshot of imported environment variables may be accessed using (factor-loc
 		- (source/area)`298 2 332 13`
 		- (coverage-zeros)`6`
 		- (coverage-counters)`17`
-		- (metrics/profile-duration)`39581`
-		- (metrics/profile-count)`3650`
-		- (metrics/profile-residency)`34.156791627443376`
-		- (metrics/profile-minimum)`14000`
-		- (metrics/profile-maximum)`1355000`
+		- (metrics/profile-duration)`40384`
+		- (metrics/profile-count)`1235`
+		- (metrics/profile-residency)`23.48671679197995`
+		- (metrics/profile-minimum)`18000`
+		- (metrics/profile-maximum)`355000`
 (signature)`system(Class, context, environ)`
 
 Create an instance representing that of the invocation from the operating
@@ -827,11 +827,11 @@ system. Primarily, information is retrieved from the (none/invalid)&<http://faul
 		- (source/area)`333 2 340 37`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`20563`
-		- (metrics/profile-count)`2633`
-		- (metrics/profile-residency)`33.33641148767199`
-		- (metrics/profile-minimum)`7000`
-		- (metrics/profile-maximum)`4210000`
+		- (metrics/profile-duration)`15717`
+		- (metrics/profile-count)`510`
+		- (metrics/profile-residency)`32.971556886227546`
+		- (metrics/profile-minimum)`8000`
+		- (metrics/profile-maximum)`110000`
 (signature)`system_exit_method(Class, exit_status)`
 
 A means of exit used with a (factor-local/classmethod)&<#Fork.trap[Fork.trap]> managed process.
@@ -885,11 +885,11 @@ exceptions that are not necessarily indicative of a failure.
 		- (source/area)`353 2 354 12`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
-		- (metrics/profile-duration)`1000`
+		- (metrics/profile-duration)`333`
 		- (metrics/profile-count)`3`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`2000`
+		- (metrics/profile-maximum)`1000`
 (signature)`raised(self)`
 
 
@@ -932,11 +932,11 @@ An exception used to communicate that a fatal condition was identified.
 		- (source/area)`363 1 376 32`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
-		- (metrics/profile-duration)`24000`
+		- (metrics/profile-duration)`33500`
 		- (metrics/profile-count)`2`
-		- (metrics/profile-residency)`97.91666666666666`
-		- (metrics/profile-minimum)`10000`
-		- (metrics/profile-maximum)`38000`
+		- (metrics/profile-residency)`98.50746268656717`
+		- (metrics/profile-minimum)`11000`
+		- (metrics/profile-maximum)`56000`
 (signature)`panic()`
 
 Raise a (factor-local/class)&<#Critical[Critical]> exception in the main thread forcing the process to exit.
@@ -1044,11 +1044,11 @@ Default signal handler for SIGINT.
 		- (source/area)`429 2 435 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`2000`
+		- (metrics/profile-duration)`0`
 		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`2000`
-		- (metrics/profile-maximum)`2000`
+		- (metrics/profile-residency)`0.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`0`
 (signature)`void(signo, frame)`
 
 Python-level signal handler that does nothing.
@@ -1063,11 +1063,11 @@ Python-level signal handler that does nothing.
 		- (source/area)`436 2 443 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
-		- (metrics/profile-duration)`8414`
-		- (metrics/profile-count)`3648`
+		- (metrics/profile-duration)`6336`
+		- (metrics/profile-count)`1233`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`4000`
-		- (metrics/profile-maximum)`197000`
+		- (metrics/profile-maximum)`88000`
 (signature)`filter(Class, *sigs)`
 
 Assign the void signal handler to the all of the given signal numbers.
@@ -1082,11 +1082,11 @@ Assign the void signal handler to the all of the given signal numbers.
 		- (source/area)`444 2 452 27`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
-		- (metrics/profile-duration)`6934`
-		- (metrics/profile-count)`3648`
+		- (metrics/profile-duration)`4699`
+		- (metrics/profile-count)`1233`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`3000`
-		- (metrics/profile-maximum)`246000`
+		- (metrics/profile-maximum)`68000`
 (signature)`catch(Class, *sigs)`
 
 Assign the interrupt signal handler to the all of the given signal numbers.
@@ -1101,11 +1101,11 @@ Assign the interrupt signal handler to the all of the given signal numbers.
 		- (source/area)`453 2 476 16`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`9`
-		- (metrics/profile-duration)`1011196601`
-		- (metrics/profile-count)`3648`
-		- (metrics/profile-residency)`99.99848209949323`
-		- (metrics/profile-minimum)`2212000`
-		- (metrics/profile-maximum)`355246427000`
+		- (metrics/profile-duration)`460334480`
+		- (metrics/profile-count)`1233`
+		- (metrics/profile-residency)`99.99739584257375`
+		- (metrics/profile-minimum)`6847000`
+		- (metrics/profile-maximum)`31636630000`
 (signature)`trap(Class)`
 
 Signal handler for a root process.
@@ -1162,11 +1162,11 @@ by (factor-local/classmethod)&<#Fork.trap[Fork.trap]>.
 		- (source/area)`495 2 498 20`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`1905`
-		- (metrics/profile-count)`12796`
+		- (metrics/profile-duration)`1313`
+		- (metrics/profile-count)`8479`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`666000`
+		- (metrics/profile-maximum)`769000`
 (signature)`__init__(self, controller, *args, **kw)`
 
 
@@ -1207,11 +1207,11 @@ by (factor-local/classmethod)&<#Fork.trap[Fork.trap]>.
 		- (source/area)`513 2 525 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`7335`
-		- (metrics/profile-count)`6730`
-		- (metrics/profile-residency)`69.20739735461525`
+		- (metrics/profile-duration)`5794`
+		- (metrics/profile-count)`2463`
+		- (metrics/profile-residency)`65.25821596244131`
 		- (metrics/profile-minimum)`3000`
-		- (metrics/profile-maximum)`674000`
+		- (metrics/profile-maximum)`778000`
 (signature)`substitute(Class, callable, *args, **kw)`
 
 Substitute the existing control call with the given one.
@@ -1232,11 +1232,11 @@ being managed by (factor-local/classmethod)&<#Fork.trap[trap]>.
 		- (source/area)`526 2 575 13`
 		- (coverage-zeros)`6`
 		- (coverage-counters)`14`
-		- (metrics/profile-duration)`1582772`
-		- (metrics/profile-count)`6066`
-		- (metrics/profile-residency)`97.57974632284359`
-		- (metrics/profile-minimum)`881000`
-		- (metrics/profile-maximum)`20020000`
+		- (metrics/profile-duration)`1754307`
+		- (metrics/profile-count)`6016`
+		- (metrics/profile-residency)`97.70904854995948`
+		- (metrics/profile-minimum)`857000`
+		- (metrics/profile-maximum)`30724000`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
@@ -1285,11 +1285,11 @@ execute the replacement.
 		- (source/area)`576 2 607 21`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`11`
-		- (metrics/profile-duration)`1011109870`
-		- (metrics/profile-count)`3648`
-		- (metrics/profile-residency)`99.68111611397775`
-		- (metrics/profile-minimum)`2171000`
-		- (metrics/profile-maximum)`355246301000`
+		- (metrics/profile-duration)`460260845`
+		- (metrics/profile-count)`1233`
+		- (metrics/profile-residency)`97.79655502412545`
+		- (metrics/profile-minimum)`6795000`
+		- (metrics/profile-maximum)`31636576000`
 (signature)`trap(Class, controller, *args, **kw)`
 
 Establish a point for substituting the process. Trap provides an
@@ -1311,11 +1311,11 @@ in a well defined manner.
 		- (source/area)`609 1 642 11`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`10`
-		- (metrics/profile-duration)`246039357`
-		- (metrics/profile-count)`176`
-		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-duration)`246519807`
+		- (metrics/profile-count)`26`
+		- (metrics/profile-residency)`99.9999843981955`
 		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`3425207000`
+		- (metrics/profile-maximum)`3215421000`
 (signature)`critical(context, callable, *args, **kw)`
 
 A callable used to trap exceptions and interject a (factor-local/class)&<#Critical[Critical]> instance caused by the
@@ -1372,11 +1372,11 @@ that rely on a set of threads to perform the actual work.
 		- (source/area)`677 1 721 26`
 		- (coverage-zeros)`12`
 		- (coverage-counters)`23`
-		- (metrics/profile-duration)`1011214336`
-		- (metrics/profile-count)`3648`
-		- (metrics/profile-residency)`-99.987915318835`
-		- (metrics/profile-minimum)`2220000`
-		- (metrics/profile-maximum)`355246453000`
+		- (metrics/profile-duration)`460351889`
+		- (metrics/profile-count)`1233`
+		- (metrics/profile-residency)`-99.97664539140587`
+		- (metrics/profile-minimum)`6860000`
+		- (metrics/profile-maximum)`31636641000`
 (signature)`control(main, *args, **kw)`
 
 A program that calls this is making an explicit declaration that signals should be
@@ -1410,11 +1410,11 @@ of a (factor-local/classmethod)&<#Fork.trap[Fork.trap]> call. (factor-local/clas
 		- (source/area)`735 1 795 30`
 		- (coverage-zeros)`3`
 		- (coverage-counters)`27`
-		- (metrics/profile-duration)`1899520`
-		- (metrics/profile-count)`6066`
-		- (metrics/profile-residency)`16.67514139518245`
-		- (metrics/profile-minimum)`957000`
-		- (metrics/profile-maximum)`20048000`
+		- (metrics/profile-duration)`2067262`
+		- (metrics/profile-count)`6016`
+		- (metrics/profile-residency)`15.114718977422543`
+		- (metrics/profile-minimum)`936000`
+		- (metrics/profile-maximum)`30752000`
 (signature)`concurrently(controller)`
 
 Dispatch the given controller in a child process of a (factor-local/function)&<#control[control]> controlled process.
@@ -1447,14 +1447,14 @@ the parent. This expects the calling process to have been launched with (factor-
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`797 1 806 70`
+		- (source/area)`797 1 806 57`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
-		- (metrics/profile-duration)`24015`
-		- (metrics/profile-count)`3668`
+		- (metrics/profile-duration)`29245`
+		- (metrics/profile-count)`1240`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`6000`
-		- (metrics/profile-maximum)`1345000`
+		- (metrics/profile-minimum)`12000`
+		- (metrics/profile-maximum)`340000`
 		- (type/syntax)`files.Path`
 		- (type/project-local/factor-element)&<files#Path[fault.system.files.Path]>
 		
@@ -1477,11 +1477,11 @@ will create a new instance.
 		- (source/area)`808 1 822 68`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`9`
-		- (metrics/profile-duration)`73500`
+		- (metrics/profile-duration)`87500`
 		- (metrics/profile-count)`2`
-		- (metrics/profile-residency)`41.49659863945578`
-		- (metrics/profile-minimum)`22000`
-		- (metrics/profile-maximum)`125000`
+		- (metrics/profile-residency)`33.14285714285714`
+		- (metrics/profile-minimum)`13000`
+		- (metrics/profile-maximum)`162000`
 		- (type/syntax)`files.Path`
 		- (type/project-local/factor-element)&<files#Path[fault.system.files.Path]>
 		
@@ -1509,11 +1509,11 @@ Otherwise, the result of (factor-local/function)&<#fs_pwd[fs_pwd]> is returned.
 		- (source/area)`824 1 841 35`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`10`
-		- (metrics/profile-duration)`8221000`
+		- (metrics/profile-duration)`8240500`
 		- (metrics/profile-count)`2`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`17000`
-		- (metrics/profile-maximum)`16425000`
+		- (metrics/profile-minimum)`10000`
+		- (metrics/profile-maximum)`16471000`
 (signature)`_scheduler_loop(ks, proxy, limit, final)`
 
 
@@ -1526,11 +1526,11 @@ Otherwise, the result of (factor-local/function)&<#fs_pwd[fs_pwd]> is returned.
 		- (source/area)`843 1 861 9`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`11`
-		- (metrics/profile-duration)`517077`
-		- (metrics/profile-count)`90`
+		- (metrics/profile-duration)`501333`
+		- (metrics/profile-count)`15`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`2149000`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`1017000`
 		- (type/syntax)`kernel.Scheduler`
 		- (type/project-local/factor-element)&<kernel#Scheduler[fault.system.kernel.Scheduler]>
 		
@@ -1552,10 +1552,10 @@ Accessing (project-local/unknown)&<process#scheduler[process.scheduler]> will pe
 		- (source/area)`864 1 867 27`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`532404`
-		- (metrics/profile-count)`89`
-		- (metrics/profile-residency)`1.7896336316056054`
-		- (metrics/profile-minimum)`192000`
-		- (metrics/profile-maximum)`2312000`
+		- (metrics/profile-duration)`543357`
+		- (metrics/profile-count)`14`
+		- (metrics/profile-residency)`1.0385171552517418`
+		- (metrics/profile-minimum)`280000`
+		- (metrics/profile-maximum)`1027000`
 (signature)`__getattr__(name)`
 

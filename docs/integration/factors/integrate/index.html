@@ -3,28 +3,37 @@
 	'-O': ('set-add', 'optimal', 'features'),
 	'-g': ('set-add', 'debug', 'features'),
 }
-
-metrics_instrumentation = {
+</code></pre></section><section class="data" documented="false" local-identifier="metrics_instrumentation" id="metrics_instrumentation"><h1><span class="prefix"></span><a class="title" href="#metrics_instrumentation"><span class="text.normal">metrics_instrumentation</span></a><div class="factor-element-meta"><span class="abstract-type">data</span></div></h1><div class="element-status"><div class="coverage"></div> <div class="profile"></div></div><pre class="text.syntax"><code class="source">metrics_instrumentation = {
 	'-m': ('set-add', 'metrics'),
 }
+</code></pre></section><section class="data" documented="false" local-identifier="restricted" id="restricted"><h1><span class="prefix"></span><a class="title" href="#restricted"><span class="text.normal">restricted</span></a><div class="factor-element-meta"><span class="abstract-type">data</span></div></h1><div class="element-status"><div class="coverage"></div> <div class="profile"></div></div><pre class="text.syntax"><code class="source">restricted = {
+	# Reprocess levels.
+	'-N': ('field-replace', -1, 'relevel'),
+	'-n': ('field-replace', +0, 'relevel'),
+	'-r': ('field-replace', +1, 'relevel'),
+	'-R': ('field-replace', +2, 'relevel'),
 
-</code></pre></section><section class="data" documented="false" local-identifier="restricted" id="restricted"><h1><span class="prefix"></span><a class="title" href="#restricted"><span class="text.normal">restricted</span></a><div class="factor-element-meta"><span class="abstract-type">data</span></div></h1><div class="element-status"><div class="coverage"></div> <div class="profile"></div></div><pre class="text.syntax"><code class="source"># Reprocess levels.
-'-N': ('field-replace', -1, 'relevel'),
-'-n': ('field-replace', +0, 'relevel'),
-'-r': ('field-replace', +1, 'relevel'),
-'-R': ('field-replace', +2, 'relevel'),
 	# Switch control; only relevant with caching.
-'-s': ('field-replace', 'never', 'switch-image'),
-'-S': ('field-replace', 'always', 'switch-image'),
+	'-s': ('field-replace', 'never', 'switch-image'),
+	'-S': ('field-replace', 'always', 'switch-image'),
+
 	# Defaults to update when missing.
-'-u': ('field-replace', 'never', 'update-product-index'),
-'-U': ('field-replace', 'always', 'update-product-index'),
-</code></pre></section><section class="data" documented="false" local-identifier="required" id="required"><h1><span class="prefix"></span><a class="title" href="#required"><span class="text.normal">required</span></a><div class="factor-element-meta"><span class="abstract-type">data</span></div></h1><div class="element-status"><div class="coverage"></div> <div class="profile"></div></div><pre class="text.syntax"><code class="source">	'-.': ('ignore', None, None),
+	'-u': ('field-replace', 'never', 'update-product-index'),
+	'-U': ('field-replace', 'always', 'update-product-index'),
+
+	'-c': ('field-replace', 'transient', 'cache-type'),
+	'-.': ('ignore', None, None),
 
 	'--closed-frames': ('field-replace', False, 'opened-frames'),
 	'--opened-frames': ('field-replace', True, 'opened-frames'),
 }
-
-required = {
+</code></pre></section><section class="data" documented="false" local-identifier="required" id="required"><h1><span class="prefix"></span><a class="title" href="#required"><span class="text.normal">required</span></a><div class="factor-element-meta"><span class="abstract-type">data</span></div></h1><div class="element-status"><div class="coverage"></div> <div class="profile"></div></div><pre class="text.syntax"><code class="source">required = {
 	'-x': ('field-replace', 'machines-context-name'),
+	'-X': ('field-replace', 'system-context-directory'),
+
+	'-D': ('field-replace', 'product-directory'),
+	'-L': ('field-replace', 'processing-lanes'),
+	'-M': ('field-replace', 'status-monitors'),
+	'-C': ('field-replace', 'persistent-cache'),
+}
 </code></pre></section><section class="function" documented="true" local-identifier="plan" id="plan"><h1><span class="prefix"></span><a class="title" href="#plan"><span class="text.normal">plan</span></a><div class="factor-element-meta"><span class="abstract-type">function</span></div></h1><div class="element-status"><div class="coverage"></div> <div class="profile"></div></div><p><code class="signature">plan(command, cc, ccmode, factors, features, cachetype, cachepath, ctl, identifier)</code></p><p><span class="text.normal">Create an invocation for processing </span><a class="invalid" href="#pj"><span class="unknown">pj</span></a><span class="text.normal"> with </span><a class="factor-local" href="#plan.Parameters.cc"><span class="parameter">cc</span></a><span class="text.normal">.</span></p></section><section class="function" documented="true" local-identifier="dispatch" id="dispatch"><h1><span class="prefix"></span><a class="title" href="#dispatch"><span class="text.normal">dispatch</span></a><div class="factor-element-meta"><span class="abstract-type">function</span></div></h1><div class="element-status"><div class="coverage"></div> <div class="profile"></div></div><p><code class="signature">dispatch(exits, meta, log, config, cc, pdr, argv)</code></p><p><span class="text.normal">Complete build connecting requirements and updating indexes.</span></p></section><section class="function" documented="false" local-identifier="configure" id="configure"><h1><span class="prefix"></span><a class="title" href="#configure"><span class="text.normal">configure</span></a><div class="factor-element-meta"><span class="abstract-type">function</span></div></h1><div class="element-status"><div class="coverage"></div> <div class="profile"></div></div><p><code class="signature">configure(restricted, required, argv)</code></p></section><section class="function" documented="false" local-identifier="main" id="main"><h1><span class="prefix"></span><a class="title" href="#main"><span class="text.normal">main</span></a><div class="factor-element-meta"><span class="abstract-type">function</span></div><code class="type"><a class="remote" href="http://fault.io/python/system/process#Exit"><span class="factor-element">process.Exit</span></a></code></h1><div class="element-status"><div class="coverage"></div> <div class="profile"></div></div><p><code class="signature">main(inv)</code></p></section><h1 class="footing"></h1></main></body></html>

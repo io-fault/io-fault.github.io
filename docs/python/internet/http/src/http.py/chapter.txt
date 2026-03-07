@@ -6,11 +6,11 @@
 		- (source/area)`1 1 760 10`
 		- (coverage-zeros)`22`
 		- (coverage-counters)`340`
-		- (metrics/profile-duration)`1905952`
+		- (metrics/profile-duration)`1001952`
 		- (metrics/profile-count)`42`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`1125000`
-		- (metrics/profile-maximum)`2150000`
+		- (metrics/profile-minimum)`991000`
+		- (metrics/profile-maximum)`1037000`
 Low-level Hypertext Transfer Protocol tools.
 
 Provides protocol tokenization, field parsers, and protocol serialization for
@@ -464,11 +464,11 @@ protocol elements when interpreting HTTP data as events.
 		- (source/area)`111 1 671 24`
 		- (coverage-zeros)`19`
 		- (coverage-counters)`281`
-		- (metrics/profile-duration)`579151`
+		- (metrics/profile-duration)`537090`
 		- (metrics/profile-count)`33`
-		- (metrics/profile-residency)`82.56069485140226`
-		- (metrics/profile-minimum)`65000`
-		- (metrics/profile-maximum)`5085000`
+		- (metrics/profile-residency)`83.40103814037464`
+		- (metrics/profile-minimum)`40000`
+		- (metrics/profile-maximum)`5053000`
 (signature)`Tokenization()`
 
 An HTTP 1.0 and 1.1 message parser. Emits HTTP events from the given binary data.
@@ -505,11 +505,11 @@ Primarily, this generator is concernced with:
 		- (source/area)`674 1 681 9`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
-		- (metrics/profile-duration)`42393`
+		- (metrics/profile-duration)`44757`
 		- (metrics/profile-count)`33`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`14000`
-		- (metrics/profile-maximum)`91000`
+		- (metrics/profile-minimum)`4000`
+		- (metrics/profile-maximum)`80000`
 (signature)`disassembly(**config)`
 
 Returns an already started (factor-local/data)&<#Disassembler[Disassembler]> generator.
@@ -524,11 +524,11 @@ Returns an already started (factor-local/data)&<#Disassembler[Disassembler]> gen
 		- (source/area)`683 1 688 57`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`4500`
+		- (metrics/profile-duration)`3500`
 		- (metrics/profile-count)`2`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`8000`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`7000`
 (signature)`headers(headers)`
 
 Produce an iterator of (invalid/unknown)&<#bytes> instances making up a segment
@@ -562,11 +562,11 @@ of headers that can be joined into a buffer.
 		- (source/area)`692 1 693 30`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
-		- (metrics/profile-duration)`1166`
+		- (metrics/profile-duration)`333`
 		- (metrics/profile-count)`6`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`3000`
+		- (metrics/profile-maximum)`2000`
 (signature)`chunk_size(length)`
 
 
@@ -579,11 +579,11 @@ of headers that can be joined into a buffer.
 		- (source/area)`695 1 710 43`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`6166`
+		- (metrics/profile-duration)`5833`
 		- (metrics/profile-count)`6`
-		- (metrics/profile-residency)`81.08108108108108`
+		- (metrics/profile-residency)`85.71428571428572`
 		- (metrics/profile-minimum)`2000`
-		- (metrics/profile-maximum)`16000`
+		- (metrics/profile-maximum)`18000`
 (signature)`chunk(data)`
 
 Returns a tuple of (chunk-size + CRLF, chunk-data, CRLF).
@@ -608,11 +608,11 @@ some of the purpose.
 		- (source/area)`712 1 751 22`
 		- (coverage-zeros)`3`
 		- (coverage-counters)`20`
-		- (metrics/profile-duration)`2435833`
+		- (metrics/profile-duration)`2180000`
 		- (metrics/profile-count)`6`
-		- (metrics/profile-residency)`86.88333903523777`
-		- (metrics/profile-minimum)`69000`
-		- (metrics/profile-maximum)`5066000`
+		- (metrics/profile-residency)`86.29204892966361`
+		- (metrics/profile-minimum)`78000`
+		- (metrics/profile-maximum)`5021000`
 (signature)`Serialization()`
 
 Assemble HTTP events back into a sequences of bytes.
@@ -641,11 +641,11 @@ Assemble HTTP events back into a sequences of bytes.
 		- (source/area)`754 1 761 9`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
-		- (metrics/profile-duration)`7500`
+		- (metrics/profile-duration)`5500`
 		- (metrics/profile-count)`6`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`2000`
-		- (metrics/profile-maximum)`18000`
+		- (metrics/profile-maximum)`16000`
 (signature)`assembly(**config)`
 
 Return a started (factor-local/data)&<#Assembler[Assembler]> generator.

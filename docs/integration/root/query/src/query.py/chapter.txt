@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 73 0`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`0`
+		- (coverage-zeros)`16`
+		- (coverage-counters)`32`
 Location information module for identifying directories prepared by (project-local/project-name)&<system.root>.
 
 
@@ -28,6 +28,8 @@ Location information module for identifying directories prepared by (project-loc
 	/element/
 		- (control)`property-set`
 		- (source/area)`5 1 5 30`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ root_project_path ]
 ! CONTROL:
@@ -37,9 +39,11 @@ Location information module for identifying directories prepared by (project-loc
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`8 1 8 59`
+		- (source/area)`8 1 8 46`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
-	root_project_path = files.Path.from_absolute(__file__) ** 1
+	root_project_path = (files.root@__file__) ** 1
 
 [ installation_path ]
 ! CONTROL:
@@ -50,6 +54,8 @@ Location information module for identifying directories prepared by (project-loc
 	/element/
 		- (control)`property-set`
 		- (source/area)`9 1 9 42`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 #!source
 	installation_path = root_project_path ** 3
 
@@ -62,6 +68,8 @@ Location information module for identifying directories prepared by (project-loc
 	/element/
 		- (control)`property-set`
 		- (source/area)`12 1 12 78`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 #!source
 	installation_envstr = os.environ.get('FAULT_INSTALLATION', '').strip() or None
 
@@ -72,6 +80,8 @@ Location information module for identifying directories prepared by (project-loc
 	/element/
 		- (control)`property-set`
 		- (source/area)`22 1 26 23`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`libexec()`
 
 Get the path to the `libexec` directory used by the fault installation.
@@ -84,6 +94,8 @@ Get the path to the `libexec` directory used by the fault installation.
 	/element/
 		- (control)`property-set`
 		- (source/area)`28 1 32 19`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 (signature)`bindir()`
 
 Get the path to the user executable tools directory used by the fault installation.
@@ -96,6 +108,8 @@ Get the path to the user executable tools directory used by the fault installati
 	/element/
 		- (control)`property-set`
 		- (source/area)`34 1 38 19`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 (signature)`libdir()`
 
 Get the path to the `lib` directory used by the fault installation.
@@ -108,6 +122,8 @@ Get the path to the `lib` directory used by the fault installation.
 	/element/
 		- (control)`property-set`
 		- (source/area)`40 1 46 42`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`3`
 (signature)`tool(name)`
 
 Prepare a structured plan for executing the tool identified by (factor-local/parameter)&<#tool.Parameters.name[name]>.
@@ -120,6 +136,8 @@ Prepare a structured plan for executing the tool identified by (factor-local/par
 	/element/
 		- (control)`property-set`
 		- (source/area)`48 1 57 37`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`dispatch(name)`
 
 Prepare a structured plan for executing the tool identified by (factor-local/parameter)&<#dispatch.Parameters.name[name]>.
@@ -135,6 +153,8 @@ operations as subprocesses.
 	/element/
 		- (control)`property-set`
 		- (source/area)`59 1 67 50`
+		- (coverage-zeros)`6`
+		- (coverage-counters)`6`
 (signature)`dispatched(name, *argv, **environ)`
 
 Serialize an execution plan performing the given tool (factor-local/parameter)&<#dispatched.Parameters.name[name]> using `fault-dispatch`.
@@ -147,6 +167,8 @@ Serialize an execution plan performing the given tool (factor-local/parameter)&<
 	/element/
 		- (control)`property-set`
 		- (source/area)`69 1 73 19`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`system()`
 
 Get the path to the integration directory of the installation.

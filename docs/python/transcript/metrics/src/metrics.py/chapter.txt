@@ -6,11 +6,11 @@
 		- (source/area)`1 1 295 0`
 		- (coverage-zeros)`14`
 		- (coverage-counters)`114`
-		- (metrics/profile-duration)`1542624`
-		- (metrics/profile-count)`823`
+		- (metrics/profile-duration)`1383612`
+		- (metrics/profile-count)`739`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`1075000`
-		- (metrics/profile-maximum)`4049000`
+		- (metrics/profile-minimum)`1169000`
+		- (metrics/profile-maximum)`2544000`
 Data structures for storing and combining status metrics for progress notifications.
 
 
@@ -143,11 +143,11 @@ Work unit progress metrics.
 		- (source/area)`30 2 36 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`1902`
-		- (metrics/profile-count)`20967`
+		- (metrics/profile-duration)`2990`
+		- (metrics/profile-count)`6160`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`7289000`
+		- (metrics/profile-maximum)`17628000`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
@@ -163,11 +163,11 @@ Number of failed, executed, or granted Works Units.
 		- (source/area)`37 2 42 39`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`41751`
-		- (metrics/profile-count)`20965`
-		- (metrics/profile-residency)`95.44179691382494`
+		- (metrics/profile-duration)`31741`
+		- (metrics/profile-count)`6158`
+		- (metrics/profile-residency)`88.23484271002266`
 		- (metrics/profile-minimum)`2000`
-		- (metrics/profile-maximum)`46952000`
+		- (metrics/profile-maximum)`23816000`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
@@ -186,11 +186,11 @@ have not completed or failed.
 		- (source/area)`44 2 52 3`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
-		- (metrics/profile-duration)`7071`
-		- (metrics/profile-count)`13635`
+		- (metrics/profile-duration)`8750`
+		- (metrics/profile-count)`11239`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`117000`
+		- (metrics/profile-maximum)`653000`
 (signature)`__str__(self)`
 
 
@@ -205,11 +205,11 @@ have not completed or failed.
 		- (source/area)`54 2 58 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`1559`
-		- (metrics/profile-count)`13640`
+		- (metrics/profile-duration)`822`
+		- (metrics/profile-count)`11241`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`42000`
+		- (metrics/profile-maximum)`12000`
 		- (type/syntax)`bool`
 		- (type/invalid/unknown)&<#bool>
 		
@@ -227,11 +227,11 @@ have not completed or failed.
 		- (source/area)`60 2 68 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
-		- (metrics/profile-duration)`1740`
-		- (metrics/profile-count)`15739`
+		- (metrics/profile-duration)`1419`
+		- (metrics/profile-count)`5648`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`228000`
+		- (metrics/profile-maximum)`27000`
 (signature)`__add__(self, op)`
 
 
@@ -246,11 +246,11 @@ have not completed or failed.
 		- (source/area)`69 2 90 9`
 		- (coverage-zeros)`4`
 		- (coverage-counters)`12`
-		- (metrics/profile-duration)`7693`
-		- (metrics/profile-count)`5717`
+		- (metrics/profile-duration)`4145`
+		- (metrics/profile-count)`1287`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`25574000`
+		- (metrics/profile-maximum)`33000`
 (signature)`split(Class, text)`
 
 
@@ -352,11 +352,11 @@ Advisory messaging metrics.
 		- (source/area)`110 2 114 57`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`500`
+		- (metrics/profile-duration)`0`
 		- (metrics/profile-count)`2`
-		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-residency)`0.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`1000`
+		- (metrics/profile-maximum)`0`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
@@ -374,11 +374,11 @@ Total number of errors, warnings, and notices.
 		- (source/area)`116 2 121 5`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
-		- (metrics/profile-duration)`2000`
+		- (metrics/profile-duration)`1000`
 		- (metrics/profile-count)`1`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`2000`
-		- (metrics/profile-maximum)`2000`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`1000`
 (signature)`__str__(self)`
 
 
@@ -393,11 +393,11 @@ Total number of errors, warnings, and notices.
 		- (source/area)`123 2 124 70`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`928`
-		- (metrics/profile-count)`13640`
+		- (metrics/profile-duration)`373`
+		- (metrics/profile-count)`11241`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`36000`
+		- (metrics/profile-maximum)`11000`
 		- (type/syntax)`bool`
 		- (type/invalid/unknown)&<#bool>
 		
@@ -415,11 +415,11 @@ Total number of errors, warnings, and notices.
 		- (source/area)`126 2 133 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
-		- (metrics/profile-duration)`1386`
-		- (metrics/profile-count)`15739`
+		- (metrics/profile-duration)`782`
+		- (metrics/profile-count)`5648`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`159000`
+		- (metrics/profile-maximum)`17000`
 (signature)`__add__(self, op)`
 
 
@@ -434,11 +434,11 @@ Total number of errors, warnings, and notices.
 		- (source/area)`134 2 151 9`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`9`
-		- (metrics/profile-duration)`5666`
+		- (metrics/profile-duration)`2666`
 		- (metrics/profile-count)`3`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`3000`
-		- (metrics/profile-maximum)`10000`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`4000`
 (signature)`split(Class, text)`
 
 
@@ -561,11 +561,11 @@ Resource usage metrics.
 		- (source/area)`173 2 179 4`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`1947`
-		- (metrics/profile-count)`8212`
+		- (metrics/profile-duration)`1234`
+		- (metrics/profile-count)`5865`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`429000`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`15000`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -583,11 +583,11 @@ Resource usage metrics.
 		- (source/area)`181 2 182 87`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`884`
-		- (metrics/profile-count)`13640`
+		- (metrics/profile-duration)`325`
+		- (metrics/profile-count)`11241`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`74000`
+		- (metrics/profile-maximum)`16000`
 		- (type/syntax)`bool`
 		- (type/invalid/unknown)&<#bool>
 		
@@ -605,11 +605,11 @@ Resource usage metrics.
 		- (source/area)`184 2 192 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
-		- (metrics/profile-duration)`1706`
-		- (metrics/profile-count)`15742`
+		- (metrics/profile-duration)`1370`
+		- (metrics/profile-count)`5651`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`190000`
+		- (metrics/profile-maximum)`178000`
 (signature)`__add__(self, op)`
 
 
@@ -624,11 +624,11 @@ Resource usage metrics.
 		- (source/area)`193 2 211 9`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`9`
-		- (metrics/profile-duration)`4110`
-		- (metrics/profile-count)`2434`
+		- (metrics/profile-duration)`4026`
+		- (metrics/profile-count)`645`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`383000`
+		- (metrics/profile-maximum)`16000`
 (signature)`split(Class, text)`
 
 
@@ -678,11 +678,11 @@ Collection of metrics regarding the status of an Abstract Procedure.
 		- (source/area)`239 2 243 46`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`3933`
-		- (metrics/profile-count)`15`
+		- (metrics/profile-duration)`5000`
+		- (metrics/profile-count)`1`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`3000`
-		- (metrics/profile-maximum)`6000`
+		- (metrics/profile-minimum)`5000`
+		- (metrics/profile-maximum)`5000`
 (signature)`create(Class)`
 
 Create an empty Procedure.
@@ -699,11 +699,11 @@ Create an empty Procedure.
 		- (source/area)`245 2 254 19`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`6`
-		- (metrics/profile-duration)`11977`
-		- (metrics/profile-count)`132509`
-		- (metrics/profile-residency)`44.84740339728043`
+		- (metrics/profile-duration)`6548`
+		- (metrics/profile-count)`38012`
+		- (metrics/profile-residency)`19.927285874979912`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`46960000`
+		- (metrics/profile-maximum)`23821000`
 (signature)`__getitem__(self, path)`
 
 
@@ -718,11 +718,11 @@ Create an empty Procedure.
 		- (source/area)`256 2 261 3`
 		- (coverage-zeros)`3`
 		- (coverage-counters)`10`
-		- (metrics/profile-duration)`17072`
-		- (metrics/profile-count)`15738`
-		- (metrics/profile-residency)`71.69808511826116`
+		- (metrics/profile-duration)`12228`
+		- (metrics/profile-count)`5647`
+		- (metrics/profile-residency)`60.79036158535702`
 		- (metrics/profile-minimum)`7000`
-		- (metrics/profile-maximum)`21441000`
+		- (metrics/profile-maximum)`199000`
 (signature)`__add__(self, operand)`
 
 
@@ -754,11 +754,11 @@ Create an empty Procedure.
 		- (source/area)`270 2 281 24`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
-		- (metrics/profile-duration)`22641`
-		- (metrics/profile-count)`5719`
-		- (metrics/profile-residency)`58.29246630883886`
+		- (metrics/profile-duration)`22166`
+		- (metrics/profile-count)`1289`
+		- (metrics/profile-residency)`69.01861962760745`
 		- (metrics/profile-minimum)`5000`
-		- (metrics/profile-maximum)`25616000`
+		- (metrics/profile-maximum)`129000`
 (signature)`structure(Class, text)`
 
 Structure progress text into a (invalid/unknown)&<#Metrics> instance.
@@ -773,11 +773,11 @@ Structure progress text into a (invalid/unknown)&<#Metrics> instance.
 		- (source/area)`283 2 295 20`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`9`
-		- (metrics/profile-duration)`39690`
-		- (metrics/profile-count)`13639`
-		- (metrics/profile-residency)`70.73718161867393`
+		- (metrics/profile-duration)`41098`
+		- (metrics/profile-count)`11240`
+		- (metrics/profile-residency)`67.73613251822732`
 		- (metrics/profile-minimum)`9000`
-		- (metrics/profile-maximum)`732000`
+		- (metrics/profile-maximum)`1472000`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		

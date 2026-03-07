@@ -3,7 +3,7 @@
 		module
 	/element/
 		- (control)`property-set`
-		- (source/area)`1 1 608 0`
+		- (source/area)`1 1 639 0`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`0`
 Print representations of factors for publication and reading.
@@ -283,7 +283,7 @@ Print representations of factors for publication and reading.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`39 1 238 44`
+		- (source/area)`39 1 269 44`
 (signature)`r_factor(sx, prefixes, variants, req, ctx, pj, pjdir, fpath, type, requirements, sources)`
 
 
@@ -295,7 +295,7 @@ Print representations of factors for publication and reading.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`240 1 265 101`
+		- (source/area)`271 1 296 101`
 (signature)`r_project(sx, prefixes, variants, req, ctx, pj, pjdir)`
 
 
@@ -305,7 +305,7 @@ Print representations of factors for publication and reading.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`267 1 282 19`
+		- (source/area)`298 1 313 19`
 (signature)`hrinit(prefix, type, identifier)`
 
 Initialize the `.http-resource` directory inside (invalid/unknown)&<#path>
@@ -322,7 +322,7 @@ Returns the directory path that was created.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`284 1 345 22`
+		- (source/area)`315 1 376 22`
 (signature)`r_corpus(config, out, ctx, req, variants)`
 
 
@@ -334,7 +334,7 @@ Returns the directory path that was created.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`347 1 355 32`
+		- (source/area)`378 1 386 32`
 (signature)`first_sentence(p)`
 
 
@@ -346,7 +346,7 @@ Returns the directory path that was created.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`357 1 361 14`
+		- (source/area)`388 1 392 14`
 (signature)`removeprefix(prefixes, string)`
 
 
@@ -358,12 +358,13 @@ Returns the directory path that was created.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`363 1 367 1`
+		- (source/area)`394 1 398 1`
 #!source
-		if f.identifier.startswith('.'):
-			continue
-		yield [web_resources, 'default', f.identifier], (f.fs_load(),)
-		yield [web_resources, 'core.css'], (''.join([
+	required = {
+		'--corpus-root': ('field-replace', 'corpus-root'),
+		'--corpus-title': ('field-replace', 'corpus-title'),
+		'-P': ('set-add', 'prefixes'),
+	}
 
 [ restricted ]
 ! CONTROL:
@@ -373,12 +374,12 @@ Returns the directory path that was created.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`369 1 372 1`
+		- (source/area)`400 1 403 1`
 #!source
-	"@import 'default/sheet.css';\n",
-	"@import 'default/if.css';\n",
-	"@import 'default/select.css';\n",
-	"@import 'default/icon.css';\n",
+	restricted = {
+		'-W': ('field-replace', False, 'web-defaults'),
+		'-w': ('field-replace', True, 'web-defaults'),
+	}
 
 [ extract_image_reference ]
 ! CONTROL:
@@ -386,7 +387,7 @@ Returns the directory path that was created.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`374 1 392 38`
+		- (source/area)`405 1 423 38`
 (signature)`extract_image_reference(svg)`
 
 Extract the hyperlink from the first image element in an SVG image.
@@ -415,7 +416,7 @@ The `href` attribute must be directly adjacent to the `=` character.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`394 1 405 23`
+		- (source/area)`425 1 436 23`
 (signature)`transfer(xfers)`
 
 Transfer the remote resources to their associated filesystem location.
@@ -427,7 +428,7 @@ Transfer the remote resources to their associated filesystem location.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`407 1 440 21`
+		- (source/area)`438 1 471 21`
 (signature)`icons(out, ctx, types)`
 
 Print the icons of the factor types used by the projects in (factor-local/parameter)&<#icons.Parameters.ctx[ctx]>.
@@ -441,7 +442,7 @@ according to (project-local/factor-element)&<html#icon_identity[system.chapters.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`442 1 520 5`
+		- (source/area)`473 1 551 5`
 (signature)`manual(argv)`
 
 Print system manuals from chapter elements.
@@ -453,7 +454,7 @@ Print system manuals from chapter elements.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`522 1 589 10`
+		- (source/area)`553 1 620 10`
 (signature)`web(argv)`
 
 Print factor representations for web publication.
@@ -467,7 +468,7 @@ Print factor representations for web publication.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`591 1 608 27`
+		- (source/area)`622 1 639 27`
 		- (type/syntax)`process.Exit`
 		- (type/remote/factor-element)&<http://fault.io/python/system/process#Exit[fault.system.process.Exit]>
 		

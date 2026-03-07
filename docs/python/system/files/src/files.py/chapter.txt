@@ -3,15 +3,15 @@
 		module
 	/element/
 		- (control)`property-set`
-		- (source/area)`1 1 1108 0`
-		- (coverage-zeros)`96`
-		- (coverage-counters)`533`
-		- (metrics/profile-duration)`15054628`
-		- (metrics/profile-count)`3636`
+		- (source/area)`1 1 753 0`
+		- (coverage-zeros)`97`
+		- (coverage-counters)`446`
+		- (metrics/profile-duration)`10081083`
+		- (metrics/profile-count)`1250`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`3059000`
-		- (metrics/profile-maximum)`99437000`
-Filesystem interfaces and data structures.
+		- (metrics/profile-minimum)`3541000`
+		- (metrics/profile-maximum)`33252000`
+File system interfaces and data structures.
 
 Current working directory related interfaces are provided in (project-local/unknown)&<process>.
 
@@ -24,7 +24,7 @@ Current working directory related interfaces are provided in (project-local/unkn
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`17 1 17 46`
+		- (source/area)`14 1 14 46`
 
 [ Iterable ]
 ! CONTROL:
@@ -34,7 +34,7 @@ Current working directory related interfaces are provided in (project-local/unkn
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`17 1 17 46`
+		- (source/area)`14 1 14 46`
 
 [ Optional ]
 ! CONTROL:
@@ -44,7 +44,7 @@ Current working directory related interfaces are provided in (project-local/unkn
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`18 1 18 38`
+		- (source/area)`15 1 15 38`
 
 [ TypeAlias ]
 ! CONTROL:
@@ -54,7 +54,7 @@ Current working directory related interfaces are provided in (project-local/unkn
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`18 1 18 38`
+		- (source/area)`15 1 15 38`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
 
@@ -66,7 +66,7 @@ Current working directory related interfaces are provided in (project-local/unkn
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`19 1 19 9`
+		- (source/area)`16 1 16 9`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
 
@@ -78,7 +78,7 @@ Current working directory related interfaces are provided in (project-local/unkn
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`20 1 20 14`
+		- (source/area)`17 1 17 14`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
 
@@ -90,7 +90,7 @@ Current working directory related interfaces are provided in (project-local/unkn
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`21 1 21 10`
+		- (source/area)`18 1 18 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
 
@@ -102,7 +102,7 @@ Current working directory related interfaces are provided in (project-local/unkn
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`22 1 22 17`
+		- (source/area)`19 1 19 17`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
 
@@ -114,7 +114,7 @@ Current working directory related interfaces are provided in (project-local/unkn
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`23 1 23 18`
+		- (source/area)`20 1 20 18`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
 
@@ -126,7 +126,7 @@ Current working directory related interfaces are provided in (project-local/unkn
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`24 1 24 11`
+		- (source/area)`21 1 21 11`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
 
@@ -138,7 +138,7 @@ Current working directory related interfaces are provided in (project-local/unkn
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`25 1 25 16`
+		- (source/area)`22 1 22 16`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
 
@@ -150,7 +150,7 @@ Current working directory related interfaces are provided in (project-local/unkn
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`26 1 26 16`
+		- (source/area)`23 1 23 16`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
 
@@ -162,7 +162,7 @@ Current working directory related interfaces are provided in (project-local/unkn
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`29 1 29 13`
+		- (source/area)`26 1 26 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
 
@@ -174,11 +174,11 @@ Current working directory related interfaces are provided in (project-local/unkn
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`30 1 30 15`
+		- (source/area)`27 1 27 15`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
 
-[ cachedcalls ]
+[ tools ]
 ! CONTROL:
 	/type/
 		import
@@ -186,7 +186,7 @@ Current working directory related interfaces are provided in (project-local/unkn
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`32 1 32 39`
+		- (source/area)`29 1 29 27`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
 
@@ -198,7 +198,7 @@ Current working directory related interfaces are provided in (project-local/unkn
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`33 1 33 43`
+		- (source/area)`30 1 30 43`
 
 [ Segment ]
 ! CONTROL:
@@ -208,124 +208,21 @@ Current working directory related interfaces are provided in (project-local/unkn
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`33 1 33 43`
+		- (source/area)`30 1 30 43`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
-
-[ type_codes ]
-! CONTROL:
-	/type/
-		data
-	/element/
-		- (control)`property-set`
-		- (source/area)`35 1 45 1`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
-Single character representations for file types.
-Primarily used by (factor-local/method)&<#Path.fs_require[Path.fs_require]>.
-
-#!source
-	type_codes = {
-		'*': None,
-		'/': 'directory',
-		'.': 'data',
-		'#': 'device',
-		'@': 'socket',
-		'|': 'pipe',
-		'&': 'link',
-		'!': 'void',
-		'?': 'unknown',
-	}
 
 [ RequirementViolation ]
 ! CONTROL:
 	/type/
-		class
-	/element/
-		- (control)`property-set`
-		- (source/area)`47 1 101 26`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
-! INHERIT:
-	- (control)`property-set`
-	- (source/area)`47 28 47 36`
-	- (type/syntax)`Exception`
-	- (type/invalid/unknown)&<#Exception>
-	
-Exception raised by (factor-local/method)&<#Path.fs_require[Path.fs_require]> when requirements are not met.
-
-[ > Properties ]
-
-/r_violation/
-	The subtype declaring the kind of violation that occurred.
-
-	/`'void'`/
-		File did not exist.
-
-	/`'inaccessible'`/
-		Path traversed through a non-directory file,
-		or had insufficient permissions on the leading path.
-
-	/`'type'`/
-		The (invalid/unknown)&<#r_type> did not match the (invalid/unknown)&<#fs_type>.
-
-	/`'directory'`/
-		The file identified by the path is a directory.
-
-	/`'prohibited'`/
-		The required permissions stated in (invalid/unknown)&<#r_properties>
-		were not available to the process.
-
-/r_type/
-	The required type issued to (factor-local/method)&<#Path.fs_require[Path.fs_require]>.
-
-/r_properties/
-	The required properties issued to (factor-local/method)&<#Path.fs_require[Path.fs_require]>.
-
-/fs_type/
-	The type of the file identified by (invalid/unknown)&<#fs_path>.
-
-/fs_path/
-	The path to the subject file.
-
-
-[ RequirementViolation >> __init__ ]
-! CONTROL:
-	/type/
-		method
+		import
 	/flags/
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`76 2 82 32`
+		- (source/area)`31 1 33 15`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
-		- (metrics/profile-duration)`3285`
-		- (metrics/profile-count)`7`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`5000`
-(signature)`__init__(self, subject, type, violation, rtype, properties)`
-
-
-[ RequirementViolation >> __str__ ]
-! CONTROL:
-	/type/
-		method
-	/flags/
-		- `undocumented`
-	/element/
-		- (control)`property-set`
-		- (source/area)`84 2 101 26`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`14`
-		- (metrics/profile-duration)`20857`
-		- (metrics/profile-count)`7`
-		- (metrics/profile-residency)`65.75342465753424`
-		- (metrics/profile-minimum)`8000`
-		- (metrics/profile-maximum)`28000`
-(signature)`__str__(self)`
-
+		- (coverage-counters)`2`
 
 [ Status ]
 ! CONTROL:
@@ -333,25 +230,19 @@ Exception raised by (factor-local/method)&<#Path.fs_require[Path.fs_require]> wh
 		class
 	/element/
 		- (control)`property-set`
-		- (source/area)`103 1 273 16`
+		- (source/area)`34 1 135 22`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
+		- (coverage-counters)`3`
 ! INHERIT:
 	- (control)`property-set`
-	- (source/area)`103 14 103 18`
-	- (type/syntax)`tuple`
-	- (type/invalid/unknown)&<#tuple>
+	- (source/area)`34 14 34 19`
+	- (type/syntax)`object`
+	- (type/invalid/unknown)&<#object>
 	
-File status interface providing symbolic names for the data packed in
-the system's status record, (factor-local/property)&<#Status.system[system]>.
-
-[ > Engineering ]
-
-Experimental. Helps isolate delayed imports.
-Likely undesired noise if a stat-cache is employed by (factor-local/class)&<#Path[Path]>.
+- (context-local/factor-element)&<fault.route/abstract#Status[fault.route.abstract.Status]>
 
 
-[ Status >> __slots__ ]
+[ Status >> unit ]
 ! CONTROL:
 	/type/
 		data
@@ -359,11 +250,11 @@ Likely undesired noise if a stat-cache is employed by (factor-local/class)&<#Pat
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`112 2 112 15`
+		- (source/area)`41 2 41 15`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
 #!source
-	__slots__ = ()
+	unit = 'bytes'
 
 [ Status >> _fs_type_map ]
 ! CONTROL:
@@ -373,7 +264,7 @@ Likely undesired noise if a stat-cache is employed by (factor-local/class)&<#Pat
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`114 2 122 2`
+		- (source/area)`42 2 50 2`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
 #!source
@@ -395,7 +286,7 @@ Likely undesired noise if a stat-cache is employed by (factor-local/class)&<#Pat
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`124 2 129 10`
+		- (source/area)`52 2 57 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
 #!source
@@ -413,14 +304,14 @@ Likely undesired noise if a stat-cache is employed by (factor-local/class)&<#Pat
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`130 2 135 10`
+		- (source/area)`58 2 63 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`42800`
-		- (metrics/profile-count)`5`
+		- (metrics/profile-duration)`37428`
+		- (metrics/profile-count)`7`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`35000`
-		- (metrics/profile-maximum)`60000`
+		- (metrics/profile-minimum)`29000`
+		- (metrics/profile-maximum)`51000`
 
 [ Status >> _read_user ]
 ! CONTROL:
@@ -430,7 +321,7 @@ Likely undesired noise if a stat-cache is employed by (factor-local/class)&<#Pat
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`136 2 141 10`
+		- (source/area)`64 2 69 10`
 		- (coverage-zeros)`3`
 		- (coverage-counters)`3`
 
@@ -442,11 +333,11 @@ Likely undesired noise if a stat-cache is employed by (factor-local/class)&<#Pat
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`142 2 147 13`
+		- (source/area)`70 2 75 13`
 		- (coverage-zeros)`3`
 		- (coverage-counters)`3`
 
-[ Status >> from_route ]
+[ Status >> from_path ]
 ! CONTROL:
 	/type/
 		classmethod
@@ -454,181 +345,105 @@ Likely undesired noise if a stat-cache is employed by (factor-local/class)&<#Pat
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`148 2 151 10`
+		- (source/area)`76 2 79 10`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`1`
-(signature)`from_route(Class, route)`
-
-
-[ Status >> system ]
-! CONTROL:
-	/type/
-		property
-	/element/
-		- (control)`property-set`
-		- (source/area)`152 2 158 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
-		- (metrics/profile-duration)`473`
-		- (metrics/profile-count)`19`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`1000`
-The status record produced by the system ((none/invalid)&<http://fault.io/dev/null[os.path.stat]>).
-
-
-[ Status >> filename ]
-! CONTROL:
-	/type/
-		property
-	/element/
-		- (control)`property-set`
-		- (source/area)`159 2 163 16`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`3`
-		- (type/syntax)`str`
-		- (type/invalid/unknown)&<#str>
-		
-The name of the file.
-
-
-[ Status >> __add__ ]
-! CONTROL:
-	/type/
-		method
-	/flags/
-		- `undocumented`
-	/element/
-		- (control)`property-set`
-		- (source/area)`165 2 170 10`
-		- (coverage-zeros)`1`
-		- (coverage-counters)`1`
-(signature)`__add__(self, operand)`
+(signature)`from_path(Class, path)`
 
 
 [ Status >> size ]
 ! CONTROL:
 	/type/
 		property
+	/flags/
+		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`171 2 177 10`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`3`
-		- (type/syntax)`int`
-		- (type/invalid/unknown)&<#int>
-		
-Number of bytes contained by the file.
-
+		- (source/area)`80 2 83 10`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 
 [ Status >> type ]
 ! CONTROL:
 	/type/
 		property
+	/flags/
+		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`178 2 197 10`
+		- (source/area)`84 2 87 10`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
-		- (metrics/profile-duration)`6000`
+		- (coverage-counters)`1`
+		- (metrics/profile-duration)`3000`
 		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`83.33333333333334`
-		- (metrics/profile-minimum)`6000`
-		- (metrics/profile-maximum)`6000`
-		- (type/syntax)`str`
-		- (type/invalid/unknown)&<#str>
-		
-/`'void'`/
-	A broken link or nonexistent file.
-
-/`'directory'`/
-	A file containing other files.
-
-/`'data'`/
-	A regular file containing bytes.
-
-/`'pipe'`/
-	A named pipe; also known as a FIFO.
-
-/`'socket'`/
-	A unix domain socket.
-
-/`'device'`/
-	A character or block device file.
-
-/`'link'`/
-	Status record of a link to a file.
-
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`3000`
+		- (metrics/profile-maximum)`3000`
 
 [ Status >> subtype ]
 ! CONTROL:
 	/type/
 		property
+	/flags/
+		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`198 2 207 10`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`4`
-		- (type/syntax)`Optional[str]`
-		
-For POSIX-type systems, designates the kind of (id)`device`:
-(id)`block` or (id)`character`.
-
-(invalid/unknown)&<#None> for status instances whose (factor-local/property)&<#Status.type[type]> is not (id)`device`.
-
+		- (source/area)`88 2 91 10`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`2`
 
 [ Status >> created ]
 ! CONTROL:
 	/type/
 		property
+	/flags/
+		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`208 2 214 10`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
-Time of creation; UTC. Not available on all systems.
-
+		- (source/area)`92 2 95 10`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 
 [ Status >> last_modified ]
 ! CONTROL:
 	/type/
 		property
+	/flags/
+		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`215 2 221 10`
+		- (source/area)`96 2 99 10`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
-		- (metrics/profile-duration)`57812`
-		- (metrics/profile-count)`16`
-		- (metrics/profile-residency)`76.10810810810811`
-		- (metrics/profile-minimum)`11000`
-		- (metrics/profile-maximum)`223000`
-Time of last modification; UTC.
-
+		- (coverage-counters)`1`
+		- (metrics/profile-duration)`46727`
+		- (metrics/profile-count)`22`
+		- (metrics/profile-residency)`74.31906614785993`
+		- (metrics/profile-minimum)`8000`
+		- (metrics/profile-maximum)`173000`
 
 [ Status >> last_accessed ]
 ! CONTROL:
 	/type/
 		property
+	/flags/
+		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`222 2 228 10`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
-Time of last access; UTC.
-
+		- (source/area)`100 2 103 10`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 
 [ Status >> meta_last_modified ]
 ! CONTROL:
 	/type/
 		property
+	/flags/
+		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`229 2 235 10`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`2`
-Time of last status change; UTC.
-
+		- (source/area)`104 2 107 10`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 
 [ Status >> owner ]
 ! CONTROL:
@@ -638,7 +453,7 @@ Time of last status change; UTC.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`236 2 239 10`
+		- (source/area)`108 2 111 10`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`1`
 
@@ -650,7 +465,7 @@ Time of last status change; UTC.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`240 2 243 10`
+		- (source/area)`112 2 115 10`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`1`
 
@@ -662,7 +477,7 @@ Time of last status change; UTC.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`244 2 247 10`
+		- (source/area)`116 2 119 10`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`1`
 
@@ -674,7 +489,7 @@ Time of last status change; UTC.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`248 2 251 10`
+		- (source/area)`120 2 123 10`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`1`
 
@@ -686,7 +501,7 @@ Time of last status change; UTC.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`252 2 255 10`
+		- (source/area)`124 2 127 10`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`1`
 
@@ -694,40 +509,30 @@ Time of last status change; UTC.
 ! CONTROL:
 	/type/
 		property
+	/flags/
+		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`256 2 264 10`
+		- (source/area)`128 2 131 10`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
-		- (metrics/profile-duration)`13000`
+		- (coverage-counters)`3`
+		- (metrics/profile-duration)`6000`
 		- (metrics/profile-count)`2`
-		- (metrics/profile-residency)`73.07692307692307`
-		- (metrics/profile-minimum)`3000`
-		- (metrics/profile-maximum)`23000`
-		- (type/syntax)`bool`
-		- (type/invalid/unknown)&<#bool>
-		
-Whether the data file is considered executable by anyone.
-
-Extended attributes are not checked.
-
+		- (metrics/profile-residency)`66.66666666666666`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`12000`
 
 [ Status >> searchable ]
 ! CONTROL:
 	/type/
 		property
+	/flags/
+		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`265 2 273 16`
-		- (coverage-zeros)`4`
-		- (coverage-counters)`6`
-		- (type/syntax)`bool`
-		- (type/invalid/unknown)&<#bool>
-		
-Whether the directory file is considered searchable by anyone.
-
-Extended attributes are not checked.
-
+		- (source/area)`132 2 135 22`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`4`
 
 [ path_string_cache ]
 ! CONTROL:
@@ -737,14 +542,14 @@ Extended attributes are not checked.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`274 1 280 30`
+		- (source/area)`136 1 142 30`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
-		- (metrics/profile-duration)`37953`
-		- (metrics/profile-count)`343548`
-		- (metrics/profile-residency)`96.85444897138396`
+		- (metrics/profile-duration)`87805`
+		- (metrics/profile-count)`31567`
+		- (metrics/profile-residency)`90.36391213117403`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`18300000`
+		- (metrics/profile-maximum)`6969000`
 (signature)`path_string_cache(path)`
 
 
@@ -754,20 +559,16 @@ Extended attributes are not checked.
 		class
 	/element/
 		- (control)`property-set`
-		- (source/area)`282 1 1104 14`
+		- (source/area)`148 1 749 14`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
 ! INHERIT:
 	- (control)`property-set`
-	- (source/area)`282 12 282 24`
+	- (source/area)`148 12 148 24`
 	- (type/syntax)`Selector[str]`
 	
 - (context-local/factor-element)&<fault.route/abstract#Path[fault.route.abstract.Path]>
 - (context-local/factor-element)&<fault.route/abstract#File[fault.route.abstract.File]>
-
-Path implementation providing file system controls.
-(project-local/unknown)&<files#root[files.root]> is provided for convenience, and (project-local/unknown)&<process#fs_pwd[process.fs_pwd]> is
-available for getting the working directory of the process.
 
 
 [ Path >> __slots__ ]
@@ -778,7 +579,7 @@ available for getting the working directory of the process.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`291 2 291 35`
+		- (source/area)`153 2 153 35`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
 #!source
@@ -792,7 +593,7 @@ available for getting the working directory of the process.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`293 2 293 33`
+		- (source/area)`155 2 155 33`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
 #!source
@@ -806,7 +607,7 @@ available for getting the working directory of the process.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`295 2 295 43`
+		- (source/area)`157 2 157 43`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
 #!source
@@ -820,7 +621,7 @@ available for getting the working directory of the process.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`296 2 299 3`
+		- (source/area)`158 2 161 3`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
 #!source
@@ -837,7 +638,7 @@ available for getting the working directory of the process.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`300 2 306 2`
+		- (source/area)`162 2 168 2`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
 #!source
@@ -857,14 +658,14 @@ available for getting the working directory of the process.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`308 2 361 13`
+		- (source/area)`170 2 223 13`
 		- (coverage-zeros)`1`
-		- (coverage-counters)`27`
-		- (metrics/profile-duration)`26391`
+		- (coverage-counters)`28`
+		- (metrics/profile-duration)`26913`
 		- (metrics/profile-count)`23`
-		- (metrics/profile-residency)`32.28995057660626`
-		- (metrics/profile-minimum)`10000`
-		- (metrics/profile-maximum)`91000`
+		- (metrics/profile-residency)`35.702746365105014`
+		- (metrics/profile-minimum)`9000`
+		- (metrics/profile-maximum)`72000`
 (signature)`fs_require(self)`
 
 
@@ -872,51 +673,28 @@ available for getting the working directory of the process.
 ! CONTROL:
 	/type/
 		classmethod
+	/flags/
+		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`362 2 379 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
-		- (metrics/profile-duration)`7921`
-		- (metrics/profile-count)`1474`
-		- (metrics/profile-residency)`37.93251113394999`
-		- (metrics/profile-minimum)`3000`
-		- (metrics/profile-maximum)`234000`
+		- (source/area)`224 2 230 13`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`4`
 (signature)`from_path(Class, path)`
-
-Construct a (factor-local/class)&<#Path[Path]> instance from the given absolute or relative path
-provided for (invalid/unknown)&<#string>; if a relative path is specified, it will
-be relative to the current working directory as identified by
-(none/invalid)&<http://fault.io/dev/null[os.path.getcwd]>.
-
-This is usually the most appropriate way to instantiate a (factor-local/class)&<#Path[Path]> route
-from user input. The exception being cases where the current working
-directory is *not* the relevant context.
 
 
 [ Path >> from_relative ]
 ! CONTROL:
 	/type/
 		classmethod
+	/flags/
+		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`380 2 397 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
-		- (metrics/profile-duration)`16047`
-		- (metrics/profile-count)`21`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`7000`
-		- (metrics/profile-maximum)`53000`
+		- (source/area)`231 2 240 13`
+		- (coverage-zeros)`3`
+		- (coverage-counters)`4`
 (signature)`from_relative(Class, context, path)`
-
-Return a new Route pointing to the file referenced by (factor-local/parameter)&<#Path.from_relative.Parameters.path[path]>;
-where path is a path relative to the (factor-local/parameter)&<#Path.from_relative.Parameters.context[context]>
-(factor-local/class)&<#Path[Path]> instance.
-
-This function does *not* refer to the current working directory
-returned by (none/invalid)&<http://fault.io/dev/null[os.path.getcwd]>; if this is desired, (factor-local/classmethod)&<#Path.from_path[from_path]> is the
-appropriate constructor to use.
 
 
 [ Path >> from_absolute ]
@@ -927,14 +705,9 @@ appropriate constructor to use.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`398 2 401 13`
-		- (coverage-zeros)`0`
+		- (source/area)`241 2 244 13`
+		- (coverage-zeros)`1`
 		- (coverage-counters)`1`
-		- (metrics/profile-duration)`6804`
-		- (metrics/profile-count)`17723`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`906000`
 (signature)`from_absolute(Class, path)`
 
 
@@ -946,14 +719,9 @@ appropriate constructor to use.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`402 2 415 14`
-		- (coverage-zeros)`0`
+		- (source/area)`245 2 258 14`
+		- (coverage-zeros)`8`
 		- (coverage-counters)`8`
-		- (metrics/profile-duration)`22000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`22000`
-		- (metrics/profile-maximum)`22000`
 (signature)`from_absolute_parts(Class, start, *paths)`
 
 
@@ -965,37 +733,17 @@ appropriate constructor to use.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`416 2 419 13`
+		- (source/area)`259 2 260 60`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`1333`
-		- (metrics/profile-count)`8459`
+		- (metrics/profile-duration)`888`
+		- (metrics/profile-count)`10901`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`37000`
+		- (metrics/profile-maximum)`319000`
 		- (type/syntax)`Iterable[Sequence[str]]`
 		
 (signature)`_partition_string(path)`
-
-
-[ Path >> from_partitioned_string ]
-! CONTROL:
-	/type/
-		classmethod
-	/element/
-		- (control)`property-set`
-		- (source/area)`420 2 425 61`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
-		- (metrics/profile-duration)`186000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`90.86021505376344`
-		- (metrics/profile-minimum)`186000`
-		- (metrics/profile-maximum)`186000`
-(signature)`from_partitioned_string(Class, path)`
-
-Construct an absolute path while interpreting consecutive separators
-as distinct partitions.
 
 
 [ Path >> __matmul__ ]
@@ -1006,14 +754,14 @@ as distinct partitions.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`427 2 435 27`
+		- (source/area)`262 2 270 27`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
-		- (metrics/profile-duration)`20825`
-		- (metrics/profile-count)`8458`
-		- (metrics/profile-residency)`93.60689894006575`
+		- (metrics/profile-duration)`15738`
+		- (metrics/profile-count)`10901`
+		- (metrics/profile-residency)`91.0932755133563`
 		- (metrics/profile-minimum)`5000`
-		- (metrics/profile-maximum)`2003000`
+		- (metrics/profile-maximum)`331000`
 (signature)`__matmul__(self, path)`
 
 
@@ -1021,27 +769,19 @@ as distinct partitions.
 ! CONTROL:
 	/type/
 		classmethod
+	/flags/
+		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`436 2 457 15`
+		- (source/area)`271 2 281 15`
 		- (coverage-zeros)`2`
-		- (coverage-counters)`9`
-		- (metrics/profile-duration)`28113985`
+		- (coverage-counters)`8`
+		- (metrics/profile-duration)`22528690`
 		- (metrics/profile-count)`71`
-		- (metrics/profile-residency)`1.9358817449888353`
-		- (metrics/profile-minimum)`779000`
-		- (metrics/profile-maximum)`1105704000`
+		- (metrics/profile-residency)`2.416761850460477`
+		- (metrics/profile-minimum)`863000`
+		- (metrics/profile-maximum)`1105147000`
 (signature)`fs_tmpdir(Class)`
-
-Create a temporary directory at a new route using a context manager.
-
-A (factor-local/class)&<#Path[Path]> to the temporary directory is returned on entrance,
-and that same path is destroyed on exit.
-
-[ >> Engineering ]
-
-The use of specific temporary files is avoided as they have inconsistent
-behavior on some platforms.
 
 
 [ Path >> __repr__ ]
@@ -1052,14 +792,14 @@ behavior on some platforms.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`459 2 464 41`
+		- (source/area)`283 2 288 41`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`5`
-		- (metrics/profile-duration)`23500`
+		- (metrics/profile-duration)`17500`
 		- (metrics/profile-count)`2`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`19000`
-		- (metrics/profile-maximum)`28000`
+		- (metrics/profile-minimum)`17000`
+		- (metrics/profile-maximum)`18000`
 (signature)`__repr__(self)`
 
 
@@ -1071,14 +811,14 @@ behavior on some platforms.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`466 2 469 10`
+		- (source/area)`290 2 293 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
-		- (metrics/profile-duration)`13790`
-		- (metrics/profile-count)`989879`
-		- (metrics/profile-residency)`18.729310110038664`
+		- (metrics/profile-duration)`12103`
+		- (metrics/profile-count)`427866`
+		- (metrics/profile-residency)`11.291021186970081`
 		- (metrics/profile-minimum)`2000`
-		- (metrics/profile-maximum)`19490000`
+		- (metrics/profile-maximum)`7469000`
 (signature)`__str__(self)`
 
 
@@ -1086,161 +826,113 @@ behavior on some platforms.
 ! CONTROL:
 	/type/
 		property
+	/flags/
+		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`470 2 482 10`
+		- (source/area)`294 2 302 10`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`9`
-		- (metrics/profile-duration)`19956`
-		- (metrics/profile-count)`6508325`
-		- (metrics/profile-residency)`90.27697466181102`
+		- (coverage-counters)`8`
+		- (metrics/profile-duration)`12403`
+		- (metrics/profile-count)`1335011`
+		- (metrics/profile-residency)`84.77337001418046`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`477010000`
+		- (metrics/profile-maximum)`83265000`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
-Returns the full filesystem path designated by the route.
-
 
 [ Path >> bytespath ]
 ! CONTROL:
 	/type/
 		property
+	/flags/
+		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`483 2 490 58`
+		- (source/area)`303 2 304 58`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
+		- (coverage-counters)`2`
 		- (metrics/profile-duration)`10000`
 		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`80.0`
+		- (metrics/profile-residency)`90.0`
 		- (metrics/profile-minimum)`10000`
 		- (metrics/profile-maximum)`10000`
 		- (type/syntax)`bytes`
 		- (type/invalid/unknown)&<#bytes>
 		
-Returns the full filesystem path designated by the route as a (invalid/unknown)&<#bytes> object
-returned by encoding the (factor-local/property)&<#Path.fullpath[fullpath]> in (none/invalid)&<http://fault.io/dev/null[sys.getfilesystemencoding]> with
-`'surrogateescape'` as the error mode.
-
 
 [ Path >> join ]
 ! CONTROL:
 	/type/
 		method
+	/flags/
+		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`492 2 511 10`
+		- (source/area)`306 2 318 10`
 		- (coverage-zeros)`1`
-		- (coverage-counters)`11`
-		- (metrics/profile-duration)`3166`
+		- (coverage-counters)`10`
+		- (metrics/profile-duration)`3000`
 		- (metrics/profile-count)`6`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`15000`
+		- (metrics/profile-maximum)`17000`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
 (signature)`join(self, *parts)`
-
-Construct a string path using (factor-local/parameter)&<#Path.join.Parameters.self[self]> as the prefix and appending the path
-fragments from (factor-local/parameter)&<#Path.join.Parameters.parts[parts]>.
-
-Segment instances should be given with an asterisk applied to the argument.
 
 
 [ Path >> filename ]
 ! CONTROL:
 	/type/
 		property
+	/flags/
+		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`512 2 518 10`
+		- (source/area)`319 2 322 10`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
-		- (metrics/profile-duration)`17500`
+		- (coverage-counters)`1`
+		- (metrics/profile-duration)`5000`
 		- (metrics/profile-count)`2`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`3000`
-		- (metrics/profile-maximum)`32000`
-Filesystem specific alias for (invalid/unknown)&<#identifier>.
-
+		- (metrics/profile-minimum)`2000`
+		- (metrics/profile-maximum)`8000`
 
 [ Path >> extension ]
 ! CONTROL:
 	/type/
 		property
-	/element/
-		- (control)`property-set`
-		- (source/area)`519 2 530 16`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
-		- (metrics/profile-duration)`2605`
-		- (metrics/profile-count)`352`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`12000`
-Return the last dot-extension of the filename.
-(invalid/unknown)&<#None> if the filename has no `.` characters at all.
-
-
-[ Path >> suffix_filename ]
-! CONTROL:
-	/type/
-		method
-	/element/
-		- (control)`property-set`
-		- (source/area)`532 2 539 51`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
-		- (metrics/profile-duration)`33617`
-		- (metrics/profile-count)`242382`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`2000`
-		- (metrics/profile-maximum)`10398000`
-(signature)`suffix_filename(self, appended_suffix)`
-
-Modify the name of the file adding the given suffix.
-
-Returns a new (factor-local/class)&<#Path[Path]> Route.
-
-
-[ Path >> suffix ]
-! CONTROL:
-	/type/
-		data
 	/flags/
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`540 2 540 25`
+		- (source/area)`323 2 329 16`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
-#!source
-	suffix = suffix_filename
+		- (coverage-counters)`4`
+		- (metrics/profile-duration)`3100`
+		- (metrics/profile-count)`10`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`2000`
+		- (metrics/profile-maximum)`8000`
 
 [ Path >> prefix_filename ]
 ! CONTROL:
 	/type/
-		method
+		data
+	/flags/
+		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`542 2 549 49`
+		- (source/area)`331 2 331 34`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
-		- (metrics/profile-duration)`16000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`16000`
-		- (metrics/profile-maximum)`16000`
-(signature)`prefix_filename(self, prefix_string)`
+		- (coverage-counters)`1`
+#!source
+	prefix_filename = Selector.prefix
 
-Modify the name of the file adding the given prefix.
-
-Returns a new (factor-local/class)&<#Path[Path]> Route.
-
-
-[ Path >> prefix ]
+[ Path >> suffix_filename ]
 ! CONTROL:
 	/type/
 		data
@@ -1248,11 +940,11 @@ Returns a new (factor-local/class)&<#Path[Path]> Route.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`550 2 550 25`
+		- (source/area)`332 2 332 34`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
 #!source
-	prefix = prefix_filename
+	suffix_filename = Selector.suffix
 
 [ Path >> __pos__ ]
 ! CONTROL:
@@ -1262,14 +954,14 @@ Returns a new (factor-local/class)&<#Path[Path]> Route.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`552 2 566 44`
+		- (source/area)`334 2 348 44`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`14`
-		- (metrics/profile-duration)`21000`
-		- (metrics/profile-count)`4`
+		- (metrics/profile-duration)`11442`
+		- (metrics/profile-count)`61`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`9000`
-		- (metrics/profile-maximum)`42000`
+		- (metrics/profile-minimum)`4000`
+		- (metrics/profile-maximum)`49000`
 (signature)`__pos__(self)`
 
 
@@ -1277,25 +969,22 @@ Returns a new (factor-local/class)&<#Path[Path]> Route.
 ! CONTROL:
 	/type/
 		method
+	/flags/
+		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`568 2 592 3`
+		- (source/area)`350 2 367 3`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`11`
-		- (metrics/profile-duration)`3272`
-		- (metrics/profile-count)`22999`
+		- (coverage-counters)`10`
+		- (metrics/profile-duration)`6852`
+		- (metrics/profile-count)`244`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`3385000`
+		- (metrics/profile-maximum)`66000`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
 (signature)`fs_path_string(self)`
-
-Construct a normalized string representing the path to the file.
-
-Relative resolution must still be explicitly performed, but empty
-path entries delimiting partitions are eliminated.
 
 
 [ Path >> __fspath__ ]
@@ -1306,7 +995,7 @@ path entries delimiting partitions are eliminated.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`593 2 593 28`
+		- (source/area)`368 2 368 28`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
 #!source
@@ -1320,14 +1009,14 @@ path entries delimiting partitions are eliminated.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`595 2 596 55`
+		- (source/area)`370 2 371 53`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`23666`
-		- (metrics/profile-count)`18`
-		- (metrics/profile-residency)`78.87323943661973`
+		- (metrics/profile-duration)`18416`
+		- (metrics/profile-count)`24`
+		- (metrics/profile-residency)`73.98190045248867`
 		- (metrics/profile-minimum)`10000`
-		- (metrics/profile-maximum)`75000`
+		- (metrics/profile-maximum)`62000`
 		- (type/syntax)`Status`
 		- (type/factor-local/class)&<#Status[Status]>
 		
@@ -1338,51 +1027,39 @@ path entries delimiting partitions are eliminated.
 ! CONTROL:
 	/type/
 		method
+	/flags/
+		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`598 2 619 49`
+		- (source/area)`373 2 379 49`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`11`
-		- (metrics/profile-duration)`51581`
-		- (metrics/profile-count)`3098076`
-		- (metrics/profile-residency)`64.62365842646275`
-		- (metrics/profile-minimum)`4000`
-		- (metrics/profile-maximum)`477054000`
+		- (coverage-counters)`10`
+		- (metrics/profile-duration)`37280`
+		- (metrics/profile-count)`581470`
+		- (metrics/profile-residency)`72.56052712963161`
+		- (metrics/profile-minimum)`5000`
+		- (metrics/profile-maximum)`83289000`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
 (signature)`fs_type(self)`
-
-The type of file the route points to. Transforms the result of an (none/invalid)&<http://fault.io/dev/null[os.path.stat]>
-call into a string describing the (python/attribute)`st_mode` field.
-
-[ >> Returns ]
-
-- `'directory'`
-- `'data'`
-- `'pipe'`
-- `'socket'`
-- `'device'`
-- `'void'`
-
-If no file is present at the path or a broken link is present, `'void'` will be returned.
 
 
 [ Path >> fs_executable ]
 ! CONTROL:
 	/type/
 		method
+	/flags/
+		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`621 2 627 27`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`6`
+		- (source/area)`381 2 383 27`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`5`
 		- (type/syntax)`bool`
 		- (type/invalid/unknown)&<#bool>
 		
 (signature)`fs_executable(self)`
-
-Whether the file at the route is considered to be an executable.
 
 
 [ Path >> fs_follow_links ]
@@ -1393,14 +1070,14 @@ Whether the file at the route is considered to be an executable.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`629 2 643 9`
+		- (source/area)`385 2 393 9`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`12`
-		- (metrics/profile-duration)`55471`
-		- (metrics/profile-count)`6728`
-		- (metrics/profile-residency)`29.42268737339635`
-		- (metrics/profile-minimum)`11000`
-		- (metrics/profile-maximum)`19526000`
+		- (coverage-counters)`10`
+		- (metrics/profile-duration)`91049`
+		- (metrics/profile-count)`582`
+		- (metrics/profile-residency)`19.750523673831406`
+		- (metrics/profile-minimum)`13000`
+		- (metrics/profile-maximum)`7056000`
 		- (type/syntax)`Iterable[Selector]`
 		
 (signature)`fs_follow_links(self)`
@@ -1410,66 +1087,57 @@ Whether the file at the route is considered to be an executable.
 ! CONTROL:
 	/type/
 		method
+	/flags/
+		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`645 2 675 13`
+		- (source/area)`395 2 418 13`
 		- (coverage-zeros)`1`
-		- (coverage-counters)`16`
-		- (metrics/profile-duration)`4354642`
-		- (metrics/profile-count)`1027`
-		- (metrics/profile-residency)`3.376982070194253`
-		- (metrics/profile-minimum)`76000`
-		- (metrics/profile-maximum)`70729000`
+		- (coverage-counters)`15`
+		- (metrics/profile-duration)`2851557`
+		- (metrics/profile-count)`210`
+		- (metrics/profile-residency)`4.654265756220077`
+		- (metrics/profile-minimum)`71000`
+		- (metrics/profile-maximum)`13901000`
 (signature)`fs_iterfiles()`
-
-Generate (factor-local/class)&<#Path[Path]> instances identifying the files held by the directory, (invalid/unknown)&<#self>.
-By default, all file types are included, but if the (factor-local/parameter)&<#Path.fs_iterfiles.Parameters.type[type]> parameter is given,
-only files of that type are returned.
-
-If (invalid/unknown)&<#self> is not a directory or cannot be searched, an empty iterator is returned.
 
 
 [ Path >> fs_list ]
 ! CONTROL:
 	/type/
 		method
+	/flags/
+		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`677 2 705 22`
+		- (source/area)`420 2 441 22`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`16`
-		- (metrics/profile-duration)`256926`
-		- (metrics/profile-count)`1402607`
-		- (metrics/profile-residency)`59.229763663040146`
-		- (metrics/profile-minimum)`8000`
-		- (metrics/profile-maximum)`448102000`
+		- (coverage-counters)`15`
+		- (metrics/profile-duration)`297247`
+		- (metrics/profile-count)`172502`
+		- (metrics/profile-residency)`66.39911910216945`
+		- (metrics/profile-minimum)`16000`
+		- (metrics/profile-maximum)`83372000`
 (signature)`fs_list(self)`
-
-Retrieve the list of files contained by the directory referred to by (factor-local/parameter)&<#Path.fs_list.Parameters.self[self]>.
-Returns a pair, the sequence of directories and the sequence of data files.
-
-Sockets, pipes, devices, and other non-data files are not retained in the list.
 
 
 [ Path >> fs_index ]
 ! CONTROL:
 	/type/
 		method
+	/flags/
+		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`707 2 728 18`
+		- (source/area)`443 2 458 18`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`11`
-		- (metrics/profile-duration)`5372560`
-		- (metrics/profile-count)`301420`
-		- (metrics/profile-residency)`0.7351536968373124`
-		- (metrics/profile-minimum)`45000`
-		- (metrics/profile-maximum)`1205860000`
+		- (coverage-counters)`10`
+		- (metrics/profile-duration)`12253750`
+		- (metrics/profile-count)`19362`
+		- (metrics/profile-residency)`0.4968301774000246`
+		- (metrics/profile-minimum)`43000`
+		- (metrics/profile-maximum)`426718000`
 (signature)`fs_index(self)`
-
-Generate pairs of directories associated with their files.
-
-Sockets, pipes, devices, broken links, and other non-data files are not retained in the lists.
 
 
 [ Path >> fs_snapshot ]
@@ -1480,56 +1148,53 @@ Sockets, pipes, devices, broken links, and other non-data files are not retained
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`730 2 808 17`
+		- (source/area)`460 2 540 14`
 		- (coverage-zeros)`13`
 		- (coverage-counters)`48`
-		- (metrics/profile-duration)`97272`
+		- (metrics/profile-duration)`117636`
 		- (metrics/profile-count)`11`
-		- (metrics/profile-residency)`89.34579439252336`
-		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`188000`
+		- (metrics/profile-residency)`89.64451313755796`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`193000`
 (signature)`fs_snapshot()`
+
+
+[ Path >> _fs_since_scan ]
+! CONTROL:
+	/type/
+		staticmethod
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`541 2 555 53`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`10`
+		- (metrics/profile-duration)`223222`
+		- (metrics/profile-count)`9`
+		- (metrics/profile-residency)`19.362867098058732`
+		- (metrics/profile-minimum)`45000`
+		- (metrics/profile-maximum)`412000`
+(signature)`_fs_since_scan(compare, traversed, directory)`
 
 
 [ Path >> fs_since ]
 ! CONTROL:
 	/type/
 		method
+	/flags/
+		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`810 2 845 52`
+		- (source/area)`557 2 566 51`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`15`
-		- (metrics/profile-duration)`295000`
+		- (coverage-counters)`6`
+		- (metrics/profile-duration)`246000`
 		- (metrics/profile-count)`6`
-		- (metrics/profile-residency)`16.89265536723164`
-		- (metrics/profile-minimum)`41000`
-		- (metrics/profile-maximum)`503000`
-		- (type/syntax)`Iterable[tuple[int, Selector]]`
-		
-(signature)`fs_since(self, since)`
-
-Identify the set of files that have been modified
-since the given point in time.
-
-The resulting iterable does not include directories.
-
-[ >> Parameters ]
-
-/(parameter)`self`/
-	
-	(control/absent)`Undocumented`.
-
-/(parameter)`since`/
-	- (type/syntax)`int`
-	- (type/invalid/unknown)&<#int>
-	
-	The point in time after which files and directories will be identified
-	as being modified and returned inside the result set.
-
-/(parameter)`traversed`/
-	
-	(control/absent)`Undocumented`.
+		- (metrics/profile-residency)`0.8807588075880758`
+		- (metrics/profile-minimum)`110000`
+		- (metrics/profile-maximum)`417000`
+(signature)`fs_since(self)`
 
 
 [ Path >> fs_real ]
@@ -1540,14 +1205,14 @@ The resulting iterable does not include directories.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`847 2 852 13`
+		- (source/area)`568 2 573 13`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`4`
-		- (metrics/profile-duration)`115500`
+		- (metrics/profile-duration)`81500`
 		- (metrics/profile-count)`4`
-		- (metrics/profile-residency)`74.02597402597402`
-		- (metrics/profile-minimum)`21000`
-		- (metrics/profile-maximum)`202000`
+		- (metrics/profile-residency)`69.93865030674846`
+		- (metrics/profile-minimum)`30000`
+		- (metrics/profile-maximum)`168000`
 (signature)`fs_real(self)`
 
 
@@ -1555,161 +1220,139 @@ The resulting iterable does not include directories.
 ! CONTROL:
 	/type/
 		method
+	/flags/
+		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`854 2 861 30`
-		- (coverage-zeros)`2`
-		- (coverage-counters)`3`
+		- (source/area)`575 2 576 30`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`2`
 		- (type/syntax)`bool`
 		- (type/invalid/unknown)&<#bool>
 		
 (signature)`exists(self)`
-
-Query the filesystem and return whether or not the file exists.
-
-A Route to a symbolic link *will* return (invalid/unknown)&<#False> if the target does not exist.
 
 
 [ Path >> fs_modified ]
 ! CONTROL:
 	/type/
 		method
+	/flags/
+		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`863 2 867 29`
+		- (source/area)`578 2 579 29`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
-		- (metrics/profile-duration)`203398`
-		- (metrics/profile-count)`632`
-		- (metrics/profile-residency)`72.66935308211718`
-		- (metrics/profile-minimum)`30000`
-		- (metrics/profile-maximum)`18691000`
+		- (coverage-counters)`2`
+		- (metrics/profile-duration)`183192`
+		- (metrics/profile-count)`104`
+		- (metrics/profile-residency)`86.30065085030442`
+		- (metrics/profile-minimum)`37000`
+		- (metrics/profile-maximum)`10515000`
 (signature)`fs_modified(self)`
-
-Update the modification time of the file identified by (factor-local/parameter)&<#Path.fs_modified.Parameters.self[self]>.
 
 
 [ Path >> fs_size ]
 ! CONTROL:
 	/type/
 		method
+	/flags/
+		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`869 2 873 58`
+		- (source/area)`581 2 582 58`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
-		- (metrics/profile-duration)`25250`
+		- (coverage-counters)`2`
+		- (metrics/profile-duration)`18000`
 		- (metrics/profile-count)`4`
-		- (metrics/profile-residency)`96.03960396039604`
-		- (metrics/profile-minimum)`14000`
-		- (metrics/profile-maximum)`50000`
-		- (type/syntax)`int`
-		- (type/invalid/unknown)&<#int>
-		
+		- (metrics/profile-residency)`94.44444444444444`
+		- (metrics/profile-minimum)`7000`
+		- (metrics/profile-maximum)`42000`
 (signature)`fs_size(self)`
-
-Return the size of the file as depicted by (none/invalid)&<http://fault.io/dev/null[os.path.stat]>.
 
 
 [ Path >> get_last_modified ]
 ! CONTROL:
 	/type/
 		method
+	/flags/
+		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`875 2 880 39`
+		- (source/area)`584 2 585 39`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
-		- (metrics/profile-duration)`119555`
+		- (coverage-counters)`2`
+		- (metrics/profile-duration)`100444`
 		- (metrics/profile-count)`9`
-		- (metrics/profile-residency)`7.063197026022305`
-		- (metrics/profile-minimum)`27000`
-		- (metrics/profile-maximum)`273000`
+		- (metrics/profile-residency)`5.530973451327434`
+		- (metrics/profile-minimum)`23000`
+		- (metrics/profile-maximum)`218000`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
 (signature)`get_last_modified(self)`
-
-Return the modification time of the file.
 
 
 [ Path >> set_last_modified ]
 ! CONTROL:
 	/type/
 		method
+	/flags/
+		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`882 2 887 62`
+		- (source/area)`587 2 588 62`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
-		- (metrics/profile-duration)`31666`
-		- (metrics/profile-count)`6`
-		- (metrics/profile-residency)`76.31578947368422`
-		- (metrics/profile-minimum)`26000`
-		- (metrics/profile-maximum)`44000`
+		- (coverage-counters)`1`
+		- (metrics/profile-duration)`54285`
+		- (metrics/profile-count)`7`
+		- (metrics/profile-residency)`71.57894736842105`
+		- (metrics/profile-minimum)`25000`
+		- (metrics/profile-maximum)`124000`
 (signature)`set_last_modified(self, time)`
-
-Set the modification time of the file identified by the (invalid/unknown)&<#Route>.
 
 
 [ Path >> get_text_content ]
 ! CONTROL:
 	/type/
 		method
+	/flags/
+		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`889 2 894 18`
+		- (source/area)`590 2 592 18`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
-		- (metrics/profile-duration)`473783`
-		- (metrics/profile-count)`4955`
-		- (metrics/profile-residency)`2.5588282150521517`
-		- (metrics/profile-minimum)`16000`
-		- (metrics/profile-maximum)`9926000`
+		- (coverage-counters)`3`
+		- (metrics/profile-duration)`290929`
+		- (metrics/profile-count)`1353`
+		- (metrics/profile-residency)`3.8559248833924418`
+		- (metrics/profile-minimum)`14000`
+		- (metrics/profile-maximum)`7176000`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
 (signature)`get_text_content(self)`
-
-Retrieve the entire contents of the file as a (invalid/unknown)&<#str>.
 
 
 [ Path >> set_text_content ]
 ! CONTROL:
 	/type/
 		method
+	/flags/
+		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`896 2 901 18`
+		- (source/area)`594 2 596 18`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
-		- (metrics/profile-duration)`191000`
+		- (coverage-counters)`2`
+		- (metrics/profile-duration)`221000`
 		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`6.806282722513089`
-		- (metrics/profile-minimum)`191000`
-		- (metrics/profile-maximum)`191000`
+		- (metrics/profile-residency)`4.97737556561086`
+		- (metrics/profile-minimum)`221000`
+		- (metrics/profile-maximum)`221000`
 		- (type/syntax)`None`
 		
 (signature)`set_text_content(self, string)`
-
-Modify the regular file identified by (factor-local/parameter)&<#Path.set_text_content.Parameters.self[self]> to contain the given (factor-local/parameter)&<#Path.set_text_content.Parameters.string[string]>.
-
-
-[ Path >> meta ]
-! CONTROL:
-	/type/
-		method
-	/element/
-		- (control)`property-set`
-		- (source/area)`903 2 912 51`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`3`
-(signature)`meta(self)`
-
-Return file specific meta data.
-
-! WARNING:
-	Preliminary API.
 
 
 [ Path >> fs_void ]
@@ -1720,14 +1363,14 @@ Return file specific meta data.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`914 2 931 13`
-		- (coverage-zeros)`2`
+		- (source/area)`598 2 615 13`
+		- (coverage-zeros)`3`
 		- (coverage-counters)`10`
-		- (metrics/profile-duration)`109253447`
-		- (metrics/profile-count)`796`
-		- (metrics/profile-residency)`99.6168870814237`
-		- (metrics/profile-minimum)`19000`
-		- (metrics/profile-maximum)`60872241000`
+		- (metrics/profile-duration)`43383000`
+		- (metrics/profile-count)`267`
+		- (metrics/profile-residency)`99.40376030549601`
+		- (metrics/profile-minimum)`53000`
+		- (metrics/profile-maximum)`1135725000`
 (signature)`fs_void(self)`
 
 
@@ -1739,14 +1382,14 @@ Return file specific meta data.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`933 2 942 13`
+		- (source/area)`617 2 626 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`9`
-		- (metrics/profile-duration)`609100275`
-		- (metrics/profile-count)`715`
-		- (metrics/profile-residency)`93.92958978998203`
+		- (metrics/profile-duration)`411418197`
+		- (metrics/profile-count)`187`
+		- (metrics/profile-residency)`84.92311120567265`
 		- (metrics/profile-minimum)`235000`
-		- (metrics/profile-maximum)`17069075000`
+		- (metrics/profile-maximum)`6562629000`
 (signature)`fs_replace(self, replacement)`
 
 
@@ -1758,7 +1401,7 @@ Return file specific meta data.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`944 2 970 20`
+		- (source/area)`628 2 654 20`
 		- (coverage-zeros)`15`
 		- (coverage-counters)`16`
 (signature)`fs_linear(self)`
@@ -1772,7 +1415,7 @@ Return file specific meta data.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`972 2 982 13`
+		- (source/area)`656 2 666 13`
 		- (coverage-zeros)`8`
 		- (coverage-counters)`11`
 (signature)`fs_reduce(self, discarded)`
@@ -1786,14 +1429,14 @@ Return file specific meta data.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`984 2 997 13`
+		- (source/area)`668 2 681 13`
 		- (coverage-zeros)`5`
 		- (coverage-counters)`11`
-		- (metrics/profile-duration)`98875`
+		- (metrics/profile-duration)`129125`
 		- (metrics/profile-count)`8`
-		- (metrics/profile-residency)`93.55246523388116`
-		- (metrics/profile-minimum)`60000`
-		- (metrics/profile-maximum)`147000`
+		- (metrics/profile-residency)`92.5459825750242`
+		- (metrics/profile-minimum)`67000`
+		- (metrics/profile-maximum)`286000`
 (signature)`fs_link_relative(self, path)`
 
 
@@ -1805,40 +1448,15 @@ Return file specific meta data.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`999 2 1010 13`
+		- (source/area)`683 2 694 13`
 		- (coverage-zeros)`5`
 		- (coverage-counters)`9`
-		- (metrics/profile-duration)`79000`
+		- (metrics/profile-duration)`98000`
 		- (metrics/profile-count)`2`
-		- (metrics/profile-residency)`84.81012658227847`
-		- (metrics/profile-minimum)`70000`
-		- (metrics/profile-maximum)`88000`
+		- (metrics/profile-residency)`87.24489795918367`
+		- (metrics/profile-minimum)`68000`
+		- (metrics/profile-maximum)`128000`
 (signature)`fs_link_absolute(self, path)`
-
-
-[ Path >> fs_init ]
-! CONTROL:
-	/type/
-		method
-	/element/
-		- (control)`property-set`
-		- (source/area)`1012 2 1042 13`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`20`
-		- (metrics/profile-duration)`633802`
-		- (metrics/profile-count)`1403`
-		- (metrics/profile-residency)`50.1485000984003`
-		- (metrics/profile-minimum)`6000`
-		- (metrics/profile-maximum)`24864000`
-(signature)`fs_init(self)`
-
-Create and initialize a data file at the route using the given (factor-local/parameter)&<#Path.fs_init.Parameters.data[data]>.
-
-If (factor-local/parameter)&<#Path.fs_init.Parameters.data[data]> is (invalid/unknown)&<#None>, no write operation will occur for pre-existing files.
-If (factor-local/parameter)&<#Path.fs_init.Parameters.data[data]> is not (invalid/unknown)&<#None>, the bytes will be written regardless.
-
-Returns the route instance, (factor-local/parameter)&<#Path.fs_init.Parameters.self[self]>.
-Leading directories will be created as needed.
 
 
 [ Path >> fs_alloc ]
@@ -1849,14 +1467,14 @@ Leading directories will be created as needed.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`1044 2 1055 13`
+		- (source/area)`696 2 707 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`9`
-		- (metrics/profile-duration)`88127`
-		- (metrics/profile-count)`10104`
-		- (metrics/profile-residency)`31.988944816169944`
-		- (metrics/profile-minimum)`18000`
-		- (metrics/profile-maximum)`10234000`
+		- (metrics/profile-duration)`248110`
+		- (metrics/profile-count)`668`
+		- (metrics/profile-residency)`24.398749834075467`
+		- (metrics/profile-minimum)`23000`
+		- (metrics/profile-maximum)`10557000`
 (signature)`fs_alloc(self)`
 
 
@@ -1868,14 +1486,14 @@ Leading directories will be created as needed.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`1057 2 1075 27`
+		- (source/area)`709 2 727 27`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`15`
-		- (metrics/profile-duration)`266625`
-		- (metrics/profile-count)`4908`
-		- (metrics/profile-residency)`46.741357346837866`
+		- (metrics/profile-duration)`97210`
+		- (metrics/profile-count)`876`
+		- (metrics/profile-residency)`70.78890506834516`
 		- (metrics/profile-minimum)`6000`
-		- (metrics/profile-maximum)`20500000`
+		- (metrics/profile-maximum)`25386000`
 (signature)`fs_mkdir(self)`
 
 
@@ -1883,22 +1501,19 @@ Leading directories will be created as needed.
 ! CONTROL:
 	/type/
 		method
+	/flags/
+		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`1076 2 1092 31`
+		- (source/area)`728 2 737 31`
 		- (coverage-zeros)`3`
-		- (coverage-counters)`8`
-		- (metrics/profile-duration)`2130208`
-		- (metrics/profile-count)`1006793`
-		- (metrics/profile-residency)`37.923301128334124`
-		- (metrics/profile-minimum)`11000`
-		- (metrics/profile-maximum)`1204955000`
+		- (coverage-counters)`7`
+		- (metrics/profile-duration)`2096955`
+		- (metrics/profile-count)`151138`
+		- (metrics/profile-residency)`39.13935326064518`
+		- (metrics/profile-minimum)`10000`
+		- (metrics/profile-maximum)`588917000`
 (signature)`fs_open(self, *args, **kw)`
-
-Open the file pointed to by the route.
-
-If the file doesn't exist, create it; if the directories
-leading up to the file don't exist, create the directories too.
 
 
 [ Path >> fs_load ]
@@ -1909,14 +1524,14 @@ leading up to the file don't exist, create the directories too.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`1094 2 1099 13`
+		- (source/area)`739 2 744 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
-		- (metrics/profile-duration)`323109`
-		- (metrics/profile-count)`8022`
-		- (metrics/profile-residency)`3.0641802296466563`
-		- (metrics/profile-minimum)`15000`
-		- (metrics/profile-maximum)`15344000`
+		- (metrics/profile-duration)`420209`
+		- (metrics/profile-count)`754`
+		- (metrics/profile-residency)`3.178911620449567`
+		- (metrics/profile-minimum)`14000`
+		- (metrics/profile-maximum)`6461000`
 		- (type/syntax)`bytes`
 		- (type/invalid/unknown)&<#bytes>
 		
@@ -1931,14 +1546,14 @@ leading up to the file don't exist, create the directories too.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`1101 2 1104 14`
+		- (source/area)`746 2 749 14`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
-		- (metrics/profile-duration)`109633`
-		- (metrics/profile-count)`30`
-		- (metrics/profile-residency)`6.324110671936759`
-		- (metrics/profile-minimum)`63000`
-		- (metrics/profile-maximum)`202000`
+		- (metrics/profile-duration)`512702`
+		- (metrics/profile-count)`383`
+		- (metrics/profile-residency)`2.1704478904081683`
+		- (metrics/profile-minimum)`57000`
+		- (metrics/profile-maximum)`32316000`
 (signature)`fs_store(self, data)`
 
 
@@ -1948,7 +1563,7 @@ leading up to the file don't exist, create the directories too.
 		data
 	/element/
 		- (control)`property-set`
-		- (source/area)`1106 1 1106 21`
+		- (source/area)`751 1 751 21`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
 The (factor-local/class)&<#Path[Path]> to the root directory of the operating system.
@@ -1962,7 +1577,7 @@ The (factor-local/class)&<#Path[Path]> to the root directory of the operating sy
 		data
 	/element/
 		- (control)`property-set`
-		- (source/area)`1107 1 1107 24`
+		- (source/area)`752 1 752 24`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
 The (factor-local/class)&<#Path[Path]> to the file that has no content and will discard writes.
@@ -1976,7 +1591,7 @@ The (factor-local/class)&<#Path[Path]> to the file that has no content and will 
 		data
 	/element/
 		- (control)`property-set`
-		- (source/area)`1108 1 1108 38`
+		- (source/area)`753 1 753 38`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
 The (factor-local/class)&<#Path[Path]> to the directory that contains no files.

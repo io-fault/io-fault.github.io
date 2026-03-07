@@ -6,11 +6,11 @@
 		- (source/area)`1 1 184 15`
 		- (coverage-zeros)`20`
 		- (coverage-counters)`80`
-		- (metrics/profile-duration)`12333`
+		- (metrics/profile-duration)`10666`
 		- (metrics/profile-count)`15`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`12000`
-		- (metrics/profile-maximum)`13000`
+		- (metrics/profile-minimum)`10000`
+		- (metrics/profile-maximum)`12000`
 Collection of parsers and formatters that apply to multiple protocols.
 
 Generally, a supplement for (project-local/unknown)&<http>, and a dependency of (project-local/unknown)&<media>.
@@ -44,11 +44,11 @@ series that can be processed by (factor-local/function)&<#split_parameter_series
 		- (source/area)`17 1 30 11`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`10`
-		- (metrics/profile-duration)`4000`
+		- (metrics/profile-duration)`3000`
 		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`50.0`
-		- (metrics/profile-minimum)`4000`
-		- (metrics/profile-maximum)`4000`
+		- (metrics/profile-residency)`66.66666666666666`
+		- (metrics/profile-minimum)`3000`
+		- (metrics/profile-maximum)`3000`
 		- (type/syntax)`bytes`
 		- (type/invalid/unknown)&<#bytes>
 		
@@ -96,11 +96,11 @@ Properly resolve backslashes inside `quoted-string` areas.
 		- (source/area)`38 1 65 11`
 		- (coverage-zeros)`13`
 		- (coverage-counters)`16`
-		- (metrics/profile-duration)`3000`
+		- (metrics/profile-duration)`2000`
 		- (metrics/profile-count)`2`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`2000`
-		- (metrics/profile-maximum)`4000`
+		- (metrics/profile-residency)`75.0`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`3000`
 (signature)`_quote(octets)`
 
 
@@ -113,11 +113,11 @@ Properly resolve backslashes inside `quoted-string` areas.
 		- (source/area)`69 1 77 32`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`6000`
+		- (metrics/profile-duration)`5000`
 		- (metrics/profile-count)`2`
 		- (metrics/profile-residency)`50.0`
-		- (metrics/profile-minimum)`4000`
-		- (metrics/profile-maximum)`8000`
+		- (metrics/profile-minimum)`3000`
+		- (metrics/profile-maximum)`7000`
 (signature)`quote(octets)`
 
 Discover whether the octets should be quoted and backslash-escape any octets
@@ -135,11 +135,11 @@ is unnecessary, (factor-local/function)&<#join_parameter_series[join_parameter_s
 		- (source/area)`79 1 92 2`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`5`
-		- (metrics/profile-duration)`24000`
+		- (metrics/profile-duration)`22000`
 		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`-37.5`
-		- (metrics/profile-minimum)`24000`
-		- (metrics/profile-maximum)`24000`
+		- (metrics/profile-residency)`-31.818181818181817`
+		- (metrics/profile-minimum)`22000`
+		- (metrics/profile-maximum)`22000`
 (signature)`join_parameter_series(fields)`
 
 Given an iterator of key-value pairs, construct a properly escaped
@@ -160,11 +160,11 @@ given the case that it is known that no escaping need happen.
 		- (source/area)`94 1 99 2`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`933`
+		- (metrics/profile-duration)`333`
 		- (metrics/profile-count)`15`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`3000`
+		- (metrics/profile-maximum)`2000`
 (signature)`_normal_parameter_area(more)`
 
 
@@ -179,11 +179,11 @@ given the case that it is known that no escaping need happen.
 		- (source/area)`101 1 114 2`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`6000`
+		- (metrics/profile-duration)`5000`
 		- (metrics/profile-count)`7`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`2000`
-		- (metrics/profile-maximum)`23000`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`19000`
 (signature)`_normal_mediarange_area(more)`
 
 
@@ -196,11 +196,11 @@ given the case that it is known that no escaping need happen.
 		- (source/area)`116 1 171 14`
 		- (coverage-zeros)`3`
 		- (coverage-counters)`24`
-		- (metrics/profile-duration)`13428`
+		- (metrics/profile-duration)`11380`
 		- (metrics/profile-count)`21`
-		- (metrics/profile-residency)`37.5886524822695`
+		- (metrics/profile-residency)`33.054393305439326`
 		- (metrics/profile-minimum)`3000`
-		- (metrics/profile-maximum)`81000`
+		- (metrics/profile-maximum)`61000`
 (signature)`split_parameter_series(series)`
 
 Given a series of `;` separated of key-value pairs, return the sequence
@@ -221,11 +221,11 @@ and must be handled separately for strict conformance.
 		- (source/area)`173 1 178 14`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
-		- (metrics/profile-duration)`4193`
+		- (metrics/profile-duration)`3516`
 		- (metrics/profile-count)`31`
-		- (metrics/profile-residency)`29.230769230769226`
+		- (metrics/profile-residency)`16.51376146788991`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`19000`
+		- (metrics/profile-maximum)`16000`
 (signature)`decode_parameters(sequence)`
 
 
@@ -240,10 +240,10 @@ and must be handled separately for strict conformance.
 		- (source/area)`180 1 185 14`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
-		- (metrics/profile-duration)`21000`
+		- (metrics/profile-duration)`18000`
 		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`14.285714285714285`
-		- (metrics/profile-minimum)`21000`
-		- (metrics/profile-maximum)`21000`
+		- (metrics/profile-residency)`5.555555555555555`
+		- (metrics/profile-minimum)`18000`
+		- (metrics/profile-maximum)`18000`
 (signature)`encode_parameters(sequence)`
 

@@ -5,12 +5,7 @@
 		- (control)`property-set`
 		- (source/area)`1 1 119 0`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`24`
-		- (metrics/profile-duration)`6000`
-		- (metrics/profile-count)`5`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`6000`
-		- (metrics/profile-maximum)`6000`
+		- (coverage-counters)`0`
 
 [ core ]
 ! CONTROL:
@@ -31,8 +26,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`2 1 2 36`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ samples ]
 ! CONTROL:
@@ -43,8 +36,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`4 1 58 1`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	samples = [
 		('no_seconds', (
@@ -111,8 +102,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`60 1 87 1`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	exceptional_samples = [
 		('iso8601', (
@@ -152,13 +141,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`89 1 94 29`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
-		- (metrics/profile-duration)`878000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`878000`
-		- (metrics/profile-maximum)`878000`
 (signature)`test_samples(test)`
 
 
@@ -171,13 +153,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`96 1 102 14`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
-		- (metrics/profile-duration)`487000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`487000`
-		- (metrics/profile-maximum)`487000`
 (signature)`test_errors(test)`
 
 
@@ -188,13 +163,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`104 1 111 57`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
-		- (metrics/profile-duration)`303000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`303000`
-		- (metrics/profile-maximum)`303000`
 (signature)`test_space_separated_iso(test)`
 
 - (context-local/factor-element)&<fault.time/format#parse_iso8601[fault.time.format.parse_iso8601]>
@@ -207,13 +175,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`113 1 119 57`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
-		- (metrics/profile-duration)`143000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`143000`
-		- (metrics/profile-maximum)`143000`
 (signature)`test_isodate_format(test)`
 
 - (context-local/factor-element)&<fault.time/format#format_iso8601_date[fault.time.format.format_iso8601_date]>

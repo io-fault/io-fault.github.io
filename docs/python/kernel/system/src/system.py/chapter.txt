@@ -4,13 +4,13 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 1597 0`
-		- (coverage-zeros)`382`
+		- (coverage-zeros)`383`
 		- (coverage-counters)`645`
-		- (metrics/profile-duration)`8990946`
-		- (metrics/profile-count)`93`
+		- (metrics/profile-duration)`26640333`
+		- (metrics/profile-count)`27`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`4161000`
-		- (metrics/profile-maximum)`22323000`
+		- (metrics/profile-minimum)`4483000`
+		- (metrics/profile-maximum)`484389000`
 System abstractions and processors for managing a processing tree.
 
 
@@ -413,11 +413,11 @@ Transfer events snapshot delivered to I/O tasks.
 		- (source/area)`50 3 63 11`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`10`
-		- (metrics/profile-duration)`17000`
+		- (metrics/profile-duration)`6000`
 		- (metrics/profile-count)`3`
-		- (metrics/profile-residency)`96.07843137254902`
-		- (metrics/profile-minimum)`12000`
-		- (metrics/profile-maximum)`26000`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`4000`
+		- (metrics/profile-maximum)`8000`
 (signature)`__str__(self)`
 
 
@@ -432,11 +432,11 @@ Transfer events snapshot delivered to I/O tasks.
 		- (source/area)`65 3 70 11`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
-		- (metrics/profile-duration)`26000`
+		- (metrics/profile-duration)`12000`
 		- (metrics/profile-count)`1`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`26000`
-		- (metrics/profile-maximum)`26000`
+		- (metrics/profile-minimum)`12000`
+		- (metrics/profile-maximum)`12000`
 (signature)`__repr__(self)`
 
 
@@ -449,11 +449,11 @@ Transfer events snapshot delivered to I/O tasks.
 		- (source/area)`71 3 77 11`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`666`
+		- (metrics/profile-duration)`0`
 		- (metrics/profile-count)`3`
-		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-residency)`0.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`1000`
+		- (metrics/profile-maximum)`0`
 Units sent.
 
 
@@ -466,11 +466,11 @@ Units sent.
 		- (source/area)`78 3 84 11`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`200`
+		- (metrics/profile-duration)`0`
 		- (metrics/profile-count)`5`
-		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-residency)`0.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`1000`
+		- (metrics/profile-maximum)`0`
 The acquire method of the channel if exhausted. (invalid/unknown)&<#None> if not exhausted.
 
 
@@ -483,11 +483,11 @@ The acquire method of the channel if exhausted. (invalid/unknown)&<#None> if not
 		- (source/area)`85 3 91 11`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`833`
+		- (metrics/profile-duration)`0`
 		- (metrics/profile-count)`6`
-		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-residency)`0.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`1000`
+		- (metrics/profile-maximum)`0`
 Whether or not this is the last event from the Channel.
 
 
@@ -502,11 +502,11 @@ Whether or not this is the last event from the Channel.
 		- (source/area)`92 3 97 14`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`666`
+		- (metrics/profile-duration)`0`
 		- (metrics/profile-count)`3`
-		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-residency)`0.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`1000`
+		- (metrics/profile-maximum)`0`
 
 [ Matrix >> Delta >> construct ]
 ! CONTROL:
@@ -519,11 +519,11 @@ Whether or not this is the last event from the Channel.
 		- (source/area)`98 3 101 14`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
-		- (metrics/profile-duration)`24000`
+		- (metrics/profile-duration)`8000`
 		- (metrics/profile-count)`1`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`24000`
-		- (metrics/profile-maximum)`24000`
+		- (metrics/profile-minimum)`8000`
+		- (metrics/profile-maximum)`8000`
 (signature)`construct(Class)`
 
 
@@ -538,11 +538,11 @@ Whether or not this is the last event from the Channel.
 		- (source/area)`102 3 119 14`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
-		- (metrics/profile-duration)`1777`
+		- (metrics/profile-duration)`1333`
 		- (metrics/profile-count)`54`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`12000`
+		- (metrics/profile-maximum)`9000`
 (signature)`snapshot(Class, channel)`
 
 
@@ -555,11 +555,11 @@ Whether or not this is the last event from the Channel.
 		- (source/area)`120 2 165 14`
 		- (coverage-zeros)`6`
 		- (coverage-counters)`13`
-		- (metrics/profile-duration)`9645`
-		- (metrics/profile-count)`31`
-		- (metrics/profile-residency)`69.89966555183946`
+		- (metrics/profile-duration)`13413`
+		- (metrics/profile-count)`29`
+		- (metrics/profile-residency)`77.37789203084834`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`128000`
+		- (metrics/profile-maximum)`214000`
 (signature)`io_collect(transfers)`
 
 Process the array's transfer and construct a sequence of I/O events.
@@ -578,11 +578,11 @@ for processing in the main task queue.
 		- (source/area)`166 2 219 14`
 		- (coverage-zeros)`15`
 		- (coverage-counters)`23`
-		- (metrics/profile-duration)`1322`
-		- (metrics/profile-count)`31`
+		- (metrics/profile-duration)`586`
+		- (metrics/profile-count)`29`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`8000`
+		- (metrics/profile-maximum)`2000`
 (signature)`io_deliver(error, events)`
 
 Send the individual (factor-local/parameter)&<#Matrix.io_deliver.Parameters.events[events]> originally prepared by
@@ -614,11 +614,11 @@ Inline I/O handler for schduler based transfers.
 		- (source/area)`230 2 329 20`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`27`
-		- (metrics/profile-duration)`2219500`
+		- (metrics/profile-duration)`1396166`
 		- (metrics/profile-count)`6`
-		- (metrics/profile-residency)`93.03146354283997`
-		- (metrics/profile-minimum)`50000`
-		- (metrics/profile-maximum)`4632000`
+		- (metrics/profile-residency)`91.2976005729975`
+		- (metrics/profile-minimum)`36000`
+		- (metrics/profile-maximum)`3869000`
 (signature)`io_loop()`
 
 
@@ -633,11 +633,11 @@ Inline I/O handler for schduler based transfers.
 		- (source/area)`331 2 335 61`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
-		- (metrics/profile-duration)`6045`
-		- (metrics/profile-count)`88`
+		- (metrics/profile-duration)`11409`
+		- (metrics/profile-count)`22`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`53000`
+		- (metrics/profile-maximum)`44000`
 (signature)`__init__(self, errors, synchronize, execute)`
 
 
@@ -652,11 +652,11 @@ Inline I/O handler for schduler based transfers.
 		- (source/area)`337 2 343 17`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
-		- (metrics/profile-duration)`998000`
+		- (metrics/profile-duration)`962571`
 		- (metrics/profile-count)`7`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`21000`
-		- (metrics/profile-maximum)`1370000`
+		- (metrics/profile-minimum)`22000`
+		- (metrics/profile-maximum)`1220000`
 (signature)`_alloc(self)`
 
 
@@ -671,11 +671,11 @@ Inline I/O handler for schduler based transfers.
 		- (source/area)`345 2 354 18`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
-		- (metrics/profile-duration)`631000`
+		- (metrics/profile-duration)`638571`
 		- (metrics/profile-count)`7`
-		- (metrics/profile-residency)`1.3583880461851934`
+		- (metrics/profile-residency)`1.4988814317673378`
 		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`1125000`
+		- (metrics/profile-maximum)`1236000`
 (signature)`_get(self)`
 
 
@@ -712,11 +712,11 @@ All arrays allocated by the Matrix will be terminated.
 		- (source/area)`369 2 375 12`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`2532`
-		- (metrics/profile-count)`306`
+		- (metrics/profile-duration)`1072`
+		- (metrics/profile-count)`304`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`38000`
+		- (metrics/profile-maximum)`26000`
 (signature)`force(self)`
 
 Execute the Array.force method on the set designated
@@ -732,11 +732,11 @@ of Array instances designated by (invalid/unknown)&<#id>.
 		- (source/area)`377 2 382 16`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`1285`
+		- (metrics/profile-duration)`571`
 		- (metrics/profile-count)`7`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`2000`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`1000`
 (signature)`terminate(self)`
 
 Terminate all arrays managed by the matrix.
@@ -751,11 +751,11 @@ Terminate all arrays managed by the matrix.
 		- (source/area)`384 2 406 14`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`16`
-		- (metrics/profile-duration)`759833`
+		- (metrics/profile-duration)`766500`
 		- (metrics/profile-count)`6`
-		- (metrics/profile-residency)`1.8863785917964466`
+		- (metrics/profile-residency)`1.869971732985432`
 		- (metrics/profile-minimum)`8000`
-		- (metrics/profile-maximum)`1148000`
+		- (metrics/profile-maximum)`1271000`
 (signature)`acquire(self, channels)`
 
 Acquire a set of channels accounting for volume limits.
@@ -802,11 +802,11 @@ Channel moving data in or out of the operating system's kernel.
 		- (source/area)`414 2 417 21`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`16500`
+		- (metrics/profile-duration)`11500`
 		- (metrics/profile-count)`2`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`16000`
-		- (metrics/profile-maximum)`17000`
+		- (metrics/profile-minimum)`9000`
+		- (metrics/profile-maximum)`14000`
 (signature)`__init__(self)`
 
 
@@ -821,11 +821,11 @@ Channel moving data in or out of the operating system's kernel.
 		- (source/area)`419 2 420 38`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
-		- (metrics/profile-duration)`12500`
+		- (metrics/profile-duration)`5500`
 		- (metrics/profile-count)`2`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`8000`
-		- (metrics/profile-maximum)`17000`
+		- (metrics/profile-minimum)`5000`
+		- (metrics/profile-maximum)`6000`
 (signature)`actuate(self)`
 
 
@@ -951,11 +951,11 @@ unlink the channel.
 		- (source/area)`516 2 528 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
-		- (metrics/profile-duration)`1000`
+		- (metrics/profile-duration)`250`
 		- (metrics/profile-count)`4`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`2000`
+		- (metrics/profile-maximum)`1000`
 The length of the buffer being transferred into or out of the kernel.
 
 (invalid/unknown)&<#None> if no transfer is currently taking place.
@@ -1002,11 +1002,11 @@ Flow that continually allocates memory for a channel transferring data into the 
 		- (source/area)`541 2 551 55`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`34000`
+		- (metrics/profile-duration)`44000`
 		- (metrics/profile-count)`1`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`34000`
-		- (metrics/profile-maximum)`34000`
+		- (metrics/profile-minimum)`44000`
+		- (metrics/profile-maximum)`44000`
 (signature)`k_transition(self)`
 
 Transition in the next buffer provided that the Flow was not obstructed.
@@ -1276,11 +1276,11 @@ Queue entries exceeds limit.
 		- (source/area)`661 2 664 27`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`36000`
+		- (metrics/profile-duration)`26000`
 		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`55.55555555555556`
-		- (metrics/profile-minimum)`36000`
-		- (metrics/profile-maximum)`36000`
+		- (metrics/profile-residency)`61.53846153846154`
+		- (metrics/profile-minimum)`26000`
+		- (metrics/profile-maximum)`26000`
 (signature)`__init__(self, channel)`
 
 
@@ -1295,11 +1295,11 @@ Queue entries exceeds limit.
 		- (source/area)`666 2 681 24`
 		- (coverage-zeros)`4`
 		- (coverage-counters)`7`
-		- (metrics/profile-duration)`9000`
+		- (metrics/profile-duration)`8000`
 		- (metrics/profile-count)`1`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`9000`
-		- (metrics/profile-maximum)`9000`
+		- (metrics/profile-minimum)`8000`
+		- (metrics/profile-maximum)`8000`
 (signature)`k_transition(self)`
 
 
@@ -1312,11 +1312,11 @@ Queue entries exceeds limit.
 		- (source/area)`683 2 699 5`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`6`
-		- (metrics/profile-duration)`16000`
+		- (metrics/profile-duration)`11000`
 		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`43.75`
-		- (metrics/profile-minimum)`16000`
-		- (metrics/profile-maximum)`16000`
+		- (metrics/profile-residency)`27.27272727272727`
+		- (metrics/profile-minimum)`11000`
+		- (metrics/profile-maximum)`11000`
 (signature)`f_transfer(self, event)`
 
 Enqueue a sequence of transfers to be processed by the Transit.
@@ -1436,11 +1436,11 @@ Final (executable) transaction exited; system process context complete.
 		- (source/area)`757 2 758 28`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
-		- (metrics/profile-duration)`3017`
-		- (metrics/profile-count)`2276`
+		- (metrics/profile-duration)`677`
+		- (metrics/profile-count)`62`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`3398000`
+		- (metrics/profile-maximum)`2000`
 
 [ Context >> kdispatch ]
 ! CONTROL:
@@ -1481,11 +1481,11 @@ Final (executable) transaction exited; system process context complete.
 		- (source/area)`768 2 775 43`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
-		- (metrics/profile-duration)`23612`
-		- (metrics/profile-count)`80`
+		- (metrics/profile-duration)`10428`
+		- (metrics/profile-count)`14`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`6000`
-		- (metrics/profile-maximum)`455000`
+		- (metrics/profile-minimum)`8000`
+		- (metrics/profile-maximum)`23000`
 (signature)`__init__(self, process)`
 
 
@@ -1656,11 +1656,11 @@ by the given (factor-local/parameter)&<#Context.defer.Parameters.measure[measure
 		- (source/area)`899 2 902 35`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`14012`
-		- (metrics/profile-count)`80`
+		- (metrics/profile-duration)`12857`
+		- (metrics/profile-count)`14`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`7000`
-		- (metrics/profile-maximum)`60000`
+		- (metrics/profile-minimum)`8000`
+		- (metrics/profile-maximum)`24000`
 (signature)`actuate(self)`
 
 
@@ -1687,13 +1687,13 @@ by the given (factor-local/parameter)&<#Context.defer.Parameters.measure[measure
 	/element/
 		- (control)`property-set`
 		- (source/area)`909 2 918 33`
-		- (coverage-zeros)`0`
+		- (coverage-zeros)`1`
 		- (coverage-counters)`5`
-		- (metrics/profile-duration)`41068`
-		- (metrics/profile-count)`2276`
-		- (metrics/profile-residency)`89.33916746012218`
+		- (metrics/profile-duration)`63451`
+		- (metrics/profile-count)`62`
+		- (metrics/profile-residency)`96.28876461616676`
 		- (metrics/profile-minimum)`6000`
-		- (metrics/profile-maximum)`10780000`
+		- (metrics/profile-maximum)`2745000`
 (signature)`connect_process_exit(self, xact_context, callback, *processes)`
 
 
@@ -1706,11 +1706,11 @@ by the given (factor-local/parameter)&<#Context.defer.Parameters.measure[measure
 		- (source/area)`920 2 929 28`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
-		- (metrics/profile-duration)`52475`
-		- (metrics/profile-count)`80`
+		- (metrics/profile-duration)`62071`
+		- (metrics/profile-count)`14`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`33000`
-		- (metrics/profile-maximum)`125000`
+		- (metrics/profile-minimum)`36000`
+		- (metrics/profile-maximum)`100000`
 (signature)`allocate(self, xactctx)`
 
 Launch an Executable for running application processors.
@@ -2204,11 +2204,11 @@ Thread manager for processes; thread pool with capacity to manage dedicated thre
 		- (source/area)`1250 2 1252 25`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`2050`
-		- (metrics/profile-count)`80`
+		- (metrics/profile-duration)`1214`
+		- (metrics/profile-count)`14`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`4000`
+		- (metrics/profile-maximum)`3000`
 (signature)`__init__(self, process)`
 
 
@@ -2352,11 +2352,11 @@ Resolve the current logical process based on the thread's identifier.
 		- (source/area)`1347 2 1354 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`1262`
-		- (metrics/profile-count)`80`
+		- (metrics/profile-duration)`857`
+		- (metrics/profile-count)`14`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`3000`
+		- (metrics/profile-maximum)`2000`
 		- (type/syntax)`core.Transaction`
 		- (type/project-local/factor-element)&<core#Transaction[fault.kernel.core.Transaction]>
 		
@@ -2376,11 +2376,11 @@ Return the primary (project-local/unknown)&<library.Unit> instance associated wi
 		- (source/area)`1355 2 1356 26`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
-		- (metrics/profile-duration)`18315`
-		- (metrics/profile-count)`2356`
+		- (metrics/profile-duration)`72513`
+		- (metrics/profile-count)`76`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`2331000`
+		- (metrics/profile-maximum)`769000`
 
 [ Process >> actuate_root_transaction ]
 ! CONTROL:
@@ -2393,11 +2393,11 @@ Return the primary (project-local/unknown)&<library.Unit> instance associated wi
 		- (source/area)`1358 2 1364 25`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
-		- (metrics/profile-duration)`69800`
-		- (metrics/profile-count)`80`
-		- (metrics/profile-residency)`78.11604584527221`
-		- (metrics/profile-minimum)`27000`
-		- (metrics/profile-maximum)`716000`
+		- (metrics/profile-duration)`51142`
+		- (metrics/profile-count)`14`
+		- (metrics/profile-residency)`70.94972067039105`
+		- (metrics/profile-minimum)`29000`
+		- (metrics/profile-maximum)`83000`
 (signature)`actuate_root_transaction(self)`
 
 
@@ -2425,11 +2425,11 @@ primarily used for process related issues.
 		- (source/area)`1375 2 1385 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
-		- (metrics/profile-duration)`2387`
-		- (metrics/profile-count)`80`
+		- (metrics/profile-duration)`2785`
+		- (metrics/profile-count)`14`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`8000`
+		- (metrics/profile-maximum)`6000`
 (signature)`boot(self, *tasks)`
 
 Boot the Process with the given tasks enqueued in the Task queue.
@@ -2461,11 +2461,11 @@ Terminate the process closing the task queue and running the invocation's exit.
 		- (source/area)`1400 2 1415 15`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
-		- (metrics/profile-duration)`538912`
-		- (metrics/profile-count)`80`
-		- (metrics/profile-residency)`1.498387957228678`
-		- (metrics/profile-minimum)`218000`
-		- (metrics/profile-maximum)`2408000`
+		- (metrics/profile-duration)`424000`
+		- (metrics/profile-count)`14`
+		- (metrics/profile-residency)`1.482479784366577`
+		- (metrics/profile-minimum)`325000`
+		- (metrics/profile-maximum)`850000`
 (signature)`__init__(self, exit, identifier)`
 
 Initialize the Process instance using the designated (factor-local/parameter)&<#Process.__init__.Parameters.identifier[identifier]>.
@@ -2488,11 +2488,11 @@ Normally, (invalid/unknown)&<#execute> is used to manage the construction of the
 		- (source/area)`1417 2 1426 17`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`528787`
-		- (metrics/profile-count)`80`
-		- (metrics/profile-residency)`2.716119424154315`
-		- (metrics/profile-minimum)`213000`
-		- (metrics/profile-maximum)`2385000`
+		- (metrics/profile-duration)`415285`
+		- (metrics/profile-count)`14`
+		- (metrics/profile-residency)`3.0271757825937393`
+		- (metrics/profile-minimum)`318000`
+		- (metrics/profile-maximum)`833000`
 (signature)`_setup(self)`
 
 
@@ -2507,11 +2507,11 @@ Normally, (invalid/unknown)&<#execute> is used to manage the construction of the
 		- (source/area)`1428 2 1430 30`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`4387`
-		- (metrics/profile-count)`80`
+		- (metrics/profile-duration)`3285`
+		- (metrics/profile-count)`14`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`9000`
+		- (metrics/profile-minimum)`2000`
+		- (metrics/profile-maximum)`8000`
 (signature)`_init_exit(self)`
 
 
@@ -2526,11 +2526,11 @@ Normally, (invalid/unknown)&<#execute> is used to manage the construction of the
 		- (source/area)`1432 2 1434 55`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`9375`
-		- (metrics/profile-count)`80`
-		- (metrics/profile-residency)`63.866666666666674`
-		- (metrics/profile-minimum)`4000`
-		- (metrics/profile-maximum)`26000`
+		- (metrics/profile-duration)`7285`
+		- (metrics/profile-count)`14`
+		- (metrics/profile-residency)`63.72549019607844`
+		- (metrics/profile-minimum)`5000`
+		- (metrics/profile-maximum)`17000`
 (signature)`_init_io(self)`
 
 
@@ -2666,11 +2666,11 @@ Sets the module attribute (factor-local/data)&<#main_thread_exit_status[main_thr
 		- (source/area)`1492 1 1508 12`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`11`
-		- (metrics/profile-duration)`587225`
-		- (metrics/profile-count)`80`
-		- (metrics/profile-residency)`4.206224190046404`
-		- (metrics/profile-minimum)`237000`
-		- (metrics/profile-maximum)`2480000`
+		- (metrics/profile-duration)`453714`
+		- (metrics/profile-count)`14`
+		- (metrics/profile-residency)`4.030226700251889`
+		- (metrics/profile-minimum)`352000`
+		- (metrics/profile-maximum)`909000`
 		- (type/syntax)`Process`
 		- (type/factor-local/class)&<#Process[Process]>
 		
@@ -2689,11 +2689,11 @@ The (factor-local/parameter)&<#spawn.Parameters.identifier[identifier]> is usual
 		- (source/area)`1510 1 1524 15`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`8`
-		- (metrics/profile-duration)`628037`
-		- (metrics/profile-count)`80`
-		- (metrics/profile-residency)`6.11826523097745`
-		- (metrics/profile-minimum)`256000`
-		- (metrics/profile-maximum)`2552000`
+		- (metrics/profile-duration)`486285`
+		- (metrics/profile-count)`14`
+		- (metrics/profile-residency)`5.9195064629847245`
+		- (metrics/profile-minimum)`381000`
+		- (metrics/profile-maximum)`969000`
 		- (type/syntax)`Process`
 		- (type/factor-local/class)&<#Process[Process]>
 		
@@ -2756,11 +2756,11 @@ Connect the system process termination signal to root transaction terminate.
 		- (source/area)`1565 1 1574 47`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
-		- (metrics/profile-duration)`39475`
-		- (metrics/profile-count)`80`
+		- (metrics/profile-duration)`12071`
+		- (metrics/profile-count)`14`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`7000`
-		- (metrics/profile-maximum)`690000`
+		- (metrics/profile-maximum)`23000`
 (signature)`control(**kw)`
 
 Control the main thread providing a low precision timer for deferred tasks.
@@ -2779,10 +2779,10 @@ by (factor-local/function)&<#spawn[spawn]>.
 		- (source/area)`1576 1 1597 95`
 		- (coverage-zeros)`7`
 		- (coverage-counters)`15`
-		- (metrics/profile-duration)`9133300325`
-		- (metrics/profile-count)`80`
+		- (metrics/profile-duration)`351697714`
+		- (metrics/profile-count)`14`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`19548000`
-		- (metrics/profile-maximum)`78874399000`
+		- (metrics/profile-minimum)`23892000`
+		- (metrics/profile-maximum)`1309151000`
 (signature)`protect(error_control)`
 

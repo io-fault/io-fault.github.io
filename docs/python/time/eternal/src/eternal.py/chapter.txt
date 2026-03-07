@@ -6,11 +6,11 @@
 		- (source/area)`1 1 151 0`
 		- (coverage-zeros)`12`
 		- (coverage-counters)`75`
-		- (metrics/profile-duration)`1187`
-		- (metrics/profile-count)`827`
+		- (metrics/profile-duration)`221`
+		- (metrics/profile-count)`739`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`17000`
+		- (metrics/profile-maximum)`5000`
 Eternals are measures of indefinite units of time. They are used to represent concepts of
 now, never, and the furthest point in time in the past--genesis.
 
@@ -86,11 +86,11 @@ now, never, and the furthest point in time in the past--genesis.
 		- (source/area)`33 1 37 9`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
-		- (metrics/profile-duration)`1500`
+		- (metrics/profile-duration)`0`
 		- (metrics/profile-count)`2`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`2000`
+		- (metrics/profile-residency)`0.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`0`
 (signature)`eternal_from_days(days)`
 
 Definite points in time are considered zero in the indefinite continuum.
@@ -107,10 +107,10 @@ Definite points in time are considered zero in the indefinite continuum.
 		- (source/area)`39 1 151 48`
 		- (coverage-zeros)`4`
 		- (coverage-counters)`62`
-		- (metrics/profile-duration)`68056`
-		- (metrics/profile-count)`827`
+		- (metrics/profile-duration)`60529`
+		- (metrics/profile-count)`739`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`46000`
-		- (metrics/profile-maximum)`298000`
+		- (metrics/profile-maximum)`187000`
 (signature)`context(ctx)`
 

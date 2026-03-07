@@ -3,9 +3,14 @@
 		module
 	/element/
 		- (control)`property-set`
-		- (source/area)`1 1 51 0`
+		- (source/area)`1 1 52 0`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`0`
+		- (metrics/profile-duration)`5000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`5000`
+		- (metrics/profile-maximum)`5000`
 Construction Context resolution support.
 
 
@@ -39,6 +44,16 @@ Construction Context resolution support.
 		- (control)`property-set`
 		- (source/area)`7 1 7 30`
 
+[ process ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 8 32`
+
 [ query ]
 ! CONTROL:
 	/type/
@@ -47,7 +62,7 @@ Construction Context resolution support.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`8 1 8 24`
+		- (source/area)`9 1 9 24`
 
 [ select ]
 ! CONTROL:
@@ -55,7 +70,12 @@ Construction Context resolution support.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`10 1 38 32`
+		- (source/area)`11 1 39 32`
+		- (metrics/profile-duration)`26000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`69.23076923076923`
+		- (metrics/profile-minimum)`26000`
+		- (metrics/profile-maximum)`26000`
 		- (type/syntax)`tuple[str, files.Path]`
 		
 (signature)`select(local)`
@@ -78,7 +98,12 @@ The first element of the tuples is a string describing the origin of the path.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`40 1 51 30`
+		- (source/area)`41 1 52 30`
+		- (metrics/profile-duration)`29000`
+		- (metrics/profile-count)`1`
+		- (metrics/profile-residency)`10.344827586206897`
+		- (metrics/profile-minimum)`29000`
+		- (metrics/profile-maximum)`29000`
 		- (type/syntax)`tuple[str, files.Path]`
 		
 (signature)`resolve()`

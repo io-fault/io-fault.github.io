@@ -6,11 +6,11 @@
 		- (source/area)`1 1 344 21`
 		- (coverage-zeros)`15`
 		- (coverage-counters)`149`
-		- (metrics/profile-duration)`127404`
-		- (metrics/profile-count)`84`
+		- (metrics/profile-duration)`58550`
+		- (metrics/profile-count)`20`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`44000`
-		- (metrics/profile-maximum)`2541000`
+		- (metrics/profile-minimum)`49000`
+		- (metrics/profile-maximum)`145000`
 Hash path implementation for compressing file paths.
 
 
@@ -73,11 +73,11 @@ Hash path implementation for compressing file paths.
 		- (source/area)`9 2 12 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`43158`
-		- (metrics/profile-count)`1131`
-		- (metrics/profile-residency)`19.474719331311974`
-		- (metrics/profile-minimum)`5000`
-		- (metrics/profile-maximum)`1131000`
+		- (metrics/profile-duration)`33841`
+		- (metrics/profile-count)`151`
+		- (metrics/profile-residency)`17.534246575342465`
+		- (metrics/profile-minimum)`4000`
+		- (metrics/profile-maximum)`115000`
 (signature)`compute(Class, data)`
 
 
@@ -92,11 +92,11 @@ Hash path implementation for compressing file paths.
 		- (source/area)`14 2 15 16`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
-		- (metrics/profile-duration)`1147`
-		- (metrics/profile-count)`1131`
+		- (metrics/profile-duration)`238`
+		- (metrics/profile-count)`151`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`105000`
+		- (metrics/profile-maximum)`3000`
 (signature)`__init__(self)`
 
 
@@ -111,11 +111,11 @@ Hash path implementation for compressing file paths.
 		- (source/area)`17 2 24 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
-		- (metrics/profile-duration)`33605`
-		- (metrics/profile-count)`1131`
+		- (metrics/profile-duration)`26615`
+		- (metrics/profile-count)`151`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`1114000`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`99000`
 (signature)`update(self, data)`
 
 
@@ -130,11 +130,11 @@ Hash path implementation for compressing file paths.
 		- (source/area)`26 2 27 28`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`1549`
-		- (metrics/profile-count)`1131`
+		- (metrics/profile-duration)`768`
+		- (metrics/profile-count)`151`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`14000`
+		- (metrics/profile-maximum)`10000`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -188,11 +188,11 @@ the path segment to be used by a resource's key.
 		- (source/area)`38 2 47 14`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
-		- (metrics/profile-duration)`2548`
-		- (metrics/profile-count)`82`
+		- (metrics/profile-duration)`1833`
+		- (metrics/profile-count)`18`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`5000`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`11000`
 (signature)`__init__(self, implementation, algorithm, depth, length)`
 
 
@@ -205,11 +205,11 @@ the path segment to be used by a resource's key.
 		- (source/area)`48 2 58 3`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`2521`
-		- (metrics/profile-count)`1126`
+		- (metrics/profile-duration)`1301`
+		- (metrics/profile-count)`146`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`67000`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`4000`
 		- (type/syntax)`Sequence[str]`
 		
 (signature)`divide(digest, length, edge, step)`
@@ -226,11 +226,11 @@ Split the hex digest into parts for building a Route to the bucket.
 		- (source/area)`60 2 68 63`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
-		- (metrics/profile-duration)`63080`
-		- (metrics/profile-count)`1126`
-		- (metrics/profile-residency)`24.970082642301033`
-		- (metrics/profile-minimum)`11000`
-		- (metrics/profile-maximum)`3430000`
+		- (metrics/profile-duration)`45212`
+		- (metrics/profile-count)`146`
+		- (metrics/profile-residency)`16.270262081502803`
+		- (metrics/profile-minimum)`10000`
+		- (metrics/profile-maximum)`139000`
 		- (type/syntax)`Sequence[str]`
 		
 (signature)`__call__(self, key)`
@@ -264,11 +264,11 @@ of divisions, and the character length of the hex digest.
 		- (source/area)`78 2 98 56`
 		- (coverage-zeros)`5`
 		- (coverage-counters)`12`
-		- (metrics/profile-duration)`9853`
-		- (metrics/profile-count)`82`
-		- (metrics/profile-residency)`60.51980198019802`
-		- (metrics/profile-minimum)`4000`
-		- (metrics/profile-maximum)`59000`
+		- (metrics/profile-duration)`16333`
+		- (metrics/profile-count)`18`
+		- (metrics/profile-residency)`53.06122448979591`
+		- (metrics/profile-minimum)`5000`
+		- (metrics/profile-maximum)`96000`
 (signature)`from_identity(Class)`
 
 Create an instance using the identity.
@@ -307,11 +307,11 @@ of each indentation block not being part of the key.
 		- (source/area)`112 2 145 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`11`
-		- (metrics/profile-duration)`6619`
-		- (metrics/profile-count)`1122`
-		- (metrics/profile-residency)`37.754140298909384`
+		- (metrics/profile-duration)`246`
+		- (metrics/profile-count)`142`
+		- (metrics/profile-residency)`68.57142857142857`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`1952000`
+		- (metrics/profile-maximum)`13000`
 (signature)`structure(seq)`
 
 Structure the indentation blocks into (key, entry) pairs.
@@ -354,11 +354,11 @@ Underscore attributes are representations of stored data.
 		- (source/area)`153 2 156 18`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`1426`
-		- (metrics/profile-count)`1121`
+		- (metrics/profile-duration)`503`
+		- (metrics/profile-count)`141`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`43000`
+		- (metrics/profile-maximum)`3000`
 (signature)`__init__(self)`
 
 
@@ -371,11 +371,11 @@ Underscore attributes are representations of stored data.
 		- (source/area)`158 2 173 68`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
-		- (metrics/profile-duration)`45750`
-		- (metrics/profile-count)`1120`
-		- (metrics/profile-residency)`85.53502078413771`
-		- (metrics/profile-minimum)`4000`
-		- (metrics/profile-maximum)`5720000`
+		- (metrics/profile-duration)`5778`
+		- (metrics/profile-count)`140`
+		- (metrics/profile-residency)`88.62793572311496`
+		- (metrics/profile-minimum)`3000`
+		- (metrics/profile-maximum)`23000`
 (signature)`load(self, lines)`
 
 Load the index from the given line sequence.
@@ -391,11 +391,11 @@ Load the index from the given line sequence.
 		- (source/area)`175 2 181 88`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`10347`
-		- (metrics/profile-count)`1122`
-		- (metrics/profile-residency)`45.48664944013781`
-		- (metrics/profile-minimum)`4000`
-		- (metrics/profile-maximum)`594000`
+		- (metrics/profile-duration)`7760`
+		- (metrics/profile-count)`142`
+		- (metrics/profile-residency)`53.08529945553539`
+		- (metrics/profile-minimum)`3000`
+		- (metrics/profile-maximum)`175000`
 (signature)`sequence(self)`
 
 Send the serialized index state to the given (invalid/unknown)&<#write> function.
@@ -426,11 +426,11 @@ Iterator containing the keys loaded from the index.
 		- (source/area)`189 2 190 26`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
-		- (metrics/profile-duration)`1000`
+		- (metrics/profile-duration)`0`
 		- (metrics/profile-count)`3`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`1000`
+		- (metrics/profile-residency)`0.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`0`
 (signature)`items(self)`
 
 
@@ -443,11 +443,11 @@ Iterator containing the keys loaded from the index.
 		- (source/area)`192 2 196 25`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`333`
+		- (metrics/profile-duration)`0`
 		- (metrics/profile-count)`3`
-		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-residency)`0.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`1000`
+		- (metrics/profile-maximum)`0`
 (signature)`has_key(self, key)`
 
 Check if a key exists in the index.
@@ -464,11 +464,11 @@ Check if a key exists in the index.
 		- (source/area)`198 2 199 23`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
-		- (metrics/profile-duration)`500`
+		- (metrics/profile-duration)`0`
 		- (metrics/profile-count)`2`
-		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-residency)`0.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`1000`
+		- (metrics/profile-maximum)`0`
 (signature)`__getitem__(self, key)`
 
 
@@ -495,11 +495,11 @@ Check if a key exists in the index.
 		- (source/area)`204 2 213 3`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
-		- (metrics/profile-duration)`4309`
-		- (metrics/profile-count)`1122`
-		- (metrics/profile-residency)`78.9865563598759`
+		- (metrics/profile-duration)`4239`
+		- (metrics/profile-count)`142`
+		- (metrics/profile-residency)`70.09966777408637`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`50000`
+		- (metrics/profile-maximum)`13000`
 (signature)`allocate(self, keys, filename)`
 
 Allocate a sequence of entries for the given keys.
@@ -514,11 +514,11 @@ Allocate a sequence of entries for the given keys.
 		- (source/area)`215 2 222 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
-		- (metrics/profile-duration)`1824`
-		- (metrics/profile-count)`557`
+		- (metrics/profile-duration)`873`
+		- (metrics/profile-count)`142`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`40000`
+		- (metrics/profile-maximum)`2000`
 (signature)`insert(self, key, filename)`
 
 Insert the key into the bucket. The key *must* not already be present.
@@ -533,11 +533,11 @@ Insert the key into the bucket. The key *must* not already be present.
 		- (source/area)`224 2 230 14`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`1000`
+		- (metrics/profile-duration)`0`
 		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`1000`
+		- (metrics/profile-residency)`0.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`0`
 (signature)`delete(self, key)`
 
 Delete the key from the index returning the entry for removal.
@@ -594,11 +594,11 @@ Filesystem based hash tree.
 		- (source/area)`247 2 249 23`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`913`
-		- (metrics/profile-count)`81`
-		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-duration)`0`
+		- (metrics/profile-count)`17`
+		- (metrics/profile-residency)`0.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`2000`
+		- (metrics/profile-maximum)`0`
 (signature)`__init__(self, addressing, directory)`
 
 
@@ -611,11 +611,11 @@ Filesystem based hash tree.
 		- (source/area)`251 2 272 25`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`12`
-		- (metrics/profile-duration)`178000`
+		- (metrics/profile-duration)`198500`
 		- (metrics/profile-count)`2`
-		- (metrics/profile-residency)`88.48314606741573`
-		- (metrics/profile-minimum)`156000`
-		- (metrics/profile-maximum)`200000`
+		- (metrics/profile-residency)`89.67254408060454`
+		- (metrics/profile-minimum)`181000`
+		- (metrics/profile-maximum)`216000`
 		- (type/syntax)`Iterable[(bytes, object)]`
 		
 (signature)`items(self)`
@@ -634,11 +634,11 @@ Returns an iterator to all the keys and their associated routes.
 		- (source/area)`273 2 279 12`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
-		- (metrics/profile-duration)`568545`
-		- (metrics/profile-count)`1119`
-		- (metrics/profile-residency)`91.69854857419499`
+		- (metrics/profile-duration)`175215`
+		- (metrics/profile-count)`139`
+		- (metrics/profile-residency)`95.88174912748923`
 		- (metrics/profile-minimum)`38000`
-		- (metrics/profile-maximum)`7512000`
+		- (metrics/profile-maximum)`2159000`
 (signature)`_index(self, route)`
 
 
@@ -651,11 +651,11 @@ Returns an iterator to all the keys and their associated routes.
 		- (source/area)`281 2 299 31`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`11`
-		- (metrics/profile-duration)`2465006`
-		- (metrics/profile-count)`1120`
-		- (metrics/profile-residency)`73.79313367432059`
-		- (metrics/profile-minimum)`157000`
-		- (metrics/profile-maximum)`27426000`
+		- (metrics/profile-duration)`1046121`
+		- (metrics/profile-count)`140`
+		- (metrics/profile-residency)`77.62210068484265`
+		- (metrics/profile-minimum)`236000`
+		- (metrics/profile-maximum)`6652000`
 		- (type/syntax)`object`
 		- (type/invalid/unknown)&<#object>
 		
@@ -675,11 +675,11 @@ If already allocated, return the reference to the resource.
 		- (source/area)`301 2 320 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`10`
-		- (metrics/profile-duration)`72333`
+		- (metrics/profile-duration)`56333`
 		- (metrics/profile-count)`3`
-		- (metrics/profile-residency)`75.1152073732719`
-		- (metrics/profile-minimum)`43000`
-		- (metrics/profile-maximum)`92000`
+		- (metrics/profile-residency)`74.55621301775147`
+		- (metrics/profile-minimum)`40000`
+		- (metrics/profile-maximum)`66000`
 		- (type/syntax)`bool`
 		- (type/invalid/unknown)&<#bool>
 		
@@ -699,11 +699,11 @@ Whether the resource has not been allocated.
 		- (source/area)`322 2 345 20`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`12`
-		- (metrics/profile-duration)`170500`
+		- (metrics/profile-duration)`165500`
 		- (metrics/profile-count)`2`
-		- (metrics/profile-residency)`91.78885630498533`
-		- (metrics/profile-minimum)`35000`
-		- (metrics/profile-maximum)`306000`
+		- (metrics/profile-residency)`91.54078549848943`
+		- (metrics/profile-minimum)`34000`
+		- (metrics/profile-maximum)`297000`
 (signature)`release(self, key)`
 
 Release the allocated resource associated with the (factor-local/parameter)&<#Directory.release.Parameters.key[key]> and delete it from the index.

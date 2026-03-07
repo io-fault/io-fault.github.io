@@ -6,11 +6,11 @@
 		- (source/area)`1 1 128 13`
 		- (coverage-zeros)`17`
 		- (coverage-counters)`59`
-		- (metrics/profile-duration)`991186`
+		- (metrics/profile-duration)`1025813`
 		- (metrics/profile-count)`43`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`30000`
-		- (metrics/profile-maximum)`4673000`
+		- (metrics/profile-minimum)`28000`
+		- (metrics/profile-maximum)`5068000`
 Support for running tests without full system/executable contexts.
 
 
@@ -65,11 +65,11 @@ Root controller for tests.
 		- (source/area)`11 2 14 22`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`7096`
+		- (metrics/profile-duration)`6161`
 		- (metrics/profile-count)`31`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`18000`
+		- (metrics/profile-maximum)`21000`
 (signature)`__init__(self)`
 
 
@@ -84,11 +84,11 @@ Root controller for tests.
 		- (source/area)`16 2 17 30`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
-		- (metrics/profile-duration)`769`
+		- (metrics/profile-duration)`76`
 		- (metrics/profile-count)`13`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`6000`
+		- (metrics/profile-maximum)`1000`
 (signature)`exited(self, processor)`
 
 
@@ -151,11 +151,11 @@ ran in order to perform them.
 		- (source/area)`32 2 34 18`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`5733`
+		- (metrics/profile-duration)`4700`
 		- (metrics/profile-count)`30`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`13000`
+		- (metrics/profile-maximum)`27000`
 (signature)`__init__(self)`
 
 
@@ -184,11 +184,11 @@ ran in order to perform them.
 		- (source/area)`39 2 40 26`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
-		- (metrics/profile-duration)`650`
+		- (metrics/profile-duration)`96`
 		- (metrics/profile-count)`83`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`2000`
+		- (metrics/profile-maximum)`1000`
 (signature)`enqueue(self, *tasks)`
 
 
@@ -203,11 +203,11 @@ ran in order to perform them.
 		- (source/area)`42 2 47 33`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
-		- (metrics/profile-duration)`2149000`
+		- (metrics/profile-duration)`1793500`
 		- (metrics/profile-count)`2`
-		- (metrics/profile-residency)`99.97673336435552`
-		- (metrics/profile-minimum)`50000`
-		- (metrics/profile-maximum)`4248000`
+		- (metrics/profile-residency)`99.97212155004182`
+		- (metrics/profile-minimum)`48000`
+		- (metrics/profile-maximum)`3539000`
 (signature)`faulted(self, resource)`
 
 
@@ -222,10 +222,10 @@ ran in order to perform them.
 		- (source/area)`49 2 57 7`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
-		- (metrics/profile-duration)`69406`
+		- (metrics/profile-duration)`65125`
 		- (metrics/profile-count)`64`
-		- (metrics/profile-residency)`98.15398469158036`
-		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-residency)`98.29654510556622`
+		- (metrics/profile-minimum)`0`
 		- (metrics/profile-maximum)`709000`
 (signature)`__call__(self)`
 
@@ -241,11 +241,11 @@ ran in order to perform them.
 		- (source/area)`59 2 65 84`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`4`
-		- (metrics/profile-duration)`290250`
+		- (metrics/profile-duration)`288250`
 		- (metrics/profile-count)`8`
-		- (metrics/profile-residency)`1.119724375538329`
+		- (metrics/profile-residency)`0.9540329575021683`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`1192000`
+		- (metrics/profile-maximum)`1199000`
 (signature)`flush(self)`
 
 
@@ -288,11 +288,11 @@ ran in order to perform them.
 		- (source/area)`73 2 74 6`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
-		- (metrics/profile-duration)`1000`
+		- (metrics/profile-duration)`0`
 		- (metrics/profile-count)`2`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`1000`
+		- (metrics/profile-residency)`0.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`0`
 (signature)`_io_attach(self, *channel)`
 
 
@@ -361,10 +361,10 @@ ran in order to perform them.
 		- (source/area)`83 2 84 21`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
-		- (metrics/profile-duration)`1000`
+		- (metrics/profile-duration)`500`
 		- (metrics/profile-count)`2`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-minimum)`0`
 		- (metrics/profile-maximum)`1000`
 (signature)`acquire(self, obj)`
 
@@ -490,11 +490,11 @@ ran in order to perform them.
 		- (source/area)`114 1 129 12`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`13`
-		- (metrics/profile-duration)`136080`
+		- (metrics/profile-duration)`126080`
 		- (metrics/profile-count)`25`
-		- (metrics/profile-residency)`89.03586125808349`
-		- (metrics/profile-minimum)`17000`
-		- (metrics/profile-maximum)`254000`
+		- (metrics/profile-residency)`88.70558375634518`
+		- (metrics/profile-minimum)`16000`
+		- (metrics/profile-maximum)`291000`
 (signature)`sector()`
 
 Construct a root Sector and Context for testing.

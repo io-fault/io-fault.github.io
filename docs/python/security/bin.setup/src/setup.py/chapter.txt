@@ -3,7 +3,7 @@
 		module
 	/element/
 		- (control)`property-set`
-		- (source/area)`1 1 14 13`
+		- (source/area)`1 1 13 23`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`0`
 Initialize a stored security context on the filesystem.
@@ -49,7 +49,7 @@ Initialize a stored security context on the filesystem.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`12 1 15 12`
+		- (source/area)`12 1 14 22`
 		- (type/syntax)`process.Exit`
 		- (type/context-local/factor-element)&<fault.system/process#Exit[fault.system.process.Exit]>
 		

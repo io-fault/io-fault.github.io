@@ -5,12 +5,7 @@
 		- (control)`property-set`
 		- (source/area)`1 1 79 0`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`37`
-		- (metrics/profile-duration)`3570000`
-		- (metrics/profile-count)`4`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`3570000`
-		- (metrics/profile-maximum)`3570000`
+		- (coverage-counters)`0`
 
 [ core ]
 ! CONTROL:
@@ -31,13 +26,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`3 1 38 21`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`13`
-		- (metrics/profile-duration)`248000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`248000`
-		- (metrics/profile-maximum)`248000`
 (signature)`test_Condition(test)`
 
 
@@ -50,13 +38,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`40 1 43 38`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`3`
-		- (metrics/profile-duration)`137000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`137000`
-		- (metrics/profile-maximum)`137000`
 (signature)`test_Inexorable(test)`
 
 
@@ -69,12 +50,5 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`45 1 79 26`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`20`
-		- (metrics/profile-duration)`286000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`286000`
-		- (metrics/profile-maximum)`286000`
 (signature)`test_Join(test)`
 

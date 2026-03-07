@@ -4,13 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 7 39`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`6`
-		- (metrics/profile-duration)`784000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`784000`
-		- (metrics/profile-maximum)`784000`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 Validate terminal classes and functionality.
 
 

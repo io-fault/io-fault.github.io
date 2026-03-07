@@ -5,12 +5,7 @@
 		- (control)`property-set`
 		- (source/area)`1 1 317 0`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`201`
-		- (metrics/profile-duration)`1436000`
-		- (metrics/profile-count)`16`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`1436000`
-		- (metrics/profile-maximum)`1436000`
+		- (coverage-counters)`0`
 
 [ module ]
 ! CONTROL:
@@ -31,13 +26,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`3 1 18 32`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`10`
-		- (metrics/profile-duration)`142000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`142000`
-		- (metrics/profile-maximum)`142000`
 (signature)`test_combine(test)`
 
 
@@ -50,13 +38,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`20 1 51 60`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`23`
-		- (metrics/profile-duration)`529000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`529000`
-		- (metrics/profile-maximum)`529000`
 (signature)`test_IRange(test)`
 
 
@@ -69,13 +50,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`53 1 80 51`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`19`
-		- (metrics/profile-duration)`186000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`186000`
-		- (metrics/profile-maximum)`186000`
 (signature)`test_IRange_intersect(test)`
 
 
@@ -88,13 +62,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`82 1 118 35`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`29`
-		- (metrics/profile-duration)`902000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`902000`
-		- (metrics/profile-maximum)`902000`
 (signature)`test_Set(test)`
 
 
@@ -107,13 +74,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`120 1 128 43`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
-		- (metrics/profile-duration)`343000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`343000`
-		- (metrics/profile-maximum)`343000`
 (signature)`test_Set_difference(test)`
 
 
@@ -126,13 +86,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`130 1 139 50`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`7`
-		- (metrics/profile-duration)`401000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`401000`
-		- (metrics/profile-maximum)`401000`
 (signature)`test_Set_intersection(test)`
 
 
@@ -145,13 +98,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`141 1 147 62`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
-		- (metrics/profile-duration)`318000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`318000`
-		- (metrics/profile-maximum)`318000`
 (signature)`test_Set_union(test)`
 
 
@@ -164,13 +110,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`149 1 163 18`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`10`
-		- (metrics/profile-duration)`312000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`312000`
-		- (metrics/profile-maximum)`312000`
 (signature)`test_Set_len(test)`
 
 
@@ -183,13 +122,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`165 1 171 26`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
-		- (metrics/profile-duration)`305000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`305000`
-		- (metrics/profile-maximum)`305000`
 (signature)`test_Set_pickle(test)`
 
 
@@ -200,13 +132,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`173 1 190 57`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`11`
-		- (metrics/profile-duration)`353000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`353000`
-		- (metrics/profile-maximum)`353000`
 (signature)`test_Mapping_narrow_indexing(test)`
 
 - (context-local/factor-element)&<fault.range/types#Mapping.__setitem__[fault.range.types.Mapping.__setitem__]>
@@ -222,13 +147,6 @@ Check single level siblings access.
 	/element/
 		- (control)`property-set`
 		- (source/area)`192 1 208 23`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`10`
-		- (metrics/profile-duration)`294000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`294000`
-		- (metrics/profile-maximum)`294000`
 (signature)`test_Mapping_get(test)`
 
 - (context-local/factor-element)&<fault.range/types#Mapping.__setitem__[fault.range.types.Mapping.__setitem__]>
@@ -244,13 +162,6 @@ Check single level siblings access.
 	/element/
 		- (control)`property-set`
 		- (source/area)`210 1 237 30`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`18`
-		- (metrics/profile-duration)`562000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`562000`
-		- (metrics/profile-maximum)`562000`
 (signature)`test_Mapping_depth_indexing(test)`
 
 - (context-local/factor-element)&<fault.range/types#Mapping.__getitem__[fault.range.types.Mapping.__getitem__]>
@@ -266,13 +177,6 @@ Check that inner values set after override initial values.
 	/element/
 		- (control)`property-set`
 		- (source/area)`239 1 266 64`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`17`
-		- (metrics/profile-duration)`540000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`540000`
-		- (metrics/profile-maximum)`540000`
 (signature)`test_Mapping_path(test)`
 
 - (context-local/factor-element)&<fault.range/types#Mapping.path[fault.range.types.Mapping.path]>
@@ -287,13 +191,6 @@ Check the effect of stacked ranges on path.
 	/element/
 		- (control)`property-set`
 		- (source/area)`268 1 294 71`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`17`
-		- (metrics/profile-duration)`491000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`491000`
-		- (metrics/profile-maximum)`491000`
 (signature)`test_Mapping_kv_query(test)`
 
 - (context-local/factor-element)&<fault.range/types#Mapping.keys[fault.range.types.Mapping.keys]>
@@ -308,13 +205,6 @@ Check the effect of stacked ranges on path.
 	/element/
 		- (control)`property-set`
 		- (source/area)`296 1 317 56`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`12`
-		- (metrics/profile-duration)`399000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`399000`
-		- (metrics/profile-maximum)`399000`
 (signature)`test_Mapping_update(test)`
 
 - (context-local/factor-element)&<fault.range/types#Mapping.update[fault.range.types.Mapping.update]>

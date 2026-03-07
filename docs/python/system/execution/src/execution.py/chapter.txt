@@ -6,11 +6,11 @@
 		- (source/area)`1 1 772 0`
 		- (coverage-zeros)`97`
 		- (coverage-counters)`336`
-		- (metrics/profile-duration)`559152`
-		- (metrics/profile-count)`820`
-		- (metrics/profile-residency)`99.6673973021014`
-		- (metrics/profile-minimum)`351000`
-		- (metrics/profile-maximum)`6707000`
+		- (metrics/profile-duration)`484502`
+		- (metrics/profile-count)`739`
+		- (metrics/profile-residency)`99.60815200239075`
+		- (metrics/profile-minimum)`347000`
+		- (metrics/profile-maximum)`5816000`
 System process execution interfaces and
 process global registry for controlling the composition of (factor-local/data)&<#Specification[Specification]> for system process execution.
 
@@ -262,11 +262,11 @@ corresponding (invalid/unknown)&<#Method's>.
 		- (source/area)`90 2 92 19`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`1859`
-		- (metrics/profile-count)`820`
+		- (metrics/profile-duration)`1258`
+		- (metrics/profile-count)`739`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`8000`
+		- (metrics/profile-maximum)`41000`
 (signature)`__init__(self)`
 
 
@@ -530,11 +530,11 @@ Descriptor of change in a subprocess' state.
 		- (source/area)`159 1 206 33`
 		- (coverage-zeros)`12`
 		- (coverage-counters)`20`
-		- (metrics/profile-duration)`3872`
-		- (metrics/profile-count)`2730`
+		- (metrics/profile-duration)`2835`
+		- (metrics/profile-count)`431`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`275000`
+		- (metrics/profile-maximum)`16000`
 		- (type/syntax)`Delta`
 		- (type/factor-local/class)&<#Delta[Delta]>
 		
@@ -598,11 +598,11 @@ and can only be used with child processes.
 		- (source/area)`208 1 245 35`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`7`
-		- (metrics/profile-duration)`64259453`
-		- (metrics/profile-count)`2734`
-		- (metrics/profile-residency)`99.96945618884718`
+		- (metrics/profile-duration)`27987`
+		- (metrics/profile-count)`477`
+		- (metrics/profile-residency)`46.60674157303371`
 		- (metrics/profile-minimum)`6000`
-		- (metrics/profile-maximum)`114566082000`
+		- (metrics/profile-maximum)`831000`
 		- (type/syntax)`typing.Optional[Delta]`
 		
 (signature)`reap(pid, options)`
@@ -684,11 +684,6 @@ execute reliable processes.
 		- (source/area)`325 1 337 35`
 		- (coverage-zeros)`3`
 		- (coverage-counters)`4`
-		- (metrics/profile-duration)`29265972000`
-		- (metrics/profile-count)`6`
-		- (metrics/profile-residency)`0.0006423842679819416`
-		- (metrics/profile-minimum)`11173612000`
-		- (metrics/profile-maximum)`114566266000`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
@@ -746,11 +741,11 @@ provide access to the input and output pipes and the standard errors of each pro
 		- (source/area)`348 2 354 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`500`
+		- (metrics/profile-duration)`0`
 		- (metrics/profile-count)`16`
-		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-residency)`0.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`1000`
+		- (metrics/profile-maximum)`0`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
@@ -766,11 +761,11 @@ Pipe file descriptor for the pipeline's input.
 		- (source/area)`355 2 361 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`812`
+		- (metrics/profile-duration)`0`
 		- (metrics/profile-count)`16`
-		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-residency)`0.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`1000`
+		- (metrics/profile-maximum)`0`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
@@ -786,7 +781,7 @@ Pipe file descriptor for the pipeline's output.
 		- (source/area)`362 2 368 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`812`
+		- (metrics/profile-duration)`437`
 		- (metrics/profile-count)`16`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
@@ -803,11 +798,11 @@ The sequence of process identifiers of the commands that make up the pipeline.
 		- (source/area)`369 2 373 16`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`437`
+		- (metrics/profile-duration)`0`
 		- (metrics/profile-count)`16`
-		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-residency)`0.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`1000`
+		- (metrics/profile-maximum)`0`
 		- (type/syntax)`typing.Sequence[int]`
 		
 Mapping of process identifiers to the standard error file descriptor.
@@ -824,11 +819,11 @@ Mapping of process identifiers to the standard error file descriptor.
 		- (source/area)`375 2 385 4`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`6437`
+		- (metrics/profile-duration)`7000`
 		- (metrics/profile-count)`16`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`4000`
-		- (metrics/profile-maximum)`12000`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`19000`
 (signature)`__new__(Class, input, output, pids, errfds)`
 
 
@@ -910,11 +905,11 @@ with no standard errors and no process identifiers.
 		- (source/area)`413 2 433 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`7062`
+		- (metrics/profile-duration)`8250`
 		- (metrics/profile-count)`16`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`4000`
-		- (metrics/profile-maximum)`10000`
+		- (metrics/profile-minimum)`5000`
+		- (metrics/profile-maximum)`16000`
 (signature)`from_commands(Class, *commands)`
 
 Create a (factor-local/class)&<#PInvocation[PInvocation]> instance from a sequences of commands.
@@ -957,11 +952,11 @@ pairs.
 		- (source/area)`444 2 514 23`
 		- (coverage-zeros)`7`
 		- (coverage-counters)`34`
-		- (metrics/profile-duration)`1391250`
+		- (metrics/profile-duration)`1565250`
 		- (metrics/profile-count)`16`
-		- (metrics/profile-residency)`99.53728661275831`
-		- (metrics/profile-minimum)`29000`
-		- (metrics/profile-maximum)`4007000`
+		- (metrics/profile-residency)`99.52483628813289`
+		- (metrics/profile-minimum)`24000`
+		- (metrics/profile-maximum)`4328000`
 		- (type/syntax)`Pipeline`
 		- (type/factor-local/class)&<#Pipeline[Pipeline]>
 		
@@ -1017,11 +1012,11 @@ the file descriptors used for input, output and the standard error of all the co
 		- (source/area)`517 1 552 75`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`24`
-		- (metrics/profile-duration)`8258`
-		- (metrics/profile-count)`197`
+		- (metrics/profile-duration)`11428`
+		- (metrics/profile-count)`42`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`39000`
+		- (metrics/profile-maximum)`65000`
 		- (type/syntax)`typing.Tuple[		typing.Sequence[typing.Tuple[str, str]],		str,		typing.Sequence[str]	]`
 		
 (signature)`parse_sx_plan(text)`
@@ -1039,11 +1034,11 @@ settings, executable path, and command arguments.
 		- (source/area)`554 1 634 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`54`
-		- (metrics/profile-duration)`65334`
-		- (metrics/profile-count)`2592`
-		- (metrics/profile-residency)`58.06918298415098`
+		- (metrics/profile-duration)`57271`
+		- (metrics/profile-count)`402`
+		- (metrics/profile-residency)`59.41884202753768`
 		- (metrics/profile-minimum)`6000`
-		- (metrics/profile-maximum)`2144000`
+		- (metrics/profile-maximum)`1012000`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -1079,11 +1074,11 @@ Factor Execution Platform structure for defining architecture specific runtimes.
 		- (source/area)`642 2 662 14`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`11`
-		- (metrics/profile-duration)`2500`
+		- (metrics/profile-duration)`1666`
 		- (metrics/profile-count)`6`
-		- (metrics/profile-residency)`86.66666666666666`
-		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`5000`
+		- (metrics/profile-residency)`60.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`3000`
 (signature)`parse_architecture_list(pfa)`
 
 Produce the architectures and their synonyms from a string
@@ -1101,11 +1096,11 @@ that uses newline separated records and space separated fields.
 		- (source/area)`663 2 666 14`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
-		- (metrics/profile-duration)`43333`
+		- (metrics/profile-duration)`43444`
 		- (metrics/profile-count)`9`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`36000`
-		- (metrics/profile-maximum)`58000`
+		- (metrics/profile-minimum)`37000`
+		- (metrics/profile-maximum)`52000`
 (signature)`fs_load_system(path)`
 
 
@@ -1118,11 +1113,11 @@ that uses newline separated records and space separated fields.
 		- (source/area)`667 2 674 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`60250`
+		- (metrics/profile-duration)`61250`
 		- (metrics/profile-count)`4`
-		- (metrics/profile-residency)`93.3609958506224`
-		- (metrics/profile-minimum)`43000`
-		- (metrics/profile-maximum)`84000`
+		- (metrics/profile-residency)`95.10204081632652`
+		- (metrics/profile-minimum)`44000`
+		- (metrics/profile-maximum)`87000`
 (signature)`fs_load_plans(source, names)`
 
 Read the plans identified by (factor-local/parameter)&<#Platform.fs_load_plans.Parameters.names[names]> from the given directory, (factor-local/parameter)&<#Platform.fs_load_plans.Parameters.source[source]>.
@@ -1137,11 +1132,11 @@ Read the plans identified by (factor-local/parameter)&<#Platform.fs_load_plans.P
 		- (source/area)`675 2 684 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
-		- (metrics/profile-duration)`45000`
+		- (metrics/profile-duration)`43666`
 		- (metrics/profile-count)`6`
-		- (metrics/profile-residency)`94.44444444444444`
-		- (metrics/profile-minimum)`28000`
-		- (metrics/profile-maximum)`55000`
+		- (metrics/profile-residency)`95.03816793893131`
+		- (metrics/profile-minimum)`27000`
+		- (metrics/profile-maximum)`52000`
 (signature)`fs_load_sections(Class, path)`
 
 Interpret a stored platform emitting section records.
@@ -1156,11 +1151,11 @@ Interpret a stored platform emitting section records.
 		- (source/area)`685 2 693 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
-		- (metrics/profile-duration)`122000`
+		- (metrics/profile-duration)`116000`
 		- (metrics/profile-count)`3`
-		- (metrics/profile-residency)`8.469945355191259`
-		- (metrics/profile-minimum)`85000`
-		- (metrics/profile-maximum)`173000`
+		- (metrics/profile-residency)`7.758620689655173`
+		- (metrics/profile-minimum)`87000`
+		- (metrics/profile-maximum)`160000`
 (signature)`from_directory(Class, path)`
 
 Create an instance from a platform directory.
@@ -1175,11 +1170,11 @@ Create an instance from a platform directory.
 		- (source/area)`694 2 708 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`8`
-		- (metrics/profile-duration)`158000`
+		- (metrics/profile-duration)`160250`
 		- (metrics/profile-count)`4`
-		- (metrics/profile-residency)`6.962025316455696`
-		- (metrics/profile-minimum)`44000`
-		- (metrics/profile-maximum)`220000`
+		- (metrics/profile-residency)`5.61622464898596`
+		- (metrics/profile-minimum)`45000`
+		- (metrics/profile-maximum)`228000`
 (signature)`from_system(Class, system, origins)`
 
 Compose a (factor-local/class)&<#Platform[Platform]> from a sequence of paths given
@@ -1197,11 +1192,11 @@ that they are extensions of (factor-local/parameter)&<#Platform.from_system.Para
 		- (source/area)`710 2 715 18`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
-		- (metrics/profile-duration)`2000`
+		- (metrics/profile-duration)`1300`
 		- (metrics/profile-count)`10`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`5000`
+		- (metrics/profile-maximum)`6000`
 (signature)`__init__(self, system)`
 
 
@@ -1216,11 +1211,11 @@ that they are extensions of (factor-local/parameter)&<#Platform.from_system.Para
 		- (source/area)`717 2 718 38`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`1000`
+		- (metrics/profile-duration)`0`
 		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`1000`
+		- (metrics/profile-residency)`0.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`0`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
@@ -1236,11 +1231,11 @@ that they are extensions of (factor-local/parameter)&<#Platform.from_system.Para
 		- (source/area)`720 2 729 61`
 		- (coverage-zeros)`3`
 		- (coverage-counters)`6`
-		- (metrics/profile-duration)`1000`
+		- (metrics/profile-duration)`0`
 		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`1000`
+		- (metrics/profile-residency)`0.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`0`
 (signature)`identify(self, architecture)`
 
 Select the canonical identifier for the given architecture.
@@ -1255,11 +1250,11 @@ Select the canonical identifier for the given architecture.
 		- (source/area)`731 2 746 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`9`
-		- (metrics/profile-duration)`33250`
+		- (metrics/profile-duration)`33375`
 		- (metrics/profile-count)`8`
-		- (metrics/profile-residency)`7.518796992481203`
+		- (metrics/profile-residency)`6.367041198501873`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`86000`
+		- (metrics/profile-maximum)`90000`
 (signature)`extend(self, architectures)`
 
 Define additional architectures extending the current set.
@@ -1274,11 +1269,11 @@ Define additional architectures extending the current set.
 		- (source/area)`748 2 755 24`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
-		- (metrics/profile-duration)`5000`
+		- (metrics/profile-duration)`4000`
 		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`40.0`
-		- (metrics/profile-minimum)`5000`
-		- (metrics/profile-maximum)`5000`
+		- (metrics/profile-residency)`50.0`
+		- (metrics/profile-minimum)`4000`
+		- (metrics/profile-maximum)`4000`
 (signature)`sections(self)`
 
 Iterate the platform's defined architectures with their synonyms and execution plans.
@@ -1293,11 +1288,11 @@ Iterate the platform's defined architectures with their synonyms and execution p
 		- (source/area)`757 2 768 29`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
-		- (metrics/profile-duration)`1333`
+		- (metrics/profile-duration)`1000`
 		- (metrics/profile-count)`3`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`2000`
+		- (metrics/profile-maximum)`1000`
 (signature)`prepare(self, architecture, identifier, argv)`
 
 Prepare the necessary information for dispatching an executable with the

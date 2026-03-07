@@ -42,7 +42,7 @@ Invoking without arguments displays help menu to standard error.
 		- (control)`property-set`
 		- (source/area)`10 1 10 32`
 
-[ Path ]
+[ files ]
 ! CONTROL:
 	/type/
 		import
@@ -50,7 +50,7 @@ Invoking without arguments displays help menu to standard error.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`11 1 11 35`
+		- (source/area)`11 1 11 30`
 
 [ process ]
 ! CONTROL:

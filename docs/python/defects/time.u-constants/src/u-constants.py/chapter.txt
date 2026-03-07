@@ -5,12 +5,7 @@
 		- (control)`property-set`
 		- (source/area)`1 1 46 30`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`29`
-		- (metrics/profile-duration)`4000`
-		- (metrics/profile-count)`6`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`4000`
-		- (metrics/profile-maximum)`4000`
+		- (coverage-counters)`0`
 Sanity checks regarding presence.
 
 
@@ -33,13 +28,6 @@ Sanity checks regarding presence.
 	/element/
 		- (control)`property-set`
 		- (source/area)`6 1 22 57`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`12`
-		- (metrics/profile-duration)`204000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`204000`
-		- (metrics/profile-maximum)`204000`
 (signature)`test_indefinites(test)`
 
 
@@ -52,13 +40,6 @@ Sanity checks regarding presence.
 	/element/
 		- (control)`property-set`
 		- (source/area)`24 1 26 65`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`2`
-		- (metrics/profile-duration)`95000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`95000`
-		- (metrics/profile-maximum)`95000`
 (signature)`test_datums(test)`
 
 
@@ -71,13 +52,6 @@ Sanity checks regarding presence.
 	/element/
 		- (control)`property-set`
 		- (source/area)`28 1 29 22`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
-		- (metrics/profile-duration)`79000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`79000`
-		- (metrics/profile-maximum)`79000`
 (signature)`test_annum_value(test)`
 
 
@@ -90,13 +64,6 @@ Sanity checks regarding presence.
 	/element/
 		- (control)`property-set`
 		- (source/area)`31 1 38 40`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
-		- (metrics/profile-duration)`131000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`131000`
-		- (metrics/profile-maximum)`131000`
 (signature)`test_indefinite_representations(test)`
 
 
@@ -109,12 +76,5 @@ Sanity checks regarding presence.
 	/element/
 		- (control)`property-set`
 		- (source/area)`40 1 47 29`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
-		- (metrics/profile-duration)`124000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`124000`
-		- (metrics/profile-maximum)`124000`
 (signature)`test_eternals_representations(test)`
 

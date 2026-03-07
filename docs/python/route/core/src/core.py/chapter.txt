@@ -6,11 +6,11 @@
 		- (source/area)`1 1 312 0`
 		- (coverage-zeros)`18`
 		- (coverage-counters)`159`
-		- (metrics/profile-duration)`679078`
-		- (metrics/profile-count)`3485`
+		- (metrics/profile-duration)`360558`
+		- (metrics/profile-count)`1102`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`82000`
-		- (metrics/profile-maximum)`23186000`
+		- (metrics/profile-minimum)`88000`
+		- (metrics/profile-maximum)`7094000`
 Implementation of the route base class and route tools.
 
 The primary class, (factor-local/class)&<#PartitionedSequence[PartitionedSequence]>, is essentially a unrolled linked list
@@ -152,11 +152,11 @@ should be subclassed in order to convey the presence of a target resource.
 		- (source/area)`21 1 22 12`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
-		- (metrics/profile-duration)`572`
-		- (metrics/profile-count)`1304872`
+		- (metrics/profile-duration)`132`
+		- (metrics/profile-count)`357994`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`6576000`
+		- (metrics/profile-maximum)`2821000`
 (signature)`vcombine(*args)`
 
 
@@ -185,11 +185,11 @@ should be subclassed in order to convey the presence of a target resource.
 		- (source/area)`25 1 26 37`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`4768`
-		- (metrics/profile-count)`68061`
-		- (metrics/profile-residency)`89.24527080951663`
+		- (metrics/profile-duration)`1994`
+		- (metrics/profile-count)`15747`
+		- (metrics/profile-residency)`81.65663513900832`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`10864000`
+		- (metrics/profile-maximum)`1601000`
 		- (type/syntax)`Sequence[Identifier]`
 		
 (signature)`join(head, tail)`
@@ -222,11 +222,11 @@ should be subclassed in order to convey the presence of a target resource.
 		- (source/area)`30 1 31 30`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
-		- (metrics/profile-duration)`7988`
-		- (metrics/profile-count)`1098403`
-		- (metrics/profile-residency)`76.14849341295529`
+		- (metrics/profile-duration)`3524`
+		- (metrics/profile-count)`114628`
+		- (metrics/profile-residency)`73.60328937759768`
 		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`309612000`
+		- (metrics/profile-maximum)`7046000`
 (signature)`construct_cache(Class, context, points)`
 
 
@@ -255,11 +255,11 @@ should be subclassed in order to convey the presence of a target resource.
 		- (source/area)`40 1 54 25`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`9`
-		- (metrics/profile-duration)`34659`
-		- (metrics/profile-count)`318262`
-		- (metrics/profile-residency)`98.98706624977449`
-		- (metrics/profile-minimum)`2000`
-		- (metrics/profile-maximum)`342320000`
+		- (metrics/profile-duration)`13016`
+		- (metrics/profile-count)`19415`
+		- (metrics/profile-residency)`88.38886844489818`
+		- (metrics/profile-minimum)`3000`
+		- (metrics/profile-maximum)`9330000`
 		- (type/syntax)`tuple[int, int, Sequence[Identifier]]`
 		
 (signature)`relative_path(target, source)`
@@ -297,11 +297,11 @@ usage must be aware of how (invalid/unknown)&<#context> can eliminate redundant 
 		- (source/area)`68 2 83 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
-		- (metrics/profile-duration)`34375`
+		- (metrics/profile-duration)`40875`
 		- (metrics/profile-count)`8`
-		- (metrics/profile-residency)`13.090909090909092`
-		- (metrics/profile-minimum)`6000`
-		- (metrics/profile-maximum)`70000`
+		- (metrics/profile-residency)`7.951070336391437`
+		- (metrics/profile-minimum)`5000`
+		- (metrics/profile-maximum)`91000`
 		- (type/syntax)`tuple[int, Sequence[Identifier]]`
 		
 (signature)`correlate(self, target)`
@@ -324,11 +324,11 @@ order to arrive at (factor-local/parameter)&<#PartitionedSequence.correlate.Para
 		- (source/area)`84 2 95 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
-		- (metrics/profile-duration)`8192`
-		- (metrics/profile-count)`36455`
-		- (metrics/profile-residency)`84.34111745836151`
+		- (metrics/profile-duration)`9743`
+		- (metrics/profile-count)`10921`
+		- (metrics/profile-residency)`60.41744981580332`
 		- (metrics/profile-minimum)`2000`
-		- (metrics/profile-maximum)`1040000`
+		- (metrics/profile-maximum)`2841000`
 (signature)`from_sequence(Class, points)`
 
 
@@ -341,11 +341,11 @@ order to arrive at (factor-local/parameter)&<#PartitionedSequence.correlate.Para
 		- (source/area)`96 2 103 77`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
-		- (metrics/profile-duration)`36675`
-		- (metrics/profile-count)`747709`
-		- (metrics/profile-residency)`26.47251711036821`
-		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`445184000`
+		- (metrics/profile-duration)`11495`
+		- (metrics/profile-count)`134611`
+		- (metrics/profile-residency)`39.34725080858571`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`7347000`
 (signature)`from_partitions(Class, parts)`
 
 Construct a new instance from an iterable of partitions in root order.
@@ -374,11 +374,11 @@ Construct a new route relative to (factor-local/parameter)&<#PartitionedSequence
 		- (source/area)`111 2 120 14`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
-		- (metrics/profile-duration)`6566`
-		- (metrics/profile-count)`328991`
-		- (metrics/profile-residency)`82.31412578750844`
+		- (metrics/profile-duration)`3985`
+		- (metrics/profile-count)`14689`
+		- (metrics/profile-residency)`81.42017696696388`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`2404000`
+		- (metrics/profile-maximum)`711000`
 (signature)`delimit(self)`
 
 Create a new partitioned sequence designating (factor-local/parameter)&<#PartitionedSequence.delimit.Parameters.self[self]> as the context.
@@ -395,11 +395,11 @@ If the context-relative path of (factor-local/parameter)&<#PartitionedSequence.d
 		- (source/area)`122 2 132 16`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
-		- (metrics/profile-duration)`2389`
-		- (metrics/profile-count)`1982024`
-		- (metrics/profile-residency)`47.946017876796326`
+		- (metrics/profile-duration)`1377`
+		- (metrics/profile-count)`275298`
+		- (metrics/profile-residency)`18.180115688048467`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`19108000`
+		- (metrics/profile-maximum)`3916000`
 (signature)`iterpartitions(self)`
 
 Produce the *partitions* of the sequence in inverse order.
@@ -416,11 +416,11 @@ The identifiers *inside* the partitions will be in root order.
 		- (source/area)`134 2 141 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
-		- (metrics/profile-duration)`6055`
-		- (metrics/profile-count)`1354859`
-		- (metrics/profile-residency)`62.7135822332736`
+		- (metrics/profile-duration)`11547`
+		- (metrics/profile-count)`199607`
+		- (metrics/profile-residency)`84.37223705433877`
 		- (metrics/profile-minimum)`2000`
-		- (metrics/profile-maximum)`20422000`
+		- (metrics/profile-maximum)`3922000`
 (signature)`partitions(self)`
 
 Construct a sequence of partitions in root order.
@@ -438,11 +438,11 @@ Result is a suitable parameter for (factor-local/classmethod)&<#PartitionedSeque
 		- (source/area)`143 2 145 22`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`983`
-		- (metrics/profile-count)`7152929`
+		- (metrics/profile-duration)`1376`
+		- (metrics/profile-count)`878832`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`309593000`
+		- (metrics/profile-maximum)`4254000`
 (signature)`__init__(self, context, points)`
 
 
@@ -471,11 +471,11 @@ Result is a suitable parameter for (factor-local/classmethod)&<#PartitionedSeque
 		- (source/area)`150 2 151 53`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
-		- (metrics/profile-duration)`10333`
+		- (metrics/profile-duration)`11666`
 		- (metrics/profile-count)`3`
-		- (metrics/profile-residency)`29.032258064516125`
-		- (metrics/profile-minimum)`7000`
-		- (metrics/profile-maximum)`17000`
+		- (metrics/profile-residency)`31.428571428571427`
+		- (metrics/profile-minimum)`6000`
+		- (metrics/profile-maximum)`23000`
 (signature)`__reduce__(self)`
 
 
@@ -490,11 +490,11 @@ Result is a suitable parameter for (factor-local/classmethod)&<#PartitionedSeque
 		- (source/area)`153 2 154 28`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`12969`
-		- (metrics/profile-count)`7220792`
-		- (metrics/profile-residency)`86.49283910403248`
+		- (metrics/profile-duration)`5733`
+		- (metrics/profile-count)`1021424`
+		- (metrics/profile-residency)`55.57343851381348`
 		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`476996000`
+		- (metrics/profile-maximum)`19455000`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
@@ -512,11 +512,11 @@ Result is a suitable parameter for (factor-local/classmethod)&<#PartitionedSeque
 		- (source/area)`156 2 162 43`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
-		- (metrics/profile-duration)`6458`
-		- (metrics/profile-count)`441696`
-		- (metrics/profile-residency)`82.54552566935493`
+		- (metrics/profile-duration)`3163`
+		- (metrics/profile-count)`163952`
+		- (metrics/profile-residency)`77.05144936895533`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`20227000`
+		- (metrics/profile-maximum)`2372000`
 (signature)`__eq__(self, operand)`
 
 
@@ -531,11 +531,11 @@ Result is a suitable parameter for (factor-local/classmethod)&<#PartitionedSeque
 		- (source/area)`164 2 169 42`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`4`
-		- (metrics/profile-duration)`600`
+		- (metrics/profile-duration)`0`
 		- (metrics/profile-count)`5`
-		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-residency)`0.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`1000`
+		- (metrics/profile-maximum)`0`
 (signature)`__lt__(self, operand)`
 
 
@@ -550,11 +550,11 @@ Result is a suitable parameter for (factor-local/classmethod)&<#PartitionedSeque
 		- (source/area)`173 2 174 45`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
-		- (metrics/profile-duration)`6823`
-		- (metrics/profile-count)`626465`
-		- (metrics/profile-residency)`60.77564307094623`
+		- (metrics/profile-duration)`4434`
+		- (metrics/profile-count)`75681`
+		- (metrics/profile-residency)`51.96785640860618`
 		- (metrics/profile-minimum)`2000`
-		- (metrics/profile-maximum)`9904000`
+		- (metrics/profile-maximum)`1783000`
 (signature)`__len__(self)`
 
 
@@ -569,11 +569,11 @@ Result is a suitable parameter for (factor-local/classmethod)&<#PartitionedSeque
 		- (source/area)`176 2 178 15`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`11256`
-		- (metrics/profile-count)`615432`
-		- (metrics/profile-residency)`34.40091195352582`
-		- (metrics/profile-minimum)`4000`
-		- (metrics/profile-maximum)`9767000`
+		- (metrics/profile-duration)`8068`
+		- (metrics/profile-count)`74993`
+		- (metrics/profile-residency)`29.628888980704875`
+		- (metrics/profile-minimum)`5000`
+		- (metrics/profile-maximum)`3430000`
 		- (type/syntax)`Iterator[Identifier]`
 		
 (signature)`__iter__(self)`
@@ -590,11 +590,11 @@ Result is a suitable parameter for (factor-local/classmethod)&<#PartitionedSeque
 		- (source/area)`180 2 185 14`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`4875`
+		- (metrics/profile-duration)`5250`
 		- (metrics/profile-count)`8`
-		- (metrics/profile-residency)`58.97435897435898`
-		- (metrics/profile-minimum)`2000`
-		- (metrics/profile-maximum)`11000`
+		- (metrics/profile-residency)`54.761904761904766`
+		- (metrics/profile-minimum)`3000`
+		- (metrics/profile-maximum)`16000`
 (signature)`__contains__(self, operand)`
 
 
@@ -609,11 +609,11 @@ Result is a suitable parameter for (factor-local/classmethod)&<#PartitionedSeque
 		- (source/area)`187 2 188 27`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
-		- (metrics/profile-duration)`3986`
+		- (metrics/profile-duration)`2465`
 		- (metrics/profile-count)`73`
-		- (metrics/profile-residency)`84.87972508591065`
+		- (metrics/profile-residency)`61.11111111111111`
 		- (metrics/profile-minimum)`2000`
-		- (metrics/profile-maximum)`27000`
+		- (metrics/profile-maximum)`15000`
 (signature)`__getitem__(self, req)`
 
 
@@ -628,11 +628,11 @@ Result is a suitable parameter for (factor-local/classmethod)&<#PartitionedSeque
 		- (source/area)`190 2 195 14`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
-		- (metrics/profile-duration)`9747`
-		- (metrics/profile-count)`463505`
-		- (metrics/profile-residency)`83.62406558253728`
+		- (metrics/profile-duration)`5222`
+		- (metrics/profile-count)`170264`
+		- (metrics/profile-residency)`82.05592214403084`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`7721000`
+		- (metrics/profile-maximum)`4424000`
 (signature)`__add__(self, tail)`
 
 
@@ -647,11 +647,11 @@ Result is a suitable parameter for (factor-local/classmethod)&<#PartitionedSeque
 		- (source/area)`199 2 200 64`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
-		- (metrics/profile-duration)`4890`
-		- (metrics/profile-count)`3768016`
-		- (metrics/profile-residency)`83.76379320757528`
+		- (metrics/profile-duration)`3203`
+		- (metrics/profile-count)`268749`
+		- (metrics/profile-residency)`78.87046809064225`
 		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`53348000`
+		- (metrics/profile-maximum)`5031000`
 (signature)`__truediv__(self, addition)`
 
 
@@ -666,11 +666,11 @@ Result is a suitable parameter for (factor-local/classmethod)&<#PartitionedSeque
 		- (source/area)`202 2 206 23`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`49169`
-		- (metrics/profile-count)`739410`
-		- (metrics/profile-residency)`12.392722871468125`
+		- (metrics/profile-duration)`32600`
+		- (metrics/profile-count)`124598`
+		- (metrics/profile-residency)`12.229039438809751`
 		- (metrics/profile-minimum)`9000`
-		- (metrics/profile-maximum)`445201000`
+		- (metrics/profile-maximum)`7356000`
 (signature)`__floordiv__(self, route)`
 
 
@@ -685,11 +685,11 @@ Result is a suitable parameter for (factor-local/classmethod)&<#PartitionedSeque
 		- (source/area)`208 2 212 86`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`27307`
-		- (metrics/profile-count)`235072`
-		- (metrics/profile-residency)`96.2624925907088`
+		- (metrics/profile-duration)`16739`
+		- (metrics/profile-count)`94700`
+		- (metrics/profile-residency)`24.547405554146685`
 		- (metrics/profile-minimum)`2000`
-		- (metrics/profile-maximum)`10378000`
+		- (metrics/profile-maximum)`3050000`
 (signature)`__mul__(self, replacement)`
 
 
@@ -704,11 +704,11 @@ Result is a suitable parameter for (factor-local/classmethod)&<#PartitionedSeque
 		- (source/area)`214 2 222 10`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`6`
-		- (metrics/profile-duration)`9858`
-		- (metrics/profile-count)`10901`
-		- (metrics/profile-residency)`26.734967338507065`
+		- (metrics/profile-duration)`13727`
+		- (metrics/profile-count)`588`
+		- (metrics/profile-residency)`49.91328047571854`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`6265000`
+		- (metrics/profile-maximum)`2057000`
 (signature)`__pow__(self, strip)`
 
 
@@ -723,11 +723,11 @@ Result is a suitable parameter for (factor-local/classmethod)&<#PartitionedSeque
 		- (source/area)`224 2 231 30`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
-		- (metrics/profile-duration)`55000`
+		- (metrics/profile-duration)`64000`
 		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`30.909090909090907`
-		- (metrics/profile-minimum)`55000`
-		- (metrics/profile-maximum)`55000`
+		- (metrics/profile-residency)`35.9375`
+		- (metrics/profile-minimum)`64000`
+		- (metrics/profile-maximum)`64000`
 (signature)`__rshift__(self, segment)`
 
 
@@ -742,11 +742,11 @@ Result is a suitable parameter for (factor-local/classmethod)&<#PartitionedSeque
 		- (source/area)`233 2 238 26`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
-		- (metrics/profile-duration)`90500`
+		- (metrics/profile-duration)`83500`
 		- (metrics/profile-count)`2`
-		- (metrics/profile-residency)`17.12707182320442`
-		- (metrics/profile-minimum)`66000`
-		- (metrics/profile-maximum)`115000`
+		- (metrics/profile-residency)`19.760479041916167`
+		- (metrics/profile-minimum)`60000`
+		- (metrics/profile-maximum)`107000`
 (signature)`__lshift__(self, segment)`
 
 
@@ -761,11 +761,11 @@ Result is a suitable parameter for (factor-local/classmethod)&<#PartitionedSeque
 		- (source/area)`240 2 244 18`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
-		- (metrics/profile-duration)`124379`
-		- (metrics/profile-count)`13508`
-		- (metrics/profile-residency)`83.68683096097588`
-		- (metrics/profile-minimum)`5000`
-		- (metrics/profile-maximum)`13439000`
+		- (metrics/profile-duration)`79605`
+		- (metrics/profile-count)`727`
+		- (metrics/profile-residency)`77.14305461959809`
+		- (metrics/profile-minimum)`14000`
+		- (metrics/profile-maximum)`1854000`
 (signature)`__invert__(self)`
 
 
@@ -794,11 +794,11 @@ Result is a suitable parameter for (factor-local/classmethod)&<#PartitionedSeque
 		- (source/area)`261 2 271 15`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`9`
-		- (metrics/profile-duration)`2181`
-		- (metrics/profile-count)`748`
-		- (metrics/profile-residency)`51.7156862745098`
+		- (metrics/profile-duration)`2500`
+		- (metrics/profile-count)`4`
+		- (metrics/profile-residency)`40.0`
 		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`5000`
+		- (metrics/profile-maximum)`4000`
 (signature)`iterpoints(self)`
 
 
@@ -813,11 +813,11 @@ Result is a suitable parameter for (factor-local/classmethod)&<#PartitionedSeque
 		- (source/area)`273 2 281 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
-		- (metrics/profile-duration)`5500`
+		- (metrics/profile-duration)`2250`
 		- (metrics/profile-count)`4`
-		- (metrics/profile-residency)`45.45454545454545`
-		- (metrics/profile-minimum)`4000`
-		- (metrics/profile-maximum)`7000`
+		- (metrics/profile-residency)`22.22222222222222`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`4000`
 (signature)`iterinverse(self)`
 
 
@@ -832,11 +832,11 @@ Result is a suitable parameter for (factor-local/classmethod)&<#PartitionedSeque
 		- (source/area)`282 2 290 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
-		- (metrics/profile-duration)`1676`
-		- (metrics/profile-count)`7954009`
-		- (metrics/profile-residency)`97.56669111020135`
+		- (metrics/profile-duration)`1465`
+		- (metrics/profile-count)`1261292`
+		- (metrics/profile-residency)`97.80718459207964`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`233523000`
+		- (metrics/profile-maximum)`7321000`
 		- (type/syntax)`Sequence[Identifier]`
 		
 
@@ -851,11 +851,11 @@ Result is a suitable parameter for (factor-local/classmethod)&<#PartitionedSeque
 		- (source/area)`291 2 299 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
-		- (metrics/profile-duration)`693`
-		- (metrics/profile-count)`1387164`
-		- (metrics/profile-residency)`99.99085438729591`
+		- (metrics/profile-duration)`62`
+		- (metrics/profile-count)`154085`
+		- (metrics/profile-residency)`99.96906578676015`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`2094000`
+		- (metrics/profile-maximum)`573000`
 
 [ PartitionedSequence >> root ]
 ! CONTROL:
@@ -868,11 +868,11 @@ Result is a suitable parameter for (factor-local/classmethod)&<#PartitionedSeque
 		- (source/area)`300 2 303 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
-		- (metrics/profile-duration)`7333`
+		- (metrics/profile-duration)`6000`
 		- (metrics/profile-count)`3`
-		- (metrics/profile-residency)`95.45454545454545`
-		- (metrics/profile-minimum)`3000`
-		- (metrics/profile-maximum)`16000`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`2000`
+		- (metrics/profile-maximum)`14000`
 
 [ PartitionedSequence >> container ]
 ! CONTROL:
@@ -885,8 +885,8 @@ Result is a suitable parameter for (factor-local/classmethod)&<#PartitionedSeque
 		- (source/area)`304 2 312 54`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
-		- (metrics/profile-duration)`5856`
-		- (metrics/profile-count)`891857`
-		- (metrics/profile-residency)`85.43376034379865`
+		- (metrics/profile-duration)`3281`
+		- (metrics/profile-count)`184105`
+		- (metrics/profile-residency)`86.66191049233025`
 		- (metrics/profile-minimum)`2000`
-		- (metrics/profile-maximum)`8858000`
+		- (metrics/profile-maximum)`2002000`

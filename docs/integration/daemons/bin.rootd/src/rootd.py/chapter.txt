@@ -11,7 +11,7 @@ Service management daemon.
 Usually executed using (project-local/unknown)&<boot>.
 
 
-[ Path ]
+[ files ]
 ! CONTROL:
 	/type/
 		import
@@ -19,7 +19,7 @@ Usually executed using (project-local/unknown)&<boot>.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`6 1 6 35`
+		- (source/area)`6 1 6 30`
 
 [ process ]
 ! CONTROL:

@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 86 0`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`0`
+		- (coverage-zeros)`17`
+		- (coverage-counters)`38`
 Utility functions and classes for project and factor filtering cases.
 
 
@@ -28,6 +28,8 @@ Utility functions and classes for project and factor filtering cases.
 	/element/
 		- (control)`property-set`
 		- (source/area)`5 1 5 31`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ SQueue ]
 ! CONTROL:
@@ -36,6 +38,8 @@ Utility functions and classes for project and factor filtering cases.
 	/element/
 		- (control)`property-set`
 		- (source/area)`7 1 29 51`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`7 14 7 19`
@@ -55,6 +59,8 @@ with (remote/factor-element)&<http://fault.io/python/project/graph#Queue[fault.p
 	/element/
 		- (control)`property-set`
 		- (source/area)`13 2 15 30`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`__init__(self, sequence)`
 
 
@@ -67,6 +73,8 @@ with (remote/factor-element)&<http://fault.io/python/project/graph#Queue[fault.p
 	/element/
 		- (control)`property-set`
 		- (source/area)`17 2 20 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`take(self, i)`
 
 
@@ -79,6 +87,8 @@ with (remote/factor-element)&<http://fault.io/python/project/graph#Queue[fault.p
 	/element/
 		- (control)`property-set`
 		- (source/area)`22 2 23 6`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`finish(self, *items)`
 
 
@@ -91,6 +101,8 @@ with (remote/factor-element)&<http://fault.io/python/project/graph#Queue[fault.p
 	/element/
 		- (control)`property-set`
 		- (source/area)`25 2 26 23`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`terminal(self)`
 
 
@@ -103,6 +115,8 @@ with (remote/factor-element)&<http://fault.io/python/project/graph#Queue[fault.p
 	/element/
 		- (control)`property-set`
 		- (source/area)`28 2 29 51`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`status(self)`
 
 
@@ -115,6 +129,8 @@ with (remote/factor-element)&<http://fault.io/python/project/graph#Queue[fault.p
 	/element/
 		- (control)`property-set`
 		- (source/area)`31 1 60 42`
+		- (coverage-zeros)`15`
+		- (coverage-counters)`15`
 (signature)`check_keywords(keywords, name)`
 
 
@@ -127,6 +143,8 @@ with (remote/factor-element)&<http://fault.io/python/project/graph#Queue[fault.p
 	/element/
 		- (control)`property-set`
 		- (source/area)`62 1 74 3`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`projectvector(factors, projectname)`
 
 
@@ -139,5 +157,7 @@ with (remote/factor-element)&<http://fault.io/python/project/graph#Queue[fault.p
 	/element/
 		- (control)`property-set`
 		- (source/area)`76 1 86 9`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`8`
 (signature)`projectgraph(factors, projects)`
 

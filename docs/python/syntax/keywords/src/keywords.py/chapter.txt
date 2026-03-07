@@ -3,14 +3,14 @@
 		module
 	/element/
 		- (control)`property-set`
-		- (source/area)`1 1 511 38`
-		- (coverage-zeros)`21`
-		- (coverage-counters)`203`
-		- (metrics/profile-duration)`126978`
-		- (metrics/profile-count)`47`
+		- (source/area)`1 1 476 38`
+		- (coverage-zeros)`4`
+		- (coverage-counters)`186`
+		- (metrics/profile-duration)`120142`
+		- (metrics/profile-count)`42`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`83000`
-		- (metrics/profile-maximum)`142000`
+		- (metrics/profile-minimum)`119000`
+		- (metrics/profile-maximum)`122000`
 Programming language profile and parser class for Keyword Oriented Syntax.
 
 Provides a data structure for describing keyword based languages that allows
@@ -150,11 +150,11 @@ While (factor-local/class)&<#Profile[Profile]> is a tuple subclass, indexes shou
 		- (source/area)`51 2 71 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`9914`
-		- (metrics/profile-count)`47`
+		- (metrics/profile-duration)`10571`
+		- (metrics/profile-count)`42`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`3000`
-		- (metrics/profile-maximum)`21000`
+		- (metrics/profile-minimum)`5000`
+		- (metrics/profile-maximum)`24000`
 (signature)`from_keywords_v1(Class, **wordtypes)`
 
 
@@ -167,11 +167,11 @@ While (factor-local/class)&<#Profile[Profile]> is a tuple subclass, indexes shou
 		- (source/area)`72 2 78 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`765`
-		- (metrics/profile-count)`47`
+		- (metrics/profile-duration)`190`
+		- (metrics/profile-count)`42`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`5000`
+		- (metrics/profile-maximum)`6000`
 		- (type/syntax)`typing.Mapping[str, typing.Set[str]]`
 		
 Dictionary associating sets of identifier strings with a classification identifier.
@@ -186,11 +186,11 @@ Dictionary associating sets of identifier strings with a classification identifi
 		- (source/area)`79 2 87 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`616`
-		- (metrics/profile-count)`99`
+		- (metrics/profile-duration)`56`
+		- (metrics/profile-count)`89`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`1000`
+		- (metrics/profile-maximum)`3000`
 		- (type/syntax)`typing.Set[typing.Tuple[str,str]]`
 		
 Comment start and stop pairs delimiting an excluded area from the source.
@@ -207,11 +207,11 @@ Exclusions are given the second highest priority by (factor-local/class)&<#Parse
 		- (source/area)`88 2 98 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`470`
-		- (metrics/profile-count)`100`
+		- (metrics/profile-duration)`44`
+		- (metrics/profile-count)`90`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`1000`
+		- (metrics/profile-maximum)`3000`
 		- (type/syntax)`typing.Set[typing.Tuple[str,str]]`
 		
 The start and stop pairs delimiting a literal area within the syntax document.
@@ -230,8 +230,8 @@ Literals are given the highest priority by (factor-local/class)&<#Parser[Parser]
 		- (source/area)`99 2 107 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`287`
-		- (metrics/profile-count)`94`
+		- (metrics/profile-duration)`23`
+		- (metrics/profile-count)`84`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
 		- (metrics/profile-maximum)`1000`
@@ -251,11 +251,11 @@ Enclosures have the highest precedence during expression processing.
 		- (source/area)`108 2 114 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`836`
-		- (metrics/profile-count)`49`
-		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-duration)`0`
+		- (metrics/profile-count)`44`
+		- (metrics/profile-residency)`0.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`5000`
+		- (metrics/profile-maximum)`0`
 		- (type/syntax)`typing.Set[str]`
 		
 Operators used to designate a resolution path for selecting an object to be used.
@@ -270,11 +270,11 @@ Operators used to designate a resolution path for selecting an object to be used
 		- (source/area)`115 2 122 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`708`
-		- (metrics/profile-count)`48`
-		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-duration)`0`
+		- (metrics/profile-count)`43`
+		- (metrics/profile-residency)`0.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`1000`
+		- (metrics/profile-maximum)`0`
 		- (type/syntax)`typing.Set[str]`
 		
 Set of operators that can perform some manipulation to the objects associated
@@ -290,11 +290,11 @@ with the adjacent identifiers.
 		- (source/area)`123 2 129 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`312`
-		- (metrics/profile-count)`48`
-		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-duration)`0`
+		- (metrics/profile-count)`43`
+		- (metrics/profile-residency)`0.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`1000`
+		- (metrics/profile-maximum)`0`
 		- (type/syntax)`typing.Set[str]`
 		
 Operators used to designate the end of a statement, expression, or field.
@@ -309,11 +309,11 @@ Operators used to designate the end of a statement, expression, or field.
 		- (source/area)`130 2 170 37`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`20`
-		- (metrics/profile-duration)`41021`
-		- (metrics/profile-count)`46`
-		- (metrics/profile-residency)`63.910969793322735`
-		- (metrics/profile-minimum)`19000`
-		- (metrics/profile-maximum)`118000`
+		- (metrics/profile-duration)`41146`
+		- (metrics/profile-count)`41`
+		- (metrics/profile-residency)`59.57320687611144`
+		- (metrics/profile-minimum)`22000`
+		- (metrics/profile-maximum)`146000`
 		- (type/syntax)`typing.Iterable[str]`
 		
 Emit all unit operators employed by the language associated with a rank and context effect.
@@ -338,7 +338,7 @@ later classes will overwrite earlier entries in cases of ambiguity.
 		class
 	/element/
 		- (control)`property-set`
-		- (source/area)`172 1 512 37`
+		- (source/area)`172 1 477 37`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
 ! INHERIT:
@@ -361,45 +361,20 @@ instance and the internal constructor, (factor-local/method)&<#Parser.__init__[_
 Applications should create and cache an instance for a given language.
 
 
-[ Parser >> integrate_switches ]
-! CONTROL:
-	/type/
-		staticmethod
-	/element/
-		- (control)`property-set`
-		- (source/area)`189 2 223 13`
-		- (coverage-zeros)`17`
-		- (coverage-counters)`17`
-(signature)`integrate_switches(tokens, context)`
-
-Qualify the syntax fields in (factor-local/parameter)&<#Parser.integrate_switches.Parameters.tokens[tokens]> by interpreting switches.
-
-[ >> Parameters ]
-
-/(parameter)`tokens`/
-	
-	Iteraable of triples produced by (factor-local/method)&<#Parser.process_document[process_document]> or (factor-local/method)&<#Parser.process_lines[process_lines]>.
-
-/(parameter)`context`/
-	
-	The presumed switch state, `'inclusion'`, `'exclusion'`, or `'literal'`.
-	Defaults to `'inclusion'`.
-
-
 [ Parser >> from_profile ]
 ! CONTROL:
 	/type/
 		classmethod
 	/element/
 		- (control)`property-set`
-		- (source/area)`224 2 289 3`
+		- (source/area)`189 2 254 3`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`29`
-		- (metrics/profile-duration)`130377`
-		- (metrics/profile-count)`45`
-		- (metrics/profile-residency)`37.87284813362877`
-		- (metrics/profile-minimum)`43000`
-		- (metrics/profile-maximum)`275000`
+		- (metrics/profile-duration)`142050`
+		- (metrics/profile-count)`40`
+		- (metrics/profile-residency)`37.926786342837026`
+		- (metrics/profile-minimum)`61000`
+		- (metrics/profile-maximum)`355000`
 (signature)`from_profile(Class, profile)`
 
 Primary constructor for (factor-local/class)&<#Parser[Parser]>.
@@ -414,14 +389,14 @@ some amount of preparation is performed by (factor-local/classmethod)&<#Parser.f
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`291 2 315 82`
+		- (source/area)`256 2 280 82`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`11`
-		- (metrics/profile-duration)`37511`
-		- (metrics/profile-count)`45`
+		- (metrics/profile-duration)`43900`
+		- (metrics/profile-count)`40`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`5000`
-		- (metrics/profile-maximum)`93000`
+		- (metrics/profile-minimum)`13000`
+		- (metrics/profile-maximum)`160000`
 (signature)`__init__(self, profile, opset, opmap, delimiter, optable, exits, classify_id, classify_op)`
 
 ! WARNING: Do not use directly.
@@ -435,14 +410,14 @@ some amount of preparation is performed by (factor-local/classmethod)&<#Parser.f
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`317 2 322 74`
+		- (source/area)`282 2 287 74`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`6500`
+		- (metrics/profile-duration)`8000`
 		- (metrics/profile-count)`2`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`12000`
+		- (metrics/profile-maximum)`15000`
 		- (type/syntax)`typing.Iterable[Tokens]`
 		
 (signature)`process_line(self, line)`
@@ -456,14 +431,14 @@ Process a single line of syntax into tokens.
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`324 2 341 59`
+		- (source/area)`289 2 306 59`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
-		- (metrics/profile-duration)`138000`
+		- (metrics/profile-duration)`120000`
 		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`10.144927536231885`
-		- (metrics/profile-minimum)`138000`
-		- (metrics/profile-maximum)`138000`
+		- (metrics/profile-residency)`9.166666666666666`
+		- (metrics/profile-minimum)`120000`
+		- (metrics/profile-maximum)`120000`
 		- (type/syntax)`typing.Iterable[typing.Iterable[Tokens]]`
 		
 (signature)`process_lines(self, lines)`
@@ -485,14 +460,14 @@ Essentially, `map(Parser.process_line, line_iter)`.
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`343 2 360 41`
+		- (source/area)`308 2 325 41`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
-		- (metrics/profile-duration)`36151`
-		- (metrics/profile-count)`5410`
-		- (metrics/profile-residency)`7.048814034226579`
-		- (metrics/profile-minimum)`14000`
-		- (metrics/profile-maximum)`13532000`
+		- (metrics/profile-duration)`51979`
+		- (metrics/profile-count)`49`
+		- (metrics/profile-residency)`15.940321947389085`
+		- (metrics/profile-minimum)`15000`
+		- (metrics/profile-maximum)`224000`
 		- (type/syntax)`typing.Iterable[typing.Iterable[Tokens]]`
 		
 (signature)`process_document(self, lines)`
@@ -513,14 +488,14 @@ instances.
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`362 2 367 30`
+		- (source/area)`327 2 332 30`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`350`
-		- (metrics/profile-count)`5420`
+		- (metrics/profile-duration)`16`
+		- (metrics/profile-count)`59`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`3000`
+		- (metrics/profile-maximum)`1000`
 (signature)`allocstack(self)`
 
 Allocate context stack for use with (factor-local/method)&<#Parser.delimit[delimit]>.
@@ -532,14 +507,14 @@ Allocate context stack for use with (factor-local/method)&<#Parser.delimit[delim
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`369 2 444 15`
+		- (source/area)`334 2 409 15`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`41`
-		- (metrics/profile-duration)`31089`
-		- (metrics/profile-count)`5425`
-		- (metrics/profile-residency)`-3.6262517861483823`
-		- (metrics/profile-minimum)`5000`
-		- (metrics/profile-maximum)`13526000`
+		- (metrics/profile-duration)`36687`
+		- (metrics/profile-count)`64`
+		- (metrics/profile-residency)`4.812606473594549`
+		- (metrics/profile-minimum)`2000`
+		- (metrics/profile-maximum)`165000`
 		- (type/syntax)`Tokens`
 		- (type/factor-local/data)&<#Tokens[Tokens]>
 		
@@ -562,14 +537,14 @@ should normally be used.
 		method
 	/element/
 		- (control)`property-set`
-		- (source/area)`446 2 512 37`
+		- (source/area)`411 2 477 37`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`34`
-		- (metrics/profile-duration)`28269`
-		- (metrics/profile-count)`5435`
-		- (metrics/profile-residency)`67.82671517739175`
+		- (metrics/profile-duration)`43472`
+		- (metrics/profile-count)`74`
+		- (metrics/profile-residency)`83.64936276033572`
 		- (metrics/profile-minimum)`7000`
-		- (metrics/profile-maximum)`13523000`
+		- (metrics/profile-maximum)`211000`
 		- (type/syntax)`Tokens`
 		- (type/factor-local/data)&<#Tokens[Tokens]>
 		

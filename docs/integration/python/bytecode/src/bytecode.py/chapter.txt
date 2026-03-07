@@ -3,7 +3,7 @@
 		module
 	/element/
 		- (control)`property-set`
-		- (source/area)`1 1 59 0`
+		- (source/area)`1 1 60 0`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`0`
 Python bytecode serialization.
@@ -55,25 +55,13 @@ Unstable API. This module may be partitioned in order to eliminate the condition
 		- (control)`property-set`
 		- (source/area)`13 1 13 14`
 
-[ serialize_timestamp_checked ]
-! CONTROL:
-	/type/
-		data
-	/flags/
-		- `undocumented`
-	/element/
-		- (control)`property-set`
-		- (source/area)`28 1 28 52`
-#!source
-	
-
 [ store ]
 ! CONTROL:
 	/type/
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`30 1 59 22`
+		- (source/area)`31 1 60 22`
 		- (type/syntax)`types.CodeType`
 		- (type/none/invalid)&<http://fault.io/dev/null[types.CodeType]>
 		

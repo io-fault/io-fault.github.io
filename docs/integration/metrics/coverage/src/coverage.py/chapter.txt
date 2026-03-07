@@ -3,7 +3,7 @@
 		module
 	/element/
 		- (control)`property-set`
-		- (source/area)`1 1 252 45`
+		- (source/area)`1 1 387 45`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`0`
 Counter placement tooling for identifying the parent element.
@@ -69,6 +69,26 @@ Counter placement tooling for identifying the parent element.
 		- (control)`property-set`
 		- (source/area)`7 1 7 44`
 
+[ Sequence ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 8 46`
+
+[ Iterable ]
+! CONTROL:
+	/type/
+		import
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`8 1 8 46`
+
 [ Mapping ]
 ! CONTROL:
 	/type/
@@ -77,7 +97,7 @@ Counter placement tooling for identifying the parent element.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`9 1 9 37`
+		- (source/area)`10 1 10 37`
 
 [ Area ]
 ! CONTROL:
@@ -87,7 +107,7 @@ Counter placement tooling for identifying the parent element.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`10 1 10 44`
+		- (source/area)`11 1 11 44`
 
 [ Address ]
 ! CONTROL:
@@ -97,7 +117,19 @@ Counter placement tooling for identifying the parent element.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`10 1 10 44`
+		- (source/area)`11 1 11 44`
+
+[ _parse_map_sources ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`14 1 19 8`
+(signature)`_parse_map_sources(lines)`
+
 
 [ _parse_sources ]
 ! CONTROL:
@@ -107,7 +139,7 @@ Counter placement tooling for identifying the parent element.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`13 1 18 8`
+		- (source/area)`22 1 27 8`
 (signature)`_parse_sources(lines)`
 
 
@@ -119,24 +151,111 @@ Counter placement tooling for identifying the parent element.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`20 1 22 47`
+		- (source/area)`29 1 31 47`
 (signature)`_parse_areas(lines)`
 
 
-[ factor_records ]
+[ organize_ipquery_syntax_areas ]
 ! CONTROL:
 	/type/
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`26 1 39 20`
-(signature)`factor_records(root)`
+		- (source/area)`35 1 68 13`
+(signature)`organize_ipquery_syntax_areas(sources, lines)`
 
-Scan the tree for data files and select the segment
-from (factor-local/parameter)&<#factor_records.Parameters.root[root]> that can be used to identify the origin of
-the record.
+Process the source path qualified (factor-local/parameter)&<#organize_ipquery_syntax_areas.Parameters.lines[lines]> into source path
+indexed sequences.
 
-Yields the path and segment identifying the data record.
+First stage used to convert `ipquery regions` output into fault syntax counters.
+
+[ > Parameters ]
+
+/(parameter)`sources`/
+	- (type/syntax)`Iterable[str]`
+	
+	The sources of interest.
+
+/(parameter)`lines`/
+	- (type/syntax)`Iterable[str]`
+	
+	The split text output of `ipquery regions`.
+
+
+[ sequence_syntax_areas ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`70 1 100 45`
+(signature)`sequence_syntax_areas(paths, areas)`
+
+Write out the (system/file)`areas` and (system/file)`sources` files for each
+file and area set in (factor-local/parameter)&<#sequence_syntax_areas.Parameters.areas[areas]>. The (factor-local/parameter)&<#sequence_syntax_areas.Parameters.paths[paths]> argument provides the index of
+source paths to the directory that the pair of files should be written to.
+
+[ > Parameters ]
+
+/(parameter)`paths`/
+	
+	Mapping of strings to (invalid/unknown)&<#files.Path> instances. Usually,
+	the key being the system path to the source file, and
+	the value being the directory to write files into.
+
+/(parameter)`areas`/
+	
+	Mapping of strings to syntax area sequences. The key
+	being the system path to the source file, and the
+	areas being a set.
+
+/(parameter)`sources_name`/
+	
+	(control/absent)`Undocumented`.
+
+/(parameter)`areas_name`/
+	
+	(control/absent)`Undocumented`.
+
+[ > Effects ]
+
+The filesystem directories referenced by (factor-local/parameter)&<#sequence_syntax_areas.Parameters.paths[paths]> will be written to.
+
+
+[ index_regions ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`102 1 121 11`
+(signature)`index_regions(regions)`
+
+Construct an index from source regions for use with (factor-local/function)&<#integrate_lcounters[integrate_lcounters]>.
+
+[ > Parameters ]
+
+/(parameter)`regions`/
+	
+	A mapping of source file identifiers, paths, associated
+	with a list of syntax areas.
+
+[ > Returns ]
+
+An index for converting L-counters to fault syntax counters.
+
+
+[ integrate_lcounters ]
+! CONTROL:
+	/type/
+		function
+	/element/
+		- (control)`property-set`
+		- (source/area)`123 1 165 51`
+(signature)`integrate_lcounters(index, fsc, lcounters)`
+
+Convert the counters in (factor-local/parameter)&<#integrate_lcounters.Parameters.lcounters[lcounters]> into fault syntax counters, (factor-local/parameter)&<#integrate_lcounters.Parameters.fsc[fsc]>, using
+the given (factor-local/parameter)&<#integrate_lcounters.Parameters.index[index]> to identify the full region.
 
 
 [ identify_source_areas ]
@@ -145,22 +264,10 @@ Yields the path and segment identifying the data record.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`41 1 48 10`
+		- (source/area)`167 1 175 11`
 (signature)`identify_source_areas(path)`
 
 Scan the directory for nodes containing regular files.
-
-
-[ identify_captured_metrics ]
-! CONTROL:
-	/type/
-		function
-	/element/
-		- (control)`property-set`
-		- (source/area)`50 1 56 36`
-(signature)`identify_captured_metrics(path)`
-
-Scan each data set for capture records.
 
 
 [ join_fault_syntax_areas ]
@@ -171,7 +278,7 @@ Scan each data set for capture records.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`58 1 66 14`
+		- (source/area)`177 1 185 14`
 (signature)`join_fault_syntax_areas(sources, areas, types)`
 
 
@@ -181,7 +288,7 @@ Scan each data set for capture records.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`68 1 90 57`
+		- (source/area)`187 1 209 57`
 (signature)`load_fault_syntax_areas(sources, areas, types)`
 
 Load the areas from the triple of (factor-local/parameter)&<#load_fault_syntax_areas.Parameters.sources[sources]>,
@@ -198,7 +305,7 @@ Used to read source counter maps.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`92 1 100 16`
+		- (source/area)`211 1 219 16`
 (signature)`join_fault_syntax_counters(sources, areas, counts)`
 
 
@@ -208,7 +315,7 @@ Used to read source counter maps.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`102 1 119 58`
+		- (source/area)`221 1 238 58`
 (signature)`load_fault_syntax_counters(sources, areas, counts)`
 
 Load the counters from the triple of (factor-local/parameter)&<#load_fault_syntax_counters.Parameters.sources[sources]>,
@@ -225,7 +332,7 @@ Used to read source coverage counters.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`121 1 125 3`
+		- (source/area)`240 1 244 3`
 (signature)`structure_area(vector)`
 
 
@@ -235,7 +342,7 @@ Used to read source coverage counters.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`127 1 151 29`
+		- (source/area)`246 1 271 29`
 (signature)`load_metrics_aggregates(path)`
 
 Read areas and constituents files from the given metrics image directory.
@@ -249,7 +356,7 @@ Read areas and constituents files from the given metrics image directory.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`153 1 161 30`
+		- (source/area)`273 1 296 30`
 (signature)`descend(mapping, current, elements)`
 
 
@@ -259,7 +366,7 @@ Read areas and constituents files from the given metrics image directory.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`163 1 178 11`
+		- (source/area)`298 1 313 11`
 (signature)`index_elements(dsrc)`
 
 Create a range mapping from the given delineated source, (factor-local/parameter)&<#index_elements.Parameters.dsrc[dsrc]>.
@@ -273,7 +380,7 @@ areas holding the content of the element.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`180 1 195 32`
+		- (source/area)`315 1 330 32`
 (signature)`total(index, areas, types, counts)`
 
 Create totals for the profile.
@@ -285,7 +392,7 @@ Create totals for the profile.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`197 1 209 37`
+		- (source/area)`332 1 344 37`
 (signature)`organize_counters(index, areas, types, counts)`
 
 Organize the integrated coverage metrics for reporting and reveal analysis.
@@ -297,7 +404,7 @@ Organize the integrated coverage metrics for reporting and reveal analysis.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`211 1 223 13`
+		- (source/area)`346 1 358 13`
 (signature)`element_area_index(index)`
 
 Convert an area-to-element index into a serializable form.
@@ -309,7 +416,7 @@ Convert an area-to-element index into a serializable form.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`225 1 242 2`
+		- (source/area)`360 1 377 2`
 (signature)`factor_source_profile(elements, areas, types, counts)`
 
 Build a serializable representation of the given coverage data.
@@ -321,7 +428,7 @@ Build a serializable representation of the given coverage data.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`244 1 253 44`
+		- (source/area)`379 1 388 44`
 (signature)`annotation(zeros, elements)`
 
 Identify the missed areas in elements for annotation reporting.

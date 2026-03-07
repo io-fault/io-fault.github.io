@@ -6,11 +6,11 @@
 		- (source/area)`1 1 282 4`
 		- (coverage-zeros)`10`
 		- (coverage-counters)`99`
-		- (metrics/profile-duration)`4025000`
+		- (metrics/profile-duration)`2800000`
 		- (metrics/profile-count)`16`
-		- (metrics/profile-residency)`99.95031055900621`
-		- (metrics/profile-minimum)`4025000`
-		- (metrics/profile-maximum)`4025000`
+		- (metrics/profile-residency)`99.96428571428572`
+		- (metrics/profile-minimum)`2800000`
+		- (metrics/profile-maximum)`2800000`
 Project materialization tools for instantiating polynomial-1 organized factor sets.
 
 
@@ -155,11 +155,11 @@ Project materialization tools for instantiating polynomial-1 organized factor se
 		- (source/area)`19 1 24 2`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
-		- (metrics/profile-duration)`2000`
+		- (metrics/profile-duration)`1000`
 		- (metrics/profile-count)`16`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`2000`
-		- (metrics/profile-maximum)`2000`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`1000`
 (signature)`_ktprotocol(iri)`
 
 
@@ -214,11 +214,11 @@ Project materialization tools for instantiating polynomial-1 organized factor se
 		- (source/area)`35 1 49 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
-		- (metrics/profile-duration)`27800`
+		- (metrics/profile-duration)`16200`
 		- (metrics/profile-count)`5`
-		- (metrics/profile-residency)`80.57553956834532`
-		- (metrics/profile-minimum)`21000`
-		- (metrics/profile-maximum)`38000`
+		- (metrics/profile-residency)`62.96296296296296`
+		- (metrics/profile-minimum)`10000`
+		- (metrics/profile-maximum)`24000`
 (signature)`sequence_format_declarations(formats)`
 
 factors/polynomial-1 .format serialization
@@ -315,11 +315,11 @@ The core data for composing a factor.
 		- (source/area)`70 2 85 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`31000`
+		- (metrics/profile-duration)`25250`
 		- (metrics/profile-count)`4`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`10000`
-		- (metrics/profile-maximum)`61000`
+		- (metrics/profile-minimum)`2000`
+		- (metrics/profile-maximum)`56000`
 (signature)`indirect(Class, extension, source, type)`
 
 Define an indirectly typed factor's composition.
@@ -353,11 +353,11 @@ Define an indirectly typed factor's composition.
 		- (source/area)`86 2 103 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`12000`
+		- (metrics/profile-duration)`9250`
 		- (metrics/profile-count)`4`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`5000`
-		- (metrics/profile-maximum)`16000`
+		- (metrics/profile-minimum)`4000`
+		- (metrics/profile-maximum)`14000`
 (signature)`explicit(Class, type, requirements, sources)`
 
 Define an explicitly typed factor's composition.
@@ -493,11 +493,11 @@ The necessary data for instantiating a project on the local system.
 		- (source/area)`124 2 174 79`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`14`
-		- (metrics/profile-duration)`226000`
+		- (metrics/profile-duration)`160000`
 		- (metrics/profile-count)`2`
-		- (metrics/profile-residency)`93.80530973451327`
-		- (metrics/profile-minimum)`206000`
-		- (metrics/profile-maximum)`246000`
+		- (metrics/profile-residency)`93.4375`
+		- (metrics/profile-minimum)`128000`
+		- (metrics/profile-maximum)`192000`
 (signature)`define(Class, information, formats, soles, sets, icon, synopsis)`
 
 Create a parameter set for project instantiation applying the proper types
@@ -550,11 +550,11 @@ to factor entries, and translating factor types to file extensions for defining
 		- (source/area)`176 1 222 39`
 		- (coverage-zeros)`3`
 		- (coverage-counters)`28`
-		- (metrics/profile-duration)`473500`
+		- (metrics/profile-duration)`391000`
 		- (metrics/profile-count)`6`
-		- (metrics/profile-residency)`25.4839845124956`
-		- (metrics/profile-minimum)`117000`
-		- (metrics/profile-maximum)`1496000`
+		- (metrics/profile-residency)`32.69394714407502`
+		- (metrics/profile-minimum)`120000`
+		- (metrics/profile-maximum)`1031000`
 (signature)`plan(info, formats, factors)`
 
 Generate the filesystem paths paired with the data that should be placed
@@ -567,14 +567,14 @@ into that file relative to the project directory being materialized.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`224 1 262 29`
+		- (source/area)`224 1 262 41`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`16`
-		- (metrics/profile-duration)`565142`
+		- (metrics/profile-duration)`450428`
 		- (metrics/profile-count)`7`
-		- (metrics/profile-residency)`42.21435793731042`
-		- (metrics/profile-minimum)`203000`
-		- (metrics/profile-maximum)`1502000`
+		- (metrics/profile-residency)`46.590548683793216`
+		- (metrics/profile-minimum)`185000`
+		- (metrics/profile-maximum)`1035000`
 (signature)`materialize(route, plans)`
 
 Create a Project instance using the filesystem API's provided by (factor-local/parameter)&<#materialize.Parameters.route[route]>
@@ -616,11 +616,11 @@ from the instructions produced by the given (factor-local/parameter)&<#materiali
 		- (source/area)`264 1 283 3`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`1164000`
+		- (metrics/profile-duration)`870500`
 		- (metrics/profile-count)`2`
-		- (metrics/profile-residency)`1.4175257731958764`
-		- (metrics/profile-minimum)`806000`
-		- (metrics/profile-maximum)`1522000`
+		- (metrics/profile-residency)`2.929350947731189`
+		- (metrics/profile-minimum)`669000`
+		- (metrics/profile-maximum)`1072000`
 (signature)`instantiate(project, route, *dimensions)`
 
 Materialize the plan of the given (factor-local/parameter)&<#instantiate.Parameters.project[project]> using the (factor-local/parameter)&<#instantiate.Parameters.route[route]> as the root directory of the project.

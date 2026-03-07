@@ -4,13 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 37 0`
-		- (coverage-zeros)`3`
-		- (coverage-counters)`20`
-		- (metrics/profile-duration)`780000`
-		- (metrics/profile-count)`2`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`780000`
-		- (metrics/profile-maximum)`780000`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 
 [ module ]
 ! CONTROL:
@@ -29,13 +24,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`3 1 32 80`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`15`
-		- (metrics/profile-duration)`286000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`286000`
-		- (metrics/profile-maximum)`286000`
 (signature)`test_Parser_emphasis(test)`
 
 - (context-local/factor-element)&<fault.text/format#Parser.emphasis[fault.text.format.Parser.emphasis]>

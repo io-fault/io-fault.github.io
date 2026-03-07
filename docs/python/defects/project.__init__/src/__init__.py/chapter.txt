@@ -6,10 +6,10 @@
 		- (source/area)`1 1 2 4`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
-		- (metrics/profile-duration)`981`
+		- (metrics/profile-duration)`0`
 		- (metrics/profile-count)`55`
-		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-residency)`0.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`1000`
+		- (metrics/profile-maximum)`0`
 Test context initialization.
 

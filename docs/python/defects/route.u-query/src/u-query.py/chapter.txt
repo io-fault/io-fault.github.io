@@ -5,12 +5,7 @@
 		- (control)`property-set`
 		- (source/area)`1 1 269 0`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`110`
-		- (metrics/profile-duration)`1756000`
-		- (metrics/profile-count)`16`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`1756000`
-		- (metrics/profile-maximum)`1756000`
+		- (coverage-counters)`0`
 Analyze the query module.
 
 
@@ -31,13 +26,6 @@ Analyze the query module.
 	/element/
 		- (control)`property-set`
 		- (source/area)`6 1 21 37`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`11`
-		- (metrics/profile-duration)`275000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`275000`
-		- (metrics/profile-maximum)`275000`
 (signature)`test_iselement(test)`
 
 - (context-local/factor-element)&<fault.route/query#iselement[fault.route.query.iselement]>
@@ -50,13 +38,6 @@ Analyze the query module.
 	/element/
 		- (control)`property-set`
 		- (source/area)`23 1 29 87`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
-		- (metrics/profile-duration)`60000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`60000`
-		- (metrics/profile-maximum)`60000`
 (signature)`test_Context_initialization(test)`
 
 - (context-local/factor-element)&<fault.route/query#Context.__init__[fault.route.query.Context.__init__]>
@@ -69,13 +50,6 @@ Analyze the query module.
 	/element/
 		- (control)`property-set`
 		- (source/area)`31 1 38 56`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
-		- (metrics/profile-duration)`125000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`125000`
-		- (metrics/profile-maximum)`125000`
 (signature)`test_Context_parse_slice(test)`
 
 - (context-local/factor-element)&<fault.route/query#Context._parse_slice[fault.route.query.Context._parse_slice]>
@@ -88,13 +62,6 @@ Analyze the query module.
 	/element/
 		- (control)`property-set`
 		- (source/area)`40 1 47 61`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
-		- (metrics/profile-duration)`112000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`112000`
-		- (metrics/profile-maximum)`112000`
 (signature)`test_Context_identify_node(test)`
 
 - (context-local/factor-element)&<fault.route/query#Context._identify_node[fault.route.query.Context._identify_node]>
@@ -107,13 +74,6 @@ Analyze the query module.
 	/element/
 		- (control)`property-set`
 		- (source/area)`49 1 55 18`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
-		- (metrics/profile-duration)`202000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`202000`
-		- (metrics/profile-maximum)`202000`
 (signature)`test_Context_prepare_empty(test)`
 
 - (context-local/factor-element)&<fault.route/query#Context.prepare[fault.route.query.Context.prepare]>
@@ -126,13 +86,6 @@ Analyze the query module.
 	/element/
 		- (control)`property-set`
 		- (source/area)`57 1 85 30`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`12`
-		- (metrics/profile-duration)`760000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`760000`
-		- (metrics/profile-maximum)`760000`
 (signature)`test_Context_invalid_path(test)`
 
 - (context-local/factor-element)&<fault.route/query#Context.structure[fault.route.query.Context.structure]>
@@ -146,13 +99,6 @@ Analyze the query module.
 	/element/
 		- (control)`property-set`
 		- (source/area)`87 1 105 29`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`8`
-		- (metrics/profile-duration)`546000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`546000`
-		- (metrics/profile-maximum)`546000`
 (signature)`test_Context_filters(test)`
 
 - (context-local/factor-element)&<fault.route/query#Context.structure[fault.route.query.Context.structure]>
@@ -166,13 +112,6 @@ Analyze the query module.
 	/element/
 		- (control)`property-set`
 		- (source/area)`107 1 120 44`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
-		- (metrics/profile-duration)`328000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`328000`
-		- (metrics/profile-maximum)`328000`
 (signature)`test_Context_all(test)`
 
 - (context-local/factor-element)&<fault.route/query#Context.structure[fault.route.query.Context.structure]>
@@ -186,13 +125,6 @@ Analyze the query module.
 	/element/
 		- (control)`property-set`
 		- (source/area)`122 1 146 46`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`12`
-		- (metrics/profile-duration)`1299000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`1299000`
-		- (metrics/profile-maximum)`1299000`
 (signature)`test_Context_index(test)`
 
 - (context-local/factor-element)&<fault.route/query#Context._index[fault.route.query.Context._index]>
@@ -206,13 +138,6 @@ Analyze the query module.
 	/element/
 		- (control)`property-set`
 		- (source/area)`148 1 164 47`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
-		- (metrics/profile-duration)`504000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`504000`
-		- (metrics/profile-maximum)`504000`
 (signature)`test_Context_predicate(test)`
 
 - (context-local/factor-element)&<fault.route/query#Context._predicate[fault.route.query.Context._predicate]>
@@ -226,13 +151,6 @@ Analyze the query module.
 	/element/
 		- (control)`property-set`
 		- (source/area)`166 1 184 56`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`8`
-		- (metrics/profile-duration)`784000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`784000`
-		- (metrics/profile-maximum)`784000`
 (signature)`test_Context_union(test)`
 
 - (context-local/factor-element)&<fault.route/query#Context._union[fault.route.query.Context._union]>
@@ -246,13 +164,6 @@ Analyze the query module.
 	/element/
 		- (control)`property-set`
 		- (source/area)`186 1 210 58`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`8`
-		- (metrics/profile-duration)`554000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`554000`
-		- (metrics/profile-maximum)`554000`
 (signature)`test_Cursor_select(test)`
 
 - (context-local/factor-element)&<fault.route/query#Context._select[fault.route.query.Context._select]>
@@ -268,13 +179,6 @@ Analyze the query module.
 	/element/
 		- (control)`property-set`
 		- (source/area)`212 1 231 25`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`7`
-		- (metrics/profile-duration)`472000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`472000`
-		- (metrics/profile-maximum)`472000`
 (signature)`test_Cursor_seek(test)`
 
 - (context-local/factor-element)&<fault.route/query#Cursor.seek[fault.route.query.Cursor.seek]>
@@ -287,13 +191,6 @@ Analyze the query module.
 	/element/
 		- (control)`property-set`
 		- (source/area)`233 1 251 35`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`7`
-		- (metrics/profile-duration)`381000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`381000`
-		- (metrics/profile-maximum)`381000`
 (signature)`test_Cursor_reset(test)`
 
 - (context-local/factor-element)&<fault.route/query#Cursor.reset[fault.route.query.Cursor.reset]>
@@ -306,13 +203,6 @@ Analyze the query module.
 	/element/
 		- (control)`property-set`
 		- (source/area)`253 1 269 65`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`5`
-		- (metrics/profile-duration)`341000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`341000`
-		- (metrics/profile-maximum)`341000`
 (signature)`test_Cursor_fork(test)`
 
 - (context-local/factor-element)&<fault.route/query#Cursor.fork[fault.route.query.Cursor.fork]>

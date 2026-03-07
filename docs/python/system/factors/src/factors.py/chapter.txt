@@ -3,14 +3,14 @@
 		module
 	/element/
 		- (control)`property-set`
-		- (source/area)`1 1 300 15`
+		- (source/area)`1 1 299 15`
 		- (coverage-zeros)`30`
-		- (coverage-counters)`145`
-		- (metrics/profile-duration)`61668`
-		- (metrics/profile-count)`3635`
+		- (coverage-counters)`144`
+		- (metrics/profile-duration)`46238`
+		- (metrics/profile-count)`1233`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`25000`
-		- (metrics/profile-maximum)`3991000`
+		- (metrics/profile-minimum)`26000`
+		- (metrics/profile-maximum)`557000`
 Module finder and loader for Factored Projects.
 
 
@@ -164,11 +164,11 @@ against the source unlike Python's builtin loader.
 		- (source/area)`26 3 31 14`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`1615`
-		- (metrics/profile-count)`130715`
+		- (metrics/profile-duration)`570`
+		- (metrics/profile-count)`56014`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`746000`
+		- (metrics/profile-maximum)`153000`
 (signature)`__init__(self, bytecode, fullname, path)`
 
 
@@ -181,11 +181,11 @@ against the source unlike Python's builtin loader.
 		- (source/area)`32 3 40 11`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
-		- (metrics/profile-duration)`36382`
-		- (metrics/profile-count)`3640`
-		- (metrics/profile-residency)`95.38023574540705`
+		- (metrics/profile-duration)`32665`
+		- (metrics/profile-count)`1233`
+		- (metrics/profile-residency)`96.36765399607717`
 		- (metrics/profile-minimum)`11000`
-		- (metrics/profile-maximum)`680000`
+		- (metrics/profile-maximum)`162000`
 (signature)`from_nothing(Class, *args)`
 
 Create the (factor-local/class)&<#IntegralFinder.Loader[Loader]> instance with (factor-local/method)&<#IntegralFinder.Loader.get_code[get_code]> overridden to return
@@ -203,11 +203,11 @@ a code object created from a `pass` statement.
 		- (source/area)`42 3 50 30`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
-		- (metrics/profile-duration)`3296400`
-		- (metrics/profile-count)`75917`
-		- (metrics/profile-residency)`23.706020921745505`
+		- (metrics/profile-duration)`2408380`
+		- (metrics/profile-count)`37290`
+		- (metrics/profile-residency)`22.469049619096776`
 		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`356697000`
+		- (metrics/profile-maximum)`184044000`
 (signature)`exec_module(self, module)`
 
 
@@ -222,11 +222,11 @@ a code object created from a `pass` statement.
 		- (source/area)`52 3 63 79`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`5`
-		- (metrics/profile-duration)`564252`
-		- (metrics/profile-count)`72321`
+		- (metrics/profile-duration)`252273`
+		- (metrics/profile-count)`36057`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`23000`
-		- (metrics/profile-maximum)`21211000`
+		- (metrics/profile-minimum)`26000`
+		- (metrics/profile-maximum)`10329000`
 (signature)`get_code(self, fullname)`
 
 
@@ -253,11 +253,11 @@ a code object created from a `pass` statement.
 		- (source/area)`68 2 97 4`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`11`
-		- (metrics/profile-duration)`33099`
-		- (metrics/profile-count)`4359`
+		- (metrics/profile-duration)`24185`
+		- (metrics/profile-count)`1956`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`8000`
-		- (metrics/profile-maximum)`676000`
+		- (metrics/profile-minimum)`15000`
+		- (metrics/profile-maximum)`324000`
 (signature)`__init__(self, python_bytecode_variants, extension_variants)`
 
 Initialize a finder instance for use with the given variants.
@@ -272,11 +272,11 @@ Initialize a finder instance for use with the given variants.
 		- (source/area)`99 2 108 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
-		- (metrics/profile-duration)`2222528`
-		- (metrics/profile-count)`13801`
+		- (metrics/profile-duration)`1095429`
+		- (metrics/profile-count)`6591`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`15000`
-		- (metrics/profile-maximum)`41157000`
+		- (metrics/profile-minimum)`10000`
+		- (metrics/profile-maximum)`13644000`
 (signature)`connect(self, route)`
 
 Add the route to finder connecting its subdirectories for import purposes.
@@ -321,11 +321,11 @@ Remove a route from the finder's set eliminating any relevant index entries.
 		- (source/area)`149 2 166 27`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`8`
-		- (metrics/profile-duration)`1435`
-		- (metrics/profile-count)`178948`
+		- (metrics/profile-duration)`459`
+		- (metrics/profile-count)`78244`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`1344000`
+		- (metrics/profile-maximum)`493000`
 (signature)`find(self, name)`
 
 Retrieve the product with a root that matches the start of the given (factor-local/parameter)&<#IntegralFinder.find.Parameters.name[name]>.
@@ -340,11 +340,11 @@ Retrieve the product with a root that matches the start of the given (factor-loc
 		- (source/area)`168 2 249 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`46`
-		- (metrics/profile-duration)`299078`
-		- (metrics/profile-count)`178948`
-		- (metrics/profile-residency)`98.88960725590799`
+		- (metrics/profile-duration)`217883`
+		- (metrics/profile-count)`78244`
+		- (metrics/profile-residency)`98.8926592127932`
 		- (metrics/profile-minimum)`2000`
-		- (metrics/profile-maximum)`13345000`
+		- (metrics/profile-maximum)`6784000`
 (signature)`find_spec(self, name, path)`
 
 Using the (invalid/unknown)&<#index>, check for the presence of (invalid/unknown)&<#name's> initial package.
@@ -361,11 +361,11 @@ used to load either an extension module or a Python bytecode module.
 		- (source/area)`250 2 267 23`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
-		- (metrics/profile-duration)`37495`
-		- (metrics/profile-count)`4359`
-		- (metrics/profile-residency)`11.724505029245492`
-		- (metrics/profile-minimum)`11000`
-		- (metrics/profile-maximum)`682000`
+		- (metrics/profile-duration)`28026`
+		- (metrics/profile-count)`1956`
+		- (metrics/profile-residency)`11.795180503110236`
+		- (metrics/profile-minimum)`17000`
+		- (metrics/profile-maximum)`332000`
 (signature)`create(Class, system, python, host)`
 
 Construct a standard loader selecting images with the given (factor-local/parameter)&<#IntegralFinder.create.Parameters.form[form]>.
@@ -377,14 +377,14 @@ Construct a standard loader selecting images with the given (factor-local/parame
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`269 1 301 14`
+		- (source/area)`269 1 300 14`
 		- (coverage-zeros)`4`
-		- (coverage-counters)`17`
-		- (metrics/profile-duration)`4245066`
-		- (metrics/profile-count)`3635`
-		- (metrics/profile-residency)`0.5808117612955943`
-		- (metrics/profile-minimum)`289000`
-		- (metrics/profile-maximum)`21425000`
+		- (coverage-counters)`16`
+		- (metrics/profile-duration)`3160574`
+		- (metrics/profile-count)`1233`
+		- (metrics/profile-residency)`1.000362331113157`
+		- (metrics/profile-minimum)`1372000`
+		- (metrics/profile-maximum)`13842000`
 (signature)`setup()`
 
 Create and install a configured (factor-local/class)&<#IntegralFinder[IntegralFinder]>.

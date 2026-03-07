@@ -4,13 +4,13 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 337 0`
-		- (coverage-zeros)`15`
+		- (coverage-zeros)`17`
 		- (coverage-counters)`105`
-		- (metrics/profile-duration)`2335714`
-		- (metrics/profile-count)`3441`
+		- (metrics/profile-duration)`1733810`
+		- (metrics/profile-count)`1070`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`1267000`
-		- (metrics/profile-maximum)`8153000`
+		- (metrics/profile-minimum)`1277000`
+		- (metrics/profile-maximum)`4127000`
 Factored Projects data structures and types.
 
 [ FactorType ]
@@ -230,11 +230,11 @@ A triple of contrived identifiers that represent a classification.
 		- (source/area)`62 2 68 15`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`1838`
-		- (metrics/profile-count)`4635`
+		- (metrics/profile-duration)`1184`
+		- (metrics/profile-count)`456`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`202000`
+		- (metrics/profile-maximum)`9000`
 (signature)`reform(self, rform)`
 
 Reconstruct the instance with the given (factor-local/parameter)&<#Variants.reform.Parameters.rform[rform]> as the new (factor-local/data)&<#Variants.form[form]> value.
@@ -285,11 +285,11 @@ Source format structure holding the language and dialect.
 		- (source/area)`77 2 88 68`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
-		- (metrics/profile-duration)`4179`
-		- (metrics/profile-count)`106`
+		- (metrics/profile-duration)`2562`
+		- (metrics/profile-count)`16`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`14000`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`12000`
 (signature)`from_string()`
 
 Split the format identifier by the first (char)`.` in (invalid/unknown)&<#string>.
@@ -330,11 +330,11 @@ Identifiers in the path exclude any filename extensions.
 		- (source/area)`98 2 99 32`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
-		- (metrics/profile-duration)`4088`
-		- (metrics/profile-count)`59029`
+		- (metrics/profile-duration)`3255`
+		- (metrics/profile-count)`4927`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`7112000`
+		- (metrics/profile-maximum)`1800000`
 (signature)`__str__(self)`
 
 
@@ -349,11 +349,11 @@ Identifiers in the path exclude any filename extensions.
 		- (source/area)`101 2 102 36`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
-		- (metrics/profile-duration)`10000`
+		- (metrics/profile-duration)`8000`
 		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`70.0`
-		- (metrics/profile-minimum)`10000`
-		- (metrics/profile-maximum)`10000`
+		- (metrics/profile-residency)`62.5`
+		- (metrics/profile-minimum)`8000`
+		- (metrics/profile-maximum)`8000`
 (signature)`__repr__(self)`
 
 
@@ -366,11 +366,11 @@ Identifiers in the path exclude any filename extensions.
 		- (source/area)`104 2 117 37`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
-		- (metrics/profile-duration)`15287`
-		- (metrics/profile-count)`190449`
+		- (metrics/profile-duration)`7279`
+		- (metrics/profile-count)`63327`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`2000`
-		- (metrics/profile-maximum)`7729000`
+		- (metrics/profile-minimum)`1000`
+		- (metrics/profile-maximum)`4428000`
 (signature)`__matmul__(self, fpath)`
 
 Relative and absolute constructor.
@@ -778,11 +778,11 @@ needed to properly form the relationship for integration.
 		- (source/area)`235 2 243 74`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
-		- (metrics/profile-duration)`1811`
-		- (metrics/profile-count)`46883`
+		- (metrics/profile-duration)`1191`
+		- (metrics/profile-count)`7177`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`631000`
+		- (metrics/profile-maximum)`54000`
 (signature)`isolate(self, isolation)`
 
 Reconstruct the reference replacing its isolation field the given (factor-local/parameter)&<#Reference.isolate.Parameters.isolation[isolation]>.
@@ -801,11 +801,11 @@ If (factor-local/parameter)&<#Reference.isolate.Parameters.isolation[isolation]>
 		- (source/area)`245 2 253 10`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`4`
-		- (metrics/profile-duration)`8204`
-		- (metrics/profile-count)`6490`
-		- (metrics/profile-residency)`48.13319310370731`
+		- (metrics/profile-duration)`12157`
+		- (metrics/profile-count)`363`
+		- (metrics/profile-residency)`28.710627690913213`
 		- (metrics/profile-minimum)`3000`
-		- (metrics/profile-maximum)`3098000`
+		- (metrics/profile-maximum)`1804000`
 (signature)`__str__(self)`
 
 
@@ -818,11 +818,11 @@ If (factor-local/parameter)&<#Reference.isolate.Parameters.isolation[isolation]>
 		- (source/area)`254 2 264 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`1118`
-		- (metrics/profile-count)`3093`
-		- (metrics/profile-residency)`87.66252528171049`
+		- (metrics/profile-duration)`676`
+		- (metrics/profile-count)`133`
+		- (metrics/profile-residency)`64.44444444444444`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`87000`
+		- (metrics/profile-maximum)`13000`
 Construct the (factor-local/class)&<#Format[Format]> instance representing the (factor-local/data)&<#Reference.isolation[isolation]>.
 
 Format instances are cached and repeat reads across references
@@ -836,13 +836,13 @@ with the same isolation should normally return the same object.
 	/element/
 		- (control)`property-set`
 		- (source/area)`265 2 284 63`
-		- (coverage-zeros)`0`
+		- (coverage-zeros)`2`
 		- (coverage-counters)`11`
-		- (metrics/profile-duration)`22009`
-		- (metrics/profile-count)`25947`
-		- (metrics/profile-residency)`21.097155024628904`
-		- (metrics/profile-minimum)`5000`
-		- (metrics/profile-maximum)`7741000`
+		- (metrics/profile-duration)`13492`
+		- (metrics/profile-count)`5233`
+		- (metrics/profile-residency)`24.58997818882248`
+		- (metrics/profile-minimum)`4000`
+		- (metrics/profile-maximum)`4433000`
 (signature)`from_ri(Class, method, ri)`
 
 Create a reference from a resource indicator.
@@ -898,11 +898,11 @@ A project factor protocol.
 		- (source/area)`298 2 299 30`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
-		- (metrics/profile-duration)`471`
-		- (metrics/profile-count)`28963`
+		- (metrics/profile-duration)`35`
+		- (metrics/profile-count)`26040`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`31000`
+		- (metrics/profile-maximum)`17000`
 (signature)`__init__(self, parameters)`
 
 
@@ -980,11 +980,11 @@ The route was identified as not conforming to the protocol.
 		- (source/area)`314 1 337 26`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
-		- (metrics/profile-duration)`21500`
-		- (metrics/profile-count)`76`
-		- (metrics/profile-residency)`13.280293757649938`
-		- (metrics/profile-minimum)`9000`
-		- (metrics/profile-maximum)`57000`
+		- (metrics/profile-duration)`14875`
+		- (metrics/profile-count)`24`
+		- (metrics/profile-residency)`10.644257703081232`
+		- (metrics/profile-minimum)`8000`
+		- (metrics/profile-maximum)`32000`
 		- (type/syntax)`FactorPath`
 		- (type/factor-local/class)&<#FactorPath[FactorPath]>
 		

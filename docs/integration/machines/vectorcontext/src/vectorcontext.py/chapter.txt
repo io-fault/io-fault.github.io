@@ -4,8 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 512 0`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`0`
+		- (coverage-zeros)`36`
+		- (coverage-counters)`238`
 Construction Context implementation using vector formulations.
 
 
@@ -28,6 +28,8 @@ Construction Context implementation using vector formulations.
 	/element/
 		- (control)`property-set`
 		- (source/area)`5 1 5 16`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ itertools ]
 ! CONTROL:
@@ -38,6 +40,8 @@ Construction Context implementation using vector formulations.
 	/element/
 		- (control)`property-set`
 		- (source/area)`6 1 6 16`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ typing ]
 ! CONTROL:
@@ -48,6 +52,8 @@ Construction Context implementation using vector formulations.
 	/element/
 		- (control)`property-set`
 		- (source/area)`7 1 7 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ collections ]
 ! CONTROL:
@@ -58,6 +64,8 @@ Construction Context implementation using vector formulations.
 	/element/
 		- (control)`property-set`
 		- (source/area)`8 1 8 18`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ dataclass ]
 ! CONTROL:
@@ -68,6 +76,8 @@ Construction Context implementation using vector formulations.
 	/element/
 		- (control)`property-set`
 		- (source/area)`9 1 9 33`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ tools ]
 ! CONTROL:
@@ -78,6 +88,8 @@ Construction Context implementation using vector formulations.
 	/element/
 		- (control)`property-set`
 		- (source/area)`11 1 11 31`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ files ]
 ! CONTROL:
@@ -88,6 +100,8 @@ Construction Context implementation using vector formulations.
 	/element/
 		- (control)`property-set`
 		- (source/area)`12 1 12 30`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ execution ]
 ! CONTROL:
@@ -98,6 +112,8 @@ Construction Context implementation using vector formulations.
 	/element/
 		- (control)`property-set`
 		- (source/area)`13 1 13 34`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ lsf ]
 ! CONTROL:
@@ -108,6 +124,8 @@ Construction Context implementation using vector formulations.
 	/element/
 		- (control)`property-set`
 		- (source/area)`14 1 14 39`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 
 [ vf ]
 ! CONTROL:
@@ -118,6 +136,8 @@ Construction Context implementation using vector formulations.
 	/element/
 		- (control)`property-set`
 		- (source/area)`15 1 17 37`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 
 [ Void ]
 ! CONTROL:
@@ -126,6 +146,8 @@ Construction Context implementation using vector formulations.
 	/element/
 		- (control)`property-set`
 		- (source/area)`18 1 33 69`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`18 12 18 20`
@@ -153,6 +175,8 @@ zero fields are required by the caller.
 	/element/
 		- (control)`property-set`
 		- (source/area)`30 2 30 20`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
@@ -168,6 +192,8 @@ zero fields are required by the caller.
 	/element/
 		- (control)`property-set`
 		- (source/area)`32 2 33 69`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`__str__(self)`
 
 
@@ -180,6 +206,8 @@ zero fields are required by the caller.
 	/element/
 		- (control)`property-set`
 		- (source/area)`35 1 36 28`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`_feature_constants(features)`
 
 
@@ -192,6 +220,8 @@ zero fields are required by the caller.
 	/element/
 		- (control)`property-set`
 		- (source/area)`38 1 39 48`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`_feature_conclusions(features)`
 
 
@@ -204,6 +234,8 @@ zero fields are required by the caller.
 	/element/
 		- (control)`property-set`
 		- (source/area)`41 1 46 2`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`_variant_constants(variants)`
 
 
@@ -216,6 +248,8 @@ zero fields are required by the caller.
 	/element/
 		- (control)`property-set`
 		- (source/area)`48 1 55 15`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`4`
 (signature)`_variant_conclusions(variants)`
 
 
@@ -228,6 +262,8 @@ zero fields are required by the caller.
 	/element/
 		- (control)`property-set`
 		- (source/area)`56 1 79 45`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`56 24 56 29`
@@ -244,6 +280,8 @@ zero fields are required by the caller.
 	/element/
 		- (control)`property-set`
 		- (source/area)`62 2 68 36`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`constants(self)`
 
 
@@ -256,6 +294,8 @@ zero fields are required by the caller.
 	/element/
 		- (control)`property-set`
 		- (source/area)`70 2 76 38`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`conclusions(self)`
 
 
@@ -268,6 +308,8 @@ zero fields are required by the caller.
 	/element/
 		- (control)`property-set`
 		- (source/area)`78 2 79 45`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 (signature)`context(self)`
 
 
@@ -278,6 +320,8 @@ zero fields are required by the caller.
 	/element/
 		- (control)`property-set`
 		- (source/area)`81 1 146 47`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`81 17 81 22`
@@ -296,6 +340,8 @@ A section of a construction context that can formulate adapters for factor proce
 	/element/
 		- (control)`property-set`
 		- (source/area)`86 2 90 18`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 (signature)`__init__(self, context, mode, semantics)`
 
 
@@ -308,6 +354,8 @@ A section of a construction context that can formulate adapters for factor proce
 	/element/
 		- (control)`property-set`
 		- (source/area)`92 2 93 51`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`__repr__(self)`
 
 
@@ -320,6 +368,8 @@ A section of a construction context that can formulate adapters for factor proce
 	/element/
 		- (control)`property-set`
 		- (source/area)`95 2 102 10`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`6`
 (signature)`_cc(self, phase, vtype, itype, xtype)`
 
 
@@ -330,6 +380,8 @@ A section of a construction context that can formulate adapters for factor proce
 	/element/
 		- (control)`property-set`
 		- (source/area)`104 2 108 76`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`vectortypes(self, features)`
 
 Identify formulation types for the given form and feature set.
@@ -342,6 +394,8 @@ Identify formulation types for the given form and feature set.
 	/element/
 		- (control)`property-set`
 		- (source/area)`110 2 118 14`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`integrates(self, vtype, itype)`
 
 Identify whether the mechanism is operable.
@@ -354,6 +408,8 @@ Identify whether the mechanism is operable.
 	/element/
 		- (control)`property-set`
 		- (source/area)`120 2 128 16`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`4`
 (signature)`unit_name_delta(self, vtype, itype)`
 
 Identify the prefix and suffix for the unit file.
@@ -366,6 +422,8 @@ Identify the prefix and suffix for the unit file.
 	/element/
 		- (control)`property-set`
 		- (source/area)`130 2 134 51`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`2`
 (signature)`prepare(self, vtype, itype, srctype)`
 
 Construct the command constructor for source preparation.
@@ -378,6 +436,8 @@ Construct the command constructor for source preparation.
 	/element/
 		- (control)`property-set`
 		- (source/area)`136 2 140 53`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`translate(self, vtype, itype, srctype)`
 
 Construct the command constructor for translating sources.
@@ -390,6 +450,8 @@ Construct the command constructor for translating sources.
 	/element/
 		- (control)`property-set`
 		- (source/area)`142 2 146 47`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`render(self, vtype, itype)`
 
 Construct the command constructor for rendering the factor's image.
@@ -402,6 +464,8 @@ Construct the command constructor for rendering the factor's image.
 	/element/
 		- (control)`property-set`
 		- (source/area)`148 1 486 12`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`1`
 ! INHERIT:
 	- (control)`property-set`
 	- (source/area)`148 15 148 20`
@@ -420,6 +484,8 @@ Vectors Formulations based Mechanism set for building system argument vectors.
 	/element/
 		- (control)`property-set`
 		- (source/area)`154 2 167 13`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`6`
 (signature)`_ref(section, name)`
 
 
@@ -430,6 +496,8 @@ Vectors Formulations based Mechanism set for building system argument vectors.
 	/element/
 		- (control)`property-set`
 		- (source/area)`168 2 172 21`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`2`
 (signature)`from_directory(Class, route)`
 
 Create instance using a directory.
@@ -444,6 +512,8 @@ Create instance using a directory.
 	/element/
 		- (control)`property-set`
 		- (source/area)`174 2 185 37`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`6`
 (signature)`__init__(self, route)`
 
 
@@ -454,6 +524,8 @@ Create instance using a directory.
 	/element/
 		- (control)`property-set`
 		- (source/area)`187 2 197 51`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`5`
 (signature)`_modes(self, factor)`
 
 Read the modes vector from factor.
@@ -466,6 +538,8 @@ Read the modes vector from factor.
 	/element/
 		- (control)`property-set`
 		- (source/area)`199 2 207 24`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`5`
 (signature)`_variants(self, factor)`
 
 Read the full product of system-architecture pairs from
@@ -481,6 +555,8 @@ the given variants (factor-local/parameter)&<#Context._variants.Parameters.facto
 	/element/
 		- (control)`property-set`
 		- (source/area)`209 2 228 33`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`9`
 (signature)`cc_unit_name_delta(self, vtype, itype)`
 
 
@@ -493,6 +569,8 @@ the given variants (factor-local/parameter)&<#Context._variants.Parameters.facto
 	/element/
 		- (control)`property-set`
 		- (source/area)`230 2 242 81`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`6`
 (signature)`cc_integration_types(self, vtype, itype)`
 
 
@@ -503,6 +581,8 @@ the given variants (factor-local/parameter)&<#Context._variants.Parameters.facto
 	/element/
 		- (control)`property-set`
 		- (source/area)`244 2 279 91`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`19`
 (signature)`vectortypes(self, mode, semantics, features)`
 
 Identify the (invalid/unknown)&<#VectorParameter> combinations to use for the given (factor-local/parameter)&<#Context.vectortypes.Parameters.semantics[semantics]> and (invalid/unknown)&<#modes>.
@@ -517,6 +597,8 @@ Identify the (invalid/unknown)&<#VectorParameter> combinations to use for the gi
 	/element/
 		- (control)`property-set`
 		- (source/area)`281 2 294 11`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`10`
 (signature)`_constants(self, vtype, itype, xtype, **kw)`
 
 
@@ -529,6 +611,8 @@ Identify the (invalid/unknown)&<#VectorParameter> combinations to use for the gi
 	/element/
 		- (control)`property-set`
 		- (source/area)`296 2 305 25`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`7`
 (signature)`_conclusions(self, vtype, itype, xtype)`
 
 
@@ -541,6 +625,8 @@ Identify the (invalid/unknown)&<#VectorParameter> combinations to use for the gi
 	/element/
 		- (control)`property-set`
 		- (source/area)`307 2 321 45`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`9`
 (signature)`_compose(self, vctx, section, composition, itype, name, fallback)`
 
 
@@ -553,6 +639,8 @@ Identify the (invalid/unknown)&<#VectorParameter> combinations to use for the gi
 	/element/
 		- (control)`property-set`
 		- (source/area)`323 2 342 24`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`13`
 (signature)`_load_descriptor(self, vctx, section, variants, phase, itype, xtype)`
 
 
@@ -565,6 +653,8 @@ Identify the (invalid/unknown)&<#VectorParameter> combinations to use for the gi
 	/element/
 		- (control)`property-set`
 		- (source/area)`344 2 356 29`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`9`
 (signature)`_read_merged(self, vctx, section, variants, phase, itype, xtype)`
 
 
@@ -577,6 +667,8 @@ Identify the (invalid/unknown)&<#VectorParameter> combinations to use for the gi
 	/element/
 		- (control)`property-set`
 		- (source/area)`358 2 370 67`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`5`
 (signature)`cc_compose(self, phase, vtype, itype, xtype)`
 
 
@@ -589,6 +681,8 @@ Identify the (invalid/unknown)&<#VectorParameter> combinations to use for the gi
 	/element/
 		- (control)`property-set`
 		- (source/area)`372 2 388 25`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`6`
 (signature)`_load_intercepts(self, context)`
 
 
@@ -599,6 +693,8 @@ Identify the (invalid/unknown)&<#VectorParameter> combinations to use for the gi
 	/element/
 		- (control)`property-set`
 		- (source/area)`390 2 397 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`5`
 (signature)`load(self)`
 
 Load the product indicies.
@@ -611,6 +707,8 @@ Load the product indicies.
 	/element/
 		- (control)`property-set`
 		- (source/area)`399 2 406 13`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`5`
 (signature)`configure(self)`
 
 Load the default factor semantics.
@@ -623,6 +721,8 @@ Load the default factor semantics.
 	/element/
 		- (control)`property-set`
 		- (source/area)`408 2 421 16`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`9`
 (signature)`_read_cell(self, factor)`
 
 Get the sole source type and path of the given (factor-local/parameter)&<#Context._read_cell.Parameters.factor[factor]>.
@@ -635,6 +735,8 @@ Get the sole source type and path of the given (factor-local/parameter)&<#Contex
 	/element/
 		- (control)`property-set`
 		- (source/area)`423 2 430 49`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`5`
 (signature)`_load_vector(self, factor)`
 
 Load vector formulations from the (factor-local/parameter)&<#Context._load_vector.Parameters.factor[factor]>.
@@ -647,6 +749,8 @@ Load vector formulations from the (factor-local/parameter)&<#Context._load_vecto
 	/element/
 		- (control)`property-set`
 		- (source/area)`432 2 441 63`
+		- (coverage-zeros)`2`
+		- (coverage-counters)`5`
 (signature)`_load_system(self, factor)`
 
 Load system command vector identified by (factor-local/parameter)&<#Context._load_system.Parameters.factor[factor]>.
@@ -661,6 +765,8 @@ Load system command vector identified by (factor-local/parameter)&<#Context._loa
 	/element/
 		- (control)`property-set`
 		- (source/area)`443 2 445 11`
+		- (coverage-zeros)`1`
+		- (coverage-counters)`1`
 (signature)`_iq(self, name)`
 
 
@@ -671,6 +777,8 @@ Load system command vector identified by (factor-local/parameter)&<#Context._loa
 	/element/
 		- (control)`property-set`
 		- (source/area)`447 2 454 46`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`4`
 (signature)`_cat(self, ctx, index, name)`
 
 Catenate the vectors selected in (factor-local/parameter)&<#Context._cat.Parameters.index[index]>.
@@ -685,6 +793,8 @@ Catenate the vectors selected in (factor-local/parameter)&<#Context._cat.Paramet
 	/element/
 		- (control)`property-set`
 		- (source/area)`456 2 461 29`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`3`
 (signature)`_v(self, factor)`
 
 
@@ -695,6 +805,8 @@ Catenate the vectors selected in (factor-local/parameter)&<#Context._cat.Paramet
 	/element/
 		- (control)`property-set`
 		- (source/area)`463 2 486 12`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`10`
 (signature)`_map_factor_semantics(self, context)`
 
 Identify the projects providing adapters for the listed semantics.

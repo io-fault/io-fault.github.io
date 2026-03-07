@@ -6,11 +6,11 @@
 		- (source/area)`1 1 79 0`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`52`
-		- (metrics/profile-duration)`5000`
+		- (metrics/profile-duration)`9000`
 		- (metrics/profile-count)`15`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`5000`
-		- (metrics/profile-maximum)`5000`
+		- (metrics/profile-minimum)`9000`
+		- (metrics/profile-maximum)`9000`
 Parsing and serialization functions for system argument vector snapshots.
 
 
@@ -33,11 +33,11 @@ Parsing and serialization functions for system argument vector snapshots.
 		- (source/area)`6 1 42 75`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`24`
-		- (metrics/profile-duration)`23615`
+		- (metrics/profile-duration)`27307`
 		- (metrics/profile-count)`13`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`2000`
-		- (metrics/profile-maximum)`36000`
+		- (metrics/profile-maximum)`41000`
 		- (type/syntax)`tuple[		list[tuple[str, str]],		str,		list[str]	]`
 		
 (signature)`parse(text)`
@@ -55,11 +55,11 @@ settings, executable path, and command arguments.
 		- (source/area)`44 1 79 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`26`
-		- (metrics/profile-duration)`81000`
+		- (metrics/profile-duration)`88500`
 		- (metrics/profile-count)`2`
-		- (metrics/profile-residency)`79.62962962962963`
-		- (metrics/profile-minimum)`79000`
-		- (metrics/profile-maximum)`83000`
+		- (metrics/profile-residency)`80.22598870056498`
+		- (metrics/profile-minimum)`66000`
+		- (metrics/profile-maximum)`111000`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		

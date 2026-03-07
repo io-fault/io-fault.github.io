@@ -5,12 +5,7 @@
 		- (control)`property-set`
 		- (source/area)`1 1 33 0`
 		- (coverage-zeros)`0`
-		- (coverage-counters)`15`
-		- (metrics/profile-duration)`381000`
-		- (metrics/profile-count)`6`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`381000`
-		- (metrics/profile-maximum)`381000`
+		- (coverage-counters)`0`
 
 [ module ]
 ! CONTROL:
@@ -47,13 +42,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`4 2 5 19`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
-		- (metrics/profile-duration)`5000`
-		- (metrics/profile-count)`5`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`4000`
-		- (metrics/profile-maximum)`6000`
 (signature)`method(self, *args, **kw)`
 
 
@@ -66,8 +54,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`7 1 7 23`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 #!source
 	instance = Referenced()
 
@@ -80,13 +66,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`9 1 10 55`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
-		- (metrics/profile-duration)`157000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`96.17834394904459`
-		- (metrics/profile-minimum)`157000`
-		- (metrics/profile-maximum)`157000`
 (signature)`test_zero(test)`
 
 
@@ -99,13 +78,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`12 1 13 57`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
-		- (metrics/profile-duration)`148000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`96.62162162162163`
-		- (metrics/profile-minimum)`148000`
-		- (metrics/profile-maximum)`148000`
 (signature)`test_one(test)`
 
 
@@ -118,13 +90,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`15 1 16 62`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
-		- (metrics/profile-duration)`134000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`96.26865671641791`
-		- (metrics/profile-minimum)`134000`
-		- (metrics/profile-maximum)`134000`
 (signature)`test_any(test)`
 
 
@@ -137,13 +102,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`18 1 19 80`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
-		- (metrics/profile-duration)`130000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`96.92307692307692`
-		- (metrics/profile-minimum)`130000`
-		- (metrics/profile-maximum)`130000`
 (signature)`test_keywords(test)`
 
 
@@ -156,12 +114,5 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`21 1 33 29`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`8`
-		- (metrics/profile-duration)`234000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`97.86324786324786`
-		- (metrics/profile-minimum)`234000`
-		- (metrics/profile-maximum)`234000`
 (signature)`test_lost_target(test)`
 

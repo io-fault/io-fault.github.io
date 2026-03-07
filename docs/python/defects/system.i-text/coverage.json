@@ -1,1 +1,1 @@
-{"module": [1, 0, []], "test_setlocale": [3, 0, []], "test_encoding": [2, 0, []], "test_cells": [4, 0, []], "test_cells_chinese_sample": [10, 0, []], "test_cells_ctlchars": [7, 0, []], "test_cells_combining": [6, 0, []], "test_cells_vs": [7, 0, []], "test_cells_sequences": [7, 0, []], "test_cells_zerowidths": [8, 0, []], "/i-text.py": [2, 0, []]}
+{"/i-text.py": []}

@@ -6,11 +6,11 @@
 		- (source/area)`1 1 1111 3`
 		- (coverage-zeros)`121`
 		- (coverage-counters)`418`
-		- (metrics/profile-duration)`1922937`
-		- (metrics/profile-count)`143`
+		- (metrics/profile-duration)`1908311`
+		- (metrics/profile-count)`77`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`629000`
-		- (metrics/profile-maximum)`8527000`
+		- (metrics/profile-minimum)`691000`
+		- (metrics/profile-maximum)`5696000`
 Channel Processors used to construct conceptual Flows.
 
 A (factor-local/class)&<#Channel[Channel]> represents an individual segment in a conceptual Flow. Channels
@@ -145,11 +145,11 @@ to index operations.
 		- (source/area)`26 2 32 18`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
-		- (metrics/profile-duration)`2333`
+		- (metrics/profile-duration)`1000`
 		- (metrics/profile-count)`3`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`4000`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`3000`
 (signature)`__int__(self)`
 
 
@@ -183,11 +183,11 @@ to index operations.
 		- (source/area)`37 2 39 20`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`24000`
+		- (metrics/profile-duration)`20500`
 		- (metrics/profile-count)`2`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`4000`
-		- (metrics/profile-maximum)`44000`
+		- (metrics/profile-minimum)`3000`
+		- (metrics/profile-maximum)`38000`
 (signature)`__str__(self)`
 
 
@@ -422,11 +422,11 @@ of other event callback mechanisms.
 		- (source/area)`114 2 134 31`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`7`
-		- (metrics/profile-duration)`9320`
+		- (metrics/profile-duration)`73460`
 		- (metrics/profile-count)`50`
-		- (metrics/profile-residency)`54.506437768240346`
+		- (metrics/profile-residency)`5.58126871766948`
 		- (metrics/profile-minimum)`4000`
-		- (metrics/profile-maximum)`27000`
+		- (metrics/profile-maximum)`3288000`
 (signature)`f_connect(self, flow)`
 
 Connect the Channel to the given object supporting the (invalid/unknown)&<#Flow> interface.
@@ -516,11 +516,11 @@ Reveal the obstructions and monitors of the Channel.
 		- (source/area)`188 2 201 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
-		- (metrics/profile-duration)`24000`
+		- (metrics/profile-duration)`18000`
 		- (metrics/profile-count)`1`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`24000`
-		- (metrics/profile-maximum)`24000`
+		- (metrics/profile-minimum)`18000`
+		- (metrics/profile-maximum)`18000`
 (signature)`terminate(self)`
 
 Drain the Channel and finish termination by signalling the controller
@@ -536,11 +536,11 @@ of its exit.
 		- (source/area)`203 2 208 22`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`35269`
+		- (metrics/profile-duration)`193500`
 		- (metrics/profile-count)`26`
-		- (metrics/profile-residency)`6.9792802617230105`
-		- (metrics/profile-minimum)`10000`
-		- (metrics/profile-maximum)`109000`
+		- (metrics/profile-residency)`0.8547008547008547`
+		- (metrics/profile-minimum)`9000`
+		- (metrics/profile-maximum)`4227000`
 (signature)`f_terminate(self)`
 
 Termination signal received when the upstream no longer has
@@ -556,11 +556,11 @@ flow transfers for the downstream Channel.
 		- (source/area)`210 2 225 27`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
-		- (metrics/profile-duration)`37214`
+		- (metrics/profile-duration)`232690`
 		- (metrics/profile-count)`42`
-		- (metrics/profile-residency)`47.280870121561094`
-		- (metrics/profile-minimum)`3000`
-		- (metrics/profile-maximum)`129000`
+		- (metrics/profile-residency)`49.575360687608715`
+		- (metrics/profile-minimum)`2000`
+		- (metrics/profile-maximum)`4244000`
 (signature)`_f_terminated(self)`
 
 Used by subclasses to issue downstream termination and exit.
@@ -580,11 +580,11 @@ of the conceptual flow is complete.
 		- (source/area)`227 2 230 38`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`4000`
+		- (metrics/profile-duration)`2000`
 		- (metrics/profile-count)`3`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`2000`
-		- (metrics/profile-maximum)`8000`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`6000`
 (signature)`interrupt(self)`
 
 
@@ -597,11 +597,11 @@ of the conceptual flow is complete.
 		- (source/area)`232 2 237 20`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`10142`
+		- (metrics/profile-duration)`9428`
 		- (metrics/profile-count)`28`
-		- (metrics/profile-residency)`20.070422535211268`
-		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`49000`
+		- (metrics/profile-residency)`14.393939393939393`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`51000`
 (signature)`f_transfer(self, event)`
 
 Emit the (factor-local/parameter)&<#Channel.f_transfer.Parameters.event[event]> directly to the downstream.
@@ -616,11 +616,11 @@ Emit the (factor-local/parameter)&<#Channel.f_transfer.Parameters.event[event]> 
 		- (source/area)`239 2 247 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`341`
+		- (metrics/profile-duration)`0`
 		- (metrics/profile-count)`202`
-		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-residency)`0.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`1000`
+		- (metrics/profile-maximum)`0`
 (signature)`f_emit(self, event)`
 
 Method replaced at runtime for selecting the recipient
@@ -653,11 +653,11 @@ Channels that have buffers *should* implement this method.
 		- (source/area)`261 2 268 10`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`389`
+		- (metrics/profile-duration)`35`
 		- (metrics/profile-count)`478`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`7000`
+		- (metrics/profile-maximum)`10000`
 Whether or not the (factor-local/class)&<#Channel[Channel]> is obstructed.
 
 
@@ -687,11 +687,11 @@ if there are no obstructions.
 		- (source/area)`279 2 298 19`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`8`
-		- (metrics/profile-duration)`427375`
+		- (metrics/profile-duration)`1000`
 		- (metrics/profile-count)`8`
-		- (metrics/profile-residency)`99.94150336355659`
-		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`3404000`
+		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`3000`
 (signature)`f_obstruct(self, by)`
 
 Instruct the Channel to signal the cessation of transfers.
@@ -707,11 +707,11 @@ The cessation may be permanent depending on the condition.
 		- (source/area)`300 2 320 16`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`10`
-		- (metrics/profile-duration)`2714`
+		- (metrics/profile-duration)`2000`
 		- (metrics/profile-count)`7`
-		- (metrics/profile-residency)`47.36842105263158`
+		- (metrics/profile-residency)`35.714285714285715`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`8000`
+		- (metrics/profile-maximum)`7000`
 (signature)`f_clear(self, obstruction)`
 
 Clear the obstruction by the key given to (factor-local/parameter)&<#Channel.f_clear.Parameters.obstruction[obstruction]>.
@@ -726,11 +726,11 @@ Clear the obstruction by the key given to (factor-local/parameter)&<#Channel.f_c
 		- (source/area)`322 2 333 19`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
-		- (metrics/profile-duration)`4392`
+		- (metrics/profile-duration)`62017`
 		- (metrics/profile-count)`56`
-		- (metrics/profile-residency)`85.36585365853658`
+		- (metrics/profile-residency)`99.28016124388137`
 		- (metrics/profile-minimum)`2000`
-		- (metrics/profile-maximum)`16000`
+		- (metrics/profile-maximum)`3281000`
 (signature)`f_watch(self, obstructed, cleared)`
 
 Assign the given functions as callbacks to obstruction events.
@@ -746,11 +746,11 @@ First called when an obstruction occurs and second when its cleared.
 		- (source/area)`335 2 341 49`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`1045`
+		- (metrics/profile-duration)`727`
 		- (metrics/profile-count)`22`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`2000`
+		- (metrics/profile-maximum)`3000`
 (signature)`f_ignore(self, obstructed, cleared)`
 
 Stop watching the Flow's obstructed state.
@@ -854,11 +854,11 @@ Used as an at-exit callback for flows.
 		- (source/area)`371 2 372 28`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
-		- (metrics/profile-duration)`1583`
+		- (metrics/profile-duration)`333`
 		- (metrics/profile-count)`12`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`12000`
+		- (metrics/profile-maximum)`4000`
 (signature)`__init__(self, endpoint)`
 
 
@@ -873,11 +873,11 @@ Used as an at-exit callback for flows.
 		- (source/area)`374 2 379 23`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`40000`
+		- (metrics/profile-duration)`32500`
 		- (metrics/profile-count)`4`
-		- (metrics/profile-residency)`32.5`
-		- (metrics/profile-minimum)`24000`
-		- (metrics/profile-maximum)`54000`
+		- (metrics/profile-residency)`36.15384615384615`
+		- (metrics/profile-minimum)`22000`
+		- (metrics/profile-maximum)`44000`
 (signature)`f_terminate(self)`
 
 
@@ -999,11 +999,11 @@ Initialized with the set of events that will be relayed,
 		- (source/area)`456 2 459 51`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`4500`
+		- (metrics/profile-duration)`1166`
 		- (metrics/profile-count)`6`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`9000`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`2000`
 (signature)`__init__(self, integral, key)`
 
 
@@ -1018,11 +1018,11 @@ Initialized with the set of events that will be relayed,
 		- (source/area)`461 2 463 20`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`4415`
+		- (metrics/profile-duration)`3589`
 		- (metrics/profile-count)`202`
-		- (metrics/profile-residency)`74.43946188340807`
+		- (metrics/profile-residency)`68.13793103448276`
 		- (metrics/profile-minimum)`3000`
-		- (metrics/profile-maximum)`20000`
+		- (metrics/profile-maximum)`26000`
 (signature)`f_transfer(self, event)`
 
 
@@ -1037,11 +1037,11 @@ Initialized with the set of events that will be relayed,
 		- (source/area)`465 2 467 23`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`32200`
+		- (metrics/profile-duration)`29400`
 		- (metrics/profile-count)`5`
-		- (metrics/profile-residency)`15.527950310559005`
-		- (metrics/profile-minimum)`19000`
-		- (metrics/profile-maximum)`70000`
+		- (metrics/profile-residency)`14.965986394557824`
+		- (metrics/profile-minimum)`17000`
+		- (metrics/profile-maximum)`65000`
 (signature)`f_terminate(self)`
 
 
@@ -1058,7 +1058,7 @@ Initialized with the set of events that will be relayed,
 		- (coverage-counters)`2`
 		- (metrics/profile-duration)`49000`
 		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`20.408163265306122`
+		- (metrics/profile-residency)`22.448979591836736`
 		- (metrics/profile-minimum)`49000`
 		- (metrics/profile-maximum)`49000`
 (signature)`interrupt(self)`
@@ -1121,11 +1121,11 @@ A simple (factor-local/class)&<#Channel[Channel]> expecting to receive events fr
 		- (source/area)`482 2 483 27`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
-		- (metrics/profile-duration)`5333`
+		- (metrics/profile-duration)`2666`
 		- (metrics/profile-count)`6`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`14000`
+		- (metrics/profile-maximum)`9000`
 (signature)`__init__(self, connect)`
 
 
@@ -1140,11 +1140,11 @@ A simple (factor-local/class)&<#Channel[Channel]> expecting to receive events fr
 		- (source/area)`485 2 488 21`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`58000`
+		- (metrics/profile-duration)`65000`
 		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`12.068965517241379`
-		- (metrics/profile-minimum)`58000`
-		- (metrics/profile-maximum)`58000`
+		- (metrics/profile-residency)`9.230769230769232`
+		- (metrics/profile-minimum)`65000`
+		- (metrics/profile-maximum)`65000`
 (signature)`f_transfer(self, events)`
 
 
@@ -1162,8 +1162,8 @@ A simple (factor-local/class)&<#Channel[Channel]> expecting to receive events fr
 		- (metrics/profile-duration)`7444`
 		- (metrics/profile-count)`9`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`4000`
-		- (metrics/profile-maximum)`18000`
+		- (metrics/profile-minimum)`3000`
+		- (metrics/profile-maximum)`19000`
 (signature)`int_transfer(self, key, event)`
 
 
@@ -1178,11 +1178,11 @@ A simple (factor-local/class)&<#Channel[Channel]> expecting to receive events fr
 		- (source/area)`494 2 501 33`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`28000`
+		- (metrics/profile-duration)`38200`
 		- (metrics/profile-count)`5`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`21000`
-		- (metrics/profile-maximum)`37000`
+		- (metrics/profile-minimum)`29000`
+		- (metrics/profile-maximum)`58000`
 (signature)`int_terminate(self, key)`
 
 
@@ -1229,11 +1229,11 @@ A flow that performs a transformation on the received events.
 		- (source/area)`510 2 511 31`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
-		- (metrics/profile-duration)`13000`
+		- (metrics/profile-duration)`7000`
 		- (metrics/profile-count)`1`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`13000`
-		- (metrics/profile-maximum)`13000`
+		- (metrics/profile-minimum)`7000`
+		- (metrics/profile-maximum)`7000`
 (signature)`__init__(self, transform)`
 
 
@@ -1248,9 +1248,9 @@ A flow that performs a transformation on the received events.
 		- (source/area)`513 2 514 39`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
-		- (metrics/profile-duration)`2666`
+		- (metrics/profile-duration)`2333`
 		- (metrics/profile-count)`3`
-		- (metrics/profile-residency)`75.0`
+		- (metrics/profile-residency)`71.42857142857143`
 		- (metrics/profile-minimum)`2000`
 		- (metrics/profile-maximum)`3000`
 (signature)`f_transfer(self, event)`
@@ -1298,11 +1298,11 @@ an obstruction occurs or the iterator ends.
 		- (source/area)`523 2 532 14`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
-		- (metrics/profile-duration)`5000`
+		- (metrics/profile-duration)`4000`
 		- (metrics/profile-count)`2`
-		- (metrics/profile-residency)`80.0`
-		- (metrics/profile-minimum)`5000`
-		- (metrics/profile-maximum)`5000`
+		- (metrics/profile-residency)`87.5`
+		- (metrics/profile-minimum)`4000`
+		- (metrics/profile-maximum)`4000`
 		- (type/syntax)`bool`
 		- (type/invalid/unknown)&<#bool>
 		
@@ -1321,11 +1321,11 @@ if it's no longer obstructed.
 		- (source/area)`534 2 549 23`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
-		- (metrics/profile-duration)`384428`
+		- (metrics/profile-duration)`955714`
 		- (metrics/profile-count)`7`
-		- (metrics/profile-residency)`42.69788182831661`
-		- (metrics/profile-minimum)`118000`
-		- (metrics/profile-maximum)`697000`
+		- (metrics/profile-residency)`16.038863976083707`
+		- (metrics/profile-minimum)`111000`
+		- (metrics/profile-maximum)`4611000`
 (signature)`it_transition(self)`
 
 Emit the next item in the iterator until an obstruction occurs or
@@ -1341,11 +1341,11 @@ the iterator is exhausted.
 		- (source/area)`551 2 559 35`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`1333`
+		- (metrics/profile-duration)`166`
 		- (metrics/profile-count)`6`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`4000`
+		- (metrics/profile-maximum)`1000`
 (signature)`__init__(self, iterator)`
 
 [ >> Parameters ]
@@ -1370,11 +1370,11 @@ the iterator is exhausted.
 		- (source/area)`561 2 563 35`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`7000`
+		- (metrics/profile-duration)`9166`
 		- (metrics/profile-count)`6`
-		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-residency)`92.72727272727273`
 		- (metrics/profile-minimum)`2000`
-		- (metrics/profile-maximum)`12000`
+		- (metrics/profile-maximum)`22000`
 (signature)`actuate(self)`
 
 
@@ -1436,11 +1436,11 @@ termination.
 		- (source/area)`578 2 582 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`4136`
+		- (metrics/profile-duration)`2681`
 		- (metrics/profile-count)`22`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`11000`
+		- (metrics/profile-maximum)`7000`
 (signature)`__init__(self, storage, operation)`
 
 
@@ -1453,11 +1453,11 @@ termination.
 		- (source/area)`583 2 588 27`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`13210`
+		- (metrics/profile-duration)`10947`
 		- (metrics/profile-count)`19`
-		- (metrics/profile-residency)`67.33067729083666`
+		- (metrics/profile-residency)`68.26923076923077`
 		- (metrics/profile-minimum)`2000`
-		- (metrics/profile-maximum)`25000`
+		- (metrics/profile-maximum)`23000`
 (signature)`appended_list(Class)`
 
 Construct a (factor-local/class)&<#Collection[Collection]> instance that appends all events into a (factor-local/data)&<#Collection.list[list]>.
@@ -1501,11 +1501,11 @@ Construct a (factor-local/class)&<#Collection[Collection]> instance that extends
 		- (source/area)`600 2 612 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
-		- (metrics/profile-duration)`21000`
+		- (metrics/profile-duration)`14000`
 		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`61.904761904761905`
-		- (metrics/profile-minimum)`21000`
-		- (metrics/profile-maximum)`21000`
+		- (metrics/profile-residency)`57.14285714285714`
+		- (metrics/profile-minimum)`14000`
+		- (metrics/profile-maximum)`14000`
 (signature)`dict(Class)`
 
 Construct a (factor-local/class)&<#Collection[Collection]> instance that builds the contents of a
@@ -1523,11 +1523,11 @@ mapping from sequences of key-value pairs.
 		- (source/area)`613 2 617 14`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`4000`
+		- (metrics/profile-duration)`4008000`
 		- (metrics/profile-count)`1`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`4000`
-		- (metrics/profile-maximum)`4000`
+		- (metrics/profile-minimum)`4008000`
+		- (metrics/profile-maximum)`4008000`
 (signature)`set(Class)`
 
 
@@ -1542,11 +1542,11 @@ mapping from sequences of key-value pairs.
 		- (source/area)`618 2 621 13`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
-		- (metrics/profile-duration)`6000`
+		- (metrics/profile-duration)`3000`
 		- (metrics/profile-count)`1`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`6000`
-		- (metrics/profile-maximum)`6000`
+		- (metrics/profile-minimum)`3000`
+		- (metrics/profile-maximum)`3000`
 (signature)`_buffer_operation(event)`
 
 
@@ -1559,11 +1559,11 @@ mapping from sequences of key-value pairs.
 		- (source/area)`622 2 629 73`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
-		- (metrics/profile-duration)`10000`
+		- (metrics/profile-duration)`6000`
 		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`90.0`
-		- (metrics/profile-minimum)`10000`
-		- (metrics/profile-maximum)`10000`
+		- (metrics/profile-residency)`83.33333333333334`
+		- (metrics/profile-minimum)`6000`
+		- (metrics/profile-maximum)`6000`
 (signature)`buffer(Class)`
 
 Construct a (factor-local/class)&<#Collection[Collection]> instance that accumulates data from sequences
@@ -1581,11 +1581,11 @@ of data into a single (factor-local/parameter)&<#Collection.buffer.Parameters.by
 		- (source/area)`631 2 632 23`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
-		- (metrics/profile-duration)`639`
+		- (metrics/profile-duration)`182`
 		- (metrics/profile-count)`241`
-		- (metrics/profile-residency)`96.10389610389612`
+		- (metrics/profile-residency)`90.9090909090909`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`11000`
+		- (metrics/profile-maximum)`7000`
 (signature)`f_transfer(self, obj)`
 
 
@@ -1717,11 +1717,11 @@ Protocol class for containing the state of a protocol layer.
 		- (source/area)`699 2 702 28`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`6250`
+		- (metrics/profile-duration)`6125`
 		- (metrics/profile-count)`8`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`15000`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`13000`
 (signature)`__init__(self, shared, local, transfer)`
 
 
@@ -1736,11 +1736,11 @@ Protocol class for containing the state of a protocol layer.
 		- (source/area)`704 2 705 44`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
-		- (metrics/profile-duration)`27000`
+		- (metrics/profile-duration)`22200`
 		- (metrics/profile-count)`15`
-		- (metrics/profile-residency)`72.34567901234567`
-		- (metrics/profile-minimum)`3000`
-		- (metrics/profile-maximum)`88000`
+		- (metrics/profile-residency)`76.57657657657657`
+		- (metrics/profile-minimum)`2000`
+		- (metrics/profile-maximum)`61000`
 (signature)`f_transfer(self, event)`
 
 
@@ -1770,11 +1770,11 @@ synchronization needs to occur with a corresponding Protocol channel.
 		- (source/area)`716 2 720 21`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`5000`
+		- (metrics/profile-duration)`4000`
 		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`40.0`
-		- (metrics/profile-minimum)`5000`
-		- (metrics/profile-maximum)`5000`
+		- (metrics/profile-residency)`25.0`
+		- (metrics/profile-minimum)`4000`
+		- (metrics/profile-maximum)`4000`
 (signature)`p_drain(self)`
 
 Perform an empty transfer allowing any transmit buffers to be emptied.
@@ -1852,11 +1852,11 @@ when next is promoted.
 		- (source/area)`754 2 759 22`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
-		- (metrics/profile-duration)`8333`
+		- (metrics/profile-duration)`7555`
 		- (metrics/profile-count)`9`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`4000`
-		- (metrics/profile-maximum)`22000`
+		- (metrics/profile-maximum)`18000`
 (signature)`__init__(self)`
 
 
@@ -1869,11 +1869,11 @@ when next is promoted.
 		- (source/area)`761 2 774 15`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
-		- (metrics/profile-duration)`444`
+		- (metrics/profile-duration)`0`
 		- (metrics/profile-count)`9`
-		- (metrics/profile-residency)`100.0`
+		- (metrics/profile-residency)`0.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`1000`
+		- (metrics/profile-maximum)`0`
 (signature)`cat_overflowing(self, channel_id)`
 
 Whether the given flow's queue has too many items.
@@ -1888,11 +1888,11 @@ Whether the given flow's queue has too many items.
 		- (source/area)`776 2 796 50`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`12`
-		- (metrics/profile-duration)`720`
+		- (metrics/profile-duration)`254`
 		- (metrics/profile-count)`204`
-		- (metrics/profile-residency)`91.83673469387755`
+		- (metrics/profile-residency)`84.61538461538461`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`16000`
+		- (metrics/profile-maximum)`15000`
 (signature)`int_transfer(self, channel_id, events)`
 
 Emit point for Sequenced Flows
@@ -1907,11 +1907,11 @@ Emit point for Sequenced Flows
 		- (source/area)`798 2 826 73`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`17`
-		- (metrics/profile-duration)`7571`
+		- (metrics/profile-duration)`4714`
 		- (metrics/profile-count)`7`
-		- (metrics/profile-residency)`88.67924528301887`
-		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`15000`
+		- (metrics/profile-residency)`81.81818181818181`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`11000`
 (signature)`int_connect(self, channel_id, initiate, flow)`
 
 Connect the flow to the (factor-local/parameter)&<#Catenation.int_connect.Parameters.channel_id[channel_id]> using the (factor-local/parameter)&<#Catenation.int_connect.Parameters.initiate[initiate]> parameter.
@@ -1926,11 +1926,11 @@ Connect the flow to the (factor-local/parameter)&<#Catenation.int_connect.Parame
 		- (source/area)`828 2 834 35`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`2000`
+		- (metrics/profile-duration)`750`
 		- (metrics/profile-count)`8`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`5000`
+		- (metrics/profile-maximum)`1000`
 (signature)`int_reserve(self, *channel_id)`
 
 Reserve a position in the sequencing of the flows. The given (invalid/unknown)&<#initiate> is the reference
@@ -1946,11 +1946,11 @@ object used by (factor-local/method)&<#Catenation.int_connect[int_connect]> in o
 		- (source/area)`836 2 846 16`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`8`
-		- (metrics/profile-duration)`41000`
+		- (metrics/profile-duration)`56000`
 		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`29.268292682926827`
-		- (metrics/profile-minimum)`41000`
-		- (metrics/profile-maximum)`41000`
+		- (metrics/profile-residency)`25.0`
+		- (metrics/profile-minimum)`56000`
+		- (metrics/profile-maximum)`56000`
 (signature)`f_transfer(self, events)`
 
 Transparency support allowing (factor-local/class)&<#Division[Division]> to be directly connected.
@@ -1968,11 +1968,11 @@ Usually unused.
 		- (source/area)`848 2 858 67`
 		- (coverage-zeros)`3`
 		- (coverage-counters)`5`
-		- (metrics/profile-duration)`4800`
+		- (metrics/profile-duration)`4000`
 		- (metrics/profile-count)`5`
-		- (metrics/profile-residency)`45.83333333333333`
-		- (metrics/profile-minimum)`3000`
-		- (metrics/profile-maximum)`7000`
+		- (metrics/profile-residency)`40.0`
+		- (metrics/profile-minimum)`2000`
+		- (metrics/profile-maximum)`6000`
 (signature)`int_terminate(self, channel_id)`
 
 
@@ -1987,11 +1987,11 @@ Usually unused.
 		- (source/area)`860 2 865 19`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`52000`
+		- (metrics/profile-duration)`49000`
 		- (metrics/profile-count)`2`
-		- (metrics/profile-residency)`12.5`
-		- (metrics/profile-minimum)`11000`
-		- (metrics/profile-maximum)`93000`
+		- (metrics/profile-residency)`10.204081632653061`
+		- (metrics/profile-minimum)`9000`
+		- (metrics/profile-maximum)`89000`
 (signature)`f_terminate(self)`
 
 
@@ -2018,11 +2018,11 @@ Termination signal ignored. Flow state dictates terminal state.
 		- (source/area)`873 2 883 23`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
-		- (metrics/profile-duration)`22916`
+		- (metrics/profile-duration)`20583`
 		- (metrics/profile-count)`12`
-		- (metrics/profile-residency)`20.0`
-		- (metrics/profile-minimum)`4000`
-		- (metrics/profile-maximum)`87000`
+		- (metrics/profile-residency)`20.24291497975709`
+		- (metrics/profile-minimum)`3000`
+		- (metrics/profile-maximum)`84000`
 (signature)`cat_flush(self)`
 
 Flush the accumulated events downstream.
@@ -2037,11 +2037,11 @@ Flush the accumulated events downstream.
 		- (source/area)`885 2 913 24`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`15`
-		- (metrics/profile-duration)`9500`
+		- (metrics/profile-duration)`8500`
 		- (metrics/profile-count)`2`
-		- (metrics/profile-residency)`57.89473684210527`
-		- (metrics/profile-minimum)`5000`
-		- (metrics/profile-maximum)`14000`
+		- (metrics/profile-residency)`52.94117647058824`
+		- (metrics/profile-minimum)`4000`
+		- (metrics/profile-maximum)`13000`
 (signature)`cat_drain(self)`
 
 Drain the new head of line emitting any queued events and
@@ -2057,11 +2057,11 @@ updating its entry in (invalid/unknown)&<#cat_connections> to immediately send e
 		- (source/area)`915 2 941 32`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`12`
-		- (metrics/profile-duration)`2714`
+		- (metrics/profile-duration)`1857`
 		- (metrics/profile-count)`7`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`5000`
+		- (metrics/profile-minimum)`0`
+		- (metrics/profile-maximum)`4000`
 (signature)`cat_transition(self)`
 
 Move the first enqueued flow to the front of the line;
@@ -2116,11 +2116,11 @@ the transformed application level events.
 		- (source/area)`955 2 961 32`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`6`
-		- (metrics/profile-duration)`5000`
+		- (metrics/profile-duration)`2333`
 		- (metrics/profile-count)`6`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`3000`
-		- (metrics/profile-maximum)`12000`
+		- (metrics/profile-minimum)`2000`
+		- (metrics/profile-maximum)`3000`
 (signature)`__init__(self, dispatch)`
 
 
@@ -2133,11 +2133,11 @@ the transformed application level events.
 		- (source/area)`963 2 976 28`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`7`
-		- (metrics/profile-duration)`16615`
+		- (metrics/profile-duration)`15538`
 		- (metrics/profile-count)`13`
-		- (metrics/profile-residency)`64.35185185185183`
+		- (metrics/profile-residency)`46.03960396039604`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`49000`
+		- (metrics/profile-maximum)`84000`
 (signature)`f_transfer(self, events)`
 
 Direct the given events to their corresponding action in order to
@@ -2169,11 +2169,11 @@ Interruptions on distributions translates to termination.
 		- (source/area)`993 2 1008 24`
 		- (coverage-zeros)`3`
 		- (coverage-counters)`8`
-		- (metrics/profile-duration)`87000`
+		- (metrics/profile-duration)`75000`
 		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`26.436781609195403`
-		- (metrics/profile-minimum)`87000`
-		- (metrics/profile-maximum)`87000`
+		- (metrics/profile-residency)`17.333333333333336`
+		- (metrics/profile-minimum)`75000`
+		- (metrics/profile-maximum)`75000`
 (signature)`f_terminate(self)`
 
 
@@ -2186,11 +2186,11 @@ Interruptions on distributions translates to termination.
 		- (source/area)`1010 2 1021 62`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`2200`
+		- (metrics/profile-duration)`2400`
 		- (metrics/profile-count)`5`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`4000`
+		- (metrics/profile-maximum)`5000`
 (signature)`div_initiate(self, f_event, channel_id, initiate)`
 
 Initiate a subflow using the given (factor-local/parameter)&<#Division.div_initiate.Parameters.channel_id[channel_id]> as its identity.
@@ -2207,11 +2207,11 @@ to the (invalid/unknown)&<#Flow.f_connect> downstream.
 		- (source/area)`1023 2 1066 40`
 		- (coverage-zeros)`10`
 		- (coverage-counters)`25`
-		- (metrics/profile-duration)`37500`
+		- (metrics/profile-duration)`44250`
 		- (metrics/profile-count)`4`
-		- (metrics/profile-residency)`33.33333333333333`
+		- (metrics/profile-residency)`33.89830508474576`
 		- (metrics/profile-minimum)`18000`
-		- (metrics/profile-maximum)`57000`
+		- (metrics/profile-maximum)`63000`
 (signature)`div_connect(self, channel_id, flow)`
 
 Associate the (factor-local/parameter)&<#Division.div_connect.Parameters.flow[flow]> with the (factor-local/parameter)&<#Division.div_connect.Parameters.channel_id[channel_id]> allowing transfers into the flow.
@@ -2231,11 +2231,11 @@ and control events.
 		- (source/area)`1068 2 1079 50`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`5`
-		- (metrics/profile-duration)`1700`
+		- (metrics/profile-duration)`800`
 		- (metrics/profile-count)`10`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`8000`
+		- (metrics/profile-maximum)`4000`
 (signature)`div_transfer(self, f_event, channel_id, subflow_transfer)`
 
 Enqueue or transfer the events to the flow associated with the channel_id context.
@@ -2250,11 +2250,11 @@ Enqueue or transfer the events to the flow associated with the channel_id contex
 		- (source/area)`1081 2 1104 40`
 		- (coverage-zeros)`2`
 		- (coverage-counters)`12`
-		- (metrics/profile-duration)`9800`
+		- (metrics/profile-duration)`15400`
 		- (metrics/profile-count)`5`
-		- (metrics/profile-residency)`34.69387755102041`
+		- (metrics/profile-residency)`20.77922077922078`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`46000`
+		- (metrics/profile-maximum)`77000`
 (signature)`div_terminate(self, f_event, channel_id, terminal)`
 
 End of subflow.

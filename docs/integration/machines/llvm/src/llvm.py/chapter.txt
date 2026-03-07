@@ -3,7 +3,7 @@
 		module
 	/element/
 		- (control)`property-set`
-		- (source/area)`1 1 506 0`
+		- (source/area)`1 1 572 0`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`0`
 Instantiate the `fault-llvm` tools project into a target directory.
@@ -127,7 +127,7 @@ Instantiate the `fault-llvm` tools project into a target directory.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`19 1 26 1`
+		- (source/area)`19 1 28 1`
 #!source
 	restricted = {
 		'-l': ('field-replace', True, 'link-only'),
@@ -137,6 +137,8 @@ Instantiate the `fault-llvm` tools project into a target directory.
 		'-f': ('field-replace', True, 'instantiate-factors'),
 		'-F': ('field-replace', False, 'instantiate-factors'),
 		'-U': ('field-replace', True, 'update-build'),
+		'-u': ('field-replace', False, 'update-build'),
+	}
 
 [ required ]
 ! CONTROL:
@@ -146,15 +148,16 @@ Instantiate the `fault-llvm` tools project into a target directory.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`28 1 34 1`
+		- (source/area)`30 1 37 1`
 #!source
-	}
-	
 	required = {
 		'-x': ('field-replace', 'target-directory'),
 		'-X': ('field-replace', 'construction-context'),
 	
 		'-C': ('field-replace', 'cmake-path'),
+		'-M': ('field-replace', 'gmake-path'),
+		'--llvm-config': ('field-replace', 'llvm-path'),
+	}
 
 [ split_config_output ]
 ! CONTROL:
@@ -164,7 +167,7 @@ Instantiate the `fault-llvm` tools project into a target directory.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`36 1 37 47`
+		- (source/area)`39 1 40 47`
 (signature)`split_config_output(flag, output)`
 
 
@@ -176,7 +179,7 @@ Instantiate the `fault-llvm` tools project into a target directory.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`39 1 51 12`
+		- (source/area)`42 1 54 12`
 (signature)`profile_library(prefix, architecture)`
 
 
@@ -186,7 +189,7 @@ Instantiate the `fault-llvm` tools project into a target directory.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`53 1 64 15`
+		- (source/area)`56 1 67 15`
 (signature)`compiler_libraries(compiler, prefix, version, executable, target)`
 
 Attempt to select the compiler libraries directory containing compiler support
@@ -199,7 +202,7 @@ libraries for profiling, sanity, and runtime.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`66 1 97 54`
+		- (source/area)`69 1 100 54`
 (signature)`parse_clang_version_1(string)`
 
 clang --version parser.
@@ -211,7 +214,7 @@ clang --version parser.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`99 1 108 3`
+		- (source/area)`102 1 111 3`
 (signature)`parse_clang_directories_1(string)`
 
 Parse -print-search-dirs output.
@@ -223,7 +226,7 @@ Parse -print-search-dirs output.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`110 1 122 2`
+		- (source/area)`113 1 125 2`
 (signature)`parse_clang_standards_1(string)`
 
 After retrieving a list from standard error, extract as much information as possible.
@@ -235,7 +238,7 @@ After retrieving a list from standard error, extract as much information as poss
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`124 1 201 13`
+		- (source/area)`127 1 204 13`
 (signature)`clang(executable)`
 
 Extract information from the given clang (factor-local/parameter)&<#clang.Parameters.executable[executable]>.
@@ -247,7 +250,7 @@ Extract information from the given clang (factor-local/parameter)&<#clang.Parame
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`203 1 274 73`
+		- (source/area)`206 1 277 73`
 (signature)`instrumentation(llvm_config_path)`
 
 Identify instrumentation related commands and libraries for making extraction tools.
@@ -261,7 +264,7 @@ Identify instrumentation related commands and libraries for making extraction to
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`276 1 291 2`
+		- (source/area)`279 1 294 2`
 (signature)`formats(ccv)`
 
 
@@ -273,14 +276,14 @@ Identify instrumentation related commands and libraries for making extraction to
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`293 1 298 1`
+		- (source/area)`296 1 301 1`
 #!source
-			],
-		}
-	
 	info = lsf.types.Information(
 		identifier = '://fault.metrics/llvm',
 		name = 'llvm',
+		authority = 'fault.io',
+		contact = "http://fault.io/critical"
+	)
 
 [ fr ]
 ! CONTROL:
@@ -290,9 +293,9 @@ Identify instrumentation related commands and libraries for making extraction to
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`300 1 300 39`
+		- (source/area)`303 1 303 39`
 #!source
-	contact = "http://fault.io/critical"
+	fr = lsf.types.factor@'meta.references'
 
 [ sr ]
 ! CONTROL:
@@ -302,9 +305,9 @@ Identify instrumentation related commands and libraries for making extraction to
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`301 1 301 41`
+		- (source/area)`304 1 304 41`
 #!source
-	)
+	sr = lsf.types.factor@'system.references'
 
 [ declare ]
 ! CONTROL:
@@ -314,7 +317,7 @@ Identify instrumentation related commands and libraries for making extraction to
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`303 1 345 77`
+		- (source/area)`306 1 348 77`
 (signature)`declare(ccv, ipq)`
 
 
@@ -326,11 +329,8 @@ Identify instrumentation related commands and libraries for making extraction to
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`347 1 373 4`
+		- (source/area)`350 1 376 4`
 #!source
-	
-		return factory.Parameters.define(info, formats(ccv), sets=sets, soles=soles)
-	
 	cmake_source = \
 		"""
 		cmake_minimum_required(VERSION 3.20.0)
@@ -355,6 +355,9 @@ Identify instrumentation related commands and libraries for making extraction to
 		llvm_map_components_to_libnames(ipqlibs coverage)
 		target_link_libraries(clang-ipquery ${ipqlibs})
 	
+		add_executable(clang-delineate delineate.c)
+		target_link_libraries(clang-delineate PRIVATE ${CLANG_LIB})
+		"""
 
 [ mksources ]
 ! CONTROL:
@@ -364,7 +367,7 @@ Identify instrumentation related commands and libraries for making extraction to
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`375 1 379 45`
+		- (source/area)`378 1 382 45`
 (signature)`mksources(directory)`
 
 
@@ -374,7 +377,7 @@ Identify instrumentation related commands and libraries for making extraction to
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`381 1 397 23`
+		- (source/area)`384 1 400 23`
 (signature)`icmake(route, ccv, ccf, include)`
 
 Instantiate as a cmake project.
@@ -390,7 +393,7 @@ of Construction Contexts.
 		function
 	/element/
 		- (control)`property-set`
-		- (source/area)`399 1 405 30`
+		- (source/area)`402 1 408 30`
 (signature)`ifactors(route, ccv, ipqd)`
 
 Instantiate as factors.
@@ -404,8 +407,20 @@ Instantiate as factors.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`407 1 415 60`
+		- (source/area)`410 1 420 54`
 (signature)`link_tools(ctx, llvm_bindir, itools)`
+
+
+[ find ]
+! CONTROL:
+	/type/
+		function
+	/flags/
+		- `undocumented`
+	/element/
+		- (control)`property-set`
+		- (source/area)`422 1 428 19`
+(signature)`find(pwd, *names)`
 
 
 [ system ]
@@ -416,7 +431,7 @@ Instantiate as factors.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`417 1 427 29`
+		- (source/area)`430 1 435 29`
 (signature)`system(exe, *argv)`
 
 
@@ -428,8 +443,8 @@ Instantiate as factors.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`429 1 442 25`
-(signature)`configure(restricted, required, argv)`
+		- (source/area)`437 1 480 14`
+(signature)`configure(pwd, restricted, required, argv)`
 
 
 [ main ]
@@ -440,7 +455,7 @@ Instantiate as factors.
 		- `undocumented`
 	/element/
 		- (control)`property-set`
-		- (source/area)`444 1 506 18`
+		- (source/area)`482 1 572 19`
 		- (type/syntax)`process.Exit`
 		- (type/remote/factor-element)&<http://fault.io/python/system/process#Exit[fault.system.process.Exit]>
 		

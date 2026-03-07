@@ -6,11 +6,11 @@
 		- (source/area)`1 1 97 0`
 		- (coverage-zeros)`11`
 		- (coverage-counters)`45`
-		- (metrics/profile-duration)`11734917`
-		- (metrics/profile-count)`827`
-		- (metrics/profile-residency)`99.93332149723791`
-		- (metrics/profile-minimum)`6794000`
-		- (metrics/profile-maximum)`59320000`
+		- (metrics/profile-duration)`10474650`
+		- (metrics/profile-count)`744`
+		- (metrics/profile-residency)`99.92996404530138`
+		- (metrics/profile-minimum)`6121000`
+		- (metrics/profile-maximum)`29590000`
 Typed system clock access.
 
 Construct instances of both the real and monotonic clocks and provide access
@@ -62,11 +62,11 @@ via (factor-local/function)&<#elapsed[elapsed]>, (factor-local/function)&<#utc[u
 		- (source/area)`11 1 15 2`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`1`
-		- (metrics/profile-duration)`2729`
-		- (metrics/profile-count)`827`
+		- (metrics/profile-duration)`2313`
+		- (metrics/profile-count)`744`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`1000`
-		- (metrics/profile-maximum)`14000`
+		- (metrics/profile-maximum)`13000`
 (signature)`_fault_clocks(module, delta)`
 
 
@@ -95,11 +95,11 @@ via (factor-local/function)&<#elapsed[elapsed]>, (factor-local/function)&<#utc[u
 		- (source/area)`33 1 42 51`
 		- (coverage-zeros)`3`
 		- (coverage-counters)`6`
-		- (metrics/profile-duration)`7824`
-		- (metrics/profile-count)`827`
-		- (metrics/profile-residency)`65.12131046206152`
+		- (metrics/profile-duration)`6907`
+		- (metrics/profile-count)`744`
+		- (metrics/profile-residency)`59.07764156450671`
 		- (metrics/profile-minimum)`4000`
-		- (metrics/profile-maximum)`34000`
+		- (metrics/profile-maximum)`18000`
 (signature)`setup()`
 
 
@@ -114,11 +114,11 @@ via (factor-local/function)&<#elapsed[elapsed]>, (factor-local/function)&<#utc[u
 		- (source/area)`46 1 49 22`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`8905`
-		- (metrics/profile-count)`760`
+		- (metrics/profile-duration)`7374`
+		- (metrics/profile-count)`766`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`6000`
-		- (metrics/profile-maximum)`121000`
+		- (metrics/profile-maximum)`130000`
 (signature)`_unix(ut)`
 
 
@@ -131,11 +131,11 @@ via (factor-local/function)&<#elapsed[elapsed]>, (factor-local/function)&<#utc[u
 		- (source/area)`50 1 61 64`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
-		- (metrics/profile-duration)`2606000`
+		- (metrics/profile-duration)`2985000`
 		- (metrics/profile-count)`2`
-		- (metrics/profile-residency)`95.12663085188028`
-		- (metrics/profile-minimum)`2605000`
-		- (metrics/profile-maximum)`2607000`
+		- (metrics/profile-residency)`94.40536013400335`
+		- (metrics/profile-minimum)`2628000`
+		- (metrics/profile-maximum)`3342000`
 (signature)`zone(selector)`
 
 Using the zone definitions provided by the system,
@@ -158,11 +158,11 @@ construct a view for the time zone identified by (factor-local/parameter)&<#zone
 		- (source/area)`63 1 67 32`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
-		- (metrics/profile-duration)`3375`
-		- (metrics/profile-count)`8`
+		- (metrics/profile-duration)`3700`
+		- (metrics/profile-count)`10`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`8000`
+		- (metrics/profile-maximum)`11000`
 		- (type/syntax)`types.Timestamp`
 		- (type/project-local/factor-element)&<types#Timestamp[fault.time.types.Timestamp]>
 		
@@ -180,11 +180,11 @@ Get the current time according to the system's real clock.
 		- (source/area)`69 1 80 52`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
-		- (metrics/profile-duration)`891333`
+		- (metrics/profile-duration)`1153666`
 		- (metrics/profile-count)`3`
-		- (metrics/profile-residency)`2.5056095736724004`
-		- (metrics/profile-minimum)`15000`
-		- (metrics/profile-maximum)`2642000`
+		- (metrics/profile-residency)`3.4383126264085515`
+		- (metrics/profile-minimum)`30000`
+		- (metrics/profile-maximum)`3398000`
 		- (type/syntax)`types.Timestamp`
 		- (type/project-local/factor-element)&<types#Timestamp[fault.time.types.Timestamp]>
 		
@@ -209,11 +209,11 @@ The default zone can be changed by overriding the (factor-local/function)&<#zone
 		- (source/area)`82 1 91 42`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
-		- (metrics/profile-duration)`934000`
+		- (metrics/profile-duration)`1227333`
 		- (metrics/profile-count)`3`
-		- (metrics/profile-residency)`4.5681655960028555`
-		- (metrics/profile-minimum)`34000`
-		- (metrics/profile-maximum)`2730000`
+		- (metrics/profile-residency)`5.975013579576317`
+		- (metrics/profile-minimum)`75000`
+		- (metrics/profile-maximum)`3531000`
 		- (type/syntax)`types.Date`
 		- (type/project-local/factor-element)&<types#Date[fault.time.types.Date]>
 		
@@ -242,11 +242,11 @@ Using (factor-local/function)&<#local[local]>, identify the current date.
 		- (source/area)`93 1 97 37`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
-		- (metrics/profile-duration)`2145`
-		- (metrics/profile-count)`21937`
+		- (metrics/profile-duration)`1610`
+		- (metrics/profile-count)`14341`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`74000`
+		- (metrics/profile-maximum)`201000`
 		- (type/syntax)`types.Measure`
 		- (type/project-local/factor-element)&<types#Measure[fault.time.types.Measure]>
 		

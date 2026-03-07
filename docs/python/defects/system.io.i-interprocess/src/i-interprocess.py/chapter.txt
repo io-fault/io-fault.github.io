@@ -4,13 +4,8 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`1 1 103 0`
-		- (coverage-zeros)`20`
-		- (coverage-counters)`53`
-		- (metrics/profile-duration)`21990000`
-		- (metrics/profile-count)`3`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`21990000`
-		- (metrics/profile-maximum)`21990000`
+		- (coverage-zeros)`0`
+		- (coverage-counters)`0`
 
 [ os ]
 ! CONTROL:
@@ -31,8 +26,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`2 1 2 10`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ traceback ]
 ! CONTROL:
@@ -43,8 +36,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`3 1 3 16`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ common ]
 ! CONTROL:
@@ -55,8 +46,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`4 1 4 20`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`1`
 
 [ child_echo ]
 ! CONTROL:
@@ -65,8 +54,6 @@
 	/element/
 		- (control)`property-set`
 		- (source/area)`6 1 26 35`
-		- (coverage-zeros)`11`
-		- (coverage-counters)`11`
 (signature)`child_echo(am, objects)`
 
 Echos objects received back at the sender.
@@ -81,13 +68,6 @@ Echos objects received back at the sender.
 	/element/
 		- (control)`property-set`
 		- (source/area)`28 1 81 32`
-		- (coverage-zeros)`9`
-		- (coverage-counters)`28`
-		- (metrics/profile-duration)`7817500`
-		- (metrics/profile-count)`2`
-		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`7175000`
-		- (metrics/profile-maximum)`8460000`
 (signature)`fork_and_circulate(test, am, channels)`
 
 
@@ -98,13 +78,6 @@ Echos objects received back at the sender.
 	/element/
 		- (control)`property-set`
 		- (source/area)`83 1 90 39`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`4`
-		- (metrics/profile-duration)`9060000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`6.622516556291391`
-		- (metrics/profile-minimum)`9060000`
-		- (metrics/profile-maximum)`9060000`
 (signature)`test_bidirectional(test)`
 
 Check for IPC via bidirectional kernel ports.
@@ -117,13 +90,6 @@ Check for IPC via bidirectional kernel ports.
 	/element/
 		- (control)`property-set`
 		- (source/area)`92 1 103 39`
-		- (coverage-zeros)`0`
-		- (coverage-counters)`6`
-		- (metrics/profile-duration)`7268000`
-		- (metrics/profile-count)`1`
-		- (metrics/profile-residency)`1.2795817281232802`
-		- (metrics/profile-minimum)`7268000`
-		- (metrics/profile-maximum)`7268000`
 (signature)`test_unidirectional(test)`
 
 Check for IPC via unidirectional kernel ports.

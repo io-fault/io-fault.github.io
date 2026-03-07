@@ -6,11 +6,11 @@
 		- (source/area)`1 1 363 0`
 		- (coverage-zeros)`10`
 		- (coverage-counters)`113`
-		- (metrics/profile-duration)`2530976`
-		- (metrics/profile-count)`817`
-		- (metrics/profile-residency)`99.61925865457528`
-		- (metrics/profile-minimum)`1486000`
-		- (metrics/profile-maximum)`11561000`
+		- (metrics/profile-duration)`2129361`
+		- (metrics/profile-count)`739`
+		- (metrics/profile-residency)`99.48366736612529`
+		- (metrics/profile-minimum)`1527000`
+		- (metrics/profile-maximum)`6325000`
 Formatting and parsing tools for status frame transport envelopes.
 
 This module provides conceptual definitions for Status Frame events ((project-local/factor-element)&<types#EStruct[fault.status.types.EStruct]>) and
@@ -143,11 +143,11 @@ Serialized messages are expected to include the trailing newline:
 		- (source/area)`44 1 53 39`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
-		- (metrics/profile-duration)`21311`
-		- (metrics/profile-count)`20488`
-		- (metrics/profile-residency)`99.02642240579704`
+		- (metrics/profile-duration)`21042`
+		- (metrics/profile-count)`13306`
+		- (metrics/profile-residency)`98.83568933620008`
 		- (metrics/profile-minimum)`2000`
-		- (metrics/profile-maximum)`12526000`
+		- (metrics/profile-maximum)`1117000`
 		- (type/syntax)`types.Frame`
 		- (type/project-local/factor-element)&<types#Frame[fault.status.types.Frame]>
 		
@@ -167,11 +167,11 @@ Create a status frame using the envelope's symbol and synopsis.
 		- (source/area)`55 1 59 60`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`20562`
-		- (metrics/profile-count)`18193`
+		- (metrics/profile-duration)`22757`
+		- (metrics/profile-count)`12544`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`3000`
-		- (metrics/profile-maximum)`7572000`
+		- (metrics/profile-maximum)`4516000`
 		- (type/syntax)`bytes`
 		- (type/invalid/unknown)&<#bytes>
 		
@@ -189,11 +189,11 @@ Create a status frame using the envelope's symbol and synopsis.
 		- (source/area)`61 1 66 44`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`36344`
-		- (metrics/profile-count)`5877`
+		- (metrics/profile-duration)`19371`
+		- (metrics/profile-count)`1447`
 		- (metrics/profile-residency)`100.0`
-		- (metrics/profile-minimum)`2000`
-		- (metrics/profile-maximum)`41488000`
+		- (metrics/profile-minimum)`3000`
+		- (metrics/profile-maximum)`9555000`
 		- (type/syntax)`object`
 		- (type/invalid/unknown)&<#object>
 		
@@ -293,11 +293,11 @@ Create a status frame using the envelope's symbol and synopsis.
 		- (source/area)`129 1 136 25`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
-		- (metrics/profile-duration)`2413`
-		- (metrics/profile-count)`2497`
+		- (metrics/profile-duration)`1650`
+		- (metrics/profile-count)`2187`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`23000`
+		- (metrics/profile-maximum)`9000`
 		- (type/syntax)`int`
 		- (type/invalid/unknown)&<#int>
 		
@@ -316,7 +316,7 @@ Currently, only supporting unicode characters in the 16-bit range.
 		- (source/area)`138 1 142 71`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`1228`
+		- (metrics/profile-duration)`514`
 		- (metrics/profile-count)`35`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
@@ -478,11 +478,11 @@ Convert an integer type code into the two-character string used for serializatio
 		- (source/area)`161 1 213 26`
 		- (coverage-zeros)`1`
 		- (coverage-counters)`25`
-		- (metrics/profile-duration)`64255`
-		- (metrics/profile-count)`19008`
-		- (metrics/profile-residency)`69.3713365903343`
+		- (metrics/profile-duration)`60188`
+		- (metrics/profile-count)`13324`
+		- (metrics/profile-residency)`63.612218126680276`
 		- (metrics/profile-minimum)`15000`
-		- (metrics/profile-maximum)`9825000`
+		- (metrics/profile-maximum)`9296000`
 		- (type/syntax)`typing.Tuple[str, bytes, str]`
 		
 (signature)`_pack(frame)`
@@ -502,11 +502,11 @@ the encoded bytes of data extending the frame and the terminating trailer.
 		- (source/area)`215 1 227 36`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`4`
-		- (metrics/profile-duration)`75127`
-		- (metrics/profile-count)`19008`
-		- (metrics/profile-residency)`14.47115586616434`
-		- (metrics/profile-minimum)`18000`
-		- (metrics/profile-maximum)`10785000`
+		- (metrics/profile-duration)`68435`
+		- (metrics/profile-count)`13324`
+		- (metrics/profile-residency)`11.331595438189753`
+		- (metrics/profile-minimum)`17000`
+		- (metrics/profile-maximum)`9300000`
 		- (type/syntax)`str`
 		- (type/invalid/unknown)&<#str>
 		
@@ -538,11 +538,11 @@ Constructs a single (invalid/unknown)&<#str> instance.
 		- (source/area)`229 1 312 3`
 		- (coverage-zeros)`9`
 		- (coverage-counters)`34`
-		- (metrics/profile-duration)`70539`
-		- (metrics/profile-count)`6025`
-		- (metrics/profile-residency)`49.728941176470585`
+		- (metrics/profile-duration)`62665`
+		- (metrics/profile-count)`1534`
+		- (metrics/profile-residency)`70.0881107678224`
 		- (metrics/profile-minimum)`3000`
-		- (metrics/profile-maximum)`41600000`
+		- (metrics/profile-maximum)`9592000`
 		- (type/syntax)`types.Frame`
 		- (type/project-local/factor-element)&<types#Frame[fault.status.types.Frame]>
 		
@@ -560,11 +560,11 @@ Unpack a serialized status frame.
 		- (source/area)`314 1 323 37`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`3`
-		- (metrics/profile-duration)`74388`
-		- (metrics/profile-count)`6025`
-		- (metrics/profile-residency)`5.174356468559163`
-		- (metrics/profile-minimum)`6000`
-		- (metrics/profile-maximum)`41607000`
+		- (metrics/profile-duration)`68037`
+		- (metrics/profile-count)`1534`
+		- (metrics/profile-residency)`7.172559164510875`
+		- (metrics/profile-minimum)`5000`
+		- (metrics/profile-maximum)`9596000`
 		- (type/syntax)`types.Frame`
 		- (type/project-local/factor-element)&<types#Frame[fault.status.types.Frame]>
 		
@@ -590,11 +590,11 @@ Extract a status frame, (project-local/factor-element)&<types#Frame[fault.status
 		- (source/area)`325 1 342 3`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`2`
-		- (metrics/profile-duration)`8797`
-		- (metrics/profile-count)`1626`
-		- (metrics/profile-residency)`88.2838168472562`
+		- (metrics/profile-duration)`8089`
+		- (metrics/profile-count)`1478`
+		- (metrics/profile-residency)`87.64637002341921`
 		- (metrics/profile-minimum)`3000`
-		- (metrics/profile-maximum)`69000`
+		- (metrics/profile-maximum)`50000`
 (signature)`declaration()`
 
 Construct a custom protocol declaration message.
@@ -637,11 +637,11 @@ Construct a custom protocol declaration message.
 		- (source/area)`350 1 363 12`
 		- (coverage-zeros)`0`
 		- (coverage-counters)`5`
-		- (metrics/profile-duration)`2100`
+		- (metrics/profile-duration)`1100`
 		- (metrics/profile-count)`10`
 		- (metrics/profile-residency)`100.0`
 		- (metrics/profile-minimum)`0`
-		- (metrics/profile-maximum)`9000`
+		- (metrics/profile-maximum)`8000`
 (signature)`message_directed_areas(fields, start, end)`
 
 Return the slices marking the areas before and after the first item
